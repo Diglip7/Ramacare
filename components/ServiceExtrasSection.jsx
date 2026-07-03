@@ -5,7 +5,7 @@ const ServiceExtrasSection = ({ aftercareContent, whyChooseContent }) => {
     <>
       {/* Recovery & Aftercare Section */}
       {aftercareContent && (
-        <section className="w-full bg-gradient-to-br from-[#F8FAFC] to-white py-12 md:py-16">
+        <section id="recovery-aftercare" className="w-full bg-gradient-to-br from-[#F8FAFC] to-white py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 md:mb-12">
               <div className="inline-flex items-center gap-2 bg-[#2D5F3F]/10 text-[#2D5F3F] px-4 py-2 rounded-full mb-4">
@@ -68,7 +68,7 @@ const ServiceExtrasSection = ({ aftercareContent, whyChooseContent }) => {
 
       {/* Why Choose Our Clinic Section */}
       {whyChooseContent && whyChooseContent.features?.length > 0 && (
-        <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+        <section id="why-choose-ramacare" className="w-full bg-white py-12 md:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#2D5F3F]/10 to-[#3A7B51]/10 text-[#2D5F3F] px-5 py-2.5 rounded-full mb-6 shadow-sm">

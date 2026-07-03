@@ -6,6 +6,8 @@ import QuickNavigation from '../../../components/QuickNavigation';
 import TreatmentOverview from '../../../components/TreatmentOverview';
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
+import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
+import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
 import PatientTestimonials from '../../../components/VideoTestimonials';
 import DoctorsSection from '../../../components/DoctorsSection';
 // import PricingPackages from '../../../components/PricingPackages';
@@ -22,9 +24,21 @@ export default function BotoxHyperhidrosisPage() {
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/botox-hyperhidrosis');
 
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'recovery-aftercare', label: 'Recovery & Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Choose Us' },
+    { id: 'when-to-consider', label: 'Good Candidate' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' }
+  ];
+
   return (
     <Layout>
-      <Head>
+        <Head>
   <title key="title">Botox Hyperhidrosis in Dubai for Excessive Sweating</title>
   <meta name="description" content="Botox hyperhidrosis in Dubai helps manage excessive sweating safely by reducing underarm, palm, and foot sweating under expert medical care." key="description" />
   <meta name="keywords" content="Botox hyperhidrosis in Dubai, Excessive sweating treatment Dubai, Hyperhidrosis treatment Dubai, Botox for sweating Dubai, Underarm sweating treatment, Palmar hyperhidrosis treatment, Non-surgical sweating control, Medical hyperhidrosis care, Sweat reduction treatment Dubai" />
@@ -96,7 +110,7 @@ export default function BotoxHyperhidrosisPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+     <QuickNavigation navItems={navItems} />
     
     <TreatmentOverview 
       subcategoryName={subcategoryName}
@@ -106,6 +120,8 @@ export default function BotoxHyperhidrosisPage() {
       <TreatmentBenefits 
         content={content?.benefits}
       />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} whyChooseContent={content?.whyChooseContent} />
+      <SkinTreatmentAdditionalContent content={content} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
     

@@ -6,6 +6,8 @@ import QuickNavigation from '../../../components/QuickNavigation';
 import TreatmentOverview from '../../../components/TreatmentOverview';
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
+import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
+import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
 import PatientTestimonials from '../../../components/VideoTestimonials';
 import DoctorsSection from '../../../components/DoctorsSection';
 // import PricingPackages from '../../../components/PricingPackages';
@@ -21,6 +23,19 @@ export default function SkinAllergyPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/skin-allergy');
+  console.log('SkinAllergyPage: content:', content);
+
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'recovery-aftercare', label: 'Recovery & Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Choose Us' },
+    { id: 'when-to-consider', label: 'Good Candidate' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' }
+  ];
 
   return (
     <Layout>
@@ -97,7 +112,7 @@ export default function SkinAllergyPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+     <QuickNavigation navItems={navItems} />
     
     <TreatmentOverview 
       subcategoryName={subcategoryName}
@@ -107,6 +122,8 @@ export default function SkinAllergyPage() {
       <TreatmentBenefits 
         content={content?.benefits}
       />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} whyChooseContent={content?.whyChooseContent} />
+      <SkinTreatmentAdditionalContent content={content} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
     

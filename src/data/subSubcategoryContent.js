@@ -18,7 +18,7 @@ export const subSubcategoryContent = {
   'aesthetic-dermatology-dubai-skin-treatment-skin-boosters': {
     hero: {
       subtitle: 'Deep Hydration & Natural Skin Rejuvenation',
-      description: 'Restore your skin\'s natural glow, hydration, and youthful appearance with Skin Boosters in Dubai at RamaCare Polyclinic.Our advanced injectable skin rejuvenation treatment is designed to deeply hydrate the skin from within, improve elasticity, refine texture, and reduce the appearance of fine lines for healthy, radiant-looking skin. Unlike traditional dermal fillers that primarily restore facial volume, skin boosters focus on improving overall skin quality by delivering hydrating hyaluronic acid into the deeper layers of the skin.This stimulates collagen production, enhances skin firmness, and provides long-lasting hydration, making your skin look smoother, fresher, and naturally rejuvenated. Whether you are concerned about dry skin, dullness, early signs of ageing, uneven texture, or loss of elasticity, our DHA-licensed aesthetic specialists create a personalized treatment plan tailored to your unique skin type and aesthetic goals.Skin booster treatments are suitable for the face, neck, décolletage, and hands, offering comprehensive skin rejuvenation with minimal discomfort and little to no downtime. At RamaCare Polyclinic, we prioritize patient safety, medical excellence, and natural-looking results.Every treatment begins with a detailed consultation and skin assessment to ensure you receive the most appropriate care using high-quality products and advanced injection techniques.',
+      description: 'Restore your skin\'s natural glow, hydration, and youthful appearance with Skin Boosters in Dubai at RamaCare Polyclinic.Our advanced injectable skin rejuvenation treatment is designed to deeply hydrate the skin from within, improve elasticity, refine texture, and reduce the appearance of fine lines for healthy, radiant-looking skin. Unlike traditional dermal fillers that primarily restore facial volume, skin boosters focus on improving overall skin quality by delivering hydrating hyaluronic acid into the deeper layers of the skin. Whether you are concerned about dry skin, dullness, early signs of ageing, uneven texture, or loss of elasticity, our DHA-licensed aesthetic specialists create a personalized treatment plan tailored to your unique skin type and aesthetic goals.Skin booster treatments are suitable for the face, neck, décolletage, and hands, offering comprehensive skin rejuvenation with minimal discomfort and little to no downtime.',
       rating: '500+ Happy Clients',  
       stats: [
         { id: 1, number: '92%', label: 'Patient Satisfaction' },
@@ -768,7 +768,7 @@ export const subSubcategoryContent = {
   'aesthetic-dermatology-dubai-skin-treatment-derma-roller': {
     hero: {
       subtitle: 'Natural Skin Repair for Smoother, Healthier-Looking Skin',
-      description: 'Restore smoother, healthier, and more radiant skin with derma roller treatment in Dubai at RamaCare Polyclinic.This advanced microneedling treatment stimulates your skin\'s natural healing process by encouraging collagen and elastin production, helping improve acne scars, fine lines, enlarged pores, uneven skin texture, and overall skin quality without surgery. Over time, aging, acne, sun exposure, and environmental factors can affect your skin\'s appearance, leaving it dull, rough, or uneven.Derma roller treatment uses a medical-grade device to create controlled micro-channels in the skin, activating natural collagen renewal and supporting healthier, firmer, and smoother-looking skin.As the skin repairs itself, you may notice gradual improvements in texture, elasticity, and overall radiance. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment by our DHA-licensed aesthetic specialists.We create a personalized treatment plan based on your skin type, concerns, and aesthetic goals to deliver safe, natural-looking results.Suitable for most skin types, derma roller treatment is a minimally invasive procedure with little downtime, making it an effective option for long-term skin rejuvenation and collagen stimulation.',
+      description: 'Restore smoother, healthier, and more radiant skin with derma roller treatment in Dubai at RamaCare Polyclinic.This advanced microneedling treatment stimulates your skin\'s natural healing process by encouraging collagen and elastin production, helping improve acne scars, fine lines, enlarged pores, uneven skin texture, and overall skin quality without surgery. Over time, aging, acne, sun exposure, and environmental factors can affect your skin\'s appearance, leaving it dull, rough, or uneven.As the skin repairs itself, you may notice gradual improvements in texture, elasticity, and overall radiance. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment by our DHA-licensed aesthetic specialists.We create a personalized treatment plan based on your skin type, concerns, and aesthetic goals to deliver safe, natural-looking results.',
       rating: '500+ Happy Clients',  
       stats: [
         { id: 1, number: '91%', label: 'Patient Satisfaction' },
@@ -1494,7 +1494,7 @@ rootCauses: [
   'aesthetic-dermatology-dubai-skin-treatment-skin-tightening': {
     hero: {
       subtitle: 'Advanced Non-Surgical Care for Firmer, Youthful Skin',
-      description: 'Loose or sagging skin is a natural result of aging, collagen loss, weight changes, pregnancy, and sun exposure.As collagen and elastin levels decline over time, the skin may lose its firmness, making fine lines, wrinkles, and skin laxity more noticeable.Fortunately, modern aesthetic treatments can effectively improve skin tightness and elasticity without the need for surgery. At RamaCare Polyclinic, we offer advanced skin tightening treatment in Dubai to help restore firmer, smoother, and younger-looking skin.Our non-surgical treatments stimulate your body\'s natural collagen production, improving skin elasticity while enhancing facial and body contours with natural-looking results.Every treatment plan is personalized to suit your skin type, concerns, and aesthetic goals. Whether you wish to tighten loose skin on the face, neck, jawline, abdomen, or other areas of the body, our experienced medical professionals use advanced technologies to deliver safe, effective, and comfortable care with minimal downtime.Our focus is on achieving gradual, long-lasting improvements while preserving your natural appearance. Choose RamaCare Polyclinic for trusted skin tightening treatment in Dubai and enjoy personalized care designed to help you achieve healthier, firmer, and more youthful-looking skin with confidence.',
+      description: 'Loose or sagging skin is a natural result of aging, collagen loss, weight changes, pregnancy, and sun exposure.As collagen and elastin levels decline over time, the skin may lose its firmness, making fine lines, wrinkles, and skin laxity more noticeable.Fortunately, modern aesthetic treatments can effectively improve skin tightness and elasticity without the need for surgery. At RamaCare Polyclinic, we offer advanced skin tightening treatment in Dubai to help restore firmer, smoother, and younger-looking skin.Our focus is on achieving gradual, long-lasting improvements while preserving your natural appearance. Choose RamaCare Polyclinic for trusted skin tightening treatment in Dubai and enjoy personalized care designed to help you achieve healthier, firmer, and more youthful-looking skin with confidence.',
       rating: '500+ Happy Clients',  
       stats: [
         { id: 1, number: '94%', label: 'Patient Satisfaction' },
@@ -2219,7 +2219,7 @@ rootCauses: [
   'aesthetic-dermatology-dubai-skin-treatment-microdermabrasion': {
    hero: {
             subtitle: 'Gentle Skin Resurfacing for a Brighter, Smoother & Healthier Complexion',
-            description: 'Dull skin, uneven texture, clogged pores, and the early signs of aging can affect your skin\'s natural radiance and confidence.Over time, dead skin cells accumulate on the skin\'s surface, making the complexion appear rough, tired, and less vibrant.Microdermabrasion is a safe, non-invasive skin resurfacing treatment that gently exfoliates the outer layer of the skin, revealing a smoother, fresher, and more youthful-looking complexion. At RamaCare Polyclinic, we provide professional microdermabrasion in Dubai using advanced exfoliation technology to remove dead skin cells, refine skin texture, minimize the appearance of enlarged pores, and promote healthy skin renewal.This gentle treatment also enhances the absorption of skincare products, leaving your skin feeling refreshed, softer, and naturally radiant. Suitable for most skin types, microdermabrasion in Dubai can help improve dullness, mild acne scars, uneven skin tone, fine lines, and rough skin texture with little to no downtime.Every treatment is personalized to your skin concerns and performed by experienced professionals who prioritize your comfort, safety, and long-term skin health. Restore your skin\'s natural glow with personalized microdermabrasion treatment in Dubai at RamaCare Polyclinic and enjoy healthier, smoother, and more radiant skin with confidence. ',
+            description: 'Dull skin, uneven texture, clogged pores, and the early signs of aging can affect your skin\'s natural radiance and confidence.Over time, dead skin cells accumulate on the skin\'s surface, making the complexion appear rough, tired, and less vibrant. At RamaCare Polyclinic, we provide professional microdermabrasion in Dubai using advanced exfoliation technology to remove dead skin cells, refine skin texture, minimize the appearance of enlarged pores, and promote healthy skin renewal.Restore your skin\'s natural glow with personalized microdermabrasion treatment in Dubai at RamaCare Polyclinic and enjoy healthier, smoother, and more radiant skin with confidence. ',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -2979,8 +2979,8 @@ choosingRightApproach: {
 
   'aesthetic-dermatology-dubai-skin-treatment-mesotherapy': {
      hero: {
-            subtitle: 'Revitalize Skin & Hair ',
-            description: 'Hair thinning, dull skin, pigmentation, and early aging often begin beneath the surface. At Rama Care Polyclinic, we offer Mesotherapy in Dubai to nourish skin and hair at a cellular level, restoring strength, glow, and vitality naturally under medical supervision.',
+            subtitle: 'Revitalize Your Skin & Hair with Advanced Mesotherapy ',
+            description: 'Healthy skin and strong hair depend on essential vitamins, minerals, amino acids, and proper hydration. Over time, aging, stress, hormonal changes, nutritional deficiencies, sun exposure, and environmental factors can reduce the skin\'s natural radiance and contribute to hair thinning, pigmentation, fine lines, and loss of elasticity.Because many of these concerns begin beneath the surface, topical products alone may not always provide the desired results.Mesotherapy in Dubai offers a minimally invasive solution that delivers nourishing ingredients directly where they are needed most. At RamaCare Polyclinic, we provide mesotherapy in Dubai using personalized treatment protocols designed to improve both skin and scalp health.The treatment involves administering carefully selected combinations of vitamins, minerals, amino acids, antioxidants, and hyaluronic acid into the targeted area to stimulate cell renewal, enhance hydration, improve circulation, and support natural collagen production.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -3063,38 +3063,40 @@ choosingRightApproach: {
       overview: {
         title: 'Understanding Mesotherapy in Dubai',
         problemIntro: {
-          title: 'The Problem: Why Skin & Hair Issues Persist',
-          description: 'Many skin and hair concerns begin below the surface, where topical products cannot reach effectively. Without proper nutrient delivery and circulation, the skin and scalp struggle to repair and regenerate.'
+          title: 'The Problem: Why Skin & Hair Concerns Persist',
+          description: 'Healthy skin and hair rely on adequate nutrition, proper blood circulation, balanced hormone levels, and the body\'s natural ability to repair damaged tissues. However, aging, environmental exposure, stress, poor nutrition, and lifestyle factors can gradually weaken these natural processes. As a result, the skin may lose its radiance and elasticity, while the scalp may struggle to support healthy hair growth. Since many of these changes occur beneath the skin\'s surface, topical skincare products and hair products often cannot deliver active ingredients deeply enough to address the underlying causes. Mesotherapy in Dubai is designed to target these deeper tissues by delivering essential nutrients directly where they are needed.'
         },
         solutionIntro: {
-          title: 'Our Solution: Mesotherapy in Dubai',
-          description: 'Our mesotherapy treatment in Dubai targets the root cause of skin and hair concerns by delivering essential nutrients directly into the skin or scalp for faster and more effective results.'
+          title: 'Personalized Mesotherapy in Dubai for Healthier Skin & Stronger Hair',
+          description: 'At RamaCare Polyclinic, we provide mesotherapy in Dubai using a personalized, doctor-supervised approach that targets the underlying causes of common skin and hair concerns rather than simply treating visible symptoms. By delivering carefully selected nutrients directly into the skin or scalp, mesotherapy helps improve cell function, stimulate collagen production, enhance blood circulation, and support the body\'s natural healing processes. This minimally invasive treatment is suitable for both facial rejuvenation and hair restoration, offering gradual, natural-looking improvements with minimal downtime.'
         },
       leftCards: [
   {
     id: 1,
     title: 'What Is Mesotherapy?',
     description:
-      'Mesotherapy in Dubai is a minimally invasive treatment that delivers vitamins, minerals, amino acids, and growth-supporting ingredients directly into the skin or scalp. This targeted nourishment improves skin quality and strengthens hair from the root.'
+      'Mesotherapy is a minimally invasive treatment that delivers a customized blend of vitamins, minerals, amino acids, antioxidants, hyaluronic acid, and other skin- or hair-supporting nutrients directly into the middle layer of the skin (mesoderm). By delivering these active ingredients precisely where they are needed, mesotherapy in Dubai helps stimulate natural cell regeneration, improve blood circulation, boost collagen production, and nourish the skin and scalp from within.Unlike topical creams or serums that remain on the skin\'s surface, mesotherapy targets the deeper tissues responsible for healthy skin and hair. At RamaCare Polyclinic, we customize every treatment according to your individual concerns, whether the goal is facial rejuvenation, improved skin hydration, pigmentation management, or strengthening hair follicles to reduce hair thinning and support healthier hair growth.'
   },
   {
     id: 2,
-    title: 'Who Is Mesotherapy For?',
-    description: 'Mesotherapy is suitable for individuals experiencing:',
+    title: 'Who Can Benefit from Mesotherapy?',
+    description: 'Mesotherapy is suitable for adults looking to improve the health and appearance of their skin or hair through a personalized, non-surgical treatment approach. You may benefit from mesotherapy in Dubai if you experience the following:',
     listItems: [
       'Hair thinning or excessive hair fall',
-      'Dull, dehydrated, or tired-looking skin',
-      'Fine lines and early aging signs',
-      'Pigmentation and uneven skin tone',
-      'Weak hair roots and reduced hair density',
-      'A professional consultation helps determine whether skin mesotherapy or hair mesotherapy is most suitable'
+      'Weak hair roots or reduced hair density',
+'Dull, dehydrated, or tired-looking skin',
+'Fine lines and early signs of skin aging',
+'Uneven skin tone or pigmentation concerns',
+'Loss of skin elasticity and firmness',
+'DDry skin requiring deep hydration',
+'A desire for natural skin and scalp rejuvenation without surgery'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Treatment Duration and Results',
     description:
-      'Each session typically takes 30–45 minutes, depending on the area treated. Results improve gradually with multiple sessions.'
+      'A typical mesotherapy session in Dubai takes approximately 30 to 45 minutes, depending on the treatment area and the condition being addressed. The procedure is performed with minimal discomfort, and most patients can return to their normal daily activities shortly afterward. Results develop gradually as the skin and scalp respond to the nutrients and natural regenerative processes. A series of treatment sessions is often recommended to achieve optimal and longer-lasting improvements, followed by maintenance treatments when appropriate.'
   }
 ],
      rootCauses: [
@@ -3102,7 +3104,7 @@ choosingRightApproach: {
     id: 1,
     title: 'Nutrient Deficiency at the Cellular Level',
     description:
-      'Lack of essential vitamins, minerals, and amino acids leads to dull skin, pigmentation, fine lines, and excessive hair fall.',
+      'A lack of essential vitamins, minerals, amino acids, and antioxidants can slow skin repair and weaken hair follicles. This may contribute to dull skin, dehydration, pigmentation, fine lines, and increased hair shedding.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
@@ -3110,229 +3112,306 @@ choosingRightApproach: {
     id: 2,
     title: 'Poor Blood Circulation',
     description:
-      'Reduced circulation limits oxygen supply, resulting in dark circles, uneven skin tone, slow healing, and weak hair follicles.',
+      'Reduced circulation limits the delivery of oxygen and nutrients to the skin and scalp. This can result in uneven skin tone, slower cell renewal, delayed healing, weakened hair follicles, and reduced hair growth.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'    
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
-    title: 'Collagen Loss & Premature Aging',
+    title: 'Collagen Loss & Premature Skin Aging',
     description:
-      'With age and environmental exposure, collagen production decreases, causing wrinkles, skin laxity, and loss of firmness.',
+      'As collagen and elastin production naturally decline with age, the skin gradually loses firmness, elasticity, and hydration. This contributes to fine lines, wrinkles, skin laxity, and a less youthful appearance.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'    
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
-    title: 'Hair Thinning & Weak Roots',
+    title: 'Hair Thinning & Weak Hair Roots',
     description:
-      'Stress, hormonal changes, and nutritional imbalance contribute to hair thinning and reduced hair density.',
+      'Hormonal changes, stress, nutritional deficiencies, genetics, and lifestyle factors may weaken hair follicles, leading to excessive hair fall, thinner hair, and reduced hair density over time.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
-    title: 'Environmental & Lifestyle Stress',
+    title: 'Environmental & Lifestyle Factors',
     description:
-      'Pollution, sun damage, poor diet, and stress accelerate skin aging and scalp damage.',
+      "Daily exposure to UV radiation, pollution, smoking, poor diet, dehydration, and chronic stress can accelerate skin aging and negatively affect scalp health. Over time, these factors may reduce the skin's natural glow, weaken its protective barrier, and contribute to premature hair and skin concerns.",
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'    
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   }
 ],
      quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical injectable therapy' },
-  { label: 'Anesthesia', value: 'Not usually required' },
-  { label: 'Downtime', value: 'Minimal' },
-  { label: 'Results', value: 'Progressive and natural' }
+  { label: 'Treatment Type', value: 'Minimally invasive injectable therapy' },
+  { label: 'Procedure Time', value: '30–45 minutes' },
+  { label: 'Anesthesia', value: 'Usually not required; topical numbing cream may be used if necessary' },
+  { label: 'Downtime', value: 'Minimal; most patients resume normal activities the same day' },
+  { label: 'Results', value: 'Gradual improvement over multiple sessions' },
+  { label: 'Recommended Sessions', value: 'Personalized according to individual needs' },
+  { label: 'Suitable For', value: 'Skin rejuvenation and hair restoration' },
+  { label: 'Possible Side Effects', value: 'Mild redness, swelling, tenderness, or temporary bruising' }
 ],
-        approachCards: [
+       approachCards: [
   {
     id: 1,
     title: 'Direct Nutrient Infusion',
     description:
-      'Mesotherapy delivers a customized blend of vitamins, minerals, amino acids, and growth factors exactly where your skin or hair needs them.',
-    hasLearnMore: false,
-    expandedContent: null
+      'One of the key advantages of mesotherapy in Dubai is its ability to deliver active ingredients precisely where they are needed.',
+    hasLearnMore: true,
+    expandedContent:
+      'Depending on your treatment goals, a customized blend of vitamins, minerals, amino acids, antioxidants, hyaluronic acid, and other regenerative nutrients is administered into the targeted skin or scalp. This direct delivery helps nourish tissues more effectively than topical products alone.'
   },
   {
     id: 2,
-    title: 'Enhanced Circulation & Oxygen Supply',
+    title: 'Enhanced Blood Circulation & Oxygen Supply',
     description:
-      'Improves blood flow to support healthier skin cells and stronger hair follicles.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Healthy circulation plays an essential role in maintaining vibrant skin and healthy hair growth.',
+    hasLearnMore: true,
+    expandedContent:
+      'Mesotherapy helps improve microcirculation within the treated area, increasing the delivery of oxygen and essential nutrients to skin cells and hair follicles. Improved circulation supports tissue repair, encourages healthy cell turnover, and creates an environment that promotes stronger, healthier skin and hair.'
   },
   {
     id: 3,
     title: 'Skin Rejuvenation & Anti-Aging Support',
     description:
-      'Stimulates collagen and elastin production, improving skin texture, hydration, tone, and elasticity.',
-    hasLearnMore: false,
-    expandedContent: null
+      'For facial rejuvenation, mesotherapy stimulates the production of collagen and elastin responsible for maintaining skin firmness, elasticity, and hydration.',
+    hasLearnMore: true,
+    expandedContent:
+      'As collagen levels gradually increase, many patients notice smoother skin texture, improved hydration, enhanced skin tone, reduced appearance of fine lines, and a healthier, more radiant complexion.'
   },
   {
     id: 4,
     title: 'Hair Growth & Follicle Strengthening',
     description:
-      'Reduces hair fall, strengthens roots, and promotes natural hair regrowth.',
-    hasLearnMore: false,
-    expandedContent: null
+      'When performed on the scalp, mesotherapy delivers essential nutrients directly to the hair follicles to support healthier hair growth.',
+    hasLearnMore: true,
+    expandedContent:
+      'The treatment helps strengthen weakened hair roots, reduce excessive hair shedding, improve scalp health, and encourage thicker, healthier-looking hair. Results develop gradually over a series of treatment sessions as the hair growth cycle naturally improves.'
   },
   {
     id: 5,
-    title: 'Personalized Treatment Approach',
+    title: 'Personalized Treatment Plans',
     description:
-      'Each mesotherapy in Dubai session is tailored to your specific skin or hair condition for safe, effective, and visible results.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Every patient’s skin and hair concerns are different, so each treatment plan is individually customized.',
+    hasLearnMore: true,
+    expandedContent:
+      'Before beginning treatment, our experienced medical professionals perform a comprehensive assessment of your skin or scalp condition, medical history, and treatment goals. Based on this evaluation, we develop a customized mesotherapy plan tailored to your individual needs, ensuring safe, effective, and natural-looking results.'
+  },
+  {
+    id: 6,
+    title: 'Ongoing Care & Long-Term Skin and Hair Health',
+    description:
+      'Achieving lasting improvements requires more than a single treatment session.',
+    hasLearnMore: true,
+    expandedContent:
+      'Following your mesotherapy in Dubai procedure, our team provides personalized aftercare advice, skincare recommendations, scalp care guidance, and lifestyle suggestions to support your results. Regular maintenance sessions may also be recommended to help preserve healthier skin, stronger hair, and long-term rejuvenation.'
   }
 ]
       },
-   healingJourney: {
-  title: 'Your Personalized Skin & Hair Rejuvenation Journey',
+  healingJourney: {
+  title: 'Your Personalized Mesotherapy Journey',
   description:
-    'Our mesotherapy in Dubai treatment follows a safe, structured, and results-driven approach designed to improve skin quality, hair health, and overall appearance. Each stage is carefully planned by experienced medical professionals to ensure comfort, safety, and visible improvement.',
+    'At RamaCare Polyclinic, our Mesotherapy in Dubai treatment follows a structured, doctor-supervised approach designed to improve skin health and support stronger, healthier hair. Every stage of the treatment is tailored to your individual concerns, ensuring safe, effective, and long-lasting results. Whether you are receiving mesotherapy for facial rejuvenation or hair restoration, our experienced medical team develops a personalized treatment plan focused on achieving natural-looking improvements with minimal downtime.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Week 1: Initial Consultation & Assessment (60 Minutes)',
+      title: 'Initial Consultation & Comprehensive Assessment',
       duration: 'Step 1',
       description:
-        'Your journey begins with a detailed consultation to determine whether mesotherapy in Dubai is suitable for your skin or hair concerns.',
+        'Your journey begins with a detailed consultation to understand your concerns, medical history, lifestyle, and treatment goals. Our doctors carefully evaluate your skin or scalp condition, assess factors contributing to your concerns, and determine whether mesotherapy is the most appropriate treatment. This thorough assessment allows us to create a personalized treatment plan based on your individual needs.',
       keyActivities: [
-        'Discussion of treatment goals and expectations',
-        'Medical history review and skin or scalp assessment',
-        'Evaluation of concerns such as hair fall, pigmentation, dull skin, fine lines, or dark circles',
-        'Identification of treatment areas',
-        'Creation of a customized mesotherapy treatment plan in Dubai'
+        'Detailed discussion of treatment goals and expectations',
+        'Review of medical history and lifestyle factors',
+        'Comprehensive skin or scalp assessment',
+        'Evaluation of pigmentation, dehydration, hair thinning, or early signs of aging',
+        'Development of a customized mesotherapy treatment plan'
       ],
       side: 'right'
     },
     {
       id: 2,
       number: '02',
-      title: 'Weeks 1–2: Preparation Phase',
+      title: 'Personalized Treatment Preparation',
       duration: 'Step 2',
       description:
-        'Proper preparation enhances the effectiveness of mesotherapy treatment in Dubai and ensures a smooth treatment experience.',
+        'Proper preparation helps maximize the effectiveness of mesotherapy in Dubai while ensuring a comfortable treatment experience. Before the procedure, the treatment area is cleansed, and our team explains every step of the process, expected results, and aftercare recommendations. Depending on your needs, topical numbing cream may be applied to improve comfort during treatment.',
       keyActivities: [
-        'Cleansing and hydration guidance',
-        'Temporary avoidance of harsh skincare or hair products',
-        'Lifestyle and nutritional recommendations',
-        'Pre-treatment safety checks'
+        'Cleansing and preparation of the treatment area',
+        'Personalized treatment planning',
+        'Selection of the appropriate mesotherapy solution',
+        'Application of topical numbing cream when required',
+        'Pre-treatment guidance and safety assessment'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Weeks 3–12: Active Mesotherapy Sessions',
+      title: 'Mesotherapy Treatment Session',
       duration: 'Step 3',
       description:
-        'This phase includes regular mesotherapy sessions in Dubai, where a combination of vitamins, minerals, amino acids, and growth-supporting ingredients are delivered directly into the skin or scalp.',
+        'During the procedure, carefully selected vitamins, minerals, amino acids, hyaluronic acid, antioxidants, and other regenerative ingredients are delivered into the targeted skin or scalp using precise micro-injections. These nutrients help improve blood circulation, stimulate collagen production, nourish hair follicles, and activate the body\'s natural repair processes. Treatment sessions typically last 30 to 45 minutes, depending on the area being treated.',
       keyActivities: [
-        '1–2 sessions per week, based on condition and treatment area',
-        'Micro-injections administered by trained professionals',
-        'Improved circulation and nutrient absorption',
-        'Support for skin rejuvenation or hair growth',
-        'Continuous progress monitoring and plan adjustments'
+        'Precise micro-injections performed by experienced professionals',
+        'Delivery of customized nutrient solutions',
+        'Stimulation of collagen production and skin renewal',
+        'Improvement of scalp circulation and hair follicle nourishment when treating hair concerns',
+        'Continuous monitoring of patient comfort throughout the procedure'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Months 4–12: Maintenance & Follow-Up Care',
+      title: 'Follow-Up & Maintenance Care',
       duration: 'Step 4',
       description:
-        'Maintenance sessions help support the improvements achieved through mesotherapy in Dubai and maintain healthy skin or hair over time.',
+        'Mesotherapy produces gradual improvements that continue to develop over several weeks. After each treatment, our medical team provides personalized aftercare instructions to support healing and maximize your results. Depending on your condition, a series of treatment sessions followed by maintenance appointments may be recommended to preserve healthier skin or stronger hair over the long term.',
       keyActivities: [
-        'Periodic maintenance treatments',
-        'Regular skin or scalp assessments',
-        'Personalized home-care guidance',
-        'Ongoing professional support'
+        'Assessment of treatment progress and clinical improvement',
+        'Personalized skincare or scalp care recommendations',
+        'Guidance on hydration, nutrition, and healthy lifestyle habits',
+        'Scheduling maintenance sessions when appropriate',
+        'Ongoing professional support for long-term skin and hair health'
       ],
       side: 'left'
     }
   ]
 },
-
       benefits: {
-        title: 'Clinically Observed Benefits',
-        description: 'Based on 15+ years of providing skin treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Reduced hair fall',
-            percentage: 91,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Stronger hair roots',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: '  Improved skin hydration',
-            percentage: 95,
-            description: null
-          },
-          {
-            id: 4,
-            title: ' Brighter complexion',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Better scalp circulation',
-            percentage: 93,
-            description: null
-          },
-           {
-            id: 6,
-            title: ' Healthier skin texture',
-            percentage: 93,
-            description: null
-          }
-        ],
-        comparisonTitle: 'Mesotherapy vs. Topical Treatments',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Mesotherapy',
-          traditional: 'Topical Products'
-        },
-        comparisonData: [
-         {
-    feature: 'Depth of Action',
-    ayurvedic: 'Works in deeper layers',
-    conventional: 'Surface-level'
+  title: 'Clinically Observed Benefits of Mesotherapy in Dubai',
+  description:
+    'At RamaCare Polyclinic, our Mesotherapy in Dubai treatment is designed to improve both skin and scalp health by delivering essential nutrients directly to the targeted area. With over 15 years of experience in advanced skin and hair treatments, our doctor-led approach focuses on stimulating natural regeneration, enhancing circulation, and supporting long-term skin rejuvenation and hair restoration. Individual outcomes vary depending on the patient\'s condition, treatment plan, and lifestyle.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced Hair Fall',
+      percentage: 91,
+      description:
+        'Mesotherapy helps nourish weakened hair follicles with essential vitamins, minerals, and amino acids.',
+      hasLearnMore: true,
+      expandedContent:
+        'Mesotherapy helps nourish weakened hair follicles with essential vitamins, minerals, and amino acids, supporting healthier hair growth while reducing excessive hair shedding and improving overall scalp health.'
+    },
+    {
+      id: 2,
+      title: 'Stronger Hair Roots',
+      percentage: 88,
+      description:
+        'Improves nutrient delivery and blood circulation to strengthen hair roots.',
+      hasLearnMore: true,
+      expandedContent:
+        'By improving nutrient delivery and blood circulation to the scalp, mesotherapy strengthens hair roots, helping improve hair density and supporting healthier, thicker-looking hair over time.'
+    },
+    {
+      id: 3,
+      title: 'Improved Skin Hydration',
+      percentage: 95,
+      description:
+        'Replenishes moisture within the skin for a softer, smoother appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'The treatment replenishes moisture within the skin and enhances hydration from within, leaving the skin feeling softer, smoother, and more refreshed while improving its natural barrier function.'
+    },
+    {
+      id: 4,
+      title: 'Brighter & More Even Complexion',
+      percentage: 85,
+      description:
+        'Stimulates healthy skin renewal for brighter, healthier-looking skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'Mesotherapy stimulates healthy skin cell renewal, helping reduce dullness and improve overall skin tone for a brighter, healthier, and more radiant complexion.'
+    },
+    {
+      id: 5,
+      title: 'Better Scalp Circulation',
+      percentage: 93,
+      description:
+        'Improves microcirculation to nourish the scalp and hair follicles.',
+      hasLearnMore: true,
+      expandedContent:
+        'Improved microcirculation delivers more oxygen and essential nutrients to the scalp, creating an environment that supports stronger hair follicles and healthier hair growth.'
+    },
+    {
+      id: 6,
+      title: 'Healthier Skin Texture & Elasticity',
+      percentage: 93,
+      description:
+        'Supports collagen and elastin production for firmer, healthier skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'By encouraging collagen and elastin production, mesotherapy helps improve skin texture, firmness, and elasticity while reducing the appearance of fine lines and promoting smoother, healthier-looking skin.'
+    }
+  ],
+
+  comparisonTitle: 'Mesotherapy vs. Topical Treatments',
+  comparisonDescription:
+    "When addressing concerns such as hair thinning, dull skin, dehydration, pigmentation, or early signs of aging, it's important to choose a treatment that targets the underlying cause rather than only the visible symptoms. While topical creams, serums, and hair products can support your daily skincare or haircare routine, they often remain on the surface and have limited ability to reach the deeper layers where skin repair and hair follicle health begin. Mesotherapy in Dubai delivers carefully selected nutrients directly into the skin or scalp, helping stimulate natural regeneration, improve circulation, and support healthier skin and stronger hair from within. At RamaCare Polyclinic, every mesotherapy treatment is customized according to your individual concerns, ensuring safe, effective, and medically supervised care.",
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Mesotherapy',
+    traditional: 'Topical Treatments'
   },
-  {
-    feature: 'Nutrient Delivery',
-    ayurvedic: 'Direct and targeted',
-    conventional: 'Limited absorption'
-  },
-  {
-    feature: 'Hair & Skin Repair',
-    ayurvedic: 'Yes',
-    conventional: 'Temporary support'
-  },
-  {
-    feature: 'Results',
-    ayurvedic: 'Long-term improvement',
-    conventional: 'Short-term effect'
-  },
-  {
-    feature: 'Medical Supervision',
-    ayurvedic: 'Yes',
-    conventional: 'No'
-  }
-        ]
+  comparisonData: [
+    {
+      feature: 'Treatment and Approach',
+      ayurvedic:
+        'Delivers vitamins, minerals, amino acids, hyaluronic acid, and other nutrients directly into the skin or scalp',
+      conventional:
+        'Applies creams, serums, lotions, or hair products to the skin or scalp surface'
+    },
+    {
+      feature: 'Depth of Action',
+      ayurvedic:
+        'Targets the deeper layers where collagen production, tissue repair, and hair follicle nourishment occur',
+      conventional:
+        'Primarily works on the outer surface with limited penetration'
+    },
+    {
+      feature: 'Nutrient Delivery',
+      ayurvedic:
+        'Direct, targeted delivery for improved absorption and effectiveness',
+      conventional:
+        'Limited absorption through the skin barrier'
+    },
+    {
+      feature: 'Skin & Hair Benefits',
+      ayurvedic:
+        'Supports collagen production, improves skin hydration, strengthens hair follicles, and promotes natural regeneration',
+      conventional:
+        'Provides temporary hydration, protection, and cosmetic improvement'
+    },
+    {
+      feature: 'Results',
+      ayurvedic:
+        'Gradual, long-lasting improvements with a personalized treatment plan',
+      conventional:
+        'Temporary benefits that require continuous daily use'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic:
+        'Performed by experienced medical professionals following personalized treatment protocols',
+      conventional:
+        'Self-administered without medical supervision'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic:
+        'Minimal, with most patients returning to normal activities the same day',
+      conventional: 'None'
+    },
+    {
+      feature: 'Best Suited For',
+      ayurvedic:
+        'Individuals seeking targeted skin rejuvenation, hair restoration, and long-term improvement',
+      conventional:
+        'Individuals looking for routine daily skincare or haircare maintenance'
+    }
+  ]
       },
     pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -3626,12 +3705,60 @@ choosingRightApproach: {
             description: 'Patient Reviews'
           }
       ]
-    }
+    },
+      whyChooseSection: {
+        title: 'Why Choose RamaCare Polyclinic for Mesotherapy in Dubai',
+        intro: 'Choosing the right clinic plays an important role in achieving safe, effective, and long-lasting results from mesotherapy in Dubai. At RamaCare Polyclinic, we combine experienced medical care with personalized treatment plans to address your unique skin or hair concerns. Every patient begins with a comprehensive consultation, where our doctors assess skin quality, scalp condition, medical history, lifestyle factors, and aesthetic goals before recommending the most suitable mesotherapy solution.',
+        features: [
+          {
+            id: 1,
+            title: 'High-Quality Formulations',
+            description: 'Our treatments are performed using carefully selected, high-quality mesotherapy formulations that contain vitamins, minerals, amino acids, antioxidants, and hydrating ingredients tailored to your individual needs.'
+          },
+          {
+            id: 2,
+            title: 'Targeted, Personalized Care',
+            description: 'Whether you are seeking facial rejuvenation, improved skin hydration, pigmentation management, or support for healthier hair growth, every procedure is designed to deliver targeted nourishment while maintaining the highest standards of patient safety.'
+          },
+          {
+            id: 3,
+            title: 'Comprehensive Patient Support',
+            description: 'Beyond the treatment itself, we believe in providing complete patient care. Our medical team offers clear guidance before, during, and after each session, ensuring you understand your treatment plan and expected results.'
+          },
+          {
+            id: 4,
+            title: 'Long-Term Results',
+            description: 'Through ongoing follow-up appointments and personalized skincare or scalp care recommendations, we help you maintain healthier skin, stronger hair, and long-term improvements. At RamaCare Polyclinic, our focus is on achieving natural-looking results through evidence-based, doctor-led care in a professional clinical environment.'
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: 'Recovery & Aftercare',
+        resultsDescription: 'One of the key benefits of mesotherapy in Dubai is that it requires minimal downtime, allowing most patients to resume their normal daily routine shortly after treatment. Mild redness, slight swelling, tenderness, or small injection marks may appear in the treated area immediately after the procedure, but these effects are temporary and generally resolve within a few hours to a couple of days.',
+        resultPoints: [
+          'Following the recommended aftercare instructions is essential for supporting the body\'s natural healing process and maximizing treatment outcomes.',
+          'Patients are encouraged to keep the treated skin or scalp clean, stay well hydrated, and avoid touching or rubbing the treated area unnecessarily during the first 24 hours.',
+          'It is also advisable to avoid strenuous exercise, excessive heat, saunas, steam rooms, swimming pools, and prolonged sun exposure for the first day or two after treatment.',
+          'For facial mesotherapy, daily use of a broad-spectrum sunscreen and a gentle skincare routine helps protect the skin while collagen production continues.',
+          'For hair mesotherapy, patients should avoid harsh hair products or chemical treatments for a short period following the procedure.',
+          'Maintaining a balanced diet, managing stress, getting adequate sleep, and following a healthy lifestyle can further support skin regeneration and hair health.',
+          'Our medical team schedules follow-up appointments when needed to monitor progress and recommend maintenance sessions based on your individual treatment goals.'
+        ]
+      },
+      whenToConsider: {
+        title: 'Who Is a Suitable Candidate for Mesotherapy?',
+        intro: 'Mesotherapy in Dubai is suitable for adults who want to improve the health and appearance of their skin or hair through a minimally invasive, non-surgical treatment. It is commonly recommended for individuals experiencing hair thinning, excessive hair fall, dull or dehydrated skin, uneven skin tone, pigmentation, fine lines, early signs of aging, or reduced skin elasticity.',
+        points: [
+          'The treatment is also an excellent option for those seeking natural skin rejuvenation, improved hydration, stronger hair follicles, or enhanced scalp health without surgery or extended recovery time.',
+          'Because every patient has different concerns, mesotherapy solutions are carefully customized to target specific skin and hair conditions.'
+        ],
+        closing: 'During your consultation at RamaCare Polyclinic, our experienced doctors evaluate your medical history, skin or scalp condition, and treatment expectations to determine whether mesotherapy is the right option for you. If another treatment would provide better results, we will recommend a personalized solution that best supports your long-term skin and hair health while ensuring safe, effective, and natural-looking outcomes.'
+      }
   },
   'aesthetic-dermatology-dubai-skin-treatment-skin-allergy': {
      hero: {
             subtitle: 'Expert Care for Itching, Rashes & Sensitive Skin Relief',
-            description: 'Skin allergies can cause persistent itching, redness, rashes, swelling, dryness, and irritation that affect both your comfort and confidence.These reactions may be triggered by allergens, environmental factors, skincare products, food, medications, or underlying skin conditions.Without proper diagnosis and treatment, allergy symptoms can recur, worsen over time, and interfere with your daily activities and overall skin health. At RamaCare Polyclinic, we provide medically guided Skin Allergy Treatment in Dubai to accurately identify the underlying cause of your symptoms and develop a personalised treatment plan tailored to your needs.Our experienced medical professionals focus on relieving itching, reducing inflammation, calming irritated skin, and helping prevent future flare-ups through evidence-based medical care. Whether you are experiencing allergic skin rashes, eczema, contact dermatitis, hives (urticaria), or other allergy-related skin concerns, we offer comprehensive assessment and treatment to restore healthier skin safely and effectively.Every treatment plan is designed to provide symptom relief while supporting long-term skin health and improving your quality of life. If you are looking for trusted skin allergy treatment in Dubai, RamaCare Polyclinic offers compassionate, patient-centered care to help you achieve healthier, calmer, and more comfortable skin with confidence.',
+            description: 'Skin allergies can cause persistent itching, redness, rashes, swelling, dryness, and irritation that affect both your comfort and confidence. At RamaCare Polyclinic, we provide medically guided Skin Allergy Treatment in Dubai to accurately identify the underlying cause of your symptoms and develop a personalised treatment plan tailored to your needs.Our experienced medical professionals focus on relieving itching, reducing inflammation, calming irritated skin, and helping prevent future flare-ups through evidence-based medical care. Whether you are experiencing allergic skin rashes, eczema, contact dermatitis, hives (urticaria), or other allergy-related skin concerns, we offer comprehensive assessment and treatment to restore healthier skin safely and effectively.Every treatment plan is designed to provide symptom relief while supporting long-term skin health and improving your quality of life.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -4088,6 +4215,69 @@ comparisonData: [
   }
 ]
       },
+  aftercareContent: {
+    resultsTitle: 'Recovery & Skin Care After Treatment',
+    resultsDescription: 'Recovery following skin allergy treatment in Dubai depends on the type and severity of the allergic reaction. Many patients begin to notice improvement in itching, redness, and irritation soon after starting treatment, though complete recovery varies from person to person. Following your personalized treatment plan and skincare recommendations plays an important role in supporting healthy skin and preventing future flare-ups.',
+    resultPoints: [
+      'Use only the skincare products recommended by your healthcare professional',
+      'Keep your skin well moisturized to help restore the natural skin barrier',
+      'Avoid scratching affected areas to reduce irritation and minimize the risk of infection',
+      'Identify and avoid known allergy triggers whenever possible',
+      'Protect your skin from excessive heat, harsh chemicals, and unnecessary sun exposure',
+      'Wear loose, breathable clothing if skin irritation is present',
+      'Take medications exactly as prescribed and attend follow-up appointments as recommended'
+    ],
+    additionalInfo: {
+      title: 'Long-Term Skin Health',
+      description: 'Maintaining a healthy skincare routine and recognizing early signs of an allergic reaction can help reduce recurrence and support long-term skin health.'
+    }
+  },
+  whyChooseContent: {
+    title: 'Why Choose RamaCare Polyclinic for Skin Allergy Treatment in Dubai?',
+    intro: 'Choosing the right healthcare provider is essential for effectively managing skin allergies and preventing recurring flare-ups. At RamaCare Polyclinic, we provide patient-centered skin allergy treatment in Dubai that focuses on identifying the underlying cause of your symptoms rather than simply masking them. Our experienced medical professionals carefully evaluate your condition, review your medical history, and develop a personalized treatment plan designed to provide safe, effective, and long-term relief. We understand that every skin allergy is different. Some reactions may be triggered by environmental allergens, cosmetics, foods, medications, or underlying skin conditions such as eczema or contact dermatitis. For this reason, every patient receives an individual assessment to help identify possible triggers and determine the most appropriate treatment approach. Our goal is not only to relieve itching, redness, rashes, and skin irritation but also to strengthen the skin barrier, improve skin comfort, and reduce the risk of future allergic reactions. We also educate patients about proper skincare, trigger avoidance, and lifestyle measures that support healthier skin over the long term. At RamaCare Polyclinic, we combine medical expertise, personalized care, and evidence-based treatment to help you regain healthier skin and improve your quality of life through comprehensive skin allergy treatment in Dubai.',
+    features: [
+      {
+        id: 1,
+        title: 'Patient-Centered Care',
+        description: 'We focus on identifying the underlying cause of your symptoms, not just masking them'
+      },
+      {
+        id: 2,
+        title: 'Experienced Medical Professionals',
+        description: 'Our team carefully evaluates your condition and medical history'
+      },
+      {
+        id: 3,
+        title: 'Personalized Treatment Plans',
+        description: 'Customized care based on your individual allergy triggers and symptoms'
+      },
+      {
+        id: 4,
+        title: 'Skin Barrier Support',
+        description: 'We help strengthen your skin barrier and improve long-term skin health'
+      },
+      {
+        id: 5,
+        title: 'Education & Prevention',
+        description: 'We teach you about proper skincare and trigger avoidance'
+      }
+    ]
+  },
+  whenToConsider: {
+    title: 'When Should You See a Doctor for a Skin Allergy?',
+    intro: 'Occasional mild skin irritation may improve with simple skincare measures, but persistent or recurring symptoms should always be evaluated by a qualified healthcare professional. Seeking early medical attention allows the underlying cause to be identified and treated before the condition becomes more severe or chronic.',
+    points: [
+      'Persistent itching, redness, or skin irritation lasting several days',
+      'Recurrent rashes or hives that continue to return',
+      'Swelling of the skin or face following exposure to a suspected allergen',
+      'Dry, cracked, or peeling skin that does not improve with routine skincare',
+      'Skin reactions after using cosmetics, medications, or skincare products',
+      'Symptoms that interfere with sleep, work, or daily activities',
+      'Signs of infection, such as increasing pain, pus, or fever',
+      'Frequent eczema or contact dermatitis flare-ups'
+    ],
+    closing: 'Early diagnosis and appropriate treatment can help relieve symptoms, identify potential allergy triggers, and reduce the likelihood of future flare-ups. If you are experiencing ongoing skin discomfort, the experienced medical team at RamaCare Polyclinic can provide a comprehensive assessment and personalized skin allergy treatment in Dubai to help restore healthier, more comfortable skin.'
+  },
     pricing: {
   title: 'Transparent Pricing & Customized Treatment Packages',
   description:
@@ -4860,6 +5050,67 @@ comparisonData: [
   }
 ]
       },
+  aftercareContent: {
+    resultsTitle: 'Recovery & Aftercare',
+    resultsDescription: 'One of the major advantages of Botox for hyperhidrosis in Dubai is the minimal recovery time. Most patients can return to work and their usual daily activities immediately after treatment. Mild redness, swelling, or tenderness at the injection sites may occur temporarily but generally resolves within a short period. Following the recommended aftercare instructions helps maximize treatment effectiveness and minimize the risk of irritation.',
+    resultPoints: [
+      'Avoid strenuous exercise and heavy physical activity for the first 24 hours',
+      'Do not massage or rub the treated area immediately after the procedure',
+      'Keep the treated skin clean and dry for the remainder of the day',
+      'Avoid excessive heat exposure, including saunas and steam rooms, for 24 hours if advised',
+      'Follow all personalized aftercare instructions provided by your healthcare professional',
+      'Attend follow-up appointments if recommended to monitor your treatment outcome'
+    ],
+    additionalInfo: {
+      title: 'Expected Results Timeline',
+      description: 'Most patients begin noticing a reduction in sweating within 2 to 5 days, with full results typically developing over the following one to two weeks. Periodic maintenance treatments can help maintain long-term sweat control and consistent results.'
+    }
+  },
+  whyChooseContent: {
+    title: 'Why Choose RamaCare Polyclinic for Botox Hyperhidrosis in Dubai?',
+    intro: 'Choosing the right clinic is essential for achieving safe, effective, and long-lasting results from Botox for hyperhidrosis in Dubai. At RamaCare Polyclinic, we provide personalized treatment plans tailored to each patient\'s symptoms, treatment goals, and medical history. Our experienced medical professionals carefully assess the severity of excessive sweating before recommending the most appropriate treatment approach. We understand that hyperhidrosis affects more than physical comfort—it can influence confidence, work performance, social interactions, and overall quality of life. Our goal is to provide treatment that not only reduces excessive sweating but also helps patients regain comfort in their everyday activities. Using clinically established injection techniques and high-quality botulinum toxin, we focus on precise treatment of the affected sweat glands while maintaining patient safety and comfort throughout the procedure. Every treatment is performed in a professional clinical environment with careful attention to hygiene, patient education, and follow-up care. From your initial consultation to your post-treatment review, our team provides ongoing guidance and support to help you achieve the best possible outcome.',
+    features: [
+      {
+        id: 1,
+        title: 'Personalized Treatment Plans',
+        description: 'We create customized care based on your individual symptoms, medical history, and treatment goals'
+      },
+      {
+        id: 2,
+        title: 'Experienced Medical Professionals',
+        description: 'Our team has expertise in assessing and treating hyperhidrosis effectively'
+      },
+      {
+        id: 3,
+        title: 'Clinically Established Techniques',
+        description: 'We use proven injection methods and high-quality botulinum toxin for precise treatment'
+      },
+      {
+        id: 4,
+        title: 'Focus on Patient Comfort',
+        description: 'We prioritize your safety and comfort throughout the entire treatment process'
+      },
+      {
+        id: 5,
+        title: 'Ongoing Support & Follow-Up',
+        description: 'From consultation to post-treatment review, we provide guidance and support for best outcomes'
+      }
+    ]
+  },
+  whenToConsider: {
+    title: 'Who Is a Good Candidate for Botox Hyperhidrosis Treatment?',
+    intro: 'Botox hyperhidrosis treatment in Dubai may be suitable for adults who experience excessive sweating that cannot be adequately controlled with antiperspirants, prescription medications, or lifestyle changes. A comprehensive medical consultation helps determine whether this treatment is appropriate based on your symptoms, overall health, and treatment goals.',
+    points: [
+      'Experience excessive sweating of the underarms, palms, soles of the feet, or forehead',
+      'Sweat excessively even in cool temperatures or while at rest',
+      'Frequently change clothes because of excessive perspiration',
+      'Notice sweating that affects work, sports, or social interactions',
+      'Have not achieved satisfactory results with topical antiperspirants or other conservative treatments',
+      'Want a non-surgical treatment with minimal downtime',
+      'Are looking for longer-lasting control of excessive sweating'
+    ],
+    closing: 'Before recommending treatment, our medical professionals perform a detailed assessment to confirm the diagnosis, discuss your medical history, explain the expected benefits and possible limitations, and create a personalized treatment plan. This patient-focused approach helps ensure that Botox for hyperhidrosis in Dubai is both safe and appropriate for your individual needs.'
+  },
   pricing: {
   title: 'Transparent Pricing & Treatment Packages',
   description:
@@ -5206,7 +5457,7 @@ comparisonData: [
   'aesthetic-dermatology-dubai-skin-treatment-carboxy-therapy': {
      hero: {
             subtitle: 'Advanced Skin & Body Rejuvenation with Medical Precision',
-            description: 'Dull skin, dark circles, stretch marks, and uneven texture can affect confidence. At ramacarepolyclinic, we offer medically supervised Carboxy Therapy in Dubai to improve skin oxygenation, boost circulation, and support natural collagen production for healthier, refreshed skin.',
+            description: 'Dull skin, dark circles, stretch marks, fine lines, and uneven skin texture can affect both your appearance and confidence.As we age, natural collagen production slows down, and blood circulation becomes less efficient, making the skin look tired, less firm, and lacking in radiance.Environmental factors, stress, and lifestyle habits can further contribute to premature skin ageing and reduced skin vitality. At RamaCare Polyclinic, we offer medically supervised carboxy therapy in Dubai to improve skin oxygenation, stimulate healthy blood circulation, and support the body\'s natural collagen production.This minimally invasive treatment uses controlled medical-grade carbon dioxide (CO₂) to encourage skin rejuvenation, helping improve skin texture, elasticity, and overall appearance without surgery.you are seeking treatment for dark under-eye circles, stretch marks, cellulite, fine lines, acne scars, or dull skin, our personalized approach focuses on achieving healthier, smoother, and more refreshed-looking skin while maintaining natural-looking results.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -5288,281 +5539,387 @@ comparisonData: [
         ]
       },
       overview: {
-        title: 'Understanding Carboxy Therapy',
+        title: 'Understanding Carboxy Therapy in Dubai',
         problemIntro: {
           title: 'The Problem: Skin & Body Concerns',
-          description: 'Many patients seek visible improvement without surgery or downtime.'
+          description: 'Many skin and body concerns develop gradually due to aging, reduced collagen production, poor circulation, environmental damage, and lifestyle factors. While these changes are common, they can affect skin quality, body contours, and self-confidence. Carboxytherapy in Dubai provides a non-surgical approach to improving these concerns by stimulating the body\'s natural healing and rejuvenation processes.'
         },
         solutionIntro: {
   title: 'Our Solution: Carboxy Therapy in Dubai',
   description:
-    'Our Carboxy Therapy in Dubai is a non-surgical treatment that uses controlled carbon dioxide infusion to improve circulation and skin rejuvenation.'
+    'At RamaCare Polyclinic, our Carboxy Therapy in Dubai is designed to naturally rejuvenate the skin and improve body contours through the controlled administration of medical-grade carbon dioxide (CO₂). This minimally invasive treatment stimulates blood circulation, enhances oxygen delivery to the tissues, and activates the body\'s natural healing response. By encouraging collagen and elastin production, Carboxy therapy helps improve skin texture, firmness, and overall appearance without surgery or prolonged recovery.Every treatment begins with a detailed consultation to assess your skin condition, treatment goals, and medical history. Our experienced medical professionals then create a personalized treatment plan to address concerns such as dark circles, cellulite, stretch marks, fine lines, skin laxity, and dull or uneven skin tone while ensuring patient comfort and safety throughout the procedure.'
 },
        leftCards: [
   {
     id: 1,
     title: 'What Is Carboxy Therapy?',
     description:
-      'Carboxy Therapy is a non-surgical aesthetic treatment that uses controlled medical carbon dioxide to increase blood flow, improve oxygen supply, and stimulate collagen, helping skin repair and rejuvenate naturally.'
+      'Carboxy Therapy in Dubai is a minimally invasive aesthetic treatment that uses controlled medical-grade carbon dioxide (CO₂) to stimulate blood circulation, improve oxygen delivery to the tissues, and encourage natural collagen and elastin production. The body responds to the carbon dioxide by increasing oxygen-rich blood flow to the treated area, helping repair damaged tissues, improve skin quality, and promote healthier, more youthful-looking skin.This advanced treatment is widely used for both facial and body rejuvenation. It can help improve concerns such as dark under-eye circles, dull skin, cellulite, stretch marks, acne scars, fine lines, skin laxity, and uneven skin texture. Because the treatment stimulates the body\'s natural healing process, results develop gradually while maintaining a natural appearance. Carboxy therapy can also be combined with other aesthetic procedures as part of a personalized skin rejuvenation program to enhance overall treatment outcomes.At RamaCare Polyclinic, every patient undergoes a detailed consultation before treatment to ensure that carboxy therapy in Dubai is appropriate for their skin concerns and aesthetic goals. Our experienced medical professionals develop customized treatment plans that focus on safety, comfort, and long-term skin health.'
   },
   {
     id: 2,
-    title: 'Who Is Carboxy Therapy Suitable For?',
-    description: 'Carboxy Therapy in Dubai is recommended for individuals with:',
+    title: 'Who Can Benefit from Carboxy Therapy?',
+    description: 'Carboxy therapy in Dubai may be suitable for adults who wish to improve overall skin quality or address specific aesthetic concerns, including:',
     listItems: [
-      'Dark circles under the eyes',
-      'Dull or tired-looking skin',
-      'Stretch marks or scars',
-      'Uneven skin tone',
-      'Early signs of aging',
-      'It can be used alone or as part of a combination skin program'
+      'Dark circles and puffiness under the eyes',
+      'Dull, tired, or dehydrated skin',
+      'Uneven skin tone and texture',
+      'Fine lines and early signs of skin ageing',
+      'Stretch marks on the abdomen, thighs, or other body areas',
+      'Mild acne scars and superficial skin irregularities',
+      'Cellulite and reduced skin firmness',
+      'Individuals seeking non-surgical skin rejuvenation',
+      'Patients looking to complement other aesthetic treatments'
     ]
   },
   {
     id: 3,
-    title: 'Trusted Carboxy Therapy Care You Can Depend On',
-    description: '',
+    title: 'Trusted Carboxy Therapy Care at RamaCare Polyclinic',
+    description: 'At RamaCare Polyclinic, patient safety and personalized care are at the center of every treatment. Our experienced medical professionals carefully assess your skin condition, treatment goals, and medical history before recommending the most suitable treatment plan.Our approach includes:',
     listItems: [
-      'Doctor-led treatment approach',
-      'Medical-grade carbon dioxide delivery',
-      'Personalized treatment planning',
-      'Suitable for face and body areas',
-      'Strict safety and hygiene protocols'
+      'Comprehensive skin consultation and assessment',
+      'Doctor-led treatment planning',
+      'Medical-grade carbon dioxide delivery systems',
+      'Personalised treatment protocols for facial and body concerns',
+      'Strict infection control and hygiene standards',
+      'Treatment tailored to different skin types',
+      'Combination therapy options when clinically appropriate',
+      'Ongoing monitoring and professional aftercare guidance'
     ]
   }
 ],
-      rootCauses: [
+     rootCauses: [
   {
     id: 1,
     title: 'Poor Blood Circulation',
-    description: 'Reduced blood flow to skin and body tissues can cause dullness, uneven tone, fatigue, and slower healing.',
+    description:
+      'Healthy blood circulation is essential for delivering oxygen and nutrients to the skin. Reduced circulation can leave the skin looking dull, tired, and uneven while slowing natural tissue repair. Improving circulation supports healthier, brighter, and more revitalized skin.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 2,
-    title: 'Cellulite & Localized Fat Accumulation',
-    description: 'Stubborn fat deposits and cellulite create uneven skin surfaces, sagging, and reduced firmness in problem areas.',
+    title: 'Cellulite & Localised Fat Deposits',
+    description:
+      'Cellulite develops when fat deposits push against connective tissue beneath the skin, creating an uneven or dimpled appearance. Localized fat accumulation can also reduce body contour definition. These concerns commonly affect the thighs, hips, abdomen, and buttocks.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
-    title: 'Dark Circles & Under-Eye Pigmentation',
-    description: 'Poor circulation, aging, and lifestyle factors lead to puffiness, dark circles, and tired-looking eyes.',
+    title: 'Dark Circles & Under-Eye Puffiness',
+    description:
+      'Dark circles often result from poor circulation, thinning skin, aging, genetics, or lifestyle factors. Reduced blood flow beneath the eyes can create a tired appearance, making the face appear older than it is.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
     title: 'Loss of Collagen & Skin Elasticity',
-    description: 'Declining collagen production causes stretch marks, sagging skin, fine lines, and reduced firmness in both face and body.',
+    description:
+      'As collagen and elastin production naturally decline with age, the skin gradually loses firmness and elasticity. This may contribute to fine lines, loose skin, stretch marks, and reduced skin resilience on both the face and body.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
-    title: 'Skin Sensitivity & Weak Barrier',
-    description: 'Environmental stress, aging, and poor hydration make skin prone to dryness, irritation, and premature aging.',
+    title: 'Skin Sensitivity & Environmental Damage',
+    description:
+      'Sun exposure, pollution, dehydration, and daily environmental stress can weaken the skin barrier and accelerate premature aging. These factors may contribute to dryness, uneven texture, and increased skin sensitivity.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 6,
     title: 'Uneven Body Contours',
-    description: 'Lack of tone or muscle support combined with fat accumulation can make body contours appear irregular and disproportionate.',
+    description:
+      'Changes in skin quality, localized fat deposits, and reduced tissue firmness may affect the overall appearance of body contours. Many individuals seek non-surgical treatments to improve skin texture and create a smoother, more refined appearance without surgery.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
-  },
+  }
 ],
-        quickFacts: [
-          { label: 'Treatment Type', value: 'Non-invasive' },
-          { label: 'Anesthesia', value: 'Not required' },
-          { label: 'Recovery Time', value: 'Immediate' },
-          { label: 'Side Effects', value: 'Minimal to none' }
-        ],
-     approachCards: [
+       quickFacts: [
+  {
+    label: 'Treatment Type',
+    value: 'Minimally Invasive Skin Rejuvenation'
+  },
+  {
+    label: 'Procedure',
+    value: 'Medical-Grade Carbon Dioxide (CO₂) Therapy'
+  },
+  {
+    label: 'Anaesthesia',
+    value: 'Usually Not Required'
+  },
+  {
+    label: 'Treatment Time',
+    value: 'Approximately 20–40 Minutes'
+  },
+  {
+    label: 'Recovery Time',
+    value: 'Immediate'
+  },
+  {
+    label: 'Downtime',
+    value: 'Minimal to None'
+  },
+  {
+    label: 'Suitable Areas',
+    value: 'Face, Under-Eye Area, Neck & Body'
+  },
+  {
+    label: 'Goal',
+    value: 'Improve Circulation, Collagen Production & Skin Rejuvenation'
+  }
+],
+    approachCards: [
   {
     id: 1,
-    title: 'Boosts Blood Circulation',
-    description: 'Infusing CO₂ stimulates blood flow, increasing oxygen delivery to tissues.',
+    title: 'Improves Blood Circulation & Skin Oxygenation',
+    description:
+      'Medical-grade carbon dioxide temporarily increases blood flow to the treated area, encouraging the body to deliver more oxygen and essential nutrients to the skin. Improved circulation supports healthier skin function, enhances tissue repair, and restores a brighter, more refreshed complexion.',
     hasLearnMore: true,
-    expandedContent: 'This revitalizes the skin, giving it a healthy, radiant, and youthful glow.'
+    expandedContent:
+      'By improving circulation and oxygen delivery, the treatment supports the skin’s natural healing process while promoting healthier, revitalized, and more radiant-looking skin over time.'
   },
   {
     id: 2,
-    title: 'Reduces Cellulite & Fat',
-    description: 'Carboxy Therapy helps break down stubborn fat deposits and smooth uneven skin surfaces.',
+    title: 'Helps Reduce Cellulite & Localised Fat',
+    description:
+      'Carboxy therapy may help improve the appearance of cellulite by enhancing circulation and supporting tissue metabolism beneath the skin. The treatment also contributes to smoother skin texture and improved body contours, making it a popular non-surgical option for areas such as the thighs, abdomen, buttocks, and arms.',
     hasLearnMore: true,
-    expandedContent: 'Improving body contours and firmness.'
+    expandedContent:
+      'Enhanced circulation and tissue metabolism help smooth uneven skin texture while improving body contours in commonly treated areas without surgery.'
   },
   {
     id: 3,
-    title: 'Treats Dark Circles',
-    description: 'Enhances microcirculation under the eyes to reduce pigmentation, puffiness, and tired appearance naturally.',
+    title: 'Reduces Dark Circles & Under-Eye Puffiness',
+    description:
+      'Poor circulation beneath the eyes is a common cause of dark circles and tired-looking skin. Carboxy therapy in Dubai improves microcirculation in the delicate under-eye area, helping reduce the appearance of pigmentation, puffiness, and fatigue while creating a brighter and more refreshed look.',
     hasLearnMore: true,
-    expandedContent: ''
+    expandedContent:
+      'Improved microcirculation beneath the eyes supports healthier skin, helping the under-eye area appear brighter, smoother, and less fatigued with continued treatment.'
   },
   {
     id: 4,
-    title: 'Stimulates Collagen Production',
-    description: 'Promotes the formation of new collagen and elastin fibers, improving skin elasticity, reducing fine lines, and minimizing stretch marks.',
+    title: 'Stimulates Natural Collagen Production',
+    description:
+      'By activating the body\'s natural healing response, carboxy therapy encourages the production of new collagen and elastin fibers. This helps improve skin elasticity, soften fine lines, reduce the appearance of stretch marks, and promote firmer, smoother skin over time.',
     hasLearnMore: true,
-    expandedContent: ''
+    expandedContent:
+      'Natural collagen and elastin regeneration improves skin firmness, elasticity, and overall texture while supporting long-term skin rejuvenation and healthier-looking skin.'
   },
   {
     id: 5,
-    title: 'Safe & Effective Results',
-    description: 'A minimally invasive procedure with little to no downtime.',
+    title: 'Safe, Minimally Invasive & Personalised Care',
+    description:
+      'Carboxytherapy is a minimally invasive procedure that requires little to no downtime, allowing most patients to return to their normal daily activities shortly after treatment. At RamaCare Polyclinic, every procedure is performed using medical-grade equipment under strict safety and hygiene protocols, ensuring personalized care and natural-looking, long-lasting results.',
     hasLearnMore: true,
-    expandedContent: 'Offering long-lasting, natural-looking improvements.'
-  },
+    expandedContent:
+      'Every treatment is tailored to your individual skin concerns and performed under strict medical safety standards to deliver comfortable, natural-looking, and long-lasting results with minimal interruption to daily life.'
+  }
 ]
       },
-     healingJourney: {
-  title: 'Your Skin & Body Rejuvenation Journey: Step by Step',
+    healingJourney: {
+  title: 'Your Carboxy Therapy Journey: Step by Step',
   description:
-    'Our carboxy therapy in Dubai follows a safe, structured, and results-oriented approach to improve skin texture, circulation, and overall appearance. Each stage is carefully designed by experienced aesthetic professionals to ensure comfort, effectiveness, and visible improvement.',
+    'At RamaCare Polyclinic, our Carboxy Therapy in Dubai follows a structured and personalized treatment process designed to improve skin quality, enhance circulation, and support natural collagen production. Every treatment begins with a comprehensive consultation to understand your concerns and create an individual care plan based on your skin condition and aesthetic goals. Our experienced medical professionals carefully monitor each stage of treatment to ensure patient safety, comfort, and optimal results.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: ' Initial Consultation & Assessment (60 Minutes)',
+      title: 'Step 1: Initial Consultation & Skin Assessment',
       duration: 'Step 1',
       description:
-        'Your journey begins with a detailed consultation to determine whether carboxy therapy in Dubai is suitable for your skin or body concerns.',
+        'Your journey begins with a detailed consultation to determine whether carboxy therapy in Dubai is the most suitable treatment for your concerns. During this appointment, our medical professionals assess your skin condition, discuss your treatment goals, review your medical history, and identify the areas that may benefit from therapy. This personalized assessment allows us to create a treatment plan that is tailored to your individual needs.',
       keyActivities: [
+        'Comprehensive medical and skin history review',
         'Discussion of treatment goals and expectations',
-        'Medical history and skin assessment',
-        'Evaluation of concerns such as dark circles, stretch marks, cellulite, or dull skin',
-        'Identification of treatment areas',
-        'Creation of a customized carboxy therapy treatment plan in Dubai'
+        'Assessment of dark circles, cellulite, stretch marks, scars, or skin laxity',
+        'Evaluation of facial and body treatment areas',
+        'Personalised Carboxy Therapy treatment plan'
       ],
       side: 'right'
     },
     {
       id: 2,
       number: '02',
-      title: 'Skin Preparation Phase',
+      title: 'Step 2: Skin Preparation',
       duration: 'Step 2',
       description:
-        'Proper preparation helps enhance the effectiveness of carboxy therapy treatment in Dubai and ensures a smoother treatment experience.',
+        'Proper preparation helps improve the effectiveness of treatment while ensuring a comfortable experience. Before each session, the treatment area is cleansed, and patients receive guidance on skincare, hydration, and temporary precautions that may help support better treatment outcomes.',
       keyActivities: [
-        'Skin cleansing and hydration guidance',
-        'Temporary avoidance of harsh skincare products',
-        'Lifestyle and post-treatment care instructions',
-        'Pre-treatment safety checks'
+        'Cleansing of the treatment area',
+        'Skin hydration recommendations',
+        'Guidance on avoiding harsh skincare products before treatment',
+        'Review of post-treatment care instructions',
+        'Final safety assessment before the procedure'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Carboxy Therapy Sessions',
+      title: 'Step 3: Active Carboxy Therapy Sessions',
       duration: 'Step 3',
       description:
-        'This phase includes regular carboxy therapy sessions in Dubai, where controlled carbon dioxide is applied to stimulate blood circulation and collagen production.',
+        'During this phase, controlled medical-grade carbon dioxide (CO₂) is carefully administered into the targeted treatment areas using specialized equipment. The carbon dioxide temporarily increases blood circulation and oxygen delivery, stimulating collagen production and supporting the body\'s natural skin renewal process. Depending on your skin concerns and treatment plan, sessions are generally performed once or twice per week.',
       keyActivities: [
-        '1–2 sessions per week, depending on treatment area',
-        'Application of medical-grade carbon dioxide',
-        'Improved oxygen delivery to tissues',
-        'Support for skin tightening, brightness, and texture improvement',
-        'Progress monitoring and session adjustments'
+        'Administration of medical-grade carbon dioxide',
+        'Treatment of targeted facial or body areas',
+        'Improved blood circulation and tissue oxygenation',
+        'Stimulation of collagen and elastin production',
+        'Ongoing progress assessment and treatment adjustments'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Maintenance & Follow-Up Care',
+      title: 'Step 4: Maintenance & Follow-Up Care',
       duration: 'Step 4',
       description:
-        'Maintenance sessions help support ongoing improvements achieved through carboxy therapy in Dubai.',
+        'Following the initial treatment program, maintenance sessions may be recommended to help preserve and enhance your results. Our team continues to monitor your progress and provides personalized skincare recommendations to support long-term skin health and ongoing rejuvenation.',
       keyActivities: [
-        'Periodic maintenance treatments',
+        'Periodic maintenance sessions',
         'Regular skin and body assessments',
-        'Personalized skincare and lifestyle guidance',
-        'Continued professional follow-up'
+        'Personalised skincare recommendations',
+        'Lifestyle guidance to support healthy skin',
+        'Continued professional follow-up and treatment planning'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'Many patients begin to notice gradual improvements in skin texture, brightness, circulation, and overall skin quality after several treatment sessions. As collagen production continues, the skin may appear firmer, smoother, and more refreshed over time. The number of sessions required varies depending on the treatment area, individual skin condition, and desired aesthetic goals. Our personalized approach ensures that every patient receives a treatment plan designed to achieve safe, natural-looking, and long-lasting results.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
 
-      benefits: {
-        title: 'Clinically Observed Benefits',
-        description: 'Based on 15+ years of providing skin treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: 'Improved blood circulation',
-            percentage: 91,
-            description: null
-          },
-          {
-            id: 2,
-            title: '  Brighter and healthier skin ',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Reduced dark circles',
-            percentage: 95,
-            description: 'Enhanced skin moisture and suppleness'
-          },
-          {
-            id: 4,
-            title: ' Improved skin texture',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Natural collagen stimulation',
-            percentage: 93,
-            description: null
-          },
-        ],
-        comparisonTitle: 'Carboxy Therapy in Dubai vs. Conventional Skin Treatments',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Carboxy Therapy in Dubai',
-          traditional: 'Conventional Skin Treatments'
-        },
-        comparisonData: [
-          {
-            feature: 'Approach	',
-            ayurvedic: 'Improves oxygenation and circulation',
-            conventional: 'Surface-level correction'
-          },
-          {
-            feature: 'Invasiveness',
-            ayurvedic: 'Non-surgical',
-            conventional: 'Often aggressive'
-          },
-          {
-            feature: 'Downtime',
-            ayurvedic: 'Minimal',
-            conventional: 'Variable'
-          },
-          {
-            feature: 'Results',
-            ayurvedic: 'Gradual and natural',
-            conventional: 'Temporary'
-          },
-          {
-            feature: 'Suitability',
-            ayurvedic: 'Face and body areas',
-            conventional: 'Limited areas'
-          },
-          {
-            feature: 'Long-Term Benefit',
-            ayurvedic: 'Supports skin health',
-            conventional: 'Limited for prolonged or repeated use'
-          }
-        ]
+     benefits: {
+  title: 'Benefits of Carboxy Therapy in Dubai',
+  description:
+    'At RamaCare Polyclinic, our Carboxy Therapy in Dubai is designed to improve skin quality by stimulating the body\'s natural healing mechanisms. By increasing blood circulation, enhancing oxygen delivery, and promoting collagen production, the treatment helps rejuvenate the skin without surgery or lengthy recovery. Each treatment plan is customized according to your skin type, treatment area, and aesthetic goals to achieve safe, natural-looking results.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Improves Blood Circulation',
+      percentage: 91,
+      description:
+        'Carboxy therapy increases blood flow to the treated area, improving oxygen and nutrient delivery.',
+      hasLearnMore: true,
+      expandedContent:
+        'Better circulation supports healthier skin function, enhances natural tissue repair, and helps restore a brighter, more revitalized appearance. Improved blood flow also contributes to long-term skin health and overall rejuvenation.'
+    },
+    {
+      id: 2,
+      title: 'Stimulates Natural Collagen Production',
+      percentage: 88,
+      description:
+        'Medical-grade carbon dioxide stimulates collagen and elastin production for firmer skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'By activating the body’s natural healing response, Carboxy Therapy encourages the formation of new collagen and elastin fibres. This helps improve skin firmness, elasticity, and overall texture while reducing visible signs of ageing over time.'
+    },
+    {
+      id: 3,
+      title: 'Brightens Dull & Tired Skin',
+      percentage: 95,
+      description:
+        'Improves skin radiance by enhancing circulation and supporting healthy skin renewal.',
+      hasLearnMore: true,
+      expandedContent:
+        'Enhanced blood circulation and oxygen delivery help restore a fresher, healthier complexion while reducing the appearance of tired-looking skin. Regular treatments promote gradual improvements in overall skin brightness and vitality.'
+    },
+    {
+      id: 4,
+      title: 'Reduces Dark Circles & Puffiness',
+      percentage: 85,
+      description:
+        'Improves microcirculation beneath the eyes to reduce dark circles and puffiness.',
+      hasLearnMore: true,
+      expandedContent:
+        'Carboxy Therapy supports healthier circulation in the delicate under-eye area, helping minimise pigmentation, mild puffiness, and visible signs of fatigue for a more refreshed and youthful appearance.'
+    },
+    {
+      id: 5,
+      title: 'Improves Stretch Marks & Skin Texture',
+      percentage: 90,
+      description:
+        'Encourages tissue regeneration to improve stretch marks and uneven skin texture.',
+      hasLearnMore: true,
+      expandedContent:
+        'Collagen stimulation supports gradual improvement in the appearance of stretch marks, superficial scars, and rough skin texture. As new collagen develops, the skin becomes smoother and more refined.'
+    },
+    {
+      id: 6,
+      title: 'Minimally Invasive with Little Downtime',
+      percentage: 93,
+      description:
+        'A minimally invasive treatment that allows most patients to resume daily activities quickly.',
+      hasLearnMore: true,
+      expandedContent:
+        'Carboxy Therapy requires little to no downtime, making it a convenient option for facial and body rejuvenation. Each treatment is performed using medical-grade techniques to provide safe, comfortable, and natural-looking results.'
+    }
+  ],
+      comparisonTitle: 'Carboxytherapy vs. Conventional Skin Treatments',
+comparisonDescription:
+  'Understanding the Difference Before Choosing Your Treatment',
+comparisonHeaders: {
+  feature: 'Aspect',
+  ourTreatment: 'Carboxy Therapy in Dubai',
+  traditional: 'Conventional Skin Treatments'
+},
+comparisonData: [
+  {
+    feature: 'Treatment Approach',
+    ayurvedic:
+      'Stimulates circulation, oxygen delivery, and natural collagen production.',
+    conventional:
+      'Primarily targets surface skin concerns using creams, peels, or cosmetic procedures.'
+  },
+  {
+    feature: 'Procedure',
+    ayurvedic:
+      'Minimally invasive treatment using medical-grade carbon dioxide (CO₂).',
+    conventional:
+      'Topical skincare products or cosmetic treatments.'
+  },
+  {
+    feature: 'Skin Concerns',
+    ayurvedic:
+      'Helps improve dark circles, cellulite, stretch marks, skin laxity, and dull skin.',
+    conventional:
+      'Often focuses on a single cosmetic concern at a time.'
+  },
+  {
+    feature: 'Downtime',
+    ayurvedic:
+      'Minimal to none.',
+    conventional:
+      'Varies depending on the treatment performed.'
+  },
+  {
+    feature: 'Results',
+    ayurvedic:
+      'Gradual, natural improvement through tissue regeneration.',
+    conventional:
+      'Results vary and may require frequent maintenance.'
+  },
+  {
+    feature: 'Long-Term Care',
+    ayurvedic:
+      'Supports ongoing skin health and collagen renewal with personalized treatment plans.',
+    conventional:
+      'Often depends on continuous product use or repeated cosmetic procedures.'
+  }
+]
       },
     pricing: {
   title: 'Transparent Pricing & Customized Treatment Packages',
@@ -5890,13 +6247,70 @@ comparisonData: [
             description: 'Patient Reviews'
           }
       ]
+    },
+    whyChooseSection: {
+      title: 'Why Choose RamaCare Polyclinic for Carboxy Therapy in Dubai?',
+      intro: 'Choosing the right clinic is essential for achieving safe, effective, and natural-looking results. At RamaCare Polyclinic, we combine personalized care with evidence-based treatment protocols to provide Carboxy Therapy in Dubai that is tailored to each patient\'s individual skin concerns and treatment goals.',
+      features: [
+        {
+          id: 1,
+          title: 'Comprehensive Consultations',
+          description: 'Our experienced medical professionals perform a comprehensive consultation before every procedure to assess your skin condition, medical history, and expectations. This allows us to develop a customized treatment plan that focuses on both safety and long-term skin health.'
+        },
+        {
+          id: 2,
+          title: 'Medical-Grade Equipment',
+          description: 'We use medical-grade equipment and maintain strict hygiene and infection-control standards throughout every treatment session.'
+        },
+        {
+          id: 3,
+          title: 'Personalized Patient-Centered Care',
+          description: 'Whether your concern is dark circles, stretch marks, cellulite, skin laxity, or overall skin rejuvenation, our goal is to help you achieve healthier, smoother, and more radiant skin through personalized, patient-centered care.'
+        },
+        {
+          id: 4,
+          title: 'Professional Guidance & Support',
+          description: 'From consultation to follow-up, our team remains committed to providing professional guidance, ongoing support, and treatments designed to deliver gradual, natural-looking improvements.'
+        }
+      ]
+    },
+    aftercareContent: {
+      resultsTitle: 'Recovery & Aftercare',
+      resultsDescription: 'One of the advantages of carboxy therapy in Dubai is the minimal recovery time. Most patients can return to their normal daily routine immediately after treatment. Mild redness, temporary swelling, or slight discomfort at the treatment site may occur but usually resolves within a few hours.',
+      resultPoints: [
+        'Keep the treated area clean and avoid rubbing or scratching the skin',
+        'Avoid hot showers, saunas, and steam rooms for the first 24 hours if advised',
+        'Stay well hydrated to support healthy skin function',
+        'Apply sunscreen daily to protect treated skin from UV exposure',
+        'Follow the personalized skincare recommendations provided by your healthcare professional',
+        'Attend scheduled follow-up appointments to monitor your progress'
+      ],
+      additionalInfo: {
+        title: 'Long-Term Results',
+        description: 'Results develop gradually as circulation improves and collagen production continues over the following weeks. Multiple sessions may be recommended depending on your skin condition and treatment goals.'
+      }
+    },
+    whenToConsider: {
+      title: 'Who Is a Good Candidate for Carboxy Therapy?',
+      intro: 'Carboxytherapy in Dubai may be suitable for adults who wish to improve skin quality without surgery or prolonged downtime. Following a detailed consultation, our medical professionals determine whether the treatment is appropriate based on your skin concerns, overall health, and aesthetic goals.',
+      points: [
+        'Have dark circles or puffiness beneath the eyes',
+        'Experience dull, tired, or uneven-looking skin',
+        'Want to improve stretch marks or mild acne scars',
+        'Have cellulite or reduced skin firmness',
+        'Notice fine lines or early signs of skin aging',
+        'Want a non-surgical skin rejuvenation treatment',
+        'Looking to improve skin texture and overall skin health',
+        'Wish to complement other aesthetic treatments as part of a personalized skin program'
+      ],
+      closing: 'Every patient receives an individual assessment before treatment to ensure that Carboxy Therapy in Dubai is safe, appropriate, and aligned with their treatment expectations. Our personalized approach focuses on achieving gradual, natural-looking improvements while supporting long-term skin health and confidence.'
     }
   },
 
   'aesthetic-dermatology-dubai-skin-treatment-electrolysis': {
     hero: {
             subtitle: 'Permanent Hair Removal with Medical Precision',
-            description: 'Unwanted hair can affect confidence and comfort, especially when temporary methods fail. At ramacare polyclinic, we provide Electrolysis in Dubai, a medically approved and permanent hair removal treatment suitable for all skin types and hair colors.',
+            description: 'Unwanted hair can affect your confidence, comfort, and daily routine, especially when shaving, waxing, threading, or using hair removal creams only provides temporary results.At RamaCare Polyclinic, we offer electrolysis in Dubai, a clinically proven and medically approved permanent hair removal treatment that targets individual hair follicles to prevent future hair growth. Electrolysis is suitable for all skin types, skin tones, and hair colors, including blonde, grey, white, red, and fine hair that may not respond effectively to laser treatments.Our experienced practitioners use advanced electrolysis technology to treat unwanted hair with precision while protecting the surrounding skin.Every treatment plan is personalized based on your hair growth pattern, treatment area, and aesthetic goals to ensure safe, comfortable, and effective care. Whether you want to remove unwanted hair from the face, upper lip, chin, neck, underarms, bikini line, arms, legs, chest, or back, our team is committed to helping you achieve smoother, permanently hair-free skin in a safe, hygienic, and patient-focused clinical environment.Experience trusted electrolysis in Dubai with personalized care and lasting results at RamaCare Polyclinic ',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -5980,157 +6394,212 @@ comparisonData: [
       overview: {
         title: 'Understanding Electrolysis Treatment',
         problemIntro: {
-          title: 'The Problem: Permanent Unwanted Hair',
-          description: 'Many hair removal methods provide temporary results and may cause irritation, ingrown hairs, or regrowth.'
+          title: 'The Problem: Why Temporary Hair Removal Methods Don\'t Provide Lasting Results',
+          description: 'Many people spend years shaving, waxing, threading, or using depilatory creams only to experience rapid hair regrowth, skin irritation, and recurring maintenance. These methods remove hair only from the surface or the root, without permanently disabling the hair follicle, so new hair continues to grow. Over time, repeated temporary hair removal can become expensive, time-consuming, and frustrating while increasing the risk of skin sensitivity, ingrown hairs, and uneven hair growth.'
         },
         solutionIntro: {
   title: 'Our Solution: Electrolysis in Dubai',
   description:
-    'Our Electrolysis in Dubai provides a safe, FDA-approved, and permanent hair removal solution for all skin and hair types.'
+    'At RamaCare Polyclinic, our electrolysis treatment in Dubai offers a medically approved and long-term solution for unwanted hair. Unlike temporary hair removal methods that require continuous maintenance, electrolysis permanently destroys individual hair follicles, helping prevent future hair growth. Every treatment is performed by experienced professionals using advanced electrolysis technology in a safe, hygienic, and DHA-compliant clinical environment.Suitable for all skin tones and every hair color, including blonde, grey, white, red, and fine hair, electrolysis provides a precise and effective solution for both facial and body hair. Each treatment plan is personalized according to your hair growth pattern, skin type, and aesthetic goals, ensuring safe, comfortable, and long-lasting results.'
 },
       leftCards: [
   {
     id: 1,
     title: 'What Is Electrolysis?',
     description:
-      'Electrolysis is a permanent hair removal treatment that uses controlled electrical energy to destroy individual hair follicles at the root. Once treated, the follicle can no longer produce hair, making it a long-term solution. Unlike lasers, Electrolysis in Dubai works on all hair colors, including white, grey, and blonde hair.'
+      'Electrolysis in Dubai is a medically approved permanent hair removal treatment that uses a fine, sterile probe to deliver a controlled electrical current directly into individual hair follicles. This precise energy destroys the follicle\'s ability to produce new hair without damaging the surrounding skin. Electrolysis is recognized worldwide as the only FDA-recognized method of permanent hair removal and is suitable for all skin tones, all hair textures, and all hair colors, including blonde, grey, white, red, and fine hair that may not respond well to laser hair removal. Since each hair follicle is treated individually, electrolysis offers exceptional precision, making it ideal for both small, delicate areas and larger body regions.Whether you want to permanently remove hair from the face, upper lip, chin, eyebrows, neck, underarms, bikini line, arms, legs, chest, abdomen, or back, electrolysis provides a safe, reliable, and clinically proven solution for smoother, hair-free skin.'
   },
   {
     id: 2,
-    title: 'Who Needs Electrolysis Treatment?',
-    description: 'Electrolysis is recommended for individuals who experience:',
+    title: 'Who Can Benefit from Electrolysis Treatment?',
+    description: 'Electrolysis in Dubai is recommended for individuals who want a permanent solution to unwanted hair and are looking for a treatment suitable for every skin type and hair colour. It is particularly beneficial for people who:',
     listItems: [
-      'Unwanted facial or body hair',
-      'Hormonal hair growth issues',
-      'Ingrown hairs',
-      'Light or grey hair not suitable for laser',
-      'Sensitive skin prone to irritation',
-      'Consistent sessions help achieve smooth, hair-free skin safely'
+      'Have unwanted facial or body hair.',
+      'Experience excessive hair growth due to hormonal changes or medical conditions.',
+      'Have blonde, grey, white, red, or fine hair unsuitable for laser treatment.',
+      'Frequently suffer from painful ingrown hairs.',
+      'Have sensitive skin that reacts to shaving or waxing.',
+      'Want a long-term alternative to temporary hair removal methods.',
+      'Need precise hair removal for small, delicate areas such as the eyebrows or upper lip.',
+      'Are you looking for safe, medically supervised permanent hair reduction?'
     ]
   },
   {
     id: 3,
     title: 'Trusted Electrolysis Care You Can Depend On',
-    description: '',
+    description: 'At RamaCare Polyclinic, we combine advanced electrolysis technology with personalized medical care to ensure safe, comfortable, and effective treatments tailored to your needs.Why Patients Choose Our Electrolysis Treatment',
     listItems: [
-      'FDA-recognized permanent hair removal method',
-      'Suitable for face and body',
-      'Effective for light, grey, or fine hair',
-      'Doctor-supervised treatment',
-      'Safe for sensitive skin areas'
+      'FDA-recognized permanent hair removal method.',
+      'Suitable for all skin tones and hair colors.',
+      'Safe for delicate facial and body areas.',
+      'Effective for blonde, grey, white, red, and fine hair.',
+      'Performed by experienced, trained professionals.',
+      'Personalized treatment plans for optimal results.',
+      'Hygienic, DHA-compliant clinical environment.',
+      'Minimal downtime with immediate return to daily activities.',
+      'Comfortable treatment using modern electrolysis equipment.',
+      'Long-lasting results with medically supervised care.'
     ]
   }
 ],
     rootCauses: [
   {
     id: 1,
-    title: 'Permanent Hair Follicle Damage',
-    description: 'Unwanted hair continues to regrow unless hair follicles are effectively targeted. Many temporary methods do not address the root cause, resulting in repeated treatments.',
+    title: 'Permanent Unwanted Hair Growth',
+    description: 'Many hair removal techniques fail to permanently eliminate unwanted hair because they do not destroy the hair follicle. As a result, hair continues to regrow, requiring ongoing maintenance throughout the year.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Ineffective on All Hair Types',
-    description: 'Certain methods like laser hair removal often fail on light, grey, blonde, or fine hair, leaving patches of unwanted hair.',
+    title: 'Limited Effectiveness on Light or Grey Hair',
+    description: 'Laser hair removal relies on pigment within the hair follicle, making it less effective for blonde, white, grey, or fine hair. This often leaves patients with persistent unwanted hair despite multiple treatment sessions.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
-    title: 'Skin Irritation & Sensitivity',
-    description: 'Frequent waxing or shaving can cause redness, bumps, razor burns, and irritation, especially on sensitive areas like the face and bikini line.',
+    title: 'Skin Irritation and Sensitivity',
+    description: 'Frequent shaving and waxing can cause redness, razor burns, bumps, skin irritation, and increased sensitivity, particularly on delicate areas such as the face, neck, underarms, and bikini line.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
-    title: 'Ingrown Hairs & Follicle Blockage',
-    description: 'Temporary methods can trap hairs under the skin, causing painful ingrown hairs, inflammation, and scarring.',
+    title: 'Ingrown Hairs and Follicle Inflammation',
+    description: 'Improper hair removal methods may cause hairs to grow back beneath the skin, resulting in painful ingrown hairs, inflammation, infection, and, in some cases, permanent pigmentation or scarring.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
-    title: 'Repeated Maintenance Required',
-    description: 'Shaving or waxing requires constant upkeep, which is time-consuming and often inconvenient for busy lifestyles.',
+    title: 'Ongoing Maintenance',
+    description: 'Temporary methods require constant upkeep every few days or weeks, making hair removal inconvenient, costly, and difficult to maintain over time.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 6,
-    title: 'Uneven Hair Growth',
-    description: 'Improper hair removal techniques can cause uneven regrowth, leaving patchy areas or coarse hairs in sensitive zones.',
+    title: 'Uneven Hair Regrowth',
+    description: 'Repeated shaving or incomplete hair removal may lead to patchy regrowth, coarse hairs, and uneven skin texture, affecting the overall appearance of treated areas.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
 ],
-        quickFacts: [
-          { label: 'Treatment Type', value: 'Non-invasive' },
-          { label: 'Anesthesia', value: 'Not required' },
-          { label: 'Recovery Time', value: 'Immediate' },
-          { label: 'Side Effects', value: 'Minimal to none' }
-        ],
-    approachCards: [
+       quickFacts: [
+  {
+    label: 'Treatment Type',
+    value: 'Non-invasive Permanent Hair Removal'
+  },
+  {
+    label: 'Treatment Duration',
+    value: '15–60 minutes per session'
+  },
+  {
+    label: 'Anaesthesia',
+    value: 'Usually not required'
+  },
+  {
+    label: 'Recovery Time',
+    value: 'Immediate'
+  },
+  {
+    label: 'Downtime',
+    value: 'None'
+  },
+  {
+    label: 'Suitable For',
+    value: 'All skin types and hair colours'
+  },
+  {
+    label: 'Sessions Required',
+    value: 'Multiple sessions, depending on hair growth cycle'
+  },
+  {
+    label: 'Results',
+    value: 'Progressive permanent hair removal'
+  },
+  {
+    label: 'Side Effects',
+    value: 'Mild temporary redness or slight swelling'
+  }
+],
+  approachCards: [
   {
     id: 1,
     title: 'Permanent Hair Removal',
-    description: 'Electrolysis destroys hair follicles at the root, preventing regrowth permanently.',
+    description:
+      'Electrolysis targets each hair follicle using a controlled electrical current, permanently destroying its ability to produce new hair. Because every follicle is treated at the root, regrowth is significantly reduced over a series of sessions, making electrolysis one of the most reliable permanent hair removal methods available.',
     hasLearnMore: true,
-    expandedContent: 'Unlike temporary methods, it provides a long-term solution for unwanted hair.'
+    expandedContent:
+      'Benefits: Permanently destroys treated hair follicles, reduces future hair growth, eliminates the need for frequent shaving or waxing, provides long-term, natural-looking results, suitable for both facial and body hair.'
   },
   {
     id: 2,
     title: 'Effective for All Hair Types',
-    description: 'Safe and effective on light, grey, blonde, fine, and coarse hair.',
+    description:
+      'Unlike laser hair removal, which relies on hair pigment, electrolysis in Dubai is effective regardless of hair color or texture. It can safely remove blonde, white, grey, red, fine, coarse, and dark hair, making it an ideal option for individuals who are not suitable candidates for laser treatments.',
     hasLearnMore: true,
-    expandedContent: 'Making it ideal for areas where laser treatments may not produce results.'
+    expandedContent:
+      'Benefits: Works on all hair colours, effective for fine and coarse hair, suitable for every skin tone, excellent option after incomplete laser results, consistent treatment outcomes.'
   },
   {
     id: 3,
     title: 'Precise & Targeted Treatment',
-    description: 'Allows meticulous treatment of individual hairs for small and sensitive areas like the upper lip, chin, eyebrows, and sideburns.',
+    description:
+      'Electrolysis treats each hair follicle individually, allowing exceptional precision even in delicate or hard-to-reach areas. This makes it particularly effective for shaping eyebrows or removing unwanted hair from the upper lip, chin, cheeks, sideburns, nipples, fingers, and other small treatment areas.',
     hasLearnMore: true,
-    expandedContent: 'Ensuring uniform results.'
+    expandedContent:
+      'Benefits: Highly accurate treatment, ideal for delicate facial areas, removes isolated unwanted hairs, preserves surrounding skin, suitable for detailed cosmetic refinement.'
   },
   {
     id: 4,
-    title: 'Safe & Skin-Friendly',
-    description: 'Performed by certified professionals using sterile techniques.',
+    title: 'Safe & Skin-Friendly Procedure',
+    description:
+      'Your safety is our priority. Every electrolysis session is performed by trained professionals using sterile, single-use probes and modern equipment, while adhering to strict hygiene protocols. The treatment is gentle on the skin and suitable for individuals with sensitive skin who experience irritation from shaving or waxing.',
     hasLearnMore: true,
-    expandedContent: 'Minimizing discomfort, irritation, and risk of scarring.'
+    expandedContent:
+      'Benefits: Performed by experienced practitioners, sterile and hygienic treatment techniques, suitable for sensitive skin, minimal downtime, low risk of complications when aftercare is followed.'
   },
   {
     id: 5,
     title: 'Long-Term Smooth Results',
-    description: 'Provides visibly smooth and clear skin over time, enhancing confidence.',
+    description:
+      'As more hair follicles are permanently treated during successive sessions, hair becomes progressively finer and less noticeable until permanent removal is achieved. Patients enjoy smoother skin, fewer ingrown hairs, and increased confidence without the constant need for temporary hair removal methods.',
     hasLearnMore: true,
-    expandedContent: 'Reducing the need for repeated temporary hair removal methods.'
+    expandedContent:
+      'Benefits: Smooth, hair-free skin, reduced ingrown hairs, improved skin appearance, long-lasting aesthetic results, greater confidence in everyday life.'
   },
   {
     id: 6,
-    title: 'Customizable Treatment Plans',
-    description: 'Electrolysis sessions are tailored based on hair density, growth cycles, and treatment areas.',
+    title: 'Personalised Treatment Plans',
+    description:
+      'Every patient has unique hair growth patterns, skin characteristics, and cosmetic goals. Before beginning treatment, our specialists conduct a detailed consultation to develop a personalized electrolysis plan based on the treatment area, hair density, growth cycle, and expected number of sessions required for optimal results.',
     hasLearnMore: true,
-    expandedContent: 'Ensuring optimal results.'
-  },
-]
+    expandedContent:
+      'Benefits: Individualised treatment strategy, tailored to hair density and growth cycles, flexible treatment for different body areas, comfortable session scheduling, optimised for safe and effective long-term results.'
+  }
+],
       },
      healingJourney: {
-  title: 'Your Hair Removal Journey: Step by Step',
-  description: 'Structured, doctor-guided approach to ensure safe, effective, and permanent hair removal with Electrolysis in Dubai.',
+  title: 'Your Permanent Hair Removal Journey: Step by Step',
+  description:
+    'At RamaCare Polyclinic, our electrolysis treatment in Dubai follows a structured, medically supervised process to deliver safe, effective, and permanent hair removal. Every patient has unique hair growth patterns, skin characteristics, and treatment goals, so we create a personalized treatment plan designed to maximize comfort and long-term results. From your initial consultation to follow-up care, each stage is carefully planned to ensure precise follicle treatment while protecting the surrounding skin.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Skin Assessment',
       duration: 'Step 1',
-      description: 'Comprehensive evaluation of hair type, density, and skin sensitivity to create a personalized electrolysis plan.',
+      description:
+        'Your journey begins with a comprehensive consultation, where our experienced practitioner evaluates your skin type, hair color, hair density, and overall medical history. Since electrolysis permanently treats individual hair follicles, understanding your hair growth cycle is essential for developing an effective treatment schedule. During this appointment, we also discuss your expectations, treatment areas, estimated number of sessions, and aftercare instructions to ensure you feel confident before starting treatment.',
       keyActivities: [
-        'Medical history review',
-        'Skin and hair mapping',
-        'Discussion of goals and expectations',
-        'Personalized session plan creation'
+        'Detailed medical history review',
+        'Skin and hair growth assessment',
+        'Evaluation of treatment areas',
+        'Discussion of treatment goals and expected results',
+        'Personalised electrolysis treatment plan',
+        'Pre-treatment instructions and patient education'
       ],
       side: 'right'
     },
@@ -6139,12 +6608,15 @@ comparisonData: [
       number: '02',
       title: 'Preparation & Trial Session',
       duration: 'Step 2',
-      description: 'Initial trial treatment to ensure comfort and suitability while preparing the skin for the full electrolysis course.',
+      description:
+        'Before beginning the full treatment program, a small trial session may be performed to assess your skin’s response and ensure maximum comfort. The treatment area is thoroughly cleansed, and if required, a topical numbing cream may be applied for sensitive areas such as the upper lip or bikini line. This stage allows both the practitioner and patient to become familiar with the procedure while confirming the most effective treatment settings.',
       keyActivities: [
-        'Test on a small area',
-        'Topical numbing if needed',
-        'Observation of skin response',
-        'Patient guidance for aftercare'
+        'Cleansing and preparation of the treatment area',
+        'Trial treatment on a small section',
+        'Application of topical numbing cream if required',
+        'Assessment of skin sensitivity and comfort',
+        'Explanation of post-treatment care',
+        'Personalised recommendations before full treatment'
       ],
       side: 'left'
     },
@@ -6153,35 +6625,42 @@ comparisonData: [
       number: '03',
       title: 'Active Electrolysis Treatment Phase',
       duration: 'Step 3',
-      description: 'Regular electrolysis sessions targeting individual hair follicles for permanent hair removal.',
+      description:
+        'During the active treatment phase, a fine sterile probe is carefully inserted into each hair follicle. A controlled electrical current is then delivered to permanently destroy the follicle, preventing future hair growth. Since hair grows in different cycles, multiple sessions are required to treat follicles during their active growth phase. Depending on the treatment area and hair density, sessions are usually scheduled every one to three weeks to achieve the best possible long-term results. Throughout the treatment program, our practitioners closely monitor your progress and adjust the treatment plan as needed to ensure safe, effective, and comfortable permanent hair removal.',
       keyActivities: [
-        '1–3 sessions per week depending on the area',
-        'Precision follicle treatment with controlled electrical current',
-        'Post-session care including soothing creams',
-        'Progress monitoring and plan adjustments'
+        'Precise treatment of individual hair follicles',
+        'Controlled electrical energy for permanent follicle destruction',
+        'Regular treatment sessions based on hair growth cycles',
+        'Gentle post-treatment skin soothing',
+        'Progress assessments during every visit',
+        'Treatment plan adjustments when necessary'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Maintenance & Follow-up',
+      title: 'Maintenance & Follow-up Care',
       duration: 'Step 4',
-      description: 'Sustaining results with follow-up treatments and long-term care guidance to maintain smooth, hair-free skin.',
+      description:
+        'As hair growth significantly decreases, follow-up appointments become less frequent. These maintenance sessions target any remaining active follicles while ensuring consistent, long-lasting results. Our team also provides personalized skin care recommendations to minimize irritation, promote healthy healing, and maintain smooth, hair-free skin.',
       keyActivities: [
-        'Periodic check-ins',
-        'Additional touch-up sessions if needed',
-        'Skin health and care advice',
-        'Long-term hair management support'
+        'Follow-up progress evaluations',
+        'Touch-up treatments for remaining hair follicles',
+        'Skin health monitoring',
+        'Personalised aftercare guidance',
+        'Long-term hair management advice',
+        'Ongoing patient support'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Treatment Results',
       duration: null,
-      description: 'Permanent hair reduction, smoother skin, minimized ingrown hairs, and enhanced confidence with Electrolysis in Dubai performed under medical supervision.',
+      description:
+        'With consistent sessions and proper aftercare, electrolysis in Dubai provides permanent hair reduction, smoother skin, fewer ingrown hairs, and long-lasting confidence. Because each follicle is permanently treated, hair growth gradually becomes finer and less noticeable until the desired outcome is achieved. Most patients notice progressive improvement throughout their treatment journey, enjoying clear, healthy-looking skin without the constant need for shaving, waxing, or threading.',
       keyActivities: [],
       side: 'right'
     }
@@ -6222,45 +6701,45 @@ comparisonData: [
             description: null
           },
         ],
-        comparisonTitle: 'Electrolysis vs. Conventional Hair Removal Methods',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Electrolysis',
-          traditional: 'Conventional Methods'
-        },
-        comparisonData: [
-          {
-            feature: 'Hair Removal	',
-            ayurvedic: 'Permanent follicle destruction',
-            conventional: 'Temporary hair removal'
-          },
-          {
-            feature: 'Hair Color Suitability',
-            ayurvedic: 'All hair colors',
-            conventional: 'Limited effectiveness'
-          },
-          {
-            feature: 'Skin Type',
-            ayurvedic: 'Safe for all skin types',
-            conventional: 'May cause irritation'
-          },
-          {
-            feature: 'Precision',
-            ayurvedic: 'Treats individual follicles',
-            conventional: 'Surface-level removal'
-          },
-          {
-            feature: 'Results',
-            ayurvedic: 'Permanent over time',
-            conventional: 'Hair regrowth expected'
-          },
-          {
-            feature: 'Medical Supervision',
-            ayurvedic: 'Doctor-guided',
-            conventional: 'Often non-medical'
-          }
-        ]
+        comparisonTitle: 'Electrolysis vs. Laser Hair Removal',
+comparisonDescription: 'Electrolysis works differently by inserting a fine sterile probe into each hair follicle and delivering a controlled electrical current that permanently destroys the follicle. Since the treatment does not rely on hair pigment, it is effective on all hair colors, all skin tones, and every hair texture. Electrolysis is also recognized as the only FDA-recognized method of permanent hair removal, making it an excellent option for patients seeking permanent results regardless of their hair color.',
+comparisonHeaders: {
+  feature: 'Feature',
+  ourTreatment: 'Electrolysis',
+  traditional: 'Laser Hair Removal'
+},
+comparisonData: [
+  {
+    feature: 'Hair Removal Result',
+    ayurvedic: 'Permanent hair removal',
+    conventional: 'Long-term hair reduction'
+  },
+  {
+    feature: 'Suitable for Hair Colour',
+    ayurvedic: 'All hair colours',
+    conventional: 'Best for dark hair'
+  },
+  {
+    feature: 'Suitable for Skin Types',
+    ayurvedic: 'All skin types',
+    conventional: 'Most skin types, depending on laser technology'
+  },
+  {
+    feature: 'Blonde, Grey & White Hair',
+    ayurvedic: '✔ Effective',
+    conventional: '✖ Limited effectiveness'
+  },
+  {
+    feature: 'Precision',
+    ayurvedic: 'Individual follicle treatment',
+    conventional: 'Treats multiple hairs simultaneously'
+  },
+  {
+    feature: 'Best For',
+    ayurvedic: 'Small and large treatment areas',
+    conventional: 'Larger body areas'
+  }
+]
       },
     pricing: {
   title: 'Transparent Pricing & Electrolysis Treatment Packages',
@@ -6544,6 +7023,85 @@ comparisonData: [
           }
         ]
       },
+      treatmentAreasAndCare: {
+        treatmentAreas: {
+          title: 'Areas That Can Be Treated',
+          subtitle: 'Electrolysis for Facial and Body Hair Removal',
+          intro: 'One of the greatest advantages of electrolysis in Dubai is its versatility. Because each hair follicle is treated individually, electrolysis can safely remove unwanted hair from both delicate facial areas and larger body regions with exceptional precision. Electrolysis is particularly beneficial for removing isolated hairs, shaping eyebrows, treating hormonal facial hair, and addressing areas where laser hair removal may not produce satisfactory results. Every treatment plan is customized according to the treatment area, hair density, and hair growth cycle to ensure safe and effective permanent hair removal.',
+          areas: [
+            { title: 'Facial Areas', description: 'Upper lip, chin, cheeks, jawline, sideburns, eyebrows, neck, forehead' },
+            { title: 'Body Areas', description: 'Underarms, arms, hands and fingers, chest, abdomen, back, bikini line, legs, toes' }
+          ]
+        }
+      },
+      detailedServiceContent: [
+        {
+          type: 'suitability',
+          title: 'Who Is an Ideal Candidate?',
+          subtitle: 'Is Electrolysis Right for You?',
+          description: 'Electrolysis in Dubai is suitable for most healthy adults who want a permanent solution for unwanted facial or body hair. Since the treatment works independently of hair pigment, it is an excellent option for individuals who may not achieve optimal results with laser hair removal.',
+          footerText: 'During your consultation, our practitioner will evaluate your medical history, skin condition, and hair growth pattern to determine whether electrolysis is the most suitable treatment for your individual goals.',
+          items: [
+            'Want permanent hair removal rather than temporary reduction.',
+            'Have blonde, grey, white, red, or fine hair.',
+            'Experience unwanted facial or body hair.',
+            'Hormonal hair growth is caused by conditions such as PCOS.',
+            'Frequently develops ingrown hairs after shaving or waxing.',
+            'Have sensitive skin prone to irritation.',
+            'Want precise hair removal for smaller treatment areas.',
+            'Are you looking for a safe, clinically proven alternative to repeated shaving or waxing?'
+          ]
+        },
+        {
+          type: 'early-intervention',
+          title: 'Risks & Safety',
+          subtitle: 'Safe, Professional Electrolysis Treatment',
+          description: 'When performed by trained professionals using sterile equipment, electrolysis in Dubai is considered a safe and well-established procedure with a low risk of complications. At RamaCare Polyclinic, strict hygiene protocols and modern electrolysis equipment help ensure every treatment is performed with patient safety as the highest priority.',
+          footerText: 'A detailed consultation is always performed before treatment to assess your suitability, discuss any medical conditions, and develop a personalized treatment plan for safe and effective results.',
+          items: [
+            'Some patients may experience temporary and mild side effects, including:',
+            'Mild redness',
+            'Slight swelling',
+            'Temporary skin sensitivity',
+            'Minor tenderness around treated follicles',
+            'These effects usually resolve naturally within a short period. Following the recommended aftercare instructions further reduces the likelihood of irritation and promotes healthy skin recovery.'
+          ]
+        }
+      ],
+      aftercareContent: {
+        resultsTitle: 'Recovery & Aftercare',
+        resultsDescription: 'One of the benefits of electrolysis in Dubai is that there is little to no downtime, allowing most patients to return to normal daily activities immediately after treatment. Mild redness, slight swelling, or temporary sensitivity around the treated follicles is common and usually resolves within a few hours. To support optimal healing and minimize irritation, following the recommended aftercare instructions is important.',
+        resultPoints: [
+          'Keep the treated area clean and dry for the first 24 hours.',
+          'Avoid touching or scratching the treated skin.',
+          'Do not wax, tweeze, or thread between treatment sessions.',
+          'Apply soothing products only if recommended by your practitioner.',
+          'Avoid excessive heat, hot baths, saunas, and steam rooms for 24–48 hours.',
+          'Protect treated areas from direct sun exposure and use sunscreen when necessary.',
+          'Stay hydrated and maintain a gentle skincare routine.',
+          'Attend all scheduled appointments to target hairs during their active growth cycle.'
+        ],
+        additionalInfo: {
+          title: 'Aftercare Guidelines',
+          description: 'Following these recommendations helps promote comfortable healing while supporting the long-term success of your permanent hair removal treatment.'
+        }
+      },
+      whyChooseContent: {
+        title: 'Why Choose RamaCare Polyclinic?',
+        intro: 'Choosing the right clinic plays an important role in achieving safe, comfortable, and long-lasting results. At RamaCare Polyclinic, we combine experienced practitioners, advanced electrolysis technology, and personalized patient care to deliver high-quality permanent hair removal treatments tailored to individual needs.',
+        features: [
+          { title: 'Experienced healthcare professionals.', description: 'Trained and certified electrolysis specialists.' },
+          { title: 'Personalised treatment plans for every patient.', description: 'Customized based on hair growth patterns and treatment goals.' },
+          { title: 'Advanced electrolysis technology.', description: 'Modern equipment for safe and effective treatment.' },
+          { title: 'Safe treatment for all skin tones and hair colours.', description: 'Suitable for every skin type and hair texture.' },
+          { title: 'Hygienic, DHA-compliant clinical environment.', description: 'Strict safety and hygiene protocols.' },
+          { title: 'Comprehensive consultation before treatment.', description: 'Detailed assessment and personalized plan.' },
+          { title: 'Focus on patient comfort and safety.', description: 'Comfortable and stress-free experience.' },
+          { title: 'Suitable for facial and body hair removal.', description: 'Versatile treatment for all areas.' },
+          { title: 'Evidence-based treatment protocols.', description: 'Clinically proven methods.' },
+          { title: 'Dedicated follow-up care and long-term patient support.', description: 'Ongoing support for lasting results.' }
+        ]
+      },
       paymentInsurance: {
   paymentTitle: 'Payment & Insurance',
   insuranceTitle: 'Insurance & Reimbursement Policy',
@@ -6607,7 +7165,7 @@ comparisonData: [
    'aesthetic-dermatology-dubai-skin-treatment-fillers': {
         hero: {
             subtitle: 'Natural Facial Volume Restoration with Medical Expertise',
-            description: 'Aging, stress, and volume loss can change facial contours over time. At ramacarepolyclinic, we provide Fillers in Dubai to restore facial volume, smooth lines, and enhance natural features—without surgery or long downtime.',
+            description: 'Aging, sun exposure, stress, and natural collagen loss can gradually reduce facial volume, leading to fine lines, wrinkles, and less defined facial contours. Our experienced aesthetic practitioners use premium-quality dermal fillers to address concerns such as hollow cheeks, thin lips, nasolabial folds, marionette lines, under-eye hollows, and jawline definition.  Whether you want to restore youthful contours or enhance your natural beauty, our customized filler treatments are designed to deliver safe, precise, and long-lasting improvements. Experience expert aesthetic care at RamaCare Polyclinic and discover how fillers in Dubai can help you achieve smoother, fuller, and more youthful-looking skin with confidence.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -6691,136 +7249,185 @@ comparisonData: [
       overview: {
         title: 'Understanding Fillers',
         problemIntro: {
-          title: 'Causes of Facial Volume Loss and Wrinkles',
-          description: 'ume loss, repeated facial expressions, sun exposure, and aging lead to fine lines, folds, and flattened facial contours. Untreated, these changes make the face look tired or aged.'
+          title: 'Common Causes of Facial Volume Loss and Wrinkles',
+          description: 'As we age, the skin naturally produces less collagen, elastin, and hyaluronic acid, leading to a gradual loss of firmness and facial volume. Daily sun exposure, environmental pollution, smoking, stress, weight fluctuations, and repetitive facial expressions can accelerate this process, causing wrinkles, sagging skin, and deeper facial folds. While these changes are a normal part of aging, they can make the face appear tired, older, or less defined. Dermal fillers provide a non-surgical solution by restoring lost volume, smoothing lines, and enhancing facial contours while maintaining a natural appearance.'
         },
         solutionIntro: {
-          title: 'Our Solution: Fillers in Dubai at ramacarepolyclinic',
-          description: 'Targeted Volume Restoration , Dermal fillers restore natural volume, smooth lines, and enhance facial contours while maintaining balanced, subtle results.Patient-Centered Approach'
+          title: 'Expert Fillers in Dubai for Natural Facial Rejuvenation',
+          description: 'At RamaCare Polyclinic, we provide fillers in Dubai using a personalized, doctor-led approach focused on enhancing your natural beauty rather than changing your appearance. Our treatment plans are designed to restore facial volume, soften wrinkles, improve facial symmetry, and define key features while maintaining balanced and natural-looking results. Every procedure is performed using premium-quality, DHA-approved dermal fillers and advanced injection techniques to maximize safety, comfort, and long-lasting outcomes.'
         },
       leftCards: [
   {
     id: 1,
-    title: 'What Is It?',
+    title: 'What Are Dermal Fillers?',
     description:
-      'A non-surgical, medically supervised treatment that restores facial volume, smooths lines, and enhances natural contours. Dermal fillers rejuvenate cheeks, lips, nasolabial folds, and other areas.'
+      'Dermal fillers are non-surgical injectable treatments designed to restore lost facial volume, smooth wrinkles, and enhance natural facial contours. Made from biocompatible substances such as hyaluronic acid, fillers help replenish moisture and support beneath the skin, creating a refreshed and youthful appearance. They are commonly used to enhance the cheeks, lips, jawline, chin, under-eye area, and nasolabial folds while maintaining natural facial expressions. At RamaCare Polyclinic, every treatment is performed by experienced medical professionals using DHA-approved dermal fillers to ensure safe, precise, and long-lasting results.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
+    title: 'Who Can Benefit from Fillers?',
     description:
-      'Adults experiencing: Loss of facial volume, deepening folds or wrinkles, thinning lips or hollow cheeks, desire for subtle, non-surgical facial enhancement.'
+      'Fillers are suitable for adults who want to improve facial harmony without surgery. You may be an ideal candidate if you experience:',
+      listItems: [
+        'Loss of facial volume due to aging',
+        'Henous hollow cheeks or temples',
+        'Thin or uneven lips',
+        'Deep smile lines or marionette lines',
+        'Mild facial asymmetry',
+        'Fine lines and wrinkles',
+        'Desire for subtle, natural-looking facial enhancement'
+      ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Treatment Duration and Results',
     description:
-      'Immediate visible results. Full effect within 1–2 weeks. Effects last 6–18 months depending on filler type, area treated, and lifestyle.'
+      'A typical filler session takes 30 to 60 minutes, depending on the treatment areas. Results are visible immediately, with the outcome becoming more refined within 1 to 2 weeks as the filler settles naturally. Depending on the filler type, treatment area, metabolism, and lifestyle, results typically last 6 to 18 months. Regular maintenance sessions can help preserve your refreshed appearance.'
   },
   {
     id: 4,
-    title: 'Trusted Dermal Filler Care You Can Depend On',
-    description: '',
+    title: 'Why Choose RamaCare for Fillers in Dubai?',
+    description: 'Choosing an experienced medical team is essential for achieving natural-looking results. At RamaCare Polyclinic, patient safety, precision, and personalized care are our priorities.',
     listItems: [
-      'DHA-approved dermal fillers',
-      'Doctor-led aesthetic treatments',
-      'Natural-looking, balanced results',
-      'Personalized facial assessment',
-      'High safety and hygiene standards'
+      'DHA-approved premium-quality dermal fillers',
+      'Doctor-led aesthetic consultations and treatments',
+      'Customized treatment plans for every face', 
+      'Natural, balanced facial enhancement',
+      'Advanced injection techniques for greater comfort',
+      'Strict hygiene and safety protocols',
+      'Minimal downtime with quick recovery time',
+      'Comprehensive aftercare guidance and follow-up support'
     ]
   }
 ],
-      rootCauses: [
+     rootCauses: [
   {
     id: 1,
     title: 'Forehead Lines',
-    description: 'Repeated eyebrow movements and facial expressions create horizontal lines across the forehead, making the skin appear aged and tense.',
+    description:
+      'Repeated eyebrow movements, facial expressions, and natural aging create horizontal forehead lines that become more noticeable over time.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 2,
     title: 'Frown Lines',
-    description: 'Constant brow furrowing deepens vertical lines between the eyebrows, often giving a stressed or angry appearance.',
+    description:
+      'Vertical lines between the eyebrows develop from frequent muscle movement and collagen loss, often giving the face a tired, stressed, or angry appearance.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
     title: 'Crow’s Feet',
-    description: 'Fine lines radiate from the outer corners of the eyes due to smiling, squinting, and sun exposure.',
+    description:
+      'Fine lines around the outer corners of the eyes form due to smiling, squinting, sun exposure, and reduced skin elasticity.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
     title: 'Loss of Facial Volume',
-    description: 'Reduction in fat, collagen, and elastin causes hollow cheeks, thinning lips, and sagging, resulting in a less youthful, tired look.',
+    description:
+      'A decline in collagen, elastin, and facial fat can lead to hollow cheeks, sunken temples, thinner lips, and reduced facial definition.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
     title: 'Nasolabial Folds',
-    description: 'Deep lines from the nose to the corners of the mouth form due to repeated smiling, collagen loss, and aging.',
+    description:
+      'These deep lines extending from the nose to the corners of the mouth become more prominent with aging, volume loss, and repeated facial movements.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 6,
     title: 'Marionette Lines',
-    description: 'Lines extending downward from the corners of the mouth create a sad or droopy expression over time.',
+    description:
+      'Lines running from the corners of the mouth toward the chin may create a downturned or sad facial expression as skin support decreases over time.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
-  },
+  }
 ],
       quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical injection' },
-  { label: 'Anesthesia', value: 'Not required (topical optional)' },
-  { label: 'Recovery Time', value: 'Minimal, usually immediate' },
-  { label: 'Side Effects', value: 'Temporary redness, swelling, or mild bruising' }
+  {
+    label: 'Treatment Type', value: 'Non-surgical injectable facial rejuvenation'
+  },
+  {
+    label: 'Procedure Time',value: '30–60 minutes'
+  },
+  {
+    label: 'Anesthesia',value: 'Usually not required; topical numbing cream available'
+  },
+  {
+    label: 'Downtime',value: 'Minimal; most patients resume normal activities the same day'
+  },
+  {
+    label: 'Results',value: 'Visible immediately, with optimal results in 1–2 weeks'
+  },
+  {
+    label: 'Longevity',value: 'Approximately 6–18 months'
+  },
+  {
+    label: 'Common Side Effects',value: 'Mild redness, swelling, tenderness, or temporary bruising'
+  },
+  {
+    label: 'Suitable For',value: 'Adults seeking facial rejuvenation and volume restoration'
+  }
 ],
-       approachCards: [
+      approachCards: [
   {
     id: 1,
     title: 'Comprehensive Facial Assessment',
-    description: 'A detailed evaluation of facial structure, skin condition, and volume loss ensures a personalized treatment plan.',
+    description:
+      'Every treatment begins with a detailed facial consultation. Our aesthetic doctors evaluate your facial anatomy, skin quality, volume loss, muscle movement, and aesthetic goals to develop a customized treatment plan.',
     hasLearnMore: true,
-    expandedContent: 'This ensures natural-looking results tailored to your facial features.'
+    expandedContent:
+      'This personalized assessment ensures the filler is placed precisely where it will provide the most natural and harmonious enhancement.'
   },
   {
     id: 2,
-    title: 'Customized Filler Selection & Dosage',
-    description: 'We select the appropriate type and amount of filler based on your unique needs and facial anatomy.',
+    title: 'Customized Filler Selection',
+    description:
+      'Not every filler is suitable for every treatment area. We carefully select the appropriate type, consistency, and quantity of dermal filler based on the treatment area, skin condition, and desired outcome.',
     hasLearnMore: true,
-    expandedContent: 'This ensures the desired outcome while maintaining facial balance.'
+    expandedContent:
+      'This individualized approach helps achieve balanced facial proportions while avoiding an overfilled appearance.'
   },
   {
     id: 3,
-    title: 'Precise, Doctor-Administered Injections',
-    description: 'Expertly performed injections target specific areas, ensuring accurate placement and minimal discomfort.',
+    title: 'Precise Doctor-Administered Injections',
+    description:
+      'Our experienced medical professionals use advanced injection techniques to deliver fillers with exceptional precision. Careful placement minimizes discomfort, reduces bruising, and creates smooth, symmetrical, and natural-looking results.',
     hasLearnMore: true,
-    expandedContent: ''
+    expandedContent:
+      'Treatment can be precisely performed for areas such as the cheeks, lips, jawline, chin, and smile lines to achieve natural facial enhancement.'
   },
   {
     id: 4,
-    title: 'FDA/DHA-Approved Filler Products',
-    description: 'Only high-quality, approved dermal fillers are used to ensure safety and effectiveness.',
+    title: 'Premium FDA & DHA-Approved Dermal Fillers',
+    description:
+      'Your safety is our highest priority. We use only premium-quality FDA- and DHA-approved dermal fillers that are clinically tested for safety, effectiveness, and long-lasting performance.',
     hasLearnMore: true,
-    expandedContent: 'Providing long-lasting results.'
+    expandedContent:
+      'These trusted products integrate naturally with the skin to restore volume while maintaining a soft, natural feel.'
   },
   {
     id: 5,
-    title: 'Post-Treatment Guidance & Follow-Up',
-    description: 'Patients receive aftercare instructions and follow-up sessions to monitor results and maintain optimal appearance.',
+    title: 'Personalized Aftercare and Follow-Up',
+    description:
+      'Following your treatment, our team provides comprehensive aftercare instructions to support optimal healing and long-lasting results.',
     hasLearnMore: true,
-    expandedContent: ''
-  },
+    expandedContent:
+      'We also schedule follow-up assessments when needed to evaluate your outcome, answer any questions, and recommend maintenance treatments that help preserve your refreshed appearance over time.'
+  }
 ]
       },
      healingJourney: {
   title: 'Your Dermal Fillers Journey',
-  description: '',
+  description:
+    'At RamaCare Polyclinic, our filler treatment in Dubai follows a safe, personalized, and medically supervised process designed to deliver natural-looking facial rejuvenation with minimal discomfort. Every stage is carefully planned to ensure optimal safety, precision, and long-lasting results while enhancing your unique facial features.',
   steps: [
     {
       id: 1,
@@ -6828,11 +7435,13 @@ comparisonData: [
       title: 'Initial Consultation & Facial Assessment',
       duration: 'Step 1',
       description:
-        'Understanding facial structure, wrinkle patterns, and patient goals.',
+        'Your journey begins with a comprehensive consultation with one of our experienced aesthetic doctors. We evaluate your facial anatomy, skin quality, facial symmetry, volume loss, and areas of concern to understand your aesthetic goals. Based on this assessment, we recommend the most suitable dermal filler treatment for natural, balanced facial enhancement.',
       keyActivities: [
-        'Facial analysis and volume mapping',
-        'Discussion of patient expectations',
-        'Personalized filler selection and plan'
+        'Comprehensive facial analysis and volume assessment',
+        'Evaluation of wrinkles, folds, and facial proportions',
+        'Discussion of treatment goals and expectations',
+        'Review of medical history and suitability',
+        'Creation of a personalized treatment plan'
       ],
       side: 'right'
     },
@@ -6842,25 +7451,29 @@ comparisonData: [
       title: 'Personalized Treatment Planning',
       duration: 'Step 2',
       description:
-        'Selection of appropriate filler type, dosage, and injection technique.',
+        'Every face is unique, which is why we create an individualized treatment strategy before beginning the procedure. Our doctors carefully select the appropriate filler type, injection technique, and treatment areas to achieve subtle, harmonious, and long-lasting results without overfilling.',
       keyActivities: [
-        'Choosing FDA/DHA-approved filler products',
-        'Planning precise injection areas',
-        'Preparing skin for treatment'
+        'Selection of premium FDA & DHA-approved dermal fillers',
+        'Planning the quantity and injection points',
+        'Mapping facial contours for balanced enhancement',
+        'Skin cleansing and treatment preparation',
+        'Patient education and pre-treatment guidance'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Filler Treatment Session',
+      title: 'Precision Dermal Filler Treatment',
       duration: 'Step 3',
       description:
-        'Precise, doctor-administered injections for target areas like cheeks, lips, nasolabial folds, or jawline.',
+        'The filler is carefully injected into the planned treatment areas using advanced techniques to restore facial volume, smooth wrinkles, and improve facial contours. The procedure is performed with precision to maximize comfort while maintaining natural facial expressions. Most treatments are completed within 30 to 60 minutes, allowing patients to return to their daily routine shortly afterward.',
       keyActivities: [
-        'Gentle, precise injections',
-        'Maintaining natural facial expressions',
-        'Immediate post-treatment guidance'
+        'Gentle, doctor-administered filler injections',
+        'Precise enhancement of cheeks, lips, chin, jawline, and smile lines',
+        'Continuous assessment for facial balance and symmetry',
+        'Immediate evaluation of treatment results',
+        'Personalized aftercare instructions'
       ],
       side: 'right'
     },
@@ -6870,90 +7483,142 @@ comparisonData: [
       title: 'Follow-Up & Aftercare Support',
       duration: 'Step 4',
       description:
-        'Monitoring results, minor adjustments if needed, and post-treatment guidance to maintain natural outcomes.',
+        'Our care continues even after your procedure. We provide detailed aftercare guidance to help reduce temporary swelling or bruising and support the best possible results. Follow-up appointments may be recommended to monitor your progress, answer questions, and determine whether minor refinements or future maintenance treatments are appropriate.',
       keyActivities: [
-        'Check wrinkle smoothing and volume restoration',
-        'Post-treatment care instructions',
-        'Recommendations for long-term facial health'
+        'Assessment of facial volume restoration and wrinkle improvement',
+        'Monitoring healing and treatment outcomes',
+        'Personalized post-treatment care instructions',
+        'Recommendations for maintaining long-lasting results',
+        'Ongoing support and future treatment planning'
       ],
       side: 'left'
     }
   ]
 },
       benefits: {
-        title: 'Clinically Observed Benefits',
-        description: 'Based on 15+ years of providing skin treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Restored facial volume',
-            percentage: 91,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Smoother fine lines and folds ',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Enhanced facial contours',
-            percentage: 95,
-            description: null
-          },
-          {
-            id: 4,
-            title: ' Natural, refreshed appearance',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Improved confidence',
-            percentage: 93,
-            description: null
-          },
-        ],
-        comparisonTitle: 'Fillers vs. Conventional Anti-Aging Treatments',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Dermal Fillers',
-          traditional: 'Conventional Treatments'
-        },
-        comparisonData: [
-          {
-            feature: 'Results	',
-            ayurvedic: 'Immediate volume restoration',
-            conventional: 'Gradual improvement'
-          },
-          {
-            feature: 'Invasiveness',
-            ayurvedic: 'Non-surgical',
-            conventional: 'May involve surgery'
-          },
-          {
-            feature: 'Downtime',
-            ayurvedic: 'Minimal',
-            conventional: 'Often longer recovery'
-          },
-          {
-            feature: 'Precision',
-            ayurvedic: 'Targeted facial enhancement',
-            conventional: 'General skin care'
-          },
-          {
-            feature: 'Longevity',
-            ayurvedic: 'Months to over a year',
-            conventional: 'Short-term effects'
-          },
-          {
-            feature: 'Customization',
-            ayurvedic: 'Highly personalized',
-            conventional: 'Limited flexibility'
-          }
-        ]
+  title: 'Clinically Observed Benefits of Fillers in Dubai',
+  description:
+    'At RamaCare Polyclinic, our filler treatments in Dubai are designed to restore facial harmony while maintaining natural-looking results. With over 15 years of experience in aesthetic and skin treatments in Dubai, we focus on personalized care, advanced techniques, and premium-quality dermal fillers to help patients achieve safe and satisfying outcomes. Individual results may vary depending on age, skin condition, treatment area, and lifestyle.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Restored Facial Volume',
+      percentage: 91,
+      description:
+        'Dermal fillers replenish lost volume in areas such as the cheeks, temples, lips, and under-eye region, creating a fuller, healthier, and more youthful appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'Fillers restore natural facial volume while improving facial harmony and youthful contours. Treatment is carefully customized according to the treatment area and your individual facial anatomy for balanced, natural-looking results.'
+    },
+    {
+      id: 2,
+      title: 'Smoother Fine Lines and Folds',
+      percentage: 88,
+      description:
+        'By filling targeted areas beneath the skin, dermal fillers soften smile lines, marionette lines, and other facial folds, resulting in smoother and rejuvenated skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'Carefully placed fillers help reduce the appearance of facial folds while maintaining natural facial movement and expression, creating a refreshed yet subtle appearance.'
+    },
+    {
+      id: 3,
+      title: 'Enhanced Facial Contours',
+      percentage: 95,
+      description:
+        'Fillers help define the cheeks, jawline, chin, and lips, improving facial balance and creating natural-looking contours without surgery.',
+      hasLearnMore: true,
+      expandedContent:
+        'Our personalized treatment approach enhances facial proportions while preserving your natural features. Results are designed to improve definition without creating an overfilled appearance.'
+    },
+    {
+      id: 4,
+      title: 'Natural, Refreshed Appearance',
+      percentage: 85,
+      description:
+        'Our personalized treatment approach enhances your existing features rather than changing them, delivering subtle, refreshed results that preserve your natural facial expressions.',
+      hasLearnMore: true,
+      expandedContent:
+        'Advanced injection techniques and premium dermal fillers are used to restore volume gradually, helping patients achieve refreshed, youthful-looking results that remain natural and harmonious.'
+    },
+    {
+      id: 5,
+      title: 'Improved Confidence',
+      percentage: 93,
+      description:
+        'Many patients report feeling more confident in their appearance after treatment, enjoying smoother skin, improved facial definition, and a youthful look with minimal downtime.',
+      hasLearnMore: true,
+      expandedContent:
+        'These figures represent observed patient outcomes at RamaCare Polyclinic and are intended for informational purposes. Individual results may vary depending on age, skin condition, treatment area, lifestyle, and the personalized treatment plan.'
+    }
+  ],
+       comparisonTitle: 'Fillers vs. Conventional Anti-Aging Treatments',
+comparisonDescription:
+  'Choosing the right facial rejuvenation treatment depends on your concerns, desired results, and lifestyle. Fillers in Dubai are an excellent option for individuals seeking immediate, natural-looking facial enhancement without surgery or extended recovery. Unlike conventional anti-aging treatments that primarily improve skin quality over time, dermal fillers restore lost volume, enhance facial contours, and smooth wrinkles with visible results soon after treatment. A consultation with our experienced aesthetic doctors at RamaCare Polyclinic can help determine the most suitable approach based on your facial anatomy and aesthetic goals.',
+
+comparisonHeaders: {
+  feature: 'Aspect',
+  ourTreatment: 'Dermal Fillers',
+  traditional: 'Conventional Anti-Aging Treatments'
+},
+
+comparisonData: [
+  {
+    feature: 'Primary Purpose',
+    ayurvedic:
+      'Restores facial volume, enhances contours, and smooths wrinkles.',
+    conventional:
+      'Focuses on improving overall skin texture and reducing early signs of aging.'
+  },
+  {
+    feature: 'Results',
+    ayurvedic:
+      'Immediate improvement with full results in 1–2 weeks.',
+    conventional:
+      'Gradual improvement over several weeks or months.'
+  },
+  {
+    feature: 'Procedure',
+    ayurvedic:
+      'Non-surgical injectable treatment.',
+    conventional:
+      'May include topical skincare, laser treatments, or surgical procedures.'
+  },
+  {
+    feature: 'Downtime',
+    ayurvedic:
+      'Minimal; most patients resume normal activities the same day.',
+    conventional:
+      'Varies depending on the treatment, with some requiring longer recovery.'
+  },
+  {
+    feature: 'Precision',
+    ayurvedic:
+      'Targets specific facial areas such as cheeks, lips, jawline, chin, and smile lines.',
+    conventional:
+      'Generally improves overall skin quality rather than restoring facial volume.'
+  },
+  {
+    feature: 'Customization',
+    ayurvedic:
+      'Highly personalized based on facial anatomy and aesthetic goals.',
+    conventional:
+      'Customization depends on the treatment type.'
+  },
+  {
+    feature: 'Longevity',
+    ayurvedic:
+      'Typically lasts 6–18 months, depending on the filler and treatment area.',
+    conventional:
+      'Results vary and often require ongoing maintenance.'
+  },
+  {
+    feature: 'Best For',
+    ayurvedic:
+      'Individuals seeking natural facial rejuvenation and volume restoration.',
+    conventional:
+      'Individuals looking to improve skin texture, pigmentation, or mild aging concerns.'
+  }
+]
       },
     pricing: {
   title: 'Transparent Pricing & Customized Filler Packages',
@@ -7291,12 +7956,70 @@ comparisonData: [
             description: 'Patient Reviews'
           }
       ]
-    }
+    },
+      whyChooseSection: {
+        title: 'Why Choose RamaCare Polyclinic for Fillers in Dubai',
+        intro: 'Choosing the right clinic is essential for achieving safe, natural-looking results with dermal fillers. At RamaCare Polyclinic, we combine medical expertise, advanced aesthetic techniques, and a patient-focused approach to deliver personalized Fillers in Dubai that enhance your natural features without creating an overfilled appearance.',
+        features: [
+          {
+            id: 1,
+            title: 'Comprehensive Facial Assessment',
+            description: 'Every treatment begins with a comprehensive facial assessment, allowing our experienced doctors to understand your facial anatomy, skin condition, and aesthetic goals before recommending the most suitable treatment plan.'
+          },
+          {
+            id: 2,
+            title: 'Premium FDA & DHA-Approved Fillers',
+            description: 'We use only premium-quality, FDA and DHA-approved dermal fillers, ensuring high standards of safety, effectiveness, and long-lasting results.'
+          },
+          {
+            id: 3,
+            title: 'Precise Injection Techniques',
+            description: 'Our doctors employ precise injection techniques to restore facial volume, soften wrinkles, and improve facial contours while maintaining balanced facial expressions. Patient safety, comfort, and satisfaction remain our priorities throughout every stage of treatment.'
+          },
+          {
+            id: 4,
+            title: 'Personalized Aftercare & Follow-Up',
+            description: 'From your initial consultation to post-treatment follow-up, our team provides clear guidance, personalized care, and ongoing support to help you achieve the best possible outcome. Whether you want to enhance your lips, cheeks, jawline, or reduce the appearance of facial folds, RamaCare Polyclinic is committed to delivering professional aesthetic care in a safe, comfortable, and welcoming environment.'
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: 'Recovery & Aftercare',
+        resultsDescription: 'One of the advantages of choosing Fillers in Dubai is the minimal recovery time. Most patients return to their daily routine immediately after treatment, although mild redness, swelling, tenderness, or bruising around the injection sites may occur. These temporary effects usually improve within a few days and are a normal part of the healing process.',
+        resultPoints: [
+          'Avoid touching or massaging the treated areas for the first 24 hours unless specifically instructed',
+          'Strenuous exercise, excessive heat exposure, saunas, steam rooms, and alcohol consumption should also be avoided for at least 24 to 48 hours, as these factors may increase swelling or bruising',
+          'Apply a cold compress to help minimize temporary swelling',
+          'Stay well hydrated to support healthy skin recovery',
+          'Protect your skin from excessive sun exposure by using sunscreen',
+          'Follow consistent skincare routine as recommended by your doctor'
+        ],
+        additionalInfo: {
+          title: 'Follow-Up & Maintenance',
+          description: 'Follow-up appointments may be arranged when needed to assess your results and determine whether any refinements or future maintenance treatments are appropriate. By following your doctor\'s advice, you can enjoy natural-looking, long-lasting results while maintaining healthy, youthful facial contours.'
+        }
+      },
+      whenToConsider: {
+        title: 'Who Is a Suitable Candidate for Fillers?',
+        intro: 'Fillers in Dubai are suitable for adults who wish to restore facial volume, reduce the appearance of wrinkles, or enhance specific facial features without surgery. Whether you are noticing early signs of aging or simply want to improve facial harmony, dermal fillers offer a safe and effective non-surgical solution for many individuals.',
+        points: [
+          'Hollow cheeks',
+          'Thinning lips',
+          'Nasolabial folds',
+          'Marionette lines',
+          'Under-eye hollows',
+          'Mild facial asymmetry',
+          'Desire to improve jawline definition',
+          'Desire to enhance chin projection',
+          'Desire to improve overall facial contours with a natural appearance'
+        ],
+        closing: 'Ideal candidates should be in good general health, have realistic expectations, and understand the benefits and limitations of treatment. During your consultation at RamaCare Polyclinic, our experienced aesthetic doctors will carefully evaluate your facial anatomy, medical history, skin condition, and cosmetic goals before recommending the most appropriate treatment plan. If dermal fillers are not the best option for your concerns, we will discuss suitable alternatives to help you achieve safe, balanced, and natural-looking facial rejuvenation.'
+      }
   },
 'aesthetic-dermatology-dubai-skin-treatment-facial': {
         hero: {
             subtitle: 'Rejuvenate Your Skin with Expert Facial Care',
-            description: 'Facial skin requires consistent care to maintain a youthful, radiant appearance. At ramacarepolyclinic, we provide Facial Treatments in Dubai to cleanse, hydrate, and rejuvenate your skin while targeting pigmentation, fine lines, and dullness.',
+            description: 'Healthy, radiant skin requires more than a daily skincare routine.  At RamaCare Polyclinic, we offer facial treatments in Dubai designed to deeply cleanse, nourish, and rejuvenate your skin while addressing a wide range of common skin concerns. Our advanced facial treatments combine professional skincare techniques with medical expertise to improve skin texture, hydration, and overall complexion. Whether you want to brighten dull skin, reduce fine lines, minimize acne marks, improve pigmentation, or restore a healthy glow, every treatment is personalized to suit your skin type and aesthetic goals. Following a detailed skin assessment, our experienced practitioners recommend the most suitable facial treatment to deliver safe, effective, and natural-looking results. If you are looking for trusted facial treatments in Dubai, RamaCare Polyclinic provides personalized skincare solutions that help restore your skin\'s natural radiance, improve overall skin health, and leave you with a smoother, brighter, and more youthful-looking complexion.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -7380,72 +8103,91 @@ comparisonData: [
       overview: {
         title: 'Understanding Facial Treatments',
         problemIntro: {
-          title: 'Common Skin Concerns',
-          description: 'Facial skin can become dull, dehydrated, or show early signs of aging due to sun exposure, lifestyle, or stress. Untreated concerns may worsen over time, affecting overall appearance.'
+          title: 'Common Skin Concerns Addressed by Facial Treatments',
+          description: 'Healthy skin is constantly exposed to environmental pollutants, UV radiation, stress, aging, and lifestyle factors that gradually reduce its natural glow and resilience. Without proper professional care, these concerns can become more noticeable over time, affecting skin texture, hydration, and overall appearance. Professional facial treatments in Dubai help improve these concerns through personalized skincare solutions.'
         },
         solutionIntro: {
-          title: 'Our Solution: Facial Treatments in Dubai at ramacarepolyclinic',
-          description: ' Targeted Skin Rejuvenation : We provide treatments tailored to your skin type and concerns, including hydrating facials, anti-aging therapies, chemical peels, and laser options.Patient-Centered Approach :-'
+          title: 'Our Solution: Facial Treatments in Dubai at RamaCare Polyclinic',
+          description: ' At RamaCare Polyclinic, our facial treatments in Dubai are designed to improve your skin\'s health, restore its natural radiance, and address a wide range of skin concerns through personalized, doctor-supervised care. Every individual\'s skin is unique, which is why we tailor each facial treatment according to your skin type, condition, lifestyle, and aesthetic goals. Whether you are looking to improve hydration, reduce pigmentation, minimize fine lines, control acne, or achieve a brighter complexion, our customized treatment plans are developed to deliver safe, effective, and natural-looking results.Using advanced skincare techniques, medical-grade products, and modern aesthetic technologies, we combine science-based treatments with personalized care to promote healthier, smoother, and younger-looking skin. Our focus is not only on improving your appearance but also on maintaining long-term skin health through comprehensive assessment, targeted treatments, and professional aftercare.'
         },
   leftCards: [
   {
     id: 1,
-    title: 'What Is It?',
-    description: 'Facial Treatments in Dubai are personalized skin care procedures that combine cleansing, exfoliation, hydration, and specialized therapies to improve skin texture, tone, and overall facial radiance.'
+    title: 'What Are Facial Treatments?',
+    description: 'Facial Treatments in Dubai are professional, non-invasive skincare procedures designed to cleanse, exfoliate, hydrate, and rejuvenate the skin while addressing a variety of cosmetic concerns. Daily exposure to sunlight, pollution, stress, aging, and environmental factors can gradually affect your skin\'s health, leading to dullness, dehydration, uneven skin tone, enlarged pores, acne, pigmentation, and fine lines. Professional facial treatments help restore the skin\'s natural balance by removing impurities, promoting healthy skin renewal, and improving overall skin texture and radiance.At RamaCare Polyclinic, every facial treatment begins with a comprehensive skin assessment to understand your skin type, concerns, and aesthetic goals.  Whether your goal is deep hydration, acne management, anti-aging care, skin brightening, or improving overall complexion, each treatment plan is personalized to deliver safe, effective, and natural-looking results.Regular facial treatments not only improve the appearance of the skin but also support long-term skin health by enhancing hydration, stimulating healthy skin renewal, and maintaining a youthful, refreshed complexion.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Adults seeking:',
+    title: 'Who Can Benefit from Facial Treatments?',
+    description: 'Facial Treatments in Dubai are suitable for both men and women who want healthier, clearer, and more radiant skin. Whether you are addressing a specific skin concern or maintaining your skin\'s overall health, professional facial treatments can be customized to meet your individual needs.You may benefit from facial treatments if you:',
     listItems: [
-      'Hydration and skin nourishment',
-      'Reduction of fine lines and wrinkles',
-      'Treatment for pigmentation or dullness',
-      'Acne and post-acne marks improvement',
-      'Overall skin rejuvenation and youthful glow'
+      'Experience dry, dehydrated, or sensitive skin.',
+      'Want to improve skin hydration and nourishment.',
+      'Notice fine lines and early signs of skin aging.',
+      'Have pigmentation, sun spots, or uneven skin tone.',
+      'Struggle with acne or post-acne marks.',
+      'Have enlarged pores or oily skin.',
+      'Want brighter, smoother, and healthier-looking skin.',
+      'Are you preparing your skin for a special occasion?',
+      'Wish to maintain a youthful complexion through regular skincare.'
+    ]
+   },
+   {
+    id: 3,
+    title: 'Trusted Facial Care You Can Depend On',
+    description: 'At RamaCare Polyclinic, we combine personalized skincare with advanced technology to deliver facial treatments that are both safe and effective. Every procedure is performed in a hygienic, DHA-compliant clinical environment by experienced skincare professionals who focus on achieving natural, healthy-looking results.Why Patients Choose Our Facial Treatments',
+    listItems: [
+      'Personalized skin analysis before every treatment.',
+      'Doctor-supervised skincare procedures.',
+      'Advanced facial treatment techniques.',
+      'High-quality medical-grade skincare products.',
+      'Suitable for all skin types.',
+      'Individualized treatment plans.',
+      'Safe, hygienic, and comfortable clinical environment.',
+      'Focus on long-term skin health and natural skin rejuvenation.'
     ]
   },
   {
-    id: 3,
-    title: 'Duration',
-    description: 'Sessions last 45–90 minutes, depending on the type of facial. Noticeable results appear after the first session, with optimal outcomes after 4–6 sessions.'
+    id: 4,
+    title: 'Treatment Duration & Results',
+    description: 'The duration of facial treatments in Dubai generally ranges from 45 to 90 minutes, depending on the type of facial selected and your individual skin concerns. Many patients notice an immediate improvement in skin hydration, smoothness, and radiance after a single session. For concerns such as pigmentation, acne, uneven texture, or signs of ageing, a series of 4–6 treatments may be recommended to achieve optimal, long-lasting results. Regular maintenance sessions help preserve healthy, glowing skin throughout the year.'
   }
 ],
-  rootCauses: [
+ rootCauses: [
   {
     id: 1,
     title: 'Fine Lines & Wrinkles',
-    description: 'Caused by aging, repeated facial movements, or sun damage',
+    description: 'As collagen and elastin production naturally decline with age, the skin begins to lose firmness and elasticity. Repeated facial expressions and sun exposure contribute to the formation of fine lines and wrinkles, making the skin appear older.',
     severity: 'High',
-    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'   
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
     title: 'Pigmentation & Dark Spots',
-    description: 'Sun, acne, or hormonal changes create uneven skin tone',
+    description: 'Excessive sun exposure, hormonal changes, acne, and aging can trigger uneven melanin production, leading to pigmentation, dark spots, and an uneven complexion.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'    
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
-    title: 'Dull Skin',
-    description: 'Poor hydration, stress, or environmental factors reduce radiance',
+    title: 'Dull & Tired-Looking Skin',
+    description: 'Dead skin cell build-up, dehydration, stress, pollution, and inadequate skincare can leave the complexion looking dull, rough, and lacking its natural radiance.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'        
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
     title: 'Acne & Post-Acne Marks',
-    description: 'Active acne and scars affect smoothness and texture',
+    description: 'Acne breakouts may leave behind persistent marks, uneven texture, enlarged pores, and mild scarring that affect overall skin smoothness and confidence.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'        
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 5,
-    title: 'Dehydration & Sensitivity',
-    description: 'Lack of moisture causes dryness, redness, and irritation',
+    title: 'Dehydration & Sensitive Skin',
+    description: 'A weakened skin barrier and insufficient moisture can cause dryness, redness, irritation, and increased skin sensitivity. Professional facial treatments help restore hydration while improving skin comfort and resilience.',
     severity: 'Medium',
-    severityColor: 'bg-[#FEF3C7] text-[#92400E]'          
+    severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   }
 ],
   quickFacts: [
@@ -7455,85 +8197,108 @@ comparisonData: [
   { label: 'Side Effects', value: 'Temporary redness or mild irritation' }
 ],
 
-     approachCards: [
+    approachCards: [
   {
     id: 1,
-    title: 'Comprehensive facial assessment',
-    description: '',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Comprehensive Facial Assessment',
+    description:
+      'Every facial treatment begins with a detailed skin consultation to understand your skin type, current condition, and cosmetic concerns. Our experienced practitioners carefully assess hydration levels, pigmentation, texture, pore size, acne activity, sensitivity, and early signs of aging before recommending the most suitable treatment plan.',
+    hasLearnMore: true,
+    expandedContent:
+      'Benefits: Professional skin analysis, identification of underlying skin concerns, evaluation of skin hydration and texture, personalised skincare recommendations, individual treatment planning.'
   },
   {
     id: 2,
-    title: 'Personalized facial plan',
-    description: '',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Personalised Facial Treatment Plan',
+    description:
+      "No two skin types are the same. Based on your consultation, we create a customized facial program that may include hydrating facials, deep cleansing treatments, anti-aging therapies, chemical peels, laser-based skin rejuvenation, or brightening treatments. Every procedure is selected to suit your skin's specific needs while supporting long-term skin health.",
+    hasLearnMore: true,
+    expandedContent:
+      'Benefits: Tailored treatment for every skin type, custom solutions for multiple skin concerns, medical-grade skincare approach, natural-looking skin improvement, long-term skin maintenance strategy.'
   },
   {
     id: 3,
-    title: 'Safe, doctor-administered procedures',
-    description: '',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Safe, Doctor-Supervised Procedures',
+    description:
+      'Your safety and comfort are our highest priorities. All Facial Treatments in Dubai at RamaCare Polyclinic are performed or supervised by experienced medical professionals using advanced equipment, evidence-based techniques, and high-quality skincare products. Every procedure follows strict hygiene and patient safety protocols within our DHA-compliant clinical environment.',
+    hasLearnMore: true,
+    expandedContent:
+      'Benefits: Doctor-supervised treatments, advanced skincare technology, high safety and hygiene standards, comfortable, minimally invasive procedures, suitable for most skin types.'
   },
   {
     id: 4,
-    title: 'Post-treatment care and guidance',
-    description: '',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Post-Treatment Care & Professional Guidance',
+    description:
+      'Healthy skin requires ongoing care beyond the treatment session. After your facial, our practitioners provide personalized aftercare instructions and skincare recommendations to help maximize results, minimize temporary sensitivity, and maintain your skin’s health between appointments. We also recommend suitable maintenance schedules based on your skin condition and treatment goals.',
+    hasLearnMore: true,
+    expandedContent:
+      'Benefits: Personalised aftercare advice, professional skincare recommendations, support for long-term skin health, guidance on maintaining treatment results, follow-up care when required.'
   },
   {
     id: 5,
-    title: 'Result',
-    description: 'Smoother, radiant skin with reduced pigmentation, fine lines, and improved overall skin health.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Treatment Results',
+    description:
+      'With regular facial treatments in Dubai, patients often notice smoother skin, improved hydration, enhanced radiance, refined skin texture, and a more even complexion. Depending on your personalized treatment plan, facial treatments can also help reduce pigmentation, minimize the appearance of fine lines, improve acne-prone skin, and restore a healthy, youthful glow.',
+    hasLearnMore: true,
+    expandedContent:
+      'Through continuous professional care and tailored skincare solutions, our goal is to help you achieve healthier, brighter, and naturally beautiful skin that looks refreshed throughout the year.'
   }
 ]
       },
 
  healingJourney: {
-  title: 'Your Facial Treatment Journey',
-  description: '',
+  title: 'Your Facial Treatment Journey: Step by Step',
+  description:
+    'At RamaCare Polyclinic, our Facial Treatments in Dubai follow a structured, patient-centered approach designed to improve skin health, enhance your natural complexion, and address your unique skincare concerns. Every treatment begins with a detailed skin assessment and is tailored to your skin type, condition, and aesthetic goals. Whether you are seeking hydration, skin brightening, acne management, anti-aging care, or pigmentation treatment, our experienced practitioners create a personalized treatment plan to deliver safe, effective, and long-lasting results.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Skin Assessment',
       duration: 'Step 1',
-      description: 'Comprehensive evaluation of skin type, concerns, and goals.',
+      description:
+        'Your skincare journey begins with a comprehensive consultation, where our experienced practitioner evaluates your skin type, hydration levels, texture, sensitivity, and overall skin health. We carefully identify concerns such as pigmentation, acne, enlarged pores, dehydration, fine lines, wrinkles, or uneven skin tone before recommending the most suitable facial treatment. This detailed assessment helps ensure every treatment is customized to achieve the best possible outcome while supporting long-term skin health.',
       keyActivities: [
-        'Skin analysis and hydration check',
-        'Identification of pigmentation, acne, or wrinkles',
-        'Customized facial treatment plan'
+        'Comprehensive skin analysis',
+        'Assessment of hydration and skin texture',
+        'Evaluation of pigmentation, acne, and fine lines',
+        'Review of medical and skincare history',
+        'Discussion of treatment goals and expectations',
+        'Personalised facial treatment recommendations'
       ],
       side: 'right'
     },
     {
       id: 2,
       number: '02',
-      title: 'Personalized Treatment Planning',
+      title: 'Personalised Treatment Planning',
       duration: 'Step 2',
-      description: 'Selection of appropriate facial therapy based on individual skin needs.',
+      description:
+        "Following your consultation, we create a customized treatment plan based on your individual skin concerns and desired results. Depending on your skin's needs, your plan may include hydrating facials, deep cleansing treatments, anti-aging therapies, chemical peels, laser skin rejuvenation, PRP facial therapy, or brightening treatments. We also explain the recommended number of sessions, expected results, and aftercare instructions before beginning treatment.",
       keyActivities: [
-        'Decide the number of sessions',
-        'Prepare skin for treatment',
-        'Discuss expected outcomes'
+        'Selection of the most appropriate facial treatment',
+        'Personalised skincare programme',
+        'Determination of treatment frequency',
+        'Preparation of the skin before treatment',
+        'Discussion of expected outcomes',
+        'Patient education and treatment planning'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Treatment Session',
+      title: 'Facial Treatment Session',
       duration: 'Step 3',
-      description: 'Gentle, precise application of facial therapy by trained doctors.',
+      description:
+        'Your facial treatment is performed by trained skincare professionals using advanced techniques, medical-grade skincare products, and modern aesthetic technologies. Depending on your personalized treatment plan, the procedure may include deep cleansing, exfoliation, hydration therapy, extraction, chemical peeling, laser skin rejuvenation, collagen-stimulating treatments, PRP therapy, specialized facial masks, or soothing serums. Every step is performed with precision to maximize skin rejuvenation while ensuring patient comfort and safety.',
       keyActivities: [
-        'Cleansing, exfoliation, and hydration',
-        'Application of targeted therapies (laser, peels, PRP, masks)',
-        'Immediate post-treatment care'
+        'Gentle cleansing and exfoliation',
+        'Removal of impurities and dead skin cells',
+        'Hydration and nourishment of the skin',
+        'Application of targeted treatments such as chemical peels, laser therapy, PRP, or customised facial masks',
+        'Soothing post-treatment skincare',
+        'Immediate assessment of skin response'
       ],
       side: 'right'
     },
@@ -7542,90 +8307,135 @@ comparisonData: [
       number: '04',
       title: 'Follow-Up & Aftercare Support',
       duration: 'Step 4',
-      description: 'Monitor progress, provide skincare guidance, and plan future sessions for maintenance.',
+      description:
+        'Maintaining healthy skin extends beyond your treatment session. Our practitioners provide detailed aftercare instructions and personalized skincare recommendations to help protect your skin, enhance treatment results, and maintain long-term skin health. Follow-up appointments allow us to monitor your progress, evaluate improvements, and recommend maintenance treatments when necessary to keep your skin looking healthy, radiant, and youthful.',
       keyActivities: [
-        'Assess skin improvement',
-        'Recommend home care and sunscreen',
-        'Schedule follow-up sessions as needed'
+        'Assessment of treatment results',
+        'Monitoring skin hydration and improvement',
+        'Personalised home skincare recommendations',
+        'Sun protection and sunscreen guidance',
+        'Scheduling maintenance or follow-up treatments',
+        'Ongoing professional skincare support'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'Many patients notice smoother, brighter, and more hydrated skin immediately after their Facial Treatments in Dubai, with continued improvements developing over the following days as the skin naturally renews itself. With a personalized treatment plan and regular maintenance sessions, facial treatments can help improve skin texture, reduce pigmentation, minimize fine lines, manage acne-prone skin, and restore a healthy, youthful glow while supporting long-term skin health.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically Observed Benefits',
-        description: 'Based on 15+ years of providing skin treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: 'Brighter, more radiant skin',
-            percentage: 91,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Smoother texture and reduced fine lines',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: ' Improved hydration and elasticity',
-            percentage: 95,
-            description: null
-          },
-          {
-            id: 4,
-            title: ' Reduced pigmentation and dullness',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Boosted confidence and youthful appearance',
-            percentage: 93,
-            description: null
-          },
-        ],
-        comparisonTitle: 'Facial Treatments vs. Conventional Skincare',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Facial Treatments',
-          traditional: 'Conventional Treatments'
-        },
-        comparisonData: [
-          {
-            feature: 'Results	',
-            ayurvedic: 'Visible after 1–2 sessions',
-            conventional: 'Gradual, may take month'
-          },
-         {
-    feature: 'Invasiveness',
-    ayurvedic: 'Non-surgical, supervised',
-    conventional: 'At-home products only'
+     benefits: {
+  title: 'Clinically Observed Benefits of Facial Treatments in Dubai',
+  description:
+    'At RamaCare Polyclinic, our Facial Treatments in Dubai are designed to improve overall skin health while enhancing your natural complexion. Using advanced skincare techniques, medical-grade products, and personalized treatment plans, our facial therapies help cleanse, hydrate, nourish, and rejuvenate the skin. Whether your goal is to improve hydration, reduce pigmentation, minimize acne marks, or soften early signs of aging, every treatment is tailored to your individual skin needs for safe, effective, and natural-looking results.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Brighter, More Radiant Skin',
+      percentage: 91,
+      description:
+        'Professional facial treatments deeply cleanse the skin by removing excess oil, dead skin cells, and impurities that contribute to a dull complexion.',
+      hasLearnMore: true,
+      expandedContent:
+        'Improved skin renewal helps reveal fresher, brighter, and healthier-looking skin with a natural glow while supporting overall skin health and radiance.'
+    },
+    {
+      id: 2,
+      title: 'Smoother Skin Texture & Reduced Fine Lines',
+      percentage: 88,
+      description:
+        'Regular facial treatments encourage healthy skin renewal while improving skin texture and reducing the appearance of fine lines.',
+      hasLearnMore: true,
+      expandedContent:
+        'By promoting hydration and supporting collagen production, the skin appears softer, smoother, and more youthful with continued professional care.'
+    },
+    {
+      id: 3,
+      title: 'Improved Hydration & Skin Elasticity',
+      percentage: 95,
+      description:
+        'Hydrating facial therapies replenish moisture levels and strengthen the skin’s natural protective barrier.',
+      hasLearnMore: true,
+      expandedContent:
+        'Well-hydrated skin feels softer, appears plumper, and maintains better elasticity, helping reduce dryness and improve overall skin comfort.'
+    },
+    {
+      id: 4,
+      title: 'Reduced Pigmentation & Dullness',
+      percentage: 85,
+      description:
+        'Targeted facial treatments help improve uneven skin tone by reducing pigmentation, sun damage, post-acne marks, and dullness.',
+      hasLearnMore: true,
+      expandedContent:
+        'With regular sessions, the complexion becomes clearer, more even, and visibly healthier while restoring a brighter and refreshed appearance.'
+    },
+    {
+      id: 5,
+      title: 'Increased Confidence & Youthful Appearance',
+      percentage: 93,
+      description:
+        'Healthier, smoother, and more radiant skin often leads to greater self-confidence and a refreshed appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'Many patients feel more comfortable with their appearance after improving skin texture, hydration, pigmentation, and overall complexion through personalized facial treatments.'
+    }
+  ],
+       comparisonTitle: 'Facial Treatments vs. Home Skincare',
+comparisonDescription: 'Professional Facial Treatments or Daily Skincare Routine?A consistent home skincare routine is essential for maintaining healthy skin, but it cannot replace the deeper cleansing, advanced technologies, and medical expertise provided by professional Facial Treatments in Dubai. The two approaches work best when combined as part of a comprehensive skincare plan.',
+comparisonHeaders: {
+  feature: 'Feature',
+  ourTreatment: 'Professional Facial Treatments',
+  traditional: 'Home Skincare Routine'
+},
+comparisonData: [
+  {
+    feature: 'Skin Assessment',
+    ayurvedic: 'Professional evaluation',
+    conventional: 'Self-assessment'
   },
   {
-    feature: 'Downtime',
-    ayurvedic: 'Minimal',
-    conventional: 'None, slower effects'
+    feature: 'Deep Cleansing',
+    ayurvedic: 'Advanced cleansing techniques',
+    conventional: 'Basic daily cleansing'
   },
   {
-    feature: 'Precision',
-    ayurvedic: 'Targeted to skin concerns',
-    conventional: 'General care'
+    feature: 'Exfoliation',
+    ayurvedic: 'Medical-grade exfoliation',
+    conventional: 'Mild over-the-counter products'
   },
   {
-    feature: 'Longevity',
-    ayurvedic: 'Lasting improvement with maintenance',
-    conventional: 'Temporary, limited'
+    feature: 'Hydration',
+    ayurvedic: 'Intensive professional hydration',
+    conventional: 'Daily moisturisers'
   },
   {
-    feature: 'Customization',
-    ayurvedic: 'Tailored to skin type and concern',
-    conventional: 'Standard products, not personalized'
+    feature: 'Pigmentation Treatment',
+    ayurvedic: 'Advanced therapies and technologies',
+    conventional: 'Limited improvement'
+  },
+  {
+    feature: 'Anti-Ageing Benefits',
+    ayurvedic: 'Collagen-stimulating treatments',
+    conventional: 'Preventive maintenance'
+  },
+  {
+    feature: 'Acne Management',
+    ayurvedic: 'Targeted professional care',
+    conventional: 'Daily skincare support'
+  },
+  {
+    feature: 'Results',
+    ayurvedic: 'Faster and more noticeable improvements',
+    conventional: 'Gradual maintenance'
   }
-        ]
+]
       },
  pricing: {
   title: 'Transparent Pricing & Customized Facial Treatment Packages',
@@ -7911,6 +8721,145 @@ comparisonData: [
     'Complete Documentation Assistance for Smooth Reimbursement Process.'
   ]
 },
+      treatmentAreasAndCare: {
+        treatmentAreas: {
+          title: 'Types of Facial Treatments',
+          subtitle: 'Personalized Facial Treatments for Every Skin Concern',
+          intro: 'At RamaCare Polyclinic, we offer a comprehensive range of Facial Treatments in Dubai designed to address different skin types and concerns. Following a detailed skin assessment, our experienced practitioners recommend the most suitable treatment to improve skin health, restore radiance, and achieve natural-looking results. Every facial is customized according to your skin condition, lifestyle, and aesthetic goals.',
+          areas: [
+            {
+              title: 'Hydrating Facial',
+              description: 'Hydrating facials replenish moisture, strengthen the skin barrier, and restore softness to dry skin. This treatment helps improve elasticity, reduce tightness, and leave the skin feeling refreshed and nourished.'
+            },
+            {
+              title: 'Deep Cleansing Facial',
+              description: 'Ideal for oily and acne-prone skin, deep cleansing facials remove excess oil, dirt, dead skin cells, and impurities that clog pores. This treatment promotes clearer skin while helping reduce blackheads and congestion.'
+            },
+            {
+              title: 'Anti-Ageing Facial',
+              description: 'Designed to target fine lines, wrinkles, and reduced skin elasticity, anti-aging facials stimulate collagen production and improve skin firmness for a smoother, younger-looking complexion.'
+            },
+            {
+              title: 'Brightening & Pigmentation Facial',
+              description: 'These treatments focus on reducing pigmentation, sun damage, uneven skin tone, and post-inflammatory marks. Active ingredients and advanced technologies help create a brighter, more even complexion.'
+            },
+            {
+              title: 'Chemical Peel Facial',
+              description: 'Chemical peels gently exfoliate damaged skin layers to improve pigmentation, acne scars, fine lines, enlarged pores, and overall skin texture. Treatment strength is carefully selected based on your skin type and goals.'
+            },
+            {
+              title: 'Laser Skin Rejuvenation',
+              description: 'Laser facial treatments improve collagen production while reducing pigmentation, fine lines, acne scars, and uneven skin texture. This advanced treatment helps restore smoother, healthier, and more youthful-looking skin.'
+            },
+            {
+              title: 'PRP Facial Therapy',
+              description: 'Platelet-Rich Plasma (PRP) facial treatment uses your body\'s natural growth factors to stimulate collagen production, accelerate skin renewal, and improve skin texture, elasticity, and overall radiance.'
+            }
+          ]
+        }
+      },
+      whenToConsider: {
+        title: 'Who Is an Ideal Candidate?',
+        intro: 'Are Facial Treatments Right for You? Facial Treatments in Dubai are suitable for most adults who want healthier, brighter, and more youthful-looking skin without surgery. Whether you are treating a specific skin condition or maintaining long-term skin health, a personalized consultation helps determine the most suitable treatment for your needs.',
+        points: [
+          'Have dull or tired-looking skin.',
+          'Experience dry skin.',
+          'Want to reduce fine lines and early signs of aging.',
+          'Have pigmentation, sun spots, or uneven skin tone.',
+          'Struggle with acne or post-acne marks.',
+          'Have enlarged pores or rough skin texture.',
+          'Want healthier, glowing skin before a special occasion.',
+          'Prefer non-invasive skin rejuvenation with minimal downtime.',
+          'Wish to maintain long-term skin health through professional skincare.'
+        ],
+        closing: 'A comprehensive skin assessment allows our practitioners to recommend the most effective treatment plan based on your skin type and aesthetic goals.'
+      },
+      aftercareContent: {
+        resultsTitle: 'Recovery & Aftercare',
+        resultsDescription: 'Caring for Your Skin After Facial Treatments Most Facial Treatments in Dubai require little or no downtime, allowing patients to return to their normal routine shortly after treatment. Depending on the procedure performed, you may notice temporary redness, mild sensitivity, or slight tightness, which usually resolves within a few hours. Following the recommended aftercare guidelines helps maximize treatment results while supporting healthy skin recovery.',
+        resultPoints: [
+          'Keep your skin clean and well hydrated.',
+          'Apply sunscreen with SPF 30 or higher every day.',
+          'Avoid excessive sun exposure for several days.',
+          'Refrain from using harsh exfoliants or active skincare ingredients unless advised.',
+          'Avoid hot showers, saunas, and steam rooms for 24–48 hours if recommended.',
+          'Drink plenty of water to maintain hydration.',
+          'Follow the skincare routine prescribed by your practitioner.',
+          'Attend maintenance sessions for long-term skin health.'
+        ],
+        additionalInfo: {
+          title: 'Aftercare Recommendations',
+          description: 'Proper aftercare helps preserve your results while protecting the skin during the natural healing process.'
+        }
+      },
+      whyChooseSection: {
+        title: 'Why Choose RamaCare Polyclinic?',
+        intro: 'Trusted Facial Treatments in Dubai Choosing the right skincare clinic is essential for achieving safe, effective, and long-lasting results. At RamaCare Polyclinic, we combine medical expertise, advanced skincare technologies, and personalized treatment plans to help every patient achieve healthier, naturally radiant skin.',
+        features: [
+          {
+            id: 1,
+            title: 'Experienced doctors and skincare professionals.',
+            description: ''
+          },
+          {
+            id: 2,
+            title: 'Personalized skin analysis before every treatment.',
+            description: ''
+          },
+          {
+            id: 3,
+            title: 'Advanced facial rejuvenation technologies.',
+            description: ''
+          },
+          {
+            id: 4,
+            title: 'Medical-grade skincare products.',
+            description: ''
+          },
+          {
+            id: 5,
+            title: 'Safe, evidence-based treatment protocols.',
+            description: ''
+          },
+          {
+            id: 6,
+            title: 'DHA-compliant clinical environment.',
+            description: ''
+          },
+          {
+            id: 7,
+            title: 'Treatments suitable for all skin types.',
+            description: ''
+          },
+          {
+            id: 8,
+            title: 'Individualized skincare plans.',
+            description: ''
+          },
+          {
+            id: 9,
+            title: 'Comprehensive aftercare and follow-up support.',
+            description: ''
+          },
+          {
+            id: 10,
+            title: 'Patient-centered approach focused on natural, healthy-looking results.',
+            description: ''
+          }
+        ]
+      },
+      risksAndSafety: {
+        title: 'Risks & Safety',
+        intro: 'Safe, Professional Facial Treatments When performed by qualified skincare professionals using medical-grade products and clinically approved technologies, Facial Treatments in Dubai are considered safe and effective for most skin types. At RamaCare Polyclinic, every treatment begins with a thorough consultation to assess skin health, identify contraindications, and select the safest treatment approach.',
+        points: [
+          'Mild redness',
+          'Temporary skin sensitivity',
+          'Slight swelling',
+          'Minor dryness or peeling after certain treatments',
+          'Temporary tightness'
+        ],
+        closing: 'These effects are generally mild and resolve naturally within a short period. Following professional aftercare advice helps minimize irritation while supporting healthy skin recovery.'
+      },
       bookConsultation: {
         badge: 'Start Your Journey',
         title: 'Book Facial Treatments in Dubai Today',
@@ -7957,7 +8906,7 @@ comparisonData: [
    'aesthetic-dermatology-dubai-skin-treatment-hifu': {
         hero: {
             subtitle: 'Non-Surgical Skin Lifting & Tightening with Advanced Technology',
-            description: 'Aging, sun exposure, and lifestyle factors gradually reduce skin firmness and elasticity. At ramacarepolyclinic, we offer HIFU in Dubai, a non-surgical ultrasound-based treatment that lifts sagging skin, improves firmness, and restores natural facial contours by stimulating collagen production.',
+            description: 'As we age, our skin naturally produces less collagen and elastin, leading to sagging skin, fine lines, and reduced facial definition.Daily sun exposure, environmental pollution, stress, and lifestyle factors can further accelerate the aging process, causing the skin to lose its firmness and youthful appearance.If you\'re looking for a non-surgical solution to lift and tighten your skin, HIFU in Dubai offers an effective way to achieve natural-looking rejuvenation without surgery or lengthy recovery. At RamaCare Polyclinic, we provide HIFU in Dubai using advanced High-Intensity Focused Ultrasound (HIFU) technology to stimulate your skin\'s natural collagen production deep beneath the surface.This innovative treatment helps lift sagging skin, improve elasticity, reduce fine lines, and redefine facial contours while preserving your natural appearance.HIFU is commonly used to tighten the face, neck, jawline, and other areas affected by skin laxity.',
             rating: '500+ Happy Clients',  
             stats: [
               {
@@ -8042,169 +8991,179 @@ comparisonData: [
         title: 'Understanding HIFU',
         problemIntro: {
           title: 'Common Skin Aging Concerns',
-          description: 'As collagen levels decline, skin loses firmness and elasticity. Many individuals want visible lifting without surgery or long recovery periods.'
+          description: 'As we age, the body\'s natural production of collagen and elastin gradually declines, reducing the skin\'s ability to remain firm, smooth, and elastic. Daily exposure to ultraviolet (UV) rays, environmental pollution, stress, smoking, and other lifestyle factors can accelerate this process, leading to visible signs of aging. Many individuals seek effective skin-tightening treatments that deliver noticeable improvement without surgery or extended recovery. HIFU in Dubai is designed to address these concerns by stimulating natural collagen production and improving skin firmness over time.'
         },
         solutionIntro: {
-          title: 'Our Solution: HIFU in Dubai at ramacarepolyclinic',
-          description: 'HIFU targets deeper skin layers without damaging the surface, stimulating collagen and tightening skin naturally over time.Patient-Centered Approach Includes:'
+          title: 'Advanced HIFU in Dubai for Natural Skin Lifting and Rejuvenation',
+          description: 'At RamaCare Polyclinic, we offer HIFU in Dubai as a safe, non-surgical solution for lifting and tightening the skin while stimulating your body\'s natural collagen production. Using advanced high-intensity focused ultrasound (HIFU) technology, the treatment targets the deeper structural layers of the skin—including the SMAS (Superficial Musculoaponeurotic System) layer—without damaging the skin\'s surface. This precise approach helps improve skin firmness, redefine facial contours, and reduce the appearance of fine lines and mild skin laxity, delivering gradual, natural-looking rejuvenation.'
         },
      leftCards: [
   {
     id: 1,
     title: 'What Is HIFU?',
     description:
-      'HIFU (High-Intensity Focused Ultrasound) is a non-surgical skin tightening treatment that delivers focused ultrasound energy into deeper skin layers. This energy stimulates collagen production, lifting and tightening sagging skin while improving texture and elasticity. HIFU in Dubai is widely trusted for natural-looking skin rejuvenation without surgery.'
+      'High-Intensity Focused Ultrasound (HIFU) is an advanced, non-surgical skin-tightening treatment that uses focused ultrasound energy to target the deeper structural layers of the skin without damaging its surface. The controlled ultrasound energy stimulates the body\'s natural collagen and elastin production, helping to gradually lift, tighten, and firm the skin over time. Unlike surgical facelifts, HIFU in Dubai offers a non-invasive solution for facial rejuvenation with little to no downtime, making it an ideal option for individuals seeking natural-looking results.At RamaCare Polyclinic, HIFU treatments are performed using advanced technology to improve skin firmness, redefine facial contours, reduce fine lines, and restore a youthful appearance while preserving your natural facial expressions.'
   },
   {
     id: 2,
     title: 'Who Can Benefit from HIFU?',
     description:
-      'HIFU is recommended for adults experiencing:',
+      'HIFU is suitable for adults experiencing early to moderate signs of skin aging who prefer a non-surgical approach to facial rejuvenation. You may be a suitable candidate if you have:',
     listItems: [
-      'Mild to moderate facial sagging',
-      'Early signs of aging',
-      'Loss of jawline definition',
-      'Loose skin on face or neck',
+      'Mild to moderate skin laxity',
+      'Sagging skin around the cheeks, jawline, or neck',
+      'Early signs of aging and collagen loss',
+      'Reduced jawline definition',
       'Fine lines and wrinkles',
-      'Preference for non-surgical skin lifting'
+      'Loose skin under the chin or neck',
+      'A desire for skin tightening without surgery or injections',
+      'Healthy skin with realistic treatment expectations'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Treatment Duration and Results',
     description:
-      'Each session lasts 45–90 minutes, depending on the treatment area. Visible lifting appears gradually over 2–3 months, with optimal results seen at 3–6 months.'
+      'A typical HIFU in Dubai session lasts 45 to 90 minutes, depending on the treatment area and your personalized treatment plan. Some patients notice a subtle improvement immediately after treatment, while the most significant lifting and tightening effects develop gradually over 2 to 3 months as new collagen forms. Optimal results are generally seen within 3 to 6 months and may continue to improve over time. Depending on your skin condition and aging process, results can last 12 to 18 months, with maintenance sessions recommended when appropriate.'
   },
   {
     id: 4,
     title: 'Trusted HIFU Care You Can Depend On',
-    description: '',
+    description: 'Choosing an experienced medical team is essential for safe and effective skin tightening treatments. At RamaCare Polyclinic, we combine advanced HIFU technology with personalized care to achieve natural-looking facial rejuvenation.',
     listItems: [
-      'Doctor-led HIFU treatments',
-      'Non-invasive and precise skin tightening',
-      'Natural collagen stimulation',
-      'Suitable for face, neck, and jawline',
-      'Minimal downtime with gradual, natural results'
+      'Doctor-led HIFU consultations and treatments',
+      'Advanced ultrasound technology for precise skin tightening',
+      'Non-invasive collagen stimulation without surgery',
+      'Personalized treatment plans for every patient',
+      'Suitable for the face, neck, jawline, and under-chin area',
+      'Minimal downtime with comfortable treatment sessions',
+      'Focus on natural, gradual, and long-lasting results',
+      'Comprehensive aftercare and follow-up support'
     ]
   }
 ],
-     rootCauses: [
+    rootCauses: [
   {
     id: 1,
     title: 'Sagging Skin',
-    description: 'Loss of structural support in the cheeks, jawline, and neck causes sagging skin that makes the face look tired and aged. Drooping skin can also accentuate folds, marionette lines, and jowls, impacting overall facial harmony and confidence.',
+    description: 'Loss of collagen and weakened connective tissues can cause the skin around the cheeks, jawline, neck, and under the chin to sag. This often reduces facial definition and contributes to an older or more tired appearance.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
     title: 'Fine Lines & Wrinkles',
-    description: 'Repeated facial movements, sun exposure, and the natural aging process contribute to the formation of fine lines around the eyes, forehead, and mouth.',
+    description: 'Repeated facial expressions, natural aging, reduced collagen production, and prolonged sun exposure gradually lead to the development of fine lines and wrinkles around the eyes, forehead, cheeks, and mouth.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
     title: 'Loss of Facial Contours',
-    description: 'Reduced cheek volume, hollow temples, and weakening jawline definition flatten the face’s natural contours, leading to a less defined, aged, and tired look.',
+    description: 'As facial tissues lose support, the cheeks may appear flatter, the jawline less defined, and the overall facial structure less youthful. Reduced collagen also contributes to changes in facial shape over time.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
     title: 'Skin Laxity',
-    description: 'Loose or crepey skin results from decreased collagen and elastin, along with thinning of the dermis, reducing firmness and elasticity.',
+    description: 'Loose or crepey skin develops when collagen and elastin fibers weaken, reducing the skin’s firmness and resilience. This concern commonly affects the face, neck, and under-chin area.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 5,
-    title: 'Early Aging',
-    description: 'Stress, sun damage, poor lifestyle habits, and environmental pollution accelerate aging, causing fine lines, dullness, loss of glow, and reduced elasticity.',
+    title: 'Early Signs of Aging',
+    description: 'Environmental damage, stress, poor sleep, unhealthy lifestyle habits, and natural aging can contribute to dull skin, decreased elasticity, fine lines, and an overall loss of youthful appearance.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 6,
     title: 'Uneven Skin Texture',
-    description: 'Aging, dryness, and sun damage cause rough or bumpy skin, enlarged pores, and uneven tone, reducing overall skin radiance.',
+    description: 'Collagen depletion and cumulative sun damage may cause rough skin texture, enlarged pores, and uneven skin tone, making the complexion appear less smooth and radiant.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 7,
-    title: 'Volume Loss in Under-Eye Area',
-    description: 'Loss of fat and tissue around the eyes creates dark circles, tear troughs, and a hollow look, contributing to a fatigued or aged appearance.',
+    title: 'Reduced Skin Firmness Around the Eyes',
+    description: 'The delicate skin around the eyes is often one of the first areas to show signs of aging. Reduced collagen production may contribute to mild skin laxity, fine lines, and a tired-looking appearance. HIFU can help improve skin firmness in suitable treatment areas while maintaining a natural look.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
-  },
+  }
 ],
       quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical injection' },
-  { label: 'Anesthesia', value: 'Not required (topical optional)' },
-  { label: 'Recovery Time', value: 'Minimal, usually immediate' },
-  { label: 'Side Effects', value: 'Temporary redness, swelling, or mild bruising' }
+  { label: 'Treatment Type', value: 'Non-surgical ultrasound skin tightening' },
+  { label: 'Procedure Time', value: '45–90 minutes' },
+  { label: 'Anesthesia', value: 'Usually not required' },
+  { label: 'Downtime', value: 'Minimal; most patients resume daily activities immediately' },
+  { label: 'Results', value: 'Gradual improvement over 2–3 months' },
+  { label: 'Longevity', value: 'Approximately 12–18 months, depending on individual factors' },
+  { label: 'Suitable For', value: 'Mild to moderate skin laxity and early signs of aging' },
+  { label: 'Possible Side Effects', value: 'Temporary redness, mild swelling, tenderness, or tingling' }
 ],
      approachCards: [
   {
     id: 1,
-    title: 'Detailed Facial and Skin Assessment',
-    description: 'A comprehensive evaluation identifies areas of concern, skin type, and degree of sagging.',
+    title: 'Comprehensive Facial & Skin Assessment',
+    description: 'Every HIFU treatment begins with a detailed consultation and skin evaluation. Our experienced doctors assess your skin quality, degree of skin laxity, facial structure, collagen loss, and overall treatment goals.',
     hasLearnMore: true,
-    expandedContent: 'This ensures personalized treatment and optimal targeting of fine lines, folds, and laxity for natural results.'
+    expandedContent: 'This comprehensive assessment helps determine whether HIFU is the most suitable treatment and ensures a personalized approach for optimal results.'
   },
   {
     id: 2,
     title: 'Personalized HIFU Treatment Planning',
-    description: 'Customized therapy plans are developed based on age, skin condition, and desired outcome.',
+    description: 'Since every patient\'s skin ages differently, we develop an individualized treatment plan based on your age, skin condition, treatment area, and desired outcome.',
     hasLearnMore: true,
-    expandedContent: 'Treatment zones, energy levels, and session duration are tailored to maximize lifting, contouring, and collagen stimulation.'
+    expandedContent: 'We carefully determine the treatment intensity, targeted areas, and the number of sessions required to achieve safe, balanced, and natural-looking skin tightening.'
   },
   {
     id: 3,
-    title: 'Doctor-Administered Precision Therapy',
-    description: 'Performed by experienced physicians, HIFU uses focused ultrasound to reach deep dermal and SMAS layers without damaging the skin surface.',
+    title: 'Doctor-Led Precision HIFU Therapy',
+    description: 'Your treatment is performed by experienced medical professionals using advanced HIFU technology. Focused ultrasound energy is delivered with precision to the deeper dermal and SMAS layers, stimulating collagen remodeling without harming the outer skin.',
     hasLearnMore: true,
-    expandedContent: 'This precision ensures effective tightening, lifting, and long-term skin rejuvenation.'
+    expandedContent: 'This targeted technique helps lift sagging tissue, improve elasticity, and restore facial definition while maintaining your natural facial expressions.'
   },
   {
     id: 4,
-    title: 'Continuous Safety Monitoring',
-    description: 'During the procedure, trained professionals monitor energy delivery and patient comfort.',
+    title: 'Continuous Safety & Patient Comfort',
+    description: 'Patient safety is a priority throughout every stage of treatment. During the procedure, our clinical team carefully monitors energy delivery, treatment depth, and patient comfort to ensure the therapy remains safe, effective, and well tolerated.',
     hasLearnMore: true,
-    expandedContent: 'Safety measures reduce risks of burns, swelling, or irritation while ensuring consistent results.'
+    expandedContent: 'The treatment requires no incisions, injections, or lengthy recovery, making it a convenient option for individuals with busy lifestyles.'
   },
   {
     id: 5,
-    title: 'Post-Treatment Guidance',
-    description: 'Patients receive personalized aftercare advice, including hydration, skincare routines, and lifestyle recommendations.',
+    title: 'Personalized Aftercare & Follow-Up Support',
+    description: 'Although HIFU in Dubai involves minimal downtime, proper aftercare helps maximize collagen production and long-term results. Our team provides personalized guidance on skincare, hydration, sun protection, and healthy lifestyle habits.',
     hasLearnMore: true,
-    expandedContent: 'This ensures smooth recovery and long-lasting benefits.'
+    expandedContent: 'Follow-up appointments may be recommended to monitor your progress and determine whether maintenance treatments would be beneficial.'
   },
   {
     id: 6,
-    title: 'Gradual & Natural Lifting',
-    description: 'HIFU gradually stimulates collagen over several weeks, resulting in a natural-looking lift and improved facial contours.',
+    title: 'Gradual, Natural-Looking Skin Tightening',
+    description: 'Unlike treatments that produce immediate artificial changes, HIFU works by encouraging your body\'s natural collagen regeneration. As new collagen develops over the following weeks and months, the skin gradually becomes firmer, smoother, and more lifted.',
     hasLearnMore: true,
-    expandedContent: 'Achieves lifting without artificial or overdone effects.'
+    expandedContent: 'This progressive improvement creates subtle, natural-looking facial rejuvenation while enhancing the contours of the face, jawline, and neck without surgery.'
   },
 ]
       },
-     healingJourney: {
-  title: 'Your Dermal Fillers Journey',
-  description: '',
+    healingJourney: {
+  title: 'Your HIFU Treatment Journey',
+  description: 'At RamaCare Polyclinic, our HIFU treatment in Dubai follows a structured, doctor-supervised process to ensure safety, comfort, and optimal skin tightening results. From the initial consultation to post-treatment follow-up, every stage is personalized according to your skin condition, degree of skin laxity, and aesthetic goals. Our focus is to stimulate natural collagen production while delivering gradual, long-lasting facial rejuvenation without surgery or extended downtime.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation & Facial Assessment',
+      title: 'Initial Consultation & Comprehensive Skin Assessment',
       duration: 'Step 1',
-      description:
-        'Understanding facial structure, wrinkle patterns, and patient goals.',
+      description: 'Your HIFU journey begins with a detailed consultation and skin evaluation. Our experienced doctors assess your skin quality, facial structure, collagen loss, elasticity, and areas of concern to determine whether HIFU is the most appropriate treatment for your needs. We also discuss your medical history, treatment expectations, and desired results to develop a personalized treatment strategy.',
       keyActivities: [
-        'Facial analysis and volume mapping',
-        'Discussion of patient expectations',
-        'Personalized filler selection and plan'
+        'Comprehensive facial and skin analysis',
+        'Assessment of skin laxity and collagen loss',
+        'Discussion of treatment goals and expectations',
+        'Review of medical history and suitability',
+        'Development of a personalized HIFU treatment plan'
       ],
       side: 'right'
     },
@@ -8213,26 +9172,28 @@ comparisonData: [
       number: '02',
       title: 'Personalized Treatment Planning',
       duration: 'Step 2',
-      description:
-        'Selection of appropriate filler type, dosage, and injection technique.',
+      description: 'Based on your skin assessment, we create an individualized treatment plan that identifies the areas requiring lifting and tightening, such as the face, jawline, neck, or under-chin region. Our specialists determine the appropriate ultrasound energy levels, treatment depth, and number of sessions needed to achieve natural-looking results while maintaining patient comfort.',
       keyActivities: [
-        'Choosing FDA/DHA-approved filler products',
-        'Planning precise injection areas',
-        'Preparing skin for treatment'
+        'Selection of treatment areas',
+        'Planning ultrasound energy depth and intensity',
+        'Determining the recommended number of sessions',
+        'Preparing the skin before treatment',
+        'Explaining expected outcomes and aftercare'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Filler Treatment Session',
+      title: 'HIFU Treatment Session',
       duration: 'Step 3',
-      description:
-        'Precise, doctor-administered injections for target areas like cheeks, lips, nasolabial folds, or jawline.',
+      description: 'During the procedure, advanced high-intensity focused ultrasound technology delivers controlled ultrasound energy to the deeper structural layers of the skin without damaging the surface. The focused energy stimulates collagen production, gradually improving skin firmness, elasticity, and facial contours. Most sessions are completed within 45 to 90 minutes, depending on the treatment area.',
       keyActivities: [
-        'Gentle, precise injections',
-        'Maintaining natural facial expressions',
-        'Immediate post-treatment guidance'
+        'Cleansing and preparation of the treatment area',
+        'Precise delivery of focused ultrasound energy',
+        'Continuous monitoring of patient comfort',
+        'Targeted treatment of the face, neck, jawline, or under-chin area',
+        'Immediate post-treatment assessment and guidance'
       ],
       side: 'right'
     },
@@ -8241,91 +9202,143 @@ comparisonData: [
       number: '04',
       title: 'Follow-Up & Aftercare Support',
       duration: 'Step 4',
-      description:
-        'Monitoring results, minor adjustments if needed, and post-treatment guidance to maintain natural outcomes.',
+      description: 'Following your HIFU treatment, our team provides personalized aftercare instructions to help support collagen regeneration and maintain healthy skin. Although there is little to no downtime, follow-up appointments may be recommended to monitor your progress, evaluate treatment outcomes, and determine whether maintenance sessions are appropriate for achieving long-term skin tightening.',
       keyActivities: [
-        'Check wrinkle smoothing and volume restoration',
-        'Post-treatment care instructions',
-        'Recommendations for long-term facial health'
+        'Assessment of skin tightening and lifting progress',
+        'Personalized skincare and hydration recommendations',
+        'Guidance on sun protection and daily skincare',
+        'Monitoring collagen development and treatment response',
+        'Long-term maintenance planning for sustained results'
       ],
       side: 'left'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically Observed Benefits',
-        description: 'Based on 15+ years of providing skin treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Non-surgical skin lifting',
-            percentage: 91,
-            description: null
-          },
-          {
-            id: 2,
-            title: '  Improved firmness and elasticity ',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: ' Reduced sagging and wrinkles',
-            percentage: 95,
-            description: null
-          },
-          {
-            id: 4,
-            title: 'Enhanced facial contours',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Youthful, refreshed appearance',
-            percentage: 93,
-            description: null
-          },
-        ],
-        comparisonTitle: 'HIFU vs. Conventional Skin Tightening Treatments',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'HIFU',
-          traditional: 'Conventional Treatments'
-        },
-        comparisonData: [
-          {
-            feature: 'Results	',
-            ayurvedic: 'Gradual, natural lifting',
-            conventional: 'Surgical or temporary'
-          },
-          {
-            feature: 'Invasiveness',
-            ayurvedic: 'Non-surgical',
-            conventional: 'Surgery or injectables'
-          },
-          {
-            feature: 'Downtime',
-            ayurvedic: 'Minimal',
-            conventional: 'Recovery often required'
-          },
-          {
-            feature: 'Precision',
-            ayurvedic: 'Targets deep tissue layers',
-            conventional: 'Surface-level treatment'
-          },
-          {
-            feature: 'Longevity',
-            ayurvedic: '6–12 months with maintenance',
-            conventional: 'Short or permanent'
-          },
-          {
-            feature: 'Safety',
-            ayurvedic: 'Doctor-administered, FDA-approved',
-            conventional: 'Varies'
-          }
-        ]
+     benefits: {
+  title: 'Clinically Observed Benefits of HIFU in Dubai',
+  description:
+    'At RamaCare Polyclinic, our HIFU in Dubai treatments are designed to improve skin firmness, stimulate natural collagen production, and provide gradual, natural-looking facial rejuvenation without surgery. With over 15 years of experience in advanced skin treatments in Dubai, we combine modern HIFU technology with personalized medical care to help patients achieve healthier, firmer, and younger-looking skin. Individual results may vary depending on age, skin condition, lifestyle, and the degree of skin laxity.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Non-Surgical Skin Lifting',
+      percentage: 91,
+      description:
+        'HIFU lifts and tightens mild to moderately sagging skin without incisions or injections.',
+      hasLearnMore: true,
+      expandedContent:
+        'HIFU lifts and tightens mild to moderately sagging skin without incisions or injections, making it an effective alternative for individuals seeking facial rejuvenation without surgery.'
+    },
+    {
+      id: 2,
+      title: 'Improved Skin Firmness & Elasticity',
+      percentage: 88,
+      description:
+        'Stimulates collagen and elastin production for firmer, smoother skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'By stimulating the body’s natural collagen and elastin production, HIFU gradually improves skin firmness, elasticity, and overall skin quality for a smoother, tighter appearance.'
+    },
+    {
+      id: 3,
+      title: 'Reduced Sagging & Fine Lines',
+      percentage: 95,
+      description:
+        'Helps reduce mild skin laxity, fine lines, and wrinkles over time.',
+      hasLearnMore: true,
+      expandedContent:
+        'As new collagen develops over time, many patients notice visible improvement in mild skin laxity, fine lines, and wrinkles around the cheeks, jawline, neck, and lower face.'
+    },
+    {
+      id: 4,
+      title: 'Enhanced Facial Contours',
+      percentage: 85,
+      description:
+        'Improves facial definition by supporting the cheeks, jawline, and neck.',
+      hasLearnMore: true,
+      expandedContent:
+        'HIFU helps redefine facial contours by improving skin support around the cheeks, jawline, and neck, creating a naturally lifted and more youthful facial profile.'
+    },
+    {
+      id: 5,
+      title: 'Refreshed, Youthful Appearance',
+      percentage: 93,
+      description:
+        'Provides gradual rejuvenation while preserving natural facial expressions.',
+      hasLearnMore: true,
+      expandedContent:
+        'Patients often report looking fresher and more rejuvenated after treatment, with gradual improvements that preserve natural facial expressions while enhancing overall confidence.'
+    }
+  ],
+
+  comparisonTitle: 'HIFU vs. Conventional Skin Tightening Treatments',
+
+  comparisonDescription:
+    "If you're considering skin tightening, it's important to understand how HIFU in Dubai differs from conventional anti-aging treatments. Unlike surgical facelifts or temporary cosmetic procedures, high-intensity focused ultrasound (HIFU) works by stimulating your body's natural collagen production deep within the skin. This promotes gradual lifting and tightening while preserving your natural facial expressions. Because HIFU is non-surgical, it requires minimal downtime and allows most patients to return to their normal activities shortly after treatment. At RamaCare Polyclinic, our doctors assess your skin condition and aesthetic goals to recommend the most suitable treatment for achieving safe, natural-looking, and long-lasting facial rejuvenation.",
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'HIFU',
+    traditional: 'Conventional Skin Tightening Treatments'
+  },
+
+  comparisonData: [
+    {
+      feature: 'Primary Purpose',
+      ayurvedic:
+        'Stimulates natural collagen production to lift and tighten the skin',
+      conventional:
+        'Improves skin appearance through surgery, injectables, or surface-based treatments'
+    },
+    {
+      feature: 'Results',
+      ayurvedic:
+        'Gradual, natural-looking lifting and tightening over several weeks',
+      conventional:
+        'Immediate surgical changes or temporary cosmetic improvements, depending on the procedure'
+    },
+    {
+      feature: 'Procedure',
+      ayurvedic: 'Non-surgical ultrasound-based treatment',
+      conventional:
+        'May involve surgery, injectable treatments, or other cosmetic procedures'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic:
+        'Minimal; most patients resume daily activities immediately',
+      conventional:
+        'Recovery time varies and may require several days or weeks, depending on the treatment'
+    },
+    {
+      feature: 'Precision',
+      ayurvedic:
+        'Targets deep dermal and SMAS layers without damaging the skin surface',
+      conventional:
+        'Many treatments focus primarily on surface layers or require invasive techniques'
+    },
+    {
+      feature: 'Longevity',
+      ayurvedic:
+        'Results typically last 12–18 months with appropriate maintenance and individual collagen response',
+      conventional:
+        'Longevity varies depending on the treatment and may require ongoing maintenance or surgery'
+    },
+    {
+      feature: 'Safety',
+      ayurvedic:
+        'Doctor-supervised procedure using advanced HIFU technology with an established safety profile',
+      conventional:
+        'Safety depends on the specific treatment, technology, and practitioner experience'
+    },
+    {
+      feature: 'Best Suited For',
+      ayurvedic:
+        'Mild to moderate skin laxity, early signs of aging, and patients seeking non-surgical skin tightening',
+      conventional:
+        'Individuals requiring surgical lifting, temporary wrinkle reduction, or other cosmetic interventions based on their needs'
+    }
+  ]
       },
   pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -8668,6 +9681,61 @@ comparisonData: [
             description: 'Patient Reviews'
           }
       ]
+    },
+    whyChooseSection: {
+      title: 'Why Choose RamaCare Polyclinic for HIFU in Dubai',
+      intro: 'Choosing the right clinic is essential for achieving safe, natural-looking skin-tightening results. At RamaCare Polyclinic, we provide HIFU in Dubai using advanced ultrasound technology combined with personalized, doctor-led care. Every patient undergoes a comprehensive skin assessment to evaluate skin laxity, facial structure, collagen loss, and treatment goals before a customized plan is developed. This individualized approach allows us to target the areas that will benefit most from collagen stimulation while preserving your natural facial expressions.',
+      features: [
+        {
+          id: 1,
+          title: 'Experienced Medical Team',
+          description: 'Our experienced medical team follows evidence-based treatment protocols and uses modern HIFU technology to deliver precise ultrasound energy to the deeper layers of the skin without surgery or damage to the skin\'s surface. We prioritize patient safety, comfort, and long-term skin health throughout every stage of the treatment.'
+        },
+        {
+          id: 2,
+          title: 'Personalized Care Beyond Treatment',
+          description: 'From your first consultation to follow-up care, our team provides clear guidance, honest recommendations, and ongoing support to help you achieve the best possible outcome.'
+        },
+        {
+          id: 3,
+          title: 'Tailored to Your Needs',
+          description: 'Whether your goal is to lift sagging skin, improve jawline definition, or reduce early signs of aging, RamaCare Polyclinic is committed to delivering personalized care and natural-looking facial rejuvenation in a professional clinical environment.'
+        }
+      ]
+    },
+    aftercareContent: {
+      resultsTitle: 'Recovery & Aftercare',
+      resultsDescription: 'One of the major benefits of HIFU in Dubai is that it requires little to no downtime, allowing most patients to resume their normal daily activities immediately after treatment. Mild redness, slight swelling, tenderness, or a temporary tingling sensation may occur in the treated area, but these effects are generally temporary and usually resolve within a few hours or days.',
+      resultPoints: [
+        'Keep your skin well hydrated',
+        'Apply a broad-spectrum sunscreen daily',
+        'Use gentle skincare products for the first few days after treatment',
+        'Protect the skin from excessive sun exposure',
+        'Avoid harsh cosmetic procedures during the recovery period',
+        'Maintain a healthy lifestyle',
+        'Stay hydrated',
+        'Eat a balanced diet',
+        'Follow a consistent skincare routine',
+        'Attend follow-up appointments to monitor progress'
+      ],
+      additionalInfo: {
+        title: '',
+        description: 'Since collagen production develops gradually, improvements continue over several weeks and months. During follow-up appointments, our doctors monitor your progress, evaluate skin tightening, and recommend maintenance sessions if needed to support long-lasting facial rejuvenation.'
+      }
+    },
+    whenToConsider: {
+      title: 'Who Is a Suitable Candidate for HIFU?',
+      intro: 'HIFU in Dubai is suitable for adults experiencing mild to moderate skin laxity who want to improve facial firmness without undergoing surgery. It is an excellent option for individuals noticing early signs of aging, including loose skin around the cheeks, jawline, neck, or under the chin, as well as fine lines and reduced skin elasticity.',
+      points: [
+        'Mild to moderate skin laxity',
+        'Loose skin around the cheeks, jawline, neck, or under the chin',
+        'Fine lines',
+        'Reduced skin elasticity',
+        'Desire for a gradual, natural-looking lifting effect with minimal downtime',
+        'Preference for a non-invasive alternative to surgical facelift procedures',
+        'Desire to maintain youthful skin by stimulating natural collagen production before more advanced signs of aging develop'
+      ],
+      closing: 'During your consultation at RamaCare Polyclinic, our experienced doctors carefully evaluate your skin condition, facial anatomy, medical history, and treatment goals to determine whether HIFU is the most appropriate option. If another skin rejuvenation treatment is better suited to your concerns, we will recommend a personalized solution designed to achieve safe, effective, and natural-looking results.'
     }
   },
 
@@ -11339,8 +12407,8 @@ comparisonData: [
 
     'aesthetic-dermatology-dubai-hair-treatment-hair-growth': {
       hero: {
-        subtitle: 'Stimulating Natural Hair Regrowth with Medical Expertise',
-        description: 'Hair thinning and slow hair growth can affect confidence and overall appearance. At ramacarepolyclinic, we offer Hair Growth Treatment in Dubai designed to stimulate dormant follicles, strengthen existing hair, and promote healthier, thicker regrowth—safely and naturally.',
+        subtitle: 'Stimulate Natural Hair Growth with Advanced, Doctor-Led Care',
+        description: 'Healthy hair growth depends on strong hair follicles, good scalp circulation, balanced nutrition, and overall scalp health.Factors such as genetics, hormonal changes, stress, nutritional deficiencies, aging, and environmental exposure can slow the natural hair growth cycle, leading to thinning hair, reduced density, and excessive hair shedding.While shampoos and over-the-counter products may provide temporary support, they often cannot address the underlying causes of hair thinning.Hair growth treatment in Dubai focuses on revitalizing the scalp and stimulating healthy hair growth through personalized, medically supervised care. At RamaCare Polyclinic, we offer hair growth treatment in Dubai using evidence-based, non-surgical solutions tailored to your individual hair and scalp condition. Depending on your needs, treatment may include PRP therapy, mesotherapy, low-level laser therapy (LLLT), scalp rejuvenation treatments, or combination protocols designed to improve blood circulation, nourish hair follicles, and support natural hair regeneration.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -11419,127 +12487,157 @@ comparisonData: [
         title: 'Understanding Hair Growth Treatment in Dubai',
         problemIntro: {
           title: 'Why Hair Growth Slows Down',
-          description: 'Hair growth slows when follicles weaken due to poor circulation, nutritional deficiencies, stress, hormonal imbalance, or scalp conditions. Without intervention, hair may become thinner and less dense over time.'
+          description: 'Healthy hair growth depends on strong hair follicles, adequate nutrition, good blood circulation, and a healthy scalp environment. When these factors become disrupted, the hair growth cycle slows, causing weaker hair, reduced density, and gradual thinning. Without early treatment, hair follicles may continue to weaken, making natural hair regrowth more difficult over time. Hair growth treatment in Dubai focuses on identifying and treating these underlying causes to support healthier, stronger hair.'
         },
         solutionIntro: {
-  title: 'Our Solution: Hair Growth Treatment in Dubai',
+  title: 'Our Solution: Hair Growth Treatment in Dubai at RamaCare Polyclinic',
   description:
-    'Our Hair Growth Treatment in Dubai focuses on restoring hair health naturally by targeting the root cause of hair loss.'
+    'At RamaCare Polyclinic, our hair growth treatment in Dubai is designed to address the underlying causes of slow hair growth and hair thinning rather than simply managing the symptoms. We believe healthy hair begins with a healthy scalp, balanced body, and properly nourished hair follicles. Our treatment approach combines modern medical expertise with holistic hair restoration principles to improve scalp health, stimulate dormant follicles, strengthen existing hair, and encourage natural, long-term hair growth.Every patient receives a personalized treatment plan based on a detailed scalp analysis, hair growth pattern, medical history, and lifestyle factors. Depending on your condition, your treatment may include advanced hair restoration therapies alongside supportive Ayurvedic and lifestyle-based care to maximize results safely and naturally.'
 },
        leftCards: [
   {
     id: 1,
     title: 'What Is Hair Growth Treatment?',
     description:
-      'Hair Growth Treatment in Dubai is a medically guided approach that focuses on activating hair follicles, improving scalp health, and supporting the natural hair growth cycle. Treatments are selected based on individual needs and long-term goals.'
+      'Hair growth treatment in Dubai is a personalized, medically supervised approach that helps stimulate healthy hair growth by improving scalp health, strengthening weakened hair follicles, and supporting the natural hair growth cycle. Rather than simply masking hair thinning, these treatments address the underlying causes that may be slowing hair growth, such as poor scalp circulation, nutritional deficiencies, hormonal changes, stress, genetics, or environmental factors.At RamaCare Polyclinic, every treatment plan begins with a comprehensive scalp assessment to determine the condition of your hair follicles and identify the factors contributing to reduced hair growth. Depending on your individual needs, treatment may include PRP therapy, mesotherapy, low-level laser therapy (LLLT), scalp revitalization procedures, medical-grade topical therapies, or a combination of evidence-based treatments. Our goal is to encourage stronger, healthier, and naturally thicker hair while preserving long-term scalp health.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Hair growth treatment is suitable for individuals experiencing:',
+    title: 'Who Can Benefit from Hair Growth Treatment?',
+    description: 'Hair growth treatment is suitable for both men and women who wish to improve hair quality, strengthen existing hair, and encourage natural regrowth. You may benefit from hair growth treatment in Dubai if you experience the following:',
     listItems: [
-      'Slow hair growth',
-      'Hair thinning or reduced density',
-      'Weak or brittle hair',
-      'Post-hair fall recovery phase',
-      'Stress or lifestyle-related hair concerns'
+      'Slow or reduced hair growth',
+'Hair thinning or decreased hair density',
+'Weak, brittle, or easily broken hair',
+'Recovery after excessive hair shedding',
+'Early stages of male or female pattern hair loss',
+'Hair damage caused by stress, hormonal changes, or nutritional deficiencies',
+'Poor scalp health affects hair quality',
+'Desire for a non-surgical solution to improve hair growth',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Treatment Duration & Expected Results',
     description:
-      'Initial improvements in hair texture and reduced breakage may appear within 4–6 weeks. Visible hair growth and density improvement typically develop over 3–6 months, depending on consistency and severity.'
+      'Hair grows in natural cycles, so visible improvement develops gradually. Many patients notice healthier hair texture, reduced breakage, and less hair shedding within 4 to 6 weeks of beginning treatment. Increased hair thickness, stronger follicles, and improved hair density typically become more noticeable over 3 to 6 months, depending on the underlying cause of hair thinning, the selected treatment, and consistency with the recommended treatment plan. Maintenance sessions and healthy lifestyle habits help support long-term results.'
   }
 ],
       rootCauses: [
   {
     id: 1,
-    title: 'Dosha Balancing Therapy',
+    title: 'Reduced Blood Circulation to the Scalp',
     description:
-      'Balances Pitta, Vata, and Kapha to reduce scalp inflammation and strengthen hair follicles.',
+      'Hair follicles require a continuous supply of oxygen and nutrients to produce healthy hair. Poor scalp circulation reduces this nourishment, slowing hair growth and weakening the hair roots.',
     severity: null,
     severityColor: null
   },
   {
     id: 2,
-    title: 'Internal Detoxification',
+    title: 'Nutritional Deficiencies',
     description:
-      'Eliminates Ama (toxins) from the body to promote nutrient-rich blood flow to the scalp.',
+      'Deficiencies in essential vitamins, minerals, proteins, and iron can negatively affect the hair growth cycle. Without adequate nutrition, hair becomes thinner, more fragile, and more likely to break or shed prematurely.',
     severity: null,
     severityColor: null
   },
   {
     id: 3,
-    title: 'Herbal Hair Therapies',
+    title: 'Hormonal Changes',
     description:
-      'Medicated oils, herbal serums, and natural treatments nourish the scalp, stimulate growth, and prevent breakage.',
+      'Hormonal imbalances associated with genetics, thyroid disorders, pregnancy, menopause, or androgenic alopecia can disrupt the normal hair growth cycle and contribute to progressive hair thinning.',
     severity: null,
     severityColor: null
   },
   {
     id: 4,
-    title: 'Diet & Lifestyle Correction',
+    title: 'Stress & Lifestyle Factors',
     description:
-      'Personalized diet plans and lifestyle adjustments support healthy hair growth and prevent future hair loss.',
+      'Chronic stress, poor sleep, smoking, unhealthy eating habits, and environmental pollution can interfere with healthy hair growth by increasing inflammation and weakening the hair follicles over time.',
     severity: null,
     severityColor: null
   },
   {
     id: 5,
-    title: 'Stress & Hormonal Support',
+    title: 'Scalp Health & Follicle Weakness',
     description:
-      'Calms the nervous system, reduces stress-related hair fall, and balances hormones for thicker, healthier hair.',
+      'Conditions such as dandruff, excessive oil production, scalp inflammation, or buildup around hair follicles create an unhealthy environment that can limit healthy hair growth and reduce overall hair density. Maintaining a healthy scalp is essential for long-term hair regeneration and stronger, healthier hair.',
     severity: null,
     severityColor: null
   }
 ],
-      quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical, minimally invasive' },
-  { label: 'Anesthesia', value: 'Not required' },
-  { label: 'Recovery Time', value: 'Immediate' },
-  { label: 'Side Effects', value: 'Minimal to none' }
+    quickFacts: [
+  { label: 'Treatment Type', value: 'Non-surgical, minimally invasive hair restoration' },
+  { label: 'Procedure Time', value: '30–60 minutes (depending on treatment method)' },
+  { label: 'Anesthesia', value: 'Usually not required' },
+  { label: 'Downtime', value: 'Minimal to none' },
+  { label: 'Results Timeline', value: 'Gradual improvement over 3–6 months' },
+  { label: 'Recommended Sessions', value: 'Customized according to individual hair condition' },
+  { label: 'Suitable For', value: 'Men and women experiencing hair thinning or slow hair growth' },
+  { label: 'Possible Side Effects', value: 'Mild temporary redness or scalp sensitivity depending on treatment' }
 ],
     approachCards: [
   {
     id: 1,
-    title: 'Dosha Balancing Therapy',
+    title: 'Comprehensive Hair & Scalp Assessment',
     description:
-      'Balances Pitta, Vata, and Kapha to reduce scalp inflammation and strengthen hair follicles.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Your treatment begins with a thorough consultation to identify the factors affecting your hair growth. Our specialists evaluate scalp health, hair density, follicle condition, medical history, nutritional status, hormonal influences, and lifestyle habits before creating a customized treatment strategy.',
+    hasLearnMore: true,
+    expandedContent:
+      'This detailed assessment helps us recommend the most suitable solution for long-term hair improvement.'
   },
   {
     id: 2,
-    title: 'Internal Detoxification',
+    title: 'Dosha Balancing Therapy',
     description:
-      'Eliminates Ama (toxins) from the body to promote nutrient-rich blood flow to the scalp.',
-    hasLearnMore: false,
-    expandedContent: null
+      'According to Ayurvedic principles, imbalances in Pitta, Vata, and Kapha can contribute to scalp inflammation, dryness, excessive hair fall, and weakened follicles. Our personalized dosha-balancing approach aims to restore internal harmony, improve scalp health, and create an environment that supports stronger, healthier hair growth naturally.',
+    hasLearnMore: true,
+    expandedContent:
+      'By restoring internal balance, this approach helps support healthier scalp conditions and long-term hair wellness.'
   },
   {
     id: 3,
-    title: 'Herbal Hair Therapies',
+    title: 'Internal Detoxification & Nutritional Support',
     description:
-      'Medicated oils, herbal serums, and natural treatments nourish the scalp, stimulate growth, and prevent breakage.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Accumulation of metabolic toxins (AMA) and poor nutritional absorption may reduce the body’s ability to nourish hair follicles effectively. Our treatment focuses on supporting natural detoxification while encouraging healthy circulation and improved delivery of essential nutrients to the scalp.',
+    hasLearnMore: true,
+    expandedContent:
+      'Combined with nutritional guidance, this helps promote healthier hair growth from within.'
   },
   {
     id: 4,
-    title: 'Diet & Lifestyle Correction',
+    title: 'Herbal Hair Therapies',
     description:
-      'Personalized diet plans and lifestyle adjustments support healthy hair growth and prevent future hair loss.',
-    hasLearnMore: false,
-    expandedContent: null
+      'We incorporate carefully selected herbal oils, botanical scalp therapies, and natural formulations that help nourish the scalp, strengthen hair roots, improve moisture balance, and reduce breakage.',
+    hasLearnMore: true,
+    expandedContent:
+      'These therapies support healthier follicles while enhancing scalp circulation and overall hair quality.'
   },
   {
     id: 5,
+    title: 'Personalized Diet & Lifestyle Guidance',
+    description:
+      'Healthy hair is closely connected to overall wellness. Our specialists provide individualized recommendations for nutrition, hydration, sleep, stress management, and daily hair care habits that support stronger hair growth and help reduce future hair loss.',
+    hasLearnMore: true,
+    expandedContent:
+      'Addressing lifestyle factors plays an important role in maintaining long-term treatment results.'
+  },
+  {
+    id: 6,
     title: 'Stress & Hormonal Support',
     description:
-      'Calms the nervous system, reduces stress-related hair fall, and balances hormones for thicker, healthier hair.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Stress and hormonal fluctuations are among the most common contributors to hair thinning. Our holistic treatment approach includes strategies that help reduce stress-related hair shedding while supporting overall hormonal balance.',
+    hasLearnMore: true,
+    expandedContent:
+      'By improving both physical and emotional well-being, we aim to create healthier conditions for consistent hair growth.'
+  },
+  {
+    id: 7,
+    title: 'Expected Results',
+    description:
+      'With a personalized treatment plan and consistent follow-up, many patients experience reduced hair shedding, healthier scalp conditions, stronger hair roots, improved hair texture, and gradual increases in hair density.',
+    hasLearnMore: true,
+    expandedContent:
+      'Because hair grows naturally in cycles, improvements develop progressively over several months, resulting in fuller, healthier-looking hair while supporting long-term scalp health.'
   }
 ]
       },
@@ -11612,76 +12710,128 @@ comparisonData: [
     }
   ]
 },
-
       benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Based on years of providing hair treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Improved hair thickness and density',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Stronger hair roots',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Healthier scalp environment',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 4,
-            title: 'Reduced breakage',
-            percentage: 89,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Enhanced confidence',
-            percentage: 85,
-            description: null
-          }
-        ],
-        comparisonTitle: 'Hair Growth Treatment vs. Conventional Hair Care',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Hair Growth Treatment',
-          traditional: 'Conventional Hair Care'
-        },
-        comparisonData: [
+  title: 'Clinically Observed Benefits of Hair Growth Treatment in Dubai',
+  description:
+    'At RamaCare Polyclinic, our hair growth treatment in Dubai is designed to strengthen hair follicles, improve scalp health, and support the natural hair growth cycle. By combining personalized treatment plans with evidence-based therapies, we help address the underlying causes of hair thinning and slow hair growth rather than simply masking the symptoms. With years of experience in providing advanced hair restoration treatments, our doctor-led approach focuses on achieving healthier, thicker, and stronger hair through safe, non-surgical care. Individual results vary depending on the cause of hair loss, scalp condition, and adherence to the recommended treatment plan.',
+  benefits: [
   {
-    feature: 'Focus',
-    ayurvedic: 'Stimulates follicles and scalp health',
-    conventional: 'Surface-level hair care'
+    id: 1,
+    title: 'Improved Hair Thickness & Density',
+    percentage: 92,
+    description:
+      'Stimulates weakened or dormant hair follicles to improve hair thickness and overall density.',
+    hasLearnMore: true,
+    expandedContent:
+      'Over time, many patients notice fuller, thicker-looking hair with improved coverage as healthier hair growth is encouraged naturally.'
   },
   {
-    feature: 'Approach',
-    ayurvedic: 'Medical, personalized',
-    conventional: 'General products'
+    id: 2,
+    title: 'Stronger Hair Roots',
+    percentage: 88,
+    description:
+      'Improves blood circulation and nutrient delivery to strengthen hair follicles.',
+    hasLearnMore: true,
+    expandedContent:
+      'This helps reduce excessive hair shedding while improving overall hair strength and resilience over time.'
   },
   {
-    feature: 'Results',
-    ayurvedic: 'Gradual, sustainable growth',
-    conventional: 'Temporary cosmetic improvement'
+    id: 3,
+    title: 'Healthier Scalp Environment',
+    percentage: 90,
+    description:
+      'Improves scalp circulation, reduces inflammation, and supports healthier follicle function.',
+    hasLearnMore: true,
+    expandedContent:
+      'A balanced scalp environment promotes long-term hair growth by creating healthier conditions for stronger and more consistent hair development.'
   },
   {
-    feature: 'Monitoring',
-    ayurvedic: 'Doctor-led follow-ups',
-    conventional: 'No clinical monitoring'
+    id: 4,
+    title: 'Reduced Hair Breakage',
+    percentage: 89,
+    description:
+      'Strengthens the hair shaft and improves scalp nourishment to minimize breakage.',
+    hasLearnMore: true,
+    expandedContent:
+      'Hair becomes healthier, smoother, and more resistant to dryness, weakness, and everyday environmental stress.'
   },
   {
-    feature: 'Long-Term Benefit',
-    ayurvedic: 'Supports the natural hair cycle',
-    conventional: 'Limited effectiveness'
+    id: 5,
+    title: 'Increased Confidence & Overall Hair Health',
+    percentage: 85,
+    description:
+      'Healthier, stronger hair helps improve appearance and overall confidence.',
+    hasLearnMore: true,
+    expandedContent:
+      'Along with promoting natural hair growth, our treatments support long-term scalp health through personalized follow-up care and lifestyle guidance.'
   }
-        ]
+],
+  comparisonTitle: 'Hair Growth Treatment vs. Conventional Hair Care',
+  comparisonDescription:
+    'Choosing the right solution for hair thinning or slow hair growth depends on addressing the underlying cause rather than simply improving the appearance of the hair. Conventional shampoos, conditioners, oils, and cosmetic products may temporarily enhance shine, softness, or manageability, but they generally do not stimulate weakened hair follicles or correct the factors responsible for reduced hair growth. Hair Growth Treatment in Dubai focuses on improving scalp health, strengthening hair follicles, enhancing blood circulation, and supporting the natural hair growth cycle through personalized, medically supervised care. At RamaCare Polyclinic, every treatment plan is tailored to your scalp condition, hair loss pattern, and long-term hair restoration goals to achieve gradual, natural, and sustainable results.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Hair Growth Treatment',
+    traditional: 'Conventional Hair Care'
+  },
+  comparisonData: [
+    {
+      feature: 'Treatment Focus',
+      ayurvedic:
+        'Stimulates hair follicles, improves scalp health, and supports natural hair growth',
+      conventional:
+        'Primarily cleanses, conditions, and improves the appearance of existing hair'
+    },
+    {
+      feature: 'Treatment Approach',
+      ayurvedic:
+        'Doctor-led, personalized treatment using evidence-based therapies such as PRP, Mesotherapy, LLLT, or scalp rejuvenation',
+      conventional:
+        'Uses commercially available shampoos, conditioners, oils, and cosmetic hair products'
+    },
+    {
+      feature: 'Results',
+      ayurvedic:
+        'Gradual improvement in hair growth, thickness, density, and scalp health over several months',
+      conventional:
+        'Temporary cosmetic improvement with limited impact on hair follicle function'
+    },
+    {
+      feature: 'Root Cause Management',
+      ayurvedic:
+        'Addresses underlying causes such as poor circulation, nutritional deficiencies, hormonal changes, and scalp conditions',
+      conventional:
+        'Does not directly treat the medical causes of hair thinning or slow hair growth'
+    },
+    {
+      feature: 'Monitoring & Follow-Up',
+      ayurvedic:
+        'Regular consultations and progress assessments with experienced medical professionals',
+      conventional:
+        'No professional monitoring or personalized treatment adjustments'
+    },
+    {
+      feature: 'Long-Term Benefits',
+      ayurvedic:
+        'Supports healthier hair follicles, stronger roots, improved scalp health, and sustainable hair growth',
+      conventional:
+        'Maintains hair appearance but offers limited long-term improvement in hair growth'
+    },
+    {
+      feature: 'Customization',
+      ayurvedic:
+        'Fully customized according to individual hair type, scalp condition, and treatment goals',
+      conventional:
+        'General formulations designed for broad consumer use'
+    },
+    {
+      feature: 'Best Suited For',
+      ayurvedic:
+        'Individuals seeking long-term improvement in hair growth and hair density',
+      conventional:
+        'Individuals looking for routine daily hair maintenance and cosmetic care'
+    }
+  ]
       },
    pricing: {
   title: 'Transparent Pricing & Customized Hair Loss Packages',
@@ -11950,13 +13100,45 @@ comparisonData: [
             description: '500+ Verified Reviews'
           }
         ]
+      },
+      whyChooseSection: {
+        title: 'Why Choose RamaCare Polyclinic for Hair Growth Treatment in Dubai',
+        intro: 'Choosing the right clinic is essential when looking for safe and effective solutions for hair thinning or slow hair growth. At RamaCare Polyclinic, we provide Hair Growth Treatment in Dubai through a personalized, doctor-led approach that focuses on identifying and treating the underlying causes of hair concerns rather than simply improving their appearance. Every patient undergoes a comprehensive consultation, including scalp evaluation, hair density assessment, medical history review, and lifestyle analysis to create a treatment plan tailored to their individual needs.',
+        features: [
+          { id: 1, title: 'Advanced Evidence-Based Therapies', description: 'Our experienced medical team combines advanced, evidence-based therapies such as PRP, mesotherapy, low-level laser therapy (LLLT), and scalp rejuvenation treatments with personalized guidance to support healthier hair growth.' },
+          { id: 2, title: 'Medical Supervision & Safety', description: 'Each procedure is performed under strict medical supervision using modern techniques designed to maximize safety, comfort, and long-term effectiveness.' },
+          { id: 3, title: 'Complete Patient Care', description: 'At RamaCare Polyclinic, we believe successful hair restoration goes beyond the treatment session. We provide continuous follow-up care, progress monitoring, and practical advice on nutrition, scalp care, and healthy lifestyle habits to help maintain your results.' },
+          { id: 4, title: 'Personalized Treatment Goals', description: 'Whether your goal is to reduce hair thinning, strengthen weak hair, or improve overall hair density, our team is committed to helping you achieve healthier, fuller-looking hair through compassionate, personalized care.' }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: 'Recovery & Aftercare',
+        resultsDescription: 'One of the key advantages of hair growth treatment in Dubai is that most non-surgical procedures require little to no downtime, allowing patients to return to their normal daily activities shortly after treatment. Depending on the therapy performed, such as PRP, mesotherapy, or low-level laser therapy, you may experience mild scalp tenderness, temporary redness, or slight sensitivity at the treatment site. These effects are usually temporary and resolve naturally within a short period.',
+        resultPoints: [
+          'Following the recommended aftercare instructions is important to support healing and maximize treatment results.',
+          'Patients are generally advised to avoid washing the scalp for several hours after injectable treatments, depending on the procedure performed.',
+          'Excessive heat exposure, vigorous exercise, swimming, steam rooms, and harsh hair products should also be avoided for the period recommended by your doctor.',
+          'Maintaining a balanced diet rich in protein, iron, vitamins, and essential nutrients plays an important role in supporting healthy hair growth.',
+          'Adequate hydration, stress management, quality sleep, and gentle daily hair care further contribute to stronger hair and a healthier scalp environment.',
+          'Regular follow-up appointments allow our specialists to monitor your progress, evaluate improvements in hair density, and adjust your treatment plan whenever necessary.',
+          'Consistent maintenance sessions and professional guidance help preserve long-term results and encourage continuous, natural hair growth.'
+        ]
+      },
+      whenToConsider: {
+        title: 'Who Is a Suitable Candidate for Hair Growth Treatment?',
+        intro: 'Hair growth treatment in Dubai is suitable for both men and women experiencing early to moderate hair thinning, slow hair growth, excessive hair shedding, or reduced hair density. It is an excellent option for individuals seeking a non-surgical solution to improve scalp health, strengthen weakened hair follicles, and encourage natural hair growth.',
+        points: [
+          'The treatment may benefit people whose hair concerns are related to genetics, stress, hormonal changes, nutritional deficiencies, lifestyle factors, or mild scalp conditions.',
+          'It is also appropriate for individuals who wish to improve hair quality following periods of excessive hair loss or those looking to maintain healthy hair before significant thinning develops.'
+        ],
+        closing: 'During your consultation at RamaCare Polyclinic, our experienced doctors perform a detailed assessment of your scalp, hair growth pattern, medical history, and overall health to determine the most appropriate treatment approach. If a combination of therapies or an alternative hair restoration procedure is better suited to your condition, we will recommend a personalized plan focused on achieving safe, natural, and long-lasting improvements in hair growth and overall scalp health.'
       }
     },
 
        'aesthetic-dermatology-dubai-hair-treatment-hair-prp': {
       hero: {
-        subtitle: 'Natural Hair Restoration Backed by Medical Expertise',
-        description: 'Hair thinning and excessive hair fall can affect both confidence and appearance. At ramacarepolyclinic, we offer Hair PRP in Dubai as a clinically guided, natural solution to strengthen hair roots, reduce hair fall, and stimulate healthier regrowth using your body’s own healing properties.',
+        subtitle: 'Natural Hair Restoration Backed by Advanced Platelet-Rich Plasma Therapy',
+        description: ' Hair PRP in Dubai is an advanced, non-surgical treatment that uses your body\'s own healing properties to stimulate natural hair growth, strengthen weakened follicles, and improve overall scalp health. At RamaCare Polyclinic, we provide hair PRP in Dubai through a personalized, doctor-led approach designed to restore healthier, stronger, and fuller-looking hair.Platelet-Rich Plasma (PRP) is prepared from a small sample of your own blood and contains concentrated growth factors that help activate dormant hair follicles, improve scalp circulation, and support the natural hair growth cycle.Every treatment begins with a comprehensive scalp evaluation to identify the cause of hair thinning and develop a customized treatment plan tailored to your individual needs.Our goal is to reduce hair fall, enhance hair density, and promote long-lasting, natural hair restoration with minimal downtime, high safety standards, and results that continue to improve over time.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -12035,169 +13217,204 @@ comparisonData: [
         title: 'Understanding Hair PRP in Dubai',
        problemIntro: {
   title: 'Problems:Why Hair Loss Continues',
-  description: 'Hair fall and thinning often start at the follicle level, where poor circulation, weak growth signals, and internal factors prevent healthy hair regrowth. Topical products alone are usually not enough to address these deeper causes.'
+  description: 'Hair loss is often a gradual process that begins beneath the scalp\'s surface, long before visible thinning becomes apparent. Healthy hair follicles require adequate blood circulation, growth factors, nutrients, and hormonal balance to produce strong, healthy hair. When these processes become disrupted, the hair growth cycle shortens, existing hair becomes weaker, and new hair growth slows significantly. While shampoos, oils, and cosmetic hair products may temporarily improve hair appearance, they generally cannot stimulate inactive follicles or address the underlying biological causes of hair loss. Hair PRP in Dubai targets these deeper factors to support natural hair regeneration.'
 },
 solutionIntro: {
-  title: 'Our Solution: Hair PRP in Dubai',
-  description: 'Our hair PRP treatment focuses on strengthening hair follicles and stimulating natural hair growth using your body’s own platelet-rich plasma.'
+  title: 'Our Solution: Hair PRP in Dubai at RamaCare Polyclinic',
+  description: 'At RamaCare Polyclinic, our Hair PRP in Dubai is designed to treat the underlying causes of hair thinning by stimulating the body\'s natural healing and regeneration process. Rather than simply improving the appearance of existing hair, PRP therapy focuses on revitalizing weakened hair follicles, improving scalp health, and supporting the natural hair growth cycle. By using Platelet-Rich Plasma (PRP) prepared from your own blood, we deliver a concentrated source of growth factors directly to areas of the scalp affected by thinning hair. This safe, minimally invasive approach helps strengthen existing hair, reduce excessive shedding, and encourage healthier, thicker hair growth over time.'
 },
       leftCards: [
   {
     id: 1,
     title: 'What Is Hair PRP Treatment?',
     description:
-      'Hair PRP (Platelet-Rich Plasma) treatment involves using a concentrated form of your own blood plasma, rich in growth factors, to stimulate hair follicles and improve scalp health. In Hair PRP in Dubai, the plasma is carefully prepared and injected into targeted scalp areas to promote stronger, thicker, and healthier hair growth over time.'
+      'Hair PRP (Platelet-Rich Plasma) in Dubai is an advanced, non-surgical hair restoration treatment that uses the healing and regenerative properties of your own blood to stimulate natural hair growth. A small blood sample is collected and processed to concentrate the platelets, which are rich in growth factors essential for tissue repair and cell regeneration. At RamaCare Polyclinic, every hair PRP in Dubai treatment begins with a comprehensive scalp assessment to determine the cause of hair thinning and evaluate follicle health. PRP therapy is often recommended for individuals in the early stages of hair loss or those experiencing increased hair shedding, helping to strengthen existing hair, improve hair density, and promote healthier, thicker hair over time.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Hair PRP treatment is suitable for individuals experiencing:',
+    title: 'Who Can Benefit from Hair PRP?',
+    description: 'Hair PRP treatment is suitable for both men and women who wish to improve hair quality and encourage natural hair regrowth without surgery. You may benefit from hair PRP in Dubai if you experience the following:',
     listItems: [
       'Early-stage hair thinning',
-      'Excessive hair fall',
-      'Weak or thinning hair strands',
-      'Post-hair fall recovery',
-      'Stress or hormone-related hair concerns'
+'Excessive or persistent hair fall',
+'Weak, fine, or fragile hair strands',
+'Reduced hair density',
+'Recovery after periods of significant hair shedding',
+'Stress-related or hormonal hair loss',
+'Early male or female pattern hair loss',
+'Desire for a natural, minimally invasive hair restoration treatment'
     ]
   },
   {
     id: 3,
-    title: 'Duration & Results',
+    title: 'Duration & Expected Results',
     description:
-      'Initial reduction in hair fall may be noticed within 4–6 weeks. Visible improvement in hair density and strength usually develops over 3–6 months, depending on individual response and consistency.'
+      'Each hair PRP session generally takes 45–60 minutes, including blood collection, PRP preparation, and scalp injections. Since hair grows naturally in cycles, results develop gradually rather than immediately. Many patients notice reduced hair shedding and healthier scalp conditions within 4 to 6 weeks, while improvements in hair thickness, density, and strength typically become more noticeable over 3 to 6 months. A series of treatment sessions followed by periodic maintenance is commonly recommended to achieve and maintain optimal long-term results.'
   }
 ],
 rootCauses: [
   {
     id: 1,
     title: 'Weak Hair Follicles',
-    description: 'Reduced growth factors and poor scalp nourishment lead to thinning hair and excessive shedding.',
+    description:
+      'As hair follicles weaken, they produce thinner, shorter, and more fragile hair strands. Reduced growth factor activity limits the follicle\'s ability to generate healthy new hair, resulting in progressive thinning and increased hair shedding.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
     title: 'Poor Scalp Blood Circulation',
-    description: 'Limited blood flow restricts oxygen and nutrient supply to hair roots, slowing growth.',
+    description:
+      'Hair follicles depend on a healthy blood supply to receive oxygen and essential nutrients. Poor circulation can reduce follicle activity, slow hair growth, and weaken the overall health of the scalp.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 3,
     title: 'Hormonal & Genetic Factors',
-    description: 'Conditions such as androgenetic alopecia affect the hair growth cycle and cause progressive hair loss.',
+    description:
+      'Conditions such as androgenetic alopecia (male and female pattern hair loss), hormonal fluctuations, and age-related changes can interfere with the normal hair growth cycle, causing a gradual reduction in hair density and long-term follicle miniaturization.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 4,
-    title: 'Stress & Lifestyle Imbalance',
-    description: 'Stress, lack of sleep, and poor nutrition contribute to hair fall and reduced hair density.',
+    title: 'Stress & Lifestyle Factors',
+    description:
+      'Chronic stress, poor nutrition, inadequate sleep, smoking, and environmental factors may contribute to excessive hair shedding by disrupting the normal hair growth cycle and reducing the body\'s ability to support healthy follicle function.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Delayed Healing & Regrowth',
-    description: 'A weakened scalp environment slows follicle repair and new hair formation.',
+    title: 'Delayed Healing & Reduced Hair Regeneration',
+    description:
+      'When the scalp lacks sufficient growth factors and cellular repair activity, damaged hair follicles recover more slowly. This delayed regeneration can reduce the formation of healthy new hair, making thinning more noticeable over time. Hair PRP therapy helps stimulate these natural healing processes to encourage stronger, healthier hair growth.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
 
-      quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical, minimally invasive' },
-  { label: 'Anesthesia', value: 'Not required' },
-  { label: 'Recovery Time', value: 'Immediate' },
-  { label: 'Side Effects', value: 'Minimal to none' }
+     quickFacts: [
+  { label: 'Treatment Type', value: 'Non-surgical Platelet-Rich Plasma (PRP) therapy' },
+  { label: 'Procedure Time', value: '45–60 minutes' },
+  { label: 'Anesthesia', value: 'Usually not required (topical numbing cream may be used if needed)' },
+  { label: 'Recovery Time', value: 'Minimal; most patients resume normal activities the same day' },
+  { label: 'Recommended Sessions', value: 'Customized according to hair loss severity' },
+  { label: 'Results Timeline', value: 'Gradual improvement over 3–6 months' },
+  { label: 'Suitable For', value: 'Men and women with early to moderate hair thinning' },
+  { label: 'Possible Side Effects', value: 'Mild temporary redness, tenderness, or scalp sensitivity' }
 ],
      approachCards: [
   {
     id: 1,
     title: 'Growth Factor Activation',
-    description: 'PRP contains powerful growth factors that activate dormant hair follicles and extend the hair growth phase.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Platelet-rich plasma contain high concentration of natural growth factors that play an important role in tissue repair and cellular regeneration.',
+    hasLearnMore: true,
+    expandedContent:
+      'When carefully injected into targeted areas of the scalp, these growth factors help reactivate weakened or dormant hair follicles, encourage new hair production, and extend the natural hair growth phase. This process supports healthier, stronger, and more resilient hair over time.'
   },
   {
     id: 2,
     title: 'Improved Scalp Circulation',
-    description: 'PRP enhances blood flow to the scalp, ensuring better oxygen and nutrient delivery to hair roots.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Healthy hair follicles depend on a consistent supply of oxygen and nutrients to function properly.',
+    hasLearnMore: true,
+    expandedContent:
+      'Hair PRP helps improve microcirculation within the scalp, enhancing blood flow around the hair follicles. Better circulation allows essential nutrients to reach the roots more efficiently, creating a healthier scalp environment that supports continuous hair growth and stronger follicle activity.'
   },
   {
     id: 3,
     title: 'Natural Hair Regrowth Support',
-    description: 'Stimulates new hair growth while improving the thickness and strength of existing hair.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Unlike treatments that rely on artificial substances, Hair PRP uses your body’s own platelets to stimulate natural hair regeneration.',
+    hasLearnMore: true,
+    expandedContent:
+      'The therapy supports the production of healthier hair strands while improving overall hair thickness, texture, and density. As hair follicles become stronger, many patients notice gradual improvements in hair fullness and reduced scalp visibility.'
   },
   {
     id: 4,
-    title: 'Reduced Hair Fall',
-    description: 'Strengthens hair roots and slows further hair loss over time.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Reduced Hair Fall & Stronger Hair Roots',
+    description:
+      'One of the primary goals of Hair PRP in Dubai is to reduce excessive hair shedding by strengthening weakened hair follicles.',
+    hasLearnMore: true,
+    expandedContent:
+      'As the follicles receive greater biological support through PRP growth factors, existing hair becomes more firmly anchored within the scalp. This helps reduce daily hair fall while encouraging healthier and longer-lasting hair growth.'
   },
   {
     id: 5,
     title: 'Personalized PRP Treatment Plan',
-    description: 'Each hair PRP session is customized based on hair loss severity, scalp condition, and individual goals.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Hair loss affects every individual differently, which is why no two treatment plans are the same.',
+    hasLearnMore: true,
+    expandedContent:
+      'During your consultation, our specialists carefully evaluate your scalp condition, hair density, pattern of hair loss, medical history, and treatment goals before recommending a customized PRP program. Depending on your individual needs, PRP therapy may also be combined with complementary treatments such as mesotherapy, low-level laser therapy (LLLT), medical scalp care, or nutritional guidance to maximize long-term hair restoration results.'
+  },
+  {
+    id: 6,
+    title: 'Continuous Progress Monitoring & Long-Term Hair Care',
+    description:
+      'Successful hair restoration requires consistent evaluation and ongoing support.',
+    hasLearnMore: true,
+    expandedContent:
+      'Throughout your hair PRP treatment journey, our medical team monitors your progress, assesses improvements in hair growth and scalp health, and adjusts your treatment plan whenever necessary. We also provide personalized advice on scalp care, nutrition, stress management, and healthy lifestyle habits that help maintain stronger hair follicles and support long-lasting, natural hair growth.'
   }
 ]
       },
-    healingJourney: {
-  title: 'Your Journey to Stronger, Healthier Hair Growth',
+   healingJourney: {
+  title: 'Your Journey to Stronger, Healthier Hair with Hair PRP in Dubai',
   description:
-    'Our hair PRP in Dubai follows a safe, structured, and evidence-based approach to reduce hair fall, strengthen hair follicles, and stimulate natural hair regrowth. Each stage is carefully managed by experienced medical professionals to ensure effective and comfortable treatment.',
+    'At RamaCare Polyclinic, our Hair PRP in Dubai follows a structured, doctor-supervised treatment process designed to reduce excessive hair fall, strengthen weakened hair follicles, and promote long-term natural hair growth. Every stage of the treatment is carefully planned according to your scalp condition, hair loss pattern, and individual goals. By combining advanced Platelet-Rich Plasma (PRP) therapy with continuous monitoring and personalized aftercare, we aim to deliver safe, comfortable, and sustainable hair restoration results.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Week 1: Initial Hair & Scalp Consultation (60 Minutes)',
+      title: 'Week 1: Initial Hair & Scalp Consultation (Approximately 60 Minutes)',
       duration: 'Step 1',
       description:
-        'Your journey begins with a detailed consultation to determine whether hair PRP in Dubai is suitable for your hair loss condition and goals.',
+        'Your Hair PRP journey begins with a detailed consultation to determine the underlying cause of your hair thinning and evaluate whether PRP therapy is the most appropriate treatment for your condition.',
       keyActivities: [
-        'Detailed medical history and hair loss pattern assessment',
-        'Scalp and follicle examination',
-        'Evaluation of genetic, hormonal, or lifestyle factors',
-        'Hair density and thinning analysis',
-        'Creation of a personalized hair PRP treatment plan in Dubai'
+        'Comprehensive medical and lifestyle history review',
+        'Hair loss pattern evaluation',
+        'Detailed scalp and hair follicle examination',
+        'Assessment of hormonal, nutritional, genetic, and lifestyle factors',
+        'Hair density and scalp photography (when required)',
+        'Personalized Hair PRP treatment plan creation'
       ],
       side: 'right'
     },
     {
       id: 2,
       number: '02',
-      title: 'Weeks 1–2: Preparation Phase',
+      title: 'Weeks 1–2: Scalp Preparation & Optimization',
       duration: 'Step 2',
       description:
-        'This phase focuses on optimizing scalp health to improve the effectiveness of hair PRP treatment in Dubai.',
+        'Preparing the scalp before PRP treatment helps create an optimal environment for healthy hair growth. During this phase, our team focuses on improving scalp health, identifying factors that may interfere with treatment outcomes, and providing personalized recommendations to maximize the effectiveness of hair PRP therapy.',
       keyActivities: [
-        'Scalp cleansing and care guidance',
-        'Nutritional and lifestyle recommendations',
-        'Temporary avoidance of certain medications (as advised)',
-        'Pre-treatment safety checks'
+        'Professional scalp assessment and cleansing guidance',
+        'Personalized hair care recommendations',
+        'Nutritional and lifestyle counseling',
+        'Temporary avoidance of medications or supplements when medically appropriate',
+        'Pre-treatment safety evaluation',
+        'Discussion of treatment expectations and aftercare'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Weeks 3–12: Active Hair PRP Sessions',
+      title: 'Weeks 3–12: Active Hair PRP Treatment Phase',
       duration: 'Step 3',
       description:
-        'During this phase, advanced hair PRP sessions in Dubai are performed using your own platelet-rich plasma to stimulate hair follicles.',
+        'During each session, a small amount of your blood is collected and processed using specialized centrifugation equipment to isolate platelet-rich plasma containing concentrated growth factors. The PRP is then carefully injected into targeted areas of the scalp under sterile conditions.',
       keyActivities: [
-        '1 session every 3–4 weeks, as recommended',
-        'Blood draw and PRP preparation under sterile conditions',
-        'PRP micro-injections into targeted scalp areas',
-        'Stimulation of hair follicles and scalp circulation',
-        'Monitoring of hair fall reduction and regrowth progress'
+        'PRP sessions scheduled approximately every 3–4 weeks',
+        'Blood collection and sterile PRP preparation',
+        'Precision PRP micro-injections into targeted scalp areas',
+        'Activation of hair follicles and stimulation of natural growth factors',
+        'Improved scalp circulation and follicle nourishment',
+        'Ongoing monitoring of hair fall reduction and hair density improvements'
       ],
       side: 'right'
     },
@@ -12207,87 +13424,151 @@ rootCauses: [
       title: 'Months 4–12: Maintenance & Follow-Up Care',
       duration: 'Step 4',
       description:
-        'Maintenance sessions help support continued hair growth after completing your hair PRP in Dubai treatment plan.',
+        'Hair growth continues long after the active PRP treatment phase. To maintain healthy follicle activity and preserve treatment results, periodic follow-up consultations and maintenance sessions may be recommended based on your individual response.',
       keyActivities: [
-        'Periodic follow-up consultations',
-        'Maintenance PRP sessions if required',
-        'Ongoing hair care and nutrition guidance',
-        'Professional monitoring of scalp and hair health'
+        'Regular follow-up consultations',
+        'Maintenance PRP sessions when clinically appropriate',
+        'Assessment of scalp health and hair density',
+        'Personalized nutrition and hair care recommendations',
+        'Long-term monitoring and treatment adjustments as required'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'With consistent treatment and appropriate follow-up care, many patients experience a gradual reduction in excessive hair shedding, stronger hair follicles, improved scalp health, and noticeable increases in hair thickness and density.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
 
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Based on years of providing hair treatment in Dubai.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Reduced hair fall',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Improved hair thickness and density',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Stronger hair roots',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 4,
-            title: ' Healthier scalp environment',
-            percentage: 89,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Increased confidence',
-            percentage: 85,
-            description: null
-          }
-        ],
-        comparisonTitle: 'Hair PRP vs. Conventional Hair Care',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Hair PRP Treatment',
-          traditional: 'Conventional Hair Care'
-        },
-        comparisonData: [
-  {
-    feature: 'Focus',
-    ayurvedic: 'Follicle stimulation & scalp repair',
-    conventional: 'Surface-level hair care'
+     benefits: {
+  title: 'Clinically Observed Benefits',
+  description:
+    'Our Hair PRP treatment in Dubai is designed to improve overall scalp health and support the body\'s natural hair growth process. By using your own platelet-rich plasma, PRP therapy delivers concentrated growth factors directly to weakened hair follicles, helping reduce hair fall, improve hair quality, and encourage healthier, stronger hair over time. Based on our experience in providing advanced hair restoration treatments, many patients notice gradual yet meaningful improvements after completing their recommended treatment plan.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced Hair Fall',
+      percentage: 92,
+      description:
+        'Hair PRP helps strengthen weakened hair follicles and prolong the active growth phase of the hair cycle.',
+      hasLearnMore: true,
+      expandedContent:
+        'Many patients experience a noticeable reduction in excessive daily hair shedding within the first few weeks of treatment, allowing existing hair to remain healthier and stronger.'
+    },
+    {
+      id: 2,
+      title: 'Improved Hair Thickness & Density',
+      percentage: 88,
+      description:
+        'By stimulating dormant or weakened hair follicles, PRP encourages the growth of thicker, healthier hair strands.',
+      hasLearnMore: true,
+      expandedContent:
+        'Over time, patients often notice fuller-looking hair, improved density, and reduced visibility of thinning areas.'
+    },
+    {
+      id: 3,
+      title: 'Stronger Hair Roots',
+      percentage: 90,
+      description:
+        'The growth factors present in platelet-rich plasma nourish hair follicles at a cellular level.',
+      hasLearnMore: true,
+      expandedContent:
+        'This improves their ability to produce stronger, healthier hair, helping reduce breakage while supporting long-term hair strength and resilience.'
+    },
+    {
+      id: 4,
+      title: 'Healthier Scalp Environment',
+      percentage: 89,
+      description:
+        'Healthy hair begins with a healthy scalp.',
+      hasLearnMore: true,
+      expandedContent:
+        'Hair PRP improves blood circulation and nutrient delivery to scalp tissues, creating an environment that supports continuous follicle activity, better hair quality, and natural hair regeneration.'
+    },
+    {
+      id: 5,
+      title: 'Increased Confidence',
+      percentage: 85,
+      description:
+        'Healthier, fuller-looking hair often has a positive impact on self-confidence and overall well-being.',
+      hasLearnMore: true,
+      expandedContent:
+        'As hair density and appearance improve, many patients report feeling more comfortable with their appearance and more confident in social and professional settings.'
+    }
+  ],
+  comparisonTitle: 'Hair PRP vs. Conventional Hair Care',
+  comparisonDescription:
+    'While shampoos, conditioners, oils, and hair serums can improve the appearance of your hair, they generally work only on the surface and may not address the underlying causes of hair thinning or excessive hair fall. Hair PRP in Dubai takes a different approach by targeting the health of the scalp and hair follicles, encouraging natural hair regeneration through your body\'s own growth factors. Understanding these differences can help you choose the treatment that best matches your hair restoration goals.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Hair PRP Treatment',
+    traditional: 'Conventional Hair Care'
   },
-  {
-    feature: 'Approach',
-    ayurvedic: 'Medical, personalized',
-    conventional: 'General products'
-  },
-  {
-    feature: 'Results',
-    ayurvedic: 'Gradual, long-term improvement',
-    conventional: 'Temporary cosmetic effects'
-  },
-  {
-    feature: 'Monitoring',
-    ayurvedic: 'Doctor-led follow-ups',
-    conventional: 'No clinical supervision'
-  },
-  {
-    feature: 'Long-Term Benefit',
-    ayurvedic: 'Supports the natural hair cycle',
-    conventional: 'Limited effectiveness'
-  }
-        ]
+  comparisonData: [
+    {
+      feature: 'Primary Focus',
+      ayurvedic:
+        'Stimulates hair follicles, improves scalp health, and supports natural hair regeneration',
+      conventional:
+        'Focuses mainly on cleansing, conditioning, and improving the appearance of existing hair'
+    },
+    {
+      feature: 'Treatment Approach',
+      ayurvedic:
+        'Doctor-led, personalized Platelet-Rich Plasma therapy based on individual hair loss patterns',
+      conventional:
+        'Uses over-the-counter shampoos, oils, serums, or cosmetic hair products'
+    },
+    {
+      feature: 'How It Works',
+      ayurvedic:
+        'Delivers concentrated growth factors directly into the scalp to activate weakened follicles',
+      conventional:
+        'Works on the surface of the hair and scalp with limited penetration'
+    },
+    {
+      feature: 'Results Timeline',
+      ayurvedic:
+        'Gradual improvements in hair strength, density, and reduced hair fall over several months',
+      conventional:
+        'Temporary cosmetic improvements that usually disappear when products are discontinued'
+    },
+    {
+      feature: 'Hair Growth Support',
+      ayurvedic:
+        'Encourages natural hair growth by strengthening existing follicles',
+      conventional:
+        'Does not typically stimulate dormant hair follicles'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic:
+        'Performed and monitored by experienced medical professionals',
+      conventional:
+        'Self-administered without clinical evaluation or follow-up'
+    },
+    {
+      feature: 'Long-Term Benefits',
+      ayurvedic:
+        'Supports the natural hair growth cycle and helps maintain healthier, stronger hair with maintenance sessions',
+      conventional:
+        'Primarily improves hair appearance without addressing underlying follicle health'
+    },
+    {
+      feature: 'Personalization',
+      ayurvedic:
+        'Treatment plan tailored to hair loss severity, scalp condition, and individual goals',
+      conventional:
+        'Standard products with limited customization'
+    }
+  ]
       },
   pricing: {
   title: 'Transparent Pricing & Customized Hair PRP Packages',
@@ -12558,6 +13839,58 @@ faq: {
             description: '500+ Verified Reviews'
           }
         ]
+      },
+      skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Option Is Right for You?",
+          description: "If your goal is simply to improve the appearance, softness, or shine of your hair, conventional hair care products may be sufficient as part of your daily routine. However, if you are experiencing ongoing hair thinning, excessive shedding, weakened hair follicles, or reduced hair density, Hair PRP in Dubai offers a medically guided, non-surgical solution that targets the root causes of hair loss. After a comprehensive scalp assessment at RamaCare Polyclinic, our specialists recommend a personalized treatment plan designed to restore healthier hair growth, improve scalp health, and deliver long-lasting, natural-looking results.",
+          points: []
+        }
+      ],
+      whyChooseSection: {
+        title: "Why Choose RamaCare Polyclinic for Hair PRP in Dubai",
+        intro: "Choosing the right clinic is just as important as choosing the right treatment when addressing hair thinning or excessive hair fall. At RamaCare Polyclinic, we provide hair PRP in Dubai through a personalized, doctor-led approach focused on restoring healthier hair naturally. Every patient begins with a detailed consultation, where our medical team evaluates scalp health, hair density, hair loss patterns, medical history, and lifestyle factors before creating an individualized treatment plan.",
+        features: [
+          {
+            id: 1,
+            title: "Advanced, Safe PRP Techniques",
+            description: "Our experienced doctors use advanced Platelet-Rich Plasma (PRP) techniques in a safe, sterile clinical environment to ensure precision, comfort, and high standards of patient care. Because PRP uses your own blood, the treatment is biocompatible and carries a very low risk of allergic reactions. We also combine medical expertise with evidence-based protocols to help maximize treatment outcomes while maintaining patient safety."
+          },
+          {
+            id: 2,
+            title: "Continuous Patient Care & Progress Monitoring",
+            description: "Beyond the treatment itself, we believe that successful hair restoration requires ongoing care. Our team closely monitors your progress, provides professional scalp care advice, and recommends nutrition and lifestyle modifications that support healthy hair growth."
+          },
+          {
+            id: 3,
+            title: "Personalized Approach to Your Goals",
+            description: "Whether your goal is to reduce hair fall, improve hair density, or strengthen weakened follicles, RamaCare Polyclinic is committed to delivering safe, natural-looking, and long-lasting results through compassionate and personalized care."
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: "Recovery & Aftercare",
+        resultsDescription: "One of the major advantages of Hair PRP in Dubai is that it is a minimally invasive procedure with little to no downtime. Most patients can return to work and resume normal daily activities shortly after treatment. Mild scalp tenderness, temporary redness, slight swelling, or sensitivity at the injection sites may occur, but these effects usually resolve within a day or two without requiring special treatment.",
+        resultPoints: [
+          "Following the recommended aftercare instructions is essential for achieving the best possible results.",
+          "Patients are generally advised to avoid washing their hair for several hours after the procedure or as directed by their doctor.",
+          "Strenuous exercise, swimming, saunas, steam rooms, excessive sun exposure, and alcohol consumption should also be avoided for the recommended period to allow the scalp to recover properly.",
+          "Using harsh shampoos, chemical hair treatments, or excessive heat styling immediately after treatment is discouraged.",
+          "Maintaining a healthy lifestyle also plays an important role in supporting long-term hair growth. A balanced diet rich in protein, vitamins, iron, zinc, and other essential nutrients helps nourish hair follicles from within.",
+          "Staying hydrated, managing stress, getting adequate sleep, and following a gentle hair care routine further contribute to healthier scalp conditions.",
+          "Regular follow-up appointments allow our doctors to monitor your progress, assess improvements in hair density, and recommend maintenance PRP sessions whenever appropriate to help preserve your results over the long term."
+        ]
+      },
+      whenToConsider: {
+        title: "Who Is a Suitable Candidate for Hair PRP?",
+        intro: "Hair PRP in Dubai is suitable for both men and women experiencing early to moderate hair thinning, excessive hair shedding, weakened hair follicles, or reduced hair density. It is particularly beneficial for individuals who want to improve natural hair growth without surgery while strengthening existing hair and maintaining a healthy scalp.",
+        points: [
+          "The treatment may be recommended for people affected by genetic hair loss, stress-related hair fall, hormonal changes, nutritional deficiencies, or age-related thinning.",
+          "It can also support recovery following periods of excessive hair shedding and help maintain healthier hair before significant hair loss develops."
+        ],
+        closing: "During your consultation at RamaCare Polyclinic, our experienced doctors perform a comprehensive scalp assessment, review your medical history, and evaluate your hair growth pattern to determine whether PRP therapy is the most appropriate treatment. If another therapy or a combination of treatments is likely to provide better results, we will recommend a personalized treatment plan focused on achieving safe, natural, and long-lasting hair restoration."
       }
     },
 
@@ -13252,8 +14585,8 @@ comparisonData: [
 
      'aesthetic-dermatology-dubai-laser-treatment-spider-veins-laser-treatment': {
       hero: {
-        subtitle: 'Safe, Non-Surgical Solution for Clearer Skin',
-        description: 'Spider veins are small, visible veins that often appear on the legs or face. While usually harmless, they can affect confidence and comfort. At ramacarepolyclinic, we offer Spider Veins Laser Treatment designed to safely reduce visible veins and improve skin appearance—without surgery or downtime.',
+        subtitle: 'Safe, Non-Surgical Treatment for Clearer, Healthier-Looking Skin',
+        description: 'Spider veins are small, damaged blood vessels that appear close to the surface of the skin, commonly affecting the legs and face. They may develop due to genetics, aging, hormonal changes, prolonged standing, pregnancy, sun exposure, or reduced circulation. Although spider veins are usually not medically serious, many people seek treatment because they can affect self-confidence and make the skin appear uneven. At RamaCare Polyclinic, we provide spider vein laser treatment in Dubai, an advanced, non-surgical solution that targets visible spider veins with precision while protecting the surrounding healthy skin. Using modern laser technology, the treatment delivers controlled energy to the affected blood vessels, causing them to gradually collapse and be naturally absorbed by the body over time. This improves skin clarity and reduces the appearance of unwanted veins without the need for surgical procedures or lengthy recovery.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -13336,147 +14669,169 @@ comparisonData: [
       overview: {
         title: 'Understanding Spider Veins Laser Treatment',
         problemIntro: {
-          title: 'The Problem: Understanding Spider Veins',
-          description: 'Spider veins can form due to genetics, prolonged standing, hormonal changes, pregnancy, aging, or sun exposure. Without treatment, they may become more noticeable over time.'
+          title: 'The Problem: Why Spider Veins Develop',
+          description: 'Spider veins develop when tiny blood vessels close to the skin\'s surface become enlarged or weakened, making them visible through the skin. Although they are generally harmless, they can become more noticeable over time and affect both appearance and confidence. Several factors contribute to their development, including genetics, aging, hormonal fluctuations, pregnancy, prolonged standing or sitting, obesity, and excessive sun exposure. While creams and cosmetic products may temporarily improve skin appearance, they cannot eliminate damaged blood vessels beneath the skin. Spider vein laser treatment in Dubai addresses the underlying vascular concern by targeting the affected veins directly.'
         },
         solutionIntro: {
   title: 'Our Solution: Spider Veins Laser Treatment in Dubai',
   description:
-    'Our Spider Veins Laser Treatment in Dubai provides a safe, effective, and minimally invasive solution to eliminate visible veins and restore smooth skin.'
+    'At RamaCare Polyclinic, our Spider Veins Laser Treatment in Dubai is designed to safely reduce visible spider veins while improving the overall appearance of your skin. Using advanced laser technology, we target damaged superficial blood vessels with precision, allowing them to gradually collapse and be naturally absorbed by the body. This non-surgical approach minimizes damage to the surrounding healthy skin, providing an effective solution for both facial and leg spider veins with little to no downtime.Every treatment begins with a comprehensive medical assessment to identify the size, depth, location, and underlying cause of the spider veins. Based on your skin type, vascular condition, and treatment goals, our experienced doctors develop a personalized treatment plan that prioritizes safety, comfort, and natural-looking results. Whether your concern is cosmetic improvement or mild discomfort caused by superficial veins, our goal is to help you achieve clearer skin and renewed confidence through evidence-based laser therapy.'
 },
        leftCards: [
   {
     id: 1,
     title: 'What Is Spider Veins Laser Treatment?',
-    description: 'Spider Veins Laser Treatment is a medical aesthetic procedure that uses focused laser energy to target and close visible spider veins. Over time, the treated veins fade and are naturally absorbed by the body.'
+    description: 'Spider vein laser treatment in Dubai is a safe, non-surgical procedure designed to reduce the appearance of small, visible blood vessels that commonly develop on the legs and face. Using advanced laser technology, carefully controlled light energy is delivered directly to the affected veins. At RamaCare Polyclinic, every spider vein laser treatment begins with a detailed medical assessment to determine the size, depth, and location of the affected veins. Our experienced doctors evaluate your skin type, medical history, and cosmetic concerns before creating a personalized treatment plan designed to achieve safe, natural-looking, and long-lasting results. '
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Spider Veins Laser Treatment is suitable for individuals with:',
+    title: 'Who Can Benefit from Spider Veins Laser Treatment?',
+    description: 'Spider vein laser treatment is suitable for men and women who wish to reduce the appearance of unwanted superficial veins and improve the appearance of their skin. You may be a suitable candidate if you have:',
     listItems: [
       'Visible red, blue, or purple spider veins',
-      'Spider veins on legs or face',
-      'Cosmetic concerns related to vein appearance',
-      'Mild leg heaviness or discomfort',
-      'Preference for non-surgical treatment'
+'Spider veins affecting the legs or face',
+'Cosmetic concerns related to visible blood vessels',
+'Mild aching, heaviness, or discomfort associated with superficial veins',
+'Small vascular lesions or broken facial capillaries',
+'Healthy skin with realistic treatment expectations',
+'A preference for a safe, non-surgical treatment option'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
-    description: 'Each session typically lasts 20–45 minutes, depending on the size and number of veins treated. Multiple sessions may be required for optimal and long-lasting results.'
+    title: 'Duration & Expected Results',
+    description: 'Each spider vein laser treatment session typically lasts 20–45 minutes, depending on the number, size, and location of the veins being treated. Some smaller veins may respond after a single session, while larger or multiple spider veins often require 4–8 treatment sessions for optimal improvement. Following treatment, the targeted veins gradually fade over several weeks as they are naturally absorbed by the body. Maintaining a healthy lifestyle and following your doctor\'s recommendations can help support long-lasting results and reduce the likelihood of new spider veins developing.'
   }
 ],
-     rootCauses: [
+    rootCauses: [
   {
     id: 1,
-    title: 'Advanced Laser Technology',
+    title: 'Genetics & Family History',
     description:
-      'Targets spider veins precisely without harming surrounding skin, promoting vein closure and natural absorption.',
+      'A family history of spider veins significantly increases the likelihood of developing similar vascular changes. Inherited weakness in vein walls and valves can make small blood vessels more susceptible to becoming enlarged and visible over time.',
     severity: null,
     severityColor: null
   },
   {
     id: 2,
-    title: 'Quick & Comfortable Sessions',
+    title: 'Hormonal Changes & Pregnancy',
     description:
-      'Non-invasive procedures with minimal discomfort, allowing you to resume daily activities immediately.',
+      'Hormonal fluctuations during pregnancy, menopause, or while taking hormonal medications may increase pressure within superficial blood vessels, making spider veins more likely to develop, particularly on the legs.',
     severity: null,
     severityColor: null
   },
   {
     id: 3,
-    title: 'Personalized Treatment Plans',
+    title: 'Aging & Reduced Skin Elasticity',
     description:
-      'Customized based on the size, location, and severity of veins for optimal results.',
+      'As the skin and blood vessels naturally age, vein walls gradually lose strength and elasticity. This allows small veins to enlarge and become increasingly visible beneath the surface of the skin.',
     severity: null,
     severityColor: null
   },
   {
     id: 4,
-    title: 'Improved Circulation & Skin Health',
+    title: 'Prolonged Standing or Sitting',
     description:
-      'Laser therapy strengthens vein walls, improves blood flow, and enhances overall skin appearance.',
+      'Occupations that require standing or sitting for extended periods can increase pressure in the leg veins, reducing healthy circulation and contributing to the development of spider veins over time.',
     severity: null,
     severityColor: null
   },
   {
     id: 5,
-    title: 'Long-Term Results',
+    title: 'Sun Exposure & Lifestyle Factors',
     description:
-      'Reduces the appearance of spider veins permanently, boosts confidence, and improves the aesthetic of your legs and skin.',
+      'Excessive sun exposure, especially on the face, can damage small blood vessels and contribute to visible facial spider veins. Additional lifestyle factors such as obesity, smoking, and limited physical activity may further increase the risk by affecting circulation and overall vascular health.',
     severity: null,
     severityColor: null
   }
 ],
-        quickFacts: [
-          { label: 'Treatment Type', value: 'Non-invasive' },
-          { label: 'Anesthesia', value: 'Not required' },
-          { label: 'Downtime', value: 'Minimal to none' },
-          { label: 'Sessions Required', value: '4–8 (depends on concern)' },
-          { label: 'Results', value: 'Progressive & long-lasting' },
-          { label: 'Safety', value: 'DHA-approved & FDA-certified' }
-        ],
-       approachCards: [
+       quickFacts: [
+  { label: 'Treatment Type', value: 'Non-surgical laser vein treatment' },
+  { label: 'Procedure Time', value: '20–45 minutes' },
+  { label: 'Anesthesia', value: 'Not usually required' },
+  { label: 'Downtime', value: 'Minimal to none' },
+  { label: 'Recommended Sessions', value: '4–8 sessions (depending on severity)' },
+  { label: 'Results Timeline', value: 'Progressive improvement over several weeks' },
+  { label: 'Suitable For', value: 'Facial and leg spider veins' },
+  { label: 'Safety', value: 'Doctor-supervised using FDA-cleared/DHA-approved technology where applicable' }
+],
+      approachCards: [
   {
     id: 1,
     title: 'Advanced Laser Technology',
     description:
-      'Targets spider veins precisely without harming surrounding skin, promoting vein closure and natural absorption.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Our clinic uses advanced laser systems that deliver carefully controlled energy directly into the affected blood vessels.',
+    hasLearnMore: true,
+    expandedContent:
+      'The laser selectively targets spider veins without damaging the surrounding skin or healthy tissue. The treated veins gradually seal, collapse, and are naturally eliminated by the body\'s lymphatic system, resulting in smoother and clearer skin over the following weeks.'
   },
   {
     id: 2,
-    title: 'Quick & Comfortable Sessions',
+    title: 'Precise & Comfortable Treatment',
     description:
-      'Non-invasive procedures with minimal discomfort, allowing you to resume daily activities immediately.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Spider vein laser treatment is a minimally invasive procedure that does not require surgery, stitches, or lengthy recovery.',
+    hasLearnMore: true,
+    expandedContent:
+      'Most patients experience only mild warmth or a brief stinging sensation during treatment. Sessions are typically completed within 20 to 45 minutes, allowing patients to return to their normal daily activities shortly afterward.'
   },
   {
     id: 3,
-    title: 'Personalized Treatment Plans',
+    title: 'Personalized Treatment Planning',
     description:
-      'Customized based on the size, location, and severity of veins for optimal results.',
-    hasLearnMore: false,
-    expandedContent: null
+      'No two cases of spider veins are exactly alike.',
+    hasLearnMore: true,
+    expandedContent:
+      'Our doctors perform a detailed assessment of your vein pattern, skin type, medical history, and lifestyle factors before recommending the most appropriate laser settings and treatment schedule. Depending on the severity of the condition, multiple sessions may be advised to achieve optimal and long-lasting improvement.'
   },
   {
     id: 4,
-    title: 'Improved Circulation & Skin Health',
+    title: 'Improved Skin Appearance & Vascular Health',
     description:
-      'Laser therapy strengthens vein walls, improves blood flow, and enhances overall skin appearance.',
-    hasLearnMore: false,
-    expandedContent: null
+      'By eliminating visible superficial veins, laser therapy helps restore a more even skin tone and smoother appearance.',
+    hasLearnMore: true,
+    expandedContent:
+      'Improved circulation within the treated area and the removal of damaged blood vessels contribute to healthier-looking skin while reducing the visibility of unwanted red, blue, or purple veins.'
   },
   {
     id: 5,
-    title: 'Long-Term Results',
+    title: 'Long-Term Improvement & Lasting Confidence',
     description:
-      'Reduces the appearance of spider veins permanently, boosts confidence, and improves the aesthetic of your legs and skin.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Treated spider veins are permanently closed and naturally absorbed by the body.',
+    hasLearnMore: true,
+    expandedContent:
+      'Although new spider veins may develop over time due to aging, genetics, or lifestyle factors, maintaining a healthy lifestyle and following medical advice can help preserve your results. Many patients notice significant improvements in the appearance of their legs or face, leading to greater confidence and comfort in everyday life.'
+  },
+  {
+    id: 6,
+    title: 'Continuous Follow-Up & Patient Support',
+    description:
+      'At RamaCare Polyclinic, our care continues beyond the treatment session.',
+    hasLearnMore: true,
+    expandedContent:
+      'We monitor your progress during follow-up appointments, evaluate the healing process, and recommend additional sessions only when clinically appropriate. Patients also receive personalized advice on skin care, sun protection, physical activity, and circulation-friendly habits to support long-term results and reduce the likelihood of future spider vein formation.'
   }
 ]
       },
-     healingJourney: {
-  title: 'Your Spider Veins Laser Journey: Step by Step',
-  description: 'A transparent, medically guided approach to ensure safety, comfort, and visible vein reduction',
+    healingJourney: {
+  title: 'Your Spider Veins Laser Treatment Journey',
+  description:
+    'Our Spider Veins Laser Treatment in Dubai follows a safe, structured, and doctor-supervised approach designed to reduce visible spider veins while protecting the surrounding skin. Every stage of treatment is carefully planned to ensure patient comfort, effective vein reduction, and long-lasting aesthetic improvement. From your initial consultation through follow-up care, our experienced medical team provides personalized guidance to help you achieve clearer, healthier-looking skin with confidence.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation & Vein Assessment (30–45 min)',
+      title: 'Initial Consultation & Vein Assessment (30–45 Minutes)',
       duration: 'Step 1',
-      description: 'A detailed evaluation to understand vein severity, skin type, medical history, and suitability for laser treatment.',
+      description:
+        'Your journey begins with a comprehensive consultation to determine whether spider vein laser treatment in Dubai is the most suitable option for your condition. Our doctors carefully examine the affected areas, evaluate the severity of the spider veins, and identify any underlying factors that may influence treatment outcomes.',
       keyActivities: [
-        'Medical history review',
-        'Visual and clinical vein assessment',
-        'Skin type evaluation',
-        'Treatment area mapping',
-        'Personalized laser treatment plan creation'
+        'Detailed medical history review',
+        'Examination of visible spider veins and surrounding skin',
+        'Assessment of vein size, depth, and distribution',
+        'Skin type and pigmentation evaluation',
+        'Identification of contributing lifestyle or medical factors',
+        'Digital treatment area mapping (when appropriate)',
+        'Personalized laser treatment plan and session schedule'
       ],
       side: 'right'
     },
@@ -13485,118 +14840,176 @@ comparisonData: [
       number: '02',
       title: 'Preparation Phase',
       duration: 'Step 2',
-      description: 'Preparing the skin and veins for optimal laser response and safe treatment delivery.',
+      description:
+        'Proper preparation helps maximize treatment effectiveness while reducing the risk of temporary skin irritation. Before your first session, our team provides clear instructions to prepare your skin and optimize laser response.',
       keyActivities: [
-        'Skin conditioning guidance',
-        'Sun-exposure precautions',
-        'Lifestyle and circulation advice',
-        'Patch testing (if required)',
-        'Pre-treatment care instructions'
+        'Skin preparation and cleansing guidance',
+        'Advice on avoiding excessive sun exposure and tanning',
+        'Review of skincare products and medications when necessary',
+        'Lifestyle recommendations to support healthy circulation',
+        'Patch testing for selected skin types if clinically indicated',
+        'Pre-treatment instructions and patient education'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Laser Treatment Phase',
+      title: 'Active Spider Veins Laser Treatment',
       duration: 'Step 3',
-      description: 'Targeted laser sessions to reduce visible spider veins and improve skin appearance gradually.',
+      description:
+        'During each treatment session, advanced laser technology delivers carefully controlled energy directly to the affected spider veins. The laser heats the targeted blood vessels, causing them to collapse while preserving the surrounding healthy skin.',
       keyActivities: [
-        'Scheduled laser sessions',
-        'Precision treatment of affected veins',
-        'Cooling and skin-protection care',
-        'Monitoring skin response',
-        'Session-based adjustments'
+        'Doctor-supervised laser treatment sessions',
+        'Precise targeting of visible spider veins',
+        'Continuous cooling and skin protection throughout the procedure',
+        'Monitoring of skin response and patient comfort',
+        'Adjustment of laser settings based on treatment progress',
+        'Documentation of improvements after each session'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Recovery, Monitoring & Maintenance',
+      title: 'Recovery, Monitoring & Long-Term Maintenance',
       duration: 'Step 4',
-      description: 'Supporting skin healing, monitoring progress, and maintaining long-term results.',
+      description:
+        'Following treatment, our team continues to monitor your progress and provide guidance to support healthy healing. Although recovery is usually quick, proper aftercare helps optimize results and reduce the likelihood of new spider veins developing.',
       keyActivities: [
-        'Follow-up assessments',
-        'Skin recovery guidance',
-        'Circulation and lifestyle support',
-        'Maintenance session planning',
-        'Long-term vein prevention advice'
+        'Follow-up consultations and progress assessments',
+        'Guidance for skin healing and sun protection',
+        'Recommendations to support healthy blood circulation',
+        'Lifestyle advice to reduce future vein formation',
+        'Maintenance treatment planning when appropriate',
+        'Long-term monitoring for lasting cosmetic improvement'
       ],
       side: 'left'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Spider Veins Laser Treatment vs. Conventional Methods',
-        comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Laser Treatment',
-          traditional: 'Creams / Home Remedies'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: 'Reduced appearance of spider veins',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Improved skin tone and clarity',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Non-surgical and safe',
-            percentage: 88,
-            description: null
-          },
-          {
-            id: 4,
-            title: ' Minimal discomfort',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Enhanced confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-         {
-  feature: 'Results',
-  ayurvedic: 'Visible vein reduction',
-  conventional: 'Temporary or minimal'
-},
-{
-  feature: 'Precision',
-  ayurvedic: 'Targets affected veins',
-  conventional: 'Surface-level'
-},
-{
-  feature: 'Safety',
-  ayurvedic: 'Doctor-supervised',
-  conventional: 'No medical monitoring'
-},
-{
-  feature: 'Downtime',
-  ayurvedic: 'Minimal',
-  conventional: 'Not effective'
-},
-{
-  feature: 'Long-Term Benefit',
-  ayurvedic: 'Gradual fading of veins',
-  conventional: 'Limited improvement'
-}
-
-        ]
+     benefits: {
+  title: 'Clinically Observed Benefits',
+  description:
+    'Based on our clinical experience and patient outcomes following Spider Veins Laser Treatment in Dubai.',
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced Appearance of Spider Veins',
+      percentage: 90,
+      description:
+        'Laser therapy selectively targets visible red, blue, and purple spider veins.',
+      hasLearnMore: true,
+      expandedContent:
+        'The treated veins gradually collapse and disappear over time. Many patients notice a significant reduction in the appearance of facial and leg spider veins, resulting in clearer and more even-looking skin.'
+    },
+    {
+      id: 2,
+      title: 'Improved Skin Tone & Clarity',
+      percentage: 92,
+      description:
+        'As visible veins become less noticeable, the treated area often appears smoother and more uniform.',
+      hasLearnMore: true,
+      expandedContent:
+        'Patients frequently experience improved skin clarity and a healthier overall complexion, particularly in areas previously affected by multiple superficial veins.'
+    },
+    {
+      id: 3,
+      title: 'Safe, Non-Surgical Treatment',
+      percentage: 88,
+      description:
+        'Spider vein laser treatment provides an effective alternative to surgical vein procedures.',
+      hasLearnMore: true,
+      expandedContent:
+        'The treatment is minimally invasive, requires no incisions or stitches, and is performed under medical supervision using advanced laser technology for a high standard of safety.'
+    },
+    {
+      id: 4,
+      title: 'Minimal Discomfort & Little Downtime',
+      percentage: 85,
+      description:
+        'Most patients tolerate the procedure well with only mild warmth or a brief stinging sensation.',
+      hasLearnMore: true,
+      expandedContent:
+        'Because recovery is minimal, normal daily activities can usually be resumed shortly after each session, making it a convenient option for individuals with busy lifestyles.'
+    },
+    {
+      id: 5,
+      title: 'Enhanced Confidence & Improved Appearance',
+      percentage: 94,
+      description:
+        'Reducing the visibility of spider veins often has a positive impact on self-confidence.',
+      hasLearnMore: true,
+      expandedContent:
+        'Whether treating the legs or face, many patients feel more comfortable wearing their preferred clothing or participating in social activities after achieving smoother, clearer-looking skin.'
+    }
+  ],
+  comparisonTitle: 'Spider Veins Laser Treatment vs. Conventional Treatments',
+  comparisonDescription:
+    'Understanding the Difference Before Choosing Your Care',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Spider Veins Laser Treatment',
+    traditional: 'Conventional Treatments'
+  },
+  comparisonData: [
+    {
+      feature: 'Treatment Focus',
+      ayurvedic:
+        'Targets and closes visible spider veins',
+      conventional:
+        'Primarily improves skin appearance or temporary symptoms'
+    },
+    {
+      feature: 'How It Works',
+      ayurvedic:
+        'Uses focused laser energy to treat damaged blood vessels',
+      conventional:
+        'Creams, massage, or cosmetic products work only on the skin surface'
+    },
+    {
+      feature: 'Precision',
+      ayurvedic:
+        'Treats specific veins without affecting surrounding tissue',
+      conventional:
+        'General application with limited precision'
+    },
+    {
+      feature: 'Invasiveness',
+      ayurvedic:
+        'Non-surgical and minimally invasive',
+      conventional:
+        'Usually non-invasive but less targeted'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic:
+        'Minimal to none',
+      conventional:
+        'None, but results are often limited'
+    },
+    {
+      feature: 'Results',
+      ayurvedic:
+        'Progressive fading of treated veins over several weeks',
+      conventional:
+        'Temporary cosmetic improvement with little effect on visible veins'
+    },
+    {
+      feature: 'Personalization',
+      ayurvedic:
+        'Customized treatment based on vein size, location, and skin type',
+      conventional:
+        'Standard products with limited customization'
+    },
+    {
+      feature: 'Long-Term Benefits',
+      ayurvedic:
+        'Helps reduce visible veins with lasting cosmetic improvement',
+      conventional:
+        'Requires continued use with limited long-term effectiveness'
+    }
+  ]
       },
       pricing: {
   title: 'Transparent Pricing & Customized Spider Veins Laser Packages',
@@ -13937,6 +15350,57 @@ comparisonData: [
             description: 'Patient Reviews'
           }
         ]
+      },
+      skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Option Is Right for You?",
+          description: "If your concern is only mild skin discoloration, cosmetic skincare products may provide temporary improvement in appearance. However, if visible spider veins are affecting your confidence or becoming more noticeable over time, Spider Veins Laser Treatment in Dubai provides a safe, doctor-led solution that addresses the underlying vascular concern. Following a comprehensive assessment, our specialists recommend a personalized treatment plan designed to achieve clearer skin and long-lasting results.",
+          points: []
+        }
+      ],
+      whyChooseSection: {
+        title: "Why Choose RamaCare Polyclinic",
+        intro: "Choosing the right clinic plays an important role in achieving safe and successful treatment outcomes. At RamaCare Polyclinic, we provide spider vein laser treatment in Dubai using advanced laser technology combined with personalized medical care. Every patient undergoes a detailed assessment to evaluate vein size, skin type, medical history, and treatment goals before a customized treatment plan is created.",
+        features: [
+          {
+            id: 1,
+            title: "Advanced Laser Technology & Safe Procedures",
+            description: "Our experienced doctors perform each procedure in a safe and comfortable clinical environment, using modern laser systems that precisely target visible veins while protecting the surrounding healthy skin. We focus on delivering natural-looking results with minimal discomfort and little downtime."
+          },
+          {
+            id: 2,
+            title: "Comprehensive Patient Care & Follow-Up",
+            description: "Beyond the procedure itself, we are committed to ongoing patient care. Our team provides detailed aftercare instructions, monitors your progress during follow-up appointments, and offers practical advice on skin protection and healthy circulation."
+          },
+          {
+            id: 3,
+            title: "Patient-Centered Approach",
+            description: "With a patient-centered approach, advanced technology, and evidence-based treatment protocols, RamaCare Polyclinic strives to help every patient achieve clearer skin and long-lasting confidence."
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: "Recovery & Aftercare",
+        resultsDescription: "One of the key advantages of spider vein laser treatment in Dubai is the minimal recovery time. Most patients can return to their normal daily activities immediately after treatment. Mild redness, slight swelling, or temporary warmth in the treated area may occur, but these effects generally resolve within a few hours or days without special intervention.",
+        resultPoints: [
+          "Following your doctor's aftercare instructions is essential for achieving the best possible results.",
+          "Patients are usually advised to protect the treated skin from direct sun exposure by applying a broad-spectrum sunscreen and wearing protective clothing when outdoors.",
+          "Avoiding hot baths, saunas, steam rooms, and vigorous exercise for the recommended period can also help reduce temporary irritation and support proper healing.",
+          "Maintaining healthy circulation is equally important.",
+          "Regular physical activity, staying hydrated, maintaining a healthy weight, and avoiding prolonged standing or sitting may help reduce pressure on the veins and support long-term vascular health.",
+          "During follow-up appointments, our medical team monitors your progress, evaluates the fading of treated veins, and recommends additional sessions if needed to achieve optimal cosmetic improvement."
+        ]
+      },
+      whenToConsider: {
+        title: "Who Is a Suitable Candidate?",
+        intro: "Spider vein laser treatment in Dubai is suitable for adults who wish to reduce the appearance of visible spider veins on the face or legs without surgery. It is an excellent option for individuals seeking a minimally invasive treatment with little downtime and gradual, natural-looking results.",
+        points: [
+          "The treatment is commonly recommended for people with red, blue, or purple superficial veins caused by genetics, aging, pregnancy, hormonal changes, prolonged standing, or sun exposure.",
+          "It may also benefit individuals experiencing mild discomfort or self-consciousness related to the appearance of spider veins."
+        ],
+        closing: "During your consultation at RamaCare Polyclinic, our experienced doctors perform a comprehensive skin and vein assessment to determine whether laser therapy is appropriate for your condition. Your medical history, skin type, vein characteristics, and treatment goals are carefully evaluated before recommending a personalized treatment plan designed to provide safe, effective, and long-lasting results."
       }
     },
 
@@ -14512,8 +15976,8 @@ comparisonData: [
   },
   'aesthetic-dermatology-dubai-laser-treatment-fractional-co2-laser': {
   hero: {
-        subtitle: 'Advanced Skin Resurfacing for Smoother, Clearer Skin',
-        description: 'Scars, wrinkles, uneven texture, and sun damage can make skin look tired and aged. At ramacarepolyclinic, we offer Fractional CO₂ Laser Treatment in Dubai to renew damaged skin, improve texture, and stimulate natural collagen—under expert medical supervision.',
+        subtitle: 'Advanced Skin Resurfacing for Smoother, Healthier-Looking Skin',
+        description: 'Scars, wrinkles, uneven skin texture, enlarged pores, pigmentation, and sun damage can affect both the appearance and confidence of your skin.As collagen production naturally declines with age and environmental exposure, the skin may become rough, dull, and less firm.While topical skincare products can improve surface hydration, they often cannot address deeper layers where many skin concerns begin. At RamaCare Polyclinic, we offer Fractional CO₂ Laser Treatment in Dubai, an advanced skin resurfacing procedure designed to stimulate natural collagen production, encourage healthy skin renewal, and improve overall skin quality.Using precision fractional laser technology, the treatment targets microscopic areas of damaged skin while preserving surrounding healthy tissue, allowing faster healing and gradual, natural-looking results.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -14598,259 +16062,317 @@ comparisonData: [
         title: 'Understanding Fractional CO₂ Laser Treatment in Dubai',
         problemIntro: {
           title: 'Why Skin Develops Scars, Wrinkles, and Texture Issues',
-          description: 'Acne, sun exposure, aging, and collagen loss can damage the deeper layers of the skin. Creams and facials often fail to treat these deeper concerns, leaving scars and wrinkles unchanged.'
+          description: 'Many common skin concerns develop beneath the surface, where ordinary skincare products cannot effectively reach. Acne, prolonged sun exposure, aging, environmental damage, and reduced collagen production gradually weaken the skin\'s natural support structure. As collagen levels decline, the skin loses firmness, elasticity, and its ability to repair itself efficiently, leading to visible imperfections that often become more noticeable over time.'
     },
         solutionIntro: {
           title: 'How Fractional CO₂ Laser Treatment in Dubai Works',
-          description: 'At ramacarepolyclinic, Fractional CO₂ Laser Treatment focuses on controlled skin renewal while protecting surrounding healthy tissue.'
-  },
+          description: 'At RamaCare Polyclinic, our Fractional CO₂ Laser Treatment in Dubai is designed to rejuvenate damaged skin by combining advanced fractional laser technology with personalized medical care. Rather than treating the entire skin surface, the laser creates thousands of microscopic treatment zones that stimulate the body\'s natural healing response while preserving surrounding healthy tissue. This controlled process encourages the production of new collagen and elastin, allowing the skin to repair itself gradually and naturally.'
+         },
         leftCards: [
           {
             id: 1,
             title: 'What Is Fractional CO₂ Laser Treatment?',
-            description: 'Fractional CO₂ Laser Treatment in Dubai is an advanced skin resurfacing procedure that creates controlled micro-channels in the skin to remove damaged tissue and stimulate collagen production. This process helps improve scars, wrinkles, pigmentation, and overall skin texture.'
+            description: 'Fractional CO₂ Laser Treatment in Dubai is an advanced skin resurfacing procedure that uses precision fractional laser technology to create thousands of microscopic treatment zones within the skin. These controlled micro-injuries stimulate the body\'s natural healing response, encouraging new collagen and elastin production while replacing damaged skin with healthier tissue.Unlike traditional resurfacing methods that treat the entire skin surface, fractional technology targets only a fraction of the skin at a time, leaving surrounding healthy tissue intact. This approach promotes faster healing while effectively improving acne scars, surgical scars, fine lines, wrinkles, enlarged pores, pigmentation, sun damage, and uneven skin texture.'
           },
           {
             id: 2,
-            title: 'Who is it for?',
-            description: 'Fractional CO₂ Laser Treatment is suitable for individuals with:',
+            title: 'Who Can Benefit from Fractional CO₂ Laser Treatment?',
+            description: 'Fractional CO₂ laser treatment may be suitable for individuals experiencing the following:',
             listItems: [
-              'Acne scars or surgical scars',
+              'Acne scars or post-acne marks',
+              'Surgical or traumatic scars',
               'Fine lines and wrinkles',
               'Uneven skin texture',
-              'Sun-damaged skin',
               'Enlarged pores',
-              'Pigmentation concerns'
+              'Sun-damaged skin',
+              'Pigmentation and age spots',
+              'Mild skin laxity',
+              'Dull or rough-looking skin'
 
             ]
           },
            {
             id: 3,
-            title: 'Duration',
-            description: 'Treatment sessions usually take 30–60 minutes, depending on the area treated. Healing occurs gradually, with visible improvement continuing over several weeks as new collagen forms.'
+            title: 'Duration & Results',
+            description: 'Treatment sessions generally last 30–60 minutes, depending on the treatment area and the severity of the skin concern. Mild redness and peeling are expected during the healing process, while noticeable improvements develop gradually as collagen remodeling continues over the following weeks and months.Many patients achieve optimal results after a series of treatments recommended by their doctor, with improvements continuing long after the final session.'
             },
            {
             id: 4,
-            title: 'Why Patients Choose Fractional CO₂ Laser Treatment in Dubai',
-            description: 'Patients trust ramacarepolyclinic for Fractional CO₂ Laser Treatment because we combine medical expertise with advanced technology and honest treatment planning. Every procedure is customized for safety, comfort, and lasting results.',
+            title: 'Why Patients Choose Fractional CO₂ Laser Treatment at RamaCare Polyclinic',
+            description: 'Patients choose RamaCare Polyclinic because we combine advanced laser technology with personalized medical care to achieve natural-looking skin rejuvenation.Our approach includes:',
             listItems: [
-              'Acne scars or surgical scars',
-              'Fine lines and wrinkles',
-              'Uneven skin texture',
-              'Sun-damaged skin',
-              'Enlarged pores',
-              'Pigmentation concerns'
-
+              'Doctor-led skin evaluation',
+'Customized laser settings for every skin type',
+'Advanced Fractional CO₂ laser technology',
+'Personalized treatment plans',
+'Focus on patient safety and comfort',
+'Comprehensive aftercare and follow-up',
+'Evidence-based treatment protocols'
             ]
           },
         ],
-        rootCauses: [
-          {
-            id: 1,
-            title: 'Unwanted Hair with Frequent Regrowth',
-            description: 'Shaving, waxing, and salon lasers offer temporary results, leading to repeated regrowth and skin irritation.',
-            severity: 'High',
-            severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-          },
-          {
-            id: 2,
-            title: 'Pigmentation & Uneven Skin Tone',
-            description: 'Sun exposure, hormonal changes, and aging can cause dark spots that topical products fail to correct.',
-            severity: 'Medium',
-            severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-          },
-          {
-            id: 3,
-            title: 'Acne Scars & Skin Texture Issues',
-            description: 'Deep scars and uneven skin texture often remain untreated with surface-level procedures.',
-            severity: 'Medium',
-            severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-          },
-          {
-            id: 4,
-            title: 'Sensitive Skin Reactions',
-            description: ' Incorrect laser settings can cause redness, burns, or hyperpigmentation—especially on darker or sensitive skin types.',
-            severity: 'Low',
-            severityColor: 'bg-[#FEF3C7] text-[#92400E]'
-          },
-          {
-            id: 5,
-            title: 'Lack of Medical Customization',
-            description: ' One-size-fits-all laser treatments do not consider individual skin type, concerns, or medical history.',
-            severity: 'Low',
-            severityColor: 'bg-[#FEF3C7] text-[#92400E]'
-          }
-        ],
+       rootCauses: [
+  {
+    id: 1,
+    title: 'Acne Scars',
+    description:
+      'Inflammatory acne can damage deeper layers of the skin, leaving permanent scars, uneven texture, and depressions that rarely improve with topical creams alone.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+  },
+  {
+    id: 2,
+    title: 'Fine Lines & Wrinkles',
+    description:
+      'Natural aging and reduced collagen production contribute to the development of fine lines, wrinkles, and loss of skin elasticity, making the skin appear older and less firm.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+  },
+  {
+    id: 3,
+    title: 'Sun Damage & Pigmentation',
+    description:
+      'Years of ultraviolet (UV) exposure can lead to uneven skin tone, sunspots, pigmentation, and premature aging, affecting overall skin clarity and radiance.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+  },
+  {
+    id: 4,
+    title: 'Enlarged Pores & Rough Skin Texture',
+    description:
+      'Excess oil production, aging, acne, and environmental damage can enlarge pores and create rough, uneven skin texture that is difficult to improve with surface-level treatments.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+  },
+  {
+    id: 5,
+    title: 'Reduced Collagen Production',
+    description:
+      'Collagen naturally decreases with age, slowing skin renewal and reducing firmness. As collagen declines, scars, wrinkles, and skin laxity become more noticeable.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+  }
+],
         quickFacts: [
-          { label: 'Treatment Type', value: 'Laser-based skin resurfacing' },
-          { label: 'Anesthesia', value: ' Topical numbing cream' },
-          { label: 'Downtime', value: 'Few days to one week (varies)' },
-          { label: 'Results', value: 'Progressive & long-lasting' },
-         
-        ],
+  { label: 'Treatment Type', value: 'Laser skin resurfacing' },
+  { label: 'Technology', value: 'Fractional CO₂ Laser' },
+  { label: 'Anaesthesia', value: 'Topical numbing cream' },
+  { label: 'Treatment Duration', value: '30–60 minutes' },
+  { label: 'Downtime', value: 'Approximately 5–7 days (varies)' },
+  { label: 'Results', value: 'Progressive collagen remodeling' },
+  { label: 'Sessions', value: 'It depends on the skin condition' },
+  { label: 'Suitable For', value: 'Acne scars, wrinkles, pigmentation, skin texture' }
+],
         approachCards: [
-          {
-            id: 1,
-            title: 'Acne Scars – High',
-            description: ' Breaks down scar tissue and stimulates collagen remodeling.',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-          {
-            id: 2,
-            title: 'Wrinkles & Fine Lines – High',
-            description: '  Improves skin firmness and smoothness by boosting collagen.',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-          {
-            id: 3,
-            title: 'Uneven Skin Texture – High',
-            description: ' Resurfaces damaged skin for a smoother appearance.',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-          {
-            id: 4,
-            title: 'Pigmentation & Sun Damage – Medium',
-            description: '  Reduces discoloration and improves skin tone.',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-          {
-            id: 5,
-            title: 'Enlarged Pores – Medium',
-            description: ' Refines skin texture and pore appearance over time.',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-             {
-            id: 6,
-            title: 'Result',
-            description: '   Smoother skin, improved texture, reduced scars and wrinkles, firmer appearance, and healthier-looking skin.CZ',
-            hasLearnMore: false,
-            expandedContent: null
-          },
-        ]
+  {
+    id: 1,
+    title: 'Acne Scar Remodeling',
+    description:
+      'Fractional CO₂ Laser penetrates the deeper layers of the skin to break down damaged scar tissue and stimulate collagen remodeling.',
+    hasLearnMore: true,
+    expandedContent:
+      'As new collagen develops, acne scars become smoother, shallower, and less noticeable, resulting in healthier and more even-looking skin over time.'
+  },
+  {
+    id: 2,
+    title: 'Wrinkle Reduction & Skin Tightening',
+    description:
+      'By activating natural collagen and elastin production, the treatment helps reduce fine lines, wrinkles, and early skin laxity.',
+    hasLearnMore: true,
+    expandedContent:
+      'Gradual collagen remodeling improves skin firmness, elasticity, and overall facial rejuvenation without surgery.'
+  },
+  {
+    id: 3,
+    title: 'Skin Resurfacing & Texture Improvement',
+    description:
+      'The laser removes damaged surface cells while promoting healthy skin renewal beneath the surface.',
+    hasLearnMore: true,
+    expandedContent:
+      'This process refines rough texture, softens uneven skin, and restores a smoother, brighter complexion with progressive improvement after each session.'
+  },
+  {
+    id: 4,
+    title: 'Pigmentation & Sun Damage Correction',
+    description:
+      'Fractional CO₂ laser helps reduce sunspots, age spots, and uneven pigmentation by encouraging controlled skin renewal.',
+    hasLearnMore: true,
+    expandedContent:
+      'As damaged pigment is replaced with healthier skin cells, the complexion becomes clearer, more balanced, and naturally radiant.'
+  },
+  {
+    id: 5,
+    title: 'Enlarged Pores & Overall Skin Quality',
+    description:
+      'Collagen stimulation strengthens the skin’s supporting structure, helping minimize enlarged pores and improve overall skin texture.',
+    hasLearnMore: true,
+    expandedContent:
+      'Patients often notice firmer skin, improved elasticity, and a healthier appearance as collagen continues to develop during the months following treatment.'
+  },
+  {
+    id: 6,
+    title: 'Personalized Treatment & Long-Term Care',
+    description:
+      'Because every patient’s skin is unique, each treatment is tailored according to skin type, concern severity, and recovery goals.',
+    hasLearnMore: true,
+    expandedContent:
+      'Throughout your treatment journey, our medical team monitors your progress, provides personalized aftercare guidance, and adjusts your treatment plan whenever necessary. With a personalized treatment plan, Fractional CO₂ Laser Treatment in Dubai can help improve acne scars, wrinkles, pigmentation, enlarged pores, uneven texture, and overall skin quality. As collagen production increases over time, patients typically notice smoother skin, improved firmness, a brighter complexion, and natural-looking rejuvenation that continues to develop for several months after treatment.'
+  }
+]
       },
-      healingJourney: {
-        title: 'Your Skin Renewal Journey: Step by Step',
-        description: 'A structured, doctor-guided approach designed to deliver safe and effective results with Fractional CO₂ Laser Treatment in Dubai.',
-        steps: [
-          {
-            id: 1,
-            number: '01',
-            title: 'Initial Consultation & Skin Assessment',
-            duration: 'Step 1',
-            description: 'null',
-            keyActivities: [
-              'Detailed skin evaluation',
-              'Scar depth and texture analysis',
-              'Medical history review',
-              'Personalized treatment plan'
-
-            ],
-            side: 'right'
-          },
-          {
-            id: 2,
-            number: '02',
-            title: 'Skin Preparation Phase',
-            duration: 'Step 2',
-            description: '',
-            keyActivities: [
-              'Pre-treatment skincare guidance',
-                'Sun protection advice',
-                'Topical numbing application'
-            ],
-            side: 'left'
-          },
-          {
-            id: 3,
-            number: '03',
-            title: ' Active Fractional CO₂ Laser Treatment',
-            duration: 'Step 3',
-            description: '',
-            keyActivities: [
-              'Controlled laser delivery',
-              'Targeted treatment areas',
-              'Skin cooling and calming care',
-              'Procedure performed under medical supervision'
-            ],
-            side: 'right'
-          },
-          {
-            id: 4,
-            number: '02',
-            title: 'Healing, Recovery & Maintenance',
-            duration: 'Step 4',
-            description: '',
-            keyActivities: [
-              'Post-treatment skincare plan',
-                'Healing and collagen remodeling phase',
-                'Follow-up assessments',
-                'Maintenance treatments, if required'
-            ],
-            side: 'left'
-          },
-          {
-            id: 5,
-            number: '02',
-            title: 'Result',
-            duration: null,
-            description: ' Gradual skin renewal with visible reduction in scars, smoother texture, improved tone, and firmer skin over time.',
-            keyActivities: [
-              'Post-treatment skincare plan',
-                'Healing and collagen remodeling phase',
-                'Follow-up assessments',
-                'Maintenance treatments, if required'
-            ],
-            side: 'left'
-          }
-        ]
+     healingJourney: {
+  title: 'Your Skin Renewal Journey: Step by Step',
+  description:
+    'Our Fractional CO₂ Laser Treatment in Dubai follows a structured, doctor-supervised process designed to safely resurface the skin, stimulate natural collagen production, and improve scars, wrinkles, pigmentation, and overall skin texture. Every stage is carefully planned to maximize treatment effectiveness while ensuring patient comfort, safety, and gradual, natural-looking results.',
+  steps: [
+    {
+      id: 1,
+      number: '01',
+      title: 'Initial Consultation & Skin Assessment (45–60 Minutes)',
+      duration: 'Step 1',
+      description:
+        'Your treatment journey begins with a comprehensive consultation to determine whether fractional CO₂ laser treatment in Dubai is the most appropriate solution for your skin concerns. Our medical professionals assess your skin condition, discuss your goals, and develop a personalized treatment plan based on your skin type and recovery expectations.',
+      keyActivities: [
+        'Detailed skin evaluation',
+        'Assessment of acne scars, wrinkles, pigmentation, and skin texture',
+        'Scar depth and severity analysis',
+        'Medical history and medication review',
+        'Skin type and sensitivity assessment',
+        'Discussion of treatment goals and expected outcomes',
+        'Creation of a personalized treatment plan'
+      ],
+      side: 'right'
+    },
+    {
+      id: 2,
+      number: '02',
+      title: 'Skin Preparation Phase',
+      duration: 'Step 2',
+      description:
+        'Proper preparation helps improve treatment safety and supports optimal healing. Before the procedure, our team provides personalized guidance to prepare your skin and reduce the risk of unnecessary irritation.',
+      keyActivities: [
+        'Personalized pre-treatment skincare instructions',
+        'Sun protection recommendations',
+        'Temporary avoidance of retinoids, exfoliating acids, and other irritating products',
+        'Gentle skin cleansing before treatment',
+        'Application of topical numbing cream for patient comfort',
+        'Final safety assessment before the laser procedure'
+      ],
+      side: 'left'
+    },
+    {
+      id: 3,
+      number: '03',
+      title: 'Active Fractional CO₂ Laser Treatment',
+      duration: 'Step 3',
+      description:
+        'During the procedure, advanced fractional laser technology creates thousands of microscopic treatment zones within the skin. These controlled micro-injuries trigger the body\'s natural healing response, stimulating collagen production while preserving surrounding healthy tissue for faster recovery.',
+      keyActivities: [
+        'Precision Fractional CO₂ laser application',
+        'Treatment of targeted areas affected by scars, wrinkles, pigmentation, or uneven texture',
+        'Continuous monitoring throughout the procedure',
+        'Skin cooling and soothing measures for comfort',
+        'Procedure performed under experienced medical supervision',
+        'Personalized adjustment of laser settings according to skin type'
+      ],
+      side: 'right'
+    },
+    {
+      id: 4,
+      number: '04',
+      title: 'Healing, Recovery & Maintenance',
+      duration: 'Step 4',
+      description:
+        'Skin continues to improve after the laser session as collagen remodeling and tissue regeneration progress over the following weeks and months. Our team monitors your recovery, provides detailed aftercare guidance, and recommends maintenance treatments when appropriate to help preserve long-term results.',
+      keyActivities: [
+        'Personalized post-treatment skincare plan',
+        'Guidance for hydration and daily sun protection',
+        'Monitoring of skin healing and collagen remodeling',
+        'Scheduled follow-up consultations',
+        'Assessment of treatment progress',
+        'Maintenance laser sessions if clinically recommended'
+      ],
+      side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'Following Fractional CO₂ Laser Treatment in Dubai, most patients notice gradual improvements in skin texture, tone, and overall appearance as new collagen develops. Over time, acne scars become less visible, fine lines soften, pigmentation improves, pores appear smaller, and the skin feels firmer and smoother. Individual results vary depending on skin condition, treatment intensity, and adherence to post-treatment care, with continued improvements often seen for several months after the procedure.',
+      keyActivities: [],
+      side: 'right'
+    }
+  ]
       },
       benefits: {
-        title: 'Fractional CO₂ Laser Treatment vs. Conventional Skin Treatments',
-        description: '',
-        comparisonTitle: 'Laser Treatment vs Conventional Methods',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Fractional CO₂ Laser',
-          traditional: 'Regular Facials'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Reduced acne scars',
-            percentage: 90,
-            description: 'null'
-          },
-          {
-            id: 2,
-            title: 'Smoother skin texture',
-            percentage: 92,
-            description: 'null'
-          },
-          {
-            id: 3,
-            title: 'Improved skin firmness',
-            percentage: 88,
-            description: 'null'
-          },
-          {
-            id: 4,
-            title: ' Softer fine lines and wrinkles',
-            percentage: 85,
-            description: ' '
-          },
-          {
-            id: 5,
-            title: 'More even skin tone',
-            percentage: 94,
-            description: ''
-          }
-        ],
+  title: 'Clinically Observed Benefits',
+  description:
+    'Based on years of providing advanced skin resurfacing and laser treatments in Dubai. Our Fractional CO₂ Laser Treatment in Dubai is designed to improve overall skin quality by stimulating natural collagen production and accelerating the skin\'s healing process. Using advanced fractional laser technology, the treatment targets damaged skin while preserving surrounding healthy tissue, allowing gradual skin renewal with long-lasting results. Although individual outcomes vary depending on skin condition, treatment intensity, and aftercare, many patients experience noticeable improvements after completing their recommended treatment plan.',
+
+  comparisonTitle: 'Laser Treatment vs Conventional Methods',
+  comparisonDescription:
+    'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Fractional CO₂ Laser',
+    traditional: 'Regular Facials'
+  },
+
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced Acne Scars',
+      percentage: 90,
+      description:
+        'Fractional CO₂ Laser stimulates collagen remodeling beneath the skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'It helps reduce the depth and visibility of acne scars. As new collagen forms, the skin gradually becomes smoother, healthier, and more even in texture.'
+    },
+    {
+      id: 2,
+      title: 'Smoother Skin Texture',
+      percentage: 92,
+      description:
+        'The treatment removes damaged skin cells while encouraging healthy skin renewal.',
+      hasLearnMore: true,
+      expandedContent:
+        'This process helps soften rough areas, refine enlarged pores, and improve the overall texture of the skin for a fresher appearance.'
+    },
+    {
+      id: 3,
+      title: 'Improved Skin Firmness',
+      percentage: 88,
+      description:
+        'Stimulates collagen and elastin production to improve skin elasticity and firmness.',
+      hasLearnMore: true,
+      expandedContent:
+        'Over the following weeks and months, many patients notice tighter, healthier-looking skin with improved structural support.'
+    },
+    {
+      id: 4,
+      title: 'Softer Fine Lines and Wrinkles',
+      percentage: 85,
+      description:
+        'Collagen remodeling helps soften early signs of aging.',
+      hasLearnMore: true,
+      expandedContent:
+        'It reduces the appearance of fine lines and wrinkles while allowing the skin to become smoother and more youthful without affecting natural facial expressions.'
+    },
+    {
+      id: 5,
+      title: 'More Even Skin Tone',
+      percentage: 94,
+      description:
+        'Controlled skin resurfacing helps reduce pigmentation, sun damage, and uneven discoloration.',
+      hasLearnMore: true,
+      expandedContent:
+        'As healthier skin replaces damaged tissue, the complexion becomes brighter, clearer, and more balanced.'
+    }
+  ],
         comparisonData: [
           {
             feature: 'Depth of Treatment',
@@ -15218,6 +16740,48 @@ comparisonData: [
             description: 'Patient Reviews'
           }
         ]
+      },
+      whyChooseSection: {
+        title: "Why Choose RamaCare Polyclinic",
+        intro: "Choosing the right clinic for fractional CO₂ laser treatment in Dubai is essential for achieving safe, effective, and natural-looking results. At RamaCare Polyclinic, we combine experienced medical professionals, advanced fractional laser technology, and personalized treatment planning to help patients improve skin texture, reduce scars, and restore healthier-looking skin.",
+        features: [
+          {
+            id: 1,
+            title: "Comprehensive Skin Consultation",
+            description: "Every patient begins with a comprehensive skin consultation, where we assess your skin type, medical history, lifestyle, and aesthetic goals before recommending treatment. This detailed evaluation allows us to customize laser settings according to your individual needs while minimizing unnecessary risks and supporting optimal healing."
+          },
+          {
+            id: 2,
+            title: "Strict Medical Protocols & Modern Technology",
+            description: "Our clinic follows strict medical protocols and uses modern laser technology designed to precisely target damaged skin while protecting surrounding healthy tissue. Throughout your treatment journey, our team monitors your progress, provides clear aftercare guidance, and adjusts your treatment plan whenever needed to achieve the best possible outcome."
+          },
+          {
+            id: 3,
+            title: "Personalized Care for All Skin Concerns",
+            description: "Whether your concern is acne scars, wrinkles, pigmentation, enlarged pores, or uneven skin texture, we focus on delivering personalized care, patient safety, and gradual, long-lasting skin rejuvenation. Our commitment to clinical excellence, transparent communication, and evidence-based treatments helps patients feel confident throughout every stage of their skin renewal journey."
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: "Recovery & Aftercare",
+        resultsDescription: "Recovery following Fractional CO₂ Laser Treatment in Dubai is an important part of achieving the best possible results. Because the treatment stimulates the skin's natural healing process, it is normal to experience temporary redness, mild swelling, warmth, and peeling during the first several days. These effects usually improve gradually as healthier new skin develops.",
+        resultPoints: [
+          "Our medical team provides detailed aftercare instructions tailored to your skin type and treatment intensity.",
+          "Patients are generally advised to keep the treated area clean, apply recommended moisturizers, avoid scratching or picking peeling skin, and use broad-spectrum sunscreen daily to protect newly treated skin from ultraviolet exposure.",
+          "Makeup, exfoliating products, retinoids, and other potentially irritating skincare products should only be resumed when advised by your doctor.",
+          "Maintaining proper hydration, following a healthy lifestyle, and attending scheduled follow-up appointments can further support collagen remodeling and skin recovery.",
+          "Depending on your individual skin concerns, additional treatment sessions or maintenance procedures may be recommended to maximize long-term improvements.",
+          "By carefully following your personalized aftercare plan, you can help support smoother healing, reduce the risk of complications, and enjoy gradual improvements in skin texture, firmness, pigmentation, and overall appearance over the weeks and months following treatment."
+        ]
+      },
+      whenToConsider: {
+        title: "Who Is a Suitable Candidate?",
+        intro: "Fractional CO₂ laser treatment in Dubai is suitable for adults who want to improve the appearance and overall quality of their skin through a medically supervised, non-surgical treatment. It is commonly recommended for individuals with acne scars, surgical scars, fine lines, wrinkles, enlarged pores, pigmentation, sun damage, rough skin texture, or mild skin laxity.",
+        points: [
+          "The treatment is most appropriate for patients seeking gradual, natural-looking skin rejuvenation through collagen stimulation rather than immediate cosmetic changes.",
+          "During your consultation, our experienced medical professionals carefully evaluate your skin type, medical history, current skincare routine, and treatment goals to determine whether a fractional CO₂ laser is the right option for you."
+        ],
+        closing: "Some individuals may require alternative treatments or a combination of therapies depending on their skin condition, active infections, certain medical conditions, or recent aesthetic procedures. A personalized assessment ensures that every patient receives the safest and most appropriate treatment plan for achieving healthier, smoother, and more youthful-looking skin."
       }
     },
 
@@ -15616,6 +17180,7 @@ comparisonData: [
     }
   ]
 },
+
      faq: {
   title: 'Frequently Asked Questions – Female Genital Rejuvenation in Dubai',
   description: null,
@@ -17155,7 +18720,7 @@ solutionIntro: {
        'aesthetic-dermatology-dubai-laser-treatment-laser-rejuvenation': {
       hero: {
         subtitle: 'Restore Brighter, Smoother, Healthier-Looking Skin',
-        description: 'Fine lines, uneven tone, pigmentation, and dull skin can make you look older than you feel. At ramacarepolyclinic, we offer Laser Rejuvenation in Dubai to refresh tired skin, improve texture, and enhance natural radiance—safely and effectively under medical supervision.',
+        description: 'Fine lines, uneven skin tone, pigmentation, sun damage, enlarged pores, and dull skin can gradually affect your appearance and confidence.As collagen production naturally declines with age and environmental factors such as UV exposure and pollution take their toll, the skin may lose its smooth texture, firmness, and youthful glow. At RamaCare Polyclinic, we provide laser rejuvenation in Dubai, an advanced non-surgical treatment designed to improve overall skin quality by encouraging the body\'s natural healing and collagen production.Using modern laser technology, the treatment targets damaged skin with precision to reduce pigmentation, soften fine lines, refine skin texture, minimize enlarged pores, and restore a brighter, more even complexion.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -17239,148 +18804,196 @@ solutionIntro: {
         title: 'Understanding Laser Rejuvenation in Dubai',
         problemIntro: {
           title: 'Why Skin Loses Its Glow Over Time',
-          description: 'Aging, sun exposure, pollution, and reduced collagen production can cause uneven tone, texture changes, and loss of firmness. Topical products often cannot reach deeper skin layers to create lasting improvement.'
+          description: 'Healthy skin depends on consistent collagen production, balanced pigmentation, and efficient skin cell renewal. Over time, aging, prolonged sun exposure, pollution, lifestyle factors, and environmental stress gradually slow these natural processes. As collagen levels decline, the skin becomes less firm, less radiant, and more prone to visible imperfections that topical skincare products often cannot fully correct.'
         },
         solutionIntro: {
           title: 'Our Solution – Laser Rejuvenation in Dubai',
-          description: ' At Rama Care Polyclinic, we use advanced laser technology to stimulate skin repair naturally. Treatments target:'
+          description: ' At RamaCare Polyclinic, our laser rejuvenation treatments in Dubai are designed to improve overall skin health by combining advanced medical laser technology with personalized clinical care. Rather than only treating visible surface concerns, laser rejuvenation stimulates the skin\'s natural healing process and encourages long-term collagen and elastin production. This helps restore smoother texture, a more even complexion, improved skin firmness, and a healthy, natural glow.'
         },
      leftCards: [
   {
     id: 1,
     title: 'What Is Laser Rejuvenation?',
     description:
-      'Laser Rejuvenation in Dubai is a non-invasive, medical-grade skin treatment that stimulates collagen production, improves texture, reduces pigmentation, and softens fine lines. It refreshes tired skin for a youthful, natural glow.'
+      'Laser Rejuvenation in Dubai is a non-surgical, medical-grade skin treatment designed to improve overall skin quality by stimulating the body\'s natural collagen production and encouraging healthy skin renewal. Using advanced laser technology, controlled light energy penetrates targeted layers of the skin to address common concerns such as pigmentation, fine lines, uneven skin tone, enlarged pores, mild acne marks, and rough skin texture without damaging surrounding healthy tissue.As collagen and elastin production increase over time, the skin gradually becomes smoother, firmer, brighter, and more even in appearance. Because the treatment works beneath the surface, results continue to develop naturally over the weeks following each session.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Laser Rejuvenation is ideal for individuals experiencing:',
+    title: 'Who Is Laser Rejuvenation Suitable For?',
+    description: 'Laser rejuvenation may be recommended for individuals experiencing the following:',
     listItems: [
-      'Dull or uneven skin tone',
+      'Dull or tired-looking skin',
+      'Uneven skin tone',
       'Fine lines and early wrinkles',
-      'Mild sun damage or pigmentation',
+      'Mild pigmentation and sun damage',
       'Enlarged pores',
-      'Rough or tired-looking skin'
+      'Rough skin texture',
+      'Mild acne marks',
+      'Early signs of skin aging',
+      'Loss of natural skin radiance'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Each session lasts 30–45 minutes, depending on the treatment area. Visible improvement develops gradually over 3–6 weeks. Recommended sessions: 3–6 for optimal results.'
+      'Treatment sessions generally take 30–45 minutes, depending on the size of the treatment area and the condition being addressed. Most patients can return to their normal daily activities shortly after treatment because little or no downtime is usually required. Initial improvements may become noticeable within 3–6 weeks as collagen production gradually increases. For optimal skin rejuvenation, many patients benefit from a series of 3–6 sessions, with the exact number determined during your personalized consultation.'
   }
 ],
       rootCauses: [
   {
     id: 1,
     title: 'Uneven Skin Tone',
-    description: 'Laser energy improves clarity and balances pigmentation.',
+    description:
+      'Sun exposure, hormonal changes, and accumulated skin damage can cause pigmentation, dark spots, and uneven skin tone, making the complexion appear less clear and balanced.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
     title: 'Fine Lines & Early Wrinkles',
-    description: 'Stimulates collagen to soften lines and improve firmness.',
+    description:
+      'Natural collagen loss gradually leads to fine lines and early wrinkles, reducing skin firmness and elasticity while contributing to visible signs of aging.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 3,
-    title: 'Dull Skin Texture',
-    description: 'Promotes smoother, refreshed-looking skin.',
+    title: 'Dull & Rough Skin Texture',
+    description:
+      'Dead skin buildup, slower skin renewal, dehydration, and environmental damage can leave the skin looking rough, tired, and lacking its natural glow.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 4,
     title: 'Sun Damage & Pigmentation',
-    description: 'Reduces visible sun-related skin changes.',
+    description:
+      'Years of ultraviolet (UV) exposure can contribute to pigmentation, age spots, and uneven skin coloration, often becoming more noticeable over time.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
     title: 'Enlarged Pores',
-    description: 'Refines skin texture for a more even appearance.',
+    description:
+      'Excess oil production, aging, and reduced skin elasticity can enlarge pores, making the skin appear uneven and affecting overall skin texture.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
-   quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical laser treatment' },
-  { label: 'Anesthesia', value: 'Not usually required' },
-  { label: 'Downtime', value: 'Minimal to none' },
-  { label: 'Results', value: 'Progressive and natural-looking' }
+
+  quickFacts: [
+  {
+    label: 'Treatment Type',
+    value: 'Non-surgical laser skin rejuvenation'
+  },
+  {
+    label: 'Technology',
+    value: 'Medical-grade laser system'
+  },
+  {
+    label: 'Anaesthesia',
+    value: 'Usually not required'
+  },
+  {
+    label: 'Treatment Duration',
+    value: '30–45 minutes'
+  },
+  {
+    label: 'Downtime',
+    value: 'Minimal to none'
+  },
+  {
+    label: 'Sessions',
+    value: 'Typically 3–6'
+  },
+  {
+    label: 'Results',
+    value: 'Progressive collagen stimulation'
+  },
+  {
+    label: 'Suitable For',
+    value: 'Pigmentation, fine lines, enlarged pores, uneven texture, dull skin'
+  }
 ],
-      approachCards: [
+     approachCards: [
   {
     id: 1,
-    title: 'Collagen Stimulation & Skin Renewal',
+    title: 'Collagen Stimulation & Natural Skin Renewal',
     description:
-      'Advanced laser energy activates fibroblasts, promoting collagen and elastin production for firmer, tighter, and smoother skin.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Laser energy penetrates controlled layers of the skin to activate fibroblast cells responsible for producing collagen and elastin.',
+    hasLearnMore: true,
+    expandedContent:
+      'As collagen levels gradually increase, the skin becomes firmer, smoother, and more youthful while supporting long-term skin regeneration.'
   },
   {
     id: 2,
-    title: 'Pigmentation & Tone Correction',
+    title: 'Pigmentation & Uneven Skin Tone Correction',
     description:
-      'Laser light targets melanin and uneven pigmentation, reducing dark spots, sun damage, and post-acne marks.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Targeted laser technology helps break down excess melanin responsible for pigmentation, sunspots, age spots, and post-inflammatory discoloration.',
+    hasLearnMore: true,
+    expandedContent:
+      'Over time, damaged pigmented cells are naturally replaced by healthier skin, creating a brighter and more even complexion.'
   },
   {
     id: 3,
-    title: 'Texture Improvement',
+    title: 'Improved Skin Texture & Pore Refinement',
     description:
-      'Laser treatments refine enlarged pores, smooth rough patches, and enhance overall skin clarity.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Laser rejuvenation promotes healthy skin cell turnover, helping reduce rough skin texture, refine enlarged pores, and improve overall skin clarity.',
+    hasLearnMore: true,
+    expandedContent:
+      'The result is softer, smoother skin with a healthier appearance and improved light reflection.'
   },
   {
     id: 4,
-    title: 'Minimal Downtime & Safe Procedure',
+    title: 'Fine Line Reduction & Skin Firmness',
     description:
-      'Doctor-supervised sessions ensure maximum safety, comfort, and gradual visible improvement with minimal disruption to daily life.',
-    hasLearnMore: false,
-    expandedContent: null
+      'As collagen remodeling continues after each treatment session, fine lines and early wrinkles gradually soften while skin elasticity improves.',
+    hasLearnMore: true,
+    expandedContent:
+      'This non-surgical approach supports natural facial rejuvenation without significantly changing facial expressions.'
   },
   {
     id: 5,
-    title: 'Lifestyle & Aftercare Guidance',
+    title: 'Personalized Treatment & Long-Term Skin Health',
     description:
-      'Post-treatment care advice and skin maintenance recommendations to prolong results and support overall skin health.',
-    hasLearnMore: false,
-    expandedContent: null
+      'No two patients have identical skin concerns. Every laser rejuvenation treatment plan is tailored according to skin type, lifestyle, and desired outcomes.',
+    hasLearnMore: true,
+    expandedContent:
+      'Throughout your treatment journey, our medical team monitors your progress, provides detailed aftercare recommendations, and adjusts your treatment plan whenever necessary to support long-lasting improvements.'
   },
   {
     id: 6,
-    title: 'Result',
+    title: 'Expected Results',
     description:
-      'Brighter, firmer, smoother, and youthful skin with enhanced tone, reduced wrinkles, and natural radiance through Laser Rejuvenation in Dubai.',
-    hasLearnMore: false,
-    expandedContent: null
+      'With a personalized course of laser rejuvenation in Dubai, many patients experience brighter, smoother, and healthier-looking skin.',
+    hasLearnMore: true,
+    expandedContent:
+      'As collagen production increases over time, improvements may include reduced pigmentation, softer fine lines, refined pores, improved skin texture, enhanced firmness, and a more radiant complexion. Individual results vary depending on skin condition, treatment response, and adherence to aftercare recommendations.'
   }
 ]
 
       },
    healingJourney: {
   title: 'Your Skin Rejuvenation Journey: Step by Step',
-  description: 'A structured, doctor-guided approach to ensure safe and effective results with Laser Rejuvenation in Dubai.',
+  description:
+    'Our Laser Rejuvenation in Dubai follows a structured, doctor-supervised process designed to improve skin tone, texture, pigmentation, and overall skin quality while prioritizing patient safety and comfort. Every stage of treatment is carefully planned to stimulate natural collagen production, encourage healthy skin renewal, and deliver gradual, long-lasting improvements. From your first consultation to follow-up care, our experienced medical professionals provide personalized guidance to help you achieve healthier, brighter, and smoother-looking skin.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation & Skin Assessment',
+      title: 'Initial Consultation & Skin Assessment (45–60 Minutes)',
       duration: 'Step 1',
-      description: null,
+      description:
+        'Your treatment journey begins with a comprehensive consultation to determine whether laser rejuvenation in Dubai is the most appropriate option for your skin concerns. During this appointment, our medical team evaluates your skin condition, discusses your goals, and develops a personalized treatment plan based on your skin type and expectations.',
       keyActivities: [
-        'Detailed skin analysis',
-        'Identification of concerns and goals',
-        'Medical history review',
-        'Personalized laser treatment plan'
+        'Comprehensive skin analysis',
+        'Assessment of pigmentation, fine lines, enlarged pores, and skin texture',
+        'Review of medical history and current skincare routine',
+        'Skin type and sensitivity evaluation',
+        'Discussion of treatment goals and expected outcomes',
+        'Creation of a customized laser rejuvenation treatment plan'
       ],
       side: 'right'
     },
@@ -17389,11 +19002,15 @@ solutionIntro: {
       number: '02',
       title: 'Skin Preparation Phase',
       duration: 'Step 2',
-      description: null,
+      description:
+        'Proper preparation helps improve treatment safety and supports better clinical outcomes. Before your session, our team provides personalized instructions to prepare your skin and reduce the likelihood of irritation or unwanted side effects.',
       keyActivities: [
-        'Pre-treatment skincare guidance',
-        'Sun protection advice',
-        'Skin cleansing and preparation'
+        'Personalized pre-treatment skincare guidance',
+        'Daily sun protection recommendations',
+        'Temporary avoidance of retinoids, exfoliants, and other potentially irritating products',
+        'Gentle cleansing of the treatment area',
+        'Final skin assessment before laser treatment',
+        'Patient education regarding the treatment process'
       ],
       side: 'left'
     },
@@ -17402,100 +19019,164 @@ solutionIntro: {
       number: '03',
       title: 'Active Laser Rejuvenation Treatment',
       duration: 'Step 3',
-      description: null,
+      description:
+        'During the procedure, controlled laser energy is delivered to targeted areas of the skin to stimulate collagen production and encourage natural skin renewal. The treatment is carefully adjusted according to your skin type and concerns to maximize effectiveness while maintaining patient comfort.',
       keyActivities: [
-        'Controlled laser energy delivery',
-        'Targeted treatment areas',
-        'Cooling and calming skin care',
-        'Continuous medical monitoring'
+        'Precision laser application using advanced technology',
+        'Treatment of pigmentation, uneven skin tone, fine lines, and enlarged pores',
+        'Controlled collagen stimulation and skin renewal',
+        'Cooling and soothing measures to enhance comfort',
+        'Continuous medical supervision throughout the procedure',
+        'Adjustment of laser settings when clinically appropriate'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Recovery & Maintenance',
+      title: 'Recovery, Follow-Up & Maintenance',
       duration: 'Step 4',
-      description: null,
+      description:
+        'Following treatment, your skin begins its natural healing and collagen remodeling process. Our team provides personalized aftercare instructions and monitors your progress to help ensure optimal healing and long-term skin improvement.',
       keyActivities: [
-        'Post-treatment skincare routine',
-        'Lifestyle and sun-care guidance',
-        'Follow-up assessments',
-        'Maintenance sessions, if needed'
+        'Personalized post-treatment skincare routine',
+        'Hydration and sun protection guidance',
+        'Monitoring of skin healing and collagen remodeling',
+        'Scheduled follow-up consultations',
+        'Evaluation of treatment outcomes',
+        'Maintenance laser sessions if recommended'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'Following laser rejuvenation in Dubai, patients typically experience gradual improvements as new collagen develops and healthy skin cells replace damaged tissue. Over the weeks after treatment, skin may appear brighter, smoother, firmer, and more even in tone. Pigmentation, fine lines, enlarged pores, and rough texture often become less noticeable, while overall skin quality continues to improve. The number of sessions required depends on individual skin concerns, treatment goals, and the personalized plan created during your consultation.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Laser Rejuvenation vs. Regular Facials',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Laser Rejuvenation',
-          traditional: 'Regular Facials'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: 'Brighter and clearer skin',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Improved skin texture',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Softer fine lines',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: ' More even skin tone',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Refreshed, healthy glow',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-{
-  feature: 'Depth of Treatment',
-  ayurvedic: 'Works on deeper skin layers',
-  conventional: 'Surface-level care'
+     benefits: {
+  title: 'Clinically Observed Benefits',
+  description:
+    'Based on years of providing advanced laser skin treatments in Dubai. Our laser rejuvenation in Dubai treatment is designed to improve overall skin quality by stimulating natural collagen production and encouraging healthy skin renewal. Using advanced medical laser technology, the treatment targets common concerns such as dull skin, uneven tone, fine lines, enlarged pores, and mild pigmentation while preserving surrounding healthy tissue. As collagen and elastin production increase over time, patients often notice smoother, brighter, and healthier-looking skin with gradual, natural-looking improvements. Individual results vary depending on skin type, existing skin concerns, and adherence to the recommended treatment plan.',
+       comparisonTitle: 'Laser Rejuvenation vs. Regular Facials',
+
+comparisonDescription:
+  'Many people considering laser rejuvenation in Dubai wonder whether a regular facial can provide similar results. Based on this evaluation, our experienced medical professionals recommend the most suitable approach to achieve safe, natural-looking, and long-lasting results.',
+comparisonHeaders: {
+  feature: 'Aspect',
+  ourTreatment: 'Laser Rejuvenation',
+  traditional: 'Regular Facials'
 },
-{
-  feature: 'Collagen Stimulation',
-  ayurvedic: 'Yes',
-  conventional: 'No'
-},
-{
-  feature: 'Results',
-  ayurvedic: 'Long-term improvement',
-  conventional: 'Short-term glow'
-},
-{
-  feature: 'Technology',
-  ayurvedic: 'Medical laser-based',
-  conventional: 'Manual techniques'
-},
-{
-  feature: 'Medical Supervision',
-  ayurvedic: 'Yes',
-  conventional: 'No'
-}
-        ]
+         benefits: [
+    {
+      id: 1,
+      title: 'Brighter and Clearer Skin',
+      percentage: 90,
+      description:
+        'Laser rejuvenation helps reduce the appearance of dullness, mild pigmentation, and sun-related skin changes by promoting healthy skin cell turnover.',
+      hasLearnMore: true,
+      expandedContent:
+        'As damaged skin is gradually replaced with new, healthier tissue, the complexion appears brighter, fresher, and more radiant.'
+    },
+    {
+      id: 2,
+      title: 'Improved Skin Texture',
+      percentage: 92,
+      description:
+        'By stimulating collagen production beneath the surface, the treatment helps smooth rough skin, refine enlarged pores, and improve overall skin texture.',
+      hasLearnMore: true,
+      expandedContent:
+        'Patients often notice softer, healthier-looking skin that feels smoother with continued collagen remodeling.'
+    },
+    {
+      id: 3,
+      title: 'Refined Skin Tone',
+      percentage: 85,
+      description:
+        'Uneven pigmentation and minor discoloration can make the complexion appear tired.',
+      hasLearnMore: true,
+      expandedContent:
+        'Laser rejuvenation supports a more balanced skin tone by encouraging controlled skin renewal and reducing visible pigmentation over time.'
+    },
+    {
+      id: 4,
+      title: 'Softer Fine Lines',
+      percentage: 88,
+      description:
+        'Natural collagen stimulation helps improve skin elasticity and reduce the appearance of early fine lines and superficial wrinkles.',
+      hasLearnMore: true,
+      expandedContent:
+        'As the skin becomes firmer, facial contours appear smoother while maintaining a natural look.'
+    },
+    {
+      id: 5,
+      title: 'Refreshed, Healthy Glow',
+      percentage: 94,
+      description:
+        'Healthier skin reflects light more evenly, creating a brighter and more youthful appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'Many patients report improved confidence as their skin gradually develops a smoother texture, better hydration, and a natural glow following their personalized treatment plan.'
+    }
+  ],
+       comparisonData: [
+  {
+    feature: 'Primary Focus',
+    ayurvedic: 'Skin renewal and collagen stimulation',
+    conventional: 'Cleansing, hydration, and relaxation'
+  },
+  {
+    feature: 'Treatment Depth',
+    ayurvedic: 'Works within deeper skin layers',
+    conventional: 'Surface-level skin care'
+  },
+  {
+    feature: 'Collagen Stimulation',
+    ayurvedic: 'Yes, stimulates natural collagen and elastin production',
+    conventional: 'Minimal to none'
+  },
+  {
+    feature: 'Skin Concerns Addressed',
+    ayurvedic: 'Fine lines, pigmentation, enlarged pores, uneven texture, dull skin',
+    conventional: 'Dryness, congestion, temporary dullness'
+  },
+  {
+    feature: 'Technology',
+    ayurvedic: 'Advanced medical-grade laser technology',
+    conventional: 'Manual cleansing and skincare products'
+  },
+  {
+    feature: 'Results',
+    ayurvedic: 'Progressive, natural, and long-lasting improvement',
+    conventional: 'Temporary skin refresh and glow'
+  },
+  {
+    feature: 'Downtime',
+    ayurvedic: 'Minimal, depending on the laser used',
+    conventional: 'None'
+  },
+  {
+    feature: 'Medical Supervision',
+    ayurvedic: 'Doctor-supervised assessment and treatment',
+    conventional: 'Usually not medically supervised'
+  },
+  {
+    feature: 'Personalization',
+    ayurvedic: 'Customized according to skin type and concerns',
+    conventional: 'Standard facial protocols'
+  },
+  {
+    feature: 'Long-Term Benefits',
+    ayurvedic: 'Supports continuous collagen remodeling and healthier skin',
+    conventional: 'Requires regular maintenance for ongoing results'
+  }
+]
       },
    pricing: {
   title: 'Transparent Pricing & Customized Packages',
@@ -17791,13 +19472,63 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
+      },
+      skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Treatment Is Right for You?",
+          description: "Regular facials are ideal for maintaining healthy skin, improving hydration, and enhancing your regular skincare routine. However, if your concerns include fine lines, early wrinkles, pigmentation, enlarged pores, uneven skin tone, rough texture, or dull skin, Laser Rejuvenation in Dubai offers a more advanced and clinically guided solution.",
+          points: []
+        }
+      ],
+      whyChooseSection: {
+        title: "Why Choose RamaCare Polyclinic",
+        intro: "Choosing the right clinic for laser rejuvenation in Dubai plays an important role in achieving safe, effective, and natural-looking skin improvement. At RamaCare Polyclinic, we combine advanced medical laser technology with experienced dermatology professionals to deliver treatments that are tailored to each patient’s unique skin needs.",
+        features: [
+          {
+            id: 1,
+            title: "Personalized Consultation & Treatment Planning",
+            description: "Every patient begins with a detailed consultation where our medical team evaluates skin type, concerns, lifestyle, and treatment goals. This allows us to create a fully customized laser plan designed to target pigmentation, fine lines, uneven texture, enlarged pores, and dull skin while maintaining maximum safety and comfort."
+          },
+          {
+            id: 2,
+            title: "Strict Medical Protocols & Modern Technology",
+            description: "Our clinic follows strict medical protocols and uses modern, clinically approved laser systems that are designed to stimulate collagen production without damaging surrounding healthy tissue. Throughout your treatment journey, our doctors closely monitor your progress and adjust your plan whenever needed to ensure optimal results."
+          },
+          {
+            id: 3,
+            title: "Focus on Long-Term Skin Health",
+            description: "At RamaCare Polyclinic, we focus on more than just short-term improvements. Our goal is to support long-term skin health through gradual collagen renewal, improved skin quality, and natural radiance. With a patient-centered approach, transparent guidance, and evidence-based care, we ensure that every treatment experience is safe, comfortable, and results-driven."
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: "Recovery & Aftercare",
+        resultsDescription: "Recovery after laser rejuvenation in Dubai is typically smooth and manageable, making it a popular choice for individuals seeking skin improvement without significant downtime. Immediately after treatment, it is normal to experience mild redness, warmth, or slight sensitivity, similar to a mild sunburn. These effects usually subside within a few hours to a couple of days, depending on the intensity of the treatment.",
+        resultPoints: [
+          "Proper aftercare is essential for achieving the best possible results. Patients are advised to keep the skin well-hydrated, avoid direct sun exposure, and apply a broad-spectrum sunscreen daily to protect the newly treated skin.",
+          "Harsh skincare products such as retinoids, exfoliants, and chemical peels should be temporarily avoided until the skin has fully recovered.",
+          "Our medical team provides personalized aftercare instructions based on your skin type and treatment intensity. Gentle cleansing and the use of recommended moisturizers help support the skin’s natural healing process and reduce irritation.",
+          "It is also important to avoid excessive heat, saunas, and strenuous exercise for a short period after treatment.",
+          "As the skin heals, collagen production increases gradually, leading to improvements in texture, tone, and overall radiance. Follow-up appointments may be recommended to monitor progress and determine if additional sessions are needed for optimal results."
+        ]
+      },
+      whenToConsider: {
+        title: "Who Is a Suitable Candidate?",
+        intro: "Laser Rejuvenation in Dubai is suitable for individuals who want to improve overall skin quality and address early signs of aging without undergoing invasive procedures. It is commonly recommended for people experiencing dull skin, uneven skin tone, fine lines, mild wrinkles, enlarged pores, pigmentation, sun damage, or rough skin texture.",
+        points: [
+          "This treatment is ideal for those seeking gradual, natural-looking improvements through collagen stimulation rather than instant or artificial changes.",
+          "It works well for individuals who are committed to a proper skincare routine and are willing to follow medical advice before and after treatment."
+        ],
+        closing: "During your consultation at RamaCare Polyclinic, our experienced medical professionals will evaluate your skin type, concerns, and goals to determine if laser rejuvenation is the right approach for you."
       }
     },
 
        'aesthetic-dermatology-dubai-laser-treatment-laser-bleaching': {
       hero: {
         subtitle: 'Brighter, Even-Toned Skin with Advanced Medical Care',
-        description: 'Uneven skin tone, pigmentation, and dark patches can affect how confident you feel in your skin. At ramacare polyclinic, we offer Laser Bleaching for Skin in Dubai to gently reduce pigmentation, brighten the skin, and improve overall tone—safely and effectively under medical supervision.',
+        description: 'Uneven skin tone, dark patches, sun damage, and pigmentation can gradually affect the clarity and brightness of your skin, making it appear dull or less radiant over time.These concerns are often caused by excess melanin production, environmental exposure, hormonal changes, or skin inflammation, and they may not fully improve with regular skincare products alone. At RamaCare Polyclinic, we offer laser bleaching for skin in Dubai, an advanced medical-grade treatment designed to safely target pigmentation and restore a more even, luminous complexion.This procedure uses precise laser technology to break down excess melanin in the skin, helping to reduce dark spots, brighten dull areas, and improve overall skin tone without damaging surrounding healthy tissue. Every treatment begins with a detailed skin assessment to ensure a personalized approach based on your skin type, pigmentation level, and aesthetic goals.Our experienced medical professionals focus on delivering gradual, natural-looking improvements while maintaining maximum safety and comfort throughout the procedure.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -17881,135 +19612,173 @@ solutionIntro: {
         title: 'Understanding Laser Bleaching for Skin in Dubai',
        problemIntro: {
   title: 'The Problem: Causes of Skin Darkening and Uneven Tone',
-  description: 'Many people seek laser bleaching in Dubai due to skin darkening caused by lifestyle, environmental exposure, and internal skin imbalances. Hyperpigmentation can affect intimate areas, underarms, knees, elbows, or facial skin, impacting confidence and comfort.'
+  description: 'Skin darkening and pigmentation issues develop gradually due to a combination of internal and external factors. In many cases, these concerns become more visible over time and may not respond well to skincare products alone, especially when pigmentation is deeper within the skin.'
 },
 solutionIntro: {
   title: 'Our Solution: Advanced & Safe Laser Bleaching in Dubai',
-  description: 'Our approach to laser bleaching in Dubai focuses on safe pigment reduction, even skin tone, and long-term skin health. Treatments are performed using medically approved technology under professional supervision.'
+  description: 'At RamaCare Polyclinic, our approach to laser bleaching in Dubai is designed to deliver safe, controlled, and effective pigmentation reduction while maintaining the natural health and integrity of your skin. Instead of offering a one-size-fits-all procedure, we focus on personalized treatment planning based on your skin type, pigmentation pattern, and long-term skin goals.Our medically supervised protocol ensures that every step—from assessment to aftercare—is carefully managed to achieve gradual skin brightening, improved tone, and long-lasting results with minimal risk of irritation or damage.'
 },
      leftCards: [
   {
     id: 1,
     title: 'What Is Laser Bleaching for Skin?',
     description:
-      'Laser Bleaching for Skin in Dubai is a non-invasive laser procedure that targets excess melanin responsible for dark pigmentation. Controlled laser energy breaks down pigment safely, helping restore a more even and brighter skin tone.'
+      'Laser bleaching for skin in Dubai is a non-invasive, medically guided laser treatment designed to target and reduce excess melanin in the skin—the main cause of dark patches and uneven pigmentation. Using controlled laser energy, the treatment safely breaks down unwanted pigment clusters without damaging the surrounding healthy skin. Over time, the body naturally eliminates these broken-down pigment particles, revealing a brighter, more even, and clearer skin tone.Unlike topical creams that work only on the surface, laser bleaching works at a deeper level within the skin, making it more effective for stubborn pigmentation concerns on both facial and body areas.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'Laser Bleaching for Skin is suitable for individuals with:',
+    title: 'Who Is Laser Bleaching for Skin Suitable For?',
+    description: 'This treatment is suitable for individuals experiencing:',
     listItems: [
-      'Uneven skin tone',
-      'Dark patches or tanning',
-      'Pigmentation on the face or body',
-      'Underarm or intimate area darkness',
-      'Sun-induced skin discoloration'
+        'Uneven skin tone',
+        'Dark patches or tanning',
+        'Pigmentation on face or body',
+        'Underarm or intimate area darkening',
+        'Sun-induced discoloration',
+        'Stubborn pigmentation resistant to creams',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Each session typically lasts 20–40 minutes, depending on the area treated. Visible improvement appears gradually over multiple sessions as pigmentation reduces safely.'
+      'Each session typically takes 20–40 minutes, depending on the treatment area and severity of pigmentation. The procedure is quick, comfortable, and requires little to no downtime, allowing patients to resume normal activities shortly after treatment.Visible improvement develops gradually over multiple sessions as excess melanin is broken down and healthy skin regeneration takes place. Most patients notice a clearer, brighter, and more even skin tone after completing a recommended treatment plan tailored to their skin condition.'
   }
 ],
     rootCauses: [
   {
     id: 1,
-    title: 'Excess Melanin Production ',
-    description: 'Overproduction of melanin leads to dark patches, uneven tone, and persistent pigmentation.',
+    title: 'Excess Melanin Production',
+    description:
+      'An overproduction of melanin is the primary cause of dark patches, uneven tone, and persistent pigmentation that does not fade easily.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Friction & Hair Removal Methods ',
-    description: 'Frequent shaving, waxing, or tight clothing can cause irritation and gradual darkening of sensitive skin areas.',
+    title: 'Friction & Hair Removal Methods',
+    description:
+      'Repeated shaving, waxing, or friction from tight clothing can irritate the skin and gradually lead to darkening, especially in sensitive areas such as underarms and body folds.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 3,
-    title: 'Hormonal Changes ',
-    description: 'Hormonal fluctuations during puberty, pregnancy, or medical conditions can trigger pigmentation issues.',
+    title: 'Hormonal Changes',
+    description:
+      'Hormonal fluctuations during pregnancy, puberty, or certain medical conditions can trigger melasma and other pigmentation-related skin concerns.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Sun & Heat Exposure ',
-    description: 'Dubai’s strong sun and heat can worsen pigmentation if skin is not adequately protected.',
+    title: 'Sun & Heat Exposure',
+    description:
+      'Strong UV rays and continuous heat exposure can stimulate excess melanin production, worsening pigmentation and causing uneven skin tone if proper protection is not used.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
-    title: 'Delayed Skin Renewal ',
-    description: 'Slow cell turnover prevents pigmented skin from shedding naturally, making discoloration long-lasting.',
+    title: 'Delayed Skin Renewal',
+    description:
+      'When skin cell turnover slows down, pigmented cells remain longer on the surface, making discoloration more visible and harder to naturally fade.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
    quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical laser treatment' },
-  { label: 'Anesthesia', value: 'Not required' },
-  { label: 'Downtime', value: 'Minimal to none' },
-  { label: 'Results', value: 'Gradual and natural-looking' }
+  {
+    label: 'Treatment Type',
+    value: 'Non-surgical laser pigmentation treatment'
+  },
+  {
+    label: 'Technology',
+    value: 'Medical-grade laser system'
+  },
+  {
+    label: 'Anesthesia',
+    value: 'Not required'
+  },
+  {
+    label: 'Downtime',
+    value: 'Minimal to none'
+  },
+  {
+    label: 'Results',
+    value: 'Gradual and natural-looking improvement'
+  },
+  {
+    label: 'Suitable Areas',
+    value: 'Face, underarms, body, intimate areas'
+  }
 ],
        approachCards: [
   {
     id: 1,
     title: 'Skin & Pigmentation Assessment',
-    description: 'A detailed evaluation helps identify skin type, pigmentation depth, and suitability for laser bleaching.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Every treatment begins with a detailed skin analysis performed by experienced medical professionals.',
+    hasLearnMore: true,
+    expandedContent:
+      'This step helps determine your skin type, pigmentation depth, sensitivity level, and suitability for laser treatment. By understanding the root cause of pigmentation—whether it is sun exposure, hormonal changes, friction, or melanin overproduction—we create a targeted plan that ensures safe and effective results.'
   },
   {
     id: 2,
     title: 'Targeted Laser Bleaching Treatment',
-    description: 'Advanced laser technology safely breaks down excess melanin without damaging surrounding skin.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'We use advanced, medical-grade laser technology that precisely targets excess melanin in the skin.',
+    hasLearnMore: true,
+    expandedContent:
+      'The controlled laser energy breaks down unwanted pigment clusters into smaller particles, which are then naturally processed and removed by the body. This process helps reduce dark patches, improve uneven skin tone, and restore a clearer, more balanced complexion—without harming surrounding healthy tissue.'
   },
   {
     id: 3,
     title: 'Skin Brightening & Rejuvenation Care',
-    description: 'Post-laser therapies support faster healing, improve texture, and enhance natural skin brightness.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'After each session, the skin begins a natural healing and renewal process.',
+    hasLearnMore: true,
+    expandedContent:
+      'To support this, we may recommend soothing and hydrating post-treatment care that helps reduce redness, enhance skin repair, and promote a healthier glow. This phase plays an important role in improving overall skin texture, brightness, and smoothness over time.'
   },
   {
     id: 4,
     title: 'Personalized Aftercare Guidance',
-    description: 'Customized skincare and sun protection advice help maintain results and prevent re-pigmentation.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Proper aftercare is essential for maintaining long-term results.',
+    hasLearnMore: true,
+    expandedContent:
+      'Patients receive customized skincare instructions, including sunscreen use, gentle cleansing routines, and avoidance of triggers that may worsen pigmentation. These guidelines help protect newly treated skin and prevent the recurrence of dark spots or uneven tone.'
   },
   {
     id: 5,
     title: 'Long-Term Skin Maintenance Support',
-    description: 'Ongoing follow-up ensures sustained improvement after laser bleaching in Dubai.',
-    hasLearnMore: false,
-    expandedContent: null
+    description:
+      'Laser bleaching results continue to improve over time, especially with proper maintenance.',
+    hasLearnMore: true,
+    expandedContent:
+      'Our team provides follow-up assessments and maintenance recommendations to ensure your skin remains even-toned, bright, and healthy. With consistent care and professional monitoring, patients can enjoy long-lasting improvements in skin clarity and overall appearance after laser bleaching in Dubai.'
   }
 ]
       },
 
   healingJourney: {
   title: 'Your Skin Brightening Journey: Step by Step',
-  description: 'A structured, doctor-guided approach to ensure safe and effective Laser Bleaching for Skin in Dubai.',
+  description: 'Our laser bleaching for skin in Dubai follows a structured, doctor-supervised treatment process designed to safely reduce pigmentation, brighten the skin, and improve overall skin tone. Every stage is carefully planned to deliver effective results while protecting your skin and supporting its natural healing process. From your initial consultation to follow-up care, our experienced medical professionals provide personalized guidance to help you achieve clearer, healthier, and more radiant skin.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation & Skin Assessment',
+      title: 'Initial Consultation & Skin Assessment (45–60 Minutes)',
       duration: 'Step 1',
-      description: null,
+      description: 'Your treatment journey begins with a comprehensive consultation to determine whether laser bleaching for skin in Dubai is the most suitable option for your skin concerns. During this visit, our medical team evaluates your skin type, pigmentation pattern, medical history, and treatment goals to develop a personalized care plan.',
       keyActivities: [
-        'Detailed skin evaluation',
-        'Pigmentation and tone analysis',
-        'Medical history review',
-        'Personalized laser plan creation'
+        'Comprehensive skin evaluation',
+        'Assessment of pigmentation depth and skin tone',
+        'Identification of the underlying causes of discoloration',
+        'Review of medical history and previous skin treatments',
+        'Skin sensitivity assessment',
+        'Creation of a customized laser bleaching treatment plan'
       ],
       side: 'right'
     },
@@ -18018,11 +19787,14 @@ solutionIntro: {
       number: '02',
       title: 'Skin Preparation Phase',
       duration: 'Step 2',
-      description: null,
+      description: 'Preparing the skin before treatment helps improve safety, optimize laser performance, and reduce the likelihood of irritation. Our specialists provide personalized recommendations based on your skin condition and the treatment area.',
       keyActivities: [
-        'Pre-treatment skincare advice',
-        'Sun protection guidance',
-        'Skin cleansing and preparation'
+        'Personalized pre-treatment skincare advice',
+        'Daily sun protection recommendations',
+        'Temporary avoidance of harsh skincare products, exfoliants, and retinoids',
+        'Gentle cleansing of the treatment area',
+        'Final skin assessment before the procedure',
+        'Patient education on treatment expectations and aftercare'
       ],
       side: 'left'
     },
@@ -18031,12 +19803,14 @@ solutionIntro: {
       number: '03',
       title: 'Active Laser Bleaching Treatment',
       duration: 'Step 3',
-      description: null,
+      description: 'During the procedure, advanced medical-grade laser technology delivers controlled energy to the targeted areas of pigmentation. The laser selectively breaks down excess melanin while preserving the surrounding healthy skin, allowing the body to naturally eliminate unwanted pigment over time.',
       keyActivities: [
-        'Controlled laser energy delivery',
-        'Targeted pigmentation treatment',
-        'Skin cooling and calming care',
-        'Continuous medical monitoring'
+        'Precision laser application to pigmented areas',
+        'Controlled reduction of excess melanin',
+        'Treatment of uneven skin tone and localized discoloration',
+        'Cooling and soothing measures to enhance patient comfort',
+        'Continuous medical supervision throughout the session',
+        'Monitoring of skin response and adjustment of laser settings when appropriate'
       ],
       side: 'right'
     },
@@ -18045,95 +19819,142 @@ solutionIntro: {
       number: '04',
       title: 'Recovery & Maintenance',
       duration: 'Step 4',
-      description: null,
+      description: 'Following treatment, the skin begins its natural healing and renewal process. Our medical team provides comprehensive aftercare instructions to support recovery, protect the treated skin, and maintain long-term improvements in skin tone and clarity.',
       keyActivities: [
-        'Post-treatment skincare routine',
-        'Sun-care and lifestyle guidance',
-        'Follow-up reviews',
-        'Maintenance sessions, if advised'
+        'Personalized post-treatment skincare routine',
+        'Daily sunscreen and UV protection guidance',
+        'Hydration and skin barrier support',
+        'Scheduled follow-up assessments',
+        'Monitoring of pigmentation improvement',
+        'Maintenance laser sessions when clinically recommended'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Expected Results',
       duration: null,
-      description: 'Gradual skin lightening, improved tone uniformity, reduced pigmentation, and healthier-looking skin.',
+      description: 'Laser bleaching for skin delivers gradual improvements as the treated pigmentation naturally fades and healthy skin cells replace damaged tissue. With a personalized treatment plan and proper aftercare, many patients notice a brighter complexion, a more even skin tone, a smoother texture, and a reduced appearance of dark patches. The number of sessions required varies depending on the depth of pigmentation, skin type, and individual treatment goals. Continued sun protection and a consistent skincare routine help maintain results over the long term.',
       keyActivities: [],
       side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Laser Bleaching for Skin vs. Topical Treatments',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Laser Bleaching for Skin',
-          traditional: 'Creams & Home Remedies'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Brighter, more even skin tone',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Reduced pigmentation and tanning',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: ' Improved skin clarity',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: ' Minimal downtime',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Boosted skin confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
- {
-    feature: 'Depth of Treatment',
-    ayurvedic: 'Targets pigment at deeper levels',
-    conventional: 'Surface-level only'
+     benefits: {
+  title: 'Clinically Observed Benefits',
+  description:
+    'Based on years of providing advanced laser skin treatments in Dubai. Our laser bleaching for skin in Dubai is designed to safely reduce pigmentation, improve skin clarity, and restore a brighter, more even complexion. By using advanced medical-grade laser technology, the treatment targets excess melanin while preserving the surrounding healthy skin. As the skin naturally renews itself, patients often notice gradual improvements in skin tone, texture, and overall radiance. Results develop progressively over multiple sessions and vary depending on individual skin type, pigmentation severity, and adherence to the recommended treatment plan.',
+
+  comparisonTitle: 'Laser Bleaching for Skin vs. Topical Treatments',
+  comparisonDescription:
+    'Many people try skin-brightening creams, serums, or home remedies before considering laser bleaching for skin in Dubai. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment to identify the cause and depth of pigmentation. Based on your skin type and treatment goals, our experienced medical professionals create a personalized laser treatment plan designed to deliver safe, gradual, and natural-looking improvements. This individualized approach helps maximize results while minimizing the risk of skin irritation or unnecessary treatment.',
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Laser Bleaching for Skin',
+    traditional: 'Creams & Home Remedies'
   },
-  {
-    feature: 'Results',
-    ayurvedic: 'Visible and long-lasting',
-    conventional: 'Often temporary'
-  },
-  {
-    feature: 'Safety',
-    ayurvedic: 'Doctor-supervised',
-    conventional: 'Self-applied'
-  },
-  {
-    feature: 'Technology',
-    ayurvedic: 'Medical laser-based',
-    conventional: 'Chemical formulations'
-  },
-  {
-    feature: 'Downtime',
-    ayurvedic: 'Minimal',
-    conventional: 'Varies'
-  }
-        ]
+
+  benefits: [
+   {
+  id: 1,
+  title: 'Brighter, More Even Skin Tone',
+  percentage: 90,
+  description: 'Laser bleaching helps reduce excess melanin responsible for uneven skin tone and discoloration.',
+  hasLearnMore: true,
+  expandedContent:
+    'As pigmentation gradually fades, the skin develops a brighter, healthier, and more balanced appearance without altering its natural complexion.'
+},
+{
+  id: 2,
+  title: 'Reduced Pigmentation and Tanning',
+  percentage: 92,
+  description: 'The treatment precisely targets areas of excess pigmentation caused by sun exposure, hormonal changes, friction, or post-inflammatory skin changes.',
+  hasLearnMore: true,
+  expandedContent:
+    'Over time, dark patches, tanning, and uneven pigmentation become less noticeable, resulting in a clearer complexion.'
+},
+{
+  id: 3,
+  title: 'Improved Skin Clarity',
+  percentage: 88,
+  description: 'By promoting natural skin renewal, laser bleaching helps improve overall skin clarity and smoothness.',
+  hasLearnMore: true,
+  expandedContent:
+    'Patients often notice healthier-looking skin with reduced dullness and a more refreshed appearance as new skin cells replace pigmented ones.'
+},
+{
+  id: 4,
+  title: 'Minimal Downtime',
+  percentage: 85,
+  description: 'Laser bleaching is a non-surgical procedure that allows most patients to return to their normal daily routine shortly after treatment.',
+  hasLearnMore: true,
+  expandedContent:
+    'Mild redness or temporary sensitivity may occur but usually resolves within a short period with proper aftercare.'
+},
+{
+  id: 5,
+  title: 'Boosted Skin Confidence',
+  percentage: 94,
+  description: 'As skin tone becomes more even and pigmentation improves, many patients experience greater confidence in their appearance.',
+  hasLearnMore: true,
+  expandedContent:
+    'The gradual, natural-looking results help create healthier, brighter skin while supporting long-term skin wellness through personalized medical care.'
+}
+  ],
+  comparisonData: [
+    {
+      feature: 'Primary Focus',
+      ayurvedic: 'Targets pigmentation at its source',
+      conventional: 'Improves surface appearance'
+    },
+    {
+      feature: 'Treatment Depth',
+      ayurvedic: 'Reaches deeper pigment layers',
+      conventional: 'Works mainly on the outer skin layer'
+    },
+    {
+      feature: 'Technology',
+      ayurvedic: 'Advanced medical-grade laser technology',
+      conventional: 'Skincare products and home remedies'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Gradual, visible, and long-lasting improvement',
+      conventional: 'Often temporary and varies by product'
+    },
+    {
+      feature: 'Pigmentation Reduction',
+      ayurvedic: 'Targets stubborn pigmentation and dark patches',
+      conventional: 'Limited effectiveness for deeper pigmentation'
+    },
+    {
+      feature: 'Treatment Precision',
+      ayurvedic: 'Treats specific pigmented areas with controlled laser energy',
+      conventional: 'General application over larger skin areas'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic: 'Doctor-supervised assessment and treatment',
+     conventional: 'Self-applied without medical supervision'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic: 'Minimal to none',
+      conventional: 'Usually none, depending on the product used'
+    },
+    {
+      feature: 'Personalization',
+      ayurvedic: 'Customized according to skin type and pigmentation',
+      conventional: 'Limited personalization'
+    },
+    {
+      feature: 'Long-Term Benefits',
+     ayurvedic: 'Supports a healthier, more even skin tone with proper maintenance',
+      conventional: 'Requires ongoing product use to maintain results'
+    }
+  ]
       },
     pricing: {
   title: 'Transparent Pricing & Customized Packages',
@@ -18429,13 +20250,52 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
+      },
+      skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Treatment Is Right for You?",
+          description: "Topical creams and home remedies can be useful for maintaining healthy skin and managing very mild pigmentation. However, if you have persistent dark patches, tanning, uneven skin tone, post-inflammatory pigmentation, or pigmentation that has not improved with skincare products, laser bleaching for skin in Dubai offers a more advanced and medically guided solution.\n\nFollowing a comprehensive consultation, our doctors evaluate your skin condition, pigmentation depth, and treatment goals before recommending the most appropriate approach. This personalized assessment helps ensure safe treatment, realistic expectations, and gradual improvements that continue as the skin naturally renews itself over time.",
+          points: []
+        }
+      ],
+      whyChooseSection: {
+        title: "Why Choose RamaCare Polyclinic",
+        intro: "Choosing the right clinic for laser bleaching for skin in Dubai is essential for achieving safe, effective, and natural-looking results. At RamaCare Polyclinic, we combine experienced medical professionals, advanced laser technology, and personalized treatment planning to help patients improve skin tone, reduce pigmentation, and achieve healthier, brighter skin with confidence.",
+        features: [
+          {
+            id: 1,
+            title: "Detailed Skin Consultation",
+            description: "Every treatment begins with a detailed skin consultation to understand your skin type, pigmentation concerns, medical history, and aesthetic goals. Based on this assessment, our team develops a customized laser treatment plan that targets your specific concerns while protecting the surrounding healthy skin. This individualized approach helps maximize results and minimizes unnecessary irritation or downtime."
+          },
+          {
+            id: 2,
+            title: "Modern, Medical-Grade Laser Systems",
+            description: "We use modern, medical-grade laser systems and follow strict clinical protocols to ensure every procedure is performed with precision and patient safety in mind. Throughout your treatment journey, our doctors monitor your progress, provide clear aftercare instructions, and make adjustments when needed to achieve the best possible outcome."
+          },
+          {
+            id: 3,
+            title: "Focus on Long-Term Skin Health",
+            description: "At RamaCare Polyclinic, our focus extends beyond improving appearance. We aim to support long-term skin health through evidence-based treatments, transparent guidance, and compassionate patient care. Whether you are treating facial pigmentation, tanning, or dark patches on other areas of the body, our goal is to deliver gradual, natural-looking improvements that enhance both your skin and your confidence."
+          }
+        ]
+      },
+      aftercareContent: {
+        resultsTitle: "Recovery & Aftercare",
+        resultsDescription: "Recovery after laser bleaching for skin in Dubai is generally quick, with minimal disruption to your daily routine. Most patients experience mild redness, warmth, or slight skin sensitivity immediately after treatment, which usually settles within a few hours or a couple of days depending on the treatment area and individual skin response.",
+        resultPoints: [
+          "Following the recommended aftercare routine is important to support healing and maintain long-term results. Patients are advised to keep the treated skin clean and well moisturized, avoid excessive heat and direct sun exposure, and apply a broad-spectrum sunscreen every day. Protecting the skin from ultraviolet (UV) rays helps reduce the risk of new pigmentation developing during the healing process.",
+          "For a short period after treatment, harsh skincare products such as exfoliants, retinoids, or strong chemical ingredients should be avoided unless recommended by your doctor. Gentle cleansing, adequate hydration, and the use of clinically recommended skincare products help the skin recover comfortably while supporting healthy cell renewal.",
+          "Our medical team provides personalized aftercare instructions based on your skin type and treatment plan, along with follow-up assessments to monitor your progress. Depending on your pigmentation concerns, additional sessions or maintenance treatments may be recommended to achieve and preserve a brighter, more even complexion over time."
+        ]
       }
     },
 
       'aesthetic-dermatology-dubai-laser-treatment-birthmark-removal': {
       hero: {
         subtitle: 'Safe, Effective Solutions for Clearer, Even-Toned Skin',
-        description: 'Birthmarks can vary in size, color, and location. While many are harmless, some people choose removal for cosmetic reasons or due to irritation and discomfort. At ramacarepolyclinic, we offer Birthmark Removal in Dubai using medically approved techniques tailored to your skin type and birthmark characteristics.',
+        description: 'Birthmarks can appear at birth or develop during early childhood, varying in size, color, shape, and location.While most birthmarks are harmless and do not require medical treatment, some individuals choose to have them removed because they affect their appearance, cause physical discomfort, or become irritated by clothing or daily activities. At RamaCare Polyclinic, we provide birthmark removal in Dubai using advanced, medically approved treatment techniques tailored to your individual skin type and the characteristics of your birthmark.After a comprehensive skin assessment, our experienced medical professionals recommend the most appropriate approach, which may include laser therapy or other clinically suitable treatment methods designed to reduce the appearance of pigmented or vascular birthmarks while preserving the surrounding healthy skin.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -18519,134 +20379,165 @@ solutionIntro: {
         title: 'Understanding Birthmark Removal in Dubai',
         problemIntro: {
   title: 'The Problem: Understanding Birthmarks and Why Treatment May Be Needed',
-  description: 'Birthmarks are common skin markings present from birth or developing shortly afterward. While many are harmless, some people seek birthmark removal for cosmetic reasons, skin comfort, or changes in color, size, or texture over time.'
+  description: 'Birthmarks are common skin markings that may be present at birth or appear shortly afterward. They develop due to changes in skin pigmentation or blood vessel formation during early development. While most birthmarks are completely harmless and do not require medical treatment, some individuals choose to have them treated because of cosmetic concerns, physical irritation, or noticeable changes in their appearance over time.The visibility of a birthmark can sometimes increase with age, sun exposure, hormonal changes, or natural skin aging. Depending on its type, a birthmark may become darker, larger, more raised, or more noticeable, which can affect confidence or make certain areas of the skin feel uncomfortable.'
 },
 solutionIntro: {
-  title: 'Our Solution: Safe & Effective Birthmark Removal Approach',
-  description: 'Our birthmark removal treatments focus on safety, precision, and skin health. Each plan is personalized to the type, depth, and location of the birthmark to ensure the best possible outcome.'
+  title: 'Our Solution: Safe & Effective Birthmark Removal in Dubai',
+  description: 'At RamaCare Polyclinic, our approach to birthmark removal in Dubai focuses on delivering safe, precise, and personalized treatment while preserving the health and appearance of your skin. Because every birthmark differs in its size, color, depth, and underlying cause, there is no single treatment suitable for everyone. Our experienced medical professionals carefully evaluate each case before recommending the most appropriate dermatological solution.Whether the birthmark is pigmented or vascular, our goal is to reduce its visibility using advanced medical technology while protecting the surrounding healthy skin. Every treatment is performed under professional supervision to achieve gradual, natural-looking improvements with minimal discomfort and a strong emphasis on patient safety.'
 },
     leftCards: [
   {
     id: 1,
     title: 'What Is Birthmark Removal?',
     description:
-      'Birthmark Removal in Dubai involves medical procedures designed to reduce or remove visible birthmarks from the skin. Depending on the type, size, and depth, treatments may include laser therapy or other dermatological methods.'
+      'Birthmark Removal in Dubai is a medically supervised treatment that helps reduce or remove the appearance of visible birthmarks using advanced dermatological techniques. Depending on the type, size, depth, and location of the birthmark, treatment may involve laser therapy or other clinically appropriate procedures to target excess pigmentation or abnormal blood vessels while protecting the surrounding healthy skin. Birthmarks can be pigmented (brown, black, or blue), vascular (red, pink, or purple), flat, or raised. Since every birthmark is different, a thorough medical assessment is essential to determine the safest and most effective treatment approach. Our goal is to improve skin appearance while achieving gradual, natural-looking results with minimal discomfort.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Birthmark removal may be suitable for individuals with:',
+    description: 'Birthmark Removal in Dubai may be suitable for individuals who have:',
     listItems: [
-      'Pigmented birthmarks (brown or dark patches)',
-      'Vascular birthmarks (red or pink marks)',
+      'Pigmented birthmarks (brown, black, or dark patches)',
+      'Vascular birthmarks (red, pink, or purple marks)',
       'Raised or textured birthmarks',
-      'Birthmarks causing irritation or cosmetic concern'
+      'Birthmarks on the face or body causing cosmetic concerns',
+      'Birthmarks that become irritated by clothing or shaving',
+      'Birthmarks that have become more noticeable over time'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Treatment duration varies depending on the birthmark type and size. Sessions usually last 20–45 minutes, with multiple sessions sometimes required for gradual improvement.'
+      'Treatment duration varies according to the type, size, and depth of the birthmark. Most sessions take 20–45 minutes, although larger or more complex birthmarks may require additional time. Visible improvement develops gradually as the treated pigment or blood vessels are naturally cleared by the body. Some birthmarks respond after only a few sessions, while others require a series of treatments for optimal results. The exact number of sessions depends on the birthmark type, skin characteristics, and the body\'s natural healing response.'
   }
 ],
-  rootCauses: [
+ rootCauses: [
   {
     id: 1,
-    title: 'Pigmentation Imbalance ',
-    description: 'Excess melanin or abnormal blood vessel formation can cause dark, red, or unevenly colored birthmarks that become more noticeable with age.',
+    title: 'Pigmentation Imbalance',
+    description: 'Some birthmarks develop because of an increased concentration of melanin within the skin. These pigmented birthmarks often appear brown, black, or blue and may become more noticeable as surrounding skin changes over time.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Skin Tissue Imbalance ',
-    description: 'Certain birthmarks involve thickened or raised skin, leading to uneven texture and cosmetic concern.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Abnormal Blood Vessel Formation',
+    description: 'Vascular birthmarks are caused by clusters of tiny blood vessels beneath the skin, creating red, pink, or purple discoloration. Their appearance varies depending on the depth and size of the affected blood vessels.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Circulation & Healing Issues ',
-    description: 'Poor blood circulation or slow skin regeneration can affect how birthmarks respond to natural fading or treatment.',
+    title: 'Raised or Thickened Skin Tissue',
+    description: 'Certain birthmarks involve changes in the structure of the skin, resulting in raised, textured, or uneven areas. These may occasionally become irritated through friction or everyday activities.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Hormonal Changes ',
-    description: 'Hormonal shifts during growth, puberty, or pregnancy may cause birthmarks to darken or enlarge.',
+    title: 'Hormonal & Age-Related Changes',
+    description: 'Hormonal fluctuations during puberty, pregnancy, or natural aging can sometimes make birthmarks appear darker, larger, or more noticeable. Although these changes are often harmless, they may increase cosmetic concerns.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Sun Exposure & Environmental Factors ',
-    description: 'Prolonged sun exposure can intensify pigmentation and make birthmarks more prominent over time.',
+    title: 'Sun Exposure & Environmental Factors',
+    description: 'Long-term exposure to ultraviolet (UV) rays can intensify pigmentation and make some birthmarks stand out more clearly against the surrounding skin. Daily sun protection plays an important role in maintaining healthy skin and preventing further darkening.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
-  quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical dermatological procedure' },
-  { label: 'Anesthesia', value: 'Usually not required' },
-  { label: 'Downtime', value: 'Minimal to mild' },
-  { label: 'Results', value: 'Gradual and long-term' }
+ quickFacts: [
+  {
+    label: 'Treatment Type',
+    value: 'Non-surgical dermatological treatment'
+  },
+  {
+    label: 'Technology',
+    value: 'Advanced medical laser and dermatological techniques'
+  },
+  {
+    label: 'Anesthesia',
+    value: 'Usually not required (topical anesthetic if needed)'
+  },
+  {
+    label: 'Downtime',
+    value: 'Minimal to mild'
+  },
+  {
+    label: 'Results',
+    value: 'Gradual and long-lasting improvement'
+  },
+  {
+    label: 'Suitable Areas',
+    value: 'Face, neck, arms, legs, and other body areas'
+  }
 ],
-      approachCards: [
+     approachCards: [
   {
     id: 1,
     title: 'Detailed Skin & Birthmark Assessment',
-    description: 'Every birthmark is carefully examined to determine its nature and suitability for treatment, ensuring a safe and informed approach.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Every treatment begins with a comprehensive consultation and skin examination. Our medical team carefully assesses the birthmark\'s type, size, depth, location, and skin characteristics to determine the safest and most effective treatment method.',
+    hasLearnMore: true,
+    expandedContent: 'During this evaluation, we also review your medical history, skin sensitivity, previous treatments, and treatment expectations. This personalized assessment allows us to create a customized treatment plan designed specifically for your skin and birthmark characteristics.'
   },
   {
     id: 2,
     title: 'Targeted Birthmark Removal Techniques',
-    description: 'Advanced and minimally invasive methods are used to reduce or remove birthmarks while minimizing scarring and skin damage.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Depending on the diagnosis, we use advanced medical-grade laser technology or other clinically appropriate dermatological procedures to target the affected tissue with precision.',
+    hasLearnMore: true,
+    expandedContent: 'The treatment is carefully adjusted according to your skin type and the characteristics of the birthmark to maximize effectiveness while minimizing the impact on surrounding healthy skin. Our minimally invasive approach helps reduce the appearance of pigmented and vascular birthmarks gradually, encouraging smoother, clearer, and more even-looking skin over time.'
   },
   {
     id: 3,
     title: 'Skin Healing & Regeneration Support',
-    description: 'Post-treatment care promotes healthy skin renewal, improves texture, and reduces pigmentation irregularities.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Following treatment, the skin naturally enters a healing and renewal phase. We provide guidance to support this process by helping maintain skin hydration, reduce temporary irritation, and encourage healthy skin regeneration.',
+    hasLearnMore: true,
+    expandedContent: 'As the treated area heals, skin texture gradually improves and discoloration becomes less noticeable. Our focus is on achieving balanced, natural-looking results while supporting the skin\'s long-term health.'
   },
   {
     id: 4,
     title: 'Personalized Aftercare & Skin Protection',
-    description: 'Guidance on sun protection, skincare, and lifestyle habits helps maintain results and prevent discoloration.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Successful birthmark removal extends beyond the treatment session itself. Patients receive individualized aftercare instructions that include gentle skincare recommendations, daily sun protection, and practical advice to help protect the treated skin during recovery.',
+    hasLearnMore: true,
+    expandedContent: 'Following these recommendations helps minimize the risk of pigmentation changes and supports consistent healing throughout the recovery period.'
   },
   {
     id: 5,
     title: 'Long-Term Monitoring & Support',
-    description: 'Follow-up care ensures proper healing and long-lasting results after birthmark removal.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Some birthmarks require multiple sessions depending on their size, depth, and response to treatment. Our team schedules follow-up appointments to monitor healing, evaluate treatment progress, and determine whether additional sessions or maintenance care may be beneficial.',
+    hasLearnMore: true,
+    expandedContent: 'Through ongoing medical supervision and personalized support, we aim to provide long-lasting improvements in skin appearance while maintaining the health, comfort, and integrity of your skin.'
+  },
+  {
+    id: 6,
+    title: 'Result',
+    description: 'Following a personalized birthmark removal in Dubai treatment plan, many patients notice a gradual reduction in the visibility of pigmented or vascular birthmarks along with smoother skin texture and a more even complexion.',
+    hasLearnMore: true,
+    expandedContent: 'Results develop progressively as the skin heals naturally, with the number of sessions varying according to the type, size, and depth of the birthmark. Our priority is to achieve safe, natural-looking outcomes while preserving healthy surrounding skin.'
   }
 ]
       },
 
-  healingJourney: {
+ healingJourney: {
   title: 'Your Birthmark Removal Journey: Step by Step',
-  description: 'A structured, doctor-guided approach to ensure safe and effective Birthmark Removal in Dubai.',
+  description: 'Our birthmark removal in Dubai follows a structured, doctor-supervised treatment process designed to safely reduce or remove the appearance of birthmarks while protecting the surrounding healthy skin. Every stage of your treatment is carefully planned according to the type, size, depth, and location of the birthmark. From the initial consultation to long-term follow-up care, our experienced medical professionals provide personalized guidance to ensure patient safety, comfort, and gradual, natural-looking results.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Skin Assessment',
       duration: 'Step 1',
-      description: null,
+      description: 'Your treatment journey begins with a comprehensive consultation to determine whether birthmark removal in Dubai is the most suitable option for your skin concern. During this appointment, our medical team carefully evaluates your birthmark, skin type, medical history, and treatment goals to create a personalized treatment plan.',
       keyActivities: [
-        'Birthmark evaluation',
-        'Skin type and depth analysis',
-        'Medical history review',
-        'Personalized treatment planning'
+        'Detailed examination of the birthmark',
+        'Assessment of pigmentation, blood vessels, size, and depth',
+        'Skin type and sensitivity evaluation',
+        'Review of medical history and previous skin treatments',
+        'Discussion of treatment expectations and possible outcomes',
+        'Creation of a customized birthmark removal treatment plan'
       ],
       side: 'right'
     },
@@ -18655,11 +20546,14 @@ solutionIntro: {
       number: '02',
       title: 'Treatment Preparation',
       duration: 'Step 2',
-      description: null,
+      description: 'Proper preparation helps improve treatment safety and allows the selected procedure to be performed as effectively as possible. Before treatment, our specialists provide individualized instructions based on your skin condition and the type of birthmark being treated.',
       keyActivities: [
-        'Skin cleansing',
-        'Pre-treatment guidance',
-        'Patch testing if required'
+        'Gentle cleansing of the treatment area',
+        'Personalized pre-treatment skincare guidance',
+        'Sun protection recommendations',
+        'Patch testing when clinically appropriate',
+        'Final assessment before treatment',
+        'Explanation of the treatment process and aftercare instructions'
       ],
       side: 'left'
     },
@@ -18668,12 +20562,14 @@ solutionIntro: {
       number: '03',
       title: 'Active Birthmark Removal Treatment',
       duration: 'Step 3',
-      description: null,
+      description: 'The treatment is performed using advanced medical-grade laser technology or another clinically appropriate dermatological technique, depending on the characteristics of the birthmark. Controlled energy is delivered precisely to the affected tissue while minimizing the impact on the surrounding healthy skin. Throughout the procedure, patient comfort and safety remain our highest priorities, with treatment settings carefully adjusted according to your individual skin type and response.',
       keyActivities: [
-        'Controlled laser or medical technique',
-        'Targeted treatment area',
-        'Skin cooling and calming care',
-        'Continuous medical monitoring'
+        'Precision laser or dermatological treatment',
+        'Targeted treatment of pigmented or vascular birthmarks',
+        'Controlled energy delivery for maximum accuracy',
+        'Skin cooling and soothing measures',
+        'Continuous medical supervision during the procedure',
+        'Monitoring of skin response throughout the session'
       ],
       side: 'right'
     },
@@ -18682,11 +20578,14 @@ solutionIntro: {
       number: '04',
       title: 'Recovery & Follow-Up Care',
       duration: 'Step 4',
-      description: null,
+      description: 'Following treatment, the skin enters a natural healing and regeneration phase. Mild redness, swelling, or temporary sensitivity may occur but generally improves over the following days. Our medical team provides detailed aftercare instructions to promote comfortable healing and support the best possible cosmetic outcome.',
       keyActivities: [
-        'Post-treatment skincare advice',
-        'Healing monitoring',
-        'Follow-up sessions if needed'
+        'Personalized post-treatment skincare routine',
+        'Healing and skin recovery monitoring',
+        'Daily sun protection recommendations',
+        'Guidance to reduce irritation during recovery',
+        'Scheduled follow-up appointments',
+        'Additional treatment sessions if clinically recommended'
       ],
       side: 'left'
     },
@@ -18695,82 +20594,116 @@ solutionIntro: {
       number: '05',
       title: 'Result',
       duration: null,
-      description:
-        'Gradual fading or removal of the birthmark with improved skin appearance and confidence.',
+      description: 'Birthmark removal delivers gradual improvements as the treated pigment or abnormal blood vessels are naturally broken down and absorbed by the body. Depending on the type of birthmark, many patients notice progressive fading, smoother skin texture, and a more even skin tone over several weeks or months. Some birthmarks respond after only a few sessions, while others require a series of treatments to achieve optimal results. Our personalized treatment plans and ongoing medical supervision help ensure safe, realistic, and long-lasting improvements.',
       keyActivities: [],
       side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Birthmark Removal vs. Cosmetic Cover-Ups',
-        comparisonDescription: 'Compare our advanced laser approach with conventional birthmark removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Birthmark Removal',
-          traditional: 'Makeup & Concealers'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Reduced birthmark visibility',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Improved skin tone and texture',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Minimal downtime',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: 'Safe, doctor-supervised care',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Enhanced self-confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-  {
-    feature: 'Effectiveness',
-    ayurvedic: 'Treats the source',
-    conventional: 'Temporary coverage'
+     benefits: {
+  title: 'Clinically-Observed Benefits',
+  description: 'Based on years of providing advanced dermatological and laser skin treatments in Dubai. Our birthmark removal in Dubai treatments are designed to safely reduce the appearance of pigmented and vascular birthmarks while preserving the surrounding healthy skin. Using advanced medical technology and personalized treatment planning, we focus on improving skin clarity, texture, and overall appearance with gradual, natural-looking results. The number of sessions and outcome depend on the type, size, depth, and location of the birthmark, as well as each patient\'s individual healing response.',
+  comparisonTitle: 'Birthmark Removal vs. Cosmetic Cover-Ups',
+  comparisonDescription: 'Many people use makeup or concealers to hide visible birthmarks, especially on the face or other exposed areas. Our experienced medical professionals evaluate the type, depth, size, and location of the birthmark to recommend the safest and most effective treatment plan. This personalized approach helps ensure realistic expectations, maximum safety, and natural-looking results.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Birthmark Removal',
+    traditional: 'Makeup & Concealers'
   },
-  {
-    feature: 'Results',
-    ayurvedic: 'Long-term improvement',
-    conventional: 'Short-term'
-  },
-  {
-    feature: 'Medical Supervision',
-    ayurvedic: 'Yes',
-    conventional: 'No'
-  },
-  {
-    feature: 'Skin Health',
-    ayurvedic: 'Preserved',
-    conventional: 'May clog pores'
-  },
-  {
-    feature: 'Confidence',
-    ayurvedic: 'Lasting',
-    conventional: 'Temporary'
-  }
-        ]
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced Birthmark Visibility',
+      percentage: 90,
+      description: 'Advanced laser and dermatological techniques precisely target the pigment or blood vessels responsible for many types of birthmarks.',
+      hasLearnMore: true,
+      expandedContent: 'As the treated tissue is naturally broken down and cleared by the body, the birthmark gradually becomes lighter and less noticeable while maintaining the surrounding healthy skin.'
+    },
+    {
+      id: 2,
+      title: 'Improved Skin Tone and Texture',
+      percentage: 92,
+      description: 'As the skin heals following treatment, many patients notice a smoother texture and a more even skin tone.',
+      hasLearnMore: true,
+      expandedContent: 'Reducing visible discoloration and improving skin quality can create a healthier, more balanced complexion that looks natural rather than overtreated.'
+    },
+    {
+      id: 3,
+      title: 'Minimal Downtime',
+      percentage: 88,
+      description: 'Most birthmark removal procedures are minimally invasive and allow patients to return to their normal daily activities soon after treatment.',
+      hasLearnMore: true,
+      expandedContent: 'Mild redness and temporary swelling may occur following treatment but generally improve within a short period with appropriate aftercare.'
+    },
+    {
+      id: 4,
+      title: 'Safe, Doctor-Supervised Care',
+      percentage: 85,
+      description: 'Every treatment is planned and performed under experienced medical supervision based on the type, size, and location of the birthmark.',
+      hasLearnMore: true,
+      expandedContent: 'Personalized treatment planning helps maximize safety while protecting the surrounding healthy skin and supporting gradual, natural-looking results.'
+    },
+    {
+      id: 5,
+      title: 'Enhanced Self-Confidence',
+      percentage: 94,
+      description: 'As birthmarks gradually become less noticeable, many patients feel more comfortable and confident in their appearance.',
+      hasLearnMore: true,
+      expandedContent: 'Progressive improvements in skin tone and texture often contribute to greater confidence while maintaining a natural-looking complexion.'
+    }
+  ],
+  comparisonData: [
+    {
+      feature: 'Primary Focus',
+      ayurvedic: 'Reduces the appearance of the birthmark',
+      conventional: 'Temporarily hides the birthmark'
+    },
+    {
+      feature: 'Treatment Approach',
+      ayurvedic: 'Medical treatment targeting pigment or blood vessels',
+      conventional: 'Cosmetic surface coverage'
+    },
+    {
+      feature: 'Effectiveness',
+      ayurvedic: 'Addresses the underlying cause where appropriate',
+      conventional: 'Covers the visible mark only'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Gradual, long-term improvement',
+      conventional: 'Temporary until removed'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic: 'Doctor-supervised consultation and treatment',
+      conventional: 'Self-applied'
+    },
+    {
+      feature: 'Skin Health',
+      ayurvedic: 'Preserves surrounding healthy skin through personalized treatment',
+      conventional: 'Frequent use may not suit every skin type'
+    },
+    {
+      feature: 'Maintenance',
+      ayurvedic: 'May require follow-up sessions depending on birthmark type',
+      conventional: 'Requires daily reapplication'
+    },
+    {
+      feature: 'Suitable for Different Birthmark Types',
+      ayurvedic: 'Treatment is selected according to birthmark characteristics',
+      conventional: 'Does not vary based on birthmark type'
+    },
+    {
+      feature: 'Long-Term Benefit',
+      ayurvedic: 'Supports lasting cosmetic improvement when treatment is appropriate',
+      conventional: 'Provides temporary cosmetic enhancement'
+    },
+    {
+      feature: 'Confidence',
+      ayurvedic: 'Helps improve confidence through gradual skin improvement',
+      conventional: 'Confidence depends on continued cosmetic coverage'
+    }
+  ]
       },
    pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -19129,7 +21062,61 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+        skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Treatment Is Right for You?",
+          description: "Makeup and concealers can be useful if you want quick, temporary coverage for a special occasion or as part of your daily routine. However, if you are looking for a longer-term solution to reduce the appearance of a birthmark, Birthmark Removal in Dubai offers a medically guided approach tailored to your individual skin and birthmark characteristics.\n\nDuring your consultation, our medical team assesses your skin type, the type of birthmark, and your treatment goals before recommending the most appropriate option. This personalized evaluation helps ensure safe treatment, realistic expectations, and gradual, natural-looking improvements while maintaining the health of your skin.",
+          points: []
+        }
+      ],
+    whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro: "Choosing the right clinic for birthmark removal in Dubai is important for achieving safe treatment, healthy skin healing, and natural-looking results. At RamaCare Polyclinic, we combine experienced medical professionals, advanced dermatological technology, and personalized treatment planning to provide care that is tailored to each patient's unique skin and birthmark characteristics.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Skin Assessment",
+      description: "Every treatment begins with a comprehensive consultation and skin assessment. Our doctors evaluate the type, size, depth, and location of the birthmark, along with your skin type, medical history, and treatment goals. This detailed evaluation allows us to recommend the most appropriate treatment approach, whether laser therapy or another medically suitable dermatological procedure."
+    },
+    {
+      id: 2,
+      title: "Advanced Medical Technology & Safe Treatment",
+      description: "We use modern, medical-grade equipment and follow established clinical protocols to ensure precision, patient comfort, and safety throughout every stage of treatment. From your initial consultation to follow-up care, our team monitors your progress closely and provides practical guidance to support optimal healing and long-term skin health."
+    },
+    {
+      id: 3,
+      title: "Personalized, Evidence-Based Care",
+      description: "At RamaCare Polyclinic, our goal is not only to reduce the appearance of birthmarks but also to improve your confidence through personalized, evidence-based care. We focus on realistic expectations, transparent communication, and gradual, natural-looking improvements that complement your skin's natural appearance."
+    }
+  ]
+},
+     aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription: "Recovery after birthmark removal in Dubai depends on the type of birthmark treated, the treatment method used, and your individual healing response. Most patients experience only mild redness, swelling, or temporary sensitivity immediately after the procedure, which generally improves within a few days. Your doctor will provide personalized aftercare instructions to promote comfortable healing and support the best possible outcome.",
+  resultPoints: [
+    "Keep the treated area clean and moisturized throughout the healing period.",
+    "Protect the treated skin from direct sun exposure during recovery.",
+    "Apply a broad-spectrum sunscreen daily to help prevent UV-related pigmentation changes.",
+    "Avoid scratching, rubbing, or picking at the treated area to allow natural healing.",
+    "Avoid harsh skincare products, exfoliants, and strong chemical ingredients unless recommended by your doctor.",
+    "Use gentle cleansers, maintain good hydration, and follow a clinically appropriate skincare routine to support healthy skin renewal.",
+    "Attend scheduled follow-up appointments so our medical team can monitor your healing progress.",
+    "Additional treatment sessions or maintenance care may be recommended depending on your individual response and treatment goals.",
+    "Following your personalized aftercare plan supports long-term improvements in skin appearance while helping maintain healthy, even-looking skin."
+  ]
+},
+ whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro: "Birthmark Removal in Dubai may be suitable for adults and older children who wish to reduce the appearance of pigmented or vascular birthmarks for cosmetic reasons or because of irritation and discomfort. Treatment is often considered for noticeable birthmarks, have become more prominent over time, or affect confidence in everyday life.",
+  points: [
+    "The most suitable candidates are individuals in good general health who have realistic expectations about the gradual nature of treatment.",
+    "Since every birthmark differs in size, depth, color, and location, a detailed medical consultation is necessary to determine the safest and most effective treatment approach."
+  ],
+  closing: "During your assessment, our experienced medical professionals evaluate your skin type, the characteristics of the birthmark, your medical history, and your treatment goals before recommending a personalized treatment plan. This individualized approach helps ensure patient safety, appropriate treatment selection, and gradual, natural-looking improvements while preserving the health and appearance of the surrounding skin."
+}
     },
 
      'aesthetic-dermatology-dubai-laser-treatment-scars-removal': {

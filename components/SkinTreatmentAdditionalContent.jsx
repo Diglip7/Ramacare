@@ -9,10 +9,44 @@ const SkinTreatmentAdditionalContent = ({ content }) => {
     whenToConsider,
     choosingRightApproach,
     skinConditions,
+    risksAndSafety,
   } = content;
 
   return (
     <div>
+      {/* Risks & Safety Section */}
+      {risksAndSafety && (
+        <section id="risks-and-safety" className="w-full py-12 md:py-16 bg-gradient-to-b from-[#F9FAFB] to-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#111827] mb-6">
+                {risksAndSafety.title}
+              </h2>
+              <p className="text-base md:text-lg text-[#6B7280]">
+                {risksAndSafety.intro}
+              </p>
+            </div>
+            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-[#E5E7EB]">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6">
+                {risksAndSafety.points.map((point, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-[#2D5F3F] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-base md:text-lg text-[#111827] font-medium">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 p-6 bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] rounded-2xl text-white text-center">
+                <p className="text-base md:text-lg">{risksAndSafety.closing}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Why Choose RamaCare Section */}
       {whyChooseSection && (
         <section id="why-choose-ramacare" className="w-full bg-gradient-to-b from-white to-[#F9FAFB] py-12 md:py-16">

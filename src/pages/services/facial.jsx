@@ -12,6 +12,9 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import TreatmentAreasAndCare from '../../../components/TreatmentAreasAndCare';
+import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
+import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -21,6 +24,21 @@ export default function FacialPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/facial');
+
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'treatment-areas-care', label: 'Types' },
+    { id: 'when-to-consider', label: 'Ideal Candidate' },
+    { id: 'risks-and-safety', label: 'Safety' },
+    { id: 'recovery-aftercare', label: 'Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Us' },
+    { id: 'testimonials', label: 'Success Stories' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' },
+  ];
 
   return (
     <Layout>
@@ -35,7 +53,7 @@ export default function FacialPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+     <QuickNavigation navItems={navItems} />
     
     <TreatmentOverview 
       subcategoryName={subcategoryName}
@@ -45,6 +63,9 @@ export default function FacialPage() {
       <TreatmentBenefits 
         content={content?.benefits}
       />
+      <TreatmentAreasAndCare content={content?.treatmentAreasAndCare} />
+      <SkinTreatmentAdditionalContent content={content} />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
     

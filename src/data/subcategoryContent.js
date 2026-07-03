@@ -24728,7 +24728,7 @@ healingJourney: {
    'facial-dubai-face-prp': {
     hero: {
       subtitle: 'Revitalize Your Skin with Advanced Platelet-Rich Plasma Therapy',
-      description: 'At ramacarepolyclinic, our Face PRP in Dubai treatment harnesses the healing power of your own platelets to rejuvenate skin, reduce fine lines, improve texture, and restore a youthful, natural glow.',
+      description: 'Healthy, youthful skin depends on collagen, elastin, and the body\'s natural ability to repair itself.As we age, collagen production gradually declines, leading to fine lines, uneven skin texture, dullness, and reduced skin elasticity.Environmental factors such as sun exposure, pollution, stress, and lifestyle habits can further accelerate these visible signs of aging.Face PRP in Dubai offers a natural, minimally invasive solution to rejuvenate the skin by stimulating its own healing and regenerative processes. At RamaCare Polyclinic, we provide Face PRP in Dubai using advanced Platelet-Rich Plasma (PRP) therapy derived from a small sample of your own blood. The concentrated platelets contain powerful growth factors that encourage collagen production, improve skin texture, enhance elasticity, and support healthy cell renewal.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -24811,163 +24811,190 @@ healingJourney: {
     overview: {
       title: 'Understanding Face PRP',
       problemIntro: {
-        title: 'Common Skin Concerns Addressed',
-        description: 'Many people struggle with aging, sun damage, or dull skin due to lifestyle and environmental factors. Face PRP in Dubai addresses:'
+        title: 'Common Skin Concerns Addressed by Face PRP',
+        description: 'As we age, the skin\'s natural ability to repair itself gradually slows, leading to reduced collagen production, loss of elasticity, uneven skin texture, and visible signs of aging. Daily exposure to sunlight, pollution, stress, poor lifestyle habits, and environmental damage can further accelerate skin aging, leaving the complexion looking dull, tired, and less vibrant. Face PRP in Dubai helps stimulate the skin\'s natural healing process by encouraging collagen production and cellular regeneration, supporting healthier, smoother, and more youthful-looking skin.'
       },
       solutionIntro: {
-        title: 'Our Solution – Face PRP',
-        description: ' At ramacarepolyclinic, our Face PRP in Dubai uses a safe, non-surgical technique to inject platelet-rich plasma into the skin, stimulating natural healing, collagen production, and rejuvenation.'
+        title: 'Advanced Face PRP in Dubai for Natural Skin Rejuvenation',
+        description: ' At RamaCare Polyclinic, we provide Face PRP in Dubai using an advanced, doctor-led approach that harnesses your body\'s own natural healing abilities to rejuvenate the skin. Platelet-Rich Plasma (PRP) is prepared from a small sample of your blood and contains concentrated growth factors that stimulate collagen production, encourage cell regeneration, and improve overall skin health. This minimally invasive treatment helps reduce the appearance of fine lines, acne scars, uneven skin tone, and dullness while restoring a naturally refreshed and youthful complexion.'
       },
       leftCards: [
         {
           id: 1,
           title: 'What Is Face PRP?',
-          description: 'Platelet-Rich Plasma (PRP) therapy is a non-surgical skin rejuvenation treatment that uses your own blood platelets to stimulate collagen, promote cell regeneration, and enhance skin health.'
+          description: 'Face PRP (Platelet-Rich Plasma) is a non-surgical skin rejuvenation treatment that uses the healing and regenerative properties of your own blood to improve skin health naturally. A small sample of blood is collected and processed to concentrate the platelets, which are rich in growth factors that support tissue repair and collagen production. The prepared PRP is then carefully applied or injected into targeted areas of the face to stimulate cell renewal, improve skin texture, enhance elasticity, and restore a healthy, youthful appearance. At RamaCare Polyclinic, our Face PRP in Dubai treatment is performed by experienced medical professionals using advanced techniques to safely rejuvenate the skin with minimal downtime. Because the treatment uses your body\'s own platelets, it offers a natural approach to facial rejuvenation while reducing the risk of allergic reactions.'
         },
         {
           id: 2,
           title: 'Who Can Benefit From Face PRP?',
-          description: 'This treatment is ideal for individuals who:',
+          description: 'Face PRP is suitable for adults who want to improve their skin naturally without surgery. You may benefit from this treatment if you:',
           listItems: [
-            'Want to reduce fine lines and early signs of aging',
-            'Have dull, uneven, or sagging skin',
-            'Seek a natural, non-invasive facial rejuvenation solution',
-            'Desire a healthy, radiant glow without surgery'
+            'Notice fine lines and early signs of skin aging',
+'Have dull, tired, or uneven-looking skin',
+'Want to improve skin texture and elasticity',
+'Experience acne scars or mild skin imperfections',
+'Have enlarged pores or uneven skin tone',
+'Wish to stimulate collagen production naturally',
+'Prefer a minimally invasive facial rejuvenation treatment',
+'Want healthier, brighter, and more youthful-looking skin',
           ]
         },
         {
           id: 3,
-          title: 'Why Choose Face PRP at Ramacare Polyclinic',
+          title: 'Why Choose Face PRP at RamaCare Polyclinic?',
+          description:'Choosing an experienced medical team is essential for achieving safe and natural-looking skin rejuvenation. At RamaCare Polyclinic, we provide personalized Face PRP in Dubai treatments focused on improving long-term skin health.',
           listItems: [
-            'Stimulates collagen production for firmer skin',
-            'Reduces fine lines, wrinkles, and sagging',
-            'Improves skin texture, tone, and elasticity',
-            'Safe, natural, and non-surgical treatment',
-            'Personalized approach tailored to each patient’s skin type'
+            'Doctor-led PRP consultations and treatments',
+'Uses your body\'s own natural growth factors',
+'Stimulates collagen and elastin production',
+'Improves skin texture, tone, and elasticity',
+'Helps reduce fine lines, acne scars, and uneven skin tone',
+'Personalized treatment plans for every skin type',
+'Minimally invasive procedure with little downtime',
+'Safe, hygienic, and patient-centered clinical care',
           ]
         },
         {
           id: 4,
-          title: 'Why Patients Choose Face PRP at Ramacare Polyclinic',
-          description: 'Our Face PRP in Dubai treatment focuses on natural rejuvenation, safety, and long-term results. Patients choose it for:',
-          listItems: [
-            'Collagen stimulation and improved skin elasticity',
-            'Reduction of fine lines, wrinkles, and scarring',
-            'Natural, non-surgical approach with minimal downtime',
-            'Personalized treatment plans for optimal results'
-          ]
+          title: 'Treatment Duration and Results',
+          description: 'A typical face PRP in Dubai session takes approximately 60 to 75 minutes, including blood collection, PRP preparation, and treatment. Many patients notice an improvement in skin hydration and radiance within a few weeks, while collagen production continues to increase over the following months. For optimal skin rejuvenation, a series of 3 to 4 sessions spaced about 4 to 6 weeks apart is commonly recommended, followed by maintenance treatments based on your skin\'s needs.',
+         
         }
       ],      
-   rootCauses: [
+  rootCauses: [
   {
     id: 1,
-    title: 'Aging & Fine Lines ',
-    description: 'As collagen and elastin levels decline with age, the skin begins to lose firmness and elasticity. This leads to wrinkles, sagging skin, crow’s feet, and forehead lines. Without professional anti-ageing treatments in Dubai, fine lines can deepen and become more prominent over time.',
+    title: 'Aging & Fine Lines',
+    description:
+      'The natural decline of collagen and elastin causes fine lines, wrinkles, and reduced skin firmness. PRP therapy encourages collagen regeneration, helping improve skin texture and soften early signs of aging.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Dull & Uneven Skin Tone ',
-    description: 'Excess sun exposure, pigmentation, and environmental stress reduce natural skin radiance. Uneven skin tone, dark patches, and tired-looking skin are common concerns that require advanced skin rejuvenation solutions.',
+    title: 'Dull & Uneven Skin Tone',
+    description:
+      'Sun exposure, pigmentation, environmental pollution, and reduced skin renewal may result in uneven skin tone and loss of natural radiance. PRP supports healthier skin renewal for a brighter complexion.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 3,
-    title: 'Loss of Skin Volume ',
-    description: 'With age, facial fat and tissue density decrease, resulting in hollow cheeks, under-eye shadows, and sagging jawlines. Volume loss contributes to an aged appearance and reduces facial contour definition.',
+    title: 'Loss of Skin Volume',
+    description:
+      'As facial tissues naturally lose collagen and structural support, the skin may appear less firm and youthful. PRP helps improve overall skin quality and elasticity, contributing to a healthier appearance.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 4,
-    title: 'Scarring & Acne Marks ',
-    description: 'Post-acne scars, pigmentation, and minor skin trauma can disrupt smooth skin texture. When skin renewal slows, these marks persist longer, affecting overall complexion clarity.',
+    title: 'Acne Scars & Skin Texture',
+    description:
+      'Previous acne breakouts, minor scars, and uneven skin texture can affect skin smoothness. By promoting tissue repair and cell regeneration, PRP can help improve the appearance of mild acne scars and overall skin texture.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 5,
-    title: 'Stress & Lifestyle Factors ',
-    description: 'Poor sleep, smoking, unhealthy diet, and chronic stress weaken the skin’s repair mechanism. This leads to dehydration, fine lines, breakouts, and reduced glow, making professional skin revitalization treatments important.',
+    title: 'Stress & Lifestyle-Related Skin Changes',
+    description:
+      'Poor sleep, smoking, dehydration, unhealthy eating habits, and chronic stress can reduce the skin’s ability to repair itself, leading to dullness, dehydration, and early aging. PRP supports the skin’s natural healing and renewal processes.',
     severity: 'Medium',
     severityColor: 'bg-[#FEF3C7] text-[#92400E]'
   },
   {
     id: 6,
-    title: 'Reduced Skin Elasticity & Firmness ',
-    description: 'Declining collagen production weakens the skin’s support structure, leading to sagging around the cheeks and jawline. Without collagen-stimulating treatments in Dubai, firmness continues to decrease.',
+    title: 'Reduced Skin Elasticity & Firmness',
+    description:
+      'Declining collagen production weakens the skin’s support structure over time, contributing to skin laxity and reduced firmness. PRP stimulates natural collagen formation, helping improve skin elasticity and overall skin health gradually.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-  },
-], 
+  }
+],
       quickFacts: [
-        { label: 'Treatment Type', value: 'Multi-step facial treatment' },
-        { label: 'Duration', value: '60-75 minutes' },
-        { label: 'Frequency', value: 'Monthly (maintenance)' },
-        { label: 'Downtime', value: 'None' }
+        { label: 'Treatment Type', value: 'Non-surgical regenerative facial treatment' },
+        { label: ' Procedure Time', value: '60-75 minutes' },
+        { label: 'Anesthesia', value: 'Topical numbing cream may be used if required' },
+        { label: 'Downtime', value: 'Minimal; mild redness may occur temporarily' },
+        { label: 'Recommended Sessions', value: 'Usually 3–4 sessions followed by maintenance' },
+        { label: 'Frequency', value: 'Approximately every 4–6 weeks initially' },
+        { label: 'Suitable For', value: 'Adults seeking natural skin rejuvenation' },
+        { label: 'Possible Side Effects', value: 'Temporary redness, mild swelling, or slight tenderness' },
       ],
     approachCards: [
   {
     id: 1,
-    title: 'PRP-Based Regeneration',
-    description: 'This treatment utilizes platelet-rich plasma (PRP) derived from your own blood to activate collagen, elastin, and new skin cell growth.',
+    title: 'PRP-Based Skin Regeneration',
+    description:
+      'The treatment begins by collecting a small sample of your blood, which is processed using specialized equipment to isolate platelet-rich plasma. The concentrated PRP contains powerful growth factors that stimulate collagen and elastin production, support tissue repair, and encourage healthy skin cell renewal.',
     hasLearnMore: true,
-    expandedContent: 'By stimulating the skin’s natural repair process, PRP therapy in Dubai helps restore firmness, smoothness, and youthful vitality without synthetic fillers or surgery.'
+    expandedContent:
+      'Because the treatment uses your own blood components, it is naturally biocompatible and well tolerated by most patients.'
   },
   {
     id: 2,
-    title: 'Targeted Rejuvenation',
-    description: 'Precision PRP injections are administered to areas affected by fine lines, wrinkles, acne scars, pigmentation, and under-eye darkness.',
+    title: 'Targeted Facial Rejuvenation',
+    description:
+      'Our experienced medical professionals carefully administer PRP to areas showing visible signs of aging or skin damage. Depending on your skin concerns, treatment may target fine lines, wrinkles, acne scars, enlarged pores, pigmentation, under-eye concerns, and uneven skin texture.',
     hasLearnMore: true,
-    expandedContent: 'This targeted approach ensures effective facial rejuvenation while promoting even skin tone and improved texture.'
+    expandedContent:
+      'Every procedure is customized to achieve balanced, natural-looking skin rejuvenation while preserving your unique facial features.'
   },
   {
     id: 3,
-    title: 'Skin Nourishment',
-    description: 'Face PRP treatment deeply revitalizes the skin by enhancing blood circulation and activating growth factors.',
+    title: 'Improved Skin Nutrition and Healing',
+    description:
+      'PRP promotes better blood circulation and activates the skin’s natural healing process. As collagen production gradually increases, many patients experience smoother skin texture, improved hydration, enhanced elasticity, and a healthier, more radiant complexion.',
     hasLearnMore: true,
-    expandedContent: 'This improves hydration, refines pores, and boosts overall skin radiance for a healthier complexion.'
+    expandedContent:
+      'These regenerative effects continue to develop over several weeks following treatment.'
   },
   {
     id: 4,
-    title: 'Lifestyle & Post-Treatment Guidance',
-    description: 'We provide personalized skincare, nutrition, and lifestyle recommendations to enhance PRP results.',
+    title: 'Personalized Skincare and Lifestyle Guidance',
+    description:
+      'Achieving long-lasting skin health requires more than a single treatment. After your Face PRP in Dubai session, our team provides personalized recommendations on skincare products, sun protection, hydration, nutrition, and healthy lifestyle habits to help maximize collagen production and maintain your results.',
     hasLearnMore: true,
-    expandedContent: 'Proper aftercare supports collagen regeneration, prolongs treatment benefits, and maintains long-term skin health.'
+    expandedContent:
+      'We also advise on suitable maintenance treatments based on your skin’s condition.'
   },
   {
     id: 5,
-    title: 'Natural & Safe Procedure',
-    description: 'Since PRP uses your own blood components, the treatment is highly safe, biocompatible, and carries minimal risk of allergic reactions.',
+    title: 'Safe, Natural, and Minimally Invasive Treatment',
+    description:
+      'Since PRP is prepared from your own blood, there is minimal risk of allergic reactions or rejection. The treatment is performed under strict medical and hygiene protocols by experienced professionals, making it a safe option for patients seeking natural skin rejuvenation without synthetic fillers or surgery.',
     hasLearnMore: true,
-    expandedContent: 'Making it a trusted facial rejuvenation option in Dubai.'
+    expandedContent: ''
   },
   {
     id: 6,
-    title: 'Minimal Downtime & Quick Recovery',
-    description: 'Face PRP is a minimally invasive procedure with little to no downtime.',
+    title: 'Minimal Downtime with Gradual, Natural Results',
+    description:
+      'Face PRP requires little to no downtime, allowing most patients to return to their normal daily activities shortly after treatment. Mild redness or slight swelling may occur temporarily, but these effects generally resolve within a short period.',
     hasLearnMore: true,
-    expandedContent: 'Patients can typically resume normal activities quickly, making it ideal for busy lifestyles.'
-  },
+    expandedContent:
+      'As collagen production increases over the following weeks, the skin gradually becomes firmer, smoother, brighter, and more youthful-looking, providing natural results that continue to improve over time.'
+  }
 ]
     },
-   healingJourney: {
-  title: 'Your Skin & Hair Rejuvenation Journey: Step by Step',
-  description: 'A transparent, structured approach to ensure safe, effective, and long-lasting results with Face PRP in Dubai.',
+  healingJourney: {
+  title: 'Your Face PRP Treatment Journey',
+  description:
+    'At RamaCare Polyclinic, our Face PRP in Dubai treatment follows a structured, doctor-supervised process designed to maximize skin rejuvenation while ensuring patient comfort and safety. Every stage is personalized according to your skin condition, concerns, and aesthetic goals. By stimulating your body\'s natural collagen production and tissue repair, Face PRP helps improve skin texture, elasticity, hydration, and overall skin health with gradual, natural-looking results.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation',
+      title: 'Initial Consultation & Skin Assessment',
       duration: 'Step 1',
-      description: 'Comprehensive assessment including skin type, hair density (if applicable), medical history, and aesthetic goals.',
+      description:
+        'Your journey begins with a comprehensive consultation and detailed skin evaluation. Our experienced medical professionals assess your skin type, texture, elasticity, pigmentation, hydration, acne scars, fine lines, and overall skin condition. We also review your medical history, lifestyle factors, and skincare routine to determine whether Face PRP is the most suitable treatment for your needs.',
       keyActivities: [
-        'Detailed health & skin/hair questionnaire',
-        'Skin texture and elasticity evaluation',
-        'Hair/scalp condition assessment (if applicable)',
-        'Personalized Face PRP treatment plan creation'
+        'Comprehensive facial skin assessment',
+        'Evaluation of skin texture, elasticity, and hydration',
+        'Assessment of fine lines, pigmentation, and acne scars',
+        'Review of medical history and treatment suitability',
+        'Development of a personalized Face PRP treatment plan'
       ],
       side: 'right'
     },
@@ -24976,123 +25003,183 @@ healingJourney: {
       number: '02',
       title: 'Preparation Phase',
       duration: 'Step 2',
-      description: 'Gentle skin and scalp preparation to ensure maximum PRP efficacy and minimal post-procedure sensitivity.',
+      description:
+        'Before treatment begins, the skin is thoroughly cleansed to remove makeup, oil, and impurities. A small sample of your blood is then collected and processed using a centrifuge to separate the platelet-rich plasma (PRP), which contains concentrated growth factors. If necessary, a topical numbing cream is applied to improve comfort during the procedure.',
       keyActivities: [
-        'Cleansing and exfoliation of the treatment area',
-        'Blood sample collection and PRP preparation',
-        'Numbing cream application for comfort',
-        'Pre-treatment hydration and sun protection advice'
+        'Cleansing and preparation of the treatment area',
+        'Blood sample collection',
+        'Preparation of platelet-rich plasma (PRP)',
+        'Application of topical numbing cream when appropriate',
+        'Final preparation before treatment'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Face PRP Treatment Phase',
+      title: 'Face PRP Treatment Session',
       duration: 'Step 3',
-      description: 'PRP (Platelet-Rich Plasma) injections to stimulate collagen, improve skin tone, reduce fine lines, and promote hair growth if applied to the scalp.',
+      description:
+        'The prepared PRP is carefully applied or injected into targeted areas of the face using advanced medical techniques. The growth factors in the PRP stimulate collagen production, support tissue regeneration, and enhance the skin\'s natural healing process. The procedure is customized according to your individual skin concerns to promote smoother, healthier, and more youthful-looking skin.',
       keyActivities: [
-        '2–3 Face PRP sessions per month (depending on plan)',
-        'Targeted injections for cheeks, under-eye, forehead, or scalp',
-        'Post-treatment care: cooling, serum application, gentle massage',
-        'Progress monitoring and plan adjustments based on results'
+        'Precise PRP application or injections',
+        'Targeted treatment of areas with fine lines, acne scars, pigmentation, or uneven texture',
+        'Stimulation of collagen and elastin production',
+        'Continuous monitoring of patient comfort',
+        'Immediate post-treatment skincare guidance'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Maintenance & Follow-up',
+      title: 'Recovery, Follow-Up & Maintenance',
       duration: 'Step 4',
-      description: 'Sustaining results with periodic sessions and lifestyle guidance for long-term rejuvenation.',
+      description:
+        'Following your PRP treatment, our team provides detailed aftercare instructions to support healing and maximize your results. Mild redness or slight swelling may occur temporarily and usually resolves quickly. Depending on your skin condition and treatment goals, a series of sessions may be recommended for optimal collagen stimulation. Regular follow-up appointments allow us to monitor your progress and adjust your treatment plan if required.',
       keyActivities: [
-        'Monthly check-ins to evaluate improvement',
-        'Seasonal or touch-up PRP sessions',
-        'Ongoing skin/hair care advice',
-        'Guidance for diet, hydration, and stress management to support results'
+        'Assessment of skin healing and treatment response',
+        'Personalized skincare and sun protection advice',
+        'Recommendations for hydration and healthy lifestyle habits',
+        'Scheduling follow-up or maintenance sessions',
+        'Long-term skin health monitoring'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Expected Result',
       duration: null,
-      description: 'Healthier, firmer, brighter skin and improved hair density (if applicable) with rejuvenated appearance and natural glow through professional Face PRP in Dubai treatments.',
+      description:
+        'With a personalized treatment plan and proper aftercare, Face PRP in Dubai can help improve skin texture, firmness, hydration, and overall radiance. As collagen production gradually increases over the following weeks, many patients notice smoother skin, softer fine lines, improved elasticity, a brighter complexion, and a naturally refreshed, youthful appearance. Individual results vary depending on skin condition, age, and adherence to the recommended treatment plan.',
       keyActivities: [],
       side: 'right'
     }
   ]
 },
-    benefits: {
-      title: 'Clinically-Observed Benefits',
-      description: 'Evidence-based results from Signature Hydra Facial treatments.',
-      comparisonTitle: 'Signature Hydra Facial vs Traditional Facials',
-      comparisonDescription: 'Compare our advanced HydraFacial technology with traditional facials',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Face PRP',
-        traditional: 'Traditional Treatments'
-      },
-      benefits: [
-        {
-          id: 1,
-          title: 'Increased collagen production for firmer, youthful skin',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 2,
-          title: ' Reduced fine lines, wrinkles, and sagging',
-          percentage: 94,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Improved skin texture, tone, and natural glow',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Safe and natural, minimal downtime',
-          percentage: 95,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Long-lasting, non-surgical skin rejuvenation',
-          percentage: 98,
-          description: null
-        }
-      ],      
-      comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Uses your own platelets to stimulate natural collagen production',
-          conventional: 'Topical creams or chemical treatments'
-        },
-        {
-          feature: 'Invasiveness',
-          ayurvedic: 'Non-surgical, minimally invasive',
-          conventional: 'May include injectables or surgical options'
-        },
-        {
-          feature: 'Skin Benefits',
-          ayurvedic: 'Improves texture, tone, elasticity, and natural glow',
-          conventional: 'Temporary improvements, limited long-term effects'
-        },
-        {
-          feature: 'Safety',
-          ayurvedic: 'Natural, safe, with minimal side effects',
-          conventional: 'Risk of allergic reaction or irritation'
-        },
-        {
-          feature: 'Long-Term Results',
-          ayurvedic: 'Promotes natural rejuvenation over time',
-          conventional: 'Short-term improvement may require repeated treatments'
-        },
-      ]
+   benefits: {
+  title: 'Clinically Observed Benefits of Face PRP in Dubai',
+  description:
+    "At RamaCare Polyclinic, our Face PRP in Dubai treatment is designed to naturally rejuvenate the skin by stimulating collagen production and supporting the body's own healing process. With over 15 years of experience in advanced skin rejuvenation treatments, we combine medical expertise with personalized care to help patients achieve healthier, firmer, and more radiant skin. Individual results vary depending on age, skin condition, lifestyle, and adherence to the recommended treatment plan.",
+ comparisonTitle: 'Face PRP vs. Traditional Facial Rejuvenation Treatments',
+comparisonDescription:
+  'Understanding the Difference Before Choosing Your Care. If you are looking to improve your skin’s appearance, it is important to understand how Face PRP in Dubai differs from traditional facial treatments. While conventional facials and topical skincare products primarily cleanse, hydrate, and temporarily improve the skin’s surface, Platelet-Rich Plasma (PRP) works by stimulating your body’s natural healing response. Using growth factors derived from your own blood, PRP encourages collagen production, supports cell regeneration, and improves overall skin quality from within. At RamaCare Polyclinic, every Face PRP treatment is personalized to your skin type and aesthetic goals, helping you achieve gradual, natural-looking skin rejuvenation with minimal downtime.',
+comparisonHeaders: {
+  feature: 'Aspect',
+  ourTreatment: 'Face PRP',
+  traditional: 'Traditional Facial Treatments'
+  },
+  benefits: [
+    {
+      id: 1,
+      title: 'Increased Collagen Production for Firmer Skin',
+      percentage: 90,
+      description:
+        'The concentrated growth factors in Platelet-Rich Plasma (PRP) stimulate the body’s natural collagen and elastin production, helping improve skin firmness, elasticity, and overall skin quality over time.',
+      hasLearnMore: true,
+      expandedContent:
+        'Face PRP encourages natural collagen regeneration, improving skin structure and supporting long-term skin rejuvenation without surgery.'
+    },
+    {
+      id: 2,
+      title: 'Reduced Fine Lines & Early Signs of Aging',
+      percentage: 94,
+      description:
+        'Regular Face PRP treatments help soften the appearance of fine lines and early wrinkles while improving skin texture for a smoother, more youthful appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'As collagen production increases, the skin gradually appears firmer, smoother, and naturally refreshed with continued improvement over time.'
+    },
+    {
+      id: 3,
+      title: 'Improved Skin Texture, Tone & Natural Radiance',
+      percentage: 90,
+      description:
+        'PRP supports healthy skin cell regeneration, helping improve uneven skin tone, reduce dullness, refine skin texture, and restore a brighter complexion.',
+      hasLearnMore: true,
+      expandedContent:
+        'The treatment enhances overall skin quality by promoting healthier skin renewal and a naturally radiant appearance.'
+    },
+    {
+      id: 4,
+      title: 'Safe, Natural Treatment with Minimal Downtime',
+      percentage: 95,
+      description:
+        'Because Face PRP uses your own blood-derived platelets, the treatment is highly biocompatible and minimally invasive.',
+      hasLearnMore: true,
+      expandedContent:
+        'Most patients return to their normal daily activities shortly after treatment, with only temporary redness or mild swelling that resolves quickly.'
+    },
+    {
+      id: 5,
+      title: 'Long-Lasting, Non-Surgical Skin Rejuvenation',
+      percentage: 98,
+      description:
+        'As collagen continues to develop over the weeks following treatment, many patients experience gradual, natural-looking improvements in skin quality, firmness, hydration, and overall facial rejuvenation.',
+      hasLearnMore: true,
+      expandedContent:
+        'Face PRP provides long-lasting skin rejuvenation without surgery. Individual results may vary depending on skin type, age, lifestyle, medical history, and completion of the recommended treatment sessions.'
+    }
+  ],   
+     comparisonData: [
+  {
+    feature: 'Primary Approach',
+    ayurvedic:
+      "Uses platelet-rich plasma from your own blood to stimulate collagen production and natural skin regeneration.",
+    conventional:
+      "Primarily uses topical products, cleansing, exfoliation, and hydration to improve the skin's surface."
+  },
+  {
+    feature: 'Procedure',
+    ayurvedic:
+      'Non-surgical, minimally invasive regenerative treatment.',
+    conventional:
+      'Non-invasive facial therapies using skincare products and manual techniques.'
+  },
+  {
+    feature: 'How It Works',
+    ayurvedic:
+      "Activates the skin's natural healing process through concentrated growth factors.",
+    conventional:
+      "Cleanses, moisturizes, and temporarily refreshes the outer layer of the skin."
+  },
+  {
+    feature: 'Skin Benefits',
+    ayurvedic:
+      'Improves skin texture, elasticity, hydration, fine lines, acne scars, and overall skin quality.',
+    conventional:
+      'Enhances hydration and radiance but generally offers temporary cosmetic improvements.'
+  },
+  {
+    feature: 'Safety',
+    ayurvedic:
+      'Uses your own blood components, reducing the risk of allergic reactions or rejection.',
+    conventional:
+      'Safety depends on the products used and individual skin sensitivity.'
+  },
+  {
+    feature: 'Downtime',
+    ayurvedic:
+      'Minimal; temporary redness or mild swelling may occur.',
+    conventional:
+      'Usually little to no downtime.'
+  },
+  {
+    feature: 'Long-Term Results',
+    ayurvedic:
+      'Gradual improvements as collagen production increases over several weeks and months.',
+    conventional:
+      'Benefits are generally short-term and require regular maintenance sessions.'
+  },
+  {
+    feature: 'Best Suited For',
+    ayurvedic:
+      'Individuals seeking natural skin rejuvenation, collagen stimulation, and long-term skin health.',
+    conventional:
+      'Individuals seeking routine skin maintenance, cleansing, hydration, and temporary skin refreshment.'
+  }
+]
     },
    pricing: {
   title: 'Transparent Pricing & Face PRP Treatment Packages in Dubai',
@@ -25345,8 +25432,8 @@ healingJourney: {
 },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Your Signature Hydra Facial Today',
-      description: 'Experience the ultimate facial treatment for radiant, hydrated, and glowing skin. Our DHA-licensed specialists are ready to help you achieve your skincare goals with advanced HydraFacial technology.',
+      title: 'Book Your Face PRP in Dubai Today',
+      description: 'Rejuvenate your skin naturally with Face PRP in Dubai at RamaCare Polyclinic, where expert care meets personalized treatment for smoother, healthier, and more radiant skin.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Session',
@@ -25371,8 +25458,8 @@ healingJourney: {
           description: 'Certified Medical Facility'
         },
         {
-          title: 'HydraFacial Certified',
-          description: 'Official Technology Partner'
+          title: 'Experienced Team',
+          description: '15+ Years Combined'
         },
         {
           title: '3000+ Sessions',
@@ -25383,6 +25470,64 @@ healingJourney: {
           description: 'Patient Reviews'
         }
       ]
+    },
+    whyChooseSection: {
+      title: 'Why Choose RamaCare Polyclinic for Face PRP in Dubai',
+      intro: 'Choosing the right clinic is essential for achieving safe, natural-looking skin rejuvenation. At RamaCare Polyclinic, we provide Face PRP in Dubai using a personalized, doctor-led approach focused on improving your skin\'s long-term health rather than simply treating visible symptoms. Every patient receives a comprehensive skin assessment to evaluate skin texture, hydration, pigmentation, elasticity, and overall skin condition before a customized treatment plan is created.',
+      features: [
+        {
+          id: 1,
+          title: 'Experienced Medical Professionals',
+          description: 'Our experienced medical professionals perform PRP therapy using advanced preparation techniques and strict clinical protocols to ensure safety, precision, and consistent treatment quality.'
+        },
+        {
+          id: 2,
+          title: 'Natural Healing Process',
+          description: 'Because Platelet-Rich Plasma is prepared from your own blood, the treatment supports the skin\'s natural healing process while minimizing the risk of allergic reactions.'
+        },
+        {
+          id: 3,
+          title: 'Personalized Care Beyond Treatment',
+          description: 'We believe successful skin rejuvenation extends beyond the treatment itself. From your initial consultation to follow-up appointments, our team provides honest advice, personalized skincare recommendations, and ongoing support to help you maintain healthier, smoother, and more radiant skin.'
+        },
+        {
+          id: 4,
+          title: 'Tailored to Your Needs',
+          description: 'Whether your goal is to reduce fine lines, improve skin texture, or restore a youthful glow, RamaCare Polyclinic is committed to delivering professional care and natural-looking results tailored to your individual needs.'
+        }
+      ]
+    },
+    aftercareContent: {
+      resultsTitle: 'Recovery & Aftercare',
+      resultsDescription: 'One of the advantages of Face PRP in Dubai is the minimal recovery time associated with the procedure. Since the treatment uses your body\'s own platelet-rich plasma, most patients experience only mild redness, slight swelling, or temporary tenderness immediately after treatment. These effects are generally short-lived and usually subside within one to two days, allowing you to return to most daily activities shortly after your appointment.',
+      resultPoints: [
+        'Avoid touching the treated area unnecessarily for the first few hours',
+        'Use gentle skincare products during the initial recovery period',
+        'Daily application of a broad-spectrum sunscreen helps protect the skin while new collagen develops',
+        'Maintain adequate hydration supports the skin\'s natural healing process',
+        'For the first 24 to 48 hours, avoid excessive sun exposure, strenuous exercise, hot showers, saunas, swimming pools, and harsh exfoliating products that could irritate the skin',
+        'A healthy lifestyle, balanced nutrition, sufficient sleep, and regular skincare maintenance can further enhance collagen production and prolong treatment results',
+        'Our medical team also schedules follow-up visits when appropriate to monitor your progress and recommend maintenance sessions based on your skin\'s individual needs'
+      ],
+      additionalInfo: {
+        title: '',
+        description: ' A healthy lifestyle, balanced nutrition, sufficient sleep, and regular skincare maintenance can further enhance collagen production and prolong treatment results. Our medical team also schedules follow-up visits when appropriate to monitor your progress and recommend maintenance sessions based on your skin\'s individual needs.'
+      }
+    },
+    whenToConsider: {
+      title: 'Who Is a Suitable Candidate for Face PRP?',
+      intro: 'Face PRP in Dubai is suitable for adults who want to naturally improve their skin\'s appearance without surgery or synthetic fillers. It is an excellent option for individuals experiencing early signs of aging, fine lines, uneven skin texture, enlarged pores, dull complexions, mild acne scars, or reduced skin elasticity.',
+      points: [
+        'Early signs of aging',
+        'Fine lines',
+        'Uneven skin texture',
+        'Enlarged pores',
+        'Dull complexions',
+        'Mild acne scars',
+        'Reduced skin elasticity',
+        'Desire for regenerative approach to facial rejuvenation by stimulating your body\'s own collagen production'
+      ],
+      closing: 'Whether you want to refresh tired-looking skin, improve overall skin quality, or maintain a youthful complexion, Face PRP can be customized to suit a variety of skin types and aesthetic goals. During your consultation at RamaCare Polyclinic, our experienced doctors carefully evaluate your skin condition, medical history, and expectations to determine whether Face PRP is the most appropriate treatment. If another skin rejuvenation procedure is better suited to your needs, we will recommend a personalized treatment plan designed to achieve safe, effective, and natural-looking results.'
     }
   },
 

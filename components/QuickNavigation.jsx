@@ -39,7 +39,7 @@ const QuickNavigation = ({ navItems }) => {
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 100; // Offset for smooth scrolling
+      const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

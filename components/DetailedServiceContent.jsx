@@ -42,10 +42,12 @@ const DetailedServiceContent = ({ content }) => {
       case 'why-choose':
       case 'process':
       case 'comparison':
+      case 'suitability':
+      case 'early-intervention':
       case 'benefits-grid':
         if (section.type === 'benefits-grid') {
           return (
-            <section key={index} className={`py-20 ${isEven ? 'bg-white' : 'bg-gray-50/50'}`}>
+            <section key={index} id={section.title.toLowerCase().replace(/\s+/g, '-')} className={`py-20 ${isEven ? 'bg-white' : 'bg-gray-50/50'}`}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{section.title}</h2>
@@ -68,7 +70,7 @@ const DetailedServiceContent = ({ content }) => {
           );
         } else {
           return (
-            <section key={index} className={`py-20 ${isEven ? 'bg-white' : 'bg-gray-50/50'}`}>
+            <section key={index} id={section.title.toLowerCase().replace(/\s+/g, '-')} className={`py-20 ${isEven ? 'bg-white' : 'bg-gray-50/50'}`}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                   <div className={isEven ? 'order-1' : 'order-1 lg:order-2'}>
@@ -126,7 +128,7 @@ const DetailedServiceContent = ({ content }) => {
     const isGroupEven = groupIndex % 2 === 0;
     
     return (
-      <section key={groupIndex} className="py-16 bg-gradient-to-br from-gray-50 to-white">
+      <section key={groupIndex} id={`${leftSection.title.toLowerCase().replace(/\s+/g, '-')}-${rightSection.title.toLowerCase().replace(/\s+/g, '-')}`} className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Side - First Section */}

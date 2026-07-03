@@ -164,28 +164,30 @@ const TreatmentAdditionalContent = ({ content }) => {
                 )}
               </div>
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#E5E7EB]">
-                <ul className="space-y-6">
-                  {(whyChoose || whyChooseSection).points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#2D5F3F] to-[#3A7B51] rounded-full flex items-center justify-center mt-0.5 shadow-lg">
-                        <svg
-                          className="w-6 h-6 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-[#111827] font-semibold text-lg">{point}</p>
-                    </li>
-                  ))}
-                </ul>
+                {((whyChoose || whyChooseSection)?.points) && (
+                  <ul className="space-y-6">
+                    {(whyChoose || whyChooseSection).points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#2D5F3F] to-[#3A7B51] rounded-full flex items-center justify-center mt-0.5 shadow-lg">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <p className="text-[#111827] font-semibold text-lg">{point}</p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {((whyChoose || whyChooseSection).note) && (
                   <div className="mt-6 pt-6 border-t border-[#E5E7EB]">
                     <p className="text-[#6B7280] text-sm">{(whyChoose || whyChooseSection).note}</p>
