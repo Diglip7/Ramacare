@@ -12,6 +12,9 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import TreatmentAdditionalContent from '../../../components/TreatmentAdditionalContent';
+import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
+import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -21,6 +24,19 @@ export default function NailFungusPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'laser-treatment/nail-fungus');
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'which-option-right', label: 'Which Option Right?' },
+    { id: 'when-to-consider', label: 'Ideal Candidate' },
+    { id: 'recovery-aftercare', label: 'Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Us' },
+    { id: 'testimonials', label: 'Success Stories' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' },
+  ];
 
   return (
     <Layout>
@@ -97,7 +113,7 @@ export default function NailFungusPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+    <QuickNavigation navItems={navItems} />
     
     <TreatmentOverview 
       subcategoryName={subcategoryName}
@@ -107,6 +123,12 @@ export default function NailFungusPage() {
       <TreatmentBenefits 
         content={content?.benefits}
       />
+       <TreatmentAdditionalContent 
+              content={{skinTreatmentContent: content?.skinTreatmentContent, }}  />
+      <SkinTreatmentAdditionalContent 
+              content={{whyChooseSection: content?.whyChooseSection,
+                 whenToConsider: content?.whenToConsider,}} />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
     

@@ -16788,7 +16788,7 @@ comparisonData: [
       'aesthetic-dermatology-dubai-laser-treatment-female-genital-rejuvenation': {
       hero: {
         subtitle: 'Restore Comfort, Confidence, and Intimate Wellness',
-        description: 'Changes due to childbirth, aging, hormonal shifts, or lifestyle factors can affect intimate comfort, appearance, and confidence. At ramacarepolyclinic, we offer Female Genital Rejuvenation in Dubai using safe, non-surgical medical solutions designed to improve comfort, tone, and overall intimate well-being—discreetly and professionally.',
+        description: 'Changes due to childbirth, aging, hormonal shifts, or lifestyle factors can affect intimate comfort, appearance, and confidence. At Ramacare Polyclinic, we offer female genital rejuvenation in Dubai using safe, non-surgical medical solutions designed to improve comfort, tone, and overall intimate well-being—discreetly and professionally.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -16871,73 +16871,76 @@ comparisonData: [
       overview: {
         title: 'Understanding Female Genital Rejuvenation in Dubai',
         problemIntro: {
-          title: 'Root Causes Affecting Female Intimate Health',
-          description: 'Many concerns related to the female genitalia in Dubai are not just surface-level issues. They often stem from internal imbalances that affect comfort, hygiene, immunity, and overall intimate wellness.',
+          title: 'Understanding Changes in Female Intimate Health',
+          description: 'Many women experience changes in intimate health throughout different stages of life. Childbirth, aging, menopause, hormonal fluctuations, and lifestyle factors can gradually affect the strength, elasticity, hydration, and overall health of vaginal tissues. While these changes are common, they may influence comfort, confidence, and quality of life if left unaddressed.',
         },
         solutionIntro: {
-          title: 'Ayurvedic Care for Female Genital Health in Dubai',
-          description: 'Our holistic Ayurvedic approach to female genital in Dubai focuses on correcting the root cause of imbalance rather than offering temporary symptom relief. Treatments are safe, natural, and personalized to each individual, ensuring optimal results and long-term benefits.',
+          title: 'Ayurvedic Female Genital Rejuvenation in Dubai',
+          description: 'At RamaCare Polyclinic, our approach to female genital rejuvenation in Dubai combines the principles of Ayurveda with personalized care to support women\'s intimate wellness naturally. Rather than focusing only on temporary symptom management, our treatments aim to promote overall balance, healthy tissue function, and long-term well-being through individualized Ayurvedic therapies, herbal formulations, dietary guidance, and lifestyle recommendations.Every treatment begins with a detailed consultation to understand your symptoms, health history, constitution (Prakriti), and lifestyle. Based on this assessment, our Ayurvedic practitioners develop a customized treatment plan designed to support intimate comfort, tissue health, and overall wellness while respecting your individual needs and goals.',
         },
        leftCards: [
   {
     id: 1,
     title: 'What Is Female Genital Rejuvenation?',
     description:
-      'Female Genital Rejuvenation in Dubai refers to non-surgical medical treatments designed to improve vaginal tone, hydration, elasticity, and external appearance. These treatments support intimate comfort and help restore tissue health using advanced, clinically approved technology.'
+      'Female Genital Rejuvenation in Dubai is a non-surgical medical treatment designed to improve vaginal tissue health, elasticity, hydration, and overall intimate wellness. Using advanced, clinically approved technologies, these treatments stimulate natural collagen production and tissue regeneration to help restore firmness, improve lubrication, and enhance comfort.Many women seek treatment following childbirth, menopause, hormonal changes, or natural aging, while others wish to address mild urinary leakage, vaginal laxity, or aesthetic concerns. Every treatment plan is customized according to your symptoms, medical history, and personal goals to ensure safe, effective, and natural-looking results.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Female Genital Rejuvenation may be suitable for women experiencing:',
+    description: 'Female genital rejuvenation may be suitable for women experiencing the following:',
     listItems: [
-      'Vaginal laxity after childbirth',
-      'Dryness or discomfort',
-      'Reduced sensitivity',
-      'Mild urinary leakage',
-      'Changes due to aging or hormonal imbalance',
-      'Aesthetic concerns affecting confidence'
+          'Vaginal laxity following childbirth',
+          'Vaginal dryness or discomfort',
+          'Reduced natural lubrication',
+          'Mild urinary stress incontinence',
+          'Decreased vaginal elasticity ',     
+          'Reduced sensation during intimacy',
+          'Age-related or menopausal changes',
+          'Hormonal changes affecting intimate health',
+          'Cosmetic concerns affecting confidence',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Treatment sessions usually take 20–40 minutes. Many women notice gradual improvement over a series of sessions, with no interruption to daily routines.'
+      'Treatment sessions generally last 20–40 minutes, depending on the treatment method and individual concerns. Since the procedure is non-surgical, most patients can return to their normal daily activities immediately after treatment. Many women notice gradual improvements in comfort, hydration, and tissue quality within a few weeks, with continued improvement over several months as collagen production naturally increases. Depending on your concerns and treatment goals, a series of sessions may be recommended for optimal and longer-lasting results.'
   }
 ],
       rootCauses: [
   {
     id: 1,
-    title: 'Pitta Dosha Aggravation',
-    description: 'Excess internal heat can lead to irritation, burning sensation, inflammation, recurrent infections, redness, and sensitivity in the female genital area.',
+    title: 'Childbirth & Vaginal Tissue Stretching',
+    description: 'Pregnancy and vaginal delivery can stretch the muscles and connective tissues of the pelvic floor, resulting in vaginal laxity, reduced tissue support, and changes in intimate comfort.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Vata Imbalance',
-    description: 'Causes dryness, discomfort, itching, reduced natural lubrication, and increased sensitivity, often worsening with stress or hormonal changes.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-  },
-  {
-    id: 3,
-    title: 'Kapha Imbalance',
-    description: 'Leads to excess discharge, moisture imbalance, sluggish healing, and higher risk of fungal or bacterial overgrowth.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-  },
-  {
-    id: 4,
-    title: 'Ama Accumulation (Toxins)',
-    description: 'Digestive toxins weaken immunity and disrupt the natural balance of the female genital system, slowing healing and increasing recurrence of issues.',
+    title: 'Natural Aging & Collagen Loss',
+    description: 'As women age, collagen and elastin production naturally decline. This can reduce tissue firmness, elasticity, and hydration, leading to changes in vaginal tone and overall intimate wellness.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
+    id: 3,
+    title: 'Hormonal Changes & Menopause',
+    description: 'Lower estrogen levels during menopause or other hormonal changes may contribute to vaginal dryness, reduced lubrication, tissue thinning, irritation, and discomfort during everyday activities or intimacy.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+  },
+  {
+    id: 4,
+    title: 'Mild Urinary Stress Incontinence',
+    description: 'Weakened pelvic floor tissues may reduce bladder support, causing mild urinary leakage during coughing, laughing, sneezing, or exercise.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+  },
+  {
     id: 5,
-    title: 'Stress & Hormonal Imbalance',
-    description: 'Triggers irregular cycles, recurrent infections, pH imbalance, discomfort, and overall decline in intimate health.',
+    title: 'Lifestyle & Overall Health Factors',
+    description: 'Smoking, obesity, chronic coughing, certain medical conditions, and reduced physical activity can contribute to pelvic floor weakness and gradual changes in intimate tissue health.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
@@ -16948,61 +16951,68 @@ comparisonData: [
   { label: 'Downtime', value: 'None' },
   { label: 'Results', value: 'Gradual and natural' }
 ],
-       approachCards: [
+      approachCards: [
   {
     id: 1,
     title: 'Dosha Balancing Therapy',
-    description: 'Restores balance between Pitta, Vata, and Kapha to reduce irritation, dryness, inflammation, and recurrence of intimate health concerns.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'According to Ayurveda, an imbalance in Vata, Pitta, and Kapha may contribute to changes in intimate comfort and overall female reproductive health.',
+    hasLearnMore: true,
+    expandedContent: 'Personalized therapies are designed to help restore dosha balance, supporting healthy tissue function, natural lubrication, and overall intimate well-being.'
   },
   {
     id: 2,
     title: 'Internal Detoxification',
-    description: 'Eliminates Ama (toxins) through gentle herbal medicines and cleansing therapies to strengthen immunity and improve healing.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Ayurvedic cleansing approaches are used to support the body\'s natural detoxification processes and digestive health.',
+    hasLearnMore: true,
+    expandedContent: 'By promoting overall systemic balance, these therapies aim to create an internal environment that supports healthy tissue function and general wellness.'
   },
   {
     id: 3,
     title: 'Herbal Intimate Care Therapies',
-    description: 'Uses carefully selected Ayurvedic herbs, medicated oils, and formulations to soothe, protect, and rejuvenate the female genital area.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Selected Ayurvedic herbs, medicated oils, and traditional formulations are recommended according to each individual\'s needs.',
+    hasLearnMore: true,
+    expandedContent: 'These therapies are intended to nourish delicate tissues, support natural hydration, promote comfort, and maintain healthy intimate skin and mucosal health.'
   },
   {
     id: 4,
-    title: 'Diet & Lifestyle Correction',
-    description: 'Personalized dietary guidance and daily routine recommendations to support hormonal balance, digestion, and long-term intimate wellness.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Diet & Lifestyle Guidance',
+    description: 'Diet and daily lifestyle habits play an important role in Ayurvedic care.',
+    hasLearnMore: true,
+    expandedContent: 'Personalized nutritional recommendations, hydration guidance, sleep hygiene, and daily routines are provided to support hormonal balance, digestive wellness, and long-term intimate health.'
   },
   {
     id: 5,
-    title: 'Stress Management & Hormonal Support',
-    description: 'Calms the nervous system, improves gut health, balances hormones, and supports natural regeneration of female genital tissues.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Stress Management & Holistic Hormonal Support',
+    description: 'Stress can influence overall health and well-being, including intimate wellness.',
+    hasLearnMore: true,
+    expandedContent: 'Ayurvedic practices such as relaxation techniques, breathing exercises, yoga, and lifestyle modifications may be recommended to support emotional balance, healthy sleep, and overall hormonal wellness as part of a comprehensive care plan.'
+  },
+  {
+    id: 6,
+    title: 'Result',
+    description: 'With a personalized female genital rejuvenation program in Dubai, many women report gradual improvements in intimate comfort, hydration, tissue health, and overall confidence.',
+    hasLearnMore: true,
+    expandedContent: 'Since every individual responds differently, treatment recommendations are tailored according to personal health needs, Ayurvedic assessment, and wellness goals. Our focus is on supporting long-term intimate wellness through safe, natural, and holistic care.'
   }
 ]
       },
-
       healingJourney: {
-  title: 'Your Intimate Wellness Journey: Step by Step',
-  description:
-    'A respectful, doctor-guided approach to ensure safe and effective Female Genital Rejuvenation in Dubai.',
+  title: 'Your Female Genital Rejuvenation Journey: Step by Step',
+  description: 'Our Female Genital Rejuvenation in Dubai follows a structured, respectful, and medically supervised approach designed to improve intimate comfort, tissue health, and overall wellness. Every stage of the treatment is personalized according to your symptoms, medical history, and individual goals. From your initial consultation through recovery and follow-up care, our experienced medical professionals ensure that your treatment is performed in a safe, confidential, and comfortable environment.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Assessment',
       duration: 'Step 1',
-      description: null,
+      description: 'Your journey begins with a private consultation where you can openly discuss your concerns, symptoms, and treatment expectations in a confidential setting. Our medical team performs a comprehensive assessment to determine whether female genital rejuvenation in Dubai is the most appropriate treatment for your needs. This consultation allows us to understand factors such as childbirth history, hormonal changes, menopause, lifestyle, and previous medical conditions before creating a personalized treatment plan.',
       keyActivities: [
-        'Private discussion of concerns and goals',
+        'Confidential discussion of symptoms and treatment goals',
         'Medical and gynecological history review',
-        'Tissue and wellness assessment',
-        'Personalized treatment planning'
+        'Assessment of intimate tissue health and elasticity',
+        'Evaluation of childbirth, hormonal, or menopausal changes',
+        'Review of previous treatments, if applicable',
+        'Creation of a personalized Female Genital Rejuvenation treatment plan'
       ],
       side: 'right'
     },
@@ -17011,24 +17021,30 @@ comparisonData: [
       number: '02',
       title: 'Treatment Preparation',
       duration: 'Step 2',
-      description: null,
+      description: 'Before the procedure, our team explains each stage of the treatment and answers any questions you may have. Proper preparation helps ensure patient comfort and allows the treatment to be performed safely and effectively. Since female genital rejuvenation is non-surgical, little preparation is usually required, and most patients can continue their normal daily routine before the appointment.',
       keyActivities: [
-        'Pre-treatment guidance',
-        'Comfort-focused preparation',
-        'Explanation of procedure and expectations'
+        'Personalized pre-treatment instructions',
+        'Review of medical suitability',
+        'Hygiene and comfort preparation',
+        'Explanation of the procedure and expected outcomes',
+        'Opportunity to discuss any remaining concerns',
+        'Final treatment readiness assessment'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Rejuvenation Treatment',
+      title: 'Active Female Genital Rejuvenation Treatment',
       duration: 'Step 3',
-      description: null,
+      description: 'The treatment is performed using advanced, clinically approved technology designed to gently stimulate natural collagen production and support tissue regeneration. The procedure is carefully controlled to maximize patient comfort while promoting gradual improvements in vaginal tissue health, elasticity, hydration, and overall intimate wellness. Throughout the session, our experienced medical professionals continuously monitor your comfort and treatment response to ensure a safe and positive experience.',
       keyActivities: [
-        'Controlled energy delivery using approved technology',
-        'Gentle, precise treatment',
-        'Continuous medical monitoring'
+        'Controlled energy delivery using approved medical technology',
+        'Gentle, precise treatment of targeted tissues',
+        'Continuous monitoring for safety and comfort',
+        'Personalized treatment settings based on individual needs',
+        'Support for natural collagen production and tissue renewal',
+        'Comfortable, minimally invasive procedure'
       ],
       side: 'right'
     },
@@ -17037,95 +17053,132 @@ comparisonData: [
       number: '04',
       title: 'Aftercare & Maintenance',
       duration: 'Step 4',
-      description: null,
+      description: 'Following treatment, most patients can return to their normal daily activities with little or no downtime. Our team provides individualized aftercare recommendations to support healing, maintain treatment results, and promote long-term intimate wellness. Depending on your treatment goals, additional sessions or maintenance treatments may be recommended to achieve optimal outcomes.',
       keyActivities: [
-        'Post-treatment care guidance',
-        'Lifestyle and wellness advice',
-        'Follow-up assessments if needed'
+        'Personalized post-treatment care instructions',
+        'Lifestyle and intimate wellness guidance',
+        'Hydration and self-care recommendations',
+        'Follow-up consultations when required',
+        'Progress evaluation and ongoing support',
+        'Maintenance treatment planning, if appropriate'
       ],
       side: 'left'
     },
     {
       id: 5,
-      number: 'Result',
-      title: 'Result',
+      number: '05',
+      title: 'Expected Results',
       duration: null,
-      description:
-        'Improved intimate comfort, better tissue tone, enhanced confidence, and long-term wellness.',
-      keyActivities: null,
+      description: 'Results develop gradually as natural collagen production and tissue regeneration continue over the weeks following treatment. Many women notice improvements in intimate comfort, tissue firmness, hydration, and overall confidence. Individual outcomes vary depending on age, tissue condition, hormonal factors, and the number of treatment sessions completed. Our personalized treatment plans and ongoing medical supervision help support safe, natural-looking, and long-lasting improvements in intimate wellness.',
+      keyActivities: [],
       side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Female Genital Rejuvenation vs. Surgical Options',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Female Genital Rejuvenation',
-          traditional: 'Surgical Procedures'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Improved vaginal tightness',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Reduced dryness and discomfort',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Enhanced intimate confidence',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: 'No downtime or surgery',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Safe, doctor-supervised care',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-  {
-    feature: 'Invasiveness',
-    ayurvedic: 'Non-surgical',
-    conventional: 'Surgical'
+     benefits: {
+  title: 'Clinically-Observed Benefits',
+  description: 'Based on clinical experience and the use of advanced, non-surgical intimate wellness treatments. Our female genital rejuvenation treatments in Dubai are designed to improve intimate comfort, tissue health, and overall feminine wellness through safe, non-surgical techniques. By stimulating natural collagen production and supporting healthy tissue regeneration, these treatments may help improve vaginal elasticity, hydration, and overall comfort without the need for surgery or lengthy recovery. Individual results vary depending on factors such as age, hormonal status, tissue condition, and the recommended treatment plan.',
+  comparisonTitle: 'Female Genital Rejuvenation vs. Surgical Options',
+  comparisonDescription: 'Women considering female genital rejuvenation in Dubai often wonder whether a non-surgical treatment or a surgical procedure is the better option. The right choice depends on your symptoms, treatment goals, overall health, and the recommendations of your healthcare provider. Surgical procedures, such as labiaplasty or vaginoplasty, are generally recommended for women with specific anatomical concerns or those requiring structural correction. Recovery can take several weeks, and patients are usually required to temporarily avoid strenuous activities and sexual intercourse during the healing process. At RamaCare Polyclinic, every patient undergoes a confidential consultation before treatment. We believe in recommending treatments based on individual needs, realistic expectations, and patient safety rather than adopting a one-size-fits-all approach.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Female Genital Rejuvenation',
+    traditional: 'Surgical Procedures'
   },
-  {
-    feature: 'Downtime',
-    ayurvedic: 'None',
-    conventional: 'Extended recovery'
-  },
-  {
-    feature: 'Comfort',
-    ayurvedic: 'Minimal discomfort',
-    conventional: 'Post-surgical pain'
-  },
-  {
-    feature: 'Results',
-    ayurvedic: 'Gradual, natural',
-    conventional: 'Immediate but invasive'
-  },
-  {
-    feature: 'Medical Risk',
-    ayurvedic: 'Low',
-    conventional: 'Higher'
-  }
-        ]
+  benefits: [
+    {
+      id: 1,
+      title: 'Improved vaginal tightness',
+      percentage: 90,
+      description: 'Advanced non-surgical rejuvenation treatments stimulate natural collagen remodeling within the vaginal tissues, helping improve firmness, elasticity, and tissue support over time.',
+      hasLearnMore: true,
+      expandedContent: 'Many women notice gradual improvements in vaginal tone and overall intimate comfort as the tissues naturally regenerate.'
+    },
+    {
+      id: 2,
+      title: 'Reduced dryness and discomfort',
+      percentage: 92,
+      description: 'Hormonal changes, childbirth, and aging can contribute to vaginal dryness and irritation.',
+      hasLearnMore: true,
+      expandedContent: 'Female genital rejuvenation supports tissue hydration and healthy vaginal function, helping reduce dryness and improve everyday comfort as well as comfort during intimate activities.'
+    },
+    {
+      id: 3,
+      title: 'Enhanced intimate confidence',
+      percentage: 88,
+      description: 'As intimate comfort and tissue health improve, many women report feeling more confident in their daily lives and personal relationships.',
+      hasLearnMore: true,
+      expandedContent: 'Natural-looking results and individualized treatment plans help support overall well-being while respecting each patient\'s personal goals and expectations.'
+    },
+    {
+      id: 4,
+      title: 'No downtime or surgery',
+      percentage: 85,
+      description: 'Female genital rejuvenation is a minimally invasive, non-surgical procedure that allows most patients to return to their normal daily activities shortly after treatment.',
+      hasLearnMore: true,
+      expandedContent: 'Because no surgical incisions are involved, recovery is generally quick, making it a convenient option for women with busy lifestyles.'
+    },
+    {
+      id: 5,
+      title: 'Safe, doctor-supervised care',
+      percentage: 94,
+      description: 'Every treatment at RamaCare Polyclinic is performed under the supervision of experienced medical professionals using clinically approved technology and personalized treatment protocols.',
+      hasLearnMore: true,
+      expandedContent: 'From your initial consultation to follow-up care, patient privacy, safety, comfort, and long-term intimate wellness remain our highest priorities.'
+    }
+  ],
+  comparisonData: [
+    {
+      feature: 'Treatment Approach',
+      ayurvedic: 'Non-surgical, minimally invasive',
+      conventional: 'Surgical correction'
+    },
+    {
+      feature: 'Invasiveness',
+      ayurvedic: 'No incisions required',
+      conventional: 'Requires surgery'
+    },
+    {
+      feature: 'Anesthesia',
+      ayurvedic: 'Usually not required',
+      conventional: 'Often requires local or general anesthesia'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic: 'Minimal to none',
+      conventional: 'Several days to weeks'
+    },
+    {
+      feature: 'Recovery',
+      ayurvedic: 'Most daily activities can usually be resumed quickly',
+      conventional: 'Longer healing period'
+    },
+    {
+      feature: 'Comfort During Recovery',
+      ayurvedic: 'Mild, temporary discomfort',
+      conventional: 'Greater post-operative discomfort'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Gradual, natural improvements',
+      conventional: 'Structural changes are typically noticeable after healing'
+    },
+    {
+      feature: 'Collagen Stimulation',
+      ayurvedic: 'Supports natural collagen production',
+      conventional: 'Not the primary treatment mechanism'
+    },
+    {
+      feature: 'Medical Risk',
+      ayurvedic: 'Lower risk associated with non-surgical procedures',
+      conventional: 'Higher risk associated with surgery'
+    },
+    {
+      feature: 'Follow-Up Care',
+      ayurvedic: 'Periodic review and maintenance if recommended',
+      conventional: 'Surgical follow-up and wound healing care'
+    }
+  ]
       },
       pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -17438,13 +17491,65 @@ comparisonData: [
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+       skinTreatmentContent: [
+        {
+          id: "which-option-right",
+          badge: "Choosing the Right Treatment",
+          title: "Which Treatment Is Right for You?",
+          description: "If your concerns involve mild to moderate vaginal laxity, dryness, reduced elasticity, or age-related changes, female genital rejuvenation in Dubai may provide a safe, non-surgical option with minimal downtime. If significant structural changes or anatomical correction are required, a surgical procedure may be more appropriate.\n\nA detailed medical consultation is the best way to determine the most suitable treatment. Our team carefully evaluates your symptoms, health history, and expectations before recommending a personalized treatment plan focused on safety, comfort, and long-term intimate wellness.",
+          points: []
+        }
+      ],
+      whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro: "Choosing the right clinic for female genital rejuvenation in Dubai is essential for achieving safe, comfortable, and natural-looking results. At RamaCare Polyclinic, we provide compassionate, confidential, and personalized care in a professional medical environment where your privacy and well-being are our highest priorities.",
+  features: [
+    {
+      id: 1,
+      title: "Personalized Consultation & Treatment Planning",
+      description: "Every treatment begins with a detailed consultation to understand your symptoms, medical history, lifestyle, and treatment goals. Our experienced medical professionals perform a comprehensive assessment before recommending the most appropriate non-surgical treatment plan tailored to your individual needs. This personalized approach helps ensure effective care while maintaining the highest standards of patient safety."
+    },
+    {
+      id: 2,
+      title: "Advanced Technology & Medical Supervision",
+      description: "We use advanced, clinically approved technology and follow established medical protocols throughout every stage of treatment. From your initial consultation to follow-up care, our team closely monitors your progress, answers your questions, and provides practical guidance to support long-term intimate health and wellness."
+    },
+    {
+      id: 3,
+      title: "Confidential & Compassionate Care",
+      description: "At RamaCare Polyclinic, we understand that intimate health concerns are deeply personal. Our respectful, discreet, and patient-centered approach creates a comfortable environment where you can discuss your concerns with confidence. Our goal is to help improve intimate comfort, tissue health, and overall quality of life through evidence-based treatments, realistic expectations, and ongoing medical support."
+    }
+  ]
+},
+      aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription: "Recovery after Female Genital Rejuvenation in Dubai is generally quick because the treatment is non-surgical and minimally invasive. Most women can return to their normal daily activities immediately or shortly after the procedure, making it a convenient option for those with busy lifestyles. Mild warmth, temporary sensitivity, or slight swelling may occur following treatment, but these effects usually resolve within a short period.",
+  resultPoints: [
+    "Following your personalized aftercare instructions is important for supporting the body's natural healing process and optimizing treatment outcomes.",
+    "Patients are encouraged to maintain good intimate hygiene, stay well hydrated, and follow any temporary activity restrictions recommended by their doctor.",
+    "Depending on the treatment performed, you may be advised to avoid sexual activity, strenuous exercise, or the use of certain intimate products for a short period to allow the tissues to recover comfortably.",
+    "Our medical team provides individualized guidance based on your treatment plan and overall health.",
+    "Follow-up appointments may be scheduled to monitor your progress, evaluate tissue healing, and determine whether additional sessions or maintenance treatments are appropriate.",
+    "By following professional aftercare recommendations and attending regular reviews, patients can support long-term improvements in intimate comfort, tissue health, and overall feminine wellness."
+  ]
+},
+      whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro: "Female Genital Rejuvenation in Dubai may be suitable for adult women who wish to improve intimate comfort, vaginal tissue health, and overall confidence without undergoing surgery. It is commonly considered by women experiencing vaginal laxity after childbirth, age-related tissue changes, reduced elasticity, vaginal dryness, mild urinary stress incontinence, or changes associated with menopause and hormonal fluctuations.",
+  points: [
+    "The ideal candidate is generally in good overall health, has realistic expectations, and is seeking gradual, natural-looking improvements through non-surgical treatment.",
+    "Since every woman's concerns and medical history are unique, a comprehensive consultation is essential before treatment begins.",
+    "During your assessment, our experienced medical professionals evaluate your symptoms, health history, tissue condition, and treatment goals to determine whether Female Genital Rejuvenation is the most appropriate option."
+  ],
+  closing: "This personalized approach helps ensure patient safety, appropriate treatment selection, and a care plan tailored to support your long-term intimate health and well-being."
+}
     },
 
     'aesthetic-dermatology-dubai-laser-treatment-mole-removal': {
       hero: {
         subtitle: 'Safe, Effective Solutions for Clearer, Healthier Skin',
-        description: 'Moles can vary in size, color, and location, and while most are harmless, some may cause discomfort or cosmetic concern. At ramacarepolyclinic, we provide Mole Removal in Dubai using safe, medically supervised techniques to restore skin appearance and confidence naturally.',
+        description: 'Moles are common skin growths that can appear anywhere on the body.While most moles are harmless, some people choose to have them removed because of cosmetic concerns, irritation caused by clothing or shaving, or changes in their size, shape, or color that require medical evaluation. At RamaCare Polyclinic, we offer mole removal in Dubai using safe, medically supervised techniques tailored to your skin type and the characteristics of your mole.Our experienced medical professionals begin with a detailed skin examination to assess the size, depth, appearance, and location of the mole before recommending the most suitable treatment. ',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -17527,134 +17632,158 @@ comparisonData: [
       overview: {
         title: 'Understanding Mole Removal in Dubai',
        problemIntro: {
-  title: 'The Problem: Understanding the Root Causes of Skin Lesions and Moles',
-  description: 'Concerns that lead people to seek mole removal in Dubai often go beyond appearance. Moles and pigmented skin lesions can be influenced by internal imbalances, environmental factors, and skin health conditions.'
+  title: 'The Problem: Why Do Moles Develop?',
+  description: 'Moles develop when pigment-producing skin cells, known as melanocytes, grow together in clusters instead of being evenly distributed throughout the skin. Most moles are harmless and remain stable for many years, but some may change in appearance due to aging, hormonal changes, genetics, or prolonged sun exposure. While many people seek mole removal for cosmetic reasons, others choose treatment because of irritation, discomfort, or changes that require medical assessment.Professional evaluation is important whenever a mole changes in size, shape, color, or texture to determine whether further examination is necessary.'
 },
 solutionIntro: {
-  title: 'Our Solution: Safe & Holistic Mole Removal in Dubai',
-  description: 'Our approach to mole removal in Dubai focuses on safety, skin health, and long-term results. We combine medical evaluation with holistic care to address both visible moles and underlying skin balance.'
+  title: 'Our Solution: Safe & Personalized Mole Removal in Dubai',
+  description: 'At RamaCare Polyclinic, our approach to mole removal in Dubai focuses on patient safety, precise treatment, and healthy skin healing. Every mole is unique in its size, depth, location, and appearance, which is why treatment always begins with a thorough medical assessment before recommending the most appropriate removal method.Our experienced medical professionals carefully evaluate whether the mole is suitable for cosmetic removal or requires further medical investigation. Based on this assessment, we create a personalized treatment plan using clinically approved techniques designed to remove the mole effectively while preserving the surrounding healthy skin and minimizing the risk of unnecessary scarring.'
 },
        leftCards: [
   {
     id: 1,
     title: 'What Is Mole Removal?',
     description:
-      'Mole Removal in Dubai is a medical procedure designed to remove unwanted or potentially problematic moles. Methods include laser treatment, surgical excision, or radiofrequency removal, depending on mole size, type, and location.'
+      'Mole removal in Dubai is a medical procedure performed to remove unwanted, bothersome, or medically concerning moles from the skin. Depending on the size, depth, location, and characteristics of the mole, treatment may involve laser therapy, radiofrequency removal, shave excision, or minor surgical excision. Every procedure is carefully selected following a detailed skin assessment to achieve the safest and most effective outcome while preserving the surrounding healthy tissue.Most moles are harmless, but some may become irritated by clothing, shaving, or daily activities, while others may change in appearance over time and require medical evaluation. '
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Mole removal is suitable for individuals with:',
+    description: 'Mole removal may be suitable for individuals with',
     listItems: [
-      'Raised or dark moles',
-      'Irritated or itchy moles',
-      'Moles affecting appearance',
-      'Changing or irregular moles',
-      'Discomfort from friction or clothing'
+      'Raised or protruding moles',
+      'Dark or pigmented moles',
+      'Moles that catch on clothing or jewelry',
+      'Frequently irritated or itchy moles',
+      'Cosmetic concerns related to facial or body moles',
+      'Moles that have changed in size, color, or shape',
+      'Benign skin growths requiring medical assessment',
+      'Discomfort during shaving or daily activities',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Treatment duration varies depending on mole size and technique. Most sessions take 20–45 minutes, with some larger moles requiring more than one visit.'
+      'Treatment time generally ranges from 20 to 45 minutes, depending on the number, size, and location of the moles being treated. Many small moles can be removed during a single visit, while larger or deeper lesions may require additional treatment or follow-up appointments.Following removal, the treated area gradually heals over the next few weeks. Most patients experience progressive improvement in skin appearance as healing continues. Recovery and cosmetic outcomes vary depending on the removal technique used and each individual\'s natural healing response.'
   }
 ],
      rootCauses: [
   {
     id: 1,
-    title: 'Pitta Dosha Aggravation ',
-    description: 'Excess internal heat may increase pigmentation, dark moles, redness, inflammation, and changes in mole appearance.',
+    title: 'Genetics & Natural Skin Development',
+    description: 'Many moles develop because of inherited genetic factors or naturally occur during childhood and early adulthood. The number and appearance of moles often vary from person to person.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Vata Imbalance ',
-    description: 'Can cause dryness, rough skin texture, uneven healing, and premature skin aging around moles.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Sun Exposure',
+    description: 'Repeated exposure to ultraviolet (UV) radiation may contribute to the development of new pigmented lesions and can sometimes cause existing moles to become darker or more noticeable.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Kapha Imbalance ',
-    description: 'Leads to raised, thickened, or slow-growing moles due to excess tissue buildup and sluggish skin metabolism.',
+    title: 'Hormonal Changes',
+    description: 'Hormonal fluctuations during puberty, pregnancy, or later stages of life may influence the appearance, color, or size of certain moles in some individuals.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Ama Accumulation (Toxins) ',
-    description: 'Digestive toxins can impair skin detoxification, leading to delayed healing and recurrent skin concerns after mole treatment.',
-    severity: 'High',
-    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+    title: 'Friction & Repeated Irritation',
+    description: 'Moles located in areas exposed to repeated rubbing from clothing, jewelry, shaving, or daily movement may become irritated, prompting many individuals to seek removal for greater comfort.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Stress & Hormonal Imbalance ',
-    description: 'May trigger changes in skin pigmentation, enlargement of existing moles, or formation of new moles.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Changes That Require Medical Assessment',
+    description: 'Although most moles are benign, changes such as irregular borders, uneven color, rapid growth, bleeding, or persistent irritation should always be evaluated by a qualified medical professional before treatment.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   }
 ],
      quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical or minor surgical' },
-  { label: 'Anesthesia', value: 'Topical or local, depending on technique' },
-  { label: 'Recovery Time', value: 'Minimal' },
-  { label: 'Side Effects', value: 'Temporary redness or mild swelling' }
+  { label: 'Treatment Type', value: 'Non-surgical or minor surgical dermatological procedure' },
+  { label: 'Technology', value: 'Laser therapy, radiofrequency, shave excision, or surgical excision' },
+  { label: 'Anesthesia', value: 'Topical or local anesthesia, depending on the procedure' },
+  { label: 'Session Duration', value: '20–45 minutes' },
+  { label: 'Recovery Time', value: 'Usually minimal' },
+  { label: 'Common Side Effects', value: 'Temporary redness, mild swelling, or tenderness' },
+  { label: 'Results', value: 'Immediate mole removal with gradual skin healing' }
 ],
-       approachCards: [
+      approachCards: [
   {
     id: 1,
-    title: 'Skin & Mole Assessment',
-    description: 'Each mole is carefully examined to determine its type, depth, and suitability for treatment, ensuring safe and effective removal.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Comprehensive Skin & Mole Assessment',
+    description: 'Every successful treatment begins with a detailed examination of the mole and surrounding skin to determine the safest and most effective removal approach.',
+    hasLearnMore: true,
+    expandedContent:
+      'During your consultation, our medical team carefully assesses the size, shape, color, depth, and location of the mole, along with your skin type, medical history, and any previous skin treatments. This detailed evaluation helps determine the most appropriate removal technique while ensuring that any mole showing unusual characteristics receives appropriate medical attention before treatment proceeds.'
   },
   {
     id: 2,
     title: 'Targeted Mole Removal Techniques',
-    description: 'Advanced and precise methods are used to remove unwanted moles while minimizing scarring and supporting natural skin healing.',
-    hasLearnMore: false,
-    expandedContent: null
+    description: 'Treatment may involve advanced laser technology, radiofrequency, shave excision, or minor surgical removal depending on the characteristics of the mole.',
+    hasLearnMore: true,
+    expandedContent:
+      'Each technique is selected according to the individual patient’s needs to achieve effective mole removal while minimizing discomfort and protecting healthy surrounding tissue. Our goal is to remove unwanted moles with precision while supporting the best possible cosmetic outcome and maintaining the natural appearance of the skin.'
   },
   {
     id: 3,
-    title: 'Internal Detoxification Support',
-    description: 'Herbal formulations help reduce toxin buildup and support faster skin recovery after mole removal.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Healthy Skin Healing & Regeneration',
+    description: 'Following mole removal, the skin naturally enters a healing phase that supports healthy tissue regeneration and encourages smooth recovery.',
+    hasLearnMore: true,
+    expandedContent:
+      'Patients receive personalized guidance to help promote comfortable healing, reduce unnecessary skin irritation, and achieve the best possible cosmetic result as the treated area gradually improves over the following weeks.'
   },
   {
     id: 4,
-    title: 'Skin Healing & Rejuvenation Therapies',
-    description: 'Natural topical applications and medicated oils promote smooth healing, reduce pigmentation, and improve overall skin texture.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Personalized Aftercare & Skin Protection',
+    description: 'Individualized aftercare recommendations help protect the treated area and support healthy skin recovery.',
+    hasLearnMore: true,
+    expandedContent:
+      'We provide personalized guidance on wound care, appropriate skincare products, sun protection, and daily skin care practices to help minimize temporary pigmentation changes. Protecting the treated area from excessive sun exposure and following medical advice can significantly improve long-term cosmetic outcomes.'
   },
   {
     id: 5,
-    title: 'Lifestyle & Skin Care Guidance',
-    description: 'Personalized advice helps prevent recurrence, supports skin health, and maintains long-lasting results after mole removal in Dubai.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Long-Term Skin Monitoring & Care',
+    description: 'Follow-up appointments allow our medical team to monitor healing and provide continued support after treatment.',
+    hasLearnMore: true,
+    expandedContent:
+      'These visits help ensure that the treated area is recovering as expected. If additional treatment or further skin evaluation is appropriate, we will discuss the available options and provide continued guidance to help maintain healthy skin over the long term.'
+  },
+  {
+    id: 6,
+    title: 'Result',
+    description: 'With a personalized mole removal in Dubai treatment plan, many patients achieve smoother, clearer-looking skin and greater confidence.',
+    hasLearnMore: true,
+    expandedContent:
+      'While healing times vary depending on the removal technique and individual skin response, our focus remains on providing safe, precise treatment with natural-looking results, minimal downtime whenever possible, and comprehensive medical support throughout your skin care journey.'
   }
-]
+],
       },
      healingJourney: {
   title: 'Your Mole Removal Journey: Step by Step',
-  description: null,
+  description:
+    'Our mole removal in Dubai follows a structured, doctor-supervised process designed to ensure safe treatment, patient comfort, and healthy skin healing. Every mole is carefully evaluated according to its size, depth, location, appearance, and whether further medical assessment is required. From your first consultation to follow-up care, our experienced medical professionals focus on precise mole removal while protecting the surrounding healthy skin and supporting the best possible cosmetic outcome.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Assessment',
       duration: 'Step 1',
-      description: null,
+      description:
+        'Your treatment journey begins with a comprehensive consultation to determine whether mole removal is appropriate for your skin concern. If a mole has changed in size, shape, color, or texture, additional medical evaluation may be recommended before treatment.',
       keyActivities: [
-        'Mole evaluation and type identification',
-        'Skin and medical history review',
-        'Personalized mole removal plan'
+        'Detailed mole examination and assessment',
+        'Identification of mole type, size, depth, and location',
+        'Skin type evaluation',
+        'Review of medical history and medications',
+        'Discussion of cosmetic or medical concerns',
+        'Creation of a personalized mole removal treatment plan'
       ],
       side: 'right'
     },
@@ -17663,106 +17792,180 @@ solutionIntro: {
       number: '02',
       title: 'Treatment Preparation',
       duration: 'Step 2',
-      description: null,
+      description:
+        'Proper preparation helps ensure a safe procedure and comfortable treatment. The treatment area is cleansed thoroughly, and the selected removal technique is explained before the procedure begins. Topical or local anesthesia may be used depending on the treatment method.',
       keyActivities: [
-        'Pre-treatment skin cleansing',
-        'Anesthesia application if needed',
-        'Procedure explanation and expectations'
+        'Cleansing and preparation of the treatment area',
+        'Pre-procedure safety assessment',
+        'Topical or local anesthesia when appropriate',
+        'Explanation of the treatment process',
+        'Review of post-treatment expectations',
+        'Final preparation before treatment'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Treatment',
+      title: 'Active Mole Removal Treatment',
       duration: 'Step 3',
-      description: null,
+      description:
+        'The mole is removed using the most appropriate technique based on your personalized treatment plan. Treatment may involve laser technology, radiofrequency removal, shave excision, or minor surgical excision while protecting the surrounding healthy skin.',
       keyActivities: [
-        'Laser, excision, or radiofrequency removal',
-        'Careful protection of the surrounding skin',
-        'Continuous medical monitoring'
+        'Precise laser, radiofrequency, or surgical mole removal',
+        'Careful treatment of the targeted area',
+        'Protection of surrounding healthy skin',
+        'Continuous monitoring throughout the procedure',
+        'Measures to maximize patient comfort',
+        'Immediate post-procedure skin assessment'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Recovery & Follow-Up',
+      title: 'Recovery & Follow-Up Care',
       duration: 'Step 4',
-      description: null,
+      description:
+        'Following treatment, the skin begins its natural healing process. Our medical team provides personalized aftercare instructions, monitors healing, and recommends follow-up appointments when appropriate to support optimal recovery and cosmetic results.',
       keyActivities: [
-        'Post-procedure care guidance',
-        'Scar management and healing monitoring',
-        'Follow-up consultation for optimal results'
+        'Personalized post-procedure care instructions',
+        'Wound care and skin healing guidance',
+        'Scar management recommendations when appropriate',
+        'Sun protection advice',
+        'Follow-up consultations',
+        'Ongoing monitoring of healing progress'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Expected Results',
+      duration: null,
+      description:
+        'Most patients notice immediate removal of the mole, followed by gradual improvement in the appearance of the treated skin as healing progresses. With proper aftercare and medical follow-up, many patients achieve smoother, clearer-looking skin with minimal visible scarring and long-lasting results.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Mole Removal vs. Home Remedies',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Mole Removal in Dubai',
-          traditional: 'Home Remedies'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: 'Reduced mole visibility or complete removal',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Minimal scarring and smooth skin',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: ' Improved aesthetic appearance',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: ' Safe, doctor-supervised procedure',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Boosted confidence and comfort',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-  {
-    feature: 'Safety',
-    ayurvedic: 'Doctor-led and medically supervised',
-    conventional: 'Unsafe, unpredictable'
+     benefits: {
+  title: 'Clinically-Observed Benefits',
+  description:
+    'Based on years of providing advanced dermatological treatments and mole removal procedures in Dubai. Our mole removal treatments in Dubai are designed to safely remove unwanted moles while preserving the health and appearance of the surrounding skin. Using clinically approved techniques and personalized treatment planning, our experienced medical professionals focus on achieving effective mole removal with minimal discomfort and optimal cosmetic outcomes. Results vary depending on the size, depth, location, and type of mole, as well as each patient’s individual healing response.',
+
+  comparisonTitle: 'Mole Removal vs. Home Remedies',
+
+  comparisonDescription:
+    'Many people consider home remedies in an attempt to remove unwanted moles.  Mole Removal in Dubai is performed by experienced medical professionals using clinically approved techniques selected according to the size, type, depth, and location of the mole. At RamaCare Polyclinic, our medical team carefully evaluates every mole before treatment and provides personalized recommendations based on your skin condition and treatment goals, helping achieve effective removal while supporting healthy healing and minimizing unnecessary skin damage.',
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Mole Removal in Dubai',
+    traditional: 'Home Remedies'
   },
-  {
-    feature: 'Results',
-    ayurvedic: 'Precise, long-lasting',
-    conventional: 'Risk of infection or scarring'
-  },
-  {
-    feature: 'Technology',
-    ayurvedic: 'Advanced medical lasers or excision',
-    conventional: 'Manual or natural methods'
-  },
-  {
-    feature: 'Healing',
-    ayurvedic: 'Monitored recovery',
-    conventional: 'Poorly managed, risk of complications'
-  }
-        ]
+
+  benefits: [
+    {
+      id: 1,
+      title: 'Reduced mole visibility or complete removal',
+      percentage: 90,
+      description:
+        'Our personalized treatment approach targets unwanted moles using clinically appropriate techniques such as laser therapy, radiofrequency procedures, or minor surgical removal.',
+      hasLearnMore: true,
+      expandedContent:
+        'Depending on the characteristics of the mole, many patients achieve complete removal or a significant reduction in its visibility while maintaining the integrity of the surrounding skin.'
+    },
+    {
+      id: 2,
+      title: 'Minimal scarring and smoother skin',
+      percentage: 92,
+      description:
+        'Careful treatment planning and precise removal techniques help minimize unnecessary skin trauma and support healthy healing.',
+      hasLearnMore: true,
+      expandedContent:
+        'With proper aftercare and individualized treatment selection, many patients experience smooth skin and minimal visible scarring following recovery.'
+    },
+    {
+      id: 3,
+      title: 'Improved aesthetic appearance',
+      percentage: 88,
+      description:
+        'Removing moles that affect facial or body appearance can create a clearer, more even-looking complexion.',
+      hasLearnMore: true,
+      expandedContent:
+        'Whether treatment is performed for cosmetic reasons or to relieve irritation, patients often notice an improvement in their overall skin appearance as healing progresses.'
+    },
+    {
+      id: 4,
+      title: 'Safe, doctor-supervised procedure',
+      percentage: 85,
+      description:
+        'Every mole removal procedure in Dubai is performed under the supervision of experienced medical professionals.',
+      hasLearnMore: true,
+      expandedContent:
+        'A comprehensive skin assessment helps determine the most suitable treatment method, ensuring patient safety, personalized care, and clinically appropriate management throughout every stage of treatment.'
+    },
+    {
+      id: 5,
+      title: 'Boosted confidence and comfort',
+      percentage: 94,
+      description:
+        'Many patients choose mole removal because of cosmetic concerns or physical discomfort caused by friction, shaving, or clothing.',
+      hasLearnMore: true,
+      expandedContent:
+        'As the treated area heals and the mole is successfully removed, patients frequently report increased confidence, greater comfort, and improved satisfaction with their skin’s appearance.'
+    }
+  ],
+
+  comparisonData: [
+    {
+      feature: 'Safety',
+      ayurvedic: 'Doctor-led, medically supervised',
+      conventional: 'No professional supervision'
+    },
+    {
+      feature: 'Assessment Before Treatment',
+      ayurvedic: 'Comprehensive skin and mole evaluation',
+      conventional: 'No medical assessment'
+    },
+    {
+      feature: 'Treatment Method',
+      ayurvedic: 'Laser, radiofrequency, shave excision, or surgical removal',
+      conventional: 'Household products or unverified methods'
+    },
+    {
+      feature: 'Precision',
+      ayurvedic: 'Targets the mole while protecting surrounding skin',
+      conventional: 'Difficult to control or predict'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Effective, long-lasting removal based on the treatment method',
+      conventional: 'Often incomplete or ineffective'
+    },
+    {
+      feature: 'Healing',
+      ayurvedic: 'Professionally monitored with aftercare guidance',
+      conventional: 'Increased risk of infection, irritation, or scarring'
+    },
+    {
+      feature: 'Risk of Complications',
+      ayurvedic: 'Minimized through medical supervision',
+      conventional: 'Higher risk of burns, bleeding, infection, and permanent scarring'
+    },
+    {
+      feature: 'Suitable for Suspicious Moles',
+      ayurvedic: 'Medical evaluation before removal',
+      conventional: 'May delay diagnosis of serious skin conditions'
+    },
+    {
+      feature: 'Follow-Up Care',
+      ayurvedic: 'Ongoing monitoring when required',
+      conventional: 'None'
+    }
+  ]
       },
      pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -18077,13 +18280,77 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+      skinTreatmentContent: [
+  {
+    id: "which-option-right",
+    badge: "Choosing the Right Treatment",
+    title: "Which Treatment Is Right for You?",
+    description:
+      "If a mole is changing in size, shape, color, or causing discomfort, it should always be evaluated by a qualified medical professional rather than treated at home. Even moles removed for cosmetic reasons benefit from proper assessment to determine the safest removal technique and achieve the best cosmetic outcome.\n\nChoosing Mole Removal in Dubai at RamaCare Polyclinic provides access to personalized treatment planning, medically approved technology, and professional follow-up care. Our goal is to remove unwanted moles safely while protecting your skin health and supporting natural-looking, long-term results with minimal downtime whenever possible.",
+    points: []
+  }
+],
+
+whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro:
+    "Choosing the right clinic for mole removal in Dubai is essential for achieving safe treatment, healthy skin healing, and the best possible cosmetic outcome. At RamaCare Polyclinic, we combine experienced medical professionals, advanced treatment technology, and personalized care to ensure every patient receives an individualized treatment plan based on their skin type, mole characteristics, and treatment goals.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Skin Assessment",
+      description:
+        "Every journey begins with a detailed consultation and skin assessment. Our medical team carefully examines the size, shape, color, depth, and location of the mole while reviewing your medical history and any previous skin treatments. This comprehensive evaluation helps us determine the most appropriate removal method, whether laser therapy, radiofrequency treatment, shave excision, or minor surgical excision."
+    },
+    {
+      id: 2,
+      title: "Advanced Technology & Safe Medical Care",
+      description:
+        "Patient safety remains our highest priority throughout every stage of treatment. We use clinically approved techniques, modern equipment, and evidence-based protocols to minimize discomfort, protect the surrounding healthy skin, and support optimal healing. Clear communication, realistic treatment expectations, and ongoing follow-up care are integral parts of our approach."
+    },
+    {
+      id: 3,
+      title: "Personalized Support Throughout Your Journey",
+      description:
+        "From your first consultation to post-treatment recovery, our dedicated team provides professional guidance, personalized aftercare instructions, and continuous support. At RamaCare Polyclinic, our goal is to help you achieve smoother, healthier-looking skin with safe, precise, and medically supervised mole removal in Dubai."
+    }
+  ]
+},
+aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription:
+    "Recovery after mole removal in Dubai varies depending on the removal technique, the size and depth of the mole, and your skin's natural healing response. Most patients experience mild redness, tenderness, or slight swelling immediately after treatment, which generally improves within a few days. Larger treatment areas or surgical procedures may require a slightly longer healing period.",
+  resultPoints: [
+    "Follow your doctor's aftercare instructions to promote healthy skin regeneration and achieve the best cosmetic outcome.",
+    "Keep the treated area clean and protected while avoiding unnecessary friction or scratching during the healing process.",
+    "If a dressing is applied, change it according to your doctor's recommendations.",
+    "Avoid swimming pools, hot tubs, and strenuous activities that may irritate the treated skin until healing is well underway.",
+    "Apply a broad-spectrum sunscreen and limit direct sun exposure to reduce the risk of temporary pigmentation changes and support smoother healing.",
+    "Use gentle skincare products or topical treatments as recommended by your doctor.",
+    "Attend follow-up appointments so our medical team can monitor your recovery, assess healing progress, and provide additional guidance if necessary.",
+    "Following your personalized aftercare plan, maintaining healthy skincare habits, and attending scheduled reviews help support long-term skin health and the best possible treatment results."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro:
+    "Mole removal in Dubai may be suitable for adults who wish to remove unwanted moles for cosmetic reasons, physical comfort, or medical evaluation. Candidates often seek treatment for raised, dark, irritated, or frequently rubbed moles that affect their confidence or cause discomfort during daily activities such as shaving or wearing clothing.",
+  points: [
+    "The ideal candidate is generally in good overall health, has realistic expectations, and understands that healing and cosmetic outcomes vary depending on the size, depth, and location of the mole.",
+    "Individuals who notice changes in a mole's size, shape, color, or texture should first undergo a professional medical assessment before considering removal.",
+    "During your consultation, our experienced medical professionals evaluate your skin type, mole characteristics, medical history, and treatment goals to determine the safest and most appropriate treatment method."
+  ],
+  closing:
+    "This personalized approach helps ensure effective treatment, supports healthy healing, and promotes natural-looking, long-lasting results while protecting the surrounding skin."
+},
     },
 
       'aesthetic-dermatology-dubai-laser-treatment-nail-fungus': {
       hero: {
         subtitle: 'Restore Healthy, Strong Nails with Expert Care',
-        description: 'Nail fungus can cause thickened, discolored, brittle, or painful nails, affecting both appearance and confidence. At ramacarepolyclinic, we provide Nail Fungus Treatment in Dubai using safe, medically supervised solutions designed to eliminate infection and restore healthy nails.',
+        description: 'Healthy nails are an important part of overall foot and hand health.When a fungal infection develops, it can cause nails to become thickened, discolored, brittle, misshapen, or difficult to trim.If left untreated, the infection may gradually spread to other nails or surrounding skin, making treatment more challenging over time. At RamaCare Polyclinic, we provide Nail Fungus Treatment in Dubai using personalized, medically supervised treatment plans tailored to the severity of the infection and your individual needs.Our experienced medical professionals perform a comprehensive nail assessment to identify the extent of the fungal infection before recommending the most appropriate treatment approach.Depending on your condition, treatment may include topical therapies, oral medications when appropriate, advanced nail care, or other clinically approved management options.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -18166,134 +18433,148 @@ solutionIntro: {
       overview: {
         title: 'Understanding Nail Fungus Treatment in Dubai',
        problemIntro: {
-  title: 'The Problem: Understanding the Root Causes of Nail Fungus',
-  description: 'Issues related to nail fungus in Dubai are common due to heat, humidity, closed footwear, and lifestyle factors. Nail fungal infections often start small but can worsen if the root cause is not addressed properly.'
+  title: 'The Problem: Why Nail Fungus Develops and Persists',
+  description: 'Nail fungus is a common condition, particularly in warm and humid environments where fungi can thrive. Factors such as excessive sweating, wearing tight or non-breathable footwear, walking barefoot in public areas, nail injuries, poor circulation, diabetes, aging, and a weakened immune system can increase the risk of developing fungal nail infections. Because fungi grow beneath or within the nail, the infection is often difficult to eliminate without professional treatment.Many people delay seeking treatment because the infection begins with subtle discoloration or mild nail changes. However, untreated nail fungus may gradually spread, causing thickened nails, discomfort, unpleasant odor, nail separation, and permanent nail damage in some cases.'
 },
 solutionIntro: {
-  title: 'Our Solution: Comprehensive Treatment for Nail Fungus in Dubai',
-  description: 'Our holistic approach to treating nail fungus in Dubai focuses on eliminating the infection while strengthening nail health and immunity to prevent recurrence.'
+  title: 'Our Solution: Comprehensive Nail Fungus Treatment in Dubai',
+  description: 'At RamaCare Polyclinic, our approach to nail fungus treatment in Dubai focuses on eliminating the fungal infection, restoring healthy nail growth, and reducing the risk of future recurrence. Since every fungal nail infection differs in severity, duration, and the number of affected nails, we begin with a thorough medical assessment before creating a personalized treatment plan. Our experienced medical professionals combine evidence-based treatment options with practical preventive care to improve nail health while addressing the factors that contribute to fungal infections. Throughout your treatment journey, we prioritize patient safety, comfort, and long-term nail health to achieve the best possible clinical outcome.'
 },
       leftCards: [
   {
     id: 1,
     title: 'What Is Nail Fungus Treatment?',
     description:
-      'Nail Fungus Treatment in Dubai is a medical procedure aimed at eliminating fungal infection from nails. Treatments may include laser therapy, topical medications, or oral antifungal solutions, depending on severity and nail type.'
+      'Nail fungus treatment in Dubai is a medical treatment designed to eliminate fungal infections affecting the fingernails or toenails while promoting healthy nail growth. Nail fungus, also known as onychomycosis, develops when fungi invade the nail plate or the tissue beneath it, causing discoloration, thickening, brittleness, and changes in nail shape. Without appropriate treatment, the infection may gradually spread, become more difficult to manage, and affect multiple nails.Treatment is personalized according to the severity of the infection, the number of affected nails, your overall health, and the condition of the nail. Depending on the clinical assessment, treatment may include topical antifungal medications, oral antifungal therapy when appropriate, laser treatment, nail debridement, or a combination of these approaches. Early diagnosis and professional management can improve treatment outcomes and reduce the risk of recurrence.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Nail Fungus Treatment is suitable for people with:',
+    description: 'Nail fungus treatment in Dubai may be suitable for individuals experiencing the following:',
     listItems: [
       'Thickened or brittle nails',
-      'Discolored nails (yellow, white, brown)',
-      'Pain or discomfort around the nail',
-      'Nails lifting from the nail bed',
-      'Persistent fungal infections'
+      'Yellow, white, brown, or dark nail discoloration',
+      'Crumbling or fragile nails',
+      'Nails lifting away from the nail bed',
+      'DDistorted nail shape',
+      'Persistent fungal nail infections',
+      'Discomfort or pain while walking or wearing shoes',
+      'Recurrent nail fungus despite previous treatment'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Treatment sessions typically last 20–45 minutes for laser or topical application. Multiple sessions are usually required depending on infection severity and nail growth rate.'
+      'Treatment sessions generally last 20–45 minutes, depending on the selected treatment method and the number of affected nails. While laser sessions are relatively quick, complete improvement takes time because healthy nails grow slowly.Visible improvement occurs gradually as the infected portion of the nail grows out and is replaced by healthy new nail tissue. Depending on the severity of the infection, multiple treatment sessions and continued home care may be required.'
   }
 ],
      rootCauses: [
   {
     id: 1,
-    title: 'Pitta Dosha Aggravation ',
-    description: 'Excess internal heat creates an environment where fungal infections thrive, leading to nail discoloration, burning sensation, inflammation, and discomfort.',
+    title: 'Thickened & Discolored Nails',
+    description: 'One of the earliest signs of nail fungus is a change in nail color, often appearing yellow, white, brown, or cloudy. As the infection progresses, the nail may become thicker, rougher, and more difficult to trim.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Vata Imbalance ',
-    description: 'Causes dryness, brittle nails, cracking, and slow nail growth, making nails more vulnerable to fungal infection.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Brittle or Crumbling Nails',
+    description: 'Fungal infection weakens the nail structure, causing it to crack, split, crumble, or break easily. These changes can affect both appearance and daily comfort.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Kapha Imbalance ',
-    description: 'Results in thickened nails, moisture retention, nail bed debris, and slow healing, which can worsen fungal growth.',
+    title: 'Nail Separation from the Nail Bed',
+    description: 'As the infection advances, the nail may begin to lift away from the underlying nail bed, creating spaces where fungi and debris can accumulate. This can increase discomfort and make treatment more challenging.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Ama Accumulation (Toxins) ',
-    description: 'Poor digestion and toxin buildup weaken immunity, allowing fungal infections to persist and recur.',
-    severity: 'High',
-    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+    title: 'Slow Nail Growth & Recurrent Infection',
+    description: 'Healthy nails grow slowly, particularly toenails. Even after the fungus is eliminated, complete nail replacement may take several months. Without appropriate treatment and preventive care, fungal infections can return.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Stress & Immune Imbalance ',
-    description: 'Chronic stress lowers immune response, increasing the risk of recurrent nail fungus in Dubai.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Risk Factors & Environmental Exposure',
+    description: 'Frequent exposure to warm, moist environments, shared showers, swimming pools, tight footwear, nail trauma, or certain medical conditions can increase susceptibility to fungal nail infections. Identifying and addressing these contributing factors is an important part of long-term treatment success.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   }
 ],
      quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical, medical nail therapy' },
+  { label: 'Treatment Type', value: 'Non-surgical medical nail treatment' },
+  { label: 'Treatment Options', value: 'Laser therapy, topical medication, oral medication, and nail care' },
   { label: 'Anesthesia', value: 'Not required' },
+  { label: 'Session Duration', value: '20–45 minutes' },
   { label: 'Recovery Time', value: 'Minimal' },
-  { label: 'Side Effects', value: 'Temporary redness or mild irritation' }
+  { label: 'Expected Results', value: 'Gradual improvement with healthy nail growth' }
 ],
       approachCards: [
   {
     id: 1,
-    title: 'Accurate Nail & Infection Assessment',
-    description: 'Detailed examination of affected nails to identify the severity, spread, and underlying causes of the fungal infection.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Comprehensive Nail & Infection Assessment',
+    description: 'Effective treatment begins with an accurate diagnosis. Our medical team carefully examines the affected nails to determine the severity of the infection, the number of nails involved, the extent of nail damage, and any underlying conditions that may contribute to fungal growth.',
+    hasLearnMore: true,
+    expandedContent: 'We also review your medical history, lifestyle habits, footwear, and previous treatments to develop the most appropriate management plan. This detailed assessment helps distinguish fungal nail infections from other nail conditions that may appear similar, ensuring that treatment is both accurate and effective.'
   },
   {
     id: 2,
-    title: 'Targeted Antifungal Therapies',
-    description: 'Natural and medical-grade antifungal treatments are used to eliminate fungus safely and effectively.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Personalized Antifungal Treatment',
+    description: 'Treatment is tailored to your individual condition and may include topical antifungal medications, oral antifungal therapy when clinically appropriate, laser treatment, professional nail care, or a combination of these approaches.',
+    hasLearnMore: true,
+    expandedContent: 'The choice of treatment depends on the severity of the infection, nail thickness, the number of affected nails, and your overall health. By targeting the fungal organisms responsible for the infection, treatment helps gradually eliminate the fungus while supporting healthy nail regeneration.'
   },
   {
     id: 3,
-    title: 'Internal Detoxification & Immune Support',
-    description: 'Herbal formulations help remove toxins, improve digestion, and boost immunity for faster and lasting recovery.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Healthy Nail Restoration & Regrowth',
+    description: 'As the fungal infection improves, healthy nail tissue gradually replaces the damaged portion of the nail. Because fingernails and toenails grow slowly, visible improvement develops progressively over several months.',
+    hasLearnMore: true,
+    expandedContent: 'Our treatment plans support healthy nail growth by reducing fungal activity, improving nail structure, and helping restore a smoother, clearer, and stronger nail appearance over time.'
   },
   {
     id: 4,
-    title: 'Nail Repair & Strengthening Care',
-    description: 'Therapies and topical applications support healthy nail regrowth, reduce discoloration, and restore nail texture.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Prevention of Recurrence',
+    description: 'Successful nail fungus treatment in Dubai extends beyond eliminating the current infection. Our medical professionals provide personalized recommendations to reduce the likelihood of reinfection.',
+    hasLearnMore: true,
+    expandedContent: 'Guidance includes nail hygiene, proper footwear selection, moisture control, nail trimming techniques, and preventive skin care. Patients with diabetes, circulation problems, or recurrent fungal infections receive additional recommendations to help maintain long-term nail health.'
   },
   {
     id: 5,
-    title: 'Lifestyle & Foot Care Guidance',
-    description: 'Personalized advice on hygiene, footwear, moisture control, and daily habits to prevent reinfection after treatment.',
-    hasLearnMore: false,
-    expandedContent: null
-  }
+    title: 'Ongoing Monitoring & Follow-Up Care',
+    description: 'Regular follow-up appointments allow us to monitor treatment progress, evaluate healthy nail growth, and adjust your treatment plan whenever necessary.',
+    hasLearnMore: true,
+    expandedContent: 'Because fungal nail infections can take time to resolve completely, continuous monitoring helps ensure the infection is responding appropriately while supporting safe and effective recovery.'
+  },
+  {
+  id: 6,
+  title: 'Result',
+  description: 'Personalized nail fungus treatment helps gradually eliminate fungal infection while supporting healthier nail growth and long-term nail health.',
+  hasLearnMore: true,
+  expandedContent: 'With a personalized nail fungus treatment plan in Dubai, many patients experience gradual elimination of the fungal infection, healthier nail growth, improved nail appearance, reduced discomfort, and a lower risk of recurrence. Combined with good nail hygiene and ongoing preventive care, treatment helps restore stronger, clearer, and healthier-looking nails while supporting long-term nail health.'
+}
 ]
       },
-    healingJourney: {
+   healingJourney: {
   title: 'Your Nail Health Journey: Step by Step',
-  description: null,
+  description: 'At RamaCare Polyclinic, every nail fungus treatment in Dubai follows a structured, medically supervised process designed to eliminate fungal infection, promote healthy nail growth, and reduce the risk of recurrence. Because every patient has different nail conditions, infection severity, and medical history, each treatment plan is personalized to deliver safe and effective care. Our experienced medical professionals guide you through every stage, ensuring comfort, safety, and realistic expectations throughout your treatment journey.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: 'Initial Consultation & Assessment',
+      title: 'Initial Consultation & Nail Assessment',
       duration: 'Step 1',
-      description: null,
+      description: 'Your treatment begins with a comprehensive consultation and detailed examination of the affected nails. Our medical team evaluates the appearance of the nails, the extent of the fungal infection, the number of nails involved, and any underlying medical conditions that may affect treatment outcomes. Your medical history, previous treatments, lifestyle habits, and footwear choices are also reviewed to identify possible contributing factors.\n\nIf necessary, additional diagnostic testing may be recommended to confirm the fungal infection and rule out other nail conditions that can resemble nail fungus. Based on the assessment, a personalized treatment plan is developed to match your specific needs.',
       keyActivities: [
-        'Detailed nail examination and fungal testing',
-        'Review of medical history and lifestyle factors',
-        'Personalized treatment plan creation'
+        'Comprehensive nail examination',
+        'Assessment of fungal infection severity',
+        'Medical history review',
+        'Evaluation of lifestyle and risk factors',
+        'Personalized treatment planning'
       ],
       side: 'right'
     },
@@ -18302,107 +18583,151 @@ solutionIntro: {
       number: '02',
       title: 'Treatment Preparation',
       duration: 'Step 2',
-      description: null,
+      description: 'Before treatment begins, the affected nails are carefully cleaned and prepared. Depending on the selected treatment method, thickened or damaged portions of the nail may be gently trimmed or reduced to improve treatment effectiveness. Our medical team explains the procedure, expected results, and recommended aftercare while answering any questions you may have before treatment starts.\n\nThis preparation helps ensure that treatment is performed safely and comfortably while maximizing the effectiveness of antifungal therapy.',
       keyActivities: [
-        'Nail cleaning and preparation',
-        'Explanation of treatment method and aftercare',
-        'Comfort-focused guidance'
+        'Nail cleansing and preparation',
+        'Nail trimming or thinning when appropriate',
+        'Treatment explanation',
+        'Comfort-focused preparation',
+        'Pre-treatment safety checks'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Treatment',
+      title: 'Active Nail Fungus Treatment',
       duration: 'Step 3',
-      description: null,
+      description: 'Treatment is performed according to your individualized care plan. Depending on your condition, this may involve advanced laser therapy, topical antifungal medication, oral antifungal treatment when clinically appropriate, professional nail care, or a combination of these approaches. Each treatment targets the fungal organisms responsible for the infection while preserving healthy surrounding tissue.\n\nThroughout the procedure, our medical professionals monitor your comfort and treatment response to ensure safe, effective care. Because healthy nails grow slowly, treatment focuses on eliminating the infection while supporting gradual replacement of the damaged nail with healthy new growth.',
       keyActivities: [
-        'Laser, topical, or oral antifungal application',
+        'Laser or antifungal treatment',
         'Targeted therapy for infected nails',
-        'Continuous monitoring by medical staff'
+        'Continuous medical monitoring',
+        'Patient comfort throughout treatment',
+        'Immediate treatment assessment'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Follow-Up & Maintenance',
+      title: 'Follow-Up & Long-Term Nail Care',
       duration: 'Step 4',
-      description: null,
+      description: 'Recovery and follow-up are essential for successful nail fungus treatment in Dubai. After each session, patients receive personalized instructions on nail hygiene, footwear selection, moisture control, and home care to encourage healthy nail growth and reduce the risk of reinfection.\n\nRegular follow-up appointments allow our medical team to monitor nail regrowth, assess treatment progress, and modify your treatment plan if required. Depending on the severity of the infection, additional sessions or maintenance care may be recommended to achieve the best possible long-term outcome.',
       keyActivities: [
-        'Post-treatment care guidance',
-        'Monitoring nail growth and infection clearance',
-        'Optional maintenance sessions for long-term health'
+        'Post-treatment care instructions',
+        'Monitoring healthy nail growth',
+        'Assessment of infection clearance',
+        'Lifestyle and preventive care guidance',
+        'Maintenance treatment if required'
       ],
       side: 'left'
+    },
+    {
+      id: 5,
+      number: '05',
+      title: 'Result',
+      duration: null,
+      description: 'With a personalized nail fungus treatment plan in Dubai, patients can expect gradual elimination of the fungal infection, healthier nail growth, stronger nail structure, improved nail appearance, and a reduced risk of recurrence. Through medically supervised care, ongoing monitoring, and proper aftercare, our goal is to help restore clear, healthy nails and support long-term nail health.',
+      keyActivities: [],
+      side: 'right'
     }
   ]
 },
       benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Nail Fungus Treatment vs. Home Remedies',
-        comparisonDescription: 'Compare our advanced laser approach with conventional hair removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Nail Fungus Treatment in Dubai',
-          traditional: 'Home Remedies'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Eliminates fungal infection',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Restores nail thickness and strength',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Improves nail color and appearance',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: 'Safe, doctor-supervised treatment',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Enhances nail health and confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
- {
-  feature: 'Safety',
-  ayurvedic: 'Doctor-supervised, medical-grade',
-  conventional: 'Unreliable, risk of irritation'
-},
-{
-  feature: 'Effectiveness',
-  ayurvedic: 'Clinically proven, long-lasting',
-  conventional: 'Often temporary or ineffective'
-},
-{
-  feature: 'Technology',
-  ayurvedic: 'Laser, topical, or oral medications',
-  conventional: 'Natural products or DIY treatments'
-},
-{
-  feature: 'Recovery',
-  ayurvedic: 'Monitored healing, gradual improvement',
-  conventional: 'Poorly controlled, slow recovery'
-}
-
-        ]
+  title: 'Clinically-Observed Benefits',
+  description: 'Based on years of providing comprehensive nail fungus treatment in Dubai. Our Nail Fungus Treatment in Dubai is designed to eliminate fungal infections while supporting healthy nail growth and reducing the likelihood of recurrence. Every treatment plan is personalized according to the severity of the infection, the number of affected nails, and your overall nail health. Using evidence-based treatment options and medically supervised care, we focus on restoring stronger, clearer, and healthier-looking nails with long-term results.',
+  comparisonTitle: 'Nail Fungus Treatment vs. Home Remedies',
+  comparisonDescription: 'Many people try home remedies such as vinegar soaks, tea tree oil, baking soda, or over-the-counter products when they first notice signs of nail fungus.  Every treatment plan is personalized and supervised by experienced medical professionals to maximize effectiveness while protecting healthy nail tissue.\n\nAt RamaCare Polyclinic, we begin with a detailed nail assessment to confirm the diagnosis, evaluate the extent of the infection, and identify the most suitable treatment option. Our goal is not only to eliminate the existing fungal infection but also to promote healthy nail regrowth and reduce the risk of future recurrence through personalized care and preventive guidance.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Nail Fungus Treatment in Dubai',
+    traditional: 'Home Remedies'
+  },
+  benefits: [
+    {
+      id: 1,
+      title: 'Elimination of Fungal Infection',
+      percentage: 90,
+      description: 'Our treatment targets the fungal organisms responsible for the infection using clinically approved therapies tailored to your condition.',
+      hasLearnMore: true,
+      expandedContent: 'By reducing fungal growth and supporting the body’s natural healing process, treatment helps eliminate the infection while minimizing the risk of it spreading to other nails.'
+    },
+    {
+      id: 2,
+      title: 'Restores Nail Thickness & Strength',
+      percentage: 92,
+      description: 'As the fungal infection clears, healthy nail tissue gradually replaces the damaged portion of the nail.',
+      hasLearnMore: true,
+      expandedContent: 'Over time, many patients notice stronger, smoother, and more durable nails with improved resistance to cracking, splitting, and brittleness.'
+    },
+    {
+      id: 3,
+      title: 'Improves Nail Color & Appearance',
+      percentage: 88,
+      description: 'Successful treatment supports healthy nail regrowth and a clearer, healthier appearance.',
+      hasLearnMore: true,
+      expandedContent: 'Fungal infections often cause yellow, white, brown, or cloudy discoloration. With healthy nail regrowth, affected nails gradually become clearer, more even in color, and healthier in appearance.'
+    },
+    {
+      id: 4,
+      title: 'Safe, Doctor-Supervised Treatment',
+      percentage: 85,
+      description: 'Every treatment is performed under the supervision of experienced medical professionals.',
+      hasLearnMore: true,
+      expandedContent: 'Personalized treatment planning, careful monitoring, and evidence-based care help maximize effectiveness while prioritizing patient safety and comfort throughout the treatment journey.'
+    },
+    {
+      id: 5,
+      title: 'Enhances Nail Health & Confidence',
+      percentage: 94,
+      description: 'Clearer, healthier nails improve both physical comfort and confidence.',
+      hasLearnMore: true,
+      expandedContent: 'As the infection resolves and healthy nails grow back, many patients feel more comfortable wearing open footwear, participating in daily activities, and maintaining overall nail hygiene.\n\nNote: Individual results vary depending on the severity of the infection, the number of affected nails, treatment adherence, and each person’s natural nail growth and healing response.'
+    }
+  ],
+  comparisonData: [
+    {
+      feature: 'Treatment Approach',
+      ayurvedic: 'Doctor-supervised medical treatment',
+      conventional: 'Self-managed home care'
+    },
+    {
+      feature: 'Safety',
+      ayurvedic: 'Clinically supervised and evidence-based',
+      conventional: 'Variable effectiveness with possible skin irritation'
+    },
+    {
+      feature: 'Effectiveness',
+      ayurvedic: 'Targets the fungal infection directly',
+      conventional: 'Often temporary or ineffective'
+    },
+    {
+      feature: 'Treatment Options',
+      ayurvedic: 'Laser therapy, topical medication, oral medication, professional nail care',
+      conventional: 'Vinegar, oils, DIY products, household remedies'
+    },
+    {
+      feature: 'Personalized Care',
+      ayurvedic: 'Individual treatment plan based on nail condition',
+      conventional: 'One-size-fits-all approach'
+    },
+    {
+      feature: 'Recovery Monitoring',
+      ayurvedic: 'Regular follow-up and progress assessment',
+      conventional: 'No professional monitoring'
+    },
+    {
+      feature: 'Risk of Recurrence',
+      ayurvedic: 'Reduced with proper treatment and aftercare',
+      conventional: 'Higher if the infection is not fully eliminated'
+    },
+    {
+      feature: 'Long-Term Results',
+      ayurvedic: 'Supports healthy nail regrowth',
+      conventional: 'Limited improvement in established infections'
+    }
+  ]
       },
     pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -18714,7 +19039,74 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+
+      skinTreatmentContent: [
+  {
+    id: "which-option-right",
+    badge: "Choosing the Right Treatment",
+    title: "Which Option Is Right for You?",
+    description:
+      "If your nail has become thickened, discolored, brittle, painful, or the infection has persisted despite home care, seeking professional evaluation is recommended. Early diagnosis and appropriate medical treatment can help prevent the infection from worsening and improve the likelihood of healthy nail regrowth.\n\nChoosing Nail Fungus Treatment in Dubai at RamaCare Polyclinic provides access to experienced medical professionals, personalized treatment planning, evidence-based therapies, and ongoing follow-up care. Our comprehensive approach focuses on eliminating the fungal infection, restoring stronger and healthier nails, and helping you maintain long-term nail health while minimizing the risk of recurrence.",
+    points: []
+  }
+],
+
+whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro:
+    "Choosing the right clinic for nail fungus treatment in Dubai is important for achieving lasting results and preventing the infection from returning. At RamaCare Polyclinic, we combine experienced medical professionals, personalized treatment planning, and evidence-based therapies to provide comprehensive care for fungal nail infections.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Nail Assessment & Personalized Treatment",
+      description:
+        "Every patient begins with a detailed nail assessment to identify the severity of the infection, evaluate contributing factors, and determine the most appropriate treatment approach. Whether your condition requires laser therapy, topical medication, oral antifungal treatment, or a combination of therapies, your treatment plan is tailored to your individual needs."
+    },
+    {
+      id: 2,
+      title: "Evidence-Based Treatment & Long-Term Nail Health",
+      description:
+        "Our focus extends beyond eliminating the existing infection. We also help strengthen nail health, encourage healthy nail regrowth, and provide practical guidance to reduce the risk of future fungal infections. Throughout your treatment journey, our team carefully monitors your progress and adjusts your care plan whenever necessary."
+    },
+    {
+      id: 3,
+      title: "Ongoing Support & Professional Care",
+      description:
+        "With modern treatment options, a patient-centered approach, and ongoing follow-up support, RamaCare Polyclinic is committed to helping you restore healthier, stronger nails safely and effectively through professional nail fungus treatment in Dubai."
+    }
+  ]
+},
+
+aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription:
+    "Recovery after nail fungus treatment in Dubai is generally simple, with most patients able to continue their normal daily activities immediately or shortly after treatment. Because healthy nails grow gradually, visible improvement develops over time as the damaged nail is slowly replaced by healthy new nail tissue. Depending on the severity of the infection, complete nail regrowth may take several months, particularly for toenails.",
+  resultPoints: [
+    "Follow your personalized aftercare plan to support healthy nail regrowth and reduce the risk of reinfection.",
+    "Keep your nails clean and dry throughout the recovery period.",
+    "Trim nails regularly and maintain good nail hygiene.",
+    "Wear breathable footwear and change socks daily.",
+    "Avoid walking barefoot in public areas such as swimming pools, gyms, and communal showers.",
+    "Allow shoes to dry completely between uses to reduce moisture buildup.",
+    "Our medical team provides personalized aftercare instructions based on your treatment method and nail condition.",
+    "Attend regular follow-up appointments to monitor nail growth and treatment progress.",
+    "Additional treatment or maintenance care may be recommended depending on your response to treatment.",
+    "Combining professional treatment with proper nail hygiene and preventive habits supports long-term nail health and helps reduce the risk of future fungal infections."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro:
+    "Nail fungus treatment in Dubai may be suitable for adults experiencing thickened, brittle, discolored, or distorted fingernails or toenails caused by a fungal infection. It is also appropriate for individuals with recurring nail fungus, nails lifting from the nail bed, discomfort while walking, or infections that have not responded to over-the-counter products or home remedies.",
+  points: [
+    "Ideal candidates are generally in good overall health and are committed to following their recommended treatment plan and aftercare instructions.",
+    "Since nail fungus often requires multiple treatment sessions and healthy nail regrowth takes time, realistic expectations and treatment consistency are important for achieving the best possible outcome."
+  ],
+  closing:
+    "During your consultation at RamaCare Polyclinic, our experienced medical professionals carefully evaluate your nails, medical history, and overall health to determine the most suitable treatment approach. This personalized assessment helps ensure safe, effective care while supporting healthy nail regrowth, improved nail appearance, and long-term protection against recurrent fungal infections."
+}
     },
   
        'aesthetic-dermatology-dubai-laser-treatment-laser-rejuvenation': {
@@ -18973,7 +19365,6 @@ solutionIntro: {
       'As collagen production increases over time, improvements may include reduced pigmentation, softer fine lines, refined pores, improved skin texture, enhanced firmness, and a more radiant complexion. Individual results vary depending on skin condition, treatment response, and adherence to aftercare recommendations.'
   }
 ]
-
       },
    healingJourney: {
   title: 'Your Skin Rejuvenation Journey: Step by Step',
@@ -21121,8 +21512,8 @@ solutionIntro: {
 
      'aesthetic-dermatology-dubai-laser-treatment-scars-removal': {
       hero: {
-        subtitle: 'Restore Smoother, Clearer Skin with Medical Expertise You Can Trust',
-        description: 'Scars can remain long after an injury, acne, surgery, or burn has healed—and they can affect both appearance and confidence. At ramacarepolyclinic, we offer Scars Removal in Dubai using safe, medically supervised treatments designed to improve skin texture, tone, and overall appearance naturally and gradually.',
+        subtitle: 'Restore Smoother, Clearer Skin with Advanced Medical Care',
+        description: 'Scars can develop after acne, injuries, burns, surgery, or other skin trauma.While they are a natural part of the body\'s healing process, some scars may remain visible for years, affecting skin texture, tone, and overall appearance. At RamaCare Polyclinic, we provide scar removal in Dubai using advanced, medically supervised treatment solutions tailored to your individual skin type and scar characteristics.Following a comprehensive skin assessment, our experienced medical professionals recommend the most appropriate treatment approach, which may include laser therapy, collagen-stimulating procedures, or other clinically suitable techniques designed to improve the appearance of scars while preserving healthy surrounding skin.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -21206,134 +21597,151 @@ solutionIntro: {
         title: 'Understanding Scars Removal in Dubai',
        problemIntro: {
   title: 'The Problem: Why Scars Develop and Persist',
-  description: 'Concerns related to scars in Dubai are common due to acne, injuries, surgeries, burns, and environmental factors such as heat and sun exposure. Scars may fade over time, but many remain visible without proper treatment and care.'
+  description: 'Scars are a natural part of the body\'s healing process following skin injury. Acne, burns, surgery, trauma, and inflammation can damage the deeper layers of the skin, causing collagen to form differently during healing. Depending on how the body repairs the damaged tissue, scars may become raised, depressed, discolored, or remain visible for many years.Although some scars gradually fade, many require professional treatment to improve their appearance because topical creams and home remedies often cannot reach the deeper layers of the skin where scar tissue develops.'
 },
 solutionIntro: {
-  title: 'Our Solution: Advanced & Holistic Care for Scars in Dubai',
-  description: 'Our treatment approach for scars in Dubai focuses on improving skin texture, reducing scar visibility, and supporting healthy skin regeneration.'
+  title: 'Our Solution: Advanced Scar Removal in Dubai',
+  description: 'At RamaCare Polyclinic, our approach to scar removal in Dubai focuses on improving skin texture, reducing the visibility of scars, and supporting the skin\'s natural healing process. Every scar is unique, so treatment begins with a detailed skin assessment to understand the type, depth, location, and underlying cause of the scar before recommending the most appropriate treatment plan.Using advanced medical technologies and evidence-based treatment techniques, our goal is to stimulate collagen remodeling, encourage healthy skin regeneration, and gradually improve the appearance of acne scars, surgical scars, injury scars, burn scars, and other skin irregularities. Every treatment is personalized to deliver safe, natural-looking, and long-lasting improvements while preserving the surrounding healthy skin.'
 },
     leftCards: [
   {
     id: 1,
     title: 'What Is Scars Removal Treatment?',
     description:
-      'Scars Removal in Dubai is a medical skin treatment that reduces the appearance of scars by improving collagen production and skin regeneration. Depending on scar type, treatments may include laser therapy, resurfacing, or combination approaches.'
+      'Scar removal in Dubai refers to a range of advanced medical treatments designed to reduce the appearance of scars by improving skin regeneration, stimulating collagen production, and enhancing overall skin texture. Depending on the type, size, depth, and location of the scar, treatment may involve laser therapy, skin resurfacing, microneedling, or a combination of clinically appropriate procedures.Scars form as part of the body\'s natural healing process after acne, surgery, burns, injuries, or other skin trauma.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Scar removal treatments are suitable for people with:',
+    description: 'Scar removal treatment may be suitable for individuals with',
     listItems: [
       'Acne scars',
       'Surgical scars',
+      'Burn scars',
       'Injury or trauma scars',
-      'Stretch marks',
-      'Uneven skin texture or pigmentation'
+      'StStretch marks',
+      'Uneven skin texture',
+      'Post-inflammatory pigmentation',
+      'Mild to moderate skin depressions',
+      'Raised or thickened scars (following medical assessment)',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Each session typically lasts 30–60 minutes. Results develop gradually as the skin heals and renews over multiple sessions.'
+      'Treatment sessions generally last 30–60 minutes, depending on the treatment method and the size of the area being treated. Since scar improvement relies on the skin\'s natural healing process, results develop gradually over several weeks and continue to improve as collagen production increases.Most patients require multiple treatment sessions to achieve the best possible outcome. The number of sessions varies according to the type, depth, age, and severity of the scar, as well as each individual\'s healing response.'
   }
 ],
   rootCauses: [
   {
     id: 1,
-    title: 'Pitta Dosha Aggravation ',
-    description: 'Excess internal heat can worsen inflammation, pigmentation, redness, and thickened scar tissue, making scars more noticeable.',
+    title: 'Collagen Imbalance During Healing',
+    description: 'When the skin heals after injury or inflammation, collagen production may become irregular. Too little collagen can create depressed or atrophic scars, while excessive collagen may lead to raised or thickened scars.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Vata Imbalance ',
-    description: 'Leads to dryness, uneven skin texture, poor collagen formation, and delayed skin healing, contributing to rough or indented scars.',
-    severity: 'Medium',
-    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+    title: 'Deep Skin Injury or Inflammation',
+    description: 'Severe acne, surgical procedures, burns, and traumatic injuries can damage deeper skin layers, making scars more noticeable and more difficult to improve without professional treatment.',
+    severity: 'High',
+    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Kapha Imbalance ',
-    description: 'Causes excess tissue buildup, resulting in raised, thick, or keloid-type scars with slow natural resolution.',
+    title: 'Skin Pigmentation Changes',
+    description: 'Following skin injury, some individuals develop darker or lighter pigmentation around scars. Sun exposure may further increase discoloration and make scars appear more prominent.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Ama Accumulation (Toxins) ',
-    description: 'Digestive toxins interfere with skin repair and regeneration, slowing scar healing and causing discoloration.',
-    severity: 'High',
-    severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+    title: 'Delayed Skin Regeneration',
+    description: 'As collagen production naturally slows with age, skin renewal becomes less efficient, making older scars slower to improve without advanced medical treatments.',
+    severity: 'Medium',
+    severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Stress & Hormonal Imbalance ',
-    description: 'Can delay wound healing and worsen the appearance of scars in Dubai, especially acne-related scars.',
+    title: 'Genetics & Individual Healing Response',
+    description: 'Every person\'s skin heals differently. Genetics, skin type, scar location, and overall health can all influence how noticeable a scar becomes and how it responds to treatment.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
- quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical, medical aesthetic' },
-  { label: 'Anesthesia', value: 'Topical (if required)' },
-  { label: 'Recovery Time', value: 'Minimal to moderate (depends on treatment)' },
-  { label: 'Side Effects', value: 'Temporary redness or mild swelling' }
+quickFacts: [
+  { label: 'Treatment Type', value: 'Non-surgical medical aesthetic treatment' },
+  { label: 'Technology', value: 'Laser therapy, skin resurfacing, collagen stimulation, or combination treatments' },
+  { label: 'Anesthesia', value: 'Topical anesthetic if required' },
+  { label: 'Session Duration', value: '30–60 minutes' },
+  { label: 'Recovery Time', value: 'Minimal to moderate depending on treatment' },
+  { label: 'Common Side Effects', value: 'Temporary redness, mild swelling, or skin sensitivity' },
+  { label: 'Results', value: 'Gradual, natural-looking improvement' }
 ],
       approachCards: [
   {
     id: 1,
-    title: 'Detailed Skin & Scar Assessment',
-    description: 'Each scar is carefully evaluated based on its type, depth, and cause to create a personalized treatment plan.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Comprehensive Skin & Scar Assessment',
+    description: 'A successful scar treatment begins with a thorough evaluation of your skin. Our medical professionals carefully examine the characteristics of your scar, including its depth, age, texture, pigmentation, and location. We also assess your skin type, medical history, previous treatments, and healing pattern before creating a customized treatment strategy.',
+    hasLearnMore: true,
+    expandedContent: 'This personalized approach helps ensure that every patient receives the most suitable and effective treatment for their specific skin concern.'
   },
   {
     id: 2,
-    title: 'Targeted Scar Reduction Therapies',
-    description: 'Advanced treatments help soften scar tissue, improve collagen production, and reduce pigmentation and uneven texture.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Targeted Scar Reduction Treatments',
+    description: 'Depending on the type of scar, we may recommend advanced laser therapy, collagen-stimulating procedures, skin resurfacing, or combination treatments to improve skin quality. These therapies work by breaking down damaged scar tissue, encouraging new collagen formation, and promoting smoother, healthier skin over time.',
+    hasLearnMore: true,
+    expandedContent: 'Treatment plans are adjusted according to your individual progress to maximize safety and achieve gradual, natural-looking results.'
   },
   {
     id: 3,
-    title: 'Internal Detoxification Support',
-    description: 'Herbal support and gentle cleansing help remove toxins and enhance the skin’s natural healing capacity.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Collagen Stimulation & Skin Regeneration',
+    description: 'Healthy collagen production plays an essential role in improving the appearance of scars. Our treatments stimulate the skin’s natural repair mechanisms, helping replace damaged tissue with healthier collagen while improving skin firmness, elasticity, and overall texture.',
+    hasLearnMore: true,
+    expandedContent: 'As collagen remodeling continues over the following weeks and months, many patients notice smoother skin and a gradual reduction in scar visibility.'
   },
   {
     id: 4,
-    title: 'Skin Rejuvenation & Healing Care',
-    description: 'Topical applications, oils, and therapies nourish the skin, improve elasticity, and promote smoother skin.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Skin Rejuvenation & Healing Support',
+    description: 'Following treatment, the skin enters a natural healing phase. Personalized skincare recommendations and clinically appropriate post-treatment care help support healthy skin regeneration, reduce temporary redness, and protect the skin during recovery.',
+    hasLearnMore: true,
+    expandedContent: 'Proper skin hydration, gentle skincare, and consistent sun protection contribute to better long-term treatment outcomes while maintaining overall skin health.'
   },
   {
     id: 5,
-    title: 'Lifestyle & Skin Care Guidance',
-    description: 'Personalized recommendations help protect the skin, prevent worsening of scars, and maintain long-term results.',
-    hasLearnMore: false,
-    expandedContent: null
+    title: 'Personalized Skin Care & Lifestyle Guidance',
+    description: 'Long-term scar improvement also depends on maintaining healthy skin habits. Our team provides individualized guidance on daily skincare, sun protection, hydration, nutrition, and lifestyle practices that support skin healing and help minimize future pigmentation changes or additional skin damage.',
+    hasLearnMore: true,
+    expandedContent: 'Regular follow-up appointments allow us to monitor your progress and recommend maintenance treatments when appropriate to preserve your results.'
+  },
+  {
+    id: 6,
+    title: 'Result',
+    description: 'With a personalized Scars Removal in Dubai treatment plan, many patients experience gradual improvements in skin texture, scar visibility, and overall skin appearance.',
+    hasLearnMore: true,
+    expandedContent: 'While complete scar removal is not always possible, advanced medical treatments can significantly reduce the appearance of many types of scars, helping you achieve smoother, healthier-looking skin with natural and long-lasting results.'
   }
 ]
       },
 
   healingJourney: {
-  title: 'Your Skin Recovery Journey: Step by Step',
-  description: null,
+  title: 'Your Scars Removal Journey: Step by Step',
+  description: 'Our scar removal in Dubai follows a structured, doctor-supervised treatment process designed to improve skin texture, stimulate natural collagen production, and gradually reduce the appearance of scars. Every treatment plan is personalized according to the type, depth, location, and age of the scar, ensuring that each patient receives the most appropriate and effective care. From your initial consultation through recovery and follow-up care, our experienced medical professionals carefully monitor your progress to maximize safety, support healthy skin regeneration, and achieve natural-looking, long-lasting improvements.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Skin Assessment',
       duration: 'Step 1',
-      description: null,
+      description: 'Your journey begins with a detailed consultation to determine whether scar removal in Dubai is the right treatment for your skin concern. Our medical team carefully evaluates the characteristics of your scar, your skin type, previous treatments, and overall skin health before creating a personalized treatment plan. Understanding the cause and type of the scar allows us to recommend the most appropriate treatment approach while setting realistic expectations for improvement.',
       keyActivities: [
-        'Scar type and depth evaluation',
-        'Skin analysis and medical history review',
-        'Personalized Scars Removal plan creation'
+        'Comprehensive skin and scar evaluation',
+        'Assessment of scar type, depth, texture, and pigmentation',
+        'Review of medical history and previous skin treatments',
+        'Skin type and healing response assessment',
+        'Discussion of treatment goals and expected outcomes',
+        'Creation of a personalized Scars Removal treatment plan'
       ],
       side: 'right'
     },
@@ -21342,24 +21750,30 @@ solutionIntro: {
       number: '02',
       title: 'Skin Preparation Phase',
       duration: 'Step 2',
-      description: null,
+      description: 'Proper preparation helps optimize treatment effectiveness and minimizes the risk of temporary skin irritation. Before each treatment session, our team provides personalized guidance based on your skin condition and the selected treatment method. Preparing the skin properly also supports a smoother recovery and better long-term results.',
       keyActivities: [
-        'Medical-grade cleansing',
-        'Pre-treatment skincare guidance',
-        'Sun protection advice'
+        'Medical-grade skin cleansing',
+        'Personalized pre-treatment skincare guidance',
+        'Temporary avoidance of certain skincare products when appropriate',
+        'Sun protection recommendations',
+        'Final skin assessment before treatment',
+        'Preparation for laser or resurfacing procedures'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Active Treatment Phase',
+      title: 'Active Scars Removal Treatment',
       duration: 'Step 3',
-      description: null,
+      description: 'Depending on your treatment plan, advanced laser technology, skin resurfacing procedures, collagen-stimulating therapies, or combination treatments are performed to improve scar appearance. These treatments work by encouraging natural collagen remodeling and replacing damaged tissue with healthier new skin. Sessions are generally scheduled every 3–4 weeks, allowing the skin sufficient time to heal and regenerate between treatments. Throughout each session, patient comfort and safety remain our highest priorities.',
       keyActivities: [
-        'Laser or resurfacing sessions',
-        'Sessions spaced 3–4 weeks apart',
-        'Post-treatment calming and healing care'
+        'Laser or skin resurfacing treatment',
+        'Controlled treatment of targeted scar areas',
+        'Collagen stimulation and skin renewal',
+        'Skin cooling and soothing measures',
+        'Continuous medical supervision',
+        'Monitoring of treatment response and progress'
       ],
       side: 'right'
     },
@@ -21368,90 +21782,137 @@ solutionIntro: {
       number: '04',
       title: 'Healing & Maintenance Phase',
       duration: 'Step 4',
-      description: null,
+      description: 'Following treatment, your skin enters a natural healing and collagen remodeling phase. Mild redness, swelling, or temporary sensitivity may occur depending on the procedure performed, but these effects usually improve within a few days. Our medical team provides personalized aftercare recommendations to support healthy skin healing and maintain long-term improvements. Depending on your scar type and treatment goals, maintenance sessions may be recommended.',
       keyActivities: [
-        'Skin regeneration monitoring',
-        'Maintenance sessions, if required',
-        'Home skincare and lifestyle guidance'
+        'Monitoring skin healing and regeneration',
+        'Personalized post-treatment skincare routine',
+        'Daily sun protection recommendations',
+        'Lifestyle and skin health guidance',
+        'Follow-up consultations',
+        'Maintenance treatment planning, if appropriate'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Expected Results',
       duration: null,
-      description:
-        'Smoother skin, softer scars, improved texture, and a more even skin tone.',
+      description: 'Scar improvement develops gradually as new collagen forms, and the skin continues its natural healing process. Many patients notice smoother skin texture, softer scar tissue, improved skin tone, and a more even complexion over several weeks and months. The degree of improvement depends on the type, age, and severity of the scar, as well as each individual\'s healing response. Our personalized treatment plans and ongoing medical supervision help achieve safe, natural-looking, and long-lasting results.',
       keyActivities: [],
       side: 'right'
     }
   ]
 },
       benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Scars Removal vs. Topical Creams',
-        comparisonDescription: 'Compare our advanced laser approach with conventional scar removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Scars Removal in Dubai',
-          traditional: 'Scar Creams'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: ' Reduced scar visibility',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: 'Improved skin texture',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Even skin tone',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: ' Boosted collagen production',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: 'Increased skin confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-{
-    feature: 'Depth of Treatment',
-    ayurvedic: 'Reaches deeper skin layers',
-    conventional: 'Surface-level only'
+  title: 'Clinically-Observed Benefits',
+  description: 'Based on years of providing advanced skin rejuvenation and scar management treatments in Dubai. Our scar removal treatments in Dubai are designed to reduce the appearance of scars while improving overall skin quality through advanced, medically supervised procedures. By stimulating natural collagen production and supporting healthy skin regeneration, these treatments help soften scar tissue, smooth uneven skin texture, and create a more even complexion over time. Individual results vary depending on the type, age, depth, and severity of the scar, as well as each person\'s natural healing response and recommended treatment plan.',
+  comparisonTitle: 'Scars Removal vs. Topical Creams',
+  comparisonDescription: 'Many people try over-the-counter creams, gels, or ointments to improve the appearance of scars. At RamaCare Polyclinic, every patient receives a detailed skin assessment before treatment begins. Our experienced medical professionals evaluate the type, depth, age, and location of the scar, along with your skin type and medical history, to recommend the most suitable treatment plan. This personalized approach helps maximize treatment safety while supporting gradual, natural-looking improvements.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Scars Removal in Dubai',
+    traditional: 'Scar Creams'
+  },
+  benefits: [
+  {
+    id: 1,
+    title: 'Reduced Scar Visibility',
+    percentage: 90,
+    description: 'Advanced treatments help reduce the visibility of scars through natural collagen remodeling.',
+    hasLearnMore: true,
+    expandedContent:
+      'Advanced scar removal treatments target damaged scar tissue while encouraging the skin’s natural healing process. As new collagen develops and the skin remodels, many scars gradually become flatter, softer, and less noticeable, resulting in a smoother overall appearance.'
   },
   {
-    feature: 'Results',
-    ayurvedic: 'Gradual, visible improvement',
-    conventional: 'Limited results'
+    id: 2,
+    title: 'Improved Skin Texture',
+    percentage: 92,
+    description: 'Treatment helps smooth rough, uneven, and indented skin caused by scars.',
+    hasLearnMore: true,
+    expandedContent:
+      'Scars can leave the skin feeling rough, uneven, or indented. By stimulating healthy skin regeneration, treatment helps refine skin texture, soften irregularities, and improve the overall quality of the treated area. Gradual improvements continue as collagen remodeling progresses over time.'
   },
   {
-    feature: 'Technology',
-    ayurvedic: 'Medical-grade treatments',
-    conventional: 'Cosmetic products'
+    id: 3,
+    title: 'More Even Skin Tone',
+    percentage: 88,
+    description: 'Professional treatments improve skin clarity and reduce scar-related discoloration.',
+    hasLearnMore: true,
+    expandedContent:
+      'Scars are often accompanied by changes in skin pigmentation that make them more visible. Professional treatments help reduce discoloration and improve skin clarity, creating a more balanced and even-looking complexion while preserving the surrounding healthy skin.'
   },
   {
-    feature: 'Supervision',
-    ayurvedic: 'Doctor-led',
-    conventional: 'Self-applied'
+    id: 4,
+    title: 'Boosted Collagen Production',
+    percentage: 85,
+    description: 'Natural collagen stimulation supports healthier skin repair and regeneration.',
+    hasLearnMore: true,
+    expandedContent:
+      'Collagen plays a vital role in repairing and strengthening the skin. Our treatments stimulate natural collagen production, supporting healthier tissue regeneration and improving skin firmness, elasticity, and the overall appearance of many types of scars.'
+  },
+  {
+    id: 5,
+    title: 'Increased Skin Confidence',
+    percentage: 94,
+    description: 'Gradual improvements in scar appearance help enhance confidence.',
+    hasLearnMore: true,
+    expandedContent:
+      'As scars become less noticeable and skin texture improves, many patients report greater confidence in their appearance. Our personalized treatment plans focus on achieving gradual, natural-looking improvements while maintaining realistic expectations and prioritizing long-term skin health.'
   }
-        ]
+],
+  comparisonData: [
+    {
+      feature: 'Treatment Approach',
+      ayurvedic: 'Medical procedures that target scar tissue',
+      conventional: 'Topical cosmetic products'
+    },
+    {
+      feature: 'Depth of Treatment',
+      ayurvedic: 'Reaches deeper skin layers',
+      conventional: 'Surface-level only'
+    },
+    {
+      feature: 'Primary Goal',
+      ayurvedic: 'Improves scar appearance and skin texture',
+      conventional: 'Moisturizes and supports superficial skin healing'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Gradual, visible improvement over multiple sessions',
+      conventional: 'Usually limited, especially for older or deeper scars'
+    },
+    {
+      feature: 'Technology',
+      ayurvedic: 'Advanced medical-grade laser and skin rejuvenation treatments',
+      conventional: 'Cosmetic formulations'
+    },
+    {
+      feature: 'Personalization',
+      ayurvedic: 'Customized according to scar type and skin condition',
+      conventional: 'General formulations for broad use'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic: 'Doctor-led consultation and treatment',
+      conventional: 'Self-applied'
+    },
+    {
+      feature: 'Suitable for Scar Types',
+      ayurvedic: 'Acne, surgical, burn, injury, and selected raised scars',
+      conventional: 'Most effective for minor or newly healed scars'
+    },
+    {
+      feature: 'Long-Term Benefit',
+      ayurvedic: 'Supports collagen remodeling and long-term skin improvement',
+      conventional: 'Requires continued use and offers limited long-term improvement'
+    },
+    {
+      feature: 'Follow-Up Care',
+      ayurvedic: 'Professional monitoring and maintenance when needed',
+      conventional: 'No clinical follow-up'
+    }
+  ]
       },
   pricing: {
   title: 'Transparent Pricing & Treatment Packages',
@@ -21764,13 +22225,70 @@ solutionIntro: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+      skinTreatmentContent: [
+  {
+    id: "which-option-right",
+    badge: "Choosing the Right Treatment",
+    title: "Which Option Is Right for You?",
+    description:
+      "Scar creams may be helpful for maintaining skin hydration or supporting the early healing stages of minor scars. However, for established acne scars, surgical scars, burn scars, or deeper skin irregularities, Scars Removal in Dubai provides a more comprehensive and medically supervised treatment approach.\n\nA professional consultation allows our medical team to evaluate your skin, determine the type and severity of your scar, and recommend the most appropriate treatment plan. By combining advanced technology with personalized care, we focus on achieving gradual, natural-looking improvements while maintaining the health and integrity of your skin.",
+    points: []
+  }
+],
+    whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro: "Choosing the right clinic for Scars Removal in Dubai is an important step toward achieving healthier-looking skin and long-lasting improvements. At RamaCare Polyclinic, we combine experienced medical professionals, advanced treatment technology, and personalized care to create treatment plans tailored to each patient's skin type, scar characteristics, and individual goals.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Scar Assessment",
+      description: "Every treatment begins with a detailed skin consultation and scar assessment. Our medical team carefully evaluates the type, depth, age, and location of the scar, along with your medical history and previous treatments, before recommending the most appropriate solution. This personalized approach helps ensure safe, effective care while setting realistic expectations for gradual improvement."
+    },
+    {
+      id: 2,
+      title: "Advanced Technology & Evidence-Based Treatment",
+      description: "We use modern, clinically approved technologies and follow evidence-based treatment protocols to improve skin texture, stimulate natural collagen production, and support healthy skin regeneration. Throughout your treatment journey, our team closely monitors your progress and adjusts your treatment plan whenever necessary to maximize results and maintain patient comfort."
+    },
+    {
+      id: 3,
+      title: "Personalized Care & Long-Term Support",
+      description: "At RamaCare Polyclinic, patient safety, transparency, and satisfaction remain our highest priorities. From your initial consultation to follow-up care, we are committed to providing professional guidance, honest treatment recommendations, and comprehensive support to help you achieve smoother skin and greater confidence through safe, medically supervised scar treatment."
+    }
+  ]
+},
+    aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription: "Recovery after scar removal in Dubai depends on the treatment method used, the type of scar being treated, and your individual skin's healing response. Most patients experience temporary redness, mild swelling, or increased skin sensitivity immediately after treatment. These effects are generally short-lived and gradually improve over the following days as the skin begins its natural healing process.",
+  resultPoints: [
+    "Follow your personalized aftercare instructions to support healing and achieve the best possible outcome.",
+    "Keep the treated skin clean and well moisturized throughout the recovery period.",
+    "Protect the treated area from excessive sun exposure during healing.",
+    "Apply a broad-spectrum sunscreen daily to reduce the risk of post-treatment pigmentation changes.",
+    "Avoid harsh skincare products, exfoliants, and unnecessary friction unless specifically recommended by your doctor.",
+    "Use gentle cleansers and maintain healthy skin hydration to support natural skin recovery.",
+    "Follow the individualized skincare recommendations provided by our medical team based on your treatment plan and skin condition.",
+    "Attend scheduled follow-up appointments so your doctor can monitor healing and collagen remodeling.",
+    "Additional treatment sessions or maintenance care may be recommended depending on your scar type, healing response, and treatment goals.",
+    "Consistent aftercare and healthy skincare habits help maintain smoother skin, improve scar appearance, and support long-term treatment success."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro: "Scars Removal in Dubai may be suitable for adults who wish to improve the appearance of acne scars, surgical scars, burn scars, injury-related scars, or other forms of uneven skin texture. Candidates often seek treatment to reduce visible scarring, improve skin smoothness, and restore confidence through non-surgical, medically supervised procedures.",
+  points: [
+    "The ideal candidate is generally in good overall health and has realistic expectations, understanding that scar improvement develops gradually over multiple treatment sessions.",
+    "Since every scar differs in type, depth, location, and age, a detailed consultation is essential before treatment begins."
+  ],
+  closing: "During your assessment, our experienced medical professionals evaluate your skin type, scar characteristics, medical history, and treatment goals to determine the most appropriate treatment approach. This personalized evaluation helps ensure patient safety, appropriate treatment selection, and a customized care plan designed to achieve natural-looking, long-lasting improvements while preserving the health of the surrounding skin."
+}
     },
 
      'aesthetic-dermatology-dubai-laser-treatment-tattoo-removal': {
       hero: {
         subtitle: 'Clear Unwanted Ink Safely, Effectively & Naturally',
-        description: 'Tattoos that no longer reflect who you are can affect confidence and comfort. At Rama Care Polyclinic, we provide Tattoo Removal in Dubai using advanced laser technology to safely fade and remove unwanted tattoos with minimal skin damage and medical supervision.',
+        description: 'An unwanted tattoo doesn\'t have to be permanent.Whether your tattoo no longer reflects your personal style, affects your professional image, or you simply wish to remove it, safe and effective treatment can help restore clearer-looking skin.  At RamaCare Polyclinic, we offer tattoo removal in Dubai using advanced laser technology that targets tattoo pigments while protecting the surrounding healthy skin.Before treatment begins, our experienced medical professionals perform a detailed assessment of your tattoo, including its size, color, age, location, and your skin type, to create a personalized treatment plan.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -21854,36 +22372,39 @@ solutionIntro: {
         title: 'Understanding Tattoo Removal in Dubai',
         problemIntro: {
           title: 'Why Tattoo Removal Can Be Challenging',
-          description: 'Tattoo ink sits deep in the skin, making it difficult to remove with creams or home methods. Improper removal can lead to scarring, pigmentation, or incomplete fading.'
+          description: 'Tattoo ink is deposited deep within the skin, making it difficult to remove without professional treatment. Home remedies, tattoo removal creams, or unverified techniques are generally unable to reach the deeper layers where ink particles are stored and may increase the risk of skin irritation, infection, scarring, or uneven pigmentation. Professional Tattoo Removal in Dubai uses advanced laser technology to target tattoo pigment while protecting the surrounding skin. However, several factors influence how easily a tattoo responds to treatment, including ink color, tattoo depth, skin type, and the body\'s natural healing process.'
         },
         solutionIntro: {
           title: 'Advanced Tattoo Removal in Dubai',
-          description: 'At Rama Care Polyclinic, tattoo removal in Dubai is performed using advanced, medically approved laser technology designed to safely break down tattoo ink while protecting surrounding skin.'
+          description: 'At RamaCare Polyclinic, our approach to tattoo removal in Dubai combines advanced laser technology with personalized medical care to deliver safe, effective, and predictable results. Every tattoo is unique in its size, color, depth, age, and ink composition, so treatment begins with a comprehensive assessment before selecting the most appropriate laser settings. Our experienced medical professionals create an individualized treatment plan designed to gradually fade unwanted tattoo ink while protecting the surrounding healthy skin. Throughout every stage of treatment, we focus on patient safety, comfort, and healthy skin healing to achieve the best possible cosmetic outcome.'
         },
    leftCards: [
   {
     id: 1,
     title: 'What Is Tattoo Removal?',
     description:
-      'Tattoo Removal in Dubai is a non-surgical laser procedure that breaks down tattoo ink particles beneath the skin. The body’s natural immune system then gradually clears the ink over multiple sessions, leaving the skin clearer over time.'
+      'Tattoo Removal in Dubai is a non-surgical medical procedure that uses advanced laser technology to gradually break down tattoo ink particles beneath the skin. Short pulses of laser energy target the pigment without significantly affecting the surrounding healthy tissue. Once the ink is fragmented into smaller particles, the body\'s natural immune system gradually removes them over time, causing the tattoo to fade with each treatment session.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Tattoo Removal is suitable for individuals who want to remove or fade:',
+    description: 'Tattoo removal in Dubai may be suitable for individuals who wish to:',
     listItems: [
-      'Old or unwanted tattoos',
-      'Poor-quality or faded tattoos',
-      'Name or relationship tattoos',
-      'Cosmetic or makeup tattoos',
-      'Tattoos before cover-up procedures'
+      'Remove unwanted or outdated tattoos',
+'Fade tattoos before a cover-up procedure',
+'Remove name or relationship tattoos',
+'Reduce cosmetic or permanent makeup tattoos',
+'Remove amateur or professional tattoos',
+'Improve the appearance of poorly executed tattoos',
+'ReReduce tattoos affecting professional or personal confidence',
+'Lighten tattoos that no longer match personal preferences',
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Duration & Results',
     description:
-      'Each session usually takes 20–40 minutes, depending on tattoo size, color, and depth. Fading occurs gradually between sessions.'
+      'Treatment sessions generally last 20–40 minutes, depending on the size, location, color, and complexity of the tattoo. Smaller tattoos often require less treatment time, while larger or multi-colored tattoos may take longer.Tattoo fading occurs gradually between sessions as the body\'s immune system naturally eliminates the fragmented ink particles. Most patients require multiple sessions spaced several weeks apart to allow adequate healing and maximize ink clearance.'
   }
 ],
 rootCauses: [
@@ -21891,97 +22412,105 @@ rootCauses: [
     id: 1,
     title: 'Unwanted or Outdated Tattoos',
     description:
-      'Many people regret tattoos due to changes in personal style, relationships, or career requirements, making the tattoo no longer relevant or desired.',
+      'Personal preferences, career goals, lifestyle changes, or past relationships often lead people to seek tattoo removal. A tattoo that once held personal meaning may no longer reflect your identity or future plans.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
-    title: 'Dark or Stubborn Ink',
+    title: 'Dark or Stubborn Ink Colors',
     description:
-      'Deep black, blue, or multi-colored inks penetrate deeper skin layers, making tattoos difficult to fade with home remedies or non-medical treatments.',
+      'Black and dark blue inks usually respond well to laser treatment, while lighter colors such as green, yellow, turquoise, and certain reds may require additional treatment sessions. Multi-colored tattoos can also take longer to remove because of differences in pigment composition.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Patchy Fading from Previous Treatments',
+    title: 'Older or Previously Treated Tattoos',
     description:
-      'Incomplete or improper tattoo removal attempts can leave uneven fading, shadowing, or blurred tattoo outlines.',
+      'Some tattoos have already undergone unsuccessful removal attempts, resulting in uneven fading or residual "ghost" images. These cases often require a customized treatment strategy to achieve more uniform results.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Skin Discoloration & Texture Changes',
+    title: 'Skin Pigmentation & Healing Response',
     description:
-      'Older tattoos or poor-quality ink can cause pigmentation changes, scarring, or uneven skin texture around the tattoo area.',
+      'Individual skin tone and natural healing ability influence treatment outcomes. Temporary pigmentation changes may occur during the healing process, making professional treatment planning and aftercare especially important.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Fear of Scarring or Skin Damage',
+    title: 'Concerns About Pain, Scarring & Skin Damage',
     description:
-      'Many patients delay treatment due to concerns about pain, burns, permanent scars, or unnatural skin appearance after removal.',
+      'Many people hesitate to begin tattoo removal because they worry about discomfort, burns, permanent scars, or poor cosmetic results. Modern medical laser systems, experienced practitioners, and personalized treatment protocols significantly reduce these risks while prioritizing patient safety and healthy skin healing.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   }
 ],
- quickFacts: [
-  { label: 'Treatment Type', value: 'Non-surgical laser treatment' },
-  { label: 'Anesthesia', value: 'Topical numbing if required' },
+quickFacts: [
+  { label: 'Treatment Type', value: 'Non-surgical laser tattoo removal' },
+  { label: 'Technology', value: 'Advanced medical laser system' },
+  { label: 'Anesthesia', value: 'Topical numbing cream when appropriate' },
+  { label: 'Session Duration', value: '20–40 minutes' },
   { label: 'Downtime', value: 'Minimal' },
-  { label: 'Results', value: 'Progressive tattoo fading' }
+  { label: 'Results', value: 'Progressive tattoo fading over multiple sessions' }
 ],
        approachCards: [
   {
     id: 1,
-    title: 'Targeted Laser Technology',
+    title: 'Comprehensive Tattoo Assessment',
     description:
-      'Laser energy breaks tattoo ink into tiny particles that are naturally removed by the body’s immune system over time.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Every treatment begins with a detailed evaluation of your tattoo, skin type, and overall skin health to create a personalized treatment plan.',
+    hasLearnMore: true,
+    expandedContent:
+      'Our medical team carefully examines the tattoo’s size, color, ink density, location, age, and depth while assessing your skin type and overall skin health. This thorough assessment helps estimate the number of treatment sessions required and allows us to develop a personalized treatment strategy tailored to your individual goals.'
   },
   {
     id: 2,
-    title: 'Safe for Different Ink Colors',
+    title: 'Advanced Laser Tattoo Removal Technology',
     description:
-      'Specialized laser settings target black, colored, and stubborn inks with precision for gradual, even fading.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Medical-grade laser technology targets tattoo pigments beneath the skin while protecting the surrounding healthy tissue.',
+    hasLearnMore: true,
+    expandedContent:
+      'Our clinically approved laser systems deliver controlled pulses of energy that break tattoo ink into tiny particles without significantly affecting nearby tissue. Your body’s natural immune system gradually clears these fragmented pigments over multiple sessions. Laser settings are carefully adjusted throughout treatment to maximize effectiveness while maintaining patient safety.'
   },
   {
     id: 3,
-    title: 'Minimal Skin Damage',
+    title: 'Safe Treatment for Different Tattoo Colors',
     description:
-      'Doctor-supervised treatment minimizes the risk of scarring, burns, and pigmentation changes.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Customized laser settings help treat black, blue, red, and many other tattoo colors with gradual, even fading.',
+    hasLearnMore: true,
+    expandedContent:
+      'Different ink colors respond differently to laser treatment. Professional Tattoo Removal in Dubai can effectively treat many tattoo colors, including black, blue, red, and several other pigments. Whether your tattoo is amateur or professionally applied, treatment is customized according to the specific characteristics of your tattoo to maximize results while minimizing unnecessary skin irritation.'
   },
   {
     id: 4,
-    title: 'Customized Treatment Planning',
+    title: 'Minimal Skin Damage & Healthy Healing',
     description:
-      'Each tattoo removal plan is based on tattoo size, ink depth, color, skin type, and individual healing response.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Treatment protocols are designed to protect healthy skin while supporting comfortable healing and minimizing the risk of complications.',
+    hasLearnMore: true,
+    expandedContent:
+      'Our experienced medical professionals carefully adjust laser settings according to your skin type and tattoo characteristics to reduce the risk of burns, scarring, or pigmentation changes. Patients also receive detailed aftercare instructions to support healthy skin regeneration and comfortable healing between treatment sessions.'
   },
   {
     id: 5,
-    title: 'Aftercare & Skin Healing Support',
+    title: 'Personalized Treatment Planning & Follow-Up',
     description:
-      'Post-treatment care guidance helps promote faster healing, reduce sensitivity, and support healthy skin regeneration.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Your treatment plan is continuously monitored and adjusted according to your tattoo’s response and your skin’s healing progress.',
+    hasLearnMore: true,
+    expandedContent:
+      'Factors such as tattoo size, ink depth, skin tone, immune response, and healing progress influence the number of sessions required. Throughout treatment, we monitor your progress closely, adjust laser settings when needed, and provide regular follow-up care to ensure optimal tattoo fading while maintaining healthy skin.'
   },
   {
     id: 6,
     title: 'Result',
     description:
-      'Progressive tattoo fading, clearer skin, minimal scarring risk, and natural-looking skin restoration with safe and effective tattoo removal in Dubai.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Gradual tattoo fading, clearer skin, improved confidence, and natural-looking results over multiple treatment sessions.',
+    hasLearnMore: true,
+    expandedContent:
+      'With a personalized Tattoo Removal treatment plan in Dubai, patients can expect progressive fading of unwanted tattoo ink over multiple sessions. As the body naturally clears fragmented pigment and healing progresses, many individuals achieve clearer skin, improved confidence, and natural-looking results with minimal risk of visible scarring when recommended aftercare guidelines are followed.'
   }
 ]
       },
@@ -21989,19 +22518,21 @@ rootCauses: [
  healingJourney: {
   title: 'Your Tattoo Removal Journey: Step by Step',
   description:
-    'A structured, doctor-guided approach for safe and effective tattoo removal.',
+    'At RamaCare Polyclinic, every Tattoo Removal in Dubai treatment follows a structured, doctor-supervised process designed to maximize tattoo fading while protecting your skin. Since every tattoo differs in size, color, depth, and ink composition, treatment is fully personalized to deliver safe and effective results. Our experienced medical professionals guide you through each stage, ensuring comfort, safety, and realistic expectations throughout your tattoo removal journey.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Tattoo Assessment',
       duration: 'Step 1',
-      description: null,
+      description:
+        'Your journey begins with a comprehensive consultation. Our medical team carefully evaluates your tattoo, including its size, colors, location, depth, age, and ink density, while also assessing your skin type and medical history. Based on this assessment, we explain the expected number of sessions and likely results before creating a personalized treatment plan.',
       keyActivities: [
-        'Tattoo size, color, and depth analysis',
-        'Skin type evaluation',
-        'Medical history review',
-        'Session estimate and treatment plan'
+        'Detailed tattoo and skin assessment',
+        'Review of medical history',
+        'Evaluation of tattoo colors and ink depth',
+        'Discussion of treatment goals',
+        'Personalized laser treatment plan'
       ],
       side: 'right'
     },
@@ -22010,122 +22541,165 @@ rootCauses: [
       number: '02',
       title: 'Skin Preparation',
       duration: 'Step 2',
-      description: null,
+      description:
+        'Before each session, the treatment area is cleansed thoroughly to prepare the skin. If required, a topical numbing cream is applied to improve comfort during the procedure. Our medical team also reviews pre-treatment instructions and answers any questions before beginning the session.',
       keyActivities: [
-        'Cleansing and numbing if needed',
-        'Laser safety precautions',
-        'Skin protection measures'
+        'Skin cleansing and preparation',
+        'Topical numbing if required',
+        'Pre-treatment safety checks',
+        'Procedure explanation',
+        'Protective eye shielding'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: 'Laser Tattoo Removal Session',
+      title: 'Active Laser Tattoo Removal',
       duration: 'Step 3',
-      description: null,
+      description:
+        'During treatment, advanced medical laser technology delivers controlled pulses of energy to the tattoo. The laser selectively targets tattoo pigment beneath the skin, breaking it into microscopic particles while minimizing damage to surrounding healthy tissue. The body’s immune system gradually removes these particles over the following weeks, resulting in progressive tattoo fading.',
       keyActivities: [
-        'Controlled laser pulses target ink',
-        'Cooling and comfort care',
-        'Continuous medical monitoring'
+        'Controlled laser energy delivery',
+        'Customized laser settings',
+        'Continuous skin monitoring',
+        'Cooling measures for patient comfort',
+        'Immediate post-treatment skin assessment'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: 'Healing & Follow-Up',
+      title: 'Healing Between Sessions',
       duration: 'Step 4',
-      description: null,
+      description:
+        'Healing is an essential part of successful tattoo removal. Mild redness, swelling, or sensitivity may occur after treatment and usually settles within a few days. Sessions are scheduled several weeks apart to allow the skin to recover and give the immune system time to remove fragmented ink particles effectively.',
       keyActivities: [
-        'Post-treatment skincare guidance',
-        'Healing and fading period',
-        'Scheduled follow-up sessions'
+        'Monitoring skin healing',
+        'Personalized skincare advice',
+        'Sun protection guidance',
+        'Progress assessment',
+        'Scheduling the next treatment session'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Final Results & Maintenance',
       duration: null,
       description:
-        'Safe, progressive tattoo fading with healthy skin recovery.',
+        'As treatment progresses, tattoos gradually become lighter until the desired level of fading or removal is achieved. Some patients seek complete removal, while others choose partial fading before a cover-up tattoo. Regular follow-up appointments help monitor your progress and ensure healthy skin healing throughout the process.\n\nResult: Progressive fading of unwanted tattoo ink, healthier-looking skin, minimal downtime, and improved confidence through safe, medically supervised Tattoo Removal in Dubai.',
       keyActivities: [],
       side: 'right'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our advanced laser treatments.',
-        comparisonTitle: 'Laser Tattoo Removal vs. Other Methods',
-        comparisonDescription: 'Compare our advanced laser approach with conventional scar removal and skin treatment methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Laser Tattoo Removal',
-          traditional: 'Creams / Home Methods'
-        },
-        benefits: [
-          {
-            id: 1,
-            title: '  Safe ink breakdown',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Reduced tattoo visibility',
-            percentage: 92,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Minimal skin damage',
-            percentage: 88,
-            description:null
-          },
-          {
-            id: 4,
-            title: 'Low scarring risk',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Improved skin confidence',
-            percentage: 94,
-            description: null
-          }
-        ],
-        comparisonData: [
-{
-  feature: 'Depth of Treatment',
-  ayurvedic: 'Targets deep ink',
-  conventional: 'Surface only'
-},
-{
-  feature: 'Effectiveness',
-  ayurvedic: 'Clinically proven',
-  conventional: 'Limited results'
-},
-{
-  feature: 'Skin Safety',
-  ayurvedic: 'Doctor-supervised',
-  conventional: 'High risk'
-},
-{
-  feature: 'Scarring Risk',
-  ayurvedic: 'Minimal',
-  conventional: 'High'
-},
-{
-  feature: 'Results',
-  ayurvedic: 'Gradual & natural',
-  conventional: 'Unpredictable'
-}
-
-        ]
+  benefits: {
+  title: 'Clinically-Observed Benefits',
+  description: 'Based on years of providing advanced laser tattoo removal treatments in Dubai. Our tattoo removal treatments in Dubai are designed to safely reduce unwanted tattoo ink while protecting the surrounding healthy skin. Using advanced laser technology and personalized treatment planning, our experienced medical professionals target tattoo pigments with precision, allowing the body’s natural immune system to gradually eliminate the fragmented ink. The number of sessions and final results vary depending on factors such as tattoo size, color, depth, ink type, and individual skin healing response.',
+  comparisonTitle: 'Laser Tattoo Removal vs. Other Methods',
+  comparisonDescription: 'Many people consider tattoo removal creams or home remedies because they appear inexpensive and convenient. These approaches often produce little or no visible improvement and may increase the risk of skin irritation, burns, infection, scarring, or uneven pigmentation when used improperly. At RamaCare Polyclinic, every patient receives a comprehensive consultation before treatment begins. Our medical professionals evaluate the tattoo’s size, color, depth, age, location, and your skin type to develop a personalized treatment plan that maximizes treatment effectiveness while minimizing discomfort and reducing the risk of complications.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Laser Tattoo Removal',
+    traditional: 'Creams / Home Methods'
+  },
+  benefits: [
+    {
+      id: 1,
+      title: 'Safe Tattoo Ink Breakdown',
+      percentage: 90,
+      description: 'Advanced laser technology safely fragments tattoo ink while protecting surrounding healthy skin.',
+      hasLearnMore: true,
+      expandedContent:
+        'Advanced laser technology delivers controlled pulses of energy that fragment tattoo ink into tiny particles without significantly affecting the surrounding healthy tissue. Over time, the body’s immune system naturally removes these particles, resulting in gradual tattoo fading across multiple treatment sessions.'
+    },
+    {
+      id: 2,
+      title: 'Reduced Tattoo Visibility',
+      percentage: 92,
+      description: 'Each treatment session progressively fades unwanted tattoo pigment.',
+      hasLearnMore: true,
+      expandedContent:
+        'Every laser session helps lighten the appearance of the tattoo as more pigment is broken down and cleared from the skin. Many patients experience noticeable fading over the course of treatment, making unwanted tattoos less visible or preparing them for successful cover-up procedures when desired.'
+    },
+    {
+      id: 3,
+      title: 'Minimal Skin Damage',
+      percentage: 88,
+      description: 'Personalized laser settings help preserve healthy skin while targeting tattoo pigment.',
+      hasLearnMore: true,
+      expandedContent:
+        'Professional Tattoo Removal in Dubai focuses on targeting tattoo pigments while preserving the surrounding skin. Personalized laser settings based on your skin type, tattoo color, and treatment area help reduce unnecessary tissue damage and support healthy skin healing throughout the removal process.'
+    },
+    {
+      id: 4,
+      title: 'Low Risk of Visible Scarring',
+      percentage: 85,
+      description: 'Clinically approved laser techniques help minimize the risk of permanent scarring.',
+      hasLearnMore: true,
+      expandedContent:
+        'When performed by experienced medical professionals using clinically approved techniques, laser tattoo removal carries a low risk of permanent scarring. Careful treatment planning, proper aftercare, and adherence to recommended treatment intervals help promote smooth healing and achieve the best possible cosmetic outcome.'
+    },
+    {
+      id: 5,
+      title: 'Improved Skin Confidence',
+      percentage: 94,
+      description: 'Gradual tattoo fading often improves confidence and satisfaction with skin appearance.',
+      hasLearnMore: true,
+      expandedContent:
+        'Many patients choose tattoo removal because their tattoo no longer reflects their lifestyle, personal preferences, or professional goals. As the tattoo gradually fades and the skin heals, patients often report greater confidence, improved comfort with their appearance, and increased satisfaction with their skin.'
+    }
+  ],
+  comparisonData: [
+    {
+      feature: 'Treatment Approach',
+      ayurvedic: 'Medical laser treatment',
+      conventional: 'Topical products or home remedies'
+    },
+    {
+      feature: 'Depth of Treatment',
+      ayurvedic: 'Targets tattoo ink deep within the skin',
+      conventional: 'Surface-level only'
+    },
+    {
+      feature: 'Effectiveness',
+      ayurvedic: 'Clinically proven for gradual tattoo fading',
+      conventional: 'Limited or inconsistent results'
+    },
+    {
+      feature: 'Precision',
+      ayurvedic: 'Controlled treatment of tattoo pigment',
+      conventional: 'Difficult to control'
+    },
+    {
+      feature: 'Skin Safety',
+      ayurvedic: 'Doctor-supervised with personalized settings',
+      conventional: 'Higher risk of burns, irritation, or infection'
+    },
+    {
+      feature: 'Scarring Risk',
+      ayurvedic: 'Low when performed correctly',
+      conventional: 'Increased risk of permanent scarring'
+    },
+    {
+      feature: 'Suitable for Different Ink Colors',
+      ayurvedic: 'Can treat many tattoo colors with customized laser settings',
+      conventional: 'Generally ineffective'
+    },
+    {
+      feature: 'Healing & Aftercare',
+      ayurvedic: 'Professional follow-up and aftercare guidance',
+      conventional: 'No medical supervision'
+    },
+    {
+      feature: 'Results',
+      ayurvedic: 'Gradual, predictable improvement over multiple sessions',
+      conventional: 'Often unpredictable or ineffective'
+    }
+  ]
       },
   pricing: {
   title: 'Transparent Pricing & Customized Packages',
@@ -22437,7 +23011,64 @@ rootCauses: [
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+
+      skinTreatmentContent: [
+  {
+    id: "which-option-right",
+    badge: "Choosing the Right Treatment",
+    title: "Which Option Is Right for You?",
+    description:
+      "If you want to remove or significantly fade an unwanted tattoo, professional laser treatment is generally the safest and most effective option. Home remedies and tattoo removal creams cannot accurately target deep tattoo pigments and may damage healthy skin without producing meaningful results.\n\nChoosing Laser Tattoo Removal in Dubai at RamaCare Polyclinic provides access to experienced medical professionals, advanced laser technology, personalized treatment planning, and ongoing follow-up care. Our goal is to help you achieve gradual tattoo fading with healthy skin healing, minimal downtime whenever possible, and natural-looking results through safe, evidence-based treatment.",
+    points: []
+  }
+],
+
+whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro: "Choosing the right clinic for Tattoo Removal in Dubai is essential for achieving safe treatment and natural-looking results. At RamaCare Polyclinic, we combine experienced medical professionals with advanced laser technology to provide personalized tattoo removal solutions for different skin types and tattoo characteristics.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Personalized Treatment Planning",
+      description: "Every treatment begins with a detailed consultation to assess the tattoo's size, color, depth, and location before selecting the most appropriate laser settings. This individualized approach helps improve treatment effectiveness while protecting the surrounding healthy skin."
+    },
+    {
+      id: 2,
+      title: "Advanced Laser Technology & Medical Supervision",
+      description: "Patient safety is our highest priority. All procedures are performed using clinically approved laser systems under medical supervision, with careful monitoring throughout every session. We also provide detailed aftercare guidance and follow-up support to encourage healthy skin healing and minimize the risk of complications."
+    },
+    {
+      id: 3,
+      title: "Professional Care & Ongoing Support",
+      description: "From consultation to the final treatment session, our team is committed to delivering professional care, transparent advice, and realistic expectations. Whether you want complete tattoo removal or gradual fading for a cover-up, we strive to help you achieve clearer skin with confidence through safe and effective Tattoo Removal in Dubai."
+    }
+  ]
+},
+
+aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription: "Recovery following Tattoo Removal in Dubai is usually straightforward, with most patients returning to normal daily activities shortly after treatment. Mild redness, swelling, tenderness, or a warm sensation in the treated area is common and typically improves within a few days. Small blisters or temporary skin sensitivity may also occur as part of the normal healing process.",
+  resultPoints: [
+    "Keep the treated area clean and dry throughout the healing period.",
+    "Avoid scratching or picking at healing skin to reduce the risk of irritation and scarring.",
+    "Protect the treated area from unnecessary friction during recovery.",
+    "Limit direct sun exposure and apply a broad-spectrum sunscreen once the skin has healed to reduce the risk of pigmentation changes.",
+    "Follow the personalized aftercare instructions provided by our medical team based on your skin type and treatment response.",
+    "Attend scheduled follow-up appointments so we can monitor healing, assess tattoo fading, and adjust future treatment sessions if necessary.",
+    "Following your recommended aftercare plan supports healthy skin regeneration, minimizes the risk of complications, and promotes gradual, even tattoo fading throughout your treatment journey."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro: "Tattoo Removal in Dubai may be suitable for adults who wish to remove or fade unwanted tattoos for personal, cosmetic, or professional reasons. It is commonly chosen by individuals with old tattoos, relationship tattoos, poorly executed designs, cosmetic tattoos, or tattoos that no longer reflect their lifestyle or preferences.",
+  points: [
+    "The ideal candidate is generally in good overall health, has realistic expectations, and understands that multiple treatment sessions are usually required for optimal results.",
+    "Factors such as tattoo color, ink depth, skin type, and the body's natural healing response influence treatment outcomes."
+  ],
+  closing: "During your consultation, our experienced medical professionals evaluate your tattoo, skin condition, and medical history to determine the safest and most effective treatment plan. This personalized approach helps achieve gradual tattoo fading while protecting skin health and supporting natural-looking results through medically supervised care."
+}
     },
 
      'aesthetic-dermatology-dubai-body-shaping-eximia-body-contouring': {
