@@ -12,8 +12,9 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
+import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function BodyShapingPage() {
   const categoryName = 'Aesthetic Dermatology';
@@ -21,6 +22,18 @@ export default function BodyShapingPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'body-shaping/eximia-body-contouring');
+   const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'when-to-consider', label: 'Ideal Candidate' },
+    { id: 'recovery-aftercare', label: 'Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Us' },
+    { id: 'testimonials', label: 'Success Stories' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' },
+  ];
 
   return (
     <Layout>
@@ -97,7 +110,7 @@ export default function BodyShapingPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+     <QuickNavigation navItems={navItems} />
     
     <TreatmentOverview 
       subcategoryName={subcategoryName}
@@ -107,6 +120,10 @@ export default function BodyShapingPage() {
       <TreatmentBenefits 
         content={content?.benefits}
       />
+      <SkinTreatmentAdditionalContent 
+              content={{whyChooseSection: content?.whyChooseSection,
+                 whenToConsider: content?.whenToConsider,}} />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
     

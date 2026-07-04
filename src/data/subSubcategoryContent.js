@@ -23073,8 +23073,8 @@ whenToConsider: {
 
      'aesthetic-dermatology-dubai-body-shaping-eximia-body-contouring': {
       hero: {
-        subtitle: 'Sculpt, Tone & Redefine Your Body Naturally',
-        description: 'Stubborn fat, loose skin, and uneven body contours can be frustrating, even with diet and exercise. At Rama Care Polyclinic, we offer Eximia Body Contouring in Dubai, a non-invasive solution designed to reduce fat, tighten skin, and improve body shape safely under medical supervision.',
+        subtitle: 'Sculpt, Tone & Redefine Your Body Without Surgery',
+        description: 'Achieving a slimmer, more sculpted body can be challenging when stubborn fat, cellulite, or loose skin persists despite a healthy diet and regular exercise.At RamaCare Polyclinic, we offer Eximia Body Contouring in Dubai, an advanced non-invasive treatment designed to reduce localized fat, improve skin firmness, and enhance your natural body contours without surgery or downtime. Using innovative body contouring technology, Eximia helps stimulate circulation, support lymphatic drainage, and tighten the skin for a smoother, more toned appearance.The treatment is suitable for areas such as the abdomen, thighs, hips, arms, waist, and buttocks, with every treatment plan tailored to your individual body goals.',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -23152,43 +23152,46 @@ whenToConsider: {
       overview: {
         title: 'Understanding Eximia Body Contouring in Dubai',
         problemIntro: {
-          title: 'Body Shaping Challenges',
-          description: 'Stubborn fat deposits, cellulite, and loss of skin firmness often remain resistant to diet and exercise, affecting body confidence and silhouette.'
+          title: 'The Problem We Treat',
+          description: 'Many people maintain a healthy lifestyle but still struggle with body contour concerns that cannot be corrected through diet and exercise alone. Genetics, aging, hormonal changes, pregnancy, and weight fluctuations can contribute to stubborn fat deposits, cellulite, poor skin elasticity, and uneven body contours.Eximia Body Contouring is designed to address these common concerns by improving body shape, enhancing skin firmness, and supporting better circulation without surgery.'
         },
         solutionIntro: {
-          title: 'Our Solution - Eximia Body Contouring',
-          description: 'At Rama Care Polyclinic, Eximia body contouring in Dubai offers a non-invasive, advanced solution to reshape the body, reduce stubborn fat, and improve skin firmness without surgery or downtime.'
+          title: 'Eximia Body Contouring in Dubai – A Personalized Non-Surgical Body Sculpting Solution',
+          description: 'At RamaCare Polyclinic, Eximia Body Contouring in Dubai provides a comprehensive, non-invasive solution for individuals looking to improve body contours without surgery. By combining advanced technologies such as radiofrequency, ultrasound, vacuum therapy, and mechanical stimulation, Eximia helps address stubborn fat deposits, cellulite, and skin laxity while enhancing your body\'s natural shape. Every treatment is tailored to your unique body composition, aesthetic goals, and lifestyle, ensuring a safe, comfortable, and personalized experience under professional medical supervision.'
         },
       leftCards: [
   {
     id: 1,
     title: 'What Is Eximia Body Contouring?',
     description:
-      'Eximia Body Contouring in Dubai is a non-surgical treatment that combines radiofrequency, ultrasound, vacuum massage, and mechanical stimulation. This advanced technology helps break down fat cells, tighten skin, improve circulation, and smooth cellulite.'
+      'Eximia Body Contouring in Dubai is an advanced, non-surgical body sculpting treatment designed to help reduce localized fat, improve skin firmness, minimize cellulite, and enhance natural body contours without surgery. The treatment combines multiple clinically developed technologies, including radiofrequency, ultrasound, vacuum therapy, and mechanical stimulation, to target stubborn fat deposits while promoting healthier-looking skin.Each technology plays a specific role in improving body contours. Radiofrequency gently heats the deeper layers of the skin to stimulate collagen production and improve skin elasticity. Ultrasound helps disrupt localized fat cells, while vacuum therapy enhances blood circulation and supports lymphatic drainage. Mechanical stimulation further improves tissue tone, helping create smoother and firmer body contours over time.'
   },
   {
     id: 2,
     title: 'Who Is It For?',
-    description: 'Eximia Body Contouring is suitable for individuals with:',
+    description: 'Eximia Body Contouring is suitable for adults who want to improve body contours safely without surgery. It may be recommended for individuals who have realistic expectations and wish to complement a healthy lifestyle with a non-invasive body sculpting treatment.This treatment may be suitable for people experiencing:',
     listItems: [
-      'Localized stubborn fat',
-      'Loose or sagging skin',
-      'Cellulite concerns',
-      'Post-weight loss body laxity',
-      'Body shaping and toning goals'
+      'Localized stubborn fat resistant to diet and exercise',
+      'Loose or mildly sagging skin',
+      'Cellulite on the thighs, hips, buttocks, abdomen, or arms',
+      'Post-weight loss skin laxity',
+      'Uneven body contours',
+      'Mild to moderate skin firmness concerns',
+      'Body sculpting and toning goals',
+      'Individuals seeking a non-surgical alternative to liposuction'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
+    title: 'Treatment Duration',
     description:
-      'Each session typically lasts 30–60 minutes, depending on the treatment area. Results improve gradually over multiple sessions.'
+      'Each Eximia Body Contouring session generally lasts 30 to 60 minutes, depending on the treatment area and the personalized treatment plan. Larger areas may require slightly longer sessions, while smaller areas can often be completed more quickly.'
   },
   {
     id: 4,
     title: 'Why Patients Choose Eximia Body Contouring in Dubai',
     description:
-      'Patients choose Rama Care Polyclinic for Eximia Body Contouring in Dubai because we combine medical expertise, advanced technology, and honest treatment planning focused on safe, realistic body transformation.'
+      'Patients choose RamaCare Polyclinic for Eximia Body Contouring in Dubai because we focus on personalized care, patient safety, and realistic treatment outcomes. Our experienced medical professionals use advanced Eximia technology to deliver safe, comfortable, and effective treatments in a professional clinical environment. We emphasize honest guidance, individualized care, and natural-looking improvements that enhance your body shape while preserving your unique appearance.'
   }
 ],
      rootCauses: [
@@ -23196,7 +23199,7 @@ whenToConsider: {
     id: 1,
     title: 'Localized Fat Pockets',
     description:
-      'Fat accumulation in areas like the abdomen, thighs, arms, and flanks that do not respond to workouts or dieting.',
+      'Targets stubborn fat in areas such as the abdomen, thighs, arms, hips, and flanks to improve body contours.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
@@ -23204,7 +23207,7 @@ whenToConsider: {
     id: 2,
     title: 'Cellulite Appearance',
     description:
-      'Poor circulation and fibrous tissue cause uneven, dimpled skin texture.',
+      'Improves circulation and skin texture to reduce the visible appearance of cellulite.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
@@ -23212,7 +23215,7 @@ whenToConsider: {
     id: 3,
     title: 'Loss of Skin Firmness',
     description:
-      'Reduced collagen and elastin lead to sagging skin and a lack of tone.',
+      'Stimulates collagen production to support firmer, tighter, and smoother-looking skin.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
@@ -23220,7 +23223,7 @@ whenToConsider: {
     id: 4,
     title: 'Poor Blood & Lymphatic Circulation',
     description:
-      'Toxin buildup and fluid retention slow fat metabolism and body sculpting results.',
+      'Encourages healthy circulation and lymphatic drainage to reduce fluid retention and support natural body sculpting.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
@@ -23228,91 +23231,106 @@ whenToConsider: {
     id: 5,
     title: 'Post-Weight Loss Body Irregularities',
     description:
-      'Uneven contours after weight loss affect the overall body shape.',
+      'Helps refine uneven contours and improve skin appearance following weight loss.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
        quickFacts: [
   { label: 'Treatment Type', value: 'Non-surgical body contouring' },
+  { label: 'Technology Used', value: 'Radiofrequency, Ultrasound, Vacuum Therapy & Mechanical Stimulation' },
+  { label: 'Treatment Areas', value: 'Abdomen, Waist, Hips, Thighs, Arms, Buttocks & Flanks' },
   { label: 'Anesthesia', value: 'Not required' },
+  { label: 'Session Duration', value: '30–60 minutes' },
   { label: 'Downtime', value: 'None' },
-  { label: 'Results', value: 'Gradual and natural-looking' }
+  { label: 'Recommended Sessions', value: 'Personalized after consultation' },
+  { label: 'Results', value: 'Gradual, natural-looking body contour improvement' }
 ],
-      approachCards: [
+     approachCards: [
   {
     id: 1,
     title: 'Targeted Fat Reduction',
     description:
-      'Advanced radiofrequency and ultrasound technology help break down localized fat deposits and reshape body contours safely and effectively.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Targets localized fat deposits using advanced radiofrequency and ultrasound technology to improve body contours without surgery.',
+    hasLearnMore: true,
+    expandedContent:
+      'Eximia technology is designed to target localized fat deposits that are often resistant to regular exercise and a balanced diet. By using advanced radiofrequency and ultrasound energy, the treatment supports the breakdown of fat cells while helping reshape areas such as the abdomen, waist, thighs, hips, arms, and flanks. This non-surgical approach promotes gradual, natural-looking body contour improvements without incisions or recovery time.'
   },
   {
     id: 2,
-    title: 'Cellulite Reduction & Skin Smoothing',
+    title: 'Cellulite Reduction & Smoother Skin',
     description:
-      'Improves blood circulation and connective tissue structure to visibly reduce cellulite and uneven skin texture.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Improves circulation and tissue health to reduce the visible appearance of cellulite and smooth skin texture.',
+    hasLearnMore: true,
+    expandedContent:
+      'Cellulite is a common concern caused by changes in connective tissue, circulation, and fat distribution beneath the skin. Eximia helps improve blood circulation and lymphatic flow while stimulating the surrounding tissues, which may reduce the appearance of dimpled skin and create a smoother, more even skin texture over time.'
   },
   {
     id: 3,
-    title: 'Skin Tightening & Firming',
+    title: 'Skin Tightening & Improved Firmness',
     description:
-      'Stimulates natural collagen and elastin production, resulting in tighter, more toned, and smoother skin.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Supports collagen production to improve skin tone, firmness, and elasticity.',
+    hasLearnMore: true,
+    expandedContent:
+      'As collagen and elastin production naturally decline with age, skin may begin to lose its firmness and elasticity. Eximia stimulates the skin’s natural regenerative processes to support collagen production, helping improve skin tone, firmness, and overall texture. The result is skin that appears tighter, smoother, and more youthful-looking.'
   },
   {
     id: 4,
-    title: 'Lymphatic Drainage & Detoxification',
+    title: 'Lymphatic Drainage & Improved Circulation',
     description:
-      'Enhances lymphatic flow to reduce fluid retention, eliminate toxins, and support long-term body sculpting results.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Encourages healthy lymphatic drainage and blood circulation to support natural body contouring.',
+    hasLearnMore: true,
+    expandedContent:
+      'Healthy lymphatic circulation plays an important role in reducing fluid retention and supporting the body’s natural metabolic processes. Eximia encourages lymphatic drainage and improves blood circulation, helping reduce temporary swelling while supporting the body’s natural contouring process and overall skin health.'
   },
   {
     id: 5,
-    title: 'Non-Invasive & Comfortable Treatment',
+    title: 'Comfortable, Non-Invasive Treatment',
     description:
-      'No surgery, no anesthesia, and no downtime—sessions are painless, safe, and suitable for busy lifestyles.',
-    hasLearnMore: false,
-    expandedContent: null
+      'A non-surgical procedure with no anesthesia, no incisions, and no downtime.',
+    hasLearnMore: true,
+    expandedContent:
+      'Eximia Body Contouring is a non-surgical treatment that requires no anesthesia, no incisions, and no downtime. Most patients find the procedure comfortable and can return to work or their normal daily activities immediately after each session, making it an ideal option for individuals with busy lifestyles.'
   },
   {
     id: 6,
     title: 'Personalized Treatment Plans',
     description:
-      'Customized protocols based on body type, problem areas, and individual body goals under expert medical supervision.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Customized treatment plans are created according to your body shape, treatment areas, and aesthetic goals.',
+    hasLearnMore: true,
+    expandedContent:
+      'No two bodies are the same. Our experienced medical team performs a detailed consultation to assess your body composition, treatment areas, and aesthetic goals before creating a customized treatment plan. The number of sessions and treatment approach are personalized to help you achieve gradual, balanced, and natural-looking results.'
   },
   {
     id: 7,
-    title: 'Result:',
+    title: 'Result',
     description:
-      'A slimmer, sculpted, and firmer body with reduced fat, smoother skin, and improved confidence through Eximia body contouring in Dubai.',
-    hasLearnMore: false,
-    expandedContent: null
+      'Gradual improvement in body contours with reduced localized fat, firmer skin, and smoother body appearance.',
+    hasLearnMore: true,
+    expandedContent:
+      'With a personalized treatment plan and a healthy lifestyle, Eximia Body Contouring in Dubai can help improve body contours, reduce localized fat, enhance skin firmness, and minimize the appearance of cellulite. Results develop gradually over multiple sessions, leaving you with a slimmer, more sculpted appearance and greater confidence in your body.'
   }
 ]
       },
     healingJourney: {
-  title: 'Your Body Contouring Journey: Step by Step',
-  description: 'A structured, doctor-guided approach ensures safe and effective results.',
+  title: 'Your Eximia Body Contouring Journey: Step by Step',
+  description:
+    'At RamaCare Polyclinic, every Eximia Body Contouring in Dubai treatment follows a structured and personalized approach designed to maximize safety, comfort, and results. Before beginning treatment, our medical team carefully evaluates your body concerns and creates a customized plan based on your individual goals. Each session is performed using advanced Eximia technology under professional supervision to ensure a comfortable and effective experience.',
   steps: [
     {
       id: 1,
       number: '01',
       title: 'Initial Consultation & Body Assessment',
       duration: 'Step 1',
-      description: null,
+      description:
+        'Every treatment begins with a comprehensive consultation to understand your body contouring goals and determine whether Eximia Body Contouring is the right option for you. Our medical professionals assess your body composition, skin condition, and treatment areas while discussing your medical history and lifestyle.',
       keyActivities: [
-        'Body analysis and measurements',
-        'Identification of problem areas',
-        'Medical history review',
-        'Personalized Eximia treatment plan'
+        'Comprehensive body assessment and measurements',
+        'Identification of stubborn fat deposits and cellulite',
+        'Evaluation of skin firmness and elasticity',
+        'Review of medical history and treatment suitability',
+        'Discussion of realistic treatment goals and expectations',
+        'Creation of a personalized Eximia Body Contouring treatment plan'
       ],
       side: 'right'
     },
@@ -23321,11 +23339,14 @@ whenToConsider: {
       number: '02',
       title: 'Preparation Phase',
       duration: 'Step 2',
-      description: null,
+      description:
+        'Before the procedure begins, the treatment area is prepared to ensure optimal comfort and safety. The skin is cleansed thoroughly, and the treatment zones are carefully marked to provide accurate and consistent energy delivery throughout the session.',
       keyActivities: [
-        'Skin cleansing and preparation',
-        'Comfort and safety setup',
-        'Treatment area marking'
+        'Cleansing and preparation of the treatment area',
+        'Marking targeted body contouring zones',
+        'Patient positioning for maximum comfort',
+        'Safety checks and treatment settings',
+        'Explanation of the treatment process before starting'
       ],
       side: 'left'
     },
@@ -23334,11 +23355,15 @@ whenToConsider: {
       number: '03',
       title: 'Active Eximia Body Contouring Session',
       duration: 'Step 3',
-      description: null,
+      description:
+        'During the session, the Eximia device delivers controlled combinations of radiofrequency, ultrasound, vacuum therapy, and mechanical stimulation to the selected treatment areas. These technologies work together to support localized fat reduction, stimulate collagen production, improve circulation, and enhance lymphatic drainage while helping improve skin texture and firmness. Most patients experience a gentle warming sensation and light massage during treatment, making the procedure comfortable without the need for anesthesia or recovery time.',
       keyActivities: [
-        'Controlled Eximia energy application',
-        'Fat stimulation and skin tightening',
-        'Continuous medical monitoring'
+        'Controlled application of Eximia technology',
+        'Targeted treatment of localized fat deposits',
+        'Skin tightening and collagen stimulation',
+        'Improved blood circulation and lymphatic drainage',
+        'Continuous monitoring by trained medical professionals',
+        'Comfortable, non-invasive treatment experience'
       ],
       side: 'right'
     },
@@ -23347,95 +23372,147 @@ whenToConsider: {
       number: '04',
       title: 'Post-Treatment Care & Maintenance',
       duration: 'Step 4',
-      description: null,
+      description:
+        'Once the session is complete, patients can return to their normal daily routine immediately. Our team provides personalized aftercare recommendations to help support the body’s natural response to treatment and maintain long-term body contouring results.',
       keyActivities: [
-        'Hydration and lifestyle guidance',
-        'Follow-up assessments',
-        'Maintenance sessions if required'
+        'Personalized hydration and nutrition guidance',
+        'Healthy lifestyle recommendations',
+        'Advice on physical activity and body maintenance',
+        'Progress monitoring during follow-up visits',
+        'Additional maintenance sessions if recommended'
       ],
       side: 'left'
     },
     {
       id: 5,
       number: '05',
-      title: 'Result',
+      title: 'Results & Ongoing Improvement',
       duration: null,
       description:
-        'Gradual body reshaping, improved firmness, smoother skin, and long-lasting contour enhancement.',
-      keyActivities: [],
+        'Eximia Body Contouring delivers gradual improvements as the body naturally responds to treatment over time. With a personalized treatment plan, regular sessions, and a healthy lifestyle, patients may notice improved body contours, smoother skin texture, enhanced firmness, and a more sculpted appearance. Individual results vary depending on body composition, treatment areas, and adherence to the recommended treatment plan.',
+      keyActivities: [
+        'Improved body contours',
+        'Reduction in localized fat appearance',
+        'Firmer, tighter-looking skin',
+        'Smoother skin texture with reduced cellulite appearance',
+        'Enhanced body confidence',
+        'Natural-looking, gradual improvements'
+      ],
       side: 'right'
     }
   ]
 },
       benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our body shaping treatments.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Non-surgical fat reduction',
-            percentage: 30,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Improved skin tightness',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 3,
-            title: ' Reduced cellulite appearance',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 4,
-            title: 'Better circulation',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Enhanced body confidence',
-            percentage: 90,
-            description: null,
-          }
-        ],
-        comparisonTitle: 'Eximia Body Contouring vs. Traditional Methods',
-        comparisonDescription: 'Compare our non-invasive body shaping approach with surgical body contouring methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'Eximia Body Contouring',
-          traditional: 'Diet & Exercis'
-        },
-        comparisonData: [
-           {
-    feature: 'Targeted Fat Reduction',
-    ayurvedic: 'Yes',
-    conventional: 'Limited'
+  title: 'Clinically-Observed Benefits of Eximia Body Contouring in Dubai',
+  description:
+    'Eximia Body Contouring offers a combination of body sculpting and skin rejuvenation benefits without the need for surgery or extended recovery. By using advanced radiofrequency, ultrasound, vacuum therapy, and mechanical stimulation, the treatment helps improve body contours while supporting healthier-looking skin. Individual results vary depending on factors such as body composition, treatment goals, and the recommended number of sessions.',
+  comparisonTitle: 'Eximia Body Contouring vs. Traditional Body Shaping Methods',
+  comparisonDescription:
+    'While a healthy diet and regular exercise are essential for overall health and weight management, they may not always eliminate localized fat deposits, cellulite, or mild skin laxity. Eximia Body Contouring in Dubai is designed to complement a healthy lifestyle by targeting specific areas that are often resistant to conventional weight-loss efforts. Unlike surgical procedures, Eximia is a non-invasive treatment that requires no anesthesia, incisions, or recovery time, making it a convenient option for individuals seeking gradual body contour improvement.\n\nThe most suitable approach depends on your body goals, lifestyle, and individual assessment. During your consultation at RamaCare Polyclinic, our medical team will recommend a personalized treatment plan based on your specific needs.',
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'Eximia Body Contouring',
+    traditional: 'Diet & Exercise'
   },
-  {
-    feature: 'Skin Tightening',
-    ayurvedic: 'Yes',
-    conventional: 'Minimal'
-  },
-  {
-    feature: 'Cellulite Improvement',
-    ayurvedic: 'Yes',
-    conventional: 'No'
-  },
-  {
-    feature: 'Downtime',
-    ayurvedic: 'None',
-    conventional: 'Not applicable'
-  },
-  {
-    feature: 'Medical Supervision',
-    ayurvedic: 'Yes',
-    conventional: 'No'
-  }
-        ]
+  benefits: [
+    {
+      id: 1,
+      title: 'Non-Surgical Fat Reduction',
+      percentage: 90,
+      description:
+        'Targets localized fat deposits without surgery, anesthesia, or significant downtime.',
+      hasLearnMore: true,
+      expandedContent:
+        'Eximia helps target localized fat deposits that are often resistant to diet and exercise. The treatment supports gradual body contour improvement without surgery, anesthesia, or significant downtime.'
+    },
+    {
+      id: 2,
+      title: 'Improved Skin Tightness',
+      percentage: 92,
+      description:
+        'Stimulates collagen and elastin production to improve skin firmness and elasticity.',
+      hasLearnMore: true,
+      expandedContent:
+        'Radiofrequency technology stimulates natural collagen and elastin production, helping improve skin firmness and elasticity. Patients often notice smoother, tighter-looking skin as treatment progresses.'
+    },
+    {
+      id: 3,
+      title: 'Reduced Appearance of Cellulite',
+      percentage: 88,
+      description:
+        'Supports smoother skin texture by improving circulation and lymphatic drainage.',
+      hasLearnMore: true,
+      expandedContent:
+        'By enhancing circulation and supporting lymphatic drainage, Eximia may help reduce the visible appearance of cellulite and improve overall skin texture for a more even-looking finish.'
+    },
+    {
+      id: 4,
+      title: 'Better Blood & Lymphatic Circulation',
+      percentage: 85,
+      description:
+        'Encourages healthy circulation and lymphatic flow to support natural body contouring.',
+      hasLearnMore: true,
+      expandedContent:
+        'The treatment encourages healthy circulation and lymphatic flow, which can help reduce temporary fluid retention while supporting the body’s natural metabolic processes.'
+    },
+    {
+      id: 5,
+      title: 'Enhanced Body Confidence',
+      percentage: 94,
+      description:
+        'Refined body contours and firmer skin help improve confidence and body image.',
+      hasLearnMore: true,
+      expandedContent:
+        'As body contours become more refined and skin appears firmer, many patients report feeling more confident in their appearance. When combined with a balanced diet and regular exercise, Eximia Body Contouring can support long-term body-shaping goals.\n\nResults vary between individuals and depend on factors such as the treatment area, body composition, lifestyle, and adherence to the recommended treatment plan.'
+    }
+  ],
+  comparisonData: [
+    {
+      feature: 'Primary Purpose',
+      ayurvedic: 'Non-surgical body contouring and skin improvement',
+      conventional: 'Overall fitness and weight management'
+    },
+    {
+      feature: 'Targeted Fat Reduction',
+      ayurvedic: 'Helps improve localized body contours in selected areas',
+      conventional: 'Overall fat loss; spot reduction is generally limited'
+    },
+    {
+      feature: 'Skin Tightening',
+      ayurvedic: 'Supports collagen production to improve skin firmness',
+      conventional: 'Limited direct effect on skin laxity'
+    },
+    {
+      feature: 'Cellulite Improvement',
+      ayurvedic: 'Helps improve the appearance of cellulite',
+      conventional: 'Usually limited effect on cellulite appearance'
+    },
+    {
+      feature: 'Body Contouring',
+      ayurvedic: 'Targets specific treatment areas such as the abdomen, thighs, arms, and flanks',
+      conventional: 'General body composition changes over time'
+    },
+    {
+      feature: 'Downtime',
+      ayurvedic: 'None; most patients return to daily activities immediately',
+      conventional: 'Not applicable'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic: 'Performed under professional medical supervision',
+      conventional: 'Self-directed unless working with a healthcare or fitness professional'
+    },
+    {
+      feature: 'Treatment Experience',
+      ayurvedic: 'Comfortable, non-invasive sessions',
+      conventional: 'Requires ongoing exercise and lifestyle commitment'
+    },
+    {
+      feature: 'Best For',
+      ayurvedic: 'Individuals seeking non-surgical body sculpting and skin tightening',
+      conventional: 'Maintaining long-term health, fitness, and overall weight management'
+    }
+  ]
       },
     pricing: {
   title: 'Transparent Pricing & Eximia Body Contouring Packages',
@@ -23703,9 +23780,55 @@ whenToConsider: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+      whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic",
+  intro: "Choosing the right clinic is an important part of achieving safe, effective, and natural-looking body contouring results. At RamaCare Polyclinic, we are committed to providing personalized care through advanced technology, experienced medical professionals, and patient-focused treatment plans. Our approach to Eximia Body Contouring in Dubai begins with a detailed consultation, allowing us to understand your body concerns, assess your skin and body composition, and recommend a treatment plan tailored to your individual goals.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Personalized Treatment Planning",
+      description: "We believe that every patient is unique, which is why we avoid one-size-fits-all solutions. Instead, we customize each treatment based on the areas being treated, your body shape, lifestyle, and desired outcomes. Throughout your treatment journey, our medical team closely monitors your progress and provides ongoing guidance to help you achieve the best possible results."
     },
+    {
+      id: 2,
+      title: "Advanced Technology, Safety & Patient Comfort",
+      description: "Our modern clinical environment prioritizes patient safety, comfort, and privacy, ensuring a positive treatment experience from consultation to follow-up care. We also focus on realistic expectations by recommending evidence-based treatments designed to complement a healthy lifestyle rather than replace it."
+    },
+    {
+      id: 3,
+      title: "Professional Care & Long-Term Support",
+      description: "Whether your goal is to reduce stubborn fat, improve skin firmness, or achieve a more sculpted body contour, RamaCare Polyclinic is dedicated to delivering professional care with advanced non-surgical body contouring solutions that help you feel more confident in your appearance."
+    }
+  ]
+},
 
+aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription: "One of the key advantages of Eximia Body Contouring in Dubai is that it requires little to no downtime, allowing most patients to resume their normal daily activities immediately after each session. Because the treatment is non-invasive, there are no surgical incisions, stitches, or lengthy recovery periods, making it a convenient option for individuals with busy schedules.",
+  resultPoints: [
+    "Follow the personalized aftercare recommendations provided by our medical team to support your body's natural response and maximize treatment results.",
+    "Stay well hydrated to support normal lymphatic function and overall wellness.",
+    "Maintain a balanced diet and engage in regular physical activity to help preserve your improved body contours over time.",
+    "Mild warmth or temporary redness in the treated area may occur but usually resolves on its own within a short period.",
+    "Attend all recommended treatment sessions and follow-up appointments so our team can monitor your progress and adjust your treatment plan if needed.",
+    "Combining Eximia Body Contouring with healthy lifestyle habits helps maintain smoother skin, improved body contours, and long-lasting confidence."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro: "Eximia Body Contouring in Dubai is suitable for adults who want to improve body contours without surgery or significant downtime. It is ideal for individuals who maintain a healthy lifestyle but continue to experience localized fat deposits, mild skin laxity, or cellulite that does not respond to diet and exercise alone.",
+  points: [
+    "Have stubborn fat in areas such as the abdomen, thighs, hips, arms, or flanks.",
+    "Want to improve skin firmness and body contours without surgery.",
+    "Are concerned about the appearance of cellulite.",
+    "Have realistic expectations about gradual, natural-looking results.",
+    "Are committed to maintaining a healthy diet and active lifestyle."
+  ],
+  closing: "A comprehensive consultation at RamaCare Polyclinic is the best way to determine whether Eximia Body Contouring is appropriate for your individual needs. Our medical professionals will evaluate your health, treatment goals, and body composition before creating a personalized treatment plan designed to help you achieve safe and effective results."
+}
+    },
      'aesthetic-dermatology-dubai-body-shaping-iv-drip': {
       hero: {
         subtitle: 'Restore Energy, Hydration & Wellness with Medical Care',
