@@ -23831,8 +23831,8 @@ whenToConsider: {
     },
      'aesthetic-dermatology-dubai-body-shaping-iv-drip': {
       hero: {
-        subtitle: 'Restore Energy, Hydration & Wellness with Medical Care',
-        description: 'Fatigue, dehydration, low immunity, and nutrient deficiencies can impact your daily life. At ramacarepolyclinic, we offer IV Drip Therapy in Dubai to replenish essential nutrients quickly and safely. Our IV Drip Dubai Therapy is personalized to support hydration, immunity, energy, and overall wellness—without downtime.',
+        subtitle: 'Restore Energy, Hydration & Wellness with Professional Medical Care',
+        description: 'Feeling constantly tired, dehydrated, or lacking essential vitamins can affect your daily performance, recovery, and overall well-being. At RamaCare Polyclinic, we provide IV drip therapy in Dubai to help restore hydration, replenish essential nutrients, and support your body\'s natural functions through safe, doctor-supervised intravenous vitamin therapy. Our personalized IV drip therapy Dubai treatments are tailored to your individual health and wellness goals.Whether you\'re looking to improve hydration, boost energy levels, support immune function, recover after travel or intense physical activity, or enhance your overall wellness, our experienced medical team carefully selects the most suitable IV infusion for your needs. ',
         rating: '500+ Happy Clients',  
         stats: [
           {
@@ -23910,235 +23910,313 @@ whenToConsider: {
       overview: {
         title: 'Understanding IV Drip Therapy in Dubai',
         problemIntro: {
-          title: 'Why Your Body Feels Depleted',
-          description: 'Busy schedules, stress, inadequate nutrition, and dehydration can reduce nutrient levels in the body. Oral supplements may not absorb efficiently, delaying recovery and wellness.'
+          title: 'Why Your Body May Feel Depleted',
+          description: 'Modern lifestyles can place significant demands on your body. Long working hours, inadequate hydration, irregular eating habits, frequent travel, physical activity, poor sleep, and ongoing stress may contribute to dehydration and lower levels of essential vitamins and minerals. Over time, these factors can affect your energy, recovery, and overall sense of well-being.Although a balanced diet and oral supplements play an important role in maintaining good health, nutrient absorption can vary depending on individual digestive health, dietary habits, and specific nutritional needs. IV Drip Therapy in Dubai offers a medically supervised option to deliver fluids and selected nutrients directly into the bloodstream, supporting hydration and overall wellness when appropriate.'
         },
         solutionIntro: {
-          title: 'How IV Drip Dubai Therapy Helps',
-          description: 'At ramacarepolyclinic, IV Drip Therapy focuses on restoring balance from within by delivering essential nutrients directly to your cells.'
+          title: 'How IV Drip Therapy in Dubai Supports Your Health and Wellness',
+          description: 'At RamaCare Polyclinic, IV Drip Therapy in Dubai is designed to provide safe, personalized hydration and nutritional support under the supervision of experienced healthcare professionals. Following a medical assessment, a customized IV infusion is prepared to match your individual health needs, lifestyle, and wellness goals. During treatment, carefully selected fluids, vitamins, minerals, electrolytes, and antioxidants are delivered directly into the bloodstream, allowing efficient absorption without passing through the digestive system. This approach can help support hydration, replenish essential nutrients, and complement a healthy lifestyle for individuals with increased hydration or nutritional needs.'
         },
        leftCards: [
   {
     id: 1,
     title: 'What Is IV Drip Therapy?',
-    description: 'IV Drip Therapy in Dubai is a medical wellness treatment that delivers vitamins, minerals, antioxidants, and fluids directly into the bloodstream. This ensures faster absorption and more effective results compared to oral supplements.'
+    description: 'IV Drip Therapy in Dubai is a doctor-supervised wellness treatment that delivers carefully selected fluids, vitamins, minerals, electrolytes, and antioxidants directly into the bloodstream through an intravenous (IV) infusion. Because the nutrients bypass the digestive system, they are absorbed efficiently, making IV therapy a practical option for individuals who require hydration support or have increased nutritional needs.'
   },
   {
     id: 2,
-    title: 'Who Is It For?',
-    description: 'IV Drip Dubai Therapy is suitable for individuals experiencing:',
+    title: 'Who Can Benefit from IV Drip Therapy?',
+    description: 'IV drip therapy may be suitable for adults who want medically supervised hydration and nutritional support, including those who experience the following:',
     listItems: [
-      'Dehydration or fatigue',
-      'Low immunity or frequent illness',
-      'Stress and burnout',
-      'Travel exhaustion or jet lag',
-      'Dull skin or low energy levels'
+      'Persistent dehydration or inadequate fluid intake',
+      'Fatigue associated with lifestyle factors or recovery',
+      'Frequent travel or jet lag',
+      'Physically demanding work or exercise recovery',
+      'High levels of daily stress',
+      'Individuals seeking wellness-focused vitamin and hydration support',
+      'People looking to maintain healthy energy levels and overall well-being'
     ]
   },
   {
     id: 3,
-    title: 'Duration',
-    description: 'Each IV Drip session usually takes 30–45 minutes. Many patients feel refreshed immediately, with improved energy and hydration after the session.'
+    title: 'Treatment Duration',
+    description: 'Most IV drip therapy sessions in Dubai take approximately 30 to 45 minutes, depending on the selected infusion and your individual treatment plan. During the procedure, you can relax comfortably while the nutrients are administered under medical supervision.Many patients report feeling well-hydrated and refreshed after treatment, although individual experiences and outcomes may vary based on overall health, hydration status, and lifestyle.'
   },
   {
     id: 4,
-    title: 'Who Chooses IV Drip Therapy in Dubai?',
-    description: 'Why Patients Choose IV Drip Therapy in Dubai at ramacarepolyclinic:',
+    title: 'Why Choose IV Drip Therapy at RamaCare Polyclinic?',
+    description: 'Patients choose RamaCare Polyclinic because we prioritize safety, personalized care, and clinical excellence throughout every stage of treatment.Our advantages include:',
     listItems: [
-      'DHA-licensed doctors and trained medical staff',
-      'Personalized IV Drip Dubai Therapy plans',
-      'High safety and hygiene standards',
-      'Comfortable, relaxing treatment experience',
-      'Focus on long-term wellness and prevention'
+      'DHA-licensed doctors and experienced healthcare professionals',
+      'Personalized IV drip formulations based on individual wellness goals', 
+      'Comprehensive medical assessment before treatment',
+      'Strict infection control and international hygiene standards',
+      'Comfortable and relaxing clinical environment',
+      'High-quality vitamins, minerals, and medical-grade infusion equipment',
+      'Patient-focused care with ongoing guidance and support',
+      'Convenient appointment scheduling with minimal interruption to your day'
     ]
   }
 ],
-       rootCauses: [
+      rootCauses: [
   {
     id: 1,
     title: 'Dehydration',
-    description: 'Rapid fluid replacement improves hydration and cellular function.',
+    description:
+      'Replenishes fluids and electrolytes to help restore healthy hydration levels and support normal body functions.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 2,
     title: 'Low Energy & Fatigue',
-    description: 'Nutrient infusion supports metabolism and energy production.',
+    description:
+      'Delivers selected vitamins and nutrients that may support normal energy metabolism and recovery from demanding lifestyles.',
     severity: 'High',
     severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
   },
   {
     id: 3,
-    title: 'Weak Immunity',
-    description: 'Vitamins and antioxidants help strengthen the immune response.',
+    title: 'Immune Wellness',
+    description:
+      'Provides essential vitamins and antioxidants that help support normal immune function as part of a healthy lifestyle.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 4,
-    title: 'Stress & Recovery',
-    description: 'Supports physical recovery and reduces oxidative stress.',
+    title: 'Stress & Physical Recovery',
+    description:
+      'Offers hydration and nutritional support following travel, exercise, or periods of increased physical or mental demand.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   },
   {
     id: 5,
-    title: 'Skin Dullness',
-    description: 'Improves circulation and nutrient delivery for healthier skin.',
+    title: 'Dull or Tired-Looking Skin',
+    description:
+      'Proper hydration and nutritional support may contribute to healthier-looking skin and overall wellness.',
     severity: 'Medium',
     severityColor: 'bg-[#FED7AA] text-[#9A3412]'
   }
 ],
-        quickFacts: [
-          { label: 'Treatment Type', value: 'Non-surgical & non-invasive' },
-          { label: 'Anesthesia', value: 'Not required' },
-          { label: 'Downtime', value: 'Minimal to none' },
-          { label: 'Sessions Required', value: '4–8 (varies by area)' },
-          { label: 'Target Areas', value: 'Abdomen, thighs, arms, flanks, hips, back, chin' },
-          { label: 'Safety', value: 'DHA-approved & FDA-certified' },
-        ],
-        approachCards: [
-          {
-            id: 1,
-            title: 'Result:',
-            description: '  Improved hydration, better energy levels, enhanced immunity, and overall body rejuvenation—safely and effectively.',
-            hasLearnMore: false,
-            expandedContent: null
-           },
-        ]
+       quickFacts: [
+  {
+    label: 'Treatment Type',value: 'Non-surgical intravenous wellness therapy'
+  },
+  {
+    label: 'Procedure Time',value: 'Approximately 30–45 minutes'
+  },
+  {
+    label: 'Anesthesia',value: 'Not required'
+  },
+  {
+    label: 'Downtime',value: 'Minimal to none'
+  },
+  {
+    label: 'Return to Daily Activities',value: 'Usually immediate'
+  },
+  {
+    label: 'Recommended Sessions',value: 'Varies depending on individual wellness goals and medical advice'
+  },
+  {
+    label: 'Common Benefits',value: 'Hydration support, vitamin replenishment, wellness support, recovery assistance'
+  },
+  {
+    label: 'Medical Supervision',value: 'DHA-licensed healthcare professionals'
+  },
+  {
+    label: 'Suitable For',value: 'Healthy adults following a medical assessment'
+  }
+],
+       approachCards: [
+  {
+    id: 1,
+    title: 'What You Can Expect',
+    description:
+      'IV Drip Therapy may help support healthy hydration, energy metabolism, nutritional replenishment, recovery after travel or exercise, and overall wellness in a safe clinical environment.',
+    hasLearnMore: true,
+    expandedContent:
+      'Depending on your individual health status and treatment plan, IV Drip Dubai Therapy may help support the following:\n\n• Healthy hydration and fluid balance.\n• Normal energy metabolism and reduced feelings of fatigue related to dehydration or lifestyle factors.\n• Nutritional replenishment with essential vitamins and minerals.\n• Recovery after travel, exercise, or physically demanding activities.\n• Overall wellness and day-to-day vitality.\n\nEvery treatment is performed in a comfortable clinical setting using high-quality medical equipment and strict hygiene protocols. Our goal is to provide a safe, effective, and patient-focused experience while helping you feel refreshed, hydrated, and supported in your long-term wellness journey. Individual results may vary based on overall health, lifestyle, and nutritional needs.'
+  },
+  {
+    id: 2,
+    title: 'Personalized Treatment Plans',
+    description:
+      'Every IV drip session begins with a medical assessment to recommend a customized formulation based on your hydration levels, wellness goals, and overall health.',
+    hasLearnMore: true,
+    expandedContent:
+      'Every IV Drip Therapy session in Dubai at RamaCare Polyclinic begins with a medical assessment to understand your hydration levels, wellness goals, and overall health. Our healthcare professionals recommend a personalized IV drip formulation to provide safe, targeted nutritional support tailored to your individual needs.'
+  },
+  {
+    id: 3,
+    title: 'Safe & Professional Care',
+    description:
+      'Administered by DHA-licensed healthcare professionals using medical-grade equipment in a hygienic clinical environment.',
+    hasLearnMore: true,
+    expandedContent:
+      'Your IV Drip Dubai treatment is administered by DHA-licensed healthcare professionals in a clean, comfortable, and hygienic clinical environment. We follow strict safety protocols and use high-quality medical-grade infusion equipment to ensure every session is safe, comfortable, and focused on your overall well-being.'
+  }
+],
       },
-    healingJourney: {
-  title: 'Your Personalized Wellness & Rehydration Journey',
+   healingJourney: {
+  title: 'Your Personalized Wellness & Hydration Journey',
   description:
-    'Our IV drip in Dubai treatment follows a safe, structured, and results-driven approach to restore hydration, boost immunity, and improve overall wellness. Each stage is carefully managed by experienced medical professionals to ensure comfort, effectiveness, and long-lasting benefits.',
+    'Our IV Drip Therapy in Dubai follows a safe, step-by-step approach designed to support hydration, nutritional balance, and overall wellness. Every stage is supervised by experienced healthcare professionals to ensure a comfortable and personalized treatment experience.',
   steps: [
     {
       id: 1,
       number: '01',
-      title: ' Initial Consultation & Health Assessment (30–60 Minutes)',
-      duration: 'Step 1',
+      title: 'Initial Consultation & Health Assessment',
+      duration: 'Step 1 (30–60 Minutes)',
       description:
-        'Your journey begins with a detailed consultation to understand your health status and select the most suitable IV drip in Dubai for your needs.',
+        'Your treatment begins with a comprehensive consultation to understand your medical history, lifestyle, and wellness goals before recommending the most suitable IV drip.',
       keyActivities: [
-        'Medical history review and current health assessment',
-        'Discussion of wellness goals such as hydration, immunity, energy boost, or detoxification',
-        'Identification of nutritional deficiencies',
-        'Creation of a personalized IV drip treatment plan in Dubai'
+        'Review of your medical history and current health',
+        'Discussion of hydration and wellness goals',
+        'Assessment of individual nutritional needs',
+        'Personalized IV drip treatment plan'
       ],
       side: 'right'
     },
     {
       id: 2,
       number: '02',
-      title: ' Preparation Phase',
+      title: 'Preparation Before Treatment',
       duration: 'Step 2',
       description:
-        'Proper preparation helps your body respond optimally to IV drip treatment in Dubai.',
+        'Before your IV Drip Dubai session, our team provides simple guidance to help ensure a safe and comfortable treatment experience.',
       keyActivities: [
-        'Guidance on hydration before and after therapy',
-        'Recommendations on diet and supplement intake',
-        'Temporary avoidance of alcohol or certain medications (if required)',
-        'Pre-treatment safety checks and vital signs assessment'
+        'Hydration and dietary recommendations',
+        'Review of medications or supplements if needed',
+        'Pre-treatment safety checks',
+        'Vital signs assessment'
       ],
       side: 'left'
     },
     {
       id: 3,
       number: '03',
-      title: ' Active IV Drip Sessions',
+      title: 'Personalized IV Drip Session',
       duration: 'Step 3',
       description:
-        'During this phase, tailored IV drip sessions in Dubai deliver essential vitamins, minerals, and fluids directly into your bloodstream for maximum absorption.',
+        'Your customized IV infusion is administered in a relaxing clinical environment while our healthcare professionals monitor your comfort throughout the session.',
       keyActivities: [
-        '1–3 sessions per week, depending on health goals',
-        'Administration of medical-grade IV fluids with vitamins, antioxidants, or electrolytes',
-        'Monitoring for comfort and response during the session',
-        'Adjustment of therapy based on individual progress'
+        'Personalized vitamin and hydration infusion',
+        'Approximately 30–45-minute treatment session',
+        'Continuous monitoring during therapy',
+        'Adjustments based on your individual needs'
       ],
       side: 'right'
     },
     {
       id: 4,
       number: '04',
-      title: ' Maintenance & Follow-Up Care',
+      title: 'Follow-Up & Wellness Maintenance',
       duration: 'Step 4',
       description:
-        'Maintenance sessions help sustain the benefits achieved through IV drip treatment in Dubai.',
+        'After treatment, our team provides guidance to help you maintain hydration and overall wellness. Follow-up sessions may be recommended depending on your health goals.',
       keyActivities: [
-        'Periodic follow-up consultations',
-        'Customized maintenance IV drip sessions if recommended',
-        'Ongoing wellness guidance for hydration, energy, and immunity',
-        'Professional monitoring of overall health'
+        'Progress evaluation and follow-up consultation',
+        'Personalized maintenance recommendations',
+        'Hydration and healthy lifestyle guidance',
+        'Ongoing professional support as needed'
       ],
       side: 'left'
     }
   ]
 },
-      benefits: {
-        title: 'Clinically-Observed Benefits',
-        description: 'Evidence-based results from our body shaping treatments.',
-        benefits: [
-          {
-            id: 1,
-            title: ' Improved hydration',
-            percentage: 30,
-            description: null
-          },
-          {
-            id: 2,
-            title: ' Increased energy levels',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 3,
-            title: 'Stronger immunity',
-            percentage: 85,
-            description: null
-          },
-          {
-            id: 4,
-            title: 'Better recovery from stress',
-            percentage: 90,
-            description: null
-          },
-          {
-            id: 5,
-            title: ' Enhanced overall well-being',
-            percentage: 90,
-            description: null
-          }
-        ],
-        comparisonTitle: 'IV Drip Therapy vs Oral Supplements',
-        comparisonDescription: 'Compare our non-invasive body shaping approach with surgical body contouring methods',
-        comparisonHeaders: {
-          feature: 'Aspect',
-          ourTreatment: 'IV Drip Therapy',
-          traditional: 'Oral Supplements'
-        },
-        comparisonData: [
-          {
-    feature: 'Absorption',
-    ayurvedic: 'Direct & immediate',
-    conventional: 'Limited by digestion'
+    benefits: {
+  title: 'Potential Benefits of IV Drip Therapy in Dubai',
+  description:
+    'When administered by qualified healthcare professionals, IV Drip Therapy in Dubai can provide hydration and nutritional support tailored to your individual wellness goals. While results vary from person to person, many patients report the following benefits:',
+
+  benefits: [
+    {
+      id: 1,
+      title: 'Improved Hydration',
+      percentage: 90,
+      description:
+        'Helps restore fluid and electrolyte balance to support normal body functions.'
+    },
+    {
+      id: 2,
+      title: 'Healthy Energy Support',
+      percentage: 88,
+      description:
+        'Delivers essential vitamins and nutrients that support normal energy metabolism.'
+    },
+    {
+      id: 3,
+      title: 'Immune System Support',
+      percentage: 85,
+      description:
+        'Provides vitamins and antioxidants that contribute to normal immune function as part of a healthy lifestyle.'
+    },
+    {
+      id: 4,
+      title: 'Recovery & Wellness',
+      percentage: 87,
+      description:
+        'Supports hydration and nutritional replenishment after travel, exercise, or demanding daily activities.'
+    },
+    {
+      id: 5,
+      title: 'Overall Well-Being',
+      percentage: 92,
+      description:
+        'May help you feel refreshed, revitalized, and better supported in maintaining your daily wellness routine.'
+    }
+  ],
+
+  comparisonTitle: 'IV Drip Therapy vs. Oral Supplements',
+
+  comparisonDescription:
+    'Both IV Drip Therapy in Dubai and oral supplements can help support nutritional intake. The right option depends on your individual health needs, lifestyle, and your healthcare provider’s recommendations.',
+
+  comparisonHeaders: {
+    feature: 'Aspect',
+    ourTreatment: 'IV Drip Therapy',
+    traditional: 'Oral Supplements'
   },
-  {
-    feature: 'Results',
-    ayurvedic: 'Faster and effective',
-    conventional: 'Slower'
-  },
-  {
-    feature: 'Customization',
-    ayurvedic: 'Doctor-formulated',
-    conventional: 'Standard doses'
-  },
-  {
-    feature: 'Medical Supervision',
-    ayurvedic: 'Yes',
-    conventional: 'No'
-  }
-        ]
+
+  comparisonData: [
+    {
+      feature: 'Nutrient Delivery',
+      ayurvedic:
+        'Delivered directly into the bloodstream through an IV infusion.',
+      conventional:
+        'Absorbed through the digestive system before entering the bloodstream.'
+    },
+    {
+      feature: 'Absorption',
+      ayurvedic:
+        'Efficient delivery that bypasses digestion.',
+      conventional:
+        'Absorption varies depending on the nutrient and the individual’s digestive health.'
+    },
+    {
+      feature: 'Treatment Plan',
+      ayurvedic:
+        'Customized by healthcare professionals based on individual wellness goals.',
+      conventional:
+        'Usually available in standard formulations and dosages.'
+    },
+    {
+      feature: 'Medical Supervision',
+      ayurvedic:
+        'Administered by DHA-licensed healthcare professionals.',
+      conventional:
+        'May be taken independently or under medical advice, depending on the supplement.'
+    },
+    {
+      feature: 'Best For',
+      ayurvedic:
+        'Individuals seeking medically supervised hydration and nutritional support.',
+      conventional:
+        'Daily nutritional supplementation and general wellness maintenance.'
+    }
+  ]
       },
      pricing: {
   title: 'Transparent Pricing & IV Drip Therapy Packages',
@@ -24384,7 +24462,62 @@ whenToConsider: {
             description: 'Patient Reviews'
           }
         ]
-      }
+      },
+  whyChooseSection: {
+  title: "Why Choose RamaCare Polyclinic for IV Drip Therapy in Dubai?",
+  intro:
+    "Choosing the right clinic is an important part of achieving safe and effective wellness outcomes. At RamaCare Polyclinic, we combine experienced medical care with a patient-first approach to deliver IV Drip Therapy in Dubai in a safe, comfortable, and professional environment.",
+  features: [
+    {
+      id: 1,
+      title: "Comprehensive Consultation & Personalized IV Therapy",
+      description:
+        "Every treatment begins with a detailed consultation to understand your health history, lifestyle, and wellness goals. Based on this assessment, our DHA-licensed healthcare professionals recommend a personalized IV drip formulation designed to meet your individual needs rather than using a one-size-fits-all approach."
+    },
+    {
+      id: 2,
+      title: "Safe Treatment, Advanced Equipment & Patient Comfort",
+      description:
+        "We maintain strict infection-control protocols and use high-quality medical-grade equipment and carefully selected vitamin infusions to ensure patient safety throughout every session. Our modern clinic provides a relaxing atmosphere where you can comfortably receive treatment while being monitored by experienced medical staff."
+    },
+    {
+      id: 3,
+      title: "Professional Care & Long-Term Wellness Support",
+      description:
+        "Beyond the treatment itself, we believe in supporting your long-term wellness. Our team provides practical guidance on hydration, nutrition, and healthy lifestyle habits to help you maintain the benefits of your treatment. Whether you are seeking hydration support, recovery after travel, or overall wellness, RamaCare Polyclinic is committed to delivering personalized care with professionalism, compassion, and clinical excellence."
+    }
+  ]
+},
+
+aftercareContent: {
+  resultsTitle: "Recovery & Aftercare",
+  resultsDescription:
+    "One of the advantages of IV Drip Therapy in Dubai is that it requires little to no recovery time. Most patients can return to work, travel, or their normal daily routine immediately after their appointment. Following your treatment, our healthcare team provides personalized aftercare recommendations based on your individual health needs and the type of IV infusion you received.",
+  resultPoints: [
+    "Drink plenty of water after your treatment to support normal hydration and overall wellness.",
+    "Maintain a balanced diet and healthy lifestyle to help maximize the benefits of your IV therapy.",
+    "Mild redness or slight tenderness around the injection site may occur but usually resolves on its own.",
+    "Follow the personalized aftercare instructions provided by our healthcare professionals.",
+    "Attend recommended follow-up appointments if IV therapy is part of your ongoing wellness plan.",
+    "Our team will monitor your progress and adjust future treatments according to your changing health goals.",
+    "Combining IV therapy with healthy nutrition, hydration, regular exercise, and sufficient rest helps support your long-term health and well-being."
+  ]
+},
+
+whenToConsider: {
+  title: "Who Is a Suitable Candidate?",
+  intro:
+    "IV Drip Therapy in Dubai may be suitable for adults seeking medically supervised hydration and nutritional support. It is commonly chosen by individuals with busy lifestyles, frequent travelers, athletes, professionals experiencing physical or mental fatigue, and those looking to support their overall wellness through personalized vitamin infusions.",
+  points: [
+    "Adults looking for hydration and nutritional support under medical supervision.",
+    "Individuals with busy lifestyles, frequent travelers, or athletes seeking recovery support.",
+    "Professionals experiencing physical or mental fatigue.",
+    "People interested in supporting their overall wellness with personalized vitamin infusions.",
+    "Individuals who understand that suitability depends on their medical history and current health status."
+  ],
+  closing:
+    "IV therapy is not suitable for everyone. Certain medical conditions, allergies, pregnancy, or ongoing health concerns may require additional evaluation before treatment. During your consultation at RamaCare Polyclinic, our healthcare professionals will review your medical history, discuss your wellness goals, and recommend the most appropriate treatment plan based on your individual needs. This personalized approach helps ensure safe, effective, and responsible care in line with current medical standards."
+}
     },
   
 
