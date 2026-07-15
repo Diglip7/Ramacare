@@ -62,12 +62,21 @@ const Footer = () => {
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
              Premium Polyclinic in Dubai Trusted Healthcare in Jumeirah 1. Authentic Panchakarma, chronic pain relief, and holistic wellness treatments by DHA-licensed experts.
             </p>
-            <button className="flex items-center space-x-2 px-4 py-2 bg-[#3d3d3d] text-white rounded-md hover:bg-[#4d4d4d] transition-colors text-sm">
-              <svg className="w-4 h-4 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-              </svg>
-              <span>DHA Licensed Number-2036418</span>
-            </button>
+           
+              <button className="flex items-center space-x-2 px-4 py-2 bg-[#3d3d3d] text-white rounded-md hover:bg-[#4d4d4d] transition-colors text-sm w-fit">
+                <svg className="w-4 h-4 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+                <span>DHA Licensed Number - 2036418</span>
+              </button>
+
+              <button className="flex items-center space-x-2 px-4 py-2 bg-[#3d3d3d] text-white rounded-md hover:bg-[#4d4d4d] transition-colors text-sm w-fit">
+                <svg className="w-4 h-4 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+                <span>Advertisement License No - ZR478282–271025</span>
+              </button>
+            
           </div>
 
           {/* Column 2: Quick Links */}

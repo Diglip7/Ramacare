@@ -42,8 +42,7 @@ export default function IVdripPage() {
         <title key="title">IV Drip Therapy in Dubai | RamaCare Polyclinic</title>
         <meta name="description" content="IV Drip Therapy in Dubai at RamaCare Polyclinic. Experience the benefits of IV Drip Therapy for weight loss, detoxification, and overall wellness. Book your consultation today!" key="description" />
         <meta name="keywords" content="IV Drip Therapy, weight loss, detoxification, overall wellness, RamaCare Polyclinic, Dubai" />
-        
-      <script
+        <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
@@ -108,28 +107,23 @@ export default function IVdripPage() {
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
-        hero={content?.hero}
-      />
-     <QuickNavigation navItems={navItems} />
-    
+        hero={content?.hero}/>
+    <QuickNavigation navItems={navItems} />
     <TreatmentOverview 
       subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      content={content?.overview}/>
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
-        content={content?.benefits}
-      />
+        content={content?.benefits}/>
       <SkinTreatmentAdditionalContent 
               content={{whyChooseSection: content?.whyChooseSection,
                  whenToConsider: content?.whenToConsider,}} />
       <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
-    </Layout>
+      </Layout>
   );
 }
