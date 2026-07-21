@@ -210,7 +210,7 @@ const HowEximiaWorksPage = () => {
 
                 <div className="mt-16 text-center">
                   <a 
-                    href="/services/eximia-body-contouring-dubai/" 
+                    href="/services/eximia-body-contouring-dubai" 
                     className="inline-flex items-center gap-2 text-[#5F5F5F] hover:text-[#1F5E4B] font-medium transition-colors group"
                   >
                     Sequential Technology Flow

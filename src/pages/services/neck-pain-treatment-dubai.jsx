@@ -31,7 +31,7 @@ export default function NeckPainTreatmentPage() {
   const [scrollY, setScrollY] = useState(0);
   const [activeTreatment, setActiveTreatment] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
-  
+
   const navItems = [
     { id: 'what-is-neck-pain', label: 'What is Neck Pain?' },
     { id: 'common-causes', label: 'Causes' },
@@ -523,13 +523,20 @@ export default function NeckPainTreatmentPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="aspect-square bg-gradient-to-br from-[#1F5E4B] to-[#38D39F] rounded-3xl flex items-center justify-center">
-                  <div className="text-center">
+                <div className="aspect-square bg-gradient-to-br from-[#1F5E4B] to-[#38D39F] rounded-3xl overflow-hidden relative shadow-lg flex items-center justify-center">
+                  <img
+                    src="/images/neck-pain-consultation-dubai.jpg"
+                    alt="Neck Pain Treatment Dubai consultation at RamaCare Polyclinic"
+                    className="absolute inset-0 w-full h-full object-cover z-10"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <div className="text-center p-6 relative z-0">
                     <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Activity className="w-16 h-16 text-white" />
                     </div>
-                    <p className="text-white text-xl font-medium">Image Placeholder</p>
-                    <p className="text-white/70 text-sm mt-2">Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
+                    <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
                   </div>
                 </div>
               </motion.div>
@@ -565,13 +572,20 @@ export default function NeckPainTreatmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl flex items-center justify-center border border-[#1F5E4B]/20">
-                    <div className="text-center">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                    <img
+                      src="/images/cervical-spine-anatomy-dubai.jpg"
+                      alt="Cervical spine anatomy diagram showing neck vertebrae"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-6 relative z-0">
                       <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <Activity className="w-12 h-12 text-[#1F5E4B]" />
                       </div>
-                      <p className="text-[#1F5E4B] text-lg font-medium">Image Placeholder</p>
-                      <p className="text-gray-600 text-sm mt-1">Cervical spine anatomy diagram showing neck vertebrae</p>
+                      <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Cervical spine anatomy diagram showing neck vertebrae</p>
                     </div>
                   </div>
                 </motion.div>
@@ -656,13 +670,20 @@ export default function NeckPainTreatmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-3xl flex items-center justify-center border border-[#1F5E4B]/20 mb-8">
-                    <div className="text-center">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 mb-8 flex items-center justify-center">
+                    <img
+                      src="/images/neck-pain-causes-infographic.jpg"
+                      alt="Common causes of neck pain including posture and text neck"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-6 relative z-0">
                       <div className="w-24 h-24 bg-[#38D39F]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="w-12 h-12 text-[#38D39F]" />
                       </div>
-                      <p className="text-[#1F5E4B] text-lg font-medium">Image Placeholder</p>
-                      <p className="text-gray-600 text-sm mt-1">Common causes of neck pain including posture and text neck</p>
+                      <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Common causes of neck pain including posture and text neck</p>
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-[#1F5E4B]/10 to-[#38D39F]/10 p-8 rounded-2xl border border-[#1F5E4B]/20">
@@ -848,13 +869,20 @@ export default function NeckPainTreatmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl flex items-center justify-center border border-[#1F5E4B]/20">
-                    <div className="text-center">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                    <img
+                      src="/images/physiotherapist-examining-neck-dubai.jpg"
+                      alt="Physiotherapist assessing cervical mobility in Dubai clinic"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-6 relative z-0">
                       <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <Stethoscope className="w-12 h-12 text-[#1F5E4B]" />
                       </div>
-                      <p className="text-[#1F5E4B] text-lg font-medium">Image Placeholder</p>
-                      <p className="text-gray-600 text-sm mt-1">Physiotherapist assessing cervical mobility in Dubai clinic</p>
+                      <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Physiotherapist assessing cervical mobility in Dubai clinic</p>
                     </div>
                   </div>
                 </motion.div>
@@ -917,8 +945,7 @@ export default function NeckPainTreatmentPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+              transition={{ duration: 0.8 }}>
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Neck Pain Treatments at RamaCare</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -937,12 +964,10 @@ export default function NeckPainTreatmentPage() {
                       transition={{ duration: 0.5, delay: index * 0.04 }}
                       whileHover={{ y: -5, scale: 1.02 }}
                       onClick={() => setActiveTreatment(index)}
-                      className={`cursor-pointer p-6 rounded-2xl transition-all ${
-                        activeTreatment === index
+                      className={`cursor-pointer p-6 rounded-2xl transition-all ${activeTreatment === index
                           ? 'bg-[#1F5E4B] text-white shadow-xl'
                           : 'bg-white text-gray-800 shadow-sm hover:shadow-md'
-                      }`}
-                    >
+                        }`} >
                       <h3 className={`text-xl font-bold mb-3 ${activeTreatment === index ? 'text-white' : 'text-[#1F5E4B]'}`}>
                         {treatment.title}
                       </h3>
@@ -952,23 +977,61 @@ export default function NeckPainTreatmentPage() {
                     </motion.div>
                   ))}
                 </div>
-                <div className="grid md:grid-cols-2 gap-6 mt-12">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-2xl flex items-center justify-center border border-[#1F5E4B]/20">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Activity className="w-10 h-10 text-[#1F5E4B]" />
+                <div className="grid md:grid-cols-3 gap-6 mt-12">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-2xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                    <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-sm text-[#1F5E4B] text-xs font-bold px-3 py-1 rounded-full z-20 shadow-sm border border-white/20">
+                      Manual Therapy
+                    </div>
+                    <img
+                      src="/images/manual-therapy-session-dubai.jpg"
+                      alt="Manual therapy session for cervical pain treatment Dubai"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-4 relative z-0">
+                      <div className="w-16 h-16 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Activity className="w-8 h-8 text-[#1F5E4B]" />
                       </div>
-                      <p className="text-[#1F5E4B] text-lg font-medium">Image Placeholder</p>
-                      <p className="text-gray-600 text-sm mt-1">Manual therapy session for cervical pain treatment Dubai</p>
+                      <p className="text-gray-600 text-xs max-w-xs mx-auto">Manual therapy session for cervical pain treatment Dubai</p>
                     </div>
                   </div>
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#FFF8E1]/50 to-[#FFECB3]/50 rounded-2xl flex items-center justify-center border border-[#FFA000]/20">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-[#FFA000]/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Activity className="w-10 h-10 text-[#FFA000]" />
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#FFF8E1]/50 to-[#FFECB3]/50 rounded-2xl overflow-hidden relative border border-[#FFA000]/20 flex items-center justify-center">
+                    <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-sm text-[#FF6F00] text-xs font-bold px-3 py-1 rounded-full z-20 shadow-sm border border-white/20">
+                      Dry Needling
+                    </div>
+                    <img
+                      src="/images/dry-needling-neck-pain-dubai.jpg"
+                      alt="Dry needling therapy for neck muscle tension Dubai"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}/>
+                    <div className="text-center p-4 relative z-0">
+                      <div className="w-16 h-16 bg-[#FFA000]/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Activity className="w-8 h-8 text-[#FFA000]" />
                       </div>
-                      <p className="text-[#FF6F00] text-lg font-medium">Image Placeholder</p>
-                      <p className="text-gray-600 text-sm mt-1">Dry needling therapy for neck muscle tension Dubai</p>
+                      <p className="text-gray-600 text-xs max-w-xs mx-auto">Dry needling therapy for neck muscle tension Dubai</p>
+                    </div>
+                  </div>
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#E0F2FE] to-[#BAE6FD] rounded-2xl overflow-hidden relative border border-[#0284C7]/20 flex items-center justify-center">
+                    <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-sm text-[#0369A1] text-xs font-bold px-3 py-1 rounded-full z-20 shadow-sm border border-white/20">
+                      Posture Correction
+                    </div>
+                    <img
+                      src="/images/posture-correction-neck-pain-dubai.jpg"
+                      alt="Posture correction technique for neck pain relief Dubai"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-4 relative z-0">
+                      <div className="w-16 h-16 bg-[#0284C7]/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Activity className="w-8 h-8 text-[#0284C7]" />
+                      </div>
+                      <p className="text-gray-600 text-xs max-w-xs mx-auto">Posture correction technique for neck pain relief Dubai</p>
                     </div>
                   </div>
                 </div>
@@ -989,8 +1052,7 @@ export default function NeckPainTreatmentPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+              transition={{ duration: 0.8 }} >
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">What to Expect: Recovery Timeline</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -1009,8 +1071,7 @@ export default function NeckPainTreatmentPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="relative pl-24"
-                      >
+                        className="relative pl-24">
                         <div className="absolute left-5 top-2 w-8 h-8 bg-[#1F5E4B] rounded-full flex items-center justify-center border-4 border-white shadow-lg">
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                         </div>
@@ -1123,8 +1184,8 @@ export default function NeckPainTreatmentPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+              transition={{ duration: 0.8 }}>
+
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Neck Pain Prevention Tips</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -1159,13 +1220,23 @@ export default function NeckPainTreatmentPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                   >
-                    <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl flex items-center justify-center border border-[#1F5E4B]/20">
-                      <div className="text-center">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                      <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-sm text-[#1F5E4B] text-xs font-bold px-3 py-1 rounded-full z-20 shadow-sm border border-white/20">
+                        Ergonomic Setup
+                      </div>
+                      <img
+                        src="/images/ergonomic-workstation-setup-dubai.jpg"
+                        alt="Ergonomic desk setup to prevent neck pain Dubai"
+                        className="absolute inset-0 w-full h-full object-cover z-10"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                      <div className="text-center p-6 relative z-0">
                         <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                           <Activity className="w-12 h-12 text-[#1F5E4B]" />
                         </div>
-                        <p className="text-[#1F5E4B] text-lg font-medium">Image Placeholder</p>
-                        <p className="text-gray-600 text-sm mt-1">Ergonomic desk setup to prevent neck pain Dubai</p>
+                        <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Ergonomic desk setup to prevent neck pain Dubai</p>
                       </div>
                     </div>
                   </motion.div>
@@ -1175,13 +1246,23 @@ export default function NeckPainTreatmentPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                   >
-                    <div className="aspect-[4/3] bg-gradient-to-br from-[#FFF8E1]/50 to-[#FFECB3]/50 rounded-3xl flex items-center justify-center border border-[#FFA000]/20">
-                      <div className="text-center">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-[#FFF8E1]/50 to-[#FFECB3]/50 rounded-3xl overflow-hidden relative border border-[#FFA000]/20 flex items-center justify-center">
+                      <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-sm text-[#FF6F00] text-xs font-bold px-3 py-1 rounded-full z-20 shadow-sm border border-white/20">
+                        Neck Exercises
+                      </div>
+                      <img
+                        src="/images/neck-stretching-exercises-dubai.jpg"
+                        alt="Guided neck stretching exercise at Dubai physiotherapy clinic"
+                        className="absolute inset-0 w-full h-full object-cover z-10"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                      <div className="text-center p-6 relative z-0">
                         <div className="w-24 h-24 bg-[#FFA000]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                           <Activity className="w-12 h-12 text-[#FFA000]" />
                         </div>
-                        <p className="text-[#FF6F00] text-lg font-medium">Image Placeholder</p>
-                        <p className="text-gray-600 text-sm mt-1">Guided neck stretching exercise at Dubai physiotherapy clinic</p>
+                        <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Guided neck stretching exercise at Dubai physiotherapy clinic</p>
                       </div>
                     </div>
                   </motion.div>
@@ -1372,13 +1453,20 @@ export default function NeckPainTreatmentPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="aspect-[4/3] bg-white/10 rounded-3xl flex items-center justify-center border border-white/20">
-                    <div className="text-center">
+                  <div className="aspect-[4/3] bg-white/10 rounded-3xl overflow-hidden relative border border-white/20 flex items-center justify-center">
+                    <img
+                      src="/images/neck-pain-clinic-cta-dubai.jpg"
+                      alt="Book Neck Pain Treatment Dubai consultation at RamaCare Polyclinic"
+                      className="absolute inset-0 w-full h-full object-cover z-10"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                    <div className="text-center p-6 relative z-0">
                       <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <Activity className="w-16 h-16 text-white" />
                       </div>
-                      <p className="text-white text-xl font-medium">Image Placeholder</p>
-                      <p className="text-white/70 text-sm mt-2">Book Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
+                      <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Book Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
                     </div>
                   </div>
                 </motion.div>

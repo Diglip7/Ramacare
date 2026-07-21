@@ -271,31 +271,31 @@ export const subcategoryContent = {
       // Image slots — none of these existed on the live page. Replace src with real photography using the AI Image Prompt as a brief.
       images: {
         anatomy: {
-          src: "https://placehold.co/800x600/1F5E4B/FFFFFF?text=Plantar+Fascia+Anatomy",
+          src: "/images/heel-anatomy-illustration-plantar-fasciitis.jpg",
           alt: "Illustration of heel anatomy showing the plantar fascia and heel bone in Plantar Fasciitis Treatment Dubai",
           caption: "Anatomical diagram showing the plantar fascia and its attachment to the heel bone",
           aiPrompt: "A clean medical illustration of the human foot highlighting the plantar fascia, heel bone, and arch, labeled diagram style, white background"
         },
         physiotherapist: {
-          src: "https://placehold.co/1000x650/0F3D30/FFFFFF?text=Physiotherapy+Session",
+          src: "/images/physiotherapist-treating-plantar-fasciitis-dubai.jpg",
           alt: "Physiotherapist providing Plantar Fasciitis Treatment Dubai to a patient",
           caption: "A DHA-licensed physiotherapist assessing a patient's foot at RamaCare Polyclinic",
           aiPrompt: "A professional physiotherapist in a modern clinic examining a patient's foot and heel, clean clinical setting, natural lighting, realistic photography style"
         },
         stretching: {
-          src: "https://placehold.co/800x600/2A7D63/FFFFFF?text=Plantar+Fascia+Stretch",
+          src: "/images/foot-stretching-exercise-plantar-fasciitis.jpg",
           alt: "Patient performing a plantar fascia stretching exercise for heel pain relief",
           caption: "A simple plantar fascia stretch used as part of a home exercise program",
           aiPrompt: "A person seated and stretching their foot and toes with a towel, soft natural lighting, physiotherapy clinic setting, realistic photography style"
         },
         gaitAnalysis: {
-          src: "https://placehold.co/800x600/1F5E4B/FFFFFF?text=Gait+Analysis",
+          src: "/images/gait-analysis-session-dubai-physiotherapy.jpg",
           alt: "Gait analysis session assessing walking mechanics for foot pain treatment",
           caption: "A physiotherapist conducting a gait analysis to identify biomechanical causes of heel pain",
           aiPrompt: "A physiotherapist observing a patient walking in a clinical gait analysis setup, modern clinic, realistic photography style"
         },
         orthotic: {
-          src: "https://placehold.co/800x600/5F5F5F/FFFFFF?text=Orthotic+Shoe+Insert",
+          src: "/images/orthotic-shoe-insert.jpg",
           alt: "Orthotic shoe insert being demonstrated for plantar fasciitis and flat feet support",
           caption: "Orthotic shoe inserts help redistribute pressure and support the arch during recovery",
           aiPrompt: "A close-up of a physiotherapist showing an orthotic shoe insert to a patient, bright modern clinic setting, realistic photography style"
@@ -522,27 +522,27 @@ export const subcategoryContent = {
 
       images: {
         anatomy: {
-          src: "/images/a3.jpg",
+          src: "/images/Cervical Spine Anatomy Illustration.jpg",
           alt: "Cervical spine anatomy diagram showing vertebrae and discs relevant to cervical spondylosis treatment Dubai",
           caption: "Understanding the cervical spine helps explain how cervical spondylosis develops."
         },
         physiotherapySession: {
-          src: "/images/gp.jpg",
+          src: "/images/Physiotherapist Treating Neck Pain.jpg",
           alt: "Physiotherapist providing manual therapy for a patient during cervical spondylosis treatment Dubai session",
           caption: "Hands-on manual therapy is a key part of neck pain rehabilitation."
         },
         traction: {
-          src: "/images/ultra.jpg",
+          src: "/images/Cervical Traction Therapy Session.jpg",
           alt: "Patient receiving cervical traction therapy as part of cervical spondylosis treatment Dubai program",
           caption: "Cervical traction helps relieve pressure on compressed nerves in the neck."
         },
         postureCorrection: {
-          src: "/images/ex2.jpg",
+          src: "/images/Neck Posture Correction Exercise.jpg",
           alt: "Patient performing posture correction exercise guided by a neck pain physiotherapist",
           caption: "Posture correction exercises support long-term neck health."
         },
         ergonomics: {
-          src: "/images/office.jpg",
+          src: "/images/Office Ergonomics for Cervical Spine Health.jpg",
           alt: "Correct ergonomic desk setup to prevent neck strain and cervical osteoarthritis",
           caption: "A well-set-up workstation reduces daily strain on the cervical spine."
         }
@@ -30362,7 +30362,7 @@ comparisonData: [
       },
       doctors: {
         doctors: [
-          DOCTORS.anan,
+          
           DOCTORS.hirbod,
           DOCTORS.soumya
         ]
@@ -31898,7 +31898,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
         doctors: [
-          DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+           DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -32479,7 +32479,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
        doctors: [
-         DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
+          DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
         ]
       },
       certifications: {
@@ -33222,7 +33222,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
         doctors: [
-         DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
+          DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
         ]
       },
       certifications: {
@@ -34019,7 +34019,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
        doctors: [
-          DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
+           DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
         ]
       },
       certifications: {
@@ -34643,7 +34643,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
         doctors: [
-          DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
+          DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna
         ]
       },
       certifications: {
@@ -35237,7 +35237,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
        doctors: [
-         DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+          DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -35844,7 +35844,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
        doctors: [
-        DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+         DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -36480,7 +36480,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
         doctors: [
-          DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+           DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -37216,7 +37216,7 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       },
       doctors: {
        doctors: [
-         DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+          DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -37829,7 +37829,7 @@ Recovery: Minimal downtime for non-surgical care
       },
       doctors: {
         doctors: [
-        DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
+         DOCTORS.hirbod, DOCTORS.soumya , DOCTORS.aparna 
         ]
       },
       certifications: {
@@ -39354,26 +39354,31 @@ Seek a cost-effective smile restoration`
       },
       images: {
         anatomy: {
+          src: "/images/Spine Anatomy Illustration.jpg",
           title: "Spine Anatomy Illustration",
           alt: "Spine anatomy diagram showing disc position relevant to slip disc treatment Dubai",
           caption: "Understanding spinal disc anatomy helps explain how a slip disc develops."
         },
         physio: {
+          src: "/images/Physiotherapist Treating a Patient with a Slip Disc.jpg",
           title: "Physiotherapist Treating a Patient with a Slip Disc",
           alt: "Physiotherapist providing manual therapy during a back pain rehabilitation session",
           caption: "Hands-on manual therapy supports pain relief and improved mobility."
         },
         stretching: {
+          src: "/images/Guided Stretching Exercises.jpg",
           title: "Guided Stretching Exercises",
           alt: "Patient performing guided stretching exercises for lumbar spine rehabilitation",
           caption: "Guided stretches help improve flexibility and reduce strain on the spine."
         },
         manual: {
+          src: "/images/Manual Therapy Session.jpg",
           title: "Manual Therapy Session",
           alt: "Physiotherapist performing manual therapy technique for spine and back pain relief",
           caption: "Manual therapy techniques ease muscle tension and support spinal mobility."
         },
         equipment: {
+          src: "/images/Spine Rehabilitation Equipment.jpg",
           title: "Spine Rehabilitation Equipment",
           alt: "Modern spine rehabilitation equipment used for structured recovery programs",
           caption: "Modern rehabilitation equipment supports structured, progressive recovery."
@@ -39627,26 +39632,31 @@ Seek a cost-effective smile restoration`
       },
       images: {
         anatomy: {
+          src: "/images/Healthy and damaged joint anatomy illustration.jpg",
           title: "Healthy and damaged joint anatomy illustration",
           alt: "Illustration comparing healthy joint and arthritic joint anatomy",
           caption: "Understanding joint anatomy differences helps track arthritis progression."
         },
         physio: {
+          src: "/images/Arthritis Treatment Dubai.jpg",
           title: "Doctor examining a patient with knee arthritis",
           alt: "Arthritis Treatment Dubai — doctor examining patient's knee joint",
           caption: "A thorough orthopedic evaluation is the first step in diagnosing joint discomfort."
         },
         stretching: {
+          src: "/images/Physiotherapist guiding arthritis.jpg",
           title: "Physiotherapist guiding arthritis rehabilitation exercises",
           alt: "Physiotherapist guiding arthritis rehabilitation exercises in Dubai",
           caption: "Controlled active movements help preserve joint range of motion."
         },
         manual: {
+          src: "/images/Manual therapy for arthritis.jpg",
           title: "Manual therapy session for arthritis pain",
           alt: "Manual therapy session for arthritis pain management at RamaCare Dubai",
           caption: "Targeted mobilization relieves joint pressure and eases tight surrounding tissues."
         },
         equipment: {
+          src: "/images/Senior patient performing supervised mobility exercises.jpg",
           title: "Senior patient performing supervised mobility exercises",
           alt: "Senior patient performing supervised mobility exercises for arthritis",
           caption: "Progressive strength training stabilizes joints and improves everyday function."
@@ -39918,26 +39928,31 @@ Seek a cost-effective smile restoration`
       },
       images: {
         anatomy: {
+          src: "/images/Sports physiotherapist.jpg",
           title: "Sports physiotherapist treating an athlete in Dubai",
           alt: "Sports Injury Rehabilitation Dubai — physiotherapist treating an athlete's knee",
           caption: "Orthopedic sports therapy targets joint flexibility and mechanical loading."
         },
         physio: {
+          src: "/images/ACL rehabilitation exercise session.jpg",
           title: "ACL rehabilitation exercise session",
           alt: "ACL rehabilitation exercise session at RamaCare Polyclinic Dubai",
           caption: "Post-operative ACL protocols prioritize quadriceps activation and joint stability."
         },
         stretching: {
+          src: "/images/Balance and strength.jpg",
           title: "Balance and strength training for sports recovery",
           alt: "Balance and strength training during sports injury recovery in Dubai",
           caption: "Proprioception drills retrain ligaments to react to sudden direction shifts."
         },
         manual: {
+          src: "/images/Manual therapy for shoulder.jpg",
           title: "Manual therapy for shoulder sports injury",
           alt: "Manual therapy session for shoulder sports injury rehabilitation Dubai",
           caption: "Focused manual mobilization increases localized shoulder joint range of motion."
         },
         equipment: {
+          src: "/images/Athlete performing supervised.jpg",
           title: "Athlete performing supervised return-to-sport exercises",
           alt: "Athlete completing supervised return-to-sport exercises at RamaCare Dubai",
           caption: "Functional return-to-play checks verify power output comparisons."
@@ -40199,26 +40214,31 @@ Seek a cost-effective smile restoration`
       },
       images: {
         anatomy: {
+          src: "/images/Physiotherapist assessing a patient with knee joint pain.jpg",
           title: "Physiotherapist assessing a patient with knee joint pain",
           alt: "Physiotherapist assessing knee joint pain in Dubai clinic",
           caption: "Orthopedic joint evaluation identifies minor biomechanical restrictions."
         },
         physio: {
+          src: "/images/Joint anatomy illustration.jpg",
           title: "Joint anatomy illustration showing healthy and damaged cartilage",
           alt: "Joint anatomy diagram showing cartilage and ligament damage",
           caption: "Cartilage damage allows bone surfaces to friction directly."
         },
         stretching: {
+          src: "/images/Manual therapy for joint.jpg",
           title: "Manual therapy session for shoulder joint pain",
           alt: "Manual therapy for Joint Pain Treatment Dubai at RamaCare",
           caption: "Hands-on mobilization restores joint glide movements."
         },
         manual: {
+          src: "/images/Patient performing rehabilitation.jpg",
           title: "Patient performing rehabilitation exercises under supervision",
           alt: "Guided joint rehabilitation exercises at RamaCare Polyclinic",
           caption: "Guided low-impact exercises restore muscle support systems."
         },
         equipment: {
+          src: "/images/Doctor explaining joint pain treatment.jpg",
           title: "Doctor explaining joint pain treatment using a skeletal model",
           alt: "DHA-licensed doctor explaining joint pain diagnosis Dubai",
           caption: "Skeletal modeling aids explanation of cartilage and joint decay."

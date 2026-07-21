@@ -245,26 +245,31 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
+        src: "/images/Anxiety Treatment Dubai.jpg",
         title: "Healthcare professional discussing anxiety management with a patient",
         alt: "Anxiety Treatment Dubai consultation at RamaCare Polyclinic",
         caption: "Personalized stress and anxiety wellness consultations identify primary physical and lifestyle strain areas."
       },
       physio: {
+        src: "/images/Guided breathing session.jpg",
         title: "Guided breathing and relaxation session in a wellness clinic",
         alt: "Guided breathing session for anxiety support in Dubai",
         caption: "Structured breathing patterns help stimulate the body's natural relaxation response."
       },
       stretching: {
+        src: "/images/Physiotherapy for anxiety.jpg",
         title: "Physiotherapist treating neck and shoulder tension related to anxiety",
         alt: "Physiotherapy for anxiety-related muscle tension in Dubai",
         caption: "Focused physical therapy helps release chronic muscle guarding in the neck and shoulders."
       },
       manual: {
+        src: "/images/Ayurvedic consultation for anxiety.jpg",
         title: "Ayurvedic wellness consultation for emotional wellbeing",
         alt: "Ayurvedic consultation for anxiety support at RamaCare Dubai",
         caption: "Ayurveda consultations look at holistic daily habits, diet, and stress profiles."
       },
       equipment: {
+        src: "/images/Guided relaxation.jpg",
         title: "Professional practicing mindfulness and stretching in a calm environment",
         alt: "Mindfulness and stretching for anxiety relief in Dubai",
         caption: "Daily movement and stretching exercises build physical resiliency and stress tolerance."
@@ -516,26 +521,31 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
+        src: "/images/Stress Treatment Dubai.jpg",
         title: "Healthcare professional consulting a patient about stress management",
         alt: "Stress Treatment Dubai consultation at RamaCare Polyclinic",
         caption: "Personalized stress care starts with understanding your specific lifestyle triggers and physical symptoms."
       },
       physio: {
+        src: "/images/Calm consultation room setting.jpg",
         title: "Calm consultation room setting",
         alt: "Supportive stress management consultation at RamaCare Dubai",
         caption: "Our clinical rooms in Jumeirah offer a quiet, supportive environment for wellness consulting."
       },
       stretching: {
+        src: "/images/Physiotherapy for stress.jpg",
         title: "Physiotherapist treating neck and shoulder tension caused by stress",
         alt: "Physiotherapy for stress-related muscle tension in Dubai",
         caption: "Manual therapy and targeted stretching release unconscious posturing tension in shoulders."
       },
       manual: {
+        src: "/images/Ayurvedic consultation for stress.jpg",
         title: "Ayurvedic wellness consultation for stress management",
         alt: "Ayurvedic consultation for stress management at RamaCare Dubai",
         caption: "Ayurvedic daily routine guidance aims to restore physical and emotional stability."
       },
       equipment: {
+        src: "/images/Guided relaxation.jpg",
         title: "Guided breathing and relaxation session in a modern clinic",
         alt: "Guided relaxation and breathing session for stress relief Dubai",
         caption: "Controlled breathing training teaches natural ways to down-regulate the nervous system."
@@ -792,31 +802,31 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
-        src: "/images/phy1.jpg",
+        src: "/images/Personalized rehabilitation consultation.jpg",
         title: "Personalized rehabilitation consultation with a DHA-licensed physiotherapist",
         alt: "Personalized post-surgery rehabilitation consultation with DHA-licensed physiotherapist",
         caption: "Every rehabilitation program starts with a detailed physical evaluation and surgeon protocol review."
       },
       physio: {
-        src: "/images/phy2.jpg",
+        src: "/images/Post-operative rehabilitation exercises.jpg",
         title: "Post-operative rehabilitation exercises in a Dubai physiotherapy clinic",
         alt: "Post-operative rehabilitation exercises at RamaCare Polyclinic Dubai",
         caption: "Guided post-operative exercises help rebuild strength and restore early joint mobility."
       },
       stretching: {
-        src: "/images/ex1.jpg",
+        src: "/images/Gait training session.jpg",
         title: "Gait training session after orthopedic surgery",
         alt: "Gait training session during post-surgery rehabilitation in Dubai",
         caption: "Controlled movement patterns and gait training restore natural walking mechanics."
       },
       manual: {
-        src: "/images/phy3.jpg",
+        src: "/images/Manual therapy session.jpg",
         title: "Manual therapy session during shoulder surgery rehabilitation",
         alt: "Manual therapy session for shoulder surgery rehabilitation Dubai",
         caption: "Hands-on joint mobilization and soft tissue release reduce pain and stiffness."
       },
       equipment: {
-        src: "/images/ultra.jpg",
+        src: "/images/Post-surgery rehabilitation dubai.jpg",
         title: "Physiotherapist assisting a patient after knee replacement surgery",
         alt: "Post-Surgery Rehabilitation Dubai — physiotherapist assisting knee replacement patient",
         caption: "Advanced therapy equipment, including ultrasound and electrotherapy, is used to manage pain and tissue healing."
@@ -1047,25 +1057,25 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
-        src: "/images/check-up.jpg",
+        src: "/images/DHA-licensed healthcare professional.jpg",
         title: "DHA-licensed healthcare professional discussing sleep problems during a consultation",
         alt: "DHA-licensed healthcare professional discussing sleep problems with a patient during an Insomnia Treatment Dubai consultation",
         caption: "Every sleep assessment starts with a detailed lifestyle and medical history evaluation."
       },
       physio: {
-        src: "/images/session.jpg",
+        src: "/images/Relaxing bedtime routine.jpg",
         title: "Relaxing bedtime routine and sleep wellness consultation",
         alt: "Relaxing bedtime routine consultation at RamaCare Polyclinic",
         caption: "Sleep hygiene counseling identifies habits that interfere with falling asleep."
       },
       stretching: {
-        src: "/images/phy3.jpg",
+        src: "/images/Physiotherapist treating neck tension.jpg",
         title: "Physiotherapist treating neck tension contributing to poor sleep in Dubai",
         alt: "Physiotherapist treating neck tension contributing to poor sleep in Dubai",
         caption: "Hands-on mobilization releases muscle tension that keeps the nervous system alert."
       },
       manual: {
-        src: "/images/abhyanga.jpg",
+        src: "/images/Ayurvedic wellness consultation.jpg",
         title: "Ayurvedic wellness consultation for improving sleep quality",
         alt: "Ayurvedic wellness consultation for improving sleep quality at RamaCare",
         caption: "Traditional Ayurvedic therapies help ease mental tension and restore natural balance."
@@ -1327,17 +1337,19 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
-        
+        src: "/images/Acne scar treatment Dubai consultation.jpg",
         title: "Acne scar treatment Dubai consultation at RamaCare Polyclinic",
         alt: "Acne scar treatment Dubai consultation at RamaCare Polyclinic",
         caption: "Personalized acne scar treatment starts with a proper skin assessment by our DHA-licensed dermatology team."
       },
       physio: {
+        src: "/images/Acne scar treatment Dubai dermatologist.jpg",
         title: "Acne scar treatment Dubai dermatologist examining patient skin",
         alt: "Acne scar treatment Dubai dermatologist examining patient skin",
         caption: "A detailed skin analysis helps identify your specific scar types and treatment options."
       },
       stretching: {
+        src: "/images/Microneedling for acne scars treatment procedure.jpg",
         title: "Microneedling for acne scars treatment procedure Dubai",
         alt: "Microneedling for acne scars treatment procedure Dubai",
         caption: "Microneedling stimulates natural collagen production to improve textural scarring."

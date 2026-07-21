@@ -292,12 +292,12 @@ export default function PsoriasisTreatmentPage() {
           <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-           <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#5F5F5F]">
-                <a href="/" className="hover:text-[#1F5E4B]">Home</a>
+           <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#FFFFFF]">
+                <a href="/" className="hover:text-[#D4A574]">Home</a>
                 <span aria-hidden="true">/</span>
-                <a href="/services/dental-dubai" className="hover:text-[#1F5E4B]">Dental Services</a>
+                <a href="/services/dental-dubai" className="hover:text-[#D4A574]">Dental Services</a>
                 <span aria-hidden="true">/</span>
-                <span aria-current="page" className="text-[#1F5E4B]">Psoriasis Treatment Dubai</span>
+                <span aria-current="page" className="text-[#FFFFFF]">Psoriasis Treatment Dubai</span>
                 </nav>
 
             <div className="grid gap-14 lg:grid-cols-12 lg:items-end">

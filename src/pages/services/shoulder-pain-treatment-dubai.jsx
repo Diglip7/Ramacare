@@ -364,17 +364,22 @@ export default function ShoulderPainTreatmentPage() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-[4/3] lg:aspect-[1.1]"
+              className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-[4/3] lg:aspect-[1.1] bg-gradient-to-br from-[#1F5E4B] to-[#38D39F] flex items-center justify-center"
             >
               <img
-                src={images && images.hero ? images.hero.src : "/images/physio.png"}
-                alt="Shoulder Pain Treatment Dubai"
-                className="w-full h-full object-cover"
+                src="/images/shoulder-pain-treatment-dubai.jpg"
+                alt="Shoulder Pain Treatment Dubai at RamaCare Polyclinic"
+                className="absolute inset-0 w-full h-full object-cover z-10"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#1F5E4B]/10">
-                <p className="text-[#1F5E4B] font-bold text-sm">Shoulder Pain Specialist Care</p>
-                <p className="text-[#5F5F5F] text-xs mt-1">DHA-Licensed Specialist Physiotherapists in Jumeirah, Dubai</p>
+              <div className="text-center p-6 relative z-0">
+                <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                  <Activity className="w-12 h-12 text-white" />
+                </div>
+                <p className="text-white text-lg font-bold">Shoulder Pain Specialist Care</p>
+                <p className="text-white/70 text-xs mt-1">DHA-Licensed Specialist Physiotherapists in Jumeirah, Dubai</p>
               </div>
             </motion.div>
           </div>
@@ -430,9 +435,25 @@ export default function ShoulderPainTreatmentPage() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="lg:sticky lg:top-24"
+                className="lg:sticky lg:top-24 w-full"
               >
-                <img src={images.anatomy.src} alt={images.anatomy.alt} loading="lazy" className="w-full rounded-2xl shadow-lg" />
+                <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-2xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                  <img
+                    src="/images/shoulder-joint-anatomy-dubai.jpg"
+                    alt="Shoulder joint anatomy showing rotator cuff and bursa"
+                    className="absolute inset-0 w-full h-full object-cover z-10"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <div className="text-center p-6 relative z-0">
+                    <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Activity className="w-12 h-12 text-[#1F5E4B]" />
+                    </div>
+                    <p className="text-[#1F5E4B] text-lg font-bold mb-1">Shoulder joint anatomy</p>
+                    <p className="text-gray-600 text-xs max-w-xs mx-auto">Shoulder joint anatomy showing rotator cuff and bursa</p>
+                  </div>
+                </div>
                 <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.anatomy.caption}</figcaption>
               </motion.figure>
             ) : null}
@@ -448,14 +469,25 @@ export default function ShoulderPainTreatmentPage() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:sticky lg:top-24"
+              className="lg:sticky lg:top-24 w-full"
             >
-              <img
-                src={images.causesInfographic.src}
-                alt={images.causesInfographic.alt}
-                loading="lazy"
-                className="w-full rounded-2xl shadow-lg"
-              />
+              <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-2xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                <img
+                  src="/images/shoulder-pain-causes-infographic.jpg"
+                  alt="Common causes of shoulder pain infographic Dubai"
+                  className="absolute inset-0 w-full h-full object-cover z-10"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+                <div className="text-center p-6 relative z-0">
+                  <div className="w-24 h-24 bg-[#38D39F]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-12 h-12 text-[#38D39F]" />
+                  </div>
+                  <p className="text-[#1F5E4B] text-lg font-bold mb-1">Shoulder Pain Causes</p>
+                  <p className="text-gray-600 text-xs max-w-xs mx-auto">Common causes of shoulder pain infographic Dubai</p>
+                </div>
+              </div>
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.causesInfographic.caption}</figcaption>
             </motion.figure>
           ) : null}
@@ -581,8 +613,24 @@ export default function ShoulderPainTreatmentPage() {
 
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center mt-12">
             {images && images.diagnosisExam ? (
-              <motion.figure initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <img src={images.diagnosisExam.src} alt={images.diagnosisExam.alt} loading="lazy" className="w-full rounded-2xl shadow-lg" />
+              <motion.figure initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="w-full">
+                <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-2xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
+                  <img
+                    src="/images/physiotherapist-assessing-shoulder-pain.jpg"
+                    alt="Physiotherapist assessing shoulder pain in Dubai clinic"
+                    className="absolute inset-0 w-full h-full object-cover z-10"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <div className="text-center p-6 relative z-0">
+                    <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Stethoscope className="w-12 h-12 text-[#1F5E4B]" />
+                    </div>
+                    <p className="text-[#1F5E4B] text-lg font-bold mb-1">Shoulder Pain Assessment</p>
+                    <p className="text-gray-600 text-xs max-w-xs mx-auto">Physiotherapist assessing shoulder pain in Dubai clinic</p>
+                  </div>
+                </div>
                 <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.diagnosisExam.caption}</figcaption>
               </motion.figure>
             ) : null}
@@ -628,24 +676,7 @@ export default function ShoulderPainTreatmentPage() {
             <p className="text-lg text-[#5F5F5F] max-w-4xl mx-auto leading-relaxed">{treatmentIntro}</p>
           </motion.div>
 
-          {images && images.manualTherapy ? (
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-14 max-w-4xl mx-auto"
-            >
-                  <div className="w-full aspect-[2/1] overflow-hidden rounded-2xl shadow-lg">
-                  <img
-                    src={images.manualTherapy.src}
-                    alt={images.manualTherapy.alt}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.manualTherapy.caption}</figcaption>
-            </motion.figure>
-          ) : null}
+
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {treatmentOptions.map(function (option, i) {
@@ -661,15 +692,7 @@ export default function ShoulderPainTreatmentPage() {
                   viewport={{ once: true }}
                   transition={{ delay: (i % 6) * 0.08 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30 overflow-hidden">
-                  {isDryNeedling && images && images.dryNeedling ? (
-                    <img src={images.dryNeedling.src} alt={images.dryNeedling.alt} loading="lazy" className="w-full h-36 object-cover" />
-                  ) : null}
-                  {isRotatorCuff && images && images.rotatorCuffExercise ? (
-                    <img src={images.rotatorCuffExercise.src} alt={images.rotatorCuffExercise.alt} loading="lazy" className="w-full h-36 object-cover" />
-                  ) : null}
-                  {isStretching && images && images.stretching ? (
-                    <img src={images.stretching.src} alt={images.stretching.alt} loading="lazy" className="w-full h-36 object-cover" />
-                  ) : null}
+
                   <div className="p-6">
                     <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-4">
                       {IconComp ? <IconComp className="w-6 h-6 text-[#1F5E4B]" /> : null}
@@ -751,47 +774,33 @@ export default function ShoulderPainTreatmentPage() {
 
       {/* Prevention Tips — with stretching image */}
       <section id="prevention" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
-          <div>
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-8"
-            >
-              Shoulder Pain Prevention Tips
-            </motion.h2>
-            <p className="text-[#5F5F5F] mb-6">Once your shoulder has recovered, these habits can help reduce the risk of the pain returning:</p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {preventionTips.map(function (tip, i) {
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.08 }}
-                    className="flex items-start gap-3 bg-[#F9F7F2] p-5 rounded-xl hover:bg-[#F5F1E8] transition-colors"
-                  >
-                    <Shield className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                    <span className="text-[#1A1A1A] text-sm">{tip}</span>
-                  </motion.div>
-                );
-              })}
-            </div>
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-8"
+          >
+            Shoulder Pain Prevention Tips
+          </motion.h2>
+          <p className="text-[#5F5F5F] mb-6">Once your shoulder has recovered, these habits can help reduce the risk of the pain returning:</p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {preventionTips.map(function (tip, i) {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="flex items-start gap-3 bg-[#F9F7F2] p-5 rounded-xl hover:bg-[#F5F1E8] transition-colors"
+                >
+                  <Shield className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
+                  <span className="text-[#1A1A1A] text-sm">{tip}</span>
+                </motion.div>
+              );
+            })}
           </div>
-
-          {images && images.stretching ? (
-            <motion.figure
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:sticky lg:top-24"
-            >
-              <img src={images.stretching.src} alt={images.stretching.alt} loading="lazy" className="w-full rounded-2xl shadow-lg" />
-              <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.stretching.caption}</figcaption>
-            </motion.figure>
-          ) : null}
         </div>
       </section>
 
@@ -808,17 +817,7 @@ export default function ShoulderPainTreatmentPage() {
             <p className="text-white/85 max-w-4xl mx-auto leading-relaxed">{whyChooseUsIntro}</p>
           </motion.div>
 
-          {images && images.rehabEquipment ? (
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 max-w-3xl mx-auto"
-            >
-              <img src={images.rehabEquipment.src} alt={images.rehabEquipment.alt} loading="lazy" className="w-full rounded-2xl shadow-lg" />
-              <figcaption className="text-sm text-white/70 mt-3 text-center">{images.rehabEquipment.caption}</figcaption>
-            </motion.figure>
-          ) : null}
+
 
           <div className="grid md:grid-cols-2 gap-6">
             {whyChooseUs.map(function (item, i) {
@@ -957,14 +956,7 @@ export default function ShoulderPainTreatmentPage() {
                 })}
               </div>
 
-              {images && images.finalCta ? (
-                <img
-                  src={images.finalCta.src}
-                  alt={images.finalCta.alt}
-                  loading="lazy"
-                  className="w-full rounded-2xl shadow-lg mb-8"
-                />
-              ) : null}
+
 
               <p className="text-lg font-medium text-[#1F5E4B] mb-8">{conclusion.ctaText}</p>
               <a

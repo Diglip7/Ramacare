@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { getAllSubcategories } from '../src/data/subcategoryContent';
 
 const BookConsultation = ({ content }) => {
   // Default content
@@ -72,6 +73,28 @@ const BookConsultation = ({ content }) => {
   });
   const [errors, setErrors] = useState({});
   const [toast, setToast] = useState({ show: false, type: 'success', message: '' });
+
+  const treatmentOptions = useMemo(() => {
+    try {
+      const all = getAllSubcategories();
+      const toTitle = (s) => s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+      
+      return all.map(({ key }) => {
+        const label = toTitle(key).trim();
+        return { value: key, label };
+      });
+    } catch (error) {
+      console.error('Error generating treatment options:', error);
+      return [];
+    }
+  }, []);
+
+  const [treatmentQuery, setTreatmentQuery] = useState('');
+  const [isTreatmentOpen, setIsTreatmentOpen] = useState(false);
+  const filteredOptions = useMemo(
+    () => treatmentOptions.filter(o => o.label.toLowerCase().includes(treatmentQuery.trim().toLowerCase())),
+    [treatmentOptions, treatmentQuery]
+  );
   const showToast = (message, type = 'success') => {
     setToast({ show: true, type, message });
     setTimeout(() => setToast(prev => ({ ...prev, show: false })), 3000);
@@ -162,6 +185,7 @@ const BookConsultation = ({ content }) => {
           additionalInfo: '',
           preferredDate: ''
         });
+        setTreatmentQuery('');
         setErrors({});
       } else {
         showToast('Submission failed. Please try again.', 'error');
@@ -356,17 +380,38 @@ const BookConsultation = ({ content }) => {
                   <label className="block text-sm md:text-base font-semibold text-[#2D5F3F] mb-2">
                     Primary Concern
                   </label>
-                  <select
-                    name="concern"
-                    value={formData.concern}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg text-sm focus:outline-none transition-all duration-200 bg-white text-[#1F2937] ${errors.concern ? 'border-red-500 focus:border-red-500' : 'border-[#D1D5DB] focus:border-[#2D5F3F] focus:ring-2 focus:ring-[#2D5F3F]/20'}`}
-                  >
-                    <option value="">Select your concern</option>
-                    {concerns.map((option) => (
-                      <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
-                  </select>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={treatmentQuery}
+                      onChange={(e) => { setTreatmentQuery(e.target.value); setIsTreatmentOpen(true); }}
+                      onFocus={() => setIsTreatmentOpen(true)}
+                      onBlur={() => setTimeout(() => setIsTreatmentOpen(false), 200)}
+                      placeholder="Search and select treatment"
+                      className={`w-full px-4 py-3 border rounded-lg text-sm focus:outline-none transition-all duration-200 bg-white text-[#1F2937] placeholder-[#6B7280] ${errors.concern ? 'border-red-500 focus:border-red-500' : 'border-[#D1D5DB] focus:border-[#2D5F3F] focus:ring-2 focus:ring-[#2D5F3F]/20'}`}
+                    />
+                    {isTreatmentOpen && (
+                      <div className="absolute z-50 mt-1 w-full max-h-52 overflow-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+                        {filteredOptions.length === 0 && (
+                          <div className="px-4 py-2.5 text-gray-500 text-sm">No matches</div>
+                        )}
+                        {filteredOptions.map((opt) => (
+                          <div
+                            key={opt.value}
+                            className="px-4 py-2.5 text-sm text-gray-900 hover:bg-[#D5F5E3] hover:text-[#27AE60] cursor-pointer transition-colors"
+                            onMouseDown={() => {
+                              setFormData(prev => ({ ...prev, concern: opt.value }));
+                              setTreatmentQuery(opt.label);
+                              setIsTreatmentOpen(false);
+                              setErrors(prev => { const next = { ...prev }; delete next.concern; return next; });
+                            }}
+                          >
+                            {opt.label}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   {errors.concern && (
                     <p className="mt-1.5 text-red-600 text-xs">{errors.concern}</p>
                   )}

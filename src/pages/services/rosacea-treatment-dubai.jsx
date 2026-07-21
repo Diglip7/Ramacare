@@ -79,11 +79,11 @@ export default function RosaceaTreatmentDubai() {
         <meta name="title" content="Rosacea Treatment Dubai | Expert Dermatology Care" />
         <meta name="description" content="Struggling with facial redness? Get expert Rosacea Treatment Dubai at RamaCare Polyclinic with DHA licensed dermatologists. Book your consultation today." />
         <meta name="keywords" content="Rosacea Treatment Dubai, Best Rosacea Treatment Dubai, Rosacea Specialist Dubai, Rosacea Clinic Dubai, Dermatologist for Rosacea Dubai, Facial Redness Treatment Dubai, Rosacea Skin Treatment Dubai, Rosacea Laser Treatment Dubai, Rosacea Management Dubai, Chronic Facial Redness Dubai, Sensitive Skin Treatment Dubai, Rosacea Consultation Dubai, Rosacea Care Dubai, Skin Clinic Dubai, Red Face Treatment Dubai, Rosacea Dermatology Dubai" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai" />
         <meta property="og:title" content="Tired of Facial Redness? Expert Rosacea Care in Dubai" />
         <meta property="og:description" content="RamaCare Polyclinic offers personalized Rosacea Treatment Dubai plans led by DHA licensed dermatologists. Calm your skin, restore your confidence. Book now." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai" />
 
         {/* Schema Markup */}
         <script
@@ -94,7 +94,7 @@ export default function RosaceaTreatmentDubai() {
               "@type": "MedicalClinic",
               "name": "RamaCare Polyclinic",
               "medicalSpecialty": "Dermatology",
-              "url": "https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/",
+              "url": "https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Dubai",
@@ -187,13 +187,13 @@ export default function RosaceaTreatmentDubai() {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Dermatology",
-                  "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
+                  "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Rosacea Treatment Dubai",
-                  "item": "https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/"
+                  "item": "https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai"
                 }
               ]
             })
@@ -984,16 +984,16 @@ export default function RosaceaTreatmentDubai() {
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "Aesthetic Dermatology", href: "/services/aesthetic-dermatology-dubai/" },
-                { name: "Acne Treatment", href: "/services/acne-treatment-dubai/" },
-                { name: "Acne Scar Treatment", href: "/services/acne-scar-treatment-dubai/" },
-                { name: "Melasma Treatment", href: "/services/melasma-treatment-dubai/" },
-                { name: "Pigmentation Treatment", href: "/services/pigmentation-treatment-dubai/" },
-                { name: "Chemical Peel", href: "/services/chemical-peel-dubai/" },
-                { name: "HydraFacial", href: "/services/hydrafacial-dubai/" },
-                { name: "Laser Skin Treatments", href: "/services/laser-skin-treatments-dubai/" },
-                { name: "PRP Therapy", href: "/services/prp-therapy-dubai/" },
-                { name: "General Physician", href: "/services/general-physician-dubai/" },
+                { name: "Aesthetic Dermatology", href: "/services/aesthetic-dermatology-dubai" },
+                { name: "Acne Treatment", href: "/services/acne-treatment-dubai" },
+                { name: "Acne Scar Treatment", href: "/services/acne-scar-treatment-dubai" },
+                { name: "Melasma Treatment", href: "/services/melasma-treatment-dubai" },
+                { name: "Pigmentation Treatment", href: "/services/pigmentation-dubai" },
+                { name: "Chemical Peel", href: "/services/hydrafacial-vs-chemical-peel-dubai" },
+                { name: "HydraFacial", href: "/services/hydrafacial-dubai" },
+                { name: "Laser Skin Treatments", href: "/services/laser-treatment-dubai" },
+                { name: "PRP Therapy", href: "/services/face-prp-in-dubai" },
+                { name: "General Physician", href: "/services/general-physician-dubai" },
                 { name: "Homepage", href: "/" },
                 { name: "Contact Page", href: "/contact-us" }
               ].map((item, idx) => (

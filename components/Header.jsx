@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { 
-  Sparkles, 
-  Leaf, 
-  Activity, 
-  Stethoscope, 
-  X, 
-  Phone, 
-  Calendar, 
+import {
+  Sparkles,
+  Leaf,
+  Activity,
+  Stethoscope,
+  X,
+  Phone,
+  Calendar,
   ChevronDown,
   Menu,
   MessageCircle
@@ -30,7 +30,7 @@ const Header = () => {
     setToast({ show: true, type, message });
     setTimeout(() => setToast(prev => ({ ...prev, show: false })), 3000);
   };
-  
+
   const treatmentCategories = [
     {
       name: 'Aesthetic Dermatology',
@@ -288,15 +288,14 @@ const Header = () => {
         .modal-overlay { animation: fadeIn 0.3s ease-out; }
         .modal-content { animation: slideUp 0.3s ease-out; }
       `}</style>
-      
+
       <header className={`bg-white transition-all duration-300 overflow-visible ${isScrolled ? 'shadow-lg sticky top-0 z-50' : 'shadow-sm'}`}>
         {toast.show && (
           <div className="fixed top-6 right-6 z-[10000]" style={{ animation: 'toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }}>
-            <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${
-              toast.type === 'success' 
-                ? 'bg-emerald-600/95 border-emerald-500 text-white' 
+            <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${toast.type === 'success'
+                ? 'bg-emerald-600/95 border-emerald-500 text-white'
                 : 'bg-red-600/95 border-red-500 text-white'
-            }`}>
+              }`}>
               {toast.type === 'success' ? (
                 <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
               ) : (
@@ -322,15 +321,15 @@ const Header = () => {
             <nav className="hidden xl:flex items-center space-x-0.5 flex-1 justify-center overflow-visible">
               {treatmentCategories.map((category, index) => {
                 return (
-                  <div key={index} className="relative flex-shrink-0" 
-                    onMouseEnter={() => handleDropdownEnter(index)} 
+                  <div key={index} className="relative flex-shrink-0"
+                    onMouseEnter={() => handleDropdownEnter(index)}
                     onMouseLeave={handleDropdownLeave}>
-                    <div 
+                    <div
                       className="flex items-center cursor-pointer"
                       onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
                     >
-                      <Link 
-                        href={`/services/${category.slug}/`} 
+                      <Link
+                        href={`/services/${category.slug}/`}
                         className="flex items-center space-x-1 px-2 py-1.5 text-gray-700 hover:text-[#1a5f3f] transition-colors text-xs whitespace-nowrap"
                         onClick={(e) => e.stopPropagation()}
                       >
@@ -338,10 +337,10 @@ const Header = () => {
                       </Link>
                       <ChevronDown className={`w-3 h-3 text-gray-500 transition-transform duration-200 ml-0.5 ${openDropdown === index ? 'rotate-180' : ''}`} />
                     </div>
-                    
+
                     {openDropdown === index && (
-                      <div 
-                        className="absolute top-full left-0 mt-2 w-64" 
+                      <div
+                        className="absolute top-full left-0 mt-2 w-64"
                         style={{ zIndex: 9999 }}
                         onMouseEnter={() => handleDropdownEnter(index)}
                         onMouseLeave={handleDropdownLeave}>
@@ -353,9 +352,9 @@ const Header = () => {
                           </div>
                           <div className="max-h-[400px] overflow-y-auto py-1 dropdown-scroll">
                             {category.subcategories.map((subcategory, subIndex) => (
-                              <Link 
-                                key={subIndex} 
-                                href={`/services/${subcategory.slug}/`} 
+                              <Link
+                                key={subIndex}
+                                href={`/services/${subcategory.slug}/`}
                                 className="block px-4 py-2.5 text-xs text-gray-700 hover:bg-[#D5F5E3] hover:text-[#27AE60] transition-all"
                                 onClick={() => setOpenDropdown(null)}>
                                 {subcategory.name}
@@ -368,7 +367,7 @@ const Header = () => {
                   </div>
                 );
               })}
-             
+
               <Link href="/testimonials/" className="px-2 py-1.5 text-gray-700 hover:text-[#1a5f3f] transition-colors text-xs whitespace-nowrap flex-shrink-0">
                 Testimonials
               </Link>
@@ -405,7 +404,7 @@ const Header = () => {
           <div className="fixed inset-0 z-[9999] xl:hidden">
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
-            
+
             {/* Slide-out Menu */}
             <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl overflow-y-auto scrollbar-hide">
               {/* Menu Header */}
@@ -430,7 +429,7 @@ const Header = () => {
                       <div key={index} className="mb-1">
                         <div className="flex items-center">
                           {/* Category Link - Clickable */}
-                          <Link 
+                          <Link
                             href={`/services/${category.slug}/`}
                             className="flex-1 flex items-center space-x-3 px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-l-lg transition-colors text-sm font-medium"
                             onClick={() => setIsMenuOpen(false)}
@@ -440,22 +439,22 @@ const Header = () => {
                             </div>
                             <span className="flex-1">{category.name}</span>
                           </Link>
-                          
+
                           {/* Toggle Button for Subcategories */}
-                          <button 
+                          <button
                             onClick={() => setOpenMobileDropdown(openMobileDropdown === index ? null : index)}
                             className="px-2 py-2.5 text-gray-500 hover:text-[#1a5f3f] hover:bg-gray-50 rounded-r-lg transition-colors"
                           >
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === index ? 'rotate-180' : ''}`} />
                           </button>
                         </div>
-                        
+
                         {openMobileDropdown === index && (
                           <div className="ml-10 mt-1 space-y-0.5 pb-2 max-h-[300px] overflow-y-auto dropdown-scroll">
                             {category.subcategories.map((subcategory, subIndex) => (
-                              <Link 
-                                key={subIndex} 
-                                href={`/services/${subcategory.slug}/`} 
+                              <Link
+                                key={subIndex}
+                                href={`/services/${subcategory.slug}/`}
                                 className="block px-3 py-2 text-xs text-gray-600 hover:text-[#1a5f3f] hover:bg-gray-50 rounded-lg transition-all"
                                 onClick={() => setIsMenuOpen(false)}
                               >
@@ -505,9 +504,9 @@ const Header = () => {
             <button onClick={handleCloseModal} className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors" aria-label="Close modal">
               <X className="w-6 h-6 text-gray-600" />
             </button>
-            <BeginYourHealingJourneySection 
-              isModal={true} 
-              onClose={handleCloseModal} 
+            <BeginYourHealingJourneySection
+              isModal={true}
+              onClose={handleCloseModal}
               onSubmissionSuccess={() => showToast('Appointment request submitted successfully!', 'success')}
             />
           </div>

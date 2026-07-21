@@ -348,8 +348,8 @@ export default function PlantarFasciitisTreatmentPage() {
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-[4/3] lg:aspect-[1.1]"
             >
               <img
-                src="/images/Shockwave.jpg"
-                alt="Plantar Fasciitis Treatment Dubai"
+                 src={images.anatomy.src}
+                  alt={images.anatomy.alt}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
@@ -398,13 +398,13 @@ export default function PlantarFasciitisTreatmentPage() {
                 className="lg:sticky lg:top-24"
               >
                 <img
-                  src={images.anatomy.src}
-                  alt={images.anatomy.alt}
+                  src={images.physiotherapist.src}
+                  alt={images.physiotherapist.alt}
                   loading="lazy"
                   className="w-full rounded-2xl shadow-lg"
                 />
                 <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">
-                  {images.anatomy.caption}
+                  {images.physiotherapist.caption}
                 </figcaption>
               </motion.figure>
             ) : null}
@@ -605,12 +605,7 @@ export default function PlantarFasciitisTreatmentPage() {
               viewport={{ once: true }}
               className="mb-16 max-w-4xl mx-auto"
             >
-              <img
-                src={images.physiotherapist.src}
-                alt={images.physiotherapist.alt}
-                loading="lazy"
-                className="w-full rounded-2xl shadow-lg"
-              />
+             
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">
                 {images.physiotherapist.caption}
               </figcaption>
@@ -620,7 +615,6 @@ export default function PlantarFasciitisTreatmentPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {treatmentOptions.map(function (option, i) {
               const IconComp = iconMap[option.icon];
-              const isOrthotic = option.icon === 'Footprints';
               return (
                 <motion.div
                   key={i}
@@ -630,15 +624,7 @@ export default function PlantarFasciitisTreatmentPage() {
                   transition={{ delay: (i % 6) * 0.08 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30 overflow-hidden"
                 >
-                  {/* Orthotics card gets the orthotic shoe image — previously this image had no home in the page */}
-                  {isOrthotic && images && images.orthotic ? (
-                    <img
-                      src={images.orthotic.src}
-                      alt={images.orthotic.alt}
-                      loading="lazy"
-                      className="w-full h-36 object-cover"
-                    />
-                  ) : null}
+                 
                   <div className="p-6">
                     <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-4">
                       {IconComp ? <IconComp className="w-6 h-6 text-[#1F5E4B]" /> : null}

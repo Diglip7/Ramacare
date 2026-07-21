@@ -413,8 +413,7 @@ export default function DandruffTreatmentDubaiPage() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex items-start gap-6 py-6"
-                >
+                  className="flex items-start gap-6 py-6">
                   <span className="text-3xl font-bold text-[#E9E2D6] w-12 flex-shrink-0">{String(index + 1).padStart(2, '0')}</span>
                   <div className="w-10 h-10 bg-[#F0F7F4] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <IconComponent className="w-5 h-5 text-[#1F5E4B]" />
@@ -429,7 +428,6 @@ export default function DandruffTreatmentDubaiPage() {
           </div>
         </div>
       </section>
-
       {/* ============================================================ */}
       {/* 5. SYMPTOMS — tag cloud style, not uniform grid                */}
       {/* ============================================================ */}
@@ -446,8 +444,7 @@ export default function DandruffTreatmentDubaiPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2.5 text-sm font-medium"
-                >
+                  className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2.5 text-sm font-medium">
                   <IconComponent className="w-4 h-4" />
                   {item.text}
                 </motion.span>
@@ -646,8 +643,7 @@ export default function DandruffTreatmentDubaiPage() {
             return (
               <div
                 key={index}
-                className="snap-start flex-shrink-0 w-64 bg-white/10 border border-white/15 rounded-2xl p-6 text-white"
-              >
+                className="snap-start flex-shrink-0 w-64 bg-white/10 border border-white/15 rounded-2xl p-6 text-white">
                 <IconComponent className="w-7 h-7 mb-4" />
                 <p className="text-sm font-medium leading-relaxed">{item.text}</p>
               </div>

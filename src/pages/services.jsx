@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import BeginYourHealingJourneySection from '../../components/BeginYourHealingJourneySection';
@@ -21,19 +21,126 @@ import {
   Shield,
   Star,
   ArrowRight,
-  X
+  X,
+  Search
 } from 'lucide-react';
 
-// Helper function to format service slug into readable name
+// Format service slug into a premium display name
 const formatServiceName = (slug) => {
   return slug
-    .replace(/-dubai$/i, '') // Remove trailing "-dubai"
-    .replace(/-/g, ' ') // Replace hyphens with spaces
-    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize each word
+    .replace(/-dubai$/i, '')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
+// Categorize all services dynamically based on slug keywords
+const categorizeSlug = (slug) => {
+  const s = slug.toLowerCase();
+  
+  if (
+    s.includes('teeth') || 
+    s.includes('dental') || 
+    s.includes('veneer') || 
+    s.includes('root-canal') || 
+    s.includes('braces') || 
+    s.includes('crown') || 
+    s.includes('scaling') || 
+    s.includes('gum') || 
+    s.includes('tooth') || 
+    s.includes('smile') || 
+    s.includes('denture') || 
+    s.includes('composite')
+  ) {
+    return 'dental-dubai';
+  }
+  
+  if (
+    s.includes('ayurveda') || 
+    s.includes('ayurvedic') || 
+    s.includes('diet') || 
+    s.includes('detox') || 
+    s.includes('pcos') || 
+    s.includes('panchakarma') || 
+    s.includes('shirodhara') || 
+    s.includes('abhyanga') || 
+    s.includes('basti') || 
+    s.includes('nasya') || 
+    s.includes('gut-health') || 
+    s.includes('allopathy')
+  ) {
+    return 'ayurveda-dubai';
+  }
+  
+  if (
+    s.includes('hydrafacial') || 
+    s.includes('hydra-facial') || 
+    s.includes('oxygeneo') || 
+    s.includes('golden-elixir') || 
+    s.includes('exosomes-facial') || 
+    s.includes('face-prp') || 
+    s === 'facial'
+  ) {
+    return 'facial-dubai';
+  }
+  
+  if (
+    s.includes('physiotherapy') || 
+    s.includes('ultrasound') || 
+    s.includes('electrotherapy') || 
+    s.includes('pelvic') || 
+    s.includes('scoliosis') || 
+    s.includes('dry-needling') || 
+    s.includes('pain') || 
+    s.includes('rehab') || 
+    s.includes('injury') || 
+    s.includes('strain') || 
+    s.includes('posture') || 
+    s.includes('arthritis') || 
+    s.includes('recovery') || 
+    s.includes('rehabilitation') || 
+    s.includes('shin-splints') || 
+    s.includes('plantar-fasciitis') || 
+    s.includes('shoulder') || 
+    s.includes('spondylosis') || 
+    s.includes('sciatica') || 
+    s.includes('disc') || 
+    s.includes('insomnia') || 
+    s.includes('anxiety') || 
+    s.includes('stress') || 
+    s.includes('exercise') || 
+    s.includes('massage') || 
+    s.includes('shockwave') || 
+    s.includes('shin')
+  ) {
+    return 'physiotherapy-dubai';
+  }
+  
+  if (
+    s.includes('physician') || 
+    s.includes('general-med') || 
+    s.includes('gastro') || 
+    s.includes('allergy') || 
+    s.includes('wound') || 
+    s.includes('infection') || 
+    s.includes('diabetes') || 
+    s.includes('hypertension') || 
+    s.includes('check-up') || 
+    s.includes('check-ups') || 
+    s.includes('examination') || 
+    s.includes('asthma') || 
+    s.includes('copd') || 
+    s.includes('dyslipidemia') || 
+    s.includes('slimming') || 
+    s.includes('thyroid') || 
+    s.includes('iv-drip')
+  ) {
+    return 'general-physician-dubai';
+  }
+  
+  return 'aesthetic-dermatology-dubai';
 };
 
 const getServicesData = () => {
-  // Define main categories
   const categoryDefinitions = [
     {
       id: 1,
@@ -41,9 +148,8 @@ const getServicesData = () => {
       slug: 'aesthetic-dermatology-dubai',
       iconName: 'Sparkles',
       color: '#1a5f3f',
-      description: 'Advanced skincare and beauty treatments for radiant, healthy skin',
-      featured: true,
-      categorySlugs: ['skin-treatment-dubai', 'hair-treatment-dubai', 'laser-treatment-dubai', 'body-shaping-dubai']
+      description: 'Advanced skincare, laser therapies, and anti-aging treatments for radiant skin.',
+      featured: true
     },
     {
       id: 2,
@@ -51,9 +157,8 @@ const getServicesData = () => {
       slug: 'dental-dubai',
       iconName: 'Sparkles',
       color: '#d4a574',
-      description: 'Comprehensive dental care for healthy, beautiful smiles',
-      featured: true,
-      categorySlugs: ['composite-veneers', 'dental-veneers-dubai', 'root-canal-treatment-dubai', 'snap-on-smile-dubai', 'teeth-bleaching-dubai', 'teeth-dentures-dubai', 'teeth-composite-restoration-dubai', 'braces-metal-ceramic-dubai', 'dental-crown-bridges-dubai', 'teeth-scaling-polishing-dubai', 'gum-disease-treatment-dubai']
+      description: 'Cosmetic and restorative dental treatments for healthy, confident smiles.',
+      featured: true
     },
     {
       id: 3,
@@ -61,9 +166,8 @@ const getServicesData = () => {
       slug: 'ayurveda-dubai',
       iconName: 'Leaf',
       color: '#1a5f3f',
-      description: 'Authentic Ayurvedic treatments for holistic wellness',
-      featured: true,
-      categorySlugs: ['ayurvedic-hairfall-treatment-dubai', 'analysis-of-individual-dubai', 'skin-diseases-treatment', 'ayurvedic-diet-plan-dubai', 'ayurvedic-gut-health-dubai', 'panchakarma-treatment', 'gastrointestinal-diseases-treatment-dubai', 'pcos-treatment-dubai', 'shirodhara-therapy-in-dubai', 'abhyanga-massage-dubai', 'basti-therapy-dubai', 'nasya-therapy-dubai']
+      description: 'Authentic traditional Ayurvedic diagnostic treatments and wellness therapies.',
+      featured: true
     },
     {
       id: 4,
@@ -71,35 +175,8 @@ const getServicesData = () => {
       slug: 'physiotherapy-dubai',
       iconName: 'Activity',
       color: '#d4a574',
-      description: 'Rehabilitation and pain management solutions',
-      featured: true,
-      categorySlugs: [
-        'ultrasound-therapy-dubai',
-        'electrotherapy-dubai',
-        'pelvic-floor-therapy-dubai',
-        'scoliosis-treatment-in-dubai',
-        'functional-exercises-dubai',
-        'dry-needling-dubai',
-        'back-pain-treatment-dubai',
-        'knee-pain-treatment-dubai',
-        'migraine-treatment-dubai',
-        'office-neck-treatment-dubai',
-        'post-surgery-recovery-dubai',
-        'post-surgery-rehabilitation-dubai',
-        'physiotherapy-insurance-dubai',
-        'cervical-spondylosis-treatment-dubai',
-        'frozen-shoulder-treatment-dubai',
-        'neck-pain-treatment-dubai',
-        'plantar-fasciitis-treatment-dubai',
-        'sciatica-treatment-dubai',
-        'shoulder-pain-treatment-dubai',
-        'slip-disc-treatment-dubai',
-        'sports-injury-rehabilitation-dubai',
-        'joint-pain-treatment-dubai',
-        'anxiety-treatment-dubai',
-        'stress-treatment-dubai',
-        'insomnia-treatment-dubai'
-      ]
+      description: 'Advanced orthopedic physical therapy, dry needling, and sports rehabilitation.',
+      featured: true
     },
     {
       id: 5,
@@ -107,9 +184,8 @@ const getServicesData = () => {
       slug: 'general-physician-dubai',
       iconName: 'Stethoscope',
       color: '#1a5f3f',
-      description: 'Comprehensive medical care for all health needs',
-      featured: true,
-      categorySlugs: ['gastrointestinal-disorders-dubai', 'management-of-allergy-dubai', 'wound-stitching-services-dubai', 'minor-injury-care', 'treatment-of-acute-infections-dubai', 'dyslipidemia-diagnosis-and-treatment', 'personalized-slimming-programs', 'thyroid-dysfunction-solutions-dubai', 'asthma-and-copd-expertise-dubai', 'diabetes-mellitus-care-dubai', 'specialized-hypertension-management', 'routine-check-ups-dubai', 'comprehensive-physical-examinations-dubai']
+      description: 'Primary medical care, health screenings, and chronic disease management.',
+      featured: true
     },
     {
       id: 6,
@@ -117,9 +193,8 @@ const getServicesData = () => {
       slug: 'facial-dubai',
       iconName: 'Sparkles',
       color: '#d4a574',
-      description: 'Premium facial treatments for glowing, youthful skin',
-      featured: true,
-      categorySlugs: ['signature-hydra-facial-dubai', 'face-prp-in-dubai', 'golden-elixir-facial-dubai', 'exosomes-facial-dubai', 'oxygeneo-illuminate-facial-dubai']
+      description: 'Premium medical-grade facials, skin boosters, and rejuvenation solutions.',
+      featured: true
     }
   ];
 
@@ -128,79 +203,20 @@ const getServicesData = () => {
     servicesByCategory[cat.slug] = [];
   });
 
-  const otherServices = [];
-
   autoGeneratedServices.forEach(slug => {
-    const isMainCategory = categoryDefinitions.some(cat => cat.slug === slug);
-    if (isMainCategory) return;
-
-    let belongsToCategory = false;
-    for (const cat of categoryDefinitions) {
-      if (cat.categorySlugs.includes(slug)) {
-        servicesByCategory[cat.slug].push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-        belongsToCategory = true;
-        break;
-      }
-    }
-
-    if (!belongsToCategory) {
-      if (slug.includes('skin') || slug.includes('laser') || slug.includes('botox') || 
-          slug.includes('filler') || slug.includes('facial') || slug.includes('hifu')) {
-        servicesByCategory['aesthetic-dermatology-dubai'].push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-      } else if (slug.includes('diet') || slug.includes('detox') || slug.includes('pcos') ||
-                 slug.includes('ayurveda') || slug.includes('panchakarma')) {
-        servicesByCategory['ayurveda-dubai'].push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-      } else if (slug.includes('physiotherapy') || slug.includes('pain') || slug.includes('rehab')) {
-        servicesByCategory['physiotherapy-dubai'].push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-      } else if (slug.includes('teeth') || slug.includes('dental')) {
-        servicesByCategory['dental-dubai'].push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-      } else {
-        otherServices.push({
-          name: formatServiceName(slug),
-          slug: slug,
-          description: `Professional ${formatServiceName(slug).toLowerCase()} treatment`
-        });
-      }
+    const targetCategory = categorizeSlug(slug);
+    if (servicesByCategory[targetCategory]) {
+      servicesByCategory[targetCategory].push({
+        name: formatServiceName(slug),
+        slug: slug,
+        description: `Professional clinical ${formatServiceName(slug).toLowerCase()} treatment.`
+      });
     }
   });
 
-  if (otherServices.length > 0) {
-    categoryDefinitions.push({
-      id: 7,
-      name: 'Other Services',
-      slug: 'other-services',
-      iconName: 'Sparkles',
-      color: '#1a5f3f',
-      description: 'Additional specialized treatments and services',
-      featured: false,
-      categorySlugs: []
-    });
-    servicesByCategory['other-services'] = otherServices;
-  }
-
   return categoryDefinitions.map(cat => ({
     ...cat,
-    subcategories: servicesByCategory[cat.slug] || []
+    subcategories: (servicesByCategory[cat.slug] || []).sort((a, b) => a.name.localeCompare(b.name))
   }));
 };
 
@@ -248,31 +264,40 @@ const ServicesPage = ({ initialServicesData }) => {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isBookingModalOpen]);
 
-  // Build services data structure dynamically from autoGeneratedServices
-  // REMOVED: Moved to getStaticProps for SEO (Pre-rendering)
+  // Filter services and their subcategories dynamically based on search
+  const filteredServices = useMemo(() => {
+    if (!searchQuery.trim()) return servicesData;
+    const query = searchQuery.toLowerCase();
+    
+    return servicesData.map(service => {
+      const matchesCategory = 
+        service.name.toLowerCase().includes(query) ||
+        service.description.toLowerCase().includes(query);
+      
+      const matchedSubcategories = service.subcategories.filter(sub => 
+        sub.name.toLowerCase().includes(query)
+      );
 
-  // Filter services based on search query
-  const filteredServices = servicesData.filter(service => 
-    service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.subcategories.some(sub => 
-      sub.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      sub.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+      if (matchesCategory || matchedSubcategories.length > 0) {
+        return {
+          ...service,
+          subcategories: matchedSubcategories.length > 0 ? matchedSubcategories : service.subcategories
+        };
+      }
+      return null;
+    }).filter(Boolean);
+  }, [servicesData, searchQuery]);
 
   const toggleCategory = (categoryId) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
   const handleBookAppointment = () => {
-    // Open the booking modal
     setIsBookingModalOpen(true);
   };
 
@@ -281,535 +306,299 @@ const ServicesPage = ({ initialServicesData }) => {
   };
 
   return (
-    <div className="force-light">
-    <Layout>
-      <Head>
-        <title key="title">Medical Services in Dubai | All Treatments & Specialties</title>
-        <meta name="description" content="Explore all medical services at RamaCare Polyclinic Dubai. Ayurveda, Dental, Dermatology, Physiotherapy, General Physician, and Facial treatments with expert care." key="description" />
-        <meta name="keywords" content="medical services Dubai, healthcare treatments, Ayurveda Dubai, dental care Dubai, dermatology Dubai, physiotherapy Dubai, general physician Dubai" />
+    <div className="force-light bg-white min-h-screen">
+      <Layout>
+        <Head>
+          <title key="title">Medical Services in Dubai | All Treatments & Specialties</title>
+          <meta name="description" content="Explore all medical services at RamaCare Polyclinic Dubai. Ayurveda, Dental, Dermatology, Physiotherapy, General Physician, and Facial treatments with expert care." key="description" />
+          <meta name="keywords" content="medical services Dubai, healthcare treatments, Ayurveda Dubai, dental care Dubai, dermatology Dubai, physiotherapy Dubai, general physician Dubai" />
+        </Head>
         
-      </Head>
-      <style jsx global>{`
-        .force-light {
-          --background: #ffffff;
-          --foreground: #171717;
-          background: #ffffff;
-          color: #171717;
-        }
-        .force-light-text {
-          color: #171717 !important;
-        }
-        .force-light .text-gray-100 {
-          color: #f3f4f6 !important;
-        }
-        .force-light .text-gray-200 {
-          color: #e5e7eb !important;
-        }
-        .force-light .text-gray-400 {
-          color: #9ca3af !important;
-        }
-        .force-light .text-gray-500 {
-          color: #6b7280 !important;
-        }
-        .force-light .text-gray-600 {
-          color: #4b5563 !important;
-        }
-        .force-light .text-gray-900 {
-          color: #111827 !important;
-        }
-        .force-light .bg-white {
-          background-color: #ffffff !important;
-        }
-        .force-light .bg-gray-50 {
-          background-color: #f9fafb !important;
-        }
-        .force-light input,
-        .force-light input::placeholder {
-          color: #171717 !important;
-        }
-        
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient {
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
+        <style jsx global>{`
+          .force-light {
+            --background: #ffffff;
+            --foreground: #171717;
+          }
+          .dropdown-scroll::-webkit-scrollbar {
+            width: 4px;
+          }
+          .dropdown-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+          .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+          }
+          .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+          }
+        `}</style>
 
-      {/* Hero Section - Clean Modern Design */}
-      <section className="relative bg-gradient-to-br from-white via-[#f8faf8] to-[#f0f7f4] py-16 md:py-20 overflow-hidden">
-        {/* Subtle Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#1a5f3f]/5 to-[#d4a574]/5 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-[#d4a574]/5 to-[#1a5f3f]/5 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white rounded-full mb-6 border border-gray-200 shadow-sm">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-b from-[#f4f7f5] to-white py-16 md:py-24 overflow-hidden border-b border-gray-100">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#1a5f3f]/5 rounded-full blur-3xl -translate-y-12 translate-x-12"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#d4a574]/5 rounded-full blur-3xl translate-y-12 -translate-x-12"></div>
+          
+          <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full mb-6 border border-gray-200 shadow-sm">
               <Award className="w-4 h-4 text-[#1a5f3f]" />
-              <span className="text-xs font-semibold text-[#1a5f3f] tracking-wide">DHA LICENSED & TRUSTED HEALTHCARE</span>
-              <div className="flex gap-0.5">
-                {[1,2,3,4,5].map(i => (
-                  <svg key={i} className="w-3 h-3 text-[#d4a574]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
+              <span className="text-xs font-semibold text-[#1a5f3f] tracking-wide uppercase">DHA Licensed & Trusted Healthcare</span>
             </div>
             
-            {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              <span className="text-gray-900"> Our </span>
-              <span className="text-[#1a5f3f]"> Medical</span>
-              <br />
-              <span className="text-gray-900">Services</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Our <span className="text-[#1a5f3f]">Medical Departments</span> <br /> & Treatments
             </h1>
-            
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-600 leading-relaxed">
-              Comprehensive healthcare solutions tailored for your wellness journey
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Explore our wide variety of clinical specialties and personalized medical services carried out in Jumeirah 1, Dubai.
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={handleBookAppointment}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#1a5f3f] text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 px-7 py-4 bg-[#1a5f3f] text-white rounded-xl font-semibold hover:bg-[#154b32] transition-colors shadow-md"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Book Free Consultation</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={handleCallNow}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1a5f3f] rounded-xl font-semibold border-2 border-[#1a5f3f]/20 hover:border-[#1a5f3f] shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 px-7 py-4 bg-white text-[#1a5f3f] border border-[#1a5f3f]/25 rounded-xl font-semibold hover:bg-gray-50 transition-colors shadow-sm"
               >
-                <div className="w-8 h-8 bg-[#1a5f3f]/10 rounded-lg flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-[#1a5f3f]" />
-                </div>
-                <span>Call Now</span>
+                <Phone className="w-5 h-5" />
+                <span>Call +971 56 659 7878</span>
               </button>
             </div>
-            
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {[
-                { value: '500+', label: 'HAPPY PATIENTS', icon: Users, color: 'bg-[#1a5f3f]' },
-                { value: '15+', label: 'YEARS EXPERIENCE', icon: Award, color: 'bg-[#d4a574]' },
-                { value: '98%', label: 'SUCCESS RATE', icon: CheckCircle, color: 'bg-gradient-to-br from-[#1a5f3f] to-[#d4a574]' },
-                { value: '40+', label: 'TREATMENTS', icon: Sparkles, color: 'bg-[#1a5f3f]' }
-              ].map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <div key={index} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-md hover:shadow-lg transition-all">
-                    <div className={`w-12 h-12 ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3`}>
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-1">
-                      <span className={index === 1 ? 'text-[#d4a574]' : 'text-[#1a5f3f]'}>
-                        {stat.value}
-                      </span>
-                    </div>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                      {stat.label}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
-            {/* Section Title */}
-            <div className="text-center mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1a5f3f]/5 rounded-full mb-3">
-                <svg className="w-3.5 h-3.5 text-[#1a5f3f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <span className="text-xs font-semibold text-[#1a5f3f] uppercase tracking-wide">Find Your Treatment</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-                Search Our <span className="text-[#1a5f3f]">Services</span>
-              </h3>
-            </div>
+        {/* Dynamic Search & Specialties Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
             
-            {/* Search Input */}
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+            {/* Search Input Box */}
+            <div className="max-w-2xl mx-auto mb-16">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search for treatments, services, or specialties..."
+                  placeholder="Search for treatments, conditions, or departments..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-6 py-4 text-base bg-transparent border-none focus:outline-none focus:ring-0 force-light-text placeholder:text-gray-400"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a5f3f]/25 focus:border-[#1a5f3f] transition-all text-base"
                 />
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                  <div className="w-10 h-10 bg-[#1a5f3f] rounded-lg flex items-center justify-center">
-                    <SearchIcon className="w-5 h-5 text-white" />
-                  </div>
-                </div>
               </div>
-              
-              {/* Quick Tags */}
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="text-xs text-gray-500 font-medium">Popular:</span>
-                {['Skin Treatment', 'Dental', 'Physiotherapy', 'Ayurveda'].map((tag, idx) => (
+              <div className="mt-4 flex flex-wrap gap-2 justify-center items-center">
+                <span className="text-xs text-gray-400 font-semibold uppercase">Suggestions:</span>
+                {['Skin Treatment', 'Dental Veneers', 'Panchakarma', 'Physiotherapy Cost', 'Hydra Facial'].map((tag) => (
                   <button
-                    key={idx}
+                    key={tag}
                     onClick={() => setSearchQuery(tag)}
-                    className="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs text-gray-600 hover:border-[#1a5f3f] hover:text-[#1a5f3f] transition-all">
+                    className="text-xs px-3.5 py-1.5 bg-gray-100 text-gray-600 rounded-full hover:bg-[#1a5f3f]/10 hover:text-[#1a5f3f] transition-colors"
+                  >
                     {tag}
                   </button>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className="py-16 bg-[#f8f9fa]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1a5f3f]/5 rounded-full mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-[#1a5f3f]" />
-              <span className="text-xs font-semibold text-[#1a5f3f] uppercase tracking-wide">Our Specialties</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Comprehensive <span className="text-[#1a5f3f]">Healthcare Services</span>
-            </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Explore our wide range of medical specialties and treatments, all delivered with expert care
-            </p>
-          </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {filteredServices.map((service) => {
-              const IconComponent = iconMap[service.iconName] || Sparkles;
-              const isExpanded = expandedCategory === service.id;
-
-              return (
-                <div 
-                  key={service.id} 
-                  className={`group relative bg-white rounded-3xl border-2 transition-all duration-500 overflow-hidden ${
-                    isExpanded 
-                      ? 'border-[#1a5f3f]/30 shadow-2xl scale-[1.02]' 
-                      : 'border-gray-100 shadow-lg hover:border-[#1a5f3f]/20 hover:shadow-xl'
-                  }`}
-                >
-                  {/* Gradient Border Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br from-[#1a5f3f]/5 via-transparent to-[#d4a574]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                    isExpanded ? 'opacity-100' : ''
-                  }`}></div>
-                  
-                  {/* Service Header */}
+            {/* Department Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map(service => {
+                const IconComponent = iconMap[service.iconName] || Sparkles;
+                const isExpanded = expandedCategory === service.id;
+                
+                return (
                   <div 
-                    className="relative p-8 cursor-pointer"
-                    onClick={() => toggleCategory(service.id)}
+                    key={service.id}
+                    className={`bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden ${
+                      isExpanded ? 'ring-2 ring-[#1a5f3f]/20' : ''
+                    }`}
                   >
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="flex items-center gap-5 flex-1">
-                        {/* Icon Container */}
-                        <div className={`relative w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
-                          isExpanded ? 'scale-110' : 'group-hover:scale-105'
-                        }`}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#1a5f3f] to-[#2d7a5f] rounded-2xl"></div>
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#1a5f3f]/20 to-[#d4a574]/20 rounded-2xl blur-lg"></div>
-                          <IconComponent className="relative w-8 h-8 text-white" />
+                    {/* Header Details */}
+                    <div className="p-8">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1a5f3f] to-[#257d54] flex items-center justify-center text-white shadow-md">
+                          <IconComponent className="w-6 h-6" />
                         </div>
-    
-                        {/* Title & Description */}
-                        <div className="flex-1">
-                          <h3 className={`text-2xl font-bold mb-2 transition-colors ${
-                            isExpanded ? 'text-[#1a5f3f]' : 'text-gray-900 group-hover:text-[#1a5f3f]'
-                          }`}>
+                        <div>
+                          <h2 className="text-xl font-bold text-gray-900 leading-tight">
                             {service.name}
-                          </h3>
-                          <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                          </h2>
+                          <p className="text-xs font-semibold text-[#d4a574] mt-0.5 uppercase tracking-wide">
+                            {service.subcategories.length} Treatments Available
+                          </p>
                         </div>
                       </div>
                       
-                      {/* Expand Arrow */}
-                      <div className={`flex-shrink-0 ml-4 w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center transition-all duration-300 ${
-                        isExpanded 
-                          ? 'bg-[#1a5f3f] rotate-180' 
-                          : 'group-hover:bg-[#1a5f3f]/10'
-                      }`}>
-                        <ChevronDown className={`w-5 h-5 transition-colors ${
-                          isExpanded ? 'text-white' : 'text-gray-400 group-hover:text-[#1a5f3f]'
-                        }`} />
-                      </div>
-                    </div>
-
-                    {/* Featured Badge & Stats */}
-                    <div className="flex items-center gap-4 flex-wrap mb-6">
-                      {service.featured && (
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#d4a574]/20 to-[#d4a574]/10 text-[#1a5f3f] rounded-full text-xs font-semibold border border-[#d4a574]/30">
-                          <Star className="w-3.5 h-3.5" />
-                          <span>Featured</span>
-                        </div>
-                      )}
+                      <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                        {service.description}
+                      </p>
                       
-                      <div className="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-3 py-1.5 rounded-full">
-                        <Users className="w-4 h-4" />
-                        <span className="font-medium">{service.subcategories.length} Treatments</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-3 py-1.5 rounded-full">
-                        <Clock className="w-4 h-4" />
-                        <span className="font-medium">30-90 min</span>
-                      </div>
-                    </div>
+                      {/* Accordion Expand/Collapse Trigger */}
+                      <button
+                        onClick={() => toggleCategory(service.id)}
+                        className="w-full flex items-center justify-between py-3.5 px-5 bg-gray-50 hover:bg-[#1a5f3f]/5 text-[#1a5f3f] font-semibold text-xs rounded-xl tracking-wider uppercase transition-colors"
+                      >
+                        <span>{isExpanded ? 'Hide' : 'Explore'} Treatment List</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                      </button>
 
-                    {/* Popular Treatments Preview */}
-                    {service.subcategories.length > 0 && (
-                      <div className="mb-4">
-                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Popular Treatments</div>
-                        <div className="flex flex-wrap gap-2">
-                          {service.subcategories.slice(0, 4).map((subcategory, index) => (
-                            <span 
-                              key={index} 
-                              className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#1a5f3f]/5 to-[#1a5f3f]/10 text-[#1a5f3f] rounded-full text-xs font-medium border border-[#1a5f3f]/10 hover:border-[#1a5f3f]/30 transition-colors"
-                            >
-                              {subcategory.name}
-                            </span>
-                          ))}
-                          {service.subcategories.length > 4 && (
-                            <span className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">
-                              +{service.subcategories.length - 4} more
-                            </span>
+                      {/* Sub-treatments list */}
+                      {isExpanded && (
+                        <div className="mt-5 max-h-[300px] overflow-y-auto dropdown-scroll border-t border-gray-100 pt-4 space-y-2.5">
+                          {service.subcategories.length === 0 ? (
+                            <p className="text-xs text-gray-400 italic text-center py-4">No treatments found matching your criteria</p>
+                          ) : (
+                            service.subcategories.map(sub => (
+                              <a
+                                key={sub.slug}
+                                href={`/services/${sub.slug}`}
+                                className="group flex items-center justify-between p-3.5 bg-gray-50 hover:bg-[#1a5f3f]/5 border border-gray-100 hover:border-[#1a5f3f]/20 rounded-xl transition-all duration-200"
+                              >
+                                <span className="text-xs sm:text-sm font-semibold text-gray-800 group-hover:text-[#1a5f3f] transition-colors leading-snug break-words pr-2">
+                                  {sub.name}
+                                </span>
+                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#1a5f3f] group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                              </a>
+                            ))
                           )}
                         </div>
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
 
-                  {/* Expanded Subcategories */}
-                  <div className={`relative transition-all duration-500 ease-in-out ${
-                    isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-                  } overflow-hidden`}>
-                    <div className="px-8 pb-8 pt-2">
-                      {/* Divider */}
-                      <div className="h-px bg-gradient-to-r from-transparent via-[#1a5f3f]/20 to-transparent mb-6"></div>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[600px] overflow-y-auto pr-2">
-                        {service.subcategories.map((subcategory, index) => (
-                          <a
-                            key={index}
-                            href={`/services/${subcategory.slug}`}
-                            className="group/item flex items-center gap-3 p-4 bg-gradient-to-r from-gray-50 to-white rounded-xl border border-gray-100 hover:border-[#1a5f3f]/30 hover:shadow-md hover:from-[#1a5f3f]/5 hover:to-[#1a5f3f]/10 transition-all duration-300"
-                          >
-                            <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-[#1a5f3f] to-[#2d7a5f] group-hover/item:scale-150 transition-transform"></div>
-                            <div className="flex-1 min-w-0">
-                              <div className="font-semibold text-gray-900 group-hover/item:text-[#1a5f3f] transition-colors text-sm truncate">
-                                {subcategory.name}
-                              </div>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover/item:text-[#1a5f3f] group-hover/item:translate-x-1 transition-all flex-shrink-0" />
-                          </a>
-                        ))}
-                      </div>
-                      
-                      {/* View All Button */}
-                      <div className="mt-6 pt-6 border-t border-gray-100">
-                        <a
-                          href={`/services/${service.slug}`}
-                          className="group/btn inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-[#1a5f3f] to-[#2d7a5f] text-white rounded-xl hover:from-[#2d7a5f] hover:to-[#1a5f3f] transition-all font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                        >
-                          <span>View All {service.name} Services</span>
-                          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                        </a>
-                      </div>
+                    {/* Department Quick Actions */}
+                    <div className="border-t border-gray-100 px-8 py-5 bg-gray-50/50 flex justify-between items-center mt-auto">
+                      <a 
+                        href={`/services/${service.slug}/`}
+                        className="text-xs font-bold text-gray-600 hover:text-[#1a5f3f] transition-colors flex items-center gap-1"
+                      >
+                        <span>Department Page</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
+                      <button
+                        onClick={handleBookAppointment}
+                        className="text-xs font-bold text-[#1a5f3f] hover:text-[#144830] transition-colors flex items-center gap-1"
+                      >
+                        <span>Book Clinic Visit</span>
+                      </button>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
-          {/* No Results */}
-          {filteredServices.length === 0 && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <SearchIcon className="w-12 h-12 text-gray-400" />
+            {/* Empty Search Screen */}
+            {filteredServices.length === 0 && (
+              <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed border-gray-200 max-w-xl mx-auto mt-12">
+                <Search className="w-10 h-10 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-gray-800 mb-1">No Treatments Found</h3>
+                <p className="text-sm text-gray-500">We couldn&apos;t find anything matching &quot;{searchQuery}&quot;. Please check your spelling or try another term.</p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">No services found</h3>
-              <p className="text-gray-600">Try adjusting your search terms</p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Why Choose Us - Modern Cards */}
-      <section className="py-20 bg-gradient-to-br from-[#f8f9fa] via-white to-[#e8f5e9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a5f3f]/5 rounded-full mb-4">
-              <Shield className="w-4 h-4 text-[#1a5f3f]" />
-              <span className="text-sm font-semibold text-[#1a5f3f] uppercase tracking-wide">Why Choose Us</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="bg-gradient-to-r from-[#1a5f3f] to-[#2d7a5f] bg-clip-text text-transparent">RamaCare</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience healthcare excellence with our comprehensive medical services
-            </p>
+            )}
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: Shield,
-                title: 'DHA Licensed',
-                description: 'Fully licensed and regulated by Dubai Health Authority',
-                gradient: 'from-[#1a5f3f]/10 to-[#1a5f3f]/5'
-              },
-              {
-                icon: Users,
-                title: 'Expert Team',
-                description: 'Experienced professionals with 15+ years expertise',
-                gradient: 'from-[#d4a574]/10 to-[#d4a574]/5'
-              },
-              {
-                icon: CheckCircle,
-                title: 'Proven Results',
-                description: '98% success rate with 500+ satisfied patients',
-                gradient: 'from-[#1a5f3f]/10 to-[#d4a574]/10'
-              },
-              {
-                icon: Award,
-                title: 'Premium Care',
-                description: 'Luxury facility with state-of-the-art equipment',
-                gradient: 'from-[#d4a574]/10 to-[#1a5f3f]/10'
-              }
-            ].map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                  {/* Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative">
-                    {/* Icon */}
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#1a5f3f] to-[#2d7a5f] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    {/* Content */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-[#1a5f3f] transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 text-center text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                    
-                    {/* Bottom Accent Line */}
-                    <div className="mt-6 h-1 bg-gradient-to-r from-[#1a5f3f] to-[#2d7a5f] rounded-full w-0 group-hover:w-full transition-all duration-500"></div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Appointment CTA - Modern Design */}
-      <section className="py-20 bg-gradient-to-br from-[#1a5f3f] via-[#2d5f3f] to-[#1a5f3f] text-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#d4a574] rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your <span className="text-[#d4a574]">Wellness Journey</span>?
-            </h2>
-            <p className="text-xl mb-12 max-w-2xl mx-auto text-gray-100 leading-relaxed">
-              Book your consultation today and experience premium healthcare services
-            </p>
+        {/* Why Choose Us */}
+        <section className="py-20 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a5f3f]/5 rounded-full mb-4">
+                <Shield className="w-4 h-4 text-[#1a5f3f]" />
+                <span className="text-xs font-semibold text-[#1a5f3f] uppercase tracking-wide">Why Choose Us</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                Professional Clinical Excellence in Dubai
+              </h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                RamaCare Polyclinic combines experienced DHA-licensed specialists, modern diagnostic equipment, and a patient-focused recovery approach.
+              </p>
+            </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: 'DHA Licensed Facility', desc: 'Completely licensed and compliant clinic operating under Dubai Health Authority guidelines.' },
+                { title: 'Experienced Specialists', desc: 'Dermatologists, Physiotherapists, Dentists, and General Physicians with 15+ years expertise.' },
+                { title: 'Holistic & Medical', desc: 'Integrated medicine offering both traditional Ayurvedic therapies and modern practices.' },
+                { title: 'Jumeirah 1 Location', desc: 'Centrally located and highly accessible with dedicated visitor parking facilities.' }
+              ].map((f, i) => (
+                <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-10 h-10 rounded-xl bg-[#1a5f3f]/10 text-[#1a5f3f] flex items-center justify-center mb-5 font-bold text-sm">
+                    0{i+1}
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">{f.title}</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Appointment CTA */}
+        <section className="py-20 bg-gradient-to-br from-[#1a5f3f] to-[#257d54] text-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_70%)] pointer-events-none"></div>
+          <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Get Expert Medical Care Today
+            </h2>
+            <p className="text-base sm:text-lg mb-10 max-w-xl mx-auto text-gray-100/90 leading-relaxed">
+              Book a consultation with our experienced clinical professionals. Our friendly reception team is here to assist you.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={handleBookAppointment}
-                className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#d4a574] to-[#c19463] text-white rounded-2xl hover:from-[#c19463] hover:to-[#d4a574] transition-all font-semibold text-lg shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(212,165,116,0.5)] hover:-translate-y-1"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-white text-[#1a5f3f] rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg"
               >
-                <Calendar className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                <span>Book Free Consultation</span>
+                <Calendar className="w-5 h-5" />
+                <span>Request Appointment</span>
               </button>
               <button
                 onClick={handleCallNow}
-                className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-2xl hover:bg-white/20 transition-all font-semibold text-lg border-2 border-white/30 hover:border-white/50 hover:-translate-y-1">
-                <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                <span>Call Now: +971 56 659 7878</span>
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold hover:bg-white/20 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call Clinic</span>
               </button>
             </div>
-            
-            {/* Contact Info */}
-            <div className="flex flex-wrap items-center justify-center gap-8 text-gray-200">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
-                <MapPin className="w-5 h-5 text-[#d4a574]" />
-                <span className="font-medium">Jumeirah 1, Dubai</span>
-              </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
-                <Clock className="w-5 h-5 text-[#d4a574]" />
-                <span className="font-medium">10:00 AM - 10:00 PM</span>
-              </div>
+          </div>
+        </section>
+
+        {/* Booking Modal */}
+        {isBookingModalOpen && (
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+            <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl">
+              <button 
+                onClick={() => setIsBookingModalOpen(false)}
+                className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
+                aria-label="Close modal"
+              >
+                <X className="w-6 h-6 text-gray-600" />
+              </button>
+              <BeginYourHealingJourneySection 
+                isModal={true} 
+                onClose={() => setIsBookingModalOpen(false)} 
+              />
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Booking Modal */}
-      {isBookingModalOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl">
-            <button 
-              onClick={() => setIsBookingModalOpen(false)}
-              className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-              aria-label="Close modal">
-              <X className="w-6 h-6 text-gray-600" />
-            </button>
-            <BeginYourHealingJourneySection 
-              isModal={true} 
-              onClose={() => setIsBookingModalOpen(false)} />
-          </div>
-        </div>
-      )}
-      <SEOContentSection title="Expert Medical Services in Dubai" content={servicesSEOContent} />
+        )}
 
-      {/* Dynamic SEO Link Directory - Prevents Orphaned Pages */}
-      <section className="sr-only" aria-hidden="true">
-        <h2>Full List of Medical Services at RamaCare Polyclinic</h2>
-        <ul>
-          {autoGeneratedServices.map((slug) => (
-            <li key={slug}>
-              <a href={`/services/${slug}/`}>{slug.replace(/-/g, ' ')}</a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
+        {/* SEO Structured Content */}
+        <SEOContentSection title="Expert Medical Services in Dubai" content={servicesSEOContent} />
+
+        {/* Dynamic SEO Link Directory - Prevents Orphaned Pages */}
+        <section className="sr-only" aria-hidden="true">
+          <h2>Full List of Medical Services at RamaCare Polyclinic</h2>
+          <ul>
+            {autoGeneratedServices.map((slug) => (
+              <li key={slug}>
+                <a href={`/services/${slug}/`}>{slug.replace(/-/g, ' ')}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </Layout>
     </div>
   );
 };
-
-// Simple search icon component with theme consistency
-const SearchIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-  </svg>
-);
 
 export async function getStaticProps() {
   const initialServicesData = getServicesData();

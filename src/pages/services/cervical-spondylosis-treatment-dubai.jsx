@@ -373,8 +373,8 @@ export default function CervicalSpondylosisTreatmentPage() {
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-[4/3] lg:aspect-[1.1]"
             >
               <img
-                src={images.physiotherapySession ? images.physiotherapySession.src : "/images/physio.png"}
-                alt="Cervical Spondylosis Treatment Dubai"
+                src={images.anatomy ? images.anatomy.src : ""}
+                alt=""
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
@@ -432,7 +432,7 @@ export default function CervicalSpondylosisTreatmentPage() {
               </div>
             </motion.div>
 
-            {images && images.anatomy ? (
+            {images && images.physiotherapySession ? (
               <motion.figure
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -441,14 +441,14 @@ export default function CervicalSpondylosisTreatmentPage() {
               >
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                   <img
-                    src={images.anatomy.src}
-                    alt={images.anatomy.alt}
+                    src={images.physiotherapySession.src}
+                    alt={images.physiotherapySession.alt}
                     loading="lazy"
                     className="w-full object-cover"
                   />
                 </div>
                 <figcaption className="text-sm text-[#5F5F5F] text-center italic">
-                  {images.anatomy.caption}
+                  {images.physiotherapySession.caption}
                 </figcaption>
 
                 <div className="bg-[#1F5E4B] text-white rounded-2xl p-6 shadow-md">
@@ -671,14 +671,7 @@ export default function CervicalSpondylosisTreatmentPage() {
               viewport={{ once: true }}
               className="mb-14 max-w-4xl mx-auto"
             >
-              <div className="w-full aspect-[2/1] overflow-hidden rounded-2xl shadow-lg border border-gray-100">
-                <img
-                  src={images.traction.src}
-                  alt={images.traction.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center font-medium">{images.traction.caption}</figcaption>
             </motion.figure>
           ) : null}

@@ -33,23 +33,23 @@ export const DOCTORS = {
     ],
     languages: ['English']
   },
-  anan: {
-    id: 3,
-    name: 'Dr. Anan',
-    firstName: 'Dr. Anan',
-    image: '/images/Dr Anan.jpeg',
-    qualifications: 'BDS (General Dentist)',
-    rating: 5.0,
-    specialization: 'General Dentistry',
-    experience: '5+ Years Experience',
-    isDHALicensed: true,
-    expertise: [
-      'Comprehensive care in preventive and restorative dentistry',
-      'Expertise in routine dental procedures and oral health maintenance',
-      'Successfully treated 500+ patients with a gentle, patient-focused approach'
-    ],
-    languages: ['English']
-  },
+  // anan: {
+  //   id: 3,
+  //   name: 'Dr. Anan',
+  //   firstName: 'Dr. Anan',
+  //   image: '/images/Dr Anan.jpeg',
+  //   qualifications: 'BDS (General Dentist)',
+  //   rating: 5.0,
+  //   specialization: 'General Dentistry',
+  //   experience: '5+ Years Experience',
+  //   isDHALicensed: true,
+  //   expertise: [
+  //     'Comprehensive care in preventive and restorative dentistry',
+  //     'Expertise in routine dental procedures and oral health maintenance',
+  //     'Successfully treated 500+ patients with a gentle, patient-focused approach'
+  //   ],
+  //   languages: ['English']
+  // },
   hafsina: {
     id: 4,
     name: 'Hafsina Karadi Kandy',
@@ -227,7 +227,7 @@ mariya: {
 
 export const DOCTOR_GROUPS = {
   AYURVEDA: [DOCTORS.shamna, DOCTORS.syamkumar, DOCTORS.mariya],
-  DENTAL: [DOCTORS.anan, DOCTORS.hirbod, DOCTORS.soumya, DOCTORS.aparna],
+  DENTAL: [ DOCTORS.hirbod, DOCTORS.soumya, DOCTORS.aparna],
   PHYSIO: [DOCTORS.jeena, DOCTORS.hafsina],
   DERMA: [ DOCTORS.sahar, DOCTORS.sonita, DOCTORS.soumya ,DOCTORS.nodainne],
   GP: [DOCTORS.sahar],
