@@ -206,7 +206,7 @@ const AppointmentPage = () => {
                 <h3 className="text-2xl font-bold text-gray-900">Our Location</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Jumeirah 1 ground floor, Jumeirah Terrace Building, 393558, Dubai
+                12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai
               </p>
               <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
                 <iframe

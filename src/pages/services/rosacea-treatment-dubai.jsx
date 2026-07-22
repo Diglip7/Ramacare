@@ -265,7 +265,7 @@ export default function RosaceaTreatmentDubai() {
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   {/* Image placeholder - Replace with actual image path later */}
                   <Image
-                    src="/images/"
+                    src="/images/Rosacea Treatment Dubai.jpg"
                     alt="Rosacea Treatment Dubai — dermatologist consulting with patient"
                     title="A warm, modern dermatology consultation room in Dubai, a female dermatologist in professional attire gently examining a patient's cheek with a dermatoscope"
                     fill
@@ -294,7 +294,7 @@ export default function RosaceaTreatmentDubai() {
                 <div className="relative aspect-square rounded-2xl overflow-hidden">
                   {/* Image placeholder - Replace with actual image path later */}
                   <Image
-                    src="/images/"
+                    src="/images/Woman with facial redness before rosacea consultation.jpg"
                     alt="Woman with facial redness before rosacea consultation in Dubai"
                     title="Close-up portrait of a woman's face showing mild facial redness across the cheeks and nose"
                     fill
@@ -453,7 +453,7 @@ export default function RosaceaTreatmentDubai() {
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   {/* Image placeholder - Replace with actual image path later */}
                   <Image
-                    src="/images/"
+                    src="/images/Common rosacea triggers.jpg"
                     alt="Common rosacea triggers including sun, heat, and stress in Dubai"
                     title="Flat-style icon set representing rosacea triggers: sun, spicy food, glass of wine, stress, and heat, arranged in a clean grid"
                     fill

@@ -74,7 +74,7 @@ export default function NasyaTherapyPage() {
     "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jumeirah Terrace Building, Ground Floor",
+      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
       "addressLocality": "Jumeirah 1",
       "addressRegion": "Dubai",
       "postalCode": "393558",

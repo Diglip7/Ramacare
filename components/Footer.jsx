@@ -194,7 +194,7 @@ const Footer = () => {
                   rel="noopener noreferrer nofollow"
                   className="flex-1 hover:text-[#d4a574] transition-colors"
                 >
-                 Jumeirah 1 ground floor, Jumeirah Terrace Building, 393558, Dubai
+                 12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai
                 </a>
               </li>
               

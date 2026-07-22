@@ -1355,11 +1355,13 @@ export const newPagesContent = {
         caption: "Microneedling stimulates natural collagen production to improve textural scarring."
       },
       manual: {
+        src: "/images/Fractional laser acne scar treatment.jpg",
         title: "Fractional laser acne scar treatment Dubai clinic",
         alt: "Fractional laser acne scar treatment Dubai clinic",
         caption: "Fractional CO2 laser resurfacing targets deeper scarring with controlled light energy."
       },
       equipment: {
+        src: "/images/Acne scar treatment Dubai.jpg",
         title: "Acne scar treatment Dubai clinic interior RamaCare Polyclinic",
         alt: "Acne scar treatment Dubai clinic interior RamaCare Polyclinic",
         caption: "Our modern, comfortable clinic provides a welcoming environment for your treatment journey."
@@ -1624,92 +1626,32 @@ export const newPagesContent = {
       showBenefitsSection: true
     },
     images: {
-      heroBanner: {
-        src: "/images/melasma-hero.jpg",
-        title: "Melasma treatment Dubai — dermatologist consultation at RamaCare Polyclinic",
-        alt: "Melasma treatment Dubai — dermatologist consultation at RamaCare Polyclinic",
-        caption: "Personalized melasma treatment starts with a proper skin assessment by our DHA-licensed dermatology team."
-      },
-      skinAssessment: {
-        src: "/images/melasma-skin-assessment.jpg",
-        title: "Dermatologist examining facial pigmentation for melasma diagnosis",
-        alt: "Dermatologist examining facial pigmentation for melasma diagnosis",
-        caption: "A detailed skin analysis helps identify your specific melasma type and treatment options."
-      },
-      sunExposure: {
-        src: "/images/melasma-sun-exposure.jpg",
-        title: "Bright Dubai skyline with strong sunlight, illustrating intense UV exposure",
-        alt: "UV sun exposure as a common cause of melasma in Dubai",
-        caption: "Dubai's intense UV rays are a major trigger for melasma."
-      },
-      consultationProgress: {
-        src: "/images/melasma-consultation.jpg",
-        title: "Dermatologist and patient sitting together reviewing a skin assessment chart on a tablet",
-        alt: "Melasma specialist Dubai consulting with a patient on treatment options",
-        caption: "Your treatment plan is tailored to your skin type and melasma depth."
-      },
-      chemicalPeel: {
-        src: "/images/melasma-chemical-peel.jpg",
-        title: "Clinical photo of a dermatology professional applying a chemical peel solution to a patient's face",
-        alt: "Chemical peel for melasma treatment being applied at RamaCare Polyclinic",
-        caption: "Chemical peels gently remove pigmented skin layers to reveal a more even complexion."
-      },
-      laserTreatment: {
-        src: "/images/melasma-laser.jpg",
-        title: "Modern dermatology laser device in a clean treatment room",
-        alt: "Laser melasma treatment Dubai using advanced dermatology technology",
-        caption: "Targeted laser energy breaks down excess pigment while protecting surrounding skin."
-      },
-      microneedling: {
-        src: "/images/melasma-microneedling.jpg",
-        title: "Close-up of a microneedling device being used on facial skin in a clinical setting",
-        alt: "Microneedling treatment for pigmentation and skin texture improvement",
-        caption: "Microneedling improves skin texture and product absorption for better results."
-      },
-      skincareProducts: {
-        src: "/images/melasma-skincare.jpg",
-        title: "Flatlay of minimalist medical-grade skincare bottles and a sunscreen tube",
-        alt: "Dermatologist-recommended skincare and sunscreen for melasma aftercare",
-        caption: "Daily sunscreen and medical-grade skincare are key for maintaining results."
-      },
-      clinicInterior: {
-        src: "/images/melasma-clinic.jpg",
-        title: "Bright, modern medical clinic reception and waiting area",
-        alt: "RamaCare Polyclinic — modern dermatology clinic in Dubai",
-        caption: "Our clinic offers a comfortable, professional environment for all your dermatology needs."
-      },
-      beforeAfter: {
-        src: "/images/melasma-before-after.jpg",
-        title: "Split-image style illustration showing a conceptual improvement in even skin tone",
-        alt: "Improved skin tone after personalized melasma treatment",
-        caption: "Most patients see visible improvement with consistent treatment and sun protection."
-      },
       anatomy: {
-        src: "/images/melasma-skin-assessment.jpg",
+        src: "/images/Melasma treatment Dubai.jpg",
         title: "Melasma treatment Dubai — dermatologist consultation at RamaCare Polyclinic",
         alt: "Melasma treatment Dubai — dermatologist consultation at RamaCare Polyclinic",
         caption: "Personalized melasma treatment starts with a proper skin assessment by our DHA-licensed dermatology team."
       },
       physio: {
-        src: "/images/melasma-consultation.jpg",
+        src: "/images/Dermatologist examining facial pigmentation.jpg",
         title: "Dermatologist examining facial pigmentation for melasma diagnosis",
         alt: "Dermatologist examining facial pigmentation for melasma diagnosis",
         caption: "A detailed skin analysis helps identify your specific melasma type and treatment options."
       },
       stretching: {
-        src: "/images/melasma-chemical-peel.jpg",
+        src: "/images/Chemical peel for melasma treatment.jpg",
         title: "Chemical peel for melasma treatment being applied at RamaCare Polyclinic",
         alt: "Chemical peel for melasma treatment being applied at RamaCare Polyclinic",
         caption: "Chemical peels gently remove pigmented skin layers to reveal a more even complexion."
       },
       manual: {
-        src: "/images/melasma-laser.jpg",
+        src: "/images/Laser melasma treatment Dubai.jpg",
         title: "Laser melasma treatment Dubai using advanced dermatology technology",
         alt: "Laser melasma treatment Dubai using advanced dermatology technology",
         caption: "Targeted laser energy breaks down excess pigment while protecting surrounding skin."
       },
       equipment: {
-        src: "/images/melasma-clinic.jpg",
+        src: "/images/Melasma treatment Dubai.jpg",
         title: "RamaCare Polyclinic — modern dermatology clinic in Dubai",
         alt: "RamaCare Polyclinic — modern dermatology clinic in Dubai",
         caption: "Our clinic offers a comfortable, professional environment for all your dermatology needs."

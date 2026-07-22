@@ -138,7 +138,7 @@ export default function ServicePageTemplate({ content }) {
     <div className="bg-white text-[#1A1A1A] antialiased">
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1F5E4B]/10 via-[#F0F7F4] to-white py-20 md:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1F5E4B]/10 via-[#F0F7F4] to-white pt-6 pb-12 sm:pt-8 sm:pb-16 md:pt-10 md:pb-20 lg:pt-14 lg:pb-24">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4A574]/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl" />
@@ -147,89 +147,89 @@ export default function ServicePageTemplate({ content }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
           {/* Breadcrumbs */}
-          <nav className="flex items-center space-x-2 text-xs font-semibold text-[#5F5F5F] mb-8 uppercase tracking-wider">
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-4 sm:mb-6 uppercase tracking-wider">
             {(breadcrumbs || []).map((b, index) => (
               <React.Fragment key={index}>
                 <a href={b.href} className="hover:text-[#1F5E4B] transition-colors">{b.label}</a>
-                {index < (breadcrumbs || []).length - 1 && <span>/</span>}
+                {index < (breadcrumbs || []).length - 1 && <span className="mx-1.5 text-gray-300">/</span>}
               </React.Fragment>
             ))}
           </nav>
 
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
             {/* Hero Copy */}
             <div className="lg:col-span-7">
-              <span className="inline-flex items-center px-4 py-1.5 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+              <span className="inline-flex items-center px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full mb-3 sm:mb-4">
                 {hero.badge}
               </span>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
                 {hero.heading}
               </h1>
 
-              <p className="text-[#D4A574] text-lg sm:text-xl font-bold tracking-wide mb-6 uppercase">
+              <p className="text-[#D4A574] text-sm sm:text-lg font-bold tracking-wide mb-3 sm:mb-4 uppercase">
                 {hero.subheading}
               </p>
 
-              <p className="text-[#5F5F5F] text-lg leading-relaxed mb-8">
+              <p className="text-[#5F5F5F] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                 {hero.intro}
               </p>
 
               {/* Expect Bullet Cards */}
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {(hero.expect || []).map((item, index) => (
-                  <div key={index} className="flex items-start space-x-3 bg-white p-4 rounded-xl shadow-sm border border-[#1F5E4B]/5 hover:border-[#1F5E4B]/20 transition-all">
-                    <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                    <span className="text-[#1A1A1A] text-sm font-medium leading-snug">{item}</span>
+                  <div key={index} className="flex items-start space-x-3 bg-white p-3 sm:p-4 rounded-xl shadow-sm border border-[#1F5E4B]/5 hover:border-[#1F5E4B]/20 transition-all">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
+                    <span className="text-[#1A1A1A] text-xs sm:text-sm font-medium leading-snug">{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* Call to Actions */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href="#book-now"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#1F5E4B] hover:bg-[#1a4f3e] text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-[#1F5E4B] hover:bg-[#1a4f3e] text-white rounded-xl font-bold text-base sm:text-lg transition-all shadow-md hover:shadow-lg"
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Book Free Consultation
                 </a>
                 <a
                   href="tel:+971566597878"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-50 text-[#1F5E4B] border border-[#1F5E4B]/20 hover:border-[#1F5E4B]/50 rounded-xl font-bold text-lg transition-all shadow-sm"
+                  className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-white hover:bg-gray-50 text-[#1F5E4B] border border-[#1F5E4B]/20 hover:border-[#1F5E4B]/50 rounded-xl font-bold text-base sm:text-lg transition-all shadow-sm"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Call Now
                 </a>
               </div>
             </div>
 
             {/* Decorative Clinic Info Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-150 relative">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4A574]/5 rounded-bl-3xl z-0" />
+            <div className="lg:col-span-5 relative w-full">
+              <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-150 relative">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-[#D4A574]/5 rounded-bl-3xl z-0" />
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-6">
-                    <Shield className="w-6 h-6 text-[#1F5E4B]" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                    <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-[#1F5E4B]" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">RamaCare Patient Care</h3>
-                  <p className="text-[#5F5F5F] text-sm leading-relaxed mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#1A1A1A] mb-3 sm:mb-4">RamaCare Patient Care</h3>
+                  <p className="text-[#5F5F5F] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
                     Our facility provides integrated orthopedic diagnostics, pain management, physical therapies, and clinical rehabilitation protocols.
                   </p>
 
-                  <div className="space-y-4 border-t border-gray-100 pt-6">
-                    <div className="flex justify-between text-sm">
+                  <div className="space-y-3 sm:space-y-4 border-t border-gray-100 pt-4 sm:pt-6">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">License Status</span>
                       <span className="text-[#1F5E4B] font-bold">DHA Registered</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">Opening Hours</span>
                       <span className="text-[#1A1A1A] font-bold">10:00 AM - 10:00 PM</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">Clinical Focus</span>
                       <span className="text-[#D4A574] font-bold">Conservative Spine & Joint Care</span>
                     </div>
@@ -246,19 +246,19 @@ export default function ServicePageTemplate({ content }) {
       <QuickNavigation navItems={navItems} />
 
       {/* INTRODUCTION BLOCK */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#F9F7F2] p-8 md:p-12 rounded-3xl shadow-sm border border-[#D4A574]/20 relative overflow-hidden">
+          <div className="bg-[#F9F7F2] p-6 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-[#D4A574]/20 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-3 h-full bg-[#D4A574]" />
-            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6 pl-4">{introText.title}</h2>
-            <div className="text-[#5F5F5F] text-lg leading-relaxed mb-6 pl-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-6 pl-4">{introText.title}</h2>
+            <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed mb-6 pl-4">
               <LinkedText text={introText.paragraph1} />
             </div>
-            <div className="text-[#5F5F5F] text-lg leading-relaxed mb-6 pl-4">
+            <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed mb-6 pl-4">
               <LinkedText text={introText.paragraph2} />
             </div>
             {introText.paragraph3 ? (
-              <div className="text-[#5F5F5F] text-lg leading-relaxed pl-4">
+              <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed pl-4">
                 <LinkedText text={introText.paragraph3} />
               </div>
             ) : null}
@@ -267,14 +267,14 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* INTERACTIVE ANATOMY SELECTOR & IMAGE 1 */}
-      <section id="what-is" className="py-20 px-4 bg-[#F5F1E8]">
+      <section id="what-is" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
               {whatIs.title}
             </h2>
-            <p className="text-lg text-[#5F5F5F] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed">
               {whatIs.intro}
             </p>
           </div>
@@ -428,11 +428,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* INTERACTIVE SYMPTOM CHECKER PANEL & IMAGE 2 */}
-      <section id="symptoms" className="py-20 px-4 bg-white">
+      <section id="symptoms" className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{signsSymptoms.title}</h2>
-            <div className="text-lg text-[#5F5F5F] leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{signsSymptoms.title}</h2>
+            <div className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed">
               <LinkedText text={signsSymptoms.intro} />
             </div>
           </div>
@@ -493,7 +493,7 @@ export default function ServicePageTemplate({ content }) {
 
             {/* Assessment Output Box (Col 4) */}
             <div className="lg:col-span-4">
-              <div className="bg-[#F9F7F2] p-8 rounded-3xl border border-[#D4A574]/20 shadow-md sticky top-24">
+              <div className="bg-[#F9F7F2] p-5 sm:p-8 rounded-3xl border border-[#D4A574]/20 shadow-md sticky top-24">
                 <h4 className="text-xl font-bold text-[#1A1A1A] mb-4">Clinical Guidance</h4>
 
                 {selectedSymptoms.length === 0 ? (
@@ -547,13 +547,13 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* CAUSES AND RISK FACTORS */}
-      <section id="causes" className="py-20 px-4 bg-[#F5F1E8]">
+      <section id="causes" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
 
             {/* Causes */}
             <div>
-              <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">{causes.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{causes.title}</h2>
               <p className="text-base text-[#5F5F5F] mb-6">{causes.intro}</p>
               <div className="space-y-3">
                 {(causes.list || []).map((c, idx) => (
@@ -572,7 +572,7 @@ export default function ServicePageTemplate({ content }) {
 
             {/* Risk Factors */}
             <div>
-              <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">{riskFactors.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{riskFactors.title}</h2>
               <p className="text-base text-[#5F5F5F] mb-6">{riskFactors.intro}</p>
               <div className="space-y-3">
                 {(riskFactors.list || []).map((rf, idx) => (
@@ -594,11 +594,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* WHEN TO SEEK MEDICAL CARE */}
-      <section className="py-20 px-4 bg-[#1F5E4B] text-white">
+      <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <AlertTriangle className="w-12 h-12 text-[#D4A574] mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">{whenToSeeDoctor.title}</h2>
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 mb-6 text-left max-w-2xl mx-auto space-y-3">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">{whenToSeeDoctor.title}</h2>
+          <div className="bg-white/10 backdrop-blur-sm p-5 sm:p-6 rounded-2xl border border-white/20 mb-6 text-left max-w-2xl mx-auto space-y-3">
             {(whenToSeeDoctor.redFlags || []).map((flag, idx) => (
               <div key={idx} className="flex items-start space-x-2">
                 <span className="text-[#D4A574] font-bold mt-0.5">•</span>
@@ -613,11 +613,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* DIAGNOSIS MODULE */}
-      <section id="diagnosis" className="py-20 px-4 bg-white">
+      <section id="diagnosis" className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{diagnosis.title}</h2>
-            <p className="text-lg text-[#5F5F5F]">{diagnosis.intro}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{diagnosis.title}</h2>
+            <p className="text-base sm:text-lg text-[#5F5F5F]">{diagnosis.intro}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -635,13 +635,13 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* CLINICAL TREATMENT OPTIONS GRID & IMAGE 3 & 4 */}
-      <section id="treatment" className="py-20 px-4 bg-[#F5F1E8]">
+      <section id="treatment" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
               {treatmentOptions.title}
             </h2>
-            <div className="text-lg text-[#5F5F5F] leading-relaxed mb-6">
+            <div className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed mb-6">
               <LinkedText text={treatmentOptions.intro} />
             </div>
             <div className="p-4 bg-white rounded-xl shadow-sm border border-[#1F5E4B]/10 max-w-2xl mx-auto">
@@ -652,10 +652,10 @@ export default function ServicePageTemplate({ content }) {
           </div>
 
           {/* Visual Images display row (Images 3 and 4) */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
             {/* Guided Exercises (Image 3) */}
-            <div className="bg-white p-4 rounded-3xl shadow-sm border border-gray-150 flex items-center gap-4">
-              <div className="relative w-36 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
+            <div className="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 flex items-center gap-3 sm:gap-4">
+              <div className="relative w-24 sm:w-36 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src={images.stretching?.src || "/images/ex2.jpg"}
                   alt={images.stretching.alt}
@@ -666,14 +666,14 @@ export default function ServicePageTemplate({ content }) {
                 />
               </div>
               <div>
-                <h5 className="font-bold text-sm text-[#1A1A1A] mb-1">{images.stretching.title}</h5>
-                <p className="text-xs text-[#5F5F5F] leading-relaxed">{images.stretching.caption}</p>
+                <h5 className="font-bold text-xs sm:text-sm text-[#1A1A1A] mb-1">{images.stretching.title}</h5>
+                <p className="text-[10px] sm:text-xs text-[#5F5F5F] leading-relaxed">{images.stretching.caption}</p>
               </div>
             </div>
 
             {/* Manual Therapy Session (Image 4) */}
-            <div className="bg-white p-4 rounded-3xl shadow-sm border border-gray-150 flex items-center gap-4">
-              <div className="relative w-36 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
+            <div className="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 flex items-center gap-3 sm:gap-4">
+              <div className="relative w-24 sm:w-36 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src={images.manual?.src || "/images/gp.jpg"}
                   alt={images.manual.alt}
@@ -684,8 +684,8 @@ export default function ServicePageTemplate({ content }) {
                 />
               </div>
               <div>
-                <h5 className="font-bold text-sm text-[#1A1A1A] mb-1">{images.manual.title}</h5>
-                <p className="text-xs text-[#5F5F5F] leading-relaxed">{images.manual.caption}</p>
+                <h5 className="font-bold text-xs sm:text-sm text-[#1A1A1A] mb-1">{images.manual.title}</h5>
+                <p className="text-[10px] sm:text-xs text-[#5F5F5F] leading-relaxed">{images.manual.caption}</p>
               </div>
             </div>
           </div>
@@ -715,11 +715,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* INTERACTIVE RECOVERY TIMELINE SELECTOR */}
-      <section id="recovery" className="py-20 px-4 bg-white">
+      <section id="recovery" className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{recoveryTimeline.title}</h2>
-            <p className="text-lg text-[#5F5F5F]">Select a severity profile to view expected timeline & factors.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{recoveryTimeline.title}</h2>
+            <p className="text-base sm:text-lg text-[#5F5F5F]">Select a severity profile to view expected timeline & factors.</p>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -762,7 +762,7 @@ export default function ServicePageTemplate({ content }) {
 
             {/* Display Result Details */}
             <div className="lg:col-span-8">
-              <div className="bg-[#F9F7F2] p-8 rounded-3xl border border-[#D4A574]/20 shadow-sm min-h-[250px] flex flex-col justify-between">
+              <div className="bg-[#F9F7F2] p-5 sm:p-8 rounded-3xl border border-[#D4A574]/20 shadow-sm min-h-[250px] flex flex-col justify-between">
                 <div>
                   <span className="text-xs text-[#D4A574] font-bold uppercase tracking-wider block mb-1">Expected Course</span>
 
@@ -822,11 +822,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* CLINICAL TREATMENT STEPPER PATHWAY */}
-      <section id="pathway" className="py-20 px-4 bg-[#F5F1E8]">
+      <section id="pathway" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{treatmentProcess.title}</h2>
-            <p className="text-lg text-[#5F5F5F]">{treatmentProcess.intro}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{treatmentProcess.title}</h2>
+            <p className="text-base sm:text-lg text-[#5F5F5F]">{treatmentProcess.intro}</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -847,15 +847,15 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* WHY CHOOSE US, DIAGNOSTIC EQUIPMENT (IMAGE 5) & PHYSIOTHERAPISTS */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
 
           <div className="grid lg:grid-cols-12 gap-12 items-center mb-20">
             {/* Copy (Col 7) */}
             <div className="lg:col-span-7">
               <span className="text-xs font-bold text-[#D4A574] uppercase tracking-wider block mb-2">Our Clinical Promise</span>
-              <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6">{whyChooseUs.title}</h2>
-              <p className="text-lg text-[#5F5F5F] leading-relaxed mb-8">{whyChooseUs.intro}</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-6">{whyChooseUs.title}</h2>
+              <p className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed mb-8">{whyChooseUs.intro}</p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {(whyChooseUs.list || []).map((item, idx) => (
@@ -869,7 +869,7 @@ export default function ServicePageTemplate({ content }) {
 
             {/* Equipment Image & Support (Image 5) (Col 5) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="bg-[#F9F7F2] p-4 rounded-3xl border border-[#D4A574]/20 shadow-sm">
+              <div className="bg-[#F9F7F2] p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-[#D4A574]/20 shadow-sm">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                   <Image
                     src={images.equipment?.src || "/images/ultra.jpg"}
@@ -906,11 +906,11 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {/* SEARCHABLE FAQ SECTION */}
-      <section id="faqs" className="py-20 px-4 bg-[#F5F1E8]">
+      <section id="faqs" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-[#5F5F5F]">Browse our answers to popular questions regarding joint care treatments in Dubai.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+            <p className="text-base sm:text-lg text-[#5F5F5F]">Browse our answers to popular questions regarding joint care treatments in Dubai.</p>
           </div>
 
           {/* Search Input */}
@@ -982,8 +982,8 @@ export default function ServicePageTemplate({ content }) {
               whatsapp: '971566597878',
               email: 'query@ramacarepolyclinic.com',
               address: {
-                line1: 'Jumeirah 1 ground floor,',
-                line2: 'Jumeirah Terrace Building, 393558, Dubai'
+                line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+                line2: 'Ground Floor, Jumeirah 1 - Dubai'
               }
             },
             clinicHours: {
@@ -1009,10 +1009,10 @@ export default function ServicePageTemplate({ content }) {
       </div>
 
       {/* CONCLUSION AND CLINICAL NOTES */}
-      <section className="py-20 px-4 bg-[#1F5E4B] text-white">
+      <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">{conclusion.title}</h2>
-          <div className="text-white/90 text-lg leading-relaxed mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">{conclusion.title}</h2>
+          <div className="text-white/90 text-base sm:text-lg leading-relaxed mb-8">
             <LinkedText text={conclusion.paragraph} />
           </div>
           <div className="w-16 h-0.5 bg-[#D4A574] mx-auto mb-6" />

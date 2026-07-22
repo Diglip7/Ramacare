@@ -203,7 +203,7 @@ function buildSchema() {
     url: SITE_URL + '/',
     telephone: '+971566597878',
     priceRange: 'AED',
-    address: { '@type': 'PostalAddress', streetAddress: 'Jumeirah Terrace Building, Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
+    address: { '@type': 'PostalAddress', streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
     medicalSpecialty: ['General Practice', 'Physiotherapy', 'Dermatology', 'Dentistry', 'Ayurveda'],
     areaServed: areasServed.map((a) => ({ '@type': 'Place', name: a })),
   };
@@ -693,7 +693,7 @@ export default function PolyclinicNearJbrPage() {
             </div>
           </div>
         </section>
-
+  
         {/* ============ Medical Disclaimer ============ */}
         <section className="max-w-4xl mx-auto px-6 py-12 border-t border-gray-100">
           <p className="text-sm text-[#5F5F5F] leading-relaxed">
@@ -717,14 +717,6 @@ export default function PolyclinicNearJbrPage() {
             </button>
           </div>
         </div>
-
-        {/* WhatsApp Floating Button */}
-        <button
-          onClick={() => handleWhatsAppClick()}
-          className="fixed bottom-24 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-shadow hover:scale-105 duration-200"
-        >
-          <LucideIcons.MessageCircle className="w-8 h-8 text-white" />
-        </button>
       </div>
     </Layout>
   );

@@ -2277,8 +2277,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -3011,8 +3011,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -3852,8 +3852,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -4628,8 +4628,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -7697,8 +7697,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -8460,8 +8460,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -9208,8 +9208,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -10036,8 +10036,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -10958,8 +10958,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -11788,8 +11788,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -12591,8 +12591,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -13392,8 +13392,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -14332,8 +14332,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -14921,8 +14921,8 @@ comparisonData: [
           whatsapp: '971566597878',
           email: 'query@ramacarepolyclinic.com',
           address: {
-            line1: 'Jumeirah 1 ground floor,',
-            line2: 'Jumeirah Terrace Building, 393558, Dubai'
+            line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+            line2: 'Ground Floor, Jumeirah 1 - Dubai'
           }
         },
         clinicHours: {
@@ -15622,8 +15622,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -16410,8 +16410,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -17178,8 +17178,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -17923,8 +17923,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -18676,8 +18676,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -19435,8 +19435,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -20204,8 +20204,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -20977,8 +20977,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -21756,8 +21756,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -22530,8 +22530,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -23291,8 +23291,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -24028,8 +24028,8 @@ healingJourney: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -24763,8 +24763,8 @@ healingJourney: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -25545,8 +25545,8 @@ healingJourney: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -26298,8 +26298,8 @@ comparisonHeaders: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -27026,8 +27026,8 @@ comparisonHeaders: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -27684,8 +27684,8 @@ comparisonHeaders: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -28335,8 +28335,8 @@ comparisonHeaders: {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
       clinicHours: {
@@ -29261,8 +29261,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -30065,8 +30065,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -30962,8 +30962,8 @@ comparisonData: [
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -31829,8 +31829,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -32414,8 +32414,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -33157,8 +33157,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -33955,8 +33955,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -34578,8 +34578,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -35173,8 +35173,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -35777,8 +35777,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -36415,8 +36415,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -37151,8 +37151,8 @@ description: 'Body shaping is not intended as a weight-loss treatment. Instead, 
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -37764,8 +37764,8 @@ Recovery: Minimal downtime for non-surgical care
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -38410,8 +38410,8 @@ Long-term oral health support
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {
@@ -39079,8 +39079,8 @@ Seek a cost-effective smile restoration`
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
        clinicHours: {

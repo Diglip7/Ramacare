@@ -175,7 +175,7 @@ function buildSchemas() {
     priceRange: 'AED',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jumeirah Terrace Building, Jumeirah 1',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
       addressLocality: 'Dubai',
       addressCountry: 'AE'
     },
@@ -794,15 +794,6 @@ export default function PolyclinicNearDubaiMarinaPage() {
             </button>
           </div>
         </div>
-
-        {/* WhatsApp Floating Button */}
-        <button
-          onClick={() => handleWhatsAppClick()}
-          className="fixed bottom-24 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-shadow hover:scale-105 duration-200"
-        >
-          <LucideIcons.MessageCircle className="w-8 h-8 text-white" />
-        </button>
-
       </div>
     </Layout>
   );

@@ -259,7 +259,7 @@ export default function ToothPainTreatmentPage() {
     telephone: '+971566597878',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jumeirah 1, Ground Floor, Jumeirah Terrace Building',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
       addressLocality: 'Dubai',
       addressCountry: 'AE',
     },
@@ -275,7 +275,7 @@ export default function ToothPainTreatmentPage() {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jumeirah 1, Ground Floor, Jumeirah Terrace Building',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
       addressLocality: 'Dubai',
       addressCountry: 'AE',
     },

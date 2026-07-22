@@ -362,7 +362,7 @@ export default function NeckPainTreatmentPage() {
       "openingHours": "Mo-Su 10:00-22:00",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Jumeirah 1, Ground Floor, Jumeirah Terrace Building",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
         "addressLocality": "Dubai",
         "postalCode": "393558",
         "addressCountry": "AE"

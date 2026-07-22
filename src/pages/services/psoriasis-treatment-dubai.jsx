@@ -254,7 +254,7 @@ export default function PsoriasisTreatmentPage() {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Jumeirah 1, Ground Floor, Jumeirah Terrace Building',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
       addressLocality: 'Dubai',
       addressCountry: 'AE',
     },
@@ -300,8 +300,8 @@ export default function PsoriasisTreatmentPage() {
                 <span aria-current="page" className="text-[#FFFFFF]">Psoriasis Treatment Dubai</span>
                 </nav>
 
-            <div className="grid gap-14 lg:grid-cols-12 lg:items-end">
-              <div className="lg:col-span-8">
+            <div className="grid gap-14 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-7">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#D4A574]/40 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#D4A574]">
                   <ShieldCheck className="h-4 w-4" /> DHA-Licensed Dermatology
                 </span>
@@ -329,30 +329,17 @@ export default function PsoriasisTreatmentPage() {
                 </div>
               </div>
 
-              {/* Hero image + floating stat cluster */}
-              <div className="lg:col-span-4">
-                <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+              {/* Hero image */}
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5">
                   <Image
                     src={IMAGES.hero.src}
                     alt={IMAGES.hero.alt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
                     priority
                   />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                {[
-                  { k: '7', v: 'Psoriasis types treated' },
-                  { k: '15', v: 'FAQs answered by our team' },
-                  { k: 'DHA', v: 'Licensed facility' },
-                  { k: '1:1', v: 'Personalized plans' },
-                ].map((s) => (
-                  <div key={s.v} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <p className="text-3xl font-black text-[#D4A574]">{s.k}</p>
-                    <p className="mt-1 text-xs leading-snug text-white/70">{s.v}</p>
-                  </div>
-                ))}
                 </div>
               </div>
             </div>

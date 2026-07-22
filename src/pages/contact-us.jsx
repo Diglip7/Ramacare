@@ -165,7 +165,7 @@ const ContactUsPage = () => {
     {
       icon: MapPin,
       title: 'Our Location',
-      highlight:  'Jumeirah 1 ground floor, Jumeirah Terrace Building, 393558, Dubai'
+      highlight:  '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai'
     },
     {
       icon: Phone,

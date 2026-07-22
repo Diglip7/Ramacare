@@ -15,8 +15,8 @@ const BookConsultation = ({ content }) => {
       whatsapp: '971566597878',
       email: 'query@ramacarepolyclinic.com',
       address: {
-        line1: 'Jumeirah 1 ground floor,',
-        line2: 'Jumeirah Terrace Building, 393558, Dubai'
+        line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+        line2: 'Ground Floor, Jumeirah 1 - Dubai'
       }
     },
     clinicHours: {

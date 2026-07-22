@@ -594,7 +594,7 @@ const RefundCancellationPage = () => {
                         <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs text-emerald-100">Address</div>
-                          <div className="font-semibold">Jumeirah 1 ground floor, Jumeirah Terrace Building, 393558, Dubai</div>
+                          <div className="font-semibold">12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai</div>
                         </div>
                       </div>
                     </div>

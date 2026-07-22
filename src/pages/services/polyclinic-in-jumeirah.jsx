@@ -748,6 +748,7 @@ export default function PolyclinicInJumeirahPage() {
         </section>
 
         {/* ============================ FINAL CTA ============================ */}
+
         <section id="book" className="px-4 pb-20">
           <div className="relative overflow-hidden mx-auto max-w-7xl rounded-3xl bg-gradient-to-br from-[#1F5E4B] via-[#103D30] to-[#0A241C] p-8 sm:p-12 text-white shadow-2xl">
             {/* Ambient gradients */}
@@ -787,7 +788,6 @@ export default function PolyclinicInJumeirahPage() {
             </div>
           </div>
         </section>
-
       </div>
     </Layout>
   );

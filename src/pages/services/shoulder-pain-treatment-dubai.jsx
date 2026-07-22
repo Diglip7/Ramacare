@@ -206,7 +206,7 @@ export default function ShoulderPainTreatmentPage() {
     "telephone": "+97142862006",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jumeirah 1 ground floor, Jumeirah Terrace Building",
+      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
       "postalCode": "393558",
       "addressLocality": "Dubai",
       "addressCountry": "AE"
@@ -230,7 +230,7 @@ export default function ShoulderPainTreatmentPage() {
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jumeirah 1 ground floor, Jumeirah Terrace Building",
+      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
       "postalCode": "393558",
       "addressLocality": "Dubai",
       "addressCountry": "AE"
@@ -985,8 +985,8 @@ export default function ShoulderPainTreatmentPage() {
               whatsapp: '971566597878',
               email: 'query@ramacarepolyclinic.com',
               address: {
-                line1: 'Jumeirah 1 ground floor,',
-                line2: 'Jumeirah Terrace Building, 393558, Dubai'
+                line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+                line2: 'Ground Floor, Jumeirah 1 - Dubai'
               }
             },
             clinicHours: {
