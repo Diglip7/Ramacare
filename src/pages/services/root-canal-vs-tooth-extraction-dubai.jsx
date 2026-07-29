@@ -36,7 +36,7 @@ const SEO = {
   title: 'Root Canal vs Tooth Extraction Dubai | RamaCare',
   metaDescription:
     "Deciding between a root canal and tooth extraction in Dubai? Compare pain, cost, recovery, and long-term results with RamaCare's DHA-licensed dental team today.",
-  canonical: 'https://ramacarepolyclinic.ae/services/root-canal-vs-tooth-extraction-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/root-canal-vs-tooth-extraction-dubai/',
   ogTitle: 'Root Canal vs Tooth Extraction Dubai — Complete Comparison Guide',
   ogDescription:
     "Not sure whether your tooth can be saved or needs to come out? RamaCare Polyclinic breaks down root canal vs tooth extraction so you can decide with confidence.",
@@ -148,10 +148,10 @@ const WHY_US = [
 ];
 
 const RELATED_SERVICES = [
-  { label: 'Dental Veneers Dubai', href: '/dental-veneers-dubai' },
-  { label: 'Teeth Whitening Dubai', href: '/teeth-whitening-dubai' },
-  { label: 'Dental Implants Dubai', href: '/dental-implants-dubai' },
-  { label: 'Invisalign Braces Dubai', href: '/invisalign-braces-dubai' },
+  { label: 'Dental Veneers Dubai', href: '/services/dental-veneers-dubai/' },
+  { label: 'Teeth Bleaching Dubai', href: '/services/teeth-bleaching-dubai/' },
+  { label: 'Root Canal Treatment Dubai', href: '/services/root-canal-treatment-dubai/' },
+  { label: 'Sensitive Teeth Treatment', href: '/services/sensitive-teeth-treatment-dubai/' },
 ];
 
 const PROCESS = [
@@ -249,7 +249,7 @@ export default function RootCanalVsExtractionPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Dental Dubai', item: 'https://ramacarepolyclinic.ae/services/dental-dubai' },
+      { '@type': 'ListItem', position: 2, name: 'Dental Dubai', item: 'https://ramacarepolyclinic.ae/services/dental-dubai/' },
       { '@type': 'ListItem', position: 3, name: 'Root Canal vs Tooth Extraction Dubai', item: SEO.canonical },
     ],
   };
@@ -314,7 +314,7 @@ export default function RootCanalVsExtractionPage() {
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-[#5F5F5F]">
               <a href="/" className="hover:text-[#1F5E4B]">Home</a>
               <span aria-hidden="true">/</span>
-              <a href="/services/dental-dubai" className="hover:text-[#1F5E4B]">Dental Dubai</a>
+              <a href="/services/dental-dubai/" className="hover:text-[#1F5E4B]">Dental Dubai</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Root Canal vs Tooth Extraction Dubai</span>
             </nav>
@@ -367,7 +367,7 @@ export default function RootCanalVsExtractionPage() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl lg:sticky lg:top-24 bg-[#F9F7F2] border border-gray-200/60 shadow-sm">
                   <Image src={IMAGES.hero.src} alt={IMAGES.hero.alt} fill sizes="(max-width: 1024px) 100vw, 480px" className="object-cover" priority />
                 </div>
               </div>
@@ -402,7 +402,7 @@ export default function RootCanalVsExtractionPage() {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <div className="relative aspect-square w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:sticky lg:top-24 bg-white border border-gray-200/60 shadow-sm">
                   <Image src={IMAGES.toothComparison.src} alt={IMAGES.toothComparison.alt} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-cover" />
                 </div>
               </div>
@@ -644,8 +644,8 @@ export default function RootCanalVsExtractionPage() {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
-                  <Image src={IMAGES.recoveryTimeline.src} alt={IMAGES.recoveryTimeline.alt} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-cover" />
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl lg:sticky lg:top-24 bg-white border border-gray-200/60 shadow-sm">
+                  <Image src={IMAGES.recoveryTimeline.src} alt={IMAGES.recoveryTimeline.alt} fill sizes="(max-width: 1024px) 100vw, 340px" className="object-contain" />
                 </div>
               </div>
             </div>
@@ -773,7 +773,7 @@ export default function RootCanalVsExtractionPage() {
                 </div>
               </div>
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:sticky lg:top-24">
                   <Image src={IMAGES.clinic.src} alt={IMAGES.clinic.alt} fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" />
                 </div>
               </div>

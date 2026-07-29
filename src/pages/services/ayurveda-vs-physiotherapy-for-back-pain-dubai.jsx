@@ -366,43 +366,50 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
       {/* ============ What is Ayurveda / Physiotherapy — mirrored panels ============ */}
       <section className="grid lg:grid-cols-2">
         {/* Ayurveda panel */}
-        <div className="bg-[#F5F1EA] px-6 sm:px-10 py-14">
-          <div className="max-w-xl ml-auto">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-4">{ayurveda.title}</h2>
-            <p className="text-sm text-base text-[#5F5F5F] leading-relaxed mb-6">{ayurveda.intro}</p>
-            <p className="text-sm font-semibold text-[#1A1A1A] mb-3">At RamaCare Polyclinic, this typically includes:</p>
-            <ul className="space-y-2.5 mb-6">
-              {ayurveda.items.map((i) => (
-                <li key={i} className="flex gap-2.5 text-sm text-[#1A1A1A]/85 leading-relaxed">
-                  <LucideIcons.Leaf className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {i}
-                </li>
-              ))}
-            </ul>
-            <p className="text-xs text-base text-[#5F5F5F] leading-relaxed italic">{ayurveda.note}</p>
+        <div className="bg-[#F5F1EA] px-6 sm:px-10 py-14 flex flex-col">
+          <div className="max-w-xl ml-auto flex-1 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-4">{ayurveda.title}</h2>
+              <p className="text-sm text-base text-[#5F5F5F] leading-relaxed mb-6">{ayurveda.intro}</p>
+              <p className="text-sm font-semibold text-[#1A1A1A] mb-3">At RamaCare Polyclinic, this typically includes:</p>
+              <ul className="space-y-2.5 mb-6">
+                {ayurveda.items.map((i) => (
+                  <li key={i} className="flex gap-2.5 text-sm text-[#1A1A1A]/85 leading-relaxed">
+                    <LucideIcons.Leaf className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {i}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-base text-[#5F5F5F] leading-relaxed italic">{ayurveda.note}</p>
+            </div>
             <div className="rounded-xl overflow-hidden mt-6">
               <img
                 src="/images/ayurvedic-oil-therapy-kati-basti-ramacare.jpg"
                 alt="Ayurvedic Kati Basti oil therapy for back pain at RamaCare Polyclinic Dubai"
-                className="w-full h-[200px] object-cover"
+                className="w-full h-[200px] lg:h-[280px] object-cover"
               />
             </div>
           </div>
         </div>
 
         {/* Physiotherapy panel */}
-        <div className="bg-[#1F5E4B] text-white px-6 sm:px-10 py-14">
-          <div className="max-w-xl mr-auto">
-            <h2 className="text-2xl font-semibold mb-4">{physio.title}</h2>
-            <p className="text-sm text-white/80 leading-relaxed mb-6">{physio.intro}</p>
-            <p className="text-sm font-semibold mb-3">Common techniques used at RamaCare:</p>
-            <ul className="space-y-2.5 mb-6">
-              {physio.items.map((i) => (
-                <li key={i} className="flex gap-2.5 text-sm text-white/85 leading-relaxed">
-                  <LucideIcons.Activity className="w-4 h-4 text-white/70 shrink-0 mt-0.5" /> {i}
-                </li>
-              ))}
-            </ul>
-            <p className="text-xs text-white/60 leading-relaxed italic">{physio.note}</p>
+        <div className="bg-[#1F5E4B] text-white px-6 sm:px-10 py-14 flex flex-col">
+          <div className="max-w-xl mr-auto flex-1 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">{physio.title}</h2>
+              <p className="text-sm text-white/80 leading-relaxed mb-6">{physio.intro}</p>
+              <p className="text-sm font-semibold mb-3">Common techniques used at RamaCare:</p>
+              <ul className="space-y-2.5 mb-6">
+                {physio.items.map((i) => (
+                  <li key={i} className="flex gap-2.5 text-sm text-white/85 leading-relaxed">
+                    <LucideIcons.Activity className="w-4 h-4 text-white/70 shrink-0 mt-0.5" /> {i}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-white/60 leading-relaxed italic">{physio.note}</p>
+              <button onClick={() => handleWhatsAppClick('a physiotherapy assessment')} className="inline-flex items-center gap-2 mt-6 rounded-md bg-white text-[#1F5E4B] px-5 py-2.5 text-sm font-semibold hover:bg-gray-100 transition-colors">
+                <LucideIcons.Calendar className="w-4 h-4" /> Consult a Physiotherapist — Schedule Your Assessment
+              </button>
+            </div>
             <div className="rounded-xl overflow-hidden mt-6">
               <img
                 src="/images/physiotherapy-back-assessment-ramacare.jpg"
@@ -410,9 +417,6 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
                 className="w-full h-[200px] object-cover"
               />
             </div>
-            <button onClick={() => handleWhatsAppClick('a physiotherapy assessment')} className="inline-flex items-center gap-2 mt-6 rounded-md bg-white text-[#1F5E4B] px-5 py-2.5 text-sm font-semibold hover:bg-gray-100 transition-colors">
-              <LucideIcons.Calendar className="w-4 h-4" /> Consult a Physiotherapist — Schedule Your Assessment
-            </button>
           </div>
         </div>
       </section>

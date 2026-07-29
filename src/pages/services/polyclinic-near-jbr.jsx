@@ -700,7 +700,7 @@ export default function PolyclinicNearJbrPage() {
             <span className="font-bold text-[#1A1A1A]">Medical Disclaimer:</span> The information provided on this page is intended for general educational purposes only and does not constitute medical advice, diagnosis, or treatment. Every patient&apos;s condition is different, and treatment outcomes vary based on individual health factors. Please consult a qualified doctor at RamaCare Polyclinic or another DHA-licensed healthcare provider for a proper diagnosis and personalized treatment plan before making any healthcare decisions.
           </p>
         </section>
-
+            
         {/* Sticky Bottom Bar */}
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 shadow-xl z-40 p-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">

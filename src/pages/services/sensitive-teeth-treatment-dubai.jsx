@@ -214,7 +214,7 @@ const RELATED_LINKS = [
 
 function Eyebrow({ children }) {
   return (
-    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[#1F5E4B]/70">
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1F5E4B]/8 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#1F5E4B]">
       {children}
     </span>
   );
@@ -223,8 +223,8 @@ function Eyebrow({ children }) {
 function SectionHeading({ id, eyebrow, title }) {
   return (
     <div className="mb-8 scroll-mt-28" id={id}>
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className="mt-2 text-2xl font-semibold leading-snug text-[#1A1A1A] sm:text-[1.75rem]">
+      {eyebrow && <div className="mb-3"><Eyebrow>{eyebrow}</Eyebrow></div>}
+      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1A1A1A] leading-snug">
         {title}
       </h2>
     </div>
@@ -370,77 +370,98 @@ export default function SensitiveTeethTreatmentPage() {
           }
         `}</style>
 
-        {/* ============================ HERO — simple centered, image below H1 ============================ */}
-        <section className="px-4 pb-10 pt-14 sm:pt-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <nav aria-label="Breadcrumb" className="mb-6 flex items-center justify-center gap-2 text-xs font-medium text-[#5F5F5F]">
-              <a href="/" className="hover:text-[#1F5E4B]">Home</a>
-              <span aria-hidden="true">/</span>
-              <a href="/dental-services-dubai" className="hover:text-[#1F5E4B]">Dental Services</a>
-              <span aria-hidden="true">/</span>
+        {/* ============================ HERO — Split Layout, Left-aligned ============================ */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#F9F7F2] to-white px-4 pb-16 pt-12 sm:pt-20">
+          {/* Decorative background grid and shapes */}
+          <div className="absolute inset-0 opacity-[0.4] pointer-events-none">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1F5E4B" strokeWidth="0.5" strokeOpacity="0.1" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#1F5E4B]/5 blur-3xl pointer-events-none"></div>
+
+          <div className="relative mx-auto max-w-7xl">
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F]">
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+              <span aria-hidden="true" className="text-gray-300">/</span>
+              <a href="/dental-services-dubai" className="hover:text-[#1F5E4B] transition-colors">Dental Services</a>
+              <span aria-hidden="true" className="text-gray-300">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Sensitive Teeth Treatment Dubai</span>
             </nav>
 
-            <Eyebrow>DHA-Licensed Dental Care</Eyebrow>
-            <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#1A1A1A] sm:text-4xl">
-              Sensitive Teeth Treatment Dubai
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#5F5F5F]">
-              If a sip of cold water or a spoonful of ice cream sends a sudden jolt through your
-              teeth, you already know how disruptive tooth sensitivity can be. Searching for
-              reliable Sensitive Teeth Treatment Dubai is often the first step people take once
-              that occasional twinge turns into a daily discomfort that affects what they eat,
-              drink, and even how they brush. Tooth sensitivity is extremely common, but that
-              doesn't mean it should be ignored — persistent sensitivity is frequently a sign of
-              an underlying issue that needs proper evaluation rather than just a change in
-              toothpaste.
-            </p>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#5F5F5F]">
-              At RamaCare Polyclinic in Dubai, we see patients regularly who have been managing
-              sensitive teeth for months, sometimes years, without ever finding out why.
-              Sensitivity can stem from something as simple as worn enamel or as significant as a
-              cracked tooth or exposed root surface, and each of these causes calls for a
-              different Tooth Sensitivity Treatment Dubai approach. This guide explains what
-              tooth sensitivity actually is, what typically causes it, when it's time to see a
-              dentist, and the treatment options available so you can understand your symptoms
-              before your visit. Whether you're dealing with mild discomfort or searching for a
-              trusted Sensitive Teeth Dentist Dubai, this page is designed to give you clear,
-              medically accurate information you can rely on.
-            </p>
+            <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-7">
+                <div className="mb-4">
+                  <Eyebrow>DHA-Licensed Dental Care</Eyebrow>
+                </div>
+                <h1 className="text-3xl font-extrabold leading-tight text-[#1A1A1A] sm:text-5xl tracking-tight">
+                  Sensitive Teeth Treatment Dubai
+                </h1>
+                <p className="mt-6 text-base leading-relaxed text-[#5F5F5F]">
+                  If a sip of cold water or a spoonful of ice cream sends a sudden jolt through your
+                  teeth, you already know how disruptive tooth sensitivity can be. Searching for
+                  reliable Sensitive Teeth Treatment Dubai is often the first step people take once
+                  that occasional twinge turns into a daily discomfort that affects what they eat,
+                  drink, and even how they brush. Tooth sensitivity is extremely common, but that
+                  doesn't mean it should be ignored — persistent sensitivity is frequently a sign of
+                  an underlying issue that needs proper evaluation rather than just a change in
+                  toothpaste.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-[#5F5F5F]">
+                  At RamaCare Polyclinic in Dubai, we see patients regularly who have been managing
+                  sensitive teeth for months, sometimes years, without ever finding out why.
+                  Sensitivity can stem from something as simple as worn enamel or as significant as a
+                  cracked tooth or exposed root surface, and each of these causes calls for a
+                  different Tooth Sensitivity Treatment Dubai approach. This guide explains what
+                  tooth sensitivity actually is, what typically causes it, when it's time to see a
+                  dentist, and the treatment options available so you can understand your symptoms
+                  before your visit. Whether you're dealing with mild discomfort or searching for a
+                  trusted Sensitive Teeth Dentist Dubai, this page is designed to give you clear,
+                  medically accurate information you can rely on.
+                </p>
 
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello RamaCare, I'd like to book a consultation for Sensitive Teeth Treatment Dubai.")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#1F5E4B] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#17493B]"
-              >
-                Book a Consultation <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href="tel:+971566597878"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1F5E4B]/25 px-6 py-3 text-sm font-semibold text-[#1F5E4B] hover:bg-[#F9F7F2]"
-              >
-                <Phone className="h-4 w-4" /> Call Now
-              </a>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello RamaCare, I'd like to book a consultation for Sensitive Teeth Treatment Dubai.")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#1F5E4B] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#17493B]"
+                  >
+                    Book a Consultation <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="tel:+971566597878"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1F5E4B]/25 px-6 py-3.5 text-sm font-semibold text-[#1F5E4B] hover:bg-[#F9F7F2]"
+                  >
+                    <Phone className="h-4 w-4" /> Call Now
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-gray-100 shadow-xl bg-[#F9F7F2]">
+                  <Image
+                    src={IMAGES.hero.src}
+                    alt={IMAGES.hero.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div className="relative mx-auto mt-12 aspect-[16/7] w-full max-w-5xl overflow-hidden rounded-2xl">
-            <Image
-              src={IMAGES.hero.src}
-              alt={IMAGES.hero.alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className="object-cover"
-              priority
-            />
           </div>
         </section>
 
         {/* ============================ IN-PAGE SECTION NAV ============================ */}
         <section className="sticky top-0 z-20 border-y border-gray-100 bg-white/95 backdrop-blur px-4 py-3">
-          <div className="mx-auto flex max-w-5xl items-center gap-2">
+          <div className="mx-auto flex max-w-7xl items-center gap-2">
             <button
               type="button"
               onClick={() => scrollNav(-1)}
@@ -479,7 +500,7 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ WHAT ARE SENSITIVE TEETH — definition list ============================ */}
         <section className="px-4 py-16">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-5xl">
             <SectionHeading id="what-are" eyebrow="The Basics" title="What Are Sensitive Teeth?" />
             <p className="text-base leading-relaxed text-[#5F5F5F]">
               Tooth sensitivity, clinically known as dentin hypersensitivity, occurs when the
@@ -494,8 +515,8 @@ export default function SensitiveTeethTreatmentPage() {
             </p>
             <dl className="mt-4 divide-y divide-gray-100 border-y border-gray-100">
               {DISTINCTIONS.map((d) => (
-                <div key={d.name} className="grid gap-1 py-4 sm:grid-cols-[220px_1fr] sm:gap-6">
-                  <dt className="text-sm font-semibold text-[#1F5E4B]">{d.name}</dt>
+                <div key={d.name} className="grid gap-1 py-4 sm:grid-cols-[260px_1fr] sm:gap-6">
+                  <dt className="text-sm sm:text-base font-bold text-[#1F5E4B]">{d.name}</dt>
                   <dd className="text-sm leading-relaxed text-[#5F5F5F]">{d.desc}</dd>
                 </div>
               ))}
@@ -510,22 +531,22 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ COMMON CAUSES — image + numbered rows ============================ */}
         <section className="bg-[#F9F7F2] px-4 py-16">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeading id="causes" eyebrow="11 Contributing Factors" title="Common Causes of Tooth Sensitivity" />
-            <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr]">
-              <div>
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-5 lg:sticky lg:top-28">
                 <p className="text-base leading-relaxed text-[#5F5F5F]">
                   There isn't a single cause behind sensitive teeth — it's usually the result of
                   one or more contributing factors. Understanding these Tooth Sensitivity Causes
                   can help you and your dentist pinpoint what's happening.
                 </p>
-                <div className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                <div className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-gray-150 shadow-md bg-white">
                   <Image
                     src={IMAGES.causes.src}
                     alt={IMAGES.causes.alt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    className="object-contain"
                   />
                 </div>
                 <p className="mt-6 text-sm leading-relaxed text-[#5F5F5F]">
@@ -536,19 +557,19 @@ export default function SensitiveTeethTreatmentPage() {
                 </p>
               </div>
 
-              <ol className="space-y-4">
+              <ol className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
                 {CAUSES.map((c, i) => {
                   const Icon = c.icon;
                   return (
-                    <li key={c.name} className="flex gap-4 rounded-xl bg-white p-4">
+                    <li key={c.name} className="flex gap-4 rounded-xl bg-white p-4 border border-gray-100 shadow-sm">
                       <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#1F5E4B]/10 text-xs font-semibold text-[#1F5E4B]">
                         {i + 1}
                       </span>
                       <div>
-                        <h4 className="flex items-center gap-2 text-sm font-semibold text-[#1A1A1A]">
+                        <h4 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[#1A1A1A]">
                           <Icon className="h-4 w-4 text-[#D4A574]" /> {c.name}
                         </h4>
-                        <p className="mt-1 text-xs leading-relaxed text-[#5F5F5F]">{c.desc}</p>
+                        <p className="mt-1.5 text-sm leading-relaxed text-[#5F5F5F]">{c.desc}</p>
                       </div>
                     </li>
                   );
@@ -560,39 +581,43 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ SYMPTOMS — minimal lined table + image ============================ */}
         <section className="px-4 py-16">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeading id="symptoms" eyebrow="Trigger Patterns" title="Symptoms of Sensitive Teeth" />
             <p className="text-base leading-relaxed text-[#5F5F5F]">
               Tooth sensitivity can show up differently from person to person, but most patients
               describe a similar pattern of triggers.
             </p>
 
-            <div className="mt-8 grid gap-10 md:grid-cols-[1fr_260px]">
-              <table className="w-full border-collapse text-left text-sm">
-                <thead>
-                  <tr className="border-b-2 border-[#1F5E4B]">
-                    <th className="py-3 pr-4 font-semibold text-[#1A1A1A]">Trigger</th>
-                    <th className="py-3 font-semibold text-[#1A1A1A]">Typical Sensation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {SYMPTOMS_TABLE.map((row) => (
-                    <tr key={row.trigger} className="border-b border-gray-100">
-                      <td className="py-3 pr-4 font-medium text-[#1A1A1A]">{row.trigger}</td>
-                      <td className="py-3 text-[#5F5F5F]">{row.sensation}</td>
+            <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-8 overflow-x-auto">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead>
+                    <tr className="border-b-2 border-[#1F5E4B]">
+                      <th className="py-3 pr-4 font-semibold text-[#1A1A1A]">Trigger</th>
+                      <th className="py-3 font-semibold text-[#1A1A1A]">Typical Sensation</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {SYMPTOMS_TABLE.map((row) => (
+                      <tr key={row.trigger} className="border-b border-gray-100">
+                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">{row.trigger}</td>
+                        <td className="py-3 text-[#5F5F5F]">{row.sensation}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
 
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
-                <Image
-                  src={IMAGES.symptoms.src}
-                  alt={IMAGES.symptoms.alt}
-                  fill
-                  sizes="260px"
-                  className="object-cover"
-                />
+              <div className="lg:col-span-4">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gray-150 shadow-md">
+                  <Image
+                    src={IMAGES.symptoms.src}
+                    alt={IMAGES.symptoms.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
 
@@ -609,9 +634,9 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ WHEN TO VISIT — simple checklist + authority note ============================ */}
         <section className="bg-[#0F3B2E] px-4 py-16 text-white">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-5xl">
             <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[#D4A574]">Know the Signs</span>
-            <h2 id="when-to-visit" className="mt-2 scroll-mt-28 text-2xl font-semibold leading-snug sm:text-[1.75rem]">
+            <h2 id="when-to-visit" className="mt-2 scroll-mt-28 text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
               When Should You Visit a Dentist?
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/75">
@@ -639,7 +664,7 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ DIAGNOSIS — horizontal scroll strip ============================ */}
         <section className="px-4 py-16">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeading id="diagnosis" eyebrow="7-Step Process" title="Diagnosis of Tooth Sensitivity" />
             <p className="text-base leading-relaxed text-[#5F5F5F]">
               An accurate diagnosis is the first step toward effective and lasting relief. At
@@ -652,15 +677,15 @@ export default function SensitiveTeethTreatmentPage() {
                 {DIAGNOSIS_STEPS.map((d, i) => {
                   const Icon = d.icon;
                   return (
-                    <div key={d.name} className="w-64 flex-shrink-0 rounded-2xl border border-gray-100 p-5">
+                    <div key={d.name} className="w-72 flex-shrink-0 rounded-2xl border border-gray-150 p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
                       <div className="flex items-center gap-2">
                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1F5E4B] text-[10px] font-semibold text-white">
                           {i + 1}
                         </span>
                         <Icon className="h-4 w-4 text-[#D4A574]" />
                       </div>
-                      <h4 className="mt-3 text-sm font-semibold text-[#1A1A1A]">{d.name}</h4>
-                      <p className="mt-1.5 text-xs leading-relaxed text-[#5F5F5F]">{d.desc}</p>
+                      <h4 className="mt-3 text-sm sm:text-base font-bold text-[#1A1A1A]">{d.name}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-[#5F5F5F]">{d.desc}</p>
                     </div>
                   );
                 })}
@@ -696,66 +721,72 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ TREATMENT — accordion ============================ */}
         <section className="bg-[#F9F7F2] px-4 py-16">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeading
               id="treatment"
               eyebrow="Personalized Plans"
               title="Sensitive Teeth Treatment Dubai: Options at RamaCare Polyclinic"
             />
 
-            <h3 className="text-lg font-semibold text-[#1A1A1A]">
-              How RamaCare Personalizes Sensitive Teeth Treatment Dubai Plans
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#5F5F5F]">
-              Treatment for sensitive teeth is never one-size-fits-all — it depends entirely on
-              what's causing the sensitivity in the first place. A patient with mild enamel wear
-              needs a very different approach than someone with gum recession or a cracked tooth.
-              Below is an overview of the treatments most commonly used for effective Sensitive
-              Teeth Treatment Dubai patients can count on.
-            </p>
+            <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-5">
+                <h3 className="text-lg font-bold text-[#1A1A1A]">
+                  How RamaCare Personalizes Sensitive Teeth Treatment Dubai Plans
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#5F5F5F]">
+                  Treatment for sensitive teeth is never one-size-fits-all — it depends entirely on
+                  what's causing the sensitivity in the first place. A patient with mild enamel wear
+                  needs a very different approach than someone with gum recession or a cracked tooth.
+                  Below is an overview of the treatments most commonly used for effective Sensitive
+                  Teeth Treatment Dubai patients can count on.
+                </p>
 
-            <div className="relative my-8 aspect-[16/8] w-full overflow-hidden rounded-2xl">
-              <Image
-                src={IMAGES.treatment.src}
-                alt={IMAGES.treatment.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 768px"
-                className="object-cover"
-              />
-            </div>
+                <div className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-gray-150 shadow-md bg-white">
+                  <Image
+                    src={IMAGES.treatment.src}
+                    alt={IMAGES.treatment.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
-            <div className="divide-y divide-gray-200 rounded-2xl bg-white">
-              {TREATMENTS.map((t, idx) => {
-                const Icon = t.icon;
-                const isOpen = openTreatment === idx;
-                return (
-                  <div key={t.name}>
-                    <button
-                      onClick={() => setOpenTreatment(isOpen ? -1 : idx)}
-                      className="flex w-full items-center gap-3 px-5 py-4 text-left"
-                    >
-                      <Icon className="h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
-                      <span className="flex-1 text-sm font-semibold text-[#1A1A1A]">{t.name}</span>
-                      {isOpen ? <Minus className="h-4 w-4 text-[#5F5F5F]" /> : <Plus className="h-4 w-4 text-[#5F5F5F]" />}
-                    </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.18 }}
+              <div className="lg:col-span-7">
+                <div className="divide-y divide-gray-200 rounded-2xl bg-white border border-gray-100 shadow-sm">
+                  {TREATMENTS.map((t, idx) => {
+                    const Icon = t.icon;
+                    const isOpen = openTreatment === idx;
+                    return (
+                      <div key={t.name}>
+                        <button
+                          onClick={() => setOpenTreatment(isOpen ? -1 : idx)}
+                          className="flex w-full items-center gap-3 px-5 py-4 text-left font-sans"
                         >
-                          <p className="px-5 pb-4 pl-12 text-sm leading-relaxed text-[#5F5F5F]">{t.desc}</p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
+                          <Icon className="h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
+                          <span className="flex-1 text-sm sm:text-base font-bold text-[#1A1A1A]">{t.name}</span>
+                          {isOpen ? <Minus className="h-4 w-4 text-[#5F5F5F]" /> : <Plus className="h-4 w-4 text-[#5F5F5F]" />}
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.18 }}
+                            >
+                              <p className="px-5 pb-4 pl-12 text-sm leading-relaxed text-[#5F5F5F]">{t.desc}</p>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
 
-            <p className="mt-6 text-xs leading-relaxed text-[#5F5F5F]">
+            <p className="mt-8 text-sm leading-relaxed text-[#5F5F5F] italic">
               Please note: Treatment recommendations vary from patient to patient based on
               clinical findings. The information above is educational and general in nature; only
               a qualified dentist can determine the right treatment plan after an in-person
@@ -766,7 +797,7 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ PREVENTION + BENEFITS — side by side ============================ */}
         <section className="px-4 py-16">
-          <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+          <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
             <div>
               <SectionHeading id="prevention" eyebrow="Daily Habits" title="Can Tooth Sensitivity Be Prevented?" />
               <p className="text-sm leading-relaxed text-[#5F5F5F]">
@@ -781,7 +812,7 @@ export default function SensitiveTeethTreatmentPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-[#5F5F5F]">
+              <p className="mt-6 text-sm leading-relaxed text-[#5F5F5F]">
                 These habits won't reverse existing damage, but they can meaningfully slow its
                 progression and reduce the likelihood of needing more involved Sensitive Teeth
                 Treatment Dubai later on.
@@ -798,12 +829,12 @@ export default function SensitiveTeethTreatmentPage() {
               <ul className="mt-5 space-y-3">
                 {BENEFITS.map((b) => (
                   <li key={b.name}>
-                    <p className="text-sm font-semibold text-[#1A1A1A]">{b.name}</p>
-                    <p className="text-xs leading-relaxed text-[#5F5F5F]">{b.desc}</p>
+                    <p className="text-sm sm:text-base font-bold text-[#1A1A1A]">{b.name}</p>
+                    <p className="text-sm leading-relaxed text-[#5F5F5F]">{b.desc}</p>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-[#5F5F5F]">
+              <p className="mt-6 text-sm leading-relaxed text-[#5F5F5F]">
                 Early evaluation is one of the simplest ways to avoid more complex and costly
                 treatment down the line, and it's the fastest route to lasting Sensitive Teeth
                 Treatment Dubai results.
@@ -814,7 +845,7 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ WHY CHOOSE US — bordered list + image ============================ */}
         <section className="bg-[#F9F7F2] px-4 py-16">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeading id="why-us" eyebrow="Our Promise" title="Why Choose RamaCare Polyclinic?" />
             <p className="text-base leading-relaxed text-[#5F5F5F]">
               Choosing the right clinic for Sensitive Teeth Treatment Dubai makes a real
@@ -822,36 +853,40 @@ export default function SensitiveTeethTreatmentPage() {
               Polyclinic apart:
             </p>
 
-            <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_320px]">
-              <ul className="divide-y divide-gray-200 rounded-2xl bg-white">
-                {WHY_US.map((w) => (
-                  <li key={w.name} className="flex items-start gap-3 px-5 py-4">
-                    <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
-                    <div>
-                      <p className="text-sm font-semibold text-[#1A1A1A]">{w.name}</p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-[#5F5F5F]">{w.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-8">
+                <ul className="divide-y divide-gray-200 rounded-2xl bg-white border border-gray-100 shadow-sm">
+                  {WHY_US.map((w) => (
+                    <li key={w.name} className="flex items-start gap-3 px-5 py-4">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
+                      <div>
+                        <p className="text-sm sm:text-base font-bold text-[#1A1A1A]">{w.name}</p>
+                        <p className="mt-1 text-sm leading-relaxed text-[#5F5F5F]">{w.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
-                <Image
-                  src={IMAGES.team.src}
-                  alt={IMAGES.team.alt}
-                  fill
-                  sizes="320px"
-                  className="object-cover"
-                />
+              <div className="lg:col-span-4">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gray-150 shadow-md bg-white">
+                  <Image
+                    src={IMAGES.team.src}
+                    alt={IMAGES.team.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
 
-            <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-[#5F5F5F]">
+            <p className="mt-8 text-sm leading-relaxed text-[#5F5F5F]">
               If you're looking for the Best Dentist Dubai for sensitive teeth and lasting relief,
               our team is ready to help you get back to enjoying your favorite foods without
               discomfort.
             </p>
-            <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-[#1F5E4B]">
+            <p className="mt-3 text-sm font-semibold text-[#1F5E4B]">
               Struggling with sensitive teeth? Book an appointment with RamaCare Polyclinic today
               and get lasting relief.
             </p>
@@ -860,7 +895,7 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ FAQ — simple single-column accordion ============================ */}
         <section className="px-4 py-16">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-5xl">
             <SectionHeading id="faq" eyebrow="Common Questions" title="Frequently Asked Questions" />
             <p className="text-sm leading-relaxed text-[#5F5F5F]">
               Below are the questions patients most often ask us when researching Sensitive Teeth
@@ -876,7 +911,7 @@ export default function SensitiveTeethTreatmentPage() {
                       onClick={() => setOpenFaq(isOpen ? -1 : idx)}
                       className="flex w-full items-center gap-3 py-4 text-left"
                     >
-                      <span className="flex-1 text-sm font-semibold text-[#1A1A1A]">
+                      <span className="flex-1 text-sm sm:text-base font-bold text-[#1A1A1A]">
                         {idx + 1}. {f.q}
                       </span>
                       <ChevronDown className={`h-4 w-4 flex-shrink-0 text-[#5F5F5F] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -920,10 +955,10 @@ export default function SensitiveTeethTreatmentPage() {
 
         {/* ============================ CONCLUSION / CTA — split two-column ============================ */}
         <section id="book" className="px-4 py-16">
-          <div className="mx-auto grid max-w-5xl gap-10 rounded-2xl border border-gray-100 p-8 sm:p-10 md:grid-cols-[1.3fr_1fr] md:items-center">
+          <div className="mx-auto grid max-w-7xl gap-10 rounded-2xl border border-gray-100 p-8 sm:p-10 md:grid-cols-[1.3fr_1fr] md:items-center">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.14em] text-[#1F5E4B]/70">Conclusion</span>
-              <h2 className="mt-2 text-2xl font-semibold leading-snug text-[#1A1A1A]">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-[#1A1A1A]">
                 Don't Let Sensitive Teeth Limit What You Eat and Drink
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-[#5F5F5F]">
@@ -943,7 +978,7 @@ export default function SensitiveTeethTreatmentPage() {
                 Don't let sensitive teeth limit what you eat and drink. Book your appointment with
                 RamaCare Polyclinic today and take the first step toward lasting comfort.
               </p>
-              <p className="mt-4 text-xs italic text-[#5F5F5F]">
+              <p className="mt-4 text-sm leading-relaxed text-[#5F5F5F] italic">
                 This article is intended for general educational purposes and does not replace
                 professional dental advice. Treatment recommendations vary based on individual
                 diagnosis — please consult a qualified dentist for an accurate assessment of your

@@ -426,7 +426,7 @@ export default function AyurvedaVsAllopathyPage() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl lg:sticky lg:top-8">
                   <Image src={IMAGES.infographic.src} alt={IMAGES.infographic.alt} fill sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" priority />
                 </div>
               </div>
@@ -438,12 +438,12 @@ export default function AyurvedaVsAllopathyPage() {
         <div className="mx-auto max-w-6xl px-4 py-8">
           <div className="space-y-20">
 
-              {/* ---- 1. Why Compare: label left / content right ---- */}
-              <section id="why-compare" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
-                <div className="sm:col-span-4">
+              {/* ---- 1. Why Compare ---- */}
+              <section id="why-compare" className="scroll-mt-24">
+                <div className="max-w-3xl">
                   <SectionHeading eyebrow="Why Compare" title="Why Patients in Dubai Compare Ayurveda and Allopathy" />
                 </div>
-                <div className="sm:col-span-8">
+                <div className="mt-6">
                   <p className="text-base leading-relaxed text-[#5F5F5F]">
                     Dubai's healthcare landscape is unusual in a good way: it gives residents
                     access to advanced allopathic hospitals and DHA-licensed Ayurveda and
@@ -471,7 +471,7 @@ export default function AyurvedaVsAllopathyPage() {
 
               {/* ---- 2. Understanding Chronic Pain: content left / image right ---- */}
               <section id="understanding" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
-                <div className="sm:col-span-8">
+                <div className="sm:col-span-7">
                   <SectionHeading eyebrow="The Basics" title="Understanding Chronic Pain" />
                   <p className="text-base leading-relaxed text-[#5F5F5F]">
                     Chronic pain is generally defined as pain that persists for more than three
@@ -531,21 +531,21 @@ export default function AyurvedaVsAllopathyPage() {
                     Ayurveda and Allopathy work best when guided by an accurate diagnosis.
                   </p>
                 </div>
-                <div className="sm:col-span-4">
+                <div className="sm:col-span-5">
                   <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl sm:sticky sm:top-8">
-                    <Image src={IMAGES.anatomy.src} alt={IMAGES.anatomy.alt} fill sizes="(max-width: 640px) 100vw, 260px" className="object-cover" />
+                    <Image src={IMAGES.anatomy.src} alt={IMAGES.anatomy.alt} fill sizes="(max-width: 640px) 100vw, 380px" className="object-cover" />
                   </div>
                 </div>
               </section>
 
               {/* ---- 3. What Is Ayurveda: image left / text right ---- */}
               <section id="what-is-ayurveda" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
-                <div className="order-2 sm:order-1 sm:col-span-4">
+                <div className="order-2 sm:order-1 sm:col-span-5">
                   <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl sm:sticky sm:top-8">
-                    <Image src={IMAGES.ayurvedaConsult.src} alt={IMAGES.ayurvedaConsult.alt} fill sizes="(max-width: 640px) 100vw, 260px" className="object-cover" />
+                    <Image src={IMAGES.ayurvedaConsult.src} alt={IMAGES.ayurvedaConsult.alt} fill sizes="(max-width: 640px) 100vw, 380px" className="object-cover" />
                   </div>
                 </div>
-                <div className="order-1 sm:order-2 sm:col-span-8">
+                <div className="order-1 sm:order-2 sm:col-span-7">
                   <SectionHeading eyebrow="Ayurvedic Approach" title="What Is Ayurveda?" />
                   <p className="text-base leading-relaxed text-[#5F5F5F]">
                     Ayurveda is a traditional system of medicine, originating in India over 3,000
@@ -584,7 +584,7 @@ export default function AyurvedaVsAllopathyPage() {
 
               {/* ---- 4. What Is Allopathy: text left / image right ---- */}
               <section id="what-is-allopathy" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
-                <div className="sm:col-span-8">
+                <div className="sm:col-span-7">
                   <SectionHeading eyebrow="Allopathic Approach" title="What Is Allopathy?" />
                   <p className="text-base leading-relaxed text-[#5F5F5F]">
                     Allopathy refers to modern, evidence-based conventional medicine — the
@@ -617,9 +617,9 @@ export default function AyurvedaVsAllopathyPage() {
                     low back pain and knee osteoarthritis.
                   </p>
                 </div>
-                <div className="sm:col-span-4">
+                <div className="sm:col-span-5">
                   <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl sm:sticky sm:top-8">
-                    <Image src={IMAGES.physio.src} alt={IMAGES.physio.alt} fill sizes="(max-width: 640px) 100vw, 260px" className="object-cover" />
+                    <Image src={IMAGES.physio.src} alt={IMAGES.physio.alt} fill sizes="(max-width: 640px) 100vw, 380px" className="object-cover" />
                   </div>
                 </div>
               </section>
@@ -666,48 +666,40 @@ export default function AyurvedaVsAllopathyPage() {
                 </p>
               </section>
 
-              {/* ---- 6/7. Benefits — mirrored rows ---- */}
+              {/* ---- 6/7. Benefits ---- */}
               <section id="benefits" className="scroll-mt-24 space-y-6">
                 <SectionHeading eyebrow="The Upside" title="Benefits of Each Approach" />
 
-                <div className="grid gap-6 rounded-2xl bg-[#D4A574]/10 p-6 sm:grid-cols-12 sm:p-8">
-                  <div className="sm:col-span-4">
-                    <h3 className="text-base font-semibold text-[#8A6A3F]">Benefits of Ayurveda</h3>
-                  </div>
-                  <div className="sm:col-span-8">
-                    <ul className="space-y-2.5">
-                      {AYURVEDA_BENEFITS.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-base leading-relaxed text-[#1A1A1A]">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#8A6A3F]" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="rounded-2xl bg-[#D4A574]/10 p-6 sm:p-8">
+                  <h3 className="text-lg font-semibold text-[#8A6A3F] mb-4">Benefits of Ayurveda</h3>
+                  <ul className="space-y-2.5">
+                    {AYURVEDA_BENEFITS.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-base leading-relaxed text-[#1A1A1A]">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#8A6A3F]" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="grid gap-6 rounded-2xl bg-[#1F5E4B]/10 p-6 sm:grid-cols-12 sm:p-8">
-                  <div className="order-2 sm:order-1 sm:col-span-8">
-                    <ul className="space-y-2.5">
-                      {ALLOPATHY_BENEFITS.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-base leading-relaxed text-[#1A1A1A]">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="order-1 text-right sm:order-2 sm:col-span-4">
-                    <h3 className="text-base font-semibold text-[#1F5E4B]">Benefits of Allopathy</h3>
-                  </div>
+                <div className="rounded-2xl bg-[#1F5E4B]/10 p-6 sm:p-8">
+                  <h3 className="text-lg font-semibold text-[#1F5E4B] mb-4">Benefits of Allopathy</h3>
+                  <ul className="space-y-2.5">
+                    {ALLOPATHY_BENEFITS.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-base leading-relaxed text-[#1A1A1A]">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1F5E4B]" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </section>
 
               {/* ---- 8. Combined: image left / text right ---- */}
               <section id="combined" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
                 <div className="order-2 sm:order-1 sm:col-span-5">
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:sticky sm:top-8">
-                    <Image src={IMAGES.consultation.src} alt={IMAGES.consultation.alt} fill sizes="(max-width: 640px) 100vw, 340px" className="object-cover" />
+                  <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl sm:sticky sm:top-8">
+                    <Image src={IMAGES.consultation.src} alt={IMAGES.consultation.alt} fill sizes="(max-width: 640px) 100vw, 380px" className="object-cover" />
                   </div>
                 </div>
                 <div className="order-1 sm:order-2 sm:col-span-7">
@@ -762,25 +754,23 @@ export default function AyurvedaVsAllopathyPage() {
                 </p>
               </section>
 
-              {/* ---- 10. Process: label left / steps right ---- */}
-              <section id="process" className="scroll-mt-24 grid gap-8 sm:grid-cols-12">
-                <div className="sm:col-span-4">
+              {/* ---- 10. Process ---- */}
+              <section id="process" className="scroll-mt-24">
+                <div className="max-w-3xl">
                   <SectionHeading eyebrow="Your Journey" title="Treatment Process at RamaCare Polyclinic" />
                 </div>
-                <div className="sm:col-span-8">
-                  <div className="space-y-4">
-                    {PROCESS.map((p, i) => (
-                      <div key={p.name} className="flex items-start gap-4 rounded-xl border border-gray-100 p-4 transition-colors hover:bg-[#F9F7F2]">
-                        <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#1F5E4B] text-xs font-bold text-white">
-                          {i + 1}
-                        </span>
-                        <div>
-                          <p className="text-base font-semibold text-[#1A1A1A]">{p.name}</p>
-                          <p className="mt-0.5 text-base leading-relaxed text-[#5F5F5F]">{p.desc}</p>
-                        </div>
+                <div className="mt-6 space-y-4">
+                  {PROCESS.map((p, i) => (
+                    <div key={p.name} className="flex items-start gap-4 rounded-xl border border-gray-100 p-4 transition-colors hover:bg-[#F9F7F2]">
+                      <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#1F5E4B] text-xs font-bold text-white">
+                        {i + 1}
+                      </span>
+                      <div>
+                        <p className="text-base font-semibold text-[#1A1A1A]">{p.name}</p>
+                        <p className="mt-0.5 text-base leading-relaxed text-[#5F5F5F]">{p.desc}</p>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </section>
 

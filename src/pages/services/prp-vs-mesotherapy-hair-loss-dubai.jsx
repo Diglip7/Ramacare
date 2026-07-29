@@ -719,7 +719,7 @@ export default function PrpVsMesotherapyPage() {
           </div>
         </div>
       </section>
-
+      
       {/* ============ Conclusion + final CTA ============ */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4">Take the Next Step Toward Healthier Hair</h2>
@@ -740,7 +740,6 @@ export default function PrpVsMesotherapyPage() {
             <LucideIcons.MessageCircle className="w-4 h-4" /> Message Us on WhatsApp
           </button>
         </div>
-
         <p className="text-xs text-[#5F5F5F] leading-relaxed mt-10 text-left">
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This article is intended for general informational purposes only and does not constitute medical advice. Results from PRP and mesotherapy treatments vary by patient and depend on individual health, hair loss cause, and severity. Please consult a licensed physician at RamaCare Polyclinic for a personalized diagnosis and treatment recommendation before undergoing any procedure.
         </p>
@@ -762,7 +761,6 @@ export default function PrpVsMesotherapyPage() {
           </button>
         </div>
       </div>
-
     </Layout>
   );
 }

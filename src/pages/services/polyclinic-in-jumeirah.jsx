@@ -483,8 +483,7 @@ export default function PolyclinicInJumeirahPage() {
                                 href={waLink(`Hello RamaCare, I'd like to ${s.cta.toLowerCase()}.`)}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 rounded-lg bg-[#1F5E4B] px-6 py-3 text-sm font-semibold text-white hover:bg-[#17493B] shadow-sm hover:shadow transition-all duration-200"
-                              >
+                                className="inline-flex items-center gap-2 rounded-lg bg-[#1F5E4B] px-6 py-3 text-sm font-semibold text-white hover:bg-[#17493B] shadow-sm hover:shadow transition-all duration-200">
                                 <MessageCircle className="h-4 w-4" /> {s.cta}
                               </a>
                             </div>

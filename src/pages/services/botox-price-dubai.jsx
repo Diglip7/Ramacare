@@ -516,7 +516,7 @@ export default function BotoxPriceDubaiPage() {
           </p>
           <div className="mb-10 rounded-2xl overflow-hidden">
             <img
-              src="/images/aesth.jpg"
+              src="/images/Facial assessment consultation for Botox price.jpg"
               alt="Facial assessment consultation for Botox price Dubai planning"
               className="w-full h-[260px] object-cover"
             />
@@ -588,7 +588,7 @@ export default function BotoxPriceDubaiPage() {
           </div>
           <div className="rounded-xl overflow-hidden">
             <img
-              src="/images/dr.jpg"
+              src="/images/Post-Botox aftercare guidance at RamaCare Polyclinic.jpg"
               alt="Post-Botox aftercare guidance at RamaCare Polyclinic"
               className="w-full h-[240px] object-cover"
             />

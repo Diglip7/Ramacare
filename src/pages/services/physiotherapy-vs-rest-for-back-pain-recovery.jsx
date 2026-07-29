@@ -433,7 +433,7 @@ export default function PhysiotherapyVsRestPage() {
                 </div>
               ))}
             </div>
-            <div className="relative rounded-2xl overflow-hidden lg:sticky lg:top-20">
+            <div className="relative rounded-2xl overflow-hidden lg:sticky lg:top-24 h-[350px] sm:h-[500px] lg:h-[650px] w-full">
               <Image
                 src="/images/spine-anatomy-illustration-lower-back-pain.jpg"
                 alt="Spine anatomy illustration showing lumbar region and nerve pathways"
@@ -442,7 +442,6 @@ export default function PhysiotherapyVsRestPage() {
                 className="object-cover"
                 priority
               />
-              <div className="relative w-full h-[280px] sm:h-[420px]" />
             </div>
           </div>
         </div>
@@ -465,7 +464,7 @@ export default function PhysiotherapyVsRestPage() {
               </div>
             ))}
           </div>
-          <div className="relative rounded-2xl overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[350px] lg:h-full lg:min-h-[380px] w-full lg:self-stretch">
             <Image
               src="/images/person-resting-lower-back-pain.jpg"
               alt="Person resting with lower back pain at home"
@@ -473,7 +472,6 @@ export default function PhysiotherapyVsRestPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div className="relative w-full h-[260px]" />
           </div>
         </div>
 
@@ -512,16 +510,15 @@ export default function PhysiotherapyVsRestPage() {
                 </div>
               ))}
             </div>
-            <div className="relative rounded-2xl overflow-hidden">
-            <Image
-              src="/images/physiotherapist-guiding-back-pain-exercises-dubai.jpg"
-              alt="Physiotherapist guiding back pain exercises in Dubai clinic"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div className="relative w-full h-[280px]" />
-          </div>
+            <div className="relative rounded-2xl overflow-hidden h-[320px] sm:h-[400px] lg:h-full lg:min-h-[480px] w-full lg:self-stretch">
+              <Image
+                src="/images/physiotherapist-guiding-back-pain-exercises-dubai.jpg"
+                alt="Physiotherapist guiding back pain exercises in Dubai clinic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -559,15 +556,14 @@ export default function PhysiotherapyVsRestPage() {
         <p className="text-base text-[#5F5F5F] leading-relaxed mt-8 text-center max-w-2xl mx-auto">
           In short: rest has a real but narrow role, mainly in the first day or two after a severe flare-up. Physiotherapy is the stronger option for almost everything that follows — including recovery from more serious causes such as sciatica or a slip disc, once red flags have been ruled out.
         </p>
-        <div className="relative rounded-2xl overflow-hidden mt-8">
+        <div className="relative rounded-2xl overflow-hidden mt-8 bg-white border border-[#E9E2D6] h-[300px] sm:h-[450px] lg:h-[600px] w-full">
           <Image
             src="/images/physiotherapy-vs-rest-back-pain-recovery-infographic.jpg"
             alt="Physiotherapy vs Rest for Back Pain Recovery comparison infographic"
             fill
             sizes="(max-width: 1024px) 100vw, 80vw"
-            className="object-cover"
+            className="object-contain"
           />
-          <div className="relative w-full h-[220px] sm:h-[300px]" />
         </div>
       </section>
 
@@ -677,7 +673,7 @@ export default function PhysiotherapyVsRestPage() {
               ))}
             </ul>
           </div>
-          <div className="relative rounded-2xl overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden h-[320px] sm:h-[400px] lg:h-full lg:min-h-[450px] w-full lg:self-stretch">
             <Image
               src="/images/core-strengthening-exercise-back-pain-dubai.jpg"
               alt="Core strengthening exercise for back pain recovery"
@@ -685,7 +681,6 @@ export default function PhysiotherapyVsRestPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div className="relative w-full h-[300px]" />
           </div>
         </div>
       </section>
@@ -710,7 +705,7 @@ export default function PhysiotherapyVsRestPage() {
             })}
           </div>
         </div>
-        <div className="relative rounded-2xl overflow-hidden mt-10">
+        <div className="relative rounded-2xl overflow-hidden mt-10 h-[300px] sm:h-[450px] lg:h-[550px] w-full">
           <Image
             src="/images/back-pain-assessment-ramacare-dubai.jpg"
             alt="Back pain assessment at RamaCare Polyclinic Dubai"
@@ -718,7 +713,6 @@ export default function PhysiotherapyVsRestPage() {
             sizes="(max-width: 1024px) 100vw, 80vw"
             className="object-cover"
           />
-          <div className="relative w-full h-[260px]" />
         </div>
       </section>
 

@@ -345,12 +345,11 @@ export default function DryNeedlingVsMassagePage() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="rounded-2xl overflow-hidden">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
             <img
               src="/images/dry-needling-vs-massage-therapy-dubai.jpg"
               alt="Physiotherapist comparing dry needling vs massage therapy Dubai treatment for a patient at RamaCare Polyclinic"
-              title="dry-needling-vs-massage-therapy-dubai-ramacare"
-              className="w-full h-[320px] sm:h-[400px] object-cover"
+              className="w-full h-auto rounded-2xl shadow-md"
             />
           </motion.div>
         </div>
@@ -389,32 +388,35 @@ export default function DryNeedlingVsMassagePage() {
         <p className="text-base text-[#5F5F5F] leading-relaxed mb-4">
           Dry needling is a technique used by trained physiotherapists to treat trigger points and muscle tightness. It involves inserting thin, sterile, single-use needles directly into or near a trigger point within the muscle. Unlike acupuncture, which is rooted in traditional Chinese medicine and works along energy meridians, dry needling is grounded in Western anatomical and neurophysiological principles — hence the &quot;dry&quot; in the name, referring to the fact that no medication or injection fluid is used.
         </p>
-        <p className="text-base font-semibold text-[#1A1A1A] mb-2 mt-6">How It Works</p>
-        <p className="text-base text-[#5F5F5F] leading-relaxed mb-6">
-          When the needle is inserted into a trigger point, it can trigger a local twitch response — a brief involuntary contraction of the muscle fibre. This response is thought to help disrupt the dysfunctional contraction cycle within the muscle, promoting relaxation, improved blood flow, and reduced pain sensitivity in the area.
-        </p>
-
-        <div className="grid sm:grid-cols-2 gap-10 items-start">
-          <div>
-            <p className="text-base font-semibold text-[#1A1A1A] mb-3">Key Benefits</p>
-            <ul className="space-y-2">
-              {dryNeedlingBenefits.map((b) => (
-                <li key={b} className="flex gap-2.5 text-base text-[#1A1A1A]/85 leading-relaxed">
-                  <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {b}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 space-y-3 text-sm text-[#5F5F5F] leading-relaxed">
-              <p><span className="font-semibold text-[#1A1A1A]">Who performs it:</span> In a clinical setting, dry needling should only be performed by trained and licensed physiotherapists. At RamaCare, dry needling is delivered exclusively by qualified physiotherapists following a proper clinical assessment.</p>
-              <p><span className="font-semibold text-[#1A1A1A]">Evidence base:</span> A growing body of physiotherapy research supports dry needling as part of a broader treatment plan for myofascial pain, particularly combined with exercise-based rehabilitation.</p>
-              <p><span className="font-semibold text-[#1A1A1A]">Safety and hygiene:</span> Reputable clinics use single-use, sterile, individually packaged needles for every session. Mild soreness, bruising, or temporary fatigue is common and typically resolves within a day or two.</p>
+        <div className="grid sm:grid-cols-2 gap-10 items-start mt-6">
+          <div className="flex flex-col justify-between h-full py-2">
+            <div>
+              <p className="text-base font-semibold text-[#1A1A1A] mb-2">How It Works</p>
+              <p className="text-base text-[#5F5F5F] leading-relaxed mb-6">
+                When the needle is inserted into a trigger point, it can trigger a local twitch response — a brief involuntary contraction of the muscle fibre. This response is thought to help disrupt the dysfunctional contraction cycle within the muscle, promoting relaxation, improved blood flow, and reduced pain sensitivity in the area.
+              </p>
+              <p className="text-lg font-bold text-[#1A1A1A] mb-4">Key Benefits</p>
+              <ul className="space-y-4">
+                {dryNeedlingBenefits.map((b) => (
+                  <li key={b} className="flex gap-2.5 text-base text-[#1A1A1A]/85 leading-relaxed">
+                    <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-1" /> {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-8 space-y-5 text-base text-[#5F5F5F] leading-relaxed">
+              <p><span className="font-bold text-[#1A1A1A]">Who performs it:</span> In a clinical setting, dry needling should only be performed by trained and licensed physiotherapists. At RamaCare, dry needling is delivered exclusively by qualified physiotherapists following a proper clinical assessment.</p>
+              <p><span className="font-bold text-[#1A1A1A]">Evidence base:</span> A growing body of physiotherapy research supports dry needling as part of a broader treatment plan for myofascial pain, particularly combined with exercise-based rehabilitation.</p>
+              <p><span className="font-bold text-[#1A1A1A]">Safety and hygiene:</span> Reputable clinics use single-use, sterile, individually packaged needles for every session. Mild soreness, bruising, or temporary fatigue is common and typically resolves within a day or two.</p>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden">
-            <img
+          <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-sm">
+            <Image
               src="/images/dry-needling-trigger-point-shoulder-ramacare.jpg"
               alt="Dry needling trigger point treatment Dubai physiotherapist"
-              className="w-full h-[320px] object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
         </div>
@@ -443,23 +445,25 @@ export default function DryNeedlingVsMassagePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-10 items-start">
-            <div className="rounded-2xl overflow-hidden order-2 sm:order-1">
+            <div className="order-2 sm:order-1">
               <img
                 src="/images/deep-tissue-massage-session-ramacare.jpg"
                 alt="Deep tissue massage therapy Dubai session at RamaCare"
-                className="w-full h-[280px] object-cover"
+                className="w-full h-auto rounded-2xl shadow-sm"
               />
             </div>
-            <div className="order-1 sm:order-2">
-              <p className="text-base font-semibold text-[#1A1A1A] mb-3">Key Benefits</p>
-              <ul className="space-y-2">
-                {massageBenefits.map((b) => (
-                  <li key={b} className="flex gap-2.5 text-base text-[#1A1A1A]/85 leading-relaxed">
-                    <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {b}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed mt-4">
+            <div className="order-1 sm:order-2 flex flex-col justify-between h-full py-2">
+              <div>
+                <p className="text-lg font-bold text-[#1A1A1A] mb-4">Key Benefits</p>
+                <ul className="space-y-4">
+                  {massageBenefits.map((b) => (
+                    <li key={b} className="flex gap-2.5 text-base text-[#1A1A1A]/85 leading-relaxed">
+                      <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-1" /> {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-base text-[#5F5F5F] leading-relaxed mt-8">
                 Massage therapy tends to have a broader, more generalized effect on the body compared to the highly localized action of dry needling, making it a strong option for patients who want overall muscle relaxation, stress relief, or recovery support alongside physiotherapy.
               </p>
             </div>
@@ -474,11 +478,13 @@ export default function DryNeedlingVsMassagePage() {
           The table below summarizes the key differences to help you compare Dry Needling vs Massage Therapy Dubai treatment options at a glance.
         </p>
 
-        <div className="rounded-xl overflow-hidden mb-8">
-          <img
+        <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-xl border border-gray-100 bg-white mb-8">
+          <Image
             src="/images/dry-needling-vs-massage-comparison-chart.jpg"
             alt="Dry needling vs massage therapy Dubai comparison chart"
-            className="w-full h-[200px] object-cover"
+            fill
+            sizes="100vw"
+            className="object-contain"
           />
         </div>
 
@@ -623,11 +629,13 @@ export default function DryNeedlingVsMassagePage() {
       <section className="max-w-7xl mx-auto px-6 py-16">
         <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-8">Your Treatment Journey at RamaCare</h2>
 
-        <div className="rounded-2xl overflow-hidden mb-10">
-          <img
+        <div className="relative aspect-[16/6] w-full overflow-hidden rounded-2xl shadow-sm bg-white mb-10">
+          <Image
             src="/images/physiotherapy-assessment-consultation-ramacare.jpg"
             alt="Physiotherapy assessment Dubai before dry needling treatment"
-            className="w-full h-[240px] object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
         </div>
 

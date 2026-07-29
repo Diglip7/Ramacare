@@ -62,11 +62,11 @@ const WHATSAPP_NUMBER = '971566597878';
 /* Image slots — filenames/alt text match your SEO image recommendations doc.
    Drop real files into /public/images/ using these exact filenames. */
 const IMAGES = {
-  hero: { src: '/images/', alt: 'Tooth Pain Treatment Dubai - dentist examining patient at RamaCare Polyclinic' },
-  causes: { src: '/images/', alt: 'Illustration showing common causes of tooth pain including cavities and gum disease' },
-  diagnosis: { src: '/images/', alt: 'Dental X-ray being reviewed to diagnose tooth pain at Dubai clinic' },
-  treatment: { src: '/images/', alt: 'Root canal and filling treatment procedure for tooth pain relief in Dubai' },
-  team: { src: '/images/', alt: 'Friendly RamaCare Polyclinic dental team providing family dental care in Dubai' },
+  hero: { src: '/images/Tooth Pain Treatment Dubai.jpg', alt: 'Tooth Pain Treatment Dubai - dentist examining patient at RamaCare Polyclinic' },
+  causes: { src: '/images/Illustration showing common causes of tooth pain.jpg', alt: 'Illustration showing common causes of tooth pain including cavities and gum disease' },
+  diagnosis: { src: '/images/Dental X-ray.jpg', alt: 'Dental X-ray being reviewed to diagnose tooth pain at Dubai clinic' },
+  treatment: { src: '/images/Root canal and filling treatment procedure.jpg', alt: 'Root canal and filling treatment procedure for tooth pain relief in Dubai' },
+  team: { src: '/images/Friendly RamaCare Polyclinic dental team.jpg', alt: 'Friendly RamaCare Polyclinic dental team providing family dental care in Dubai' },
 };
 
 /* ------------------------------- Data ------------------------------- */
@@ -636,13 +636,13 @@ export default function ToothPainTreatmentPage() {
               </div>
 
               <div className="lg:col-span-6">
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-sm lg:sticky lg:top-24">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-sm lg:sticky lg:top-24 bg-white">
                   <Image
                     src={IMAGES.diagnosis.src}
                     alt={IMAGES.diagnosis.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </div>
