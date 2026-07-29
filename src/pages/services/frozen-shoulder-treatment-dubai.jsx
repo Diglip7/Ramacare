@@ -1507,8 +1507,6 @@ export default function FrozenShoulderTreatmentPage() {
                       <h3 className="text-lg font-bold text-[#1A1A1A] mb-1">Clinic Hours</h3>
                       <p className="text-[#5F5F5F] leading-relaxed">
                         Sunday - Saturday: 10:00 AM - 10:00 PM
-                        <br />
-                        Friday: 10:00 AM - 8:00 PM
                       </p>
                     </div>
                   </div>

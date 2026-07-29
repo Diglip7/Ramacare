@@ -157,6 +157,15 @@ export default function AnxietyTreatmentPage() {
       </Head>
 
       <ServicePageTemplate content={content} />
+
+      {/* Medical Disclaimer */}
+      <section className="py-10 bg-gray-50 border-t border-gray-150 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs text-gray-500 leading-relaxed">
+            <strong className="text-gray-700">Medical Disclaimer:</strong> This content is for general informational purposes only and does not constitute medical, psychiatric, or psychological advice, diagnosis, or treatment. RamaCare Polyclinic provides supportive, lifestyle-based wellness care and does not diagnose anxiety disorders or provide psychotherapy. If you are experiencing significant anxiety, panic attacks, or other mental health symptoms, including thoughts of self-harm, please consult an appropriately licensed mental health professional or seek emergency care. Individual results vary, and no specific outcome is guaranteed.
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 }

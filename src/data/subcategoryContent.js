@@ -288,6 +288,41 @@ export const subcategoryContent = {
           caption: "A simple plantar fascia stretch used as part of a home exercise program",
           aiPrompt: "A person seated and stretching their foot and toes with a towel, soft natural lighting, physiotherapy clinic setting, realistic photography style"
         },
+        exercise1PlantarFascia: {
+          src: "/images/foot-stretching-exercise-plantar-fasciitis.jpg",
+          alt: "Plantar fascia stretch exercise - pulling toes back to stretch foot sole",
+          aiPrompt: "Close-up of a person gently pulling their toes back to stretch the sole of their foot, clinical setting, soft natural lighting, realistic photography"
+        },
+        exercise2Calf: {
+          src: "/images/exercise-calf-stretch-wall.jpg",
+          alt: "Calf stretch exercise against wall for plantar fasciitis",
+          aiPrompt: "Person leaning into a wall with back leg straight to stretch calf muscle, physiotherapy clinic, natural lighting, realistic photography"
+        },
+        exercise3Towel: {
+          src: "/images/exercise-towel-stretch-foot.jpg",
+          alt: "Towel stretch exercise using towel around ball of foot",
+          aiPrompt: "Person seated using a towel around the ball of their foot to stretch, clinical setting, realistic photography"
+        },
+        exercise4HeelRaises: {
+          src: "/images/exercise-heel-raises-standing.jpg",
+          alt: "Heel raises exercise standing on toes to build calf strength",
+          aiPrompt: "Person slowly rising onto toes to build calf and foot strength, bright clinical setting, realistic photography"
+        },
+        exercise5ToeCurls: {
+          src: "/images/exercise-toe-curls-towel.jpg",
+          alt: "Toe curls exercise scrunching towel with toes",
+          aiPrompt: "Close-up of foot scrunching a towel with toes to strengthen small foot muscles, clinical setting, realistic photography"
+        },
+        exercise6FootRolling: {
+          src: "/images/exercise-foot-rolling-ball.jpg",
+          alt: "Foot rolling exercise using ball under arch to ease tension",
+          aiPrompt: "Person rolling arch of foot over a small exercise ball to ease tension, clinical setting, realistic photography"
+        },
+        exercise7MarblePickup: {
+          src: "/images/exercise-marble-pickup-toes.jpg",
+          alt: "Marble pickup exercise picking up marbles with toes",
+          aiPrompt: "Person picking up small marbles with their toes to build foot muscle control, clinical setting, realistic photography"
+        },
         gaitAnalysis: {
           src: "/images/gait-analysis-session-dubai-physiotherapy.jpg",
           alt: "Gait analysis session assessing walking mechanics for foot pain treatment",
@@ -399,13 +434,13 @@ export const subcategoryContent = {
       benefitsNote: "According to Mayo Clinic guidance, most cases of plantar fasciitis improve with conservative treatment when addressed consistently — which is exactly why early physiotherapy makes such a difference for Chronic Heel Pain Dubai patients who've been struggling for months.",
 
       exercises: [
-        { name: "Plantar Fascia Stretch", description: "Gently pulling the toes back to stretch the sole of the foot" },
-        { name: "Calf Stretch", description: "Leaning into a wall with the back leg straight to stretch the calf and Achilles tendon" },
-        { name: "Towel Stretch", description: "Using a towel around the ball of the foot to stretch the fascia while seated" },
-        { name: "Heel Raises", description: "Slowly rising onto the toes to build calf and foot strength" },
-        { name: "Toe Curls", description: "Scrunching a towel with the toes to strengthen the small foot muscles" },
-        { name: "Foot Rolling", description: "Rolling the arch over a ball to ease tension" },
-        { name: "Marble Pickup", description: "Picking up small objects with the toes to build foot muscle control" }
+        { name: "Plantar Fascia Stretch", description: "Gently pulling the toes back to stretch the sole of the foot", imageKey: "exercise1PlantarFascia" },
+        { name: "Calf Stretch", description: "Leaning into a wall with the back leg straight to stretch the calf and Achilles tendon", imageKey: "exercise2Calf" },
+        { name: "Towel Stretch", description: "Using a towel around the ball of the foot to stretch the fascia while seated", imageKey: "exercise3Towel" },
+        { name: "Heel Raises", description: "Slowly rising onto the toes to build calf and foot strength", imageKey: "exercise4HeelRaises" },
+        { name: "Toe Curls", description: "Scrunching a towel with the toes to strengthen the small foot muscles", imageKey: "exercise5ToeCurls" },
+        { name: "Foot Rolling", description: "Rolling the arch over a ball to ease tension", imageKey: "exercise6FootRolling" },
+        { name: "Marble Pickup", description: "Picking up small objects with the toes to build foot muscle control", imageKey: "exercise7MarblePickup" }
       ],
       exercisesNote: "These exercises should always be prescribed and guided by a physiotherapist, since incorrect technique or progressing too quickly can aggravate the fascia rather than help it heal.",
 
@@ -776,7 +811,7 @@ export const subcategoryContent = {
         metaDescription: "Struggling with shoulder pain? Get expert Shoulder Pain Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists. Book your appointment today.",
         keywords: "Shoulder Pain Treatment Dubai, Shoulder Impingement Syndrome Dubai, Shoulder Injury Treatment Dubai, Rotator Cuff Injury Dubai, Chronic Shoulder Pain Dubai, Shoulder Pain Specialist Dubai, Sports Shoulder Injury Dubai, Shoulder Physiotherapy Dubai, Frozen Shoulder Treatment Dubai, Shoulder Rehabilitation Dubai",
         slug: "/services/shoulder-pain-treatment-dubai",
-        canonical: "https://www.ramacarepolyclinic.com/shoulder-pain-treatment-dubai"
+        canonical: "https://www.ramacarepolyclinic.com/services/shoulder-pain-treatment-dubai"
       },
 
       breadcrumbs: [
@@ -1027,7 +1062,7 @@ export const subcategoryContent = {
         "Compassionate Patient Care — a supportive, patient-first environment throughout your recovery",
         "Flexible Appointment Scheduling — accommodating both routine and urgent cases"
       ],
-      whyChooseUsClosing: "These standards are part of why patients turn to us as a trusted best physiotherapy clinic Dubai choice for joint and muscle rehabilitation. For general physiotherapy needs beyond the shoulder, you can also explore our full {{Physiotherapy Dubai|/physiotherapy-dubai}} services.",
+      whyChooseUsClosing: "These standards are part of why patients turn to us as a trusted best physiotherapy clinic Dubai choice for joint and muscle rehabilitation. For general physiotherapy needs beyond the shoulder, you can also explore our full {{Physiotherapy Dubai|/services/physiotherapy-dubai}} services.",
 
       treatmentJourney: {
         stages: [
@@ -1045,15 +1080,15 @@ export const subcategoryContent = {
       },
 
       relatedServices: [
-        { label: "Physiotherapy Dubai", href: "/physiotherapy-dubai" },
-        { label: "Frozen Shoulder Treatment Dubai", href: "/frozen-shoulder-treatment-dubai" },
-        { label: "Neck Pain Treatment Dubai", href: "/neck-pain-treatment-dubai" },
-        { label: "Back Pain Treatment Dubai", href: "/back-pain-treatment-dubai" },
-        { label: "Sciatica Treatment Dubai", href: "/sciatica-treatment-dubai" },
-        { label: "Dry Needling Dubai", href: "/dry-needling-dubai" },
-        { label: "Electrotherapy Dubai", href: "/electrotherapy-dubai" },
-        { label: "Ultrasound Therapy Dubai", href: "/ultrasound-therapy-dubai" },
-        { label: "Sports Injury Rehabilitation Dubai", href: "/sports-injury-rehabilitation-dubai" }
+        { label: "Physiotherapy Dubai", href: "/services/physiotherapy-dubai" },
+        { label: "Frozen Shoulder Treatment Dubai", href: "/services/frozen-shoulder-treatment-dubai" },
+        { label: "Neck Pain Treatment Dubai", href: "/services/neck-pain-treatment-dubai" },
+        { label: "Back Pain Treatment Dubai", href: "/services/back-pain-treatment-dubai" },
+        { label: "Sciatica Treatment Dubai", href: "/services/sciatica-treatment-dubai" },
+        { label: "Dry Needling Dubai", href: "/services/dry-needling-dubai" },
+        { label: "Electrotherapy Dubai", href: "/services/electrotherapy-dubai" },
+        { label: "Ultrasound Therapy Dubai", href: "/services/ultrasound-therapy-dubai" },
+        { label: "Sports Injury Rehabilitation Dubai", href: "/services/sports-injury-rehabilitation-dubai" }
       ],
 
       faqs: [
@@ -39580,17 +39615,15 @@ Seek a cost-effective smile restoration`
       recoveryTimeline: {
         title: "Recovery & Long-Term Management",
         cases: [
-          { name: "Mild / Early Stage", description: "Focuses on joint preservation, low-impact exercise, and flare-up prevention. Progress is often noticed in 2-4 weeks of regular physical therapy." },
+          { name: "Mild / Early Stage", description: "Often starts showing improvement within 2–4 sessions of targeted physiotherapy." },
           { name: "Moderate / Structural Wear", description: "Aims to restore joint range of motion, build surrounding muscle strength, and protect joint surfaces. Significant improvements in function occur in 4-8 weeks." },
           { name: "Severe / Advanced joint change", description: "Addresses pain relief, maximizing compensatory strategies, and pre/post-operative rehabilitation. Ongoing periodic maintenance supports lasting joint function." }
         ],
-        factorsIntro: "Key management factors:",
+        factorsIntro: "Recovery and wellness outcomes depend heavily on daily habits, initial symptom severity, and overall lifestyle alignment. Key contributors include:",
         factors: [
-          "Type of arthritis",
-          "Degree of joint cartilage change",
-          "Compliance with exercise program",
-          "Activity level",
-          "Weight management"
+          "Consistency with recommended physical exercises",
+          "Integration of stress management and relaxation habits",
+          "Coordination with medical and psychological specialists when needed"
         ]
       },
       whyChooseUs: {

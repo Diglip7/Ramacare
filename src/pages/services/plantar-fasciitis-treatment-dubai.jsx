@@ -1,5 +1,6 @@
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Image from "next/image";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
@@ -697,7 +698,7 @@ export default function PlantarFasciitisTreatmentPage() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-[1fr_1.4fr] gap-8">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-8">
             <div className="space-y-2">
               {exercises.map(function (ex, i) {
                 const isActive = activeExercise === i;
@@ -730,15 +731,24 @@ export default function PlantarFasciitisTreatmentPage() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-[#F5F1E8] rounded-2xl overflow-hidden flex flex-col"
             >
-              {images && images.stretching ? (
-                <img
-                  src={images.stretching.src}
-                  alt={images.stretching.alt}
-                  loading="lazy"
-                  className="w-full h-48 object-cover"
-                />
-              ) : null}
-              <div className="p-8 flex flex-col justify-center flex-1">
+              {(() => {
+                const currentExercise = exercises[activeExercise];
+                const imageData = currentExercise?.imageKey && images?.[currentExercise.imageKey]
+                  ? images[currentExercise.imageKey]
+                  : images?.stretching;
+                return imageData ? (
+                  <div className="relative w-full aspect-[16/9]">
+                    <Image
+                      src={imageData.src}
+                      alt={imageData.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : null;
+              })()}
+              <div className="p-6 sm:p-8 flex flex-col justify-center flex-1">
                 <Activity className="w-10 h-10 text-[#1F5E4B] mb-4" />
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3">
                   {exercises[activeExercise].name}

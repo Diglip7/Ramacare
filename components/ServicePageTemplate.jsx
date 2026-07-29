@@ -71,6 +71,7 @@ export default function ServicePageTemplate({ content }) {
     treatmentOptions,
     physioFocus,
     treatmentProcess,
+    lifestyleTips,
     benefits,
     recoveryTimeline,
     whyChooseUs,
@@ -157,7 +158,7 @@ export default function ServicePageTemplate({ content }) {
           </nav>
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-
+  
             {/* Hero Copy */}
             <div className="lg:col-span-7">
               <span className="inline-flex items-center px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full mb-3 sm:mb-4">
@@ -541,7 +542,6 @@ export default function ServicePageTemplate({ content }) {
                 )}
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -549,7 +549,7 @@ export default function ServicePageTemplate({ content }) {
       {/* CAUSES AND RISK FACTORS */}
       <section id="causes" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className={riskFactors ? "grid lg:grid-cols-2 gap-12" : "max-w-3xl mx-auto"}>
 
             {/* Causes */}
             <div>
@@ -571,24 +571,25 @@ export default function ServicePageTemplate({ content }) {
             </div>
 
             {/* Risk Factors */}
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{riskFactors.title}</h2>
-              <p className="text-base text-[#5F5F5F] mb-6">{riskFactors.intro}</p>
-              <div className="space-y-3">
-                {(riskFactors.list || []).map((rf, idx) => (
-                  <div key={idx} className="bg-white p-4 rounded-xl shadow-sm border border-gray-150 flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-[#D4A574]/10 text-[#D4A574] font-bold text-xs flex items-center justify-center flex-shrink-0">
-                      {idx + 1}
+            {riskFactors && (
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{riskFactors.title}</h2>
+                <p className="text-base text-[#5F5F5F] mb-6">{riskFactors.intro}</p>
+                <div className="space-y-3">
+                  {(riskFactors.list || []).map((rf, idx) => (
+                    <div key={idx} className="bg-white p-4 rounded-xl shadow-sm border border-gray-150 flex items-start space-x-3">
+                      <div className="w-8 h-8 rounded-lg bg-[#D4A574]/10 text-[#D4A574] font-bold text-xs flex items-center justify-center flex-shrink-0">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-sm text-[#1A1A1A]">{rf.name}</h4>
+                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{rf.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-[#1A1A1A]">{rf.name}</h4>
-                      <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{rf.description}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-
+            )}
           </div>
         </div>
       </section>
@@ -598,6 +599,11 @@ export default function ServicePageTemplate({ content }) {
         <div className="max-w-4xl mx-auto text-center">
           <AlertTriangle className="w-12 h-12 text-[#D4A574] mx-auto mb-6" />
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">{whenToSeeDoctor.title}</h2>
+          {whenToSeeDoctor.intro && (
+            <p className="text-sm sm:text-base text-white/90 max-w-xl mx-auto mb-6 leading-relaxed">
+              {whenToSeeDoctor.intro}
+            </p>
+          )}
           <div className="bg-white/10 backdrop-blur-sm p-5 sm:p-6 rounded-2xl border border-white/20 mb-6 text-left max-w-2xl mx-auto space-y-3">
             {(whenToSeeDoctor.redFlags || []).map((flag, idx) => (
               <div key={idx} className="flex items-start space-x-2">
@@ -631,6 +637,11 @@ export default function ServicePageTemplate({ content }) {
               </div>
             ))}
           </div>
+          {diagnosis.outro && (
+            <div className="mt-10 text-center text-sm text-[#5F5F5F] max-w-2xl mx-auto italic">
+              <LinkedText text={diagnosis.outro} />
+            </div>
+          )}
         </div>
       </section>
 
@@ -713,6 +724,41 @@ export default function ServicePageTemplate({ content }) {
           </p>
         </div>
       </section>
+
+      {physioFocus && (
+        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{physioFocus.title}</h2>
+              <p className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed">
+                <LinkedText text={physioFocus.intro} />
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              {(physioFocus.goals || []).map((goal, idx) => (
+                <div key={idx} className="p-5 rounded-2xl bg-[#FCFDFB] border border-gray-150 shadow-sm hover:border-[#1F5E4B]/20 transition-all flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-[#1F5E4B]/5 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-base text-[#1A1A1A] mb-1">{goal.name}</h4>
+                    <p className="text-sm text-[#5F5F5F] leading-relaxed">
+                      <LinkedText text={goal.description} />
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {physioFocus.outro && (
+              <p className="text-sm sm:text-base text-[#5F5F5F] leading-relaxed italic text-center max-w-2xl mx-auto border-t border-gray-100 pt-6">
+                <LinkedText text={physioFocus.outro} />
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* INTERACTIVE RECOVERY TIMELINE SELECTOR */}
       <section id="recovery" className="py-12 md:py-20 px-4 bg-white">
@@ -803,7 +849,7 @@ export default function ServicePageTemplate({ content }) {
                 </div>
 
                 <div className="border-t border-gray-200/50 pt-6">
-                  <p className="text-xs font-semibold text-[#5F5F5F] uppercase tracking-wider mb-2">
+                  <p className="text-sm sm:text-base font-semibold text-[#5F5F5F] tracking-wider mb-4">
                     {recoveryTimeline.factorsIntro}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -820,6 +866,36 @@ export default function ServicePageTemplate({ content }) {
           </div>
         </div>
       </section>
+
+      {benefits && (
+        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{benefits.title}</h2>
+              {benefits.intro && (
+                <p className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed">
+                  <LinkedText text={benefits.intro} />
+                </p>
+              )}
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
+              {(benefits.list || []).map((item, idx) => (
+                <div key={idx} className="flex items-start space-x-3 bg-[#FCFDFB] p-4 rounded-xl border border-gray-150 shadow-sm">
+                  <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
+                  <span className="text-[#1A1A1A] text-sm font-semibold">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            {benefits.outro && (
+              <p className="text-sm sm:text-base text-[#5F5F5F] leading-relaxed italic text-center max-w-2xl mx-auto border-t border-gray-100 pt-6">
+                <LinkedText text={benefits.outro} />
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* CLINICAL TREATMENT STEPPER PATHWAY */}
       <section id="pathway" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
@@ -843,8 +919,38 @@ export default function ServicePageTemplate({ content }) {
               </div>
             ))}
           </div>
+          {treatmentProcess.outro && (
+            <div className="mt-10 text-center text-sm text-[#5F5F5F] max-w-2xl mx-auto italic">
+              <LinkedText text={treatmentProcess.outro} />
+            </div>
+          )}
         </div>
       </section>
+
+      {lifestyleTips && (
+        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{lifestyleTips.title}</h2>
+              <p className="text-base sm:text-lg text-[#5F5F5F]">{lifestyleTips.intro}</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {(lifestyleTips.list || []).map((tip, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-[#FCFDFB] border border-gray-200 hover:border-[#1F5E4B]/30 hover:shadow-md transition-all flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-[#1F5E4B]/5 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm text-[#1A1A1A] mb-1">{tip.name}</h4>
+                    <p className="text-xs text-[#5F5F5F] leading-relaxed">{tip.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* WHY CHOOSE US, DIAGNOSTIC EQUIPMENT (IMAGE 5) & PHYSIOTHERAPISTS */}
       <section className="py-12 md:py-20 px-4 bg-white">

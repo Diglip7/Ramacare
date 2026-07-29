@@ -34,7 +34,7 @@ export const newPagesContent = {
       badge: "DHA Licensed & Trusted",
       heading: "Anxiety Treatment Dubai",
       subheading: "Supportive Physical & Lifestyle Wellness Care",
-      intro: "Anxiety doesn’t always look like panic. Sometimes it’s a tight chest before a meeting, a mind that won’t switch off at 2 a.m., or a low hum of worry that follows you through the day without ever fully naming itself. If you’ve been searching for Anxiety Treatment Dubai, you’re likely somewhere on that spectrum — not necessarily in crisis, but tired of carrying it. At RamaCare Polyclinic, our DHA-licensed team offers personalized, supportive care for the physical and lifestyle side of anxiety — muscle tension, disrupted sleep, restlessness, and fatigue — through physiotherapy, Ayurvedic wellness consultation, and practical daily-life guidance.",
+      intro: "Anxiety doesn’t always look like panic. Sometimes it’s a tight chest before a meeting, a mind that won’t switch off at 2 a.m., or a low hum of worry that follows you through the day without ever fully naming itself. If you’ve been searching for Anxiety Treatment Dubai, you’re likely somewhere on that spectrum — not necessarily in crisis, but tired of carrying it.\n\nAt RamaCare Polyclinic, our DHA-licensed team offers personalized, supportive care for the physical and lifestyle side of anxiety — muscle tension, disrupted sleep, restlessness, and fatigue — through physiotherapy, Ayurvedic wellness consultation, and practical daily-life guidance. Every plan is built around your specific symptoms and routine, not a generic script. And if what you’re experiencing points to something that needs clinical mental health care, we’ll help you understand that and guide you toward the right specialist.\n\nReady to take the first step? Book your consultation with RamaCare Polyclinic today.",
       expect: [
         "Every plan is built around your specific symptoms and routine, not a generic script",
         "DHA-licensed team offering physiotherapy and Ayurveda wellness consultation",
@@ -53,11 +53,11 @@ export const newPagesContent = {
       intro: "Anxiety is the body and mind’s response to a perceived threat or uncertainty — a mix of physical arousal (a faster heartbeat, tense muscles, shallow breathing) and mental activity (worry, racing thoughts, a sense of dread). According to the American Psychological Association, anxiety is distinct from stress in one important way: stress is usually a response to an identifiable external trigger, while anxiety can persist as excessive worry even after the original trigger has passed.",
       earlyTreatment: {
         title: "Occasional vs. Persistent Anxiety",
-        paragraph: "Occasional anxiety is a normal, protective response — nerves before a job interview, worry before a medical test, tension during a difficult conversation. It tends to ease once the situation resolves. Persistent anxiety lingers for weeks or months, often attaching itself to multiple areas of life at once — work, health, family, finances — and it doesn’t fully go away even when things are objectively fine."
+        paragraph: "Occasional anxiety is a normal, protective response — nerves before a job interview, worry before a medical test, tension during a difficult conversation. It tends to ease once the situation resolves.\n\nPersistent anxiety is different. It lingers for weeks or months, often attaching itself to multiple areas of life at once — work, health, family, finances — and it doesn’t fully go away even when things are objectively fine. When this pattern continues for an extended period, it’s often described as chronic anxiety, and it’s the pattern that benefits most from a structured, personalized approach — and in some cases from evaluation by a licensed mental health professional."
       },
       lumbarVsCervical: {
         title: "Recognizing Patterns",
-        paragraph: "Anxiety also shows up in recognizable patterns: physical anxiety (muscle tension, racing heart, shallow breathing), emotional anxiety (persistent worry, unease), workplace anxiety (performance pressure, difficulty switching off), and sleep-related anxiety (racing mind, frequent waking)."
+        paragraph: "Anxiety also shows up in recognizable patterns:\n• Physical anxiety — muscle tension, a racing heart, shallow or rapid breathing, digestive upset\n• Emotional anxiety — persistent worry, irritability, a sense of dread or unease\n• Workplace anxiety — performance pressure, tight deadlines, fear of falling behind, difficulty switching off after hours\n• Sleep-related anxiety — a mind that races at bedtime, frequent waking, or feeling wired despite exhaustion"
       },
       misconceptions: {
         title: "Functional Impact",
@@ -78,16 +78,18 @@ export const newPagesContent = {
       title: "Common Symptoms",
       intro: "Anxiety rarely stays confined to “just thoughts.” It tends to show up physically just as often. Common indicators include:",
       list: [
-        { name: "Excessive worry", description: "Excessive or hard-to-control worry and racing thoughts." },
-        { name: "Restlessness", description: "Or a sense of being 'on edge' and alert." },
-        { name: "Sleep issues", description: "Difficulty falling or staying asleep." },
-        { name: "Persistent fatigue", description: "Fatigue and low energy levels, even after rest." },
-        { name: "Muscle tension", description: "Especially in the neck and shoulders." },
-        { name: "Headaches", description: "Tension-type headaches." },
-        { name: "Rapid heartbeat", description: "A rapid or pounding heartbeat." },
-        { name: "Concentration", description: "Difficulty concentrating." },
-        { name: "Digestive discomfort", description: "Stomach issues or gut symptoms." },
-        { name: "Shallow breathing", description: "Shallow or rapid breathing." }
+        { name: "Excessive or hard-to-control worry", description: "Persistent thoughts and difficulty switching off." },
+        { name: "Restlessness or a sense of being “on edge”", description: "Feeling wound-up, jittery, or unable to relax." },
+        { name: "Difficulty falling or staying asleep", description: "Disrupted sleep patterns or lying awake." },
+        { name: "Persistent fatigue, even after rest", description: "Feeling constantly tired or depleted of energy." },
+        { name: "Muscle tension, especially in the neck and shoulders", description: "Unconscious guarding or physical stiffness." },
+        { name: "Neck and shoulder tightness", description: "Sustained contraction from ongoing stress." },
+        { name: "Tension-type headaches", description: "Dull pain or pressure around the forehead or base of skull." },
+        { name: "A rapid or pounding heartbeat", description: "Heightened physical activation even at rest." },
+        { name: "Difficulty concentrating", description: "A racing mind or feeling easily distracted." },
+        { name: "Digestive discomfort", description: "Stomach butterflies, nausea, or regular unsettled feeling." },
+        { name: "Irritability", description: "Having a shorter fuse or feeling easily frustrated." },
+        { name: "Shallow or rapid breathing", description: "Changes in breathing patterns during moments of worry." }
       ],
       outro: "Many patients first come to RamaCare for the physical symptoms alone — a stiff neck, recurring tension headaches, poor sleep — without immediately connecting them to anxiety. Looking at the full pattern is often what brings the picture into focus."
     },
@@ -107,18 +109,9 @@ export const newPagesContent = {
         { name: "Family history", description: "A genetic or environmental predisposition toward anxiety, as noted by the Cleveland Clinic." }
       ]
     },
-    riskFactors: {
-      title: "Who is Most Affected",
-      intro: "While anxiety is a universal human response, certain groups experience heightened levels due to their environment or profile:",
-      list: [
-        { name: "Corporate Professionals", description: "Exposed to high-performance metrics, regular deadlines, and digital overload." },
-        { name: "Expats relocating", description: "Managing new cultural environments, distance from family support systems." },
-        { name: "Caregivers & Parents", description: "Balanced work loads while managing children or sick family members." },
-        { name: "Chronic pain sufferers", description: "Dealing with sustained physical discomfort which drains nervous energy." }
-      ]
-    },
     whenToSeeDoctor: {
       title: "When Should You Seek Professional Help?",
+      intro: "Occasional worry is a normal part of life and usually resolves once the situation passes. It’s worth arranging a proper assessment if you notice:",
       redFlags: [
         "Persistent anxiety that affects your daily life for several weeks or more",
         "Difficulty sleeping that isn’t improving",
@@ -138,24 +131,25 @@ export const newPagesContent = {
         { name: "Stress and symptom review", description: "Identifying patterns, triggers, and how anxiety is showing up physically." },
         { name: "Physical examination", description: "Checking for physical signs of tension or strain, where relevant." },
         { name: "Musculoskeletal assessment", description: "Particularly for neck, shoulder, or upper back tension linked to anxiety." }
-      ]
+      ],
+      outro: "This gives our physiotherapists and wellness team a clear, individual picture, so the supportive care plan we build genuinely fits your circumstances rather than offering one-size-fits-all advice."
     },
     treatmentOptions: {
       title: "Anxiety Treatment Dubai: Supportive Care at RamaCare",
       intro: "Our approach to Anxiety Treatment Dubai takes a holistic view of supportive, evidence-informed care — addressing the physical, lifestyle, and daily-routine dimensions of anxiety together rather than in isolation.",
-      physioIntro: "Explore our full {{Ayurveda Dubai|/services/ayurveda-dubai/}}, {{Physiotherapy Dubai|/services/physiotherapy-dubai/}}, and {{Stress Treatment Dubai|/services/stress-treatment-dubai/}} services to see how these approaches work together as part of a broader wellness plan.",
+      physioIntro: "Explore our full {{Ayurveda Dubai|/services/ayurveda-dubai/}}, {{physiotherapy Dubai|/services/physiotherapy-dubai/}}, and {{Stress Treatment Dubai|/services/stress-treatment-dubai/}} services to see how these approaches work together as part of a broader wellness plan.",
       list: [
         { name: "Lifestyle counseling", description: "Practical, realistic adjustments to your daily routine." },
         { name: "Stress management education", description: "Understanding your own patterns and triggers." },
         { name: "Sleep hygiene guidance", description: "Practical steps to improve sleep quality." },
         { name: "Breathing exercises", description: "Simple, structured techniques you can use in the moment." },
         { name: "Relaxation techniques", description: "Supporting the body’s natural recovery response." },
-        { name: "Physiotherapy for muscle tension", description: "Addressing the physical toll of ongoing anxiety. Explore our {{Physiotherapy Dubai|/services/physiotherapy-dubai/}} page." },
+        { name: "Physiotherapy for muscle tension", description: "Addressing the physical toll of ongoing anxiety." },
         { name: "Gentle stretching programs", description: "To ease tension in commonly affected areas." },
         { name: "Exercise recommendations", description: "Tailored to your fitness level and schedule." },
-        { name: "Ayurvedic wellness consultation", description: "A complementary, lifestyle-based perspective. Explore our {{Ayurveda Dubai|/services/ayurveda-dubai/}} page." },
+        { name: "Ayurvedic wellness consultation, where clinically appropriate", description: "A complementary, lifestyle-based perspective." },
         { name: "Personalized wellness plans", description: "Built around your specific symptoms and circumstances." },
-        { name: "Referral", description: "To a licensed mental health professional when symptoms indicate it is clinically appropriate." }
+        { name: "Referral to a licensed mental health professional", description: "When your symptoms indicate this is clinically appropriate." }
       ],
       outro: "Every supportive care plan is built around your specific symptoms and routine, not a generic script."
     },
@@ -163,26 +157,46 @@ export const newPagesContent = {
       title: "Physiotherapy for Anxiety-Related Physical Symptoms",
       intro: "Anxiety has a very physical signature, and for many people it settles first in the neck, shoulders, and upper back. Physiotherapy can help address:",
       goals: [
-        { name: "Neck stiffness", description: "Guarding tension that builds from sustained, unconscious muscle protection. Explore our {{Neck Pain Treatment Dubai|/services/neck-pain-treatment-dubai/}}." },
-        { name: "Shoulder tension", description: "Often held without realizing it during anxious periods. Explore our {{Shoulder Pain Treatment Dubai|/services/shoulder-pain-treatment-dubai/}}." },
-        { name: "Upper back tightness", description: "Particularly between the shoulder blades. Explore our {{Back Pain Treatment Dubai|/services/back-pain-treatment-dubai/}}." },
-        { name: "Tension headaches", description: "Especially originating at the base of skull. Explore our {{Migraine Treatment Dubai|/services/migraine-treatment-dubai/}}." },
+        { name: "Neck stiffness", description: "Guarding tension that builds from sustained, unconscious muscle protection. Explore our {{neck pain|/services/neck-pain-treatment-dubai/}}." },
+        { name: "Shoulder tension", description: "Often held without realizing it during anxious periods. Explore our {{shoulder pain|/services/shoulder-pain-treatment-dubai/}}." },
+        { name: "Upper back tightness", description: "Particularly between the shoulder blades. Explore our {{back pain|/services/back-pain-treatment-dubai/}}." },
+        { name: "Tension headaches", description: "Especially originating at the base of skull. Explore our {{migraine treatment|/services/migraine-treatment-dubai/}}." },
         { name: "Poor posture", description: "Associated with anxiety and stress, such as rounded shoulders and a forward head position from prolonged tension." }
-      ]
+      ],
+      outro: "If tension has settled into a specific area, it’s worth exploring targeted support for {{neck pain|/services/neck-pain-treatment-dubai/}}, {{shoulder pain|/services/shoulder-pain-treatment-dubai/}}, or {{back pain|/services/back-pain-treatment-dubai/}} alongside your broader anxiety support plan. Persistent tension headaches can also be assessed as part of our {{migraine treatment|/services/migraine-treatment-dubai/}} services, and disrupted sleep patterns can be addressed through our {{insomnia treatment|/services/insomnia-treatment-dubai/}} support. Widespread joint stiffness linked to prolonged muscle guarding can also be evaluated through our {{joint pain treatment|/services/joint-pain-treatment-dubai/}} services."
     },
     treatmentProcess: {
       title: "Ayurvedic Wellness Support",
       intro: "For patients interested in a complementary, lifestyle-based approach, our Ayurvedic team offers wellness-focused support alongside conventional care, drawing on Ayurveda’s traditional mind-body perspective on daily routine and balance. This typically includes:",
       steps: [
-        { step: "1", name: "Personalized consultation", description: "To understand your constitution and current imbalances." },
+        { step: "1", name: "Personalized Ayurvedic consultation", description: "To understand your constitution and current imbalances." },
         { step: "2", name: "Daily routine recommendations", description: "To build more structure, rest, and predictability into your day." },
-        { step: "3", name: "Relaxation-focused therapies", description: "Designed to support the body’s natural recovery, including Abhyanga and Shirodhara." },
+        { step: "3", name: "Relaxation-focused therapies", description: "Designed to support the body’s natural recovery." },
         { step: "4", name: "Diet and lifestyle guidance", description: "That supports overall energy and emotional steadiness." },
         { step: "5", name: "Wellness-oriented herbal advice", description: "Discussed transparently and without unsupported treatment claims." }
+      ],
+      outro: "Ayurvedic support at RamaCare is offered as a complement to, not a replacement for, appropriate medical or mental health care where that’s needed. Learn more about our full {{Ayurveda Dubai|/services/ayurveda-dubai/}} offering."
+    },
+    lifestyleTips: {
+      title: "Lifestyle Tips for Managing Anxiety",
+      intro: "Alongside professional support, everyday habits make a meaningful difference:",
+      list: [
+        { name: "Regular physical activity", description: "Even moderate movement helps regulate stress hormones." },
+        { name: "Walking", description: "A simple, accessible way to build in daily movement and mental space." },
+        { name: "Yoga", description: "Combines movement, breath, and mindfulness." },
+        { name: "Meditation", description: "Even a few minutes daily can help settle a racing mind." },
+        { name: "Deep breathing", description: "A quick, practical tool for moments of acute worry." },
+        { name: "Healthy sleep habits", description: "A consistent routine improves sleep quality over time." },
+        { name: "Balanced nutrition", description: "Steady blood sugar and hydration support overall resilience." },
+        { name: "Reducing excessive caffeine", description: "Particularly in the afternoon and evening." },
+        { name: "Time management", description: "Realistic planning reduces the sense of being overwhelmed." },
+        { name: "Social support", description: "Staying connected with people who understand your situation." },
+        { name: "Mindfulness practices", description: "Bringing attention back to the present moment throughout the day." }
       ]
     },
     benefits: {
       title: "Benefits of Early Support",
+      intro: "Addressing anxiety-related symptoms before they become deeply entrenched tends to produce steadier, more sustainable results:",
       list: [
         "Better sleep quality",
         "Improved concentration",
@@ -190,7 +204,8 @@ export const newPagesContent = {
         "Better daily functioning",
         "Improved emotional wellbeing",
         "Better overall quality of life"
-      ]
+      ],
+      outro: "According to the World Health Organization and the National Institute of Mental Health, anxiety-related concerns are common and highly manageable with the right combination of support — and earlier, consistent attention is generally associated with better outcomes than waiting until symptoms become severe."
     },
     recoveryTimeline: {
       title: "Supportive Recovery & Outlook",
@@ -236,7 +251,7 @@ export const newPagesContent = {
       { question: "Can anxiety cause headaches or digestive discomfort?", answer: "Yes, both are recognized physical symptoms of anxiety for many people, linked to prolonged muscle tension and the body’s heightened stress response." },
       { question: "What lifestyle changes help most?", answer: "Regular physical activity, consistent sleep habits, mindfulness practices, reduced caffeine intake, and better time management are among the most consistently supported approaches." },
       { question: "When should I seek urgent mental health care?", answer: "If you experience severe anxiety, panic attacks, thoughts of self-harm, or any acute mental health crisis, seek help from a qualified mental health professional or emergency service immediately rather than waiting for a routine appointment." },
-      { question: "Why choose RamaCare for anxiety support?", answer: "Because our DHA-licensed team offers a genuinely personalized, evidence-based approach — combining physiotherapy, Ayurvedic wellness support, and practical lifestyle guidance, with clear referral pathways to licensed mental health professionals when needed — rather than generic, one-size-fits-all advice." }
+      { question: "Why choose RamaCare for Anxiety Treatment Dubai support?", answer: "Because our DHA-licensed team offers a genuinely personalized, evidence-based approach — combining physiotherapy, Ayurvedic wellness support, and practical lifestyle guidance, with clear referral pathways to licensed mental health professionals when needed — rather than generic, one-size-fits-all advice." }
     ],
     conclusion: {
       title: "Conclusion",
@@ -549,542 +564,6 @@ export const newPagesContent = {
         title: "Guided breathing and relaxation session in a modern clinic",
         alt: "Guided relaxation and breathing session for stress relief Dubai",
         caption: "Controlled breathing training teaches natural ways to down-regulate the nervous system."
-      }
-    }
-  },
-  'post-surgery-rehabilitation-dubai': {
-    byline: {
-      reviewer: "Jeena Mathew",
-      credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/1",
-      date: "July 2026"
-    },
-    seo: {
-      title: "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
-      metaTitle: "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
-      metaDescription: "Expert Post-Surgery Rehabilitation Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment today.",
-      keywords: "Post-Surgery Rehabilitation Dubai, post operative rehabilitation Dubai, knee replacement recovery Dubai, hip replacement recovery Dubai, ACL rehabilitation Dubai, rotator cuff repair Dubai, spine surgery rehab Dubai, physical therapy after surgery Jumeirah, sports surgery rehab Dubai, dry needling Dubai, ultrasound therapy Dubai, electrotherapy Dubai",
-      slug: "/post-surgery-rehabilitation-dubai",
-      canonical: "https://ramacarepolyclinic.ae/services/post-surgery-rehabilitation-dubai/"
-    },
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Services", href: "/services/" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
-      { label: "Post-Surgery Rehabilitation", href: "/services/post-surgery-rehabilitation-dubai/" }
-    ],
-    hero: {
-      badge: "DHA Licensed & Trusted",
-      heading: "Post-Surgery Rehabilitation Dubai",
-      subheading: "Personalized Post-Operative Physiotherapy & Recovery Protocols",
-      intro: "Surgery is often just the first step toward recovery — what happens afterward matters just as much. RamaCare Polyclinic's Post-Surgery Rehabilitation Dubai program is designed to help you heal faster, move more freely, and regain independence, guided by DHA-licensed physiotherapists working in step with your surgeon's protocol.",
-      expect: [
-        "Faster, more complete recovery through structured, progressive rehabilitation",
-        "Personalized rehabilitation plans built around your specific surgery and healing stage",
-        "Supervision by DHA-licensed physiotherapists, following your surgeon's recommended protocol",
-        "A clear, staged path back to daily activities, work, or sport"
-      ]
-    },
-    introText: {
-      title: "Introduction",
-      paragraph1: "Surgery addresses the structural problem — a torn ligament, a worn joint, a fractured bone — but the body still needs guided support to heal properly and regain full function. This is exactly why Post-Surgery Rehabilitation Dubai plays such an important role in the overall recovery journey. Without it, many patients experience prolonged stiffness, incomplete strength recovery, or a slower return to the activities that matter to them.",
-      paragraph2: "Rehabilitation after surgery serves several essential purposes: preventing complications like blood clots or excessive scar tissue, restoring movement that naturally decreases during recovery, reducing post-operative pain, and helping patients regain the independence to manage daily tasks without assistance. Each of these goals requires a structured, professionally guided approach rather than simply \"waiting it out.\"",
-      paragraph3: "At RamaCare Polyclinic, our physiotherapy team works closely with your surgical history and your surgeon's recommendations to build a rehabilitation plan suited to your specific procedure, healing stage, and personal goals — whether that's walking comfortably again, returning to work, or getting back to sport. Muscles that go unused during immobilization weaken quickly, joints that aren't moved through their range can stiffen, and movement patterns can become guarded or compensatory if left unaddressed. Structured rehabilitation directly counters each of these tendencies, which is why it's considered a standard part of orthopedic and sports surgery recovery worldwide, not an optional add-on."
-    },
-    whatIs: {
-      title: "What Is Post-Surgery Rehabilitation?",
-      intro: "Post-surgery rehabilitation is a structured, progressive physiotherapy process designed to restore movement, strength, and function following an operation. It bridges the gap between the surgical procedure itself and a full return to normal activity.",
-      earlyTreatment: {
-        title: "Why Rehabilitation Matters",
-        paragraph: "Rehabilitation matters because surgery, while addressing the underlying structural issue, often results in temporary muscle weakness, joint stiffness, and reduced confidence in movement — all of which need deliberate, guided attention to resolve properly. Left unaddressed, these effects can persist well beyond the expected healing time."
-      },
-      lumbarVsCervical: {
-        title: "Structured Phases of Recovery",
-        paragraph: "The goals of physiotherapy after surgery typically include reducing pain and swelling, restoring range of motion, rebuilding strength, retraining movement patterns, and ultimately supporting a safe return to daily activities or sport. These goals are pursued in a specific sequence, often described as recovery phases, that respects how surgical tissue actually heals."
-      },
-      misconceptions: {
-        title: "Aligning with Surgeon Protocols",
-        paragraph: "Following your surgeon's protocol is essential throughout this process. Surgeons provide specific guidance based on the exact procedure performed — weight-bearing restrictions, movement precautions, or timelines for introducing certain exercises — and rehabilitation at RamaCare is always coordinated with these instructions rather than working independently of them."
-      }
-    },
-    types: {
-      title: "Conditions We Help After Surgery",
-      intro: "Our physiotherapy team supports rehabilitation across a wide range of surgical procedures, each requiring its own tailored approach to Post-Surgery Rehabilitation Dubai:",
-      list: [
-        { name: "Knee Replacement", description: "Restoring range of motion, strength, and walking ability following total or partial knee replacement." },
-        { name: "Hip Replacement", description: "Rebuilding strength and mobility while respecting hip precautions during early recovery." },
-        { name: "ACL Reconstruction", description: "A structured, sports-focused rehabilitation pathway supporting return to pivoting and cutting activities." },
-        { name: "Meniscus Surgery", description: "Restoring knee function and protecting the joint surface during recovery." },
-        { name: "Rotator Cuff Repair", description: "Carefully progressed shoulder rehabilitation respecting tissue healing timelines." },
-        { name: "Shoulder Arthroscopy", description: "Restoring shoulder mobility and strength following minimally invasive shoulder procedures." },
-        { name: "Spine Surgery", description: "Supporting safe movement and core stability following spinal procedures." },
-        { name: "Disc Surgery", description: "Guided rehabilitation to restore function while protecting the surgical site." },
-        { name: "Fracture Fixation", description: "Restoring strength and movement following surgical repair of broken bones." },
-        { name: "Ligament Repair", description: "Rebuilding joint stability after surgical ligament reconstruction." },
-        { name: "Tendon Repair", description: "Carefully staged loading to protect healing tendon tissue while restoring function." },
-        { name: "Sports Surgery", description: "Sport-specific rehabilitation supporting a safe, confident return to competition." },
-        { name: "Foot & Ankle Surgery", description: "Restoring walking mechanics and lower limb function." },
-        { name: "Hand Surgery", description: "Fine motor and functional rehabilitation to support daily tasks and work activities." }
-      ]
-    },
-    signsSymptoms: {
-      title: "Symptoms That May Require Rehabilitation",
-      intro: "Certain signs after surgery suggest that structured physiotherapy would be beneficial. Select symptoms to review general advice:",
-      list: [
-        { name: "Joint stiffness", description: "Stiffness that limits normal movement in the affected joint." },
-        { name: "Muscle weakness", description: "Weakness or instability around the surgical site." },
-        { name: "Ongoing pain", description: "Pain beyond the expected initial recovery period." },
-        { name: "Persistent swelling", description: "Swelling that persists or fluctuates in the recovery zone." },
-        { name: "Gait difficulties", description: "Difficulty walking normally or needing assistive devices longer than expected." },
-        { name: "Limited range of motion", description: "Limited range of motion in the affected joint." },
-        { name: "Muscle atrophy", description: "Noticeable muscle loss or atrophy from immobilization." },
-        { name: "Balance issues", description: "Particularly after lower limb surgery." },
-        { name: "Stair difficulty", description: "Difficulty climbing stairs safely." },
-        { name: "Activity limitations", description: "Difficulty returning to sports or previous activity levels." }
-      ],
-      outro: "If you're noticing any of these signs, a rehabilitation assessment can help identify the right next steps."
-    },
-    causes: {
-      title: "Why Structured Rehabilitation is Essential After Surgery",
-      intro: "Committing to structured post operative rehabilitation Dubai patients receive offers physiological benefits that extend well beyond simply healing the surgical site. This is why Post-Surgery Rehabilitation Dubai is considered a core part of recovery:",
-      list: [
-        { name: "Faster recovery", description: "Guided, progressive loading of healing tissue under professional supervision." },
-        { name: "Improved mobility", description: "Restoring natural glide and movement patterns in the affected joint or limb." },
-        { name: "Stiffness reduction", description: "Early, appropriate mobilization reduces the tightness that naturally follows surgical trauma." },
-        { name: "Pain reduction", description: "Achieved through appropriate hands-on manual therapy, swelling control, and gentle movement." },
-        { name: "Scar tissue management", description: "Preventing adhesions and restrictions in joint capsules or fascial planes." },
-        { name: "Muscle rebuilding", description: "Rebuilding strength, volume, and control lost during surgery and the subsequent immobilization." },
-        { name: "Enhanced balance", description: "Restoring proprioceptive feedback, particularly important after lower limb procedures." },
-        { name: "Reduced complications", description: "Minimizing the risk of blood clots, excessive scarring, or long-term joint restrictions." }
-      ]
-    },
-    riskFactors: {
-      title: "Risks of Skipping Post-Operative Rehabilitation",
-      intro: "Deciding to 'wait it out' rather than pursuing structured, guided rehabilitation exposes patients to potential long-term issues:",
-      list: [
-        { name: "Persistent stiffness", description: "Unorganized scar tissue can lead to permanent loss of joint range of motion." },
-        { name: "Muscle atrophy", description: "Prolonged disuse leads to rapid muscle wasting and persistent weakness." },
-        { name: "Guarded gait patterns", description: "Compensatory walking patterns can strain other joints like the lower back or opposite knee." },
-        { name: "Chronic pain", description: "Poor joint mechanics and unmanaged scar tissue can contribute to long-term discomfort." }
-      ]
-    },
-    whenToSeeDoctor: {
-      title: "When Should You Contact Your Care Team?",
-      redFlags: [
-        "Sudden, severe increase in pain not relieved by prescribed medication",
-        "Excessive swelling, redness, or heat around the surgical incision site",
-        "Any fluid leakage, drainage, or opening of the surgical wound",
-        "Fever, chills, or other systemic signs of post-operative infection",
-        "Sudden calf pain, swelling, or redness (potential sign of DVT)",
-        "Sudden shortness of breath or chest pain (requires immediate emergency medical attention)"
-      ],
-      note: "These guidelines represent general post-surgical safety precautions. Please consult your operating surgeon or a physician at RamaCare Polyclinic, in coordination with your surgical team, for specific advice regarding your surgical recovery protocol. Never ignore signs of potential infection or vascular complications."
-    },
-    diagnosis: {
-      title: "Our Assessment Process",
-      intro: "A thorough assessment ensures your rehabilitation plan is built around your actual surgical history and current condition, not a generic template. At RamaCare, this typically includes:",
-      methods: [
-        { name: "Medical history review", description: "Understanding your overall health background, previous injuries, and baseline function." },
-        { name: "Surgical report review", description: "Examining details of the procedure performed and any specific notes from your surgeon." },
-        { name: "Surgeon protocol review", description: "Aligning rehabilitation directly with your operating surgeon's specific recommendations and timelines." },
-        { name: "Pain assessment", description: "Understanding current pain levels, patterns, and localized tissue sensitivity." },
-        { name: "Range of motion testing", description: "Measuring joint mobility against expected post-operative milestones." },
-        { name: "Muscle strength assessment", description: "Identifying areas of muscle loss, inhibition, or weakness needing focused attention." },
-        { name: "Functional movement testing", description: "Assessing how your body compensates and moves as a whole." },
-        { name: "Walking & gait assessment", description: "Reviewing walking mechanics, weight-bearing status, and any compensatory patterns." },
-        { name: "Goal setting", description: "Establishing clear, personalized recovery targets together for daily life, work, or sports." }
-      ]
-    },
-    treatmentOptions: {
-      title: "Post-Surgery Rehabilitation Dubai at RamaCare",
-      intro: "Our Post-Surgery Rehabilitation Dubai programs are structured around your specific procedure, healing stage, and personal recovery goals.",
-      physioIntro: "Explore our full {{Physiotherapy Dubai|/services/physiotherapy-dubai/}}, {{Sports Injury Rehabilitation Dubai|/services/sports-injury-rehabilitation-dubai/}}, and {{Knee Pain Treatment Dubai|/services/knee-pain-treatment-dubai/}} services to see how these techniques support recovery.",
-      list: [
-        { name: "Manual Therapy", description: "Hands-on techniques to reduce pain and improve joint and soft tissue mobility." },
-        { name: "Joint Mobilization", description: "Gentle, graded movement techniques to restore normal joint mechanics." },
-        { name: "Therapeutic Exercise", description: "Targeted exercises designed to restore strength, flexibility, and control." },
-        { name: "Strength Training", description: "Progressive resistance work to rebuild muscle lost during surgery and immobilization." },
-        { name: "Stretching", description: "Techniques to restore flexibility and reduce post-surgical stiffness." },
-        { name: "Balance Training", description: "Exercises to rebuild stability, particularly important after lower limb procedures." },
-        { name: "Gait Training", description: "Restoring normal, efficient walking mechanics after surgery affecting the legs or spine." },
-        { name: "Neuromuscular Re-education", description: "Retraining the connection between muscles and the nervous system for coordinated movement." },
-        { name: "Electrotherapy", description: "Supporting pain relief and muscle activation. Explore our {{Electrotherapy Dubai|/services/electrotherapy-dubai/}}." },
-        { name: "Ultrasound Therapy", description: "Supporting tissue healing and reducing localized discomfort. Explore our {{Ultrasound Therapy Dubai|/services/ultrasound-therapy-dubai/}}." },
-        { name: "Dry Needling", description: "Where appropriate, addressing muscular tightness and trigger points. Explore our {{Dry Needling Dubai|/services/dry-needling-dubai/}}." },
-        { name: "Taping", description: "Providing support and feedback to joints and muscles during early rehabilitation." },
-        { name: "Soft Tissue Release", description: "Reducing muscle tension and improving tissue mobility around the surgical area." },
-        { name: "Functional Training", description: "Practicing real-world movements relevant to daily life, work, or sport." }
-      ],
-      outro: "Every rehabilitation plan is personalized according to five key factors: your surgery type, your current healing stage, your pain level, your functional goals, and your broader medical history — ensuring the program fits you specifically, not a generic post-surgical template."
-    },
-    physioFocus: {
-      title: "Targeted Physiotherapy Interventions",
-      intro: "Our physiotherapists draw on a range of evidence-based techniques, selected according to your specific needs:",
-      goals: [
-        { name: "Joint Mobility", description: "Gentle joint mobilization and passive stretching to combat post-surgical stiffness. Explore our {{Shoulder Pain Treatment Dubai|/services/shoulder-pain-treatment-dubai/}} and {{Frozen Shoulder Treatment Dubai|/services/frozen-shoulder-treatment-dubai/}} pages." },
-        { name: "Muscle Re-activation", description: "Using electrotherapy and targeted activation drills to wake up muscles inhibited by surgical trauma." },
-        { name: "Biomechanics & Gait", description: "Retraining normal walking mechanics, stair climbing, and weight distribution. Explore our {{Sciatica Treatment Dubai|/services/sciatica-treatment-dubai/}} and {{Slip Disc Treatment Dubai|/services/slip-disc-treatment-dubai/}} pages." },
-        { name: "Scar Desensitization", description: "Using manual techniques to mobilize healed incision lines, preventing thick adhesions." }
-      ]
-    },
-    treatmentProcess: {
-      title: "What a Personalized Plan Looks Like",
-      intro: "No two recovery plans at RamaCare look identical, because no two patients arrive with the same combination of surgery, healing progress, and goals. We guide you through a phased process:",
-      steps: [
-        { step: "1", name: "Surgeon Protocol Alignment", description: "We review your surgeon's specific guidelines, precautions, and weight-bearing restrictions." },
-        { step: "2", name: "Comprehensive Assessment", description: "We assess your current range of motion, strength, gait mechanics, and pain levels." },
-        { step: "3", name: "Phased Exercise Progression", description: "We design a step-by-step exercise plan that safely increases loading as your tissues heal." },
-        { step: "4", name: "Functional Verification", description: "We perform objective strength and mobility testing before clearing you to return to sports or heavy daily tasks." }
-      ]
-    },
-    benefits: {
-      title: "Benefits of Early Rehabilitation",
-      list: [
-        "Reduced risk of post-operative complications like deep vein thrombosis (DVT)",
-        "Faster, more complete healing of surgical tissues through controlled loading",
-        "Better range of motion and minimized joint contractures or stiffness",
-        "Minimized muscle atrophy and faster strength recovery in key stabilizers",
-        "Reduced dependence on pain medications through natural pain-relief techniques",
-        "Restored balance and coordination to prevent falls during early recovery",
-        "Improved confidence in movement and return to independent living"
-      ]
-    },
-    recoveryTimeline: {
-      title: "Rehabilitation Timeline",
-      cases: [
-        { name: "Phase 1 & 2: Protect & Restore", description: "Managing pain, swelling, and protecting the surgical site during early healing (weeks 1-4), followed by gentle restoration of range of motion. This initial priority is managing pain and swelling while protecting the surgical site during early healing. As the acute phase settles, focus shifts to regaining range of motion in the affected joint or limb." },
-        { name: "Phase 3 & 4: Rebuild & Function", description: "Progressive strengthening exercises rebuild muscle lost during surgery and immobilization, transitioning into functional everyday tasks (weeks 4-12). Patients begin practicing everyday movements — walking, climbing stairs, reaching — with proper mechanics." },
-        { name: "Phase 5: Return to Activity", description: "Advanced functional training, balance re-education, and sport-specific loading support a safe, confident return to full activity (weeks 12+). A final stage of functional testing and gradual reintroduction supports a safe, confident return to your normal activities or sport." }
-      ],
-      factorsIntro: "Timelines vary considerably depending on the type of surgery performed and your surgeon's specific recommendations. Key recovery factors include:",
-      factors: [
-        "Surgery type and invasiveness",
-        "Adherence to surgeon protocol",
-        "Consistent home care exercises",
-        "Age and general physical health"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Choose RamaCare Polyclinic?",
-      intro: "At RamaCare Polyclinic, we combine clinical expertise, advanced equipment, and surgeon-coordinated care to support your recovery journey in a modern facility.",
-      list: [
-        "DHA-licensed physiotherapists with experience across a wide range of post-surgical conditions",
-        "Evidence-based rehabilitation grounded in recognized clinical standards",
-        "Personalized recovery plans built around your specific surgery and goals",
-        "Modern rehabilitation equipment to support every stage of recovery",
-        "Surgeon-guided protocols, ensuring rehabilitation aligns with your operating surgeon's recommendations",
-        "Patient-centered care with clear communication throughout your recovery journey",
-        "Convenient Dubai location in Jumeirah, accessible for patients across the city"
-      ],
-      outro: "Supporting your rehabilitation between clinic visits makes a meaningful difference. Our team provides comprehensive home care guidance to optimize your results."
-    },
-    faqs: [
-      { question: "When should rehabilitation start?", answer: "This depends on your specific surgery and your surgeon's protocol. Some procedures call for early mobilization within days, while others require a longer initial protection period before rehabilitation begins." },
-      { question: "How many physiotherapy sessions will I need?", answer: "This varies based on your surgery type, healing progress, and personal goals. Your physiotherapist will provide a personalized estimate after your initial assessment." },
-      { question: "Can physiotherapy reduce pain after surgery?", answer: "Yes. Appropriate manual therapy, guided movement, and modalities like electrotherapy or ultrasound can all contribute to reduced post-surgical pain." },
-      { question: "How long is recovery?", answer: "Recovery timelines vary significantly depending on the surgery performed, your overall health, and how consistently you follow your rehabilitation plan. Your physiotherapist will discuss a realistic timeline based on your specific case." },
-      { question: "Can rehabilitation prevent stiffness?", answer: "Yes. Early, appropriately guided movement is one of the most effective ways to prevent excessive post-surgical stiffness." },
-      { question: "Is rehabilitation painful?", answer: "Some mild discomfort during certain exercises is common, but rehabilitation should never cause sharp or worsening pain. Your physiotherapist will adjust your program accordingly." },
-      { question: "What surgeries need physiotherapy?", answer: "Most orthopedic surgeries — including joint replacements, ligament reconstructions, tendon repairs, and spine procedures — benefit from structured post-surgical physiotherapy." },
-      { question: "Can I walk immediately after surgery?", answer: "This depends entirely on your specific procedure and surgeon's instructions. Some surgeries allow early walking with support, while others require a period of restricted weight-bearing." },
-      { question: "What exercises are safe?", answer: "Safe exercises depend on your surgery type and healing stage. Your physiotherapist will guide you through appropriate movements at each phase of recovery." },
-      { question: "Can rehabilitation improve balance?", answer: "Yes. Balance training is a core component of many rehabilitation programs, particularly following lower limb surgery." },
-      { question: "Can elderly patients benefit?", answer: "Yes. Rehabilitation programs are adapted to individual health status and mobility level, making them beneficial for elderly patients recovering from surgery." },
-      { question: "Will rehabilitation help me return to sports?", answer: "Yes. Sports-specific rehabilitation programs are designed to help athletes safely and confidently return to training and competition." },
-      { question: "What if I miss sessions?", answer: "Missing sessions can slow progress, so it's best to maintain consistency where possible. If you need to reschedule, our team can help adjust your plan accordingly." },
-      { question: "Do I need a referral?", answer: "While a referral or surgical report from your surgeon helps us align your rehabilitation with their protocol, you can generally book a physiotherapy assessment directly." },
-      { question: "Why choose RamaCare?", answer: "RamaCare Polyclinic combines DHA-licensed physiotherapy expertise with personalized, surgeon-guided rehabilitation plans, making it a trusted choice for Post-Surgery Rehabilitation Dubai patients who want a safe, complete recovery." }
-    ],
-    conclusion: {
-      title: "Take Control of Your Recovery",
-      paragraph: "Surgery is an important step, but full recovery depends just as much on what happens afterward. Post-Surgery Rehabilitation Dubai at RamaCare Polyclinic combines DHA-licensed physiotherapy expertise, surgeon-guided protocols, and a personalized, phase-based approach to help you heal safely, regain strength, and return to the activities that matter to you.",
-      outro: "If you're preparing for surgery or recovering from a recent procedure, don't leave your recovery to chance. Book your rehabilitation assessment with RamaCare Polyclinic today."
-    },
-    images: {
-      anatomy: {
-        src: "/images/Personalized rehabilitation consultation.jpg",
-        title: "Personalized rehabilitation consultation with a DHA-licensed physiotherapist",
-        alt: "Personalized post-surgery rehabilitation consultation with DHA-licensed physiotherapist",
-        caption: "Every rehabilitation program starts with a detailed physical evaluation and surgeon protocol review."
-      },
-      physio: {
-        src: "/images/Post-operative rehabilitation exercises.jpg",
-        title: "Post-operative rehabilitation exercises in a Dubai physiotherapy clinic",
-        alt: "Post-operative rehabilitation exercises at RamaCare Polyclinic Dubai",
-        caption: "Guided post-operative exercises help rebuild strength and restore early joint mobility."
-      },
-      stretching: {
-        src: "/images/Gait training session.jpg",
-        title: "Gait training session after orthopedic surgery",
-        alt: "Gait training session during post-surgery rehabilitation in Dubai",
-        caption: "Controlled movement patterns and gait training restore natural walking mechanics."
-      },
-      manual: {
-        src: "/images/Manual therapy session.jpg",
-        title: "Manual therapy session during shoulder surgery rehabilitation",
-        alt: "Manual therapy session for shoulder surgery rehabilitation Dubai",
-        caption: "Hands-on joint mobilization and soft tissue release reduce pain and stiffness."
-      },
-      equipment: {
-        src: "/images/Post-surgery rehabilitation dubai.jpg",
-        title: "Physiotherapist assisting a patient after knee replacement surgery",
-        alt: "Post-Surgery Rehabilitation Dubai — physiotherapist assisting knee replacement patient",
-        caption: "Advanced therapy equipment, including ultrasound and electrotherapy, is used to manage pain and tissue healing."
-      }
-    }
-  },
-  'insomnia-treatment-dubai': {
-    byline: {
-      reviewer: "Jeena Mathew",
-      credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/1",
-      date: "July 2026"
-    },
-    seo: {
-      title: "Insomnia Treatment Dubai | RamaCare Sleep Wellness Clinic",
-      metaTitle: "Insomnia Treatment Dubai | RamaCare Sleep Wellness Clinic",
-      metaDescription: "Struggling with sleep? Get personalized Insomnia Treatment Dubai care from DHA-licensed experts at RamaCare. Book your sleep wellness consultation today.",
-      keywords: "Insomnia Treatment Dubai, sleep wellness clinic Dubai, difficulty sleeping Dubai, sleep problems Dubai, chronic insomnia Dubai, physical therapy for sleep, holistic sleep care Dubai, natural sleep support Dubai, Ayurveda sleep support Dubai, neck pain and sleep, back pain and sleep, stress related insomnia Dubai",
-      slug: "/insomnia-treatment-dubai",
-      canonical: "https://ramacarepolyclinic.ae/services/insomnia-treatment-dubai/"
-    },
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Services", href: "/services/" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
-      { label: "Insomnia Treatment", href: "/services/insomnia-treatment-dubai/" }
-    ],
-    hero: {
-      badge: "DHA Licensed & Trusted",
-      heading: "Insomnia Treatment Dubai",
-      subheading: "Restful Nights Start With the Right Support",
-      intro: "If you have spent weeks — or months — staring at the ceiling, exhausted but unable to switch off, you are not alone. Sleep difficulties are one of the most common health concerns among adults living and working in Dubai's fast-paced environment. At RamaCare Polyclinic, our approach to Insomnia Treatment Dubai combines personalized care, holistic wellness support, and evidence-informed lifestyle guidance, all delivered by DHA-licensed healthcare professionals who take the time to understand what is really disrupting your sleep.",
-      expect: [
-        "Every plan is built around your specific sleep patterns and routine, not a generic script",
-        "DHA-licensed team offering holistic wellness support and lifestyle-based guidance",
-        "Integrated physiotherapy to address physical tension, neck pain, and back pain that disrupt sleep",
-        "In-house Ayurvedic wellness consultations for complementary, traditional sleep support"
-      ]
-    },
-    introText: {
-      title: "Introduction",
-      paragraph1: "Sleep is not a luxury — it is a biological necessity. During deep sleep, the body repairs tissue, consolidates memory, regulates hormones, and restores the nervous system. When sleep is consistently disrupted, the effects ripple into nearly every area of life: concentration suffers, mood becomes unstable, immunity weakens, and long-term physical health can be affected.",
-      paragraph2: "Insomnia, broadly defined as persistent difficulty falling asleep, staying asleep, or waking too early despite having the opportunity to rest, affects a significant portion of adults at some point in their lives. The Sleep Problems Dubai patients most often describe to us are tied to long working hours, frequent travel, high stress levels, and constant screen exposure, all of which make quality sleep harder to achieve. When this kind of Difficulty Sleeping Dubai residents experience turns into a nightly pattern rather than an occasional frustration, it is worth taking seriously.",
-      paragraph3: "Seeking Insomnia Treatment Dubai support early — rather than waiting for sleep problems to become entrenched — can make a meaningful difference. A structured, professional assessment helps identify contributing factors and allows a personalized wellness plan to be built around your specific circumstances, rather than relying on generic advice or trial-and-error remedies."
-    },
-    whatIs: {
-      title: "What Is Insomnia?",
-      intro: "Insomnia is a sleep disorder characterized by ongoing difficulty initiating or maintaining sleep, even when a person has adequate time and an appropriate environment for rest. It is generally categorized as:",
-      earlyTreatment: {
-        title: "Acute vs. Chronic Sleep Issues",
-        paragraph: "Acute insomnia is short-term sleep disruption, often triggered by stress, travel, illness, or a specific life event, typically lasting days to a few weeks. Chronic insomnia involves sleep difficulty occurring at least three nights a week for three months or longer, often requiring a more structured, multi-factor approach to management."
-      },
-      lumbarVsCervical: {
-        title: "Sleep Difficulty Presentation",
-        paragraph: "Insomnia can present in different ways, including difficulty falling asleep at the start of the night, difficulty staying asleep with frequent waking, waking too early and being unable to fall back asleep, and sleep that does not feel restorative even after a full night in bed."
-      },
-      misconceptions: {
-        title: "Individualized Sleep Profiles",
-        paragraph: "Recognizing which pattern applies to you is an important first step, and it is something our team explores carefully during your assessment to identify the primary factors disrupting your circadian cycle."
-      }
-    },
-    types: {
-      title: "Common Symptoms of Insomnia",
-      intro: "Insomnia does not only affect the hours you spend in bed — it shapes how you feel and function throughout the day. Common indicators include:",
-      list: [
-        { name: "Difficulty Falling Asleep", description: "Spending prolonged time awake at bedtime trying to settle a racing mind." },
-        { name: "Frequent Waking", description: "Waking up multiple times throughout the night and struggling to fall back asleep." },
-        { name: "Early Morning Awakening", description: "Waking up hours before your alarm and being unable to return to sleep." },
-        { name: "Non-Restorative Sleep", description: "Feeling exhausted, unrefreshed, and run-down even after a full night in bed." }
-      ]
-    },
-    signsSymptoms: {
-      title: "How Sleep Loss Affects You Daily",
-      intro: "Sleep difficulties trigger ripple effects across your physical and cognitive wellbeing. Select symptoms to review general advice:",
-      list: [
-        { name: "Daytime fatigue", description: "Persistent daytime fatigue and low energy levels." },
-        { name: "Poor concentration", description: "Difficulty focusing, poor concentration, and reduced mental clarity." },
-        { name: "Mood changes", description: "Increased irritability, low motivation, or a short temper." },
-        { name: "Headaches & tension", description: "Tension headaches and muscular guarding in the neck and shoulders." },
-        { name: "Performance issues", description: "Noticeable drop in work productivity or academic performance." }
-      ],
-      outro: "If several of these symptoms feel familiar, a professional evaluation can help clarify what is contributing to your sleep problems."
-    },
-    causes: {
-      title: "Causes of Sleep Disruption",
-      intro: "Sleep problems rarely have a single cause. In our experience supporting patients across Dubai, insomnia is often the result of overlapping physical, psychological, and lifestyle factors:",
-      list: [
-        { name: "Stress and anxiety", description: "An overactive mind at bedtime is one of the most common insomnia triggers." },
-        { name: "Circadian disruption", description: "Shift work, irregular schedules, and jet lag disrupt the body's natural circadian rhythm." },
-        { name: "Digital stimulation", description: "Excessive screen time and blue light exposure, especially in the hour before bed." },
-        { name: "Chronic physical pain", description: "Neck pain, back pain, and joint stiffness that make it difficult to find a comfortable position." },
-        { name: "Hormonal changes", description: "Imbalances related to menopause, thyroid function, or stress response." },
-        { name: "Medication side effects", description: "Certain prescriptions and over-the-counter drugs that interfere with sleep architecture." }
-      ]
-    },
-    riskFactors: {
-      title: "Risks of Delaying Sleep Support",
-      intro: "Getting the Right Sleep Support Early prevents acute sleep difficulty from becoming an entrenched chronic cycle:",
-      list: [
-        { name: "Chronic Insomnia Progression", description: "Early interventions help break poor sleep patterns before they become deep-seated habits." },
-        { name: "Impaired Daytime Function", description: "Sustained sleep loss affects cognitive memory, decision making, and safety." },
-        { name: "Compromised Immune Function", description: "Lack of deep sleep reduces systemic recovery, tissue repair, and immunity." },
-        { name: "Cardiovascular Strain", description: "Chronic sleep deprivation is linked to higher blood pressure and metabolic changes." }
-      ]
-    },
-    whenToSeeDoctor: {
-      title: "When Should You Seek Specialist Evaluation?",
-      redFlags: [
-        "Sleep difficulties that persist for more than 4-6 weeks despite lifestyle adjustments",
-        "Loud snoring accompanied by gasping, choking, or breathing pauses (indicative of sleep apnea)",
-        "Sudden, uncontrollable episodes of daytime sleepiness (narcolepsy markers)",
-        "Severe, worsening anxiety, depression, or emotional distress tied to sleep deprivation",
-        "Sleep issues accompanied by chest pain, heart palpitations, or severe headaches"
-      ],
-      note: "These guidelines are informational. Persistent, severe, or worsening sleep disorders require evaluation by a qualified sleep medicine specialist or mental health professional. At RamaCare Polyclinic, our role is to provide supportive, holistic care and lifestyle-based guidance, and we will refer patients onward when specialist evaluation is appropriate."
-    },
-    diagnosis: {
-      title: "Assessment Process at RamaCare",
-      intro: "Our Insomnia Treatment Dubai service begins with a comprehensive, unhurried assessment conducted by our DHA-licensed healthcare professionals. This typically includes a review of:",
-      methods: [
-        { name: "Medical History", description: "Understanding your overall health background and any existing conditions." },
-        { name: "Lifestyle & Travel", description: "Reviewing work schedules, travel frequency, and general daily routines." },
-        { name: "Sleep Habits", description: "Assessing bedtime routines, sleep environment, and waking patterns." },
-        { name: "Stress & Tension", description: "Evaluating psychological stressors and physical muscle tension in the neck and back." },
-        { name: "Goal Setting", description: "Establishing realistic, personalized recovery targets together." }
-      ]
-    },
-    treatmentOptions: {
-      title: "Insomnia Treatment Dubai at RamaCare: Our Supportive Care Approach",
-      intro: "Our Insomnia Treatment Dubai programs look at the whole person, not just the hours spent in bed. This reflects our broader Holistic Sleep Care Dubai philosophy. This is what genuine Poor Sleep Treatment Dubai support should look like: a personalized plan built around your specific situation, not a generic checklist.",
-      physioIntro: "Explore our related wellness and pain support options: {{Stress Treatment Dubai|/services/stress-treatment-dubai/}}, {{Anxiety Treatment Dubai|/services/anxiety-treatment-dubai/}}, and {{Ayurveda Dubai|/services/ayurveda-dubai/}}.",
-      list: [
-        { name: "Lifestyle Counseling", description: "Practical adjustments to daily habits and routines that interfere with sleep." },
-        { name: "Sleep Hygiene Education", description: "Covering evidence-informed bedtime routines, screen management, and environment setup." },
-        { name: "Relaxation Techniques", description: "Calming an overactive mind using progressive muscle relaxation and visualization." },
-        { name: "Stress Management", description: "Tailoring strategies to help you manage work and lifestyle pressures." },
-        { name: "Physiotherapy for Sleep", description: "Addressing physical muscle tension, neck pain, and back pain contributing to discomfort at night." },
-        { name: "Breathing Exercises", description: "Simple, structured breathing patterns to stimulate the body's natural relaxation response." },
-        { name: "Ayurvedic Sleep Support", description: "Complementary, lifestyle-based routines and wellness recommendations. Explore our {{Ayurveda Dubai|/services/ayurveda-dubai/}}." },
-        { name: "Specialist Referral", description: "Guiding patients to sleep medicine specialists or psychiatrists when clinically indicated." }
-      ],
-      outro: "RamaCare does not claim to cure insomnia, and we are committed to referring patients with persistent or severe sleep disorders to the appropriate specialist for further evaluation and management."
-    },
-    physioFocus: {
-      title: "Physiotherapy for Better Sleep Dubai: Addressing the Physical Side",
-      intro: "Physical discomfort is an often-overlooked contributor to poor sleep, and it frequently overlaps with the Stress Related Insomnia Dubai patients experience, since tension held in the body and tension held in the mind tend to reinforce one another. Tight muscles, poor posture, and unresolved pain can make it genuinely difficult to relax and stay asleep. Our Physiotherapy Dubai team works alongside our sleep wellness service to help address:",
-      goals: [
-        { name: "Neck Tension", description: "Releasing guarding tension in the cervical spine. Explore our {{Neck Pain Treatment Dubai|/services/neck-pain-treatment-dubai/}}." },
-        { name: "Shoulder Stiffness", description: "Addressing muscular tightness in the upper back. Explore our {{Shoulder Pain Treatment Dubai|/services/shoulder-pain-treatment-dubai/}}." },
-        { name: "Back Pain", description: "Relieving lumbar discomfort that prevents finding a comfortable sleeping position. Explore our {{Back Pain Treatment Dubai|/services/back-pain-treatment-dubai/}}." },
-        { name: "Postural Fatigue", description: "Counteracting desk-bound alignment issues that lead to nighttime aches." }
-      ]
-    },
-    treatmentProcess: {
-      title: "Ayurvedic Sleep Support Dubai",
-      intro: "For patients interested in a more traditional, holistic layer of care, RamaCare offers Ayurvedic Sleep Support Dubai consultations as part of a broader wellness plan. This may include:",
-      steps: [
-        { step: "1", name: "Personalized Consultation", description: "A detailed review with an Ayurvedic wellness practitioner to identify constitutional balances." },
-        { step: "2", name: "Dinacharya Routine Guidance", description: "Structuring a supportive, predictable daily routine aligned with Ayurvedic circadian principles." },
-        { step: "3", name: "Relaxation-focused Therapies", description: "Easing physical and mental tension using traditional external therapies like Abhyanga." },
-        { step: "4", name: "Dietary Recommendations", description: "Suggesting warm, grounding foods that support digestion and evening relaxation." },
-        { step: "5", name: "Traditional Herbal Advice", description: "Discussed transparently, focusing on general wellness without unsupported medical claims." }
-      ]
-    },
-    benefits: {
-      title: "The Benefits of Better Sleep",
-      list: [
-        "Increased daytime energy and physical recovery",
-        "Better focus, concentration, and mental clarity",
-        "Improved mood and emotional resilience",
-        "Stronger immune function and faster cellular repair",
-        "Higher productivity at work or study",
-        "An overall improved quality of life"
-      ]
-    },
-    recoveryTimeline: {
-      title: "Timeline & Sleep Wellness Outlook",
-      cases: [
-        { name: "Mild / Acute Sleep Issues", description: "For short-term sleep disruptions (1-4 weeks), implementing consistent sleep hygiene and relaxation routines often yields improvement within 2 weeks." },
-        { name: "Moderate / Stress-Related", description: "For sleep issues tied to high stress or physical tension (4-8 weeks), a combination of physiotherapy and lifestyle adjustments typically stabilizes sleep cycles within 4 to 6 weeks." },
-        { name: "Severe / Chronic Insomnia", description: "For long-standing sleep difficulties (8+ weeks), a comprehensive lifestyle program alongside medical/psychological coordination can rebuild healthy sleep architecture over several months." }
-      ],
-      factorsIntro: "Recovery depends heavily on consistency with daily sleep habits, underlying stress levels, and active participation. Key recovery factors include:",
-      factors: [
-        "Consistent sleep-wake schedules",
-        "Screen-free bedtime routines",
-        "Stress management techniques",
-        "Regular physical activity",
-        "Pain and muscle tension control"
-      ]
-    },
-
-    whyChooseUs: {
-      title: "Why Choose RamaCare Polyclinic for Sleep Wellness?",
-      intro: "Patients across Dubai choose RamaCare for our combination of clinical care and genuine wellness expertise. We are known as a Sleep Clinic Dubai residents recommend to friends and colleagues. We also offer the kind of Natural Sleep Support Dubai patients increasingly look for alongside conventional care.",
-      list: [
-        "DHA-licensed healthcare professionals conducting every assessment",
-        "Personalized sleep wellness plans built around your unique symptoms and lifestyle",
-        "Evidence-informed supportive care, not one-size-fits-all advice",
-        "In-house physiotherapy services to address physical contributors to poor sleep",
-        "Ayurvedic wellness expertise for patients seeking complementary, holistic support",
-        "Modern, comfortable facilities designed with patient comfort in mind",
-        "A convenient Dubai location in Jumeirah, accessible for patients across the city"
-      ],
-      outro: "Related concerns we also support include Stress Treatment Dubai, Anxiety Treatment Dubai, Migraine Treatment Dubai, Arthritis Treatment Dubai, and Joint Pain Treatment Dubai, many of which overlap with sleep difficulties."
-    },
-    faqs: [
-      { question: "What is insomnia?", answer: "Insomnia is a sleep disorder involving persistent difficulty falling asleep, staying asleep, or waking too early, despite having adequate opportunity to rest." },
-      { question: "What causes insomnia?", answer: "Common causes include stress, anxiety, poor sleep habits, chronic pain, hormonal changes, certain medications, caffeine, alcohol, and underlying medical or mental health conditions." },
-      { question: "When should I seek professional help for sleep problems?", answer: "If sleep difficulty occurs several nights a week for more than a few weeks, or is affecting your daily function, it is a good time to seek a professional assessment." },
-      { question: "Can stress cause insomnia?", answer: "Yes. Stress and anxiety are among the most common contributors to both short-term and chronic insomnia, often by keeping the mind alert at bedtime." },
-      { question: "Can physiotherapy improve sleep?", answer: "Physiotherapy can help by addressing muscle tension, poor posture, and pain that make it difficult to relax or find a comfortable sleeping position." },
-      { question: "Can neck pain affect sleep?", answer: "Yes. Neck tension and discomfort can make it harder to fall asleep and can contribute to waking during the night." },
-      { question: "Can Ayurveda support better sleep?", answer: "Ayurvedic wellness guidance, including daily routine recommendations and relaxation-focused practices, may offer complementary support as part of a broader wellness plan." },
-      { question: "How long does supportive sleep care take to show results?", answer: "This varies from person to person, depending on the underlying causes and how consistently lifestyle recommendations are followed. Your care plan will include realistic expectations discussed during your consultation." },
-      { question: "Can lifestyle changes really improve insomnia?", answer: "For many people, consistent sleep schedules, reduced screen time, and stress management can meaningfully improve sleep quality over time." },
-      { question: "Is exercise good for sleep?", answer: "Regular physical activity, particularly earlier in the day, is generally associated with improved sleep quality for most people." },
-      { question: "What foods may support better sleep?", answer: "A balanced diet with reduced caffeine and alcohol, particularly in the evening, is generally recommended to support healthier sleep patterns." },
-      { question: "Can poor sleep affect my overall health?", answer: "Yes. Ongoing poor sleep can affect mood, concentration, immune function, and long-term physical health." },
-      { question: "Will I need medication for insomnia?", answer: "Not necessarily. Our approach focuses on supportive, lifestyle-based care. If medication or specialist evaluation is needed, we will refer you appropriately." },
-      { question: "Can insomnia become chronic if untreated?", answer: "Yes, acute insomnia can develop into chronic insomnia if underlying causes are not addressed, which is why early assessment is encouraged." },
-      { question: "Why choose RamaCare for Insomnia Treatment in Dubai?", answer: "RamaCare offers personalized, DHA-licensed assessments combined with physiotherapy and Ayurvedic wellness support, all tailored to your individual sleep concerns." }
-    ],
-    conclusion: {
-      title: "Restful Nights Start Here",
-      paragraph: "Struggling with sleep can affect every part of your day, from your energy and focus to your mood and overall wellbeing. At RamaCare Polyclinic, our Insomnia Treatment Dubai service is built around understanding your unique situation, addressing physical tension through physiotherapy, offering complementary Ayurvedic wellness support where appropriate, and guiding you toward healthier, more sustainable sleep habits.",
-      outro: "Individual results vary, and recovery timelines differ from person to person based on the underlying causes of sleep difficulty. RamaCare provides supportive wellness care and does not replace specialist sleep medicine; patients with persistent or severe sleep disorders will be guided toward appropriate specialist evaluation when needed."
-    },
-    images: {
-      anatomy: {
-        src: "/images/DHA-licensed healthcare professional.jpg",
-        title: "DHA-licensed healthcare professional discussing sleep problems during a consultation",
-        alt: "DHA-licensed healthcare professional discussing sleep problems with a patient during an Insomnia Treatment Dubai consultation",
-        caption: "Every sleep assessment starts with a detailed lifestyle and medical history evaluation."
-      },
-      physio: {
-        src: "/images/Relaxing bedtime routine.jpg",
-        title: "Relaxing bedtime routine and sleep wellness consultation",
-        alt: "Relaxing bedtime routine consultation at RamaCare Polyclinic",
-        caption: "Sleep hygiene counseling identifies habits that interfere with falling asleep."
-      },
-      stretching: {
-        src: "/images/Physiotherapist treating neck tension.jpg",
-        title: "Physiotherapist treating neck tension contributing to poor sleep in Dubai",
-        alt: "Physiotherapist treating neck tension contributing to poor sleep in Dubai",
-        caption: "Hands-on mobilization releases muscle tension that keeps the nervous system alert."
-      },
-      manual: {
-        src: "/images/Ayurvedic wellness consultation.jpg",
-        title: "Ayurvedic wellness consultation for improving sleep quality",
-        alt: "Ayurvedic wellness consultation for improving sleep quality at RamaCare",
-        caption: "Traditional Ayurvedic therapies help ease mental tension and restore natural balance."
-      },
-      equipment: {
-        src: "/images/homepage.jpg",
-        title: "Peaceful sleep environment illustrating healthy sleep habits",
-        alt: "Peaceful sleep environment illustrating healthy sleep habits Dubai",
-        caption: "Creating a screen-free, cool, and quiet sleep environment supports deep rest."
       }
     }
   },

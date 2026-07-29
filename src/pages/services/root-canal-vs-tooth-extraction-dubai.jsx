@@ -784,7 +784,7 @@ export default function RootCanalVsExtractionPage() {
         <section className="bg-[#F9F7F2] px-4 py-16">
           <div className="mx-auto max-w-7xl">
             <SectionHeading title="Your Appointment Process, Step by Step" />
-            <div className="grid gap-8 lg:grid-cols-12">
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-7">
                 <div className="space-y-3">
                   {PROCESS.map((p, i) => (
@@ -798,12 +798,9 @@ export default function RootCanalVsExtractionPage() {
                   ))}
                 </div>
               </div>
-              <div className="lg:col-span-5 space-y-4">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                  <Image src={IMAGES.xrayConsult.src} alt={IMAGES.xrayConsult.alt} fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" />
-                </div>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                  <Image src={IMAGES.dentistExam.src} alt={IMAGES.dentistExam.alt} fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover" />
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                  <Image src={IMAGES.xrayConsult.src} alt={IMAGES.xrayConsult.alt} fill sizes="(max-width: 1024px) 100vw, 41.66vw" className="object-cover" />
                 </div>
               </div>
             </div>
