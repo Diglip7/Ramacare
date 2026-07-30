@@ -947,7 +947,7 @@ export default function RosaceaTreatmentDubaiPage() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] border border-gray-150 shadow-sm p-2 bg-white">
+                <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-gray-150 shadow-sm p-2 bg-white">
                   <div className="relative w-full h-full overflow-hidden rounded-[1.8rem]">
                     <Image
                       src={IMAGES.process.src}
@@ -1163,7 +1163,6 @@ export default function RosaceaTreatmentDubaiPage() {
             </button>
           </div>
         </div>
-
       </div>
     </Layout>
   );

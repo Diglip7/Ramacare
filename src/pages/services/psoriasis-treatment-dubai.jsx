@@ -56,7 +56,7 @@ import {
 const SEO = {
   title: 'Psoriasis Treatment Dubai | RamaCare Polyclinic',
   metaDescription: 'Struggling with psoriasis flare-ups? Get expert Psoriasis Treatment Dubai at RamaCare Polyclinic — DHA-licensed dermatologists. Book a consultation today.',
-  canonical: 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/',
   keywords: 'Psoriasis Treatment Dubai, Best Psoriasis Treatment Dubai, Psoriasis Specialist Dubai, Psoriasis Clinic Dubai, Scalp Psoriasis Treatment Dubai, Ayurvedic Psoriasis Treatment Dubai, Psoriasis Dermatologist Dubai',
 };
 
@@ -420,8 +420,8 @@ export default function PsoriasisTreatmentPage() {
     '@graph': [
       {
         '@type': 'MedicalWebPage',
-        '@id': 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai/#webpage',
-        url: 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai',
+        '@id': 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/',
         name: 'Psoriasis Treatment Dubai | RamaCare Polyclinic',
         description: 'Struggling with psoriasis flare-ups? Get expert Psoriasis Treatment Dubai at RamaCare Polyclinic — DHA-licensed dermatologists. Book a consultation today.',
         medicalAudience: {
@@ -429,7 +429,7 @@ export default function PsoriasisTreatmentPage() {
           audienceType: 'Patient'
         },
         about: {
-          '@id': 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai/#condition'
+          '@id': 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/#condition'
         },
         lastReviewed: '2026-07-14',
         reviewedBy: {
@@ -443,7 +443,7 @@ export default function PsoriasisTreatmentPage() {
       },
       {
         '@type': 'MedicalCondition',
-        '@id': 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai/#condition',
+        '@id': 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/#condition',
         name: 'Psoriasis',
         alternateName: TYPES_CONTENT.items.map((t) => t.name),
         description: 'A chronic autoimmune skin condition in which accelerated skin cell turnover leads to red, scaly patches, most commonly on the elbows, knees, scalp, and lower back.',
@@ -482,13 +482,13 @@ export default function PsoriasisTreatmentPage() {
             '@type': 'ListItem',
             position: 2,
             name: 'Dermatology',
-            item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai'
+            item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Psoriasis Treatment Dubai',
-            item: 'https://ramacarepolyclinic.ae/psoriasis-treatment-dubai'
+            item: 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/'
           }
         ]
       }
@@ -647,7 +647,18 @@ export default function PsoriasisTreatmentPage() {
 
               {/* Detail Panel */}
               <div className="lg:col-span-7 flex flex-col justify-between">
-                <div className="h-full rounded-3xl bg-white p-8 sm:p-10 shadow-sm border border-gray-100 flex flex-col justify-center">
+                {/* Section Diagram */}
+                <div className="relative mb-4 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-200">
+                  <Image
+                    src={IMAGES.types.src}
+                    alt={IMAGES.types.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="rounded-2xl bg-white p-5 sm:p-6 shadow-sm border border-gray-100 flex-grow flex flex-col justify-center">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeType}
@@ -664,17 +675,6 @@ export default function PsoriasisTreatmentPage() {
                       </p>
                     </motion.div>
                   </AnimatePresence>
-                </div>
-
-                {/* Section Diagram */}
-                <div className="relative mt-6 aspect-[16/6] w-full overflow-hidden rounded-2xl border border-gray-200">
-                  <Image
-                    src={IMAGES.types.src}
-                    alt={IMAGES.types.alt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                    className="object-cover"
-                  />
                 </div>
               </div>
             </div>
@@ -1042,6 +1042,7 @@ export default function PsoriasisTreatmentPage() {
         {/* ============================================== */}
         {/* 13. CONCLUSION SECTION                         */}
         {/* ============================================== */}
+        
         <section className="bg-white py-20 px-4 text-center">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-black text-[#1A1A1A] sm:text-4xl mb-8">{CONCLUSION_CONTENT.title}</h2>
@@ -1079,7 +1080,6 @@ export default function PsoriasisTreatmentPage() {
         {/* ============================================== */}
         <footer className="bg-[#F9F7F2] py-16 px-4 border-t border-gray-200">
           <div className="mx-auto max-w-4xl space-y-10">
-            
             {/* Internal Links Map */}
             <div className="space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-wider text-center text-gray-400">Internal Linking Map</h5>
@@ -1089,8 +1089,6 @@ export default function PsoriasisTreatmentPage() {
                 <Link href="/services/hair-loss-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Hair Loss Treatment Dubai</Link>
                 <span>•</span>
                 <Link href="/services/acne-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Acne Treatment Dubai</Link>
-                <span>•</span>
-                <Link href="/services/eczema-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Eczema Treatment Dubai</Link>
                 <span>•</span>
                 <Link href="/services/rosacea-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Rosacea Treatment Dubai</Link>
                 <span>•</span>
@@ -1114,26 +1112,8 @@ export default function PsoriasisTreatmentPage() {
                 <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F5E4B] underline">Mayo Clinic — mayoclinic.org</a>
               </div>
             </div>
-
           </div>
         </footer>
-
-        {/* Sticky Bottom Consultation Bar */}
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-xl z-40 p-4 transform translate-y-0 transition-transform">
-          <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
-            <div className="hidden md:block">
-              <p className="text-sm font-bold text-[#1A1A1A]">Psoriasis Treatment Dubai | RamaCare Polyclinic</p>
-              <p className="text-xs text-[#5F5F5F]">Book a clinical consultation with our dermatology team today.</p>
-            </div>
-            <button
-              onClick={handleWhatsApp}
-              className="flex items-center gap-2 bg-[#1F5E4B] hover:bg-[#154133] text-white px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all font-bold whitespace-nowrap text-sm"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Book Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </Layout>
   );

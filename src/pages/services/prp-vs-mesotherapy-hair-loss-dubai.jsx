@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -272,7 +273,6 @@ export default function PrpVsMesotherapyPage() {
     window.open(`https://wa.me/971566597878?text=${message}`, '_blank');
   };
   const handleBookAppointment = () => router.push('/book-appointment/');
-
   const schemaBlocks = buildSchema();
 
   return (
@@ -303,10 +303,15 @@ export default function PrpVsMesotherapyPage() {
 
       {/* ============ HERO ============ */}
       <section className="max-w-7xl mx-auto px-6 pt-8 pb-4">
-        <p className="text-xs font-medium text-[#5F5F5F] mb-6">
-          Home <span className="mx-1.5">/</span> Aesthetic Dermatology <span className="mx-1.5">/</span> Hair Loss Treatment <span className="mx-1.5">/</span>{' '}
-          <span className="text-[#1F5E4B]">PRP vs Mesotherapy</span>
-        </p>
+        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5">
+          <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span>/</span>
+          <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
+          <span>/</span>
+          <Link href="/services/hair-loss-dubai/" className="hover:text-[#1F5E4B] transition-colors">Hair Loss Treatment</Link>
+          <span>/</span>
+          <span aria-current="page" className="text-[#1F5E4B]">PRP vs Mesotherapy</span>
+        </nav>
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-semibold text-[#1A1A1A] leading-[1.2] mb-6">
@@ -719,7 +724,7 @@ export default function PrpVsMesotherapyPage() {
           </div>
         </div>
       </section>
-      
+
       {/* ============ Conclusion + final CTA ============ */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4">Take the Next Step Toward Healthier Hair</h2>

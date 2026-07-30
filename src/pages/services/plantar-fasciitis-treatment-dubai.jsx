@@ -396,8 +396,7 @@ export default function PlantarFasciitisTreatmentPage() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="lg:sticky lg:top-24"
-              >
+                className="lg:sticky lg:top-24">
                 <img
                   src={images.physiotherapist.src}
                   alt={images.physiotherapist.alt}
@@ -535,8 +534,7 @@ export default function PlantarFasciitisTreatmentPage() {
               <motion.figure
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
                 <img
                   src={images.gaitAnalysis.src}
                   alt={images.gaitAnalysis.alt}

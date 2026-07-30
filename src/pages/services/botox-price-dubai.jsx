@@ -264,9 +264,6 @@ export default function BotoxPriceDubaiPage() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="order-1 lg:order-2">
-            <p className="text-xs font-medium text-[#5F5F5F] mb-4">
-              Home <span className="mx-1.5">/</span> <span className="text-[#1F5E4B]">Botox Price Dubai</span>
-            </p>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-[#1A1A1A] leading-[1.15] mb-6">
               Botox Price Dubai
             </h1>
@@ -306,8 +303,7 @@ export default function BotoxPriceDubaiPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
-                className={`flex items-start gap-5 py-5 ${i !== priceFactors.length - 1 ? 'border-b border-[#E9E2D6]' : ''} ${i % 2 === 1 ? 'sm:flex-row-reverse sm:text-right' : ''}`}
-              >
+                className={`flex items-start gap-5 py-5 ${i !== priceFactors.length - 1 ? 'border-b border-[#E9E2D6]' : ''} ${i % 2 === 1 ? 'sm:flex-row-reverse sm:text-right' : ''}`} >
                 <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center shrink-0">
                   <IconTile name={f.icon} />
                 </div>

@@ -39,7 +39,10 @@ const Header = () => {
         { name: 'Skin Treatment', slug: 'skin-treatment-dubai' },
         { name: 'Hair Treatment', slug: 'hair-treatment-dubai' },
         { name: 'Laser Treatment', slug: 'laser-treatment-dubai' },
-        { name: 'Body Shaping', slug: 'body-shaping-dubai' }
+        { name: 'Body Shaping', slug: 'body-shaping-dubai' },
+        { name: 'Acne Treatment', slug: 'acne-treatment-dubai' },
+        { name: 'Psoriasis Treatment', slug: 'psoriasis-treatment-dubai' },
+        { name: 'Rosacea Treatment', slug: 'rosacea-treatment-dubai' }
       ],
       icon: Sparkles
     },
@@ -57,7 +60,8 @@ const Header = () => {
         { name: 'Braces (Metal & Ceramic)', slug: 'braces-metal-ceramic-dubai' },
         { name: 'Dental Crown Bridges', slug: 'dental-crown-bridges-dubai' },
         { name: 'Teeth Scaling & Polishing', slug: 'teeth-scaling-polishing-dubai' },
-        { name: 'Gum Disease Treatment', slug: 'gum-disease-treatment-dubai' }
+        { name: 'Gum Disease Treatment', slug: 'gum-disease-treatment-dubai' },
+        { name: 'Sensitive Teeth Treatment', slug: 'sensitive-teeth-treatment-dubai' }
       ],
       icon: Sparkles
     },
@@ -100,25 +104,25 @@ const Header = () => {
         { name: 'Scoliosis Treatment', slug: 'scoliosis-treatment-in-dubai' },
         { name: 'Functional Exercises', slug: 'functional-exercises-dubai' },
         { name: 'Dry Needling', slug: 'dry-needling-dubai' },
-        // { name: 'Back Pain Treatment', slug: 'back-pain-treatment-dubai' },
-        // { name: 'Knee Pain Treatment', slug: 'knee-pain-treatment-dubai' },
-        // { name: 'Migraine Treatment', slug: 'migraine-treatment-dubai' },
-        // { name: 'Office Neck Treatment', slug: 'office-neck-treatment-dubai' },
-        // { name: 'Post Surgery Recovery', slug: 'post-surgery-recovery-dubai' },
-        // { name: 'Post Surgery Rehabilitation', slug: 'post-surgery-rehabilitation-dubai' },
-        // { name: 'Physiotherapy Insurance', slug: 'physiotherapy-insurance-dubai' },
-        // { name: 'Cervical Spondylosis Treatment', slug: 'cervical-spondylosis-treatment-dubai' },
-        // { name: 'Frozen Shoulder Treatment', slug: 'frozen-shoulder-treatment-dubai' },
-        // { name: 'Neck Pain Treatment', slug: 'neck-pain-treatment-dubai' },
-        // { name: 'Plantar Fasciitis Treatment', slug: 'plantar-fasciitis-treatment-dubai' },
-        // { name: 'Sciatica Treatment', slug: 'sciatica-treatment-dubai' },
-        // { name: 'Shoulder Pain Treatment', slug: 'shoulder-pain-treatment-dubai' },
-        // { name: 'Slip Disc Treatment', slug: 'slip-disc-treatment-dubai' },
-        // { name: 'Sports Injury Rehabilitation', slug: 'sports-injury-rehabilitation-dubai' },
-        // { name: 'Joint Pain Treatment', slug: 'joint-pain-treatment-dubai' },
-        // { name: 'Anxiety Treatment', slug: 'anxiety-treatment-dubai' },
-        // { name: 'Stress Treatment', slug: 'stress-treatment-dubai' },
-        // { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' }
+        { name: 'Back Pain Treatment', slug: 'back-pain-treatment-dubai' },
+        { name: 'Knee Pain Treatment', slug: 'knee-pain-treatment-dubai' },
+        { name: 'Migraine Treatment', slug: 'migraine-treatment-dubai' },
+        { name: 'Office Neck Treatment', slug: 'office-neck-treatment-dubai' },
+        { name: 'Post Surgery Recovery', slug: 'post-surgery-recovery-dubai' },
+        { name: 'Post Surgery Rehabilitation', slug: 'post-surgery-rehabilitation-dubai' },
+        { name: 'Physiotherapy Insurance', slug: 'physiotherapy-insurance-dubai' },
+        { name: 'Cervical Spondylosis Treatment', slug: 'cervical-spondylosis-treatment-dubai' },
+        { name: 'Frozen Shoulder Treatment', slug: 'frozen-shoulder-treatment-dubai' },
+        { name: 'Neck Pain Treatment', slug: 'neck-pain-treatment-dubai' },
+        { name: 'Plantar Phasciitis Treatment', slug: 'plantar-fasciitis-treatment-dubai' },
+        { name: 'Sciatica Treatment', slug: 'sciatica-treatment-dubai' },
+        { name: 'Shoulder Pain Treatment', slug: 'shoulder-pain-treatment-dubai' },
+        { name: 'Slip Disc Treatment', slug: 'slip-disc-treatment-dubai' },
+        { name: 'Sports Injury Rehabilitation', slug: 'sports-injury-rehabilitation-dubai' },
+        { name: 'Joint Pain Treatment', slug: 'joint-pain-treatment-dubai' },
+        { name: 'Anxiety Treatment', slug: 'anxiety-treatment-dubai' },
+        { name: 'Stress Treatment', slug: 'stress-treatment-dubai' },
+        { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' }
       ],
       icon: Activity
     },
@@ -293,8 +297,8 @@ const Header = () => {
         {toast.show && (
           <div className="fixed top-6 right-6 z-[10000]" style={{ animation: 'toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }}>
             <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${toast.type === 'success'
-                ? 'bg-emerald-600/95 border-emerald-500 text-white'
-                : 'bg-red-600/95 border-red-500 text-white'
+              ? 'bg-emerald-600/95 border-emerald-500 text-white'
+              : 'bg-red-600/95 border-red-500 text-white'
               }`}>
               {toast.type === 'success' ? (
                 <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>

@@ -579,56 +579,60 @@ export default function AyurvedaVsPhysiotherapyArthritisPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start"
+                className="mt-10 space-y-8"
               >
-                {/* Left: What Is */}
-                <div className="lg:col-span-5">
-                  <div className="flex items-center gap-2">
-                    <ActiveIcon className="h-5 w-5" style={{ color: active.color }} />
-                    <h3 className="text-lg font-semibold text-[#1A1A1A]">{active.heading}</h3>
+                {/* Top balanced grid: What Is vs Approaches/Pathway list */}
+                <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+                  {/* Left Column: What Is */}
+                  <div className="lg:col-span-5">
+                    <div className="flex items-center gap-2">
+                      <ActiveIcon className="h-5 w-5" style={{ color: active.color }} />
+                      <h3 className="text-lg font-semibold text-[#1A1A1A]">{active.heading}</h3>
+                    </div>
+                    {active.paragraphs.map((p) => (
+                      <p key={p.slice(0, 20)} className="mt-3 text-sm leading-relaxed text-[#5F5F5F]">
+                        {p}
+                      </p>
+                    ))}
+                    <p className="mt-4 text-xs leading-relaxed text-[#5F5F5F]">{active.note}</p>
+                    <CtaLink label={active.cta} href={waLink(`Hello RamaCare, I'd like to ${active.cta.toLowerCase()} regarding arthritis care.`)} />
                   </div>
-                  {active.paragraphs.map((p) => (
-                    <p key={p.slice(0, 20)} className="mt-3 text-sm leading-relaxed text-[#5F5F5F]">
-                      {p}
-                    </p>
-                  ))}
-                  <p className="mt-4 text-xs leading-relaxed text-[#5F5F5F]">{active.note}</p>
-                  <CtaLink label={active.cta} href={waLink(`Hello RamaCare, I'd like to ${active.cta.toLowerCase()} regarding arthritis care.`)} />
-                </div>
 
-                {/* Right: approaches list + benefits, stacked */}
-                <div className="lg:col-span-7">
-                  <div className="rounded-2xl border border-gray-100 p-6">
-                    <p className="text-xs font-semibold text-[#1A1A1A]">{active.listIntro}</p>
-                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                      {active.list.map((item) => {
-                        const Icon = item.icon;
-                        return (
-                          <div key={item.name} className="flex items-start gap-2.5">
-                            <Icon className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: active.color }} />
-                            <div>
-                              <p className="text-sm font-semibold text-[#1A1A1A]">{item.name}</p>
-                              <p className="text-xs leading-relaxed text-[#5F5F5F]">{item.desc}</p>
+                  {/* Right Column: Approaches List */}
+                  <div className="lg:col-span-7">
+                    <div className="rounded-2xl border border-gray-100 p-6 bg-white">
+                      <p className="text-xs font-semibold text-[#1A1A1A]">{active.listIntro}</p>
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        {active.list.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <div key={item.name} className="flex items-start gap-2.5">
+                              <Icon className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: active.color }} />
+                              <div>
+                                <p className="text-sm font-semibold text-[#1A1A1A]">{item.name}</p>
+                                <p className="text-xs leading-relaxed text-[#5F5F5F]">{item.desc}</p>
+                              </div>
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="mt-6 rounded-2xl p-6" style={{ backgroundColor: `${active.bg}0D` }}>
-                    <h3 className="text-lg font-semibold" style={{ color: active.color }}>
-                      {active.benefitsHeading}
-                    </h3>
-                    <ul className="mt-4 space-y-2.5">
-                      {active.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[#1A1A1A]">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: active.color }} />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {/* Bottom Full-Width Column: Benefits section with 2-column layout */}
+                <div className="rounded-2xl p-6 sm:p-8" style={{ backgroundColor: `${active.bg}0D` }}>
+                  <h3 className="text-lg font-semibold" style={{ color: active.color }}>
+                    {active.benefitsHeading}
+                  </h3>
+                  <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                    {active.benefits.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[#1A1A1A]">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 animate-pulse" style={{ color: active.color }} />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             </AnimatePresence>
