@@ -1493,9 +1493,9 @@ export default function FrozenShoulderTreatmentPage() {
                     <div>
                       <h3 className="text-lg font-bold text-[#1A1A1A] mb-1">Location</h3>
                       <p className="text-[#5F5F5F] leading-relaxed">
-                        Jumeirah Terrace Building, Ground Floor
+                       12 Al Dhiyafah Rd - Jumeirah Terrace Building, 
                         <br />
-                        Jumeirah 1, Dubai, 393558
+                       Ground Floor, Jumeirah 1 - Dubai
                       </p>
                     </div>
                   </div>

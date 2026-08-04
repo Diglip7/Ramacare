@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Layout from '../../../components/Layout';
 import Head from "next/head";
 import Link from "next/link";
@@ -215,6 +215,15 @@ export default function DandruffTreatmentDubaiPage() {
   const { showToast, ToastComponent } = useToast();
   const [activeAccordion, setActiveAccordion] = useState(null);
   const router = useRouter();
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { scrollLeft } = scrollRef.current;
+      const scrollTo = direction === 'left' ? scrollLeft - 300 : scrollLeft + 300;
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in Dandruff Treatment. Please help me book a consultation.");
@@ -587,7 +596,7 @@ export default function DandruffTreatmentDubaiPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-6">{content.bestOffer.title}</h2>
           <p className="text-lg text-[#5F5F5F] leading-relaxed">
             {content.bestOffer.lead} {content.bestOffer.mid}{" "}
-            <Link href="/services/psoriasis-treatment-dubai" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
+            <Link href="/services/dandruff-treatment-dubai" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
               {content.bestOffer.link}
             </Link>{" "}
             {content.bestOffer.tail}
@@ -636,22 +645,56 @@ export default function DandruffTreatmentDubaiPage() {
       {/* ============================================================ */}
       {/* 12. BENEFITS — single horizontal scroll strip                  */}
       {/* ============================================================ */}
-      <section className="py-20 bg-[#1A5F3F]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">{content.benefits.title}</h2>
+      <section className="py-20 bg-[#1A5F3F] relative overflow-hidden">
+        <style dangerouslySetInnerHTML={{__html: `
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}} />
+        
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">{content.benefits.title}</h2>
+          {/* Scroll Arrows */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => scroll('left')}
+              aria-label="Scroll left"
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-white flex items-center justify-center transition-all focus:outline-none"
+            >
+              <LucideIcons.ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              aria-label="Scroll right"
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-white flex items-center justify-center transition-all focus:outline-none"
+            >
+              <LucideIcons.ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
-        <div className="flex gap-5 overflow-x-auto px-6 pb-4 snap-x max-w-7xl mx-auto">
-          {content.benefits.items.map((item, index) => {
-            const IconComponent = LucideIcons[item.icon] || LucideIcons.Circle;
-            return (
-              <div
-                key={index}
-                className="snap-start flex-shrink-0 w-64 bg-white/10 border border-white/15 rounded-2xl p-6 text-white">
-                <IconComponent className="w-7 h-7 mb-4" />
-                <p className="text-sm font-medium leading-relaxed">{item.text}</p>
-              </div>
-            );
-          })}
+        
+        <div className="relative max-w-7xl mx-auto">
+          <div 
+            ref={scrollRef}
+            className="flex gap-5 overflow-x-auto px-6 pb-4 snap-x no-scrollbar scroll-smooth"
+          >
+            {content.benefits.items.map((item, index) => {
+              const IconComponent = LucideIcons[item.icon] || LucideIcons.Circle;
+              return (
+                <div
+                  key={index}
+                  className="snap-start flex-shrink-0 w-64 bg-white/10 border border-white/15 rounded-2xl p-6 text-white"
+                >
+                  <IconComponent className="w-7 h-7 mb-4" />
+                  <p className="text-sm font-medium leading-relaxed">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -745,9 +788,9 @@ export default function DandruffTreatmentDubaiPage() {
         </div>
       </section>
 
-      {/* Reviewer + related links */}
-      <section className="bg-[#F5F1EA] py-12 px-6 pb-32">
-        <div className="max-w-3xl mx-auto space-y-6">
+      {/* Reviewer Section */}
+      <section className="bg-[#F5F1EA] py-12 px-6">
+        <div className="max-w-3xl mx-auto">
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-6">
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 border-2 border-[#1A5F3F]/10">
               <LucideIcons.UserCheck className="w-8 h-8 text-[#1A5F3F]" />
@@ -761,21 +804,94 @@ export default function DandruffTreatmentDubaiPage() {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-3 justify-center text-sm">
-            <Link href="/services/aesthetic-dermatology-dubai" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">Dermatology Services</Link>
-            <span className="text-[#5F5F5F]">·</span>
-            <Link href="/services/skin-diseases-treatment" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">Eczema Treatment</Link>
-            <span className="text-[#5F5F5F]">·</span>
-            <Link href="/services/rosacea-treatment-dubai" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">Rosacea Treatment</Link>
-            <span className="text-[#5F5F5F]">·</span>
-            <Link href="/services/general-physician-dubai" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">General Physician</Link>
-            <span className="text-[#5F5F5F]">·</span>
-            <Link href="/doctors" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">About Us</Link>
-            <span className="text-[#5F5F5F]">·</span>
-            <Link href="/contact-us" className="text-[#1F5E4B] font-medium underline hover:text-[#1A5F3F]">Contact Us</Link>
-          </div>
         </div>
       </section>
+
+      {/* ============================================== */}
+      {/* 17. CLINICAL RESOURCES & RELATED SERVICES      */}
+      {/* ============================================== */}
+      <footer className="bg-[#F9F7F2] py-16 px-4 border-t border-gray-200">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-12 gap-12 text-left">
+            {/* Related Services Column */}
+            <div className="lg:col-span-6 space-y-6">
+              <h4 className="text-lg font-bold text-[#1A5F3F] mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                Related Services & Care
+              </h4>
+              <p className="text-sm text-[#5F5F5F] mb-4">
+                Explore other dermatology and skin health services at RamaCare Polyclinic that may complement your scalp care:
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link href="/services/aesthetic-dermatology-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Dermatology Services
+                </Link>
+                <Link href="/services/hair-loss-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Hair Loss Treatment
+                </Link>
+                <Link href="/services/hair-prp-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> PRP Hair Treatment
+                </Link>
+                <Link href="/services/psoriasis-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Psoriasis Treatment
+                </Link>
+                <Link href="/services/skin-diseases-treatment/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Eczema Treatment
+                </Link>
+                <Link href="/services/rosacea-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Rosacea Treatment
+                </Link>
+                <Link href="/services/general-physician-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> General Physician
+                </Link>
+                <Link href="/doctors/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> About Us
+                </Link>
+                <Link href="/contact-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium col-span-2">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Contact Us
+                </Link>
+              </div>
+            </div>
+
+            {/* External References Column */}
+            <div className="lg:col-span-6 space-y-6">
+              <h4 className="text-lg font-bold text-[#1A5F3F] mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                Clinical Reference Guidelines
+              </h4>
+              <p className="text-sm text-[#5F5F5F] mb-4">
+                Our clinical protocols align with standard guidelines established by leading dermatology and health organizations:
+              </p>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://www.aad.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>American Academy of Dermatology (AAD) <span className="text-xs text-[#8C8C8C] font-normal">— general patient education on dandruff and seborrheic dermatitis</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>Mayo Clinic <span className="text-xs text-[#8C8C8C] font-normal">— overview of dandruff causes, symptoms, and self-care</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>World Health Organization (WHO) <span className="text-xs text-[#8C8C8C] font-normal">— global reports and health topics on chronic conditions</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.bad.org.uk" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>British Association of Dermatologists <span className="text-xs text-[#8C8C8C] font-normal">— clinical guidelines and patient information sheets on scalp conditions</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

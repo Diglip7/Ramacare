@@ -911,8 +911,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-white/80 leading-relaxed max-w-4xl mx-auto mt-10 text-center text-sm"
-          >
+            className="text-white/80 leading-relaxed max-w-4xl mx-auto mt-10 text-center text-sm">
             {whyChooseUs.note}
           </motion.p>
         </div>

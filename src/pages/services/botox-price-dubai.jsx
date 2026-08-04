@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -12,7 +13,7 @@ import { useRouter } from 'next/router';
    placeholders per the brief's own note — replace before publishing.
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/botox-price-dubai';
+const PAGE_PATH = '/services/botox-price-dubai/';
 const DOCTOR_NAME = 'Dr. Sahar Zomorrodi';
 
 const priceFactors = [
@@ -619,19 +620,79 @@ export default function BotoxPriceDubaiPage() {
         </div>
       </section>
 
-      {/* ============ Related treatments — icon chip strip ============ */}
-      <section className="bg-[#F5F1EA] py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-2">Explore Related Treatments</h2>
-          <p className="text-sm text-[#5F5F5F] leading-relaxed mb-6 max-w-2xl">
-            If you&apos;re researching Botox price in Dubai, you may also be considering complementary treatments available at RamaCare Polyclinic.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {related.map((r) => (
-              <a key={r.label} href={r.href} className="inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] bg-white border border-[#E9E2D6] px-4 py-2.5 rounded-full hover:border-[#1F5E4B] hover:text-[#1F5E4B] transition-colors">
-                <IconTile name={r.icon} className="w-4 h-4 text-[#1F5E4B]" /> {r.label}
-              </a>
-            ))}
+      {/* ============================================== */}
+      {/* CLINICAL RESOURCES & RELATED SERVICES          */}
+      {/* ============================================== */}
+      <section className="bg-[#F9F7F2] py-16 px-6 border-t border-gray-200">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-12 gap-12 text-left">
+            {/* Related Services Column */}
+            <div className="lg:col-span-6 space-y-6">
+              <h4 className="text-lg font-bold text-[#1A5F3F] mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                Related Services & Care
+              </h4>
+              <p className="text-sm text-[#5F5F5F] mb-4">
+                Explore other dermatology and skin health services at RamaCare Polyclinic that may complement your Botox care:
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <Link href="/services/botox-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Botox Treatment Dubai
+                </Link>
+                <Link href="/services/fillers-in-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Dermal Fillers
+                </Link>
+                <Link href="/services/hydrafacial-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> HydraFacial Dubai
+                </Link>
+                <Link href="/services/hair-prp-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> PRP Hair Treatment
+                </Link>
+                <Link href="/services/aesthetic-dermatology-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Aesthetic Dermatology
+                </Link>
+                <Link href="/services/chemical-peel-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Chemical Peel
+                </Link>
+                <Link href="/contact-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Contact Us
+                </Link>
+                <Link href="/book-appointment/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Book Appointment
+                </Link>
+              </div>
+            </div>
+
+            {/* External References Column */}
+            <div className="lg:col-span-6 space-y-6">
+              <h4 className="text-lg font-bold text-[#1A5F3F] mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                Clinical Reference Guidelines
+              </h4>
+              <p className="text-sm text-[#5F5F5F] mb-4">
+                Our clinical injection protocols align with standard guidelines established by leading dermatology and health organizations:
+              </p>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://www.aad.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>American Academy of Dermatology (AAD) <span className="text-xs text-[#8C8C8C] font-normal">— general patient resources on botulinum toxin treatments</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>Mayo Clinic <span className="text-xs text-[#8C8C8C] font-normal">— patient-facing guide to Botox procedure risks and outcomes</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                    <span>World Health Organization (WHO) <span className="text-xs text-[#8C8C8C] font-normal">— international health guidelines and standards</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

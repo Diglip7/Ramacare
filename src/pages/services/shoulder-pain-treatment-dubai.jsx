@@ -517,12 +517,12 @@ export default function ShoulderPainTreatmentPage() {
       {/* Symptoms + Risk Factors + When to See a Physiotherapist */}
       <section id="symptoms" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="lg:col-span-6 space-y-6"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">Symptoms You Shouldn't Ignore</h2>
               <div className="space-y-3">
@@ -550,21 +550,29 @@ export default function ShoulderPainTreatmentPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#1F5E4B] rounded-2xl p-8 text-white space-y-3"
+              className="lg:col-span-6 self-stretch flex-shrink-0"
             >
-              <Users className="w-10 h-10 mb-2" />
-              <h3 className="text-xl font-bold mb-2">Who Is Most at Risk?</h3>
-              <div className="space-y-2">
-                {riskFactors.map(function (r, i) {
-                  return (
-                    <div key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-4 h-4 text-white/80 mt-1 flex-shrink-0" />
-                      <span className="text-white/95 text-sm">{r}</span>
-                    </div>
-                  );
-                })}
+              <div className="bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-3xl p-8 sm:p-10 lg:p-12 text-white space-y-6 h-full flex flex-col justify-between shadow-2xl shadow-[#1F5E4B]/20">
+                <div className="space-y-6">
+                  <div className="w-16 h-16 bg-white/15 rounded-2xl flex items-center justify-center backdrop-blur-sm mb-2">
+                    <Users className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold">Who Is Most at Risk?</h3>
+                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 pt-2">
+                    {riskFactors.map(function (r, i) {
+                      return (
+                        <div key={i} className="flex items-start gap-3 p-3 bg-white/5 rounded-xl">
+                          <CheckCircle className="w-5 h-5 text-white/90 mt-0.5 flex-shrink-0" />
+                          <span className="text-white/95 text-base leading-relaxed">{r}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="pt-6 border-t border-white/20 mt-4">
+                  <p className="text-white/90 text-base sm:text-lg leading-relaxed">{riskFactorsNote}</p>
+                </div>
               </div>
-              <p className="text-white/80 text-sm leading-relaxed pt-3 border-t border-white/20">{riskFactorsNote}</p>
             </motion.div>
           </div>
 

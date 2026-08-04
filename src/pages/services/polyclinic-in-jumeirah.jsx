@@ -574,7 +574,7 @@ export default function PolyclinicInJumeirahPage() {
                   ))}
                 </ul>
               </div>
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-7 min-w-0">
                 <SectionHeading eyebrow="Comparison" title="RamaCare vs Visiting Multiple Clinics" />
                 <div className="overflow-x-auto rounded-2xl border border-gray-100 bg-white shadow-md">
                   <table className="w-full min-w-[520px] border-collapse text-left text-sm">

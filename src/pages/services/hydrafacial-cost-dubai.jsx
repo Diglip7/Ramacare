@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -222,7 +223,7 @@ function DashItem({ label, text }) {
   return (
     <li className="flex gap-3 py-2.5 border-b border-gray-100 last:border-0">
       <span className="text-[#1F5E4B] font-semibold shrink-0">—</span>
-      <p className="text-sm text-[#5F5F5F] leading-relaxed">
+      <p className="text-base text-[#5F5F5F] leading-relaxed">
         {label ? <span className="font-medium text-[#1A1A1A]">{label} — </span> : null}
         {text}
       </p>
@@ -232,7 +233,7 @@ function DashItem({ label, text }) {
 
 function SectionLabel({ children }) {
   return (
-    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#1F5E4B] mb-2">{children}</p>
+    <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#1F5E4B] mb-2">{children}</p>
   );
 }
 
@@ -289,10 +290,7 @@ export default function HydraFacialCostDubaiPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/85 via-[#1A1A1A]/35 to-[#1A1A1A]/10" />
 
         <div className="relative z-10 flex h-full max-w-7xl mx-auto flex-col justify-end px-6 pb-12 sm:px-8">
-          <p className="text-xs font-medium text-white/70 mb-4">
-            Home <span className="mx-1.5">/</span> Aesthetic Dermatology <span className="mx-1.5">/</span>{' '}
-            <span className="text-white">HydraFacial Cost Dubai</span>
-          </p>
+          
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.15] max-w-3xl">
             HydraFacial Cost Dubai — What You&apos;ll Actually Pay in 2026
           </h1>
@@ -325,7 +323,7 @@ export default function HydraFacialCostDubaiPage() {
       </div>
 
       {/* ============ INTRO ============ */}
-      <section className="max-w-4xl mx-auto px-6 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <p className="text-[#5F5F5F] leading-relaxed">
           If you&apos;ve typed &quot;HydraFacial cost Dubai&quot; into Google, you&apos;re probably comparing more than just a price tag — you&apos;re trying to figure out which clinic will give you real, medically-guided results without overpaying or under-delivering. HydraFacial has become one of the most requested facials in Dubai because it combines cleansing, exfoliation, extraction, and hydration into a single, no-downtime session — but prices across the city vary widely depending on the clinic, the technology used, and whether the treatment is performed under medical supervision.
         </p>
@@ -337,332 +335,513 @@ export default function HydraFacialCostDubaiPage() {
         </p>
         <p className="text-[#5F5F5F] leading-relaxed mt-4">
           Understanding HydraFacial cost Dubai norms before you book also helps you spot red flags. If a clinic advertises an unusually low flat rate with no mention of what&apos;s included, that&apos;s often a sign the &quot;facial&quot; being offered isn&apos;t the medical-grade, device-based treatment you&apos;re actually looking for. A transparent starting price, backed by a proper consultation, is generally a better indicator of quality than the lowest number you can find.
-        </p>
-      </section>
+      </p>
+    </section>
 
-      {/* ============ MAIN GUIDE LAYOUT — sticky sidebar + article column ============ */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <div className="grid lg:grid-cols-[220px_1fr] gap-12">
-          {/* Sticky sidebar nav */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-24">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#5F5F5F] mb-4">On This Page</p>
-              <ul className="space-y-2.5 border-l border-gray-200">
-                {nav.map((item) => (
-                  <li key={item.id}>
-                    <a href={`#${item.id}`} className="block pl-4 -ml-px border-l-2 border-transparent hover:border-[#1F5E4B] text-sm text-[#5F5F5F] hover:text-[#1F5E4B] transition-colors">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 rounded-xl border border-[#E9E2D6] bg-[#F5F1EA] p-5">
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#1F5E4B] mb-1">Quick Contact</p>
-                <button onClick={handleCall} className="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#1F5E4B] mt-3">
-                  <LucideIcons.Phone className="w-4 h-4 text-[#1F5E4B]" /> +971 4 286 2006
-                </button>
-                <button onClick={handleWhatsAppClick} className="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#1F5E4B] mt-2">
-                  <LucideIcons.MessageCircle className="w-4 h-4 text-[#1F5E4B]" /> +971 56 659 7878
-                </button>
-                <p className="flex items-start gap-2 text-sm text-[#5F5F5F] mt-2">
-                  <LucideIcons.MapPin className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> Jumeirah 1, Dubai
-                </p>
+    {/* ============ MAIN GUIDE LAYOUT — premium structured layouts ============ */}
+    <section className="max-w-6xl mx-auto px-6 pb-20 space-y-24">
+        
+        {/* 1. What is HydraFacial — connected timeline + side panel */}
+        <div id="what-is" className="scroll-mt-24">
+          <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
+            <div className="space-y-6">
+              <SectionLabel>The Treatment</SectionLabel>
+              <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A]">What Is HydraFacial?</h2>
+              <p className="text-base text-[#5F5F5F] leading-relaxed">
+                HydraFacial is a patented, device-based skin treatment that uses a vortex-style suction and infusion system to clean, exfoliate, extract, and hydrate the skin in one continuous process. Unlike manual facials, the handheld device does the work mechanically and consistently, which is part of why results tend to look uniform across the face rather than patchy.
+              </p>
+              <p className="text-base text-[#5F5F5F] leading-relaxed">
+                HydraFacial is generally considered suitable for most skin types, including oily, dry, combination, and — with the right serum selection — sensitive skin.
+              </p>
+              <div className="rounded-2xl overflow-hidden shadow-md mt-6">
+                <img 
+                  src="/images/skin-consultation-hydrafacial-assessment.jpg" 
+                  alt="Skin consultation before HydraFacial cost Dubai assessment" 
+                  className="w-full h-[280px] object-cover" 
+                />
               </div>
             </div>
-          </aside>
 
-          {/* Article column */}
-          <div className="min-w-0">
-
-            {/* What is HydraFacial — connected timeline of 4 stages */}
-            <div id="what-is" className="scroll-mt-24 mb-16">
-              <SectionLabel>The Treatment</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-3">What Is HydraFacial?</h2>
-              <p className="text-[#5F5F5F] leading-relaxed mb-8">
-                HydraFacial is a patented, device-based skin treatment that uses a vortex-style suction and infusion system to clean, exfoliate, extract, and hydrate the skin in one continuous process. Unlike manual facials, the handheld device does the work mechanically and consistently, which is part of why results tend to look uniform across the face rather than patchy. HydraFacial is generally considered suitable for most skin types, including oily, dry, combination, and — with the right serum selection — sensitive skin.
-              </p>
-              <div className="relative pl-8 border-l-2 border-[#E9E2D6] space-y-8">
+            <div className="bg-white border border-[#E9E2D6] rounded-3xl p-8 shadow-sm">
+              <h3 className="text-lg font-bold text-[#1A1A1A] mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#1F5E4B]"></span>
+                The 4 Treatment Stages
+              </h3>
+              <div className="space-y-8 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#E9E2D6]">
                 {stages.map((s) => (
-                  <div key={s.n} className="relative">
-                    <span className="absolute -left-[41px] top-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#1F5E4B] text-white text-xs font-semibold">
+                  <div key={s.n} className="relative pl-10">
+                    <span className="absolute left-0 top-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#1F5E4B] text-white text-xs font-bold shadow-sm">
                       {s.n}
                     </span>
-                    <h3 className="text-base font-semibold text-[#1A1A1A]">{s.title}</h3>
+                    <h4 className="text-base font-bold text-[#1A1A1A]">{s.title}</h4>
                     <p className="text-sm text-[#5F5F5F] leading-relaxed mt-1">{s.text}</p>
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="mt-10 rounded-lg overflow-hidden">
-                <img src="/images/skin-consultation-hydrafacial-assessment.jpg" alt="Skin consultation before HydraFacial cost Dubai assessment" className="w-full h-[260px] object-cover" />
+        {/* 2. Advisory Callout — gold/teal gradient border */}
+        <div className="relative overflow-hidden rounded-3xl border-l-8 border-[#1F5E4B] bg-[#F5F1EA] p-8 shadow-sm">
+          <div className="absolute right-4 top-4 text-[#1F5E4B]/10">
+            <LucideIcons.Quote className="w-24 h-24 rotate-180" />
+          </div>
+          <div className="relative z-10 max-w-3xl">
+            <h3 className="text-lg font-bold text-[#1A1A1A] mb-3">Why HydraFacial Pricing Isn&apos;t One-Size-Fits-All</h3>
+            <p className="text-base text-[#5F5F5F] leading-relaxed">
+              Because the treatment can be customized with different boosters, LED add-ons, or serum blends, no single number can honestly represent every possible HydraFacial session. That&apos;s exactly why serious clinics quote a starting price rather than a flat number for everyone — and why you should be cautious of clinics advertising a single fixed price with no mention of what&apos;s included.
+            </p>
+          </div>
+        </div>
+
+        {/* 3. Value Beyond Price — 2x2 grid of modern question cards */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <SectionLabel>Assessment Guidelines</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Understanding HydraFacial Value</h2>
+            <p className="text-[#5F5F5F] leading-relaxed mt-3">
+              When comparing HydraFacial cost Dubai-wide, it helps to look past the number on the price list and ask what&apos;s actually driving that price. Two clinics could both advertise &quot;AED 500 HydraFacial,&quot; but the results can differ significantly.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {valueQuestions.map((q, i) => (
+              <div key={q} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex gap-4">
+                <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-xl bg-[#F0F7F4] text-[#1F5E4B] text-sm font-bold">{i + 1}</span>
+                <p className="text-base text-[#1A1A1A] font-medium leading-snug pt-1">{q}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#F9F7F2] rounded-2xl p-6 border border-[#E9E2D6] text-center max-w-3xl mx-auto">
+            <p className="text-sm text-[#5F5F5F] leading-relaxed">
+              At RamaCare Polyclinic, the goal is to make sure the HydraFacial cost Dubai patients pay reflects genuine value — proper assessment, medical oversight, and a treatment plan suited to their skin, not just a facial performed on a fixed schedule regardless of individual needs.
+            </p>
+          </div>
+        </div>
+
+        {/* 4. Seasonal Offers — warm callout banner */}
+        <div className="bg-[#FDF5E6] rounded-3xl border border-[#D4A574]/20 p-8 flex flex-col md:flex-row gap-6 items-center justify-between shadow-sm">
+          <div className="space-y-2 text-center md:text-left">
+            <h3 className="text-lg font-bold text-[#1A1A1A] flex items-center justify-center md:justify-start gap-2">
+              <LucideIcons.Calendar className="w-5 h-5 text-[#D4A574]" />
+              Do Seasonal Offers Affect HydraFacial Cost?
+            </h3>
+            <p className="text-sm text-[#5F5F5F] leading-relaxed max-w-2xl">
+              Dubai clinics, including RamaCare, occasionally run seasonal promotions or bundled packages that can affect the standard HydraFacial cost Dubai patients would otherwise pay. These offers are typically time-limited and may include multiple sessions, added boosters, or discounts when combined with other treatments like skin boosters or microdermabrasion.
+            </p>
+          </div>
+          <button 
+            onClick={handleBookAppointment}
+            className="shrink-0 bg-[#1A1A1A] text-white hover:bg-black px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors"
+          >
+            Check Current Offers
+          </button>
+        </div>
+
+        {/* 5. Pricing Breakdown — real interactive table */}
+        <div id="pricing" className="scroll-mt-24 space-y-8">
+          <div className="max-w-2xl">
+            <SectionLabel>Pricing Breakdown</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">HydraFacial Cost Dubai — 2026 Pricing</h2>
+            <p className="text-[#5F5F5F] leading-relaxed mt-3">
+              At RamaCare Polyclinic, HydraFacial cost Dubai-wide starts from AED 500 for a standard session. This starting price includes the core treatment: cleansing, exfoliation, extraction, and hydration infusion. Your final price may depend on:
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-start">
+            <div className="overflow-hidden rounded-2xl border border-[#E9E2D6] shadow-sm">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-[#1A1A1A] text-white text-xs uppercase tracking-wider">
+                    <th className="px-6 py-4 font-semibold">Treatment Tier</th>
+                    <th className="px-6 py-4 font-semibold text-right">Starting Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {priceTable.map((row, i) => (
+                    <tr key={row.treatment} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F9F7F2]'}>
+                      <td className="px-6 py-4 text-sm font-medium text-[#1A1A1A] border-t border-[#E9E2D6]">{row.treatment}</td>
+                      <td className="px-6 py-4 text-sm font-semibold text-right border-t border-[#E9E2D6] text-[#1F5E4B]">{row.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="bg-gray-50 p-4 border-t border-[#E9E2D6]">
+                <p className="text-xs text-[#5F5F5F] leading-relaxed italic">
+                  We intentionally don&apos;t display fixed prices for tiered or add-on versions of the treatment, since final cost depends on your skin assessment. This keeps pricing transparent rather than advertising a number that may not apply to your specific skin.
+                </p>
               </div>
             </div>
 
-            {/* Why pricing isn't one-size — blockquote callout */}
-            <div className="mb-16 border-l-4 border-[#1F5E4B] bg-[#F5F1EA] rounded-r-lg px-6 py-5">
-              <h3 className="text-base font-semibold text-[#1A1A1A] mb-2">Why HydraFacial Pricing Isn&apos;t One-Size-Fits-All</h3>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                Because the treatment can be customized with different boosters, LED add-ons, or serum blends, no single number can honestly represent every possible HydraFacial session. That&apos;s exactly why serious clinics quote a starting price rather than a flat number for everyone — and why you should be cautious of clinics advertising a single fixed price with no mention of what&apos;s included.
-              </p>
-            </div>
+            <div className="space-y-6">
+              <div className="bg-white border border-[#E9E2D6] rounded-2xl p-6 shadow-sm">
+                <h4 className="text-sm font-bold text-[#1A1A1A] uppercase tracking-wider mb-4">Cost Modifiers</h4>
+                <ul className="divide-y divide-gray-100">
+                  {priceDependsOn.map((p) => (
+                    <li key={p.label} className="py-3 first:pt-0 last:pb-0">
+                      <p className="text-sm font-bold text-[#1A1A1A]">{p.label}</p>
+                      <p className="text-xs text-[#5F5F5F] mt-0.5">{p.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            {/* Value beyond price — numbered question list */}
-            <div className="mb-16">
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Understanding HydraFacial Value Beyond Just the Price Tag</h3>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed mb-5">
-                When comparing HydraFacial cost Dubai-wide, it helps to look past the number on the price list and ask what&apos;s actually driving that price. A few questions worth asking before booking based on price alone:
-              </p>
-              <ol className="space-y-3">
-                {valueQuestions.map((q, i) => (
-                  <li key={q} className="flex gap-3 text-sm text-[#5F5F5F] leading-relaxed">
-                    <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-[#F0F7F4] text-[#1F5E4B] text-xs font-semibold">{i + 1}</span>
-                    <span className="pt-0.5">{q}</span>
+              <div className="flex gap-3 rounded-2xl bg-[#F0F7F4] border border-[#1F5E4B]/10 px-5 py-4">
+                <LucideIcons.Info className="w-5 h-5 text-[#1F5E4B] shrink-0 mt-0.5" />
+                <p className="text-xs text-[#1A1A1A]/85 leading-relaxed">
+                  <span className="font-semibold text-[#1F5E4B]">DHA-Compliant Disclaimer:</span> Prices are indicative and may vary depending on the doctor&apos;s assessment, treatment plan, skin condition, and optional add-on boosters. A consultation is recommended for an accurate quotation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 6. Cost Factors — interactive cards grid */}
+        <div id="factors" className="scroll-mt-24 space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <SectionLabel>Cost Factors</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">What Affects the HydraFacial Cost?</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {costFactors.map((f, index) => {
+              const [title, desc] = f.split(' — ');
+              return (
+                <div key={index} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-[#F0F7F4] flex items-center justify-center text-[#1F5E4B] mb-4">
+                    <LucideIcons.DollarSign className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-base font-bold text-[#1A1A1A] leading-tight mb-2">{title}</h4>
+                  <p className="text-xs text-[#5F5F5F] leading-relaxed">{desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 7. What's Included — split panels comparison */}
+        <div id="included" className="scroll-mt-24 space-y-8">
+          <div className="max-w-2xl">
+            <SectionLabel>Inclusions</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">What&apos;s Included in the Starting Price?</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-2xl border border-[#1F5E4B]/20 bg-[#F0F7F4] p-8 shadow-sm">
+              <h4 className="text-lg font-bold text-[#1F5E4B] mb-6 flex items-center gap-2">
+                <LucideIcons.CheckCircle className="w-5 h-5" /> Included in standard AED 500
+              </h4>
+              <ul className="space-y-4">
+                {included.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-[#1A1A1A]/85 font-medium">
+                    <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" />
+                    {item}
                   </li>
                 ))}
-              </ol>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed mt-5">
-                At RamaCare Polyclinic, the goal is to make sure the HydraFacial cost Dubai patients pay reflects genuine value — proper assessment, medical oversight, and a treatment plan suited to their skin, not just a facial performed on a fixed schedule regardless of individual needs.
-              </p>
-            </div>
-
-            {/* Seasonal offers */}
-            <div className="mb-16">
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Do Seasonal Offers Affect HydraFacial Cost?</h3>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                Dubai clinics, including RamaCare, occasionally run seasonal promotions or bundled packages that can affect the standard HydraFacial cost Dubai patients would otherwise pay. These offers are typically time-limited and may include multiple sessions, added boosters, or discounts when combined with other treatments like skin boosters or microdermabrasion. Since these promotions change throughout the year, it&apos;s best to contact the clinic directly for current pricing rather than relying on older information found online.
-              </p>
-            </div>
-
-            {/* Full pricing breakdown — real table */}
-            <div id="pricing" className="scroll-mt-24 mb-16">
-              <SectionLabel>Pricing</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-3">HydraFacial Cost Dubai — Full Pricing Breakdown</h2>
-              <p className="text-[#5F5F5F] leading-relaxed mb-6">
-                At RamaCare Polyclinic, HydraFacial cost Dubai-wide starts from AED 500 for a standard session. This starting price includes the core treatment: cleansing, exfoliation, extraction, and hydration infusion. Your final price may depend on:
-              </p>
-              <ul className="mb-8">
-                {priceDependsOn.map((p) => (
-                  <DashItem key={p.label} label={p.label} text={p.text} />
-                ))}
-              </ul>
-
-              <div className="overflow-hidden rounded-xl border border-[#E9E2D6]">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-[#1A1A1A] text-white">
-                      <th className="text-left px-5 py-3 font-medium">Treatment</th>
-                      <th className="text-right px-5 py-3 font-medium">Starting Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {priceTable.map((row, i) => (
-                      <tr key={row.treatment} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F5F1EA]'}>
-                        <td className="px-5 py-3.5 text-[#1A1A1A] border-t border-[#E9E2D6]">{row.treatment}</td>
-                        <td className="px-5 py-3.5 text-right border-t border-[#E9E2D6] font-semibold text-[#1F5E4B]">{row.price}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-[#5F5F5F] leading-relaxed mt-3">
-                We intentionally don&apos;t display fixed prices for tiered or add-on versions of the treatment, since final cost depends on your skin assessment. This keeps pricing transparent rather than advertising a number that may not apply to your specific skin.
-              </p>
-
-              <div className="mt-6 flex gap-3 rounded-lg bg-[#F0F7F4] px-5 py-4">
-                <LucideIcons.Info className="w-5 h-5 text-[#1F5E4B] shrink-0 mt-0.5" />
-                <p className="text-xs text-[#1A1A1A] leading-relaxed">
-                  <span className="font-semibold">DHA-Compliant Disclaimer:</span> Prices are indicative and may vary depending on the doctor&apos;s assessment, treatment plan, skin condition, and optional add-on boosters. A consultation is recommended for an accurate quotation.
-                </p>
-              </div>
-            </div>
-
-            {/* Factors affecting cost */}
-            <div id="factors" className="scroll-mt-24 mb-16">
-              <SectionLabel>Cost Factors</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-5">Factors That Affect HydraFacial Cost</h2>
-              <div className="grid sm:grid-cols-2 gap-x-10">
-                <ul>{costFactors.slice(0, 4).map((f) => <DashItem key={f} text={f} />)}</ul>
-                <ul>{costFactors.slice(4).map((f) => <DashItem key={f} text={f} />)}</ul>
-              </div>
-            </div>
-
-            {/* What's included — two-panel split */}
-            <div id="included" className="scroll-mt-24 mb-16">
-              <SectionLabel>Transparency</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-5">What&apos;s Included in the Starting Price?</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="rounded-xl border border-[#1F5E4B]/25 bg-[#F0F7F4] p-6">
-                  <p className="text-sm font-semibold text-[#1F5E4B] mb-3">Included in AED 500</p>
-                  <ul className="space-y-2">
-                    {included.map((i) => (
-                      <li key={i} className="flex gap-2 text-sm text-[#1A1A1A]/85">
-                        <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-gray-200 bg-white p-6">
-                  <p className="text-sm font-semibold text-[#1A1A1A] mb-3">Quoted Separately After Consultation</p>
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                    Add-on boosters, specialized serums, or combination treatments are quoted separately after your consultation, based on your skin assessment and goals.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Benefits — compact two-column list, no cards */}
-            <div className="mb-16">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-5">Benefits of HydraFacial</h2>
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-1">
-                {benefits.map((b) => (
-                  <div key={b.title} className="py-2.5 border-b border-gray-100">
-                    <p className="text-sm font-medium text-[#1A1A1A]">{b.title}</p>
-                    <p className="text-sm text-[#5F5F5F] leading-relaxed">{b.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Good candidate + contraindication callout */}
-            <div id="candidate" className="scroll-mt-24 mb-16">
-              <SectionLabel>Is It Right For You</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-5">Who Is a Good Candidate for HydraFacial?</h2>
-              <ul className="grid sm:grid-cols-2 gap-x-10">
-                {candidateFor.map((c) => <DashItem key={c} text={c} />)}
-              </ul>
-              <div className="mt-6 flex gap-3 rounded-lg border border-amber-200 bg-amber-50 px-5 py-4">
-                <LucideIcons.AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-amber-900 leading-relaxed">
-                  If you have active, inflamed acne, an active skin infection, or a known allergy to specific active ingredients, a consultation is essential before booking. Pregnant or breastfeeding patients, and those with active rosacea flare-ups, should also mention this during consultation so the provider can adjust the treatment plan or timing.
-                </p>
-              </div>
-            </div>
-
-            {/* Treatment process — vertical timeline */}
-            <div id="process" className="scroll-mt-24 mb-16">
-              <SectionLabel>Step By Step</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-8">HydraFacial Treatment Process</h2>
-              <div className="relative pl-8 border-l-2 border-[#E9E2D6] space-y-7">
-                {processSteps.map((step, i) => (
-                  <motion.div
-                    key={step.title}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="relative"
-                  >
-                    <span className="absolute -left-[41px] top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#1F5E4B] bg-white text-[#1F5E4B] text-xs font-semibold">
-                      {i + 1}
-                    </span>
-                    <h3 className="text-base font-semibold text-[#1A1A1A]">{step.title}</h3>
-                    <p className="text-sm text-[#5F5F5F] leading-relaxed mt-1">{step.text}</p>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-10 rounded-lg overflow-hidden">
-                <img src="/images/hydrafacial-device-treatment-dubai.jpg" alt="HydraFacial machine performing treatment in Dubai clinic" className="w-full h-[260px] object-contain" />
-              </div>
-            </div>
-
-            {/* Before & after care — split Do/Don't panels */}
-            <div id="care" className="scroll-mt-24 mb-16">
-              <SectionLabel>Aftercare</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-6">Before &amp; After Care</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="rounded-xl bg-[#F0F7F4] p-6">
-                  <p className="text-sm font-semibold text-[#1F5E4B] mb-3 flex items-center gap-2">
-                    <LucideIcons.Check className="w-4 h-4" /> Do&apos;s
-                  </p>
-                  <ul className="space-y-2">
-                    {doList.map((d) => (
-                      <li key={d} className="text-sm text-[#1A1A1A]/85">{d}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="rounded-xl bg-[#F5F1EA] p-6">
-                  <p className="text-sm font-semibold text-[#1A1A1A] mb-3 flex items-center gap-2">
-                    <LucideIcons.X className="w-4 h-4" /> Don&apos;ts
-                  </p>
-                  <ul className="space-y-2">
-                    {dontList.map((d) => (
-                      <li key={d} className="text-sm text-[#5F5F5F]">{d}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed mt-5">
-                <span className="font-medium text-[#1A1A1A]">Expected recovery:</span> Little to no downtime for most patients; mild, temporary redness may occur and typically resolves within a few hours.
-              </p>
-            </div>
-
-            {/* Why choose RamaCare — compact single column */}
-            <div id="why-us" className="scroll-mt-24 mb-16">
-              <SectionLabel>RamaCare Polyclinic</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-5">Why Choose RamaCare Polyclinic for HydraFacial in Dubai?</h2>
-              <ul>
-                {whyUs.map((w) => <DashItem key={w} text={w} />)}
               </ul>
             </div>
 
-            {/* Related treatments — internal linking */}
-            <div className="mb-16 rounded-xl border border-[#E9E2D6] p-6">
-              <p className="text-sm font-semibold text-[#1A1A1A] mb-3">Related Treatments</p>
-              <div className="flex flex-wrap gap-3 text-sm">
-                <a href={links.acne} className="text-[#1F5E4B] underline underline-offset-4 hover:text-[#17493A]">acne treatment plan</a>
-                <a href={links.pigmentation} className="text-[#1F5E4B] underline underline-offset-4 hover:text-[#17493A]">pigmentation treatment</a>
-                <a href={links.aestheticDermatology} className="text-[#1F5E4B] underline underline-offset-4 hover:text-[#17493A]">Aesthetic Dermatology Dubai</a>
-                <a href={links.hairPrp} className="text-[#1F5E4B] underline underline-offset-4 hover:text-[#17493A]">Hair PRP Dubai</a>
+            <div className="rounded-2xl border border-[#E9E2D6] bg-white p-8 shadow-sm flex flex-col justify-center">
+              <div className="w-12 h-12 rounded-full bg-[#F5F1EA] flex items-center justify-center text-[#D4A574] mb-6">
+                <LucideIcons.PlusCircle className="w-6 h-6" />
               </div>
-            </div>
-
-            {/* FAQ — plus/minus accordion, numbered */}
-            <div id="faq" className="scroll-mt-24 mb-16">
-              <SectionLabel>Questions</SectionLabel>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-6">Frequently Asked Questions</h2>
-              <div className="divide-y divide-gray-100 border-y border-gray-100">
-                {faqs.map((f, i) => (
-                  <div key={f.q}>
-                    <button
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      className="w-full flex items-start justify-between gap-4 py-4 text-left"
-                    >
-                      <span className="text-sm font-medium text-[#1A1A1A]">{f.q}</span>
-                      <span className="shrink-0 text-[#1F5E4B] text-lg leading-none mt-0.5">
-                        {openFaq === i ? <LucideIcons.Minus className="w-4 h-4" /> : <LucideIcons.Plus className="w-4 h-4" />}
-                      </span>
-                    </button>
-                    {openFaq === i && (
-                      <p className="text-sm text-[#5F5F5F] leading-relaxed pb-4 pr-8">{f.a}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Book now — contact card, not full-bleed CTA banner */}
-            <div className="rounded-2xl border border-[#E9E2D6] bg-[#F5F1EA] p-8 sm:p-10">
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#1A1A1A] mb-2">Book Your HydraFacial Consultation Today</h2>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed mb-6 max-w-xl">
-                HydraFacial cost Dubai-wide starts from AED 500 at RamaCare Polyclinic — but the real value is in getting a treatment tailored to your actual skin, under proper medical supervision.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <button onClick={handleCall} className="inline-flex items-center gap-2 rounded-md bg-white border border-[#E9E2D6] px-5 py-2.5 text-sm font-medium text-[#1A1A1A] hover:border-[#1F5E4B]">
-                  <LucideIcons.Phone className="w-4 h-4 text-[#1F5E4B]" /> +971 4 286 2006
-                </button>
-                <button onClick={handleWhatsAppClick} className="inline-flex items-center gap-2 rounded-md bg-white border border-[#E9E2D6] px-5 py-2.5 text-sm font-medium text-[#1A1A1A] hover:border-[#1F5E4B]">
-                  <LucideIcons.MessageCircle className="w-4 h-4 text-[#1F5E4B]" /> +971 56 659 7878
-                </button>
-                <button onClick={handleBookAppointment} className="inline-flex items-center gap-2 rounded-md bg-[#1F5E4B] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#17493A]">
-                  <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
-                </button>
-              </div>
-              <p className="flex items-center gap-2 text-sm text-[#5F5F5F] mt-5">
-                <LucideIcons.MapPin className="w-4 h-4 text-[#1F5E4B]" /> Visit us in Jumeirah 1, Dubai
+              <h4 className="text-lg font-bold text-[#1A1A1A] mb-3">Quoted Separately After Consultation</h4>
+              <p className="text-base text-[#5F5F5F] leading-relaxed">
+                Add-on boosters, specialized serums, or combination treatments are quoted separately after your consultation, based on your skin assessment and goals. This ensures you only pay for what your skin genuinely requires.
               </p>
             </div>
           </div>
         </div>
+
+        {/* 8. Benefits — visual cards deck */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <SectionLabel>Benefits</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Why Get a HydraFacial?</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((b) => (
+              <div key={b.title} className="bg-white border border-[#E9E2D6] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-base font-bold text-[#1F5E4B] mb-2 flex items-center gap-2">
+                  <span className="w-1.5 h-4 bg-[#D4A574] rounded-full"></span>
+                  {b.title}
+                </h4>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed">{b.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 9. Good Candidate vs Warning — split panels with warning box */}
+        <div id="candidate" className="scroll-mt-24 space-y-8">
+          <div className="max-w-2xl">
+            <SectionLabel>Suitability</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Who is a Good Candidate?</h2>
+          </div>
+
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-start">
+            <div className="bg-white border border-[#E9E2D6] rounded-3xl p-8 shadow-sm">
+              <h4 className="text-lg font-bold text-[#1A1A1A] mb-6 flex items-center gap-2">
+                <LucideIcons.UserCheck className="w-5 h-5 text-[#1F5E4B]" />
+                Ideal for Skin Types
+              </h4>
+              <ul className="grid sm:grid-cols-2 gap-4">
+                {candidateFor.map((c) => (
+                  <li key={c} className="flex gap-2.5 items-start">
+                    <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#5F5F5F] leading-snug">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-amber-200 bg-amber-50/50 p-8 space-y-4">
+              <h4 className="text-lg font-bold text-amber-900 flex items-center gap-2">
+                <LucideIcons.AlertTriangle className="w-5 h-5 text-amber-600" />
+                Contraindications
+              </h4>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                If you have active, inflamed acne, an active skin infection, or a known allergy to specific active ingredients, a consultation is essential before booking. 
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                Pregnant or breastfeeding patients, and those with active rosacea flare-ups, should also mention this during consultation so the provider can adjust the treatment plan or timing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 10. Treatment Process — vertical structured process cards */}
+        <div id="process" className="scroll-mt-24 space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <SectionLabel>Your Journey</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">HydraFacial Treatment Process</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              {processSteps.map((step, i) => (
+                <div key={step.title} className="bg-white border border-[#E9E2D6] rounded-2xl p-5 shadow-sm hover:border-[#1F5E4B] transition-colors flex gap-4">
+                  <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#1F5E4B] text-white text-xs font-bold">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-bold text-[#1A1A1A]">{step.title}</h4>
+                    <p className="text-xs text-[#5F5F5F] mt-1">{step.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-6">
+              <div className="rounded-3xl overflow-hidden shadow-md">
+                <img 
+                  src="/images/hydrafacial-device-treatment-dubai.jpg" 
+                  alt="HydraFacial machine performing treatment in Dubai clinic" 
+                  className="w-full h-[320px] object-cover" 
+                />
+              </div>
+              <p className="text-xs text-[#5F5F5F] italic text-center">
+                Our clinic utilizes modern HydraFacial medical devices for precise, consistent results.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 11. Before & After Care — high-contrast Do/Don't grids */}
+        <div id="care" className="scroll-mt-24 space-y-8">
+          <div className="max-w-2xl">
+            <SectionLabel>Clinical Care</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Before &amp; After Care</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-[#F0F7F4] border border-[#1F5E4B]/10 rounded-2xl p-8 shadow-sm">
+              <h4 className="text-lg font-bold text-[#1F5E4B] mb-6 flex items-center gap-2">
+                <LucideIcons.Check className="w-5 h-5" /> Do&apos;s
+              </h4>
+              <ul className="space-y-3.5">
+                {doList.map((d) => (
+                  <li key={d} className="flex gap-2 text-sm text-[#1A1A1A]/80 font-medium">
+                    <span className="text-[#1F5E4B]">•</span> {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-[#F5F1EA] border border-[#D4A574]/20 rounded-2xl p-8 shadow-sm">
+              <h4 className="text-lg font-bold text-[#1A1A1A] mb-6 flex items-center gap-2">
+                <LucideIcons.X className="w-5 h-5 text-red-600" /> Don&apos;ts
+              </h4>
+              <ul className="space-y-3.5">
+                {dontList.map((d) => (
+                  <li key={d} className="flex gap-2 text-sm text-[#5F5F5F] font-medium">
+                    <span className="text-red-500 font-bold">•</span> {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm max-w-xl mx-auto">
+            <p className="text-sm text-[#5F5F5F]">
+              <span className="font-bold text-[#1A1A1A]">Expected recovery:</span> Little to no downtime for most patients; mild, temporary redness may occur and typically resolves within a few hours.
+            </p>
+          </div>
+        </div>
+
+        {/* 12. Why Choose RamaCare */}
+        <div id="why-us" className="scroll-mt-24 space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <SectionLabel>Why Choose Us</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Why Choose RamaCare Polyclinic?</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyUs.map((w, index) => {
+              const [title, desc] = w.split(' — ');
+              return (
+                <div key={index} className="bg-white border border-gray-150 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-10 h-10 rounded-full bg-[#1F5E4B]/10 flex items-center justify-center text-[#1F5E4B] mb-4">
+                    <LucideIcons.CheckCircle2 className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-base font-bold text-[#1A1A1A] mb-2 leading-snug">{title}</h4>
+                  <p className="text-xs text-[#5F5F5F] leading-relaxed">{desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 13. Clinical Resources & Related Services */}
+        <div className="border-t border-gray-200 pt-16">
+          <div className="grid md:grid-cols-2 gap-8 text-left bg-white border border-[#E9E2D6] rounded-3xl p-8 shadow-sm">
+            {/* Related Services Column */}
+            <div className="space-y-4">
+              <h4 className="text-base font-bold text-[#1A1A1A] flex items-center gap-2">
+                <span className="w-1.5 h-5 bg-[#D4A574] rounded-full inline-block"></span>
+                Related Services & Care
+              </h4>
+              <p className="text-xs text-[#5F5F5F]">
+                Explore other skin health and aesthetic services at RamaCare Polyclinic that may complement your HydraFacial care:
+              </p>
+              <div className="grid sm:grid-cols-2 gap-2 text-xs">
+                <Link href="/services/aesthetic-dermatology-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Aesthetic Dermatology
+                </Link>
+                <Link href="/services/acne-treatment-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Acne Treatment
+                </Link>
+                <Link href="/services/acne-scar-treatment-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Acne Scar Treatment
+                </Link>
+                <Link href="/services/melasma-treatment-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Melasma Treatment
+                </Link>
+                <Link href="/services/rosacea-treatment-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Rosacea Treatment
+                </Link>
+                <Link href="/services/pigmentation-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Pigmentation Treatment
+                </Link>
+                <Link href="/services/hair-prp-dubai/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Hair PRP Dubai
+                </Link>
+                <Link href="/book-appointment/" className="text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                  <LucideIcons.ChevronRight className="w-3 h-3 text-[#D4A574]" /> Book Appointment
+                </Link>
+              </div>
+            </div>
+
+            {/* External References Column */}
+            <div className="space-y-4">
+              <h4 className="text-base font-bold text-[#1A1A1A] flex items-center gap-2">
+                <span className="w-1.5 h-5 bg-[#D4A574] rounded-full inline-block"></span>
+                Clinical Reference Guidelines
+              </h4>
+              <p className="text-xs text-[#5F5F5F]">
+                Our clinical skin care protocols align with patient education standards from leading organizations:
+              </p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="https://www.aad.org" target="_blank" rel="noopener noreferrer" className="text-xs text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3 h-3 text-[#1F5E4B] shrink-0" />
+                    <span>American Academy of Dermatology (AAD) <span className="text-[10px] text-[#8C8C8C] font-normal">— general patient resources</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-xs text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3 h-3 text-[#1F5E4B] shrink-0" />
+                    <span>Mayo Clinic <span className="text-[10px] text-[#8C8C8C] font-normal">— patient-facing skin care information</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nhs.uk" target="_blank" rel="noopener noreferrer" className="text-xs text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1 transition-colors font-medium">
+                    <LucideIcons.ExternalLink className="w-3 h-3 text-[#1F5E4B] shrink-0" />
+                    <span>National Health Service (NHS) <span className="text-[10px] text-[#8C8C8C] font-normal">— health facts and guidance on non-surgical facials</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 14. FAQ Accordion */}
+        <div id="faq" className="scroll-mt-24">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Frequently Asked Questions</h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-8 shadow-sm divide-y divide-gray-100">
+            {faqs.map((f, i) => (
+              <div key={f.q} className="py-4 first:pt-0 last:pb-0">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-start justify-between gap-4 text-left py-2"
+                >
+                  <span className="text-base font-bold text-[#1A1A1A]">{f.q}</span>
+                  <span className="shrink-0 text-[#1F5E4B] text-lg leading-none mt-1">
+                    {openFaq === i ? <LucideIcons.Minus className="w-4 h-4" /> : <LucideIcons.Plus className="w-4 h-4" />}
+                  </span>
+                </button>
+                {openFaq === i && (
+                  <p className="text-sm text-[#5F5F5F] leading-relaxed pt-2 pb-2 pr-8">{f.a}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 15. Premium Booking CTA Banner */}
+        <div className="rounded-3xl border border-[#E9E2D6] bg-[#F5F1EA] p-8 sm:p-12 text-center relative overflow-hidden shadow-md">
+          <div className="absolute right-0 bottom-0 text-[#1F5E4B]/5 pointer-events-none">
+            <LucideIcons.Sparkles className="w-64 h-64 translate-x-20 translate-y-20" />
+          </div>
+          <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A]">Book Your HydraFacial Consultation Today</h2>
+            <p className="text-base text-[#5F5F5F] leading-relaxed">
+              HydraFacial cost Dubai-wide starts from AED 500 at RamaCare Polyclinic — but the real value is in getting a treatment tailored to your actual skin, under proper medical supervision.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
+              <button onClick={handleCall} className="inline-flex items-center gap-2 rounded-xl bg-white border border-[#E9E2D6] px-6 py-3.5 text-sm font-bold text-[#1A1A1A] hover:border-[#1F5E4B] transition-all shadow-sm">
+                <LucideIcons.Phone className="w-4 h-4 text-[#1F5E4B]" /> +971 4 286 2006
+              </button>
+              <button onClick={handleWhatsAppClick} className="inline-flex items-center gap-2 rounded-xl bg-white border border-[#E9E2D6] px-6 py-3.5 text-sm font-bold text-[#1A1A1A] hover:border-[#1F5E4B] transition-all shadow-sm">
+                <LucideIcons.MessageCircle className="w-4 h-4 text-[#1F5E4B]" /> +971 56 659 7878
+              </button>
+              <button onClick={handleBookAppointment} className="inline-flex items-center gap-2 rounded-xl bg-[#1F5E4B] px-6 py-3.5 text-sm font-bold text-white hover:bg-[#17493A] transition-all shadow-md transform hover:-translate-y-0.5">
+                <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
+              </button>
+            </div>
+            <p className="flex items-center justify-center gap-2 text-xs font-semibold text-[#5F5F5F]">
+              <LucideIcons.MapPin className="w-4 h-4 text-[#1F5E4B]" /> Visit us in Jumeirah 1, Dubai
+            </p>
+          </div>
+        </div>
+
       </section>
 
       {/* Sticky Bottom Bar */}

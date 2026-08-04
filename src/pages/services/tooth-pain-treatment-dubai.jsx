@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
 import {
@@ -36,6 +37,8 @@ import {
   Pill,
   Crown,
   Siren,
+  ChevronRight,
+  ExternalLink,
 } from 'lucide-react';
 
 /* =====================================================================
@@ -52,7 +55,7 @@ const SEO = {
   title: 'Tooth Pain Treatment Dubai | RamaCare Polyclinic',
   metaDescription:
     'Struggling with a toothache? Get expert Tooth Pain Treatment Dubai at RamaCare Polyclinic — same-day appointments with DHA-licensed dentists. Book today.',
-  canonical: 'https://ramacarepolyclinic.ae/tooth-pain-treatment-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/',
   keywords:
     'Tooth Pain Treatment Dubai, Toothache Treatment Dubai, Emergency Dentist Dubai, Root Canal Treatment Dubai, Wisdom Tooth Pain Dubai, Dental Pain Relief Dubai, Best Dentist Dubai, Family Dental Clinic Dubai',
 };
@@ -636,13 +639,13 @@ export default function ToothPainTreatmentPage() {
               </div>
 
               <div className="lg:col-span-6">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-sm lg:sticky lg:top-24 bg-white">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-sm lg:sticky lg:top-24 border border-gray-150">
                   <Image
                     src={IMAGES.diagnosis.src}
                     alt={IMAGES.diagnosis.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -858,30 +861,88 @@ export default function ToothPainTreatmentPage() {
           </div>
         </section>
 
-        {/* ============================ RELATED SERVICES — internal links ============================ */}
-        <section className="bg-white py-14 px-4">
-          <div className="mx-auto max-w-5xl text-center">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-[#5F5F5F]">Related Dental Services</h3>
-            <div className="mt-5 flex flex-wrap justify-center gap-3">
-              {[
-                { label: 'Dental Services Dubai', href: '/services/dental-dubai' },
-                { label: 'Root Canal Treatment Dubai', href: '/services/root-canal-treatment-dubai' },
-                { label: 'Teeth Whitening Dubai', href: '/services/teeth-bleaching-dubai' },
-                { label: 'Gum Disease Treatment Dubai', href: '/services/gum-disease-treatment-dubai' },
-                { label: 'Composite Veneers Dubai', href: '/services/composite-veneers' },
-                { label: 'General Physician', href: '/services/general-physician-dubai' },
-              ].map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-full border border-[#1F5E4B]/15 px-4 py-2 text-xs font-semibold text-[#1F5E4B] hover:bg-[#1F5E4B]/5"
-                >
-                  {l.label}
-                </a>
-              ))}
+        {/* ============================================== */}
+        {/* 16. CLINICAL RESOURCES & RELATED SERVICES      */}
+        {/* ============================================== */}
+        <footer className="bg-[#F9F7F2] py-16 px-4 border-t border-gray-200">
+          <div className="mx-auto max-w-6xl text-left">
+            <div className="grid lg:grid-cols-12 gap-12">
+              {/* Related Services Column */}
+              <div className="lg:col-span-6 space-y-6">
+                <h4 className="text-lg font-bold text-[#0F3B2E] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                  Related Services & Care
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Explore other dental and general health services at RamaCare Polyclinic that may complement your oral care:
+                </p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <Link href="/services/dental-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Dental Services Dubai
+                  </Link>
+                  <Link href="/services/root-canal-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Root Canal Treatment
+                  </Link>
+                  <Link href="/services/teeth-bleaching-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Teeth Whitening
+                  </Link>
+                  <Link href="/services/gum-disease-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Gum Disease Treatment
+                  </Link>
+                  <Link href="/services/composite-veneers/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Composite Veneers
+                  </Link>
+                  <Link href="/services/general-physician-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> General Physician
+                  </Link>
+                  <Link href="/about-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> About Us
+                  </Link>
+                  <Link href="/contact-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Contact Us
+                  </Link>
+                </div>
+              </div>
+
+              {/* External References Column */}
+              <div className="lg:col-span-6 space-y-6">
+                <h4 className="text-lg font-bold text-[#0F3B2E] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                  Clinical Reference Guidelines
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Our clinical protocols align with standard guidelines established by leading dental and health organizations:
+                </p>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="https://www.ada.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>American Dental Association (ADA) <span className="text-xs text-[#8C8C8C] font-normal">— oral hygiene and cavity prevention guidance</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>World Health Organization (WHO) <span className="text-xs text-[#8C8C8C] font-normal">— global oral health statistics and prevention guidance</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>Mayo Clinic <span className="text-xs text-[#8C8C8C] font-normal">— general patient-facing dental symptom information</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.fdiworlddental.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>FDI World Dental Federation <span className="text-xs text-[#8C8C8C] font-normal">— global preventive dental care standards</span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </section>
+        </footer>
 
         {/* ============================ CONCLUSION / CTA — gold banner ============================ */}
         <section id="book" className="bg-[#FDF5E6] py-20 px-4">

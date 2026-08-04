@@ -13,7 +13,9 @@ import {
   Phone,
   Search,
   AlertTriangle,
-  MessageCircle
+  MessageCircle,
+  Activity,
+  Award
 } from 'lucide-react';
 
 // Renders text containing {{Label|/href}} tokens as real inline links.
@@ -118,8 +120,8 @@ export default function ServicePageTemplate({ content }) {
 
   // WhatsApp integration
   const whatsappNumber = "971566597878";
-  const whatsappMessage = selectedSymptoms.length > 0 
-    ? `Hello RamaCare, I'm interested in ${seo.title || 'your services'} and I have these symptoms:\n${selectedSymptoms.map((symptom, idx) => `${idx + 1}. ${symptom}`).join('\n')}\nCan you help me with a specialist assessment?` 
+  const whatsappMessage = selectedSymptoms.length > 0
+    ? `Hello RamaCare, I'm interested in ${seo.title || 'your services'} and I have these symptoms:\n${selectedSymptoms.map((symptom, idx) => `${idx + 1}. ${symptom}`).join('\n')}\nCan you help me with a specialist assessment?`
     : `Hello RamaCare, I'm interested in ${seo.title || 'your services'} and would like to book a specialist assessment.`;
 
   const navItems = [
@@ -148,17 +150,19 @@ export default function ServicePageTemplate({ content }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
           {/* Breadcrumbs */}
-          <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-4 sm:mb-6 uppercase tracking-wider">
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-4 sm:mb-6 tracking-wider">
             {(breadcrumbs || []).map((b, index) => (
               <React.Fragment key={index}>
-                <a href={b.href} className="hover:text-[#1F5E4B] transition-colors">{b.label}</a>
+                <a href={b.href} className="hover:text-[#1F5E4B] transition-colors">
+                  {b.label.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}
+                </a>
                 {index < (breadcrumbs || []).length - 1 && <span className="mx-1.5 text-gray-300">/</span>}
               </React.Fragment>
             ))}
           </nav>
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-  
+
             {/* Hero Copy */}
             <div className="lg:col-span-7">
               <span className="inline-flex items-center px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full mb-3 sm:mb-4">
@@ -247,22 +251,59 @@ export default function ServicePageTemplate({ content }) {
       <QuickNavigation navItems={navItems} />
 
       {/* INTRODUCTION BLOCK */}
-      <section className="py-12 md:py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[#F9F7F2] p-6 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-[#D4A574]/20 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-3 h-full bg-[#D4A574]" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-6 pl-4">{introText.title}</h2>
-            <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed mb-6 pl-4">
-              <LinkedText text={introText.paragraph1} />
-            </div>
-            <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed mb-6 pl-4">
-              <LinkedText text={introText.paragraph2} />
-            </div>
-            {introText.paragraph3 ? (
-              <div className="text-[#5F5F5F] text-base sm:text-lg leading-relaxed pl-4">
-                <LinkedText text={introText.paragraph3} />
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+            {/* Title Column (4 Cols) */}
+            <div className="lg:col-span-4 space-y-6">
+              <div>
+                <span className="inline-flex items-center px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full mb-3 sm:mb-4">
+                  Clinical Overview
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-tight">
+                  {introText.title}
+                </h2>
+                <div className="w-12 h-1 bg-[#D4A574] rounded-full mt-4" />
               </div>
-            ) : null}
+
+              {/* Elegant highlights list to fill the empty space below the title */}
+              <div className="pt-6 border-t border-gray-150 space-y-4">
+                <div className="flex items-center space-x-3 text-[#5F5F5F]">
+                  <CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold tracking-wide">Evidence-Based Care</span>
+                </div>
+                <div className="flex items-center space-x-3 text-[#5F5F5F]">
+                  <Shield className="w-5 h-5 text-[#1F5E4B] flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold tracking-wide">DHA-Licensed Clinic</span>
+                </div>
+                <div className="flex items-center space-x-3 text-[#5F5F5F]">
+                  <Activity className="w-5 h-5 text-[#1F5E4B] flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold tracking-wide">Conservative Therapy</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Paragraphs Column (8 Cols) */}
+            <div className="lg:col-span-8 space-y-6">
+              {/* Paragraph 1: Highlighted with a gold left line */}
+              <div className="pl-4 sm:pl-6 border-l-4 border-[#D4A574] text-[#1A1A1A] text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+                <LinkedText text={introText.paragraph1} />
+              </div>
+
+              {/* Paragraph 2 */}
+              <div className="pl-4 sm:pl-6 text-[#5F5F5F] text-base sm:text-lg leading-relaxed">
+                <LinkedText text={introText.paragraph2} />
+              </div>
+
+              {/* Paragraph 3 */}
+              {introText.paragraph3 && (
+                <div className="pl-4 sm:pl-6 text-[#5F5F5F] text-base sm:text-lg leading-relaxed">
+                  <LinkedText text={introText.paragraph3} />
+                </div>
+              )}
+            </div>
+
           </div>
         </div>
       </section>
@@ -549,29 +590,28 @@ export default function ServicePageTemplate({ content }) {
       {/* CAUSES AND RISK FACTORS */}
       <section id="causes" className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
         <div className="max-w-7xl mx-auto">
-          <div className={riskFactors ? "grid lg:grid-cols-2 gap-12" : "max-w-3xl mx-auto"}>
-
-            {/* Causes */}
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{causes.title}</h2>
-              <p className="text-base text-[#5F5F5F] mb-6">{causes.intro}</p>
-              <div className="space-y-3">
-                {(causes.list || []).map((c, idx) => (
-                  <div key={idx} className="bg-white p-4 rounded-xl shadow-sm border border-gray-150 flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-[#1F5E4B]/10 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0">
-                      {idx + 1}
+          {riskFactors ? (
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Causes */}
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{causes.title}</h2>
+                <p className="text-base text-[#5F5F5F] mb-6">{causes.intro}</p>
+                <div className="space-y-3">
+                  {(causes.list || []).map((c, idx) => (
+                    <div key={idx} className="bg-white p-4 rounded-xl shadow-sm border border-gray-150 flex items-start space-x-3">
+                      <div className="w-8 h-8 rounded-lg bg-[#1F5E4B]/10 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-sm text-[#1A1A1A]">{c.name}</h4>
+                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{c.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-[#1A1A1A]">{c.name}</h4>
-                      <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{c.description}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Risk Factors */}
-            {riskFactors && (
+              {/* Risk Factors */}
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{riskFactors.title}</h2>
                 <p className="text-base text-[#5F5F5F] mb-6">{riskFactors.intro}</p>
@@ -589,32 +629,72 @@ export default function ServicePageTemplate({ content }) {
                   ))}
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            /* Layout when there are no Risk Factors (e.g. Anxiety page) - Wide 2-Column Split */
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-4">
+                <span className="text-xs font-bold text-[#D4A574] uppercase tracking-wider block mb-2">Contributors</span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{causes.title}</h2>
+                <p className="text-base text-[#5F5F5F]">{causes.intro}</p>
+              </div>
+              <div className="lg:col-span-8 grid sm:grid-cols-2 gap-4">
+                {(causes.list || []).map((c, idx) => (
+                  <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-150 flex items-start space-x-3 hover:shadow-md transition-shadow">
+                    <div className="w-8 h-8 rounded-lg bg-[#1F5E4B]/10 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0">
+                      {idx + 1}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sm text-[#1A1A1A]">{c.name}</h4>
+                      <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{c.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
       {/* WHEN TO SEEK MEDICAL CARE */}
-      <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <AlertTriangle className="w-12 h-12 text-[#D4A574] mx-auto mb-6" />
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">{whenToSeeDoctor.title}</h2>
-          {whenToSeeDoctor.intro && (
-            <p className="text-sm sm:text-base text-white/90 max-w-xl mx-auto mb-6 leading-relaxed">
-              {whenToSeeDoctor.intro}
-            </p>
-          )}
-          <div className="bg-white/10 backdrop-blur-sm p-5 sm:p-6 rounded-2xl border border-white/20 mb-6 text-left max-w-2xl mx-auto space-y-3">
-            {(whenToSeeDoctor.redFlags || []).map((flag, idx) => (
-              <div key={idx} className="flex items-start space-x-2">
-                <span className="text-[#D4A574] font-bold mt-0.5">•</span>
-                <span className="text-sm font-medium leading-relaxed">{flag}</span>
+      <section className="py-16 md:py-24 px-4 bg-[#1F5E4B] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+            {/* Left Column: Heading and Info (6 Cols) */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 border border-white/20">
+                <AlertTriangle className="w-8 h-8 text-[#D4A574]" />
               </div>
-            ))}
+              <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight">{whenToSeeDoctor.title}</h2>
+              {whenToSeeDoctor.intro && (
+                <p className="text-base text-white/90 leading-relaxed">
+                  {whenToSeeDoctor.intro}
+                </p>
+              )}
+              <div className="w-16 h-1 bg-[#D4A574]/40 rounded-full" />
+              <p className="text-xs text-white/80 leading-relaxed font-light">
+                {whenToSeeDoctor.note}
+              </p>
+            </div>
+
+            {/* Right Column: Red Flags List Card (6 Cols) */}
+            <div className="lg:col-span-6">
+              <div className="bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/20 shadow-xl">
+                <span className="text-[#D4A574] text-xs font-bold uppercase tracking-wider block mb-4">Key Assessment Indicators</span>
+                <div className="space-y-4">
+                  {(whenToSeeDoctor.redFlags || []).map((flag, idx) => (
+                    <div key={idx} className="flex items-start space-x-3">
+                      <span className="text-[#D4A574] font-bold text-lg leading-none mt-0.5">•</span>
+                      <span className="text-sm font-medium leading-relaxed text-white">{flag}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
-          <p className="text-sm text-white/80 max-w-xl mx-auto leading-relaxed">
-            {whenToSeeDoctor.note}
-          </p>
         </div>
       </section>
 
@@ -868,31 +948,39 @@ export default function ServicePageTemplate({ content }) {
       </section>
 
       {benefits && (
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{benefits.title}</h2>
-              {benefits.intro && (
-                <p className="text-base sm:text-lg text-[#5F5F5F] leading-relaxed">
-                  <LinkedText text={benefits.intro} />
-                </p>
-              )}
-            </div>
+        <section className="py-16 md:py-24 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
-              {(benefits.list || []).map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-3 bg-[#FCFDFB] p-4 rounded-xl border border-gray-150 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                  <span className="text-[#1A1A1A] text-sm font-semibold">{item}</span>
+              {/* Left Column: Heading and Intro (4 Cols) */}
+              <div className="lg:col-span-4">
+                <span className="text-xs font-bold text-[#D4A574] uppercase tracking-wider block mb-2">Advantages</span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">{benefits.title}</h2>
+                {benefits.intro && (
+                  <p className="text-base text-[#5F5F5F] leading-relaxed">
+                    <LinkedText text={benefits.intro} />
+                  </p>
+                )}
+              </div>
+
+              {/* Right Column: Grid and Outro (8 Cols) */}
+              <div className="lg:col-span-8 space-y-8">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {(benefits.list || []).map((item, idx) => (
+                    <div key={idx} className="flex items-start space-x-3 bg-[#FCFDFB] p-4 rounded-xl border border-gray-150 shadow-sm hover:shadow-md transition-shadow">
+                      <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
+                      <span className="text-[#1A1A1A] text-sm font-semibold">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+                {benefits.outro && (
+                  <p className="text-xs sm:text-sm text-[#5F5F5F] leading-relaxed italic border-t border-gray-100 pt-6">
+                    <LinkedText text={benefits.outro} />
+                  </p>
+                )}
+              </div>
 
-            {benefits.outro && (
-              <p className="text-sm sm:text-base text-[#5F5F5F] leading-relaxed italic text-center max-w-2xl mx-auto border-t border-gray-100 pt-6">
-                <LinkedText text={benefits.outro} />
-              </p>
-            )}
+            </div>
           </div>
         </section>
       )}
@@ -952,6 +1040,9 @@ export default function ServicePageTemplate({ content }) {
         </section>
       )}
 
+      {/* Doctors Showcase */}
+      <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
+
       {/* WHY CHOOSE US, DIAGNOSTIC EQUIPMENT (IMAGE 5) & PHYSIOTHERAPISTS */}
       <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -1004,9 +1095,6 @@ export default function ServicePageTemplate({ content }) {
               </div>
             </div>
           </div>
-
-          {/* Doctors Showcase */}
-          <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
 
         </div>
       </section>

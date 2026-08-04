@@ -1,6 +1,7 @@
 
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import QuickNavigation from '../../../components/QuickNavigation';
 import { useState, useEffect } from 'react';
@@ -862,32 +863,26 @@ export default function NeckPainTreatmentPage() {
                 </p>
                 <div className="w-24 h-1 bg-[#38D39F] mx-auto mt-6"></div>
               </div>
-              <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
+                  className="lg:col-span-5 flex-shrink-0 self-stretch"
                 >
-                  <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5E4B]/10 to-[#38D39F]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 flex items-center justify-center">
-                    <img
+                  <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden border border-[#1F5E4B]/20 lg:sticky lg:top-24">
+                    <Image
                       src="/images/physiotherapist-examining-neck-dubai.jpg"
                       alt="Physiotherapist assessing cervical mobility in Dubai clinic"
-                      className="absolute inset-0 w-full h-full object-cover z-10"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 41.66vw"
+                      className="object-cover"
                     />
-                    <div className="text-center p-6 relative z-0">
-                      <div className="w-24 h-24 bg-[#1F5E4B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Stethoscope className="w-12 h-12 text-[#1F5E4B]" />
-                      </div>
-                      <p className="text-gray-600 text-sm mt-1 max-w-xs mx-auto">Physiotherapist assessing cervical mobility in Dubai clinic</p>
-                    </div>
                   </div>
                 </motion.div>
-                <div className="max-w-xl">
-                  <div className="space-y-6">
+                <div className="lg:col-span-7">
+                  <div className="space-y-4 sm:space-y-5">
                     {diagnosisSteps.map((step, index) => (
                       <motion.div
                         key={index}
@@ -895,17 +890,17 @@ export default function NeckPainTreatmentPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.05 }}
-                        className="flex items-start gap-6 p-6 bg-white rounded-2xl shadow-sm"
+                        className="flex items-start gap-5 p-5 sm:p-6 bg-white rounded-2xl shadow-sm"
                       >
-                        <div className="w-12 h-12 bg-[#1F5E4B] rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-white font-bold text-lg">{index + 1}</span>
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#1F5E4B] rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-base sm:text-lg">{index + 1}</span>
                         </div>
-                        <p className="text-lg text-gray-700 pt-2">{step}</p>
+                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed pt-1">{step}</p>
                       </motion.div>
                     ))}
                   </div>
-                  <div className="mt-10 bg-[#1F5E4B]/10 p-8 rounded-2xl border border-[#1F5E4B]/20">
-                    <p className="text-lg text-gray-800">
+                  <div className="mt-8 bg-[#1F5E4B]/10 p-6 sm:p-8 rounded-2xl border border-[#1F5E4B]/20">
+                    <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
                       This thorough approach ensures your treatment plan targets the actual source of your pain, not just the area that hurts.
                     </p>
                   </div>

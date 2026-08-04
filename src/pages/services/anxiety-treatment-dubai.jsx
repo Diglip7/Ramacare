@@ -158,6 +158,56 @@ export default function AnxietyTreatmentPage() {
 
       <ServicePageTemplate content={content} />
 
+      {/* External References Section */}
+      <section className="py-12 bg-white border-t border-gray-150 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-sm font-bold text-[#1A1A1A] uppercase tracking-wider mb-3 text-center">
+            External References Used for Factual Accuracy
+          </h3>
+          <p className="text-xs text-[#5F5F5F] text-center mb-6">
+            These external medical authorities were referenced to verify factual accuracy; no text was copied.
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-3 text-xs text-[#5F5F5F] max-w-2xl mx-auto">
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                World Health Organization — Anxiety disorders fact sheet
+              </a>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://www.mayoclinic.org/diseases-conditions/anxiety/symptoms-causes/syc-20350961" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                Mayo Clinic — Anxiety disorders: symptoms and causes
+              </a>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://my.clevelandclinic.org/health/diseases/9536-anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                Cleveland Clinic — Anxiety disorders: causes, symptoms, treatment
+              </a>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://www.nhs.uk/mental-health/conditions/anxiety/" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                NHS — Get help with anxiety, fear or panic
+              </a>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://www.apa.org/topics/stress/anxiety-difference" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                American Psychological Association — What’s the difference between stress and anxiety?
+              </a>
+            </li>
+            <li className="flex items-start space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+              <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                National Institute of Mental Health — Anxiety disorders
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* Medical Disclaimer */}
       <section className="py-10 bg-gray-50 border-t border-gray-150 px-4">
         <div className="max-w-4xl mx-auto text-center">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import Link from 'next/link';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
@@ -252,10 +253,14 @@ export default function HydraFacialVsChemicalPeelPage() {
 
       {/* ============ HERO ============ */}
       <section className="max-w-7xl mx-auto px-6 pt-8 pb-4">
-        <p className="text-xs font-medium text-[#5F5F5F] mb-6">
-          Home <span className="mx-1.5">/</span> Aesthetic Dermatology <span className="mx-1.5">/</span>{' '}
-          <span className="text-[#1F5E4B]">HydraFacial vs Chemical Peel Dubai</span>
-        </p>
+        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5">
+          <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span>/</span>
+          <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
+          <span>/</span>
+          <span aria-current="page" className="text-[#1F5E4B]">HydraFacial vs Chemical Peel</span>
+        </nav>
+
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-semibold text-[#1A1A1A] leading-[1.2] mb-6">
@@ -413,7 +418,7 @@ export default function HydraFacialVsChemicalPeelPage() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-2">HydraFacial vs Chemical Peel Dubai: Detailed Comparison</h2>
         <p className="text-sm text-[#5F5F5F] leading-relaxed mb-8">Tap any topic for the full comparison.</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {detailedTopics.map((t, i) => {
             const isOpen = openTopic === i;
             return (
@@ -445,7 +450,7 @@ export default function HydraFacialVsChemicalPeelPage() {
 
       {/* ============ Benefits ============ */}
       <section className="bg-[#F5F1EA] py-16 px-6 mt-10">
-        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-white rounded-xl p-6">
             <div className="flex items-center gap-2.5 mb-4">
               <LucideIcons.Droplet className="w-5 h-5 text-[#1F5E4B]" />
@@ -481,7 +486,7 @@ export default function HydraFacialVsChemicalPeelPage() {
         <p className="text-sm text-[#5F5F5F] leading-relaxed mb-8">
           Safety is a core part of any honest HydraFacial vs Chemical Peel Dubai discussion, so here&apos;s what to realistically expect from each.
         </p>
-        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <div className="rounded-xl border border-[#E9E2D6] p-5">
             <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#1F5E4B] bg-[#F0F7F4] px-2.5 py-1 rounded-full mb-3">Low Risk</span>
             <p className="text-sm font-semibold text-[#1A1A1A] mb-2">HydraFacial</p>
@@ -507,7 +512,7 @@ export default function HydraFacialVsChemicalPeelPage() {
 
       {/* ============ Who Should Choose — profile cards ============ */}
       <section className="bg-[#F0F7F4] py-16 px-6">
-        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-white rounded-xl p-6">
             <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4">Who Should Choose HydraFacial?</h3>
             <ul className="space-y-2.5">
@@ -601,7 +606,7 @@ export default function HydraFacialVsChemicalPeelPage() {
       <section className="bg-[#F5F1EA] py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {faqs.map((f, i) => {
               const isOpen = openFaq === i;
               return (
@@ -634,7 +639,7 @@ export default function HydraFacialVsChemicalPeelPage() {
           </div>
           <button
             onClick={handleBookAppointment}
-            className="flex items-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#17493A] hover:shadow-xl transition-all font-semibold whitespace-nowrap"
+            className="w-full md:w-auto flex items-center justify-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#17493A] hover:shadow-xl transition-all font-semibold whitespace-nowrap text-center"
           >
             <LucideIcons.Calendar className="w-5 h-5" />
             Book Consultation

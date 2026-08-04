@@ -49,17 +49,17 @@ export default function PostSurgeryRehabilitationPage() {
   ];
 
   const coreBenefits = [
-    { name: "Faster recovery", description: "Guided, progressive loading of healing tissue under professional supervision." },
-    { name: "Improved mobility", description: "Restoring natural range of motion in the affected joint or limb." },
-    { name: "Better flexibility", description: "Reducing the stiffness that naturally follows surgical immobilization." },
-    { name: "Pain reduction", description: "Achieved through appropriate manual therapy and movement." },
-    { name: "Scar tissue management", description: "Preventing adhesions and restrictions in movement." },
-    { name: "Reduced stiffness", description: "Through early, appropriate mobilization." },
-    { name: "Muscle strengthening", description: "Rebuilding strength and volume lost during surgery and immobilization." },
-    { name: "Improved balance", description: "Restoring proprioceptive feedback, particularly important after lower limb procedures." },
-    { name: "Better circulation", description: "Supporting healing and reducing the risk of deep vein thrombosis (DVT)." },
-    { name: "Reduced complications", description: "Minimizing the risk of blood clots or excessive scarring." },
-    { name: "Safe return to daily activities", description: "Guided by objective clinical progress rather than guesswork." }
+    "Faster recovery through guided, progressive loading of healing tissue",
+    "Improved mobility in the affected joint or limb",
+    "Better flexibility, reducing the stiffness that often follows surgery",
+    "Pain reduction through appropriate manual therapy and movement",
+    "Scar tissue management to prevent restrictions in movement",
+    "Reduced stiffness through early, appropriate mobilization",
+    "Muscle strengthening to rebuild what's lost during surgery and immobilization",
+    "Improved balance, particularly important after lower limb surgery",
+    "Better circulation, supporting healing and reducing complication risk",
+    "Reduced risk of complications such as blood clots or excessive scarring",
+    "Safe return to daily activities, guided by objective progress rather than guesswork"
   ];
 
   const conditionsList = [
@@ -179,7 +179,7 @@ export default function PostSurgeryRehabilitationPage() {
     "Modern rehabilitation equipment to support every stage of recovery",
     "Surgeon-guided protocols, ensuring rehabilitation aligns with your operating surgeon's recommendations",
     "Patient-centered care with clear communication throughout your recovery journey",
-    "Convenient Jumeirah location, easy to reach for regular appointments"
+    "Convenient Dubai location in Jumeirah, accessible for patients across the city"
   ];
 
   const faqs = [
@@ -266,7 +266,7 @@ export default function PostSurgeryRehabilitationPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Breadcrumbs */}
-            <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-6 uppercase tracking-wider">
+            <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-6 lowercase tracking-wider">
               {breadcrumbs.map((b, i) => (
                 <React.Fragment key={i}>
                   {i > 0 && <span className="mx-2">/</span>}
@@ -289,8 +289,6 @@ export default function PostSurgeryRehabilitationPage() {
                 <p className="text-[#D4A574] text-base sm:text-lg font-bold tracking-wide mb-6 uppercase">
                   Personalized Post-Operative Physiotherapy & Recovery Protocols
                 </p>
-
-
 
                 <p className="text-[#5F5F5F] text-sm sm:text-base leading-relaxed mb-8">
                   Surgery is often just the first step toward recovery — what happens afterward matters just as much. RamaCare Polyclinic's Post-Surgery Rehabilitation Dubai program is designed to help you heal faster, move more freely, and regain independence, guided by DHA-licensed physiotherapists working in step with your surgeon's protocol.
@@ -335,24 +333,82 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* INTRODUCTION */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-[#F9F7F2] p-6 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-[#D4A574]/20 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-3 h-full bg-[#D4A574]" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-6 pl-4">Introduction</h2>
-              <div className="space-y-6 text-[#5F5F5F] text-base leading-relaxed pl-4">
-                <p>
-                  Surgery addresses the structural problem — a torn ligament, a worn joint, a fractured bone — but the body still needs guided support to heal properly and regain full function. This is exactly why <strong>Post-Surgery Rehabilitation Dubai</strong> plays such an important role in the overall recovery journey. Without it, many patients experience prolonged stiffness, incomplete strength recovery, or a slower return to the activities that matter to them.
-                </p>
-                <p>
-                  Rehabilitation after surgery serves several essential purposes: preventing complications like blood clots or excessive scar tissue, restoring movement that naturally decreases during recovery, reducing post-operative pain, and helping patients regain the independence to manage daily tasks without assistance. Each of these goals requires a structured, professionally guided approach rather than simply &quot;waiting it out.&quot;
-                </p>
-                <p>
-                  At RamaCare Polyclinic, our physiotherapy team works closely with your surgical history and your surgeon's recommendations to build a rehabilitation plan suited to your specific procedure, healing stage, and personal goals — whether that's walking comfortably again, returning to work, or getting back to sport.
-                </p>
-                <p>
-                  Many patients assume that once the surgery itself is complete, recovery will simply happen on its own with time and rest. In reality, the body needs deliberate, guided input during this window to heal in a way that supports full, lasting function. Muscles that go unused during immobilization weaken quickly, joints that aren't moved through their range can stiffen, and movement patterns can become guarded or compensatory if left unaddressed. Structured rehabilitation directly counters each of these tendencies, which is why it's considered a standard part of orthopedic and sports surgery recovery worldwide, not an optional add-on.
-                </p>
+        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-[#F9F7F2]/50 border-b border-gray-150">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
+              {/* Left Column - Visual Highlight Sidebar */}
+              <div className="lg:col-span-4 lg:sticky lg:top-8">
+                <div className="bg-[#1F5E4B] text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#D4A574]/15 rounded-full -ml-12 -mb-12" />
+                  
+                  <span className="text-xs text-[#D4A574] font-bold uppercase tracking-wider block mb-2">
+                    Clinical Focus
+                  </span>
+                  <h3 className="text-2xl font-extrabold mb-6 leading-tight">
+                    Bridging the Gap Between Surgery & Recovery
+                  </h3>
+                  
+                  <div className="space-y-6">
+                    <div className="border-l-2 border-[#D4A574] pl-4">
+                      <h4 className="font-bold text-sm text-white/90">Objective Protocol</h4>
+                      <p className="text-xs text-white/70 mt-1">Guided by your operating surgeon's specific timelines and weight-bearing instructions.</p>
+                    </div>
+                    <div className="border-l-2 border-[#D4A574] pl-4">
+                      <h4 className="font-bold text-sm text-white/90">Active Recovery</h4>
+                      <p className="text-xs text-white/70 mt-1">Restoring normal biomechanics to prevent joint compensation and stiffness.</p>
+                    </div>
+                    <div className="border-l-2 border-[#D4A574] pl-4">
+                      <h4 className="font-bold text-sm text-white/90">DHA-Licensed Care</h4>
+                      <p className="text-xs text-white/70 mt-1">Physiotherapy administered by certified professionals in Jumeirah.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Styled Text & Myth Buster */}
+              <div className="lg:col-span-8 space-y-8">
+                <div>
+                  <h2 className="text-3xl font-extrabold text-[#1A1A1A] tracking-tight mb-6 flex items-center gap-3">
+                    <span className="w-8 h-1 bg-[#1F5E4B] rounded-full inline-block"></span>
+                    Understanding Post-Surgery Recovery
+                  </h2>
+                  <p className="text-lg text-[#1F5E4B] font-semibold leading-relaxed mb-6">
+                    Surgery addresses the structural problem — a torn ligament, a worn joint, a fractured bone — but the body still needs guided support to heal properly and regain full function.
+                  </p>
+                  <div className="space-y-6 text-[#5F5F5F] text-base leading-relaxed">
+                    <p>
+                      This is exactly why <strong className="text-[#1A1A1A]">Post-Surgery Rehabilitation Dubai</strong> plays such an important role in the overall recovery journey. Without it, many patients experience prolonged stiffness, incomplete strength recovery, or a slower return to the activities that matter to them.
+                    </p>
+                    <p>
+                      Rehabilitation after surgery serves several essential purposes: preventing complications like blood clots or excessive scar tissue, restoring movement that naturally decreases during recovery, reducing post-operative pain, and helping patients regain the independence to manage daily tasks without assistance. Each of these goals requires a structured, professionally guided approach rather than simply &quot;waiting it out.&quot;
+                    </p>
+                    <p>
+                      At RamaCare Polyclinic, our physiotherapy team works closely with your surgical history and your surgeon's recommendations to build a rehabilitation plan suited to your specific procedure, healing stage, and personal goals — whether that's walking comfortably again, returning to work, or getting back to sport.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Myth vs Reality Card */}
+                <div className="bg-[#FCFDFB] p-6 sm:p-8 rounded-2xl border border-gray-150 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-[#D4A574]" />
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <span className="text-xs text-red-500 font-extrabold uppercase tracking-wider block mb-1">Common Assumption</span>
+                      <h4 className="font-bold text-sm text-[#1A1A1A] mb-2">"Time and rest are enough to heal after surgery."</h4>
+                      <p className="text-xs text-[#5F5F5F] leading-relaxed">
+                        Many assume recovery happens automatically on its own. However, muscles go unused and weaken quickly, while joints naturally stiffen and form restrictive scar tissue.
+                      </p>
+                    </div>
+                    <div className="sm:border-l sm:border-gray-250 sm:pl-6">
+                      <span className="text-xs text-[#1F5E4B] font-extrabold uppercase tracking-wider block mb-1">Clinical Reality</span>
+                      <h4 className="font-bold text-sm text-[#1A1A1A] mb-2">Structured input is required for optimal loading.</h4>
+                      <p className="text-xs text-[#5F5F5F] leading-relaxed">
+                        To heal in a way that supports full, lasting function, tissue needs progressive, safe loading. This is why rehabilitation is standard for orthopedic and sports surgeries.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -404,13 +460,10 @@ export default function PostSurgeryRehabilitationPage() {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {coreBenefits.map((b, idx) => (
+              {coreBenefits.map((benefit, idx) => (
                 <div key={idx} className="p-5 rounded-xl border border-gray-150 bg-[#FCFDFB] flex items-start space-x-3 hover:border-[#1F5E4B]/30 hover:shadow-sm transition-all">
                   <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-sm text-[#1A1A1A]">{b.name}</h4>
-                    <p className="text-xs text-[#5F5F5F] mt-1 leading-relaxed">{b.description}</p>
-                  </div>
+                  <span className="text-sm font-medium text-[#1A1A1A] leading-relaxed">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -861,11 +914,10 @@ export default function PostSurgeryRehabilitationPage() {
         </div>
 
         {/* DOCTORS SHOWCASE */}
-        <section className="py-12 md:py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
-          </div>
-        </section>
+
+
+        <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
+
 
         {/* CONCLUSION AND CLINICAL NOTES */}
         <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
@@ -898,30 +950,104 @@ export default function PostSurgeryRehabilitationPage() {
           </div>
         </section>
 
-        {/* SUPPORTING SEO ASSETS (FOOTER NOTES) */}
-        <section className="py-8 bg-gray-100 text-gray-400 text-[10px] px-4 border-t border-gray-200">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
-            <div>
-              <h5 className="font-bold text-gray-600 uppercase mb-2">Internal Linking Map</h5>
-              <div className="flex flex-wrap gap-x-3 gap-y-1">
-                <a href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] underline">Physiotherapy Dubai</a>
-                <a href="/services/sports-injury-rehabilitation-dubai" className="hover:text-[#1F5E4B] underline">Sports Injury Rehabilitation Dubai</a>
-                <a href="/services/knee-pain-treatment-dubai" className="hover:text-[#1F5E4B] underline">Knee Pain Treatment Dubai</a>
-                <a href="/services/shoulder-pain-treatment-dubai" className="hover:text-[#1F5E4B] underline">Shoulder Pain Treatment Dubai</a>
-                <a href="/services/neck-pain-treatment-dubai" className="hover:text-[#1F5E4B] underline">Neck Pain Treatment Dubai</a>
-                <a href="/services/slip-disc-treatment-dubai" className="hover:text-[#1F5E4B] underline">Slip Disc Treatment Dubai</a>
-                <a href="/services/frozen-shoulder-treatment-dubai" className="hover:text-[#1F5E4B] underline">Frozen Shoulder Treatment Dubai</a>
-                <a href="/services/sciatica-treatment-dubai" className="hover:text-[#1F5E4B] underline">Sciatica Treatment Dubai</a>
-                <a href="/services/dry-needling-dubai" className="hover:text-[#1F5E4B] underline">Dry Needling Dubai</a>
-                <a href="/services/electrotherapy-dubai" className="hover:text-[#1F5E4B] underline">Electrotherapy Dubai</a>
-                <a href="/services/ultrasound-therapy-dubai" className="hover:text-[#1F5E4B] underline">Ultrasound Therapy Dubai</a>
+        {/* CLINICAL RESOURCES & RELATED SERVICES */}
+        <section className="py-12 bg-[#F9F7F2] border-t border-[#D4A574]/20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {/* Internal Links Column */}
+              <div>
+                <h4 className="text-lg font-bold text-[#1A1A1A] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#1F5E4B] rounded-full inline-block"></span>
+                  Related Treatments & Services
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Explore other specialized physiotherapy and rehabilitation services available at RamaCare Polyclinic:
+                </p>
+                <div className="grid sm:grid-cols-2 gap-x-4 gap-y-2">
+                  <a href="/services/physiotherapy-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Physiotherapy Dubai
+                  </a>
+                  <a href="/services/sports-injury-rehabilitation-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Sports Injury Rehab
+                  </a>
+                  <a href="/services/knee-pain-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Knee Pain Treatment
+                  </a>
+                  <a href="/services/shoulder-pain-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Shoulder Pain Treatment
+                  </a>
+                  <a href="/services/neck-pain-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Neck Pain Treatment
+                  </a>
+                  <a href="/services/slip-disc-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Slip Disc Treatment
+                  </a>
+                  <a href="/services/frozen-shoulder-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Frozen Shoulder Rehab
+                  </a>
+                  <a href="/services/sciatica-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Sciatica Treatment
+                  </a>
+                  <a href="/services/dry-needling-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Dry Needling Dubai
+                  </a>
+                  <a href="/services/electrotherapy-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Electrotherapy Dubai
+                  </a>
+                  <a href="/services/ultrasound-therapy-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium col-span-2">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Ultrasound Therapy Dubai
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h5 className="font-bold text-gray-600 uppercase mb-2">External Reference Alignment Only</h5>
-              <p className="leading-relaxed">
-                World Health Organization (WHO), American Physical Therapy Association (APTA), American Academy of Orthopaedic Surgeons (AAOS), NHS, Mayo Clinic, Cleveland Clinic.
-              </p>
+
+              {/* External Links Column */}
+              <div>
+                <h4 className="text-lg font-bold text-[#1A1A1A] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                  Clinical Reference Guidelines
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Our treatment guidelines are aligned with global standards and resources established by leading health organizations:
+                </p>
+                <ul className="space-y-2.5">
+                  <li>
+                    <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>World Health Organization (WHO) <span className="text-xs text-[#8C8C8C] font-normal">— post-surgical recovery and rehabilitation guidance</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.apta.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>American Physical Therapy Association (APTA) <span className="text-xs text-[#8C8C8C] font-normal">— post-operative rehabilitation standards</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>American Academy of Orthopaedic Surgeons (AAOS) <span className="text-xs text-[#8C8C8C] font-normal">— orthopedic surgery and recovery information</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.nhs.uk" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>NHS <span className="text-xs text-[#8C8C8C] font-normal">— post-surgical physiotherapy guidance</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>Mayo Clinic <span className="text-xs text-[#8C8C8C] font-normal">— post-operative recovery information</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://my.clevelandclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                      <span>Cleveland Clinic <span className="text-xs text-[#8C8C8C] font-normal">— orthopedic rehabilitation resources</span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

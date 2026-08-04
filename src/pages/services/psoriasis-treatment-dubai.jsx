@@ -43,7 +43,8 @@ import {
   Layers,
   Activity,
   ChevronRight,
-  UserCheck
+  UserCheck,
+  ExternalLink
 } from 'lucide-react';
 
 /* =====================================================================
@@ -1078,38 +1079,87 @@ export default function PsoriasisTreatmentPage() {
         {/* ============================================== */}
         {/* 14. FOOTER CREDITS & INTERNAL LINK MAP          */}
         {/* ============================================== */}
+        {/* ============================================== */}
+        {/* 14. CLINICAL RESOURCES & RELATED SERVICES      */}
+        {/* ============================================== */}
         <footer className="bg-[#F9F7F2] py-16 px-4 border-t border-gray-200">
-          <div className="mx-auto max-w-4xl space-y-10">
-            {/* Internal Links Map */}
-            <div className="space-y-4">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-center text-gray-400">Internal Linking Map</h5>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center text-xs text-[#5F5F5F] font-semibold">
-                <Link href="/services/aesthetic-dermatology-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Dermatology Services</Link>
-                <span>•</span>
-                <Link href="/services/hair-loss-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Hair Loss Treatment Dubai</Link>
-                <span>•</span>
-                <Link href="/services/acne-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Acne Treatment Dubai</Link>
-                <span>•</span>
-                <Link href="/services/rosacea-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Rosacea Treatment Dubai</Link>
-                <span>•</span>
-                <Link href="/services/melasma-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Melasma Treatment Dubai</Link>
-                <span>•</span>
-                <Link href="/services/general-physician-dubai" className="hover:text-[#1F5E4B] transition-colors underline">General Physician</Link>
-                <span>•</span>
-                <Link href="/about-us" className="hover:text-[#1F5E4B] transition-colors underline">About Us</Link>
-                <span>•</span>
-                <Link href="/contact-us" className="hover:text-[#1F5E4B] transition-colors underline">Contact Us</Link>
+          <div className="mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-12 gap-12">
+              {/* Related Services Column */}
+              <div className="lg:col-span-6 space-y-6">
+                <h4 className="text-lg font-bold text-[#0F3B2E] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                  Related Services & Care
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Explore other dermatology and skin health services at RamaCare Polyclinic that may complement your psoriasis care:
+                </p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <Link href="/services/aesthetic-dermatology-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Dermatology Services
+                  </Link>
+                  <Link href="/services/hair-loss-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Hair Loss Treatment
+                  </Link>
+                  <Link href="/services/acne-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Acne Treatment
+                  </Link>
+                  <Link href="/services/eczema-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Eczema Treatment
+                  </Link>
+                  <Link href="/services/rosacea-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Rosacea Treatment
+                  </Link>
+                  <Link href="/services/melasma-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Melasma Treatment
+                  </Link>
+                  <Link href="/services/general-physician-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> General Physician
+                  </Link>
+                  <Link href="/about-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> About Us
+                  </Link>
+                  <Link href="/contact-us/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium col-span-2">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Contact Us
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* External Authority References */}
-            <div className="space-y-3 border-t border-gray-200 pt-8 text-center">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-gray-400">External Authority References</h5>
-              <div className="flex flex-wrap gap-5 justify-center text-xs text-[#5F5F5F]">
-                <a href="https://www.aad.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F5E4B] underline">American Academy of Dermatology (AAD) — aad.org</a>
-                <a href="https://www.psoriasis.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F5E4B] underline">National Psoriasis Foundation — psoriasis.org</a>
-                <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F5E4B] underline">World Health Organization (WHO) — who.int</a>
-                <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F5E4B] underline">Mayo Clinic — mayoclinic.org</a>
+              {/* External References Column */}
+              <div className="lg:col-span-6 space-y-6">
+                <h4 className="text-lg font-bold text-[#0F3B2E] mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-[#D4A574] rounded-full inline-block"></span>
+                  Clinical Reference Guidelines
+                </h4>
+                <p className="text-sm text-[#5F5F5F] mb-4">
+                  Our clinical protocols align with standard guidelines established by leading dermatology and health organizations:
+                </p>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="https://www.aad.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>American Academy of Dermatology (AAD) <span className="text-xs text-[#8C8C8C] font-normal">— general psoriasis overview and patient education</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.psoriasis.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>National Psoriasis Foundation <span className="text-xs text-[#8C8C8C] font-normal">— news, research and advocacy for psoriasis patients</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>World Health Organization (WHO) <span className="text-xs text-[#8C8C8C] font-normal">— global reports and health topics on chronic conditions</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.mayoclinic.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                      <ExternalLink className="w-3.5 h-3.5 text-[#1F5E4B] flex-shrink-0" />
+                      <span>Mayo Clinic <span className="text-xs text-[#8C8C8C] font-normal">— comprehensive guide to psoriasis types and clinical interventions</span></span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
