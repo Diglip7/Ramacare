@@ -1,12 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { createPortal } from 'react-dom';
 import Header from './Header';
 import PromoBanner from './PromoBanner';
+import GoogleReviews from './GoogleReviews';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  const [portalTarget, setPortalTarget] = useState(null);
+
+  useEffect(() => {
+    setMounted(true);
+
+    const setupPortal = () => {
+      const faqElement = document.getElementById('faq');
+      if (faqElement) {
+        let insertTarget = faqElement;
+        // Traverse up to find the closest <section> element
+        while (
+          insertTarget && 
+          insertTarget.tagName !== 'SECTION' && 
+          insertTarget.parentElement
+        ) {
+          insertTarget = insertTarget.parentElement;
+        }
+
+        let wrapper = document.getElementById('google-reviews-portal-wrapper');
+        if (!wrapper) {
+          wrapper = document.createElement('div');
+          wrapper.id = 'google-reviews-portal-wrapper';
+          wrapper.className = 'w-full';
+          insertTarget.parentNode.insertBefore(wrapper, insertTarget);
+        }
+        setPortalTarget(wrapper);
+      } else {
+        setPortalTarget(null);
+      }
+    };
+
+    setupPortal();
+    const timer = setTimeout(setupPortal, 150);
+    return () => clearTimeout(timer);
+  }, [router.asPath]);
+
   const isServicesRoute = router.pathname.startsWith('/services');
   const excludedCategoryRoutes = new Set([
     '/services/ayurveda-dubai/',
@@ -33,6 +72,11 @@ const Layout = ({ children }) => {
       <main className="flex-grow" style={isSubcategoryRoute ? fontStyle : undefined}>
         {children}
       </main>
+      {mounted && portalTarget ? (
+        createPortal(<GoogleReviews />, portalTarget)
+      ) : (
+        mounted && !router.pathname.includes('policy') && !router.pathname.includes('confirmed') && <GoogleReviews />
+      )}
       <Footer />
     </div>
   );

@@ -39,31 +39,31 @@ export default function physiotherapydubaiCategoryPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care</title>
-  <meta name="description" content="Professional physiotherapy treatment in Dubai for pain relief, sports injuries, post-surgery recovery, and rehabilitation with licensed therapists and tailored care." key="description" />
-  <meta name="keywords" content="Physiotherapy treatment in Dubai, Best physiotherapy clinic in Dubai, Physiotherapy Dubai near me, Sports injury physiotherapy Dubai, Post surgery physiotherapy in Dubai, Rehabilitation center Dubai, Pain relief physiotherapy Dubai, Licensed physiotherapist Dubai, Physiotherapy clinics in Dubai, Manual therapy Dubai, Back pain physiotherapy Dubai" />
-  
-  
-        
-</Head>
+        <title key="title">Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care</title>
+        <meta name="description" content="Professional physiotherapy treatment in Dubai for pain relief, sports injuries, post-surgery recovery, and rehabilitation with licensed therapists and tailored care." key="description" />
+        <meta name="keywords" content="Physiotherapy treatment in Dubai, Best physiotherapy clinic in Dubai, Physiotherapy Dubai near me, Sports injury physiotherapy Dubai, Post surgery physiotherapy in Dubai, Rehabilitation center Dubai, Pain relief physiotherapy Dubai, Licensed physiotherapist Dubai, Physiotherapy clinics in Dubai, Manual therapy Dubai, Back pain physiotherapy Dubai" />
+
+
+
+      </Head>
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
-      <TreatmentSection 
-        category="physiotherapy" 
+      <TreatmentSection
+        category="physiotherapy"
         content={{
           ...content?.treatments,
           consultationHeading: content?.treatments?.consultationCTA?.heading,
           consultationSubtext: content?.treatments?.consultationCTA?.subtext,
-        }} 
+        }}
       />
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />
       <PatientTestimonials content={content?.successStories} />
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
       <FAQSection content={content?.faq} />
-       {/* <OurFacilitySection content={content?.facility} /> */}
-       <BeginYourHealingJourneySection content={content?.booking} />
+      {/* <OurFacilitySection content={content?.facility} /> */}
+      <BeginYourHealingJourneySection content={content?.booking} />
       <SEOContentSection title="Leading Physiotherapy Center in Dubai" content={physioSEOContent} />
     </Layout>
   );

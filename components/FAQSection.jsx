@@ -1,19 +1,17 @@
-'use client';
-
 import React, { useState, useMemo } from 'react';
 
 const FAQSection = ({ content }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const whatsappNumber = "971566597878"; // UAE format
-const whatsappMessage = "Hi, I’d like to know more.";
+  const whatsappMessage = "Hi, I’d like to know more.";
   const openWhatsApp = () => {
-  const encodedMessage = encodeURIComponent(whatsappMessage);
-  window.open(
-    `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-    "_blank"
-  );
-};
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  };
 
   const rawFaqs = Array.isArray(content?.faqs) ? content.faqs : [
     {

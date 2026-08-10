@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // BenefitCard component to handle individual benefit state
-const BenefitCard = ({ benefit, defaultBenefits }) => {
+const BenefitCard = ({ benefit, defaultBenefits, hidePercentages }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const fallbackById = defaultBenefits.find(d => d.id === benefit.id && typeof d.percentage === 'number');
   const fallbackByTitle = defaultBenefits.find(d => d.title === benefit.title && typeof d.percentage === 'number');
@@ -37,26 +37,28 @@ const BenefitCard = ({ benefit, defaultBenefits }) => {
           </h3>
         </div>
       </div>
-      <div className="relative z-10">
-        <div className="w-full h-2 bg-[#D5D5C8] rounded-full overflow-hidden mb-1.5">
-          <div
-            className="h-full bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] rounded-full transition-all duration-700 ease-out group-hover:shadow-md"
-            style={{ width: `${resolvedPercentage}%` }}
-          ></div>
+      {!hidePercentages && (
+        <div className="relative z-10">
+          <div className="w-full h-2 bg-[#D5D5C8] rounded-full overflow-hidden mb-1.5">
+            <div
+              className="h-full bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] rounded-full transition-all duration-700 ease-out group-hover:shadow-md"
+              style={{ width: `${resolvedPercentage}%` }}
+            ></div>
+          </div>
+          <div className="flex justify-end">
+            <span className="text-xs text-[#6B7280] font-medium">
+              {resolvedPercentage}% patients
+            </span>
+          </div>
         </div>
-        <div className="flex justify-end">
-          <span className="text-xs text-[#6B7280] font-medium">
-            {resolvedPercentage}% patients
-          </span>
-        </div>
-      </div>
-      
+      )}
+
       {/* Description with anchor tags */}
       {benefit.description && (
         <div className="relative z-10 mt-4">
           <div className={`text-xs md:text-sm text-[#4B5563] leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
-            <span 
-              dangerouslySetInnerHTML={{ __html: benefit.description }} 
+            <span
+              dangerouslySetInnerHTML={{ __html: benefit.description }}
               className="[&>a]:text-[#047857] [&>a]:font-semibold [&>a]:hover:bg-[#047857]/10 [&>a]:hover:px-1 [&>a]:hover:rounded [&>a]:transition-all [&>a]:duration-200"
             />
           </div>
@@ -78,8 +80,8 @@ const BenefitCard = ({ benefit, defaultBenefits }) => {
           )}
           {isExpanded && benefit.expandedContent && (
             <div className="mt-3 pt-3 border-t border-[#E5E7EB] text-xs md:text-sm text-[#4B5563] leading-relaxed">
-              <span 
-                dangerouslySetInnerHTML={{ __html: benefit.expandedContent }} 
+              <span
+                dangerouslySetInnerHTML={{ __html: benefit.expandedContent }}
                 className="[&>a]:text-[#047857] [&>a]:font-semibold [&>a]:hover:bg-[#047857]/10 [&>a]:hover:px-1 [&>a]:hover:rounded [&>a]:transition-all [&>a]:duration-200"
               />
             </div>
@@ -179,7 +181,7 @@ const TreatmentBenefits = ({ content }) => {
   const comparisonData = content?.comparisonData || defaultComparisonData;
   const comparisonTitle = content?.comparisonTitle || 'Ayurvedic vs. Conventional Hairfall Treatment';
   const comparisonDescription = content?.comparisonDescription || null;
-  
+
   // Customizable column headers
   const columnHeaders = content?.comparisonHeaders || {
     feature: 'Aspect',
@@ -210,7 +212,7 @@ const TreatmentBenefits = ({ content }) => {
         {/* Benefits Grid - New Horizontal Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mb-12 md:mb-16">
           {benefits.map((benefit) => (
-            <BenefitCard key={benefit.id} benefit={benefit} defaultBenefits={defaultBenefits} />
+            <BenefitCard key={benefit.id} benefit={benefit} defaultBenefits={defaultBenefits} hidePercentages={content?.hidePercentages} />
           ))}
         </div>
 
@@ -224,7 +226,7 @@ const TreatmentBenefits = ({ content }) => {
               {comparisonDescription}
             </p>
           )}
-          
+
           <div className="bg-[#F5F5F0] rounded-lg p-4 md:p-6 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
@@ -279,6 +281,11 @@ const TreatmentBenefits = ({ content }) => {
               </table>
             </div>
           </div>
+          {content?.comparisonFooter && (
+            <p className="mt-4 text-xs md:text-sm text-[#6B7280] italic text-center max-w-3xl mx-auto">
+              {content.comparisonFooter}
+            </p>
+          )}
         </div>
       </div>
     </section>

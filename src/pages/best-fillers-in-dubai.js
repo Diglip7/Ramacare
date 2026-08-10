@@ -14,6 +14,7 @@ import TestimonialsSection from '../../components/TestimonialsSection';
 import RiskFreeSection from '../../components/RiskFreeSection';
 import FAQSection from '../../components/LandingFAQSection';
 import ConsultationSection from '../../components/ConsultationSection';
+import GoogleReviews from '../../components/GoogleReviews';
 import Footer from '../../components/LandingFooter';
 import DiscountModal from '../../components/DiscountModal';
 
@@ -58,6 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`
               <RiskFreeSection />
               <FAQSection />
               <ConsultationSection />
+              <GoogleReviews />
               <Footer />
       </div>
     </>

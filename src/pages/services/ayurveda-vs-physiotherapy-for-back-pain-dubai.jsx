@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
 import BookConsultation from '../../../components/BookConsultation';
 
@@ -297,7 +298,8 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
       {/* ============ HERO — split VS composition ============ */}
       <section className="relative">
         <p className="text-xs font-medium text-[#5F5F5F] max-w-7xl mx-auto px-6 pt-6">
-          Home <span className="mx-1.5">/</span> Services <span className="mx-1.5">/</span>{' '}
+          <Link href="/" className="hover:underline">Home</Link> <span className="mx-1.5">/</span>{' '}
+          <Link href="/services" className="hover:underline">Services</Link> <span className="mx-1.5">/</span>{' '}
           <span className="text-[#1F5E4B]">Ayurveda vs Physiotherapy for Back Pain Dubai</span>
         </p>
 

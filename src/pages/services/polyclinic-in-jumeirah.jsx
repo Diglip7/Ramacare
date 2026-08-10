@@ -361,7 +361,7 @@ export default function PolyclinicInJumeirahPage() {
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1F5E4B]/10 px-3 py-1.5 text-sm font-semibold text-[#1F5E4B]">
                   <MapPin className="h-4 w-4" /> Jumeirah 1, Dubai
                 </span>
-                <h1 className="mt-5 text-3xl font-extrabold leading-tight text-[#1A1A1A] sm:text-5xl tracking-tight">
+                <h1 className="mt-5 text-3xl font-bold leading-tight text-[#1A1A1A] sm:text-5xl tracking-tight">
                   Polyclinic in Jumeirah <span className="block mt-1 text-[#1F5E4B] font-semibold text-2xl sm:text-3xl">Trusted Multi-Specialty Healthcare at RamaCare Polyclinic</span>
                 </h1>
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#5F5F5F]">

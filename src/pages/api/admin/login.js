@@ -19,7 +19,6 @@ export default async function handler(req, res) {
     if (!email || !password) {
       return res.status(400).json({ message: "Email and password required" });
     }
-
     const user = await User.findOne({ email }).select("+password");
     console.log("👤 User:", user?.email);
 

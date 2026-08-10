@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import BeginYourHealingJourneySection from '../../../components/BeginYourHealingJourneySection';
 import SEOContentSection from '../../../components/SEOContentSection';
-import { DOCTOR_GROUPS } from '../../../src/data/doctors';
+import { DOCTOR_GROUPS, DOCTORS } from '../../../src/data/doctors';
 
 const AllDoctorsPage = ({ content }) => {
   const doctorsSEOContent = [
@@ -35,12 +36,12 @@ const AllDoctorsPage = ({ content }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [toast, setToast] = useState({ show: false, type: 'success', message: '' });
   const [expandedExpertise, setExpandedExpertise] = useState({});
-  
+
   const showToast = (message, type = 'success') => {
     setToast({ show: true, type, message });
     setTimeout(() => setToast(prev => ({ ...prev, show: false })), 3000);
   };
-  
+
   const toggleExpertise = (doctorId) => {
     setExpandedExpertise(prev => ({
       ...prev,
@@ -94,7 +95,7 @@ const AllDoctorsPage = ({ content }) => {
     return [1, 2, 3, 4, 5].map((star) => {
       const isFull = star <= Math.floor(rating);
       const isHalf = !isFull && star === Math.ceil(rating) && rating % 1 >= 0.5;
-      
+
       if (isHalf) {
         return (
           <div key={star} className={`relative ${size}`}>
@@ -107,7 +108,7 @@ const AllDoctorsPage = ({ content }) => {
           </div>
         );
       }
-      
+
       return (
         <svg key={star} className={`${size} ${isFull ? 'text-[#C9A961]' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -121,15 +122,14 @@ const AllDoctorsPage = ({ content }) => {
       <Head>
         <title key="title">All Doctors - RamaCare</title>
         <meta name="description" content="Meet all our expert doctors at RamaCare" key="description" />
-        
+
       </Head>
-      
-      <main>
-        <section 
-          id="all-doctors" 
+
+      <main style={{ fontFamily: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" }}>
+        <section
+          id="all-doctors"
           ref={sectionRef}
-          className="relative w-full bg-[#F9FAFB] py-12 sm:py-16 lg:py-20 overflow-hidden font-sans"
-          style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }}
+          className="relative w-full bg-[#F9FAFB] py-12 sm:py-16 lg:py-20 overflow-hidden"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header Section */}
@@ -153,130 +153,80 @@ const AllDoctorsPage = ({ content }) => {
               </p>
             </div>
 
-            {/* Doctor Cards Grid - Updated to show more columns on larger screens */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-              {doctors.map((doctor) => (
-                <div key={doctor.id} className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col h-full">
-                  {/* Image Container with Overlay */}
-                  <div className="relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group">
-                    {doctor.image ? (
-                      <Image 
-                        src={doctor.image} 
-                        alt={doctor.name}
-                        fill
-                        className="object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-110"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
-                        <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                      </div>
-                    )}
-                    
-                    {/* Dark gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            {/* Doctor Cards Grid - Premium Horizontal/Wide Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+              {doctors.map((doctor) => {
+                const slug = Object.keys(DOCTORS).find(k => DOCTORS[k].id === doctor.id) || doctor.id;
+                return (
+                  <div key={doctor.id} className="bg-white rounded-3xl overflow-hidden border border-[#E9E2D6]/80 hover:shadow-[0_12px_35px_rgba(31,94,75,0.06)] transition-all duration-300 flex flex-col sm:flex-row group">
+                    {/* Image Container */}
+                    <div className="relative w-full sm:w-[42%] h-64 sm:h-auto min-h-[260px] bg-[#FAF9F5] overflow-hidden shrink-0">
+                      {doctor.image ? (
+                        <Image
+                          src={doctor.image}
+                          alt={doctor.name}
+                          fill
+                          className="object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-[#1F5E4B]/5 flex items-center justify-center">
+                          <svg className="w-20 h-20 text-[#1F5E4B]/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                      )}
 
-                    {/* DHA Licensed Badge */}
-                    {doctor.isDHALicensed && (
-                      <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-xs font-medium text-white">DHA Licensed</span>
-                      </div>
-                    )}
-
-                    {/* Bottom Info on Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                      {/* Rating */}
-                      <div className="flex items-center gap-1.5 mb-3">
-                        {renderStars(doctor.rating, 'w-4 h-4')}
-                        <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
-                      </div>
-
-                      {/* Doctor Name */}
-                      <h3 className="text-xl font-medium text-white mb-1 tracking-tight">
-                        {doctor.name}
-                      </h3>
-
-                      {/* Qualifications */}
-                      <p className="text-sm text-white/90 font-normal">
-                        {doctor.qualifications}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card Body - Using flex-grow to make all cards equal height */}
-                  <div className="p-6 flex-grow flex flex-col">
-                    {/* Specialization Section */}
-                    <div className="mb-5 pb-5 border-b border-gray-100">
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Specialization</span>
-                      </div>
-                      <p className="text-base font-normal text-[#111827] mb-3">
-                        {doctor.specialization}
-                      </p>
-                      <span className="inline-block bg-[#F9FAFB] text-[#6B7280] px-3 py-1.5 rounded-full text-xs font-normal">
-                        {doctor.experience}
-                      </span>
+                      {/* DHA Licensed Badge */}
+                      {doctor.isDHALicensed && (
+                        <div className="absolute top-4 left-4 bg-[#C9A961] rounded-full px-3 py-1 shadow-md z-10 flex items-center gap-1">
+                          <span className="text-[9px] uppercase tracking-wider font-semibold text-white">DHA Licensed</span>
+                        </div>
+                      )}
                     </div>
 
-                    {/* Key Expertise Section - Using flex-grow to maintain consistent layout */}
-                    <div className="mb-5 flex-grow">
-                      <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
-                      <ul className="space-y-2.5">
-                        {doctor.expertise.slice(0, 3).map((item, idx) => (  // Limit to first 3 items for consistency
-                          <li key={idx} className="flex items-start gap-2.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
-                            <span className="text-sm text-[#6B7280] leading-relaxed">{item}</span>
-                          </li>
-                        ))}
-                        {doctor.expertise.length > 3 && (
-                          <React.Fragment>
-                            {expandedExpertise[doctor.id] && doctor.expertise.slice(3).map((item, idx) => (
-                              <li key={idx + 3} className="flex items-start gap-2.5 pl-5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
-                                <span className="text-sm text-[#6B7280] leading-relaxed">{item}</span>
-                              </li>
-                            ))}
-                            <li className="mt-2">
-                              <button 
-                                onClick={() => toggleExpertise(doctor.id)}
-                                className="text-[#C9A961] text-xs font-medium hover:underline"
-                              >
-                                {expandedExpertise[doctor.id] ? 'Show Less' : `+${doctor.expertise.length - 3} more`}
-                              </button>
+                    {/* Card Content */}
+                    <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+                      <div>
+                        {/* Name & Specialization */}
+                        <div className="mb-4">
+                          <h3 className="text-xl font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] transition-colors leading-tight">
+                            <Link href={`/doctors/${slug}`}>
+                              {doctor.name}
+                            </Link>
+                          </h3>
+                          <p className="text-xs font-semibold text-[#1F5E4B] tracking-wide mt-1.5">
+                            {doctor.specialization}
+                          </p>
+                        </div>
+
+                        {/* Experience & Qualifications */}
+                        <div className="space-y-1 mb-4 text-xs text-[#5F5F5F]">
+                          <p className="font-semibold text-gray-700">{doctor.qualifications}</p>
+                          <p className="opacity-80">{doctor.experience.split('|')[0].trim()}</p>
+                        </div>
+
+                        {/* Key Expertise list */}
+                        <ul className="space-y-2 mb-6 border-t border-gray-100 pt-4">
+                          {(doctor.expertise || []).slice(0, 2).map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-xs text-[#5F5F5F] leading-relaxed">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-1.5 flex-shrink-0"></span>
+                              <span>{item}</span>
                             </li>
-                          </React.Fragment>
-                        )}
-                      </ul>
-                    </div>
-
-                    {/* Languages */}
-                    <div className="mb-5 flex-shrink-0">
-                      <div className="flex flex-wrap gap-2">
-                        {doctor.languages.map((language, idx) => (
-                          <span key={idx} className="text-[#1b5e3f] text-xs font-medium">
-                            {language}
-                          </span>
-                        ))}
+                          ))}
+                        </ul>
                       </div>
-                    </div>
 
-                    {/* CTA Button - Using mt-auto to push button to bottom */}
-                    <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="w-full bg-gradient-to-r from-[#1b5e3f] via-[#2d7a56] to-[#1b5e3f] text-white px-6 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 hover:shadow-md mt-auto"
-                    >
-                      Book with {doctor.firstName}
-                    </button>
+                      {/* Single Elegant CTA */}
+                      <Link
+                        href={`/doctors/${slug}`}
+                        className="w-full text-center bg-[#FAF9F5] border border-[#E9E2D6] hover:bg-[#1F5E4B] hover:text-white hover:border-[#1F5E4B] text-[#1A1A1A] py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
+                      >
+                        View Full Profile
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
 
@@ -284,12 +234,12 @@ const AllDoctorsPage = ({ content }) => {
         </section>
         <SEOContentSection title="Our Medical Experts in Dubai" content={doctorsSEOContent} />
       </main>
-      
+
       {/* Appointment Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
           <div className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl">
-            <button 
+            <button
               onClick={() => setIsModalOpen(false)}
               className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
               aria-label="Close modal"
@@ -299,9 +249,9 @@ const AllDoctorsPage = ({ content }) => {
               </svg>
             </button>
             <div className="p-6">
-              <BeginYourHealingJourneySection 
-                isModal={true} 
-                onClose={() => setIsModalOpen(false)} 
+              <BeginYourHealingJourneySection
+                isModal={true}
+                onClose={() => setIsModalOpen(false)}
                 onSubmissionSuccess={() => {
                   setIsModalOpen(false);
                   showToast('Appointment booked!', 'success');

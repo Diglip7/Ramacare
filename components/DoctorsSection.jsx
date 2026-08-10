@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { DOCTOR_GROUPS } from '../src/data/doctors';
+import Link from 'next/link';
+import { DOCTOR_GROUPS, DOCTORS } from '../src/data/doctors';
 
 const DoctorsSection = ({ content, customDoctors }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +25,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
   }, []);
 
   const DEFAULT_DOCTORS = DOCTOR_GROUPS.ALL;
-  
+
   const normalizeDoctor = (d) => {
     const name = d?.name || '';
     const firstName = d?.firstName || (name.split(' ')[0] || '');
@@ -51,7 +52,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
       _ratingLabel: ratingLabel,
     };
   };
-  
+
   const isLegacyList = (list) => {
     if (!Array.isArray(list) || list.length !== 3) return false;
     const ids = list.map(d => d.id).sort().join(',');
@@ -61,12 +62,12 @@ const DoctorsSection = ({ content, customDoctors }) => {
     return names.includes('Shamna') && names.includes('Anan') && names.includes('Jeena');
   };
 
-  const rawDoctors = (customDoctors && customDoctors.length > 0) 
-    ? customDoctors 
-    : (content?.doctors && content.doctors.length > 0 && !isLegacyList(content.doctors)) 
-      ? content.doctors 
+  const rawDoctors = (customDoctors && customDoctors.length > 0)
+    ? customDoctors
+    : (content?.doctors && content.doctors.length > 0 && !isLegacyList(content.doctors))
+      ? content.doctors
       : DEFAULT_DOCTORS;
-  const doctors = rawDoctors.map(normalizeDoctor);
+  const doctors = rawDoctors.filter(Boolean).map(normalizeDoctor);
 
   const renderStars = (rating, size = 'w-4 h-4') => {
     return [1, 2, 3, 4, 5].map((star) => {
@@ -93,7 +94,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
   };
 
   return (
-    <section 
+    <section
       id="our-doctors"
       ref={sectionRef}
       className="relative w-full bg-[#F9FAFB] py-12 sm:py-16 lg:py-20 overflow-hidden font-sans"
@@ -158,98 +159,110 @@ const DoctorsSection = ({ content, customDoctors }) => {
             style={{ scrollBehavior: 'smooth' }}
           >
             <div className={`flex gap-6 items-stretch ${doctors.length <= 3 ? 'lg:justify-center' : ''} ${doctors.length <= 2 ? 'md:justify-center' : ''}`}>
-              {doctors.map((doctor) => (
-                <div 
-                  key={doctor.id} 
-                  className={`snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col
-                    ${doctors.length === 1 ? 'w-full md:w-3/4 lg:w-1/2 max-w-lg' : 
-                      doctors.length === 2 ? 'w-full md:w-1/2 lg:w-1/2 max-w-md' : 
-                      'w-full md:w-1/2 lg:w-1/3'}
-                  `}
-                >
-                  <div className="relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
-                    {doctor.image ? (
-                      <Image 
-                        src={doctor.image} 
-                        alt={doctor.name}
-                        fill
-                        className="object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-110"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
-                        <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
+              {doctors.map((doctor) => {
+                const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
+                return (
+                  <div
+                    key={doctor.id}
+                    className={`snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col
+                      ${doctors.length === 1 ? 'w-full md:w-3/4 lg:w-1/2 max-w-lg' :
+                        doctors.length === 2 ? 'w-full md:w-1/2 lg:w-1/2 max-w-md' :
+                          'w-full md:w-1/2 lg:w-1/3'}
+                    `}
+                  >
+                    <Link href={`/doctors/${slug}`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                      {doctor.image ? (
+                        <Image
+                          src={doctor.image}
+                          alt={doctor.name}
+                          fill
+                          className="object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
+                          <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                      {doctor.isDHALicensed && (
+                        <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-xs font-medium text-white">DHA Licensed</span>
+                        </div>
+                      )}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <div className="flex items-center gap-1.5 mb-3">
+                          {renderStars(doctor._ratingNum, 'w-4 h-4')}
+                          <span className="text-white text-sm font-medium ml-1">{doctor._ratingLabel}</span>
+                        </div>
+                        <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
+                          {doctor.name}
+                        </h3>
+                        <p className="text-sm text-white/90 font-normal">
+                          {doctor.qualifications}
+                        </p>
                       </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    {doctor.isDHALicensed && (
-                      <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-xs font-medium text-white">DHA Licensed</span>
+                    </Link>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="mb-5 pb-5 border-b border-gray-100 flex-shrink-0">
+                        <div className="flex items-center gap-2 mb-2">
+                          <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Specialization</span>
+                        </div>
+                        <p className="text-base font-normal text-[#111827] mb-3 line-clamp-2">
+                          {doctor.specialization}
+                        </p>
+                        <span className="inline-block bg-[#F9FAFB] text-[#6B7280] px-3 py-1.5 rounded-full text-xs font-normal">
+                          {doctor.experience}
+                        </span>
                       </div>
-                    )}
-                    <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                      <div className="flex items-center gap-1.5 mb-3">
-                        {renderStars(doctor._ratingNum, 'w-4 h-4')}
-                        <span className="text-white text-sm font-medium ml-1">{doctor._ratingLabel}</span>
+                      <div className="mb-5 flex-shrink-0">
+                        <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
+                        <ul className="space-y-2.5" style={{ minHeight: '120px' }}>
+                          {Array.isArray(doctor.expertise) ? doctor.expertise.slice(0, 3).map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
+                              <span className="text-sm text-[#6B7280] leading-relaxed line-clamp-2">{item}</span>
+                            </li>
+                          )) : null}
+                        </ul>
                       </div>
-                      <h3 className="text-xl font-medium text-white mb-1 tracking-tight">
-                        {doctor.name}
-                      </h3>
-                      <p className="text-sm text-white/90 font-normal">
-                        {doctor.qualifications}
-                      </p>
+                      <div className="mb-5 flex-shrink-0">
+                        <div className="flex flex-wrap gap-2">
+                          {(doctor.languages || []).map((language, idx) => (
+                            <span key={idx} className="text-[#1b5e3f] text-xs font-medium">
+                              {language}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
+                        <Link
+                          href={`/doctors/${slug}`}
+                          className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
+                        >
+                          View Full Profile
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                        <button
+                          onClick={() => document.getElementById("book-now")?.scrollIntoView({ behavior: "smooth" })}
+                          className="w-full bg-[#1b5e3f] hover:bg-[#154637] text-white py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-sm"
+                        >
+                          {`Book with ${(doctor.firstName || doctor.name.split(' ')[0])}`}
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div className="mb-5 pb-5 border-b border-gray-100 flex-shrink-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Specialization</span>
-                      </div>
-                      <p className="text-base font-normal text-[#111827] mb-3 line-clamp-2">
-                        {doctor.specialization}
-                      </p>
-                      <span className="inline-block bg-[#F9FAFB] text-[#6B7280] px-3 py-1.5 rounded-full text-xs font-normal">
-                        {doctor.experience}
-                      </span>
-                    </div>
-                    <div className="mb-5 flex-shrink-0">
-                      <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
-                      <ul className="space-y-2.5" style={{ minHeight: '120px' }}>
-                        {Array.isArray(doctor.expertise) ? doctor.expertise.slice(0, 3).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
-                            <span className="text-sm text-[#6B7280] leading-relaxed line-clamp-2">{item}</span>
-                          </li>
-                        )) : null}
-                      </ul>
-                    </div>
-                    <div className="mb-5 flex-shrink-0">
-                      <div className="flex flex-wrap gap-2">
-                        {(doctor.languages || []).map((language, idx) => (
-                          <span key={idx} className="text-[#1b5e3f] text-xs font-medium">
-                            {language}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="mt-auto">
-                      <button
-                        onClick={() => document.getElementById("book-now")?.scrollIntoView({ behavior: "smooth" })}
-                        className="w-full bg-gradient-to-r from-[#1b5e3f] via-[#2d7a56] to-[#1b5e3f] text-white px-6 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 hover:shadow-md"
-                      >
-                        {`Book with ${(doctor.firstName || doctor.name.split(' ')[0])}`}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

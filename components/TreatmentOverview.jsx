@@ -263,6 +263,11 @@ const TreatmentOverview = ({ content, subcategoryName }) => {
                             </ul>
                           </div>
                         ))}
+                        {card.description && (
+                          <p className="text-sm text-[#4B5563] leading-relaxed mt-3 pt-2 border-t border-gray-100">
+                            {card.description}
+                          </p>
+                        )}
                       </div>
                     ) : card.listItems && card.listItems.length > 0 ? (
                       <div>
