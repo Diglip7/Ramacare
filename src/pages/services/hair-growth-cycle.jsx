@@ -234,7 +234,7 @@ export default function HairGrowthCyclePage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -312,7 +312,7 @@ export default function HairGrowthCyclePage() {
                 </h3>
                 <div className="rounded-2xl overflow-hidden shadow-md border border-gray-150">
                   <img
-                    src="/images/hair-growth-cycle-infographic-dubai.jpg"
+                    src="/images/Diagram of the hair growth cycle.jpg"
                     alt="Diagram of the hair growth cycle stages at RamaCare Polyclinic"
                     className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -420,7 +420,7 @@ export default function HairGrowthCyclePage() {
             <div className="md:col-span-5">
               <div className="bg-[#FDFCF7] p-6 rounded-2xl border border-[#1F5E4B]/10 shadow-sm text-center">
                 <img
-                  src="/images/hair-follicle-comparison-illustration.jpg"
+                  src="/images/Hair follicle anatomy diagram.jpg"
                   alt="Hair follicle anatomy diagram for hair growth cycle education"
                   className="rounded-xl mx-auto w-full max-h-64 object-cover shadow-sm"
                 />
@@ -633,7 +633,7 @@ export default function HairGrowthCyclePage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-md">
               <img
-                src="/images/prp-scalp-injection-dubai.jpg"
+                src="/images/Dermatologist performing PRP hair.jpg"
                 alt="Dermatologist performing PRP hair treatment in Dubai"
                 className="w-full h-64 object-cover"
               />
@@ -651,7 +651,7 @@ export default function HairGrowthCyclePage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-md md:order-2">
               <img
-                src="/images/hair-mesotherapy-session-ramacare.jpg"
+                src="/images/hair-mesotherapy-session.jpg"
                 alt="Hair mesotherapy session in Dubai polyclinic"
                 className="w-full h-64 object-cover"
               />
@@ -700,7 +700,6 @@ export default function HairGrowthCyclePage() {
                 In men, pattern hair loss is often linked to genetic sensitivity to hormones, which can gradually shorten the anagen phase in affected follicles — typically starting at the hairline or crown. Over repeated cycles, affected follicles may produce progressively finer, shorter hair. This is why early intervention is frequently discussed as more effective than waiting until hair loss has significantly progressed.
               </p>
             </div>
-
             {/* Women */}
             <div id="cycle-women" className="bg-[#FDFCF7] p-8 rounded-3xl border border-gray-200 space-y-4 scroll-mt-24 shadow-sm">
               <h3 className="text-xl font-bold text-[#1A1A1A] flex items-center gap-2">

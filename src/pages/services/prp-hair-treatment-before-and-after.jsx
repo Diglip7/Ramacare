@@ -36,10 +36,8 @@ function BeforeAfterSlider({ beforeImage, afterImage, title, desc, heightClass =
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
-
   const handleMouseDown = () => setIsDragging(true);
   const handleMouseUp = () => setIsDragging(false);
-  
   const handleMove = (clientX) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -65,8 +63,7 @@ function BeforeAfterSlider({ beforeImage, afterImage, title, desc, heightClass =
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
         onMouseMove={handleMouseMove}
-        onTouchMove={handleTouchMove}
-      >
+        onTouchMove={handleTouchMove}>
         {/* After Image */}
         <img 
           src={afterImage} 
@@ -77,8 +74,7 @@ function BeforeAfterSlider({ beforeImage, afterImage, title, desc, heightClass =
         {/* Before Image */}
         <div 
           className="absolute inset-0 w-full h-full overflow-hidden"
-          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-        >
+          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
           <img 
             src={beforeImage} 
             alt="Before PRP Hair Treatment" 
@@ -89,15 +85,13 @@ function BeforeAfterSlider({ beforeImage, afterImage, title, desc, heightClass =
         {/* Slider Line & Handle */}
         <div
           className="absolute inset-y-0 w-[56px] pointer-events-none"
-          style={{ left: `calc(${sliderPosition}% - 28px)` }}
-        >
+          style={{ left: `calc(${sliderPosition}% - 28px)` }}>
           <div className="absolute inset-x-0 top-0 bottom-0 flex justify-center">
             <div className="w-[2px] h-full bg-white shadow-[0_0_4px_rgba(0,0,0,0.5)]"></div>
           </div>
           <button
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center gap-1 w-10 h-10 rounded-full border-2 border-white/20 bg-black/40 backdrop-blur-md cursor-ew-resize text-white pointer-events-auto"
-            aria-label="Drag slider to compare before and after"
-          >
+            aria-label="Drag slider to compare before and after">
             <ChevronLeft className="w-3.5 h-3.5 shrink-0" />
             <ChevronRight className="w-3.5 h-3.5 shrink-0" />
           </button>
@@ -432,8 +426,14 @@ export default function PrpHairBeforeAfterPage() {
                 {
                   '@type': 'ListItem',
                   position: 2,
+                  name: 'Services',
+                  item: 'https://ramacarepolyclinic.ae/services/',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
                   name: 'PRP Hair Treatment Before and After',
-                  item: 'https://ramacarepolyclinic.ae/prp-hair-treatment-before-and-after',
+                  item: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/',
                 },
               ],
             }),
@@ -455,9 +455,11 @@ export default function PrpHairBeforeAfterPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span className="mx-1">/</span>
+          <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span className="mx-1">/</span>
           <span className="text-[#1F5E4B]">PRP Hair Treatment Before and After</span>
         </nav>
@@ -573,8 +575,7 @@ export default function PrpHairBeforeAfterPage() {
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 space-y-5"
-          >
+            className="lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/10 text-[#1F5E4B] px-4 py-2 rounded-full text-sm font-semibold">
               <Info className="w-4 h-4" />
               What Is PRP?
@@ -584,7 +585,7 @@ export default function PrpHairBeforeAfterPage() {
               PRP hair treatment is a non-surgical procedure that uses your own blood plasma, processed to concentrate platelets, then injected into areas of the scalp experiencing thinning or shedding. Platelets release growth factors that are believed to encourage blood flow to hair follicles, extend the growth (anagen) phase of the hair cycle, and support the health of follicles that are still active but weakened.
             </p>
             <p className="text-lg text-[#5F5F5F] leading-relaxed">
-              It&apos;s a treatment rooted in regenerative medicine principles that have also been used in orthopedics and dermatology for years, which is part of why it&apos;s gained credibility as a <Link href="/services/hair-treatment-dubai/" className="text-[#1F5E4B] underline font-semibold">hair thinning treatment</Link> option rather than a fringe remedy.
+              It&apos;s a treatment rooted in regenerative medicine principles that have also been used in orthopedics and dermatology for years, which is part of why it&apos;s gained credibility as a <Link href="/services/hair-thinning-treatment-dubai/" className="text-[#1F5E4B] underline font-semibold">hair thinning treatment</Link> option rather than a fringe remedy.
             </p>
             <p className="text-lg text-[#5F5F5F] leading-relaxed">
               At RamaCare Polyclinic, PRP is typically positioned as part of a broader hair restoration Dubai strategy — sometimes on its own, sometimes alongside our core <Link href="/services/hair-prp-dubai/" className="text-[#1F5E4B] underline font-semibold">Hair PRP Treatment in Dubai</Link> service, depending on what a patient&apos;s scalp examination shows.
@@ -1257,8 +1258,7 @@ export default function PrpHairBeforeAfterPage() {
               <Link
                 key={i}
                 href={g.href}
-                className="group bg-white rounded-2xl border border-gray-200 p-6 hover:border-[#1F5E4B]/30 hover:shadow-lg transition-all flex flex-col justify-between"
-              >
+                className="group bg-white rounded-2xl border border-gray-200 p-6 hover:border-[#1F5E4B]/30 hover:shadow-lg transition-all flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-[#1A1A1A] mb-2 group-hover:text-[#1F5E4B] transition-colors">{g.title}</h4>
                   <p className="text-sm text-[#5F5F5F] leading-relaxed">{g.desc}</p>

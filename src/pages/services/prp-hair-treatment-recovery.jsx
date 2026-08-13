@@ -304,7 +304,7 @@ export default function PrpHairRecoveryPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -377,8 +377,7 @@ export default function PrpHairRecoveryPage() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="lg:col-span-5"
-            >
+              className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/15">
                 <img
                   src="/images/hair-consultation-ramacare-prp.jpg"
@@ -439,11 +438,10 @@ export default function PrpHairRecoveryPage() {
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5"
-          >
+            className="lg:col-span-5">
             <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
               <img
-                src="/images/prp-blood-centrifuge-preparation.jpg"
+                src="/images/Centrifuged platelet rich plasma prepared.jpg"
                 alt="Centrifuged platelet rich plasma prepared for scalp injections"
                 className="w-full h-[280px] sm:h-[350px] object-cover"
               />
@@ -821,7 +819,7 @@ export default function PrpHairRecoveryPage() {
           </div>
           <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
             <img
-              src="/images/doctor-examining-scalp-ramacare.jpg"
+              src="/images/Medical professional examining scalp.jpg"
               alt="Medical professional examining scalp during hair restoration recovery"
               className="w-full h-[340px] object-cover"
             />
@@ -911,7 +909,7 @@ export default function PrpHairRecoveryPage() {
           </div>
           <div className="md:col-span-4 rounded-xl overflow-hidden shadow-lg border border-gray-100">
             <img
-              src="/images/patient-results-hair-loss-treatment.jpg"
+              src="/images/patient-results-hair-loss-treatment1.jpg"
               alt="Satisfied patient showing hair density results"
               className="w-full h-[220px] object-cover"
             />

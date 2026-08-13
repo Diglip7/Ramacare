@@ -84,7 +84,7 @@ const commonSigns = [
 ];
 
 const causesDirectory = [
-  { icon: Dna, title: 'Genetic Hair Thinning', body: 'The most common cause of progressive hair thinning is androgenetic alopecia (commonly known as male or female pattern hair loss). This is a genetically influenced condition in which hair follicles gradually shrink over successive growth cycles \u2014 a process called follicular miniaturization. Over time, thick terminal hairs are replaced by shorter, finer hairs, and eventually some follicles may stop producing visible hair altogether.' },
+  { icon: Dna, title: 'Genetic Hair Thinning', body: 'The most common cause of progressive hair thinning is androgenetic alopecia (commonly known as male or female pattern hair loss). This is a genetically influenced condition in which hair follicles gradually shrink over successive growth cycles — a process called follicular miniaturization. Over time, thick terminal hairs are replaced by shorter, finer hairs, and eventually some follicles may stop producing visible hair altogether.' },
   {
     icon: Baby,
     title: 'Hormonal Changes',
@@ -103,7 +103,7 @@ const causesDirectory = [
     title: 'Nutritional Factors',
     intro: 'Hair follicles are metabolically active and can be sensitive to nutritional status. Factors sometimes discussed include:',
     bullets: ['Iron levels', 'Vitamin D', 'Vitamin B12', 'Zinc', 'Protein intake'],
-    outro: 'It\u2019s worth being clear here: nutritional deficiencies should be properly evaluated through appropriate testing rather than assumed, and supplementation should not be self-initiated based on a suspicion alone. Correcting a deficiency that doesn\u2019t actually exist won\u2019t help hair density, and unnecessary supplementation carries its own considerations.',
+    outro: "It's worth being clear here: nutritional deficiencies should be properly evaluated through appropriate testing rather than assumed, and supplementation should not be self-initiated based on a suspicion alone. Correcting a deficiency that doesn't actually exist won't help hair density, and unnecessary supplementation carries its own considerations.",
   },
   { icon: Thermometer, title: 'Thyroid Conditions', body: 'Both underactive and overactive thyroid function can be associated with changes in hair density and texture, which is one reason thyroid function is sometimes included in a broader diagnostic workup for unexplained thinning.' },
   { icon: ShieldAlert, title: 'Alopecia Areata', body: 'This is an autoimmune condition that can cause patchy or, in some cases, more diffuse hair loss. It behaves differently from pattern thinning and typically requires its own diagnostic and management approach.' },
@@ -116,7 +116,7 @@ const causesDirectory = [
   { icon: Pill, title: 'Medications', body: 'Certain medications can be associated with hair shedding or thinning as a side effect, which is one reason a full medication history is relevant during assessment.' },
   { icon: TrendingDown, title: 'Rapid Weight Loss', body: 'Significant or rapid weight loss, including after some medical or surgical interventions, can trigger a temporary shedding phase that affects density.' },
   { icon: Clock, title: 'Aging', body: 'Hair density and diameter naturally change with age for many people, independent of other specific conditions.' },
-  { icon: Scissors, title: 'Tight Hairstyles', body: 'Consistently tight hairstyles \u2014 tight ponytails, braids, or extensions \u2014 can contribute to traction-related hair thinning, particularly along the hairline and temples.' },
+  { icon: Scissors, title: 'Tight Hairstyles', body: 'Consistently tight hairstyles — tight ponytails, braids, or extensions — can contribute to traction-related hair thinning, particularly along the hairline and temples.' },
   { icon: Flame, title: 'Excessive Heat and Chemical Damage', body: 'Frequent heat styling and chemical treatments (coloring, relaxing, perming) can weaken hair shafts over time, contributing to a finer, thinner appearance even when the follicle itself is unaffected.' },
 ];
 
@@ -128,35 +128,35 @@ const regrowSpectrum = [
 ];
 
 const regrowFactors = [
-  'Underlying cause \u2014 some causes are more responsive to treatment than others',
-  'Duration \u2014 thinning that has been present for a shorter time may respond differently than long-standing thinning',
-  'Follicle condition \u2014 whether the follicle is still active (miniaturized but alive) or has become dormant or scarred',
-  'Presence of scarring \u2014 scarring alopecias generally carry a different prognosis than non-scarring forms',
-  'Medical factors \u2014 hormonal, nutritional, or thyroid-related causes may improve once the underlying issue is addressed',
-  'Treatment suitability \u2014 not every treatment is appropriate for every cause or every patient',
+  'Underlying cause — some causes are more responsive to treatment than others',
+  'Duration — thinning that has been present for a shorter time may respond differently than long-standing thinning',
+  'Follicle condition — whether the follicle is still active (miniaturized but alive) or has become dormant or scarred',
+  'Presence of scarring — scarring alopecias generally carry a different prognosis than non-scarring forms',
+  'Medical factors — hormonal, nutritional, or thyroid-related causes may improve once the underlying issue is addressed',
+  'Treatment suitability — not every treatment is appropriate for every cause or every patient',
 ];
 
 const diagnosisSteps = [
-  'Medical history \u2014 general health, medications, recent illnesses, or major life events',
-  'Family history \u2014 since pattern hair thinning often runs in families',
-  'Hair-loss pattern \u2014 where the thinning is occurring and how it\u2019s distributed',
-  'Scalp examination \u2014 checking for redness, scaling, inflammation, or signs of scarring',
-  'Hair density assessment \u2014 evaluating the current density compared to expected norms',
+  'Medical history — general health, medications, recent illnesses, or major life events',
+  'Family history — since pattern hair thinning often runs in families',
+  "Hair-loss pattern — where the thinning is occurring and how it's distributed",
+  'Scalp examination — checking for redness, scaling, inflammation, or signs of scarring',
+  'Hair density assessment — evaluating the current density compared to expected norms',
   'Trichoscopy or dermoscopic assessment, when appropriate, to examine follicles and hair shafts in more detail',
-  'Photographic monitoring \u2014 establishing a baseline for tracking change over time',
-  'Blood tests, when clinically indicated \u2014 such as iron studies, thyroid function, or vitamin levels, based on what the clinical picture suggests',
+  'Photographic monitoring — establishing a baseline for tracking change over time',
+  'Blood tests, when clinically indicated — such as iron studies, thyroid function, or vitamin levels, based on what the clinical picture suggests',
 ];
 
 const consultationSteps = [
-  'Initial consultation \u2014 a conversation about your concerns and what you\u2019ve noticed',
-  'Discussion of symptoms \u2014 when the thinning started, how it has progressed, and any associated symptoms like itching or shedding',
-  'Medical and family history \u2014 relevant health background and any family patterns of hair loss',
-  'Scalp assessment \u2014 a physical examination of the scalp and hair',
-  'Evaluation of hair density \u2014 comparing density across different areas of the scalp',
-  'Possible diagnostic testing \u2014 if clinically indicated, based on findings so far',
-  'Discussion of treatment options \u2014 reviewing what may be appropriate given the findings',
-  'Personalized treatment planning \u2014 if treatment is pursued, tailoring it to your specific situation',
-  'Follow-up and monitoring \u2014 tracking progress and adjusting the plan as needed',
+  "Initial consultation — a conversation about your concerns and what you've noticed",
+  'Discussion of symptoms — when the thinning started, how it has progressed, and any associated symptoms like itching or shedding',
+  'Medical and family history — relevant health background and any family patterns of hair loss',
+  'Scalp assessment — a physical examination of the scalp and hair',
+  'Evaluation of hair density — comparing density across different areas of the scalp',
+  'Possible diagnostic testing — if clinically indicated, based on findings so far',
+  'Discussion of treatment options — reviewing what may be appropriate given the findings',
+  'Personalized treatment planning — if treatment is pursued, tailoring it to your specific situation',
+  'Follow-up and monitoring — tracking progress and adjusting the plan as needed',
 ];
 
 const treatmentOptions = [
@@ -164,23 +164,23 @@ const treatmentOptions = [
     icon: Droplet,
     color: '#1F5E4B',
     title: 'PRP Hair Treatment',
-    body: 'Platelet-rich plasma (PRP) therapy involves drawing a small sample of the patient\u2019s own blood, processing it to concentrate the platelets, and injecting this concentrated plasma into areas of the scalp experiencing thinning. The rationale is that platelets contain growth factors that may support the local scalp environment. PRP is performed in a clinical setting, typically as a series of sessions, and results \u2014 where they occur \u2014 tend to develop gradually rather than immediately. Recovery is generally short, though mild scalp tenderness or redness can occur in the days after treatment. PRP is not suitable or effective for every cause of thinning, and outcomes vary between individuals.',
+    body: "Platelet-rich plasma (PRP) therapy involves drawing a small sample of the patient's own blood, processing it to concentrate the platelets, and injecting this concentrated plasma into areas of the scalp experiencing thinning. The rationale is that platelets contain growth factors that may support the local scalp environment. PRP is performed in a clinical setting, typically as a series of sessions, and results — where they occur — tend to develop gradually rather than immediately. Recovery is generally short, though mild scalp tenderness or redness can occur in the days after treatment. PRP is not suitable or effective for every cause of thinning, and outcomes vary between individuals.",
     linkText: 'Hair PRP Treatment in Dubai',
-    linkHref: '/hair-prp-treatment-dubai',
+    linkHref: '/services/hair-prp-dubai/',
   },
   {
     icon: FlaskConical,
     color: '#2A7D63',
     title: 'Hair Mesotherapy',
-    body: 'Hair mesotherapy involves injecting a formulation of vitamins, minerals, amino acids, or other nutrients directly into the scalp. The general concept is to deliver supportive ingredients closer to the hair follicles than topical products can reach. It differs from PRP in that it does not use the patient\u2019s own blood-derived plasma, and the formulations used can vary. As with PRP, suitability varies by patient and underlying cause.',
+    body: "Hair mesotherapy involves injecting a formulation of vitamins, minerals, amino acids, or other nutrients directly into the scalp. The general concept is to deliver supportive ingredients closer to the hair follicles than topical products can reach. It differs from PRP in that it does not use the patient's own blood-derived plasma, and the formulations used can vary. As with PRP, suitability varies by patient and underlying cause.",
     linkText: 'Hair Mesotherapy in Dubai',
-    linkHref: '/hair-mesotherapy-dubai',
+    linkHref: '/services/mesotherapy-dubai/',
   },
   {
     icon: Stethoscope,
     color: '#5F5F5F',
     title: 'Medical Management',
-    body: 'For some causes of hair thinning \u2014 particularly those linked to hormonal, thyroid, or other medical factors \u2014 treatment may involve addressing the underlying medical condition itself. This is determined on a case-by-case basis and would be discussed as part of a personalized plan. We do not provide prescription or dosage information on this page, as this must be individualized by a clinician.',
+    body: 'For some causes of hair thinning — particularly those linked to hormonal, thyroid, or other medical factors — treatment may involve addressing the underlying medical condition itself. This is determined on a case-by-case basis and would be discussed as part of a personalized plan. We do not provide prescription or dosage information on this page, as this must be individualized by a clinician.',
   },
   {
     icon: Sparkles,
@@ -194,7 +194,7 @@ const treatmentOptions = [
     title: 'Hair Transplant',
     body: 'For patients with more advanced or stable pattern hair loss, hair transplantation may be considered as a surgical option. This involves relocating hair follicles from a donor area to areas of thinning or loss. It requires careful candidate assessment, evaluation of donor hair availability, and an understanding that it is a surgical procedure with its own recovery period and limitations. It is not typically the first option considered for early or diffuse thinning.',
     linkText: 'PRP vs Hair Transplant in Dubai',
-    linkHref: '/prp-vs-hair-transplant-dubai',
+    linkHref: '/services/prp-vs-hair-transplant-dubai/',
   },
 ];
 
@@ -206,9 +206,9 @@ const prpProcess = [
 ];
 
 const timelineTable = [
-  { stage: 'Initial (Assessment)', observed: 'Baseline density and scalp evaluation; no treatment effect yet', note: 'This stage establishes what \u201cbefore\u201d looks like and confirms suitability for treatment' },
+  { stage: 'Initial (Assessment)', observed: 'Baseline density and scalp evaluation; no treatment effect yet', note: 'This stage establishes what "before" looks like and confirms suitability for treatment' },
   { stage: 'Early (First Weeks)', observed: 'Minimal visible change; some patients notice reduced shedding', note: 'Early weeks are not usually indicative of final outcomes' },
-  { stage: 'Developing (Months 2\u20136)', observed: 'Gradual changes may begin to appear for some patients, if they occur', note: 'Hair growth cycles are slow, so visible change takes time to develop' },
+  { stage: 'Developing (Months 2–6)', observed: 'Gradual changes may begin to appear for some patients, if they occur', note: 'Hair growth cycles are slow, so visible change takes time to develop' },
   { stage: 'Longer Term (6+ Months)', observed: 'More meaningful assessment of whether density has improved, stabilized, or continued to change', note: 'Ongoing monitoring and, where relevant, maintenance sessions may be part of the plan' },
 ];
 
@@ -221,13 +221,13 @@ const improvingResults = [
 ];
 
 const photoFactors = [
-  'Lighting \u2014 brighter or more diffuse lighting can make hair appear denser',
-  'Hair length \u2014 longer hair naturally provides more coverage than shorter hair',
-  'Camera angle \u2014 small angle changes can dramatically alter how much scalp is visible',
-  'Hair styling \u2014 product, blow-drying, and parting choices affect apparent volume',
-  'Scalp position \u2014 head tilt changes how much scalp shows',
-  'Time between photographs \u2014 natural hair growth over months adds length and fullness independent of any treatment effect',
-  'Individual differences \u2014 every patient\u2019s starting point, cause of thinning, and response to treatment is different',
+  'Lighting — brighter or more diffuse lighting can make hair appear denser',
+  'Hair length — longer hair naturally provides more coverage than shorter hair',
+  'Camera angle — small angle changes can dramatically alter how much scalp is visible',
+  'Hair styling — product, blow-drying, and parting choices affect apparent volume',
+  'Scalp position — head tilt changes how much scalp shows',
+  'Time between photographs — natural hair growth over months adds length and fullness independent of any treatment effect',
+  "Individual differences — every patient's starting point, cause of thinning, and response to treatment is different",
 ];
 
 const resultFactors = [
@@ -273,7 +273,7 @@ const vsTransplant = [
 ];
 
 const vsMeso = [
-  { label: 'Basic Approach', a: 'Uses the patient\u2019s own concentrated blood plasma', b: 'Uses injected formulations of vitamins, minerals, or amino acids' },
+  { label: 'Basic Approach', a: "Uses the patient's own concentrated blood plasma", b: 'Uses injected formulations of vitamins, minerals, or amino acids' },
   { label: 'Procedure', a: 'Blood draw, processing, then scalp injection', b: 'Direct scalp injection of a prepared formulation' },
   { label: 'Treatment Planning', a: 'Individualized based on assessment and follicle health', b: 'Individualized based on assessment and formulation selected' },
   { label: 'Recovery', a: 'Generally short, mild tenderness or redness possible', b: 'Generally short, mild tenderness or redness possible' },
@@ -297,9 +297,9 @@ const trackingSteps = [
   'Same lighting conditions each time',
   'Same camera or device, where possible',
   'Same angle for each photo',
-  'Similar hairstyle \u2014 freshly washed, unstyled hair tends to give the most accurate picture',
+  'Similar hairstyle — freshly washed, unstyled hair tends to give the most accurate picture',
   'Same scalp areas photographed consistently (crown, hairline, part line)',
-  'Consistent intervals \u2014 monthly is often more useful than daily or weekly',
+  'Consistent intervals — monthly is often more useful than daily or weekly',
   'Hair density observations noted alongside photos',
   'Shedding observations, such as general patterns rather than exact counts',
   'Professional follow-up, where a clinician can compare findings over time using consistent assessment methods',
@@ -320,7 +320,7 @@ const dailyHabits = [
 const whenToSee = [
   'Rapid or sudden thinning', 'Sudden, significant shedding', 'Patchy hair loss', 'Scalp pain', 'Visible scalp inflammation or redness',
   'Itching accompanied by significant shedding', 'Hair loss occurring alongside other unexplained symptoms', 'Progressive hairline recession',
-  'Worsening crown thinning', 'Persistent, unexplained thinning that isn\u2019t improving',
+  'Worsening crown thinning', "Persistent, unexplained thinning that isn't improving",
 ];
 
 const clinicChecklist = [
@@ -333,7 +333,7 @@ const clinicChecklist = [
   'Follow-up built into the treatment plan',
   'Evidence-informed recommendations, grounded in what is clinically appropriate for your case',
   'Clear communication about what a treatment can and cannot achieve',
-  'No guaranteed results \u2014 a trustworthy provider will not promise outcomes that can\u2019t be guaranteed',
+  "No guaranteed results — a trustworthy provider will not promise outcomes that can't be guaranteed",
 ];
 
 const redFlags = [
@@ -358,7 +358,7 @@ const whyChoose = [
 ];
 
 const consultDiscussionPoints = [
-  'Your hair thinning symptoms and how they\u2019ve progressed',
+  "Your hair thinning symptoms and how they've progressed",
   'Possible underlying causes',
   'Your scalp health',
   'Whether you may be a suitable candidate for specific treatments',
@@ -375,7 +375,7 @@ const faqGroups = [
       { question: 'What causes hair thinning?', answer: 'Causes include genetics (androgenetic alopecia), hormonal changes, stress, nutritional factors, thyroid conditions, alopecia areata, scalp conditions, certain medications, rapid weight loss, aging, tight hairstyles, and excessive heat or chemical damage.' },
       { question: 'Can thinning hair grow back?', answer: 'It depends on the underlying cause, how long the thinning has been present, and the current condition of the hair follicles. Some causes are more responsive to treatment or resolve on their own, while others, such as long-standing genetic thinning with dormant follicles, are less likely to reverse.' },
       { question: 'Why is my hair thinning at the crown?', answer: 'Crown thinning is a common pattern in androgenetic alopecia, though other causes can also contribute; an assessment can help clarify the specific reason in your case.' },
-      { question: 'Why is my hair part getting wider?', answer: 'A widening part is a common early sign of diffuse thinning, frequently discussed in women\u2019s hair concerns, and can stem from several possible causes.' },
+      { question: 'Why is my hair part getting wider?', answer: 'A widening part is a common early sign of diffuse thinning, frequently discussed in women’s hair concerns, and can stem from several possible causes.' },
       { question: 'Can stress cause hair thinning?', answer: 'Significant stress can trigger increased shedding (telogen effluvium), which can affect perceived density, especially when combined with other contributing factors.' },
       { question: 'Can nutritional deficiencies cause thinning hair?', answer: 'Certain deficiencies, such as iron or vitamin D, have been associated with changes in hair density, though this should be confirmed through appropriate testing rather than assumed.' },
     ],
@@ -384,12 +384,12 @@ const faqGroups = [
     key: 'treatment',
     label: 'Treatment Options',
     faqs: [
-      { question: 'What is the best treatment for thinning hair?', answer: 'There isn\u2019t a universal \u201cbest\u201d treatment. The right option depends on the cause, severity, duration, follicle health, and individual circumstances, which is why assessment comes before treatment recommendations.' },
+      { question: 'What is the best treatment for thinning hair?', answer: "There isn't a universal \"best\" treatment. The right option depends on the cause, severity, duration, follicle health, and individual circumstances, which is why assessment comes before treatment recommendations." },
       { question: 'Does PRP help thinning hair?', answer: 'PRP may be considered for certain patients with active but miniaturized follicles. It is not effective for every cause of thinning, and results vary between individuals.' },
       { question: 'How many PRP sessions may be recommended?', answer: 'This varies by individual and is determined as part of a personalized treatment plan based on assessment findings.' },
       { question: 'Are PRP results permanent?', answer: 'PRP does not create new hair follicles, and any supportive effect on existing follicles generally requires maintenance sessions over time; results are not considered permanent.' },
       { question: 'Can Hair Mesotherapy help thinning hair?', answer: 'Mesotherapy may be considered for some patients as a way to deliver supportive ingredients to the scalp, though suitability and results vary depending on the underlying cause.' },
-      { question: 'Is PRP better than Hair Mesotherapy?', answer: 'Neither is universally \u201cbetter\u201d \u2014 they work differently, and suitability depends on individual assessment rather than a blanket comparison.' },
+      { question: 'Is PRP better than Hair Mesotherapy?', answer: 'Neither is universally "better" — they work differently, and suitability depends on individual assessment rather than a blanket comparison.' },
       { question: 'Can thinning hair require a transplant?', answer: 'In cases of more advanced or stable pattern hair loss with adequate donor hair, a transplant may be considered, though this depends on individual candidacy.' },
     ],
   },
@@ -398,8 +398,8 @@ const faqGroups = [
     label: 'Who It Affects & Timing',
     faqs: [
       { question: 'How long does hair thinning treatment take?', answer: 'Most treatments require several months before meaningful change, if any, can reasonably be assessed, due to the natural pace of the hair growth cycle.' },
-      { question: 'Does hair thinning affect women?', answer: 'Yes \u2014 diffuse thinning, a widening part, and hormonally linked changes (such as postpartum or menopause-related thinning) are common concerns among women.' },
-      { question: 'Does hair thinning affect men?', answer: 'Yes \u2014 male pattern hair loss, including hairline recession and crown thinning, is one of the most common causes of hair thinning in men.' },
+      { question: 'Does hair thinning affect women?', answer: 'Yes — diffuse thinning, a widening part, and hormonally linked changes (such as postpartum or menopause-related thinning) are common concerns among women.' },
+      { question: 'Does hair thinning affect men?', answer: 'Yes — male pattern hair loss, including hairline recession and crown thinning, is one of the most common causes of hair thinning in men.' },
       { question: 'When should I see a hair specialist?', answer: 'Consider seeking assessment for rapid or sudden thinning, patchy loss, scalp pain or inflammation, itching with significant shedding, or persistent unexplained thinning.' },
     ],
   },
@@ -407,8 +407,8 @@ const faqGroups = [
     key: 'cost',
     label: 'Cost & Monitoring',
     faqs: [
-      { question: 'How much does hair thinning treatment cost in Dubai?', answer: 'Cost depends on the treatment type, number of sessions, and individual treatment plan, so it\u2019s best discussed during a consultation rather than estimated generically.' },
-      { question: 'How can I monitor my hair-thinning progress?', answer: 'Use consistent baseline photography \u2014 same lighting, angle, and hairstyle \u2014 at regular intervals, alongside professional follow-up assessments over time.' },
+      { question: 'How much does hair thinning treatment cost in Dubai?', answer: 'Cost depends on the treatment type, number of sessions, and individual treatment plan, so it’s best discussed during a consultation rather than estimated generically.' },
+      { question: 'How can I monitor my hair-thinning progress?', answer: 'Use consistent baseline photography — same lighting, angle, and hairstyle — at regular intervals, alongside professional follow-up assessments over time.' },
     ],
   },
 ];
@@ -416,21 +416,21 @@ const faqGroups = [
 const allFaqsForSchema = faqGroups.flatMap((g) => g.faqs);
 
 const relatedGuides = [
-  { title: 'Hair Loss Treatment in Dubai', desc: 'A broader overview of hair loss causes and treatment approaches available in Dubai.', href: '/hair-loss-treatment-dubai' },
-  { title: 'Hair Fall Treatment in Dubai', desc: 'Explore treatment options specifically focused on managing excessive hair fall.', href: '/hair-fall-treatment-dubai' },
-  { title: 'Hair Regrowth Treatment Dubai', desc: 'Learn about approaches that may support hair regrowth for suitable candidates.', href: '/hair-regrowth-treatment-dubai' },
-  { title: 'Hair PRP Treatment in Dubai', desc: 'Our dedicated page covering PRP therapy in detail, including the procedure and considerations.', href: '/hair-prp-treatment-dubai' },
-  { title: 'PRP Hair Treatment Results', desc: 'A closer look at what PRP results can and cannot be expected to look like.', href: '/prp-hair-treatment-results' },
-  { title: 'PRP Hair Treatment Before and After', desc: 'Guidance on how to interpret before-and-after photos responsibly.', href: '/prp-hair-treatment-before-and-after' },
-  { title: 'PRP Hair Treatment Recovery', desc: 'What to expect in the days following a PRP session.', href: '/prp-hair-treatment-recovery' },
-  { title: 'PRP Hair Treatment Cost in Dubai', desc: 'An educational look at the factors that influence PRP treatment pricing.', href: '/prp-hair-treatment-cost-dubai' },
-  { title: 'Hair Growth Cycle', desc: 'Understand the phases hair goes through and why treatments require patience.', href: '/hair-growth-cycle' },
-  { title: 'Hair Loss Causes', desc: 'A deeper dive into the many possible causes behind hair loss and thinning.', href: '/hair-loss-causes' },
-  { title: 'Hair Mesotherapy in Dubai', desc: 'Learn about mesotherapy as an alternative or complementary treatment approach.', href: '/hair-mesotherapy-dubai' },
-  { title: 'PRP vs Hair Mesotherapy', desc: 'A side-by-side comparison to help you understand the differences between these two options.', href: '/prp-vs-hair-mesotherapy-dubai' },
-  { title: 'PRP vs Hair Transplant in Dubai', desc: 'Compare non-surgical and surgical approaches to hair restoration.', href: '/prp-vs-hair-transplant-dubai' },
-  { title: 'Best Hair Specialist in Dubai', desc: 'Guidance on finding a qualified professional for your hair and scalp concerns.', href: '/best-hair-specialist-dubai' },
-  { title: 'Hair Loss Clinic Dubai', desc: 'An overview of what to look for when choosing a hair loss clinic in Dubai.', href: '/hair-loss-clinic-dubai' },
+  { title: 'Hair Loss Treatment in Dubai', desc: 'A broader overview of hair loss causes and treatment approaches available in Dubai.', href: '/services/hair-loss-dubai/' },
+  { title: 'Hair Fall Treatment in Dubai', desc: 'Explore treatment options specifically focused on managing excessive hair fall.', href: '/services/hair-loss-dubai/' },
+  { title: 'Hair Regrowth Treatment Dubai', desc: 'Learn about approaches that may support hair regrowth for suitable candidates.', href: '/services/hair-regrowth-treatment-dubai/' },
+  { title: 'Hair PRP Treatment in Dubai', desc: 'Our dedicated page covering PRP therapy in detail, including the procedure and considerations.', href: '/services/hair-prp-dubai/' },
+  { title: 'PRP Hair Treatment Results', desc: 'A closer look at what PRP results can and cannot be expected to look like.', href: '/services/prp-hair-treatment-results/' },
+  { title: 'PRP Hair Treatment Before and After', desc: 'Guidance on how to interpret before-and-after photos responsibly.', href: '/services/prp-hair-treatment-before-and-after/' },
+  { title: 'PRP Hair Treatment Recovery', desc: 'What to expect in the days following a PRP session.', href: '/services/prp-hair-treatment-recovery/' },
+  { title: 'PRP Hair Treatment Cost in Dubai', desc: 'An educational look at the factors that influence PRP treatment pricing.', href: '/services/hair-prp-cost-dubai/' },
+  { title: 'Hair Growth Cycle', desc: 'Understand the phases hair goes through and why treatments require patience.', href: '/services/hair-growth-cycle/' },
+  { title: 'Hair Loss Causes', desc: 'A deeper dive into the many possible causes behind hair loss and thinning.', href: '/services/hair-loss-dubai/' },
+  { title: 'Hair Mesotherapy in Dubai', desc: 'Learn about mesotherapy as an alternative or complementary treatment approach.', href: '/services/mesotherapy-dubai/' },
+  { title: 'PRP vs Hair Mesotherapy', desc: 'A side-by-side comparison to help you understand the differences between these two options.', href: '/services/prp-vs-hair-mesotherapy-dubai/' },
+  { title: 'PRP vs Hair Transplant in Dubai', desc: 'Compare non-surgical and surgical approaches to hair restoration.', href: '/services/prp-vs-hair-transplant-dubai/' },
+  { title: 'Best Hair Specialist in Dubai', desc: 'Guidance on finding a qualified professional for your hair and scalp concerns.', href: '/services/best-hair-specialist-dubai/' },
+  { title: 'Hair Loss Clinic Dubai', desc: 'An overview of what to look for when choosing a hair loss clinic in Dubai.', href: '/services/hair-loss-clinic-dubai/' },
 ];
 
 export default function HairThinningTreatmentDubaiPage() {
@@ -469,7 +469,7 @@ export default function HairThinningTreatmentDubaiPage() {
           key="og:description"
         />
         <meta property="og:type" content="website" key="og:type" />
-        <meta name="twitter:title" content="Hair Thinning Treatment Dubai \u2014 RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:title" content="Hair Thinning Treatment Dubai — RamaCare Polyclinic" key="twitter:title" />
         <meta
           name="twitter:description"
           content="Causes, diagnosis, and treatment options for hair thinning in Dubai, explained clearly."
@@ -536,7 +536,7 @@ export default function HairThinningTreatmentDubaiPage() {
       </Head>
 
       {/* ============ HERO — minimal editorial ============ */
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
           <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
             <Link href="/">Home</Link>
             <span className="mx-1">/</span>
@@ -605,12 +605,12 @@ export default function HairThinningTreatmentDubaiPage() {
               {/* Styled Image Overlay Card */}
               <div className="relative border border-gray-200 rounded-3xl p-6 bg-white shadow-lg max-w-md mx-auto">
                 <img
-                  src="/images/hair-consultation-ramacare-prp-mesotherapy.jpg"
-                  alt="Hair density assessment being conducted at a Dubai hair clinic"
+                  src="/images/hair-thinning-consultation-dubai.jpg"
+                  alt="Doctor consulting with a patient about hair thinning at RamaCare Polyclinic Dubai"
                   className="w-full h-80 object-cover rounded-2xl mb-4"
                 />
                 <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center">
-                  “Assessing hair density helps establish a baseline before treatment planning.”
+                  "A personalized consultation is the first step in understanding hair thinning."
                 </p>
               </div>
             </motion.div>
@@ -670,7 +670,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">What Is Hair Thinning?</h2>
             <p className="text-[#5F5F5F] leading-relaxed mb-3">
               Hair thinning refers to a gradual reduction in hair density and, often, in the diameter of individual
-              hair strands. It&apos;s different from going bald in a specific spot \u2014 thinning is usually diffuse
+              hair strands. It&apos;s different from going bald in a specific spot — thinning is usually diffuse
               or pattern-based, meaning the overall volume of hair looks and feels reduced rather than disappearing
               entirely from one area.
             </p>
@@ -695,7 +695,7 @@ export default function HairThinningTreatmentDubaiPage() {
               It&apos;s important to understand that a person can experience meaningful hair thinning without ever
               developing an obvious bald patch. The hair may still be present across the scalp, just in a visibly
               reduced, finer, or less dense form. This is one reason thinning can be underestimated by the person
-              experiencing it \u2014 the change is often subtle at first, and comparison photos over months or years
+              experiencing it — the change is often subtle at first, and comparison photos over months or years
               are usually more revealing than day-to-day observation.
             </p>
           </section>
@@ -705,7 +705,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">Hair Thinning vs Hair Shedding</h2>
             <p className="text-[#5F5F5F] leading-relaxed mb-6">
               Patients often use &ldquo;thinning&rdquo; and &ldquo;shedding&rdquo; interchangeably, but they describe
-              different things \u2014 and understanding the distinction matters for how a concern is assessed.
+              different things — and understanding the distinction matters for how a concern is assessed.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full border-t border-gray-200 min-w-[560px]">
@@ -728,7 +728,7 @@ export default function HairThinningTreatmentDubaiPage() {
               </table>
             </div>
             <p className="mt-6 text-sm text-[#5F5F5F] leading-relaxed">
-              Shedding and thinning are not mutually exclusive \u2014 they frequently occur together. A period of
+              Shedding and thinning are not mutually exclusive — they frequently occur together. A period of
               increased shedding can contribute to a perception of reduced density, and ongoing follicular
               miniaturization can make regrowing hairs progressively finer, which compounds the appearance of
               thinning. Persistent or progressive changes in either shedding or density are worth discussing with a
@@ -752,8 +752,8 @@ export default function HairThinningTreatmentDubaiPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-[#5F5F5F] leading-relaxed">
-              None of these signs alone confirms a specific diagnosis, but a cluster of them \u2014 especially if
-              progressive \u2014 is a reasonable prompt to seek a professional scalp and hair assessment.
+              None of these signs alone confirms a specific diagnosis, but a cluster of them — especially if
+              progressive — is a reasonable prompt to seek a professional scalp and hair assessment.
             </p>
           </section>
 
@@ -805,7 +805,7 @@ export default function HairThinningTreatmentDubaiPage() {
             </div>
             <p className="mt-6 text-sm text-[#5F5F5F]">
               For a broader look at underlying causes, see our detailed guide on{' '}
-              <a href="/hair-loss-causes" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-loss-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 Hair Loss Causes
               </a>
               .
@@ -847,7 +847,7 @@ export default function HairThinningTreatmentDubaiPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-[#5F5F5F] leading-relaxed">
-              We are not able to tell you which category your hair thinning falls into without an assessment \u2014
+              We are not able to tell you which category your hair thinning falls into without an assessment —
               this is precisely why diagnosis comes before treatment discussion.
             </p>
           </section>
@@ -885,12 +885,12 @@ export default function HairThinningTreatmentDubaiPage() {
               {/* Consultation Image */}
               <div className="border border-gray-200 rounded-3xl p-4 bg-white shadow-md">
                 <img
-                  src="/images/doctor-examining-scalp-ramacare-dubai.jpg"
-                  alt="Doctor consulting with a patient about hair thinning at RamaCare Polyclinic Dubai"
+                  src="/images/scalp-examination-hair-thinning-dubai.jpg"
+                  alt="Clinician examining scalp for signs of hair thinning"
                   className="w-full h-64 object-cover rounded-2xl"
                 />
                 <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3">
-                  “A personalized consultation is the first step in understanding hair thinning.”
+                  "A thorough scalp examination helps identify possible causes of thinning."
                 </p>
               </div>
             </div>
@@ -960,7 +960,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <p className="text-[#5F5F5F] leading-relaxed mb-3">
               Because PRP is one of the more frequently discussed options for thinning hair, it deserves a closer
               look. PRP may be considered for certain patterns of thinning, particularly where follicles are
-              miniaturized but still active \u2014 meaning they are producing finer hair rather than having stopped
+              miniaturized but still active — meaning they are producing finer hair rather than having stopped
               entirely. The treatment generally involves:
             </p>
 
@@ -978,10 +978,10 @@ export default function HairThinningTreatmentDubaiPage() {
             <div className="grid md:grid-cols-[1.8fr_1.2fr] gap-8 items-center my-6">
               <div>
                 <p className="text-[#5F5F5F] leading-relaxed mb-3">
-                  Treatment plans vary considerably between patients \u2014 the number of sessions, spacing between
+                  Treatment plans vary considerably between patients — the number of sessions, spacing between
                   sessions, and whether PRP is combined with other approaches all depend on individual assessment
                   findings. Because PRP works by supporting the existing follicular environment rather than creating new
-                  follicles, results depend heavily on the health of the follicles being treated \u2014 this is part of
+                  follicles, results depend heavily on the health of the follicles being treated — this is part of
                   why an accurate diagnosis matters so much before starting.
                 </p>
                 <p className="text-[#5F5F5F] leading-relaxed mb-4">
@@ -993,31 +993,31 @@ export default function HairThinningTreatmentDubaiPage() {
               {/* PRP Image */}
               <div className="border border-gray-200 rounded-3xl p-4 bg-white shadow-md">
                 <img
-                  src="/images/prp-scalp-injection-dubai.jpg"
+                  src="/images/prp-hair-treatment-dubai.jpg"
                   alt="PRP hair treatment being performed on a patient's scalp"
                   className="w-full h-52 object-cover rounded-2xl"
                 />
                 <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3">
-                  “PRP therapy involves injecting concentrated plasma into targeted scalp areas.”
+                  "PRP therapy involves injecting concentrated plasma into targeted scalp areas."
                 </p>
               </div>
             </div>
 
             <p className="text-sm text-[#5F5F5F] leading-relaxed bg-[#F9F7F2] rounded-xl p-5">
               Related reading:{' '}
-              <a href="/prp-hair-treatment-results" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/prp-hair-treatment-results/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Results
               </a>
               ,{' '}
-              <a href="/prp-hair-treatment-before-and-after" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/prp-hair-treatment-before-and-after/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Before and After
               </a>
               ,{' '}
-              <a href="/prp-hair-treatment-recovery" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/prp-hair-treatment-recovery/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Recovery
               </a>
               ,{' '}
-              <a href="/prp-hair-treatment-cost-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-prp-cost-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Cost in Dubai
               </a>
               .
@@ -1041,7 +1041,7 @@ export default function HairThinningTreatmentDubaiPage() {
               ))}
             </div>
             <p className="mt-4 text-xs text-[#5F5F5F]">
-              This timeline is general and educational \u2014 it is not a guarantee of what will happen in any
+              This timeline is general and educational — it is not a guarantee of what will happen in any
               individual case, and some patients may not experience meaningful change at all, depending on the
               underlying cause.
             </p>
@@ -1057,9 +1057,9 @@ export default function HairThinningTreatmentDubaiPage() {
             </div>
             <p className="text-sm text-[#5F5F5F] leading-relaxed">
               It&apos;s worth noting that visual improvement and actual follicular change are not always identical
-              \u2014 perceived improvement can be influenced by styling, lighting, and hair length, which is why
+              — perceived improvement can be influenced by styling, lighting, and hair length, which is why
               photographic monitoring under consistent conditions is valuable. See more in our{' '}
-              <a href="/prp-hair-treatment-results" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/prp-hair-treatment-results/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Results
               </a>{' '}
               guide.
@@ -1084,7 +1084,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <p className="mt-4 text-sm text-[#5F5F5F] leading-relaxed">
               Because of these variables, another patient&apos;s before-and-after result should never be used to
               predict your own outcome. See our detailed{' '}
-              <a href="/prp-hair-treatment-before-and-after" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/prp-hair-treatment-before-and-after/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Before and After
               </a>{' '}
               page for a closer look at how to evaluate these images critically.
@@ -1123,10 +1123,10 @@ export default function HairThinningTreatmentDubaiPage() {
                 </div>
                 <p className="mt-6 text-sm text-[#5F5F5F] leading-relaxed">
                   Because each hair follicle moves through this cycle independently and the anagen phase alone can last
-                  years, any treatment aimed at supporting hair density needs time \u2014 often several months \u2014
+                  years, any treatment aimed at supporting hair density needs time — often several months —
                   before meaningful change can reasonably be assessed. This is one of the most common points of
                   confusion for patients expecting faster results. Learn more in our full{' '}
-                  <a href="/hair-growth-cycle" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+                  <a href="/services/hair-growth-cycle/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                     Hair Growth Cycle
                   </a>{' '}
                   guide.
@@ -1136,12 +1136,12 @@ export default function HairThinningTreatmentDubaiPage() {
               {/* Hair Growth Cycle Image */}
               <div className="border border-gray-200 rounded-3xl p-4 bg-white shadow-md">
                 <img
-                  src="/images/hair-growth-cycle-infographic-dubai.jpg"
+                  src="/images/hair-growth-cycle-diagram.jpg"
                   alt="Diagram illustrating the anagen, catagen, telogen, and exogen phases of hair growth"
                   className="w-full h-52 object-cover rounded-2xl"
                 />
                 <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3">
-                  “Understanding the hair growth cycle explains why treatment results take time.”
+                  "Understanding the hair growth cycle explains why treatment results take time."
                 </p>
               </div>
             </div>
@@ -1195,7 +1195,7 @@ export default function HairThinningTreatmentDubaiPage() {
           <section id="compare">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">Comparing Approaches</h2>
             <p className="text-[#5F5F5F] leading-relaxed mb-6">
-              Not every case of thinning requires \u2014 or is suitable for \u2014 surgical intervention. See how the
+              Not every case of thinning requires — or is suitable for — surgical intervention. See how the
               general approaches compare:
             </p>
             <div className="flex gap-2 mb-6">
@@ -1239,7 +1239,7 @@ export default function HairThinningTreatmentDubaiPage() {
                 <>
                   The right choice depends entirely on individual assessment findings. Read a deeper comparison on
                   our{' '}
-                  <a href="/prp-vs-hair-transplant-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+                  <a href="/services/prp-vs-hair-transplant-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                     PRP vs Hair Transplant in Dubai
                   </a>{' '}
                   page.
@@ -1248,7 +1248,7 @@ export default function HairThinningTreatmentDubaiPage() {
                 <>
                   Both approaches require a personalized treatment plan rather than a one-size-fits-all protocol. See
                   our full comparison on{' '}
-                  <a href="/prp-vs-hair-mesotherapy-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+                  <a href="/services/prp-vs-hair-mesotherapy-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                     PRP vs Hair Mesotherapy
                   </a>
                   .
@@ -1275,7 +1275,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <p className="text-sm text-[#5F5F5F] leading-relaxed">
               Because pricing is tied to your individualized treatment plan, the most accurate way to understand cost
               is through a consultation. For general guidance on PRP pricing specifically, see our{' '}
-              <a href="/prp-hair-treatment-cost-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-prp-cost-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 PRP Hair Treatment Cost in Dubai
               </a>{' '}
               page.
@@ -1286,7 +1286,7 @@ export default function HairThinningTreatmentDubaiPage() {
           <section>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">How to Track Hair Thinning</h2>
             <p className="text-[#5F5F5F] leading-relaxed mb-6">
-              If you&apos;re concerned about hair thinning \u2014 whether or not you&apos;ve started treatment \u2014
+              If you&apos;re concerned about hair thinning — whether or not you&apos;ve started treatment —
               tracking change accurately over time is more useful than daily observation, which can be misleading
               due to lighting, styling, and even how recently you washed your hair. A more reliable method includes:
             </p>
@@ -1317,7 +1317,7 @@ export default function HairThinningTreatmentDubaiPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-[#5F5F5F] leading-relaxed">
-              These habits are supportive, not curative \u2014 they should be viewed as part of a broader approach
+              These habits are supportive, not curative — they should be viewed as part of a broader approach
               rather than a standalone treatment for progressive or genetic thinning.
             </p>
           </section>
@@ -1340,7 +1340,7 @@ export default function HairThinningTreatmentDubaiPage() {
             <p className="text-sm text-[#5F5F5F] leading-relaxed">
               If any of these apply to you, it&apos;s worth arranging an assessment sooner rather than continuing to
               monitor on your own. Learn more about finding the right professional on our{' '}
-              <a href="/best-hair-specialist-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/best-hair-specialist-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 Best Hair Specialist in Dubai
               </a>{' '}
               page.
@@ -1392,21 +1392,21 @@ export default function HairThinningTreatmentDubaiPage() {
               Dubai has a wide range of hair and skin clinics, which makes it especially important to prioritize
               proper assessment and individualized planning over marketing claims when choosing where to seek a hair
               thinning treatment in Dubai. A reliable{' '}
-              <a href="/hair-specialist-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/best-hair-specialist-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 hair specialist in Dubai
               </a>{' '}
               will begin with a thorough evaluation rather than moving straight to a specific procedure, and a
               trustworthy{' '}
-              <a href="/hair-loss-clinic-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-loss-clinic-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 hair loss clinic in Dubai
               </a>{' '}
               will be transparent about what a given treatment can realistically offer based on your individual
               diagnosis. Whether you&apos;re exploring a{' '}
-              <a href="/hair-loss-clinic-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-loss-clinic-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 hair clinic in Dubai
               </a>{' '}
               for the first time or comparing options for{' '}
-              <a href="/hair-loss-treatment-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
+              <a href="/services/hair-loss-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/30 hover:decoration-[#1F5E4B]">
                 hair treatment in Dubai
               </a>
               , the same principle applies: assessment before treatment, and realistic expectations throughout.
@@ -1514,7 +1514,7 @@ export default function HairThinningTreatmentDubaiPage() {
             ))}
           </div>
           <p className="text-center text-white/80 text-sm max-w-2xl mx-auto mb-8">
-            We won&apos;t promise guaranteed regrowth, a permanent cure, or results that work for everyone \u2014
+            We won&apos;t promise guaranteed regrowth, a permanent cure, or results that work for everyone —
             what we can offer is an honest, structured assessment and a treatment plan built around your individual
             circumstances.
           </p>

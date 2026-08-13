@@ -267,7 +267,7 @@ export default function PrpVsTransplantPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -288,8 +288,7 @@ export default function PrpVsTransplantPage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-6"
-            >
+              className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/10 border border-[#1F5E4B]/20 px-4 py-2 rounded-full text-xs font-bold text-[#1F5E4B] tracking-wide uppercase">
                 <Users className="w-3.5 h-3.5" />
                 Dermatology &amp; Hair Restoration
@@ -309,12 +308,12 @@ export default function PrpVsTransplantPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 pt-2">
-                <a
-                  href="#book-now"
+                <Link
+                  href="/book-appointment/"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#1F5E4B] px-8 py-4 text-sm font-bold text-white hover:bg-[#17493A] transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                 >
                   <Calendar className="w-4 h-4" /> Book Consultation
-                </a>
+                </Link>
                 <a
                   href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic%2C%20I%20would%20like%20to%20ask%20about%20the%20differences%20between%20PRP%20and%20Hair%20Transplant%20options."
                   target="_blank"
@@ -350,7 +349,7 @@ export default function PrpVsTransplantPage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border border-gray-150">
                   <img
-                    src="/images/hair-consultation-ramacare-prp.jpg"
+                    src="/images/hair-consultation-ramacare-prp1.jpg"
                     alt="Dermatologist consultation for hair loss treatments in Dubai"
                     className="w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -360,7 +359,7 @@ export default function PrpVsTransplantPage() {
         </div>
       </section>
 
-      {/* ============ STICKY NAVIGATION ============ */}
+          {/* ============ STICKY NAVIGATION ============ */}
       <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-3">
@@ -412,7 +411,7 @@ export default function PrpVsTransplantPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#1F5E4B]/10 to-transparent rounded-3xl -rotate-2 transform scale-105" />
             <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
               <img
-                src="/images/doctor-examining-scalp-ramacare.jpg"
+                src="/images/doctor-examining-scalp-ramacare1.jpg"
                 alt="Scalp examination under hair diagnostics"
                 className="w-full h-[380px] object-cover"
               />
@@ -911,7 +910,7 @@ export default function PrpVsTransplantPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#1F5E4B]/5 to-transparent rounded-3xl rotate-1 transform scale-105" />
             <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
               <img
-                src="/images/doctor-examining-scalp-ramacare.jpg"
+                src="/images/doctor-examining-scalp-ramacare2.jpg"
                 alt="Scalp monitoring and follow-up clinical support"
                 className="w-full h-[360px] object-cover"
               />
@@ -972,20 +971,20 @@ export default function PrpVsTransplantPage() {
             The only way to know for certain whether PRP, a hair transplant, or a combination of both is right for you is a hands-on evaluation with a specialist who can examine your scalp and discuss your goals directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <Link
+              href="/book-appointment/"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#1F5E4B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/95 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Calendar className="w-5 h-5" />
+              Book Consultation
+            </Link>
             <a
               href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic%2C%20I%20would%20like%20to%20ask%20about%20the%20differences%20between%20PRP%20and%20Hair%20Transplant%20options."
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#1F5E4B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/95 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Book Consultation
-            </a>
-            <a
-              href="/contact-us"
               className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all"
             >
-              <Phone className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5" />
               Contact Us
             </a>
           </div>
@@ -1003,7 +1002,7 @@ export default function PrpVsTransplantPage() {
           </div>
           <div className="md:col-span-4 rounded-2xl overflow-hidden shadow-lg border border-gray-150">
             <img
-              src="/images/patient-results-hair-loss-treatment.jpg"
+              src="/images/patient-results-hair-loss-treatment3.jpg"
               alt="Successful hair density results after clinical procedures"
               className="w-full h-[220px] object-cover"
             />
@@ -1034,6 +1033,23 @@ export default function PrpVsTransplantPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Bottom Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-250 shadow-lg z-40 p-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="hidden md:block">
+            <p className="text-sm font-semibold text-[#1A1A1A]">Not sure which treatment fits your hair loss?</p>
+            <p className="text-xs text-[#5F5F5F]">Book a scalp assessment today</p>
+          </div>
+          <Link
+            href="/book-appointment/"
+            className="flex items-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#17493A] hover:shadow-xl transition-all font-semibold whitespace-nowrap"
+          >
+            <Calendar className="w-5 h-5" />
+            Book Consultation
+          </Link>
+        </div>
+      </div>
 
 
     </Layout>

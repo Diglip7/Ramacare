@@ -283,7 +283,7 @@ export default function HairLossClinicDubai() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -839,7 +839,6 @@ export default function HairLossClinicDubai() {
                 <p className="text-[#5F5F5F] text-base leading-relaxed">
                   Because PRP is one of the more frequently asked-about treatments, here's a closer look at how it generally works:
                 </p>
-
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { title: "What PRP is", desc: "A treatment using a concentration of platelets separated from a small sample of the patient's own blood." },
@@ -961,7 +960,6 @@ export default function HairLossClinicDubai() {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -1007,7 +1005,7 @@ export default function HairLossClinicDubai() {
             </div>
           </div>
         </section>
-
+      
         {/* ============ SECTION: DEMOGRAPHICS (MEN, WOMEN & AGE GROUPS) ============ */}
         <section id="demographics" className="scroll-mt-36 py-20 px-4 md:px-8 border-b border-[#E6E2D8]">
           <div className="max-w-7xl mx-auto space-y-12">
@@ -1088,7 +1086,6 @@ export default function HairLossClinicDubai() {
                 Choosing where to seek care matters. Consider the following when evaluating a clinic:
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {/* Guidelines */}
               <div className="bg-white border border-[#E6E2D8] p-8 rounded-3xl shadow-sm space-y-6">
@@ -1113,7 +1110,6 @@ export default function HairLossClinicDubai() {
                   ))}
                 </ul>
               </div>
-
               {/* Red Flags */}
               <div className="bg-amber-50/20 border border-amber-200 p-8 rounded-3xl shadow-sm space-y-6">
                 <h3 className="font-extrabold text-xl text-amber-800 border-b border-amber-200 pb-3">Be Cautious of Clinics That:</h3>
@@ -1166,7 +1162,7 @@ export default function HairLossClinicDubai() {
               </div>
               <div className="lg:col-span-5 space-y-6">
                 <img
-                  src="/images/ramacare-polyclinic-dubai-clinic.jpg"
+                  src="/images/RamaCare Polyclinic hair loss clinic.jpg"
                   alt="RamaCare Polyclinic hair loss clinic location in Dubai"
                   className="w-full h-[300px] object-cover rounded-3xl shadow-lg border border-[#E6E2D8]"
                 />
@@ -1189,7 +1185,6 @@ export default function HairLossClinicDubai() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
               {/* Cost Factors */}
               <div className="bg-white border border-[#E6E2D8] p-6 rounded-2xl shadow-sm space-y-4">
                 <h3 className="font-extrabold text-xl text-[#1F5E4B]">Treatment Cost</h3>

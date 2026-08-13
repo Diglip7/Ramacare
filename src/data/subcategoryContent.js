@@ -9947,8 +9947,8 @@ export const subcategoryContent = {
 
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book an Ultrasound Therapy Assessment',
-      description: 'If you are experiencing muscle discomfort, stiffness, restricted mobility, or a rehabilitation-related concern, a physiotherapy assessment can help determine the most appropriate treatment approach.\n\nRamaCare Polyclinic provides personalized physiotherapy care in Jumeirah 1, Dubai.',
+      title: 'Book an Ultrasound Therapy in Dubai Assessment',
+      description: 'If you are experiencing muscle discomfort, stiffness, restricted mobility, or a rehabilitation-related concern and have been considering Ultrasound Therapy in Dubai, a physiotherapy assessment can help determine the most appropriate treatment approach.\n\nRamaCare Polyclinic provides personalized physiotherapy care in Jumeirah 1, Dubai.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Book a Physiotherapy Assessment',
@@ -10033,7 +10033,7 @@ export const subcategoryContent = {
       title: 'Ultrasound Therapy Cost in Dubai',
       paragraphs: [
         'Patients researching Ultrasound Therapy in Dubai often have questions about session pricing and broader rehabilitation program costs.',
-        'Treatment costs can vary according to the assessment, treatment plan, number of sessions, and services required.',
+        'Ultrasound Therapy in Dubai session costs can vary according to the assessment, treatment plan, number of sessions, and services required.',
         'For current pricing and treatment information, contact RamaCare Polyclinic directly.'
       ],
       link: {
@@ -10051,9 +10051,9 @@ export const subcategoryContent = {
 
   'physiotherapy-dubai-electrotherapy': {
     hero: {
-      title: 'Electrotherapy in Dubai for Fast Pain Relief & Muscle Recovery',
-      subtitle: 'Advanced Physiotherapy Treatment for Back Pain, Muscle Stiffness & Rehabilitation',
-      description: 'Struggling with back pain, neck stiffness, muscle tension, sports injuries, or slow recovery after physical strain?Electrotherapy in Dubai is a safe, non-invasive physiotherapy treatment designed to reduce pain, improve muscle function, accelerate tissue healing, and restore mobility naturally. At RamaCare Polyclinic, our DHA-licensed physiotherapists use advanced electrotherapy techniques as part of personalized rehabilitation and pain-management programs tailored to each patient’s condition and recovery goals.Electrotherapy helps stimulate muscles, improve blood circulation, reduce inflammation, and support faster recovery from acute and chronic musculoskeletal conditions. This advanced physiotherapy treatment is commonly recommended for back pain, neck pain, joint stiffness, muscle spasms, sports injuries, arthritis, nerve-related pain, post-surgical rehabilitation, and mobility limitations. Our evidence-based rehabilitation approach focuses on improving physical function, reducing discomfort, and supporting long-term recovery without surgery or excessive medication use.Whether you are recovering from an injury, managing chronic pain, or seeking improved mobility and muscle recovery, our experienced physiotherapy team provides safe and effective electrotherapy in Dubai in a comfortable clinical environment.',
+      title: 'Electrotherapy in Dubai for Pain Relief & Muscle Recovery',
+      subtitle: 'Advanced Physiotherapy Treatment for Pain, Muscle Stiffness & Rehabilitation',
+      description: 'If you are experiencing back pain, neck stiffness, muscle tension, sports injuries, muscle weakness, or difficulty recovering after physical strain, Electrotherapy in Dubai may be recommended as part of a personalized physiotherapy and rehabilitation program. At RamaCare Polyclinic, our DHA-licensed physiotherapists use appropriate electrotherapy techniques alongside clinical assessment, therapeutic exercise, and other rehabilitation approaches according to each patient’s condition and recovery goals.Electrotherapy uses controlled electrical stimulation delivered through electrodes placed on the skin.Depending on the modality and treatment goal, it may help manage pain, support muscle activation, reduce muscle spasms, and complement rehabilitation. Electrotherapy may be used as part of physiotherapy care for conditions such as back and neck pain, muscle stiffness, sports injuries, selected nerve-related symptoms, joint problems, and post-surgical rehabilitation.Treatment suitability, intensity, duration, and frequency are determined by the physiotherapist after assessing your symptoms, medical history, physical function, and rehabilitation needs.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -10085,25 +10085,28 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed Physiotherapy Clinic',
-        'Advanced Electrotherapy Technology',
-        'Personalised Rehabilitation Programs',
+        '•	DHA-Licensed Physiotherapy Clinic',
+        '•	Advanced Electrotherapy Technology',
+        '•	Personalised Rehabilitation Programs',
+        '•	Professional Physiotherapy Assessment',
+        '•	Individualised Treatment Planning',
+       
       ],
       image: {
         src: '/images/electro1.jpg',
         alt: 'Electrotherapy treatment using electrical stimulation to relieve pain, improve muscle function, and support rehabilitation.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment outcomes and recovery timelines may vary depending on the patient\'s condition, severity of symptoms, overall health status, and adherence to the prescribed physiotherapy plan. All electrotherapy treatments are performed by DHA-licensed physiotherapists using approved rehabilitation protocols and professional clinical standards.',
+        text: 'Safety & Medical Disclaimer: Electrotherapy is not suitable for every patient or every condition. Treatment recommendations depend on the patient’s medical history, symptoms, physical assessment, and the specific electrotherapy modality being considered. Treatment outcomes and recovery timelines vary between individuals.',
         show: true
       }
     },
     doctors: {
       badge: 'Medical Expertise',
       title: 'Meet Our Electrotherapy Specialists in Dubai',
-      description: 'DHA-licensed physiotherapists with extensive experience in advanced electrotherapy.',
+      description: 'DHA-licensed physiotherapists with experience in advanced electrotherapy modalities and personalised musculoskeletal rehabilitation.',
       doctors: [
-        DOCTORS.jeena, DOCTORS.hafsina
+        DOCTORS.jeena
       ]
     },
     certifications: {
@@ -10150,58 +10153,71 @@ export const subcategoryContent = {
         {
           id: 1,
           title: 'What Is Electrotherapy?',
-          description: 'Electrotherapy is an advanced physiotherapy treatment that uses controlled electrical impulses delivered through small electrodes placed on the skin. These gentle electrical stimulations help activate nerves and muscles, reduce pain signals, improve blood circulation, decrease inflammation, and support natural muscle recovery. Electrotherapy is widely used in physiotherapy and rehabilitation programs for pain management, muscle strengthening, nerve stimulation, injury recovery, and post-surgical rehabilitation. This non-invasive treatment helps improve physical function, mobility, and overall musculoskeletal health without surgery or prolonged medication use. At RamaCare Polyclinic, our DHA-licensed physiotherapists provide personalized electrotherapy in Dubai using evidence-based rehabilitation techniques tailored to each patient’s condition, pain severity, and recovery goals.'
+          description: 'Electrotherapy is a physiotherapy modality that uses controlled electrical stimulation to influence nerves and muscles through electrodes placed on the skin.\n\nDifferent forms of electrotherapy may be used for different rehabilitation goals. Depending on the technique selected, electrical stimulation can be used to support pain management, muscle activation, muscle relaxation, and functional rehabilitation.\n\nElectrotherapy is generally used as part of a broader physiotherapy plan rather than as a standalone solution. Your physiotherapist may combine it with therapeutic exercises, stretching, mobility work, manual techniques, posture correction, and home-based rehabilitation when appropriate.\n\nAt RamaCare Polyclinic, the treatment approach is personalised according to your condition, symptoms, physical limitations, and recovery objectives.'
         },
         {
           id: 2,
           title: 'Types of Electrotherapy Used',
+          description: 'The specific modality and settings are selected by the physiotherapist following assessment.',
           sections: [
             {
-              heading: 'Depending on the patient’s condition and rehabilitation needs, our physiotherapists may use:',
+              heading: 'Depending on the patient’s condition and rehabilitation requirements, a physiotherapist may recommend different forms of electrical stimulation, including:',
               items: [
-                'TENS (Transcutaneous Electrical Nerve Stimulation) for pain relief',
-                'EMS (Electrical Muscle Stimulation) for muscle activation and strengthening',
-                'IFT (Interferential Therapy) for deep pain management and circulation improvement',
-                'Muscle stimulation and relaxation therapies for rehabilitation support',
-                'Nerve stimulation therapies to improve muscle response and recovery'
+                'TENS (Transcutaneous Electrical Nerve Stimulation): Commonly used as part of pain-management programs.',
+                'EMS (Electrical Muscle Stimulation): May be used to support muscle activation and strengthening.',
+                'IFT (Interferential Therapy): May be used for pain management and as part of selected rehabilitation programs.',
+                'Muscle Stimulation: May support activation of weak or underused muscles when clinically appropriate.',
+                'Nerve Stimulation: May be incorporated into rehabilitation where stimulation is considered appropriate for the patient’s condition.',
               ]
             },
           ]
         },
         {
           id: 3,
-          title: 'Conditions Treated with Electrotherapy',
-          description: 'Electrotherapy may help manage and support recovery from:',
-          listItems: [
-            'Back and neck pain',
-            'Muscle spasms and stiffness',
-            'Joint pain and arthritis',
-            'Sports injuries',
-            'Nerve-related pain',
-            'Post-surgical rehabilitation',
-            'Muscle weakness or atrophy',
-            'Shoulder and knee pain'
-
+          title: 'Conditions That May Be Managed With Electrotherapy',
+          description: 'Electrotherapy is not appropriate for every condition. A physiotherapy assessment helps determine whether electrical stimulation is suitable and whether another treatment approach or a combination of therapies would be more appropriate.',
+          sections: [
+            {
+              heading: 'Electrotherapy may be incorporated into physiotherapy programs for a range of musculoskeletal and rehabilitation concerns, including:',
+              items: [
+                'Back and neck pain',
+                'Muscle spasms and stiffness',
+                'Selected joint pain',
+                'Sports injuries',
+                'Muscle weakness',
+                'Shoulder and knee problems',
+                'Selected nerve-related symptoms',
+                'Post-surgical rehabilitation',
+                'Reduced mobility',
+                'Recovery following physical strain'
+              ]
+            }
           ]
         },
         {
           id: 4,
-          title: 'Who May Benefit from Electrotherapy?',
-          description: 'Electrotherapy may be recommended for patients experiencing:',
-          listItems: [
-            'Chronic or acute pain',
-            'Muscle weakness or fatigue',
-            'Limited movement or stiffness',
-            'Injury-related swelling',
-            'Slow recovery after surgery',
-            'Nerve pain or tingling sensations',
+          title: 'Who May Benefit From Electrotherapy?',
+          description: 'Your physiotherapist will assess the underlying problem rather than relying on electrotherapy alone. The treatment plan may include exercises and other physiotherapy techniques to address movement, strength, flexibility, and functional limitations.',
+          sections: [
+            {
+              heading: 'Electrotherapy may be considered for patients experiencing:',
+              items: [
+                'Acute or persistent musculoskeletal pain',
+                'Muscle tightness or spasms',
+                'Muscle weakness or reduced activation',
+                'Limited movement or stiffness',
+                'Certain rehabilitation-related mobility limitations',
+                'Recovery needs following injury or surgery',
+                'Selected nerve-related symptoms'
+              ]
+            }
           ]
         },
         {
           id: 5,
-          title: 'Treatment Duration & Sessions',
+          title: 'How Long Does an Electrotherapy Session Take?',
           description:
-            'Initial Assessment: 20–30 minutes \n\n Electrotherapy Session: 10–15 minutes \n\n Number of Sessions: Depends on diagnosis \n\n Frequency: 2–3 sessions per week'
+            'The duration of treatment varies according to the selected modality, treatment area, and overall physiotherapy plan.\n\nAt RamaCare, the initial assessment may take approximately 20–30 minutes, while the electrotherapy component may be shorter and integrated into the wider physiotherapy session.\n\nThe number of sessions cannot be determined in advance for every patient. Your physiotherapist will recommend a suitable schedule based on your condition and response to treatment.'
         }
       ],
       rootCauses: [
@@ -10338,239 +10354,200 @@ export const subcategoryContent = {
       ]
     },
     whyChoose: {
-      title: 'Why Patients Choose RamaCare for Electrotherapy in Dubai',
-      intro: 'Choosing the right physiotherapy clinic is an important part of your recovery journey. At RamaCare Polyclinic, we understand that living with pain, muscle stiffness, or reduced mobility can affect your work, sleep, physical activity, and overall quality of life. Our goal is to help you recover safely while restoring confidence in your movement and daily routine.\n\nOur DHA-licensed physiotherapists take the time to understand your symptoms, medical history, and rehabilitation goals before recommending treatment. Rather than applying a one-size-fits-all approach, we create personalized electrotherapy programs tailored to your specific condition and recovery needs.\n\nUsing advanced electrotherapy technology and evidence-based rehabilitation techniques, we focus on reducing pain, improving muscle function, supporting tissue healing, and enhancing long-term mobility. Throughout your treatment journey, our team monitors your progress closely and adjusts your rehabilitation plan to help you achieve the best possible outcomes.',
+      title: 'Why Choose RamaCare for Electrotherapy in Dubai?',
+      intro: 'Choosing an appropriate physiotherapy clinic is an important part of your rehabilitation journey.\n\nAt RamaCare Polyclinic, our physiotherapy approach begins with assessment rather than applying the same treatment to every patient.\n\nOur DHA-licensed physiotherapists consider your symptoms, medical history, movement limitations, treatment goals, and response to therapy when developing a rehabilitation plan.',
       features: [
         {
           id: 1,
-          title: 'Comprehensive physiotherapy assessments to identify the underlying cause of pain and dysfunction.',
+          title: 'Comprehensive physiotherapy assessment',
           description: ''
         },
         {
           id: 2,
-          title: 'Personalised electrotherapy treatment plans designed around your lifestyle and recovery goals.',
+          title: 'Personalised electrotherapy treatment planning',
           description: ''
         },
         {
           id: 3,
-          title: 'DHA-licensed physiotherapists experienced in musculoskeletal rehabilitation and pain management.',
+          title: 'DHA-licensed physiotherapists',
           description: ''
         },
         {
           id: 4,
-          title: 'Modern electrotherapy equipment used according to established clinical protocols.',
+          title: 'Modern electrotherapy equipment',
           description: ''
         },
         {
           id: 5,
-          title: 'Guidance on home exercises, posture correction, and self-care strategies to support lasting results.',
+          title: 'Individualised rehabilitation programs',
           description: ''
         },
         {
           id: 6,
-          title: 'Ongoing progress monitoring and treatment modifications when needed.',
+          title: 'Guidance on exercises and home care',
           description: ''
         },
         {
           id: 7,
-          title: 'A professional, respectful, and patient-focused environment where your comfort and well-being remain our priority.',
+          title: 'Progress monitoring throughout treatment',
+          description: ''
+        },
+        {
+          id: 8,
+          title: 'Patient-focused clinical care',
           description: ''
         }
       ],
-      closingParagraph: 'Whether you are recovering from a sports injury, managing chronic pain, or seeking to improve mobility after surgery, our team is committed to supporting you at every stage of your rehabilitation journey. Early treatment and the right guidance can often lead to faster recovery, improved function, and a better quality of life.'
+      closingParagraph: 'Electrotherapy may be recommended as one component of a broader rehabilitation program designed around your individual needs.'
     },
 
     // Healing Journey / Process Section
     healingJourney: {
-      title: 'Electrotherapy in Dubai: Advanced Physiotherapy for Pain Relief & Muscle Recovery',
-      description: 'Discover the benefits of electrotherapy in Dubai, a safe and non-invasive physiotherapy treatment designed to reduce pain, stimulate muscles, improve mobility, and accelerate natural healing. At RamaCare Polyclinic, our structured rehabilitation approach helps ensure personalized care and effective recovery outcomes tailored to each patient’s condition and treatment goals.',
+      title: 'Electrotherapy Treatment Process in Dubai',
+      description: 'At RamaCare Polyclinic, each electrotherapy treatment follows a structured, personalised process. From initial assessment to progress review, every step is designed around your condition, symptoms, and rehabilitation goals.',
       steps: [
         {
           id: 1,
           number: '01',
-          title: 'Comprehensive Assessment & Diagnosis',
-          duration: 'Step 01',
-          description: 'Before starting electrotherapy treatment, our DHA-licensed physiotherapists perform a detailed assessment to understand the underlying cause of pain, muscle weakness, stiffness, or mobility limitations. This helps us create a personalized physiotherapy and rehabilitation plan based on your condition and recovery needs.',
+          title: 'Comprehensive Physiotherapy Assessment',
+          duration: 'Step 1',
+          description: 'Before treatment, the physiotherapist reviews your symptoms, medical history, physical limitations, and rehabilitation goals. This assessment helps determine whether electrotherapy is suitable for you and which modality may be appropriate.',
           keyActivities: [
-            'Detailed medical history and symptom evaluation',
-            'Physical and musculoskeletal examination',
-            'Identification of pain points and affected muscles or joints',
-            'Mobility and posture assessment',
-            'Personalised electrotherapy treatment planning'
+            'Medical and treatment history',
+            'Symptom evaluation',
+            'Musculoskeletal examination',
+            'Pain and movement assessment',
+            'Muscle and functional assessment',
+            'Posture and mobility evaluation',
+            'Identification of the appropriate treatment approach'
           ],
           side: 'right'
         },
         {
           id: 2,
           number: '02',
-          title: 'Targeted Electrotherapy Sessions',
-          duration: 'Step 02',
-          description: 'During treatment sessions, controlled electrical stimulation is applied to targeted muscles, nerves, and soft tissues to reduce pain, improve circulation, activate muscles, and support faster recovery. Our physiotherapists continuously monitor treatment intensity to ensure safe, comfortable, and effective rehabilitation.',
-          keyActivities: [
-            '2–3 physiotherapy sessions per week based on condition severity',
-            'Application of controlled electrical stimulation to affected areas',
-            'Muscle activation and nerve stimulation therapy',
-            'Real-time monitoring of patient response and comfort',
-            'Adjustment of treatment intensity for optimal rehabilitation outcomes'
-          ],
+          title: 'Personalised Electrotherapy Session',
+          duration: 'Step 2',
+          description: 'If electrotherapy is recommended, electrodes are positioned on the appropriate treatment area according to the selected modality and clinical objective. The physiotherapist controls the stimulation settings and monitors your response throughout the session. You may experience a mild tingling or stimulation sensation depending on the type and intensity of treatment. Treatment should remain within a comfortable and clinically appropriate range. The physiotherapist may adjust the intensity based on your response and treatment requirements.',
+          keyActivities: [],
           side: 'left'
         },
         {
           id: 3,
           number: '03',
-          title: 'Supportive Home Care & Recovery Guidance',
-          duration: 'Step 03',
-          description: 'To improve long-term recovery and rehabilitation results, patients receive personalised guidance on home exercises, posture correction, stretching routines, and lifestyle modifications. This helps maintain flexibility, strengthen muscles, reduce recurrence of pain, and support overall musculoskeletal health.',
+          title: 'Rehabilitation and Home-Care Guidance',
+          duration: 'Step 3',
+          description: 'Electrotherapy may be combined with other physiotherapy interventions to support functional recovery. Your physiotherapist may also monitor your progress and adjust the treatment plan as your condition changes.',
           keyActivities: [
-            'Home exercise programs for strength and flexibility',
-            'Posture correction and ergonomic guidance',
-            'Stretching and mobility improvement routines',
-            'Lifestyle and recovery recommendations',
-            'Ongoing progress monitoring and therapy optimisation'
+            'Therapeutic exercises',
+            'Stretching',
+            'Mobility exercises',
+            'Strengthening',
+            'Posture correction',
+            'Ergonomic guidance',
+            'Home exercise programs',
+            'Activity modification'
           ],
           side: 'right'
         },
         {
           id: 4,
           number: '04',
-          title: 'Expected Treatment Outcomes',
-          duration: 'Results',
-          description: 'Patients undergoing electrotherapy in Dubai may experience the following improvements as part of their physiotherapy and rehabilitation journey.',
+          title: 'Progress Review',
+          duration: 'Step 4',
+          description: 'Your response to treatment is reviewed throughout the rehabilitation process. The number and frequency of sessions depend on the diagnosis, treatment goals, response to therapy, and overall rehabilitation plan.',
           keyActivities: [
-            'Reduced pain and muscle stiffness',
-            'Improved muscle strength and flexibility',
-            'Better circulation and tissue healing',
-            'Enhanced mobility and physical function',
-            'Faster rehabilitation after injury or surgery',
-            'Reduced inflammation and muscle fatigue',
-            'Improved posture and movement control',
-            'Long-term support for musculoskeletal recovery'
+            'Pain levels',
+            'Muscle function',
+            'Mobility',
+            'Strength',
+            'Flexibility',
+            'Functional ability',
+            'Ability to perform daily activities'
           ],
           side: 'left'
         }
       ]
     },
     benefits: {
-      title: 'Clinically Observed Results of Electrotherapy in Dubai',
+      title: 'Benefits of Electrotherapy',
       description:
-        'With 15+ years of physiotherapy and rehabilitation experience and 2,500+ Physiotherapy Patients Treated Since 2008, RamaCare Polyclinic provides evidence-based electrotherapy in Dubai designed to reduce pain, improve muscle function, stimulate nerve activity, and support long-term recovery. Our DHA-licensed physiotherapists use advanced electrotherapy techniques to deliver safe, non-invasive, and personalized rehabilitation care for a wide range of musculoskeletal and nerve-related conditions.',
+        'When appropriately selected and administered as part of physiotherapy, electrotherapy may provide several rehabilitation benefits.',
+      hidePercentages: true,
       benefits: [
         {
           id: 1,
-          title: 'Fast & Effective Pain Relief',
-          percentage: 93,
-          description: 'Reduces pain, muscle tension, and joint discomfort for improved daily comfort.'
+          title: 'Pain Management',
+          description: 'Certain electrotherapy modalities may help manage pain and discomfort and can be used alongside other physiotherapy techniques.',
+          hasLearnMore: false
         },
         {
           id: 2,
-          title: 'Reduces Muscle Stiffness & Spasms',
-          percentage: 89,
-          description: 'Relaxes tight muscles and improves flexibility, movement, and overall comfort.'
+          title: 'Muscle Activation',
+          description: 'Electrical muscle stimulation may support activation of selected muscles when reduced muscle activity is affecting rehabilitation.',
+          hasLearnMore: false
         },
         {
           id: 3,
-          title: 'Improves Nerve Stimulation & Muscle Activation',
-          percentage: 86,
-          description: 'Supports nerve communication and helps activate weak or underused muscles.'
+          title: 'Support for Muscle Relaxation',
+          description: 'Some forms of stimulation may be used as part of a treatment plan for muscle tightness or spasms.',
+          hasLearnMore: false
         },
         {
           id: 4,
-          title: 'Enhances Blood Circulation & Tissue Healing',
-          percentage: 88,
-          description: 'Improves circulation to support tissue repair and faster recovery.'
+          title: 'Support During Rehabilitation',
+          description: 'Electrotherapy can be incorporated into rehabilitation programs following selected injuries or procedures when clinically appropriate.',
+          hasLearnMore: false
         },
         {
           id: 5,
-          title: 'Supports Sports Injury & Trauma Recovery',
-          percentage: 84,
-          description: 'Aids rehabilitation following injuries, muscle strain, and physical trauma.'
+          title: 'Improved Participation in Physiotherapy',
+          description: 'In some cases, managing pain or supporting muscle activation may help a patient participate more comfortably in therapeutic exercises and movement-based rehabilitation.',
+          hasLearnMore: true
         },
         {
           id: 6,
-          title: 'Helps Manage Chronic Pain Conditions',
-          percentage: 91,
-          description: 'Provides ongoing support for chronic pain and mobility limitations.'
-        },
-        {
-          id: 7,
-          title: 'Improves Muscle Strength & Functional Mobility',
-          percentage: 83,
-          description: 'Strengthens muscles and improves movement, balance, and physical function.'
-        },
-        {
-          id: 8,
-          title: 'Safe, Non-Invasive & Drug-Free Treatment',
-          percentage: 95,
-          description: 'Supports recovery without surgery, injections, or long-term medication.'
-        },
-        {
-          id: 9,
-          title: 'Supports Long-Term Musculoskeletal & Nerve Health',
-          percentage: 92,
-          description: 'Promotes lasting muscle balance, posture, and overall physical wellbeing.'
+          title: 'Non-Invasive Treatment',
+          description: 'Electrotherapy is delivered externally through electrodes placed on the skin and does not require injections or surgical procedures.',
+          hasLearnMore: false
         }
       ],
-      comparisonTitle: 'Electrotherapy in Dubai vs Conventional Pain Treatment',
+      comparisonTitle: 'Electrotherapy vs Other Physiotherapy Treatments',
 
       comparisonDescription:
-        'Electrotherapy in Dubai is an advanced physiotherapy treatment designed to reduce pain, stimulate muscles and nerves, improve circulation, and support long-term rehabilitation. Unlike conventional pain treatment methods that mainly focus on temporary symptom relief, electrotherapy helps improve muscle activation, nerve function, tissue healing, and overall physical recovery through safe and non-invasive physiotherapy care.',
+        'Electrotherapy is one of several modalities that may be used in physiotherapy. The most appropriate treatment depends on your diagnosis, symptoms, physical assessment, and rehabilitation goals. In many cases, physiotherapy works best through a combination of appropriate interventions rather than relying on one modality.',
 
       comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Electrotherapy in Dubai',
-        traditional: 'Conventional Pain Treatment'
+        feature: 'Treatment',
+        ourTreatment: 'Main Purpose',
+        traditional: 'Clinical Context'
       },
 
       comparisonData: [
         {
-          feature: 'Treatment Approach',
-          ayurvedic: 'Targets the underlying cause of pain by stimulating muscles, nerves, and circulation to support rehabilitation',
-          conventional: 'Primarily focuses on temporary pain suppression and symptom management'
+          feature: 'Electrotherapy',
+          ayurvedic: 'Electrical stimulation for selected pain-management, muscle-activation, and rehabilitation goals',
+          conventional: 'One component within a broader physiotherapy and rehabilitation program'
         },
         {
-          feature: 'Treatment Method',
-          ayurvedic: 'Uses controlled electrical impulses to improve muscle activation, nerve stimulation, circulation, and healing',
-          conventional: 'Relies on medications, painkillers, injections, or prolonged rest'
+          feature: 'Therapeutic Exercise',
+          ayurvedic: 'Strength, mobility, flexibility, balance, and functional recovery',
+          conventional: 'Often the foundation of longer-term physiotherapy rehabilitation plans'
         },
         {
-          feature: 'Invasiveness',
-          ayurvedic: 'Non-invasive, drug-free, and comfortable physiotherapy treatment',
-          conventional: 'May involve invasive procedures, injections, or long-term medication use'
+          feature: 'Manual Therapy',
+          ayurvedic: 'Selected hands-on techniques to support movement and symptom management',
+          conventional: 'Used in combination with exercise and other modalities when appropriate'
         },
         {
-          feature: 'Side Effects',
-          ayurvedic: 'Minimal to none when performed by qualified physiotherapists using professional protocols',
-          conventional: 'Possible side effects such as drowsiness, dependency, stomach irritation, or fatigue'
+          feature: 'Ultrasound Therapy',
+          ayurvedic: 'Therapeutic ultrasound may be used as part of selected rehabilitation programs',
+          conventional: 'Targets tissue-level circulation and healing support when clinically indicated'
         },
         {
-          feature: 'Pain Relief',
-          ayurvedic: 'Helps provide progressive and long-lasting improvement in pain and mobility',
-          conventional: 'Often provides fast but temporary symptom relief'
-        },
-        {
-          feature: 'Healing Process',
-          ayurvedic: 'Supports muscle recovery, nerve stimulation, blood circulation, and natural tissue healing',
-          conventional: 'Does not actively restore muscle strength, nerve function, or tissue repair'
-        },
-        {
-          feature: 'Muscle & Nerve Function',
-          ayurvedic: 'Improves muscle activation, flexibility, coordination, and nerve communication',
-          conventional: 'Limited improvement in muscle rehabilitation or functional recovery'
-        },
-        {
-          feature: 'Rehabilitation Support',
-          ayurvedic: 'Enhances physiotherapy exercises, rehabilitation programs, and mobility recovery',
-          conventional: 'Limited role in long-term rehabilitation and physical recovery'
-        },
-        {
-          feature: 'Long-Term Benefits',
-          ayurvedic: 'May help reduce recurring pain, stiffness, muscle weakness, and mobility limitations',
-          conventional: 'Often requires repeated medication use or ongoing pain management treatments'
-        },
-        {
-          feature: 'Suitability',
-          ayurvedic: 'Suitable for sports injuries, chronic pain, muscle weakness, postural strain, arthritis, and post-surgical rehabilitation',
-          conventional: 'Commonly used for short-term pain and inflammation management'
+          feature: 'Dry Needling',
+          ayurvedic: 'A specialised technique that may be used for selected muscular and myofascial problems',
+          conventional: 'Administered only after appropriate assessment and when clinically suitable'
         }
       ]
     },
@@ -10626,84 +10603,69 @@ export const subcategoryContent = {
 
     // FAQ Section
     faq: {
-      title: 'Frequently Asked Questions About Electrotherapy in Dubai',
-      description: 'Expert answers about Electrotherapy in Dubai, pain management, rehabilitation, and physiotherapy treatment.',
-      resourcesHeading: 'Complete Physiotherepy Services',
+      title: 'Frequently Asked Questions',
+      description: 'Answers to common questions about electrotherapy, treatment suitability, session details, and rehabilitation.',
+      resourcesHeading: 'Complete Physiotherapy Services',
       faqs: [
         {
           id: 1,
-          question: 'What is electrotherapy?',
-          answer: 'Electrotherapy is a physiotherapy treatment that uses controlled electrical impulses to reduce pain, stimulate muscles, improve circulation, and support faster healing.'
+          question: 'What is electrotherapy used for?',
+          answer: 'Electrotherapy may be used as part of physiotherapy programs for pain management, muscle activation, selected muscle spasms, and rehabilitation following certain injuries or procedures.'
         },
         {
           id: 2,
-          question: 'Is electrotherapy safe?',
-          answer: 'Yes, electrotherapy is safe when performed by trained physiotherapists using approved equipment at a DHA-licensed clinic like ramacarepolyclinic.'
+          question: 'Is electrotherapy painful?',
+          answer: 'Most patients experience a mild tingling or stimulation sensation. Treatment intensity is adjusted according to the modality, clinical objective, and patient comfort.'
         },
         {
           id: 3,
-          question: 'Does electrotherapy hurt?',
-          answer: 'Electrotherapy does not hurt. Patients usually feel a mild tingling or pulsing sensation, which is comfortable and well-tolerated.'
+          question: 'How many electrotherapy sessions will I need?',
+          answer: 'There is no single number of sessions that is appropriate for everyone. The recommended frequency and duration depend on your diagnosis, symptoms, treatment goals, and response to physiotherapy.'
         },
         {
           id: 4,
-          question: 'How does electrotherapy help relieve pain?',
-          answer: 'Electrotherapy blocks pain signals, relaxes tight muscles, improves blood flow, and reduces inflammation, helping relieve pain naturally.'
+          question: 'How long does an electrotherapy session take?',
+          answer: 'The electrotherapy component varies according to the treatment plan and modality. It may be integrated into a wider physiotherapy session following the initial assessment.'
         },
         {
           id: 5,
-          question: 'What conditions can be treated with electrotherapy?',
-          answer: 'Electrotherapy treats back pain, neck pain, arthritis, muscle spasms, sports injuries, nerve pain, joint stiffness, and post-surgical weakness.'
+          question: 'Can electrotherapy help with back pain?',
+          answer: 'Electrotherapy may be used as part of a physiotherapy program for selected cases of back pain. Your physiotherapist will first assess the cause and severity of your symptoms and determine whether electrical stimulation is appropriate.'
         },
         {
           id: 6,
-          question: 'How long does an electrotherapy session take?',
-          answer: 'A typical electrotherapy session lasts 15 to 20 minutes, depending on the condition and treatment plan.'
+          question: 'Can electrotherapy help muscle weakness?',
+          answer: 'Certain forms of electrical muscle stimulation may support muscle activation in selected rehabilitation situations. The physiotherapist determines whether this approach is appropriate based on your physical assessment.'
         },
         {
           id: 7,
-          question: 'How many electrotherapy sessions are required?',
-          answer: 'The number of sessions depends on your condition. Acute pain may need fewer sessions, while chronic issues require multiple treatments.'
+          question: 'What is the difference between TENS and EMS?',
+          answer: 'TENS is generally used for pain-management purposes, while EMS is designed to stimulate muscle activity. The appropriate modality depends on the patient’s condition and rehabilitation goals.'
         },
         {
           id: 8,
-          question: 'Who should consider electrotherapy?',
-          answer: 'Electrotherapy is suitable for people with muscle weakness, chronic pain, limited movement, nerve discomfort, or slow recovery after injury.'
+          question: 'Can I return to my normal activities after electrotherapy?',
+          answer: 'Electrotherapy is non-invasive, and many patients can continue normal activities after treatment. However, your physiotherapist may recommend temporary activity modifications depending on your condition and wider rehabilitation plan.'
         },
         {
           id: 9,
-          question: 'Can electrotherapy be combined with other physiotherapy treatments?',
-          answer: 'Yes, electrotherapy is often combined with exercises, manual therapy, or ultrasound therapy for improved recovery outcomes.'
+          question: 'Is electrotherapy suitable for everyone?',
+          answer: 'No. Certain medical conditions, implanted devices, reduced sensation, skin conditions, pregnancy-related considerations, or other factors may require additional assessment or make particular forms of electrotherapy unsuitable.'
         },
         {
           id: 10,
-          question: 'Is there any downtime after electrotherapy?',
-          answer: 'No downtime is required. Patients can resume daily activities immediately after electrotherapy sessions.'
+          question: 'Is electrotherapy used alone?',
+          answer: 'Not necessarily. Electrotherapy is often incorporated into a broader physiotherapy program that may include therapeutic exercise, mobility training, strengthening, posture correction, and home rehabilitation.'
         },
         {
           id: 11,
-          question: 'Is electrotherapy suitable for elderly patients?',
-          answer: 'Yes, electrotherapy is gentle and effective for elderly patients experiencing joint pain, muscle weakness, or mobility limitations.'
+          question: 'Is Electrotherapy Safe?',
+          answer: 'Electrotherapy is generally considered a non-invasive physiotherapy modality when an appropriate technique is selected and treatment is administered by a qualified professional.\n\nHowever, electrotherapy is not suitable for everyone.\n\nYour physiotherapist should review your medical history and treatment requirements before starting electrical stimulation.\n\nDepending on the modality and treatment area, additional assessment or precautions may be required for patients with certain implanted electrical devices, cardiac conditions, impaired sensation, skin conditions at the electrode site, pregnancy-related considerations, or other medical circumstances.\n\nDo not begin electrotherapy without informing your physiotherapist about relevant medical conditions, medications, implanted devices, recent surgery, pregnancy, or changes in your health.'
         },
         {
           id: 12,
-          question: 'Are there any side effects of electrotherapy?',
-          answer: 'Electrotherapy has minimal side effects. Mild skin redness or tingling may occur temporarily but usually resolves quickly.'
-        },
-        {
-          id: 13,
-          question: 'Can electrotherapy reduce the need for pain medication?',
-          answer: 'Electrotherapy may help reduce dependence on pain medications by addressing the underlying cause of pain under medical guidance.'
-        },
-        {
-          id: 14,
-          question: 'Why choose ramacarepolyclinic for electrotherapy in Dubai?',
-          answer: 'ramacarepolyclinic offers experienced physiotherapists, modern electrotherapy equipment, personalised care plans, and safe treatment protocols.'
-        },
-        {
-          id: 15,
-          question: 'How can I book electrotherapy in Dubai?',
-          answer: 'You can book an electrotherapy consultation at ramacarepolyclinic by calling the clinic or scheduling an appointment online.'
+          question: 'What Does Electrotherapy Feel Like?',
+          answer: 'The sensation depends on the type of electrotherapy used and the treatment settings.\n\nMany patients experience a mild tingling, pulsing, or muscle stimulation sensation. Electrical stimulation should be adjusted according to the treatment objective and patient comfort.\n\nIf you experience significant discomfort, burning, unusual pain, or another unexpected sensation during treatment, inform your physiotherapist immediately.'
         }
       ],
       resources: [
@@ -10925,8 +10887,8 @@ export const subcategoryContent = {
 
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Electrotherapy  in Dubai Today',
-      description: 'Restore your fitness naturally with trusted Electrotherapy at Rama Care Polyclinic—safe, personalized, and focused on long-term results for a healthier you.',
+      title: 'Book an Electrotherapy Consultation in Dubai',
+      description: 'If you are experiencing pain, muscle stiffness, weakness, or mobility limitations, a physiotherapy assessment can help determine the most appropriate treatment approach.\n\nAt RamaCare Polyclinic, our DHA-licensed physiotherapists assess your condition and develop a personalised rehabilitation plan based on your symptoms and recovery goals.\n\nBook your Electrotherapy Consultation in Dubai today.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -10948,19 +10910,19 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified physiotherapy clinic'
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Procedures',
-          description: 'Completed'
+          title: '2,500+ Patients',
+          description: 'Treated Since 2008'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: '4.9/5 Rating',
+          description: 'Verified Patient Reviews'
         }
       ]
     }

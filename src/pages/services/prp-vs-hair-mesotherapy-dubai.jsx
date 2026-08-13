@@ -241,7 +241,7 @@ export default function PrpVsHairMesotherapyPage() {
         />
         
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -385,10 +385,10 @@ export default function PrpVsHairMesotherapyPage() {
 
           <div className="grid sm:grid-cols-2 gap-5">
             <div className="rounded-2xl overflow-hidden shadow-sm">
-              <img src="/images/prp-hair-treatment-procedure-ramacare.jpg" alt="PRP hair treatment procedure for hair loss Dubai at RamaCare Polyclinic" className="w-full h-[220px] object-cover" />
+              <img src="/images/prp-hair-treatment-procedure-ramacare1.jpg" alt="PRP hair treatment procedure for hair loss Dubai at RamaCare Polyclinic" className="w-full h-[220px] object-cover" />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-sm">
-              <img src="/images/prp-blood-centrifuge-preparation-dubai.jpg" alt="PRP preparation process for PRP hair treatment Dubai" className="w-full h-[220px] object-cover" />
+              <img src="/images/PRP preparation process for PRP hair.jpg" alt="PRP preparation process for PRP hair treatment Dubai" className="w-full h-[220px] object-cover" />
             </div>
           </div>
 
@@ -414,10 +414,9 @@ export default function PrpVsHairMesotherapyPage() {
           <div className="relative max-w-xs mx-auto aspect-square mb-8">
             <div className="absolute inset-5 rounded-full overflow-hidden shadow-md">
               <img
-                src="/images/hair-growth-cycle-infographic-dubai.jpg"
+                src="/images/hair growth cycle infographic.jpg"
                 alt="Hair growth cycle infographic showing anagen and telogen phases"
-                className="w-full h-full object-cover"
-              />
+                className="w-full h-full object-cover"/>
             </div>
             <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#1F5E4B]/20" />
             {growthCyclePhases.map((p) => {
@@ -459,7 +458,7 @@ export default function PrpVsHairMesotherapyPage() {
 
           <div className="grid sm:grid-cols-2 gap-8 items-center">
             <div className="rounded-2xl overflow-hidden order-2 sm:order-1 shadow-sm">
-              <img src="/images/hair-mesotherapy-session-ramacare.jpg" alt="Hair mesotherapy for hair loss Dubai treatment session" className="w-full h-[260px] object-cover" />
+              <img src="/images/Hair mesotherapy for hair loss Dubai.jpg" alt="Hair mesotherapy for hair loss Dubai treatment session" className="w-full h-[260px] object-cover" />
             </div>
             <div className="order-1 sm:order-2 space-y-4">
               <p className="text-sm font-semibold text-[#1A1A1A]">How Hair Mesotherapy Works</p>
@@ -495,7 +494,7 @@ export default function PrpVsHairMesotherapyPage() {
           </div>
           <div className="rounded-2xl overflow-hidden mt-8 shadow-sm">
             <img
-              src="/images/prp-vs-mesotherapy-comparison-chart-dubai.jpg"
+              src="/images/PRP vs Mesotherapy for hair loss Dubai.jpg"
               alt="PRP vs Mesotherapy for hair loss Dubai comparison chart"
               className="w-full h-[220px] sm:h-[300px] object-cover"
             />
@@ -546,7 +545,6 @@ export default function PrpVsHairMesotherapyPage() {
       <section className="py-16 bg-white border-b border-gray-150">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4">Recovery Time &amp; Sessions Comparison</h2>
-
           <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
             <table className="w-full text-left border-collapse text-xs md:text-sm">
               <thead>
@@ -567,7 +565,6 @@ export default function PrpVsHairMesotherapyPage() {
               </tbody>
             </table>
           </div>
-
           <div className="grid sm:grid-cols-3 gap-6 pt-4">
             <div className="bg-[#FDFCF7] p-5 rounded-2xl border border-gray-200">
               <h4 className="font-bold text-[#1F5E4B] text-sm mb-2">Number of Sessions Required</h4>
@@ -617,7 +614,6 @@ export default function PrpVsHairMesotherapyPage() {
               </ul>
             </div>
           </div>
-
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm mt-6">
             <table className="w-full text-left border-collapse text-xs md:text-sm">
               <thead>
@@ -638,7 +634,6 @@ export default function PrpVsHairMesotherapyPage() {
               </tbody>
             </table>
           </div>
-
           <div className="bg-red-50/40 border border-red-200 p-5 rounded-2xl space-y-2">
             <h4 className="font-extrabold text-[#1A1A1A] text-sm flex items-center gap-2">
               <LucideIcons.AlertCircle className="w-5 h-5 text-red-500" /> Limitations of Both Treatments
@@ -662,7 +657,6 @@ export default function PrpVsHairMesotherapyPage() {
               </p>
             </div>
           </div>
-
           <div className="border-t border-gray-150 pt-8">
             <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4">Cost Comparison in Dubai</h2>
             <div className="rounded-2xl border-l-4 border-[#C5A880] bg-[#FDFCF7] px-6 py-5 mb-6">
@@ -696,7 +690,6 @@ export default function PrpVsHairMesotherapyPage() {
               This is also where patients sometimes learn that neither PRP nor Mesotherapy is the ideal fit — for more advanced hair loss, a specialist may instead discuss a surgical option, and our guide comparing <Link href="/services/prp-vs-hair-transplant-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#17493A]">PRP vs Hair Transplant in Dubai</Link> covers that comparison in depth if it’s relevant to your situation.
             </p>
           </div>
-
           <div className="border-t border-gray-200 pt-8">
             <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-6">What to Expect During a Consultation</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -732,7 +725,7 @@ export default function PrpVsHairMesotherapyPage() {
             </ul>
           </div>
           <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md">
-            <img src="/images/doctor-examining-scalp-ramacare-dubai.jpg" alt="DHA-licensed doctor examining scalp for hair restoration Dubai" className="w-full h-[300px] object-cover" />
+            <img src="/images/DHA-licensed doctor examining scalp for hair.jpg" alt="DHA-licensed doctor examining scalp for hair restoration Dubai" className="w-full h-[300px] object-cover" />
           </div>
         </div>
       </section>
@@ -793,11 +786,6 @@ export default function PrpVsHairMesotherapyPage() {
           <p className="text-sm text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto">
             There’s no single, universal answer to the PRP vs Hair Mesotherapy in Dubai comparison — both are non-surgical, low-downtime treatments that support existing hair rather than replacing what’s already been lost, and the better fit depends on your specific hair loss pattern, underlying cause, and personal goals. PRP draws on your own blood biology, while Hair Mesotherapy delivers a customized nutrient blend directly to the scalp, and for some patients, combining the two makes more sense than choosing just one. Whichever direction feels right after reading this guide, a personal consultation is the most reliable way to turn general understanding into a specific, realistic plan for your hair.
           </p>
-
-          <div className="rounded-2xl overflow-hidden max-w-2xl mx-auto shadow-sm">
-            <img src="/images/patient-results-hair-loss-treatment-ramacare.jpg" alt="Patient results after hair loss treatment Dubai at RamaCare" className="w-full h-[260px] object-cover" />
-          </div>
-
           <div className="flex flex-wrap justify-center gap-3 pt-4">
             <Link href="/book-appointment/" className="inline-flex items-center gap-2 rounded-xl bg-[#1F5E4B] px-8 py-4 text-sm font-bold text-white hover:bg-[#17493A] transition-colors">
               <LucideIcons.Calendar className="w-4 h-4" /> Book Consultation
@@ -806,8 +794,6 @@ export default function PrpVsHairMesotherapyPage() {
               <LucideIcons.MessageCircle className="w-4 h-4" /> Contact Us
             </a>
           </div>
-
-
         </div>
       </section>
 

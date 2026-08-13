@@ -255,7 +255,7 @@ export default function HairRegrowthTreatmentDubai() {
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] rounded-full bg-gradient-to-bl from-[#A2E3C4]/15 to-transparent blur-[120px] pointer-events-none z-0" />
         <div className="absolute top-[30%] left-0 w-[40vw] h-[60vh] rounded-full bg-gradient-to-tr from-[#1F5E4B]/5 to-transparent blur-[100px] pointer-events-none z-0" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 relative z-10">
           <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
             <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
             <span className="mx-1">/</span>
@@ -332,7 +332,7 @@ export default function HairRegrowthTreatmentDubai() {
               </div>
               <div className="relative overflow-hidden rounded-3xl border border-[#1E2E2A]/10 shadow-sm aspect-[4/3] group bg-white">
                 <img
-                  src="/images/hair-consultation-ramacare-prp-mesotherapy.jpg"
+                  src="/images/Doctor consulting with a patient about hair regrowth treatment.jpg"
                   alt="Doctor consulting with a patient about hair regrowth treatment options in Dubai"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -479,7 +479,7 @@ export default function HairRegrowthTreatmentDubai() {
               <div className="lg:col-span-4">
                 <div className="relative overflow-hidden rounded-3xl border border-[#1E2E2A]/10 shadow-sm aspect-[4/3] group bg-white">
                   <img
-                    src="/images/doctor-examining-scalp-ramacare-dubai.jpg"
+                    src="/images/Clinician examining a patient's scalp.jpg"
                     alt="Clinician examining a patient's scalp to assess hair thinning in Dubai"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />

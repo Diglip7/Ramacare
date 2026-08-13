@@ -45,7 +45,7 @@ export default function UltrasoundTherapyPage() {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Services",
-                  "item": "https://ramacarepolyclinic.ae/services"
+                  "item": "https://ramacarepolyclinic.ae/services/"
                 },
                 {
                   "@type": "ListItem",
@@ -104,53 +104,70 @@ export default function UltrasoundTherapyPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "${CANONICAL_URL}#procedure",
-  "name": "Ultrasound Therapy in Dubai",
-  "alternateName": "Therapeutic Ultrasound Treatment",
-  "url": "${CANONICAL_URL}",
-  "mainEntityOfPage": "${CANONICAL_URL}",
-  "description": "Ultrasound Therapy in Dubai at RamaCare Polyclinic offers therapeutic ultrasound treatment as part of personalized physiotherapy and rehabilitation programs provided by DHA-licensed physiotherapists.",
-  "procedureType": "Physical therapy",
-  "bodyLocation": "Musculoskeletal system",
-  "howPerformed": "Therapeutic ultrasound is applied by a qualified physiotherapist using a therapeutic ultrasound device over a selected treatment area as part of a broader physiotherapy and rehabilitation program.",
-  "preparation": "A professional physiotherapy assessment is required before treatment to determine suitability.",
-  "followup": "Follow-up sessions and progress evaluation may be recommended as part of the broader rehabilitation program.",
-  "indication": [
-    "Muscle pain and stiffness",
-    "Joint stiffness",
-    "Soft tissue rehabilitation",
-    "Sports-related muscle strains",
-    "Mobility limitations"
-  ],
-  "possibleComplication": "Individual suitability varies; a qualified physiotherapist should assess each patient before treatment.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Physiotherapy Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$"
-  }
-}
-    `,
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalProcedure",
+              "@id": `${CANONICAL_URL}#procedure`,
+              "name": "Ultrasound Therapy in Dubai",
+              "alternateName": "Therapeutic Ultrasound Treatment",
+              "url": CANONICAL_URL,
+              "mainEntityOfPage": CANONICAL_URL,
+              "description": "Ultrasound Therapy in Dubai at RamaCare Polyclinic offers therapeutic ultrasound treatment as part of personalized physiotherapy and rehabilitation programs provided by DHA-licensed physiotherapists.",
+              "procedureType": "Physical therapy",
+              "bodyLocation": "Musculoskeletal system",
+              "howPerformed": "Therapeutic ultrasound is applied by a qualified physiotherapist using a therapeutic ultrasound device over a selected treatment area as part of a broader physiotherapy and rehabilitation program.",
+              "preparation": "A professional physiotherapy assessment is required before treatment to determine suitability.",
+              "followup": "Follow-up sessions and progress evaluation may be recommended as part of the broader rehabilitation program.",
+              "indication": [
+                "Muscle pain and stiffness",
+                "Joint stiffness",
+                "Soft tissue rehabilitation",
+                "Sports-related muscle strains",
+                "Mobility limitations"
+              ],
+              "possibleComplication": "Individual suitability varies; a qualified physiotherapist should assess each patient before treatment.",
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "RamaCare Polyclinic – Physiotherapy Department",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+                  "addressLocality": "Jumeirah 1",
+                  "addressRegion": "Dubai",
+                  "postalCode": "393558",
+                  "addressCountry": "AE"
+                },
+                "telephone": "+971 56 659 7878",
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Dubai"
+                },
+                "priceRange": "$$"
+              }
+            })
           }}
         />
-      </Head>
 
+        {content?.faq?.faqs && content.faq.faqs.length > 0 && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": content.faq.faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              })
+            }}
+          />
+        )}
+      </Head>
       <TreatmentHero
         categoryName={categoryName}
         subcategoryName={subcategoryName}
@@ -162,7 +179,6 @@ export default function UltrasoundTherapyPage() {
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
-
       <SafetySection />
 
       <HealingJourney content={content?.healingJourney} />

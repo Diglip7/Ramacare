@@ -403,7 +403,7 @@ export default function PrpHairTreatmentResultsPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -557,8 +557,7 @@ export default function PrpHairTreatmentResultsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="relative"
-                >
+                  className="relative">
                   <div
                     className="hidden md:flex w-3.5 h-3.5 rounded-full border-4 border-[#F9F7F2] mb-4 mx-auto"
                     style={{ backgroundColor: `rgba(31,94,75,${0.25 + i * 0.25})` }}
@@ -643,7 +642,7 @@ export default function PrpHairTreatmentResultsPage() {
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mt-10">
             <img
-              src="/images/prp-hair-treatment-procedure.jpg"
+              src="/images/PRP injection being administered.jpg"
               alt="PRP injection being administered to the scalp during a hair treatment session"
               className="w-full h-72 object-cover rounded-2xl shadow-lg"
             />
@@ -667,9 +666,8 @@ export default function PrpHairTreatmentResultsPage() {
               <button
                 key={i}
                 onClick={() => setOpenStage(i)}
-                className={`px-5 py-3 rounded-xl font-semibold text-sm transition-all ${
-                  openStage === i ? 'bg-white text-[#1F5E4B] shadow-lg' : 'bg-white/10 text-white/80 hover:bg-white/20'
-                }`}
+                className={`px-5 py-3 rounded-xl font-semibold text-sm transition-all ${openStage === i ? 'bg-white text-[#1F5E4B] shadow-lg' : 'bg-white/10 text-white/80 hover:bg-white/20'
+                  }`}
               >
                 {m.stage}
               </button>
@@ -702,14 +700,6 @@ export default function PrpHairTreatmentResultsPage() {
               </div>
             </motion.div>
           </AnimatePresence>
-
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mt-10">
-            <img
-              src="/images/prp-hair-growth-timeline.jpg"
-              alt="Illustrated timeline showing stages of PRP hair treatment results"
-              className="w-full h-56 object-cover rounded-2xl shadow-lg opacity-95"
-            />
-          </motion.div>
         </div>
       </section>
 
@@ -853,7 +843,7 @@ export default function PrpHairTreatmentResultsPage() {
               always be considered in the context of a proper hair-loss assessment rather than in isolation:
             </p>
           </motion.div>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {resultFactors.map((f, i) => (
               <motion.div
                 key={i}
@@ -861,7 +851,8 @@ export default function PrpHairTreatmentResultsPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04 }}
-                className="group bg-[#F9F7F2] border border-gray-200 hover:border-[#1F5E4B]/30 hover:bg-[#1F5E4B]/5 rounded-2xl px-5 py-4 max-w-xs"
+                className={`group bg-[#F9F7F2] border border-gray-200 hover:border-[#1F5E4B]/30 hover:bg-[#1F5E4B]/5 rounded-2xl px-5 py-4 transition-all ${i === resultFactors.length - 1 ? 'sm:col-span-2 lg:col-span-3' : ''
+                  }`}
               >
                 <h4 className="font-bold text-[#1A1A1A] text-sm mb-1 group-hover:text-[#1F5E4B]">{f.title}</h4>
                 <p className="text-xs text-[#5F5F5F] leading-relaxed">{f.desc}</p>
@@ -872,8 +863,7 @@ export default function PrpHairTreatmentResultsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 text-[#5F5F5F] leading-relaxed bg-[#1F5E4B]/5 border border-[#1F5E4B]/15 rounded-2xl p-6"
-          >
+            className="mt-8 text-[#5F5F5F] leading-relaxed bg-[#1F5E4B]/5 border border-[#1F5E4B]/15 rounded-2xl p-6">
             Because of this complexity, PRP is best approached as one component of a broader, individualized
             hair-loss management plan rather than a standalone quick fix.
           </motion.p>
@@ -965,7 +955,7 @@ export default function PrpHairTreatmentResultsPage() {
 
           <div className="mt-10 grid md:grid-cols-2 gap-8 items-center">
             <img
-              src="/images/hair-growth-cycle-diagram.jpg"
+              src="/images/Diagram illustrating the four phases.jpg"
               alt="Diagram illustrating the four phases of the natural hair growth cycle"
               className="w-full h-56 object-cover rounded-2xl shadow-lg"
             />
@@ -985,7 +975,8 @@ export default function PrpHairTreatmentResultsPage() {
 
       {/* ============ HAIR LOSS TYPES — horizontal scroll carousel ============ */}
       <section className="py-20 px-4 bg-[#12392D]">
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           .no-scrollbar::-webkit-scrollbar {
             display: none;
           }
@@ -1294,8 +1285,7 @@ export default function PrpHairTreatmentResultsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="bg-white rounded-2xl border border-gray-200 p-5 hover:border-[#1F5E4B]/30 hover:shadow-lg transition-all"
-              >
+                className="bg-white rounded-2xl border border-gray-200 p-5 hover:border-[#1F5E4B]/30 hover:shadow-lg transition-all">
                 <span className="text-2xl font-bold text-[#1F5E4B]/25">{String(i + 1).padStart(2, '0')}</span>
                 <p className="text-sm text-[#5F5F5F] leading-relaxed mt-2">{step}</p>
               </motion.div>
@@ -1325,8 +1315,7 @@ export default function PrpHairTreatmentResultsPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="flex items-start gap-3"
-                >
+                  className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-[#1F5E4B] flex-shrink-0 mt-1" />
                   <span className="text-sm text-[#5F5F5F] leading-relaxed">{step}</span>
                 </motion.li>
@@ -1585,7 +1574,7 @@ export default function PrpHairTreatmentResultsPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-2xl font-bold text-[#1A1A1A] mb-8">Related Hair Treatment Guides</h3>
-          
+
           <div className="relative">
             {/* Left scroll control */}
             <button

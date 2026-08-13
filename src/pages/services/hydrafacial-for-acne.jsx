@@ -325,7 +325,7 @@ export default function HydrafacialForAcnePage() {
               <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#D4A574] text-white flex items-center justify-center font-sans text-xl rounded-full shadow-lg">01</div>
               <img
                 src="/images/acne-prone-skin-consultation-dubai.jpg"
-                alt="Skin consultation for acne-prone skin at a Dubai clinic — Intro / Quick Answer section"
+                alt="Skin consultation for acne-prone skin at a Dubai clinic"
                 className="w-full h-[450px] object-cover rounded-2xl mb-4"
               />
               <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center">
@@ -352,7 +352,6 @@ export default function HydrafacialForAcnePage() {
             >
               <LucideIcons.ChevronLeft className="w-5 h-5" />
             </button>
-
             <div
               ref={navRef}
               className="flex gap-6 overflow-x-auto scrollbar-none py-1 px-6 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
@@ -431,7 +430,7 @@ export default function HydrafacialForAcnePage() {
             <div className="border border-gray-200 rounded-3xl p-4 bg-white shadow-md">
               <img
                 src="/images/hydrafacial-treatment-session-dubai.jpg"
-                alt="Hydrafacial treatment being performed on a patient — “What Is a Hydrafacial?” section"
+                alt="Hydrafacial treatment being performed on a patient"
                 className="w-full h-96 object-cover rounded-2xl"
               />
               <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3">
@@ -963,7 +962,7 @@ export default function HydrafacialForAcnePage() {
             <div className="border border-gray-200 rounded-3xl p-4 bg-white shadow-md flex flex-col justify-center h-full min-h-[450px]">
               <img
                 src="/images/ramacare-hydrafacial-treatment-room.jpg"
-                alt="Aesthetic treatment room at RamaCare Polyclinic Dubai — “Why Choose RamaCare” section"
+                alt="Aesthetic treatment room at RamaCare Polyclinic Dubai"
                 className="w-full flex-grow object-cover rounded-2xl min-h-[380px]"
               />
               <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3 shrink-0">

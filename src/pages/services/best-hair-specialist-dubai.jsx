@@ -370,7 +370,7 @@ export default function BestHairSpecialistPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
@@ -383,7 +383,7 @@ export default function BestHairSpecialistPage() {
       </div>
 
       {/* ============ ASYMMETRIC ELEGANT HERO SECTION ============ */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] pt-12 pb-24 border-b border-gray-200">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] pt-12 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             {/* Left Content Column */}
@@ -470,7 +470,7 @@ export default function BestHairSpecialistPage() {
                 <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-inner relative">
                   {/* IMAGE 1 (HERO) */}
                   <img
-                    src="/images/hair-scalp-consultation-dubai.jpg"
+                    src="/images/Patient consultation for hair loss.jpg"
                     alt="Patient consultation for hair loss assessment in Dubai"
                     className="w-full h-full object-cover"
                   />
@@ -527,7 +527,6 @@ export default function BestHairSpecialistPage() {
               A hair specialist’s role generally includes:
             </p>
           </div>
-
           {/* Interactive Roles Display */}
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
@@ -589,7 +588,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ WHY THE CAUSE OF HAIR LOSS MATTERS ============ */}
-      <section id="cause" className="py-20 bg-[#FDFCF7] border-y border-gray-200/50">
+      <section id="cause" className="py-20 bg-[#FDFCF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Header */}
           <div className="max-w-3xl space-y-4">
@@ -618,7 +617,6 @@ export default function BestHairSpecialistPage() {
               </div>
             ))}
           </div>
-
           <p className="text-sm text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto">
             Because these causes call for very different responses — from reassurance and time, to topical or oral medical management, to procedures like PRP, to referral for blood tests — a treatment plan that skips the diagnostic step is starting from the wrong end.
           </p>
@@ -665,7 +663,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ HOW A HAIR SPECIALIST DIAGNOSES HAIR LOSS ============ */}
-      <section id="diagnose" className="py-20 bg-[#F4F1EA]/30 border-y border-gray-200/40">
+      <section id="diagnose" className="py-20 bg-[#F4F1EA]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Header */}
           <div className="max-w-3xl space-y-4">
@@ -679,7 +677,6 @@ export default function BestHairSpecialistPage() {
               A responsible diagnostic process is built around the individual patient rather than a standard script. It typically involves:
             </p>
           </div>
-
           {/* Step-by-step diagnostic journey */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {diagnosticSteps.map((step, idx) => (
@@ -692,7 +689,6 @@ export default function BestHairSpecialistPage() {
               </div>
             ))}
           </div>
-
           {/* IMAGE 2 (DIAGNOSIS) */}
           <div className="bg-white border border-gray-200/80 p-6 rounded-2xl shadow-xs grid md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-3 rounded-xl overflow-hidden h-[150px] shadow-sm">
@@ -721,7 +717,7 @@ export default function BestHairSpecialistPage() {
               Coming prepared with a few key questions can help you get more out of a consultation and evaluate whether a clinic’s approach is genuinely individualized:
             </p>
           </div>
-          <div className="lg:col-span-7 bg-[#FDFCF7] border border-gray-155 p-6 md:p-8 rounded-3xl space-y-4">
+          <div className="lg:col-span-7 bg-[#FDFCF7] border border-[#E6E2D8] p-6 md:p-8 rounded-3xl space-y-4">
             <div className="grid sm:grid-cols-2 gap-4">
               {questionsToAsk.map((q, idx) => (
                 <div key={idx} className="flex gap-2.5 items-start">
@@ -738,7 +734,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ HAIR TREATMENT OPTIONS ============ */}
-      <section id="treatments" className="py-20 bg-[#FDFCF7] border-y border-gray-200/50">
+      <section id="treatments" className="py-20 bg-[#FDFCF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Header */}
           <div className="max-w-3xl space-y-4">
@@ -747,92 +743,97 @@ export default function BestHairSpecialistPage() {
               Treatment should follow diagnosis, not replace it. Below is an overview of the main options that may be discussed once the cause of hair loss has been assessed.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          <div className="space-y-8">
             {/* PRP Card */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm flex flex-col justify-between">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl border border-[#E6E2D8] p-8 shadow-sm hover:shadow-md transition-all duration-300 grid md:grid-cols-12 gap-8 items-start relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#1F5E4B]" />
+              <div className="md:col-span-5 space-y-4">
                 <span className="inline-block bg-[#1F5E4B]/10 text-[#1F5E4B] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Biological Stimulant</span>
-                <h3 className="text-lg font-bold text-[#1A1A1A]">PRP Hair Treatment</h3>
-                <p className="text-sm text-[#5F5F5F] leading-relaxed">
+                <h3 className="text-xl font-bold text-[#1A1A1A]">PRP Hair Treatment</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
                   Platelet-Rich Plasma (PRP) hair treatment involves drawing a small sample of the patient’s own blood, processing it to concentrate the platelets, and injecting the resulting plasma into areas of the scalp experiencing thinning. The platelets contain growth factors that are thought to support the hair-growth environment.
                 </p>
-                <div className="space-y-2 pt-2 border-t border-gray-100 text-xs text-[#5F5F5F]">
-                  <p><strong className="text-[#1A1A1A]">Who may benefit:</strong> PRP is generally discussed for patients with early-to-moderate thinning where hair follicles are still active, most often in the context of androgenetic alopecia. Suitability is assessed individually.</p>
-                  <p><strong className="text-[#1A1A1A]">Why diagnosis matters:</strong> PRP is not equally appropriate for every cause of hair loss. A specialist needs to confirm the underlying cause before recommending it.</p>
-                  <p><strong className="text-[#1A1A1A]">Expected timeline:</strong> Because hair grows in cycles, visible changes take time and are typically assessed over multiple months rather than after a single session.</p>
-                  <p><strong className="text-[#1A1A1A]">Limitations:</strong> PRP does not reverse all types of hair loss, and outcomes vary between individuals. It is one option among several, not a universal solution.</p>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed pt-2">
+                  For a full explanation of the procedure, session planning, and what to expect, see <Link href="/services/hair-prp-dubai/" className="text-[#1F5E4B] font-bold hover:underline">Hair PRP Treatment in Dubai</Link>.
+                </p>
+              </div>
+              <div className="md:col-span-7 bg-[#FDFCF7] border border-[#E6E2D8] rounded-2xl p-6 space-y-4">
+                <div className="space-y-3 text-xs text-[#5F5F5F]">
+                  <p><strong className="text-[#1A1A1A] font-semibold">Who may benefit:</strong> PRP is generally discussed for patients with early-to-moderate thinning where hair follicles are still active, most often in the context of androgenetic alopecia. Suitability is assessed individually.</p>
+                  <p><strong className="text-[#1A1A1A] font-semibold">Why diagnosis matters:</strong> PRP is not equally appropriate for every cause of hair loss. A specialist needs to confirm the underlying cause before recommending it.</p>
+                  <p><strong className="text-[#1A1A1A] font-semibold">Expected timeline:</strong> Because hair grows in cycles, visible changes take time and are typically assessed over multiple months rather than after a single session.</p>
+                  <p><strong className="text-[#1A1A1A] font-semibold">Limitations:</strong> PRP does not reverse all types of hair loss, and outcomes vary between individuals. It is one option among several, not a universal solution.</p>
                 </div>
               </div>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed pt-4 border-t border-gray-100 mt-4">
-                For a full explanation of the procedure, session planning, and what to expect, see <Link href="/services/hair-prp-dubai/" className="text-[#1F5E4B] font-bold hover:underline">Hair PRP Treatment in Dubai</Link>.
-              </p>
             </div>
-
             {/* Mesotherapy Card */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm flex flex-col justify-between">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl border border-[#E6E2D8] p-8 shadow-sm hover:shadow-md transition-all duration-300 grid md:grid-cols-12 gap-8 items-start relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#C5A880]" />
+              <div className="md:col-span-12 space-y-4">
                 <span className="inline-block bg-[#C5A880]/15 text-[#C5A880] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Nutrient Delivery</span>
-                <h3 className="text-lg font-bold text-[#1A1A1A]">Hair Mesotherapy</h3>
-                <p className="text-sm text-[#5F5F5F] leading-relaxed">
+                <h3 className="text-xl font-bold text-[#1A1A1A]">Hair Mesotherapy</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
                   Hair Mesotherapy involves delivering a solution of vitamins, minerals, or other nourishing ingredients directly into the scalp through a series of fine injections. It works on a different principle from PRP, which uses the patient’s own blood-derived plasma rather than an external formulation.
                 </p>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed border-t border-[#E6E2D8] pt-4 mt-2">
+                  Because PRP and Hair Mesotherapy work differently and suit different situations, treatment selection should be individualized rather than based on which option a clinic happens to promote. Learn more about the approach and candidacy considerations on the <Link href="/services/mesotherapy-dubai/" className="text-[#C5A880] font-bold hover:underline">Hair Mesotherapy in Dubai</Link> page.
+                </p>
               </div>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed pt-4 border-t border-gray-100 mt-4">
-                Because PRP and Hair Mesotherapy work differently and suit different situations, treatment selection should be individualized rather than based on which option a clinic happens to promote. Learn more about the approach and candidacy considerations on the <Link href="/services/mesotherapy-dubai/" className="text-[#C5A880] font-bold hover:underline">Hair Mesotherapy in Dubai</Link> page.
-              </p>
             </div>
-
             {/* Medical Management Card */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm flex flex-col justify-between">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl border border-[#E6E2D8] p-8 shadow-sm hover:shadow-md transition-all duration-300 grid md:grid-cols-12 gap-8 items-start relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gray-400" />
+              <div className="md:col-span-12 space-y-4">
                 <span className="inline-block bg-gray-100 text-[#1A1A1A] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Clinical Management</span>
-                <h3 className="text-lg font-bold text-[#1A1A1A]">Medical Management</h3>
-                <p className="text-sm text-[#5F5F5F] leading-relaxed">
+                <h3 className="text-xl font-bold text-[#1A1A1A]">Medical Management</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
                   Depending on the diagnosis, some patients may be advised toward medical management as part of their care plan. This is a decision made by the treating clinician based on your specific assessment, and it is not something this article can substitute for. No medications or dosages are recommended here — that discussion belongs in a consultation.
                 </p>
-              </div>
-              <div className="pt-6 text-xs text-[#7F7F7F] italic border-t border-gray-100 mt-4">
-                Prescriptions are guided strictly by clinical assessments.
+                <div className="text-xs text-[#7F7F7F] italic border-t border-[#E6E2D8] pt-4 mt-2">
+                  Prescriptions are guided strictly by clinical assessments.
+                </div>
               </div>
             </div>
-
             {/* Lifestyle and Nutritional Factors Card */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm flex flex-col justify-between">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl border border-[#E6E2D8] p-8 shadow-sm hover:shadow-md transition-all duration-300 grid md:grid-cols-12 gap-8 items-start relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-green-700" />
+              <div className="md:col-span-5 space-y-4">
                 <span className="inline-block bg-gray-100 text-[#1A1A1A] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">General Wellness</span>
-                <h3 className="text-lg font-bold text-[#1A1A1A]">Lifestyle and Nutritional Factors</h3>
-                <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                  Alongside any clinical treatment, general hair health can be supported by:
+                <h3 className="text-xl font-bold text-[#1A1A1A]">Lifestyle and Nutritional Factors</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
+                  Alongside any clinical treatment, general hair health can be supported by basic wellness practices. Wellness complements medical care pathways to build the best foundation for recovery.
                 </p>
-                <ul className="space-y-1 text-xs text-[#5F5F5F] list-disc pl-4 leading-relaxed">
+                <div className="text-xs text-[#7F7F7F] italic border-t border-[#E6E2D8] pt-4 mt-2">
+                  Wellness complements medical care pathways.
+                </div>
+              </div>
+              <div className="md:col-span-7 bg-[#FDFCF7] border border-[#E6E2D8] rounded-2xl p-6 space-y-4">
+                <p className="text-xs font-semibold text-[#1A1A1A]">Key supportive factors:</p>
+                <ul className="space-y-2 text-xs text-[#5F5F5F] list-disc pl-4 leading-relaxed font-light">
                   <li>Balanced nutrition with adequate protein intake</li>
                   <li>Addressing any identified nutritional gaps under professional guidance</li>
                   <li>Managing stress where possible</li>
                   <li>Prioritizing adequate sleep</li>
                   <li>Gentle hair care — avoiding excessive heat styling, harsh chemical treatments, and tight hairstyles</li>
                 </ul>
-                <p className="text-xs text-[#7F7F7F] italic border-t border-gray-100 pt-2">
+                <p className="text-xs text-[#7F7F7F] italic border-t border-[#E6E2D8] pt-3">
                   Nutrition supports overall hair health, but it does not override an underlying genetic or medical cause.
                 </p>
               </div>
-              <div className="pt-6 text-xs text-[#7F7F7F] italic border-t border-gray-100 mt-4">
-                Wellness complements medical care pathways.
-              </div>
             </div>
-
             {/* Hair Transplant Card */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm flex flex-col justify-between">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl border border-[#E6E2D8] p-8 shadow-sm hover:shadow-md transition-all duration-300 grid md:grid-cols-12 gap-8 items-start relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#C5A880]" />
+              <div className="md:col-span-12 space-y-4">
                 <span className="inline-block bg-[#C5A880]/15 text-[#C5A880] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Surgical Restoration</span>
-                <h3 className="text-lg font-bold text-[#1A1A1A]">Hair Transplant</h3>
-                <p className="text-sm text-[#5F5F5F] leading-relaxed">
+                <h3 className="text-xl font-bold text-[#1A1A1A]">Hair Transplant</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
                   Surgical hair restoration may be considered for patients with more advanced hair loss, particularly once non-surgical options have been discussed and a specialist has assessed donor-area suitability. This is a more involved decision, and the comparison of approaches is covered in detail.
                 </p>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed pt-4 border-t border-[#E6E2D8] mt-2">
+                  Surgical hair restoration may be considered for patients with more advanced hair loss, particularly once non-surgical options have been discussed and a specialist has assessed donor-area suitability. This is a more involved decision, and the comparison of approaches is covered in detail in <Link href="/services/prp-vs-hair-transplant-dubai/" className="text-[#1F5E4B] font-bold hover:underline">PRP vs Hair Transplant in Dubai</Link>.
+                </p>
               </div>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed pt-4 border-t border-gray-100 mt-4">
-                Surgical hair restoration may be considered for patients with more advanced hair loss, particularly once non-surgical options have been discussed and a specialist has assessed donor-area suitability. This is a more involved decision, and the comparison of approaches is covered in detail in <Link href="/services/prp-vs-hair-transplant-dubai/" className="text-[#1F5E4B] font-bold hover:underline">PRP vs Hair Transplant in Dubai</Link>.
-              </p>
             </div>
           </div>
         </div>
@@ -848,28 +849,31 @@ export default function BestHairSpecialistPage() {
               Understanding why hair treatments require patience starts with understanding how hair actually grows. Each hair follicle cycles through distinct phases:
             </p>
           </div>
-
           <div className="grid lg:grid-cols-12 gap-8 items-center">
-            {/* Visual Steps Grid */}
-            <div className="lg:col-span-8 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Visual Steps Timeline */}
+            <div className="lg:col-span-7 space-y-4">
               {[
-                { phase: "Anagen (growth phase)", desc: "The active phase during which the hair follicle produces new hair. This phase can last several years." },
-                { phase: "Catagen (transition phase)", desc: "A short transitional phase where hair growth slows and the follicle begins to shrink." },
-                { phase: "Telogen (resting phase)", desc: "A resting period during which the hair is not actively growing but has not yet shed." },
-                { phase: "Exogen (shedding phase)", desc: "The phase in which the resting hair is released and shed, often coinciding with a new hair beginning to grow." }
+                { number: "01", phase: "Anagen (Growth Phase)", desc: "The active phase during which the hair follicle produces new hair. This phase can last several years." },
+                { number: "02", phase: "Catagen (Transition Phase)", desc: "A short transitional phase where hair growth slows and the follicle begins to shrink." },
+                { number: "03", phase: "Telogen (Resting Phase)", desc: "A resting period during which the hair is not actively growing but has not yet shed." },
+                { number: "04", phase: "Exogen (Shedding Phase)", desc: "The phase in which the resting hair is released and shed, often coinciding with a new hair beginning to grow." }
               ].map((item, idx) => (
-                <div key={idx} className="bg-[#FDFCF7] border border-gray-150 p-5 rounded-2xl space-y-2 hover:border-[#1F5E4B]/40 transition-all">
-                  <p className="text-sm font-bold text-[#1A1A1A]">{item.phase}</p>
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed">{item.desc}</p>
+                <div key={idx} className="bg-white border border-[#E6E2D8] p-5 rounded-2xl flex gap-4 items-start shadow-xs hover:border-[#1F5E4B]/40 transition-all duration-300">
+                  <span className="text-xl font-bold text-[#D4A574] bg-[#FDFCF7] w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border border-[#E6E2D8]">
+                    {item.number}
+                  </span>
+                  <div className="space-y-1">
+                    <p className="text-sm font-bold text-[#1A1A1A]">{item.phase}</p>
+                    <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
-
-            {/* Explanation box with IMAGE 3 (HAIR GROWTH CYCLE) */}
-            <div className="lg:col-span-4 bg-[#E6EFEA]/30 border border-gray-150 p-6 rounded-3xl space-y-4">
-              <div className="rounded-xl overflow-hidden aspect-[4/3] shadow-inner relative">
+            {/* Explanation box with Infographic */}
+            <div className="lg:col-span-5 bg-[#E6EFEA]/30 border border-[#E6E2D8] p-6 rounded-3xl space-y-4">
+              <div className="rounded-xl overflow-hidden aspect-[4/3] shadow-inner relative bg-white">
                 <img
-                  src="/images/hair-growth-cycle-illustration.jpg"
+                  src="/images/Illustration of the anagen catagen telogen exogen hair.jpg"
                   alt="Illustration of the anagen catagen telogen exogen hair growth cycle"
                   className="w-full h-full object-cover"
                 />
@@ -877,8 +881,8 @@ export default function BestHairSpecialistPage() {
               <p className="text-xs text-[#7F7F7F] text-center italic border-t border-gray-100 pt-2">
                 Understanding the hair growth cycle explains why treatment results take time.
               </p>
-              <p className="text-sm text-[#5F5F5F] leading-relaxed">
-                At any given time, the hairs on your scalp are in different phases of this cycle simultaneously. This is precisely why hair treatments — including PRP — cannot show results overnight. Influencing the growth environment takes time to translate into visible change, since it depends on follicles progressing through their natural cycle. For a deeper explanation, see the <Link href="/services/hair-growth-cycle/" className="underline font-bold text-[#1F5E4B]">Hair Growth Cycle</Link> guide.
+              <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
+                At any given time, the hairs on your scalp are in different phases of this cycle simultaneously. This is precisely why hair treatments — including PRP — cannot show results overnight. Influencing the growth environment takes time to translate into visible change, since it depends on follicles progressing through their natural cycle. For a deeper explanation, see the <Link href="/services/hair-growth-cycle/" className="underline font-bold text-[#1F5E4B] hover:underline">Hair Growth Cycle</Link> guide.
               </p>
             </div>
           </div>
@@ -886,7 +890,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ PRP HAIR TREATMENT RESULTS ============ */}
-      <section id="results" className="py-20 bg-[#FDFCF7] border-y border-gray-200/50">
+      <section id="results" className="py-20 bg-[#FDFCF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {/* Header */}
           <div className="max-w-3xl space-y-4">
@@ -1001,7 +1005,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ HOW TO CHOOSE A HAIR SPECIALIST IN DUBAI ============ */}
-      <section id="choose" className="py-20 bg-[#FDFCF7] border-y border-gray-200/50">
+      <section id="choose" className="py-20 bg-[#FDFCF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Selection Checklist */}
@@ -1122,7 +1126,7 @@ export default function BestHairSpecialistPage() {
             <h2 className="text-3xl font-bold text-[#1A1A1A] text-center">Hair Loss by Age</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {ageGroups.map((group, idx) => (
-                <div key={idx} className="bg-[#FDFCF7] border border-gray-155 p-5 rounded-2xl shadow-xs space-y-2">
+                <div key={idx} className="bg-[#FDFCF7] border border-[#E6E2D8] p-5 rounded-2xl shadow-xs space-y-2">
                   <span className="w-2 h-2 rounded-full bg-[#C5A880] block" />
                   <h4 className="font-extrabold text-sm text-[#1A1A1A]">{group.age}</h4>
                   <p className="text-sm text-[#5F5F5F] leading-relaxed">{group.desc}</p>
@@ -1137,7 +1141,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ DUBAI SPECIFIC CLIMATE CONSIDERATIONS ============ */}
-      <section id="dubai-climate" className="py-20 bg-[#F4F1EA]/30 border-y border-gray-250/45">
+      <section id="dubai-climate" className="py-20 bg-[#F4F1EA]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl font-bold text-[#1A1A1A]">Dubai-Specific Considerations</h2>
@@ -1148,7 +1152,7 @@ export default function BestHairSpecialistPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {dubaiClimatePoints.map((point, index) => (
-              <div key={index} className="bg-white border border-gray-155 p-5 rounded-2xl shadow-xs space-y-2">
+              <div key={index} className="bg-white border border-[#E6E2D8] p-5 rounded-2xl shadow-xs space-y-2">
                 <span className="text-xs font-bold text-[#C5A880] uppercase tracking-wide">Point {index + 1}</span>
                 <h4 className="font-bold text-sm text-[#1A1A1A]">{point.title}</h4>
                 <p className="text-xs text-[#5F5F5F] leading-relaxed">{point.desc}</p>
@@ -1176,7 +1180,7 @@ export default function BestHairSpecialistPage() {
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ramacareWhy.map((why, index) => (
-              <div key={index} className="bg-[#FDFCF7] border border-gray-155 p-5 rounded-2xl shadow-xs space-y-2 hover:border-[#1F5E4B]/40 transition-all duration-300">
+              <div key={index} className="bg-[#FDFCF7] border border-[#E6E2D8] p-5 rounded-2xl shadow-xs space-y-2 hover:border-[#1F5E4B]/40 transition-all duration-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#1F5E4B] block" />
                 <h4 className="font-bold text-sm text-[#1A1A1A]">{why.title}</h4>
                 <p className="text-sm text-[#5F5F5F] leading-relaxed">{why.text}</p>
@@ -1207,7 +1211,7 @@ export default function BestHairSpecialistPage() {
       </section>
 
       {/* ============ RELATED GUIDES ============ */}
-      <section id="related-guides" className="bg-[#FDFCF7] py-20 border-y border-gray-200/50">
+      <section id="related-guides" className="bg-[#FDFCF7] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-2xl font-bold text-[#1A1A1A]">Related Hair Treatment Guides</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1249,7 +1253,7 @@ export default function BestHairSpecialistPage() {
                   )}
                 </button>
                 {isOpen && (
-                  <div className="p-5 border-t border-gray-155 bg-[#FDFCF7]">
+                  <div className="p-5 border-t border-[#E6E2D8] bg-[#FDFCF7]">
                     <p className="text-sm text-[#5F5F5F] leading-relaxed">{faq.a}</p>
                   </div>
                 )}
@@ -1259,52 +1263,54 @@ export default function BestHairSpecialistPage() {
         </div>
       </section>
 
-      {/* ============ MEDICAL DISCLAIMER ============ */}
-      <section id="disclaimer" className="bg-red-50/20 border-y border-red-155 py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-          <h4 className="font-extrabold text-red-800 text-sm flex items-center gap-1.5">
-            <LucideIcons.AlertOctagon className="w-5 h-5 text-red-600" /> Medical Disclaimer
-          </h4>
-          <p className="text-sm text-[#5F5F5F] leading-relaxed">
-            Hair loss has many possible causes, and treatment suitability varies from person to person. The information on this page is intended for general educational purposes and cannot replace an individual medical assessment. It is not a diagnosis of your specific condition. Sudden, severe, painful, or patchy hair loss should be evaluated by a qualified healthcare professional rather than managed based on general information alone.
-          </p>
-        </div>
-      </section>
-
-      {/* ============ BOOK A HAIR AND SCALP CONSULTATION ============ */}
-      <section id="book-consult" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl font-bold text-[#1A1A1A]">Book a Hair and Scalp Consultation in Dubai</h2>
-          <p className="text-sm text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto">
-            If you are concerned about hair thinning, increased shedding, or changes in your scalp, the most useful next step is a personalized assessment rather than guessing at a cause or treatment on your own. RamaCare Polyclinic in Jumeirah 1, Dubai offers hair and scalp consultations designed to identify what is actually happening before recommending any treatment path.
-          </p>
-          <p className="text-sm text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto">
-            Book a Hair and Scalp Consultation in Dubai to discuss your history, get a proper assessment, and understand which options may be appropriate for your situation.
-          </p>
-
-          <div className="flex justify-center gap-3 pt-4">
-            <Link
-              href="/book-appointment/"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#1F5E4B] px-8 py-4 text-sm font-bold text-white hover:bg-[#17493A] transition-colors"
-            >
-              <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
-            </Link>
-            <a
-              href="https://wa.me/971566597878"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#1F5E4B] px-8 py-4 text-sm font-bold text-[#1F5E4B] bg-white hover:bg-gray-50 transition-colors"
-            >
-              <LucideIcons.MessageCircle className="w-4 h-4" /> WhatsApp Us
-            </a>
+      {/* ============ MEDICAL DISCLAIMER & BOOK A HAIR AND SCALP CONSULTATION ============ */}
+      <section id="book-consult" className="py-24 bg-[#FDFCF7]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          {/* Medical Disclaimer Card */}
+          <div id="disclaimer" className="bg-amber-50/40 border border-amber-200/60 rounded-2xl p-6 md:p-8 space-y-3 shadow-sm">
+            <h4 className="font-bold text-amber-800 text-sm flex items-center gap-2">
+              <LucideIcons.AlertTriangle className="w-5 h-5 text-amber-600" /> Medical Disclaimer
+            </h4>
+            <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
+              Hair loss has many possible causes, and treatment suitability varies from person to person. The information on this page is intended for general educational purposes and cannot replace an individual medical assessment. It is not a diagnosis of your specific condition. Sudden, severe, painful, or patchy hair loss should be evaluated by a qualified healthcare professional rather than managed based on general information alone.
+            </p>
           </div>
 
-          <div className="border-t border-gray-155 pt-12 text-left max-w-4xl mx-auto space-y-4">
-            <h4 className="font-bold text-[#1A1A1A] text-lg">Conclusion</h4>
-            <p className="text-sm text-[#5F5F5F] leading-relaxed">
+          <div className="text-center space-y-6">
+            <span className="text-xs uppercase tracking-widest font-bold text-[#D4A574]">Scalp Consultation</span>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#1A1A1A] tracking-tight">Book a Hair and Scalp Consultation in Dubai</h2>
+            <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed font-light">
+              If you are concerned about hair thinning, increased shedding, or changes in your scalp, the most useful next step is a personalized assessment rather than guessing at a cause or treatment on your own. RamaCare Polyclinic in Jumeirah 1, Dubai offers hair and scalp consultations designed to identify what is actually happening before recommending any treatment path.
+            </p>
+            <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed font-light">
+              Book a Hair and Scalp Consultation in Dubai to discuss your history, get a proper assessment, and understand which options may be appropriate for your situation.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
+              <Link
+                href="/book-appointment/"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#1F5E4B] px-8 py-4 text-sm font-bold text-white hover:bg-[#17493A] transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
+              </Link>
+              <a
+                href="https://wa.me/971566597878"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#1F5E4B]/30 px-8 py-4 text-sm font-bold text-[#1F5E4B] bg-white hover:bg-gray-50 transition-all shadow-sm"
+              >
+                <LucideIcons.MessageCircle className="w-4 h-4" /> WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <div className="border-t border-[#E6E2D8] pt-12 text-left space-y-6">
+            <h4 className="font-bold text-[#1A1A1A] text-xl">Conclusion</h4>
+            <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
               Finding the right hair specialist is not about choosing whichever clinic promises the most dramatic results. It comes down to identifying the actual cause of your hair loss, understanding what you are hoping to achieve, selecting a treatment approach that fits your diagnosis, setting realistic expectations for how and when results may appear, and having your progress monitored over time. Hair loss is rarely a single, simple problem with one universal answer — which is exactly why a careful, individualized assessment matters more than any single procedure.
             </p>
-            <p className="text-sm text-[#5F5F5F] leading-relaxed">
+            <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
               If you are searching for the best hair specialist in Dubai, the most reliable approach is to look for a practitioner who prioritizes diagnosis, communicates clearly, and builds a treatment plan around your specific findings rather than a fixed package. That patient-first process — assessment before treatment — is the foundation of responsible hair and scalp care, and it is the approach RamaCare Polyclinic aims to offer to every patient who walks through its doors in Jumeirah.
             </p>
           </div>
