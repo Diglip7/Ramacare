@@ -360,8 +360,7 @@ export default function HairRegrowthTreatmentDubai() {
           <button
             onClick={() => scrollNav('left')}
             className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-[#FAF9F5] via-[#FAF9F5]/95 to-transparent px-3.5 z-20 text-[#1F5E4B] hover:text-[#12392D] transition-colors flex items-center justify-center cursor-pointer border-none outline-none"
-            aria-label="Scroll left"
-          >
+            aria-label="Scroll left">
             <ChevronLeft className="w-5 h-5 md:w-6 h-6" />
           </button>
 

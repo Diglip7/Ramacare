@@ -393,7 +393,7 @@ export default function HydrafacialBeforeAndAfterPage() {
             <div className="relative border border-[#E9E2D6] rounded-3xl p-6 bg-white shadow-xl w-full max-w-xl lg:max-w-none mx-auto transform hover:scale-[1.01] transition-all duration-500">
               <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#D4A574] text-white flex items-center justify-center font-sans text-xl rounded-full shadow-lg">01</div>
               <img 
-                src="/images/skin-consultation-hydrafacial-assessment.jpg" 
+                src="/images/skin-consultation-hydrafacial-assessment-1.jpg" 
                 alt="Skin consultation for Hydrafacial assessment at RamaCare Polyclinic Dubai" 
                 className="w-full h-[450px] object-cover rounded-2xl mb-4"
               />

@@ -18,24 +18,36 @@ const Layout = ({ children }) => {
     const setupPortal = () => {
       const faqElement = document.getElementById('faq');
       if (faqElement) {
-        let insertTarget = faqElement;
-        // Traverse up to find the closest <section> element
-        while (
-          insertTarget && 
-          insertTarget.tagName !== 'SECTION' && 
-          insertTarget.parentElement
-        ) {
-          insertTarget = insertTarget.parentElement;
+        let current = faqElement;
+        let sectionAncestor = null;
+        while (current) {
+          if (current.tagName === 'SECTION') {
+            sectionAncestor = current;
+            break;
+          }
+          if (
+            current.tagName === 'MAIN' || 
+            current.tagName === 'BODY' || 
+            current.tagName === 'HTML'
+          ) {
+            break;
+          }
+          current = current.parentElement;
         }
 
-        let wrapper = document.getElementById('google-reviews-portal-wrapper');
-        if (!wrapper) {
-          wrapper = document.createElement('div');
-          wrapper.id = 'google-reviews-portal-wrapper';
-          wrapper.className = 'w-full';
-          insertTarget.parentNode.insertBefore(wrapper, insertTarget);
+        const insertTarget = sectionAncestor || faqElement;
+        if (insertTarget && insertTarget.parentNode && insertTarget.parentNode.nodeType === 1) {
+          let wrapper = document.getElementById('google-reviews-portal-wrapper');
+          if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.id = 'google-reviews-portal-wrapper';
+            wrapper.className = 'w-full';
+            insertTarget.parentNode.insertBefore(wrapper, insertTarget);
+          }
+          setPortalTarget(wrapper);
+        } else {
+          setPortalTarget(null);
         }
-        setPortalTarget(wrapper);
       } else {
         setPortalTarget(null);
       }
