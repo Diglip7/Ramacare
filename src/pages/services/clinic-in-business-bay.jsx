@@ -364,11 +364,10 @@ export default function ClinicInBusinessBayPage() {
                   <button
                     key={idx}
                     onClick={() => setActiveTab(idx)}
-                    className={`flex items-center gap-4 text-left p-4 rounded-xl transition-all duration-300 ${
-                      activeTab === idx
-                        ? 'bg-[#1F5E4B] text-white shadow-md transform translate-x-2'
-                        : 'bg-[#FDFCF7] hover:bg-[#F5F1EA] text-[#1A1A1A] border border-[#E9E2D6]'
-                    }`}
+                    className={`flex items-center gap-4 text-left p-4 rounded-xl transition-all duration-300 ${activeTab === idx
+                      ? 'bg-[#1F5E4B] text-white shadow-md transform translate-x-2'
+                      : 'bg-[#FDFCF7] hover:bg-[#F5F1EA] text-[#1A1A1A] border border-[#E9E2D6]'
+                      }`}
                   >
                     {IconComponent && <IconComponent className={`w-5 h-5 ${activeTab === idx ? 'text-white' : 'text-[#1F5E4B]'}`} />}
                     <span className="font-semibold text-xs md:text-sm tracking-wide">{item.title}</span>
@@ -512,7 +511,7 @@ export default function ClinicInBusinessBayPage() {
       {/* ============ SERVICE SPOTLIGHTS (GENERAL & PHYSIO) ============ */}
       <section className="py-24 bg-[#FDFCF7] border-b border-[#E6E2D8]">
         <div className="max-w-7xl mx-auto px-6 space-y-24">
-          
+
           {/* General Medicine Spotlight */}
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
             <div className="space-y-6">
@@ -554,7 +553,7 @@ export default function ClinicInBusinessBayPage() {
             </div>
             <div>
               <img
-                src="/images/general-physician-consultation-ramacare.jpg"
+                src="/images/general-physician-consultation-ramacare1.jpg"
                 alt="General physician consulting a patient at RamaCare Polyclinic"
                 className="w-full h-80 object-cover rounded-3xl border border-[#E9E2D6] shadow-md"
               />
@@ -662,8 +661,8 @@ export default function ClinicInBusinessBayPage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     allowFullScreen
-  />
-</div>
+                  />
+                </div>
                 <div className="flex items-center justify-between mt-3 px-2">
                   <p className="text-xs text-[#5F5F5F] leading-relaxed italic">
                     Ground Floor, Jumeirah Terrace Building, Jumeirah 1, Dubai
@@ -781,7 +780,6 @@ export default function ClinicInBusinessBayPage() {
               It&apos;s not always obvious when a symptom warrants a professional opinion versus simply monitoring it at home. As a general guide, it&apos;s worth booking a consultation if a symptom is:
             </p>
           </div>
-
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { title: 'Persistent', text: 'Lasting longer than you would expect for a minor issue.' },
@@ -829,9 +827,8 @@ export default function ClinicInBusinessBayPage() {
             </div>
             <div className="pt-2">
               <Link
-                href="/polyclinic-in-dubai/"
-                className="inline-flex items-center gap-1.5 text-xs text-[#1F5E4B] font-bold uppercase tracking-wider hover:underline"
-              >
+                href="/about-us/"
+                className="inline-flex items-center gap-1.5 text-xs text-[#1F5E4B] font-bold uppercase tracking-wider hover:underline">
                 Learn More About Our Polyclinic <LucideIcons.ArrowRight className="w-3 h-3" />
               </Link>
             </div>
@@ -856,12 +853,10 @@ export default function ClinicInBusinessBayPage() {
             {faqData.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-[#E9E2D6] rounded-2xl bg-white overflow-hidden shadow-sm transition-all duration-300"
-              >
+                className="border border-[#E9E2D6] rounded-2xl bg-white overflow-hidden shadow-sm transition-all duration-300">
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="flex items-center justify-between w-full p-6 text-left"
-                >
+                  className="flex items-center justify-between w-full p-6 text-left">
                   <span className="font-bold text-[#1A1A1A] text-sm md:text-base pr-4">{faq.q}</span>
                   <span className={`p-1.5 rounded-full bg-[#1F5E4B]/5 text-[#1F5E4B] transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`}>
                     <LucideIcons.ChevronDown className="w-4 h-4" />
@@ -895,7 +890,6 @@ export default function ClinicInBusinessBayPage() {
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white filter blur-2xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#D4A574] filter blur-3xl" />
         </div>
-
         <div className="relative z-10 max-w-4xl mx-auto px-6 space-y-8">
           <span className="text-xs uppercase tracking-widest font-bold text-[#D4A574]">Get Started Today</span>
           <h2 className="text-4xl md:text-5xl font-sans font-extrabold tracking-tight">

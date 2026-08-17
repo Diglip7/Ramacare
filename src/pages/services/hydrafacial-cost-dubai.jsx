@@ -290,7 +290,7 @@ export default function HydraFacialCostDubaiPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/85 via-[#1A1A1A]/35 to-[#1A1A1A]/10" />
 
         <div className="relative z-10 flex h-full max-w-7xl mx-auto flex-col justify-end px-6 pb-12 sm:px-8">
-          
+
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.15] max-w-3xl">
             HydraFacial Cost Dubai — What You&apos;ll Actually Pay in 2026
           </h1>
@@ -335,12 +335,12 @@ export default function HydraFacialCostDubaiPage() {
         </p>
         <p className="text-[#5F5F5F] leading-relaxed mt-4">
           Understanding HydraFacial cost Dubai norms before you book also helps you spot red flags. If a clinic advertises an unusually low flat rate with no mention of what&apos;s included, that&apos;s often a sign the &quot;facial&quot; being offered isn&apos;t the medical-grade, device-based treatment you&apos;re actually looking for. A transparent starting price, backed by a proper consultation, is generally a better indicator of quality than the lowest number you can find.
-      </p>
-    </section>
+        </p>
+      </section>
 
-    {/* ============ MAIN GUIDE LAYOUT — premium structured layouts ============ */}
-    <section className="max-w-6xl mx-auto px-6 pb-20 space-y-24">
-        
+      {/* ============ MAIN GUIDE LAYOUT — premium structured layouts ============ */}
+      <section className="max-w-6xl mx-auto px-6 pb-20 space-y-24">
+
         {/* 1. What is HydraFacial — connected timeline + side panel */}
         <div id="what-is" className="scroll-mt-24">
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
@@ -354,10 +354,10 @@ export default function HydraFacialCostDubaiPage() {
                 HydraFacial is generally considered suitable for most skin types, including oily, dry, combination, and — with the right serum selection — sensitive skin.
               </p>
               <div className="rounded-2xl overflow-hidden shadow-md mt-6">
-                <img 
-                  src="/images/skin-consultation-hydrafacial-assessment.jpg" 
-                  alt="Skin consultation before HydraFacial cost Dubai assessment" 
-                  className="w-full h-[280px] object-cover" 
+                <img
+                  src="/images/skin-consultation-hydrafacial-assessment.jpg"
+                  alt="Skin consultation before HydraFacial cost Dubai assessment"
+                  className="w-full h-[280px] object-cover"
                 />
               </div>
             </div>
@@ -432,7 +432,7 @@ export default function HydraFacialCostDubaiPage() {
               Dubai clinics, including RamaCare, occasionally run seasonal promotions or bundled packages that can affect the standard HydraFacial cost Dubai patients would otherwise pay. These offers are typically time-limited and may include multiple sessions, added boosters, or discounts when combined with other treatments like skin boosters or microdermabrasion.
             </p>
           </div>
-          <button 
+          <button
             onClick={handleBookAppointment}
             className="shrink-0 bg-[#1A1A1A] text-white hover:bg-black px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors"
           >
@@ -604,7 +604,7 @@ export default function HydraFacialCostDubaiPage() {
                 Contraindications
               </h4>
               <p className="text-sm text-amber-800 leading-relaxed">
-                If you have active, inflamed acne, an active skin infection, or a known allergy to specific active ingredients, a consultation is essential before booking. 
+                If you have active, inflamed acne, an active skin infection, or a known allergy to specific active ingredients, a consultation is essential before booking.
               </p>
               <p className="text-sm text-amber-800 leading-relaxed">
                 Pregnant or breastfeeding patients, and those with active rosacea flare-ups, should also mention this during consultation so the provider can adjust the treatment plan or timing.
@@ -637,10 +637,10 @@ export default function HydraFacialCostDubaiPage() {
 
             <div className="space-y-6">
               <div className="rounded-3xl overflow-hidden shadow-md">
-                <img 
-                  src="/images/hydrafacial-device-treatment-dubai.jpg" 
-                  alt="HydraFacial machine performing treatment in Dubai clinic" 
-                  className="w-full h-[320px] object-cover" 
+                <img
+                  src="/images/hydrafacial-device-treatment-dubai.jpg"
+                  alt="HydraFacial machine performing treatment in Dubai clinic"
+                  className="w-full h-[320px] object-cover"
                 />
               </div>
               <p className="text-xs text-[#5F5F5F] italic text-center">
@@ -787,35 +787,37 @@ export default function HydraFacialCostDubaiPage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* 14. FAQ Accordion */}
-        <div id="faq" className="scroll-mt-24">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Frequently Asked Questions</h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-8 shadow-sm divide-y divide-gray-100">
-            {faqs.map((f, i) => (
-              <div key={f.q} className="py-4 first:pt-0 last:pb-0">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-start justify-between gap-4 text-left py-2"
-                >
-                  <span className="text-base font-bold text-[#1A1A1A]">{f.q}</span>
-                  <span className="shrink-0 text-[#1F5E4B] text-lg leading-none mt-1">
-                    {openFaq === i ? <LucideIcons.Minus className="w-4 h-4" /> : <LucideIcons.Plus className="w-4 h-4" />}
-                  </span>
-                </button>
-                {openFaq === i && (
-                  <p className="text-sm text-[#5F5F5F] leading-relaxed pt-2 pb-2 pr-8">{f.a}</p>
-                )}
-              </div>
-            ))}
-          </div>
+      {/* 14. FAQ Accordion */}
+      <section id="faq" className="max-w-6xl mx-auto px-6 py-20 scroll-mt-24">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <SectionLabel>FAQ</SectionLabel>
+          <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] mt-2">Frequently Asked Questions</h2>
         </div>
 
-        {/* 15. Premium Booking CTA Banner */}
+        <div className="max-w-3xl mx-auto bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-8 shadow-sm divide-y divide-gray-100">
+          {faqs.map((f, i) => (
+            <div key={f.q} className="py-4 first:pt-0 last:pb-0">
+              <button
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                className="w-full flex items-start justify-between gap-4 text-left py-2"
+              >
+                <span className="text-base font-bold text-[#1A1A1A]">{f.q}</span>
+                <span className="shrink-0 text-[#1F5E4B] text-lg leading-none mt-1">
+                  {openFaq === i ? <LucideIcons.Minus className="w-4 h-4" /> : <LucideIcons.Plus className="w-4 h-4" />}
+                </span>
+              </button>
+              {openFaq === i && (
+                <p className="text-sm text-[#5F5F5F] leading-relaxed pt-2 pb-2 pr-8">{f.a}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 15. Premium Booking CTA Banner */}
+      <div className="max-w-6xl mx-auto px-6 pb-20">
         <div className="rounded-3xl border border-[#E9E2D6] bg-[#F5F1EA] p-8 sm:p-12 text-center relative overflow-hidden shadow-md">
           <div className="absolute right-0 bottom-0 text-[#1F5E4B]/5 pointer-events-none">
             <LucideIcons.Sparkles className="w-64 h-64 translate-x-20 translate-y-20" />
@@ -841,8 +843,7 @@ export default function HydraFacialCostDubaiPage() {
             </p>
           </div>
         </div>
-
-      </section>
+      </div>
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">
@@ -861,7 +862,7 @@ export default function HydraFacialCostDubaiPage() {
         </div>
       </div>
 
-     
+
     </Layout>
   );
 }

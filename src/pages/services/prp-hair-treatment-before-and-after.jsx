@@ -654,8 +654,7 @@ export default function PrpHairBeforeAfterPage() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl border-2 border-[#1F5E4B]/20 p-8 shadow-sm"
-            >
+              className="bg-white rounded-2xl border-2 border-[#1F5E4B]/20 p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-11 h-11 rounded-full bg-[#1F5E4B]/10 flex items-center justify-center">
                   <Check className="w-6 h-6 text-[#1F5E4B]" />
@@ -676,8 +675,7 @@ export default function PrpHairBeforeAfterPage() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl border-2 border-gray-200 p-8 shadow-sm"
-            >
+              className="bg-white rounded-2xl border-2 border-gray-200 p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center">
                   <X className="w-6 h-6 text-gray-500" />

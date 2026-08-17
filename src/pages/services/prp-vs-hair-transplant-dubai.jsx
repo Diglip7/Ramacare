@@ -267,22 +267,19 @@ export default function PrpVsTransplantPage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
-        <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
-          <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
-          <span className="mx-1">/</span>
-          <span className="text-[#1F5E4B]">PRP vs Hair Transplant</span>
-        </nav>
-      </div>
-
       {/* ============ ELITE PREMIUM HERO WITH SPLIT CARDS ============ */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] py-20 lg:py-28 border-b border-gray-200">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] pt-8 md:pt-12 pb-20 lg:pb-28 border-b border-gray-200">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
           <div className="absolute w-[40rem] h-[40rem] bg-[#1F5E4B]/5 rounded-full -top-40 -left-40 blur-3xl" />
           <div className="absolute w-96 h-96 bg-[#C5A880]/10 rounded-full bottom-10 right-10 blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="mb-6 md:mb-8 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span className="mx-1">/</span>
+            <span className="text-[#1F5E4B]">PRP vs Hair Transplant</span>
+          </nav>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -293,7 +290,7 @@ export default function PrpVsTransplantPage() {
                 <Users className="w-3.5 h-3.5" />
                 Dermatology &amp; Hair Restoration
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-[#1A1A1A] leading-[1.12]">
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-[1.12]">
                 PRP vs Hair Transplant in Dubai: <span className="text-[#1F5E4B]">Which One Fits Your Journey?</span>
               </h1>
               <div className="text-sm md:text-base text-[#5F5F5F] space-y-4 leading-relaxed">
@@ -329,11 +326,11 @@ export default function PrpVsTransplantPage() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-5"
-            >
+              className="lg:col-span-5">
+                
               <div className="bg-white rounded-3xl p-6 border-2 border-[#1F5E4B]/15 shadow-[0_20px_50px_rgba(31,94,75,0.06)] space-y-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#E6EFEA] rounded-full -mr-8 -mt-8 pointer-events-none" />
-                <h3 className="font-extrabold text-[#1A1A1A] text-lg flex items-center gap-2 border-b border-gray-100 pb-3">
+                <h3 className="font-bold text-[#1A1A1A] text-lg flex items-center gap-2 border-b border-gray-100 pb-3">
                   <Shield className="w-5 h-5 text-[#1F5E4B]" />
                   Comparative Insights
                 </h3>
@@ -359,7 +356,7 @@ export default function PrpVsTransplantPage() {
         </div>
       </section>
 
-          {/* ============ STICKY NAVIGATION ============ */}
+      {/* ============ STICKY NAVIGATION ============ */}
       <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-3">
@@ -387,7 +384,7 @@ export default function PrpVsTransplantPage() {
               <Activity className="w-3.5 h-3.5" />
               Scalp Diagnostics
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">Understanding Hair Loss</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">Understanding Hair Loss</h2>
             <p className="text-[#5F5F5F] leading-relaxed text-sm md:text-base">
               Before comparing treatments, it helps to understand what&apos;s actually happening to the hair. Most hair loss falls into a few broad categories:
             </p>
@@ -397,7 +394,7 @@ export default function PrpVsTransplantPage() {
                   <div className="w-9 h-9 rounded-xl bg-[#E6EFEA] text-[#1F5E4B] flex items-center justify-center mb-3 group-hover:bg-[#1F5E4B] group-hover:text-white transition-all shadow-sm">
                     <type.icon className="w-4 h-4" />
                   </div>
-                  <h4 className="font-extrabold text-[#1A1A1A] text-sm mb-1">{type.title}</h4>
+                  <h4 className="font-bold text-[#1A1A1A] text-sm mb-1">{type.title}</h4>
                   <p className="text-xs text-[#5F5F5F] leading-relaxed">{type.desc}</p>
                 </div>
               ))}
@@ -425,7 +422,7 @@ export default function PrpVsTransplantPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-3xl border-2 border-[#1F5E4B]/15 hover:border-[#1F5E4B]/40 shadow-sm space-y-4 transition-all duration-300">
             <span className="inline-block bg-[#E6EFEA] text-[#1F5E4B] text-xs font-bold uppercase px-3 py-1 rounded-md">Non-Surgical Stimulation</span>
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A]">What Is PRP Hair Treatment?</h3>
+            <h3 className="text-2xl font-bold text-[#1A1A1A]">What Is PRP Hair Treatment?</h3>
             <p className="text-sm text-[#5F5F5F] leading-relaxed">
               PRP, or Platelet Rich Plasma therapy, is a non-surgical treatment that uses a concentrated portion of your own blood platelets to stimulate hair follicles. It&apos;s grown popular as an accessible entry point into hair restoration precisely because it involves no incisions, no grafts, and comparatively little downtime.
             </p>
@@ -436,7 +433,7 @@ export default function PrpVsTransplantPage() {
 
           <div className="bg-white p-8 rounded-3xl border-2 border-[#C5A880]/20 hover:border-[#C5A880]/50 shadow-sm space-y-4 transition-all duration-300">
             <span className="inline-block bg-[#FDF7EE] text-[#C5A880] text-xs font-bold uppercase px-3 py-1 rounded-md">Surgical Relocation</span>
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A]">What Is a Hair Transplant?</h3>
+            <h3 className="text-2xl font-bold text-[#1A1A1A]">What Is a Hair Transplant?</h3>
             <p className="text-sm text-[#5F5F5F] leading-relaxed">
               A hair transplant is a surgical procedure that physically relocates hair follicles from a donor area — usually the back or sides of the scalp, where hair tends to be more resistant to hormonal thinning — to the areas experiencing hair loss. Unlike PRP, a transplant can restore visible density in areas that are already bald or significantly thinned, because it introduces new, functioning follicles rather than stimulating existing ones.
             </p>
@@ -451,7 +448,7 @@ export default function PrpVsTransplantPage() {
       <section id="treatments" className="py-24 px-4 bg-white scroll-mt-16">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">How the Treatments Work</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">How the Treatments Work</h2>
             <p className="text-sm text-[#5F5F5F]">A step-by-step comparative look at the clinical biological processes.</p>
           </div>
 
@@ -459,7 +456,7 @@ export default function PrpVsTransplantPage() {
             {/* PRP STEPPER */}
             <div className="bg-[#E6EFEA]/30 p-8 rounded-3xl border border-[#1F5E4B]/15 space-y-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#1F5E4B]/5 rounded-full pointer-events-none -mr-10 -mt-10" />
-              <h3 className="text-2xl font-extrabold text-[#1F5E4B] flex items-center gap-2.5 border-b border-[#1F5E4B]/15 pb-4">
+              <h3 className="text-2xl font-bold text-[#1F5E4B] flex items-center gap-2.5 border-b border-[#1F5E4B]/15 pb-4">
                 <Syringe className="w-6 h-6" />
                 How PRP Works
               </h3>
@@ -486,7 +483,7 @@ export default function PrpVsTransplantPage() {
             {/* TRANSPLANT STEPPER */}
             <div className="bg-[#FDF7EE]/40 p-8 rounded-3xl border border-[#C5A880]/30 space-y-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5A880]/5 rounded-full pointer-events-none -mr-10 -mt-10" />
-              <h3 className="text-2xl font-extrabold text-[#C5A880] flex items-center gap-2.5 border-b border-[#C5A880]/20 pb-4">
+              <h3 className="text-2xl font-bold text-[#C5A880] flex items-center gap-2.5 border-b border-[#C5A880]/20 pb-4">
                 <Settings className="w-6 h-6" />
                 How Hair Transplants Work
               </h3>
@@ -517,7 +514,7 @@ export default function PrpVsTransplantPage() {
       <section id="differences" className="py-24 px-4 bg-[#F9F7F2] scroll-mt-16 border-t border-gray-200">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">PRP vs Hair Transplant: Key Differences</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">PRP vs Hair Transplant: Key Differences</h2>
             <p className="text-sm text-[#5F5F5F]">
               PRP is a non-surgical treatment that stimulates existing follicles, while a hair transplant surgically relocates active follicles into thinning or bald areas. PRP suits early, diffuse thinning; transplants suit more advanced or localized hair loss.
             </p>
@@ -527,13 +524,13 @@ export default function PrpVsTransplantPage() {
             {/* PRP Summary Card */}
             <div className="bg-white p-8 rounded-3xl border-2 border-[#1F5E4B]/15 shadow-sm space-y-5 hover:shadow-md transition-shadow">
               <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                <h4 className="font-extrabold text-lg text-[#1F5E4B]">PRP Hair Treatment</h4>
+                <h4 className="font-bold text-lg text-[#1F5E4B]">PRP Hair Treatment</h4>
                 <span className="bg-[#E6EFEA] text-[#1F5E4B] text-[10px] font-bold px-2 py-0.5 rounded-full">Stimulation</span>
               </div>
               <div className="divide-y divide-gray-100">
                 {keyDifferences.map((item, i) => (
                   <div key={i} className="flex justify-between items-start gap-4 text-xs md:text-sm py-3">
-                    <span className="text-[#1A1A1A] font-extrabold shrink-0">{item.label}</span>
+                    <span className="text-[#1A1A1A] font-bold shrink-0">{item.label}</span>
                     <span className="text-[#5F5F5F] text-right">{item.prp}</span>
                   </div>
                 ))}
@@ -543,13 +540,13 @@ export default function PrpVsTransplantPage() {
             {/* Hair Transplant Summary Card */}
             <div className="bg-white p-8 rounded-3xl border-2 border-[#C5A880]/20 shadow-sm space-y-5 hover:shadow-md transition-shadow">
               <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                <h4 className="font-extrabold text-lg text-[#C5A880]">Hair Transplant</h4>
+                <h4 className="font-bold text-lg text-[#C5A880]">Hair Transplant</h4>
                 <span className="bg-[#FDF7EE] text-[#C5A880] text-[10px] font-bold px-2 py-0.5 rounded-full">Surgery</span>
               </div>
               <div className="divide-y divide-gray-100">
                 {keyDifferences.map((item, i) => (
                   <div key={i} className="flex justify-between items-start gap-4 text-xs md:text-sm py-3">
-                    <span className="text-[#1A1A1A] font-extrabold shrink-0">{item.label}</span>
+                    <span className="text-[#1A1A1A] font-bold shrink-0">{item.label}</span>
                     <span className="text-[#5F5F5F] text-right">{item.transplant}</span>
                   </div>
                 ))}
@@ -563,7 +560,7 @@ export default function PrpVsTransplantPage() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="bg-[#E6EFEA]/20 p-8 rounded-3xl border border-[#1F5E4B]/15 space-y-4">
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A]">Which Treatment Is Better for Early Hair Loss?</h3>
+            <h3 className="text-2xl font-bold text-[#1A1A1A]">Which Treatment Is Better for Early Hair Loss?</h3>
             <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed">
               For early-stage thinning — where hair is becoming finer or less dense but hasn&apos;t disappeared entirely — PRP is often the first option a specialist will discuss. The logic is straightforward: PRP works by supporting follicles that are still active, so it tends to be most effective before those follicles have gone dormant.
             </p>
@@ -573,7 +570,7 @@ export default function PrpVsTransplantPage() {
           </div>
 
           <div className="bg-[#FDF7EE]/30 p-8 rounded-3xl border border-[#C5A880]/30 space-y-4">
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A]">Which Option Is Better for Advanced Hair Loss?</h3>
+            <h3 className="text-2xl font-bold text-[#1A1A1A]">Which Option Is Better for Advanced Hair Loss?</h3>
             <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed">
               Once an area has been bald for an extended period, the follicles there are typically no longer active, and no amount of biological stimulation can restart something that isn&apos;t present. This is where a hair transplant becomes the more realistic option, since it introduces new follicles rather than relying on existing ones.
             </p>
@@ -590,7 +587,7 @@ export default function PrpVsTransplantPage() {
           <div className="w-12 h-12 rounded-full bg-[#1F5E4B]/10 flex items-center justify-center mx-auto text-[#1F5E4B]">
             <Sparkles className="w-6 h-6" />
           </div>
-          <h3 className="text-2xl md:text-3xl font-extrabold text-[#1A1A1A]">PRP vs Hair Transplant Results</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">PRP vs Hair Transplant Results</h3>
           <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed">
             PRP typically produces subtler improvements in hair density and thickness, visible gradually over months. Hair transplant results are generally more dramatic and visible, since new follicles are physically placed in previously bald areas — but they also take months to mature into their final appearance.
           </p>
@@ -605,7 +602,7 @@ export default function PrpVsTransplantPage() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Recovery Comparison Table */}
           <div className="space-y-6 bg-[#FDFCF7] p-8 rounded-3xl border-2 border-gray-200/80">
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A] flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-[#1A1A1A] flex items-center gap-2">
               <Clock className="w-5.5 h-5.5 text-[#1F5E4B]" />
               Recovery Time Comparison
             </h3>
@@ -621,7 +618,7 @@ export default function PrpVsTransplantPage() {
                 <tbody className="divide-y divide-gray-150 text-[#5F5F5F] text-xs md:text-sm">
                   {recoveryComparison.map((row, i) => (
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
-                      <td className="px-4 py-3 font-extrabold text-[#1A1A1A]">{row.label}</td>
+                      <td className="px-4 py-3 font-bold text-[#1A1A1A]">{row.label}</td>
                       <td className="px-4 py-3">{row.prp}</td>
                       <td className="px-4 py-3">{row.transplant}</td>
                     </tr>
@@ -636,13 +633,13 @@ export default function PrpVsTransplantPage() {
 
           {/* Pain & Comfort Details */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-extrabold text-[#1A1A1A] flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-[#1A1A1A] flex items-center gap-2">
               <Shield className="w-5.5 h-5.5 text-[#1F5E4B]" />
               Procedure &amp; Comfort Profile
             </h3>
             <div className="space-y-4">
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm hover:border-[#1F5E4B]/20 transition-all">
-                <h4 className="font-extrabold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
+                <h4 className="font-bold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
                   <Settings className="w-4 h-4 text-[#1F5E4B]" /> Complexity of Procedure
                 </h4>
                 <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
@@ -651,7 +648,7 @@ export default function PrpVsTransplantPage() {
               </div>
 
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm hover:border-[#1F5E4B]/20 transition-all">
-                <h4 className="font-extrabold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
+                <h4 className="font-bold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
                   <HeartPulse className="w-4 h-4 text-[#1F5E4B]" /> Pain and Comfort
                 </h4>
                 <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
@@ -660,7 +657,7 @@ export default function PrpVsTransplantPage() {
               </div>
 
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm hover:border-[#1F5E4B]/20 transition-all">
-                <h4 className="font-extrabold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
+                <h4 className="font-bold text-[#1A1A1A] text-sm mb-1.5 flex items-center gap-2">
                   <Briefcase className="w-4 h-4 text-[#1F5E4B]" /> Downtime and Schedule
                 </h4>
                 <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
@@ -676,21 +673,21 @@ export default function PrpVsTransplantPage() {
       <section className="py-24 px-4 bg-[#F9F7F2] border-y border-gray-200">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-3xl border-t-4 border-[#1F5E4B] border-x border-b border-gray-150 shadow-sm hover:shadow-md transition-shadow space-y-3">
-            <h4 className="font-extrabold text-base text-[#1A1A1A]">Number of Sessions Required</h4>
+            <h4 className="font-bold text-base text-[#1A1A1A]">Number of Sessions Required</h4>
             <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
               PRP is designed around a series of sessions, typically spaced several weeks apart initially, followed by periodic maintenance visits to sustain results. A hair transplant is usually a single procedure, though very large or advanced cases are sometimes staged across more than one session. This is a meaningful difference in commitment: PRP asks for ongoing visits over time, while a transplant front-loads the commitment into one (or occasionally two) larger procedures.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-3xl border-t-4 border-[#C5A880] border-x border-b border-gray-150 shadow-sm hover:shadow-md transition-shadow space-y-3">
-            <h4 className="font-extrabold text-base text-[#1A1A1A]">Longevity of Results</h4>
+            <h4 className="font-bold text-base text-[#1A1A1A]">Longevity of Results</h4>
             <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
               PRP&apos;s effects are generally considered to require maintenance — without periodic touch-up sessions, the stimulating effect on existing follicles tends to fade over time. Hair transplant results, by contrast, are generally considered long-lasting, since the relocated follicles typically retain their original resistance to the hormonal factors that caused hair loss in their original location. That said, &quot;long-lasting&quot; doesn&apos;t mean &quot;immune to future change&quot; — surrounding non-transplanted hair can continue to thin naturally, which is one reason some patients pursue PRP alongside a transplant to support the hair around the transplanted area.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-3xl border-t-4 border-[#1F5E4B] border-x border-b border-gray-150 shadow-sm hover:shadow-md transition-shadow space-y-3">
-            <h4 className="font-extrabold text-base text-[#1A1A1A]">Can PRP Be Combined?</h4>
+            <h4 className="font-bold text-base text-[#1A1A1A]">Can PRP Be Combined?</h4>
             <p className="text-xs md:text-sm text-[#5F5F5F] leading-relaxed">
               Yes — this is actually one of the more common approaches in modern hair restoration, rather than an either/or decision. PRP is sometimes used before a transplant to assess how existing follicles respond, and more frequently used after a transplant to support the healing process and encourage the transplanted grafts into their new growth cycle. It may also be used on surrounding non-transplanted areas to help manage ongoing thinning that the transplant itself doesn&apos;t address.
             </p>
@@ -701,7 +698,7 @@ export default function PrpVsTransplantPage() {
       {/* ============ RISKS TABLE ============ */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto space-y-6">
-          <h3 className="text-2xl font-extrabold text-[#1A1A1A] text-center">Risks &amp; Side Effects Matrix</h3>
+          <h3 className="text-2xl font-bold text-[#1A1A1A] text-center">Risks &amp; Side Effects Matrix</h3>
           <div className="overflow-x-auto rounded-2xl border border-gray-250 shadow-sm bg-white">
             <table className="w-full min-w-[550px]">
               <thead>
@@ -714,7 +711,7 @@ export default function PrpVsTransplantPage() {
               <tbody className="divide-y divide-gray-200 text-[#5F5F5F] text-xs md:text-sm">
                 {risksComparison.map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
-                    <td className="px-6 py-4 font-extrabold text-[#1A1A1A]">{row.label}</td>
+                    <td className="px-6 py-4 font-bold text-[#1A1A1A]">{row.label}</td>
                     <td className="px-6 py-4">{row.prp}</td>
                     <td className="px-6 py-4">{row.transplant}</td>
                   </tr>
@@ -734,7 +731,7 @@ export default function PrpVsTransplantPage() {
           <div className="w-12 h-12 rounded-full bg-[#1F5E4B]/10 flex items-center justify-center mx-auto text-[#1F5E4B]">
             <CheckCircle className="w-6 h-6" />
           </div>
-          <h3 className="text-2xl font-extrabold text-[#1A1A1A]">Success Rates</h3>
+          <h3 className="text-2xl font-bold text-[#1A1A1A]">Success Rates</h3>
           <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed max-w-3xl mx-auto">
             Success for PRP is typically measured in terms of reduced shedding and modest improvements in hair thickness and density — outcomes that are real but incremental, and that vary based on how much active follicle function remains. Success for hair transplants is generally measured by graft survival rate and the naturalness of the final hairline, which depend heavily on surgical technique and the patient&apos;s own healing response. Neither treatment can promise a specific numerical outcome for an individual patient, and any provider who guarantees an exact result is a red flag worth taking seriously.
           </p>
@@ -745,7 +742,7 @@ export default function PrpVsTransplantPage() {
       <section id="candidacy" className="py-24 px-4 bg-white scroll-mt-16">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">Candidacy Guidelines</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">Candidacy Guidelines</h2>
             <p className="text-sm text-[#5F5F5F]">Identify which option aligns with your goals and hair condition.</p>
           </div>
 
@@ -756,7 +753,7 @@ export default function PrpVsTransplantPage() {
                 <div className="w-10 h-10 rounded-full bg-[#1F5E4B] text-white flex items-center justify-center font-bold shadow">
                   <UserCheck className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-extrabold text-[#1F5E4B]">Ideal Candidate for PRP</h3>
+                <h3 className="text-xl font-bold text-[#1F5E4B]">Ideal Candidate for PRP</h3>
               </div>
               <ul className="space-y-4">
                 {prpIdealCandidate.map((item, i) => (
@@ -774,7 +771,7 @@ export default function PrpVsTransplantPage() {
                 <div className="w-10 h-10 rounded-full bg-[#C5A880] text-white flex items-center justify-center font-bold shadow">
                   <Users className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-extrabold text-[#C5A880]">Ideal Candidate for Transplant</h3>
+                <h3 className="text-xl font-bold text-[#C5A880]">Ideal Candidate for Transplant</h3>
               </div>
               <ul className="space-y-4">
                 {transplantIdealCandidate.map((item, i) => (
@@ -793,7 +790,7 @@ export default function PrpVsTransplantPage() {
       <section className="py-24 px-4 bg-[#F9F7F2] border-t border-gray-200">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <h3 className="text-3xl font-extrabold text-[#1A1A1A]">Lifestyle Factors That Influence Results</h3>
+            <h3 className="text-3xl font-bold text-[#1A1A1A]">Lifestyle Factors That Influence Results</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {lifestyleFactors.map((item, i) => (
                 <div key={i} className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex items-start gap-3">
@@ -801,7 +798,7 @@ export default function PrpVsTransplantPage() {
                     <item.icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h5 className="font-extrabold text-[#1A1A1A] text-sm mb-0.5">{item.title}</h5>
+                    <h5 className="font-bold text-[#1A1A1A] text-sm mb-0.5">{item.title}</h5>
                     <p className="text-[11px] text-[#5F5F5F] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -810,7 +807,7 @@ export default function PrpVsTransplantPage() {
           </div>
 
           <div className="lg:col-span-5 bg-white p-8 rounded-3xl border-2 border-gray-200 shadow-xl space-y-5">
-            <h4 className="font-extrabold text-lg text-[#1A1A1A] flex items-center gap-2 border-b border-gray-100 pb-3">
+            <h4 className="font-bold text-lg text-[#1A1A1A] flex items-center gap-2 border-b border-gray-100 pb-3">
               <Check className="w-5 h-5 text-[#1F5E4B]" />
               Questions to Ask
             </h4>
@@ -829,14 +826,14 @@ export default function PrpVsTransplantPage() {
       {/* ============ COST COMPARISON (Premium Metric Box) ============ */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h3 className="text-3xl font-extrabold text-[#1A1A1A] text-center">Cost Comparison in Dubai</h3>
+          <h3 className="text-3xl font-bold text-[#1A1A1A] text-center">Cost Comparison in Dubai</h3>
           <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed text-center">
             PRP is generally less expensive per session than a hair transplant, but requires ongoing sessions over time, while a transplant involves a larger upfront cost for what&apos;s typically a one-time procedure. Actual pricing depends on your specific case.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 pt-4">
             <div className="border-2 border-[#1F5E4B]/15 p-6 rounded-2xl bg-[#E6EFEA]/15 shadow-sm space-y-3">
-              <h4 className="font-extrabold text-sm text-[#1F5E4B] mb-2 uppercase tracking-wider flex items-center gap-2">
+              <h4 className="font-bold text-sm text-[#1F5E4B] mb-2 uppercase tracking-wider flex items-center gap-2">
                 <DollarSign className="w-4 h-4" /> PRP Cost Influencers
               </h4>
               <ul className="list-disc pl-5 space-y-2 text-xs text-[#5F5F5F]">
@@ -847,7 +844,7 @@ export default function PrpVsTransplantPage() {
             </div>
 
             <div className="border-2 border-[#C5A880]/20 p-6 rounded-2xl bg-[#FDF7EE]/20 shadow-sm space-y-3">
-              <h4 className="font-extrabold text-sm text-[#C5A880] mb-2 uppercase tracking-wider flex items-center gap-2">
+              <h4 className="font-bold text-sm text-[#C5A880] mb-2 uppercase tracking-wider flex items-center gap-2">
                 <DollarSign className="w-4 h-4" /> Transplant Cost Influencers
               </h4>
               <ul className="list-disc pl-5 space-y-2 text-xs text-[#5F5F5F]">
@@ -867,7 +864,7 @@ export default function PrpVsTransplantPage() {
       {/* ============ SPECIALIST ASSESSMENT DETAILS ============ */}
       <section className="py-20 px-4 bg-[#F9F7F2] border-t border-gray-150">
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <h3 className="text-2xl font-extrabold text-[#1A1A1A]">How a Specialist Determines the Right Option</h3>
+          <h3 className="text-2xl font-bold text-[#1A1A1A]">How a Specialist Determines the Right Option</h3>
           <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed max-w-3xl mx-auto">
             A qualified specialist typically starts with a scalp examination to assess the pattern, stage, and likely cause of hair loss, sometimes supported by diagnostic tools that evaluate follicle density and activity. From there, the discussion usually covers your goals, your tolerance for downtime and ongoing sessions, your donor hair quality (if a transplant is being considered), and any underlying health factors that could affect either treatment.
           </p>
@@ -882,7 +879,7 @@ export default function PrpVsTransplantPage() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <h3 className="text-3xl font-extrabold text-[#1A1A1A]">Why Patients Choose RamaCare Polyclinic</h3>
+            <h3 className="text-3xl font-bold text-[#1A1A1A]">Why Patients Choose RamaCare Polyclinic</h3>
             <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed">
               Deciding between PRP and a hair transplant isn&apos;t a decision to make from a search engine alone — it deserves a real conversation with someone who can examine your scalp and talk through your specific situation. At RamaCare Polyclinic in Dubai, patients choose us for:
             </p>
@@ -894,7 +891,7 @@ export default function PrpVsTransplantPage() {
                 { title: 'Modern Facilities', desc: 'Located conveniently in Jumeirah 1, easily accessible for patients across Dubai.' }
               ].map((item, i) => (
                 <div key={i} className="border border-gray-150 p-5 rounded-2xl shadow-sm bg-gray-50/50 hover:border-[#1F5E4B]/20 transition-all">
-                  <h4 className="font-extrabold text-sm text-[#1A1A1A] mb-1 flex items-center gap-1.5">
+                  <h4 className="font-bold text-sm text-[#1A1A1A] mb-1 flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-[#1F5E4B]" /> {item.title}
                   </h4>
                   <p className="text-xs text-[#5F5F5F] leading-relaxed">{item.desc}</p>
@@ -926,7 +923,7 @@ export default function PrpVsTransplantPage() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B]">
               <HelpCircle className="w-6 h-6" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -942,7 +939,7 @@ export default function PrpVsTransplantPage() {
                   onClick={() => toggleFaq(index)}
                   className="w-full px-7 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                 >
-                  <span className="font-extrabold text-[#1A1A1A] text-sm md:text-base">{faq.question}</span>
+                  <span className="font-bold text-[#1A1A1A] text-sm md:text-base">{faq.question}</span>
                   <ChevronDown className={`w-5 h-5 text-[#1F5E4B] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
@@ -966,7 +963,7 @@ export default function PrpVsTransplantPage() {
       {/* ============ FINAL CTA ============ */}
       <section className="py-24 px-4 bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]" id="book-now">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">Ready to Find Out Which Option Fits You?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">Ready to Find Out Which Option Fits You?</h2>
           <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             The only way to know for certain whether PRP, a hair transplant, or a combination of both is right for you is a hands-on evaluation with a specialist who can examine your scalp and discuss your goals directly.
           </p>
@@ -995,7 +992,7 @@ export default function PrpVsTransplantPage() {
       <section className="py-16 px-4 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-8 text-left space-y-4">
-            <h2 className="text-2xl font-extrabold text-[#1A1A1A]">Conclusion</h2>
+            <h2 className="text-2xl font-bold text-[#1A1A1A]">Conclusion</h2>
             <p className="text-sm md:text-base text-[#5F5F5F] leading-relaxed">
               There&apos;s no single right answer to the PRP vs Hair Transplant in Dubai question — the right treatment depends on your stage of hair loss, how much active follicle function remains, your tolerance for downtime and ongoing sessions, and your personal goals. PRP offers a lower-commitment, non-surgical way to support existing hair, while a hair transplant offers a more permanent solution for areas that have already gone bald. For many patients, the most honest answer is that the two aren&apos;t strictly competitors — they can work together as part of a broader hair restoration plan. Whichever direction feels right on paper, a personal consultation is the most reliable way to turn that general understanding into a specific, realistic plan for your own hair.
             </p>
@@ -1013,7 +1010,7 @@ export default function PrpVsTransplantPage() {
       {/* ============ RELATED GUIDES ============ */}
       <section className="py-16 px-4 bg-[#FDFCF7] border-t border-gray-200">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-extrabold text-[#1A1A1A] mb-8">Related Hair Treatment Guides</h3>
+          <h3 className="text-2xl font-bold text-[#1A1A1A] mb-8">Related Hair Treatment Guides</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {relatedGuides.map((g, i) => (
               <Link
@@ -1022,7 +1019,7 @@ export default function PrpVsTransplantPage() {
                 className="group bg-white rounded-2xl border border-gray-200 p-6 hover:border-[#1F5E4B]/30 hover:shadow-lg transition-all flex flex-col justify-between"
               >
                 <div>
-                  <h4 className="font-extrabold text-sm text-[#1A1A1A] mb-2 group-hover:text-[#1F5E4B] transition-colors">{g.title}</h4>
+                  <h4 className="font-bold text-sm text-[#1A1A1A] mb-2 group-hover:text-[#1F5E4B] transition-colors">{g.title}</h4>
                   <p className="text-[11px] text-[#5F5F5F] leading-relaxed">{g.desc}</p>
                 </div>
                 <span className="inline-flex items-center gap-1 text-[#1F5E4B] font-bold text-xs mt-4">

@@ -20,14 +20,14 @@ const reviewsData = [
     avatar: "E",
     role: "Verified Patient"
   },
-  {
+ {
     id: 3,
-    name: "Maria Beatrice",
+    name: "Kranthi Kiran",
     rating: 5,
-    date: "2 days ago",
-    text: "I have booked and done teeth whitening with Dr. Aparna. She explained all the steps before starting with the procedure. I've already recommended her to my friends. Results are beyond my expectations, it doesn't look fake white.",
-    avatar: "M",
-    role: "Local Guide"
+    date: "1 day ago",
+    text: "Really happy with my experience here with Dr.Aprana. She was not only highly professional and knowledgeable, but also took a very personal approach. I never felt rushed, and everything was explained patiently and clearly\n\nWhat stood out most was the genuine care and attention given throughout the treatment. It felt like they were truly focused on my comfort and well-being, rather than just completing the procedure.\n\nExcellent service, friendly approach, and great professionalism. Highly recommended!",
+    avatar: "K",
+    role: "Verified Patient"
   }
 ];
 

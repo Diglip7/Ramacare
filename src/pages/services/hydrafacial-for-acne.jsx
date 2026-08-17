@@ -257,7 +257,7 @@ export default function HydrafacialForAcnePage() {
       </Head>
 
       {/* ============ BOLD EDITORIAL HERO ============ */}
-      <header className="relative min-h-[95vh] flex flex-col justify-center bg-[#FDFCF7] overflow-hidden pt-28 pb-16 px-6 border-b border-[#E6E2D8]">
+      <header className="relative bg-[#FDFCF7] overflow-hidden pt-8 md:pt-12 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-[#E6E2D8]">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#1F5E4B] filter blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[#D4A574] filter blur-3xl" />
@@ -266,7 +266,7 @@ export default function HydrafacialForAcnePage() {
         {/* Asymmetrical Skew Grid Background */}
         <div className="absolute top-0 right-0 w-5/12 h-full bg-[#1F5E4B]/5 transform skew-x-12 origin-top-right hidden lg:block" />
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full mb-8">
+        <div className="relative z-10 max-w-7xl mx-auto w-full mb-4 md:mb-6">
           <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
             <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
             <span className="mx-1">/</span>
@@ -1012,7 +1012,6 @@ export default function HydrafacialForAcnePage() {
               We don&apos;t present Hydrafacial — or any single treatment — as a guaranteed fix for acne. Our focus is on understanding your skin first, and recommending an approach that&apos;s realistic and appropriate for you.
             </p>
           </section>
-
         </div>
       </div>
 

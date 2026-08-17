@@ -187,7 +187,7 @@ const FAQS = [
 
 function Eyebrow({ children }) {
   return (
-    <span className="inline-flex items-center px-4 py-2 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+    <span className="inline-flex items-center px-4 py-2 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold uppercase tracking-widest rounded-full mb-4 sm:mb-5">
       {children}
     </span>
   );
@@ -285,20 +285,20 @@ export default function HairPrpCostPage() {
       <div className="bg-white antialiased">
 
         {/* ============================ HERO ============================ */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#1F5E4B]/10 via-[#F0F7F4] to-white py-20 md:py-28">
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#1F5E4B]/10 via-[#F0F7F4] to-white py-10 sm:py-12 md:py-14 lg:py-16">
           <div className="absolute inset-0 z-0">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4A574]/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl" />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <nav aria-label="Breadcrumb" className="mb-8 flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-gray-600">
+            <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6 flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-gray-600">
               <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
               <span aria-hidden="true">/</span>
               <a href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Hair PRP Cost Dubai</span>
             </nav>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -801,11 +801,6 @@ export default function HairPrpCostPage() {
         {/* ============================ FINAL CTA / BOOK CONSULTATION ============================ */}
       <BookConsultation />
 
-      <p className="mx-auto mt-8 max-w-3xl text-center text-xs italic text-gray-600">
-        Medical Disclaimer: This content is for educational purposes only and should not
-        replace professional medical advice. Individual treatment plans, results, and costs
-        are determined after a clinical assessment by a qualified healthcare professional.
-      </p>
 
       </div>
     </Layout>

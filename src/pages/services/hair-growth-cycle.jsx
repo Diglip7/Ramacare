@@ -234,24 +234,21 @@ export default function HairGrowthCyclePage() {
           }}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
-        <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
-          <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
-          <span className="mx-1">/</span>
-          <Link href="/services/hair-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors">Hair Treatments</Link>
-          <span className="mx-1">/</span>
-          <span className="text-[#1F5E4B]">Hair Growth Cycle</span>
-        </nav>
-      </div>
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] py-20 lg:py-28 border-b border-gray-200">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FDFCF7] via-[#F4F1EA] to-[#E6EFEA] pt-8 md:pt-12 pb-20 lg:pb-24 border-b border-gray-200">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
           <div className="absolute w-[40rem] h-[40rem] bg-[#1F5E4B]/5 rounded-full -top-40 -left-40 blur-3xl" />
           <div className="absolute w-96 h-96 bg-[#C5A880]/10 rounded-full bottom-10 right-10 blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Breadcrumb" className="mb-6 md:mb-8 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span className="mx-1">/</span>
+            <Link href="/services/hair-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors">Hair Treatments</Link>
+            <span className="mx-1">/</span>
+            <span className="text-[#1F5E4B]">Hair Growth Cycle</span>
+          </nav>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}

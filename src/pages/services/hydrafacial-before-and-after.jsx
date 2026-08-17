@@ -332,14 +332,14 @@ export default function HydrafacialBeforeAndAfterPage() {
       </Head>
 
       {/* Hero Section: Editorial visual design, oversized typography and asymmetric layout */}
-      <header className="relative min-h-[90vh] flex flex-col justify-center bg-[#F5F1EA] overflow-hidden pt-24 pb-12 px-6">
+      <header className="relative bg-[#F5F1EA] overflow-hidden pt-8 md:pt-12 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 z-0 opacity-15">
           <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-[#1F5E4B] filter blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#D4A574] filter blur-3xl"></div>
         </div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#1F5E4B]/5 transform skew-x-12 origin-top-right"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full mb-8">
+        <div className="relative z-10 max-w-7xl mx-auto w-full mb-4 md:mb-6">
           <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
             <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
             <span className="mx-1">/</span>
@@ -392,9 +392,9 @@ export default function HydrafacialBeforeAndAfterPage() {
           <div className="relative w-full">
             <div className="relative border border-[#E9E2D6] rounded-3xl p-6 bg-white shadow-xl w-full max-w-xl lg:max-w-none mx-auto transform hover:scale-[1.01] transition-all duration-500">
               <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#D4A574] text-white flex items-center justify-center font-sans text-xl rounded-full shadow-lg">01</div>
-              <img 
-                src="/images/skin-consultation-hydrafacial-assessment-1.jpg" 
-                alt="Skin consultation for Hydrafacial assessment at RamaCare Polyclinic Dubai" 
+              <img
+                src="/images/skin-consultation-hydrafacial-assessment-1.jpg"
+                alt="Skin consultation for Hydrafacial assessment at RamaCare Polyclinic Dubai"
                 className="w-full h-[450px] object-cover rounded-2xl mb-4"
               />
               <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center">
@@ -484,9 +484,9 @@ export default function HydrafacialBeforeAndAfterPage() {
             </div>
             <div className="relative w-full">
               <div className="border border-[#E9E2D6] rounded-3xl p-4 bg-white shadow-lg flex flex-col justify-center h-full min-h-[420px]">
-                <img 
-                  src="/images/hydrafacial-device-extraction.jpg" 
-                  alt="Close-up of Hydrafacial vacuum extraction tip on skin" 
+                <img
+                  src="/images/hydrafacial-device-extraction.jpg"
+                  alt="Close-up of Hydrafacial vacuum extraction tip on skin"
                   className="w-full flex-grow object-cover rounded-2xl min-h-[350px]"
                 />
                 <p className="text-xs text-[#5F5F5F] leading-relaxed italic text-center mt-3 shrink-0">
@@ -673,8 +673,8 @@ export default function HydrafacialBeforeAndAfterPage() {
                       key={idx}
                       onClick={() => setActiveTab(idx)}
                       className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-t-lg transition-colors ${activeTab === idx
-                          ? 'bg-[#1F5E4B] text-white'
-                          : 'text-[#5F5F5F] hover:bg-[#F5F1EA]'
+                        ? 'bg-[#1F5E4B] text-white'
+                        : 'text-[#5F5F5F] hover:bg-[#F5F1EA]'
                         }`}
                     >
                       {item.stage}
@@ -964,10 +964,9 @@ export default function HydrafacialBeforeAndAfterPage() {
             </div>
 
             <p className="text-[#5F5F5F] leading-relaxed font-light border-t border-[#E9E2D6] pt-4 text-sm font-sans">
-              We do not use exaggerated marketing claims, invented success rates, or guaranteed outcomes — because informed patients make better decisions about their skin. Learn more about our approach to skin assessments on our <Link href="/services/best-skin-specialist-dubai/" className="text-[#1F5E4B] underline font-semibold">Best Skin Specialist in Dubai</Link> page.
+              We do not use exaggerated marketing claims, invented success rates, or guaranteed outcomes — because informed patients make better decisions about their skin. .
             </p>
           </article>
-
         </div>
       </section>
 
@@ -1032,14 +1031,7 @@ export default function HydrafacialBeforeAndAfterPage() {
             </div>
           </article>
 
-          {/* Disclaimer block */}
-          <div className="bg-[#F5F1EA] rounded-2xl p-6 border border-[#E9E2D6] text-xs text-[#5F5F5F] leading-relaxed font-light font-sans">
-            <p className="font-bold text-[#1A1A1A] mb-1">Disclaimer</p>
-            <p>
-              Hydrafacial results vary between individuals based on skin type, concern, and consistency of treatment. Before-and-after images are illustrative and not guarantees of outcome. This content is educational and does not replace an in-person skin consultation with a qualified professional.
-            </p>
-          </div>
-
+       
           {/* Book a Consultation Callout Block */}
           <article id="book-now" className="rounded-3xl border border-[#E9E2D6] bg-[#F5F1EA] p-8 sm:p-12 text-center relative overflow-hidden shadow-md">
             <div className="absolute right-0 bottom-0 text-[#1F5E4B]/5 pointer-events-none">
@@ -1072,7 +1064,7 @@ export default function HydrafacialBeforeAndAfterPage() {
                 { title: 'Hydrafacial Treatment in Dubai', desc: 'An overview of the Hydrafacial treatment process and what it involves.', href: '/services/hydrafacial-dubai/' },
                 { title: 'Facial Treatment in Dubai', desc: 'Explore the range of facial treatment options available.', href: '/services/facial-dubai/' },
                 { title: 'Skin Rejuvenation Dubai', desc: 'Learn about broader approaches to improving skin tone and texture.', href: '/services/laser-rejuvenation-dubai/' },
-                { title: 'Best Skin Specialist in Dubai', desc: 'Guidance on finding a qualified professional for your skin concerns.', href: '/services/best-skin-specialist-dubai/' }
+                { title: 'Best Skin Specialist in Dubai', desc: 'Guidance on finding a qualified professional for your skin concerns.', href: '/services/skin-treatment-dubai/' }
               ].map((g, idx) => (
                 <Link
                   key={idx}
@@ -1088,8 +1080,6 @@ export default function HydrafacialBeforeAndAfterPage() {
               ))}
             </div>
           </article>
-
-
 
         </div>
       </section>

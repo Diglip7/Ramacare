@@ -449,7 +449,7 @@ export default function BestHairSpecialistPage() {
                   <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
                 </Link>
                 <a
-                  href="https://wa.me/971566597878"
+                  href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20a%20hair%20specialist%20in%20Dubai."
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 text-[#1A1A1A] px-8 py-4 rounded-xl font-bold text-sm hover:bg-gray-50 transition-all shadow-sm"
@@ -467,7 +467,7 @@ export default function BestHairSpecialistPage() {
               className="lg:col-span-5 relative"
             >
               <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-150 space-y-6 relative z-10">
-                <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-inner relative">
+                <div className="rounded-2xl overflow-hidden h-[300px] sm:h-[400px] lg:h-[480px] shadow-inner relative">
                   {/* IMAGE 1 (HERO) */}
                   <img
                     src="/images/Patient consultation for hair loss.jpg"
@@ -561,11 +561,10 @@ export default function BestHairSpecialistPage() {
                   <button
                     key={key}
                     onClick={() => setActiveTab(key)}
-                    className={`w-full text-left px-5 py-4 rounded-xl border transition-all flex justify-between items-center ${
-                      activeTab === key
-                        ? 'bg-white border-[#1F5E4B] shadow-sm'
-                        : 'bg-transparent border-transparent hover:bg-white/40'
-                    }`}
+                    className={`w-full text-left px-5 py-4 rounded-xl border transition-all flex justify-between items-center ${activeTab === key
+                      ? 'bg-white border-[#1F5E4B] shadow-sm'
+                      : 'bg-transparent border-transparent hover:bg-white/40'
+                      }`}
                   >
                     <span className="text-sm font-bold text-[#1A1A1A]">
                       {specialistTypes[key].title}
@@ -1062,21 +1061,19 @@ export default function BestHairSpecialistPage() {
             <div className="flex justify-center gap-3">
               <button
                 onClick={() => setActiveGender('men')}
-                className={`px-6 py-2.5 rounded-full font-bold text-sm border transition-all ${
-                  activeGender === 'men'
-                    ? 'bg-[#1F5E4B] text-white border-[#1F5E4B]'
-                    : 'bg-transparent text-[#1A1A1A] border-gray-300 hover:bg-gray-50'
-                }`}
+                className={`px-6 py-2.5 rounded-full font-bold text-sm border transition-all ${activeGender === 'men'
+                  ? 'bg-[#1F5E4B] text-white border-[#1F5E4B]'
+                  : 'bg-transparent text-[#1A1A1A] border-gray-300 hover:bg-gray-50'
+                  }`}
               >
                 Hair Loss in Men
               </button>
               <button
                 onClick={() => setActiveGender('women')}
-                className={`px-6 py-2.5 rounded-full font-bold text-sm border transition-all ${
-                  activeGender === 'women'
-                    ? 'bg-[#C5A880] text-white border-[#C5A880]'
-                    : 'bg-transparent text-[#1A1A1A] border-gray-300 hover:bg-gray-50'
-                }`}
+                className={`px-6 py-2.5 rounded-full font-bold text-sm border transition-all ${activeGender === 'women'
+                  ? 'bg-[#C5A880] text-white border-[#C5A880]'
+                  : 'bg-transparent text-[#1A1A1A] border-gray-300 hover:bg-gray-50'
+                  }`}
               >
                 Hair Loss in Women
               </button>
@@ -1266,7 +1263,7 @@ export default function BestHairSpecialistPage() {
       {/* ============ MEDICAL DISCLAIMER & BOOK A HAIR AND SCALP CONSULTATION ============ */}
       <section id="book-consult" className="py-24 bg-[#FDFCF7]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           {/* Medical Disclaimer Card */}
           <div id="disclaimer" className="bg-amber-50/40 border border-amber-200/60 rounded-2xl p-6 md:p-8 space-y-3 shadow-sm">
             <h4 className="font-bold text-amber-800 text-sm flex items-center gap-2">
@@ -1295,7 +1292,7 @@ export default function BestHairSpecialistPage() {
                 <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
               </Link>
               <a
-                href="https://wa.me/971566597878"
+                href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20a%20hair%20specialist%20in%20Dubai."
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-2 rounded-xl border border-[#1F5E4B]/30 px-8 py-4 text-sm font-bold text-[#1F5E4B] bg-white hover:bg-gray-50 transition-all shadow-sm"

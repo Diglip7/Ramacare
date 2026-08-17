@@ -534,19 +534,17 @@ export default function HairThinningTreatmentDubaiPage() {
           }}
         />
       </Head>
-
-      {/* ============ HERO — minimal editorial ============ */
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
-          <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
-            <Link href="/">Home</Link>
-            <span className="mx-1">/</span>
-            <Link href="/services/hair-treatment-dubai/">Hair Treatments</Link>
-            <span className="mx-1">/</span>
-            <span>Hair Thinning Treatment Dubai</span>
-          </nav>
-        </div>}
+      {/* ============ HERO — minimal editorial ============ */}
       <section className="bg-[#F9F7F2] border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-20">
+          <nav aria-label="Breadcrumb" className="mb-6 md:mb-8 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span className="mx-1">/</span>
+            <Link href="/services/hair-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors">Hair Treatments</Link>
+            <span className="mx-1">/</span>
+            <span className="text-[#1F5E4B]">Hair Thinning Treatment Dubai</span>
+          </nav>
+
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-start">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="space-y-8">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1F5E4B] mb-5">
