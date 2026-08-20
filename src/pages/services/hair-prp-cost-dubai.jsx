@@ -770,8 +770,7 @@ export default function HairPrpCostPage() {
                       <div key={f.q} className={colIdx === 0 ? 'border-t border-gray-100 first:border-t-0' : ''}>
                         <button
                           onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                          className="flex w-full items-center gap-3 py-5 text-left"
-                        >
+                          className="flex w-full items-center gap-3 py-5 text-left">
                           <span className="flex-1 text-base font-semibold text-gray-900">
                             {idx + 1}. {f.q}
                           </span>
@@ -783,8 +782,7 @@ export default function HairPrpCostPage() {
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: 'auto', opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.18 }}
-                            >
+                              transition={{ duration: 0.18 }}>
                               <p className="pb-5 text-base leading-relaxed text-gray-600">{f.a}</p>
                             </motion.div>
                           )}
@@ -797,11 +795,8 @@ export default function HairPrpCostPage() {
             </div>
           </div>
         </section>
-
         {/* ============================ FINAL CTA / BOOK CONSULTATION ============================ */}
       <BookConsultation />
-
-
       </div>
     </Layout>
   );

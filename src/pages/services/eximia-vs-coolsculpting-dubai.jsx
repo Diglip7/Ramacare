@@ -123,14 +123,12 @@ const EximiaVsCoolSculptingPage = () => {
       if (error) newErrors[key] = error;
     });
     setAppointmentErrors(newErrors);
-    
     console.log('Validation errors:', newErrors);
     
     if (Object.keys(newErrors).length > 0) {
       console.log('Validation failed, stopping submission');
       return;
-    }
-    
+    } 
     console.log('Validation passed, submitting...');
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -145,7 +143,7 @@ const EximiaVsCoolSculptingPage = () => {
         treatmentArea: appointmentData.treatmentArea,
         preferredDate: appointmentData.preferredDate
       };
-      
+
       console.log('Sending payload:', payload);
       console.log('Preferred Date value:', appointmentData.preferredDate);
       console.log('Is valid date?', !isNaN(new Date(appointmentData.preferredDate).getTime()));
@@ -155,7 +153,7 @@ const EximiaVsCoolSculptingPage = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      
+     
       const responseData = await res.json();
       console.log('Response status:', res.status);
       console.log('Response data:', responseData);
@@ -190,7 +188,6 @@ const EximiaVsCoolSculptingPage = () => {
       <Head>
         <title key="title">Eximia vs. CoolSculpting Dubai | Which is Best for Fat Loss?</title>
         <meta name="description" content="Compare Eximia HR77 Platinum and CoolSculpting (Cryolipolysis) for non-surgical fat reduction in Dubai. Learn about results, comfort, downtime, and choose the right treatment." key="description" />
-        
       </Head>
 
       {/* Hero Section */}
@@ -226,8 +223,7 @@ const EximiaVsCoolSculptingPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button 
                   onClick={scrollToForm}
-                  className="px-8 py-4 bg-[#1F5E4B] text-white rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg"
-                >
+                  className="px-8 py-4 bg-[#1F5E4B] text-white rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg">
                   Book Free Consultation
                 </button>
                 <button 

@@ -59,19 +59,36 @@ const getIconForTitle = (title) => {
   );
 };
 
+const getWhatsAppMessage = (doctorName, rawSkill = null) => {
+  if (!rawSkill || typeof rawSkill !== 'string' || rawSkill.trim() === '') {
+    return `Hello RamaCare, I would like to book a consultation with ${doctorName}. Please share the available slots.`;
+  }
+
+  // Clean raw skill string (e.g. "Back Pain: Targeted manual therapy" -> "Back Pain")
+  let cleanSkill = rawSkill.split(':')[0].trim();
+  cleanSkill = cleanSkill.replace(/<[^>]*>/g, '').trim();
+
+  // If skill title already ends with "Consultation" or "Session"
+  if (/consultation$/i.test(cleanSkill)) {
+    return `Hello RamaCare, I would like to book a ${cleanSkill} with ${doctorName}. Please share the available slots.`;
+  }
+
+  return `Hello RamaCare, I would like to book a consultation for ${cleanSkill} with ${doctorName}. Please share the available slots.`;
+};
+
 const DoctorProfilePage = ({ doctor }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-  const [expandedExpertise, setExpandedExpertise] = useState({});
   const [expandedConditions, setExpandedConditions] = useState({});
   const [activeExpertiseIdx, setActiveExpertiseIdx] = useState(0);
   const currentDoctor = doctor;
+
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(`Hello RamaCare, I would like to book a consultation with ${currentDoctor.name}. Please share the available slots.`);
+  const handleWhatsAppClick = (skillName = null) => {
+    const messageText = getWhatsAppMessage(currentDoctor.name, skillName);
+    const message = encodeURIComponent(messageText);
     window.open(`https://wa.me/971566597878?text=${message}`, '_blank');
   };
 
@@ -222,7 +239,7 @@ const DoctorProfilePage = ({ doctor }) => {
               {/* CTA Buttons */}
               <div className="pt-4 flex flex-wrap gap-4">
                 <button
-                  onClick={handleWhatsAppClick}
+                  onClick={() => handleWhatsAppClick()}
                   className="bg-[#C9A961] hover:bg-[#b0914e] text-white font-bold py-4 px-8 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center gap-2.5"
                 >
                   <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -260,7 +277,8 @@ const DoctorProfilePage = ({ doctor }) => {
           </div>
         </section>
 
-        {/* ============ DETAIL SECTIONS =======        {/* Section 1: Intro, Biography & Qualifications - Luxury Editorial Layout */}
+        {/* ============ DETAIL SECTIONS ============ */}
+        {/* Section 1: Intro, Biography & Qualifications */}
         <section className="py-20 bg-gradient-to-b from-[#FAF9F5] via-white to-[#FAF9F5] relative overflow-hidden">
           {/* Decorative mesh gradients in background */}
           <div className="absolute top-1/3 -left-20 w-96 h-96 bg-[#1F5E4B]/3 rounded-full blur-[100px] pointer-events-none"></div>
@@ -268,15 +286,13 @@ const DoctorProfilePage = ({ doctor }) => {
 
           <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-16">
 
-            {/* Row 1: Biography & Image side-by-side (Image on Left) */}
+            {/* Row 1: Biography & Image side-by-side */}
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-              {/* Image Column with premium background effects */}
+              {/* Image Column */}
               {currentDoctor.assessmentImage && (
                 <div className="lg:col-span-5 relative group lg:sticky lg:top-24">
-                  {/* Luxury offset backdrop card */}
                   <div className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-br from-[#1F5E4B] to-[#C9A961] rounded-[32px] opacity-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500 -z-10"></div>
-                  {/* Luxury glow effect behind the image */}
                   <div className="absolute -inset-1 bg-gradient-to-tr from-[#C9A961]/40 to-[#1F5E4B]/40 rounded-[34px] blur-sm opacity-25 group-hover:opacity-40 transition duration-1000"></div>
 
                   <div className="relative h-96 sm:h-[480px] w-full rounded-[32px] overflow-hidden bg-white shadow-2xl ring-1 ring-[#C9A961]/25 ring-offset-4 ring-offset-white">
@@ -331,15 +347,12 @@ const DoctorProfilePage = ({ doctor }) => {
 
             </div>
 
-            {/* Row 2: Qualifications & Credentials in a beautiful Full-Width forest green gradient card */}
+            {/* Row 2: Qualifications & Credentials */}
             <div className="pt-8">
               <div className="bg-gradient-to-br from-[#1F5E4B] via-[#154637] to-[#0F3B2E] text-white rounded-[32px] p-8 sm:p-12 shadow-2xl border border-[#C9A961]/25 relative overflow-hidden group">
-                {/* Subtle lighting overlay */}
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl pointer-events-none transition-transform duration-1000 group-hover:scale-110"></div>
 
                 <div className="relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-
-                  {/* Left Column of Card (Header Info) */}
                   <div className="lg:col-span-4 space-y-3">
                     <span className="text-[10px] text-[#C9A961] tracking-widest font-extrabold uppercase block">Credentials</span>
                     <h3 className="text-2xl sm:text-3xl font-light tracking-tight text-white leading-tight">
@@ -352,7 +365,6 @@ const DoctorProfilePage = ({ doctor }) => {
                     )}
                   </div>
 
-                  {/* Right Column of Card (Lists of Credentials) */}
                   <div className="lg:col-span-8 space-y-6">
                     <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
                       {(currentDoctor.qualificationsDetailed || currentDoctor.education).map((item, idx) => (
@@ -383,7 +395,6 @@ const DoctorProfilePage = ({ doctor }) => {
 
         {/* Section 2: Specialization Details (Areas of Expertise) */}
         <section className="py-24 bg-gradient-to-b from-[#FAF9F5] via-white to-[#FAF9F5] border-y border-[#E9E2D6]/60 relative overflow-hidden">
-          {/* Subtle geometric circles in background */}
           <div className="absolute -left-20 top-20 w-96 h-96 bg-[#1F5E4B]/3 rounded-full pointer-events-none blur-3xl"></div>
           <div className="absolute -right-20 bottom-20 w-96 h-96 bg-[#C9A55A]/5 rounded-full pointer-events-none blur-3xl"></div>
 
@@ -419,7 +430,6 @@ const DoctorProfilePage = ({ doctor }) => {
                       return (
                         <div
                           key={idx}
-                          onMouseEnter={() => setActiveExpertiseIdx(idx)}
                           onClick={() => setActiveExpertiseIdx(idx)}
                           className={`group p-5 rounded-2xl cursor-pointer border transition-all duration-300 flex items-center gap-5 relative overflow-hidden ${isActive
                             ? 'bg-white border-[#1F5E4B] shadow-md translate-x-1'
@@ -463,7 +473,7 @@ const DoctorProfilePage = ({ doctor }) => {
                   <div className="lg:col-span-7 flex flex-col">
                     <div className="bg-white border border-[#E9E2D6] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-1 flex flex-col justify-between relative group/card min-h-[520px]">
 
-                      {/* Top banner image with gradient overlay (blurred single image backdrop) */}
+                      {/* Top banner image with gradient overlay */}
                       <div className="relative h-64 w-full bg-gradient-to-br from-[#1F5E4B] to-[#154637] overflow-hidden">
                         <Image
                           src="/images/patient-treatment-consultation-ramacare-dubai.jpg"
@@ -472,7 +482,6 @@ const DoctorProfilePage = ({ doctor }) => {
                           priority
                           className="object-cover opacity-80 blur-[2px] scale-102 transition-transform duration-500"
                         />
-                        {/* Gradient fades */}
                         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/15"></div>
                         <div className="absolute top-6 left-6 bg-[#1F5E4B]/90 backdrop-blur-md border border-[#C9A55A]/30 text-[#C9A55A] text-[10px] font-extrabold uppercase px-4 py-1.5 rounded-full tracking-widest shadow-sm">
                           Active Specialization Focus
@@ -516,7 +525,7 @@ const DoctorProfilePage = ({ doctor }) => {
                         <div className="pt-8 border-t border-[#E9E2D6]/20 flex flex-wrap items-center justify-between gap-4">
                           <span className="text-xs text-[#5F5F5F]/85 font-semibold">Consult with {currentDoctor.firstName} today</span>
                           <button
-                            onClick={handleWhatsAppClick}
+                            onClick={() => handleWhatsAppClick(activeItem.title)}
                             className="bg-[#1F5E4B] hover:bg-[#154637] text-white font-bold py-4 px-7 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 shadow-md flex items-center gap-2.5 hover:shadow-lg"
                           >
                             <span>Book Consultation Session</span>
@@ -552,7 +561,6 @@ const DoctorProfilePage = ({ doctor }) => {
                   const toggleExpand = () => setExpandedConditions(prev => ({ ...prev, [idx]: !prev[idx] }));
                   return (
                     <div key={idx} className="bg-white border border-[#E9E2D6] border-l-4 border-l-[#C9A961] p-6 rounded-2xl shadow-xs hover:shadow-md transition-shadow duration-300">
-                      {/* Medical Icon Badge */}
                       <div className="w-10 h-10 rounded-xl bg-[#C9A961]/10 text-[#C9A961] flex items-center justify-center mb-4 border border-[#C9A961]/10">
                         {getIconForTitle(item.title)}
                       </div>
@@ -579,7 +587,6 @@ const DoctorProfilePage = ({ doctor }) => {
         {/* Section 3: Services Provided */}
         {currentDoctor.servicesDetailed && (
           <section className="py-20 bg-[#FAF9F5] border-y border-[#E9E2D6]/80 relative overflow-hidden">
-            {/* Subtle contour line graphic */}
             <div className="absolute right-0 bottom-0 w-80 h-80 opacity-[0.03] pointer-events-none">
               <svg viewBox="0 0 100 100" fill="none" stroke="#1F5E4B" strokeWidth="0.5">
                 <circle cx="50" cy="50" r="40" strokeDasharray="2,2" />
@@ -589,7 +596,6 @@ const DoctorProfilePage = ({ doctor }) => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-              {/* Full Width Section Header */}
               <div className="mb-12 border-b border-[#E9E2D6]/40 pb-8">
                 <h2 className="text-2xl font-bold text-[#2C3E35] flex items-center gap-3 mb-2">
                   <span className="w-2.5 h-6 rounded bg-[#1F5E4B]"></span> {currentDoctor.servicesHeading}
@@ -599,7 +605,6 @@ const DoctorProfilePage = ({ doctor }) => {
                 </p>
               </div>
 
-              {/* Full-width 3-column Grid */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {currentDoctor.servicesDetailed.map((service, idx) => (
                   <div
@@ -639,7 +644,6 @@ const DoctorProfilePage = ({ doctor }) => {
                 <div className="relative border-l-2 border-[#1F5E4B]/20 pl-8 ml-4 space-y-6 mt-8">
                   {currentDoctor.treatmentStepsDetailed.map((step, idx) => (
                     <div key={idx} className="relative group">
-                      {/* Timeline Dot */}
                       <span className="absolute -left-[45px] top-1 w-6 h-6 rounded-full bg-white border-2 border-[#1F5E4B] text-[#1F5E4B] group-hover:bg-[#1F5E4B] group-hover:text-white flex items-center justify-center font-extrabold text-[10px] transition-colors duration-300 shadow-xs">
                         {idx + 1}
                       </span>
@@ -651,7 +655,6 @@ const DoctorProfilePage = ({ doctor }) => {
                   ))}
                 </div>
 
-                {/* Patient Guided Exercise Image */}
                 {currentDoctor.rehabImage && (
                   <div className="relative h-64 sm:h-[360px] w-full rounded-2xl overflow-hidden shadow-sm mt-10">
                     <Image
@@ -693,8 +696,6 @@ const DoctorProfilePage = ({ doctor }) => {
                         </li>
                       ))}
                     </ul>
-
-
                   </div>
                 )}
               </div>
@@ -765,7 +766,7 @@ const DoctorProfilePage = ({ doctor }) => {
             <div dangerouslySetInnerHTML={{ __html: currentDoctor.ctaTextHTML }}></div>
             <div className="mt-8 flex justify-center">
               <button
-                onClick={handleWhatsAppClick}
+                onClick={() => handleWhatsAppClick()}
                 className="bg-[#C9A961] hover:bg-[#b0914e] text-white font-bold py-4 px-8 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 shadow-md flex items-center justify-center gap-2.5"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

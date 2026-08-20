@@ -381,25 +381,7 @@ export const DOCTORS = {
       'Ayurvedic Diet & Gut Health counseling'
     ]
   },
-  sonita: {
-    id: 3,
-    name: 'Sonita Sinaga',
-    firstName: 'Sonita',
-    image: '/images/Sonita.jpeg',
-    qualifications: 'Licensed & Certified Aesthetic Therapist | NCLC Laser Certified',
-    rating: 5.0,
-    specialization: 'Skincare, Laser Treatments & Wellness Therapy',
-    experience: '14+ years of professional experience ',
-    isDHALicensed: true,
-    expertise: [
-      'Laser hair removal and skin rejuvenation treatments',
-      'Advanced facial therapies including HydraFacial and microdermabrasion',
-      'Chemical peels and pigmentation correction treatments',
-      'PRP, HIFU, and non-invasive skin rejuvenation procedures',
-      'Personalized aesthetic treatment planning'
-    ],
-    languages: ['English']
-  },
+
   "soumya-abraham-dha-licensed-nurse-dubai": {
     id: 4,
     name: 'Soumya Abraham',
@@ -1734,6 +1716,7 @@ export const DOCTORS = {
       "url": "https://ramacarepolyclinic.ae/doctors/mariya-thayyil-muhammed-ayurveda-therapist-dubai"
     }
   },
+
   "sonita-sinaga-aesthetic-therapist-dubai": {
     id: 11,
     name: 'Sonita Sinaga',
@@ -1769,13 +1752,29 @@ export const DOCTORS = {
     patientEducationHeading: 'Patient Education: Supporting Healthy Skin Every Day',
     patientEducationDesc: 'Professional treatments work best alongside a consistent, well-informed home skincare routine.',
     expertise: [
+      'Advanced Beauty & Aesthetic Treatment Skills',
+      'HIFU (High-Intensity Focused Ultrasound)',
+      'RF Microneedling',
+      'Carbon Laser Peel',
+      'Eximia Body Sculpting',
+      'PRP Facial / Vampire Facial',
       'Laser Hair Removal',
-      'Skin Rejuvenation',
-      'HydraFacial',
-      'Microdermabrasion',
+      'Laser Skin Rejuvenation',
+      'Laser Toning & Pigmentation Treatment',
+      'Skin Tightening & Lifting',
+      'Body Contouring & Sculpting',
+      'Facial Rejuvenation Treatments',
+      'Microneedling & Skin Renewal',
       'Chemical Peels',
-      'Acne & Pigmentation Treatments',
-      'Anti-Aging Treatments'
+      'Hydrafacial',
+      'Oxygeneo facial',
+      'Radiofrequency (RF) Skin Tightening',
+      'Acne & Acne Scar Treatments',
+      'Anti-Aging & Skin Firming Treatments',
+      'Skin Analysis & Personalized Treatment Planning',
+      'Pre- & Post-Treatment Care',
+      'Client Consultation & Treatment Recommendations',
+      'Advanced Skincare & Product Knowledge'
     ],
     introParagraphs: [
       'Sonita Sinaga is a <a href="/doctors/sonita-sinaga-aesthetic-therapist-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">Licensed & Certified Aesthetic Therapist Dubai</a> patients turn to for advanced, safe, and personalised skin care at <a href="/" class="text-[#1F5E4B] hover:underline font-semibold">RamaCare Polyclinic</a> in Jumeirah 1. She is NCLC Laser Certified and brings more than 14 years of professional experience in laser technology, facial rejuvenation, and results-focused skincare.',
@@ -1807,32 +1806,96 @@ export const DOCTORS = {
     ],
     expertiseDetailed: [
       {
+        title: 'Advanced Beauty & Aesthetic Treatment Skills',
+        desc: 'Comprehensive expertise in advanced non-invasive cosmetic, facial, and skincare treatments tailored to individual skin needs.'
+      },
+      {
+        title: 'HIFU (High-Intensity Focused Ultrasound)',
+        desc: 'Non-surgical skin lifting and tightening procedure targeting deep tissue layers to stimulate collagen production and improve skin firmness.'
+      },
+      {
+        title: 'RF Microneedling',
+        desc: 'Advanced radiofrequency microneedling to stimulate collagen renewal, refine skin texture, reduce fine lines, and tighten skin.'
+      },
+      {
+        title: 'Carbon Laser Peel',
+        desc: 'Laser-assisted skin treatment designed to deep cleanse pores, exfoliate dead skin cells, control excess oil, and brighten the complexion.'
+      },
+      {
+        title: 'Eximia Body Sculpting',
+        desc: 'Non-invasive body contouring and fat reduction treatment designed to smooth skin, reduce stubborn fat deposits, and tone targeted body areas.'
+      },
+      {
+        title: 'PRP Facial / Vampire Facial',
+        desc: 'Platelet-Rich Plasma facial therapy using natural growth factors to accelerate skin healing, boost collagen, and restore a youthful glow.'
+      },
+      {
         title: 'Laser Hair Removal',
-        desc: 'Sonita performs <a href="/services/hair-removal-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">laser hair removal</a> using clinic-grade laser technology designed to target hair follicles while supporting skin comfort throughout the session. The treatment is generally suited to a range of skin and hair types, though suitability is always confirmed during a professional assessment. Sessions are typically spaced several weeks apart, and Sonita explains the process, expected sensation, and aftercare at every step, with safety measures such as skin cooling and patch testing built into her protocol. Most patients are advised that a course of multiple sessions, rather than a single visit, is generally needed to work with the hair growth cycle.'
+        desc: 'Sonita performs <a href="/services/hair-removal-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">laser hair removal</a> using clinic-grade laser technology designed to target hair follicles while supporting skin comfort throughout the session.'
       },
       {
-        title: 'Skin Rejuvenation',
-        desc: '<a href="/services/laser-rejuvenation-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">Skin Rejuvenation</a> treatments are designed to support improvements in skin texture, tone, and overall radiance. Sonita builds each rejuvenation plan around the patient\'s specific concerns — whether that\'s uneven texture, dullness, or early fine lines — and customises technique and treatment frequency accordingly, with an emphasis on healthy skin maintenance rather than a one-time fix. She often combines in-clinic sessions with simple home-care adjustments to help support the results between visits.'
+        title: 'Laser Skin Rejuvenation',
+        desc: '<a href="/services/laser-rejuvenation-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">Skin Rejuvenation</a> treatments designed to support improvements in skin texture, tone, and overall radiance.'
       },
       {
-        title: 'HydraFacial',
-        desc: '<a href="/services/hydrafacial-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">HydraFacial</a> is a multi-step treatment that combines cleansing, gentle exfoliation, and hydration in a single session. Sonita tailors the treatment intensity to the patient\'s skin type, making it a versatile option for patients seeking a refreshed, nourished complexion with minimal downtime. It is frequently chosen by patients wanting a quick reset before an event, or as a regular addition to an ongoing skin maintenance routine.'
+        title: 'Laser Toning & Pigmentation Treatment',
+        desc: 'Targeted laser therapy designed to diminish hyperpigmentation, sun spots, and uneven skin tone for a clearer, more radiant complexion.'
       },
       {
-        title: 'Microdermabrasion',
-        desc: '<a href="/services/microdermabrasion-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">Microdermabrasion</a> uses controlled exfoliation to help support skin renewal and a smoother surface texture. Sonita explains what to expect before, during, and after the session, including typical recovery time, so patients can plan their treatment with confidence. Mild redness immediately after treatment is common and generally settles within a short period.'
+        title: 'Skin Tightening & Lifting',
+        desc: 'Advanced non-surgical techniques aimed at firming sagging skin, boosting elasticity, and defining facial contours.'
+      },
+      {
+        title: 'Body Contouring & Sculpting',
+        desc: 'Customised body shaping solutions focused on firming, toning, and addressing stubborn areas for an improved silhouette.'
+      },
+      {
+        title: 'Facial Rejuvenation Treatments',
+        desc: 'Multi-step skin restoration procedures structured to refresh dull skin, restore moisture balance, and enhance vital radiance.'
+      },
+      {
+        title: 'Microneedling & Skin Renewal',
+        desc: 'Minimally invasive skin renewal therapy that creates micro-channels to trigger natural cellular repair and product absorption.'
       },
       {
         title: 'Chemical Peels',
-        desc: 'Chemical Peels are used to support superficial exfoliation, which may help improve the appearance of pigmentation and support acne management as part of a broader skincare plan. Peel strength and formulation are always selected after a professional consultation, based on the patient\'s skin sensitivity and goals, with clear guidance given on post-peel sun protection.'
+        desc: 'Superficial and targeted chemical peels to support controlled exfoliation, improving skin texture, tone, and clarity.'
       },
       {
-        title: 'Acne & Pigmentation Treatments',
-        desc: 'Acne-prone and <a href="/services/pigmentation-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">pigmentation treatments</a> require a careful, personalised assessment before any treatment begins. Sonita develops individualised treatment and maintenance programmes that combine in-clinic procedures with home-care guidance, aimed at supporting clearer, more even-toned skin over time. She pays particular attention to triggers such as sun exposure and product use, since these often influence how skin responds to treatment.'
+        title: 'Hydrafacial',
+        desc: '<a href="/services/hydrafacial-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">HydraFacial</a> multi-step treatment combining deep cleansing, gentle exfoliation, and intense serum hydration.'
       },
       {
-        title: 'Anti-Aging Treatments',
-        desc: 'Sonita\'s anti-ageing approach is rooted in prevention as much as correction. Treatment plans are designed to support skin elasticity and address the visible signs of ageing, such as fine lines, through a structured, professionally guided skincare plan rather than a single procedure. She encourages patients to start preventive care early, noting that consistency generally matters more than any single treatment.'
+        title: 'Oxygeneo facial',
+        desc: 'Innovative 3-in-1 super-facial that exfoliates, oxygenates from within, and infuses essential nutrients for vibrant, glowing skin.'
+      },
+      {
+        title: 'Radiofrequency (RF) Skin Tightening',
+        desc: 'Non-invasive thermal therapy that heats dermal layers to contract collagen fibers and stimulate new collagen growth.'
+      },
+      {
+        title: 'Acne & Acne Scar Treatments',
+        desc: 'Targeted treatment protocols combining in-clinic procedures and homecare guidance for clearer skin and scar reduction.'
+      },
+      {
+        title: 'Anti-Aging & Skin Firming Treatments',
+        desc: 'Preventive and corrective anti-ageing care formulated to enhance skin elasticity and smooth fine lines and wrinkles.'
+      },
+      {
+        title: 'Skin Analysis & Personalized Treatment Planning',
+        desc: 'Comprehensive clinical evaluation of skin type and condition to build targeted, effective treatment pathways.'
+      },
+      {
+        title: 'Pre- & Post-Treatment Care',
+        desc: 'Dedicated consultation and aftercare guidance ensuring patient safety, comfortable recovery, and maximum treatment longevity.'
+      },
+      {
+        title: 'Client Consultation & Treatment Recommendations',
+        desc: 'In-depth consultation to discuss individual skin goals, medical history, and recommended aesthetic treatment schedules.'
+      },
+      {
+        title: 'Advanced Skincare & Product Knowledge',
+        desc: 'Professional assessment of active skincare ingredients and customized homecare product recommendations.'
       }
     ],
     servicesDetailed: [
