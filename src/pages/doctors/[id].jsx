@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -58,7 +58,40 @@ const getIconForTitle = (title) => {
     </svg>
   );
 };
+function WhyChooseTabs({ currentDoctor }) {
+  const [tab, setTab] = useState(0);
+  const tabs = [
+    currentDoctor.whyChooseDoctor && { label: `Why Choose ${currentDoctor.firstName}`, items: currentDoctor.whyChooseDoctor },
+    currentDoctor.whyChooseClinic && { label: "Why Choose RamaCare", items: currentDoctor.whyChooseClinic },
+  ].filter(Boolean);
+  const active = tabs[tab] || tabs[0];
+  if (!active) return null;
 
+  return (
+    <div className="mt-12 bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-8 shadow-sm">
+      <div className="inline-flex bg-[#FAF9F5] rounded-full p-1.5 border border-[#E9E2D6] mb-6">
+        {tabs.map((t, i) => (
+          <button
+            key={t.label}
+            onClick={() => setTab(i)}
+            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${tab === i ? "bg-[#1F5E4B] text-white shadow-xs" : "text-[#5F5F5F] hover:text-[#1F5E4B]"
+              }`}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+        {active.items.slice(0, 8).map((item, idx) => (
+          <li key={idx} className="flex gap-3 items-start text-xs sm:text-sm text-[#5F5F5F] leading-relaxed">
+            <span className="w-5 h-5 rounded-full bg-[#C9A961]/15 text-[#C9A961] border border-[#C9A961]/30 flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">✓</span>
+            <span dangerouslySetInnerHTML={{ __html: item }} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 const getWhatsAppMessage = (doctorName, rawSkill = null) => {
   if (!rawSkill || typeof rawSkill !== 'string' || rawSkill.trim() === '') {
     return `Hello RamaCare, I would like to book a consultation with ${doctorName}. Please share the available slots.`;
@@ -77,13 +110,38 @@ const getWhatsAppMessage = (doctorName, rawSkill = null) => {
 };
 
 const DoctorProfilePage = ({ doctor }) => {
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaqs, setOpenFaqs] = useState({ 0: true });
+  const [faqSearch, setFaqSearch] = useState('');
   const [expandedConditions, setExpandedConditions] = useState({});
   const [activeExpertiseIdx, setActiveExpertiseIdx] = useState(0);
+  const treatmentScrollRef = useRef(null);
   const currentDoctor = doctor;
 
+  const scrollTreatment = (direction) => {
+    if (treatmentScrollRef.current) {
+      const scrollAmount = direction === 'left' ? -320 : 320;
+      treatmentScrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
+    setOpenFaqs((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const handleExpandAllFaqs = () => {
+    if (!currentDoctor?.faqsDetailed) return;
+    const allOpen = {};
+    currentDoctor.faqsDetailed.forEach((_, i) => {
+      allOpen[i] = true;
+    });
+    setOpenFaqs(allOpen);
+  };
+
+  const handleCollapseAllFaqs = () => {
+    setOpenFaqs({});
   };
 
   const handleWhatsAppClick = (skillName = null) => {
@@ -628,131 +686,431 @@ const DoctorProfilePage = ({ doctor }) => {
           </section>
         )}
 
-        {/* Section 4: Treatment Process & Why Choose Info */}
+        {/* Section 4: Treatment Approach & Clinical Process */}
         {currentDoctor.treatmentStepsDetailed && (
-          <section className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
-              <div className="lg:col-span-8">
-                <h2 className="text-2xl font-bold text-[#2C3E35] flex items-center gap-3 mb-2">
-                  <span className="w-2.5 h-6 rounded bg-[#1F5E4B]"></span> {currentDoctor.treatmentHeading}
+          <section className="py-20 sm:py-24 bg-[#FAF9F5] border-y border-[#E9E2D6]/80 relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+              {/* Header */}
+              <div className="mb-10 sm:mb-12">
+                <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/10 border border-[#1F5E4B]/20 rounded-full px-3.5 py-1 mb-3">
+                  <span className="w-2 h-2 rounded-full bg-[#1F5E4B]" />
+                  <span className="text-[11px] font-bold tracking-widest uppercase text-[#1F5E4B]">
+                    Care Methodology
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold text-[#2C3E35] mb-2">
+                  {currentDoctor.treatmentHeading || 'Treatment Approach'}
                 </h2>
                 {currentDoctor.treatmentDesc && (
-                  <p className="text-sm text-[#5F5F5F] mb-8 leading-relaxed max-w-2xl">
+                  <p className="text-xs sm:text-sm text-[#5F5F5F] max-w-3xl leading-relaxed">
                     {currentDoctor.treatmentDesc}
                   </p>
                 )}
-                <div className="relative border-l-2 border-[#1F5E4B]/20 pl-8 ml-4 space-y-6 mt-8">
-                  {currentDoctor.treatmentStepsDetailed.map((step, idx) => (
-                    <div key={idx} className="relative group">
-                      <span className="absolute -left-[45px] top-1 w-6 h-6 rounded-full bg-white border-2 border-[#1F5E4B] text-[#1F5E4B] group-hover:bg-[#1F5E4B] group-hover:text-white flex items-center justify-center font-extrabold text-[10px] transition-colors duration-300 shadow-xs">
-                        {idx + 1}
-                      </span>
-                      <div className="bg-[#FAF9F5]/40 border border-[#E9E2D6]/40 rounded-2xl p-5 hover:bg-white hover:border-[#1F5E4B]/20 transition-all duration-300 shadow-xs">
-                        <h3 className="font-bold text-[#2C3E35] text-sm tracking-tight">{step.name}</h3>
-                        <p className="text-xs text-[#5F5F5F] leading-relaxed mt-2" dangerouslySetInnerHTML={{ __html: step.detail }}></p>
+              </div>
+
+              {/* Main Split Layout: Left Image Showcase + Right Vertical Connected Steps */}
+              {currentDoctor.rehabImage ? (
+                <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+                  {/* LEFT: Image Showcase with Proper Framing */}
+                  <div className="lg:col-span-5 flex flex-col">
+                    <div className="relative w-full h-[320px] sm:h-[380px] lg:h-full min-h-[340px] rounded-3xl overflow-hidden shadow-md border border-[#E9E2D6] bg-white group">
+                      <Image
+                        src={currentDoctor.rehabImage}
+                        alt={currentDoctor.rehabImageAlt || "Treatment session"}
+                        fill
+                        className="object-cover object-[50%_35%] group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+
+                      <div className="absolute bottom-4 left-4 right-4 z-10">
+                        <span className="bg-[#C9A961] text-[#154637] text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider mb-1.5 inline-block">
+                          Clinical Practice
+                        </span>
+                        <p className="text-xs font-semibold text-white/95 leading-snug">
+                          {currentDoctor.rehabImageAlt || `${currentDoctor.name} conducting personalized care`}
+                        </p>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* RIGHT: Connected Vertical Process Steps Timeline */}
+                  <div className="lg:col-span-7 bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col justify-center">
+                    <h3 className="text-xs font-extrabold text-[#1F5E4B] uppercase tracking-wider mb-6 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#C9A961]" />
+                      Structured Treatment Journey
+                    </h3>
+
+                    <div className="space-y-6 relative before:absolute before:left-4 before:top-3 before:bottom-3 before:w-0.5 before:bg-[#1F5E4B]/20">
+                      {currentDoctor.treatmentStepsDetailed.map((step, idx) => (
+                        <div key={idx} className="relative flex items-start gap-4 pl-1 group">
+                          {/* Step Circle Badge */}
+                          <div className="w-8 h-8 rounded-full bg-[#FAF9F5] border-2 border-[#1F5E4B] text-[#1F5E4B] group-hover:bg-[#1F5E4B] group-hover:text-white font-extrabold text-xs flex items-center justify-center shrink-0 z-10 transition-colors duration-300 shadow-xs">
+                            {idx + 1}
+                          </div>
+
+                          <div className="flex-1 pt-0.5">
+                            <h4 className="font-bold text-sm text-[#2C3E35] group-hover:text-[#1F5E4B] transition-colors leading-snug">
+                              {step.name}
+                            </h4>
+                            <p className="text-xs text-[#5F5F5F] leading-relaxed mt-1" dangerouslySetInnerHTML={{ __html: step.detail }} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Fallback if doctor has no rehabImage: Connected Horizontal Steps Row */
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                  {currentDoctor.treatmentStepsDetailed.map((step, idx) => (
+                    <div key={idx} className="bg-white border border-[#E9E2D6] rounded-3xl p-6 shadow-xs relative">
+                      <div className="w-8 h-8 rounded-full bg-[#1F5E4B] text-white font-bold text-xs flex items-center justify-center mb-4">
+                        {idx + 1}
+                      </div>
+                      <h4 className="font-bold text-sm text-[#2C3E35] mb-2">{step.name}</h4>
+                      <p className="text-xs text-[#5F5F5F] leading-relaxed" dangerouslySetInnerHTML={{ __html: step.detail }} />
                     </div>
                   ))}
                 </div>
+              )}
 
-                {currentDoctor.rehabImage && (
-                  <div className="relative h-64 sm:h-[360px] w-full rounded-2xl overflow-hidden shadow-sm mt-10">
-                    <Image
-                      src={currentDoctor.rehabImage}
-                      alt={currentDoctor.rehabImageAlt || "Rehabilitation exercise"}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-              </div>
-
-              <div className="lg:col-span-4 space-y-6">
-                {currentDoctor.whyChooseDoctor && (
-                  <div className="bg-white border border-[#E9E2D6] rounded-3xl p-8 shadow-sm">
-                    <h3 className="text-sm font-bold text-[#2C3E35] mb-5 border-b border-[#E9E2D6]/50 pb-3 flex items-center gap-2">
-                      <span className="w-1.5 h-4 bg-[#1F5E4B] rounded"></span> Why Choose {currentDoctor.firstName}
-                    </h3>
-                    <ul className="space-y-4">
-                      {currentDoctor.whyChooseDoctor.slice(0, 8).map((item, idx) => (
-                        <li key={idx} className="flex gap-3 items-start text-xs text-[#5F5F5F] leading-relaxed">
-                          <span className="w-5 h-5 rounded-full bg-[#1F5E4B]/5 text-[#1F5E4B] flex items-center justify-center shrink-0 text-[10px] font-bold border border-[#1F5E4B]/10">✓</span>
-                          <span dangerouslySetInnerHTML={{ __html: item }}></span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {currentDoctor.whyChooseClinic && (
-                  <div className="bg-white border border-[#E9E2D6] rounded-3xl p-8 shadow-sm">
-                    <h3 className="text-sm font-bold text-[#2C3E35] mb-5 border-b border-[#E9E2D6]/50 pb-3 flex items-center gap-2">
-                      <span className="w-1.5 h-4 bg-[#C9A961] rounded"></span> Why Choose RamaCare
-                    </h3>
-                    <ul className="space-y-4">
-                      {currentDoctor.whyChooseClinic.slice(0, 8).map((item, idx) => (
-                        <li key={idx} className="flex gap-3 items-start text-xs text-[#5F5F5F] leading-relaxed">
-                          <span className="w-5 h-5 rounded-full bg-[#C9A961]/5 text-[#C9A961] flex items-center justify-center shrink-0 text-[10px] font-bold border border-[#C9A961]/10">✓</span>
-                          <span dangerouslySetInnerHTML={{ __html: item }}></span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+              {/* Why Choose Tabs */}
+              {(currentDoctor.whyChooseDoctor || currentDoctor.whyChooseClinic) && (
+                <WhyChooseTabs currentDoctor={currentDoctor} />
+              )}
             </div>
           </section>
         )}
 
         {/* Section 5: Patient Education Section */}
         {currentDoctor.patientEducation && (
-          <section className="py-16 bg-[#FAF9F5] border-t border-[#E9E2D6]/80">
-            <div className="max-w-7xl mx-auto px-6">
-              <h2 className="text-2xl font-bold text-[#2C3E35] flex items-center gap-3 mb-2">
-                <span className="w-2.5 h-6 rounded bg-[#1F5E4B]"></span> {currentDoctor.patientEducationHeading}
-              </h2>
-              <p className="text-sm text-[#5F5F5F] mb-10 max-w-2xl">
-                {currentDoctor.patientEducationDesc}
-              </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {currentDoctor.patientEducation.map((item, idx) => (
-                  <div key={idx} className="bg-white border border-[#E9E2D6]/70 p-6 rounded-2xl shadow-sm flex items-start gap-4">
-                    <span className="text-[#C9A961] text-lg font-bold">★</span>
-                    <span className="text-xs text-[#5F5F5F] leading-relaxed" dangerouslySetInnerHTML={{ __html: item }}></span>
+          <section className="py-20 sm:py-24 bg-gradient-to-b from-[#FAF9F5] via-white to-[#FAF9F5] border-t border-[#E9E2D6]/80 relative overflow-hidden">
+            {/* Background Decorative Accents */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 -ml-24 w-80 h-80 bg-[#1F5E4B]/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 -mr-24 w-80 h-80 bg-[#C9A961]/5 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+              {/* Header */}
+              <div className="max-w-3xl mb-12 sm:mb-16">
+                <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/10 border border-[#1F5E4B]/20 rounded-full px-4 py-1.5 mb-4 shadow-2xs">
+                  <span className="w-2 h-2 rounded-full bg-[#1F5E4B]" />
+                  <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-[#1F5E4B]">
+                    Clinical Education & Guidance
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold text-[#2C3E35] mb-2">
+                  {currentDoctor.patientEducationHeading}
+                </h2>
+                <p className="text-xs sm:text-sm text-[#5F5F5F] leading-relaxed max-w-2xl">
+                  {currentDoctor.patientEducationDesc}
+                </p>
+              </div>
+
+              {/* Cards Grid */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+                {currentDoctor.patientEducation.map((item, idx) => {
+                  const formattedNum = String(idx + 1).padStart(2, '0');
+
+                  return (
+                    <div
+                      key={idx}
+                      className="group relative bg-white border border-[#E9E2D6] rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-xl hover:border-[#1F5E4B]/40 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                    >
+                      {/* Top Gradient Accent Line on Hover */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1F5E4B] via-[#C9A961] to-[#1F5E4B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      <div>
+                        {/* Header Badge Row */}
+                        <div className="flex items-center justify-between gap-3 mb-5">
+                          <span className="w-9 h-9 rounded-2xl bg-[#1F5E4B]/10 border border-[#1F5E4B]/20 text-[#1F5E4B] flex items-center justify-center font-bold text-sm group-hover:bg-[#1F5E4B] group-hover:text-white transition-colors duration-300">
+                            ✦
+                          </span>
+                          <span className="text-xs font-mono font-extrabold text-[#C9A961] bg-[#C9A961]/10 border border-[#C9A961]/20 px-2.5 py-1 rounded-xl">
+                            GUIDE {formattedNum}
+                          </span>
+                        </div>
+
+                        {/* Content */}
+                        <div
+                          className="text-xs sm:text-sm text-[#3A4D43] leading-relaxed font-medium group-hover:text-[#1A1A1A] transition-colors"
+                          dangerouslySetInnerHTML={{ __html: item }}
+                        />
+                      </div>
+
+                      {/* Card Footer Accent */}
+                      <div className="mt-6 pt-4 border-t border-[#E9E2D6]/40 flex items-center gap-1.5 text-[11px] font-semibold text-[#1F5E4B]">
+                        <svg className="w-3.5 h-3.5 text-[#C9A961]" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        Doctor Recommended
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom Doctor Takeaway Banner */}
+              <div className="mt-12 bg-gradient-to-r from-[#1F5E4B] via-[#154637] to-[#0D3126] text-white rounded-3xl p-6 sm:p-8 shadow-lg border border-[#1F5E4B]/30 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A961]/10 rounded-full blur-2xl pointer-events-none" />
+
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="w-12 h-12 rounded-2xl bg-[#C9A961]/20 border border-[#C9A961]/40 flex items-center justify-center text-2xl shrink-0">
+                    💡
                   </div>
-                ))}
+                  <div>
+                    <h4 className="font-extrabold text-white text-base sm:text-lg mb-1">
+                      Personalized Preventative Care
+                    </h4>
+                    <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
+                      Small adjustments in daily routines prevent long-term health issues. Schedule a consultation with {currentDoctor.name} for personalized health guidance.
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => handleWhatsAppClick()}
+                  className="shrink-0 bg-[#C9A961] hover:bg-[#b5954f] text-[#154637] font-extrabold px-6 py-3.5 rounded-2xl text-xs uppercase tracking-wider transition-all duration-300 shadow-md cursor-pointer relative z-10"
+                >
+                  Book Consultation
+                </button>
               </div>
             </div>
           </section>
         )}
 
         {/* Section 6: FAQs */}
-        {currentDoctor.faqsDetailed && (
-          <section id="faq" className="py-16 bg-white border-t border-[#E9E2D6]/80">
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="text-2xl font-bold text-[#2C3E35] text-center mb-10">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                {currentDoctor.faqsDetailed.map((faq, idx) => (
-                  <div key={idx} className="border border-[#E9E2D6]/80 rounded-2xl overflow-hidden bg-[#FAF9F5] shadow-sm">
-                    <button
-                      onClick={() => toggleFaq(idx)}
-                      className="w-full flex items-center justify-between gap-4 text-left font-semibold text-sm text-[#2C3E35] p-5 bg-white border-b border-[#E9E2D6]/40"
-                    >
-                      <span>{faq.q}</span>
-                      <svg className={`w-4 h-4 text-[#1F5E4B] shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        {currentDoctor.faqsDetailed && (() => {
+          const filteredFaqs = (currentDoctor.faqsDetailed || [])
+            .map((faq, originalIndex) => ({ ...faq, originalIndex }))
+            .filter((faq) => {
+              if (!faqSearch.trim()) return true;
+              const q = faqSearch.toLowerCase();
+              return faq.q.toLowerCase().includes(q) || faq.a.toLowerCase().includes(q);
+            });
+
+          return (
+            <section id="faq" className="py-20 sm:py-24 bg-gradient-to-b from-[#FAF9F5] via-white to-[#FAF9F5] border-t border-[#E9E2D6]/80 relative overflow-hidden">
+              {/* Soft Ambient Background Blur Highlights */}
+              <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-[#C9A961]/5 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+                {/* FAQ Header Section */}
+                <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                  <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/10 border border-[#1F5E4B]/20 rounded-full px-4 py-1.5 mb-4 shadow-2xs">
+                    <span className="w-2 h-2 rounded-full bg-[#C9A961] animate-pulse" />
+                    <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-[#1F5E4B]">
+                      Patient Knowledge Base
+                    </span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-[#2C3E35] mb-2">
+                    Frequently Asked Questions
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#5F5F5F] leading-relaxed max-w-2xl mx-auto">
+                    Get clear, expert answers regarding treatment procedures, consultation expectations, and medical care with {currentDoctor.name} at RamaCare Polyclinic Jumeirah.
+                  </p>
+
+                  {/* Interactive Search & Controls Bar */}
+                  <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-2.5 sm:p-3 rounded-2xl border border-[#E9E2D6] shadow-sm">
+                    {/* Search Field */}
+                    <div className="relative w-full sm:flex-1 flex items-center">
+                      <svg className="w-4 h-4 text-[#1F5E4B] absolute left-3.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
-                    </button>
-                    {openFaq === idx && (
-                      <div className="text-xs text-[#5F5F5F] leading-relaxed p-6 bg-white">
-                        {faq.a}
+                      <input
+                        type="text"
+                        value={faqSearch}
+                        onChange={(e) => setFaqSearch(e.target.value)}
+                        placeholder="Search questions (e.g. session, DHA, pain, booking)..."
+                        className="w-full pl-10 pr-9 py-2.5 bg-[#FAF9F5] border border-[#E9E2D6]/70 rounded-xl text-xs sm:text-sm text-[#2C3E35] placeholder:text-gray-400 focus:outline-none focus:border-[#1F5E4B] focus:bg-white transition-all"
+                      />
+                      {faqSearch && (
+                        <button
+                          onClick={() => setFaqSearch('')}
+                          className="absolute right-3 text-gray-400 hover:text-[#2C3E35] p-1 rounded-full text-xs cursor-pointer"
+                          title="Clear search"
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Controls */}
+                    <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end shrink-0">
+                      <span className="text-[11px] font-semibold text-[#5F5F5F] px-2 hidden md:inline">
+                        {filteredFaqs.length} {filteredFaqs.length === 1 ? 'Question' : 'Questions'}
+                      </span>
+                      <button
+                        onClick={handleExpandAllFaqs}
+                        className="px-3.5 py-2 text-xs font-semibold text-[#1F5E4B] bg-[#1F5E4B]/5 hover:bg-[#1F5E4B]/15 border border-[#1F5E4B]/20 rounded-xl transition-all cursor-pointer"
+                      >
+                        Expand All
+                      </button>
+                      <button
+                        onClick={handleCollapseAllFaqs}
+                        className="px-3.5 py-2 text-xs font-semibold text-[#5F5F5F] hover:text-[#2C3E35] bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-xl transition-all cursor-pointer"
+                      >
+                        Collapse All
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* FAQ Grid: 2 Column Layout (Left Sticky Assistance Card + Right Accordion Cards) */}
+                <div className="grid lg:grid-cols-12 gap-8 items-start">
+
+                  {/* LEFT STICKY CARD */}
+                  <div className="lg:col-span-4 lg:sticky lg:top-28">
+                    <div className="bg-gradient-to-br from-[#1F5E4B] via-[#154637] to-[#0D3126] text-white rounded-3xl p-6 sm:p-7 shadow-xl border border-[#1F5E4B]/30 relative overflow-hidden">
+                      {/* Ambient Accent */}
+                      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#C9A961]/20 rounded-full blur-2xl pointer-events-none" />
+
+                      {/* Doctor Info Header */}
+                      <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+                        <div className="relative w-16 h-16 rounded-2xl overflow-hidden shrink-0 border-2 border-[#C9A961] shadow-md bg-white/10">
+                          {currentDoctor.image ? (
+                            <Image src={currentDoctor.image} alt={currentDoctor.name} fill className="object-cover object-[50%_20%]" />
+                          ) : (
+                            <div className="w-full h-full bg-[#1F5E4B] flex items-center justify-center font-bold text-white text-xl">
+                              {currentDoctor.firstName ? currentDoctor.firstName[0] : 'D'}
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          <span className="inline-block bg-[#C9A961] text-[#154637] text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md tracking-wider mb-1">
+                            DHA Licensed Specialist
+                          </span>
+                          <h3 className="font-bold text-base text-white leading-tight">{currentDoctor.name}</h3>
+                          <p className="text-xs text-white/70 mt-0.5">{currentDoctor.specialization}</p>
+                        </div>
                       </div>
+
+                      {/* Card Content */}
+                      <div className="space-y-3 mb-6">
+                        <h4 className="text-base font-extrabold text-white flex items-center gap-2">
+                          <span className="text-[#C9A961]">💬</span> Need Personal Guidance?
+                        </h4>
+                        <p className="text-xs text-white/80 leading-relaxed">
+                          Have specific questions about your health situation or scheduling? Speak directly with {currentDoctor.firstName}'s care team on WhatsApp.
+                        </p>
+                      </div>
+
+                      {/* WhatsApp Button */}
+                      <button
+                        onClick={() => handleWhatsAppClick()}
+                        className="w-full bg-[#C9A961] hover:bg-[#b5954f] text-[#154637] font-extrabold py-3.5 px-5 rounded-2xl text-xs uppercase tracking-wider transition-all duration-300 shadow-md flex items-center justify-center gap-2.5 cursor-pointer group"
+                      >
+                        <svg className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.505-5.724-1.46L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.49 1.977 14.02 1.053 11.997 1.053c-5.444 0-9.87 4.374-9.874 9.8-.001 1.73.473 3.41 1.37 4.89l-.994 3.633 3.738-.971c1.452.793 2.923 1.189 4.32 1.189z" />
+                        </svg>
+                        Ask on WhatsApp
+                      </button>
+
+                      {/* Quick Info Badges */}
+                      <div className="mt-6 pt-5 border-t border-white/10 grid grid-cols-2 gap-2.5 text-[11px] text-white/80 font-medium">
+                        <div className="flex items-center gap-1.5 bg-white/5 p-2 rounded-xl border border-white/5">
+                          <span className="text-emerald-400 font-bold">📍</span> Jumeirah 1
+                        </div>
+                        <div className="flex items-center gap-1.5 bg-white/5 p-2 rounded-xl border border-white/5">
+                          <span className="text-amber-400 font-bold">⚡</span> Quick Reply
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* RIGHT ACCORDION LIST */}
+                  <div className="lg:col-span-8 space-y-4">
+                    {filteredFaqs.length === 0 ? (
+                      <div className="bg-white border border-[#E9E2D6] rounded-3xl p-10 text-center shadow-xs">
+                        <div className="w-12 h-12 rounded-full bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center mx-auto mb-4 text-xl">
+                          🔍
+                        </div>
+                        <h4 className="font-bold text-[#2C3E35] text-base mb-1">No matching questions found</h4>
+                        <p className="text-xs text-[#5F5F5F] mb-6">
+                          We couldn't find any questions matching "{faqSearch}". Try a different keyword or ask us directly.
+                        </p>
+                        <button
+                          onClick={() => setFaqSearch('')}
+                          className="px-5 py-2.5 bg-[#1F5E4B] text-white text-xs font-bold rounded-xl hover:bg-[#154637] transition-all cursor-pointer"
+                        >
+                          Clear Search Filter
+                        </button>
+                      </div>
+                    ) : (
+                      filteredFaqs.map((faq) => {
+                        const idx = faq.originalIndex;
+                        const isOpen = !!openFaqs[idx];
+                        const formattedNum = String(idx + 1).padStart(2, '0');
+
+                        return (
+                          <div
+                            key={idx}
+                            className={`group relative border transition-all duration-300 rounded-2xl overflow-hidden ${isOpen
+                                ? 'border-[#1F5E4B] bg-[#FAF9F5] shadow-md ring-1 ring-[#1F5E4B]/20'
+                                : 'border-[#E9E2D6]/80 bg-white hover:border-[#1F5E4B]/50 hover:shadow-xs'
+                              }`}
+                          >
+                            {/* Left Active Accent Bar */}
+                            {isOpen && (
+                              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#1F5E4B]" />
+                            )}
+
+                            {/* Question Header Button */}
+                            <button
+                              onClick={() => toggleFaq(idx)}
+                              className="w-full flex items-center justify-between gap-4 text-left p-5 sm:p-6 cursor-pointer focus:outline-none"
+                              aria-expanded={isOpen}
+                            >
+                              <div className="flex items-center gap-3.5 sm:gap-4 flex-1">
+                                {/* Numbered Pill Badge */}
+                                <span className={`shrink-0 text-xs font-mono font-extrabold px-2.5 py-1 rounded-xl transition-colors ${isOpen
+                                    ? 'bg-[#1F5E4B] text-white'
+                                    : 'bg-[#C9A961]/15 text-[#C9A961] group-hover:bg-[#1F5E4B]/10 group-hover:text-[#1F5E4B]'
+                                  }`}>
+                                  {formattedNum}
+                                </span>
+                                {/* Question Text */}
+                                <span className={`text-sm sm:text-base font-bold transition-colors leading-snug ${isOpen ? 'text-[#1F5E4B]' : 'text-[#2C3E35] group-hover:text-[#1F5E4B]'
+                                  }`}>
+                                  {faq.q}
+                                </span>
+                              </div>
+
+                              {/* Toggle Plus/Minus Button Icon */}
+                              <div className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-all duration-300 border ${isOpen
+                                  ? 'bg-[#1F5E4B] text-white border-[#1F5E4B]'
+                                  : 'bg-[#FAF9F5] text-[#1F5E4B] border-[#E9E2D6] group-hover:bg-[#1F5E4B] group-hover:text-white group-hover:border-[#1F5E4B]'
+                                }`}>
+                                {isOpen ? (
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M20 12H4" />
+                                  </svg>
+                                ) : (
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                                  </svg>
+                                )}
+                              </div>
+                            </button>
+
+                            {/* Expanded Answer Area */}
+                            {isOpen && (
+                              <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#5F5F5F] leading-relaxed border-t border-[#E9E2D6]/40 bg-white/70">
+                                <div className="pt-3">
+                                  {faq.a}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })
                     )}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          </section>
-        )}
+            </section>
+          );
+        })()}
 
         {/* ============ FOOTER / BOOKING CTA ============ */}
         <section className="bg-gradient-to-br from-[#1F5E4B] to-[#154637] text-white py-16 sm:py-20 text-center relative overflow-hidden">
@@ -784,8 +1142,7 @@ const DoctorProfilePage = ({ doctor }) => {
           <p className="text-sm text-[#5F5F5F] text-center mb-10">Consult with any of our DHA-licensed clinical experts in Jumeirah 1.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(DOCTORS)
-              .filter(([key]) => key !== currentDoctor.slug)
-              .slice(0, 3)
+              .filter(([key, otherDoctor]) => key !== currentDoctor.slug && otherDoctor.name !== currentDoctor.name)
               .map(([key, otherDoctor]) => (
                 <div key={key} className="bg-white border border-[#E9E2D6]/80 rounded-2xl p-5 hover:shadow-md transition-shadow flex flex-col justify-between">
                   <div className="flex gap-4 items-center">
@@ -794,7 +1151,7 @@ const DoctorProfilePage = ({ doctor }) => {
                         <Image src={otherDoctor.image} alt={otherDoctor.name} fill className="object-cover object-[50%_20%]" />
                       ) : (
                         <div className="w-full h-full bg-teal-50 flex items-center justify-center text-teal-700 font-bold text-sm">
-                          {otherDoctor.firstName[0]}
+                          {otherDoctor.firstName ? otherDoctor.firstName[0] : (otherDoctor.name ? otherDoctor.name[0] : 'D')}
                         </div>
                       )}
                     </div>
@@ -804,7 +1161,7 @@ const DoctorProfilePage = ({ doctor }) => {
                     </div>
                   </div>
                   <div className="mt-5 pt-4 border-t border-[#E9E2D6]/40 flex justify-end">
-                    <Link href={`/doctors/${key}`} className="text-xs font-bold text-[#1F5E4B] hover:underline flex items-center gap-1">
+                    <Link href={otherDoctor.urlSlug || `/doctors/${key}`} className="text-xs font-bold text-[#1F5E4B] hover:underline flex items-center gap-1">
                       View Full Details <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
                     </Link>
                   </div>

@@ -2051,7 +2051,7 @@ function BookConsultation() {
             </div>
 
             <div className="mt-8 text-[12.5px] text-white/60">
-              📍 RamaCare Polyclinic, Jumeirah 1, Dubai · Open Sat–Thu
+              📍 RamaCare Polyclinic, Jumeirah 1, Dubai · Open Sun–Sat
             </div>
           </div>
 

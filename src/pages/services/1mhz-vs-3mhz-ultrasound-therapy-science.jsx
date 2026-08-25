@@ -494,7 +494,7 @@ const UltrasoundFrequencyScience = () => {
                   </div>
                   <div>
                     <p className="font-bold text-lg">Location:</p>
-                    <p className="text-white/70">Jumeirah 1, Dubai</p>
+                    <p className="text-white/70">12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai</p>
                   </div>
                 </div>
 

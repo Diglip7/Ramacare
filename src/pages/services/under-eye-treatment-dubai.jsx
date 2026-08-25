@@ -921,7 +921,7 @@ export default function UnderEyePage() {
                         underlying tissue more visible. Pigmentation in this area can be genuinely difficult to
                         treat and may require a comprehensive approach that combines sun protection, appropriate
                         skincare, and, in selected cases, professional treatments such as{" "}
-                        <Link href="/services/skin-boosters-dubai" className="text-[#1F5E4B] font-semibold underline underline-offset-4">
+                        <Link href="/services/laser-rejuvenation-dubai" className="text-[#1F5E4B] font-semibold underline underline-offset-4">
                             Skin Rejuvenation
                         </Link>{" "}
                         &mdash; rather than expecting a single product or session to resolve it. Daily sun protection
@@ -1406,12 +1406,12 @@ export default function UnderEyePage() {
                                 </Link>
 
                                 <a
-                                    href="tel:+971566597878"
+                                    href="tel:(+971) 04 286 2006"
                                     className="group rounded-2xl border border-white/30 bg-white/10 backdrop-blur-md text-white p-5 text-sm font-bold shadow-md hover:bg-white/20 transition-all hover:scale-[1.02] flex items-center justify-between"
                                 >
                                     <div className="flex items-center gap-3">
                                         <Phone className="w-5 h-5 text-emerald-300 shrink-0" />
-                                        <span>Call +971 56 659 7878</span>
+                                        <span>Call (+971) 04 286 2006</span>
                                     </div>
                                     <ChevronRight className="w-4 h-4 text-emerald-300 group-hover:translate-x-1 transition-transform" />
                                 </a>

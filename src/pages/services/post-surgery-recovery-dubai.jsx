@@ -504,7 +504,7 @@ const PostSurgeryRecoveryPage = () => {
                     <MapPin className="w-6 h-6 text-white/70 flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-white font-bold text-base">Location</p>
-                      <p className="text-white/70 text-sm">Jumeirah 1, Dubai</p>
+                      <p className="text-white/70 text-sm">12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

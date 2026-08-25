@@ -848,7 +848,7 @@ function Hero() {
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="tel:+971566597878"
+              href="tel:(+971) 04 286 2006"
               className="group inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[13.5px] font-semibold uppercase tracking-[0.06em] transition-transform hover:-translate-y-0.5"
               style={{ borderColor: `${BRAND.graphite}33`, color: BRAND.graphite, backgroundColor: "#FFFFFF" }}
             >
@@ -1987,8 +1987,7 @@ function FAQs() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-4 border-l-2 pl-4 text-[15px] leading-relaxed text-neutral-700 md:text-[15.5px]"
-                    style={{ borderColor: BRAND.clay }}
-                  >
+                    style={{ borderColor: BRAND.clay }}>
                     {faq.a}
                   </motion.p>
                 )}
@@ -2017,9 +2016,8 @@ function InternalLinksAndFinalCta() {
                 key={item.label}
                 href={item.href}
                 className="inline-flex items-center gap-2 rounded-full border px-4.5 py-2.5 text-[14px] font-medium transition-all hover:-translate-y-0.5 hover:shadow-xs hover:border-[#1F5E4B] hover:text-[#1F5E4B]"
-                style={{ borderColor: `${BRAND.graphite}18`, color: BRAND.graphite }}
-              >
-                {item.label} <ArrowRight size={13} color={BRAND.clay} />
+                style={{ borderColor: `${BRAND.graphite}18`, color: BRAND.graphite }}>
+                {item.label} <ArrowRight size={13} color={BRAND.clay}/>
               </a>
             ))}
           </div>
@@ -2031,27 +2029,22 @@ function InternalLinksAndFinalCta() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.16em]" style={{ color: BRAND.claySoft }}>{finalCta.eyebrow}</span>
           <p className="mt-5 text-[17px] leading-[1.85] text-white/90 md:text-[18.5px]">{finalCta.body}</p>
           <p className="mt-4 text-[15px] leading-relaxed text-white/70">{finalCta.sub}</p>
-
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-
             <a
               href="https://wa.me/971566597878?text=Hello%20RamaCare%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20Non-Surgical%20Facelift%20in%20Dubai."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border-2 px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.05em] text-white transition-transform hover:-translate-y-0.5"
-              style={{ borderColor: BRAND.claySoft }}
-            >
+              style={{ borderColor: BRAND.claySoft }}>
               <Send size={16} color={BRAND.claySoft} /> WhatsApp Us
             </a>
             <a
-              href="tel:+971566597878"
+              href="tel:(+971) 04 286 2006"
               className="inline-flex items-center gap-2 rounded-full border px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.05em] text-white/90 transition-transform hover:-translate-y-0.5"
-              style={{ borderColor: `${BRAND.claySoft}55` }}
-            >
+              style={{ borderColor: `${BRAND.claySoft}55` }}>
               <Phone size={16} color={BRAND.claySoft} /> Call Clinic
             </a>
           </div>
-
           <p className="mx-auto mt-10 max-w-2xl text-[14px] leading-[1.85] text-white/60">{finalCta.conclusion}</p>
         </div>
       </section>
@@ -2062,6 +2055,7 @@ function InternalLinksAndFinalCta() {
 /* ------------------------------------------------------------------ */
 /*  PAGE                                                               */
 /* ------------------------------------------------------------------ */
+
 export default function NonSurgicalFacelift() {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -2088,7 +2082,6 @@ export default function NonSurgicalFacelift() {
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
           rel="stylesheet"
         />
-
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -2111,7 +2104,6 @@ export default function NonSurgicalFacelift() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </Head>
-
       <main>
         <Hero />
         <QuickAnswer />

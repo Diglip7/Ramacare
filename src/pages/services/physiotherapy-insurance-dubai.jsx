@@ -871,7 +871,7 @@ export default function PhysiotherapyInsuranceDubai() {
                       Our Location
                     </h4>
                     <p className="text-sm text-white/80" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}>
-                      RamaCare Polyclinic, Jumeirah 1
+                      12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai
                     </p>
                   </div>
                 </div>

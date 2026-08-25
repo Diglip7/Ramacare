@@ -616,7 +616,7 @@ const UltrasoundShinSplintsPage = () => {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {[
-                { icon: <MapPin size={20} />, label: 'Location', value: 'Jumeirah 1, Dubai' },
+                { icon: <MapPin size={20} />, label: 'Location', value: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai' },
                 { icon: <ActivityIcon size={20} />, label: 'Specialty', value: 'Sports Physiotherapy & Running Gait Analysis' },
                 { icon: <ArrowRight size={20} />, label: 'Next Step', value: "Book Your Runner's Assessment" },
               ].map((item, i) => (

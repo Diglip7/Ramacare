@@ -427,7 +427,7 @@ export default function BestHairSpecialistPage() {
                   <LucideIcons.PhoneCall className="w-5 h-5 text-[#C5A880] shrink-0" />
                   <div>
                     <p className="text-[10px] uppercase tracking-wider text-[#7F7F7F] font-bold">Contact Number</p>
-                    <a href="tel:+971566597878" className="font-semibold text-xs md:text-sm hover:underline text-[#1F5E4B]">+971 56 659 7878</a>
+                    <a href="tel:(+971) 04 286 2006" className="font-semibold text-xs md:text-sm hover:underline text-[#1F5E4B]">(+971) 04 286 2006</a>
                   </div>
                 </div>
               </div>
