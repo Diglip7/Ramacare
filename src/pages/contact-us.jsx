@@ -170,7 +170,7 @@ const ContactUsPage = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      highlight: '+971 56 659 7878'
+      highlight: '+971042862006'
     },
     {
       icon: Mail,
@@ -544,12 +544,12 @@ const ContactUsPage = () => {
                   </p>
                   <div className="space-y-4">
                     <a 
-                      href="tel:+971566597878"
+                      href="tel:+971042862006"
                       className="block w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 rounded-xl py-3 px-4 text-center font-medium transition-all"
                     >
                       <div className="flex items-center justify-center gap-2">
                         <Phone className="w-5 h-5" />
-                        <span>Call Now: +971 56 659 7878</span>
+                        <span>Call Now: +971042862006</span>
                       </div>
                     </a>
                     <a 

@@ -727,7 +727,7 @@ export default function HairPrpCostPage() {
                   WhatsApp Us
                 </a>
                 <a
-                  href="tel:+971566597878"
+                  href="tel:+971042862006"
                   className="flex items-center justify-center gap-2 rounded-xl border border-[#1F5E4B]/25 px-4 py-4 text-base font-bold text-gray-600 hover:bg-[#F9F7F2] transition-all"
                 >
                   <Phone className="h-5 w-5" />

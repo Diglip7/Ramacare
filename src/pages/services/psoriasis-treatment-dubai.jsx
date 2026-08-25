@@ -558,7 +558,7 @@ export default function PsoriasisTreatmentPage() {
                     <MessageCircle className="h-5 w-5" /> Book Consultation
                   </button>
                   <a
-                    href="tel:+971566597878"
+                    href="tel:+971042862006"
                     className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-wide text-white transition-all"
                   >
                     <Phone className="h-4 w-4" /> Call Now
@@ -1062,10 +1062,10 @@ export default function PsoriasisTreatmentPage() {
                 <MessageCircle className="h-5 w-5" /> Book on WhatsApp
               </button>
               <a
-                href="tel:+971566597878"
+                href="tel:+971042862006"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-250 hover:bg-gray-50 px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#1A1A1A] transition-all"
               >
-                <Phone className="h-4 w-4" /> Call Now: +971 56 659 7878
+                <Phone className="h-4 w-4" /> Call Now
               </a>
             </div>
 

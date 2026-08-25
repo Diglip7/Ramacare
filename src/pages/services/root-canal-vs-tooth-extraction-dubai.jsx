@@ -358,7 +358,7 @@ export default function RootCanalVsExtractionPage() {
                     Book an Appointment <ArrowRight className="h-4 w-4" />
                   </a>
                   <a
-                    href="tel:+971566597878"
+                    href="tel:+971042862006"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1F5E4B]/25 px-6 py-3 text-sm font-semibold text-[#1F5E4B] hover:bg-[#F9F7F2] transition-colors duration-200"
                   >
                     <Phone className="h-4 w-4" /> Call Now
@@ -860,7 +860,7 @@ export default function RootCanalVsExtractionPage() {
                     <MessageCircle className="h-4 w-4" /> Book an Appointment
                   </a>
                   <a
-                    href="tel:+971566597878"
+                    href="tel:+971042862006"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1F5E4B]/25 px-6 py-3 text-sm font-semibold text-[#1F5E4B] hover:bg-white transition-colors duration-200"
                   >
                     <Phone className="h-4 w-4" /> Call Now

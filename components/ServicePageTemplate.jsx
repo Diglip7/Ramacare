@@ -201,7 +201,7 @@ export default function ServicePageTemplate({ content }) {
                   Book Free Consultation
                 </a>
                 <a
-                  href="tel:+971566597878"
+                  href="tel:+971042862006"
                   className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-white hover:bg-gray-50 text-[#1F5E4B] border border-[#1F5E4B]/20 hover:border-[#1F5E4B]/50 rounded-xl font-bold text-base sm:text-lg transition-all shadow-sm"
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -228,7 +228,7 @@ export default function ServicePageTemplate({ content }) {
                   <div className="space-y-3 sm:space-y-4 border-t border-gray-100 pt-4 sm:pt-6">
                     <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">License Status</span>
-                      <span className="text-[#1F5E4B] font-bold">DHA Registered</span>
+                      <span className="text-[#1F5E4B] font-bold">DHA Licensed - 2036418</span>
                     </div>
                     <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">Opening Hours</span>
