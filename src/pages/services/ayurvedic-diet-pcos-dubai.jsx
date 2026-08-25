@@ -1176,7 +1176,7 @@ export default function AyurvedicDietPCOSPage() {
                       fontWeight: '400', 
                       color: '#5F5F5F'
                     }}>
-                      Jumeirah 1, Dubai, UAE
+                      12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Dubai
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -1189,7 +1189,7 @@ export default function AyurvedicDietPCOSPage() {
                       fontWeight: '400', 
                       color: '#5F5F5F'
                     }}>
-                      +971 XX XXX XXXX
+                      (+971) 04 286 2006
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -1203,7 +1203,7 @@ export default function AyurvedicDietPCOSPage() {
                       fontWeight: '400', 
                       color: '#5F5F5F'
                     }}>
-                      info@ramacare.ae
+                      query@ramacarepolyclinic.com
                     </span>
                   </div>
                 </div>

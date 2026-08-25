@@ -16,17 +16,43 @@ import {
 /*  CONTENT — verbatim, kept as constants at the top of the file        */
 /* ------------------------------------------------------------------ */
 const meta = {
-  title: "Dental Tooth Filling in Dubai | Rama Care Polyclinic",
+  title: "Dental Tooth Filling in Dubai | RamaCare Polyclinic",
   description:
-    "Get Dental Tooth Filling in Dubai at Rama Care Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation.",
+    "Get Dental Tooth Filling in Dubai at RamaCare Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation.",
   url: "/dental-tooth-filling-dubai",
+};
+
+/* ------------------------------------------------------------------ */
+/*  IMAGE ASSETS & RECOMMENDATIONS MAPPING                             */
+/* ------------------------------------------------------------------ */
+const IMAGES = {
+  hero: {
+    src: "/images/Dental Tooth Filling in Dubai consultation.jpg",
+    alt: "Dental Tooth Filling in Dubai consultation at RamaCare Polyclinic",
+  },
+  cavityIllustration: {
+    src: "/images/tooth decay and dental cavity anatomy illustration.jpg",
+    alt: "tooth decay and dental cavity anatomy illustration",
+  },
+  examination: {
+    src: "/images/dentist examining a cavity before tooth filling.jpg",
+    alt: "dentist examining a cavity before tooth filling in Dubai",
+  },
+  beforeAfterBefore: {
+    src: "/images/tooth filling before.jpg",
+    alt: "tooth filling before and after dental restoration",
+  },
+  beforeAfterAfter: {
+    src: "/images/tooth filling after.jpg",
+    alt: "tooth filling before and after dental restoration",
+  },
 };
 
 const hero = {
   h1: "Dental Tooth Filling in Dubai for Cavities & Tooth Decay",
   intro: [
     "If a toothache or a small dark spot on your tooth has been on your mind, you're not alone — cavities are one of the most common reasons people visit a dentist. Tooth decay develops gradually, starting as a weak spot in the enamel and, if left untreated, spreading deeper into the tooth. A dental filling is the treatment most patients think of first, and for good reason: when caught early, it's often a straightforward way to remove the decayed portion of a tooth and restore it to a functional, comfortable state. This guide on Dental Tooth Filling in Dubai explains how decay develops, what actually happens during a filling appointment, and when a filling may not be the right treatment at all.",
-    "It's worth saying clearly at the outset: not every cavity can be treated with a simple filling. Some decay is shallow and limited to the enamel; other cases have progressed closer to the nerve of the tooth, or the tooth has cracked in a way that changes what's structurally possible. That's why an in-person dental examination — often supported by an X-ray — comes before any treatment plan. At Rama Care Polyclinic in Jumeirah 1, Dubai, our dental team assesses the depth and extent of decay first, then discusses whether a filling, a crown, root canal treatment or another approach is the most appropriate option for that specific tooth.",
+    "It's worth saying clearly at the outset: not every cavity can be treated with a simple filling. Some decay is shallow and limited to the enamel; other cases have progressed closer to the nerve of the tooth, or the tooth has cracked in a way that changes what's structurally possible. That's why an in-person dental examination — often supported by an X-ray — comes before any treatment plan. At RamaCare Polyclinic in Jumeirah 1, Dubai, our dental team assesses the depth and extent of decay first, then discusses whether a filling, a crown, root canal treatment or another approach is the most appropriate option for that specific tooth.",
   ],
 };
 
@@ -1033,7 +1059,7 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pt-8 pb-16 md:px-10 md:pt-10 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -1104,52 +1130,34 @@ function Hero() {
           </div>
         </motion.div>
 
-        {/* SCAN FRAME */}
+        {/* HERO IMAGE & DIAGNOSTIC CARD */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm"
+          className="relative mx-auto w-full max-w-md"
         >
           <div
-            className="relative overflow-hidden rounded-[20px] px-10 py-14"
+            className="relative overflow-hidden rounded-[26px] border border-white/20 p-3 shadow-2xl"
             style={{ backgroundColor: BRAND.darkTeal }}
           >
-            {/* viewfinder corner brackets */}
-            {[
-              "top-4 left-4 border-t border-l",
-              "top-4 right-4 border-t border-r",
-              "bottom-4 left-4 border-b border-l",
-              "bottom-4 right-4 border-b border-r",
-            ].map((pos) => (
-              <span
-                key={pos}
-                className={`absolute h-5 w-5 ${pos}`}
-                style={{ borderColor: `${BRAND.gold}88` }}
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px]">
+              <img
+                src={IMAGES.hero.src}
+                alt={IMAGES.hero.alt}
+                className="h-full w-full object-cover"
               />
-            ))}
-
-            <div className="mb-6 flex items-center justify-center gap-2 text-[11px] font-medium uppercase tracking-[0.16em] text-white/50">
-              <ScanLine size={13} color={BRAND.gold} />
-              Diagnostic View
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F3B2E] via-transparent to-transparent opacity-75" />
             </div>
 
-            <div className="relative flex justify-center">
-              <ToothIcon stage="decayed" size={150} />
-
-              {/* animated scan sweep */}
-              <motion.div
-                className="pointer-events-none absolute left-1/2 h-px w-40 -translate-x-1/2"
-                style={{ background: `linear-gradient(90deg, transparent, ${BRAND.gold}, transparent)` }}
-                initial={{ top: "6%" }}
-                animate={{ top: ["6%", "94%", "6%"] }}
-                transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </div>
-
-            <div className="mt-7 flex items-center justify-center gap-2 text-[12px] text-white/60">
-              <Activity size={13} color={DECAY} />
-              Decay flagged for assessment
+            <div className="p-4 text-center">
+              <div className="flex items-center justify-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em]" style={{ color: BRAND.gold }}>
+                <ScanLine size={14} color={BRAND.gold} />
+                Cavity Assessment &amp; Restoration
+              </div>
+              <p className="mt-1 text-[13px] text-white/80">
+                Professional dental filling consultation at RamaCare Polyclinic, Jumeirah 1, Dubai
+              </p>
             </div>
           </div>
         </motion.div>
@@ -1310,7 +1318,7 @@ function WhyTeethNeedFillings() {
             transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <ImagePlaceholder
-              src="/images/healthy-vs-infected-tooth-comparison.jpg"
+              src="/images/tooth decay and dental cavity anatomy illustration.jpg"
               alt="tooth decay and dental cavity anatomy illustration"
               label="Clinical illustration — tooth decay and dental cavity anatomy"
             />
@@ -1512,7 +1520,12 @@ function SignsYouMayNeedFilling() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <ImagePlaceholder label="Patient consultation photo — add here" ratio="aspect-square" />
+            <ImagePlaceholder
+              src={IMAGES.examination.src}
+              alt={IMAGES.examination.alt}
+              label="Dentist examining a cavity before tooth filling in Dubai"
+              ratio="aspect-square"
+            />
           </motion.div>
         </div>
 
@@ -1809,6 +1822,7 @@ function WhatToExpectTreatment() {
             })}
           </div>
         </div>
+
       </div>
     </section>
   );
@@ -2149,7 +2163,11 @@ function FillingVsRootCanalVsCrown() {
         </div>
 
         <p className="mx-auto mt-10 max-w-3xl text-[14.5px] leading-[1.9] text-neutral-600">
-          {fillingVsRootCanalVsCrown.closing}
+          If the decay has reached the inner part of the tooth, your dentist may discuss whether{" "}
+          <Link href="/services/root-canal-treatment-dubai" className="font-semibold text-[#1F5E4B] underline underline-offset-4 decoration-[#1F5E4B]44 hover:decoration-[#1F5E4B]">
+            root canal treatment in Dubai
+          </Link>{" "}
+          is more appropriate than a conventional filling. Please don't attempt to self-diagnose based on symptoms alone — pain levels don't always correlate directly with the extent of internal damage, and only a clinical exam (often with an X-ray) can confirm what's actually happening inside the tooth.
         </p>
       </div>
     </section>
@@ -2611,7 +2629,7 @@ function BeforeAfter() {
         >
           <div className="relative aspect-square overflow-hidden">
             <img
-              src="/images/Before.jpeg"
+              src="/images/tooth filling before.jpg"
               alt="tooth filling before and after dental restoration"
               className="h-full w-full object-cover"
             />
@@ -2624,7 +2642,7 @@ function BeforeAfter() {
           </div>
           <div className="relative aspect-square overflow-hidden">
             <img
-              src="/images/After.jpeg"
+              src="/images/tooth filling after.jpg"
               alt="tooth filling before and after dental restoration"
               className="h-full w-full object-cover"
             />
@@ -2639,8 +2657,7 @@ function BeforeAfter() {
           {/* center seam badge, desktop */}
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full sm:flex"
-            style={{ backgroundColor: BRAND.gold }}
-          >
+            style={{ backgroundColor: BRAND.gold }}>
             <ArrowRight size={16} color="#FFFFFF" />
           </div>
         </motion.div>
@@ -2829,13 +2846,16 @@ function Insurance() {
                 </div>
               ))}
             </div>
-            <div
-              className="mt-6 flex items-center gap-3 rounded-xl px-4 py-3.5"
+            <a
+              href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic!%20I'm%20not%20sure%20if%20I%20need%20a%20tooth%20filling,%20root%20canal,%20or%20crown.%20Can%20your%20team%20help%20clarify?"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center gap-3 rounded-xl px-4 py-3.5 transition-transform hover:scale-[1.01]"
               style={{ backgroundColor: BRAND.teal }}
             >
               <PhoneCall size={15} color="#FFFFFF" />
               <span className="text-[13px] font-medium text-white">Not sure? Our team can help clarify.</span>
-            </div>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -3235,7 +3255,9 @@ function BookConsultation() {
 
             <div className="mt-9 flex flex-col items-center gap-4">
               <a
-                href="tel:+97142862006"
+                href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic!%20I%20would%20like%20to%20book%20a%20Dental%20Tooth%20Filling%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-[14.5px] font-semibold shadow-sm transition-transform hover:-translate-y-0.5"
                 style={{ backgroundColor: BRAND.gold, color: BRAND.darkTeal }}
               >
@@ -3244,11 +3266,16 @@ function BookConsultation() {
               </a>
 
               <div className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[13.5px] text-white/70">
-                <a href="tel:+97142862006" className="flex items-center gap-2 hover:text-white">
+                <a href="tel:+97142862006" className="flex items-center gap-2 hover:text-white transition-colors">
                   <PhoneCall size={15} color={BRAND.gold} />
                   {bookConsultation.phone}
                 </a>
-                <a href="https://wa.me/971566597878" className="flex items-center gap-2 hover:text-white">
+                <a
+                  href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic!%20I%20have%20a%20question%20about%20Dental%20Tooth%20Filling%20treatment%20in%20Dubai."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
                   <Send size={15} color={BRAND.gold} />
                   WhatsApp {bookConsultation.whatsapp}
                 </a>
@@ -3284,7 +3311,7 @@ const clinicSchema = {
   "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
   "@id": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai#clinic",
   "name": "RamaCare Polyclinic",
-  "image": "https://ramacarepolyclinic.com/images/ramacare-dental-clinic-dubai.jpg",
+  "image": "https://ramacarepolyclinic.com/images/ramacare-dental-clinic-jumeirah-1.jpg",
   "url": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai",
   "telephone": "+971-4-286-2006",
   "priceRange": "$$",

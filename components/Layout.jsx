@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
     setMounted(true);
 
     const setupPortal = () => {
-      const faqElement = document.getElementById('faq');
+      const faqElement = document.getElementById('faq') || document.getElementById('faqs');
       if (faqElement) {
         let current = faqElement;
         let sectionAncestor = null;

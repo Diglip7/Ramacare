@@ -59,7 +59,7 @@ const FONT_BODY = "'Nunito Sans', sans-serif";
 /*  META DATA                                                                 */
 /* -------------------------------------------------------------------------- */
 const meta = {
-  title: "Hollywood Smile Treatment Dubai | RamaCare Polyclinic",
+  title: "Hollywood Smile Treatment Dubai | RamaCare",
   description:
     "Explore Hollywood Smile Treatment Dubai at RamaCare Polyclinic with personalized cosmetic dentistry options for a natural, balanced smile. Book a consultation.",
   url: "https://www.ramacarepolyclinic.com/services/hollywood-smile-treatment-dubai",
@@ -70,11 +70,11 @@ const meta = {
 /* -------------------------------------------------------------------------- */
 const IMAGES = {
   hero: {
-    src: "/images/cosmetic-dental-consultation.jpg",
+    src: "/images/Hollywood Smile Treatment Dubai consultation.jpg",
     alt: "Hollywood Smile Treatment Dubai consultation at RamaCare Polyclinic",
   },
   assessment: {
-    src: "/images/dental consultation with Dr. Hirbod Gilandoust.jpg",
+    src: "/images/cosmetic dentist assessing smile design in Dubai.jpg",
     alt: "cosmetic dentist assessing smile design in Dubai",
   },
   planning: {
@@ -82,31 +82,43 @@ const IMAGES = {
     alt: "Hollywood Smile veneer planning in Dubai",
   },
   digitalDesign: {
-    src: "/images/modern-dental-treatment-room.jpg",
+    src: "/images/digital smile design for Hollywood Smile treatment.jpg",
     alt: "digital smile design for Hollywood Smile treatment",
   },
   porcelainVeneers: {
-    src: "/images/composite-veeners.jpg",
+    src: "/images/porcelain dental veneers for smile makeover in Dubai.jpg",
     alt: "porcelain dental veneers for smile makeover in Dubai",
   },
   compositeBonding: {
-    src: "/images/composite.jpg",
+    src: "/images/composite dental bonding for smile enhancement.jpg",
     alt: "composite dental bonding for smile enhancement",
   },
+  teethWhitening: {
+    src: "/images/teeth-bleaching.jpg",
+    alt: "professional teeth whitening for Hollywood Smile treatment in Dubai",
+  },
+  dentalCrowns: {
+    src: "/images/dental-crown.jpg",
+    alt: "dental crowns for structural tooth restoration in Dubai",
+  },
+  orthodontics: {
+    src: "/images/braces.jpg",
+    alt: "orthodontic braces alignment for smile makeover in Dubai",
+  },
   smileResult: {
-    src: "/images/happy-patient-after-dental-treatment-dubai.jpg",
+    src: "/images/Hollywood Smile Treatment Dubai.jpg",
     alt: "Hollywood Smile Treatment Dubai natural-looking smile result",
   },
   dentistConsultation: {
-    src: "/images/dentist-examining-patient-dubai.jpg",
+    src: "/images/cosmetic dentistry consultation for smile makeover in Dubai.jpg",
     alt: "cosmetic dentistry consultation for smile makeover in Dubai",
   },
   aftercare: {
-    src: "/images/dental-checkup-ramacare-polyclinic.jpg",
+    src: "/images/veneer aftercare and maintenance advice from Dubai.jpg",
     alt: "veneer aftercare and maintenance advice from Dubai dentist",
   },
   clinicCTA: {
-    src: "/images/ramaCare Polyclinic Jumeirah Dubai.jpg",
+    src: "/images/RamaCare dental clinic in Jumeirah 1 Dubai.jpg",
     alt: "RamaCare dental clinic in Jumeirah 1 Dubai",
   },
 };
@@ -179,19 +191,19 @@ const treatmentOptions = {
       icon: Sun,
       title: "Teeth Whitening",
       body: "Improves natural tooth color and is often considered before or alongside other cosmetic treatments, so veneer or bonding shade can be matched for overall consistency.",
-      image: null,
+      image: IMAGES.teethWhitening,
     },
     {
       icon: Crown,
       title: "Dental Crowns",
       body: "Restorative rather than purely cosmetic — considered when a tooth has significant structural damage, a large filling, or has been weakened by a previous root canal.",
-      image: null,
+      image: IMAGES.dentalCrowns,
     },
     {
       icon: AlignCenter,
       title: "Orthodontic Treatment",
       body: "When the main concern is crooked or misaligned teeth, orthodontics may be a more appropriate long-term option than masking alignment with veneers.",
-      image: null,
+      image: IMAGES.orthodontics,
     },
   ],
 };
@@ -492,12 +504,33 @@ function SmileArc({ size = 280, pointCount = 8 }) {
 function Hero() {
   return (
     <section className="relative overflow-hidden" style={{ backgroundColor: BRAND.cream, fontFamily: FONT_BODY }}>
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pt-8 pb-16 md:px-10 md:pt-10 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/* BREADCRUMB UI */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-neutral-500">
+              <li>
+                <Link href="/" className="transition-colors hover:text-[#1F5E4B]">
+                  Home
+                </Link>
+              </li>
+              <li>/</li>
+              <li>
+                <Link href="/services/dental-dubai" className="transition-colors hover:text-[#1F5E4B]">
+                  Dental Services
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-[#1F5E4B]" aria-current="page">
+                Hollywood Smile Treatment Dubai
+              </li>
+            </ol>
+          </nav>
+
           <div
             className="mb-7 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[11.5px] font-semibold uppercase tracking-[0.16em]"
             style={{ borderColor: `${BRAND.teal}33`, color: BRAND.teal, backgroundColor: `${BRAND.teal}0d` }}
@@ -2007,7 +2040,7 @@ function BookConsultation() {
                 <Phone size={16} /> Call Clinic 
               </a>
               <a
-                href="https://wa.me/971566597878?text=Hi%20RamaCare,%20I%20would%20like%20to%20book%20a%20Hollywood%20Smile%20consultation"
+                href="https://wa.me/971566597878?text=Hello%20RamaCare%20Polyclinic!%20I%20would%20like%20to%20book%20a%20Hollywood%20Smile%20consultation%20in%20Dubai."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[13.5px] font-bold text-white transition-all hover:bg-white/10"
@@ -2059,28 +2092,52 @@ export default function HollywoodSmileTreatmentDubai() {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "RamaCare Polyclinic",
+    "image": "https://www.ramacarepolyclinic.com/images/ramaCare%20Polyclinic%20Jumeirah%20Dubai.jpg",
     "url": meta.url,
     "telephone": "+971-4-286-2006",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",
       "addressLocality": "Jumeirah 1",
       "addressRegion": "Dubai",
       "addressCountry": "AE",
     },
     "medicalSpecialty": "Dentistry",
+    "sameAs": [
+      "https://www.ramacarepolyclinic.com/",
+      "https://ramacarepolyclinic.ae/"
+    ]
   };
 
   const pageSchemaData = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    "name": meta.title,
+    "name": "Hollywood Smile Treatment Dubai for a Natural-Looking Smile",
     "url": meta.url,
     "description": meta.description,
+    "medicalAudience": {
+      "@type": "Patient"
+    },
+    "about": {
+      "@type": "MedicalProcedure",
+      "name": "Hollywood Smile Treatment"
+    },
     "publisher": {
       "@type": "MedicalOrganization",
-      "name": "RamaCare Polyclinic",
-    },
+      "name": "RamaCare Polyclinic"
+    }
+  };
+
+  const procedureSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Dental Veneers",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "bodyLocation": "Teeth",
+    "howPerformed": "Thin custom-made shells are bonded to the front surface of the tooth to adjust color, shape, size, and proportion, following a clinical assessment.",
+    "preparation": "Dental examination, bite assessment, and smile analysis prior to treatment.",
+    "followup": "Routine dental check-ups to monitor fit, wear, and longevity."
   };
 
   const breadcrumbSchemaData = {
@@ -2088,9 +2145,32 @@ export default function HollywoodSmileTreatmentDubai() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ramacarepolyclinic.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.ramacarepolyclinic.com/services" },
+      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://www.ramacarepolyclinic.com/services/dental-dubai" },
       { "@type": "ListItem", "position": 3, "name": "Hollywood Smile Treatment Dubai", "item": meta.url },
     ],
+  };
+
+  const organizationSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RamaCare Polyclinic",
+    "url": "https://www.ramacarepolyclinic.com/",
+    "logo": "https://www.ramacarepolyclinic.com/images/Logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",
+      "addressLocality": "Jumeirah 1",
+      "addressRegion": "Dubai",
+      "addressCountry": "AE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971-4-286-2006",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://ramacarepolyclinic.ae/"
+    ]
   };
 
   return (
@@ -2109,11 +2189,19 @@ export default function HollywoodSmileTreatmentDubai() {
         />
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchemaData) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchemaData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchemaData) }}
         />
       </Head>
 

@@ -228,8 +228,7 @@ const EximiaVsCoolSculptingPage = () => {
                 </button>
                 <button 
                   onClick={() => window.open('https://wa.me/971566597878', '_blank')}
-                  className="px-8 py-4 bg-white text-[#1F5E4B] rounded-lg font-semibold border-2 border-[#1F5E4B] hover:bg-[#1F5E4B] hover:text-white transition-all"
-                >
+                  className="px-8 py-4 bg-white text-[#1F5E4B] rounded-lg font-semibold border-2 border-[#1F5E4B] hover:bg-[#1F5E4B] hover:text-white transition-all">
                   WhatsApp Consultation
                 </button>
               </div>
@@ -453,8 +452,7 @@ const EximiaVsCoolSculptingPage = () => {
               </div>
               <button 
                 onClick={() => window.open('/services/eximia-vs-coolsculpting-dubai/', '_blank')}
-                className="w-full py-3 px-6 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
-              >
+                className="w-full py-3 px-6 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                 Learn More <span>→</span>
               </button>
             </div>
