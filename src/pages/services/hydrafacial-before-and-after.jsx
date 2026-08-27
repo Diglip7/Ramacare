@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1082,7 +1083,9 @@ export default function HydrafacialBeforeAndAfterPage() {
           </article>
 
         </div>
-      </section>
+        </section>
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-before-and-after/" />
 
       {/* Floating Bottom Navigation Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

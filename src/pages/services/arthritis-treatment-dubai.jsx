@@ -19,7 +19,6 @@ export default function ArthritisTreatmentPage() {
   }
 
   const { seo, breadcrumbs, faqs, types, treatmentOptions, signsSymptoms } = content;
-
   const typesList = types?.list || [];
 
   // Set up page-specific schemas for SEO

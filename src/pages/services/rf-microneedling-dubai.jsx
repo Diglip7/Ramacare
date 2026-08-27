@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
     Sparkles,
     Calendar,
@@ -1207,7 +1208,9 @@ export default function RFMicroneedlingDubai() {
                             </a>
                         </div>
                     </div>
-                </section>
+                    </section>
+                {/* Content Reviewer Badge */}
+                <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/rf-microneedling-dubai/" />
             </main>
         </Layout>
     );

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
     Sparkles,
     Calendar,
@@ -1681,7 +1682,9 @@ export default function MicroneedlingSkinRenewalServicePage() {
                     <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-semibold pr-1">
                         WhatsApp Doctor
                     </span>
-                </a>
+             </a>
+            {/* Content Reviewer Badge */}
+                <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/microneedling-skin-renewal-dubai/" />
 
             </div>
         </Layout>

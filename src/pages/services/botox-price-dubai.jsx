@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -720,7 +721,9 @@ export default function BotoxPriceDubaiPage() {
         <p className="text-xs text-[#5F5F5F] leading-relaxed mt-8 text-left">
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> Botox pricing outlined on this page is provided for general informational purposes only and does not constitute a fixed quote. Final Botox price in Dubai is determined on an individual basis following an in-person consultation and facial assessment by {DOCTOR_NAME} or another qualified physician at RamaCare Polyclinic. Treatment suitability, recommended dosage, and expected outcomes are determined solely by the treating doctor based on each patient&apos;s medical history and facial anatomy. Results vary from person to person, and no specific outcome is guaranteed. This content does not replace professional medical advice; please consult our clinical team directly to discuss whether Botox treatment is appropriate for you.
         </p>
-      </section>
+        </section>
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/botox-price-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

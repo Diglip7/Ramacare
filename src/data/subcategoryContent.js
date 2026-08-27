@@ -243,8 +243,8 @@ export const subcategoryContent = {
       metaTitle: "Plantar Fasciitis Treatment Dubai – Expert Heel Pain Care",
       metaDescription: "Get expert Plantar Fasciitis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care, and proven heel pain relief. Book now.",
       keywords: "Plantar Fasciitis Treatment Dubai, Heel Pain Treatment Dubai, Physiotherapy for Plantar Fasciitis Dubai, Plantar Fascia Pain Dubai, Heel Spur Treatment Dubai, Foot Pain Treatment Dubai, Chronic Heel Pain Dubai, Flat Feet Treatment Dubai, Running Injury Treatment Dubai, Foot Physiotherapy Dubai",
-      slug: "/plantar-fasciitis-treatment-dubai",
-      canonical: "https://www.ramacarepolyclinic.com/plantar-fasciitis-treatment-dubai"
+      slug: "/services/plantar-fasciitis-treatment-dubai",
+      canonical: "https://ramacarepolyclinic.ae/services/plantar-fasciitis-treatment-dubai"
     },
 
     // Visible breadcrumb trail (mirrors breadcrumbSchema in the page) — was missing from the rendered page entirely
@@ -252,7 +252,7 @@ export const subcategoryContent = {
       { label: "Home", href: "/" },
       { label: "Services", href: "/services" },
       { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
-      { label: "Plantar Fasciitis Treatment Dubai", href: "/plantar-fasciitis-treatment-dubai" }
+      { label: "Plantar Fasciitis Treatment Dubai", href: "/services/plantar-fasciitis-treatment-dubai" }
     ],
 
     hero: {
@@ -263,7 +263,7 @@ export const subcategoryContent = {
       // Restored from source doc: guide overview + direct specialist mention (was cut from hero.intro)
       guideNote: "In this guide, we'll cover what plantar fasciitis is, why it develops, how it's diagnosed, and what real, effective treatment looks like. If you'd rather speak with someone directly, our Plantar Fasciitis Specialist Dubai team is ready to assess your foot and get you started.",
       stats: [
-        { label: "Patients Treated", value: "500+" },
+        { label: "Patients Treated", value: "2500+" },
         { label: "DHA Licensed", value: "100%" }
       ]
     },
@@ -531,8 +531,8 @@ export const subcategoryContent = {
       metaTitle: "Cervical Spondylosis Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Get expert Cervical Spondylosis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care plans. Book your assessment today.",
       keywords: "Cervical Spondylosis Treatment Dubai, neck arthritis treatment Dubai, cervical osteoarthritis Dubai, cervical disc degeneration Dubai, cervical degenerative disc disease Dubai, Neck Pain Treatment Dubai, Spine Physiotherapy Dubai, Dry Needling Dubai, neck pain clinic Jumeirah, posture correction Dubai",
-      slug: "/cervical-spondylosis-treatment-dubai",
-      canonical: "https://www.ramacarepolyclinic.com/cervical-spondylosis-treatment-dubai"
+      slug: "/services/cervical-spondylosis-treatment-dubai",
+      canonical: "https://www.ramacarepolyclinic.ae/services/cervical-spondylosis-treatment-dubai"
     },
 
     breadcrumbs: [
@@ -811,7 +811,7 @@ export const subcategoryContent = {
       metaDescription: "Struggling with shoulder pain? Get expert Shoulder Pain Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists. Book your appointment today.",
       keywords: "Shoulder Pain Treatment Dubai, Shoulder Impingement Syndrome Dubai, Shoulder Injury Treatment Dubai, Rotator Cuff Injury Dubai, Chronic Shoulder Pain Dubai, Shoulder Pain Specialist Dubai, Sports Shoulder Injury Dubai, Shoulder Physiotherapy Dubai, Frozen Shoulder Treatment Dubai, Shoulder Rehabilitation Dubai",
       slug: "/services/shoulder-pain-treatment-dubai",
-      canonical: "https://www.ramacarepolyclinic.com/services/shoulder-pain-treatment-dubai"
+      canonical: "https://www.ramacarepolyclinic.ae/services/shoulder-pain-treatment-dubai"
     },
 
     breadcrumbs: [
@@ -18663,7 +18663,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '1100+',
+          number: '2500+',
           label: 'Patients Treated'
         },
         {

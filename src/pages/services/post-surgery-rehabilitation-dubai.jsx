@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../../../components/Layout';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import DoctorsSection from '../../../components/DoctorsSection';
 import { DOCTOR_GROUPS } from '../../data/doctors';
 import {
@@ -916,7 +917,7 @@ export default function PostSurgeryRehabilitationPage() {
         {/* DOCTORS SHOWCASE */}
 
 
-        <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
+       
 
 
         {/* CONCLUSION AND CLINICAL NOTES */}
@@ -1051,6 +1052,9 @@ export default function PostSurgeryRehabilitationPage() {
             </div>
           </div>
         </section>
+
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" />
       </div>
     </Layout>
   );

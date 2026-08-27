@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -843,7 +844,9 @@ export default function HydraFacialCostDubaiPage() {
             </p>
           </div>
         </div>
-      </div>
+        </div>
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-cost-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

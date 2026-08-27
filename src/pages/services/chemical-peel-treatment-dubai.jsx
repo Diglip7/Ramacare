@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import {
   Sparkles,
   CheckCircle2,
@@ -1474,6 +1475,8 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/chemical-peel-treatment-dubai/" />
     </Layout>
   );
 }

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Calendar, MessageCircle, Clock, Shield, MapPin, Zap, CheckCircle2, Radio, Award, UserCheck, Lock, ChevronDown, Activity, Droplet, Heart } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const PostSurgeryRecoveryPage = () => {
   const whatsappNumber = "971566597878";
@@ -619,6 +620,9 @@ const PostSurgeryRecoveryPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" />
       </main>
     </Layout>
     {ToastComponent}

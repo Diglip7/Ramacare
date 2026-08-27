@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import DoctorsSection from '../../../components/DoctorsSection';
 import QuickNavigation from '../../../components/QuickNavigation';
 import { subcategoryContent } from '../../data/subcategoryContent';
@@ -171,7 +172,7 @@ export default function ShoulderPainTreatmentPage() {
         "@type": "ListItem",
         "position": i + 1,
         "name": b.label,
-        "item": b.href && b.href.startsWith('http') ? b.href : "https://www.ramacarepolyclinic.com" + b.href
+        "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
       };
     })
   };
@@ -979,6 +980,10 @@ export default function ShoulderPainTreatmentPage() {
         </section>
       ) : null}
 
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" />
+
+      {/* CLINICAL BOOKING CONSULTATION / LEAD FORM */}
       <div id="book-now">
         <BookConsultation
           content={{

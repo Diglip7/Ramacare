@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -56,8 +57,8 @@ const medicalClinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "RamaCare Polyclinic",
-  "url": "https://www.ramacarepolyclinic.com/services/non-surgical-facelift-dubai",
-  "image": "https://www.ramacarepolyclinic.com/images/facial-assessment-non-surgical-facelift.jpg",
+  "url": "https://ramacarepolyclinic.ae//services/non-surgical-facelift-dubai",
+  "image": "/https://ramacarepolyclinic.ae/images/facial-assessment-non-surgical-facelift.jpg",
   "telephone": "+971566597878",
   "address": {
     "@type": "PostalAddress",
@@ -95,7 +96,7 @@ const medicalWebPageSchema = {
   "@type": "MedicalWebPage",
   "name": "Non-Surgical Facelift in Dubai | RamaCare",
   "description": "Explore Non-Surgical Facelift in Dubai at RamaCare Polyclinic. Personalized facial rejuvenation options for laxity, volume loss & aging. Book a consultation.",
-  "url": "https://www.ramacarepolyclinic.com/services/non-surgical-facelift-dubai",
+  "url": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai",
   "specialty": {
     "@type": "MedicalSpecialty",
     "name": "Dermatology"
@@ -120,19 +121,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.ramacarepolyclinic.com/"
+      "item": "https://ramacarepolyclinic.ae/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Facial Aesthetics",
-      "item": "https://www.ramacarepolyclinic.com/services"
+      "item": "https://ramacarepolyclinic.ae/services"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Non-Surgical Facelift in Dubai",
-      "item": "https://www.ramacarepolyclinic.com/services/non-surgical-facelift-dubai"
+      "item": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai"
     }
   ]
 };
@@ -141,8 +142,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "RamaCare Polyclinic",
-  "url": "https://www.ramacarepolyclinic.com/",
-  "logo": "https://www.ramacarepolyclinic.com/images/ramacare-logo.png",
+  "url": "https://ramacarepolyclinic.ae/",
+  "logo": "https://ramacarepolyclinic.ae/images/ramacare-logo.png",
   "telephone": "+971566597878",
   "address": {
     "@type": "PostalAddress",
@@ -2075,7 +2076,7 @@ export default function NonSurgicalFacelift() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <link rel="canonical" href={`https://www.ramacarepolyclinic.com${meta.url}`} />
+        <link rel="canonical" href={`https://ramacarepolyclinic.ae${meta.url}`} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
@@ -2127,6 +2128,8 @@ export default function NonSurgicalFacelift() {
         <PatientJourney />
         <FAQs />
         <InternalLinksAndFinalCta />
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/non-surgical-facelift-dubai/" />
       </main>
     </Layout>
   );

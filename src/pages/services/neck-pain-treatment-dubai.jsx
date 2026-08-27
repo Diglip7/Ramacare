@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import QuickNavigation from '../../../components/QuickNavigation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -343,7 +344,7 @@ export default function NeckPainTreatmentPage() {
           "@type": "ListItem",
           "position": 3,
           "name": "Neck Pain Treatment Dubai",
-          "item": "https://ramacare.ae/neck-pain-treatment-dubai"
+          "item": "https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai"
         }
       ]
     },
@@ -453,13 +454,13 @@ export default function NeckPainTreatmentPage() {
         <title key="title">Neck Pain Treatment Dubai | Expert Physiotherapy Care</title>
         <meta name="description" key="description" content="Suffering from neck pain? Get expert Neck Pain Treatment Dubai care at RamaCare Polyclinic with DHA-licensed physiotherapists. Book your consultation today." />
         <meta name="keywords" content="Neck pain treatment Dubai, Neck pain specialist Dubai, Physiotherapy for neck pain Dubai, Cervical pain treatment Dubai, Chronic neck pain Dubai, Neck stiffness treatment Dubai, Cervical spondylosis Dubai, Pinched nerve neck Dubai, Upper back and neck pain Dubai, Neck muscle strain Dubai, Neck rehabilitation Dubai, Best physiotherapy clinic Dubai, Manual therapy Dubai, Dry needling Dubai, Electrotherapy Dubai, Ultrasound therapy Dubai, Sports injury physiotherapy Dubai" />
-        <link rel="canonical" href="https://ramacare.ae/neck-pain-treatment-dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai" />
 
         {/* Open Graph Tags */}
         <meta property="og:title" content="Neck Pain Treatment Dubai — Expert Physiotherapy at RamaCare" />
         <meta property="og:description" content="Get lasting relief from neck pain with DHA-licensed physiotherapists at RamaCare Polyclinic Dubai. Personalized, evidence-based treatment plans. Book now." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ramacare.ae/neck-pain-treatment-dubai" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
 
         {/* Twitter Card Tags */}
@@ -526,7 +527,7 @@ export default function NeckPainTreatmentPage() {
               >
                 <div className="aspect-square bg-gradient-to-br from-[#1F5E4B] to-[#38D39F] rounded-3xl overflow-hidden relative shadow-lg flex items-center justify-center">
                   <img
-                    src="/images/neck-pain-consultation-dubai.jpg"
+                    src="/images/Patient consulting a physiotherapist about neck pain.jpg"
                     alt="Neck Pain Treatment Dubai consultation at RamaCare Polyclinic"
                     className="absolute inset-0 w-full h-full object-cover z-10"
                     onError={(e) => {
@@ -673,7 +674,7 @@ export default function NeckPainTreatmentPage() {
                 >
                   <div className="aspect-[4/3] bg-gradient-to-br from-[#38D39F]/10 to-[#1F5E4B]/10 rounded-3xl overflow-hidden relative border border-[#1F5E4B]/20 mb-8 flex items-center justify-center">
                     <img
-                      src="/images/neck-pain-causes-infographic.jpg"
+                      src="/images/Causes of neck pain infographic.jpg"
                       alt="Common causes of neck pain including posture and text neck"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
@@ -873,7 +874,7 @@ export default function NeckPainTreatmentPage() {
                 >
                   <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden border border-[#1F5E4B]/20 lg:sticky lg:top-24">
                     <Image
-                      src="/images/physiotherapist-examining-neck-dubai.jpg"
+                      src="/images/Physiotherapist examining a patient's neck.jpg"
                       alt="Physiotherapist assessing cervical mobility in Dubai clinic"
                       fill
                       sizes="(max-width: 1024px) 100vw, 41.66vw"
@@ -997,7 +998,7 @@ export default function NeckPainTreatmentPage() {
                       Dry Needling
                     </div>
                     <img
-                      src="/images/dry-needling-neck-pain-dubai.jpg"
+                      src="/images/Dry needling treatment on neck.jpg"
                       alt="Dry needling therapy for neck muscle tension Dubai"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
@@ -1015,7 +1016,7 @@ export default function NeckPainTreatmentPage() {
                       Posture Correction
                     </div>
                     <img
-                      src="/images/posture-correction-neck-pain-dubai.jpg"
+                      src="/images/Posture correction demonstration.jpg"
                       alt="Posture correction technique for neck pain relief Dubai"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
@@ -1220,7 +1221,7 @@ export default function NeckPainTreatmentPage() {
                         Ergonomic Setup
                       </div>
                       <img
-                        src="/images/ergonomic-workstation-setup-dubai.jpg"
+                        src="/images/Ergonomic workstation setup.jpg"
                         alt="Ergonomic desk setup to prevent neck pain Dubai"
                         className="absolute inset-0 w-full h-full object-cover z-10"
                         onError={(e) => {
@@ -1246,7 +1247,7 @@ export default function NeckPainTreatmentPage() {
                         Neck Exercises
                       </div>
                       <img
-                        src="/images/neck-stretching-exercises-dubai.jpg"
+                        src="/images/Patient performing neck stretching exercises.jpg"
                         alt="Guided neck stretching exercise at Dubai physiotherapy clinic"
                         className="absolute inset-0 w-full h-full object-cover z-10"
                         onError={(e) => {
@@ -1475,8 +1476,11 @@ export default function NeckPainTreatmentPage() {
           </div>
         </section>
 
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" />
+
         {/* Medical Disclaimer */}
-        <section className="py-12 bg-gray-100">
+        <section className="py-12 bg-[#F9F7F2]">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">

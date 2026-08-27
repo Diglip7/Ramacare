@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { createPortal } from 'react-dom';
 import Header from './Header';
-import PromoBanner from './PromoBanner';
+// import PromoBanner from './PromoBanner';
 import GoogleReviews from './GoogleReviews';
 import Footer from './Footer';
 
@@ -80,7 +80,7 @@ const Layout = ({ children }) => {
       {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> */}
       </Head>
       <Header />
-      <PromoBanner />
+      {/* <PromoBanner /> */}
       <main className="flex-grow" style={isSubcategoryRoute ? fontStyle : undefined}>
         {children}
       </main>

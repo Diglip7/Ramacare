@@ -144,7 +144,7 @@ const TreatmentAdditionalContent = ({ content }) => {
                 <div className="grid grid-cols-2 gap-4">
                   {((whyChoose || whyChooseSection).stats || [
                     { number: "15+", label: "Years Experience" },
-                    { number: "5000+", label: "Happy Patients" },
+                    { number: "500+", label: "Happy Patients" },
                     { number: "4.9", label: "Patient Rating" },
                     { number: "DHA", label: "Approved" }
                   ]).map((stat, idx) => (

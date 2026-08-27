@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   Sparkles,
   ShieldCheck,
@@ -1163,7 +1164,9 @@ export default function PsoriasisTreatmentPage() {
               </div>
             </div>
           </div>
-        </footer>
+           </footer>
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/psoriasis-treatment-dubai/" />
       </div>
     </Layout>
   );

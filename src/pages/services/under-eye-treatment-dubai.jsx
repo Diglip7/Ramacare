@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { ChevronLeft, ChevronRight, Calendar, Phone, MessageCircle, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -1469,7 +1470,9 @@ export default function UnderEyePage() {
                         understanding your concern before recommending any path forward. If you're ready to have
                         that conversation, the team is available to schedule an assessment.
                     </p>
-                </section>
+                    </section>
+                {/* Content Reviewer Badge */}
+                <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/under-eye-treatment-dubai/" />
             </main>
         </Layout>
     );

@@ -62,7 +62,7 @@ const meta = {
   title: "Hollywood Smile Treatment Dubai | RamaCare",
   description:
     "Explore Hollywood Smile Treatment Dubai at RamaCare Polyclinic with personalized cosmetic dentistry options for a natural, balanced smile. Book a consultation.",
-  url: "https://www.ramacarepolyclinic.com/services/hollywood-smile-treatment-dubai",
+  url: "https://ramacarepolyclinic.ae/services/hollywood-smile-treatment-dubai",
 };
 
 /* -------------------------------------------------------------------------- */
@@ -2092,7 +2092,7 @@ export default function HollywoodSmileTreatmentDubai() {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "RamaCare Polyclinic",
-    "image": "https://www.ramacarepolyclinic.com/images/ramaCare%20Polyclinic%20Jumeirah%20Dubai.jpg",
+    "image": "https://ramacarepolyclinic.ae/images/ramaCare%20Polyclinic%20Jumeirah%20Dubai.jpg",
     "url": meta.url,
     "telephone": "+971-4-286-2006",
     "priceRange": "$$$",
@@ -2105,7 +2105,7 @@ export default function HollywoodSmileTreatmentDubai() {
     },
     "medicalSpecialty": "Dentistry",
     "sameAs": [
-      "https://www.ramacarepolyclinic.com/",
+      "https://ramacarepolyclinic.ae/",
       "https://ramacarepolyclinic.ae/"
     ]
   };
@@ -2144,8 +2144,8 @@ export default function HollywoodSmileTreatmentDubai() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ramacarepolyclinic.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://www.ramacarepolyclinic.com/services/dental-dubai" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
       { "@type": "ListItem", "position": 3, "name": "Hollywood Smile Treatment Dubai", "item": meta.url },
     ],
   };
@@ -2154,8 +2154,8 @@ export default function HollywoodSmileTreatmentDubai() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "RamaCare Polyclinic",
-    "url": "https://www.ramacarepolyclinic.com/",
-    "logo": "https://www.ramacarepolyclinic.com/images/Logo.png",
+    "url": "https://ramacarepolyclinic.ae/",
+    "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",

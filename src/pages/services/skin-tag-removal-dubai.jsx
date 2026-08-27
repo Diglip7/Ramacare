@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -1834,6 +1835,8 @@ export default function SkinTagRemovalDubai() {
         <WhyRamaCareAndJourney />
         <FAQsSkinTag />
         <InternalLinksAndFinalCtaSkinTag />
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/skin-tag-removal-dubai/" />
       </main>
     </Layout>
   );

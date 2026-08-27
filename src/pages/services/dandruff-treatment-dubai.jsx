@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from 'framer-motion';
@@ -892,6 +893,9 @@ export default function DandruffTreatmentDubaiPage() {
           </div>
         </div>
       </footer>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/dandruff-treatment-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

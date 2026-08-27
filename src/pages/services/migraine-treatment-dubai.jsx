@@ -164,7 +164,7 @@ export default function MigraineTreatmentPage() {
                     <Award className="w-6 h-6 text-[#1F5E4B]" />
                   </div>
                   <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">500+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">2500+</div>
                     <div className="text-xs md:text-sm text-[#5F5F5F]">Patients Treated</div>
                   </div>
                 </div>
@@ -214,8 +214,7 @@ export default function MigraineTreatmentPage() {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1, type: 'spring' }}
-                  className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border-2 border-[#1F5E4B]/20"
-                >
+                  className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border-2 border-[#1F5E4B]/20">
                   <div className="flex items-center gap-2">
                     <Target className="w-6 h-6 text-[#1F5E4B]" />
                     <div>
@@ -230,8 +229,7 @@ export default function MigraineTreatmentPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2 }}
-                  className="absolute -bottom-6 -left-6 bg-[#E3F2FD] rounded-xl shadow-lg p-4 border-2 border-[#1565C0]/20"
-                >
+                  className="absolute -bottom-6 -left-6 bg-[#E3F2FD] rounded-xl shadow-lg p-4 border-2 border-[#1565C0]/20">
                   <div className="flex items-center gap-2">
                     <Shield className="w-5 h-5 text-[#1565C0]" />
                     <span className="text-sm font-semibold text-[#1565C0]">Safe & Effective</span>

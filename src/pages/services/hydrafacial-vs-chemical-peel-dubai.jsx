@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Link from 'next/link';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -628,7 +629,9 @@ export default function HydraFacialVsChemicalPeelPage() {
         <p className="text-xs text-[#5F5F5F] leading-relaxed">
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This article is intended for general informational purposes only and does not constitute medical advice. Results from HydraFacial and chemical peel treatments vary between individuals, and no specific outcome is guaranteed. All treatments at RamaCare Polyclinic are performed in accordance with Dubai Health Authority (DHA) regulations, and treatment suitability is determined only after a consultation with a qualified dermatologist. For general reference on skin treatment safety and best practices, patients may also consult resources published by the American Academy of Dermatology, Mayo Clinic, and Cleveland Clinic.
         </p>
-      </section>
+         </section>
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-vs-chemical-peel-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

@@ -24384,7 +24384,7 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '600+',
+          number: '2500+',
           label1: 'Patients Treated',
           label2: 'Success Stories',
           target: 600

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import DoctorsSection from '../../../components/DoctorsSection';
 import QuickNavigation from '../../../components/QuickNavigation';
 import { subcategoryContent } from '../../data/subcategoryContent';
@@ -130,12 +131,12 @@ export default function PlantarFasciitisTreatmentPage() {
         "@type": "ListItem",
         "position": i + 1,
         "name": b.label,
-        "item": b.href && b.href.startsWith('http') ? b.href : "https://www.ramacarepolyclinic.com" + b.href
+        "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
       };
     })
   };
 
-  // Previously missing: MedicalCondition schema for the plantar fasciitis / heel pain content itself
+  //  MedicalCondition schema for the plantar fasciitis / heel pain content itself
   const medicalConditionSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalCondition",
@@ -146,7 +147,7 @@ export default function PlantarFasciitisTreatmentPage() {
     "possibleTreatment": treatmentOptions.map(function (t) { return { "@type": "MedicalTherapy", "name": t.title, "description": t.description }; })
   };
 
-  // Previously missing: MedicalTherapy schema list for the individual treatment modalities
+  // MedicalTherapy schema list for the individual treatment modalities
   const medicalTherapySchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -163,7 +164,7 @@ export default function PlantarFasciitisTreatmentPage() {
     })
   };
 
-  // Previously missing: MedicalClinic schema for business details
+  // MedicalClinic schema for business details
   const medicalClinicSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
@@ -178,13 +179,12 @@ export default function PlantarFasciitisTreatmentPage() {
       "addressCountry": "AE"
     },
     "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Saturday"], "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "20:00" }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "22:00" },
     ],
     "medicalSpecialty": "Physiotherapy"
   };
 
-  // Previously missing: Physician schema, guarded in case doctor data isn't present
+  // Physician schema, guarded in case doctor data isn't present
   const physicianSchema = content.doctors && content.doctors.doctors && content.doctors.doctors.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -991,6 +991,9 @@ export default function PlantarFasciitisTreatmentPage() {
           </div>
         </section>
       ) : null}
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" />
 
       <div id="book-now">
         <BookConsultation

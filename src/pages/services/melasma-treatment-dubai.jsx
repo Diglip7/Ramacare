@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import BookConsultation from '../../../components/BookConsultation';
 import DoctorsSection from '../../../components/DoctorsSection';
 import { DOCTOR_GROUPS } from '../../data/doctors';
@@ -1083,7 +1084,9 @@ export default function MelasmaTreatmentPage() {
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/melasma-treatment-dubai/" />
       </div>
     </Layout>
   );

@@ -399,7 +399,7 @@ export default function KneePainTreatmentPage() {
                     <Users className="w-6 h-6 text-[#1565C0]" />
                   </div>
                   <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">2000+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">2500+</div>
                     <div className="text-xs md:text-sm text-[#5F5F5F]">Patients Treated</div>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   Sparkles,
   ShieldCheck,
@@ -1146,7 +1147,9 @@ export default function RosaceaTreatmentDubaiPage() {
               </div>
             </div>
           </div>
-        </footer>
+           </footer>
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/rosacea-treatment-dubai/" />
 
         {/* Sticky Consultation Bar */}
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-xl z-40 p-4 transform translate-y-0 transition-transform">

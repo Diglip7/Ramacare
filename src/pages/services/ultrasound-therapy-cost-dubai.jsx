@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MessageCircle, DollarSign, Package, TrendingDown, Stethoscope, Activity, ClipboardList, ShieldCheck, Zap, MapPin, Award, CheckCircle, ChevronDown, MapPin as MapPinIcon, BadgeCheck } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 export default function UltrasoundTherapyCostPage() {
   const { showToast, ToastComponent } = useToast();
@@ -939,6 +940,8 @@ export default function UltrasoundTherapyCostPage() {
           </motion.div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Jeena Mathew" variant="full" />
 
       {/* Fixed Bottom CTA Bar */}
       <div 

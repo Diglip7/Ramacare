@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import DoctorsSection from '../../../components/DoctorsSection';
 import QuickNavigation from '../../../components/QuickNavigation';
 import { subcategoryContent } from '../../data/subcategoryContent';
@@ -141,7 +142,7 @@ export default function CervicalSpondylosisTreatmentPage() {
         "@type": "ListItem",
         "position": i + 1,
         "name": b.label,
-        "item": b.href && b.href.startsWith('http') ? b.href : "https://www.ramacarepolyclinic.com" + b.href
+        "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
       };
     })
   };
@@ -374,7 +375,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             >
               <img
                 src={images.anatomy ? images.anatomy.src : ""}
-                alt=""
+                alt="Cervical spine anatomy diagram showing vertebrae and discs relevant to cervical spondylosis treatment Dubai"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
@@ -671,7 +672,7 @@ export default function CervicalSpondylosisTreatmentPage() {
               viewport={{ once: true }}
               className="mb-14 max-w-4xl mx-auto"
             >
-          
+
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center font-medium">{images.traction.caption}</figcaption>
             </motion.figure>
           ) : null}
@@ -1000,6 +1001,9 @@ export default function CervicalSpondylosisTreatmentPage() {
           </div>
         </section>
       ) : null}
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" />
 
       <div id="book-now">
         <BookConsultation

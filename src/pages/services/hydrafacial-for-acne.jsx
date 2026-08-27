@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1109,7 +1110,9 @@ export default function HydrafacialForAcnePage() {
           </section>
 
         </div>
-      </div>
+          </div>
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-for-acne/" />
     </Layout>
   );
 }

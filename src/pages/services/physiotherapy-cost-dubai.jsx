@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 /* ------------------------------------------------------------------
    Page data — sourced directly from the Physiotherapy Cost Dubai
@@ -730,6 +731,8 @@ export default function PhysiotherapyCostDubaiPage() {
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This content is for educational purposes only and should not replace professional medical advice. Individual treatment plans and costs are determined after a clinical assessment by a qualified physiotherapist. Prices mentioned are starting prices and may vary depending on the patient&apos;s condition, treatment duration, required techniques, and clinical assessment.
         </p>
       </section>
+
+      <ContentReviewBadge doctorName="Jeena Mathew" variant="full" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

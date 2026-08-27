@@ -255,7 +255,7 @@ export const DOCTORS = {
         }
       ],
       "knowsLanguage": "English",
-      "url": "https://www.ramacarepolyclinic.com/dr-shamna-keloth-meethal-ayurveda-doctor-dubai"
+      "url": "https://www.ramacarepolyclinic.ae/dr-shamna-keloth-meethal-ayurveda-doctor-dubai"
     },
     introParagraphs: [
       "Modern life in Dubai moves fast, and it often leaves little room for the body's natural balance. If you're looking for care that treats you as a whole person rather than a list of symptoms, Dr. Shamna Keloth Meethal, Ayurveda Doctor in Dubai, offers exactly that. She is a DHA licensed Ayurveda practitioner at <a href=\"/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">RamaCare Polyclinic</a> in <a href=\"/contact-us/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">Jumeirah 1, Dubai location</a>, with more than 11 years of clinical experience in general Ayurveda and preventive care.",

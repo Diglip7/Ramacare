@@ -569,9 +569,9 @@ export const newPagesContent = {
   },
   'acne-scar-treatment-dubai': {
     byline: {
-      reviewer: "DHA-Licensed Dermatologist",
-      credentials: "DHA-Licensed Dermatology Professional",
-      href: "/doctors",
+      reviewer: "Sonita Sinaga",
+      credentials: "Licensed & Certified Aesthetic Therapist · NCLC Laser Certified",
+      href: "/doctors/sonita-sinaga-aesthetic-therapist-dubai",
       date: "July 2026"
     },
     seo: {

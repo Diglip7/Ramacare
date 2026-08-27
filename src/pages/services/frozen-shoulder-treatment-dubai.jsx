@@ -2,6 +2,7 @@ import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   Activity,
   Calendar,
@@ -125,6 +126,7 @@ export default function FrozenShoulderTreatmentPage() {
         <title key="title">Frozen Shoulder Treatment Dubai | Expert Physiotherapy</title>
         <meta name="description" content="Struggling with shoulder stiffness or pain? Get expert frozen shoulder treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios. Book now!" key="description" />
         <meta name="keywords" content="Frozen Shoulder Treatment Dubai, Frozen Shoulder Specialist Dubai, Frozen Shoulder Physiotherapy Dubai, Frozen Shoulder Pain Treatment, Shoulder Pain Clinic Dubai, Adhesive Capsulitis Treatment Dubai, Shoulder Mobility Treatment Dubai, Shoulder Rehabilitation Dubai, Best Frozen Shoulder Treatment, Frozen Shoulder Recovery, Physiotherapy for Frozen Shoulder, Shoulder Joint Stiffness, Shoulder Pain Relief Dubai, Frozen Shoulder Doctor Dubai, Shoulder Stiffness Treatment Dubai, Frozen Shoulder Exercises Dubai" key="keywords" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/frozen-shoulder-treatment-dubai/" />
 
         {/* Social SEO */}
         <meta property="og:title" content="Frozen Shoulder Treatment Dubai | RamaCare Polyclinic" key="og:title" />
@@ -1516,6 +1518,9 @@ export default function FrozenShoulderTreatmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" />
 
       {/* Medical Disclaimer */}
       <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">

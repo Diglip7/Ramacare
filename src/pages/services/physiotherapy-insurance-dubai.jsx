@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, CheckCircle, MapPin, Phone } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 export default function PhysiotherapyInsuranceDubai() {
   const { showToast, ToastComponent } = useToast();
@@ -105,8 +106,7 @@ export default function PhysiotherapyInsuranceDubai() {
 
               <h1 
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-6 leading-tight"
-                style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-              >
+                style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
                 Is Ultrasound Therapy Covered by Insurance in Dubai?
               </h1>
 
@@ -680,6 +680,7 @@ export default function PhysiotherapyInsuranceDubai() {
             
             <div className="text-center">
               <button 
+                onClick={() => window.open('https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20would%20like%20to%20request%20the%20Physiotherapy%20Insurance%20Claim%20Checklist.', '_blank')}
                 className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '600', transform: 'none' }}
               >
@@ -831,14 +832,17 @@ export default function PhysiotherapyInsuranceDubai() {
             className="mt-12 bg-white rounded-3xl p-8 shadow-lg max-w-sm mx-auto text-center">
             <p className="text-base text-[#5F5F5F] mb-4" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>Still have questions?</p>
             <button
-              onClick={handleBookAppointment}
-              className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer"
+              onClick={() => window.open('https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20have%20questions%20about%20physiotherapy%20insurance%20coverage.%20Can%20you%20please%20help%20me%3F', '_blank')}
+              className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer flex items-center justify-center gap-2 mx-auto"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px', fontWeight: '600' }}>
+              <MessageCircle className="w-4 h-4" />
               Chat with Our Team
             </button>
           </motion.div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Jeena Mathew" variant="full" />
 
       {/* Verify Your Coverage Today Section */}
       <section id="verify-coverage-form" className="bg-[#1F5E4B] py-20 md:py-32">

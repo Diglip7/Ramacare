@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BookConsultation from './BookConsultation';
 import DoctorsSection from './DoctorsSection';
 import QuickNavigation from './QuickNavigation';
+import ContentReviewBadge from './ContentReviewBadge';
 import { DOCTOR_GROUPS } from '../src/data/doctors';
 import {
   Calendar,
@@ -1041,7 +1042,25 @@ export default function ServicePageTemplate({ content }) {
       )}
 
       {/* Doctors Showcase */}
-      <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
+      <DoctorsSection customDoctors={
+        (content?.doctors && Array.isArray(content.doctors) && content.doctors.length > 0)
+          ? content.doctors
+          : ((contextStr) => {
+              if (contextStr.includes('derma') || contextStr.includes('acne') || contextStr.includes('scar') || contextStr.includes('skin') || contextStr.includes('laser') || contextStr.includes('botox') || contextStr.includes('filler') || contextStr.includes('peel') || contextStr.includes('facial') || contextStr.includes('eximia') || contextStr.includes('hair') || contextStr.includes('aesthetic')) {
+                return DOCTOR_GROUPS.DERMA;
+              }
+              if (contextStr.includes('dental') || contextStr.includes('teeth') || contextStr.includes('veneer') || contextStr.includes('root-canal') || contextStr.includes('crown') || contextStr.includes('smile') || contextStr.includes('braces')) {
+                return DOCTOR_GROUPS.DENTAL;
+              }
+              if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya')) {
+                return DOCTOR_GROUPS.AYURVEDA;
+              }
+              if (contextStr.includes('physician') || contextStr.includes('general-physician') || contextStr.includes('gp') || contextStr.includes('check-up')) {
+                return DOCTOR_GROUPS.GP;
+              }
+              return DOCTOR_GROUPS.PHYSIO;
+            })(((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(content?.breadcrumbs || [])).toLowerCase())
+      } />
 
       {/* WHY CHOOSE US, DIAGNOSTIC EQUIPMENT (IMAGE 5) & PHYSIOTHERAPISTS */}
       <section className="py-12 md:py-20 px-4 bg-white">
@@ -1157,9 +1176,14 @@ export default function ServicePageTemplate({ content }) {
               </div>
             )}
           </div>
-
-        </div>
+  </div>
       </section>
+      {/* MEDICAL REVIEWER BADGE */}
+      <ContentReviewBadge 
+        doctorName={content.byline?.reviewer || content.reviewer?.name || (typeof content.reviewer === 'string' ? content.reviewer : undefined)} 
+        pageSlug={seo?.slug || seo?.canonical || ''}
+        category={content.category || ''}
+      />
 
       {/* CLINICAL BOOKING APPOINTMENT / LEAD FORM */}
       <div id="book-now">

@@ -1870,8 +1870,8 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "RamaCare Polyclinic",
-    "image": "https://www.ramacarepolyclinic.com/images/ramaCare%20Polyclinic%20Jumeirah%20Dubai.jpg",
-    "url": "https://www.ramacarepolyclinic.com/services/zoom-teeth-whitening-before-after",
+    "image": "https://ramacarepolyclinic.ae/images/ramaCare%20Polyclinic%20Jumeirah%20Dubai.jpg",
+    "url": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai/",
     "telephone": "+971-4-286-2006",
     "priceRange": "$$",
     "address": {
@@ -1883,7 +1883,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     },
     "medicalSpecialty": "Dentistry",
     "sameAs": [
-      "https://www.ramacarepolyclinic.com/",
+      "https://ramacarepolyclinic.ae/",
       "https://ramacarepolyclinic.ae/"
     ]
   };
@@ -1892,7 +1892,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": meta.title,
-    "url": "https://www.ramacarepolyclinic.com/services/zoom-teeth-whitening-treatment-dubai",
+    "url": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai",
     "description": meta.description,
     "medicalAudience": {
       "@type": "Patient"
@@ -1923,9 +1923,9 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ramacarepolyclinic.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://www.ramacarepolyclinic.com/services/dental-dubai" },
-      { "@type": "ListItem", "position": 3, "name": "Zoom Teeth Whitening Treatment in Dubai", "item": "https://www.ramacarepolyclinic.com/services/zoom-teeth-whitening-treatment-dubai" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
+      { "@type": "ListItem", "position": 3, "name": "Zoom Teeth Whitening Treatment in Dubai", "item": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai" },
     ],
   };
 
@@ -1933,8 +1933,8 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "RamaCare Polyclinic",
-    "url": "https://www.ramacarepolyclinic.com/",
-    "logo": "https://www.ramacarepolyclinic.com/images/Logo.png",
+    "url": "https://ramacarepolyclinic.ae/",
+    "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",
@@ -1957,7 +1957,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <link rel="canonical" href="https://www.ramacarepolyclinic.com/services/zoom-teeth-whitening-treatment-dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />

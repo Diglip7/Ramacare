@@ -2,6 +2,7 @@ import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   Activity,
   Calendar,
@@ -134,7 +135,7 @@ export default function SciaticaTreatmentPage() {
         <title key="title">Sciatica Treatment Dubai | Expert Physiotherapy Relief</title>
         <meta name="description" content="Struggling with sciatica pain down your leg? Get expert sciatica treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios for lasting relief. Book now!" key="description" />
         <meta name="keywords" content="Sciatica Treatment Dubai, Sciatica Specialist Dubai, Sciatica Physiotherapy Dubai, Sciatica Pain Treatment, Leg Pain Clinic Dubai, Sciatic Nerve Treatment Dubai, Lower Back Pain Treatment Dubai, Nerve Compression Treatment Dubai, Herniated Disc Treatment Dubai, Best Sciatica Treatment, Sciatica Relief Dubai, Sciatica Exercises Dubai, Sciatica Doctor Dubai, Sciatica Rehabilitation Dubai" key="keywords" />
-
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/sciatica-treatment-dubai/" />
         {/* Social SEO */}
         <meta property="og:title" content="Sciatica Treatment Dubai | RamaCare Polyclinic" key="og:title" />
         <meta property="og:description" content="Expert, DHA-licensed physiotherapy for sciatica in Dubai. Personalized care to relieve pain and restore mobility. Book your consultation today." key="og:description" />
@@ -505,7 +506,7 @@ export default function SciaticaTreatmentPage() {
                   </div>
                 </motion.div>
               ))}
-              
+
               <div className="p-6 bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl border border-amber-200">
                 <h4 className="text-lg font-bold text-amber-800 mb-3 flex items-center gap-2">
                   <AlertCircle className="w-5 h-5" />
@@ -1382,6 +1383,9 @@ export default function SciaticaTreatmentPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" />
 
       {/* Medical Disclaimer */}
       <section className="py-12 px-4 bg-[#F9F7F2] border-t border-gray-200">

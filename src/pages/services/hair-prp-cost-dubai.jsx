@@ -747,8 +747,7 @@ export default function HairPrpCostPage() {
                 <a
                   key={l.href}
                   href={l.href}
-                  className="rounded-full border border-[#1F5E4B]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#1F5E4B] hover:bg-[#1F5E4B]/5 transition-all"
-                >
+                  className="rounded-full border border-[#1F5E4B]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#1F5E4B] hover:bg-[#1F5E4B]/5 transition-all">
                   {l.label}
                 </a>
               ))}
