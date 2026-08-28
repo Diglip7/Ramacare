@@ -7,6 +7,7 @@ import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 /* ------------------------------------------------------------------
    Page data — sourced exactly from the Jumeirah Ayurveda content brief.
@@ -615,6 +616,7 @@ export default function AyurvedicClinicJumeirahPage() {
             <strong className="text-[#2C2722]">Medical Disclaimer:</strong> The information on this page is intended for general educational purposes and does not constitute medical advice. Ayurvedic treatment plans vary based on individual assessment, medical history, and response to therapy. Results are not guaranteed and may differ between patients. Please consult Dr. Shamna Keloth Meethal or another qualified healthcare professional before beginning any treatment, particularly if you have an existing medical condition, are pregnant, or are taking medication. In case of a medical emergency, please seek immediate care from an appropriate emergency service.
           </p>
         </section>
+        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-clinic-in-jumeirah" />
         {/* SECTION: EXISTING BOOKING COMPONENT INTEGRATED */}
         <BookConsultation content={bookConsultationContent} />
       </div>

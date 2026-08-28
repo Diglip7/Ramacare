@@ -317,7 +317,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-lg">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
-                      src="/images/Post-surgery rehabilitation dubai.jpg"
+                      src="/images/Physiotherapist assisting a patient after knee replacement surgery.jpg"
                       alt="Post-Surgery Rehabilitation Dubai — physiotherapist assisting knee replacement patient"
                       title="Physiotherapist assisting a patient after knee replacement surgery"
                       layout="fill"
@@ -525,7 +525,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
-                      src="/images/Post-operative rehabilitation exercises.jpg"
+                      src="/images/Post-operative rehabilitation exercises in a Dubai physiotherapy clinic.jpg"
                       alt="Post-operative rehabilitation exercises at RamaCare Polyclinic Dubai"
                       title="Post-operative rehabilitation exercises in Jumeirah clinic"
                       layout="fill"
@@ -580,7 +580,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
-                      src="/images/Gait training session.jpg"
+                      src="/images/Gait training session after orthopedic surgery.jpg"
                       alt="Gait training session during post-surgery rehabilitation in Dubai"
                       title="Gait training session after orthopedic surgery"
                       layout="fill"
@@ -721,7 +721,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
-                      src="/images/Manual therapy session.jpg"
+                      src="/images/Manual therapy session during shoulder surgery rehabilitation.jpg"
                       alt="Manual therapy session for shoulder surgery rehabilitation Dubai"
                       title="Manual therapy session during shoulder surgery rehabilitation"
                       layout="fill"
@@ -781,7 +781,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
-                      src="/images/Personalized rehabilitation consultation.jpg"
+                      src="/images/Personalized rehabilitation consultation with a DHA-licensed physiotherapist.jpg"
                       alt="Personalized post-surgery rehabilitation consultation with DHA-licensed physiotherapist"
                       title="Personalized post-surgery rehabilitation consultation"
                       layout="fill"

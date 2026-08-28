@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
@@ -1269,6 +1270,8 @@ export default function PrpHairBeforeAfterPage() {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="prp-hair-treatment-before-and-after" />
 
       {/* ============ MEDICAL DISCLAIMER ============ */}
       <section className="py-12 px-4 bg-white border-t border-gray-200">

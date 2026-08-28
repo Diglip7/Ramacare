@@ -11,6 +11,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-dubai/';
@@ -196,6 +197,8 @@ export default function UltrasoundTherapyPage() {
       <CostSection content={content?.costSection} />
 
       <PaymentInsurance content={content?.paymentInsurance} />
+
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-therapy-dubai" />
 
       <FAQSection content={content?.faq} />
 

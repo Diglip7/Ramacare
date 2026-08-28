@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   Leaf,
   Activity,
@@ -929,6 +930,8 @@ export default function AyurvedaVsPhysiotherapyArthritisPage() {
             </div>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurveda-vs-physiotherapy-for-arthritis-dubai" />
 
         <BookConsultation />
 

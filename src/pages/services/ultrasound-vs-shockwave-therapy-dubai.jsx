@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Calendar, MessageCircle, Clock, Shield, MapPin, Zap, CheckCircle2, Radio, Award, UserCheck, Lock, ChevronDown, Activity, Droplet, Heart, Zap as ZapIcon, Waves, TrendingUp } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
 
 const UltrasoundVsShockwavePage = () => {
@@ -672,6 +673,8 @@ const UltrasoundVsShockwavePage = () => {
             </div>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-vs-shockwave-therapy-dubai" />
 
         {/* Popup Modal */}
         {showModal && (

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState } from 'react';
 import { CheckCircle2, Calendar, ChevronDown, User, Phone, MapPin, MessageCircle } from 'lucide-react';
 
@@ -636,6 +637,8 @@ const EximiaSafetyPage = () => {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="is-eximia-body-contouring-safe-dubai" />
     </Layout>
   );
 };

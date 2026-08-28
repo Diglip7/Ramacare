@@ -374,7 +374,7 @@ const CONCLUSION_CONTENT = {
     "At RamaCare Polyclinic, our DHA-licensed dermatology team is committed to offering thoughtful, evidence-based Psoriasis Treatment Dubai patients can trust — from topical therapies and phototherapy to systemic options and supportive Ayurvedic care, all guided by an individualized plan built around you.",
     "As with any medical condition, individual results vary, and the right treatment approach depends on a proper clinical evaluation. If you're dealing with persistent skin symptoms, don't wait for them to get worse. Book a consultation with RamaCare Polyclinic's dermatology team today and take the first step toward clearer, healthier skin."
   ],
-  disclaimer: "This article is intended for general educational purposes and does not replace professional medical advice. Please consult a qualified dermatologist for diagnosis and treatment tailored to your individual condition."
+ 
 };
 
 const IMAGES = {

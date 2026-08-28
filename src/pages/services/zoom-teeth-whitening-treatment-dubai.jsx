@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { motion } from "framer-motion";
 import { ArrowLeftRight, ArrowRight, ChevronLeft, ChevronRight, MapPin, Quote, Camera, Film, Check, X, Info, ClipboardCheck, TicketCheck, Gauge, CalendarClock, AlertTriangle, Sparkle, RefreshCw, Building2, Award, Users, Route, Receipt, ThumbsUp, ThumbsDown, Phone, Send, Milestone } from "lucide-react";
 
@@ -2010,6 +2011,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
         <BenefitsAndLimits />
         <WhyRamaCare />
         <PatientJourney />
+        <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="zoom-teeth-whitening-treatment-dubai" />
         <FAQs />
         <InternalLinks />
         <FinalCta />

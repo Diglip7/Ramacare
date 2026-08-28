@@ -14,6 +14,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -139,6 +140,7 @@ export default function SkinDiseasesTreatmentPage() {
      <DoctorsSection content={content?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+    <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="skin-diseases-treatment" />
     <FAQSection content={content?.faq} />
     <BookConsultation content={content?.bookConsultation} />
   </Layout>

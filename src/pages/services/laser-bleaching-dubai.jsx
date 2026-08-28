@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
@@ -135,7 +136,8 @@ export default function LaserBleachingPage() {
       />
       <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
+        <DoctorsSection content={content?.doctors} />
+        <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="laser-bleaching-dubai" />
     
     <PaymentInsurance content={content?.paymentInsurance} />
       <FAQSection content={content?.faq} />

@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1552,6 +1553,8 @@ export default function HairThinningTreatmentDubaiPage() {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="hair-thinning-treatment-dubai" />
     </Layout>
   );
 }

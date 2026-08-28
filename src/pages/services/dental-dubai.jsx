@@ -12,6 +12,7 @@ import FAQSection from "../../../components/FAQSection";
 // import OurFacilitySection from "../../../components/OurFacilitySection";
 import BeginYourHealingJourneySection from "../../../components/BeginYourHealingJourneySection";
 import SEOContentSection from "../../../components/SEOContentSection";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { getCategoryContent } from "../../data/categoryContent";
 
 export default function dentaldubaiCategoryPage() {
@@ -65,6 +66,7 @@ export default function dentaldubaiCategoryPage() {
       <ExpertsSection content={content?.experts} />
       <PatientTestimonials content={content?.successStories} />
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="dental-dubai" />
       <FAQSection content={content?.faq} />
        {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />

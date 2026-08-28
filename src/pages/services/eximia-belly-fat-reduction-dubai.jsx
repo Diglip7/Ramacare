@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, HeartPulse, Sparkles, Zap, Wind, Shield, Heart, Droplets, Baby, Coffee, Utensils, Activity, ChevronDown, Send } from 'lucide-react';
@@ -735,6 +736,8 @@ export default function EximiaBellyFatReductionPage() {
           </motion.form>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="eximia-belly-fat-reduction-dubai" />
     </Layout>
   );
 }

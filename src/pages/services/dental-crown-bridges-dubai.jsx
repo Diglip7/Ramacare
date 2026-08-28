@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -25,33 +26,30 @@ export default function dentaldubaiCrownBridgePage() {
   return (
     <Layout>
       <Head>
-  <title key="title">dental Crown Bridges in Dubai | Durable & Natural Smile</title>
-  <meta name="description" content="Restore your smile with dental crown bridges in Dubai. Safe, long-lasting, and natural-looking solutions by licensed dentists for effective tooth replacement." key="description" />
-  <meta name="keywords" content="dental crown bridges Dubai, Tooth crown Dubai, dental bridge treatment, Porcelain crown Dubai, Metal ceramic crowns, Tooth replacement in Dubai, Cosmetic dental bridges, Long-lasting dental crowns, Licensed dentist in Dubai, Full mouth restoration Dubai, Affordable crown bridges, Natural-looking dental crowns" />
-  
-  
-        
-</Head>
+        <title key="title">Dental Crown Bridges in Dubai | Durable & Natural Smile</title>
+        <meta name="description" content="Restore your smile with dental crown bridges in Dubai. Safe, long-lasting, and natural-looking solutions by licensed dentists for effective tooth replacement." key="description" />
+        <meta name="keywords" content="dental crown bridges Dubai, Tooth crown Dubai, dental bridge treatment, Porcelain crown Dubai, Metal ceramic crowns, Tooth replacement in Dubai, Cosmetic dental bridges, Long-lasting dental crowns, Licensed dentist in Dubai, Full mouth restoration Dubai, Affordable crown bridges, Natural-looking dental crowns" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="dental-crown-bridges-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

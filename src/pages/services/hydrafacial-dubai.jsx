@@ -13,15 +13,15 @@ import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import TreatmentAdditionalContent from '../../../components/TreatmentAdditionalContent';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function SignatureHydraFacialPage() {
   const categoryName = 'Facial';
   const subcategoryName = 'HydraFacial in Dubai';
 
-   // Get content from data file
-    const content = getSubcategoryContent('facial-dubai', 'signature-hydra-facial');
+  // Get content from data file
+  const content = getSubcategoryContent('facial-dubai', 'signature-hydra-facial');
 
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
@@ -35,13 +35,13 @@ export default function SignatureHydraFacialPage() {
   ];
 
   return (
-     <Layout>
+    <Layout>
       <Head>
-  <title key="title">HydraFacial in Dubai | Best HydraFacial Treatment - Rama Care Polyclinic</title>
-  <meta name="description" content="Experience the best HydraFacial in Dubai at Rama Care Polyclinic. Deep cleanse, exfoliate & hydrate for an instant glow. DHA-licensed specialists, zero downtime." key="description" />
-  <meta name="keywords" content="HydraFacial Dubai, HydraFacial treatment Dubai, best HydraFacial Dubai, HydraFacial cost Dubai, deep cleansing facial, Dubai DHA licensed facial clinic, HydraFacial Jumeirah, non-invasive skin treatment Dubai" />
-  
-   <script
+        <title key="title">HydraFacial in Dubai | Best HydraFacial Treatment - Rama Care Polyclinic</title>
+        <meta name="description" content="Experience the best HydraFacial in Dubai at Rama Care Polyclinic. Deep cleanse, exfoliate & hydrate for an instant glow. DHA-licensed specialists, zero downtime." key="description" />
+        <meta name="keywords" content="HydraFacial Dubai, HydraFacial treatment Dubai, best HydraFacial Dubai, HydraFacial cost Dubai, deep cleansing facial, Dubai DHA licensed facial clinic, HydraFacial Jumeirah, non-invasive skin treatment Dubai" />
+        
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -104,31 +104,31 @@ export default function SignatureHydraFacialPage() {
             })
           }}
         />
-</Head>
+      </Head>
 
-    <TreatmentHero 
-      categoryName="Facial Treatments Dubai"
-      subcategoryName="HydraFacial"
-      description={content?.hero?.description}
-      hero={content?.hero}
-    />
-     <QuickNavigation navItems={navItems} />
-    
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
-    <HealingJourney content={content?.healingJourney} />
-    <TreatmentBenefits 
-      content={content?.benefits}
-    />
-     <TreatmentAdditionalContent content={content} />
-    <PatientTestimonials content={content?.testimonials} />
-     <DoctorsSection content={content?.doctors} customDoctors={content?.doctors?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <FAQSection content={content?.faq} />
-    <BookConsultation content={content?.bookConsultation} />
-  </Layout>
+      <TreatmentHero 
+        categoryName="Facial Treatments Dubai"
+        subcategoryName="HydraFacial"
+        description={content?.hero?.description}
+        hero={content?.hero}
+      />
+      <QuickNavigation navItems={navItems} />
+      
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
+      <HealingJourney content={content?.healingJourney} />
+      <TreatmentBenefits 
+        content={content?.benefits}
+      />
+      <TreatmentAdditionalContent content={content} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} customDoctors={content?.doctors?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="hydrafacial-dubai" />
+      <FAQSection content={content?.faq} />
+      <BookConsultation content={content?.bookConsultation} />
+    </Layout>
   );
 }

@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function PCOSTreatmentPage() {
   const categoryName = 'Ayurveda';
@@ -25,9 +25,9 @@ export default function PCOSTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Ayurvedic PCOS Treatment in Dubai | Hormone Balance Naturally</title>
-  <meta name="description" content="Manage PCOS naturally in Dubai with Ayurvedic therapies, Panchakarma detox, herbal remedies, diet, and lifestyle guidance for hormonal balance and fertility support." key="description" />
-  <meta name="keywords" content="Ayurvedic PCOS treatment Dubai, PCOS management Dubai, Hormone balance Dubai, Panchakarma for PCOS Dubai, Herbal PCOS remedies Dubai, Women’s Health Dubai, PCOS diet and lifestyle in Dubai, Ayurvedic gynecology Dubai, Fertility support Dubai, PCOS therapy Dubai, DHA licensed Ayurvedic doctor in Dubai, Holistic PCOS treatment Dubai" />
+        <title key="title">Ayurvedic PCOS Treatment in Dubai | Hormone Balance Naturally</title>
+        <meta name="description" content="Manage PCOS naturally in Dubai with Ayurvedic therapies, Panchakarma detox, herbal remedies, diet, and lifestyle guidance for hormonal balance and fertility support." key="description" />
+        <meta name="keywords" content="Ayurvedic PCOS treatment Dubai, PCOS management Dubai, Hormone balance Dubai, Panchakarma for PCOS Dubai, Herbal PCOS remedies Dubai, Women’s Health Dubai, PCOS diet and lifestyle in Dubai, Ayurvedic gynecology Dubai, Fertility support Dubai, PCOS therapy Dubai, DHA licensed Ayurvedic doctor in Dubai, Holistic PCOS treatment Dubai" />
    
    <script
   type="application/ld+json"
@@ -97,21 +97,21 @@ export default function PCOSTreatmentPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <QuickNavigation />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} /> 
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} /> 
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="pcos-treatment-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );
 }
-

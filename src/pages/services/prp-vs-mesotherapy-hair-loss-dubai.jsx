@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -749,6 +750,8 @@ export default function PrpVsMesotherapyPage() {
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This article is intended for general informational purposes only and does not constitute medical advice. Results from PRP and mesotherapy treatments vary by patient and depend on individual health, hair loss cause, and severity. Please consult a licensed physician at RamaCare Polyclinic for a personalized diagnosis and treatment recommendation before undergoing any procedure.
         </p>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="prp-vs-mesotherapy-hair-loss-dubai" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

@@ -754,7 +754,6 @@ export default function HairPrpCostPage() {
             </div>
           </div>
         </section>
-
         {/* ============================ FAQ — two static columns ============================ */}
         <section className="px-4 py-16">
           <div className="mx-auto max-w-6xl">

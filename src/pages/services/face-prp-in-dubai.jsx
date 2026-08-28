@@ -14,8 +14,8 @@ import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function FacePRPinDubaiPage() {
     const categoryName = 'Facial';
@@ -40,79 +40,79 @@ export default function FacePRPinDubaiPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Face PRP in Dubai – Skin Rejuvenation by Experts</title>
-  <meta name="description" content="Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow." key="description" />
-  <meta name="keywords" content="Face PRP in Dubai, PRP facial treatment Dubai, Skin rejuvenation Dubai, Collagen stimulation facial, Anti-aging PRP treatment, Facial rejuvenation therapy, Fine lines reduction in Dubai, Youthful skin treatment in Dubai, Platelet-rich plasma facial, Professional PRP skin therapy" />
-  
-   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
-      "@id": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/#procedure",
-      "name": "Face PRP Treatment in Dubai",
-      "alternateName": "Platelet-Rich Plasma Facial Rejuvenation",
-      "url": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
-      "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
-      "description": "Face PRP (Platelet-Rich Plasma) therapy in Dubai is a non-surgical aesthetic treatment that uses your own clinically prepared plasma to stimulate collagen production, improve skin elasticity, reduce fine lines, and rejuvenate facial skin naturally.",
-      "procedureType": "Aesthetic regenerative skin procedure",
-      "howPerformed": "After a clinical consultation and skin assessment, a small sample of your blood is drawn and centrifuged to isolate platelet-rich plasma. PRP is then injected into targeted areas of the face to encourage collagen stimulation and cellular regeneration.",
-      "preparation": "Patients should arrive with clean skin and share their medical history before the procedure. Minimal preparation is required.",
-      "followup": "Multiple sessions over weeks are recommended for optimal skin rejuvenation results, with aftercare guidance provided by clinicians.",
-      "indication": [
-        "Fine lines and wrinkles",
-        "Dull or uneven skin tone",
-        "Acne scars and pigmentation concerns",
-        "Loss of facial elasticity",
-        "General facial skin rejuvenation"
-      ],
-      "provider": {
-        "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-          "addressLocality": "Jumeirah 1",
-          "addressRegion": "Dubai",
-          "postalCode": "393558",
-          "addressCountry": "AE"
-        },
-        "telephone": "+971566597878",
-        "areaServed": {
-          "@type": "City",
-          "name": "Dubai"
-        },
-        "priceRange": "$$"
-      }
-    })
-  }}
-/>
-</Head>
+        <title key="title">Face PRP in Dubai – Skin Rejuvenation by Experts</title>
+        <meta name="description" content="Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow." key="description" />
+        <meta name="keywords" content="Face PRP in Dubai, PRP facial treatment Dubai, Skin rejuvenation Dubai, Collagen stimulation facial, Anti-aging PRP treatment, Facial rejuvenation therapy, Fine lines reduction in Dubai, Youthful skin treatment in Dubai, Platelet-rich plasma facial, Professional PRP skin therapy" />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalProcedure",
+              "@id": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/#procedure",
+              "name": "Face PRP Treatment in Dubai",
+              "alternateName": "Platelet-Rich Plasma Facial Rejuvenation",
+              "url": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
+              "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
+              "description": "Face PRP (Platelet-Rich Plasma) therapy in Dubai is a non-surgical aesthetic treatment that uses your own clinically prepared plasma to stimulate collagen production, improve skin elasticity, reduce fine lines, and rejuvenate facial skin naturally.",
+              "procedureType": "Aesthetic regenerative skin procedure",
+              "howPerformed": "After a clinical consultation and skin assessment, a small sample of your blood is drawn and centrifuged to isolate platelet-rich plasma. PRP is then injected into targeted areas of the face to encourage collagen stimulation and cellular regeneration.",
+              "preparation": "Patients should arrive with clean skin and share their medical history before the procedure. Minimal preparation is required.",
+              "followup": "Multiple sessions over weeks are recommended for optimal skin rejuvenation results, with aftercare guidance provided by clinicians.",
+              "indication": [
+                "Fine lines and wrinkles",
+                "Dull or uneven skin tone",
+                "Acne scars and pigmentation concerns",
+                "Loss of facial elasticity",
+                "General facial skin rejuvenation"
+              ],
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+                  "addressLocality": "Jumeirah 1",
+                  "addressRegion": "Dubai",
+                  "postalCode": "393558",
+                  "addressCountry": "AE"
+                },
+                "telephone": "+971566597878",
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Dubai"
+                },
+                "priceRange": "$$"
+              }
+            })
+          }}
+        />
+      </Head>
 
-    <TreatmentHero 
-      categoryName={categoryName}
-      subcategoryName={subcategoryName}
-      hero={content?.hero}
-    />
-     <QuickNavigation navItems={navItems} />
-    
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
-    <HealingJourney content={content?.healingJourney} />
-    <TreatmentBenefits 
-      content={content?.benefits}
-    />
-    <SkinTreatmentAdditionalContent content={content} />
-    <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
-    <PatientTestimonials content={content?.testimonials} />
-     <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <FAQSection content={content?.faq} />
-    <BookConsultation content={content?.bookConsultation} />
-  </Layout>
+      <TreatmentHero 
+        categoryName={categoryName}
+        subcategoryName={subcategoryName}
+        hero={content?.hero}
+      />
+      <QuickNavigation navItems={navItems} />
+      
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
+      <HealingJourney content={content?.healingJourney} />
+      <TreatmentBenefits 
+        content={content?.benefits}
+      />
+      <SkinTreatmentAdditionalContent content={content} />
+      <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="face-prp-in-dubai" />
+      <FAQSection content={content?.faq} />
+      <BookConsultation content={content?.bookConsultation} />
+    </Layout>
   );
 }

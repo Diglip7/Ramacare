@@ -639,7 +639,7 @@ export default function HydraFacialCostDubaiPage() {
             <div className="space-y-6">
               <div className="rounded-3xl overflow-hidden shadow-md">
                 <img
-                  src="/images/hydrafacial-device-treatment-dubai.jpg"
+                  src="/images/HydraFacial device in use.jpg"
                   alt="HydraFacial machine performing treatment in Dubai clinic"
                   className="w-full h-[320px] object-cover"
                 />

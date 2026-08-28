@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from 'react';
@@ -1454,6 +1455,8 @@ export default function EximiaBeforeAfterPage() {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="eximia-before-and-after-results-dubai" />
     </Layout>
   );
 }

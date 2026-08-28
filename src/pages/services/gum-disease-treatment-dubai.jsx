@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function GumDiseaseTreatmentPage() {
   const categoryName = 'Dental';
@@ -25,32 +25,30 @@ export default function GumDiseaseTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Gum Disease Treatment in Dubai | Healthy Gums Care</title>
-  <meta name="description" content="Protect your oral health with expert gum disease treatment in Dubai. Safe, effective solutions by licensed dentists to prevent gum infection and maintain healthy gums." key="description" />
-  <meta name="keywords" content="Gum disease treatment Dubai, Periodontitis treatment Dubai, Gum infection treatment, Gum care Dubai, Gum disease dentist Dubai, Periodontal therapy Dubai, Gum inflammation treatment, Oral health Dubai, Healthy gums Dubai, dental clinic for gums, Gum treatment near me in Dubai, Professional gum care" />
-  
-   
-        
-</Head>
+        <title key="title">Gum Disease Treatment in Dubai | Healthy Gums Care</title>
+        <meta name="description" content="Protect your oral health with expert gum disease treatment in Dubai. Safe, effective solutions by licensed dentists to prevent gum infection and maintain healthy gums." key="description" />
+        <meta name="keywords" content="Gum disease treatment Dubai, Periodontitis treatment Dubai, Gum infection treatment, Gum care Dubai, Gum disease dentist Dubai, Periodontal therapy Dubai, Gum inflammation treatment, Oral health Dubai, Healthy gums Dubai, dental clinic for gums, Gum treatment near me in Dubai, Professional gum care" />
+      </Head>
+
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="gum-disease-treatment-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

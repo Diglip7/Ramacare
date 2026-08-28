@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -25,33 +26,30 @@ export default function dentaldubaiVeneersPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">dental Veneers in Dubai | Trusted Smile Makeover Experts</title>
-  <meta name="description" content="Transform your smile with dental veneers in Dubai. Expert porcelain and composite solutions for natural, durable, and personalized cosmetic results by certified dentists." key="description" />
-  <meta name="keywords" content="dental veneers Dubai, Porcelain veneers Dubai, Composite veneers Dubai, Cosmetic dentistry Dubai, Smile makeover Dubai, Tooth restoration in Dubai, Same-day veneers Dubai, Natural-looking veneers Dubai, Emax veneers Dubai, Affordable veneers Dubai, DHA-licensed dentist in Dubai, Best dental veneers Dubai, dental veneers Jumeirah 1, Best dental veneers Jumeirah 1" />
-  
-  
-        
-</Head>
+        <title key="title">Dental Veneers in Dubai | Trusted Smile Makeover Experts</title>
+        <meta name="description" content="Transform your smile with dental veneers in Dubai. Expert porcelain and composite solutions for natural, durable, and personalized cosmetic results by certified dentists." key="description" />
+        <meta name="keywords" content="dental veneers Dubai, Porcelain veneers Dubai, Composite veneers Dubai, Cosmetic dentistry Dubai, Smile makeover Dubai, Tooth restoration in Dubai, Same-day veneers Dubai, Natural-looking veneers Dubai, Emax veneers Dubai, Affordable veneers Dubai, DHA-licensed dentist in Dubai, Best dental veneers Dubai, dental veneers Jumeirah 1, Best dental veneers Jumeirah 1" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="dental-veneers-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

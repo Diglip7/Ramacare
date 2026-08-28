@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import BeginYourHealingJourneySection from '../../../components/BeginYourHealingJourneySection';
 
 const EximiaCellulitePage = () => {
@@ -428,6 +429,7 @@ const EximiaCellulitePage = () => {
           </div>
         </div>
       )}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="eximia-cellulite-treatment-dubai" />
     </Layout>
   );
 };

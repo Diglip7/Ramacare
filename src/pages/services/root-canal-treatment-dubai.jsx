@@ -13,8 +13,8 @@ import PaymentInsurance from '../../../components/PaymentInsurance';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function RootCanalTreatmentPage() {
   const categoryName = 'Dental';
@@ -26,37 +26,34 @@ export default function RootCanalTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Root Canal Treatment in Dubai | Trusted Endodontist Care</title>
-  <meta name="description" content="Get safe and effective root canal treatment in Dubai. Skilled endodontists remove infection, relieve pain, and restore your tooth for long-lasting dental health." key="description" />
-  <meta name="keywords" content="Root canal treatment Dubai, Root canal therapy Dubai, Endodontist Dubai, Painless root canal Dubai, Tooth infection treatment in Dubai, dental clinic Dubai, Emergency root canal Dubai, Tooth restoration in Dubai, Best endodontist in Dubai, DHA-licensed dentist in Dubai, Root canal cost in Dubai, Advanced root canal Dubai" />
-  
-  
-        
-</Head>
+        <title key="title">Root Canal Treatment in Dubai | Trusted Endodontist Care</title>
+        <meta name="description" content="Get safe and effective root canal treatment in Dubai. Skilled endodontists remove infection, relieve pain, and restore your tooth for long-lasting dental health." key="description" />
+        <meta name="keywords" content="Root canal treatment Dubai, Root canal therapy Dubai, Endodontist Dubai, Painless root canal Dubai, Tooth infection treatment in Dubai, dental clinic Dubai, Emergency root canal Dubai, Tooth restoration in Dubai, Best endodontist in Dubai, DHA-licensed dentist in Dubai, Root canal cost in Dubai, Advanced root canal Dubai" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <ServiceExtrasSection 
-      aftercareContent={content?.recoveryAftercare}
-      whyChooseContent={content?.whyChoose}
-    />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ServiceExtrasSection 
+        aftercareContent={content?.recoveryAftercare}
+        whyChooseContent={content?.whyChoose}
+      />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="root-canal-treatment-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

@@ -1,4 +1,5 @@
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import Head from "next/head";
 import HeroSection from "../../../components/HeroSection";
 import WhyChooseUsSection from "../../../components/WhyChooseUsSection";
@@ -64,6 +65,7 @@ export default function physiotherapydubaiCategoryPage() {
       <FAQSection content={content?.faq} />
       {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="physiotherapy-dubai" />
       <SEOContentSection title="Leading Physiotherapy Center in Dubai" content={physioSEOContent} />
     </Layout>
   );

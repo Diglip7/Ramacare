@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
@@ -137,6 +138,7 @@ export default function FemaleGenitalRejuvenationPage() {
             <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
+       <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="female-genital-rejuvenation-dubai" />
     
     <PaymentInsurance content={content?.paymentInsurance} />
       <FAQSection content={content?.faq} />

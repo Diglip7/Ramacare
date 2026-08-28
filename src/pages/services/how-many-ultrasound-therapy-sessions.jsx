@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { Zap, TrendingUp, Activity, CheckCircle, Award, Users, Calendar, RefreshCcw, Clock, Dumbbell } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '../../../components/Toast';
@@ -676,6 +677,7 @@ const UltrasoundSessionsTimelinePage = () => {
         </div>
       </section>
 
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="how-many-ultrasound-therapy-sessions" />
     </Layout>
   );
 };

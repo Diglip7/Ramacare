@@ -20,15 +20,17 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
   const isExplicitJeena = doctorName && (doctorName.toLowerCase().includes('jeena') || doctorName.toLowerCase().includes('jheen') || doctorName.toLowerCase().includes('mathew'));
   const isExplicitShamna = doctorName && doctorName.toLowerCase().includes('shamna');
   const isExplicitSonita = doctorName && (doctorName.toLowerCase().includes('sonita') || doctorName.toLowerCase().includes('sinaga'));
+  const isExplicitNodainne = doctorName && (doctorName.toLowerCase().includes('nodainne') || doctorName.toLowerCase().includes('guerrero'));
   const isExplicitSahar = doctorName && doctorName.toLowerCase().includes('sahar');
   const isExplicitHirbod = doctorName && doctorName.toLowerCase().includes('hirbod');
   const isExplicitAparna = doctorName && doctorName.toLowerCase().includes('aparna');
 
-  const isGenericTitle = !doctorName || (!isExplicitJeena && !isExplicitShamna && !isExplicitSonita && !isExplicitSahar && !isExplicitHirbod && !isExplicitAparna);
+  const isGenericTitle = !doctorName || (!isExplicitJeena && !isExplicitShamna && !isExplicitSonita && !isExplicitNodainne && !isExplicitSahar && !isExplicitHirbod && !isExplicitAparna);
 
   let isJeena = isExplicitJeena;
   let isShamna = isExplicitShamna;
   let isSonita = isExplicitSonita;
+  let isNodainne = isExplicitNodainne;
   let isSahar = isExplicitSahar;
   let isHirbod = isExplicitHirbod;
   let isAparna = isExplicitAparna;
@@ -92,6 +94,14 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     link = '/doctors/sonita-sinaga-aesthetic-therapist-dubai';
     image = '/images/Sonita.jpeg';
     statement = 'This aesthetic dermatology & skincare guide has been clinically reviewed for treatment safety, laser protocols, and skincare excellence by Sonita Sinaga.';
+  } else if (isNodainne) {
+    name = 'Nodainne Baves Guerrero';
+    role = 'Certified Aesthetic & Beauty Therapist';
+    credentials = 'Certified Aesthetic & Skincare Specialist';
+    experience = 'Professional Aesthetic & Skincare Experience';
+    link = '/doctors/nodainne-baves-guerrero-beauty-therapist-dubai';
+    image = '/images/Nodainne Baves Guerrero.jpeg';
+    statement = 'This aesthetic & facial care guide has been reviewed for clinical skincare standards and treatment safety by Nodainne Baves Guerrero.';
   } else if (isSahar) {
     name = 'Dr. Sahar Zomorrodi';
     role = 'General Practitioner & Aesthetic Specialist';

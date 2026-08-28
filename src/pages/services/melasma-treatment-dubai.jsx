@@ -482,7 +482,7 @@ export default function MelasmaTreatmentPage() {
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Dermatologist examining facial pigmentation.jpg"
-                      alt="Dermatologist examining facial pigmentation for melasma diagnosis"
+                      alt="UV sun exposure as a common cause of melasma in Dubai"
                       title="Skin analysis for melasma"
                       layout="fill"
                       objectFit="cover"

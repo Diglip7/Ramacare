@@ -235,17 +235,7 @@ export default function DandruffTreatmentDubaiPage() {
     router.push('/book-appointment');
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: content.faq.items.map((f) => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
-    })),
-  };
-
-  const medicalConditionSchema = {
+  const fullPageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
@@ -260,9 +250,13 @@ export default function DandruffTreatmentDubaiPage() {
         },
         lastReviewed: '2026-07-23',
         reviewedBy: {
-          '@type': 'Physician',
-          name: 'RamaCare Polyclinic Dermatology Team',
-          medicalSpecialty: 'Dermatology'
+          '@id': 'https://ramacarepolyclinic.ae/doctors/#sahar-zomorrodi'
+        },
+        about: {
+          '@id': 'https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/#condition'
+        },
+        publisher: {
+          '@id': 'https://ramacarepolyclinic.ae/#organization'
         }
       },
       {
@@ -270,13 +264,136 @@ export default function DandruffTreatmentDubaiPage() {
         '@id': 'https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/#condition',
         name: 'Dandruff',
         alternateName: 'Pityriasis Capitis',
-        description: 'A common scalp condition characterized by flaking of the skin on the scalp, often accompanied by itching.',
-        signOrSymptom: content.symptoms.items.map((s) => ({ '@type': 'MedicalSignOrSymptom', name: s.text })),
-        riskFactor: content.causes.items.map((c) => ({ '@type': 'MedicalRiskFactor', name: c.text }))
+        description: 'A common scalp condition characterized by flaking of the skin on the scalp, often accompanied by itching, oiliness, or redness.',
+        associatedAnatomy: {
+          '@type': 'AnatomicalStructure',
+          name: 'Scalp'
+        },
+        signOrSymptom: content.symptoms.items.map((s) => ({
+          '@type': 'MedicalSignOrSymptom',
+          name: s.text
+        })),
+        riskFactor: content.causes.items.map((c) => ({
+          '@type': 'MedicalRiskFactor',
+          name: c.text
+        })),
+        differentialDiagnosis: [
+          {
+            '@type': 'MedicalCondition',
+            name: 'Seborrheic Dermatitis',
+            description: 'A chronic inflammatory scalp and skin condition causing yellow, greasy flakes, redness, and persistent itching.'
+          },
+          {
+            '@type': 'MedicalCondition',
+            name: 'Scalp Psoriasis',
+            description: 'An autoimmune condition producing thick, silvery scales on well-demarcated red patches across the scalp.'
+          },
+          {
+            '@type': 'MedicalCondition',
+            name: 'Dry Scalp / Eczema',
+            description: 'Scalp dryness or dermatitis resulting in fine white flakes due to lack of moisture or barrier disruption.'
+          }
+        ],
+        possibleTreatment: content.treatments.items.map((t) => ({
+          '@type': 'MedicalTherapy',
+          name: t.name,
+          description: t.purpose
+        }))
+      },
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        alternateName: 'RamaCare Medical Clinic Dubai',
+        url: 'https://ramacarepolyclinic.ae/',
+        logo: 'https://ramacarepolyclinic.ae/images/logo.png',
+        image: 'https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dermatology-team.jpg',
+        telephone: '+971566597878',
+        priceRange: '$$$',
+        medicalSpecialty: ['Dermatology', 'ScalpCare'],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Ground Floor, Jumeirah Terrace Building, 12 Al Dhiyafah Rd, Jumeirah 1',
+          addressLocality: 'Dubai',
+          addressRegion: 'Dubai',
+          postalCode: '393558',
+          addressCountry: 'AE'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '25.2323',
+          longitude: '55.2678'
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            opens: '09:00',
+            closes: '21:00'
+          }
+        ]
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://ramacarepolyclinic.ae/#organization',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        logo: 'https://ramacarepolyclinic.ae/images/logo.png',
+        telephone: '+971566597878',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Ground Floor, Jumeirah Terrace Building, 12 Al Dhiyafah Rd, Jumeirah 1',
+          addressLocality: 'Dubai',
+          addressRegion: 'Dubai',
+          postalCode: '393558',
+          addressCountry: 'AE'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+971566597878',
+          contactType: 'customer service',
+          areaServed: 'AE',
+          availableLanguage: ['English', 'Arabic']
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/doctors/#sahar-zomorrodi',
+        name: 'Dr. Sahar Zomorrodi',
+        jobTitle: 'Specialist Dermatologist',
+        medicalSpecialty: 'Dermatology',
+        worksFor: {
+          '@id': 'https://ramacarepolyclinic.ae/#clinic'
+        },
+        url: 'https://ramacarepolyclinic.ae/doctors/',
+        description: 'DHA-licensed Specialist Dermatologist at RamaCare Polyclinic Dubai, specializing in scalp disorders, anti-dandruff treatments, seborrheic dermatitis, and aesthetic dermatology.',
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'DHA License',
+            recognizedBy: {
+              '@type': 'Organization',
+              name: 'Dubai Health Authority'
+            }
+          }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/#faq',
+        mainEntity: content.faq.items.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.answer
+          }
+        }))
       },
       {
         '@type': 'BreadcrumbList',
-        'itemListElement': [
+        '@id': 'https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/#breadcrumb',
+        itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
@@ -310,8 +427,8 @@ export default function DandruffTreatmentDubaiPage() {
           content="Struggling with flaky, itchy scalp? Get expert Dandruff Treatment Dubai at RamaCare Polyclinic. DHA-licensed dermatologists. Book your consultation today."
           key="description"
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fullPageSchema) }} />
       </Head>
 
       {/* ============================================================ */}
@@ -346,7 +463,17 @@ export default function DandruffTreatmentDubaiPage() {
               {content.hero.subtitle}
             </motion.p>
             <p className="text-base text-[#5F5F5F] leading-relaxed mb-5 whitespace-pre-line">{content.hero.description1}</p>
-            <p className="text-base text-[#5F5F5F] leading-relaxed mb-8 whitespace-pre-line">{content.hero.description2}</p>
+            <p className="text-base text-[#5F5F5F] leading-relaxed mb-8 whitespace-pre-line">
+              At RamaCare Polyclinic, our approach to Dandruff Treatment Dubai starts with understanding why your scalp is flaking — because dandruff is not a single condition, but a symptom with several possible underlying causes. Our{" "}
+              <Link href="/services/aesthetic-dermatology-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
+                dermatology team
+              </Link>{" "}
+              evaluates your scalp, hair care habits, medical history, and lifestyle factors to build a treatment plan suited to you, rather than offering a one-size-fits-all shampoo recommendation. Early diagnosis genuinely does improve outcomes, helping you avoid the frustrating cycle of trying product after product with little lasting relief.
+              {"\n\n"}
+              Whether you need a straightforward flaky scalp treatment or a more comprehensive plan for a stubborn, recurring condition, the right Dandruff Treatment Dubai provider will always start with a proper diagnosis rather than a generic recommendation.
+              {"\n\n"}
+              In this guide, we'll walk through what dandruff actually is, its different types and causes, when to see a dermatologist, how it's diagnosed, and the treatment options available at our clinic — so you can make an informed decision about your scalp health.
+            </p>
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={handleBookAppointment}
@@ -536,7 +663,23 @@ export default function DandruffTreatmentDubaiPage() {
                         <IconComponent className="w-4 h-4" />
                       </div>
                       <h3 className="text-base font-bold text-[#1A1A1A] mb-1">{step.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {step.id === "04" ? (
+                          <>
+                            Differential diagnosis – ruling out look-alike conditions such as{" "}
+                            <Link href="/services/psoriasis-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
+                              psoriasis
+                            </Link>
+                            ,{" "}
+                            <Link href="/services/skin-diseases-treatment/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
+                              underlying skin conditions such as eczema
+                            </Link>
+                            , or fungal infections.
+                          </>
+                        ) : (
+                          step.description
+                        )}
+                      </p>
                     </motion.div>
                   );
                 })}
@@ -597,8 +740,8 @@ export default function DandruffTreatmentDubaiPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-6">{content.bestOffer.title}</h2>
           <p className="text-lg text-[#5F5F5F] leading-relaxed">
             {content.bestOffer.lead} {content.bestOffer.mid}{" "}
-            <Link href="/services/dandruff-treatment-dubai" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
-              {content.bestOffer.link}
+            <Link href="/services/psoriasis-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
+              seborrheic dermatitis &amp; psoriasis treatment Dubai protocols
             </Link>{" "}
             {content.bestOffer.tail}
           </p>
@@ -630,11 +773,11 @@ export default function DandruffTreatmentDubaiPage() {
             <p className="text-sm text-[#5F5F5F] italic mb-4">{content.hairLoss.note}</p>
             <p className="text-sm text-[#5F5F5F]">
               {content.hairLoss.footer}{" "}
-              <Link href="/services/hair-loss-dubai" className="text-[#1F5E4B] font-bold underline hover:text-[#1A5F3F]">
-                Hair Loss Treatment Dubai
-              </Link>{" "}
-              services, along with our{" "}
-              <Link href="/services/hair-prp-dubai" className="text-[#1F5E4B] font-bold underline hover:text-[#1A5F3F]">
+              <Link href="/services/hair-loss-dubai/" className="text-[#1F5E4B] font-bold underline hover:text-[#1A5F3F]">
+                our dedicated Hair Loss Treatment Dubai services
+              </Link>
+              , along with our{" "}
+              <Link href="/services/hair-prp-dubai/" className="text-[#1F5E4B] font-bold underline hover:text-[#1A5F3F]">
                 PRP Hair Treatment Dubai
               </Link>{" "}
               options where appropriate.
@@ -761,7 +904,31 @@ export default function DandruffTreatmentDubaiPage() {
                 </button>
                 {activeAccordion === index && (
                   <div className="pb-5">
-                    <p className="text-gray-600 leading-relaxed text-sm">{item.answer}</p>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {index === 13 ? (
+                        <>
+                          Yes, our dermatology team manages a full spectrum of scalp conditions, from mild dandruff to seborrheic dermatitis and{" "}
+                          <Link href="/services/rosacea-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
+                            other inflammatory skin concerns
+                          </Link>
+                          .
+                        </>
+                      ) : index === 14 ? (
+                        <>
+                          You can book a consultation by contacting our clinic directly through our{" "}
+                          <Link href="/contact-us/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
+                            Contact Us page
+                          </Link>{" "}
+                          or calling our team at{" "}
+                          <Link href="/services/general-physician-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F]">
+                            General Physician
+                          </Link>{" "}
+                          to schedule an appointment with one of our dermatologists.
+                        </>
+                      ) : (
+                        item.answer
+                      )}
+                    </p>
                   </div>
                 )}
               </div>
@@ -777,7 +944,25 @@ export default function DandruffTreatmentDubaiPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.conclusion.title}</h2>
           <p className="text-white/90 leading-relaxed mb-4">{content.conclusion.paragraph1}</p>
-          <p className="text-white/90 leading-relaxed mb-8 whitespace-pre-line">{content.conclusion.paragraph2}</p>
+          <p className="text-white/90 leading-relaxed mb-8 whitespace-pre-line">
+            At{" "}
+            <Link href="/about-us/" className="underline font-bold text-white hover:text-gray-200">
+              RamaCare Polyclinic
+            </Link>
+            ,{" "}
+            <Link href="/services/aesthetic-dermatology-dubai/" className="underline font-bold text-white hover:text-gray-200">
+              our dermatology team is committed to
+            </Link>{" "}
+            providing accurate diagnosis and personalized Dandruff Treatment Dubai plans based on evidence-based dermatological practice, not one-size-fits-all solutions.
+            {"\n\n"}
+            If you've been struggling with a flaky, itchy, or uncomfortable scalp, a professional evaluation can help you understand what's really going on — and what to do about it.
+            {"\n\n"}
+            Ready to address your scalp concerns properly?{" "}
+            <Link href="/contact-us/" className="underline font-bold text-white hover:text-gray-200">
+              Book a consultation
+            </Link>{" "}
+            with our dermatology team at RamaCare Polyclinic today and take the first step toward a healthier, flake-free scalp.
+          </p>
           <button
             onClick={handleBookAppointment}
             className="bg-white text-[#1A5F3F] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105 inline-flex items-center justify-center mb-8"
@@ -786,25 +971,6 @@ export default function DandruffTreatmentDubaiPage() {
             {content.conclusion.cta}
           </button>
           <p className="text-xs text-white/60 max-w-2xl mx-auto leading-relaxed">{content.conclusion.disclaimer}</p>
-        </div>
-      </section>
-
-      {/* Reviewer Section */}
-      <section className="bg-[#F5F1EA] py-12 px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-6">
-            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 border-2 border-[#1A5F3F]/10">
-              <LucideIcons.UserCheck className="w-8 h-8 text-[#1A5F3F]" />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500 font-medium mb-1">Content Reviewed by</p>
-              <div className="flex flex-wrap items-center gap-2">
-                <h4 className="text-lg font-bold text-[#1A1A1A]">RamaCare Dermatology Team</h4>
-                <span className="text-gray-600 text-sm">, RamaCare Polyclinic, Dubai</span>
-                <LucideIcons.CheckCircle className="w-4 h-4 text-teal-600" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

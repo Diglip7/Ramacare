@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Activity, ArrowRight, Bug, Candy, CheckCircle2, ChevronDown, Circle, Droplets, History, ImageIcon,
@@ -3456,6 +3457,7 @@ export default function DentalToothFillingDubai() {
         <PreventingCavities />
         <WhyRamaCare />
         <PatientJourney />
+        <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="dental-tooth-filling-dubai" />
         <FAQs />
         <BookConsultation />
       </main>

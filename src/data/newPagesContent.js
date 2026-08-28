@@ -21,7 +21,7 @@ export const newPagesContent = {
       metaTitle: "Anxiety Treatment Dubai | Supportive Care at RamaCare",
       metaDescription: "Struggling with anxiety? RamaCare Polyclinic Dubai offers personalized Anxiety Treatment Dubai support with DHA-licensed experts. Book your consultation today.",
       keywords: "Anxiety Treatment Dubai, Anxiety Management Dubai, Stress and Anxiety Support Dubai, Chronic Anxiety Dubai, Holistic Anxiety Care Dubai, Ayurvedic Anxiety Support Dubai, Relaxation Therapy Dubai, Sleep and Anxiety Support Dubai, Burnout Recovery Dubai, Physiotherapy for Anxiety Dubai, Wellness Clinic Dubai, Mind-Body Wellness Dubai, Emotional Wellbeing Support Dubai, Workplace Anxiety Support Dubai",
-      slug: "/anxiety-treatment-dubai",
+      slug: "/services/anxiety-treatment-dubai",
       canonical: "https://ramacarepolyclinic.ae/services/anxiety-treatment-dubai/"
     },
     breadcrumbs: [
@@ -260,31 +260,31 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
-        src: "/images/Anxiety Treatment Dubai.jpg",
+        src: "/images/Healthcare professional discussing anxiety management with a patient.jpg",
         title: "Healthcare professional discussing anxiety management with a patient",
         alt: "Anxiety Treatment Dubai consultation at RamaCare Polyclinic",
         caption: "Personalized stress and anxiety wellness consultations identify primary physical and lifestyle strain areas."
       },
       physio: {
-        src: "/images/Guided breathing session.jpg",
+        src: "/images/Guided breathing and relaxation session in a wellness clinic.jpg",
         title: "Guided breathing and relaxation session in a wellness clinic",
         alt: "Guided breathing session for anxiety support in Dubai",
         caption: "Structured breathing patterns help stimulate the body's natural relaxation response."
       },
       stretching: {
-        src: "/images/Physiotherapy for anxiety.jpg",
+        src: "/images/Physiotherapist treating neck and shoulder tension related to anxiety.jpg",
         title: "Physiotherapist treating neck and shoulder tension related to anxiety",
         alt: "Physiotherapy for anxiety-related muscle tension in Dubai",
         caption: "Focused physical therapy helps release chronic muscle guarding in the neck and shoulders."
       },
       manual: {
-        src: "/images/Ayurvedic consultation for anxiety.jpg",
+        src: "/images/Ayurvedic wellness consultation for emotional wellbeing.jpg",
         title: "Ayurvedic wellness consultation for emotional wellbeing",
         alt: "Ayurvedic consultation for anxiety support at RamaCare Dubai",
         caption: "Ayurveda consultations look at holistic daily habits, diet, and stress profiles."
       },
       equipment: {
-        src: "/images/Guided relaxation.jpg",
+        src: "/images/Professional practicing mindfulness and stretching in a calm environment.jpg",
         title: "Professional practicing mindfulness and stretching in a calm environment",
         alt: "Mindfulness and stretching for anxiety relief in Dubai",
         caption: "Daily movement and stretching exercises build physical resiliency and stress tolerance."
@@ -304,7 +304,7 @@ export const newPagesContent = {
       metaTitle: "Stress Treatment Dubai | Supportive Care at RamaCare",
       metaDescription: "Feeling overwhelmed by stress? RamaCare Polyclinic Dubai offers personalized Stress Treatment Dubai support with DHA-licensed professionals. Book today.",
       keywords: "Stress Treatment Dubai, Stress Management Dubai, Chronic Stress Treatment Dubai, Stress Relief Dubai, Stress Therapy Dubai, Workplace Stress Dubai, Emotional Stress Management Dubai, Stress and Anxiety Support Dubai, Burnout Recovery Dubai, Holistic Stress Management Dubai, Ayurvedic Stress Treatment Dubai, Physiotherapy for Stress Dubai, Lifestyle Medicine Dubai, Wellness Clinic Dubai, Mind-Body Wellness Dubai, Relaxation Therapy Dubai",
-      slug: "/stress-treatment-dubai",
+      slug: "/services/stress-treatment-dubai",
       canonical: "https://ramacarepolyclinic.ae/services/stress-treatment-dubai/"
     },
     breadcrumbs: [
@@ -536,7 +536,7 @@ export const newPagesContent = {
     },
     images: {
       anatomy: {
-        src: "/images/Stress Treatment Dubai.jpg",
+        src: "/images/Healthcare professional consulting a patient about stress management.jpg",
         title: "Healthcare professional consulting a patient about stress management",
         alt: "Stress Treatment Dubai consultation at RamaCare Polyclinic",
         caption: "Personalized stress care starts with understanding your specific lifestyle triggers and physical symptoms."
@@ -548,19 +548,19 @@ export const newPagesContent = {
         caption: "Our clinical rooms in Jumeirah offer a quiet, supportive environment for wellness consulting."
       },
       stretching: {
-        src: "/images/Physiotherapy for stress.jpg",
+        src: "/images/Physiotherapist treating neck and shoulder tension caused by stress.jpg",
         title: "Physiotherapist treating neck and shoulder tension caused by stress",
         alt: "Physiotherapy for stress-related muscle tension in Dubai",
         caption: "Manual therapy and targeted stretching release unconscious posturing tension in shoulders."
       },
       manual: {
-        src: "/images/Ayurvedic consultation for stress.jpg",
+        src: "/images/Ayurvedic wellness consultation for stress management.jpg",
         title: "Ayurvedic wellness consultation for stress management",
         alt: "Ayurvedic consultation for stress management at RamaCare Dubai",
         caption: "Ayurvedic daily routine guidance aims to restore physical and emotional stability."
       },
       equipment: {
-        src: "/images/Guided relaxation.jpg",
+        src: "/images/Guided breathing and relaxation session in a modern clinic.jpg",
         title: "Guided breathing and relaxation session in a modern clinic",
         alt: "Guided relaxation and breathing session for stress relief Dubai",
         caption: "Controlled breathing training teaches natural ways to down-regulate the nervous system."

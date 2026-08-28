@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
 import DoctorsSection from '../../../components/DoctorsSection';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
 import { 
   Activity, 
@@ -849,6 +850,8 @@ export default function BackPainTreatmentPage() {
       </section>
 
       <DoctorsSection content={content?.doctors} />
+
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="back-pain-treatment-dubai" />
 
       {/* Book Consultation Section */}
       <BookConsultation 

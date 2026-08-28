@@ -136,11 +136,10 @@ const FAQSection = ({ content }) => {
               <div
                 key={faq.id}
                 onClick={() => toggleFAQ(index)}
-                className={`bg-white rounded-xl p-4 md:p-5 cursor-pointer transition-all duration-300 ${
-                  openIndex === index
+                className={`bg-white rounded-xl p-4 md:p-5 cursor-pointer transition-all duration-300 ${openIndex === index
                     ? 'border-2 border-[#047857] shadow-lg'
                     : 'border-2 border-[#E5E7EB] shadow-sm hover:border-[#047857]/50 hover:shadow-md hover:-translate-y-0.5'
-                }`}
+                  }`}
               >
                 {/* Question Header - INCREASED FONT SIZE */}
                 <div className="flex items-center justify-between gap-4">
@@ -148,9 +147,8 @@ const FAQSection = ({ content }) => {
                     {faq.question}
                   </h3>
                   <svg
-                    className={`w-5 h-5 md:w-6 md:h-6 text-[#6B7280] flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
+                    className={`w-5 h-5 md:w-6 md:h-6 text-[#6B7280] flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -165,10 +163,9 @@ const FAQSection = ({ content }) => {
                 </div>
 
                 {/* Answer Content - ALWAYS present in DOM for SEO */}
-                <div 
-                  className={`mt-4 pt-4 border-t border-[#F3F4F6] transition-all duration-300 ${
-                    openIndex === index ? 'block opacity-100' : 'hidden md:block md:invisible md:h-0 md:mt-0 md:pt-0 opacity-0'
-                  }`}
+                <div
+                  className={`mt-4 pt-4 border-t border-[#F3F4F6] transition-all duration-300 ${openIndex === index ? 'block opacity-100' : 'hidden md:block md:invisible md:h-0 md:mt-0 md:pt-0 opacity-0'
+                    }`}
                 >
                   <p className="text-xs md:text-sm text-[#4B5563] leading-relaxed">
                     {faq.answer}
@@ -182,62 +179,62 @@ const FAQSection = ({ content }) => {
 
       {/* Related Resources Section */}
       {resourcesHeading && (
-      <section className="w-full bg-[#F3F4F6] py-8 md:py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-6 md:mb-8">
-            <h2 className="md:text-xl lg:text-2xl font-bold text-[#1F2937] text-center mb-3">
-              {resourcesHeading}
-            </h2>
-          </div>
+        <section className="w-full bg-[#F3F4F6] py-8 md:py-12">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Section Header */}
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="md:text-xl lg:text-2xl font-bold text-[#1F2937] text-center mb-3">
+                {resourcesHeading}
+              </h2>
+            </div>
 
-          {/* Resource Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-            {resources.map((resource, index) => {
-              const cardContent = (
-                <div className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#047857]/30 group">
-                  {/* Left Side - Icon + Text */}
-                  <div className="flex items-center gap-3 md:gap-4 flex-1">
-                    <div className={`${resource.bgColor || 'bg-[#ECFDF5]'} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                      {resource.icon || getResourceIcon(index)}
+            {/* Resource Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+              {resources.map((resource, index) => {
+                const cardContent = (
+                  <div className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#047857]/30 group">
+                    {/* Left Side - Icon + Text */}
+                    <div className="flex items-center gap-3 md:gap-4 flex-1">
+                      <div className={`${resource.bgColor || 'bg-[#ECFDF5]'} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                        {resource.icon || getResourceIcon(index)}
+                      </div>
+                      {/* UPDATED: Text turns green and increases font size on hover */}
+                      <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#3d5f4a] group-hover:text-sm md:group-hover:text-base">
+                        {resource.text}
+                      </span>
                     </div>
-                    {/* UPDATED: Text turns green and increases font size on hover */}
-                    <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#3d5f4a] group-hover:text-sm md:group-hover:text-base">
-                      {resource.text}
-                    </span>
+
+                    {/* Right Side - Arrow */}
+                    <svg
+                      className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#047857]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </div>
+                );
 
-                  {/* Right Side - Arrow */}
-                  <svg
-                    className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#047857]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              );
-
-              // If resource has a link, wrap in Link component
-              return resource.link ? (
-                <Link key={resource.id || index} href={resource.link}>
-                  {cardContent}
-                </Link>
-              ) : (
-                <div key={resource.id || index}>
-                  {cardContent}
-                </div>
-              );
-            })}
+                // If resource has a link, wrap in Link component
+                return resource.link ? (
+                  <Link key={resource.id || index} href={resource.link}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <div key={resource.id || index}>
+                    {cardContent}
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
     </>
   );

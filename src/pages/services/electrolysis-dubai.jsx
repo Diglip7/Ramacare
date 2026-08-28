@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import TreatmentAreasAndCare from '../../../components/TreatmentAreasAndCare';
 import DetailedServiceContent from '../../../components/DetailedServiceContent';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
@@ -133,6 +134,7 @@ export default function ElectrolysisPage() {
        <DoctorsSection content={content?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="electrolysis-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

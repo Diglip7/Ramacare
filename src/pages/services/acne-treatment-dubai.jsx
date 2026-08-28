@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
 import { 
   Sparkles, 
@@ -857,6 +858,9 @@ export default function AcneTreatmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="acne-treatment-dubai" />
 
       {/* Book Consultation Section */}
       <BookConsultation 

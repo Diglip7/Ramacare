@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
@@ -1030,6 +1031,8 @@ export default function PrpVsTransplantPage() {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="prp-vs-hair-transplant-dubai" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-250 shadow-lg z-40 p-4">

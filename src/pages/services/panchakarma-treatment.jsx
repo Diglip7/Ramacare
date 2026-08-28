@@ -13,8 +13,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function PanchakarmaTreatmentPage() {
   const categoryName = 'Ayurveda';
@@ -26,14 +26,13 @@ export default function PanchakarmaTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness</title>
-  <meta name="description" content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available." key="description" />
-  <meta name="keywords" content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai" />
-   
-   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: `
+        <title key="title">Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness</title>
+        <meta name="description" content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available." key="description" />
+        <meta name="keywords" content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
 {
   "@context": "https://schema.org",
   "@type": "MedicalProcedure",
@@ -75,34 +74,33 @@ export default function PanchakarmaTreatmentPage() {
     "priceRange": "$$$"
   }
 }
-    `,
-  }}
-/>
-</Head>
+            `,
+          }}
+        />
+      </Head>
 
-    <TreatmentHero 
-      categoryName={categoryName}
-      subcategoryName={subcategoryName}
-      hero={content?.hero}
-    />
-     <QuickNavigation />
+      <TreatmentHero 
+        categoryName={categoryName}
+        subcategoryName={subcategoryName}
+        hero={content?.hero}
+      />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
-    <HealingJourney content={content?.healingJourney} />
-    <TreatmentBenefits 
-      content={content?.benefits}
-    />
-    <PanchakarmaWhyChoose content={content?.panchakarmaWhyChoose} />
-    <PatientTestimonials content={content?.testimonials} />
-     <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <FAQSection content={content?.faq} />
-    <BookConsultation content={content?.bookConsultation} />
-  </Layout>
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
+      <HealingJourney content={content?.healingJourney} />
+      <TreatmentBenefits 
+        content={content?.benefits}
+      />
+      <PanchakarmaWhyChoose content={content?.panchakarmaWhyChoose} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="panchakarma-treatment" />
+      <FAQSection content={content?.faq} />
+      <BookConsultation content={content?.bookConsultation} />
+    </Layout>
   );
 }
-

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -282,6 +283,100 @@ export default function AyurvedicDietDiabetesPage() {
         <title key="title">Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control</title>
         <meta name="description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." key="description" />
         
+        {/* Open Graph & Twitter Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" />
+        <meta property="og:description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" />
+        <meta name="twitter:description" content="Manage Type 2 Diabetes and Prediabetes naturally with DHA-licensed Ayurvedic diet plans at RamaCare Polyclinic Dubai." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" />
+
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://ramacarepolyclinic.ae/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Ayurvedic Treatment",
+                  "item": "https://ramacarepolyclinic.ae/services/ayurvedic-treatment-dubai/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Ayurvedic Diet for Diabetes",
+                  "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/"
+                }
+              ]
+            })
+          }}
+        />
+
+        {/* MedicalProcedure Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalProcedure",
+              "name": "Ayurvedic Diet for Diabetes",
+              "description": "Clinical Ayurvedic diet management for Type 2 Diabetes and prediabetes focusing on Kapha balance, insulin sensitivity, and natural blood sugar control in Dubai.",
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "RamaCare Polyclinic",
+                "url": "https://ramacarepolyclinic.ae/",
+                "telephone": "+971566597878",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+                  "addressLocality": "Jumeirah 1, Dubai",
+                  "addressCountry": "AE"
+                }
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Dubai"
+              }
+            })
+          }}
+        />
+
+        {/* FAQPage Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": content.faqs.items.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })
+          }}
+        />
       </Head>
 
       {/* Top Info Bar */}
@@ -903,6 +998,8 @@ export default function AyurvedicDietDiabetesPage() {
           </motion.div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-diabetes-dubai" />
 
       {/* Floating Bottom Bar */}
       {showFloatingBar && (

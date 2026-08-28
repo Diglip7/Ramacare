@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../../components/Layout";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
@@ -2224,6 +2225,7 @@ export default function HollywoodSmileTreatmentDubai() {
         <ComparisonMatrix />
         <WhyRamaCare />
         <PatientJourney />
+        <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="hollywood-smile-treatment-dubai" />
         <FAQs />
         <BookConsultation />
       </main>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { MessageCircle, Calendar, Phone, Check, Zap, Activity, Target, Users, ChevronDown, ChevronUp, MapPin, Award, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const UltrasoundFrequencyScience = () => {
   const [activeTab, setActiveTab] = useState('1mhz'); // '1mhz' or '3mhz'
@@ -634,6 +635,9 @@ const UltrasoundFrequencyScience = () => {
             </div>
           </div>
         </section>
+
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="1mhz-vs-3mhz-ultrasound-therapy-science" />
 
       </main>
 

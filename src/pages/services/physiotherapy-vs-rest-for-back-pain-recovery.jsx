@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -803,6 +804,8 @@ export default function PhysiotherapyVsRestPage() {
           <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This page is for educational purposes only and does not replace professional medical advice. It is not a substitute for professional diagnosis or treatment. Individual treatment recommendations, including whether rest, physiotherapy, or a combination is appropriate, require assessment by a qualified healthcare professional.
         </p>
       </section>
+
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="physiotherapy-vs-rest-for-back-pain-recovery" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

@@ -12,6 +12,7 @@ import FAQSection from "../../../components/FAQSection";
 // import OurFacilitySection from "../../../components/OurFacilitySection";
 import BeginYourHealingJourneySection from "../../../components/BeginYourHealingJourneySection";
 import SEOContentSection from "../../../components/SEOContentSection";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { getCategoryContent } from "../../data/categoryContent";
 
 export default function generalphysiciandubaiCategoryPage() {
@@ -39,13 +40,10 @@ export default function generalphysiciandubaiCategoryPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">General Physician Treatment for Everyday Health Care</title>
-  <meta name="description" content="General physician treatment covers routine checkups, diagnosis, and care for common illnesses, infections, and chronic conditions with medical guidance." key="description" />
-  <meta name="keywords" content="General physician treatment, General physician care, Primary care doctor, Family medicine treatment, Routine health checkup, Diagnosis and treatment clinic, Chronic disease management, Common illness treatment, Preventive health care, Medical consultation services" />
-  
-  
-        
-</Head>
+        <title key="title">General Physician Treatment for Everyday Health Care</title>
+        <meta name="description" content="General physician treatment covers routine checkups, diagnosis, and care for common illnesses, infections, and chronic conditions with medical guidance." key="description" />
+        <meta name="keywords" content="General physician treatment, General physician care, Primary care doctor, Family medicine treatment, Routine health checkup, Diagnosis and treatment clinic, Chronic disease management, Common illness treatment, Preventive health care, Medical consultation services" />
+      </Head>
 
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
@@ -65,6 +63,7 @@ export default function generalphysiciandubaiCategoryPage() {
       <ExpertsSection content={content?.experts} />
       <PatientTestimonials content={content?.successStories} />
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="general-physician-dubai" />
       <FAQSection content={content?.faq} />
        {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />
@@ -72,4 +71,3 @@ export default function generalphysiciandubaiCategoryPage() {
     </Layout>
   );
 }
-

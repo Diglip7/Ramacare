@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState, useEffect } from 'react';
 import { Calendar, MessageCircle } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -111,14 +112,14 @@ const ProfessionalVsHomeUltrasoundPage = () => {
   });
 
   const handleBookAppointment = () => {
-    const appointmentSection = document.getElementById('book-now');
+    const appointmentSection = document.getElementById('book-appointment');
     if (appointmentSection) {
       appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   const scrollToForm = () => {
-    const formSection = document.getElementById('book-now');
+    const formSection = document.getElementById('book-appointment');
     if (formSection) {
       formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -891,6 +892,10 @@ const ProfessionalVsHomeUltrasoundPage = () => {
                 
                 <button
                   type="button"
+                  onClick={() => {
+                    const message = `Hello RamaCare, I'm interested in booking an appointment for ultrasound therapy. Please help me schedule a consultation.`;
+                    window.open(`https://wa.me/971566597878?text=${encodeURIComponent(message)}`, '_blank');
+                  }}
                   className="flex-1 bg-white text-[#1F5E4B] border-2 border-[#1F5E4B] rounded-full px-8 py-4 font-semibold hover:bg-[#1F5E4B]/5 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -906,6 +911,8 @@ const ProfessionalVsHomeUltrasoundPage = () => {
         </div>
       </section>
       
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="professional-vs-home-ultrasound" />
+
       <StickyBottomBar 
         onBookNow={() => {
           const formSection = document.getElementById('book-appointment');

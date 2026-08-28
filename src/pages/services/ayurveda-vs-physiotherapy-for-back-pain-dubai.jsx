@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 
 const SITE_URL = 'https://ramacarepolyclinic.ae';
@@ -169,7 +170,7 @@ const related = [
   { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
   { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai' },
   { label: 'Ultrasound Therapy for Chronic Back Pain', href: '/services/ultrasound-therapy-for-chronic-back-pain' },
-  { label: 'Post-Surgery Recovery Dubai', href: '/services/post-surgery-rehabilitation-dubai' },
+  { label: 'Post-Surgery Recovery Dubai', href: '/services/post-surgery-recovery-dubai' },
   { label: 'Panchakarma Treatment', href: '/services/panchakarma-treatment' },
   { label: 'Book Appointment', href: '#book-now' },
   { label: 'Home Page', href: '/' },
@@ -610,6 +611,8 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
           The Ayurveda vs Physiotherapy for Back Pain Dubai decision ultimately comes down to your specific diagnosis, the nature of your pain, and your personal recovery goals. Physiotherapy is typically the stronger choice for acute injuries, post-surgical recovery, and sports-related pain, while Ayurveda offers meaningful long-term benefits for chronic, lifestyle-linked discomfort. In many cases, the most effective path is a coordinated combination of both. Rather than guessing which treatment is right for you, a proper clinical assessment at RamaCare Polyclinic will help identify the safest, most effective route to lasting relief.
         </p>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurveda-vs-physiotherapy-for-back-pain-dubai" />
 
       <BookConsultation />
 

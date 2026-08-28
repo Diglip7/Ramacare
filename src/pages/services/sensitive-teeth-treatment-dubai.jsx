@@ -52,7 +52,7 @@ const SEO = {
   title: 'Sensitive Teeth Treatment Dubai | RamaCare Polyclinic',
   metaDescription:
     'Living with sharp tooth pain from hot or cold foods? Get expert Sensitive Teeth Treatment Dubai at RamaCare Polyclinic — DHA-licensed dentists. Book today.',
-  canonical: 'https://ramacarepolyclinic.ae/sensitive-teeth-treatment-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/sensitive-teeth-treatment-dubai/',
   keywords:
     'Sensitive Teeth Treatment Dubai, Tooth Sensitivity Treatment Dubai, Sensitive Teeth Dentist Dubai, Enamel Erosion Treatment Dubai, Gum Recession Treatment Dubai, Sensitive Teeth Specialist Dubai, Family Dental Clinic Dubai',
 };

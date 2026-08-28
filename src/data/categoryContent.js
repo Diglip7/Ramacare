@@ -631,7 +631,7 @@ export const categoryContent = {
       ],
       ctaText: 'Meet Our Dermatologists',
       image: '/images/aesthetic.png',
-      imageAlt: 'Aesthetic dermatology treatment',
+      imageAlt: 'DHA-licensed dermatologist conducting skin consultation and aesthetic treatment at RamaCare Dubai',
       overlayCard: {
         number: '15+',
         smallText: 'Years of Experience',
@@ -683,7 +683,7 @@ export const categoryContent = {
         }
       ],
       image: '/images/p5.jpg',
-      imageAlt: 'Aesthetic dermatology treatment in Dubai',
+      imageAlt: 'Patient receiving advanced laser skin rejuvenation treatment at RamaCare Polyclinic Jumeirah',
       ctaCard: {
         title: 'Expert Aesthetic Care in Jumeirah 1',
         description: 'Book a consultation with our DHA-licensed dermatologists for personalized beauty and skin health solutions tailored to Dubai\'s unique environment.'

@@ -13,8 +13,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function ElectrotherapyPage() {
   const categoryName = 'Physiotherapy';
@@ -37,13 +37,13 @@ export default function ElectrotherapyPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Electrotherapy in Dubai for Pain Relief and Physiotherapy</title>
-  <meta name="description" content="Electrotherapy in Dubai offers safe physiotherapy treatment for pain relief, muscle stimulation, and faster recovery using TENS, IFC, and NMES under expert care." key="description" />
-  <meta name="keywords" content="Electrotherapy in Dubai, Electrotherapy treatment Dubai, Physiotherapy electrotherapy, TENS therapy Dubai, IFC therapy Dubai, NMES therapy Dubai, Pain relief physiotherapy Dubai, Muscle stimulation therapy, Electrotherapy physiotherapy clinic, Rehabilitation therapy Dubai" />
-   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: `
+        <title key="title">Electrotherapy in Dubai for Pain Relief and Physiotherapy</title>
+        <meta name="description" content="Electrotherapy in Dubai offers safe physiotherapy treatment for pain relief, muscle stimulation, and faster recovery using TENS, IFC, and NMES under expert care." key="description" />
+        <meta name="keywords" content="Electrotherapy in Dubai, Electrotherapy treatment Dubai, Physiotherapy electrotherapy, TENS therapy Dubai, IFC therapy Dubai, NMES therapy Dubai, Pain relief physiotherapy Dubai, Muscle stimulation therapy, Electrotherapy physiotherapy clinic, Rehabilitation therapy Dubai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
 {
   "@context": "https://schema.org",
   "@type": "MedicalProcedure",
@@ -85,10 +85,10 @@ export default function ElectrotherapyPage() {
     "priceRange": "$$"
   }
 }
-    `,
-  }}
-/>
-</Head>
+            `,
+          }}
+        />
+      </Head>
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
@@ -96,8 +96,8 @@ export default function ElectrotherapyPage() {
       />
       <QuickNavigation navItems={navItems} />
       <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
+        subcategoryName={subcategoryName}
+        content={content?.overview}
       />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
@@ -107,6 +107,7 @@ export default function ElectrotherapyPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="electrotherapy-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

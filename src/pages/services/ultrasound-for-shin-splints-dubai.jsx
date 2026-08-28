@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
 import { MessageCircle, Activity, Heart, Zap, MapPin, Activity as ActivityIcon, ArrowRight, ChevronDown } from 'lucide-react';
 
@@ -813,6 +814,8 @@ const UltrasoundShinSplintsPage = () => {
         </div>
       </div>
     </section>
+
+    <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-for-shin-splints-dubai" />
 
     </Layout>
     <>{ToastComponent}</>

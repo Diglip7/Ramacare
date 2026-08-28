@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import TreatmentAdditionalContent from '../../../components/TreatmentAdditionalContent';
 import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
@@ -140,6 +141,7 @@ export default function BirthmarkRemovalPage() {
        <DoctorsSection content={content?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="birthmark-removal-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

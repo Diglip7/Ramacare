@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Calendar, MessageCircle, Clock, Shield, MapPin, Zap, CheckCircle2, Radio, Award, UserCheck, Lock, ChevronDown } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
 
 const OfficeNeckTreatmentPage = () => {
@@ -436,6 +437,9 @@ const OfficeNeckTreatmentPage = () => {
             </div>
           </div>
         </section>
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="office-neck-treatment-dubai" />
+
         {/* Final CTA Section: Reclaim Your Focus */}
         <section id="book-now" className="bg-[#1F5E4B] py-20 px-6">
           <div className="max-w-4xl mx-auto space-y-12">

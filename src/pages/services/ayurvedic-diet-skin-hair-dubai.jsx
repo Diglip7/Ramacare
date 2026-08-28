@@ -4,6 +4,7 @@ import Head from "next/head";
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -692,6 +693,8 @@ export default function AyurvedicDietSkinHairDubaiPage() {
           </motion.div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-skin-hair-dubai" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#1F5E4B] py-4 px-4 sm:px-6 shadow-2xl transition-all">

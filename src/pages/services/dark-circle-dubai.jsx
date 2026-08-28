@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 
@@ -109,6 +110,7 @@ export default function DarkCirclePage() {
        <DoctorsSection content={content?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="dark-circle-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

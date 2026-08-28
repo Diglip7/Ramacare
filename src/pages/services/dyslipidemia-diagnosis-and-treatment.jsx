@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function DyslipidemiaDiagnosisandTreatmentPage() {
   const categoryName = 'General Physician';
@@ -25,31 +25,30 @@ export default function DyslipidemiaDiagnosisandTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Dyslipidemia Diagnosis and Treatment for Healthy Cholesterol</title>
-  <meta name="description" content="Dyslipidemia diagnosis and treatment focused on managing cholesterol levels, reducing heart disease risk, and supporting long-term cardiovascular health safely." key="description" />
-  <meta name="keywords" content="Dyslipidemia diagnosis and treatment, High cholesterol treatment, Lipid profile test, Cholesterol management, Dyslipidemia care, Heart health treatment, High LDL cholesterol, Triglyceride management, Preventive cardiac care" />
-  
-        
-</Head>
+        <title key="title">Dyslipidemia Diagnosis and Treatment for Healthy Cholesterol</title>
+        <meta name="description" content="Dyslipidemia diagnosis and treatment focused on managing cholesterol levels, reducing heart disease risk, and supporting long-term cardiovascular health safely." key="description" />
+        <meta name="keywords" content="Dyslipidemia diagnosis and treatment, High cholesterol treatment, Lipid profile test, Cholesterol management, Dyslipidemia care, Heart health treatment, High LDL cholesterol, Triglyceride management, Preventive cardiac care" />
+      </Head>
+
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="dyslipidemia-diagnosis-and-treatment" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

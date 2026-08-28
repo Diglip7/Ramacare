@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const EximiaSessionsNeededPage = () => {
   const [appointmentData, setAppointmentData] = useState({
@@ -744,6 +745,8 @@ const EximiaSessionsNeededPage = () => {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="how-many-eximia-sessions-needed-dubai" />
     </Layout>
   );
 };

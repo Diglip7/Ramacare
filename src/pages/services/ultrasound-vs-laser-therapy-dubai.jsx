@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { MessageCircle, ChevronDown, ChevronUp, Phone, MapPin, Award } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Footer from '../../../components/Footer';
 
 const UltrasoundVsLaserPage = () => {
@@ -858,8 +859,10 @@ Which treatment (Ultrasound or Laser) would be best for me?`;
           </div>
         </section>
 
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-vs-laser-therapy-dubai" />
+
       </main>
-      <Footer />
+      
     </Layout>
   );
 };

@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function AyurvedicDietPlanPage() {
   const categoryName = 'Ayurveda';
@@ -25,14 +25,13 @@ export default function AyurvedicDietPlanPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance</title>
-  <meta name="description" content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely." key="description" />
-  <meta name="keywords" content="Ayurvedic diet plan Dubai, Dosha-based diet Dubai, Ayurvedic meal plan Dubai, Personalized diet plan Dubai, Ayurvedic nutrition Dubai, Weight Management Ayurveda Dubai, Digestive Health Ayurveda Dubai, Immunity-boosting diet in Dubai, Healthy eating Ayurveda Dubai, Ayurveda lifestyle Dubai, Herbal diet recommendations in Dubai, Ayurvedic food types in Dubai" />
-  
-   <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: `
+        <title key="title">Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance</title>
+        <meta name="description" content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely." key="description" />
+        <meta name="keywords" content="Ayurvedic diet plan Dubai, Dosha-based diet Dubai, Ayurvedic meal plan Dubai, Personalized diet plan Dubai, Ayurvedic nutrition Dubai, Weight Management Ayurveda Dubai, Digestive Health Ayurveda Dubai, Immunity-boosting diet in Dubai, Healthy eating Ayurveda Dubai, Ayurveda lifestyle Dubai, Herbal diet recommendations in Dubai, Ayurvedic food types in Dubai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
 {
   "@context": "https://schema.org",
   "@type": "MedicalProcedure",
@@ -73,32 +72,32 @@ export default function AyurvedicDietPlanPage() {
     "priceRange": "$$"
   }
 }
-    `,
-  }}
-/>
-</Head>
+            `,
+          }}
+        />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
-        hero={content?.hero}/>
-     <QuickNavigation />
+        hero={content?.hero}
+      />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );
 }
-

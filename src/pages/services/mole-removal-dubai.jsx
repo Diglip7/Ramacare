@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
@@ -130,7 +131,8 @@ export default function MoleRemovalPage() {
                  whenToConsider: content?.whenToConsider,}} />
       <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
+        <DoctorsSection content={content?.doctors} />
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="mole-removal-dubai" />
        <PaymentInsurance content={content?.paymentInsurance} />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />

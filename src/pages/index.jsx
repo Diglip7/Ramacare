@@ -49,9 +49,9 @@ export default function Home() {
        <meta name="keywords" content="RamaCare Polyclinic Dubai, Polyclinic in Dubai, Trusted polyclinic in Dubai, Multi-Specialty Clinic Dubai, Medical clinic Dubai, DHA licensed polyclinic, Family healthcare Dubai, Affordable healthcare Dubai, Polyclinic in Jumeirah 1, Medical clinic Jumeirah 1, Best Polyclinic in Jumeirah 1" />
        <meta name="google-site-verification" content="VRn7pg1rACQOgcGV13YChuu05_Iu__0QVLXrw9dNGCc" /> 
 
-       
+     
        <script type="application/ld+json"
-  dangerouslySetInnerHTML={{
+      dangerouslySetInnerHTML={{
     __html: JSON.stringify([
       {
         "@context": "https://schema.org",

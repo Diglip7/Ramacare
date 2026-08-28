@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Layout from '../../../components/Layout';
 import BookConsultation from '../../../components/BookConsultation';
 import DoctorsSection from '../../../components/DoctorsSection';
-import { DOCTOR_GROUPS } from '../../data/doctors';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import { DOCTOR_GROUPS, DOCTORS } from '../../data/doctors';
 import {
   Calendar,
   CheckCircle,
@@ -181,9 +182,9 @@ export default function InsomniaTreatmentPage() {
     "description": "DHA-licensed sleep wellness support at RamaCare Polyclinic, Jumeirah, Dubai. Address insomnia using physiotherapy, lifestyle guidance, and Ayurvedic consultations.",
     "reviewedBy": {
       "@type": "Physician",
-      "name": "Jeena Mathew",
-      "medicalSpecialty": "Physiotherapy",
-      "url": "https://ramacarepolyclinic.ae/doctors/1"
+      "name": "Dr. Sahar Zomorrodi",
+      "medicalSpecialty": "General Practice",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai"
     }
   };
 
@@ -776,7 +777,7 @@ export default function InsomniaTreatmentPage() {
         {/* DOCTORS SHOWCASE */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
-            <DoctorsSection customDoctors={DOCTOR_GROUPS.PHYSIO} />
+            <DoctorsSection customDoctors={[DOCTORS.sahar, DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai']]} />
           </div>
         </section>
 
@@ -810,6 +811,9 @@ export default function InsomniaTreatmentPage() {
             </p>
           </div>
         </section>
+
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/insomnia-treatment-dubai/" />
       </div>
     </Layout>
   );

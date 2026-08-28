@@ -12,6 +12,7 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import SkinTreatmentAdditionalContent from '../../../components/SkinTreatmentAdditionalContent';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
@@ -128,6 +129,7 @@ export default function FillersPage() {
        <DoctorsSection content={content?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="fillers-in-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

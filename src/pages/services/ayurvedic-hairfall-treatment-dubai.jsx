@@ -14,6 +14,7 @@ import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 import { Check, Info, TrendingUp, Scissors, IndianRupee, Wallet, Target, Sparkles, XCircle, CheckCircle2 } from 'lucide-react';
 
@@ -27,7 +28,7 @@ export default function AyurvedicHairfallTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Ayurvedic Hair Fall Treatment in Dubai – Safe & Natural</title>
+        <title key="title">Ayurvedic Hair Fall Treatment in Dubai – Safe & Natural</title>
   <meta name="description" content="Control hair fall naturally with Ayurvedic treatments in Dubai. Herbal remedies, scalp therapies, and personalized care help restore healthy, strong hair." key="description" />
   <meta name="keywords" content="Ayurvedic Hair Fall Treatment Dubai, Hair Loss Treatment Ayurveda Dubai, Natural Hair Regrowth Dubai, Herbal Hair Care Dubai, Ayurvedic Hair Therapy Dubai, Hair Strengthening Treatments Dubai, Hair Fall Solutions Dubai, Ayurveda for Hair Loss, Ayurvedic Scalp Treatment Dubai, Hair Growth Oils Dubai, Best Ayurvedic Hair Treatment, Personalized Hair Care Dubai" />
   
@@ -250,9 +251,9 @@ export default function AyurvedicHairfallTreatmentPage() {
      <DoctorsSection content={content?.doctors} customDoctors={content?.doctors?.doctors} />
     
     <PaymentInsurance content={content?.paymentInsurance} />
+    <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-hairfall-treatment-dubai" />
     <FAQSection content={content?.faq} />
     <BookConsultation content={content?.bookConsultation} />
   </Layout>
   );
 }
-

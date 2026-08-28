@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -698,6 +699,8 @@ export default function AyurvedicDietThyroidPage() {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-thyroid-dubai" />
 
       {/* Exit/Intent Popup */}
       {showPopup && (

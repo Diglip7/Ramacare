@@ -1,4 +1,5 @@
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useRef } from 'react';
@@ -1725,7 +1726,8 @@ export default function HairRegrowthTreatmentDubai() {
           </p>
         </footer>
 
-      </div>
-    </Layout>
+        </div>
+        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="hair-regrowth-treatment-dubai" />
+      </Layout>
   );
 }

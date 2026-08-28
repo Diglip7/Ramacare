@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function TeethCompositeRestorationPage() {
   const categoryName = 'Dental';
@@ -25,33 +25,30 @@ export default function TeethCompositeRestorationPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Tooth Composite Restoration | Durable & Natural dental Care</title>
-  <meta name="description" content="Restore your teeth with composite restoration for a natural look and long-lasting results. Safe, pain-free dental treatment by licensed dentists for healthy smiles." key="description" />
-  <meta name="keywords" content="Tooth composite restoration, dental composite filling, Composite bonding treatment, Tooth repair Dubai, Cosmetic dental restoration, Durable tooth restoration, Natural-looking fillings, DHA licensed dentist in Dubai, Smile restoration Dubai, Tooth repair treatment, Affordable composite restoration, dental repair solutions" />
-  
-  
-        
-</Head>
+        <title key="title">Tooth Composite Restoration | Durable & Natural Dental Care</title>
+        <meta name="description" content="Restore your teeth with composite restoration for a natural look and long-lasting results. Safe, pain-free dental treatment by licensed dentists for healthy smiles." key="description" />
+        <meta name="keywords" content="Tooth composite restoration, dental composite filling, Composite bonding treatment, Tooth repair Dubai, Cosmetic dental restoration, Durable tooth restoration, Natural-looking fillings, DHA licensed dentist in Dubai, Smile restoration Dubai, Tooth repair treatment, Affordable composite restoration, dental repair solutions" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="teeth-composite-restoration-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

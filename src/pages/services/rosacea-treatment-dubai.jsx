@@ -415,10 +415,10 @@ const IMAGES = {
   intro: { src: '/images/Woman with facial redness before rosacea consultation.jpg', alt: 'Woman with facial redness before rosacea consultation in Dubai' },
   triggers: { src: '/images/Common rosacea triggers.jpg', alt: 'Common rosacea triggers including sun, heat, and stress in Dubai' },
   subtypes: { src: '/images/types-of-rosacea-subtypes.jpg', alt: 'Clinical reference illustration of facial skin concerns' },
-  treatments: { src: '/images/rosacea-laser-treatment-dubai.jpg', alt: 'Dermatology laser skin treatment and vascular therapy in Dubai clinic' },
-  lifestyle: { src: '/images/gentle-skincare-routine-rosacea.jpg', alt: 'Dermatological facial hydration session for sensitive skin' },
-  whyChoose: { src: '/images/ramacare-clinic-reception-dubai.jpg', alt: 'RamaCare Polyclinic modern reception area in Dubai' },
-  process: { src: '/images/rosacea-treatment-process-journey.jpg', alt: 'Infographic process detailing patient check up and consultation' },
+  treatments: { src: '/images/rosacea-laser-treatment-dubai.jpg', alt: 'Rosacea laser treatment Dubai procedure at dermatology clinic' },
+  lifestyle: { src: '/images/gentle-skincare-routine-rosacea.jpg', alt: 'Sun protection and gentle skincare routine for rosacea management' },
+  whyChoose: { src: '/images/ramacare-clinic-reception-dubai.jpg', alt: 'RamaCare Polyclinic dermatology clinic reception in Dubai' },
+  process: { src: '/images/rosacea-treatment-process-journey.jpg', alt: 'Step-by-step rosacea treatment consultation process' },
   benefits: { src: '/images/woman-clear-healthy-skin-after-treatment.jpg', alt: 'Calm skin appearance after dermatology treatment' }
 };
 

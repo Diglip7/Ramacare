@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { MessageCircle, Calendar, Check, Zap, Activity, Waves, Clock, ChevronDown, ChevronUp, AlertCircle, Flame, HeartPulse, MapPin, Award, Sparkles, X, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
 
 const ThermalVsMechanicalUltrasound = () => {
@@ -776,7 +777,8 @@ const ThermalVsMechanicalUltrasound = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </Layout>
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="thermal-vs-mechanical-ultrasound-therapy-dubai" />
+      </Layout>
   );
 };
 

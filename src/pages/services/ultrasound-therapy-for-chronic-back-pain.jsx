@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Calendar, MessageCircle, Activity, Zap, HeartHandshake, Bone, X, Check, Radio, Hand, Laptop, ChevronDown, MapPin, Award, Mail } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
 
 const UltrasoundBackPainPage = () => {
@@ -492,6 +493,8 @@ const UltrasoundBackPainPage = () => {
             </div>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-therapy-for-chronic-back-pain" />
       </main>
     </Layout>
     {ToastComponent}

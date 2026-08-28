@@ -27,7 +27,7 @@ export const subSubcategoryContent = {
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
-        secondary: { text: 'WhatsApp', phone: '+971 XX XXX XXXX', icon: 'whatsapp' }
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: ['DHA-Licensed Aesthetic Specialists', 'Safe, Non-Surgical Skin Enhancement', 'Personalized Skin Booster Care in Dubai', ' Improves skin hydration and elasticity'],
       image: {
@@ -745,10 +745,10 @@ export const subSubcategoryContent = {
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
-        phone: '+971 XX XXX XXXX',
+        phone: '+971 56 659 7878',
         whatsapp: 'Chat with us instantly',
         email: 'query@ramacarepolyclinic.com',
-        address: { line1: 'Dubai Healthcare City', line2: 'Building X, Floor X, Dubai, UAE' }
+        address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
@@ -777,7 +777,7 @@ export const subSubcategoryContent = {
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
-        secondary: { text: 'WhatsApp', phone: '+971 XX XXX XXXX', icon: 'whatsapp' }
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: [' DHA-Licensed Aesthetic Specialists', 'Safe, Non-Surgical Skin Rejuvenation', 'Personalized Derma Roller Care in Dubai'],
       image: {
@@ -1471,10 +1471,10 @@ export const subSubcategoryContent = {
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
-        phone: '+971 XX XXX XXXX',
+        phone: '+971 56 659 7878',
         whatsapp: 'Chat with us instantly',
         email: 'query@ramacarepolyclinic.com',
-        address: { line1: 'Dubai Healthcare City', line2: 'Building X, Floor X, Dubai, UAE' }
+        address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
@@ -1503,7 +1503,7 @@ export const subSubcategoryContent = {
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
-        secondary: { text: 'WhatsApp', phone: '+971 XX XXX XXXX', icon: 'whatsapp' }
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: ['DHA-Licensed Medical Aesthetic Clinic', ' Experienced Aesthetic Doctors & Therapists', 'Safe & Effective Skin Tightening Treatment in Dubai'],
       image: {
@@ -2196,10 +2196,10 @@ export const subSubcategoryContent = {
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
-        phone: '+971 XX XXX XXXX',
+        phone: '+971 56 659 7878',
         whatsapp: 'Chat with us instantly',
         email: 'query@ramacarepolyclinic.com',
-        address: { line1: 'Dubai Healthcare City', line2: 'Building X, Floor X, Dubai, UAE' }
+        address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
@@ -2246,7 +2246,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -3007,7 +3007,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -3785,7 +3785,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -4637,7 +4637,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -5484,7 +5484,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -6337,7 +6337,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -7192,7 +7192,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -8046,7 +8046,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -8933,7 +8933,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -9770,7 +9770,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -10573,7 +10573,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -11248,7 +11248,7 @@ export const subSubcategoryContent = {
         },
         secondary: {
           text: 'WhatsApp',
-          phone: '+971 XX XXX XXXX',
+          phone: '+971 56 659 7878',
           icon: 'whatsapp'
         }
       },
@@ -15417,7 +15417,7 @@ export const subSubcategoryContent = {
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
-        secondary: { text: 'WhatsApp', phone: '+971 XX XXX XXXX', icon: 'whatsapp' }
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: [' DHA-Licensed Multispecialty Polyclinic', 'Experienced Doctors & Certified Aesthetic Team', 'Safe, Clinically Approved Laser Technology'],
       image: {
@@ -15954,10 +15954,10 @@ export const subSubcategoryContent = {
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
-        phone: '+971 XX XXX XXXX',
+        phone: '+971 56 659 7878',
         whatsapp: 'Chat with us instantly',
         email: 'query@ramacarepolyclinic.com',
-        address: { line1: 'Dubai Healthcare City', line2: 'Building X, Floor X, Dubai, UAE' }
+        address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
@@ -15972,7 +15972,6 @@ export const subSubcategoryContent = {
         { title: '4.9/5 Rating', description: 'Patient Reviews' }
       ]
     }
-
   },
   'aesthetic-dermatology-dubai-laser-treatment-fractional-co2-laser': {
     hero: {

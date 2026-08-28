@@ -66,10 +66,10 @@ const WHATSAPP_NUMBER = '971566597878';
    Drop real files into /public/images/ using these exact filenames. */
 const IMAGES = {
   hero: { src: '/images/Tooth Pain Treatment Dubai.jpg', alt: 'Tooth Pain Treatment Dubai - dentist examining patient at RamaCare Polyclinic' },
-  causes: { src: '/images/Illustration showing common causes of tooth pain.jpg', alt: 'Illustration showing common causes of tooth pain including cavities and gum disease' },
-  diagnosis: { src: '/images/Dental X-ray.jpg', alt: 'Dental X-ray being reviewed to diagnose tooth pain at Dubai clinic' },
-  treatment: { src: '/images/Root canal and filling treatment procedure.jpg', alt: 'Root canal and filling treatment procedure for tooth pain relief in Dubai' },
-  team: { src: '/images/Friendly RamaCare Polyclinic dental team.jpg', alt: 'Friendly RamaCare Polyclinic dental team providing family dental care in Dubai' },
+  causes: { src: '/images/causes-of-tooth-pain-dubai.jpg', alt: 'Illustration showing common causes of tooth pain including cavities and gum disease' },
+  diagnosis: { src: '/images/dental-xray-diagnosis-dubai.jpg', alt: 'Dental X-ray being reviewed to diagnose tooth pain at Dubai clinic' },
+  treatment: { src: '/images/root-canal-filling-treatment-dubai.jpg', alt: 'Root canal and filling treatment procedure for tooth pain relief in Dubai' },
+  team: { src: '/images/ramacare-polyclinic-dental-team-dubai.jpg', alt: 'Friendly RamaCare Polyclinic dental team providing family dental care in Dubai' },
 };
 
 /* ------------------------------- Data ------------------------------- */
@@ -219,86 +219,170 @@ export default function ToothPainTreatmentPage() {
   const [activePain, setActivePain] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
 
-  // JSON-LD
-  const faqSchema = {
+  // JSON-LD @graph Schema Markup covering all 7 recommended schema types
+  const fullPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Dental Services', item: 'https://ramacarepolyclinic.ae/dental-services-dubai' },
-      { '@type': 'ListItem', position: 3, name: 'Tooth Pain Treatment Dubai', item: SEO.canonical },
-    ],
-  };
-
-  const medicalConditionSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalCondition',
-    name: 'Tooth Pain (Odontalgia)',
-    alternateName: PAIN_TYPES.map((p) => p.name),
-    signOrSymptom: SYMPTOMS_TABLE.map((s) => ({ '@type': 'MedicalSignOrSymptom', name: s.symptom })),
-    riskFactor: CAUSES.map((c) => ({ '@type': 'MedicalRiskFactor', name: c.name })),
-    possibleTreatment: TREATMENTS.map((t) => ({
-      '@type': 'MedicalTherapy',
-      name: t.name,
-      description: t.desc,
-    })),
-  };
-
-  const dentistSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Dentist',
-    name: 'RamaCare Polyclinic — Dental Services',
-    url: SEO.canonical,
-    telephone: '+971566597878',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
-      addressCountry: 'AE',
-    },
-  };
-
-  const clinicSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalClinic',
-    name: 'RamaCare Polyclinic',
-    url: 'https://ramacarepolyclinic.ae/',
-    logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
-    telephone: '+971566597878',
-    priceRange: '$$',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
-      addressCountry: 'AE',
-    },
-  };
-
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalWebPage',
-    name: SEO.title,
-    url: SEO.canonical,
-    description: SEO.metaDescription,
-    reviewedBy: {
-      '@type': 'Dentist',
-      name: 'RamaCare Polyclinic Dental Team',
-    },
-    author: {
-      '@type': 'MedicalOrganization',
-      name: 'RamaCare Polyclinic Editorial Team',
-      url: 'https://ramacarepolyclinic.ae',
-    },
+    '@graph': [
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/#webpage',
+        url: SEO.canonical,
+        name: SEO.title,
+        description: SEO.metaDescription,
+        medicalAudience: {
+          '@type': 'MedicalAudience',
+          audienceType: 'Patient'
+        },
+        lastReviewed: '2026-07-23',
+        reviewedBy: {
+          '@id': 'https://ramacarepolyclinic.ae/doctors/#dental-team'
+        },
+        about: {
+          '@id': 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/#condition'
+        },
+        publisher: {
+          '@id': 'https://ramacarepolyclinic.ae/#organization'
+        }
+      },
+      {
+        '@type': 'MedicalCondition',
+        '@id': 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/#condition',
+        name: 'Tooth Pain',
+        alternateName: ['Toothache', 'Odontalgia', ...PAIN_TYPES.map((p) => p.name)],
+        description: 'Dental pain or discomfort affecting teeth, gums, or jaw, often caused by decay, infection, cracked teeth, or nerve irritation.',
+        associatedAnatomy: {
+          '@type': 'AnatomicalStructure',
+          name: 'Teeth and Oral Cavity'
+        },
+        signOrSymptom: SYMPTOMS_TABLE.map((s) => ({
+          '@type': 'MedicalSignOrSymptom',
+          name: s.symptom
+        })),
+        riskFactor: CAUSES.map((c) => ({
+          '@type': 'MedicalRiskFactor',
+          name: c.name
+        })),
+        possibleTreatment: TREATMENTS.map((t) => ({
+          '@type': 'MedicalTherapy',
+          name: t.name,
+          description: t.desc
+        }))
+      },
+      {
+        '@type': 'DentalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#dentalclinic',
+        name: 'RamaCare Polyclinic — Dental Care Department',
+        alternateName: 'RamaCare Dental Clinic Dubai',
+        url: 'https://ramacarepolyclinic.ae/',
+        logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
+        image: 'https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dental-team-dubai.jpg',
+        telephone: '+971566597878',
+        priceRange: '$$$',
+        medicalSpecialty: ['Dentistry', 'General Dentistry', 'Emergency Dentistry'],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+          addressLocality: 'Dubai',
+          addressRegion: 'Dubai',
+          postalCode: '393558',
+          addressCountry: 'AE'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '25.2323',
+          longitude: '55.2678'
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            opens: '09:00',
+            closes: '21:00'
+          }
+        ]
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://ramacarepolyclinic.ae/#organization',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
+        telephone: '+971566597878',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+          addressLocality: 'Dubai',
+          addressRegion: 'Dubai',
+          postalCode: '393558',
+          addressCountry: 'AE'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+971566597878',
+          contactType: 'customer service',
+          areaServed: 'AE',
+          availableLanguage: ['English', 'Arabic']
+        }
+      },
+      {
+        '@type': 'Dentist',
+        '@id': 'https://ramacarepolyclinic.ae/doctors/#dental-team',
+        name: 'RamaCare Polyclinic Dental Team',
+        jobTitle: 'DHA-Licensed Dentists & Endodontic Specialists',
+        medicalSpecialty: 'Dentistry',
+        worksFor: {
+          '@id': 'https://ramacarepolyclinic.ae/#dentalclinic'
+        },
+        url: 'https://ramacarepolyclinic.ae/doctors/',
+        description: 'DHA-licensed dental specialists at RamaCare Polyclinic Dubai providing comprehensive tooth pain treatment, emergency dentistry, root canals, and family dental care.',
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'DHA License',
+            recognizedBy: {
+              '@type': 'Organization',
+              name: 'Dubai Health Authority'
+            }
+          }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/#faq',
+        mainEntity: FAQS.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.a
+          }
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://ramacarepolyclinic.ae/services/tooth-pain-treatment-dubai/#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://ramacarepolyclinic.ae/'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Dental Services',
+            item: 'https://ramacarepolyclinic.ae/dental-services-dubai'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Tooth Pain Treatment Dubai',
+            item: SEO.canonical
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -312,12 +396,7 @@ export default function ToothPainTreatmentPage() {
         <meta property="og:description" content={SEO.metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SEO.canonical} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fullPageSchema) }} />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">

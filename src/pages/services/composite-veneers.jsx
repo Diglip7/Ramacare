@@ -13,8 +13,8 @@ import PaymentInsurance from '../../../components/PaymentInsurance';
 import ServiceExtrasSection from '../../../components/ServiceExtrasSection';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function CompositeVeneersPage() {
   const categoryName = 'Dental';
@@ -26,37 +26,34 @@ export default function CompositeVeneersPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Composite Veneers Dubai | Safe & Natural Smile Solutions</title>
-  <meta name="description" content="Enhance your smile with composite veneers in Dubai—safe, natural-looking, and durable dental solutions for teeth restoration and cosmetic smile makeovers by expert dentists." key="description" />
-  <meta name="keywords" content="Composite veneers Dubai, dental veneers Dubai, Cosmetic dentistry Dubai, Smile makeover Dubai, Tooth restoration in Dubai, Affordable veneers Dubai, Same-day veneers Dubai, Composite bonding Dubai, Durable veneers Dubai, Natural-looking veneers Dubai, DHA-licensed dentist in Dubai, Best veneers Dubai" />
-  
-   
-        
-</Head>
+        <title key="title">Composite Veneers Dubai | Safe & Natural Smile Solutions</title>
+        <meta name="description" content="Enhance your smile with composite veneers in Dubai—safe, natural-looking, and durable dental solutions for teeth restoration and cosmetic smile makeovers by expert dentists." key="description" />
+        <meta name="keywords" content="Composite veneers Dubai, dental veneers Dubai, Cosmetic dentistry Dubai, Smile makeover Dubai, Tooth restoration in Dubai, Affordable veneers Dubai, Same-day veneers Dubai, Composite bonding Dubai, Durable veneers Dubai, Natural-looking veneers Dubai, DHA-licensed dentist in Dubai, Best veneers Dubai" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <ServiceExtrasSection 
-      aftercareContent={content?.recoveryAftercare}
-      whyChooseContent={content?.whyChoose}
-    />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ServiceExtrasSection 
+        aftercareContent={content?.recoveryAftercare}
+        whyChooseContent={content?.whyChoose}
+      />
+      <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="composite-veneers" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

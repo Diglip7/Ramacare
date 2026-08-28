@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -713,6 +714,8 @@ const content = {
           </form>
         </motion.div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-weight-loss-dubai" />
 
       {/* Sticky Bottom CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-[#1F5E4B] text-white py-4 px-6 z-50 shadow-2xl">

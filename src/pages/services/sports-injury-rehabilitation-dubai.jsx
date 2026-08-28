@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
 import { DOCTOR_GROUPS } from '../../data/doctors';
 
@@ -138,6 +139,7 @@ export default function SportsInjuryRehabilitationPage() {
       </Head>
 
       <ServicePageTemplate content={content} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="sports-injury-rehabilitation-dubai" />
     </Layout>
   );
 }

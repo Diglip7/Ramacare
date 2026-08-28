@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState, useEffect } from 'react';
 import { CheckCircle2, ArrowRight, Calendar, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -482,7 +483,7 @@ const HowEximiaWorksPage = () => {
         </div>
       </section>
 
-     
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="how-eximia-body-contouring-works-dubai" />
     </Layout>
   );
 };

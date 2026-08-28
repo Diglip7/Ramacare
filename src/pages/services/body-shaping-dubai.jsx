@@ -13,8 +13,8 @@ import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import TreatmentAdditionalContent from '../../../components/TreatmentAdditionalContent';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function BodyShapingPage() {
   const categoryName = 'Aesthetic Dermatology';
@@ -35,98 +35,136 @@ export default function BodyShapingPage() {
     { id: 'book-now', label: 'Book Now' }
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Aesthetic Dermatology",
+        "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Body Shaping",
+        "item": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Body Shaping in Dubai",
+    "description": "Non-surgical body contouring and fat reduction treatments designed to improve body definition, support skin tightening, and enhance overall body confidence using FDA-approved technologies within a DHA-licensed facility.",
+    "url": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "bodyLocation": "Body",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/body-shaping.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
+  // Dynamically generate FAQ schema from subcategory content data
+  const rawFaqs = content?.faq?.faqs || content?.faq?.questions || [];
+  const faqSchema = rawFaqs.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": rawFaqs.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
   return (
     <Layout>
       <Head>
-  <title key="title">Body Shaping in Dubai | Expert Non-Surgical Body Sculpting</title>
-  <meta name="description" content="Achieve your ideal body with expert body shaping in Dubai—safe, non-surgical treatments for fat reduction, contouring, and toning with personalized care." key="description" />
-  <meta name="keywords" content="Body shaping in Dubai, Body sculpting Dubai, Body contouring Dubai, Non-surgical body shaping in Dubai, Fat reduction Dubai, Slimming treatments in Dubai, Muscle toning in Dubai, Safe body contouring in Dubai, Personalized body treatment Dubai, Cellulite treatment Dubai, Medical body shaping in Dubai, DHA licensed body clinic" />
-  
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/#condition",
-          "name": "Localized Fat Deposits and Body Contouring Concerns",
-          "alternateName": "Stubborn Fat, Uneven Body Contours",
-          "url": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/",
-          "description": "Localized fat deposits and uneven body contours can affect the shape and appearance of areas such as the abdomen, flanks, thighs, arms, and chin. These concerns may not respond adequately to diet and exercise alone and can benefit from medically supervised body shaping treatments.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Body Shaping Therapy",
-            "description": "Body shaping therapy includes non‑invasive and minimally invasive procedures designed to reduce localized fat, tighten skin, and improve body contours using energy‑based technologies such as laser, radiofrequency, ultrasound, or cryolipolysis."
-          }
-        },
-        {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/#procedure",
-          "name": "Body Shaping Treatment in Dubai",
-          "alternateName": "Fat Reduction & Contouring Procedures",
-          "url": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/body-shaping-dubai/",
-          "description": "Body shaping at RamaCare Polyclinic in Dubai involves personalized fat reduction and body contouring treatments using proven technologies. The treatment plan is tailored to the patient’s goals, body area, and underlying tissue characteristics.",
-          "procedureType": "Non‑invasive/Minimally Invasive Body Contouring Procedure",
-          "howPerformed": "After a detailed consultation and assessment of body areas, trained clinicians select the most appropriate body shaping modality — such as cryolipolysis (fat freezing), radiofrequency energy, ultrasound lipolysis, or laser‑assisted contouring. Protective measures and comfort options (e.g., cooling, topical numbing) are used based on the technology and patient preference.",
-          "preparation": "Patients should provide a complete medical history, avoid excessive sun exposure on target areas, and follow any clinician‑recommended pre‑treatment instructions to optimize outcomes. Maintaining healthy hydration and avoiding certain medications may be advised.",
-          "followup": "Post‑treatment follow‑up includes monitoring treated areas for optimal fat reduction and skin tightening, scheduling additional sessions as needed, and recommending supportive lifestyle guidance to maintain results. Instructions on activity levels and self‑care are provided.",
-          "indication": [
-            "Localized fat deposits resistant to diet and exercise",
-            "Body contour refinement in areas such as abdomen, flanks, thighs, arms, or chin",
-            "Improvement of mild skin laxity",
-            "Individuals seeking non‑surgical contouring options"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
-        }
-      ]
-    })
-  }}
-/>
-</Head>
+        <title key="title">Body Shaping in Dubai | Expert Non-Surgical Body Sculpting</title>
+        <meta name="description" content="Achieve your ideal body with expert body shaping in Dubai—safe, non-surgical treatments for fat reduction, contouring, and toning with personalized care." key="description" />
+        <meta name="keywords" content="Body shaping in Dubai, Body sculpting Dubai, Body contouring Dubai, Non-surgical body shaping in Dubai, Fat reduction Dubai, Slimming treatments in Dubai, Muscle toning in Dubai, Safe body contouring in Dubai, Personalized body treatment Dubai, Cellulite treatment Dubai, Medical body shaping in Dubai, DHA licensed body clinic" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Body Shaping in Dubai | Expert Non-Surgical Body Sculpting" />
+        <meta property="og:description" content="Achieve your ideal body with expert body shaping in Dubai—safe, non-surgical treatments for fat reduction, contouring, and toning with personalized care." />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/body-shaping-dubai/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/body-shaping.jpg" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Body Shaping in Dubai | Expert Non-Surgical Body Sculpting" />
+        <meta name="twitter:description" content="Achieve your ideal body with expert body shaping in Dubai—safe, non-surgical treatments for fat reduction, contouring, and toning with personalized care." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/body-shaping.jpg" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema, null, 2) }}
+        />
+        <script
+          key="medical-procedure-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema, null, 2) }}
+        />
+        {faqSchema && (
+          <script
+            key="faq-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema, null, 2) }}
+          />
+        )}
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation navItems={navItems} />
+      <QuickNavigation navItems={navItems} />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-        <TreatmentAdditionalContent content={content} />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
+      <TreatmentAdditionalContent content={content} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
     
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="body-shaping-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );
 }
-

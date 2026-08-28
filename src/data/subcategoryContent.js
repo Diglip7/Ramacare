@@ -29032,7 +29032,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'Where is your skin treatment clinic located in Dubai?',
           answer:
-            'Our clinic is located in Dubai Healthcare City, easily accessible with parking facilities available. Exact directions are shared during appointment booking.'
+            'Our skin treatment clinic is located at 12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai.'
         }
       ],
       resources: [
@@ -29141,7 +29141,8 @@ export const subcategoryContent = {
         {
           id: 1,
           videoUrl: '/Videos/testimonial-1.mp4',
-          thumbnail: '/images/Thumb-1.jpeg'
+          thumbnail: '/images/Thumb-1.jpeg',
+          alt: 'Patient testimonial after skin treatment for acne at RamaCare Dubai'
         },
         {
           id: 2,
@@ -29161,7 +29162,8 @@ export const subcategoryContent = {
         {
           id: 5,
           videoUrl: '/Videos/testimonial-5.mp4',
-          thumbnail: '/images/Thumb-5.jpeg'  // ✅ Custom image
+          thumbnail: '/images/Thumb-5.jpeg',  // ✅ Custom image
+          alt: 'Patient testimonial after pigmentation treatment at RamaCare Dubai'
         },
         {
           id: 6,
@@ -29232,7 +29234,7 @@ export const subcategoryContent = {
   },
   'aesthetic-dermatology-dubai-hair-treatment': {
     hero: {
-      title: 'Effective Hair Fall & Scalp Treatments Tailored to Your Needs ',
+      title: 'Hair Treatment in Dubai — Effective Solutions for Hair Fall & Scalp Health',
       subtitle: '',
       description: 'Noticing more hair on your pillow, in the shower drain, or on your hairbrush?Hair fall can affect both men and women at any age and is often caused by a combination of factors such as stress, hormonal changes, genetics, nutritional deficiencies, scalp conditions, and lifestyle habits. At RamaCare Polyclinic, we offer personalized hair treatment in Dubai designed to identify the factors contributing to your hair concerns and create a treatment plan that supports healthier hair and scalp function.Rather than focusing only on the visible symptoms, our approach aims to improve overall scalp health, strengthen hair roots, and support natural hair growth over time. Whether you are experiencing hair thinning, excessive hair shedding, dandruff, scalp irritation, weak hair roots, or reduced hair density, our experienced healthcare professionals provide individualized care based on your condition and treatment goals.',
       rating: '500+ Happy Clients',
@@ -29946,7 +29948,8 @@ export const subcategoryContent = {
         {
           id: 1,
           videoUrl: '/Videos/testimonial-1.mp4',
-          thumbnail: '/images/Thumb-1.jpeg'
+          thumbnail: '/images/Thumb-1.jpeg',
+          alt: 'Patient testimonial after hair fall treatment at RamaCare Dubai'
         },
         {
           id: 2,
@@ -29966,7 +29969,8 @@ export const subcategoryContent = {
         {
           id: 5,
           videoUrl: '/Videos/testimonial-5.mp4',
-          thumbnail: '/images/Thumb-5.jpeg'  // ✅ Custom image
+          thumbnail: '/images/Thumb-5.jpeg',  // ✅ Custom image
+          alt: 'Patient testimonial after PRP hair therapy at RamaCare Dubai'
         },
         {
           id: 6,
@@ -30843,7 +30847,8 @@ export const subcategoryContent = {
         {
           id: 1,
           videoUrl: '/Videos/testimonial-1.mp4',
-          thumbnail: '/images/Thumb-1.jpeg'
+          thumbnail: '/images/Thumb-1.jpeg',
+          alt: 'Patient testimonial video about laser treatment results at RamaCare Polyclinic Dubai'
         },
         {
           id: 2,
@@ -30863,7 +30868,8 @@ export const subcategoryContent = {
         {
           id: 5,
           videoUrl: '/Videos/testimonial-5.mp4',
-          thumbnail: '/images/Thumb-5.jpeg'  // ✅ Custom image
+          thumbnail: '/images/Thumb-5.jpeg',  // ✅ Custom image
+          alt: 'Patient testimonial video sharing laser treatment experience at RamaCare Polyclinic Dubai'
         },
         {
           id: 6,
@@ -31710,7 +31716,8 @@ export const subcategoryContent = {
         {
           id: 1,
           videoUrl: '/Videos/testimonial-1.mp4',
-          thumbnail: '/images/Thumb-1.jpeg'
+          thumbnail: '/images/Thumb-1.jpeg',
+          alt: 'Patient testimonial video about body shaping results at RamaCare Polyclinic Dubai'
         },
         {
           id: 2,
@@ -31730,7 +31737,8 @@ export const subcategoryContent = {
         {
           id: 5,
           videoUrl: '/Videos/testimonial-5.mp4',
-          thumbnail: '/images/Thumb-5.jpeg'  // ✅ Custom image
+          thumbnail: '/images/Thumb-5.jpeg',  // ✅ Custom image
+          alt: 'Patient testimonial video sharing body contouring experience at RamaCare Polyclinic Dubai'
         },
         {
           id: 6,
@@ -39066,7 +39074,7 @@ Seek a cost-effective smile restoration`
       metaTitle: "Slip Disc Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Get expert Slip Disc Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment in Dubai today.",
       keywords: "Slip Disc Treatment Dubai, Slipped Disc Treatment Dubai, Herniated Disc Treatment Dubai, Disc Bulge Treatment Dubai, Lower Back Pain Treatment Dubai, Spine Pain Treatment Dubai, Spine Rehabilitation Dubai, Back Pain Specialist Dubai, Orthopedic Physiotherapy Dubai",
-      slug: "/slip-disc-treatment-dubai",
+      slug: "/services/slip-disc-treatment-dubai",
       canonical: "https://ramacarepolyclinic.ae/services/slip-disc-treatment-dubai/"
     },
     breadcrumbs: [
@@ -39330,7 +39338,7 @@ Seek a cost-effective smile restoration`
       metaTitle: "Arthritis Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Personalized Arthritis Treatment Dubai at RamaCare Polyclinic. DHA-licensed doctors & physiotherapists, evidence-based care. Book your consultation now.",
       keywords: "Arthritis Treatment Dubai, Knee Arthritis Dubai, Osteoarthritis Dubai, Rheumatoid Arthritis Dubai, Joint Pain Specialist Dubai, Jumeirah Polyclinic, Spine Pain Treatment",
-      slug: "/arthritis-treatment-dubai",
+      slug: "/services/arthritis-treatment-dubai",
       canonical: "https://ramacarepolyclinic.ae/services/arthritis-treatment-dubai/"
     },
     breadcrumbs: [
@@ -39575,19 +39583,19 @@ Seek a cost-effective smile restoration`
         caption: "Understanding joint anatomy differences helps track arthritis progression."
       },
       physio: {
-        src: "/images/Arthritis Treatment Dubai.jpg",
+        src: "/images/Doctor examining a patient with knee arthritis.jpg",
         title: "Doctor examining a patient with knee arthritis",
         alt: "Arthritis Treatment Dubai — doctor examining patient's knee joint",
         caption: "A thorough orthopedic evaluation is the first step in diagnosing joint discomfort."
       },
       stretching: {
-        src: "/images/Physiotherapist guiding arthritis.jpg",
+        src: "/images/Physiotherapist guiding arthritis rehabilitation exercises.jpg",
         title: "Physiotherapist guiding arthritis rehabilitation exercises",
         alt: "Physiotherapist guiding arthritis rehabilitation exercises in Dubai",
         caption: "Controlled active movements help preserve joint range of motion."
       },
       manual: {
-        src: "/images/Manual therapy for arthritis.jpg",
+        src: "/images/Manual therapy session for arthritis pain.jpg",
         title: "Manual therapy session for arthritis pain",
         alt: "Manual therapy session for arthritis pain management at RamaCare Dubai",
         caption: "Targeted mobilization relieves joint pressure and eases tight surrounding tissues."
@@ -39865,7 +39873,7 @@ Seek a cost-effective smile restoration`
     },
     images: {
       anatomy: {
-        src: "/images/Sports physiotherapist.jpg",
+        src: "/images/Sports physiotherapist treating an athlete in Dubai.jpg",
         title: "Sports physiotherapist treating an athlete in Dubai",
         alt: "Sports Injury Rehabilitation Dubai — physiotherapist treating an athlete's knee",
         caption: "Orthopedic sports therapy targets joint flexibility and mechanical loading."
@@ -39877,19 +39885,19 @@ Seek a cost-effective smile restoration`
         caption: "Post-operative ACL protocols prioritize quadriceps activation and joint stability."
       },
       stretching: {
-        src: "/images/Balance and strength.jpg",
+        src: "/images/Balance and strength training for sports recovery.jpg",
         title: "Balance and strength training for sports recovery",
         alt: "Balance and strength training during sports injury recovery in Dubai",
         caption: "Proprioception drills retrain ligaments to react to sudden direction shifts."
       },
       manual: {
-        src: "/images/Manual therapy for shoulder.jpg",
+        src: "/images/Manual therapy for shoulder sports injury.jpg",
         title: "Manual therapy for shoulder sports injury",
         alt: "Manual therapy session for shoulder sports injury rehabilitation Dubai",
         caption: "Focused manual mobilization increases localized shoulder joint range of motion."
       },
       equipment: {
-        src: "/images/Athlete performing supervised.jpg",
+        src: "/images/Athlete performing supervised return-to-sport exercises.jpg",
         title: "Athlete performing supervised return-to-sport exercises",
         alt: "Athlete completing supervised return-to-sport exercises at RamaCare Dubai",
         caption: "Functional return-to-play checks verify power output comparisons."
@@ -39902,7 +39910,7 @@ Seek a cost-effective smile restoration`
       metaTitle: "Joint Pain Treatment Dubai | RamaCare Polyclinic, Dubai",
       metaDescription: "Struggling with joint pain? Get expert Joint Pain Treatment Dubai care at RamaCare Polyclinic, Dubai. DHA-licensed team. Book your consultation today.",
       keywords: "Joint Pain Treatment Dubai, Joint Pain Specialist Dubai, Joint Pain Relief Dubai, Knee Joint Pain Treatment Dubai, Shoulder Joint Pain Dubai, Hip Joint Pain Treatment Dubai, Elbow Joint Pain Dubai, Ankle Joint Pain Dubai, Wrist Joint Pain Treatment Dubai, Physiotherapy for Joint Pain Dubai, Arthritis Treatment Dubai, Joint Rehabilitation Dubai, Chronic Joint Pain Dubai, Non-Surgical Joint Pain Treatment Dubai, Orthopedic Clinic Dubai, Musculoskeletal Pain Treatment Dubai",
-      slug: "/joint-pain-treatment-dubai",
+      slug: "/services/joint-pain-treatment-dubai",
       canonical: "https://ramacarepolyclinic.ae/services/joint-pain-treatment-dubai/"
     },
     breadcrumbs: [
@@ -40157,25 +40165,25 @@ Seek a cost-effective smile restoration`
         caption: "Orthopedic joint evaluation identifies minor biomechanical restrictions."
       },
       physio: {
-        src: "/images/Joint anatomy illustration.jpg",
+        src: "/images/Joint anatomy illustration showing healthy and damaged cartilage.jpg",
         title: "Joint anatomy illustration showing healthy and damaged cartilage",
         alt: "Joint anatomy diagram showing cartilage and ligament damage",
         caption: "Cartilage damage allows bone surfaces to friction directly."
       },
       stretching: {
-        src: "/images/Manual therapy for joint.jpg",
+        src: "/images/Manual therapy session for shoulder joint pain.jpg",
         title: "Manual therapy session for shoulder joint pain",
         alt: "Manual therapy for Joint Pain Treatment Dubai at RamaCare",
         caption: "Hands-on mobilization restores joint glide movements."
       },
       manual: {
-        src: "/images/Patient performing rehabilitation.jpg",
+        src: "/images/Patient performing rehabilitation exercises under supervision.jpg",
         title: "Patient performing rehabilitation exercises under supervision",
         alt: "Guided joint rehabilitation exercises at RamaCare Polyclinic",
         caption: "Guided low-impact exercises restore muscle support systems."
       },
       equipment: {
-        src: "/images/Doctor explaining joint pain treatment.jpg",
+        src: "/images/Doctor explaining joint pain treatment using a skeletal model.jpg",
         title: "Doctor explaining joint pain treatment using a skeletal model",
         alt: "DHA-licensed doctor explaining joint pain diagnosis Dubai",
         caption: "Skeletal modeling aids explanation of cartilage and joint decay."

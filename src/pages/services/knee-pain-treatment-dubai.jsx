@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { 
   Activity,
   MapPin, 
@@ -1303,6 +1304,9 @@ export default function KneePainTreatmentPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="knee-pain-treatment-dubai" />
 
       {/* Book Consultation Component */}
       <BookConsultation />

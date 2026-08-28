@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function AnalysisOfIndividualTreatmentPage() {
   const categoryName = 'Ayurveda';
@@ -25,14 +25,13 @@ export default function AnalysisOfIndividualTreatmentPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Individual Analysis in Dubai | Ayurvedic Health Assessment</title>
-  <meta name="description" content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans." key="description" />
-  <meta name="keywords" content="Analysis of the individual Dubai, Ayurvedic body analysis Dubai, Dosha assessment Dubai, Personalized Ayurveda Dubai, Ayurvedic consultation in Dubai, Health evaluation in Dubai, Holistic wellness Dubai, Ayurvedic lifestyle guidance, Natural treatment Dubai, Ayurveda expert in Dubai, Individual health assessment, Traditional Ayurveda Dubai" />
-  
-    <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: `
+        <title key="title">Individual Analysis in Dubai | Ayurvedic Health Assessment</title>
+        <meta name="description" content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans." key="description" />
+        <meta name="keywords" content="Analysis of the individual Dubai, Ayurvedic body analysis Dubai, Dosha assessment Dubai, Personalized Ayurveda Dubai, Ayurvedic consultation in Dubai, Health evaluation in Dubai, Holistic wellness Dubai, Ayurvedic lifestyle guidance, Natural treatment Dubai, Ayurveda expert in Dubai, Individual health assessment, Traditional Ayurveda Dubai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
 {
   "@context": "https://schema.org",
   "@type": "MedicalProcedure",
@@ -72,33 +71,32 @@ export default function AnalysisOfIndividualTreatmentPage() {
     "priceRange": "$$"
   }
 }
-      `,
-    }}
-  />
-</Head>
+            `,
+          }}
+        />
+      </Head>
 
-    <TreatmentHero 
-      categoryName={categoryName}
-      subcategoryName={subcategoryName}
-      hero={content?.hero}
-    />
-    <QuickNavigation />
+      <TreatmentHero 
+        categoryName={categoryName}
+        subcategoryName={subcategoryName}
+        hero={content?.hero}
+      />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
-    <HealingJourney content={content?.healingJourney} />
-    <TreatmentBenefits 
-      content={content?.benefits}
-    />
-    <PatientTestimonials content={content?.testimonials} />
-     <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
-    <FAQSection content={content?.faq} />
-    <BookConsultation content={content?.bookConsultation} />
-  </Layout>
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
+      <HealingJourney content={content?.healingJourney} />
+      <TreatmentBenefits 
+        content={content?.benefits}
+      />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="analysis-of-individual-dubai" />
+      <FAQSection content={content?.faq} />
+      <BookConsultation content={content?.bookConsultation} />
+    </Layout>
   );
 }
-

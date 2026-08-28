@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { ShieldCheck, Award, Clock, Waves, Info, Heart, Thermometer, AlertTriangle, Activity, Settings, ChevronDown, Phone, MapPin } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const UltrasoundSafetyPage = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -515,8 +516,10 @@ const UltrasoundSafetyPage = () => {
                 </div>
               </form>
             </div>
-          </div>
+            </div>
         </section>
+
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="ultrasound-therapy-safety-dubai" />
 
       </main>
 

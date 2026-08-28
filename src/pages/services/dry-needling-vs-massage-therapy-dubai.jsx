@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useRouter } from 'next/router';
 
 
@@ -732,7 +733,9 @@ export default function DryNeedlingVsMassagePage() {
         </div>
       </div>
 
-      <div className="pb-24" />
+      <div className="pb-8" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="dry-needling-vs-massage-therapy-dubai" />
+      <div className="pb-16" />
       <BookConsultation />
     </Layout>
   );

@@ -221,7 +221,7 @@ const PatientTestimonials = ({ content }) => {
                     testimonial.thumbnail ? (
                       <img 
                         src={testimonial.thumbnail} 
-                        alt={`Testimonial ${testimonial.id}`} 
+                        alt={testimonial.alt || `Patient testimonial video ${testimonial.id} - RamaCare Polyclinic Dubai`} 
                         className="absolute inset-0 w-full h-full object-cover"
                         loading="lazy"
                       />

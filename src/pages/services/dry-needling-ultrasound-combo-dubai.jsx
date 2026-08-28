@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Calendar, MessageCircle, ShieldCheck, Award, Activity, ArrowRight, MoveDown } from 'lucide-react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 // FAQ Item Component
 const FAQItem = ({ question, answer }) => {
@@ -158,6 +159,7 @@ const DryNeedlingUltrasoundComboPage = () => {
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+
         {/* Top Banner Section */}
         <section className="bg-[#1b5e3f] text-white py-8 px-4">
           <motion.div 
@@ -730,6 +732,8 @@ const DryNeedlingUltrasoundComboPage = () => {
             </div>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="dry-needling-ultrasound-combo-dubai" />
 
         {/* Final CTA Section - Book Your Combo Session */}
         <section id="booking-section" className="py-16 md:py-24 px-4 bg-[#1F5E4B]">

@@ -12,6 +12,7 @@ import FAQSection from "../../../components/FAQSection";
 // import OurFacilitySection from "../../../components/OurFacilitySection";
 import BeginYourHealingJourneySection from "../../../components/BeginYourHealingJourneySection";
 import SEOContentSection from "../../../components/SEOContentSection";
+import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import { getCategoryContent } from "../../data/categoryContent";
 
 export default function facialdubaiCategoryPage() {
@@ -39,13 +40,10 @@ export default function facialdubaiCategoryPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Facial Treatments in Dubai | Expert Skin Care Clinic</title>
-  <meta name="description" content="Professional facial treatments in Dubai offering safe, personalized care for acne, pigmentation, aging, and dull skin, delivered by experienced skin specialists you can trust." key="description" />
-  <meta name="keywords" content="facial treatments in Dubai, skin care clinic Dubai, advanced facial treatment Dubai, acne facial treatment Dubai, anti-aging facial Dubai, pigmentation treatment Dubai, medical facial Dubai, professional skin treatment Dubai, dermatology facial Dubai" />
-  
-   
-        
-</Head>
+        <title key="title">Facial Treatments in Dubai | Expert Skin Care Clinic</title>
+        <meta name="description" content="Professional facial treatments in Dubai offering safe, personalized care for acne, pigmentation, aging, and dull skin, delivered by experienced skin specialists you can trust." key="description" />
+        <meta name="keywords" content="facial treatments in Dubai, skin care clinic Dubai, advanced facial treatment Dubai, acne facial treatment Dubai, anti-aging facial Dubai, pigmentation treatment Dubai, medical facial Dubai, professional skin treatment Dubai, dermatology facial Dubai" />
+      </Head>
 
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
@@ -65,11 +63,11 @@ export default function facialdubaiCategoryPage() {
       <ExpertsSection content={content?.experts} />
       <VideoTestimonials content={content?.successStories} />
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="facial-dubai" />
       <FAQSection content={content?.faq} />
        {/* <OurFacilitySection content={content?.facility} /> */}
-       <BeginYourHealingJourneySection content={content?.booking} />
+      <BeginYourHealingJourneySection content={content?.booking} />
       <SEOContentSection title="Advanced Facial Treatments in Dubai" content={facialSEOContent} />
     </Layout>
   );
 }
-

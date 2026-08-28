@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const faqData = [
   {
@@ -698,6 +699,8 @@ const EximiaVsCoolSculptingPage = () => {
           </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="eximia-vs-coolsculpting-dubai" />
     </Layout>
   );
 };

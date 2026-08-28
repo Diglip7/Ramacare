@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function DiabetesMellitusCarePage() {
   const categoryName = 'General Physician';
@@ -25,34 +25,30 @@ export default function DiabetesMellitusCarePage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Diabetes Mellitus Care in Dubai by Experienced Physicians</title>
-  <meta name="description" content="Get trusted diabetes mellitus care in Dubai with accurate diagnosis, lifestyle guidance, and ongoing medical support to help you manage blood sugar safely." key="description" />
-  <meta name="keywords" content="Diabetes mellitus care in Dubai, Diabetes treatment Dubai, Diabetes management clinic Dubai, Type 1 diabetes treatment in Dubai, Type 2 diabetes care in Dubai, Blood sugar control in Dubai, Diabetes doctor in Dubai, Endocrine care Dubai, Chronic diabetes management in Dubai" />
-  
-  
-  
-        
-</Head>
+        <title key="title">Diabetes Mellitus Care in Dubai by Experienced Physicians</title>
+        <meta name="description" content="Get trusted diabetes mellitus care in Dubai with accurate diagnosis, lifestyle guidance, and ongoing medical support to help you manage blood sugar safely." key="description" />
+        <meta name="keywords" content="Diabetes mellitus care in Dubai, Diabetes treatment Dubai, Diabetes management clinic Dubai, Type 1 diabetes treatment in Dubai, Type 2 diabetes care in Dubai, Blood sugar control in Dubai, Diabetes doctor in Dubai, Endocrine care Dubai, Chronic diabetes management in Dubai" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="diabetes-mellitus-care-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

@@ -12,8 +12,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function ThyroidDysfunctionSolutionsPage() {
   const categoryName = 'General Physician';
@@ -25,33 +25,30 @@ export default function ThyroidDysfunctionSolutionsPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Thyroid Dysfunction Solutions in Dubai | Expert Care</title>
-  <meta name="description" content="Get trusted thyroid dysfunction solutions in Dubai with accurate diagnosis and personalised care. Our doctors help manage hypothyroidism and hyperthyroidism safely." key="description" />
-  <meta name="keywords" content="Thyroid dysfunction solutions in Dubai, Thyroid treatment Dubai, Hypothyroidism treatment in Dubai, Hyperthyroidism treatment Dubai, Thyroid disorder management in Dubai, Thyroid specialist Dubai, Thyroid diagnosis Dubai, Hormonal imbalance treatment in Dubai, Endocrinology clinic Dubai" />
-  
- 
-        
-</Head>
+        <title key="title">Thyroid Dysfunction Solutions in Dubai | Expert Care</title>
+        <meta name="description" content="Get trusted thyroid dysfunction solutions in Dubai with accurate diagnosis and personalised care. Our doctors help manage hypothyroidism and hyperthyroidism safely." key="description" />
+        <meta name="keywords" content="Thyroid dysfunction solutions in Dubai, Thyroid treatment Dubai, Hypothyroidism treatment in Dubai, Hyperthyroidism treatment Dubai, Thyroid disorder management in Dubai, Thyroid specialist Dubai, Thyroid diagnosis Dubai, Hormonal imbalance treatment in Dubai, Endocrinology clinic Dubai" />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-     <QuickNavigation />
+      <QuickNavigation />
     
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="thyroid-dysfunction-solutions-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

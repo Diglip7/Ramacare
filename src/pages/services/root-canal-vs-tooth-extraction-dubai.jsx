@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   ShieldCheck,
   XCircle,
@@ -906,6 +907,8 @@ export default function RootCanalVsExtractionPage() {
             </div>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="root-canal-vs-tooth-extraction-dubai" />
 
         <section className="bg-[#F9F7F2] px-4 py-10">
           <div className="mx-auto max-w-7xl">

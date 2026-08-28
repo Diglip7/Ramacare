@@ -13,8 +13,8 @@ import DoctorsSection from '../../../components/DoctorsSection';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 
 export default function PelvicFloorTherapyPage() {
   const categoryName = 'Physiotherapy';
@@ -36,14 +36,14 @@ export default function PelvicFloorTherapyPage() {
 
   return (
     <Layout>
-    <Head>
-  <title key="title">Pelvic Floor Therapy in Dubai for Strength and Recovery</title>
-  <meta name="description" content="Pelvic floor therapy in Dubai helps improve bladder control, core strength, and recovery after childbirth or surgery through safe, guided physiotherapy care." key="description" />
-  <meta name="keywords" content="Pelvic floor therapy in Dubai, Pelvic floor physiotherapy Dubai, Pelvic floor treatment Dubai, Women’s health physiotherapy Dubai, Postnatal pelvic floor therapy, Pelvic floor exercises Dubai, Urinary incontinence treatment Dubai, Pelvic pain physiotherapy, Core strengthening physiotherapy, Rehabilitation physiotherapy Dubai" />
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: `
+      <Head>
+        <title key="title">Pelvic Floor Therapy in Dubai for Strength and Recovery</title>
+        <meta name="description" content="Pelvic floor therapy in Dubai helps improve bladder control, core strength, and recovery after childbirth or surgery through safe, guided physiotherapy care." key="description" />
+        <meta name="keywords" content="Pelvic floor therapy in Dubai, Pelvic floor physiotherapy Dubai, Pelvic floor treatment Dubai, Women’s health physiotherapy Dubai, Postnatal pelvic floor therapy, Pelvic floor exercises Dubai, Urinary incontinence treatment Dubai, Pelvic pain physiotherapy, Core strengthening physiotherapy, Rehabilitation physiotherapy Dubai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
 {
   "@context": "https://schema.org",
   "@type": "MedicalProcedure",
@@ -85,30 +85,30 @@ export default function PelvicFloorTherapyPage() {
     "priceRange": "$$"
   }
 }
-    `,
-  }}
-/>
-</Head>
+            `,
+          }}
+        />
+      </Head>
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-    <QuickNavigation navItems={navItems} />
-    
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}
-    />
+      <QuickNavigation navItems={navItems} />
+      
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}
+      />
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
       />
       <ServiceWhyChoose content={content?.whyChoose} />
-       <PatientTestimonials content={content?.testimonials} />
-       <DoctorsSection content={content?.doctors} />
-    
-    <PaymentInsurance content={content?.paymentInsurance} />
+      <PatientTestimonials content={content?.testimonials} />
+      <DoctorsSection content={content?.doctors} />
+      <PaymentInsurance content={content?.paymentInsurance} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="pelvic-floor-therapy-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
