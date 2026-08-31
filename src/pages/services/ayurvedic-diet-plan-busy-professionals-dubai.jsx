@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -74,7 +75,7 @@ const content = {
         letter: 'C',
         title: 'Screen Recovery & Eye Care',
         description: 'Digital eye strain is a major professional complaint in Dubai.',
-        favor: 'Action: Apply a drop of pure Rose Water or perform a quick Netra Tarpana (eye nourishment) at our Jumeirah clinic to soothe the "Pitta" in the eyes caused by blue light.'
+        favor: 'Action: Apply a drop of pure Rose Water or perform a quick <a href="/services/ayurveda-dubai/" class="text-[#1F5E4B] underline font-bold">Netra Tarpana (eye nourishment) at our Jumeirah clinic</a> to soothe the "Pitta" in the eyes caused by blue light.'
       }
     ]
   },
@@ -140,7 +141,7 @@ const content = {
   },
   authorityFooter: {
     title: 'The "Authority" Footer',
-    description: 'Don\'t wait for burnout to take action. Optimize your career and your health with a strategic Ayurvedic Diet Plan Dubai.',
+    description: 'Don\'t wait for burnout to take action. Optimize your career and your health with a strategic <a href="/services/ayurvedic-diet-plan-dubai/" class="underline font-bold text-white">Ayurvedic Diet Plan Dubai</a>.',
     buttonText: 'Book Your Executive Wellness Assessment in Jumeirah Today'
   },
   assessmentForm: {
@@ -172,6 +173,68 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
     primaryConcern: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const faqsForSchema = content.faq.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/",
+        "name": "Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy",
+        "description": "Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Work-Related Stress & Burnout (Vata-Pitta Imbalance)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Busy Professionals", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in the Ayurvedic Diet Plan for Busy Professionals. Please help me book a consultation.");
@@ -245,12 +308,48 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
       <Head>
         <title key="title">Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy</title>
         <meta name="description" content="Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy" key="og:title" />
+        <meta property="og:description" content="Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diet3.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet Plan for Busy Professionals in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy" key="twitter:title" />
+        <meta name="twitter:description" content="A DHA-licensed Ayurvedic approach for DIFC and Business Bay professionals — balance stress, improve sleep, and sustain energy through the workday." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diet3.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center w-full">
+        <div className="max-w-7xl mx-auto">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Busy Professionals</span>
+          </nav>
+
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center w-full">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -300,7 +399,8 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Summary Section */}
       <section className="bg-[#E9E2D6] py-20 px-4 sm:px-6 lg:px-8">
@@ -343,9 +443,9 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
             })}
           </div>
 
-          <button onClick={scrollToForm} className="mt-8 bg-[#1F5E4B] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#16493a] transition-all duration-300">
+          <a href="/services/ayurveda-dubai/" className="inline-block mt-8 bg-[#1F5E4B] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#16493a] transition-all duration-300">
             {content.summary.cta}
-          </button>
+          </a>
         </div>
       </section>
 
@@ -419,9 +519,10 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
                 </p>
                 {step.favor && (
                   <div className="bg-[#E9E2D6] p-4 rounded-lg border-l-4 border-[#1F5E4B]">
-                    <p className="text-[#1A1A1A] text-base leading-relaxed">
-                      {step.favor}
-                    </p>
+                    <p 
+                      className="text-[#1A1A1A] text-base leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: step.favor }}
+                    />
                   </div>
                 )}
               </motion.div>
@@ -580,9 +681,10 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
             className="text-3xl sm:text-4xl font-bold mb-6 tracking-tight">
             {content.authorityFooter.title}
           </motion.h2>
-          <p className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            {content.authorityFooter.description}
-          </p>
+          <p 
+            className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: content.authorityFooter.description }}
+          />
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -692,24 +794,30 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
         </div>
       </section>
 
-      {/* Section 8: Content Reviewer Badge */}
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[#F5F1EA] p-6 rounded-2xl flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left border border-[#E9E2D6]"
-          >
-            <div className="w-12 h-12 bg-[#1F5E4B] rounded-full flex items-center justify-center text-white shrink-0 shadow-sm">
-              <LucideIcons.Check size={24} />
-            </div>
-            <p className="text-[#1A1A1A] text-base md:text-lg">
-              Content Reviewed by <span className="font-bold text-[#1F5E4B]">{content.reviewer.name}</span>, {content.reviewer.role}
-            </p>
-          </motion.div>
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Diet vs. Fasting</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-busy-professionals-dubai" />
 
       {/* Bottom Sticky CTA for Mobile */}
       <div className="fixed bottom-6 right-6 z-50 md:hidden">

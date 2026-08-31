@@ -40,60 +40,140 @@ export default function BastiTherapyPage() {
     { id: 'book-now', label: 'Book Now' },
   ];
 
+  const faqsForSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer.replace(/<[^>]*>/g, '')
+    }
+  })) || [];
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
+        "name": "Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment",
+        "description": "Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalTherapy",
+          "name": "Basti Therapy"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Basti Therapy", "item": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#procedure",
+        "name": "Basti Therapy in Dubai",
+        "alternateName": "Ayurvedic Basti Detox & Vata Balance Treatment",
+        "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
+        "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
+        "description": "Basti Therapy in Dubai at RamaCare Polyclinic offers traditional Ayurvedic detoxification treatment designed to support digestive wellness, remove accumulated toxins, and restore natural Vata dosha balance through personalized herbal therapies.",
+        "procedureType": "Ayurvedic detox treatment",
+        "bodyLocation": "Colon and digestive system",
+        "howPerformed": "Basti Therapy involves administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. Preparatory procedures such as Abhyanga Massage and mild steam therapy may be recommended before the main detox procedure.",
+        "preparation": "Patients undergo initial Ayurvedic consultation and assessment of body constitution (dosha), digestive health, and lifestyle habits before beginning Basti Therapy.",
+        "followup": "Post-therapy guidance and follow-up assessments are recommended to support balanced recovery and monitor digestive wellness progress.",
+        "indication": [
+          "Digestive disorders",
+          "Vata dosha imbalance",
+          "Joint pain and stiffness",
+          "Chronic constipation",
+          "Stress and nervous system imbalance",
+          "Detoxification and wellness"
+        ],
+        "possibleComplication": "Mild temporary digestive changes may occur during detoxification depending on therapy intensity and individual body constitution.",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "telephone": "+971 56 659 7878",
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          },
+          "priceRange": "$$$"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment</title>
         <meta name="description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs." key="description" />
-        <meta name="keywords" content="Basti Therapy Dubai, Ayurvedic Basti Treatment, Panchakarma Basti Dubai, Vata balance therapy, Ayurvedic detox Dubai, colon cleansing Ayurveda, digestive health treatment Dubai, joint pain relief Ayurveda" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment" key="og:title" />
+        <meta property="og:description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/basti-therapy.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Basti Therapy in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment" key="twitter:title" />
+        <meta name="twitter:description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/basti-therapy.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#procedure",
-  "name": "Basti Therapy in Dubai",
-  "alternateName": "Ayurvedic Basti Detox & Vata Balance Treatment",
-  "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
-  "description": "Basti Therapy in Dubai at RamaCare Polyclinic offers traditional Ayurvedic detoxification treatment designed to support digestive wellness, remove accumulated toxins, and restore natural Vata dosha balance through personalized herbal therapies.",
-  "procedureType": "Ayurvedic detox treatment",
-  "bodyLocation": "Colon and digestive system",
-  "howPerformed": "Basti Therapy involves administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. Preparatory procedures such as Abhyanga Massage and mild steam therapy may be recommended before the main detox procedure.",
-  "preparation": "Patients undergo initial Ayurvedic consultation and assessment of body constitution (dosha), digestive health, and lifestyle habits before beginning Basti Therapy.",
-  "followup": "Post-therapy guidance and follow-up assessments are recommended to support balanced recovery and monitor digestive wellness progress.",
-  "indication": [
-    "Digestive disorders",
-    "Vata dosha imbalance",
-    "Joint pain and stiffness",
-    "Chronic constipation",
-    "Stress and nervous system imbalance",
-    "Detoxification and wellness"
-  ],
-  "possibleComplication": "Mild temporary digestive changes may occur during detoxification depending on therapy intensity and individual body constitution.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$$"
-  }
-}
-            `,
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>

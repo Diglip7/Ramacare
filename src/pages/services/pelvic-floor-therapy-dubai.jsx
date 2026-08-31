@@ -34,58 +34,148 @@ export default function PelvicFloorTherapyPage() {
     { id: 'book-now', label: 'Book Now' },
   ];
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/pelvic-floor-therapy-dubai/';
+
+  const faqsForSchema = (content?.faq?.faqs || []).map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pelvic Floor Therapy",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Pelvic Floor Therapy in Dubai for Strength and Recovery",
+        "description": "Pelvic floor therapy in Dubai helps improve bladder control, core strength, and recovery after childbirth or surgery through safe, guided physiotherapy care.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Pelvic Floor Dysfunction"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Pelvic Floor Therapy in Dubai",
+        "alternateName": "Pelvic Floor Physiotherapy Treatment",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Pelvic Floor Therapy in Dubai at RamaCare Polyclinic offers specialized physiotherapy for pelvic support muscles to improve continence, pelvic pain, postpartum recovery, and core stability, provided by experienced physiotherapists.",
+        "procedureType": "Physical therapy",
+        "bodyLocation": "Pelvic floor muscles",
+        "howPerformed": "Pelvic floor therapy is performed through targeted exercise regimens, manual techniques, biofeedback, and functional training designed to strengthen, relax, or coordinate pelvic floor muscles based on individual needs.",
+        "preparation": "No special preparation is required. Patients may be advised to wear comfortable clothing to allow easy access for assessment and therapy.",
+        "followup": "Follow-up sessions and progress assessments are recommended to ensure optimal results and ongoing muscle function improvements.",
+        "indication": [
+          "Urinary incontinence",
+          "Pelvic pain",
+          "Postpartum pelvic recovery",
+          "Pelvic floor muscle weakness",
+          "Core stability and support"
+        ],
+        "possibleComplication": "Temporary muscle soreness or discomfort may occur after therapy sessions.",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic – Physiotherapy Department",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "telephone": "+971 56 659 7878",
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          },
+          "priceRange": "$$"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqsForSchema.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Pelvic Floor Therapy in Dubai for Strength and Recovery</title>
         <meta name="description" content="Pelvic floor therapy in Dubai helps improve bladder control, core strength, and recovery after childbirth or surgery through safe, guided physiotherapy care." key="description" />
         <meta name="keywords" content="Pelvic floor therapy in Dubai, Pelvic floor physiotherapy Dubai, Pelvic floor treatment Dubai, Women’s health physiotherapy Dubai, Postnatal pelvic floor therapy, Pelvic floor exercises Dubai, Urinary incontinence treatment Dubai, Pelvic pain physiotherapy, Core strengthening physiotherapy, Rehabilitation physiotherapy Dubai" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Pelvic Floor Therapy in Dubai | Weakness & Recovery | RamaCare" key="og:title" />
+        <meta property="og:description" content="Specialized Pelvic Floor Physiotherapy in Jumeirah, Dubai. Recover bladder control, postnatal strength, and core stability with our DHA-licensed clinical team." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pelvic-floor-therapy.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Pelvic Floor Therapy in Dubai for Strength and Recovery" key="twitter:title" />
+        <meta name="twitter:description" content="Recover bladder control, postpartum strength, and core stability with our specialized physical therapists in Jumeirah 1, Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pelvic-floor-therapy.jpg" key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/pelvic-floor-therapy-dubai/#procedure",
-  "name": "Pelvic Floor Therapy in Dubai",
-  "alternateName": "Pelvic Floor Physiotherapy Treatment",
-  "url": "https://ramacarepolyclinic.ae/services/pelvic-floor-therapy-dubai/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/pelvic-floor-therapy-dubai/",
-  "description": "Pelvic Floor Therapy in Dubai at RamaCare Polyclinic offers specialized physiotherapy for pelvic support muscles to improve continence, pelvic pain, postpartum recovery, and core stability, provided by experienced physiotherapists.",
-  "procedureType": "Physical therapy",
-  "bodyLocation": "Pelvic floor muscles",
-  "howPerformed": "Pelvic floor therapy is performed through targeted exercise regimens, manual techniques, biofeedback, and functional training designed to strengthen, relax, or coordinate pelvic floor muscles based on individual needs.",
-  "preparation": "No special preparation is required. Patients may be advised to wear comfortable clothing to allow easy access for assessment and therapy.",
-  "followup": "Follow-up sessions and progress assessments are recommended to ensure optimal results and ongoing muscle function improvements.",
-  "indication": [
-    "Urinary incontinence",
-    "Pelvic pain",
-    "Postpartum pelvic recovery",
-    "Pelvic floor muscle weakness",
-    "Core stability and support"
-  ],
-  "possibleComplication": "Temporary muscle soreness or discomfort may occur after therapy sessions.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Physiotherapy Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$"
-  }
-}
-            `,
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>

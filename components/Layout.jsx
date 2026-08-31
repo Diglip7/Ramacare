@@ -42,13 +42,17 @@ const Layout = ({ children }) => {
             wrapper = document.createElement('div');
             wrapper.id = 'google-reviews-portal-wrapper';
             wrapper.className = 'w-full';
-            insertTarget.parentNode.insertBefore(wrapper, insertTarget);
           }
+          insertTarget.parentNode.insertBefore(wrapper, insertTarget);
           setPortalTarget(wrapper);
         } else {
           setPortalTarget(null);
         }
       } else {
+        const existingWrapper = document.getElementById('google-reviews-portal-wrapper');
+        if (existingWrapper) {
+          existingWrapper.remove();
+        }
         setPortalTarget(null);
       }
     };
@@ -59,15 +63,16 @@ const Layout = ({ children }) => {
   }, [router.asPath]);
 
   const isServicesRoute = router.pathname.startsWith('/services');
+  const cleanPath = router.pathname.replace(/\/$/, '') || '/';
   const excludedCategoryRoutes = new Set([
-    '/services/ayurveda-dubai/',
-    '/services/dental-dubai/',
-    '/services/physiotherapy-dubai/',
-    '/services/general-physician-dubai/',
-    '/services/aesthetic-dermatology-dubai/',
-    '/services/facial-dubai/',
+    '/services/ayurveda-dubai',
+    '/services/dental-dubai',
+    '/services/physiotherapy-dubai',
+    '/services/general-physician-dubai',
+    '/services/aesthetic-dermatology-dubai',
+    '/services/facial-dubai',
   ]);
-  const isSubcategoryRoute = isServicesRoute && !excludedCategoryRoutes.has(router.pathname);
+  const isSubcategoryRoute = isServicesRoute && !excludedCategoryRoutes.has(cleanPath);
   const isBlogRoute = router.pathname.startsWith('/blog/') && router.pathname !== '/blog';
   const fontStyle = { fontFamily: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" };
   return (

@@ -28,146 +28,139 @@ export default function UltrasoundTherapyPage() {
         <meta name="description" content="Looking for ultrasound therapy in Dubai? Get personalized physiotherapy for muscle pain, stiffness, sports injuries and rehabilitation at RamaCare Polyclinic." key="description" />
         <link rel="canonical" href={CANONICAL_URL} />
         <meta name="keywords" content="Ultrasound therapy in Dubai, Therapeutic ultrasound Dubai, Ultrasound physiotherapy Dubai, Pain relief ultrasound therapy, Muscle injury treatment in Dubai, Joint pain therapy in Dubai, Sports injury ultrasound therapy, Physiotherapy ultrasound treatment, Rehabilitation therapy Dubai, Non-surgical pain treatment in Dubai" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Ultrasound Therapy in Dubai for Pain & Recovery | RamaCare" key="og:title" />
+        <meta property="og:description" content="Looking for ultrasound therapy in Dubai? Get personalized physiotherapy for muscle pain, stiffness, sports injuries and rehabilitation at RamaCare Polyclinic." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ultrasound-therapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultra1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ultrasound Therapy in Dubai for Pain & Recovery" key="twitter:title" />
+        <meta name="twitter:description" content="Non-invasive physiotherapy for muscle pain, stiffness, and sports injuries with DHA-licensed therapists in Jumeirah 1, Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultra1.jpg" key="twitter:image" />
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
+              "@graph": [
                 {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
+                  "@type": "BreadcrumbList",
+                  "@id": `${CANONICAL_URL}#breadcrumb`,
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://ramacarepolyclinic.ae/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Physiotherapy",
+                      "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Ultrasound Therapy",
+                      "item": CANONICAL_URL
+                    }
+                  ]
                 },
                 {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Services",
-                  "item": "https://ramacarepolyclinic.ae/services/"
+                  "@type": "MedicalWebPage",
+                  "@id": `${CANONICAL_URL}#webpage`,
+                  "url": CANONICAL_URL,
+                  "name": "Ultrasound Therapy Dubai",
+                  "description": "Looking for ultrasound therapy in Dubai? Get personalized physiotherapy for muscle pain, stiffness, sports injuries and rehabilitation at RamaCare Polyclinic.",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@type": "WebSite",
+                    "url": "https://ramacarepolyclinic.ae/",
+                    "name": "RamaCare Polyclinic"
+                  },
+                  "about": {
+                    "@type": "MedicalCondition",
+                    "name": "Musculoskeletal and Soft Tissue Rehabilitation"
+                  },
+                  "reviewedBy": {
+                    "@type": "Person",
+                    "name": "Jeena Mathew",
+                    "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+                    "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+                  },
+                  "breadcrumb": {
+                    "@id": `${CANONICAL_URL}#breadcrumb`
+                  },
+                  "publisher": {
+                    "@type": "MedicalClinic",
+                    "name": "RamaCare Polyclinic",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+                      "addressLocality": "Jumeirah 1, Dubai",
+                      "addressCountry": "AE"
+                    }
+                  }
                 },
                 {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Physiotherapy",
-                  "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
+                  "@type": "MedicalProcedure",
+                  "@id": `${CANONICAL_URL}#procedure`,
                   "name": "Ultrasound Therapy in Dubai",
-                  "item": CANONICAL_URL
-                }
+                  "alternateName": "Therapeutic Ultrasound Treatment",
+                  "url": CANONICAL_URL,
+                  "description": "Ultrasound Therapy in Dubai at RamaCare Polyclinic offers therapeutic ultrasound treatment as part of personalized physiotherapy and rehabilitation programs provided by DHA-licensed physiotherapists.",
+                  "procedureType": "Physical therapy",
+                  "bodyLocation": "Musculoskeletal system",
+                  "howPerformed": "Therapeutic ultrasound is applied by a qualified physiotherapist using a therapeutic ultrasound device over a selected treatment area as part of a broader physiotherapy and rehabilitation program.",
+                  "preparation": "A professional physiotherapy assessment is required before treatment to determine suitability.",
+                  "followup": "Follow-up sessions and progress evaluation may be recommended as part of the broader rehabilitation program.",
+                  "indication": [
+                    "Muscle pain and stiffness",
+                    "Joint stiffness",
+                    "Soft tissue rehabilitation",
+                    "Sports-related muscle strains",
+                    "Mobility limitations"
+                  ],
+                  "possibleComplication": "Individual suitability varies; a qualified physiotherapist should assess each patient before treatment.",
+                  "provider": {
+                    "@type": "MedicalClinic",
+                    "name": "RamaCare Polyclinic – Physiotherapy Department",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+                      "addressLocality": "Jumeirah 1, Dubai",
+                      "addressCountry": "AE"
+                    },
+                    "telephone": "+971 56 659 7878"
+                  }
+                },
+                ...(content?.faq?.faqs && content.faq.faqs.length > 0 ? [{
+                  "@type": "FAQPage",
+                  "@id": `${CANONICAL_URL}#faq`,
+                  "mainEntity": content.faq.faqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": faq.answer
+                    }
+                  }))
+                }] : [])
               ]
             })
           }}
         />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalWebPage",
-              "@id": `${CANONICAL_URL}#webpage`,
-              "url": CANONICAL_URL,
-              "name": "Ultrasound Therapy in Dubai for Pain & Recovery | RamaCare",
-              "description": "Looking for ultrasound therapy in Dubai? Get personalized physiotherapy for muscle pain, stiffness, sports injuries and rehabilitation at RamaCare Polyclinic.",
-              "mainEntityOfPage": CANONICAL_URL,
-              "author": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic",
-                "url": "https://ramacarepolyclinic.ae/"
-              },
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                  "addressLocality": "Jumeirah 1",
-                  "addressRegion": "Dubai",
-                  "postalCode": "393558",
-                  "addressCountry": "AE"
-                },
-                "telephone": "+971 56 659 7878",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Dubai"
-                }
-              }
-            })
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalProcedure",
-              "@id": `${CANONICAL_URL}#procedure`,
-              "name": "Ultrasound Therapy in Dubai",
-              "alternateName": "Therapeutic Ultrasound Treatment",
-              "url": CANONICAL_URL,
-              "mainEntityOfPage": CANONICAL_URL,
-              "description": "Ultrasound Therapy in Dubai at RamaCare Polyclinic offers therapeutic ultrasound treatment as part of personalized physiotherapy and rehabilitation programs provided by DHA-licensed physiotherapists.",
-              "procedureType": "Physical therapy",
-              "bodyLocation": "Musculoskeletal system",
-              "howPerformed": "Therapeutic ultrasound is applied by a qualified physiotherapist using a therapeutic ultrasound device over a selected treatment area as part of a broader physiotherapy and rehabilitation program.",
-              "preparation": "A professional physiotherapy assessment is required before treatment to determine suitability.",
-              "followup": "Follow-up sessions and progress evaluation may be recommended as part of the broader rehabilitation program.",
-              "indication": [
-                "Muscle pain and stiffness",
-                "Joint stiffness",
-                "Soft tissue rehabilitation",
-                "Sports-related muscle strains",
-                "Mobility limitations"
-              ],
-              "possibleComplication": "Individual suitability varies; a qualified physiotherapist should assess each patient before treatment.",
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic – Physiotherapy Department",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                  "addressLocality": "Jumeirah 1",
-                  "addressRegion": "Dubai",
-                  "postalCode": "393558",
-                  "addressCountry": "AE"
-                },
-                "telephone": "+971 56 659 7878",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Dubai"
-                },
-                "priceRange": "$$"
-              }
-            })
-          }}
-        />
-
-        {content?.faq?.faqs && content.faq.faqs.length > 0 && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": content.faq.faqs.map(faq => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                  }
-                }))
-              })
-            }}
-          />
-        )}
       </Head>
       <TreatmentHero
         categoryName={categoryName}
@@ -267,11 +260,6 @@ function SafetySection() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="mt-8 pt-4 border-t border-gray-100">
-              <p className="text-xs md:text-sm text-gray-500 italic">
-                Clinical team must verify the final contraindication wording before publication.
-              </p>
             </div>
           </div>
         </div>

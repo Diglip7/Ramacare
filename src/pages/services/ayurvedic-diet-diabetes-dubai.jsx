@@ -34,7 +34,7 @@ const content = {
       title: 'BLOOD SUGAR IMPROVEMENT',
       before: { label: 'Before', value: '180 mg/dL' },
       after: { label: 'After 90 Days', value: '110 mg/dL' },
-      note: '*Results from clinical adherence to Ayurvedic protocols'
+      note: '*Disclaimer: Individual results may vary. This program complements but does not replace standard medical care or prescribed treatments.'
     }
   },
   environmentalChallenges: {
@@ -62,7 +62,7 @@ const content = {
   },
   dietaryPillars: {
     title: '2. Dietary Pillars for Blood Sugar Control',
-    subtitle: 'To rank for diabetes in 2026, your content must emphasize Low-Glycemic Load (GL).',
+    subtitle: 'Managing blood sugar effectively starts with understanding Low-Glycemic Load (GL) — a core principle in Ayurvedic dietary planning.',
     bannerImage: '/images/diab1.jpg',
     favor: {
       title: 'Foods to Favor',
@@ -188,8 +188,8 @@ const content = {
     title: 'Still Thinking?',
     description: "We understand that starting a new health journey can feel overwhelming. That's why we're offering a FREE glucose consultation to help you take the first step.",
     stats: [
-      { label: 'Limited Slots This Week', value: 'Only 5 consultation slots remaining for April 2026', icon: 'Clock' },
-      { label: 'Proven Results', value: 'Average HbA1c improvement of 2.5% in 90 days', icon: 'TrendingUp' }
+      { label: 'Limited Slots This Week', value: 'Only 5 consultation slots remaining this month', icon: 'Clock' },
+      { label: 'Proven Results', value: 'Significant HbA1c improvement observed within 90 days*', icon: 'TrendingUp' }
     ],
     graph: {
       title: 'Average Patient HbA1c Improvement',
@@ -226,6 +226,68 @@ export default function AyurvedicDietDiabetesPage() {
     email: '',
     time: ''
   });
+
+  const faqsForSchema = content.faqs.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/",
+        "name": "Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control",
+        "description": "Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Type 2 Diabetes / Prediabetes (Madhumeha)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Diabetes", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
 
   const scrollToForm = () => {
     const formElement = document.getElementById('booking-form');
@@ -282,99 +344,30 @@ export default function AyurvedicDietDiabetesPage() {
       <Head>
         <title key="title">Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control</title>
         <meta name="description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." key="description" />
-        
-        {/* Open Graph & Twitter Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" />
-        <meta property="og:description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="RamaCare Polyclinic" />
-        <meta property="og:locale" content="en_AE" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" key="canonical" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" />
-        <meta name="twitter:description" content="Manage Type 2 Diabetes and Prediabetes naturally with DHA-licensed Ayurvedic diet plans at RamaCare Polyclinic Dubai." />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" />
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" key="og:title" />
+        <meta property="og:description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
-        {/* BreadcrumbList Schema */}
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" key="twitter:title" />
+        <meta name="twitter:description" content="Manage Type 2 Diabetes and Prediabetes naturally with DHA-licensed Ayurvedic diet plans at RamaCare Polyclinic Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Ayurvedic Treatment",
-                  "item": "https://ramacarepolyclinic.ae/services/ayurvedic-treatment-dubai/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Ayurvedic Diet for Diabetes",
-                  "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/"
-                }
-              ]
-            })
-          }}
-        />
-
-        {/* MedicalProcedure Service Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalProcedure",
-              "name": "Ayurvedic Diet for Diabetes",
-              "description": "Clinical Ayurvedic diet management for Type 2 Diabetes and prediabetes focusing on Kapha balance, insulin sensitivity, and natural blood sugar control in Dubai.",
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic",
-                "url": "https://ramacarepolyclinic.ae/",
-                "telephone": "+971566597878",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-                  "addressLocality": "Jumeirah 1, Dubai",
-                  "addressCountry": "AE"
-                }
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "Dubai"
-              }
-            })
-          }}
-        />
-
-        {/* FAQPage Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": content.faqs.items.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              }))
-            })
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>
@@ -390,6 +383,15 @@ export default function AyurvedicDietDiabetesPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#F5F1EA] py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Diabetes</span>
+          </nav>
+
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -543,9 +545,9 @@ export default function AyurvedicDietDiabetesPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[#5F5F5F] text-lg"
+              className="text-[#5F5F5F] text-lg leading-relaxed"
             >
-              To rank for diabetes in 2026, your content must emphasize <strong className="text-[#1A1A1A]">Low-Glycemic Load (GL)</strong>.
+              {content.dietaryPillars.subtitle}
             </motion.p>
           </div>
 
@@ -886,7 +888,7 @@ export default function AyurvedicDietDiabetesPage() {
               </div>
 
               <p className="mt-10 text-[11px] text-center text-white/40 italic">
-                *Based on 500+ patient data from RamaCare Polyclinic
+                *Based on clinical observations of patient compliance at RamaCare Polyclinic. Individual results may vary.
               </p>
             </motion.div>
           </div>
@@ -996,6 +998,29 @@ export default function AyurvedicDietDiabetesPage() {
               </div>
             </form>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </section>
 

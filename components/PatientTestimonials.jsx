@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const PatientTestimonials = ({ content }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -221,10 +222,12 @@ const PatientTestimonials = ({ content }) => {
                   {/* Mixed Thumbnail Support - Custom image or Video Frame (SEO Optimized) */}
                   {playingVideo !== testimonial.id && (
                     testimonial.thumbnail ? (
-                      <img 
+                      <Image 
                         src={testimonial.thumbnail} 
-                        alt={`Testimonial ${testimonial.id}`} 
-                        className="absolute inset-0 w-full h-full object-cover"
+                        alt={testimonial.alt || `Patient testimonial ${testimonial.id}`} 
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         loading="lazy"
                       />
                     ) : (

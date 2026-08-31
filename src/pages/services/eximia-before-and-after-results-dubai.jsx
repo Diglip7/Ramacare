@@ -1451,7 +1451,7 @@ export default function EximiaBeforeAfterPage() {
 
           {/* Footer Info */}
           <div className="mt-16 text-center text-white/80 text-sm">
-            <p>Located in Dubai Healthcare City · Open 7 Days a Week · Free Parking Available</p>
+            <p>Located in Jumeirah 1, Dubai · Open 7 Days a Week · Free Parking Available</p>
           </div>
         </div>
       </section>

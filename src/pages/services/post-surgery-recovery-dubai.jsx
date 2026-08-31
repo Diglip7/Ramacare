@@ -14,6 +14,132 @@ const PostSurgeryRecoveryPage = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', surgeryType: '', time: '' });
   const { showToast, ToastComponent } = useToast();
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/post-surgery-recovery-dubai/';
+
+  const faqs = [
+    {
+      q: "Is it safe to use ultrasound over surgical metal plates or screws?",
+      a: "Yes. Unlike Microwave or Shortwave diathermy, therapeutic ultrasound does not heat up metal implants significantly. It is 100% safe for patients with orthopedic hardware, provided it is administered by a DHA-licensed professional."
+    },
+    {
+      q: "Does ultrasound help reduce the appearance of surgical scars?",
+      a: "While our primary goal is internal healing, ultrasound does improve the blood supply to the skin, which can lead to a flatter, softer, and less prominent external scar."
+    },
+    {
+      q: "When can I start ultrasound after my surgery?",
+      a: "Typically, we wait until the surgical staples or sutures are removed (usually 10–14 days). However, we can begin treating the surrounding muscles almost immediately to prevent compensatory stiffness."
+    }
+  ];
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Post-Surgery Recovery",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Post-Op Healing: Ultrasound for Scar Tissue in Dubai | RamaCare",
+        "description": "Speed up your post-surgical healing in Dubai. Learn how RamaCare's ultrasound therapy prevents scar tissue stiffness and accelerates tissue repair after surgery.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Post-Surgical Scar Tissue and Rehabilitation"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Post-Surgery Recovery (Ultrasound Therapy)",
+        "alternateName": "Post-Surgical Ultrasound Rehabilitation",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Therapeutic ultrasound used in post-surgical rehabilitation to reduce swelling, prevent scar tissue adhesions, and accelerate tissue repair after orthopedic and other surgeries.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Post-Surgical Tissues and Joints",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }
+    ]
+  };
+
+  const physiotherapyResources = [
+    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -54,15 +180,61 @@ const PostSurgeryRecoveryPage = () => {
       <Head>
         <title key="title">Post-Op Healing: Ultrasound for Scar Tissue in Dubai | RamaCare</title>
         <meta name="description" content="Speed up your post-surgical healing in Dubai. Learn how RamaCare's ultrasound therapy prevents scar tissue stiffness and accelerates tissue repair after surgery." key="description" />
+        <meta name="keywords" content="Post surgery recovery Dubai, Ultrasound therapy scar tissue, Post-op rehabilitation Dubai, ACL recovery physiotherapy Dubai, Rotator cuff recovery Dubai, Scar tissue treatment Dubai, Post-surgical physiotherapy Jumeirah" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Post-Op Healing: Ultrasound for Scar Tissue in Dubai | RamaCare" />
+        <meta property="og:description" content="Speed up your post-surgical healing in Dubai. Learn how RamaCare's ultrasound therapy prevents scar tissue stiffness and accelerates tissue repair after surgery." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/post-surgery-recovery.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Post-Op Healing: Ultrasound for Scar Tissue in Dubai | RamaCare" />
+        <meta name="twitter:description" content="Speed up your post-surgical healing in Dubai with ultrasound therapy that prevents scar tissue stiffness." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/post-surgery-recovery.jpg" />
         
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">Post-Surgery Recovery</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       <main className="min-h-screen" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
         {/* Hero Section */}
         <section className="relative bg-white overflow-hidden">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Column: Content */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -70,9 +242,9 @@ const PostSurgeryRecoveryPage = () => {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                {/* H1 — Figma: ~60px, font-normal, tight leading */}
+                {/* H1 */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-[#1A1A1A] font-semibold">
-                  Post-Surgery Recovery Dubai | Ultrasound for Scar Tissue at RamaCare
+                  Post-Surgery Recovery in Dubai
                 </h1>
 
                 {/* Description */}
@@ -95,7 +267,7 @@ const PostSurgeryRecoveryPage = () => {
                   </p>
                 </div>
 
-                {/* Buttons — Figma: dark green + bright green, bold, large padding */}
+                {/* Buttons */}
                 <div className="flex flex-wrap gap-4 pt-2">
                   <a 
                     href="#book-now"
@@ -115,7 +287,7 @@ const PostSurgeryRecoveryPage = () => {
                   </a>
                 </div>
 
-                {/* Trust Badges — Figma: single row, CheckCircle icon, no border-top gap */}
+                {/* Trust Badges */}
                 <div className="flex flex-wrap gap-x-8 gap-y-3 pt-4 text-[14px] font-medium text-[#1A1A1A]">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-[18px] h-[18px] text-[#1F5E4B]" />
@@ -132,35 +304,32 @@ const PostSurgeryRecoveryPage = () => {
                 </div>
               </motion.div>
 
-              {/* Right Column: Green card — Figma: flat #2D7A64, large icon circle, legend at bottom */}
+              {/* Right Column: Hero Image Card */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full lg:mt-40"
+                className="relative w-full"
               >
-                <div className="w-full rounded-[16px] overflow-hidden bg-[#2D7A64] flex flex-col items-center justify-center py-16 px-10 gap-10">
-                  {/* Large icon circle */}
-                  <div className="w-[160px] h-[160px] bg-[#1F5E4B]/60 rounded-full flex items-center justify-center">
-                    <svg className="w-[90px] h-[90px] text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                    </svg>
-                  </div>
-
-                  {/* Legend row */}
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="flex items-center gap-4 text-white text-[13px]">
+                <div className="w-full rounded-2xl overflow-hidden shadow-2xl bg-[#2D7A64] relative group">
+                  <Image
+                    src="/images/post-surgery-recovery.jpg"
+                    alt="Post-surgery ultrasound therapy for scar tissue recovery at RamaCare Dubai"
+                    width={600}
+                    height={450}
+                    priority
+                    className="w-full h-[380px] md:h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Overlay badge with clinical indicator */}
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
+                    <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <div className="w-[10px] h-[10px] bg-[#FF6B6B] rounded-full"></div>
-                        <span>Scar Tissue</span>
+                        <div className="w-2.5 h-2.5 bg-[#4ADE80] rounded-full animate-pulse"></div>
+                        <span className="text-sm font-semibold tracking-wide">Targeted Post-Op Healing</span>
                       </div>
-                      <div className="w-12 h-px bg-white/50"></div>
-                      <div className="flex items-center gap-2">
-                        <span>Smooth Recovery</span>
-                        <div className="w-[10px] h-[10px] bg-[#4ADE80] rounded-full"></div>
-                      </div>
+                      <span className="text-xs bg-white/20 backdrop-blur-md px-3 py-1 rounded-full font-medium">Ultrasound Rehab</span>
                     </div>
-                    <p className="text-white/80 text-[13px] text-center">Ultrasound therapy accelerates healing</p>
+                    <p className="text-xs text-white/80 mt-1">Accelerating tissue remodeling &amp; preventing scar adhesions</p>
                   </div>
                 </div>
               </motion.div>
@@ -190,7 +359,7 @@ const PostSurgeryRecoveryPage = () => {
               {/* Timeline */}
               <div className="pt-6">
                 <div className="relative flex items-start justify-between">
-                  {/* Background line — behind circles, centered at circle midpoint */}
+                  {/* Background line */}
                   <div className="absolute top-[26px] left-[26px] right-[26px] h-[2px] z-0"
                     style={{ background: 'linear-gradient(to right, #e5e7eb 0%, #1F5E4B 20%, #1F5E4B 80%, #e5e7eb 100%)' }}
                   />
@@ -227,11 +396,9 @@ const PostSurgeryRecoveryPage = () => {
         {/* How Ultrasound Accelerates Recovery */}
         <section className="bg-white py-16 md:py-24">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-
-            {/* Section heading — 48px bold */}
+            {/* Section heading */}
             <h2
-              className="text-center text-[#1A1A1A] mb-14"
-              style={{ fontSize: '48px', fontWeight: 700, lineHeight: 1.2 }}
+              className="text-center text-[#1A1A1A] mb-14 text-3xl md:text-4xl lg:text-[48px] font-bold leading-tight"
             >
               How Ultrasound Accelerates Surgical Recovery
             </h2>
@@ -262,21 +429,18 @@ const PostSurgeryRecoveryPage = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="bg-[#EAE4D9] rounded-2xl p-8 flex flex-col gap-5"
                 >
-                  {/* Icon circle — Figma: dark green #1F5E4B, ~52px, all 3 same color */}
                   <div
                     className="w-[52px] h-[52px] rounded-full flex items-center justify-center text-white flex-shrink-0"
                     style={{ backgroundColor: '#1F5E4B' }}
                   >
                     {card.icon}
                   </div>
-                  {/* Title */}
                   <h3
                     className="text-[#1A1A1A]"
                     style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.5 }}
                   >
                     {card.title}
                   </h3>
-                  {/* Body */}
                   <p
                     className="text-[#5F5F5F]"
                     style={{ fontSize: '15px', lineHeight: 1.75 }}
@@ -292,17 +456,14 @@ const PostSurgeryRecoveryPage = () => {
         {/* Common Post-Surgical Cases Section */}
         <section className="bg-[#EAE4D9] py-16 md:py-24">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-
             {/* Heading */}
             <h2
-              className="text-center text-[#1A1A1A] mb-14"
-              style={{ fontSize: '48px', fontWeight: 700, lineHeight: 1.2 }}
+              className="text-center text-[#1A1A1A] mb-14 text-3xl md:text-4xl lg:text-[48px] font-bold leading-tight"
             >
               Common Post-Surgical Cases We Treat in Jumeirah 1
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-
               {/* Card 1 — ACL & Knee Replacements */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -390,7 +551,6 @@ const PostSurgeryRecoveryPage = () => {
                   </a>
                 </div>
               </motion.div>
-
             </div>
           </div>
         </section>
@@ -400,12 +560,11 @@ const PostSurgeryRecoveryPage = () => {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
             <div className="text-center mb-12">
               <h2
-                className="text-[#1A1A1A] mb-5"
-                style={{ fontSize: '48px', fontWeight: 700, lineHeight: 1.2 }}
+                className="text-[#1A1A1A] mb-5 text-3xl md:text-4xl lg:text-[48px] font-bold leading-tight"
               >
                 The RamaCare &quot;Safe-Start&quot; Protocol
               </h2>
-              <p className="text-[#5F5F5F] max-w-3xl mx-auto" style={{ fontSize: '17px', lineHeight: 1.7 }}>
+              <p className="text-[#5F5F5F] max-w-3xl mx-auto text-[17px] leading-[1.7]">
                 Timing is everything in post-surgical care. We follow a strict safety timeline to ensure the surgical site is ready for <a href="/services/ultrasound-therapy-dubai/" className="text-[#1F5E4B] hover:underline font-semibold">ultrasound therapy</a>:
               </p>
             </div>
@@ -446,27 +605,13 @@ const PostSurgeryRecoveryPage = () => {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
             <div className="max-w-4xl mx-auto">
               <h2
-                className="text-[#1A1A1A] text-center mb-3"
-                style={{ fontSize: '56px', fontWeight: 700, lineHeight: 1.15 }}>
+                className="text-[#1A1A1A] text-center mb-3 text-3xl md:text-4xl lg:text-[56px] font-bold leading-[1.15]">
                 Frequently Asked Questions
               </h2>
-              <p className="text-center text-[#5F5F5F] mb-12" style={{ fontSize: '15px' }}>People Also Ask (PAA)</p>
+              <p className="text-center text-[#5F5F5F] mb-12 text-[15px]">People Also Ask (PAA)</p>
             
               <div className="space-y-4">
-                {[
-                  {
-                    q: "Is it safe to use ultrasound over surgical metal plates or screws?",
-                    a: "Yes. Unlike Microwave or Shortwave diathermy, therapeutic ultrasound does not heat up metal implants significantly. It is 100% safe for patients with orthopedic hardware, provided it is administered by a DHA-licensed professional."
-                  },
-                  {
-                    q: "Does ultrasound help reduce the appearance of surgical scars?",
-                    a: "While our primary goal is internal healing, ultrasound does improve the blood supply to the skin, which can lead to a flatter, softer, and less prominent external scar."
-                  },
-                  {
-                    q: "When can I start ultrasound after my surgery?",
-                    a: "Typically, we wait until the surgical staples or sutures are removed (usually 10–14 days). However, we can begin treating the surrounding muscles almost immediately to prevent compensatory stiffness."
-                  }
-                ].map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <details key={index} className="group bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300">
                     <summary className="flex justify-between items-center text-left px-8 py-6 cursor-pointer list-none focus:outline-none hover:bg-[#F9F5F0]/50 transition-colors">
                       <span className="text-lg md:text-xl font-semibold text-[#1A1A1A] pr-8">{faq.q}</span>
@@ -483,6 +628,56 @@ const PostSurgeryRecoveryPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Recovery & Physiotherapy Services Cross-Links Section */}
+        <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+                Related Recovery &amp; Physiotherapy Services
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280]">
+                Explore comprehensive post-surgical rehab and specialized physiotherapy programs at RamaCare Dubai.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {physiotherapyResources.map((resource, index) => (
+                <a 
+                  key={index} 
+                  href={resource.link}
+                  className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+                >
+                  <div className="flex items-center gap-3 md:gap-4 flex-1">
+                    <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                      <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                    </div>
+                    <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B]">
+                      {resource.text}
+                    </span>
+                  </div>
+
+                  <svg
+                    className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Content Reviewer Badge */}
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="post-surgery-recovery-dubai" />
 
         {/* Final CTA Section */}
         <section id="book-now" className="bg-[#1F5E4B] py-20">
@@ -512,7 +707,7 @@ const PostSurgeryRecoveryPage = () => {
                     <Award className="w-6 h-6 text-white/70 flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-white font-bold text-base">Specialty</p>
-                      <p className="text-white/70 text-sm">Orthopedic & Post-Surgical Rehabilitation</p>
+                      <p className="text-white/70 text-sm">Orthopedic &amp; Post-Surgical Rehabilitation</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -601,7 +796,7 @@ const PostSurgeryRecoveryPage = () => {
                   </div>
                   <button 
                     type="submit"
-                    className="w-full bg-[#1F5E4B] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#164a38] transition-all shadow-lg text-lg"
+                    className="w-full bg-[#1F5E4B] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#164a38] transition-all shadow-lg text-lg cursor-pointer"
                   >
                     Confirm Appointment
                   </button>
@@ -610,7 +805,7 @@ const PostSurgeryRecoveryPage = () => {
                     href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#20bd5a] transition-all shadow-lg text-lg"
+                    className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#20bd5a] transition-all shadow-lg text-lg cursor-pointer"
                   >
                     <MessageCircle className="w-6 h-6" />
                     WhatsApp Instantly
@@ -620,13 +815,11 @@ const PostSurgeryRecoveryPage = () => {
             </div>
           </div>
         </section>
-
-        {/* Content Reviewer Badge */}
-        <ContentReviewBadge doctorName="Jeena Mathew" />
       </main>
     </Layout>
     {ToastComponent}
     </>
   );
 };
+
 export default PostSurgeryRecoveryPage;

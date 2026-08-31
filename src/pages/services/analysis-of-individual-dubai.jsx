@@ -17,62 +17,151 @@ import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 export default function AnalysisOfIndividualTreatmentPage() {
   const categoryName = 'Ayurveda';
-  const subcategoryName = 'Analysis-Of-Individual';
+  const subcategoryName = 'Analysis of the Individual';
 
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'analysis-of-individual');
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ayurveda",
+        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Analysis of the Individual",
+        "item": "https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Analysis of the Individual in Dubai",
+    "description": "Comprehensive Ayurvedic health assessment evaluating Prakriti (body constitution), Vikriti (current dosha imbalance), digestive strength, and lifestyle factors to create a precise, personalized, root-cause-based treatment plan.",
+    "url": "https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "medicalSpecialty": "Ayurveda",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/analysis.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Shamna Keloth Meethal",
+    "medicalSpecialty": "Ayurveda",
+    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic"
+    }
+  };
 
   return (
     <Layout>
       <Head>
         <title key="title">Individual Analysis in Dubai | Ayurvedic Health Assessment</title>
-        <meta name="description" content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans." key="description" />
-        <meta name="keywords" content="Analysis of the individual Dubai, Ayurvedic body analysis Dubai, Dosha assessment Dubai, Personalized Ayurveda Dubai, Ayurvedic consultation in Dubai, Health evaluation in Dubai, Holistic wellness Dubai, Ayurvedic lifestyle guidance, Natural treatment Dubai, Ayurveda expert in Dubai, Individual health assessment, Traditional Ayurveda Dubai" />
+        <meta
+          name="description"
+          content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans."
+          key="description"
+        />
+        <meta
+          name="keywords"
+          content="Analysis of the individual Dubai, Ayurvedic body analysis Dubai, Dosha assessment Dubai, Personalized Ayurveda Dubai, Ayurvedic consultation in Dubai, Health evaluation in Dubai, Holistic wellness Dubai, Ayurvedic lifestyle guidance, Natural treatment Dubai, Ayurveda expert in Dubai, Individual health assessment, Traditional Ayurveda Dubai"
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Individual Analysis in Dubai | Ayurvedic Health Assessment" key="og:title" />
+        <meta
+          property="og:description"
+          content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans."
+          key="og:description"
+        />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/analysis.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Individual Analysis in Dubai | Ayurvedic Health Assessment" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Get a personalized analysis of your health in Dubai. Ayurvedic experts assess your dosha, lifestyle, and body constitution to create natural wellness plans."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/analysis.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/#procedure",
-  "name": "Individual Health Analysis in Dubai",
-  "alternateName": "Comprehensive Health Assessment",
-  "url": "https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/analysis-of-individual-dubai/",
-  "description": "Individual Health Analysis in Dubai at RamaCare Polyclinic provides a thorough and personalized examination of your overall health using advanced diagnostics, expert clinical evaluations, and lifestyle assessments to identify health needs and risks early.",
-  "procedureType": "Health assessment and diagnostic evaluation",
-  "bodyLocation": "Whole body",
-  "howPerformed": "The analysis starts with a detailed consultation about medical history and lifestyle, followed by diagnostic tests, physical assessment, and lifestyle evaluation. Results are reviewed to create a personalized wellness and treatment plan.",
-  "preparation": "Patients may need to undergo fasting prior to certain tests. Instructions are provided before the appointment.",
-  "followup": "Results are explained in detail with tailored recommendations and a follow-up plan for monitoring and ongoing care.",
-  "indication": [
-    "Preventive healthcare evaluation",
-    "Chronic condition risk assessment",
-    "Lifestyle and nutritional assessment",
-    "Overall health optimisation"
-  ],
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic - Comprehensive Care Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$"
-  }
-}
-            `,
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
+        />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
         />
       </Head>
 
@@ -100,3 +189,4 @@ export default function AnalysisOfIndividualTreatmentPage() {
     </Layout>
   );
 }
+

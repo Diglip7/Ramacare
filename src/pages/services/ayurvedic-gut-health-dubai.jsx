@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -86,25 +87,29 @@ const content = {
         name: 'CCF Tea',
         badge: 'Cleanses Ama',
         description: 'Cumin, Coriander, Fennel tea—the Ayurvedic "reset button" for digestion. Drink warm throughout the day.',
-        image: '/images/gut1.jpg'
+        image: '/images/gut1.jpg',
+        alt: 'CCF tea (cumin, coriander, fennel) for Ayurvedic gut health in Dubai'
       },
       {
         name: 'Ginger',
         badge: 'Ignites Agni',
         description: 'The digestive fire starter. A thin slice before meals or warm ginger water kindles Agni.',
-        image: '/images/gut2.jpg'
+        image: '/images/gut2.jpg',
+        alt: 'Fresh ginger used to ignite Agni in Ayurvedic gut health treatment'
       },
       {
         name: 'A2 Ghee',
         badge: 'Nourishes Tissues',
         description: 'Pure, grass-fed ghee lubricates the intestines and carries nutrients deep into tissues.',
-        image: '/images/gut3.jpg'
+        image: '/images/gut3.jpg',
+        alt: 'A2 ghee for tissue nourishment in Ayurvedic gut health'
       },
       {
         name: 'Buttermilk',
         badge: 'Balances Flora',
         description: 'Spiced buttermilk (with cumin, salt, and coriander) is the Ayurvedic "probiotic" for gut flora.',
-        image: '/images/gut4.jpg'
+        image: '/images/gut4.jpg',
+        alt: 'Spiced buttermilk as an Ayurvedic probiotic for gut flora balance'
       }
     ]
   },
@@ -178,18 +183,115 @@ export default function AyurvedicGutHealthDubaiPage() {
     router.push('/book-appointment');
   };
 
+  const faqsForSchema = content.paa.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/",
+        "name": "Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion",
+        "description": "Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Digestive Health / Gut Health (Agni Balance)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Gut Health", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
       <Head>
         <title key="title">Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion</title>
         <meta name="description" content="Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion" key="og:title" />
+        <meta property="og:description" content="Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-gut-health-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Gut Health in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion" key="twitter:title" />
+        <meta name="twitter:description" content="Heal your gut naturally with DHA-licensed Ayurvedic plans in Dubai focused on restoring 'Agni' and eliminating bloating, IBS, and toxins." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-gut-health-dubai-og.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#F5F1EA] to-white px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 lowercase tracking-wider">
+            <a href="/" className="hover:text-[#2D5A41] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#2D5A41] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic gut health</span>
+          </nav>
+
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -327,7 +429,7 @@ export default function AyurvedicGutHealthDubaiPage() {
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-[#E9E2D6]"
               >
                 <div className="h-48 overflow-hidden">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  <img src={item.image} alt={item.alt || item.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -444,21 +546,7 @@ export default function AyurvedicGutHealthDubaiPage() {
       </section>
 
       {/* Reviewer Section */}
-      <section className="bg-[#F5F1EA] py-12 px-6 pb-32">
-        <div className="max-w-3xl mx-auto bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-6">
-          <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 border-2 border-[#1A5F3F]/10">
-            <LucideIcons.UserCheck className="w-8 h-8 text-[#1A5F3F]" />
-          </div>
-          <div className="flex-grow">
-            <p className="text-xs text-gray-500 font-medium mb-1">Content Reviewed by</p>
-            <div className="flex items-center gap-2">
-              <h4 className="text-lg font-bold text-[#1A1A1A]">Shamna</h4>
-              <span className="text-gray-600 text-sm">, Ayurvedic Specialist at RamaCare Polyclinic, Dubai</span>
-              <LucideIcons.CheckCircle className="w-4 h-4 text-teal-600" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-gut-health-dubai" />
 
 
       {/* Sticky Bottom Bar */}

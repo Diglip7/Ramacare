@@ -18,7 +18,7 @@ const content = {
       primary: { text: 'Book Your Beauty Consultation in Jumeirah Today' },
       secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
     },
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/ayurvedic-skin-hair-treatment-dubai.jpg'
   },
   dubaiFactors: {
     title: '1. The "Dubai Factors" Destroying Your Skin and Hair',
@@ -43,7 +43,7 @@ const content = {
   },
   glowGrow: {
     title: '2. The "Glow & Grow" Dietary Protocol',
-    subtitle: 'To rank for "Hair Fall Dubai" in 2026, we focus on the Rakta-Mansa (Blood and Muscle) tissue nourishment.',
+    subtitle: 'Our approach centers on Rakta-Mansa (Blood and Muscle tissue) nourishment — the Ayurvedic foundation for healthy hair and skin regeneration.',
     favor: {
       title: 'Foods to Favor (The "Radiance" List)',
       intro: 'Available at Organic Foods & Café or Spinneys:',
@@ -139,7 +139,7 @@ const content = {
       },
       {
         title: 'Integrative Care',
-        description: 'We can combine your diet plan with our in-house Ayurvedic scalp treatments (Shirodhara) for maximum results.',
+        description: 'We can combine your diet plan with our in-house Ayurvedic scalp treatments (<a href="/services/shirodhara-therapy-in-dubai/" class="text-[#1F5E4B] underline font-bold">Shirodhara</a>) for maximum results.',
         icon: 'Stethoscope'
       }
     ]
@@ -167,6 +167,68 @@ export default function AyurvedicDietSkinHairDubaiPage() {
     preferredTime: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const faqsForSchema = content.paa.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/",
+        "name": "Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally",
+        "description": "Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Hair Fall / Skin Health (Ojas & Pitta Balance)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Skin & Hair", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in the Ayurvedic Diet for Skin & Hair. Please help me book a consultation.");
@@ -240,13 +302,48 @@ export default function AyurvedicDietSkinHairDubaiPage() {
       {ToastComponent}
       <Head>
         <title key="title">Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally</title>
-        <meta name="description" content="Combat the effects of Dubai’s hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah." key="description" />
-        
+        <meta name="description" content="Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah." key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally" key="og:title" />
+        <meta property="og:description" content="Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-skin-hair-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet for Skin and Hair in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally" key="twitter:title" />
+        <meta name="twitter:description" content="Stop hair fall and restore skin glow with an Ayurvedic diet plan built for Dubai's hard water and harsh climate — DHA-licensed care in Jumeirah." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-skin-hair-dubai-og.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* 1. Hero Section */}
       <section className="relative overflow-hidden bg-[#F5F1EA] px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Skin & Hair</span>
+          </nav>
+
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -567,9 +664,10 @@ export default function AyurvedicDietSkinHairDubaiPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A]">
                     {item.title}
                   </h3>
-                  <p className="text-[#5F5F5F] leading-relaxed">
-                    {item.description}
-                  </p>
+                  <p 
+                    className="text-[#5F5F5F] leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
                 </motion.div>
               );
             })}
@@ -691,6 +789,33 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               </div>
             </form>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Therapies
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            <a href="/services/shirodhara-therapy-in-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Shirodhara Therapy</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-hairfall-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Hairfall Treatment</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/skin-diseases-treatment/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Skin Diseases Treatment</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </section>
 

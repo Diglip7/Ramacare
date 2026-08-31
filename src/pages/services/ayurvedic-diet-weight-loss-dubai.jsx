@@ -94,19 +94,19 @@ const content = {
     items: [
       {
         question: 'Can I follow an Ayurvedic diet if I eat out frequently in Dubai?',
-        answer: 'Yes. We teach you how to navigate menus: choose grilled over fried, opt for lentil-based dishes, avoid heavy cream sauces, and request warm water instead of cold beverages.'
+        answer: 'Yes. Ayurveda focuses on principles rather than rigid meal prep — choosing warm, cooked dishes over cold or raw options, favoring grilled proteins and vegetable-based mains, and being mindful of portion size at business lunches or dinners. Most Dubai restaurant menus have suitable choices once you know what to look for.'
       },
       {
         question: 'How long until I see results?',
-        answer: 'Most patients notice improved digestion and energy within 10-14 days. Visible fat loss typically begins in 3-4 weeks, with sustained progress over 3 months.'
+        answer: 'Many patients notice reduced bloating and improved energy within the first 7-10 days of shifting meal timing. Visible weight changes typically begin within 3 to 6 weeks, with continued, sustainable progress over the following months as digestive strength (Agni) improves.'
       },
       {
         question: 'Is this safe alongside my medications?',
-        answer: 'Ayurvedic diets are food-based and generally safe. However, we always recommend informing your primary physician, especially if you are on diabetes or thyroid medication.'
+        answer: 'Ayurvedic dietary changes can generally be followed alongside most medications, but any herbal supplements — such as Triphala or Guggul — should only be introduced under the guidance of a licensed Ayurvedic practitioner. Always inform your doctor about any new supplements if you\'re on prescribed medication.'
       },
       {
         question: 'Do I need to buy special supplements?',
-        answer: 'Not necessarily. Many Ayurvedic herbs (cumin, turmeric, ginger) are available in Dubai supermarkets. For clinical-grade formulations like Triphala or Guggul, we provide guidance on sourcing.'
+        answer: 'Not necessarily. The core of an Ayurvedic weight loss plan is dietary and lifestyle change — meal timing, food choices, and daily routine. Herbal support like Triphala or Guggul can be added for extra benefit, but a personalized plan can start with food alone.'
       }
     ]
   },
@@ -153,15 +153,77 @@ const content = {
  };
  
  export default function AyurvedicDietWeightLossPage() {
-   const { showToast, ToastComponent } = useToast();
-   const [openFaq, setOpenFaq] = useState(null);
-   const [formData, setFormData] = useState({
-     name: '',
-     phone: '',
-     email: '',
-     goal: '',
-     time: ''
-   });
+  const { showToast, ToastComponent } = useToast();
+  const [openFaq, setOpenFaq] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    goal: '',
+    time: ''
+  });
+
+  const faqsForSchema = content.faqs.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/",
+        "name": "Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans",
+        "description": "Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Weight Management / Metabolic Balance (Kapha & Agni)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Weight Loss", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
  
    const scrollToForm = () => {
      const element = document.getElementById('booking-form');
@@ -211,13 +273,48 @@ const content = {
       {ToastComponent}
       <Head>
         <title key="title">Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans</title>
-        <meta name="description" content="Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas. Visit RamaCare Jumeirah" key="description" />
-        
+        <meta name="description" content="Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas. Visit RamaCare Jumeirah." key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans" key="og:title" />
+        <meta property="og:description" content="Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diet1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet for Weight Loss in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans" key="twitter:title" />
+        <meta name="twitter:description" content="Sustainable, DHA-licensed Ayurvedic weight loss plans in Dubai — targeting metabolism and Dosha balance instead of fad diets." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diet1.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Weight Loss</span>
+          </nav>
+
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -464,9 +561,10 @@ const content = {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                     >
-                      <div className="p-6 pt-0 text-[#5F5F5F] leading-relaxed text-sm md:text-[16px] bg-white">
-                        {faq.answer}
-                      </div>
+                      <div 
+                        className="p-6 pt-0 text-[#5F5F5F] leading-relaxed text-sm md:text-[16px] bg-white"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -713,6 +811,29 @@ const content = {
             </div>
           </form>
         </motion.div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Diet vs. Keto</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
       </section>
 
       <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-weight-loss-dubai" />

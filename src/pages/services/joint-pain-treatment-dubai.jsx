@@ -2,12 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
-import { DOCTOR_GROUPS } from '../../data/doctors';
 
 export default function JointPainTreatmentPage() {
   const content = subcategoryContent['joint-pain-treatment-dubai'];
-  
+
   if (!content) {
     return (
       <Layout>
@@ -18,126 +18,118 @@ export default function JointPainTreatmentPage() {
     );
   }
 
-  const { seo, breadcrumbs, faqs, types, treatmentOptions, signsSymptoms } = content;
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/joint-pain-treatment-dubai/";
+  const PAGE_TITLE = "Joint Pain Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Struggling with joint pain? Get expert Joint Pain Treatment Dubai care at RamaCare Polyclinic, Dubai. DHA-licensed team. Book your consultation today.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/physiotherapist-assessing-knee-joint-pain-dubai.jpg";
 
-  const typesList = types?.list || [];
+  const { breadcrumbs, faqs } = content;
 
-  // Set up page-specific schemas for SEO
-  const faqSchema = {
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
-      }
-    }))
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((b, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "name": b.label,
-      "item": b.href.startsWith('http') ? b.href : `https://ramacarepolyclinic.ae${b.href}`
-    }))
-  };
-
-  const medicalConditionSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalCondition",
-    "name": "Joint Pain",
-    "alternateName": typesList.map(t => t.name) || [],
-    "possibleTreatment": treatmentOptions.list.map(t => ({
-      "@type": "MedicalTherapy",
-      "name": t.name,
-      "description": t.description
-    })),
-    "signOrSymptom": signsSymptoms.list.map(s => ({
-      "@type": "MedicalSymptom",
-      "name": s.name
-    }))
-  };
-
-  const medicalTherapySchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      { name: "Physiotherapy", description: "Forms the foundation of treatment, addressing pain, movement restrictions, and muscle imbalances." },
-      { name: "Manual therapy", description: "Uses hands-on techniques to ease muscle tension, improve joint mobility, and reduce pain." },
-      { name: "Electrotherapy", description: "Uses targeted electrical stimulation to help reduce pain signals and support muscle recovery." },
-      { name: "Ultrasound therapy", description: "Uses sound waves to reduce inflammation and encourage healing." }
-    ].map((item, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "item": {
-        "@type": "MedicalTherapy",
-        "name": item.name,
-        "description": item.description
-      }
-    }))
-  };
-
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": DOCTOR_GROUPS.PHYSIO.map((doc, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "item": {
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": (breadcrumbs || []).map(function (b, i) {
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": b.label,
+            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+          };
+        })
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Joint Pain"
+        },
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
         "@type": "Physician",
-        "name": doc.name,
-        "image": `https://ramacarepolyclinic.ae${doc.image}`,
-        "telephone": "+971566597878",
-        "medicalSpecialty": "Physiotherapy"
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Musculoskeletal Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (faqs || []).map(function (f) {
+          return {
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.answer
+            }
+          };
+        })
       }
-    }))
-  };
-
-  const clinicSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic",
-    "url": "https://ramacarepolyclinic.ae/",
-    "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
-    "telephone": "+971566597878",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Dubai",
-      "addressCountry": "AE"
-    }
+    ]
   };
 
   return (
     <Layout>
       <Head>
-        <title key="title">{seo.title}</title>
-        <meta name="description" content={seo.metaDescription} key="description" />
-        <meta name="keywords" content={seo.keywords} />
-        <link rel="canonical" href={seo.canonical} />
-        
-        {/* OpenGraph */}
-        <meta property="og:title" content={seo.metaTitle} />
-        <meta property="og:description" content={seo.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={seo.canonical} />
-        
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Joint Pain Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
         {/* Structured Data Schemas */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalTherapySchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
-      
+
       <ServicePageTemplate content={content} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="joint-pain-treatment-dubai" />
     </Layout>
   );
 }

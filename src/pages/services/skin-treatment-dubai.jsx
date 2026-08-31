@@ -141,7 +141,6 @@ export default function SkinTreatmentPage() {
           />
         )}
       </Head>
-
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
@@ -149,7 +148,6 @@ export default function SkinTreatmentPage() {
         hero={content?.hero}
       />
       <QuickNavigation navItems={navItems} />
-    
       <TreatmentOverview 
         subcategoryName={subcategoryName}
         content={content?.overview}
@@ -161,7 +159,6 @@ export default function SkinTreatmentPage() {
       <SkinTreatmentAdditionalContent content={content} />
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
-    
       <PaymentInsurance content={content?.paymentInsurance} />
       <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="skin-treatment-dubai" />
       <FAQSection content={content?.faq} />

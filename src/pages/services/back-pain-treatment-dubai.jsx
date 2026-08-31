@@ -1,5 +1,6 @@
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
@@ -44,6 +45,121 @@ export default function BackPainTreatmentPage() {
     Shield
   };
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/back-pain-treatment-dubai/';
+
+  const faqsForSchema = (faqs || []).map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Back Pain Treatment",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care",
+        "description": "Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Back Pain"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Back Pain Treatment in Dubai",
+        "alternateName": "Therapeutic Back Pain Physiotherapy",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Non-surgical physiotherapy and rehabilitation for lower back pain, upper back pain, sciatica, and slip disc conditions, delivered by DHA-licensed physiotherapists.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Back and Spine",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "telephone": "+971 56 659 7878",
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqsForSchema.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
+  const physiotherapyResources = [
+    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Post Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
+  ];
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -60,10 +176,52 @@ export default function BackPainTreatmentPage() {
         <title key="title">Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care</title>
         <meta name="description" content="Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility." key="description" />
         <meta name="keywords" content="Back pain treatment Dubai, Physiotherapy for back pain, Lower back pain treatment, Sciatica treatment Dubai, Posture correction Dubai, Non-surgical back pain treatment, Back pain specialist Dubai" />
-        
-        
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care" />
+        <meta property="og:description" content="Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/back-pain.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care" />
+        <meta name="twitter:description" content="Expert back pain treatment in Dubai with advanced physiotherapy and non-surgical rehabilitation for lasting relief." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/back-pain.jpg" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
+
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">Back Pain Treatment</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       {/* Hero Section with Parallax Effect */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
@@ -181,9 +339,13 @@ export default function BackPainTreatmentPage() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <Image 
                   src="/images/back-pain.jpg" 
                   alt="Back Pain Treatment in Dubai" 
+                  width={1200}
+                  height={630}
+                  quality={75}
+                  priority
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
@@ -849,6 +1011,50 @@ export default function BackPainTreatmentPage() {
         </div>
       </section>
 
+      {/* Related Resources Section */}
+      <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+              Complete Physiotherapy Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {physiotherapyResources.map((resource, index) => (
+              <a 
+                key={index} 
+                href={resource.link}
+                className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+              >
+                <div className="flex items-center gap-3 md:gap-4 flex-1">
+                  <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                    <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B] group-hover:text-sm md:group-hover:text-base">
+                    {resource.text}
+                  </span>
+                </div>
+
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <DoctorsSection content={content?.doctors} />
 
       <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="back-pain-treatment-dubai" />
@@ -880,18 +1086,18 @@ export default function BackPainTreatmentPage() {
           statCards: [
             {
               title: 'DHA Licensed',
-              description: 'Certified dental Facility'
+              description: 'Certified Physiotherapy Facility'
             },
             {
               title: 'Experienced Team',
-              description: '10+ Years Combined'
+              description: '15+ Years Combined'
             },
             {
-              title: '1,200+ Procedures',
-              description: 'Completed'
+              title: '2,500+ Patients',
+              description: 'Treated'
             },
             {
-              title: '4.8/5 Rating',
+              title: '4.9/5 Rating',
               description: 'Patient Reviews'
             }
           ]

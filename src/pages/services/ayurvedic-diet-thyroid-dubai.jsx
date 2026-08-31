@@ -30,7 +30,7 @@ const content = {
     },
     image: {
       src: '/images/th1.jpg',
-      alt: 'Ayurvedic Diet for Thyroid in Dubai'
+      alt: 'Ayurvedic diet plan and warming spices for thyroid health at RamaCare Dubai'
     }
   },
   localContext: {
@@ -206,6 +206,68 @@ export default function AyurvedicDietThyroidPage() {
   const [openFaq, setOpenFaq] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
 
+  const faqsForSchema = content.faq.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/",
+        "name": "Ayurvedic Diet for Thyroid in Dubai | RamaCare Polyclinic",
+        "description": "DHA-licensed Ayurvedic thyroid diet plans in Dubai targeting the root cause of Hypothyroidism and Hyperthyroidism through diet, herbs, and lifestyle changes.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Thyroid Disorders (Hypothyroidism and Hyperthyroidism)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda Treatments", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Thyroid", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
@@ -230,45 +292,34 @@ export default function AyurvedicDietThyroidPage() {
       </div>
 
       <Head>
-        <title key="title">Ayurvedic Diet for Thyroid Dubai | Natural Hormonal Balance | RamaCare</title>
+        <title key="title">Ayurvedic Diet for Thyroid in Dubai | RamaCare Polyclinic</title>
         <meta name="description" content="Restore your metabolism naturally. Our DHA-licensed Ayurvedic thyroid diet plans in Dubai target the root cause of Hypothyroidism and Hyperthyroidism. Visit RamaCare Polyclinic in Jumeirah 1." key="description" />
-        
+        <meta name="keywords" content="Ayurvedic diet for thyroid Dubai, Hypothyroidism diet Dubai, Hyperthyroidism treatment Dubai, Natural thyroid treatment Dubai, Ayurveda thyroid Dubai, Kapha imbalance diet, Ashwagandha thyroid, DHA-licensed Ayurveda doctor Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for Thyroid in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="Restore your metabolism naturally. Our DHA-licensed Ayurvedic thyroid diet plans in Dubai target the root cause of Hypothyroidism and Hyperthyroidism." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/th1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet for Thyroid in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Thyroid in Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:description" content="Restore your metabolism naturally with DHA-licensed Ayurvedic thyroid diet plans in Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/th1.jpg" key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/#procedure",
-  "name": "Ayurvedic Diet for Thyroid in Dubai",
-  "alternateName": "Natural Thyroid Management Program",
-  "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-thyroid-dubai/",
-  "description": "Restore your metabolism naturally. Our DHA-licensed Ayurvedic thyroid diet plans in Dubai target the root cause of Hypothyroidism and Hyperthyroidism. Visit RamaCare Polyclinic in Jumeirah 1.",
-  "procedureType": "Therapeutic dietary consultation",
-  "bodyLocation": "Whole body",
-  "howPerformed": "The treatment includes an Ayurvedic consultation to assess body constitution (dosha) and thyroid function, followed by personalized diet recommendations using traditional Ayurvedic nutrition principles tailored to hormonal balance.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$"
-  }
-}
-            `,
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>
@@ -276,6 +327,15 @@ export default function AyurvedicDietThyroidPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#F5F1EA] to-white py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda Treatments</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Thyroid</span>
+          </nav>
+
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -572,9 +632,10 @@ export default function AyurvedicDietThyroidPage() {
                   animate={{ height: openFaq === idx ? 'auto' : 0, opacity: openFaq === idx ? 1 : 0 }}
                   className="overflow-hidden"
                 >
-                  <div className="px-8 pb-6 text-[#4A4A4A] leading-relaxed border-t border-gray-100 pt-4">
-                    {item.answer}
-                  </div>
+                  <div 
+                    className="px-8 pb-6 text-[#4A4A4A] leading-relaxed border-t border-gray-100 pt-4"
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                  />
                 </motion.div>
               </motion.div>
             ))}
@@ -696,6 +757,29 @@ export default function AyurvedicDietThyroidPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="container mx-auto px-6 text-center max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </section>

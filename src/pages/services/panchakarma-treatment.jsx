@@ -23,59 +23,149 @@ export default function PanchakarmaTreatmentPage() {
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'panchakarma-treatment');
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ayurveda",
+        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Panchakarma Treatment",
+        "item": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Panchakarma Treatment in Dubai",
+    "description": "Authentic Ayurvedic Panchakarma detoxification and rejuvenation therapy in Dubai combining oil therapy, herbal steam, cleansing protocols, and personalized care to balance doshas, boost immunity, and relieve stress.",
+    "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "medicalSpecialty": "Ayurveda",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/panchakarma.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Shamna Keloth Meethal",
+    "medicalSpecialty": "Ayurveda",
+    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic"
+    }
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness</title>
-        <meta name="description" content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available." key="description" />
-        <meta name="keywords" content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai" />
+        <meta
+          name="description"
+          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          key="description"
+        />
+        <meta
+          name="keywords"
+          content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai"
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/panchakarma-treatment/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="og:title" />
+        <meta
+          property="og:description"
+          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          key="og:description"
+        />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/panchakarma-treatment/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/panchakarma.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Panchakarma Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/panchakarma.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/#procedure",
-  "name": "Panchakarma Treatment in Dubai",
-  "alternateName": "Ayurvedic Panchakarma Detox & Rejuvenation",
-  "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/",
-  "description": "Panchakarma Treatment in Dubai at RamaCare Polyclinic offers traditional Ayurvedic detoxification and rejuvenation therapies designed to cleanse the body, balance doshas, and restore wellness, guided by experienced practitioners.",
-  "procedureType": "Ayurvedic detox treatment",
-  "bodyLocation": "Whole body",
-  "howPerformed": "Panchakarma involves a sequence of Ayurvedic procedures including oleation (oil therapy), sudation (herbal steam therapy), therapeutic purgation, enemas and rejuvenating herbal treatments tailored to individual constitution and detox goals.",
-  "preparation": "Patients undergo initial consultation and assessment of body constitution (dosha) before beginning Panchakarma. Preparatory diets and cleansing are recommended.",
-  "followup": "Post-therapy guidance and follow-up assessments are recommended to support lasting wellness and monitor outcomes.",
-  "indication": [
-    "Detoxification",
-    "Stress & toxin reduction",
-    "Metabolic support",
-    "Chronic condition support",
-    "Rejuvenation and wellness"
-  ],
-  "possibleComplication": "Mild temporary fatigue or detox reactions may occur depending on individual response.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$$"
-  }
-}
-            `,
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
+        />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
         />
       </Head>
 
@@ -104,3 +194,4 @@ export default function PanchakarmaTreatmentPage() {
     </Layout>
   );
 }
+

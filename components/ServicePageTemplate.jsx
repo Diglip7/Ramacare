@@ -605,7 +605,7 @@ export default function ServicePageTemplate({ content }) {
                       </div>
                       <div>
                         <h4 className="font-bold text-sm text-[#1A1A1A]">{c.name}</h4>
-                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{c.description}</p>
+                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5"><LinkedText text={c.description} /></p>
                       </div>
                     </div>
                   ))}
@@ -624,7 +624,7 @@ export default function ServicePageTemplate({ content }) {
                       </div>
                       <div>
                         <h4 className="font-bold text-sm text-[#1A1A1A]">{rf.name}</h4>
-                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{rf.description}</p>
+                        <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5"><LinkedText text={rf.description} /></p>
                       </div>
                     </div>
                   ))}
@@ -647,7 +647,7 @@ export default function ServicePageTemplate({ content }) {
                     </div>
                     <div>
                       <h4 className="font-bold text-sm text-[#1A1A1A]">{c.name}</h4>
-                      <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5">{c.description}</p>
+                      <p className="text-xs text-[#5F5F5F] leading-normal mt-0.5"><LinkedText text={c.description} /></p>
                     </div>
                   </div>
                 ))}

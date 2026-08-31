@@ -5,12 +5,13 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
     title: "Ayurvedic Diet vs. Keto Diet: A Dubai Perspective on Sustainable Wellness",
     highlight: "In Dubai's extreme climate, not every diet works the same.",
-    description1: "In the quest for the perfect body in the city of gold, two heavyweights dominate the conversation: the modern, high-fat Keto Diet and the ancient, balance-based Ayurvedic Diet. While both promise weight loss, their impact on the body—especially in the extreme climate of the UAE—is vastly different.",
+    description1: "In the quest for the perfect body in the city of gold, two heavyweights dominate the conversation: the modern, high-fat Keto Diet and the ancient, balance-based Ayurvedic Diet. While both promise weight loss, their impact on the body—especially in the extreme climate of the UAE—is vastly different. Ayurveda uses a constitutional approach to health, starting with a custom <a href=\"/services/ayurvedic-diet-plan-dubai/\" class=\"text-[#2D5A41] underline font-bold\">Ayurvedic Diet Plan</a> tailored to your specific body type.",
     description2: "At RamaCare Polyclinic, we often see patients who have \"burned out\" on Keto and are looking for a more personalized, long-term solution. Here is a clinical breakdown of how these two diets perform in the Dubai environment.",
     ctaButtons: {
       primary: { text: 'Book Your Comparative Consultation in Jumeirah Today' },
@@ -92,7 +93,7 @@ const content = {
       },
       {
         question: 'What if I\'ve already tried Keto and it didn\'t work?',
-        answer: 'You\'re not alone. Many of our patients come to us after experiencing Keto burnout. We help you understand why it didn\'t work for your specific constitution and design a personalized Ayurvedic approach that addresses the root causes.'
+        answer: 'Many of our patients come to us after experiencing Keto burnout. We help you understand why it didn\'t work for your specific constitution and design a personalized Ayurvedic approach that addresses the root causes. If needed, this may include clinic-based metabolic cleansing therapies like <a href=\"/services/panchakarma-treatment/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>.'
       },
       {
         question: 'How long does it take to see results with Ayurveda?',
@@ -129,6 +130,68 @@ export default function AyurvedicDietVsKetoDubaiPage() {
   const [activeAccordion, setActiveAccordion] = useState(0);
   const [showTopBar, setShowTopBar] = useState(false);
   const router = useRouter();
+
+  const faqsForSchema = content.paa.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer.replace(/<[^>]*>/g, '')
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/",
+        "name": "Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?",
+        "description": "Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Weight Management / Dietary Comparison (Ayurveda vs Keto)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs. Keto Diet", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -182,11 +245,46 @@ export default function AyurvedicDietVsKetoDubaiPage() {
       <Head>
         <title key="title">Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?</title>
         <meta name="description" content="Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?" key="og:title" />
+        <meta property="og:description" content="Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-vs-keto-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet vs Keto Diet Comparison in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?" key="twitter:title" />
+        <meta name="twitter:description" content="Keto or Ayurveda? See which approach offers safer, more sustainable weight loss for Dubai's climate and lifestyle." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-vs-keto-dubai-og.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* 1. Hero Section */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-20 bg-white">
+        {/* Breadcrumbs */}
+        <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+          <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+          <span className="mx-2">/</span>
+          <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+          <span className="mx-2">/</span>
+          <span className="text-gray-400">Ayurvedic diet vs. keto</span>
+        </nav>
+
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -202,12 +300,14 @@ export default function AyurvedicDietVsKetoDubaiPage() {
               "{content.hero.highlight}"
             </div>
 
-            <p className="text-base md:text-lg text-[#5F5F5F] leading-relaxed">
-              {content.hero.description1}
-            </p>
-            <p className="text-base md:text-lg text-[#5F5F5F] leading-relaxed">
-              {content.hero.description2}
-            </p>
+            <p 
+              className="text-base md:text-lg text-[#5F5F5F] leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: content.hero.description1 }}
+            />
+            <p 
+              className="text-base md:text-lg text-[#5F5F5F] leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: content.hero.description2 }}
+            />
             
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <button
@@ -233,28 +333,13 @@ export default function AyurvedicDietVsKetoDubaiPage() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-sm flex items-center justify-center bg-[linear-gradient(to_right,#FDECEB_50%,#E9F7EF_50%)]"
+            className="relative h-[400px] md:h-[500px] rounded-[32px] overflow-hidden shadow-2xl flex items-center justify-center"
           >
-            {/* Diagonal Pattern Overlay */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none" 
-                 style={{ 
-                   backgroundImage: 'linear-gradient(45deg, transparent 25%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.1) 50%, transparent 50%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1))',
-                   backgroundSize: '60px 60px'
-                 }}>
-            </div>
-            
-            <div className="grid grid-cols-2 w-full h-full relative z-10">
-              <div className="flex flex-col items-center justify-center p-8 border-r border-gray-100">
-                <LucideIcons.Flame className="w-20 h-20 text-red-500 mb-4" />
-                <h3 className="text-2xl font-bold text-red-600">Keto</h3>
-                <p className="text-red-400 text-sm">Heat & Intensity</p>
-              </div>
-              <div className="flex flex-col items-center justify-center p-8">
-                <LucideIcons.Leaf className="w-20 h-20 text-green-600 mb-4" />
-                <h3 className="text-2xl font-bold text-green-700">Ayurveda</h3>
-                <p className="text-green-500 text-sm">Balance & Cooling</p>
-              </div>
-            </div>
+            <img 
+              src="/images/ayurvedic-diet-vs-keto-dubai.jpg" 
+              alt="Comparing Ayurvedic diet and Keto diet approaches for weight loss in Dubai" 
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </div>
       </section>
@@ -427,16 +512,17 @@ export default function AyurvedicDietVsKetoDubaiPage() {
                   </span>
                   <LucideIcons.ChevronDown className={`w-6 h-6 transition-transform duration-300 ${activeAccordion === index ? 'rotate-180 text-[#1F5E4B]' : 'text-gray-400'}`} />
                 </button>
-                <motion.div
-                  initial={false}
-                  animate={{ height: activeAccordion === index ? 'auto' : 0, opacity: activeAccordion === index ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="px-6 pb-4 text-[#5F5F5F] text-base leading-relaxed">
-                    {item.answer}
-                  </div>
-                </motion.div>
+                  <motion.div
+                    initial={false}
+                    animate={{ height: activeAccordion === index ? 'auto' : 0, opacity: activeAccordion === index ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div 
+                      className="px-6 pb-4 text-[#5F5F5F] text-base leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    />
+                  </motion.div>
               </div>
             ))}
           </div>
@@ -474,7 +560,7 @@ export default function AyurvedicDietVsKetoDubaiPage() {
                 {content.idealPlan.cta1}
               </button>
               <button
-                onClick={handleBookAppointment}
+                onClick={() => router.push('/services/ayurvedic-diet-plan-dubai/')}
                 className="w-full md:w-auto px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#1F5E4B] transition-all"
               >
                 {content.idealPlan.cta2}
@@ -484,7 +570,34 @@ export default function AyurvedicDietVsKetoDubaiPage() {
         </div>
       </section>
 
-      {/* 9. Retargeting Strip */}
+    
+
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-vs-keto-dubai" />
+  {/* 9. Retargeting Strip */}
       <section className="sticky bottom-0 z-40 bg-[#E9E2D6] border-t-2 border-b-2 border-[#1F5E4B] py-3 md:py-4">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -500,21 +613,6 @@ export default function AyurvedicDietVsKetoDubaiPage() {
           </div>
         </div>
       </section>
-
-      {/* 10. Reviewer Badge */}
-      <section className="bg-white">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-12">
-          <div className="bg-[#E9E2D6] rounded-xl p-6 md:p-8 flex items-center gap-4 max-w-4xl mx-auto">
-            <div className="flex-shrink-0 bg-white rounded-full p-2">
-              <LucideIcons.CheckCircle2 className="w-6 h-6 text-[#1F5E4B]" />
-            </div>
-            <p className="text-[#4A4A4A] text-sm md:text-base leading-relaxed">
-              {content.reviewer.text}
-            </p>
-          </div>
-        </div>
-      </section>
-
     
     </Layout>
   );

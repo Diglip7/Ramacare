@@ -323,115 +323,128 @@ export default function NeckPainTreatmentPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const schemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ramacarepolyclinic.ae/"
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai/";
+  const PAGE_TITLE = "Neck Pain Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Suffering from neck pain? Get expert Neck Pain Treatment Dubai care at RamaCare Polyclinic with DHA-licensed physiotherapists. Book your consultation today.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/neck-pain-clinic-cta-dubai.jpg";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://ramacarepolyclinic.ae/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Neck Pain Treatment Dubai",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://ramacarepolyclinic.ae/services/"
+        "medicalAudience": { "@type": "Patient" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Neck Pain",
+          "alternateName": ["Cervical Pain", "Neck Stiffness"],
+          "description": "Neck pain is discomfort, stiffness, or soreness in the cervical spine — the seven small vertebrae that support your head and connect it to your shoulders. It can be caused by poor posture, text neck, muscle strain, whiplash, or degenerative changes like cervical spondylosis."
         },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Neck Pain Treatment Dubai",
-          "item": "https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai"
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
         }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": ["MedicalClinic", "LocalBusiness"],
-      "@id": "https://ramacarepolyclinic.ae/#organization",
-      "name": "RamaCare Polyclinic",
-      "alternateName": "Rama Care Polyclinic Dubai",
-      "url": "https://ramacarepolyclinic.ae/",
-      "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
-      "image": "https://ramacarepolyclinic.ae/images/Logo.png",
-      "description": "DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai offering expert care in Dermatology, Dental, Physiotherapy, and Ayurveda.",
-      "telephone": "+971566597878",
-      "email": "query@ramacarepolyclinic.com",
-      "priceRange": "$$",
-      "openingHours": "Mo-Su 10:00-22:00",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-        "addressLocality": "Dubai",
-        "postalCode": "393558",
-        "addressCountry": "AE"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.2345",
-        "longitude": "55.2712"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Dubai"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "542",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "medicalSpecialty": [
-        "General Medicine",
-        "Dermatology",
-        "Dental Care",
-        "Physiotherapy",
-        "Ayurveda"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalCondition",
-      "name": "Neck Pain",
-      "alternateName": ["Cervical Pain", "Neck Stiffness"],
-      "description": "Neck pain is discomfort, stiffness, or soreness in the cervical spine — the seven small vertebrae that support your head and connect it to your shoulders. It can be caused by poor posture, text neck, muscle strain, whiplash, or degenerative changes like cervical spondylosis.",
-      "possibleTreatment": {
-        "@type": "MedicalTherapy",
-        "name": "Physiotherapy for Neck Pain"
-      },
-      "differentialDiagnosis": ["Cervical Spondylosis", "Pinched Nerve", "Muscle Strain", "Whiplash"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
-      "name": "Neck Pain Physiotherapy Treatment",
-      "description": "Expert physiotherapy treatment for neck pain combining manual therapy, dry needling, electrotherapy, ultrasound therapy, therapeutic exercises, and posture correction for lasting relief.",
-      "performedBy": {
-        "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae/"
-      },
-      "preparation": "Wear comfortable clothing, bring any previous medical records or imaging (X-ray, MRI) if available.",
-      "followup": "Follow home exercise program, maintain proper posture, attend scheduled follow-up sessions.",
-      "status": "Available"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
         }
-      }))
-    }
-  ];
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Neck Pain Physiotherapy Treatment",
+        "alternateName": "Cervical Spine Physiotherapy",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Expert physiotherapy treatment for neck pain combining manual therapy, dry needling, electrotherapy, ultrasound therapy, therapeutic exercises, and posture correction for lasting relief.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Cervical Spine",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
 
   const causes = [
     { cause: 'Poor posture', desc: 'Slouching strains the muscles that hold your head upright' },
@@ -451,31 +464,62 @@ export default function NeckPainTreatmentPage() {
   return (
     <Layout>
       <Head>
-        <title key="title">Neck Pain Treatment Dubai | Expert Physiotherapy Care</title>
-        <meta name="description" key="description" content="Suffering from neck pain? Get expert Neck Pain Treatment Dubai care at RamaCare Polyclinic with DHA-licensed physiotherapists. Book your consultation today." />
-        <meta name="keywords" content="Neck pain treatment Dubai, Neck pain specialist Dubai, Physiotherapy for neck pain Dubai, Cervical pain treatment Dubai, Chronic neck pain Dubai, Neck stiffness treatment Dubai, Cervical spondylosis Dubai, Pinched nerve neck Dubai, Upper back and neck pain Dubai, Neck muscle strain Dubai, Neck rehabilitation Dubai, Best physiotherapy clinic Dubai, Manual therapy Dubai, Dry needling Dubai, Electrotherapy Dubai, Ultrasound therapy Dubai, Sports injury physiotherapy Dubai" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" key="description" content={PAGE_DESCRIPTION} />
+          <meta name="keywords" content="Neck pain treatment Dubai, Neck pain specialist Dubai, Physiotherapy for neck pain Dubai, Cervical pain treatment Dubai, Chronic neck pain Dubai, Neck stiffness treatment Dubai, Cervical spondylosis Dubai, Pinched nerve neck Dubai, Upper back and neck pain Dubai, Neck muscle strain Dubai, Neck rehabilitation Dubai, Best physiotherapy clinic Dubai, Manual therapy Dubai, Dry needling Dubai, Electrotherapy Dubai, Ultrasound therapy Dubai, Sports injury physiotherapy Dubai" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
         {/* Open Graph Tags */}
-        <meta property="og:title" content="Neck Pain Treatment Dubai — Expert Physiotherapy at RamaCare" />
-        <meta property="og:description" content="Get lasting relief from neck pain with DHA-licensed physiotherapists at RamaCare Polyclinic Dubai. Personalized, evidence-based treatment plans. Book now." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai" />
-        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Neck Pain Treatment Dubai consultation at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
-        <meta name="twitter:title" content="Neck Pain Treatment Dubai | RamaCare Polyclinic" />
-        <meta name="twitter:description" content="Struggling with neck stiffness or pain? RamaCare Polyclinic Dubai offers expert, non-surgical physiotherapy treatment. Book your consultation today." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
         {/* Structured Data / Schemas */}
         <script
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemas)
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">Neck Pain Treatment Dubai</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -1469,32 +1513,68 @@ export default function NeckPainTreatmentPage() {
               </div>
               <div className="mt-12">
                 <p className="text-white/80">
-                  Visit our RamaCare Polyclinic homepage to learn more about our full range of physiotherapy and rehabilitation services, including post-surgery rehabilitation.
+                  Visit our <Link href="/" className="underline hover:text-white">RamaCare Polyclinic homepage</Link> to learn more about our full range of physiotherapy and rehabilitation services, including <Link href="/services/post-surgery-rehabilitation-dubai/" className="underline hover:text-white">post-surgery rehabilitation</Link>. Our team also manages related conditions such as <Link href="/services/back-pain-treatment-dubai/" className="underline hover:text-white">back pain</Link>, <Link href="/services/frozen-shoulder-treatment-dubai/" className="underline hover:text-white">frozen shoulder</Link>, <Link href="/services/cervical-spondylosis-treatment-dubai/" className="underline hover:text-white">cervical spondylosis</Link>, and <Link href="/services/sciatica-treatment-dubai/" className="underline hover:text-white">sciatica</Link>.
                 </p>
               </div>
             </motion.div>
           </div>
         </section>
 
+        {/* Related Conditions & Physiotherapy Services Cross-Links Section */}
+        <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+                Related Conditions &amp; Physiotherapy Services
+              </h2>
+              <p className="text-sm md:text-base text-[#6B7280]">
+                Explore related musculoskeletal therapies and specialized rehabilitation programs at RamaCare Dubai.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { text: 'Cervical Spondylosis Treatment', link: '/services/cervical-spondylosis-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+                { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
+                { text: 'Shoulder Pain Treatment', link: '/services/shoulder-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+                { text: 'Frozen Shoulder Treatment', link: '/services/frozen-shoulder-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
+                { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+                { text: 'Sciatica Treatment', link: '/services/sciatica-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
+                { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#EFF6FF]' },
+                { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
+                { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#F5F3FF]' },
+                { text: 'Physiotherapy in Dubai', link: '/services/physiotherapy-dubai/', bgColor: 'bg-[#ECFDF5]' }
+              ].map((resource, index) => (
+                <a 
+                  key={index} 
+                  href={resource.link}
+                  className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+                >
+                  <div className="flex items-center gap-3 md:gap-4 flex-1">
+                    <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                      <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                    </div>
+                    <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B]">
+                      {resource.text}
+                    </span>
+                  </div>
+
+                  <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Content Reviewer Badge */}
-        <ContentReviewBadge doctorName="Jeena Mathew" />
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="neck-pain-treatment-dubai" />
 
         {/* Medical Disclaimer */}
-        <section className="py-12 bg-[#F9F7F2]">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-                <div className="flex items-start gap-4">
-                  <AlertTriangle className="w-8 h-8 text-[#FF6F00] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-2">Medical Disclaimer</h3>
-                    <p className="text-gray-700">
-                      This content is for informational purposes only and does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider regarding any medical condition. Individual results vary, and no specific outcome is guaranteed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm text-gray-600">
+              <strong>Medical Disclaimer:</strong> This content is for general educational purposes and does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider regarding your specific condition. Individual results vary, and no treatment outcome is guaranteed.
+            </p>
           </div>
         </section>
       </div>

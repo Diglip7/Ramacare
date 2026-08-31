@@ -22,58 +22,146 @@ export default function AyurvedicDietPlanPage() {
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'ayurvedic-diet-plan');
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ayurveda",
+        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ayurvedic Diet Plan",
+        "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Ayurvedic Diet Plan in Dubai",
+    "description": "Personalized nutrition program based on individual body constitution (Prakriti) and current imbalances (Vikriti), including dosha-based meal planning, food timing guidance, herbal supplements, and lifestyle advice to support digestion, immunity, and long-term wellness.",
+    "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "medicalSpecialty": "Ayurveda",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/a-diet.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Shamna Keloth Meethal",
+    "medicalSpecialty": "Ayurveda",
+    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic"
+    }
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance</title>
-        <meta name="description" content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely." key="description" />
-        <meta name="keywords" content="Ayurvedic diet plan Dubai, Dosha-based diet Dubai, Ayurvedic meal plan Dubai, Personalized diet plan Dubai, Ayurvedic nutrition Dubai, Weight Management Ayurveda Dubai, Digestive Health Ayurveda Dubai, Immunity-boosting diet in Dubai, Healthy eating Ayurveda Dubai, Ayurveda lifestyle Dubai, Herbal diet recommendations in Dubai, Ayurvedic food types in Dubai" />
+        <meta
+          name="description"
+          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          key="description"
+        />
+        <meta
+          name="keywords"
+          content="Ayurvedic diet plan Dubai, Dosha-based diet Dubai, Ayurvedic meal plan Dubai, Personalized diet plan Dubai, Ayurvedic nutrition Dubai, Weight Management Ayurveda Dubai, Digestive Health Ayurveda Dubai, Immunity-boosting diet in Dubai, Healthy eating Ayurveda Dubai, Ayurveda lifestyle Dubai, Herbal diet recommendations in Dubai, Ayurvedic food types in Dubai"
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance" key="og:title" />
+        <meta
+          property="og:description"
+          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          key="og:description"
+        />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/a-diet.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/a-diet.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/#procedure",
-  "name": "Ayurvedic Diet Plan in Dubai",
-  "alternateName": "Personalized Ayurvedic Nutrition Plan",
-  "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/",
-  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/",
-  "description": "Ayurvedic Diet Plan in Dubai at RamaCare Polyclinic offers personalized nutrition guidance based on Ayurvedic principles to support wellness, balance body constitution, improve digestion and promote holistic health.",
-  "procedureType": "Therapeutic dietary consultation",
-  "bodyLocation": "Whole body",
-  "howPerformed": "The treatment includes an Ayurvedic consultation to assess body constitution (dosha), followed by personalized diet recommendations using traditional Ayurvedic nutrition principles tailored to your health goals.",
-  "preparation": "Patients are advised to prepare their current diet history and details of lifestyle habits before the consultation.",
-  "followup": "Regular monitoring and follow-up consultations are recommended to adjust diet plans, assess progress and adapt nutritional recommendations.",
-  "indication": [
-    "Digestive imbalance",
-    "Weight management",
-    "Overall wellness",
-    "Stress and metabolic support"
-  ],
-  "possibleComplication": "No serious complications; some initial adjustment to dietary changes may occur.",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "postalCode": "393558",
-      "addressCountry": "AE"
-    },
-    "telephone": "+971 56 659 7878",
-    "areaServed": {
-      "@type": "City",
-      "name": "Dubai"
-    },
-    "priceRange": "$$"
-  }
-}
-            `,
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
+        />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
         />
       </Head>
 
@@ -101,3 +189,4 @@ export default function AyurvedicDietPlanPage() {
     </Layout>
   );
 }
+

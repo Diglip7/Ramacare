@@ -6,11 +6,12 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
     title: "Ayurvedic Diet vs. Intermittent Fasting: Navigating Ramadan & Beyond in Dubai",
-    description1: "In the fitness circles of Dubai Marina and the corporate hubs of DIFC, Intermittent Fasting (IF) is hailed as the ultimate health hack. Meanwhile, millions in the UAE practice spiritual fasting during the Holy Month of Ramadan. But how does this stack up against the ancient Ayurvedic practice of Langhana (Lightening Therapy)?",
+    description1: "In the fitness circles of Dubai Marina and the corporate hubs of DIFC, Intermittent Fasting (IF) is hailed as the ultimate health hack. Meanwhile, millions in the UAE practice spiritual fasting during the Holy Month of Ramadan. But how does this stack up against the ancient Ayurvedic practice of Langhana (Lightening Therapy), often used alongside professional detox treatments like <a href=\"/services/panchakarma-treatment/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>?",
     description2: "At RamaCare Polyclinic, we believe that fasting is a powerful tool, but without an Ayurvedic foundation, it can often lead to muscle loss, dehydration, and \"rebound\" weight gain in the harsh Dubai climate.",
     graphic: {
       left: { icon: 'Clock', text: 'Modern Fasting', subtext: '16:8 Window' },
@@ -197,10 +198,11 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
   const router = useRouter();
   const { showToast, ToastComponent } = useToast();
   const [showTopBar, setShowTopBar] = useState(false);
+  const [bannerText, setBannerText] = useState("Fasting & Nutrition Consultation in Dubai - Optimize Your Health Today");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) { // Adjust this value based on when you want the top bar to appear
+      if (window.scrollY > 200) { 
         setShowTopBar(true);
       } else {
         setShowTopBar(false);
@@ -211,8 +213,80 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const today = new Date();
+    // Ramadan 2026 is approx mid-Feb to mid-March
+    const isRamadanSeason = (today.getMonth() === 1 && today.getDate() >= 1) || (today.getMonth() === 2 && today.getDate() <= 25);
+    if (isRamadanSeason) {
+      setBannerText("Ramadan & Fasting Health Consultation in Dubai - Book Your Custom Diet Protocol");
+    } else {
+      setBannerText("Fasting & Nutrition Consultation in Dubai - Optimize Your Health Today");
+    }
+  }, []);
+
+  const faqsForSchema = content.faq.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/",
+        "name": "Ayurvedic Diet vs. Intermittent Fasting Dubai | Ramadan Guide",
+        "description": "Compare Intermittent Fasting and Ayurvedic 'Langhana.' Learn how to fast safely in Dubai's heat and optimize your Ramadan nutrition with RamaCare Polyclinic Jumeirah.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Fasting Protocols / Dosha-Based Nutrition (Langhana)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs. Intermittent Fasting", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   const handleWhatsAppClick = (sourceMessage = "") => {
-    // If sourceMessage is a React event or not a string, use the default message
     const finalMessage = (typeof sourceMessage === 'string' && sourceMessage !== "") 
       ? sourceMessage 
       : "Hello RamaCare, I'm interested in a Fasting Consultation. Please help me book an appointment.";
@@ -238,7 +312,7 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex items-center justify-between gap-4">
             <p className="text-sm md:text-base font-medium">
-              {content.stickyTopBar.text}
+              {bannerText}
             </p>
             <button
               onClick={scrollToForm}
@@ -252,12 +326,47 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
       <Head>
         <title key="title">Ayurvedic Diet vs. Intermittent Fasting Dubai | Ramadan Guide</title>
         <meta name="description" content="Compare Intermittent Fasting and Ayurvedic 'Langhana.' Learn how to fast safely in Dubai's heat and optimize your Ramadan nutrition with RamaCare Polyclinic Jumeirah." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet vs. Intermittent Fasting Dubai | Ramadan Guide" key="og:title" />
+        <meta property="og:description" content="Compare Intermittent Fasting and Ayurvedic 'Langhana.' Learn how to fast safely in Dubai's heat and optimize your Ramadan nutrition with RamaCare Polyclinic Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-intermittent-fasting-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet vs Intermittent Fasting in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet vs. Intermittent Fasting Dubai | Ramadan Guide" key="twitter:title" />
+        <meta name="twitter:description" content="Learn how Ayurvedic Langhana compares to modern intermittent fasting, and how to fast safely in Dubai's heat and during Ramadan." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-intermittent-fasting-dubai-og.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section  */}
       <section className="bg-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6  tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic diet vs. intermittent fasting</span>
+          </nav>
+
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -267,12 +376,14 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#1A1A1A] leading-tight mb-6">
               {content.hero.title}
             </h1>
-            <p className="text-base md:text-lg text-[#5F5F5F] leading-relaxed">
-              {content.hero.description1}
-            </p>
-            <p className="text-base md:text-lg text-[#5F5F5F] leading-relaxed">
-              {content.hero.description2}
-            </p>
+            <p 
+              className="text-base md:text-lg text-[#5F5F5F] leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: content.hero.description1 }}
+            />
+            <p 
+              className="text-base md:text-lg text-[#5F5F5F] leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: content.hero.description2 }}
+            />
 
             {/* Summary Section */}
             <div className="bg-[#E9E2D6] p-6 rounded-2xl space-y-3 border border-[#1F5E4B]/10 my-8">
@@ -630,13 +741,34 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
           </div>
           </div>
 
-          <div className="mt-12 bg-[#F5F1EA] p-6 rounded-2xl border-l-4 border-[#1F5E4B]">
-            <p className="text-[#1A1A1A] text-sm md:text-base font-medium">
-              <span className="font-bold">Content Reviewed by</span> Shamna, Ayurvedic Specialist at RamaCare Polyclinic, Dubai.
-            </p>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] text-center mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-vs-intermittent-fasting-dubai" />
 
       {/* Final CTA Banner */}
       <section className="bg-[#1F5E4B] py-20 md:py-24 lg:py-32 relative overflow-hidden text-center">

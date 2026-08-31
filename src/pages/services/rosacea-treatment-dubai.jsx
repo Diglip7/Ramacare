@@ -57,9 +57,9 @@ import {
    ===================================================================== */
 
 const SEO = {
-  title: 'Rosacea Treatment Dubai | RamaCare Polyclinic',
-  metaTitle: 'Rosacea Treatment Dubai | Expert Dermatology Care',
-  metaDescription: 'Struggling with facial redness? Get expert Rosacea Treatment Dubai at RamaCare Polyclinic with DHA licensed dermatologists. Book your consultation today.',
+  title: 'Rosacea Treatment Dubai | Expert Dermatology Care | RamaCare',
+  metaTitle: 'Rosacea Treatment Dubai | Expert Dermatology Care | RamaCare',
+  metaDescription: 'Struggling with facial redness or flushing? Get personalized Rosacea Treatment Dubai plans from DHA licensed dermatologists at RamaCare Polyclinic. Book your consultation today.',
   canonical: 'https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/',
   keywords: 'Rosacea Treatment Dubai, Best Rosacea Treatment Dubai, Rosacea Specialist Dubai, Rosacea Clinic Dubai, Dermatologist for Rosacea Dubai, Facial Redness Treatment Dubai, Rosacea Skin Treatment Dubai, Rosacea Laser Treatment Dubai, Rosacea Management Dubai, Chronic Facial Redness Dubai, Sensitive Skin Treatment Dubai, Rosacea Consultation Dubai, Rosacea Care Dubai, Skin Clinic Dubai, Red Face Treatment Dubai, Rosacea Dermatology Dubai',
 };
@@ -460,12 +460,28 @@ export default function RosaceaTreatmentDubaiPage() {
         about: {
           '@id': 'https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/#condition'
         },
-        lastReviewed: '2026-07-23',
+        lastReviewed: '2026-08-28',
         reviewedBy: {
-          '@type': 'Physician',
-          name: 'RamaCare Polyclinic Dermatology Team',
-          medicalSpecialty: 'Dermatology'
+          '@id': 'https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/#physician'
+        },
+        publisher: {
+          '@type': 'MedicalOrganization',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/'
         }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/rosacea-treatment-dubai/#physician',
+        name: 'Dr. Sahar Zomorrodi',
+        medicalSpecialty: 'General Practice',
+        honorificSuffix: 'MD',
+        hasCredential: 'DHA Licensed General Practitioner',
+        worksFor: {
+          '@type': 'MedicalOrganization',
+          name: 'RamaCare Polyclinic'
+        },
+        url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/'
       },
       {
         '@type': 'MedicalCondition',
@@ -518,12 +534,28 @@ export default function RosaceaTreatmentDubaiPage() {
         <meta name="description" content={SEO.metaDescription} />
         <meta name="keywords" content={SEO.keywords} />
         <link rel="canonical" href={SEO.canonical} />
-        <meta property="og:title" content="Tired of Facial Redness? Expert Rosacea Care in Dubai" />
-        <meta property="og:description" content="RamaCare Polyclinic offers personalized Rosacea Treatment Dubai plans led by DHA licensed dermatologists. Calm your skin, restore your confidence. Book now." />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
+        <meta property="og:title" content={SEO.title} />
+        <meta property="og:description" content={SEO.metaDescription} />
         <meta property="og:url" content={SEO.canonical} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/rosacea-treatment-dubai-og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Rosacea Treatment Dubai - RamaCare Polyclinic" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SEO.title} />
+        <meta name="twitter:description" content="Struggling with facial redness or flushing? Get personalized Rosacea Treatment Dubai plans from DHA licensed dermatologists at RamaCare Polyclinic." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/rosacea-treatment-dubai-og.jpg" />
+
+        {/* Structured Data Schemas */}
+        <script key="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema, null, 2) }} />
+        <script key="medical-condition-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema, null, 2) }} />
       </Head>
 
       <div className="bg-[#F5F8F6] text-[#1A1A1A] antialiased">

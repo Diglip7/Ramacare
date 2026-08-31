@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import {
   ChevronDown,
   ChevronLeft,
@@ -331,14 +332,70 @@ export default function SensitiveTeethTreatmentPage() {
     '@type': 'MedicalWebPage',
     name: SEO.title,
     url: SEO.canonical,
-    description: SEO.metaDescription,
-    reviewedBy: { '@type': 'Dentist', name: 'RamaCare Polyclinic Dental Team' },
-    author: {
-      '@type': 'MedicalOrganization',
-      name: 'RamaCare Polyclinic Editorial Team',
-      url: 'https://ramacarepolyclinic.ae',
+    description: 'Comprehensive guide to tooth sensitivity — causes, symptoms, diagnosis, and treatment options including fluoride treatment, dental bonding, gum grafting, and desensitizing care — at RamaCare Polyclinic, Jumeirah 1, Dubai.',
+    medicalAudience: {
+      '@type': 'Patient'
     },
+    about: {
+      '@type': 'MedicalCondition',
+      name: 'Dentin Hypersensitivity'
+    },
+    reviewedBy: {
+      '@type': 'Physician',
+      name: 'Dr. Hirbod Gilandoust',
+      medicalSpecialty: 'Dentistry',
+      url: 'https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/'
+    },
+    publisher: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      telephone: '+971566597878',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE'
+      }
+    }
   };
+
+  const physicianSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Hirbod Gilandoust",
+      "medicalSpecialty": "Esthetic Dentistry & Dental Surgery",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Aparna Balakrishnan",
+      "medicalSpecialty": "Cosmetic Dentistry",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Soumya Abraham",
+      "medicalSpecialty": "DHA Licensed Nurse",
+      "url": "https://ramacarepolyclinic.ae/doctors/soumya-abraham-dha-licensed-nurse-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    }
+  ];
 
   return (
     <Layout>
@@ -346,17 +403,34 @@ export default function SensitiveTeethTreatmentPage() {
         <title>{SEO.title}</title>
         <meta name="description" content={SEO.metaDescription} />
         <meta name="keywords" content={SEO.keywords} />
-        <link rel="canonical" href={SEO.canonical} />
-        <meta property="og:title" content={SEO.title} />
-        <meta property="og:description" content={SEO.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={SEO.canonical} />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={SEO.canonical} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={SEO.title} key="og:title" />
+        <meta property="og:description" content={SEO.metaDescription} key="og:description" />
+        <meta property="og:url" content={SEO.canonical} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/sensitive-teeth-treatment-dubai-hero.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={SEO.title} key="twitter:title" />
+        <meta name="twitter:description" content={SEO.metaDescription} key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/sensitive-teeth-treatment-dubai-hero.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">
@@ -653,11 +727,15 @@ export default function SensitiveTeethTreatmentPage() {
               ))}
             </ul>
             <p className="mt-6 text-sm leading-relaxed text-white/75">
-              According to general guidance from organizations such as the American Dental
-              Association (ADA) and the Mayo Clinic, persistent tooth sensitivity should be
-              evaluated by a dentist rather than managed indefinitely with home remedies, since it
-              can sometimes indicate a treatable underlying condition. RamaCare Polyclinic offers
-              timely appointments for patients experiencing any of these warning signs.
+              According to general guidance from organizations such as the{' '}
+              <a href="https://www.ada.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#D4A574]">
+                American Dental Association (ADA)
+              </a>{' '}
+              and the{' '}
+              <a href="https://www.mayoclinic.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#D4A574]">
+                Mayo Clinic
+              </a>
+              , persistent tooth sensitivity should be evaluated by a dentist rather than managed indefinitely with home remedies, since it can sometimes indicate a treatable underlying condition. RamaCare Polyclinic offers timely appointments for patients experiencing any of these warning signs.
             </p>
           </div>
         </section>
@@ -892,6 +970,8 @@ export default function SensitiveTeethTreatmentPage() {
             </p>
           </div>
         </section>
+
+        <ContentReviewBadge doctorName="Dr. Hirbod Gilandoust" pageSlug="sensitive-teeth-treatment-dubai" />
 
         {/* ============================ FAQ — simple single-column accordion ============================ */}
         <section className="px-4 py-16">

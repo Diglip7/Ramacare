@@ -9,6 +9,7 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
   Clock,
   MapPin,
   MessageCircle,
@@ -129,143 +130,151 @@ export default function SciaticaTreatmentPage() {
     }
   ];
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/sciatica-treatment-dubai/";
+  const PAGE_TITLE = "Sciatica Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Struggling with sciatica pain down your leg? Get expert sciatica treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios for lasting relief. Book now!";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/sciatica-treatment-dubai-physiotherapy.jpg";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ramacarepolyclinic.ae/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Physiotherapy", "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" },
+          { "@type": "ListItem", "position": 4, "name": "Sciatica Treatment Dubai", "item": CANONICAL_URL }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "medicalAudience": { "@type": "Patient" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Sciatica",
+          "description": "A condition characterized by pain radiating along the sciatic nerve, which runs from the lower back through the hips and buttocks and down each leg."
+        },
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        }
+      },
+      {
+        "@type": "MedicalTherapy",
+        "@id": `${CANONICAL_URL}#therapy`,
+        "name": "Sciatica Physiotherapy Treatment",
+        "description": "A structured, evidence-based physiotherapy program for sciatica combining manual therapy, neural mobilization, dry needling, electrotherapy, ultrasound therapy, and progressive exercise, provided by DHA licensed physiotherapists at RamaCare Polyclinic in Dubai.",
+        "usedToTreat": {
+          "@type": "MedicalCondition",
+          "name": "Sciatica"
+        },
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(function (f) {
+          return {
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.answer
+            }
+          };
+        })
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Sciatica Treatment Dubai | Expert Physiotherapy Relief</title>
-        <meta name="description" content="Struggling with sciatica pain down your leg? Get expert sciatica treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios for lasting relief. Book now!" key="description" />
-        <meta name="keywords" content="Sciatica Treatment Dubai, Sciatica Specialist Dubai, Sciatica Physiotherapy Dubai, Sciatica Pain Treatment, Leg Pain Clinic Dubai, Sciatic Nerve Treatment Dubai, Lower Back Pain Treatment Dubai, Nerve Compression Treatment Dubai, Herniated Disc Treatment Dubai, Best Sciatica Treatment, Sciatica Relief Dubai, Sciatica Exercises Dubai, Sciatica Doctor Dubai, Sciatica Rehabilitation Dubai" key="keywords" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/sciatica-treatment-dubai/" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
         {/* Social SEO */}
-        <meta property="og:title" content="Sciatica Treatment Dubai | RamaCare Polyclinic" key="og:title" />
-        <meta property="og:description" content="Expert, DHA-licensed physiotherapy for sciatica in Dubai. Personalized care to relieve pain and restore mobility. Book your consultation today." key="og:description" />
         <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Physiotherapist treating sciatica pain at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
 
-        <meta name="twitter:title" content="Sciatica Treatment Dubai - RamaCare Polyclinic" key="twitter:title" />
-        <meta name="twitter:description" content="Shooting leg pain from sciatica? RamaCare's DHA-licensed physiotherapists offer proven, non-surgical sciatica treatment in Dubai." key="twitter:description" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
-        {/* Schema Markup */}
+        {/* Structured Data Schemas */}
         <script
-          key="schema1"
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalWebPage",
-              "about": {
-                "@type": "MedicalCondition",
-                "name": "Sciatica",
-                "description": "A condition characterized by pain radiating along the sciatic nerve, which runs from the lower back through the hips and buttocks and down each leg.",
-                "signOrSymptom": [
-                  { "@type": "MedicalSignOrSymptom", "name": "Lower back pain" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Pain radiating down the leg" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Numbness or tingling in the leg" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Muscle weakness in the leg" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Pain worsened by sitting" }
-                ],
-                "riskFactor": [
-                  { "@type": "MedicalRiskFactor", "name": "Age" },
-                  { "@type": "MedicalRiskFactor", "name": "Obesity" },
-                  { "@type": "MedicalRiskFactor", "name": "Prolonged sitting" },
-                  { "@type": "MedicalRiskFactor", "name": "Pregnancy" }
-                ],
-                "possibleTreatment": {
-                  "@type": "MedicalTherapy",
-                  "name": "Physiotherapy for Sciatica"
-                }
-              }
-            })
-          }}
-        />
-
-        <script
-          key="schema2"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalTherapy",
-              "name": "Sciatica Physiotherapy Treatment",
-              "description": "A structured, evidence-based physiotherapy program for sciatica combining manual therapy, neural mobilization, dry needling, electrotherapy, ultrasound therapy, and progressive exercise, provided by DHA licensed physiotherapists at RamaCare Polyclinic in Dubai.",
-              "usedToTreat": {
-                "@type": "MedicalCondition",
-                "name": "Sciatica"
-              },
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic",
-                "url": "https://ramacarepolyclinic.ae/"
-              }
-            })
-          }}
-        />
-
-        <script
-          key="schema3"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              }))
-            })
-          }}
-        />
-
-        <script
-          key="schema4"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Sciatica Treatment Dubai",
-                  "item": "https://ramacarepolyclinic.ae/services/sciatica-treatment-dubai"
-                }
-              ]
-            })
-          }}
-        />
-
-        <script
-          key="schema5"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalClinic",
-              "name": "RamaCare Polyclinic",
-              "url": "https://ramacarepolyclinic.ae/",
-              "medicalSpecialty": "Physiotherapy",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jumeirah 1",
-                "addressRegion": "Dubai",
-                "addressCountry": "AE"
-              },
-              "priceRange": "$$",
-              "hasMap": "https://www.google.com/maps/place/RamaCare+Polyclinic"
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1 text-sm text-[#5F5F5F]">
+            <li className="flex items-center gap-1">
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+              <ChevronRight className="w-3.5 h-3.5 text-[#5F5F5F]/50" />
+            </li>
+            <li className="flex items-center gap-1">
+              <a href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</a>
+              <ChevronRight className="w-3.5 h-3.5 text-[#5F5F5F]/50" />
+            </li>
+            <li className="flex items-center gap-1">
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+              <ChevronRight className="w-3.5 h-3.5 text-[#5F5F5F]/50" />
+            </li>
+            <li className="flex items-center gap-1">
+              <span className="text-[#1F5E4B] font-medium">Sciatica Treatment Dubai</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       {/* Hero Section - Enhanced Gradient with Animated Shapes */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
@@ -974,17 +983,38 @@ export default function SciaticaTreatmentPage() {
               {
                 icon: Shield,
                 title: "Dry Needling",
-                desc: "Fine needles are used to release tight muscle knots, particularly in the piriformis and lower back muscles that often contribute to nerve compression. Learn more about our dry needling treatment."
+                desc: (
+                  <span>
+                    Fine needles are used to release tight muscle knots, particularly in the piriformis and lower back muscles that often contribute to nerve compression. Learn more about our{' '}
+                    <a href="/services/dry-needling-dubai/" className="underline text-[#1F5E4B] font-medium hover:text-[#0F3D30]">
+                      dry needling treatment
+                    </a>.
+                  </span>
+                )
               },
               {
                 icon: Zap,
                 title: "Electrotherapy",
-                desc: "Used to reduce pain signals and calm inflamed tissue, especially useful during the acute, more painful phase. See our electrotherapy services."
+                desc: (
+                  <span>
+                    Used to reduce pain signals and calm inflamed tissue, especially useful during the acute, more painful phase. See our{' '}
+                    <a href="/services/electrotherapy-dubai/" className="underline text-[#1F5E4B] font-medium hover:text-[#0F3D30]">
+                      electrotherapy services
+                    </a>.
+                  </span>
+                )
               },
               {
                 icon: Activity,
                 title: "Ultrasound Therapy",
-                desc: "Deep heating therapy that promotes blood flow and supports tissue healing around the affected nerve. Read more about ultrasound therapy."
+                desc: (
+                  <span>
+                    Deep heating therapy that promotes blood flow and supports tissue healing around the affected nerve. Read more about{' '}
+                    <a href="/services/ultrasound-therapy-dubai/" className="underline text-[#1F5E4B] font-medium hover:text-[#0F3D30]">
+                      ultrasound therapy
+                    </a>.
+                  </span>
+                )
               },
               {
                 icon: TrendingUp,
@@ -1284,7 +1314,14 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl"
           >
             <p className="text-lg leading-relaxed text-center">
-              Our goal isn't just to reduce your pain today. It's to help you understand your body, build resilience, and lower the chance of sciatica returning. If your pain stems from a broader issue, our team also manages related conditions like back pain and frozen shoulder.
+              Our goal isn't just to reduce your pain today. It's to help you understand your body, build resilience, and lower the chance of sciatica returning. If your pain stems from a broader issue, our team also manages related conditions like{' '}
+              <a href="/services/back-pain-treatment-dubai/" className="underline font-semibold hover:text-[#C9A961]">
+                back pain
+              </a>{' '}
+              and{' '}
+              <a href="/services/frozen-shoulder-treatment-dubai/" className="underline font-semibold hover:text-[#C9A961]">
+                frozen shoulder
+              </a>.
             </p>
           </motion.div>
         </div>

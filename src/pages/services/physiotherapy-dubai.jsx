@@ -37,16 +37,107 @@ export default function physiotherapydubaiCategoryPage() {
     "At RamaCare, we utilize modern equipment and therapeutic exercises to deliver lasting results. We take a holistic approach to rehabilitation, addressing the underlying causes of your pain to prevent recurrence. Experience the highest standard of physiotherapy care in Dubai. Book your free consultation with our specialists today."
   ];
 
+  const faqsForSchema = (content?.faq?.faqs || []).map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/",
+        "name": "Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care",
+        "description": "Professional physiotherapy treatment in Dubai for pain relief, sports injuries, post-surgery recovery, and rehabilitation with licensed therapists and tailored care.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Musculoskeletal and Neurological Rehabilitation"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ramacarepolyclinic.ae/services/" },
+            { "@type": "ListItem", "position": 3, "name": "Physiotherapy Treatment", "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/#faq",
+        "mainEntity": faqsForSchema.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care</title>
         <meta name="description" content="Professional physiotherapy treatment in Dubai for pain relief, sports injuries, post-surgery recovery, and rehabilitation with licensed therapists and tailored care." key="description" />
-        <meta name="keywords" content="Physiotherapy treatment in Dubai, Best physiotherapy clinic in Dubai, Physiotherapy Dubai near me, Sports injury physiotherapy Dubai, Post surgery physiotherapy in Dubai, Rehabilitation center Dubai, Pain relief physiotherapy Dubai, Licensed physiotherapist Dubai, Physiotherapy clinics in Dubai, Manual therapy Dubai, Back pain physiotherapy Dubai" />
+        <meta name="keywords" content="Physiotherapy treatment in Dubai, Best physiotherapy clinic in Dubai, Physiotherapy Dubai near me, Sports injury physiotherapy Dubai, Post surgery physiotherapy in Dubai, Rehabilitation center Dubai, Pain relief physiotherapy Dubai, Licensed physiotherapist Dubai, Physiotherapy clinics in Dubai, Manual therapy Dubai, Back pain physiotherapy Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" key="canonical" />
 
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care" key="og:title" />
+        <meta property="og:description" content="Professional physiotherapy treatment in Dubai for pain relief, sports injuries, post-surgery recovery, and rehabilitation with licensed therapists and tailored care." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/phy3.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Physiotherapy Treatment in Dubai | Trusted Rehab & Pain Care" key="twitter:title" />
+        <meta name="twitter:description" content="Professional physiotherapy for pain relief, sports injuries, and post-surgery recovery with DHA-licensed therapists in Jumeirah 1, Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/phy3.jpg" key="twitter:image" />
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
+
+      {/* Breadcrumbs */}
+      <div className="bg-white border-b border-gray-100 py-3">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-y-1 text-xs sm:text-sm font-semibold text-[#5F5F5F]">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2 text-gray-300">/</span>
+            <a href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</a>
+            <span className="mx-2 text-gray-300">/</span>
+            <span className="text-gray-400">Physiotherapy Treatment</span>
+          </nav>
+        </div>
+      </div>
+
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />

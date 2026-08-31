@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
-import { DOCTOR_GROUPS } from '../../data/doctors';
 
 export default function AnxietyTreatmentPage() {
   const content = subcategoryContent['anxiety-treatment-dubai'];
@@ -18,145 +18,118 @@ export default function AnxietyTreatmentPage() {
     );
   }
 
-  const { seo, breadcrumbs, faqs, types, treatmentOptions, signsSymptoms } = content;
-  const typesList = types?.list || [];
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/anxiety-treatment-dubai/";
+  const PAGE_TITLE = "Anxiety Treatment Dubai | Supportive Care at RamaCare";
+  const PAGE_DESCRIPTION = "Struggling with anxiety? RamaCare Polyclinic Dubai offers personalized Anxiety Treatment Dubai support with DHA-licensed experts. Book your consultation today.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/Healthcare professional discussing anxiety management with a patient.jpg";
 
-  // Page-specific JSON-LD schemas
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
-      }
-    }))
-  };
+  const { breadcrumbs, faqs } = content;
 
-  const breadcrumbSchema = {
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((b, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "name": b.label,
-      "item": b.href.startsWith('http') ? b.href : `https://ramacarepolyclinic.ae${b.href}`
-    }))
-  };
-
-  const medicalConditionSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalCondition",
-    "name": "Anxiety-related physical tension and lifestyle strain",
-    "alternateName": typesList.map(t => t.name) || [],
-    "possibleTreatment": treatmentOptions.list.map(t => ({
-      "@type": "MedicalTherapy",
-      "name": t.name,
-      "description": t.description
-    })),
-    "signOrSymptom": signsSymptoms.list.map(s => ({
-      "@type": "MedicalSymptom",
-      "name": s.name
-    }))
-  };
-
-  const medicalTherapySchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      { name: "Physiotherapy", description: "To address anxiety-related muscle tension, neck guarding, and physical strain." },
-      { name: "Ayurvedic wellness consultation", description: "Complementary mind-body routine, diet, and relaxation therapies." },
-      { name: "Sleep hygiene guidance", description: "Practical daily steps and routines to support resting cycles." },
-      { name: "Breathing exercises", description: "Structured techniques to help manage acute worry in the moment." }
-    ].map((item, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "item": {
-        "@type": "MedicalTherapy",
-        "name": item.name,
-        "description": item.description
-      }
-    }))
-  };
-
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": DOCTOR_GROUPS.PHYSIO.map((doc, i) => ({
-      "@type": "ListItem",
-      "position": i + 1,
-      "item": {
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": (breadcrumbs || []).map(function (b, i) {
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": b.label,
+            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+          };
+        })
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Anxiety"
+        },
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
         "@type": "Physician",
-        "name": doc.name,
-        "image": `https://ramacarepolyclinic.ae${doc.image}`,
-        "telephone": "+971566597878",
-        "medicalSpecialty": "Physiotherapy"
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Musculoskeletal Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (faqs || []).map(function (f) {
+          return {
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.answer
+            }
+          };
+        })
       }
-    }))
-  };
-
-  const clinicSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic",
-    "url": "https://ramacarepolyclinic.ae/",
-    "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
-    "telephone": "+971566597878",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "addressLocality": "Dubai",
-      "addressCountry": "AE"
-    }
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": seo.title,
-    "url": `https://ramacarepolyclinic.ae/services${seo.slug}`,
-    "description": seo.metaDescription,
-    "reviewedBy": {
-      "@type": "Physician",
-      "name": "Jeena Mathew",
-      "medicalSpecialty": "Physiotherapy",
-      "url": "https://ramacarepolyclinic.ae/doctors/1"
-    },
-    "author": {
-      "@type": "MedicalOrganization",
-      "name": "RamaCare Polyclinic Editorial Team",
-      "url": "https://ramacarepolyclinic.ae"
-    }
+    ]
   };
 
   return (
     <Layout>
       <Head>
-        <title key="title">{seo.title}</title>
-        <meta name="description" content={seo.metaDescription} key="description" />
-        <meta name="keywords" content={seo.keywords} />
-        <link rel="canonical" href={seo.canonical} />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
-        {/* OpenGraph */}
-        <meta property="og:title" content={seo.title} />
-        <meta property="og:description" content={seo.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={seo.canonical} />
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Anxiety Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
         {/* Structured Data Schemas */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalTherapySchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       <ServicePageTemplate content={content} />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="anxiety-treatment-dubai" />
 
       {/* External References Section */}
       <section className="py-12 bg-white border-t border-gray-150 px-4">

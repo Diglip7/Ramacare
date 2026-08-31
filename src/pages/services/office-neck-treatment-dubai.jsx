@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Calendar, MessageCircle, Clock, Shield, MapPin, Zap, CheckCircle2, Radio, Award, UserCheck, Lock, ChevronDown } from 'lucide-react';
+import { Calendar, MessageCircle, Clock, Shield, MapPin, Zap, CheckCircle2, Radio, Award, UserCheck, Lock, ChevronDown, Activity } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useToast } from '../../../components/Toast';
@@ -13,6 +13,131 @@ const OfficeNeckTreatmentPage = () => {
   const whatsappMessage = encodeURIComponent("Hello RamaCare, I'm interested in 'Office Neck' treatment using Ultrasound Therapy.");
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', time: '' });
   const { showToast, ToastComponent } = useToast();
+
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/office-neck-treatment-dubai/';
+
+  const faqs = [
+    {
+      q: "Can ultrasound therapy help with my tension headaches?",
+      a: "Absolutely. Most tension headaches in office workers originate from the Cervical Spine (the neck). By relaxing the neck muscles with ultrasound, we reduce the tension pulling on the base of your skull."
+    },
+    {
+      q: "Is it safe to have ultrasound on my neck?",
+      a: "Yes. At RamaCare, we use low-intensity medical settings specifically calibrated for the delicate structures of the neck. It is a 100% non-invasive alternative to neck cracking or spinal adjustments."
+    },
+    {
+      q: "How many sessions do I need for Tech Neck?",
+      a: "For acute stiffness, 3 to 5 sessions are often enough. For chronic postural issues developed over years, we suggest a 10-session package combined with postural retraining."
+    }
+  ];
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "'Office Neck' Treatment",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare",
+        "description": "Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare's ultrasound therapy fixes 'Office Neck' and postural strain fast.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Neck Pain"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "'Office Neck' Treatment (Ultrasound Therapy)",
+        "alternateName": "Postural Strain Treatment",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Ultrasound therapy to treat cervical myofascial pain and postural strain caused by prolonged desk work, commonly known as 'Office Neck' or 'Tech Neck,' for busy professionals in Dubai.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Cervical Spine",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "telephone": "+971 56 659 7878",
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }
+    ]
+  };
+
+  const physiotherapyResources = [
+    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Post Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,9 +178,55 @@ const OfficeNeckTreatmentPage = () => {
       <Head>
         <title key="title">'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare</title>
         <meta name="description" content="Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare’s ultrasound therapy fixes 'Office Neck' and postural strain fast." key="description" />
-        
+        <meta name="keywords" content="Office neck treatment Dubai, Tech neck treatment Dubai, Ultrasound therapy DIFC, Neck stiffness treatment Dubai, Postural strain treatment Dubai, Corporate wellness physiotherapy Dubai, Cervical myofascial pain treatment" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare" />
+        <meta property="og:description" content="Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare's ultrasound therapy fixes 'Office Neck' and postural strain fast." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/office.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare" />
+        <meta name="twitter:description" content="Professionals in DIFC or Business Bay suffering from neck stiffness? RamaCare's ultrasound therapy fixes 'Office Neck' fast." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/office.jpg" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
+
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">'Office Neck' Treatment</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       <main className="min-h-screen" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
         {/* Hero Section */}
@@ -71,7 +242,7 @@ const OfficeNeckTreatmentPage = () => {
               >
                 <div className="space-y-6">
                   <h1 className="text-4xl md:text-5xl lg:text-[60px] font-semibold text-[#1A1A1A] leading-tight">
-                    'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare
+                    'Office Neck' Treatment in Dubai
                   </h1>
                   <p className="text-base md:text-[18px] text-[#5F5F5F] leading-relaxed">
                     Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare's <a href="/services/ultrasound-therapy-dubai/" className="text-[#1F5E4B] hover:underline font-semibold">ultrasound therapy </a> fixes "Office Neck" and postural strain fast.
@@ -399,6 +570,50 @@ const OfficeNeckTreatmentPage = () => {
                     </p>
                   </div>
                 </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources Section */}
+        <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+                Complete Physiotherapy Services
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {physiotherapyResources.map((resource, index) => (
+                <a 
+                  key={index} 
+                  href={resource.link}
+                  className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+                >
+                  <div className="flex items-center gap-3 md:gap-4 flex-1">
+                    <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                      <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                    </div>
+                    <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B] group-hover:text-sm md:group-hover:text-base">
+                      {resource.text}
+                    </span>
+                  </div>
+
+                  <svg
+                    className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
               ))}
             </div>
           </div>

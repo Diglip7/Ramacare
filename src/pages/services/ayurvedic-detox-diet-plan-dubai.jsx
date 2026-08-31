@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -48,7 +49,7 @@ const content = {
   },
   phases: {
     title: '2. The Phases of Your Ayurvedic Detox Plan',
-    subtitle: 'To rank as a medical authority, we outline the clinical phases of detoxification used at our Jumeirah clinic:',
+    subtitle: 'As a DHA-licensed Ayurvedic clinic, we follow a structured, three-phase clinical detoxification process at our Jumeirah center:',
     items: [
       {
         step: 1,
@@ -96,11 +97,11 @@ const content = {
       },
       {
         question: 'Can I do this detox while working a 9-to-5 job in Dubai?',
-        answer: 'Yes. Because Ayurveda uses nourishing foods like Kitchari, you wont experience the fainting spells associated with juice fasts. It is perfectly safe for a busy DIFC professional.'
+        answer: 'Yes. Most working professionals in Dubai complete this detox alongside their regular schedule. The key is preparation: eat your Kitchari meals at consistent times, stay hydrated through the day, and avoid scheduling high-stress meetings during Phase 1 when energy dips are most common. Many of our Jumeirah clients complete the full 5–7 day plan during a normal work week by prepping meals the night before.'
       },
       {
         question: 'Is a detox the same as Panchakarma?',
-        answer: 'A detox diet is a foundational part of Panchakarma. While a diet plan can be done at home, a full Panchakarma at our Jumeirah 1 Polyclinic involves professional therapies like Virechana (purgation) and Basti (enema) for a deeper cellular cleanse.'
+        answer: 'Not quite. A detox diet plan uses food, herbs, and daily routine changes to gently clear Ama (toxins) and can be done independently at home with guidance. Panchakarma is a more intensive, clinic-administered Ayurvedic therapy — including procedures like Virechana, Basti, and Nasya — typically recommended for deeper, long-standing imbalances. Many patients start with a detox diet plan and progress to a full Panchakarma program if needed. Learn more about <a href="/services/panchakarma-treatment/" class="text-[#1F5E4B] underline font-bold">Panchakarma Treatment in Dubai</a>.'
       }
     ]
   },
@@ -130,8 +131,8 @@ const content = {
     buttonText: 'Start Your Body Reset in Jumeirah Today'
   },
   reviewer: {
-    name: 'Shamna',
-    role: 'Ayurvedic Specialist at RamaCare Polyclinic, Dubai.'
+    name: 'Dr. Shamna Keloth Meethal',
+    role: 'BAMS, Ayurveda Doctor (DHA Licensed)'
   }
 };
 
@@ -142,10 +143,72 @@ export default function AyurvedicDetoxDietPlanPage() {
   const [popupData, setPopupData] = useState({ name: '', email: '' });
   const router = useRouter();
 
+  const faqsForSchema = content.faqs.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer.replace(/<[^>]*>/g, '')
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/",
+        "name": "Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing",
+        "description": "Flush out toxins and reset your metabolism. Our DHA-licensed Ayurvedic detox diet plans in Dubai focus on clearing Ama (toxins) and restoring gut health. Visit RamaCare Jumeirah 1.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Metabolic Detoxification / Ama Clearance"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Detox Diet Plan", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopupOpen(true);
-    }, 2000); // Open popup after 2 seconds
+    }, 2000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -158,12 +221,7 @@ export default function AyurvedicDetoxDietPlanPage() {
     router.push('/book-appointment');
   };
 
-  const handlePopupInputChange = (e) => {
-    const { name, value } = e.target;
-    setPopupData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleDownload = async (e) => {
+  const handleWhatsAppDownloadSubmit = (e) => {
     e.preventDefault();
     
     if (!popupData.name || !popupData.email) {
@@ -171,8 +229,10 @@ export default function AyurvedicDetoxDietPlanPage() {
       return;
     }
     
-    // In a real app, this would handle the lead capture
-    showToast('Thank you! Your download will start shortly.', 'success');
+    const message = encodeURIComponent(`Hello RamaCare, my name is ${popupData.name} (${popupData.email}) and I would like to get my free 5-Day Detox Plan PDF!`);
+    window.open(`https://wa.me/971566597878?text=${message}`, '_blank');
+    
+    showToast('Redirecting to WhatsApp to send your details...', 'success');
     setIsPopupOpen(false);
     setPopupData({ name: '', email: '' });
   };
@@ -183,7 +243,33 @@ export default function AyurvedicDetoxDietPlanPage() {
       <Head>
         <title key="title">Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing</title>
         <meta name="description" content="Flush out toxins and reset your metabolism. Our DHA-licensed Ayurvedic detox diet plans in Dubai focus on clearing Ama (toxins) and restoring gut health. Visit RamaCare Jumeirah 1." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing" key="og:title" />
+        <meta property="og:description" content="Flush out toxins and reset your metabolism. Our DHA-licensed Ayurvedic detox diet plans in Dubai focus on clearing Ama (toxins) and restoring gut health. Visit RamaCare Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-detox-diet-plan-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Detox Diet Plan in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing" key="twitter:title" />
+        <meta name="twitter:description" content="Reset your metabolism with a DHA-licensed Ayurvedic detox diet plan in Dubai — clearing Ama (toxins) and restoring gut health in as little as 5–7 days." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-detox-diet-plan-dubai-og.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Lead Capture Popup */}
@@ -208,17 +294,17 @@ export default function AyurvedicDetoxDietPlanPage() {
                   Wait! Don't Miss This
                 </h3>
                 <p className="text-[#5F5F5F] mb-6 text-base leading-relaxed">
-                  Get your free 5-Day Detox Plan PDF with meal plans, shopping lists, and daily schedules.
+                  Submit your details to receive your free 5-Day Detox Plan PDF instantly via WhatsApp.
                 </p>
 
-                <form onSubmit={handleDownload} className="space-y-4">
+                <form onSubmit={handleWhatsAppDownloadSubmit} className="space-y-4">
                   <input
                     type="text"
                     name="name"
                     placeholder="Enter your name"
                     required
                     value={popupData.name}
-                    onChange={handlePopupInputChange}
+                    onChange={(e) => setPopupData(prev => ({ ...prev, name: e.target.value }))}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-[#E9E2D6] focus:border-[#1F5E4B] outline-none transition-all text-[#1A1A1A]"
                   />
                   <input
@@ -227,14 +313,15 @@ export default function AyurvedicDetoxDietPlanPage() {
                     placeholder="Enter your email"
                     required
                     value={popupData.email}
-                    onChange={handlePopupInputChange}
+                    onChange={(e) => setPopupData(prev => ({ ...prev, email: e.target.value }))}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-[#E9E2D6] focus:border-[#1F5E4B] outline-none transition-all text-[#1A1A1A]"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#1F5E4B] text-white py-3 rounded-full font-bold text-base hover:bg-[#163f35] transition-all"
+                    className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-3 rounded-full font-bold text-base transition-all flex items-center justify-center gap-2"
                   >
-                    Download Free PDF
+                    <LucideIcons.MessageCircle size={20} />
+                    Get PDF via WhatsApp
                   </button>
                 </form>
               </div>
@@ -260,6 +347,15 @@ export default function AyurvedicDetoxDietPlanPage() {
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        {/* Breadcrumbs */}
+        <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6  tracking-wider">
+          <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+          <span className="mx-2">/</span>
+          <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+          <span className="mx-2">/</span>
+          <span className="text-gray-400">Ayurvedic detox diet plan</span>
+        </nav>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -298,6 +394,26 @@ export default function AyurvedicDetoxDietPlanPage() {
                 <LucideIcons.MessageCircle size={20} />
                 {content.hero.ctaButtons.secondary.text}
               </button>
+            </div>
+
+            {/* Trust Stats Row */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-[#E9E2D6]/40">
+              <div className="flex items-center gap-2">
+                <LucideIcons.ShieldCheck className="w-5 h-5 text-[#1F5E4B]" />
+                <span className="text-xs font-semibold text-gray-700">DHA Licensed Facility</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <LucideIcons.Clock className="w-5 h-5 text-[#1F5E4B]" />
+                <span className="text-xs font-semibold text-gray-700">18+ Years Experience</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <LucideIcons.Users className="w-5 h-5 text-[#1F5E4B]" />
+                <span className="text-xs font-semibold text-gray-700">1,000+ Resets Done</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <LucideIcons.Star className="w-5 h-5 text-[#1F5E4B]" />
+                <span className="text-xs font-semibold text-gray-700">4.9/5 Patient Rating</span>
+              </div>
             </div>
           </motion.div>
 
@@ -413,12 +529,12 @@ export default function AyurvedicDetoxDietPlanPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="rounded-[32px] overflow-hidden shadow-2xl max-w-xl mx-auto"
+            className="rounded-[32px] overflow-hidden shadow-2xl max-w-5xl mx-auto"
           >
             <img 
-              src="/images/detox3.png" 
-              alt="Premium Kitchari bowl" 
-              className="w-full h-auto rounded-[32px]"
+              src="/images/a-diet.jpg" 
+              alt="Ayurvedic detox diet bowl with wholesome ingredients" 
+              className="w-full h-[300px] sm:h-[450px] object-cover rounded-[32px]"
             />
           </motion.div>
         </div>
@@ -493,9 +609,10 @@ export default function AyurvedicDetoxDietPlanPage() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-6 text-[#5F5F5F] leading-relaxed text-base">
-                        {faq.answer}
-                      </div>
+                      <div 
+                        className="px-6 pb-6 text-[#5F5F5F] leading-relaxed text-base"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -564,22 +681,35 @@ export default function AyurvedicDetoxDietPlanPage() {
         </div>
       </section>
 
-      {/* Section 7: Content Reviewer Badge */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-[#F2EFE9] p-6 md:p-8 rounded-[24px] flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left"
-        >
-          <div className="w-12 h-12 bg-[#1F5E4B] rounded-full flex items-center justify-center text-white shrink-0 shadow-md">
-            <LucideIcons.Check size={24} />
+      {/* Related Services */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] text-center mb-10">
+            Related Ayurvedic Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="/services/panchakarma-treatment/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Panchakarma Treatment</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/pcos-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">PCOS Treatment</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
-          <p className="text-[#1A1A1A] text-base md:text-lg">
-            Content Reviewed by <span className="font-bold text-[#1F5E4B]">{content.reviewer.name}</span>, {content.reviewer.role}
-          </p>
-        </motion.div>
+        </div>
       </section>
+
+      {/* Content Reviewer Badge */}
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-detox-diet-plan-dubai" />
     </Layout>
   );
 }

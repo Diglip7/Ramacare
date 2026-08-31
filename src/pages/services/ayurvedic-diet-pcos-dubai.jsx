@@ -2,22 +2,15 @@ import { useState, useEffect } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MessageCircle, Snowflake, Sun, Moon, X } from 'lucide-react';
+import { Calendar, MessageCircle, Snowflake, Sun, Moon, X, ArrowRight, ShieldCheck, Clock, Users, Star } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 export default function AyurvedicDietPCOSPage() {
   const { showToast, ToastComponent } = useToast();
   const [openFaq, setOpenFaq] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showBottomBar, setShowBottomBar] = useState(false);
-
-  useEffect(() => {
-    // Show modal on page render
-    const timer = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   // FAQ Data
   const faqData = [
@@ -42,6 +35,76 @@ export default function AyurvedicDietPCOSPage() {
       answer: "If late dinners are unavoidable, opt for the lightest option possible—soup or moong dal. Avoid heavy proteins or fried foods. Consider making lunch your largest meal and having a small snack (like spearmint tea + almonds) around 4–5 PM to reduce evening hunger."
     }
   ];
+
+  const faqsForSchema = faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/",
+        "name": "Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare",
+        "description": "Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Polycystic Ovary Syndrome (PCOS)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for PCOS", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
+  useEffect(() => {
+    // Show modal on page render
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const content = {
     challenges: [
@@ -226,14 +289,48 @@ export default function AyurvedicDietPCOSPage() {
       {ToastComponent}
       <Head>
         <title key="title">Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare</title>
-        <meta name="description" content="Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah. Book your consultation today!" key="description" />
+        <meta name="description" content="Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah." key="description" />
         <meta name="keywords" content="Ayurvedic diet for PCOS Dubai, PCOS treatment Dubai, hormonal balance Ayurveda, PCOS diet plan UAE, natural PCOS remedy Dubai" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare" key="og:title" />
+        <meta property="og:description" content="Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pcos1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet for PCOS in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally" key="twitter:title" />
+        <meta name="twitter:description" content="A DHA-licensed Ayurvedic diet plan for PCOS in Dubai — balancing hormones, improving insulin sensitivity, and regularizing cycles naturally." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pcos1.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="bg-[#F5F1EA] py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for PCOS</span>
+          </nav>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <motion.div
@@ -713,17 +810,17 @@ export default function AyurvedicDietPCOSPage() {
               {
                 name: "Shatavari (Asparagus racemosus)",
                 benefits: "Regulates estrogen, supports ovarian health, and improves follicular maturation.",
-                evidence: "A 2018 study in the Journal of Ayurveda and Integrative Medicine found that Shatavari improved menstrual regularity in 67% of PCOS patients within 12 weeks."
+                evidence: "Clinical observations and preliminary studies indicate that Shatavari supplementation supports regular menstrual cycles and ovarian function in women with PCOS."
               },
               {
                 name: "Ashwagandha (Withania somnifera)",
                 benefits: "Reduces cortisol (stress hormone), which indirectly lowers androgen levels and improves insulin sensitivity.",
-                evidence: "Research published in the Indian Journal of Psychological Medicine (2012) showed a 27% reduction in cortisol levels, correlating with improved hormonal balance."
+                evidence: "Research published in the Indian Journal of Psychological Medicine (2012) showed a 27.9% reduction in cortisol levels, correlating with improved stress response and hormonal balance."
               },
               {
                 name: "Triphala (Three Fruits)",
                 benefits: "Detoxifies the liver (critical for hormone metabolism) and improves gut health (linked to PCOS via the gut-hormone axis).",
-                evidence: "A 2017 study in Pharmacognosy Research demonstrated that Triphala reduced insulin resistance markers by 18% in 8 weeks."
+                evidence: "Research suggests that the antioxidant properties of Triphala help reduce markers of metabolic stress and support healthy glucose metabolism."
               }
             ].map((herb, index) => (
               <motion.div
@@ -872,16 +969,14 @@ export default function AyurvedicDietPCOSPage() {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                     >
-                      <div className="px-6 pb-6 pt-0" style={{ 
-                        fontFamily: "'Nunito Sans', sans-serif", 
-                        fontSize: '15px', 
-                        fontWeight: '400', 
-                        color: '#5F5F5F', 
-                        lineHeight: '1.7',
-                        backgroundColor: 'white'
-                      }}>
-                        {faq.answer}
-                      </div>
+                      <div 
+                        className="px-6 pb-6 pt-0 text-base leading-relaxed text-[#5F5F5F]"
+                        style={{ 
+                          fontFamily: "'Nunito Sans', sans-serif", 
+                          backgroundColor: 'white'
+                        }}
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -1055,7 +1150,7 @@ export default function AyurvedicDietPCOSPage() {
                   color: '#5F5F5F',
                   lineHeight: '1.7'
                 }}>
-                  <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Why This Matters:</strong> A 2019 study in Fertility and Sterility found that women who combined diet with stress management saw 2x faster improvements in ovulation compared to diet alone.
+                  <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Why This Matters:</strong> Clinical evidence shows that integrating dietary changes with stress management leads to significantly faster improvements in ovulation compared to dietary changes alone.
                 </p>
               </div>
             </motion.div>
@@ -1387,85 +1482,30 @@ export default function AyurvedicDietPCOSPage() {
         </div>
       </section>
 
-      {/* Trust Badge Section */}
-      <section className="py-12 md:py-16 bg-[#E9E2D6] px-4 md:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 md:p-10 rounded-2xl shadow-lg"
-          >
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              {/* Doctor Image */}
-              <div className="flex-shrink-0">
-                <div className="w-24 h-24 rounded-full overflow-hidden" style={{ border: '3px solid #1F5E4B' }}>
-                  <img 
-                    src="/images/Dr Shamna Keloth Meethal.jpeg" 
-                    alt="DHA Licensed Ayurvedic Specialist"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left">
-                <p className="mb-2" style={{ 
-                  fontFamily: "'Nunito Sans', sans-serif", 
-                  fontSize: '16px', 
-                  fontWeight: '700', 
-                  color: '#1A1A1A'
-                }}>
-                  Content Reviewed by Dr. Shamna,
-                </p>
-                <p className="mb-4" style={{ 
-                  fontFamily: "'Nunito Sans', sans-serif", 
-                  fontSize: '15px', 
-                  fontWeight: '400', 
-                  color: '#5F5F5F'
-                }}>
-                  Ayurvedic Specialist at RamaCare Polyclinic, Dubai.
-                </p>
-                <p style={{ 
-                  fontFamily: "'Nunito Sans', sans-serif", 
-                  fontSize: '14px', 
-                  fontWeight: '400', 
-                  color: '#5F5F5F',
-                  lineHeight: '1.6'
-                }}>
-                  All information provided has been verified for accuracy and compliance with Dubai Health Authority (DHA) guidelines for integrative medicine.
-                </p>
-              </div>
-
-              {/* DHA Badge */}
-              <div className="flex-shrink-0 rounded-xl p-6 text-center" style={{ backgroundColor: '#F5F1EA' }}>
-                <div className="mb-2 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M16 3L4 8v8c0 8.4 5.12 16.24 12 18 6.88-1.76 12-9.6 12-18V8L16 3z" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 16l3 3 5-5" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <p className="font-semibold" style={{ 
-                  fontFamily: "'Nunito Sans', sans-serif", 
-                  fontSize: '14px', 
-                  fontWeight: '600', 
-                  color: '#1F5E4B'
-                }}>
-                  DHA Licensed
-                </p>
-                <p style={{ 
-                  fontFamily: "'Nunito Sans', sans-serif", 
-                  fontSize: '12px', 
-                  fontWeight: '400', 
-                  color: '#5F5F5F'
-                }}>
-                  Dubai Health Authority
-                </p>
-              </div>
-            </div>
-          </motion.div>
+      {/* Related Reading */}
+      <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
+            Related Ayurvedic Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-thyroid-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Thyroid Diet Plan</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-weight-loss-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Weight Loss Plan</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </section>
+
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-pcos-dubai" />
 
       {/* Exit Intent Popup Modal */}
       <AnimatePresence>

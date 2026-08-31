@@ -29,10 +29,14 @@ export default function PostSurgeryRehabilitationPage() {
   const [faqSearch, setFaqSearch] = useState('');
   const [activeFaq, setActiveFaq] = useState(null);
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/post-surgery-rehabilitation-dubai/";
+
   const seo = {
     title: "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
     metaDescription: "Expert Post-Surgery Rehabilitation Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment today.",
-    canonical: "https://ramacarepolyclinic.ae/services/post-surgery-rehabilitation-dubai/"
+    canonical: CANONICAL_URL,
+    keywords: "Post-surgery rehabilitation Dubai, Post-operative physiotherapy Dubai, ACL rehabilitation Dubai, Knee replacement recovery Dubai, Hip replacement rehab Dubai, Post-op physiotherapy Jumeirah, Surgical recovery physiotherapy Dubai",
+    ogImage: "https://ramacarepolyclinic.ae/images/Physiotherapist%20assisting%20a%20patient%20after%20knee%20replacement%20surgery.jpg"
   };
 
   const breadcrumbs = [
@@ -207,42 +211,106 @@ export default function PostSurgeryRehabilitationPage() {
   );
 
   // SEO schemas
-  const faqSchema = {
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://ramacarepolyclinic.ae/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Post-Surgery Rehabilitation",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "name": seo.title,
+        "url": CANONICAL_URL,
+        "description": seo.metaDescription,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "medicalAudience": { "@type": "Patient" },
+        "about": {
+          "@type": "MedicalTherapy",
+          "name": "Post-Surgery Rehabilitation",
+          "medicineSystem": "https://schema.org/PhysicalTherapy"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Post-Surgery Rehabilitation",
+        "alternateName": "Post-Operative Physiotherapy",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Structured, phase-based post-operative physiotherapy for ACL, knee/hip replacement, rotator cuff, spine, and other surgeries, coordinated with the patient's surgeon and delivered by DHA-licensed physiotherapists.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Post-Surgical Joints and Musculoskeletal Tissues",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
       }
-    }))
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Post-Surgery Rehabilitation Dubai",
-    "url": "https://ramacarepolyclinic.ae/services/post-surgery-rehabilitation-dubai",
-    "description": "DHA-licensed, surgeon-guided post-surgery rehabilitation at RamaCare Polyclinic, Dubai, covering joint replacement, ACL reconstruction, spine surgery, and sports surgery recovery.",
-    "medicalAudience": { "@type": "Patient" },
-    "about": {
-      "@type": "MedicalTherapy",
-      "name": "Post-Surgery Rehabilitation",
-      "medicineSystem": "https://schema.org/PhysicalTherapy"
-    },
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
-    }
+    ]
   };
 
   return (
@@ -250,11 +318,34 @@ export default function PostSurgeryRehabilitationPage() {
       <Head>
         <title key="title">{seo.title}</title>
         <meta name="description" content={seo.metaDescription} key="description" />
+        <meta name="keywords" content={seo.keywords} />
+        <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={seo.canonical} key="canonical" />
 
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.metaDescription} />
+        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:image" content={seo.ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content="Expert Post-Surgery Rehabilitation Dubai with DHA-licensed physiotherapists and personalized recovery plans." />
+        <meta name="twitter:image" content={seo.ogImage} />
+
         {/* Structured Data Schemas */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">
@@ -1054,7 +1145,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* Content Reviewer Badge */}
-        <ContentReviewBadge doctorName="Jeena Mathew" />
+        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="post-surgery-rehabilitation-dubai" />
       </div>
     </Layout>
   );

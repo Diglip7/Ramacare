@@ -239,20 +239,20 @@ export const subcategoryContent = {
   // ============================================
   'plantar-fasciitis-treatment-dubai': {
     seo: {
-      title: "Plantar Fasciitis Treatment Dubai - RamaCare Polyclinic UAE",
-      metaTitle: "Plantar Fasciitis Treatment Dubai – Expert Heel Pain Care",
+      title: "Plantar Fasciitis Treatment Dubai | RamaCare Polyclinic",
+      metaTitle: "Plantar Fasciitis Treatment Dubai | RamaCare Polyclinic",
       metaDescription: "Get expert Plantar Fasciitis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care, and proven heel pain relief. Book now.",
       keywords: "Plantar Fasciitis Treatment Dubai, Heel Pain Treatment Dubai, Physiotherapy for Plantar Fasciitis Dubai, Plantar Fascia Pain Dubai, Heel Spur Treatment Dubai, Foot Pain Treatment Dubai, Chronic Heel Pain Dubai, Flat Feet Treatment Dubai, Running Injury Treatment Dubai, Foot Physiotherapy Dubai",
-      slug: "/services/plantar-fasciitis-treatment-dubai",
-      canonical: "https://ramacarepolyclinic.ae/services/plantar-fasciitis-treatment-dubai"
+      slug: "/services/plantar-fasciitis-treatment-dubai/",
+      canonical: "https://ramacarepolyclinic.ae/services/plantar-fasciitis-treatment-dubai/"
     },
 
-    // Visible breadcrumb trail (mirrors breadcrumbSchema in the page) — was missing from the rendered page entirely
+    // Visible breadcrumb trail (mirrors breadcrumbSchema in the page)
     breadcrumbs: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/services/" },
       { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
-      { label: "Plantar Fasciitis Treatment Dubai", href: "/services/plantar-fasciitis-treatment-dubai" }
+      { label: "Plantar Fasciitis Treatment", href: "/services/plantar-fasciitis-treatment-dubai/" }
     ],
 
     hero: {
@@ -263,8 +263,9 @@ export const subcategoryContent = {
       // Restored from source doc: guide overview + direct specialist mention (was cut from hero.intro)
       guideNote: "In this guide, we'll cover what plantar fasciitis is, why it develops, how it's diagnosed, and what real, effective treatment looks like. If you'd rather speak with someone directly, our Plantar Fasciitis Specialist Dubai team is ready to assess your foot and get you started.",
       stats: [
-        { label: "Patients Treated", value: "2500+" },
-        { label: "DHA Licensed", value: "100%" }
+        { label: "Patients Treated", value: "2,500+" },
+        { label: "Years Combined", value: "15+" },
+        { label: "Patient Rating", value: "4.9/5" }
       ]
     },
 
@@ -531,15 +532,15 @@ export const subcategoryContent = {
       metaTitle: "Cervical Spondylosis Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Get expert Cervical Spondylosis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care plans. Book your assessment today.",
       keywords: "Cervical Spondylosis Treatment Dubai, neck arthritis treatment Dubai, cervical osteoarthritis Dubai, cervical disc degeneration Dubai, cervical degenerative disc disease Dubai, Neck Pain Treatment Dubai, Spine Physiotherapy Dubai, Dry Needling Dubai, neck pain clinic Jumeirah, posture correction Dubai",
-      slug: "/services/cervical-spondylosis-treatment-dubai",
-      canonical: "https://www.ramacarepolyclinic.ae/services/cervical-spondylosis-treatment-dubai"
+      slug: "/services/cervical-spondylosis-treatment-dubai/",
+      canonical: "https://ramacarepolyclinic.ae/services/cervical-spondylosis-treatment-dubai/"
     },
 
     breadcrumbs: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "/services" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai" },
-      { label: "Cervical Spondylosis Treatment Dubai", href: "/cervical-spondylosis-treatment-dubai" }
+      { label: "Services", href: "/services/" },
+      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
+      { label: "Cervical Spondylosis Treatment", href: "/services/cervical-spondylosis-treatment-dubai/" }
     ],
 
     hero: {
@@ -806,19 +807,19 @@ export const subcategoryContent = {
   //
   'shoulder-pain-treatment-dubai': {
     seo: {
-      title: "Shoulder Pain Treatment Dubai - RamaCare Polyclinic UAE",
+      title: "Shoulder Pain Treatment Dubai | RamaCare Polyclinic",
       metaTitle: "Shoulder Pain Treatment Dubai | RamaCare Polyclinic",
       metaDescription: "Struggling with shoulder pain? Get expert Shoulder Pain Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists. Book your appointment today.",
       keywords: "Shoulder Pain Treatment Dubai, Shoulder Impingement Syndrome Dubai, Shoulder Injury Treatment Dubai, Rotator Cuff Injury Dubai, Chronic Shoulder Pain Dubai, Shoulder Pain Specialist Dubai, Sports Shoulder Injury Dubai, Shoulder Physiotherapy Dubai, Frozen Shoulder Treatment Dubai, Shoulder Rehabilitation Dubai",
-      slug: "/services/shoulder-pain-treatment-dubai",
-      canonical: "https://www.ramacarepolyclinic.ae/services/shoulder-pain-treatment-dubai"
+      slug: "/services/shoulder-pain-treatment-dubai/",
+      canonical: "https://ramacarepolyclinic.ae/services/shoulder-pain-treatment-dubai/"
     },
 
     breadcrumbs: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "/services" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai" },
-      { label: "Shoulder Pain Treatment Dubai", href: "/services/shoulder-pain-treatment-dubai" }
+      { label: "Services", href: "/services/" },
+      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
+      { label: "Shoulder Pain Treatment Dubai", href: "/services/shoulder-pain-treatment-dubai/" }
     ],
 
     hero: {
@@ -1422,7 +1423,7 @@ export const subcategoryContent = {
       {
         title: "Stress-Related Headache Treatment",
         description: "Stress and anxiety can trigger recurring headaches and migraine attacks. Our wellness-focused approach helps patients manage physical and emotional stress more effectively.",
-        focus: "Holistic wellness support including Ayurveda treatment in Dubai for relaxation and stress relief."
+        focus: "Holistic wellness support including <a href=\"/services/ayurveda-dubai/\" class=\"underline font-semibold hover:text-[#2A7D63]\">Ayurveda treatment in Dubai</a> for relaxation and stress relief."
       },
       {
         title: "Neck & Posture-Related Headache Treatment",
@@ -2325,7 +2326,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Healthcare Facility'
         },
         {
           title: 'Experienced Team',
@@ -2359,8 +2360,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '6000+',
-          label: 'Hair Sessions Performed'
+          number: '2,500+',
+          label: 'Assessments Completed'
         },
         {
           id: 3,
@@ -2398,7 +2399,7 @@ export const subcategoryContent = {
     doctors: {
       badge: 'Medical Expertise',
       title: 'Meet Our Analysis Treatment Specialists in Dubai',
-      description: 'DHA-licensed dermatologists with extensive experience in advanced ayurvedic analysis treatment.',
+      description: 'DHA-licensed Ayurvedic doctors with extensive experience in personalized health analysis.',
       doctors: [
         DOCTORS.shamna, DOCTORS.syamkumar
       ]
@@ -2704,43 +2705,43 @@ export const subcategoryContent = {
           description: null
         }
       ],
-      comparisonTitle: 'Ayurvedic Hairfall Treatment vs Conventional Methods',
-      comparisonDescription: 'Compare our holistic Ayurvedic approach with conventional hair treatment methods',
+      comparisonTitle: 'Ayurvedic Individual Analysis vs Generic Care',
+      comparisonDescription: 'Compare our personalized Ayurvedic health assessment with generic symptom-based care',
       comparisonHeaders: {
         feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Treatment',
-        traditional: 'Conventional Methods'
+        ourTreatment: 'Ayurvedic Individual Analysis',
+        traditional: 'Generic Care'
       },
       comparisonData: [
         {
-          feature: 'Treatment Approach',
-          ayurvedic: 'Holistic, natural, addresses root cause',
-          conventional: 'Symptomatic, chemical-based'
+          feature: 'Diagnostic Focus',
+          ayurvedic: 'Root cause & dosha constitution assessment',
+          conventional: 'Surface symptom masking only'
         },
         {
-          feature: 'Side Effects',
-          ayurvedic: 'Minimal to none',
-          conventional: 'Possible dryness, irritation'
+          feature: 'Personalization',
+          ayurvedic: 'Fully customized to individual body type',
+          conventional: 'One-size-fits-all generic prescriptions'
         },
         {
-          feature: 'Duration',
-          ayurvedic: '3-6 months for visible results',
-          conventional: 'Quick initial results, may require maintenance'
+          feature: 'Assessment Depth',
+          ayurvedic: 'Prakriti, Vikriti & lifestyle evaluation',
+          conventional: 'Brief single-symptom evaluation'
         },
         {
-          feature: 'Long-term Sustainability',
-          ayurvedic: 'Yes, promotes natural hair health',
-          conventional: 'May require ongoing treatment'
+          feature: 'Long-term Health Impact',
+          ayurvedic: 'Prevents recurrence & promotes vitality',
+          conventional: 'Temporary relief with recurring symptoms'
         },
         {
-          feature: 'Cost Effectiveness',
-          ayurvedic: 'Moderate, one-time investment',
-          conventional: 'Ongoing costs for maintenance'
+          feature: 'Treatment Planning',
+          ayurvedic: 'Targeted diet, herbs & natural therapies',
+          conventional: 'Standard pharmaceutical management'
         },
         {
           feature: 'Overall Wellness',
-          ayurvedic: 'Improves overall health',
-          conventional: 'Focused on hair only'
+          ayurvedic: 'Restores mind, body & metabolic balance',
+          conventional: 'Focuses on isolated complaints'
         }
       ]
     },
@@ -2980,7 +2981,7 @@ export const subcategoryContent = {
     // Patient Testimonials Section
     testimonials: {
       title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who experienced natural hair restoration',
+      subtitle: 'Verified testimonials from patients who received a personalized health analysis',
       testimonials: [
         {
           id: 1,
@@ -3059,7 +3060,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Healthcare Facility'
         },
         {
           title: 'Experienced Team',
@@ -4013,7 +4014,7 @@ export const subcategoryContent = {
       problemIntro: {
         title: 'Common Health & Nutrition Concerns',
         description:
-          'Many people follow generic diets without understanding their body type, leading to digestive issues issues, low energy, weight imbalance, and lifestyle diseases.'
+          'Many people follow generic diets without understanding their body type, leading to digestive issues, low energy, weight imbalance, and lifestyle diseases.'
       },
       solutionIntro: {
         title: 'Advanced Ayurvedic Diet Plan in Dubai',
@@ -4025,7 +4026,7 @@ export const subcategoryContent = {
           id: 1,
           title: 'What Is an Ayurvedic Diet Plan?',
           description:
-            'An Ayurvedic Diet Plan is a nutrition program tailored to your body constitution (Prakriti) and current imbalances (Vikriti). It focuses on useful digestion, dosha balance, and holistic health, rather than following generic diet trends. This helps prevent disease, improve energy, and support natural healing.'
+            'An Ayurvedic Diet Plan is a nutrition program tailored to your body constitution (Prakriti) and current imbalances (Vikriti). It focuses on efficient digestion, dosha balance, and holistic health, rather than following generic diet trends. This helps prevent disease, improve energy, and support natural healing.'
         },
         {
           id: 2,
@@ -4049,7 +4050,7 @@ export const subcategoryContent = {
             'Suffer from lifestyle disorders like obesity, diabetes, or hypertension',
             'Experience skin, hair, or immunity concerns',
             'Seek natural weight management',
-            'Enjoy long-term power, vitality, and wellness',
+            'Enjoy long-term energy, vitality, and wellness',
             'Choose preventative healthcare and holistic food'
           ]
         },
@@ -4057,7 +4058,7 @@ export const subcategoryContent = {
           id: 4,
           title: 'Treatment Duration',
           description:
-            'Initial Consultation: 30–45 minutes , Diet Plan: 1 session , Follow-Up Holidays: As shown for monitoring and adjustments'
+            'Initial Consultation: 30–45 minutes , Diet Plan: 1 session , Follow-Up Visits: As advised for monitoring and adjustments'
         },
       ],
       rootCauses: [
@@ -5366,8 +5367,106 @@ export const subcategoryContent = {
     },
     faq: {
       title: 'Frequently Asked Questions',
-      description: 'Ayurvedic Diet Plans in Dubai',
+      description: 'Basti Therapy at Ramacarepolyclinic',
       resourcesHeading: 'Complete Ayurvedic Services',
+      resources: [
+        {
+          id: 1,
+          text: 'Panchakarma Treatment',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/panchakarma-treatment/'
+        },
+        {
+          id: 2,
+          text: 'Diet Advice',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 3,
+          text: 'Analysis of Individual',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/analysis-of-individual-dubai/'
+        },
+        {
+          id: 4,
+          text: 'Ayurvedic Hairfall Treatment',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-hairfall-treatment-dubai/'
+        },
+        {
+          id: 5,
+          text: 'Skin Diseases Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/skin-diseases-treatment/'
+        },
+        {
+          id: 6,
+          text: 'Ayurvedic Diet Plan',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 7,
+          text: 'Gastric Disorder Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/gastrointestinal-diseases-treatment-dubai/'
+        },
+        {
+          id: 8,
+          text: 'PCOS Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/pcos-treatment-dubai/'
+        },
+        {
+          id: 9,
+          text: 'Abhyanga Massage',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/abhyanga-massage-dubai/'
+        },
+        {
+          id: 10,
+          text: 'Basti Therapy',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/basti-therapy-dubai/'
+        },
+        {
+          id: 11,
+          text: 'Shirodhara Therapy',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/shirodhara-therapy-in-dubai/'
+        },
+        {
+          id: 12,
+          text: 'Nasya Therapy',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/nasya-therapy-dubai/'
+        },
+        {
+          id: 13,
+          text: 'Ayurvedic Gut Health',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-gut-health-dubai/'
+        },
+        {
+          id: 14,
+          text: 'Ayurvedic Detox Diet',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-detox-diet-plan-dubai/'
+        },
+        {
+          id: 15,
+          text: 'Ayurvedic Diet for PCOS',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-diet-pcos-dubai/'
+        },
+        {
+          id: 16,
+          text: 'Ayurvedic Diet for Thyroid',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-thyroid-dubai/'
+        }
+      ],
       faqs: [
         {
           id: 1,
@@ -5474,7 +5573,7 @@ export const subcategoryContent = {
       title: 'Understanding Ayurvedic Nasya Therapy',
       problemIntro: {
         title: 'The Challenge: Sinus & Respiratory Imbalance',
-        description: 'Nasya is a traditional Ayurvedic detoxification procedure that involves the controlled administration of herbal oils or herbal extracts through the nasal passages. According to Ayurveda, the nose is considered the gateway to the head, making Nasya Therapy an important treatment for supporting respiratory wellness, mental clarity, sinus health, and nervous system balance.\n\nModern lifestyle factors such as pollution, dust exposure, stress, poor sleep quality, excessive screen time, and unhealthy routines may contribute to toxin accumulation in the head and neck region. Ayurvedic nasal detox therapies aim to cleanse these pathways naturally while promoting relaxation and overall wellness.'
+        description: 'Living in urban environments like Dubai exposes individuals to air conditioning, ambient dust, dry desert air, and environmental pollutants that can irritate the respiratory tract and block sinus passages. Chronic sinus congestion, frequent headaches, dry nasal passages, and mental fatigue often arise when toxins accumulate in the head and neck region, impacting daily productivity, sleep quality, and overall well-being.'
       },
       solutionIntro: {
         title: 'Our Solution: Personalized Nasya Treatment in Dubai',
@@ -5766,7 +5865,7 @@ export const subcategoryContent = {
     },
     doctors: {
       badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Ayurvedic Specialists',
+      title: 'Meet Our Nasya Therapy Specialists in Dubai',
       description: 'Our experienced Ayurvedic doctors are committed to providing personalized care and effective treatments.',
       doctors: [
         DOCTORS.shamna, DOCTORS.syamkumar
@@ -5781,6 +5880,104 @@ export const subcategoryContent = {
       title: 'Frequently Asked Questions About Nasya Therapy in Dubai',
       description: 'Personalized Ayurvedic Nasya Therapy & Wellness Support',
       resourcesHeading: 'Complete Ayurvedic Services',
+      resources: [
+        {
+          id: 1,
+          text: 'Panchakarma Treatment',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/panchakarma-treatment/'
+        },
+        {
+          id: 2,
+          text: 'Diet Advice',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 3,
+          text: 'Analysis of Individual',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/analysis-of-individual-dubai/'
+        },
+        {
+          id: 4,
+          text: 'Ayurvedic Hairfall Treatment',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-hairfall-treatment-dubai/'
+        },
+        {
+          id: 5,
+          text: 'Skin Diseases Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/skin-diseases-treatment/'
+        },
+        {
+          id: 6,
+          text: 'Ayurvedic Diet Plan',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 7,
+          text: 'Gastric Disorder Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/gastrointestinal-diseases-treatment-dubai/'
+        },
+        {
+          id: 8,
+          text: 'PCOS Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/pcos-treatment-dubai/'
+        },
+        {
+          id: 9,
+          text: 'Abhyanga Massage',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/abhyanga-massage-dubai/'
+        },
+        {
+          id: 10,
+          text: 'Basti Therapy',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/basti-therapy-dubai/'
+        },
+        {
+          id: 11,
+          text: 'Shirodhara Therapy',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/shirodhara-therapy-in-dubai/'
+        },
+        {
+          id: 12,
+          text: 'Nasya Therapy',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/nasya-therapy-dubai/'
+        },
+        {
+          id: 13,
+          text: 'Ayurvedic Gut Health',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-gut-health-dubai/'
+        },
+        {
+          id: 14,
+          text: 'Ayurvedic Detox Diet',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-detox-diet-plan-dubai/'
+        },
+        {
+          id: 15,
+          text: 'Ayurvedic Diet for PCOS',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-diet-pcos-dubai/'
+        },
+        {
+          id: 16,
+          text: 'Ayurvedic Stress Management',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-stress-management-dubai/'
+        }
+      ],
       faqs: [
         {
           id: 1,
@@ -5899,7 +6096,7 @@ export const subcategoryContent = {
         ' Ayurvedic Root-Cause Healing Approach',
       ],
       image: {
-        src: '/images/shirodara.jpg',
+        src: '/images/shirodhara.jpg',
         alt: 'Traditional Shirodhara Therapy with herbal oil'
       },
       medicalNotice: {
@@ -6340,8 +6537,105 @@ export const subcategoryContent = {
     faq: {
       title: 'Frequently Asked Questions (FAQs)',
       description: 'Expert answers about Shirodhara Therapy in Dubai',
-      resourcesHeading: null,
-      resources: [],
+      resourcesHeading: 'Complete Ayurvedic Services',
+      resources: [
+        {
+          id: 1,
+          text: 'Panchakarma Treatment',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/panchakarma-treatment/'
+        },
+        {
+          id: 2,
+          text: 'Diet Advice',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 3,
+          text: 'Analysis of Individual',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/analysis-of-individual-dubai/'
+        },
+        {
+          id: 4,
+          text: 'Ayurvedic Hairfall Treatment',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-hairfall-treatment-dubai/'
+        },
+        {
+          id: 5,
+          text: 'Skin Diseases Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/skin-diseases-treatment/'
+        },
+        {
+          id: 6,
+          text: 'Ayurvedic Diet Plan',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 7,
+          text: 'Gastric Disorder Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/gastrointestinal-diseases-treatment-dubai/'
+        },
+        {
+          id: 8,
+          text: 'PCOS Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/pcos-treatment-dubai/'
+        },
+        {
+          id: 9,
+          text: 'Abhyanga Massage',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/abhyanga-massage-dubai/'
+        },
+        {
+          id: 10,
+          text: 'Basti Therapy',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/basti-therapy-dubai/'
+        },
+        {
+          id: 11,
+          text: 'Shirodhara Therapy',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/shirodhara-therapy-in-dubai/'
+        },
+        {
+          id: 12,
+          text: 'Nasya Therapy',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/nasya-therapy-dubai/'
+        },
+        {
+          id: 13,
+          text: 'Ayurvedic Gut Health',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-gut-health-dubai/'
+        },
+        {
+          id: 14,
+          text: 'Ayurvedic Detox Diet',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-detox-diet-plan-dubai/'
+        },
+        {
+          id: 15,
+          text: 'Ayurvedic Diet for PCOS',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-diet-pcos-dubai/'
+        },
+        {
+          id: 16,
+          text: 'Ayurvedic Stress Management',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-stress-management-dubai/'
+        }
+      ],
       faqs: [
         {
           id: 1,
@@ -6914,6 +7208,105 @@ export const subcategoryContent = {
           id: 15,
           question: 'Why choose Abhyanga massage in Dubai?',
           answer: 'Abhyanga massage in Dubai offers a natural, Ayurvedic approach to relaxation, detoxification, and wellness, making it ideal for managing stress, improving health, and restoring body balance.'
+        }
+      ],
+      resourcesHeading: 'Complete Ayurvedic Services',
+      resources: [
+        {
+          id: 1,
+          text: 'Panchakarma Treatment',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/panchakarma-treatment/'
+        },
+        {
+          id: 2,
+          text: 'Diet Advice',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 3,
+          text: 'Analysis of Individual',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/analysis-of-individual-dubai/'
+        },
+        {
+          id: 4,
+          text: 'Ayurvedic Hairfall Treatment',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-hairfall-treatment-dubai/'
+        },
+        {
+          id: 5,
+          text: 'Skin Diseases Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/skin-diseases-treatment/'
+        },
+        {
+          id: 6,
+          text: 'Ayurvedic Diet Plan',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-plan-dubai/'
+        },
+        {
+          id: 7,
+          text: 'Gastric Disorder Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/gastrointestinal-diseases-treatment-dubai/'
+        },
+        {
+          id: 8,
+          text: 'PCOS Treatment',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/pcos-treatment-dubai/'
+        },
+        {
+          id: 9,
+          text: 'Abhyanga Massage',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/abhyanga-massage-dubai/'
+        },
+        {
+          id: 10,
+          text: 'Basti Therapy',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/basti-therapy-dubai/'
+        },
+        {
+          id: 11,
+          text: 'Shirodhara Therapy',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/shirodhara-therapy-in-dubai/'
+        },
+        {
+          id: 12,
+          text: 'Nasya Therapy',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/nasya-therapy-dubai/'
+        },
+        {
+          id: 13,
+          text: 'Ayurvedic Gut Health',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-gut-health-dubai/'
+        },
+        {
+          id: 14,
+          text: 'Ayurvedic Detox Diet',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-detox-diet-plan-dubai/'
+        },
+        {
+          id: 15,
+          text: 'Ayurvedic Diet for PCOS',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-diet-pcos-dubai/'
+        },
+        {
+          id: 16,
+          text: 'Ayurvedic Diet for Thyroid',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-thyroid-dubai/'
         }
       ]
     },
@@ -10941,8 +11334,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '6000+',
-          label: 'Electrotherapy Performed'
+          number: '6,000+',
+          label: 'Pelvic Floor Sessions Completed'
         },
         {
           id: 3,
@@ -10974,7 +11367,7 @@ export const subcategoryContent = {
         alt: 'Pelvic Floor Therapy in Dubai is provided by specialists to strengthen pelvic muscles and improve bladder and core health.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual body constitution, hair condition, and adherence to the treatment plan. All Pelvic Floor Therapy treatments are provided at a DHA-licensed clinic using approved herbal formulations and protocols.',
+        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual condition, symptom severity, and adherence to the recommended therapy plan. All Pelvic Floor Therapy treatments are provided by DHA-licensed physiotherapists at RamaCare Polyclinic, following individualized assessment and evidence-based rehabilitation protocols.',
         show: true
       }
     },
@@ -11450,7 +11843,7 @@ export const subcategoryContent = {
     faq: {
       title: 'Frequently Asked Questions About Pelvic Floor Therapy in Dubai',
       description: null,
-      resourcesHeading: 'Complete Physiotherepy Services',
+      resourcesHeading: 'Complete Physiotherapy Services',
       faqs: [
         {
           id: 1,
@@ -11661,7 +12054,7 @@ export const subcategoryContent = {
     // Patient Testimonials Section
     testimonials: {
       title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who experienced natural hair restoration',
+      subtitle: 'Verified testimonials from patients who experienced improved pelvic health and quality of life',
       testimonials: [
         {
           id: 1,
@@ -11740,18 +12133,18 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Physiotherapy Facility'
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Procedures',
-          description: 'Completed'
+          title: '2,500+ Patients',
+          description: 'Treated'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -11772,8 +12165,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '6000+',
-          label: 'Electrotherapy Performed'
+          number: '2,500+',
+          label: 'Functional Exercise Sessions Completed'
         },
         {
           id: 3,
@@ -12253,7 +12646,7 @@ export const subcategoryContent = {
     faq: {
       title: 'Frequently Asked Questions (FAQs) – Functional Exercises in Dubai',
       description: 'Expert answers to common questions about Functional Exercises in Dubai.',
-      resourcesHeading: 'Complete Physiotherepy Services',
+      resourcesHeading: 'Complete Physiotherapy Services',
       faqs: [
         {
           id: 1,
@@ -12543,18 +12936,18 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Physiotherapy Facility'
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Procedures',
-          description: 'Completed'
+          title: '2,500+ Patients',
+          description: 'Treated'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -12575,8 +12968,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '6000+',
-          label: 'Electrotherapy Performed'
+          number: '6,000+',
+          label: 'Physiotherapy Sessions Completed'
         },
         {
           id: 3,
@@ -12608,7 +13001,7 @@ export const subcategoryContent = {
         alt: 'Scoliosis treatment provided by specialists to improve spinal alignment, posture, and overall mobility.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual body constitution, hair condition, and adherence to the treatment plan. All Ayurvedic treatments are provided at a DHA-licensed clinic using approved herbal formulations and protocols.',
+        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on the severity of the spinal curvature, individual condition, and adherence to the recommended therapy plan. All Scoliosis Treatment programs are provided by DHA-licensed physiotherapists at RamaCare Polyclinic, following individualized assessment and evidence-based rehabilitation protocols.',
         show: true
       }
     },
@@ -13054,7 +13447,7 @@ export const subcategoryContent = {
     faq: {
       title: 'Frequently Asked Questions About Scoliosis Treatment in Dubai',
       description: null,
-      resourcesHeading: 'Complete Physiotherepy Services',
+      resourcesHeading: 'Complete Physiotherapy Services',
       faqs: [
         {
           id: 1,
@@ -13265,7 +13658,7 @@ export const subcategoryContent = {
     // Patient Testimonials Section
     testimonials: {
       title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who experienced natural hair restoration',
+      subtitle: 'Verified testimonials from patients who experienced improved posture, reduced pain, and better spinal health',
       testimonials: [
         {
           id: 1,
@@ -13344,18 +13737,18 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Physiotherapy Facility'
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Procedures',
-          description: 'Completed'
+          title: '2,500+ Patients',
+          description: 'Treated'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -13880,7 +14273,7 @@ export const subcategoryContent = {
     faq: {
       title: 'Frequently Asked Questions – Dry Needling Therapy in Dubai',
       description: 'Expert answers to common questions about Dry Needling Therapy in Dubai.',
-      resourcesHeading: 'Complete Physiotherepy Services',
+      resourcesHeading: 'Complete Physiotherapy Services',
       faqs: [
         {
           id: 1,
@@ -14284,18 +14677,18 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Physiotherapy Facility'
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Procedures',
-          description: 'Completed'
+          title: '2,500+ Patients',
+          description: 'Treated'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -31830,7 +32223,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed Cosmetic dental Clinic',
+        'DHA-Licensed Cosmetic Dental Clinic',
         ' Experienced Cosmetic Dentists',
         ' Advanced Teeth Whitening Techniques'
       ],
@@ -32242,7 +32635,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -32284,7 +32677,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -32374,7 +32767,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -32395,7 +32788,7 @@ export const subcategoryContent = {
   'dental-dubai-root-canal-treatment': {
     hero: {
       subtitle: 'Painless Relief & Advanced Tooth-Saving Dental Care',
-      description: 'Root canal treatment in Dubai is a highly effective restorative dental procedure designed to eliminate infection, relieve severe tooth pain, and preserve damaged natural teeth.At our DHA-licensed dental clinic in Dubai Healthcare City, experienced dentists and endodontists use advanced diagnostic technology, modern pain-management techniques, and minimally invasive procedures to provide comfortable and stress-free treatment.\n\n A root canal procedure not only removes infection from inside the tooth but also helps restore normal chewing function and prevent future dental complications.Early treatment can save the natural tooth, reduce the risk of abscess formation, and protect surrounding teeth and gums from infection spread.\n\n Many patients avoid treatment due to the misconception that root canals are painful.However, modern root canal therapy is performed using advanced anaesthesia and precision dental instruments, making the procedure comparable to receiving a routine dental filling.Our clinic focuses on patient comfort, accurate diagnosis, and long-term dental health while delivering personalized care using DHA-approved protocols and sterilization standards.',
+      description: 'Root canal treatment in Dubai is a highly effective restorative dental procedure designed to eliminate infection, relieve severe tooth pain, and preserve damaged natural teeth.At our DHA-licensed dental clinic in Jumeirah 1, Dubai, experienced dentists and endodontists use advanced diagnostic technology, modern pain-management techniques, and minimally invasive procedures to provide comfortable and stress-free treatment.\n\n A root canal procedure not only removes infection from inside the tooth but also helps restore normal chewing function and prevent future dental complications.Early treatment can save the natural tooth, reduce the risk of abscess formation, and protect surrounding teeth and gums from infection spread.\n\n Many patients avoid treatment due to the misconception that root canals are painful.However, modern root canal therapy is performed using advanced anaesthesia and precision dental instruments, making the procedure comparable to receiving a routine dental filling.Our clinic focuses on patient comfort, accurate diagnosis, and long-term dental health while delivering personalized care using DHA-approved protocols and sterilization standards.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -32411,7 +32804,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed dental Clinic',
+        'DHA-Licensed Dental Clinic',
         'Experienced Endodontists',
         'Advanced Pain-Free Techniques'
       ],
@@ -32472,7 +32865,7 @@ export const subcategoryContent = {
       leftCards: [
         {
           id: 1,
-          title: 'Understanding Root Canal Treatment in Dubai',
+          title: 'What Is Root Canal Treatment?',
           description:
             'Root canal treatment, also known as endodontic therapy, is a dental procedure used to remove infected or inflamed pulp tissue from inside a tooth. The pulp contains nerves, connective tissue, and blood vessels that help the tooth develop during growth. When bacteria enter the pulp through deep cavities, cracks, trauma, or repeated dental procedures, infection and inflammation may occur.\n\nDuring the procedure, the infected pulp is removed, the root canals are cleaned and disinfected, and the inside of the tooth is sealed to prevent reinfection. In many cases, a dental crown is later placed to strengthen and protect the treated tooth.\n\nModern root canal treatment focuses on preserving the natural tooth whenever possible while restoring comfort and functionality.'
         },
@@ -32886,7 +33279,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -32928,7 +33321,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -33117,7 +33510,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -33154,8 +33547,8 @@ export const subcategoryContent = {
         }
       },
       features: [
-        ' Dubai Healthcare City',
-        ' DHA-Licensed dental Clinic',
+        ' Jumeirah 1, Dubai',
+        ' DHA-Licensed Dental Clinic',
         ' 4.9/5 Rating (500+ Verified Reviews)',
       ],
       image: {
@@ -33215,7 +33608,7 @@ export const subcategoryContent = {
       leftCards: [
         {
           id: 1,
-          title: 'Understanding Composite Veneers in Dubai',
+          title: 'What Are Composite Veneers?',
           description:
             'Composite veneers are thin layers of tooth-colored composite resin that are applied directly to the front surface of teeth to improve smile appearance. The material is carefully sculpted, shaped, and polished to match the natural texture, color, and contour of surrounding teeth. Unlike porcelain veneers, composite veneers usually require minimal enamel removal and can often be completed in a single appointment, making them a convenient and affordable cosmetic dentistry option. The procedure combines cosmetic artistry with restorative dental techniques to improve smile aesthetics while maintaining natural tooth integrity. Modern composite materials are highly durable, aesthetically refined, and designed to mimic the translucency and texture of real teeth.'
         },
@@ -33708,7 +34101,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -33750,7 +34143,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -33951,8 +34344,8 @@ export const subcategoryContent = {
         }
       },
       features: [
-        ' Dubai Healthcare City',
-        ' DHA-Licensed dental Clinic',
+        ' Jumeirah 1, Dubai',
+        ' DHA-Licensed Dental Clinic',
         ' 4.9/5 Rating (500+ Verified Reviews)',
       ],
       image: {
@@ -34538,7 +34931,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -34574,7 +34967,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed Cosmetic dental Clinic',
+        'DHA-Licensed Cosmetic Dental Clinic',
         'Experienced Snap-On Smile Dentists',
         ' Advanced, Pain-Free Cosmetic Dentistry',
         'Advanced Cosmetic Dentistry Standards'
@@ -35001,7 +35394,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -35043,7 +35436,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -35133,7 +35526,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -35152,7 +35545,7 @@ export const subcategoryContent = {
   },
   'dental-dubai-teeth-composite-restoration': {
     hero: {
-      subtitle: 'Natural Tooth Repair & Aesthetic dental Care',
+      subtitle: 'Natural Tooth Repair & Aesthetic Dental Care',
       description: 'Tooth Composite Restoration is a modern dental treatment that repairs damaged, decayed, or chipped teeth using high-quality tooth-colored materials. At Rama Care Polyclinic, we focus on restoring your tooth’s strength, function, and appearance in a comfortable and minimally invasive way.',
       rating: '500+ Happy Clients',
 
@@ -35169,7 +35562,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed dental Clinic',
+        'DHA-Licensed Dental Clinic',
         'Experienced Cosmetic Dentists',
         'Tooth-Colored, Natural Results'
       ],
@@ -35239,7 +35632,7 @@ export const subcategoryContent = {
           title: 'Who Needs Tooth Composite Restoration?',
           description: 'This treatment is ideal for patients with:',
           listItems: [
-            'dental cavities or early tooth decay',
+            'Dental cavities or early tooth decay',
             'Chipped or broken teeth',
             'Worn enamel from grinding',
             'Small gaps or uneven tooth edges',
@@ -35337,7 +35730,7 @@ export const subcategoryContent = {
           description:
             'A thorough dental check to evaluate damage and plan the restoration.',
           keyActivities: [
-            'dental examination',
+            'Dental examination',
             'X-ray (if required)',
             'Shade selection',
             'Treatment explanation'
@@ -35542,7 +35935,7 @@ export const subcategoryContent = {
         },
         {
           id: 7,
-          question: 'What is the cost off tooth composite restoration in Dubai?',
+          question: 'What is the cost of tooth composite restoration in Dubai?',
           answer:
             'The cost depends on tooth condition, number of teeth treated, and complexity. Rama Care Polyclinic offers transparent pricing with no hidden charges.'
         },
@@ -35605,7 +35998,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -35647,7 +36040,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -35773,7 +36166,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed dental Clinic',
+        'DHA-Licensed Dental Clinic',
         'Experienced Orthodontists',
         'Advanced Braces Technology',
         'Proven orthodontic results',
@@ -35837,9 +36230,9 @@ export const subcategoryContent = {
       leftCards: [
         {
           id: 1,
-          title: 'What Are dental Braces?',
+          title: 'What Are Dental Braces?',
           description:
-            'dental braces are orthodontic appliances that gradually move teeth into proper alignment using brackets, wires, and controlled pressure. They improve bite function, appearance, and overall oral health.'
+            'Dental braces are orthodontic appliances that gradually move teeth into proper alignment using brackets, wires, and controlled pressure. They improve bite function, appearance, and overall oral health.'
         },
         {
           id: 2,
@@ -35974,7 +36367,7 @@ export const subcategoryContent = {
           description:
             'A detailed assessment to understand alignment issues and recommend the most suitable brace option.',
           keyActivities: [
-            'dental and orthodontic examination',
+            'Dental and orthodontic examination',
             'Digital X-rays and photographs',
             'Bite and jaw analysis',
             'Treatment plan discussion'
@@ -36243,7 +36636,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -36285,7 +36678,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -36412,8 +36805,8 @@ export const subcategoryContent = {
         }
       },
       features: [
-        ' DHA-Licensed dental Clinic',
-        ' Experienced dental Hygienists',
+        ' DHA-Licensed Dental Clinic',
+        ' Experienced Dental Hygienists',
         ' Advanced Pain-Free Cleaning Techniques',
       ],
       image: {
@@ -36949,7 +37342,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -36991,7 +37384,7 @@ export const subcategoryContent = {
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -37111,7 +37504,7 @@ export const subcategoryContent = {
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -37148,7 +37541,7 @@ export const subcategoryContent = {
         }
       },
       features: [
-        'DHA-Licensed dental Clinic',
+        'DHA-Licensed Dental Clinic',
         'Experienced Periodontists',
         ' Advanced, Pain-Free Techniques',
       ],
@@ -37562,7 +37955,7 @@ Recovery: Minimal downtime for non-surgical care
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -37604,7 +37997,7 @@ Recovery: Minimal downtime for non-surgical care
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -37724,7 +38117,7 @@ Recovery: Minimal downtime for non-surgical care
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -37745,7 +38138,7 @@ Recovery: Minimal downtime for non-surgical care
   'dental-dubai-dental-crown-bridge': {
     hero: {
       subtitle: 'Restore Strength, Function & Natural Smile',
-      description: 'dental crowns and bridges are reliable restorative dental solutions designed to repair damaged teeth and replace missing ones. At Rama Care Polyclinic, we offer high-quality dental crowns and bridges in Dubai, enabling patients to regain comfortable chewing, clear speech, and a confident smile with long-lasting results.',
+      description: 'Dental crowns and bridges are reliable restorative dental solutions designed to repair damaged teeth and replace missing ones. At Rama Care Polyclinic, we offer high-quality dental crowns and bridges in Dubai, enabling patients to regain comfortable chewing, clear speech, and a confident smile with long-lasting results.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -37761,16 +38154,16 @@ Recovery: Minimal downtime for non-surgical care
         }
       },
       features: [
-        ' DHA-Licensed dental Clinic',
+        ' DHA-Licensed Dental Clinic',
         'Experienced Prosthodontic Dentists',
         ' Advanced Digital Dentistry',
       ],
       image: {
         src: '/images/dental-crown1.jpg',
-        alt: 'dental crown bridges in Dubai used to restore damaged or missing teeth and improve oral function.'
+        alt: 'Dental crown bridges in Dubai used to restore damaged or missing teeth and improve oral function.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer:Results may vary depending on individual skin condition and treatment adherence. All Skin Tightening Treatment in Dubai at ramacarepolyclinic follows DHA-approved medical protocols and safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual dental condition and treatment adherence. All Dental Crown & Bridges treatments at RamaCare Polyclinic follow DHA-approved medical protocols and safety standards.',
         show: true
       }
     },
@@ -37810,19 +38203,19 @@ Recovery: Minimal downtime for non-surgical care
       ]
     },
     overview: {
-      title: 'Understanding dental Crowns & Bridges',
+      title: 'Understanding Dental Crowns & Bridges',
       problemIntro: {
         title: 'Common Problems Caused by Damaged or Missing Teeth',
         description: 'Damaged or missing teeth can impact daily comfort, facial structure, and long-term oral health. Many patients postpone treatment due to fear of discomfort, high costs, or concerns about unnatural-looking restorations.'
       },
       solutionIntro: {
-        title: 'Advanced dental Crown & Bridges in Dubai',
+        title: 'Advanced Dental Crown & Bridges in Dubai',
         description: 'At Rama Care Polyclinic, we offer personalised crown and bridge solutions designed to restore function, comfort, and natural aesthetics.Our Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
           id: 1,
-          title: 'What Is a dental Crown & Bridge?',
+          title: 'What Is a Dental Crown & Bridge?',
           description: 'A dental crown is a custom-made cap placed over a damaged or weakened tooth. It restores strength, shape, and appearance while protecting the tooth from further damage.\n\n A dental bridge replaces one or more missing teeth by anchoring an artificial tooth between two supporting crowns. It restores chewing ability and prevents teeth from shifting.'
         },
         {
@@ -38067,7 +38460,7 @@ Long-term oral health support
       ]
     },
     pricing: {
-      title: 'Transparent Pricing & dental Crown & Bridges Packages',
+      title: 'Transparent Pricing & Dental Crown & Bridges Packages',
       description:
         'Customised dental crown and bridge packages based on your tooth condition, number of missing teeth, and smile restoration goals.',
       packages: [
@@ -38208,7 +38601,7 @@ Long-term oral health support
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -38250,7 +38643,7 @@ Long-term oral health support
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -38370,7 +38763,7 @@ Long-term oral health support
       statCards: [
         {
           title: 'DHA Licensed',
-          description: 'Certified dental Facility'
+          description: 'Certified Dental Facility'
         },
         {
           title: 'Experienced Team',
@@ -38407,7 +38800,7 @@ Long-term oral health support
         }
       },
       features: [
-        '  DHA-Licensed dental Clinic',
+        'DHA-Licensed Dental Clinic',
         'Experienced Prosthodontists',
         ' Custom-Made Dentures for Comfort & Fit',
       ],
@@ -38653,13 +39046,13 @@ Seek a cost-effective smile restoration`
     },
     benefits: {
       title: 'Clinically-Observed Benefits',
-      description: 'Evidence-based results from our crown and bridge treatment procedures.',
-      comparisonTitle: 'Teeth Dentures vs dental Implants',
+      description: 'Evidence-based results from our teeth denture treatment procedures.',
+      comparisonTitle: 'Teeth Dentures vs Dental Implants',
       comparisonDescription: 'Compare our restorative approach with alternative treatments',
       comparisonHeaders: {
         feature: 'Aspect',
         ourTreatment: 'Dentures',
-        traditional: 'dental Implants'
+        traditional: 'Dental Implants'
       },
       benefits: [
         {
@@ -38733,7 +39126,7 @@ Seek a cost-effective smile restoration`
           subtitle: 'For partial tooth loss or first-time denture users',
           duration: '7–10 days',
           features: [
-            'dental consultation & oral examination',
+            'Dental consultation & oral examination',
             'Custom denture planning and design',
             'High-quality partial or basic full denture',
             'Initial fitting and bite adjustment',
@@ -38783,7 +39176,7 @@ Seek a cost-effective smile restoration`
           id: 1,
           question: 'What are dental dentures?',
           answer:
-            'dental dentures are removable appliances designed to replace missing teeth, restoring chewing ability, speech clarity, facial structure, and confidence in your smile.'
+            'Dental dentures are removable appliances designed to replace missing teeth, restoring chewing ability, speech clarity, facial structure, and confidence in your smile.'
         },
         {
           id: 2,
@@ -38879,7 +39272,7 @@ Seek a cost-effective smile restoration`
         },
         {
           id: 2,
-          text: 'dental Veneers',
+          text: 'Dental Veneers',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/dental-veneers-dubai/'
         },
@@ -38921,7 +39314,7 @@ Seek a cost-effective smile restoration`
         },
         {
           id: 9,
-          text: ' dental Crown Bridge',
+          text: ' Dental Crown Bridge',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/dental-crown-bridges-dubai/'
         },
@@ -38979,8 +39372,8 @@ Seek a cost-effective smile restoration`
         {
           id: 2,
           number: '5,000+',
-          label1: 'Crowns & Bridges',
-          label2: 'Placed',
+          label1: 'Dentures',
+          label2: 'Fitted',
           target: 5000
         },
         {
@@ -39008,10 +39401,10 @@ Seek a cost-effective smile restoration`
         '0% interest installments (conditions apply)'
       ],
       insuranceOptions: [
-        'Accepted by select insurance providers',
-        'Restorative treatment coverage verification',
-        'Detailed invoices provided for claims',
-        'Assistance with documentation'
+        'Reimbursement Only – We currently accept insurance on a reimbursement basis.',
+        'Patients are required to make payment at the time of service.',
+        'We provide detailed claim forms & receipts for reimbursement.',
+        'Our team assists you with your insurance claim process.'
       ]
     },
     bookConsultation: {
@@ -39070,8 +39463,8 @@ Seek a cost-effective smile restoration`
 
   'slip-disc-treatment-dubai': {
     seo: {
-      title: "Slip Disc Treatment Dubai | RamaCare Polyclinic | Book Now",
-      metaTitle: "Slip Disc Treatment Dubai – RamaCare Polyclinic",
+      title: "Slip Disc Treatment Dubai | RamaCare Polyclinic",
+      metaTitle: "Slip Disc Treatment Dubai | RamaCare Polyclinic",
       metaDescription: "Get expert Slip Disc Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment in Dubai today.",
       keywords: "Slip Disc Treatment Dubai, Slipped Disc Treatment Dubai, Herniated Disc Treatment Dubai, Disc Bulge Treatment Dubai, Lower Back Pain Treatment Dubai, Spine Pain Treatment Dubai, Spine Rehabilitation Dubai, Back Pain Specialist Dubai, Orthopedic Physiotherapy Dubai",
       slug: "/services/slip-disc-treatment-dubai",
@@ -39105,7 +39498,7 @@ Seek a cost-effective smile restoration`
       intro: "The term \"slip disc\" is used loosely to describe several related conditions, and understanding the difference can help you make sense of your own diagnosis.",
       types: [
         { name: "Herniated disc", description: "The tough outer layer of a disc tears, allowing the softer inner material to push out and potentially irritate a nearby nerve." },
-        { name: "Bulging disc", description: "The disc's outer layer stays intact, but the disc bulges outward beyond its normal boundary. Patients researching {{Disc Bulge Treatment Dubai|/services/slip-disc-treatment-dubai/}} are usually describing this less severe stage of the condition." },
+        { name: "Bulging disc", description: "The disc's outer layer stays intact, but the disc bulges outward beyond its normal boundary. Patients researching Disc Bulge Treatment Dubai are usually describing this less severe stage of the condition." },
         { name: "Disc prolapse", description: "Another term often used interchangeably with herniation, referring to disc material protruding from its normal space." }
       ],
       earlyTreatment: {
@@ -39611,10 +40004,10 @@ Seek a cost-effective smile restoration`
   'sports-injury-rehabilitation-dubai': {
     seo: {
       title: "Sports Injury Rehabilitation Dubai | RamaCare Polyclinic",
-      metaTitle: "Sports Injury Rehabilitation Dubai – RamaCare Polyclinic",
+      metaTitle: "Sports Injury Rehabilitation Dubai | RamaCare Polyclinic",
       metaDescription: "Expert Sports Injury Rehabilitation Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment today.",
       keywords: "Sports Injury Rehabilitation Dubai, Sports Physiotherapy Dubai, ACL Rehabilitation Dubai, Meniscus Tear Rehab, Rotator Cuff Rehabilitation, Running Injury Rehabilitation Dubai",
-      slug: "/sports-injury-rehabilitation-dubai",
+      slug: "/services/sports-injury-rehabilitation-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/sports-injury-rehabilitation-dubai/"
     },
     breadcrumbs: [
@@ -39906,11 +40299,11 @@ Seek a cost-effective smile restoration`
   },
   'joint-pain-treatment-dubai': {
     seo: {
-      title: "Joint Pain Treatment Dubai | RamaCare Polyclinic, Dubai",
-      metaTitle: "Joint Pain Treatment Dubai | RamaCare Polyclinic, Dubai",
+      title: "Joint Pain Treatment Dubai | RamaCare Polyclinic",
+      metaTitle: "Joint Pain Treatment Dubai | RamaCare Polyclinic",
       metaDescription: "Struggling with joint pain? Get expert Joint Pain Treatment Dubai care at RamaCare Polyclinic, Dubai. DHA-licensed team. Book your consultation today.",
       keywords: "Joint Pain Treatment Dubai, Joint Pain Specialist Dubai, Joint Pain Relief Dubai, Knee Joint Pain Treatment Dubai, Shoulder Joint Pain Dubai, Hip Joint Pain Treatment Dubai, Elbow Joint Pain Dubai, Ankle Joint Pain Dubai, Wrist Joint Pain Treatment Dubai, Physiotherapy for Joint Pain Dubai, Arthritis Treatment Dubai, Joint Rehabilitation Dubai, Chronic Joint Pain Dubai, Non-Surgical Joint Pain Treatment Dubai, Orthopedic Clinic Dubai, Musculoskeletal Pain Treatment Dubai",
-      slug: "/services/joint-pain-treatment-dubai",
+      slug: "/services/joint-pain-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/joint-pain-treatment-dubai/"
     },
     breadcrumbs: [

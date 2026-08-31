@@ -9,6 +9,7 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
   Clock,
   MapPin,
   MessageCircle,
@@ -120,145 +121,188 @@ export default function FrozenShoulderTreatmentPage() {
     }
   ];
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/frozen-shoulder-treatment-dubai/";
+  const PAGE_TITLE = "Frozen Shoulder Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Struggling with shoulder stiffness or pain? Get expert frozen shoulder treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios. Book now!";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/frozen-shoulder-treatment-dubai-physiotherapy.jpg";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://ramacarepolyclinic.ae/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Frozen Shoulder Treatment Dubai",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "medicalAudience": { "@type": "Patient" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Adhesive Capsulitis (Frozen Shoulder)",
+          "alternateName": "Frozen Shoulder",
+          "description": "A condition in which the connective tissue capsule surrounding the shoulder joint becomes thickened, inflamed, and tight, causing progressive pain and restricted range of motion."
+        },
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Frozen Shoulder Physiotherapy Treatment",
+        "alternateName": "Adhesive Capsulitis Rehabilitation",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "A structured, evidence-based physiotherapy program for adhesive capsulitis combining manual therapy, joint mobilization, dry needling, electrotherapy, ultrasound therapy, and progressive exercise, provided by DHA licensed physiotherapists at RamaCare Polyclinic in Dubai.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Glenohumeral (Shoulder) Joint",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Frozen Shoulder Treatment Dubai | Expert Physiotherapy</title>
-        <meta name="description" content="Struggling with shoulder stiffness or pain? Get expert frozen shoulder treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios. Book now!" key="description" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="keywords" content="Frozen Shoulder Treatment Dubai, Frozen Shoulder Specialist Dubai, Frozen Shoulder Physiotherapy Dubai, Frozen Shoulder Pain Treatment, Shoulder Pain Clinic Dubai, Adhesive Capsulitis Treatment Dubai, Shoulder Mobility Treatment Dubai, Shoulder Rehabilitation Dubai, Best Frozen Shoulder Treatment, Frozen Shoulder Recovery, Physiotherapy for Frozen Shoulder, Shoulder Joint Stiffness, Shoulder Pain Relief Dubai, Frozen Shoulder Doctor Dubai, Shoulder Stiffness Treatment Dubai, Frozen Shoulder Exercises Dubai" key="keywords" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/frozen-shoulder-treatment-dubai/" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
-        {/* Social SEO */}
-        <meta property="og:title" content="Frozen Shoulder Treatment Dubai | RamaCare Polyclinic" key="og:title" />
-        <meta property="og:description" content="Expert, DHA-licensed physiotherapy for frozen shoulder in Dubai. Personalized care to restore mobility and relieve pain. Book your consultation today." key="og:description" />
+        {/* Social SEO - Open Graph */}
         <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Physiotherapist assessing frozen shoulder treatment Dubai patient range of motion" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
-        <meta name="twitter:title" content="Frozen Shoulder Treatment Dubai - RamaCare Polyclinic" key="twitter:title" />
-        <meta name="twitter:description" content="Shoulder stiffness slowing you down? RamaCare's DHA-licensed physiotherapists offer proven, non-surgical frozen shoulder treatment in Dubai." key="twitter:description" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
         {/* Schema Markup */}
         <script
-          key="schema1"
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalWebPage",
-              "about": {
-                "@type": "MedicalCondition",
-                "name": "Frozen Shoulder",
-                "alternateName": "Adhesive Capsulitis",
-                "description": "A condition in which the connective tissue capsule surrounding the shoulder joint becomes thickened, inflamed, and tight, causing progressive pain and restricted range of motion.",
-                "signOrSymptom": [
-                  { "@type": "MedicalSignOrSymptom", "name": "Shoulder pain" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Restricted shoulder range of motion" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Night pain" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Difficulty lifting the arm" },
-                  { "@type": "MedicalSignOrSymptom", "name": "Shoulder stiffness" }
-                ],
-                "riskFactor": [
-                  { "@type": "MedicalRiskFactor", "name": "Diabetes" },
-                  { "@type": "MedicalRiskFactor", "name": "Shoulder immobilization" },
-                  { "@type": "MedicalRiskFactor", "name": "Thyroid disorders" },
-                  { "@type": "MedicalRiskFactor", "name": "Age between 40 and 60" }
-                ],
-                "possibleTreatment": {
-                  "@type": "MedicalTherapy",
-                  "name": "Physiotherapy for Frozen Shoulder"
-                }
-              }
-            })
-          }}
-        />
-
-        <script
-          key="schema2"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalTherapy",
-              "name": "Frozen Shoulder Physiotherapy Treatment",
-              "description": "A structured, evidence-based physiotherapy program for adhesive capsulitis combining manual therapy, joint mobilization, dry needling, electrotherapy, ultrasound therapy, and progressive exercise, provided by DHA licensed physiotherapists at RamaCare Polyclinic in Dubai.",
-              "usedToTreat": {
-                "@type": "MedicalCondition",
-                "name": "Frozen Shoulder (Adhesive Capsulitis)"
-              },
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic",
-                "url": "https://ramacarepolyclinic.ae/"
-              }
-            })
-          }}
-        />
-
-        <script
-          key="schema3"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              }))
-            })
-          }}
-        />
-
-        <script
-          key="schema4"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Frozen Shoulder Treatment Dubai",
-                  "item": "https://ramacarepolyclinic.ae/services/frozen-shoulder-treatment-dubai"
-                }
-              ]
-            })
-          }}
-        />
-
-        <script
-          key="schema5"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalClinic",
-              "name": "RamaCare Polyclinic",
-              "url": "https://ramacarepolyclinic.ae/",
-              "medicalSpecialty": "Physiotherapy",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jumeirah 1",
-                "addressRegion": "Dubai",
-                "addressCountry": "AE"
-              },
-              "priceRange": "$$",
-              "hasMap": "https://www.google.com/maps/place/RamaCare+Polyclinic"
-            })
+            __html: JSON.stringify(schemaGraph)
           }}
         />
       </Head>
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">Frozen Shoulder Treatment Dubai</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       {/* Hero Section - Enhanced Gradient with Animated Shapes */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
@@ -1519,8 +1563,54 @@ export default function FrozenShoulderTreatmentPage() {
         </div>
       </section>
 
+      {/* Related Conditions & Physiotherapy Services Cross-Links Section */}
+      <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+              Related Conditions &amp; Physiotherapy Services
+            </h2>
+            <p className="text-sm md:text-base text-[#6B7280]">
+              Explore related musculoskeletal therapies and specialized rehabilitation programs at RamaCare Dubai.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { text: 'Shoulder Pain Treatment', link: '/services/shoulder-pain-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
+              { text: 'Cervical Spondylosis Treatment', link: '/services/cervical-spondylosis-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+              { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
+              { text: 'Sciatica Treatment', link: '/services/sciatica-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+              { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#ECFDF5]' },
+              { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
+              { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#FEF2F2]' },
+              { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+              { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
+              { text: 'Physiotherapy in Dubai', link: '/services/physiotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' }
+            ].map((resource, index) => (
+              <a 
+                key={index} 
+                href={resource.link}
+                className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+              >
+                <div className="flex items-center gap-3 md:gap-4 flex-1">
+                  <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                    <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B]">
+                    {resource.text}
+                  </span>
+                </div>
+
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Jeena Mathew" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="frozen-shoulder-treatment-dubai" />
 
       {/* Medical Disclaimer */}
       <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">

@@ -111,132 +111,145 @@ export default function PlantarFasciitisTreatmentPage() {
   const heroBlobStyleOne = { transform: 'translateY(' + (scrollY * 0.25) + 'px)' };
   const heroBlobStyleTwo = { transform: 'translateY(' + (scrollY * -0.15) + 'px)' };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(function (f) {
-      return {
-        "@type": "Question",
-        "name": f.question,
-        "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-      };
-    })
-  };
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/plantar-fasciitis-treatment-dubai/";
+  const PAGE_TITLE = "Plantar Fasciitis Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Get expert Plantar Fasciitis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care, and proven heel pain relief. Book now.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/heel-anatomy-illustration-plantar-fasciitis.jpg";
 
-  const breadcrumbSchema = {
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": (breadcrumbs || []).map(function (b, i) {
-      return {
-        "@type": "ListItem",
-        "position": i + 1,
-        "name": b.label,
-        "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
-      };
-    })
-  };
-
-  //  MedicalCondition schema for the plantar fasciitis / heel pain content itself
-  const medicalConditionSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalCondition",
-    "name": "Plantar Fasciitis",
-    "alternateName": "Heel Pain, Degenerative Fasciopathy",
-    "signOrSymptom": symptoms.map(function (s) { return { "@type": "MedicalSymptom", "name": s }; }),
-    "riskFactor": riskFactors.map(function (r) { return { "@type": "MedicalRiskFactor", "name": r }; }),
-    "possibleTreatment": treatmentOptions.map(function (t) { return { "@type": "MedicalTherapy", "name": t.title, "description": t.description }; })
-  };
-
-  // MedicalTherapy schema list for the individual treatment modalities
-  const medicalTherapySchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": treatmentOptions.map(function (t, i) {
-      return {
-        "@type": "ListItem",
-        "position": i + 1,
-        "item": {
-          "@type": "MedicalTherapy",
-          "name": t.title,
-          "description": t.description
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": (breadcrumbs || []).map(function (b, i) {
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": b.label,
+            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+          };
+        })
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "medicalAudience": { "@type": "Patient" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Plantar Fasciitis",
+          "alternateName": "Heel Pain, Degenerative Fasciopathy"
+        },
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
         }
-      };
-    })
-  };
-
-  // MedicalClinic schema for business details
-  const medicalClinicSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic",
-    "url": seo.canonical,
-    "telephone": "+97142862006",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-      "postalCode": "393558",
-      "addressLocality": "Dubai",
-      "addressCountry": "AE"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "22:00" },
-    ],
-    "medicalSpecialty": "Physiotherapy"
-  };
-
-  // Physician schema, guarded in case doctor data isn't present
-  const physicianSchema = content.doctors && content.doctors.doctors && content.doctors.doctors.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": content.doctors.doctors.map(function (doc, i) {
-      return {
-        "@type": "ListItem",
-        "position": i + 1,
-        "item": {
-          "@type": "Physician",
-          "name": doc.name,
-          "medicalSpecialty": "Physiotherapy"
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
         }
-      };
-    })
-  } : null;
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Plantar Fasciitis Treatment",
+        "alternateName": "Physiotherapy for Plantar Fasciitis and Heel Pain",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Comprehensive physiotherapy treatment for plantar fasciitis and heel pain combining manual therapy, targeted stretching, dry needling, foot taping, shockwave therapy, and custom rehabilitation exercises.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Plantar Fascia & Heel",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+97142862006",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(function (f) {
+          return {
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.answer
+            }
+          };
+        })
+      }
+    ]
+  };
 
   return (
     <Layout>
       <Head>
-        <title key="title">{seo.title}</title>
-        <meta name="description" content={seo.metaDescription} key="description" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="keywords" content={seo.keywords} />
-        <link rel="canonical" href={seo.canonical} />
-        <meta property="og:title" content={seo.metaTitle} />
-        <meta property="og:description" content={seo.metaDescription} />
-        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Illustration of heel anatomy showing the plantar fascia in Plantar Fasciitis Treatment Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalTherapySchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalClinicSchema) }}
-        />
-        {physicianSchema ? (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-          />
-        ) : null}
       </Head>
 
       {/* Breadcrumbs — previously missing from the rendered page (schema existed, UI did not) */}
@@ -993,7 +1006,16 @@ export default function PlantarFasciitisTreatmentPage() {
       ) : null}
 
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Jeena Mathew" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="plantar-fasciitis-treatment-dubai" />
+
+      {/* Medical Disclaimer */}
+      <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm text-gray-600">
+            <strong>Medical Disclaimer:</strong> This content is for general educational purposes and does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider regarding your specific condition. Individual results vary, and no treatment outcome is guaranteed.
+          </p>
+        </div>
+      </section>
 
       <div id="book-now">
         <BookConsultation
@@ -1016,14 +1038,12 @@ export default function PlantarFasciitisTreatmentPage() {
             clinicHours: {
               weekdays: 'Sunday - Saturday:',
               weekdaysTime: '10:00 AM - 10:00 PM',
-              friday: 'Friday:',
-              fridayTime: '10:00 AM - 8:00 PM'
             },
             statCards: [
               { title: 'DHA Licensed', description: 'Certified Facility' },
-              { title: 'Experienced Team', description: '10+ Years Combined' },
-              { title: '1,200+ Procedures', description: 'Completed' },
-              { title: '4.8/5 Rating', description: 'Patient Reviews' }
+              { title: 'Experienced Team', description: '15+ Years Combined' },
+              { title: '2,500+ Patients', description: 'Treated' },
+              { title: '4.9/5 Rating', description: 'Patient Reviews' }
             ]
           }}
         />

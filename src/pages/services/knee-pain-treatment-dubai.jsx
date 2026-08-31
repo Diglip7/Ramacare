@@ -1,5 +1,6 @@
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
@@ -284,14 +285,173 @@ export default function KneePainTreatmentPage() {
     { title: "When to See Doctor", icon: Clock }
   ];
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/knee-pain-treatment-dubai/';
+
+  const faqsForSchema = (faqs || []).map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Physiotherapy",
+            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knee Pain Treatment",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Knee Pain Treatment in Dubai | Joint Pain Relief",
+        "description": "Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Knee Pain"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        }
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Knee Pain Treatment in Dubai",
+        "alternateName": "Knee Pain Physiotherapy",
+        "url": CANONICAL_URL,
+        "mainEntityOfPage": CANONICAL_URL,
+        "description": "Non-surgical physiotherapy and rehabilitation for chronic knee pain, arthritis, sports injuries, and joint mobility issues, delivered by DHA-licensed physiotherapists.",
+        "procedureType": "Physical therapy technique",
+        "bodyLocation": "Knee Joint",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "postalCode": "393558",
+            "addressCountry": "AE"
+          },
+          "telephone": "+971 56 659 7878",
+          "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqsForSchema.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
+  const physiotherapyResources = [
+    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
+    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+    { text: 'Post Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
+  ];
+
   return (
     <Layout>
       <Head>
         <title key="title">Knee Pain Treatment in Dubai | Joint Pain Relief</title>
         <meta name="description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic." key="description" />
         <meta name="keywords" content="Knee pain treatment Dubai, Knee physiotherapy Dubai, Arthritis knee treatment, Sports injury knee treatment, Chronic knee pain Dubai, Knee rehabilitation Dubai, Joint pain relief Dubai" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Knee Pain Treatment in Dubai | Joint Pain Relief" />
+        <meta property="og:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/knee-pain.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Knee Pain Treatment in Dubai | Joint Pain Relief" />
+        <meta name="twitter:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/knee-pain.jpg" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
+
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
+            <li>
+              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <span className="text-[#1F5E4B] font-medium">Knee Pain Treatment</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       {/* Hero Section - Unique Diagonal Design */}
       <section className="relative bg-white overflow-hidden">
@@ -300,7 +460,7 @@ export default function KneePainTreatmentPage() {
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
         <div className="absolute top-40 right-20 w-64 h-64 bg-[#2A7D63]/5 rounded-full blur-2xl"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content - Spans 7 columns */}
             <div className="lg:col-span-7 space-y-6 md:space-y-8">
@@ -418,41 +578,23 @@ export default function KneePainTreatmentPage() {
 
             {/* Right Visual - Spans 5 columns */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
               className="lg:col-span-5 hidden lg:block"
             >
               <div className="relative">
-                {/* Main Feature Card */}
-                <div className="bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-2xl p-8 text-white shadow-2xl">
-                  <div className="space-y-6">
-                    <div className="text-center">
-                      <Bone className="w-20 h-20 mx-auto opacity-30 mb-4" />
-                      <h3 className="text-2xl font-bold mb-2">Expert Knee Care</h3>
-                      <p className="text-white/80 text-sm">Personalized Treatment Plans</p>
-                    </div>
-                    
-                    {/* Service List */}
-                    <div className="space-y-3">
-                      {[
-                        { name: 'Physiotherapy', icon: Activity },
-                        { name: 'Electrotherapy', icon: Zap },
-                        { name: 'Rehabilitation', icon: Target },
-                        { name: 'Manual Therapy', icon: Hand }
-                      ].map((service, i) => {
-                        const Icon = service.icon;
-                        return (
-                          <div key={i} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                              <Icon className="w-5 h-5" />
-                            </div>
-                            <span className="font-medium">{service.name}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image 
+                    src="/images/knee-pain.jpg" 
+                    alt="Knee pain treatment and physiotherapy session at RamaCare Polyclinic Dubai" 
+                    width={1200}
+                    height={630}
+                    quality={75}
+                    priority
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
 
                 {/* Floating Badge */}
@@ -1256,6 +1398,50 @@ export default function KneePainTreatmentPage() {
         </div>
       </section>
 
+      {/* Related Resources Section */}
+      <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
+              Complete Physiotherapy Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {physiotherapyResources.map((resource, index) => (
+              <a 
+                key={index} 
+                href={resource.link}
+                className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
+              >
+                <div className="flex items-center gap-3 md:gap-4 flex-1">
+                  <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                    <Activity className="w-5 h-5 text-[#1F5E4B]" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B] group-hover:text-sm md:group-hover:text-base">
+                    {resource.text}
+                  </span>
+                </div>
+
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-24 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] text-white relative overflow-hidden">
         {/* Decorative Background */}
@@ -1309,7 +1495,49 @@ export default function KneePainTreatmentPage() {
       <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="knee-pain-treatment-dubai" />
 
       {/* Book Consultation Component */}
-      <BookConsultation />
+      <BookConsultation 
+        content={{
+          badge: 'Start Your Journey',
+          title: 'Book Knee Pain Treatment in Dubai Today',
+          description: 'Restore your mobility and live pain-free with trusted knee pain treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+          getInTouchTitle: 'Get In Touch',
+          requestAppointmentTitle: 'Request Appointment',
+          submitButtonText: 'Confirm Free Consultation',
+          contactInfo: {
+            phone: '+971 04 286 2006',
+            whatsapp: '971566597878',
+            email: 'query@ramacarepolyclinic.com',
+            address: {
+              line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+              line2: 'Ground Floor, Jumeirah 1 - Dubai'
+            }
+          },
+          clinicHours: {
+            weekdays: 'Sunday - Saturday:',
+            weekdaysTime: '10:00 AM - 10:00 PM',
+            friday: 'Friday:',
+            fridayTime: '10:00 AM - 8:00 PM'
+          },
+          statCards: [
+            {
+              title: 'DHA Licensed',
+              description: 'Certified Physiotherapy Facility'
+            },
+            {
+              title: 'Experienced Team',
+              description: '15+ Years Combined'
+            },
+            {
+              title: '2,500+ Patients',
+              description: 'Treated'
+            },
+            {
+              title: '4.9/5 Rating',
+              description: 'Patient Reviews'
+            }
+          ]
+        }}
+      />
     </Layout>
   );
 }

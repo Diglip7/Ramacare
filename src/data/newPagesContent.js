@@ -21,7 +21,7 @@ export const newPagesContent = {
       metaTitle: "Anxiety Treatment Dubai | Supportive Care at RamaCare",
       metaDescription: "Struggling with anxiety? RamaCare Polyclinic Dubai offers personalized Anxiety Treatment Dubai support with DHA-licensed experts. Book your consultation today.",
       keywords: "Anxiety Treatment Dubai, Anxiety Management Dubai, Stress and Anxiety Support Dubai, Chronic Anxiety Dubai, Holistic Anxiety Care Dubai, Ayurvedic Anxiety Support Dubai, Relaxation Therapy Dubai, Sleep and Anxiety Support Dubai, Burnout Recovery Dubai, Physiotherapy for Anxiety Dubai, Wellness Clinic Dubai, Mind-Body Wellness Dubai, Emotional Wellbeing Support Dubai, Workplace Anxiety Support Dubai",
-      slug: "/services/anxiety-treatment-dubai",
+      slug: "/services/anxiety-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/anxiety-treatment-dubai/"
     },
     breadcrumbs: [

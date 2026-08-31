@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
@@ -152,6 +153,68 @@ export default function AyurvedicDietDubaiSummerPage() {
   const { showToast, ToastComponent } = useToast();
   const router = useRouter();
 
+  const faqsForSchema = content.paa.items.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }));
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/",
+        "name": "Ayurvedic Diet Tips for Dubai Summer | RamaCare",
+        "description": "Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Heat Stress / Pitta Imbalance (Seasonal)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#physician"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Dubai Summer", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#faq",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
+
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in Ayurvedic Diet Tips for the Dubai Summer. Please help me book a consultation.");
     window.open(`https://wa.me/${content.hero.ctaButtons.secondary.phone}?text=${message}`, '_blank');
@@ -167,12 +230,47 @@ export default function AyurvedicDietDubaiSummerPage() {
       <Head>
         <title key="title">Ayurvedic Diet Tips for Dubai Summer | RamaCare</title>
         <meta name="description" content="Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah." key="description" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Diet Tips for Dubai Summer | RamaCare" key="og:title" />
+        <meta property="og:description" content="Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pitta.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurvedic Diet Tips for the Dubai Summer - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Diet Tips for Dubai Summer | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Cool Pitta and beat the Dubai heat with Ayurvedic diet tips from RamaCare Polyclinic Jumeirah." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pitta.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white px-6 py-16 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-7xl">
+          {/* Breadcrumbs */}
+          <nav className="flex flex-wrap items-center gap-y-1.5 text-xs font-semibold text-[#5F5F5F] mb-6 tracking-wider">
+            <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+            <span className="mx-2">/</span>
+            <a href="/services/ayurveda-dubai/" className="hover:text-[#1F5E4B] transition-colors">Ayurveda</a>
+            <span className="mx-2">/</span>
+            <span className="text-gray-400">Ayurvedic Diet for Dubai Summer</span>
+          </nav>
+
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -500,11 +598,26 @@ export default function AyurvedicDietDubaiSummerPage() {
               </button>
             </Link>
 
-            <div className="mx-auto max-w-4xl rounded-xl bg-[#E9E2D6] p-6">
-              <p className="text-base text-[#1A1A1A]">
-                Content Reviewed by <span className="font-bold">{content.reviewer.name}</span>, {content.reviewer.role}
-              </p>
+            {/* Related Reading */}
+            <div className="mx-auto max-w-4xl mt-12 mb-8">
+              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">Related Ayurvedic Guides</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Detox Diet Plan</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Diet Plan</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Gut Health</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </div>
+
+            <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-dubai-summer" />
           </motion.div>
         </div>
       </section>

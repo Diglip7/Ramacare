@@ -25,65 +25,149 @@ export default function AyurvedicHairfallTreatmentPage() {
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'ayurvedic-hairfall-treatment');
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ayurveda",
+        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ayurvedic Hairfall Treatment",
+        "item": "https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Ayurvedic Hair Fall Treatment in Dubai",
+    "description": "Holistic, root-cause-based Ayurvedic treatment for hair loss combining herbal scalp therapies (Shiro Abhyanga, Lepam), internal Ayurvedic medicines, dosha balancing, and personalized diet and lifestyle correction to restore healthy, natural hair growth.",
+    "url": "https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "bodyLocation": "Scalp",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "medicalSpecialty": "Ayurveda",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/hairfall1.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Shamna Keloth Meethal",
+    "medicalSpecialty": "Ayurveda",
+    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic"
+    }
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Ayurvedic Hair Fall Treatment in Dubai – Safe & Natural</title>
-  <meta name="description" content="Control hair fall naturally with Ayurvedic treatments in Dubai. Herbal remedies, scalp therapies, and personalized care help restore healthy, strong hair." key="description" />
-  <meta name="keywords" content="Ayurvedic Hair Fall Treatment Dubai, Hair Loss Treatment Ayurveda Dubai, Natural Hair Regrowth Dubai, Herbal Hair Care Dubai, Ayurvedic Hair Therapy Dubai, Hair Strengthening Treatments Dubai, Hair Fall Solutions Dubai, Ayurveda for Hair Loss, Ayurvedic Scalp Treatment Dubai, Hair Growth Oils Dubai, Best Ayurvedic Hair Treatment, Personalized Hair Care Dubai" />
-  
-   <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalProcedure",
-              "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/#procedure",
-              name: "Ayurvedic Hairfall Treatment in Dubai",
-              alternateName: "Herbal Hair Loss Therapy",
-              url: "https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/",
-              mainEntityOfPage:
-                "https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/",
-              description:
-                "Ayurvedic Hairfall Treatment in Dubai at RamaCare Polyclinic provides traditional Ayurvedic protocols, herbal therapies, and personalized care to reduce hair fall, nourish scalp health, and promote natural hair regrowth, administered by experienced practitioners.",
-              procedureType: "Ayurvedic medical treatment",
-              bodyLocation: "Scalp and hair follicles",
-              howPerformed:
-                "Hairfall treatment begins with a detailed consultation and scalp assessment, followed by personalized herbal protocols, medicated oil applications, and dietary and wellness guidance tailored to individual hair concerns.",
-              preparation:
-                "Initial evaluation of scalp condition and medical & lifestyle history is done prior to customizing the Ayurvedic hairfall treatment plan.",
-              followup:
-                "Regular follow-up consultations are recommended to monitor progress and adjust therapy protocols for optimal results.",
-              indication: [
-                "Excessive hair fall",
-                "Thinning hair",
-                "Weak or dull hair",
-                "Dry or itchy scalp",
-              ],
-              possibleComplication:
-                "Mild scalp sensitivity or temporary itching may occur during early stages of herbal treatment.",
-              provider: {
-                "@type": "MedicalClinic",
-                name: "RamaCare Polyclinic - Ayurvedic & Hair Wellness Department",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Jumeirah Terrace Building, Ground Floor",
-                  addressLocality: "Jumeirah 1",
-                  addressRegion: "Dubai",
-                  postalCode: "393558",
-                  addressCountry: "AE",
-                },
-                telephone: "+971 56 659 7878",
-                areaServed: {
-                  "@type": "City",
-                  name: "Dubai",
-                },
-                priceRange: "$$",
-              },
-            }),
-          }}
+        <meta
+          name="description"
+          content="Control hair fall naturally with Ayurvedic treatments in Dubai. Herbal remedies, scalp therapies, and personalized care help restore healthy, strong hair."
+          key="description"
         />
-</Head>
+        <meta
+          name="keywords"
+          content="Ayurvedic Hair Fall Treatment Dubai, Hair Loss Treatment Ayurveda Dubai, Natural Hair Regrowth Dubai, Herbal Hair Care Dubai, Ayurvedic Hair Therapy Dubai, Hair Strengthening Treatments Dubai, Hair Fall Solutions Dubai, Ayurveda for Hair Loss, Ayurvedic Scalp Treatment Dubai, Hair Growth Oils Dubai, Best Ayurvedic Hair Treatment, Personalized Hair Care Dubai"
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ayurvedic Hair Fall Treatment in Dubai – Safe & Natural" key="og:title" />
+        <meta
+          property="og:description"
+          content="Control hair fall naturally with Ayurvedic treatments in Dubai. Herbal remedies, scalp therapies, and personalized care help restore healthy, strong hair."
+          key="og:description"
+        />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-hairfall-treatment-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hairfall1.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurvedic Hair Fall Treatment in Dubai – Safe & Natural" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Control hair fall naturally with Ayurvedic treatments in Dubai. Herbal remedies, scalp therapies, and personalized care help restore healthy, strong hair."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hairfall1.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
+        />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+        />
+      </Head>
 
     <TreatmentHero 
       categoryName={categoryName}

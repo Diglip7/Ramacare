@@ -435,12 +435,23 @@ export default function PsoriasisTreatmentPage() {
         },
         lastReviewed: '2026-07-14',
         reviewedBy: {
-          '@type': 'Physician',
-          name: 'RamaCare Polyclinic Dermatology Team',
-          medicalSpecialty: 'Dermatology'
+          '@id': 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/#physician'
         },
         publisher: {
           '@id': 'https://ramacarepolyclinic.ae/#organization'
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/psoriasis-treatment-dubai/#physician',
+        name: 'Dr. Sahar Zomorrodi',
+        medicalSpecialty: 'General Practice',
+        honorificSuffix: 'MD',
+        hasCredential: 'DHA Licensed General Practitioner',
+        url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+        worksFor: {
+          '@type': 'MedicalOrganization',
+          name: 'RamaCare Polyclinic'
         }
       },
       {
@@ -504,12 +515,28 @@ export default function PsoriasisTreatmentPage() {
         <meta name="description" content={SEO.metaDescription} />
         <meta name="keywords" content={SEO.keywords} />
         <link rel="canonical" href={SEO.canonical} />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={SEO.title} />
         <meta property="og:description" content={SEO.metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SEO.canonical} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/psoriasis-treatment-dubai-hero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Dermatologist consulting patient for Psoriasis Treatment Dubai at RamaCare Polyclinic" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SEO.title} />
+        <meta name="twitter:description" content={SEO.metaDescription} />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/psoriasis-treatment-dubai-hero.jpg" />
+
+        {/* Structured Data Schemas */}
+        <script key="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema, null, 2) }} />
+        <script key="medical-condition-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema, null, 2) }} />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">

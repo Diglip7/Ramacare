@@ -1062,12 +1062,11 @@ export const categoryContent = {
 
   'dental': {
     hero: {
-      badge: 'DHA-Licensed dental Clinic',
-       titleLine1: 'Dental Treatment in Dubai  ',
-      titleHighlight: ' Healthy, Beautiful',
-      titleLine2:' Smiles',
-      // title: 'dental Treatment in Dubai – Comprehensive Care for Healthy and Beautiful Smiles',
-      subtitle: 'Comprehensive dental solutions, advanced treatments, and personalized care — all under one roof for your oral health and radiant smile.',
+      badge: 'DHA-Licensed Dental Clinic',
+      titleLine1: 'Dental Treatment in Dubai — ',
+      titleHighlight: 'Healthy, Beautiful',
+      titleLine2: ' Smiles',
+      subtitle: 'Comprehensive Dental solutions, advanced treatments, and personalized care — all under one roof for your oral health and radiant smile.',
       description: 'Achieve a confident, beautiful smile with dental veneers—a modern cosmetic dental solution designed to correct stains, chips, gaps, and uneven teeth. Our expert dentists use advanced techniques and high-quality materials to create natural-looking veneers that enhance your smile while preserving your natural teeth.',
       ctaText: 'Book Free Consultation',
       backgroundImage: '/images/d1.jpg',
@@ -1090,10 +1089,10 @@ export const categoryContent = {
     whyChooseUs: {
       badge: 'Why Choose Us',
       title: 'Dubai\'s Premier Dental Care Centre',
-      description: 'At RamaCare Polyclinic, we redefine dental care in Dubai. Here’s why patients trust us for their dental treatment:',
+      description: 'At RamaCare Polyclinic, we redefine dental care in Dubai. Here’s why patients trust us for their Dental treatment:',
       cards: [
         {
-          title: 'Advanced dental Treatments',
+          title: 'Advanced Dental Treatments',
           description: 'We combine evidence-based techniques with the latest dental technology for safe, effective procedures.'
         },
         {
@@ -1109,11 +1108,11 @@ export const categoryContent = {
           description: 'Personalized care, transparent communication, and continuous follow-ups ensure your comfort and confidence.'
         },
         {
-          title: 'DHA-licensed dentists',
+          title: 'DHA-Licensed Dentists',
           description: 'with extensive clinical expertise '
         },
         {
-          title: 'Personalized dental treatment plans',
+          title: 'Personalized Dental Treatment Plans',
           description: 'tailored to each patient '
         },
         {
@@ -1121,11 +1120,11 @@ export const categoryContent = {
           description: 'offering a family-friendly environment '
         },
         {
-          title: 'Cutting-edge dental technology',
+          title: 'Cutting-Edge Dental Technology',
           description: 'for accurate diagnostics and effective treatments'
         },
         {
-          title: 'Comprehensive care',
+          title: 'Comprehensive Care',
           description: 'spanning preventive, cosmetic, and surgical dentistry'
         },
       ]
@@ -1135,22 +1134,22 @@ export const categoryContent = {
       title: 'Complete Oral Health Solutions',
       description: 'Our dental services encompass preventive care, cosmetic dentistry, restorative treatments, and oral surgery, ensuring your smile is healthy, beautiful, and functional for years to come.',
       paragraphs: [
-        'Our dental Department delivers advanced oral healthcare within a modern, multi-specialty polyclinic in the heart of Jumeirah 1, Dubai. We combine clinical expertise, cutting-edge dental technology, and a patient-first approach to provide safe, comfortable, and high-quality dental care for all ages.',
+        'Our Dental Department delivers advanced oral healthcare within a modern, multi-specialty polyclinic in the heart of Jumeirah 1, Dubai. We combine clinical expertise, cutting-edge dental technology, and a patient-first approach to provide safe, comfortable, and high-quality dental care for all ages.',
         'Led by DHA-licensed dentists with extensive clinical experience, our skilled team offers a full spectrum of services, including preventive dentistry, cosmetic smile enhancement, restorative treatments, orthodontics, and minor oral surgical procedures. Each treatment plan is personalized to meet your dental needs, lifestyle, and long-term oral health goals.',
-        'We adhere to strict international sterilization and hygiene protocols, using modern equipment and minimally invasive techniques to ensure precision, comfort, and lasting results. Whether you need routine dental care, smile enhancement, or advanced restorative solutions, our dental Department provides trusted care with the professionalism and comfort of a premium medical facility.'
+        'We adhere to strict international sterilization and hygiene protocols, using modern equipment and minimally invasive techniques to ensure precision, comfort, and lasting results. Whether you need routine dental care, smile enhancement, or advanced restorative solutions, our Dental Department provides trusted care with the professionalism and comfort of a premium medical facility.'
       ],
       stats: [
-        { number: '15+', label: ' Advanced dental Treatments' },
-        { number: '1,000+', label: ' Happy dental Patients' },
+        { number: '15+', label: ' Advanced Dental Treatments' },
+        { number: '1,000+', label: ' Happy Dental Patients' },
         { number: '99%', label: ' Patient Satisfaction' }
       ],
       ctaText: 'Meet Our Dentists',
       image: '/images/d4.jpg',
-      imageAlt: 'dental care services',
+      imageAlt: 'Dental consultation room at RamaCare Polyclinic Jumeirah 1',
       overlayCard: {
         number: '15+',
         smallText: 'Years of Experience',
-        boldText: 'Trusted dental Care'
+        boldText: 'Trusted Dental Care'
       }
     },
    treatments: {
@@ -1175,7 +1174,7 @@ export const categoryContent = {
       idealFor:
         ' Patients with chipped, discolored, or uneven teeth seeking fast cosmetic improvement.',
       image: '/images/comp.jpg',
-      alt: 'dental Treatment provided in a clean and modern clinical environment.'
+      alt: 'Dental treatment provided in a clean and modern clinical environment.'
     },
     {
       id: 2,
@@ -1195,7 +1194,7 @@ export const categoryContent = {
       idealFor:
         ' Individuals looking for a complete smile transformation with long-term results.',
       image: '/images/dentalveeners.jpg',
-      alt: 'dental Treatment performed by an experienced dentist using advanced equipment.'
+      alt: 'Dental treatment performed by an experienced dentist using advanced equipment.'
     },
     {
       id: 3,
@@ -1215,7 +1214,7 @@ export const categoryContent = {
       idealFor:
         ' Patients suffering from tooth infection, deep decay, or severe sensitivity.',
       image: '/images/rootcanal.jpg',
-      alt: 'Patient receiving safe and comfortable dental Treatment.'
+      alt: 'Patient receiving safe and comfortable Dental treatment.'
     },
     {
       id: 4,
@@ -1235,7 +1234,7 @@ export const categoryContent = {
       idealFor:
         ' Patients seeking a temporary or non-invasive cosmetic smile enhancement.',
       image: '/images/snap-on-smile.jpg',
-      alt: 'dental Treatment room designed for hygiene, safety, and patient comfort.'
+      alt: 'Dental treatment room designed for hygiene, safety, and patient comfort.'
     },
     {
       id: 5,
@@ -1255,7 +1254,7 @@ export const categoryContent = {
       idealFor:
         ' Individuals with stained or dull teeth seeking a brighter smile.',
       image: '/images/teeth-bleaching.jpg',
-      alt: 'Comprehensive dental Treatment focused on long-term oral health care.'
+      alt: 'Comprehensive Dental treatment focused on long-term oral health care.'
     },
     {
       id: 6,
@@ -1275,7 +1274,7 @@ export const categoryContent = {
       idealFor:
         ' Patients with partial or complete tooth loss.',
       image: '/images/teethdentures.jpg',
-      alt: 'Personalized dental Treatment consultation for accurate diagnosis and planning.'
+      alt: 'Personalized Dental treatment consultation for accurate diagnosis and planning.'
     },
     {
       id: 7,
@@ -1295,7 +1294,7 @@ export const categoryContent = {
       idealFor:
         ' Patients with cavities, chipped, or damaged teeth.',
       image: '/images/composite.jpg',
-      alt: 'Painless dental Treatment using modern dental techniques.'
+      alt: 'Painless Dental treatment using modern dental techniques.'
     },
     {
       id: 8,
@@ -1315,7 +1314,7 @@ export const categoryContent = {
       idealFor:
         ' Children, teenagers, and adults with alignment or bite issues.',
       image: '/images/braces.jpg',
-      alt: 'Routine dental Treatment carried out with professional care.'
+      alt: 'Routine Dental treatment carried out with professional care.'
     },
     {
       id: 9,
@@ -1335,7 +1334,7 @@ export const categoryContent = {
       idealFor:
         ' Patients with broken, weakened, or missing teeth.',
       image: '/images/dental-crown.jpg',
-      alt: 'Cosmetic and restorative dental Treatment for smile improvement.'
+      alt: 'Cosmetic and restorative Dental treatment for smile improvement.'
     },
     {
       id: 10,
@@ -1355,7 +1354,7 @@ export const categoryContent = {
       idealFor:
         ' Patients with bleeding gums, swelling, or chronic bad breath.',
       image: '/images/gum-disease.jpg',
-      alt: 'High-quality dental Treatment ensuring patient safety and effective results.'
+      alt: 'High-quality Dental treatment ensuring patient safety and effective results.'
     }
   ],
   consultationCTA: {
@@ -1397,7 +1396,7 @@ export const categoryContent = {
         {
           icon: 'Shield',
           title: 'Reduce Stress & Jaw Tension',
-          description: 'dental stress from grinding or clenching can cause jaw pain. Our customized night guards, bite alignment, and relaxation therapies help reduce discomfort and prevent long-term damage.'
+          description: 'Dental stress from grinding or clenching can cause jaw pain. Our customized night guards, bite alignment, and relaxation therapies help reduce discomfort and prevent long-term damage.'
         },
         {
           icon: 'Star',
@@ -1411,7 +1410,7 @@ export const categoryContent = {
         },
         {
           icon: 'Star',
-          title: 'Pediatric & Family dental Care',
+          title: 'Pediatric & Family Dental Care',
           description: 'Gentle, effective care for children ensures healthy dental habits from an early age, preventing future complications and fostering lifelong oral wellness.'
         },
         {
@@ -1421,13 +1420,13 @@ export const categoryContent = {
         },
       ],
       image: '/images/d2.jpg',
-      imageAlt: 'dental care in Dubai',
+      imageAlt: 'Cosmetic dental procedure in progress at RamaCare Dubai',
       ctaCard: {
-        title: 'Expert dental Care in Jumeirah 1',
-        description: 'Book a consultation with our DHA-licensed dentists for personalized smile transformation and oral health solutions.'
+        title: 'Expert Dental Care in Jumeirah 1',
+        description: 'Book a consultation with our DHA-Licensed Dentists for personalized smile transformation and oral health solutions.'
       },
       bottomSection: {
-        title: 'Premium dental Care Centre in Jumeirah 1, Dubai',
+        title: 'Premium Dental Care Centre in Jumeirah 1, Dubai',
         description: 'We offer comprehensive dental services including cosmetic dentistry, restorative treatments, orthodontics, and preventive care in Dubai. Our DHA-licensed dentists use advanced technology and premium materials to deliver natural-looking, long-lasting results. Visit our Jumeirah 1 clinic for teeth whitening, veneers, dental implants, or routine check-ups. We provide personalized care to help you achieve a healthy, beautiful smile.'
       }
     },
@@ -1624,10 +1623,10 @@ export const categoryContent = {
     }    ,
 
     facility: {
-  badge: 'Our dental Facility',
-  title: 'State-of-the-Art dental Clinic',
+  badge: 'Our Dental Facility',
+  title: 'State-of-the-Art Dental Clinic',
   description:
-    'Receive comprehensive dental care in our modern Dubai dental clinic equipped with advanced technology, premium sterilization standards, and patient-centric comfort.',
+    'Receive comprehensive dental care in our modern Dubai Dental clinic equipped with advanced technology, premium sterilization standards, and patient-centric comfort.',
   topGalleryImages: [
     {
       id: 1,
@@ -1732,9 +1731,9 @@ export const categoryContent = {
        backgroundAlt: 'Physiotherapy Treatment focused on pain relief and improved body mobility.',
       stats: [
         { number: '15+', label: 'Years Experience' },
-        { number: '5,00+', label: 'Happy Patients' },
+        { number: '500+', label: 'Happy Patients' },
         { number: '98%', label: 'Recovery Success Rate' },
-        { number: '4.8/5', label: 'Patient Rating' }
+        { number: '4.9/5', label: 'Patient Rating' }
       ],
       features: [
         'DHA-Licensed Physiotherapists',
@@ -1815,54 +1814,54 @@ export const categoryContent = {
         {
           id: 1,
           title: 'Ultrasound Therapy',
-          slug: 'hair-treatment',
+          slug: 'ultrasound-therapy',
           fullSlug: '/services/ultrasound-therapy-dubai/',
-          icon: 'Scissors',
-          subtitle: 'Restore Strength, Shine, and Volume',
-          duration: '45-60 Mins',
-          badgeColor: 'purple',
+          icon: 'Activity',
+          subtitle: 'Deep Tissue Pain Relief & Faster Healing',
+          duration: '30-45 Mins',
+          badgeColor: 'blue',
           benefits: [
-            'Solutions for hair thinning, hair loss, and scalp health',
-            'Advanced PRP therapy, hair regrowth treatments, and nourishment',
-            'Improves hair texture and overall scalp condition',
+            'Reduces inflammation and promotes tissue healing at the cellular level',
+            'Eases muscle spasms, stiffness, and deep-seated joint pain',
+            'Improves blood circulation to accelerate soft tissue recovery'
           ],
-          idealFor: 'Patients experiencing stress-related or hereditary hair loss, Those looking for non-surgical hair restoration solutions',
+          idealFor: 'Patients with soft tissue injuries, tendonitis, or chronic muscle stiffness; those recovering from sprains or strains who need targeted, non-invasive pain relief',
           image: '/images/ultrasound.jpg',
-           alt: 'Ultrasound Therapy in Dubai performed in a modern clinic to support pain relief and muscle recovery.'
+          alt: 'Ultrasound Therapy in Dubai performed in a modern clinic to support pain relief and muscle recovery.'
         },
         {
           id: 2,
           title: 'Electrotherapy',
-          slug: 'laser-treatment',
+          slug: 'electrotherapy',
           fullSlug: '/services/electrotherapy-dubai/',
           icon: 'Zap',
-          subtitle: ' Precision Skin and Hair Solutions',
-          duration: '30-60 Mins',
-          badgeColor: 'purple',
+          subtitle: 'Nerve & Muscle Stimulation for Pain Management',
+          duration: '30-45 Mins',
+          badgeColor: 'blue',
           benefits: [
-            'Laser hair removal for smooth, long-lasting results',
-            'Skin resurfacing for pigmentation, scars, and texture improvement',
-            'Safe, clinically approved procedures for all skin types',
+            'Reduces pain signals through targeted electrical nerve stimulation (TENS/NMES)',
+            'Helps re-activate weakened or inhibited muscles after injury or surgery',
+            'Supports faster recovery alongside manual therapy and exercise'
           ],
-          idealFor: 'Individuals seeking non-invasive, high-precision treatments,Dubai residents want fast and effective aesthetic solutions',
+          idealFor: 'Patients with chronic pain conditions, post-surgical muscle weakness, or nerve-related discomfort seeking a safe, drug-free management option',
           image: '/images/electro-therepy.jpg',
           alt: 'Electrotherapy in Dubai performed in a professional physiotherapy clinic for pain relief and muscle recovery.'
         },
         {
           id: 3,
-          title: 'Pelvic Floor Therapy ',
-          slug: 'body-shaping',
+          title: 'Pelvic Floor Therapy',
+          slug: 'pelvic-floor-therapy',
           fullSlug: '/services/pelvic-floor-therapy-dubai/',
           icon: 'Target',
-          subtitle: 'Contour and Rejuvenate Your Body',
-          duration: '45-90 Mins',
-          badgeColor: 'orange',
+          subtitle: 'Restore Core & Pelvic Function',
+          duration: '45-60 Mins',
+          badgeColor: 'blue',
           benefits: [
-            'Non-surgical body sculpting and fat reduction',
-            'Cellulite treatment and skin tightening for smoother contours.',
-            'Enhances overall body confidence and aesthetics',
+            'Strengthens and rehabilitates pelvic floor muscles for improved bladder and core control',
+            'Supports postpartum recovery and post-surgical pelvic rehabilitation',
+            'Addresses pelvic pain, incontinence, and core instability with targeted exercises'
           ],
-          idealFor: 'Individuals looking for body contouring without surgery, Those aiming for a toned and sculpted appearance',
+          idealFor: 'Postpartum women, patients recovering from pelvic or abdominal surgery, and individuals experiencing pelvic pain or incontinence',
           image: '/images/pelvic.jpg',
           alt: 'Pelvic Floor Therapy in Dubai delivered in a private clinic to improve core stability and pelvic health.'
         },
@@ -2017,10 +2016,10 @@ export const categoryContent = {
     },
     {
       id: 3,
-      number: '94%',
+      number: '98%',
       label1: 'Success Rate',
       label2: 'Patient Satisfaction',
-      target: 94
+      target: 98
     },
     {
       id: 4,
