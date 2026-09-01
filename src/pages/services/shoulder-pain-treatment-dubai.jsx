@@ -34,7 +34,9 @@ import {
   ClipboardCheck,
   Quote,
   AlertCircle,
-  Stethoscope
+  Stethoscope,
+  Search,
+  Award
 } from 'lucide-react';
 
 // Renders text containing {{Label|/href}} tokens as real inline links.
