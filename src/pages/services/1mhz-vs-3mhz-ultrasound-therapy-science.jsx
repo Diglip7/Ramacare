@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { MessageCircle, Calendar, Phone, Check, Zap, Activity, Target, Users, ChevronDown, ChevronUp, MapPin, Award, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
@@ -145,12 +146,116 @@ const UltrasoundFrequencyScience = () => {
     }
   ];
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/1mhz-vs-3mhz-ultrasound-therapy-dubai.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/',
+        name: '1MHz vs 3MHz Ultrasound Therapy Science | RamaCare Dubai',
+        description: 'Understanding the physics of healing. Learn the difference between 1MHz and 3MHz ultrasound frequencies and how RamaCare uses sound waves to repair deep tissue in Jumeirah.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound (Frequency-Calibrated)' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: '1MHz vs 3MHz Ultrasound Therapy Science', item: 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/#faq',
+        mainEntity: faqData.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Deep Tissue Science: 1MHz vs 3MHz Ultrasound | RamaCare</title>
+        <title key="title">1MHz vs 3MHz Ultrasound Therapy Science | RamaCare Dubai</title>
         <meta name="description" content="Understanding the physics of healing. Learn the difference between 1MHz and 3MHz ultrasound frequencies and how RamaCare uses sound waves to repair deep tissue in Jumeirah." key="description" />
-        
+        <meta name="keywords" content="1MHz vs 3MHz ultrasound, ultrasound frequency science, deep tissue ultrasound therapy, superficial ultrasound therapy, ultrasound therapy Dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="1MHz vs 3MHz Ultrasound Therapy Science | RamaCare Dubai" key="og:title" />
+        <meta property="og:description" content="Understanding the physics of healing. Learn the difference between 1MHz and 3MHz ultrasound frequencies and how RamaCare uses sound waves to repair deep tissue in Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/1mhz-vs-3mhz-ultrasound-therapy-dubai.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="1MHz vs 3MHz ultrasound therapy frequency comparison at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="1MHz vs 3MHz Ultrasound Therapy Science | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Deep or shallow? Learn how RamaCare calibrates ultrasound frequency to the exact depth of your injury." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/1mhz-vs-3mhz-ultrasound-therapy-dubai.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-[#FDFBF7]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
@@ -158,6 +263,16 @@ const UltrasoundFrequencyScience = () => {
         {/* Hero Section */}
         <section className="relative bg-[#F5F1EA] overflow-hidden">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-16 py-16 lg:py-24">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">1MHz vs 3MHz Ultrasound Science</span>
+            </nav>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
               {/* Left Column */}

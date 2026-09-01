@@ -63,7 +63,7 @@ const meta = {
   title: "Hollywood Smile Treatment Dubai | RamaCare",
   description:
     "Explore Hollywood Smile Treatment Dubai at RamaCare Polyclinic with personalized cosmetic dentistry options for a natural, balanced smile. Book a consultation.",
-  url: "https://ramacarepolyclinic.ae/services/hollywood-smile-treatment-dubai",
+  url: "https://ramacarepolyclinic.ae/services/hollywood-smile-treatment-dubai/",
 };
 
 /* -------------------------------------------------------------------------- */
@@ -2180,6 +2180,23 @@ export default function HollywoodSmileTreatmentDubai() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={meta.url} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Hollywood Smile Treatment Dubai | RamaCare" key="og:title" />
+        <meta property="og:description" content="Explore Hollywood Smile Treatment Dubai at RamaCare Polyclinic with personalized cosmetic dentistry options for a natural, balanced smile. Book a consultation." key="og:description" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content={meta.url} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Hollywood%20Smile%20Treatment%20Dubai%20consultation.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hollywood Smile Treatment Dubai consultation at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Hollywood Smile Treatment Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Personalized cosmetic dentistry for a natural, balanced smile — veneers, bonding, whitening, and more at RamaCare Polyclinic Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Hollywood%20Smile%20Treatment%20Dubai%20consultation.jpg" key="twitter:image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchemaData) }}

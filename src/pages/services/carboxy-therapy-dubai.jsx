@@ -25,6 +25,16 @@ export default function CarboxyTherapyPage() {
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/carboxy-therapy');
 
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
@@ -41,72 +51,85 @@ export default function CarboxyTherapyPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Carboxy Therapy in Dubai for Skin and Body Rejuvenation</title>
-  <meta name="description" content="Carboxy therapy in Dubai improves circulation, skin texture, and elasticity using safe carbon dioxide therapy under expert medical supervision." key="description" />
-  <meta name="keywords" content="Carboxy therapy in Dubai, Carboxytherapy treatment Dubai, Skin rejuvenation Dubai, Dark circles treatment Dubai, Cellulite reduction therapy, Skin tightening treatment Dubai, Body contouring Dubai, Non-surgical aesthetic treatment, Professional skin therapy in Dubai" />
-  
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/#condition",
-          "name": "Skin Circulation, Texture, and Rejuvenation Concerns",
-          "alternateName": "Skin Blood Flow and Surface Quality Issues",
-          "url": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/",
-          "description": "Skin circulation, texture, and rejuvenation concerns include dull complexion, uneven texture, mild scarring, pigmentation irregularities, and localized loss of elasticity often related to poor microcirculation and aging.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Carboxy Therapy",
-            "description": "A minimally invasive aesthetic therapy that uses controlled carbon dioxide (CO₂) injections to improve local blood flow, stimulate collagen production, and enhance skin texture and tone."
-          }
-        },
-        {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/#procedure",
-          "name": "Carboxy Therapy in Dubai",
-          "alternateName": "CO₂ Aesthetic Skin Rejuvenation",
-          "url": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/",
-          "description": "Carboxy Therapy in Dubai at RamaCare Polyclinic is a minimally invasive aesthetic procedure designed to improve skin circulation, texture, tone, and rejuvenation by administering controlled carbon dioxide gas under the skin.",
-          "procedureType": "Minimally invasive aesthetic therapy",
-          "howPerformed": "The procedure involves the clinician administering controlled carbon dioxide (CO₂) gas beneath the skin in targeted treatment areas using fine cannulas or needles, which stimulates microcirculation and collagen response to enhance skin quality.",
-          "preparation": "Patients should attend with clean skin, disclose their medical history, and avoid blood-thinning medications or supplements prior to treatment if advised by the clinician.",
-          "followup": "Follow-up sessions may be recommended based on individual response, skin condition, and treatment goals. Clinician-guided aftercare helps optimize results.",
-          "indication": [
-            "Dull or uneven skin tone",
-            "Poor local circulation or dull complexion",
-            "Mild scarring or textural irregularities",
-            "Localized loss of skin elasticity",
-            "Fine lines and early signs of aging"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
-        }
-      ]
-    })
-  }}
-/>
-</Head>
+        <title key="title">Carboxy Therapy in Dubai for Skin and Body Rejuvenation</title>
+        <meta name="description" content="Carboxy therapy in Dubai improves circulation, skin texture, and elasticity using safe carbon dioxide therapy under expert medical supervision." key="description" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Carboxy Therapy in Dubai for Skin and Body Rejuvenation" />
+        <meta property="og:description" content="Carboxy therapy in Dubai improves circulation, skin texture, and elasticity using safe carbon dioxide therapy under expert medical supervision." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/carboxy.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Carboxy Therapy in Dubai - RamaCare Polyclinic" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Carboxy Therapy in Dubai for Skin and Body Rejuvenation" />
+        <meta name="twitter:description" content="Carboxy therapy in Dubai improves circulation, skin texture, and elasticity using safe carbon dioxide therapy under expert medical supervision." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/carboxy.jpg" />
+
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+                    { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+                    { "@type": "ListItem", "position": 3, "name": "Carboxy Therapy", "item": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/" }
+                  ]
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  "name": "Carboxy Therapy in Dubai",
+                  "description": "Carboxy therapy in Dubai improves circulation, skin texture, and elasticity using safe carbon dioxide therapy under expert medical supervision.",
+                  "url": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/",
+                  "procedureType": "Minimally invasive aesthetic therapy",
+                  "bodyLocation": "Face and Body",
+                  "reviewedBy": {
+                    "@type": "Person",
+                    "name": "Sonita Sinaga",
+                    "jobTitle": "Licensed & Certified Aesthetic Therapist",
+                    "hasCredential": "NCLC Laser Certified",
+                    "worksFor": {
+                      "@type": "MedicalOrganization",
+                      "name": "RamaCare Polyclinic"
+                    },
+                    "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+                  },
+                  "provider": {
+                    "@type": "MedicalClinic",
+                    "name": "RamaCare Polyclinic",
+                    "url": "https://ramacarepolyclinic.ae/",
+                    "image": "https://ramacarepolyclinic.ae/images/carboxy.jpg",
+                    "telephone": "+971566597878",
+                    "priceRange": "$$",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+                      "addressLocality": "Jumeirah 1",
+                      "addressRegion": "Dubai",
+                      "addressCountry": "AE"
+                    }
+                  }
+                },
+                {
+                  "@type": "FAQPage",
+                  "mainEntity": faqSchema
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}

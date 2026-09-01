@@ -229,6 +229,40 @@ export default function MelasmaTreatmentPage() {
     }
   };
 
+  const medicalWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Melasma Treatment Dubai | RamaCare Polyclinic",
+    "url": seo.canonical,
+    "description": "Personalized, evidence-based melasma treatment combining prescription topical therapy, chemical peels, laser treatment, microneedling, and medical-grade skincare, tailored to pigmentation depth, skin type, and individual triggers.",
+    "medicalAudience": {
+      "@type": "Patient"
+    },
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Melasma"
+    },
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Sahar Zomorrodi",
+      "medicalSpecialty": "General Practice",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "telephone": "+971566597878",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
   return (
     <Layout>
       <Head>
@@ -237,14 +271,24 @@ export default function MelasmaTreatmentPage() {
         <link rel="canonical" href={seo.canonical} key="canonical" />
         
         {/* OpenGraph */}
-        <meta property="og:title" content="Struggling With Melasma? RamaCare Dubai Can Help" />
-        <meta property="og:description" content="Personalized, evidence-based melasma treatment in Dubai. Meet DHA-licensed dermatology experts at RamaCare Polyclinic and start your skin journey today." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:title" content="Struggling With Melasma? RamaCare Dubai Can Help" key="og:title" />
+        <meta property="og:description" content="Personalized, evidence-based melasma treatment in Dubai. Meet DHA-licensed dermatology experts at RamaCare Polyclinic and start your skin journey today." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={seo.canonical} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Melasma treatment Dubai.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Struggling With Melasma? RamaCare Dubai Can Help" key="twitter:title" />
+        <meta name="twitter:description" content="Personalized, evidence-based melasma treatment in Dubai. Meet DHA-licensed dermatology experts at RamaCare Polyclinic and start your skin journey today." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Melasma treatment Dubai.jpg" key="twitter:image" />
 
         {/* Structured Data Schemas */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />

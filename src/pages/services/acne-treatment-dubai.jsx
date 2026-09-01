@@ -893,14 +893,14 @@ export default function AcneTreatmentPage() {
             },
             {
               title: 'Experienced Team',
-              description: '10+ Years Combined'
+              description: '15+ Years Experience'
             },
             {
-              title: '1,200+ Procedures',
+              title: '2,500+ Procedures',
               description: 'Completed'
             },
             {
-              title: '4.8/5 Rating',
+              title: '4.9/5 Rating',
               description: 'Patient Reviews'
             }
           ]

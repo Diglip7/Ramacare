@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { MessageCircle, Calendar, Check, Zap, Activity, Waves, Clock, ChevronDown, ChevronUp, AlertCircle, Flame, HeartPulse, MapPin, Award, Sparkles, X, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../../../components/Layout';
@@ -111,13 +112,117 @@ const ThermalVsMechanicalUltrasound = () => {
     }
   ];
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/thermal-vs-mechanical-ultrasound-therapy-dubai.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/',
+        name: 'Thermal vs. Mechanical Ultrasound Therapy Dubai | RamaCare Guide',
+        description: 'Should you use Thermal or Mechanical ultrasound? Learn how RamaCare Jumeirah uses different ultrasound modes to treat acute swelling versus chronic stiffness.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound (Thermal & Mechanical Modes)' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Thermal vs. Mechanical Ultrasound', item: 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
       <Head>
         <title key="title">Thermal vs. Mechanical Ultrasound Therapy Dubai | RamaCare Guide</title>
         <meta name="description" content="Should you use Thermal or Mechanical ultrasound? Learn how RamaCare Jumeirah uses different ultrasound modes to treat acute swelling versus chronic stiffness." key="description" />
-        
+        <meta name="keywords" content="Thermal vs mechanical ultrasound Dubai, continuous vs pulsed ultrasound, therapeutic ultrasound modes, ultrasound therapy for swelling, ultrasound for muscle stiffness Dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Thermal vs. Mechanical Ultrasound Therapy Dubai | RamaCare Guide" key="og:title" />
+        <meta property="og:description" content="Should you use Thermal or Mechanical ultrasound? Learn how RamaCare Jumeirah uses different ultrasound modes to treat acute swelling versus chronic stiffness." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/thermal-vs-mechanical-ultrasound-therapy-dubai.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Thermal vs Mechanical ultrasound therapy comparison at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Thermal vs. Mechanical Ultrasound Therapy Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Swelling or stiffness? Learn how RamaCare Jumeirah switches between thermal and mechanical ultrasound modes to treat your specific injury." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/thermal-vs-mechanical-ultrasound-therapy-dubai.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
@@ -125,6 +230,16 @@ const ThermalVsMechanicalUltrasound = () => {
         {/* Section 1: Hero */}
         <section className="bg-[#F5F1EA] py-16 lg:py-24">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Thermal vs. Mechanical Ultrasound</span>
+            </nav>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 items-center">
               
               {/* Left Column: Content */}
@@ -535,12 +650,12 @@ const ThermalVsMechanicalUltrasound = () => {
           </div>
         </section>
 
-        {/* Section 6: Awareness Campaign */}
+        {/* Section 6: Common Concerns From Dubai Runners */}
         <section className="bg-white py-16 lg:py-24">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4">Awareness Campaign</h2>
-              <p className="text-lg text-[#5F5F5F]">Educational ads for Dubai runners and athletes</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4">Common Concerns From Dubai Runners</h2>
+              <p className="text-lg text-[#5F5F5F]">Key recovery guidance for active individuals and athletes</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -777,7 +892,7 @@ const ThermalVsMechanicalUltrasound = () => {
           </motion.div>
         )}
       </AnimatePresence>
-        <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="thermal-vs-mechanical-ultrasound-therapy-dubai" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="thermal-vs-mechanical-ultrasound-therapy-dubai" />
       </Layout>
   );
 };

@@ -221,86 +221,124 @@ export default function PrpHairRecoveryPage() {
         <title key="title">PRP Hair Treatment Recovery: What to Expect Day by Day | Dubai</title>
         <meta
           name="description"
-          content="Wondering about PRP hair treatment recovery? See what to expect day-by-day, complete aftercare tips, and recovery timelines at RamaCare Polyclinic, Dubai."
+          content="A day-by-day PRP hair treatment recovery timeline, aftercare instructions, and guidance on normal vs. concerning symptoms, medically reviewed by RamaCare Polyclinic."
           key="description"
         />
-        <meta property="og:title" content="PRP Hair Treatment Recovery: What to Expect | RamaCare Polyclinic" key="og:title" />
+        <meta
+          name="keywords"
+          content="PRP hair treatment recovery Dubai, PRP aftercare instructions, PRP hair treatment side effects, PRP recovery timeline, hair PRP downtime, PRP hair treatment day by day recovery"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="PRP Hair Treatment Recovery: What to Expect Day by Day | RamaCare Polyclinic" key="og:title" />
         <meta
           property="og:description"
-          content="Realistic day-by-day PRP hair treatment recovery timeline and expert aftercare guidelines in Dubai."
+          content="A day-by-day PRP hair treatment recovery timeline, aftercare instructions, and guidance on normal vs. concerning symptoms, medically reviewed by RamaCare Polyclinic."
           key="og:description"
         />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta name="twitter:title" content="PRP Hair Treatment Recovery Timeline — RamaCare Polyclinic" key="twitter:title" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="PRP Hair Treatment Recovery: What to Expect Day by Day | RamaCare Polyclinic" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="A detailed look at what to expect during your PRP hair treatment recovery from the Jumeirah 1 clinical team."
+          content="A day-by-day PRP hair treatment recovery timeline, aftercare instructions, and guidance on normal vs. concerning symptoms, medically reviewed by RamaCare Polyclinic."
           key="twitter:description"
         />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp.jpg" key="twitter:image" />
 
+        {/* Structured JSON-LD Schema (@graph: MedicalWebPage, Physician, FAQPage, MedicalClinic) */}
         <script
-          key="schema-article"
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'MedicalWebPage',
-              about: {
-                '@type': 'MedicalProcedure',
-                name: 'PRP Hair Treatment Recovery',
-                description:
-                  'Recovery guidelines and day by day timeline details following a Platelet Rich Plasma hair restoration treatment.',
-                procedureType: 'https://schema.org/NoninvasiveProcedure',
-              },
-            }),
-          }}
-        />
-        <script
-          key="schema-faq"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
-                '@type': 'Question',
-                name: f.question,
-                acceptedAnswer: { '@type': 'Answer', text: f.answer },
-              })),
-            }),
-          }}
-        />
-        <script
-          key="schema-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+              '@graph': [
                 {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'PRP Hair Treatment Recovery',
-                  item: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/',
+                  '@type': 'MedicalWebPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/#webpage',
+                  url: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/',
+                  name: 'PRP Hair Treatment Recovery: What to Expect Day by Day',
+                  description:
+                    'A day-by-day PRP hair treatment recovery timeline, aftercare instructions, and guidance on normal vs. concerning symptoms, medically reviewed by RamaCare Polyclinic.',
+                  inLanguage: 'en',
+                  isPartOf: {
+                    '@type': 'WebSite',
+                    url: 'https://ramacarepolyclinic.ae/',
+                    name: 'RamaCare Polyclinic',
+                  },
+                  about: {
+                    '@type': 'MedicalProcedure',
+                    name: 'Platelet Rich Plasma (PRP) Hair Therapy',
+                  },
+                  reviewedBy: {
+                    '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/#physician',
+                  },
+                  breadcrumb: {
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+                      {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: 'PRP Hair Treatment Recovery',
+                        item: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/',
+                      },
+                    ],
+                  },
+                },
+                {
+                  '@type': 'Physician',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/#physician',
+                  name: 'Dr. Sahar Zomorrodi',
+                  jobTitle: 'General Practitioner & Aesthetic Specialist',
+                  medicalSpecialty: 'General Practice',
+                  honorificSuffix: 'MD',
+                  hasCredential: 'DHA Licensed General Practitioner',
+                  worksFor: {
+                    '@type': 'MedicalOrganization',
+                    name: 'RamaCare Polyclinic',
+                    url: 'https://ramacarepolyclinic.ae/',
+                  },
+                  url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/#faq',
+                  mainEntity: faqs.map((f) => ({
+                    '@type': 'Question',
+                    name: f.question,
+                    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+                  })),
+                },
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/#organization',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/',
+                  telephone: '+971566597878',
+                  medicalSpecialty: 'Dermatology',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+                    addressLocality: 'Jumeirah 1, Dubai',
+                    addressCountry: 'AE',
+                  },
+                  priceRange: '$$',
                 },
               ],
-            }),
-          }}
-        />
-        <script
-          key="schema-clinic"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'MedicalClinic',
-              name: 'RamaCare Polyclinic',
-              url: 'https://ramacarepolyclinic.ae/',
-              medicalSpecialty: 'Dermatology',
-              address: { '@type': 'PostalAddress', addressLocality: 'Jumeirah 1', addressRegion: 'Dubai', addressCountry: 'AE' },
-              priceRange: '$$',
             }),
           }}
         />
@@ -308,6 +346,8 @@ export default function PrpHairRecoveryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span className="mx-1">/</span>
+          <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span className="mx-1">/</span>
           <span className="text-[#1F5E4B]">PRP Hair Treatment Recovery</span>
         </nav>

@@ -243,7 +243,6 @@ export default function CervicalSpondylosisTreatmentPage() {
       <Head>
         <title key="title">Cervical Spondylosis Treatment Dubai | RamaCare Polyclinic</title>
         <meta name="description" content={seo.metaDescription} key="description" />
-        <meta name="keywords" content={seo.keywords} />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 

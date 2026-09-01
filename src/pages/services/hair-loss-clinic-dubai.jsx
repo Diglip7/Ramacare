@@ -204,84 +204,107 @@ export default function HairLossClinicDubai() {
     { title: 'Best Hair Specialist in Dubai', desc: 'Guidance on what to look for when choosing a hair specialist for your assessment and care.', href: '/services/best-hair-specialist-dubai/' },
   ];
 
+  const CANONICAL_URL = `${SITE_URL}${PAGE_PATH}`;
+  const OG_IMAGE = `${SITE_URL}/images/hair-loss-clinic-dubai-og.jpg`;
+  const META_TITLE = 'Hair Loss Clinic Dubai | Diagnosis & Care – RamaCare';
+  const META_DESCRIPTION =
+    'Hair Loss Clinic Dubai — RamaCare Polyclinic offers professional hair & scalp assessment, diagnosis, and personalized care plans. Book a consultation today.';
+  const META_KEYWORDS =
+    'Hair Loss Clinic Dubai, Hair Loss Treatment Dubai, Trichologist Dubai, Hair Specialist Dubai, Scalp Assessment Dubai, PRP Hair Treatment Dubai, Hair Transplant Alternative Dubai, Female Hair Loss Dubai, Male Pattern Baldness Dubai';
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": META_TITLE,
+        "description": META_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": `${SITE_URL}/`,
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Hair Loss"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services/` },
+            { "@type": "ListItem", "position": 3, "name": "Hair Loss Clinic Dubai", "item": CANONICAL_URL }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Dr. Sahar Zomorrodi",
+        "medicalSpecialty": "General Practice",
+        "honorificSuffix": "MD",
+        "hasCredential": "DHA Licensed General Practitioner",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": `${SITE_URL}/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/`
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Hair Loss Clinic Dubai | Diagnosis & Care – RamaCare</title>
-        <meta
-          name="description"
-          content="Hair Loss Clinic Dubai — RamaCare Polyclinic offers professional hair & scalp assessment, diagnosis, and personalized care plans. Book a consultation today."
-          key="description"/>
-        <meta name="keywords" content="Hair Loss Clinic Dubai, Hair Loss Treatment Dubai, Trichologist Dubai, Hair Specialist Dubai, Scalp Assessment Dubai, PRP Hair Treatment Dubai" />
+        <title key="title">{META_TITLE}</title>
+        <meta name="description" content={META_DESCRIPTION} key="description" />
+        <meta name="keywords" content={META_KEYWORDS} key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
-        {/* Structured Schema */}
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={META_TITLE} key="og:title" />
+        <meta property="og:description" content={META_DESCRIPTION} key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hair Loss Clinic Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={META_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={META_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
+        {/* Unified JSON-LD @graph Schema */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebPage",
-                  "@id": `${SITE_URL}${PAGE_PATH}`,
-                  "url": `${SITE_URL}${PAGE_PATH}`,
-                  "name": "Hair Loss Clinic Dubai | Diagnosis & Care – RamaCare",
-                  "description": "Hair Loss Clinic Dubai — RamaCare Polyclinic offers professional hair & scalp assessment, diagnosis, and personalized care plans."
-                },
-                {
-                  "@type": "MedicalClinic",
-                  "@id": `${SITE_URL}/#clinic`,
-                  "name": "RamaCare Polyclinic",
-                  "url": SITE_URL,
-                  "logo": `${SITE_URL}/images/Logo.png`,
-                  "telephone": "+971 56 659 7878",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                    "addressLocality": "Jumeirah 1",
-                    "addressRegion": "Dubai",
-                    "addressCountry": "AE"
-                  }
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": `${SITE_URL}${PAGE_PATH}#breadcrumb`,
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": SITE_URL
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Services",
-                      "item": `${SITE_URL}/services/`
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Hair Loss Clinic Dubai",
-                      "item": `${SITE_URL}${PAGE_PATH}`
-                    }
-                  ]
-                },
-                {
-                  "@type": "FAQPage",
-                  "@id": `${SITE_URL}${PAGE_PATH}#faq-schema`,
-                  "mainEntity": faqs.map(faq => ({
-                    "@type": "Question",
-                    "name": faq.question,
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": faq.answer
-                    }
-                  }))
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
@@ -1163,7 +1186,7 @@ export default function HairLossClinicDubai() {
               </div>
               <div className="lg:col-span-5 space-y-6">
                 <img
-                  src="/images/RamaCare Polyclinic hair loss clinic.jpg"
+                  src="/images/ramacare-polyclinic-hair-loss-clinic-dubai.jpg"
                   alt="RamaCare Polyclinic hair loss clinic location in Dubai"
                   className="w-full h-[300px] object-cover rounded-3xl shadow-lg border border-[#E6E2D8]"
                 />

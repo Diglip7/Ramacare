@@ -201,6 +201,24 @@ export default function HydrafacialForAcnePage() {
           key="description"
         />
         <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Hydrafacial for Acne in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="Wondering if Hydrafacial is good for acne-prone skin? Learn benefits, limitations & suitability, then book a skin assessment at RamaCare Dubai." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} key="og:url" />
+        <meta property="og:image" content={`${SITE_URL}/images/hydrafacial-for-acne-dubai-og.jpg`} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hydrafacial for Acne in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Hydrafacial for Acne in Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:description" content="Wondering if Hydrafacial is good for acne-prone skin? Learn benefits, limitations & suitability, then book a skin assessment at RamaCare Dubai." key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE_URL}/images/hydrafacial-for-acne-dubai-og.jpg`} key="twitter:image" />
         <script
           key="schema-webpage"
           type="application/ld+json"

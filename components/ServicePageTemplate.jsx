@@ -1106,9 +1106,13 @@ export default function ServicePageTemplate({ content }) {
                     {whyChooseUs.outro}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">Joint pain</span>
-                    <span className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">Sports Rehab</span>
-                    <span className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">Orthopedic Care</span>
+                    {(content.supportTags || whyChooseUs?.tags || (
+                      (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety')) ? ['Stress Management', 'Physiotherapy', 'Ayurvedic Wellness'] :
+                      (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress')) ? ['Anxiety Support', 'Physiotherapy', 'Ayurvedic Wellness'] :
+                      ['Joint pain', 'Sports Rehab', 'Orthopedic Care']
+                    )).map((tag, idx) => (
+                      <span key={idx} className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">{tag}</span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -1123,7 +1127,15 @@ export default function ServicePageTemplate({ content }) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
-            <p className="text-base sm:text-lg text-[#5F5F5F]">Browse our answers to popular questions regarding joint care treatments in Dubai.</p>
+            <p className="text-base sm:text-lg text-[#5F5F5F]">
+              {content.faqsSubtitle || content.faqIntro || content.faqsIntro || (
+                (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety'))
+                  ? 'Browse our answers to popular questions about anxiety and supportive wellness care in Dubai.'
+                  : (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress'))
+                  ? 'Browse our answers to popular questions about stress management and wellness care in Dubai.'
+                  : `Browse our answers to popular questions regarding ${seo?.title?.split('|')[0]?.trim() || 'our treatments'} in Dubai.`
+              )}
+            </p>
           </div>
 
           {/* Search Input */}
@@ -1191,7 +1203,13 @@ export default function ServicePageTemplate({ content }) {
           content={{
             badge: 'Start Your Recovery',
             title: seo.title.replace('| Book Now', '').trim(),
-            description: 'Get back to comfortable, pain-free joint movement with evidence-based care at RamaCare Polyclinic.',
+            description: content.consultationDescription || content.bookingDescription || (
+              (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety'))
+                ? 'Take the first step toward feeling calmer and more like yourself, with evidence-based supportive care at RamaCare Polyclinic.'
+                : (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress'))
+                ? 'Take the first step toward feeling calmer, more energized, and more in control, with evidence-based supportive care at RamaCare Polyclinic.'
+                : 'Get back to comfortable, pain-free joint movement with evidence-based care at RamaCare Polyclinic.'
+            ),
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
             submitButtonText: 'Confirm Free Consultation',
@@ -1216,7 +1234,7 @@ export default function ServicePageTemplate({ content }) {
               { title: 'Personalized Plans', description: 'Built Around Assessment' },
               { title: '4.9/5 Rating', description: 'Patient Reviews' }
             ],
-            concerns: [
+            concerns: content.concerns || [
               { value: seo.slug.replace('/', ''), label: 'Primary Joint Treatment' },
               { value: 'knee-pain-treatment-dubai', label: 'Knee Pain / Arthritis' },
               { value: 'shoulder-pain-treatment-dubai', label: 'Shoulder Pain / Stiffness' },

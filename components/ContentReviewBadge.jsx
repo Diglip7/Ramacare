@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, CheckCircle2, Award, Calendar, ExternalLink } from 'lucide-react';
 
-export default function ContentReviewBadge({ doctorName, doctorRole, doctorCredentials, profileUrl, doctorImage, category, pageSlug }) {
+export default function ContentReviewBadge({ doctorName, doctorRole, doctorCredentials, profileUrl, doctorImage, category, pageSlug, customStatement }) {
   const contextStr = ((doctorName || '') + ' ' + (category || '') + ' ' + (pageSlug || '')).toLowerCase();
 
   // Location and General Clinic Pages do NOT display a Content Reviewer Badge
@@ -67,7 +67,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
   let credentials = 'MD · DHA Licensed General Practitioner';
   let experience = '10+ Years Clinical Experience';
   let link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai';
-  let image = '/images/Sahar.png';
+  let image = '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png';
   let statement = 'This medical guide has been reviewed for clinical accuracy, diagnostic integrity, and DHA healthcare standards by Dr. Sahar Zomorrodi.';
 
   if (isJeena) {
@@ -93,7 +93,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     experience = '14+ Years Clinical Experience';
     link = '/doctors/sonita-sinaga-aesthetic-therapist-dubai';
     image = '/images/Sonita.jpeg';
-    statement = 'This aesthetic dermatology & skincare guide has been clinically reviewed for treatment safety, laser protocols, and skincare excellence by Sonita Sinaga.';
+    statement = `This aesthetic dermatology & skincare guide has been clinically reviewed for treatment safety, ${contextStr.includes('prp') ? 'PRP protocols' : 'laser protocols'}, and skincare excellence by Sonita Sinaga.`;
   } else if (isNodainne) {
     name = 'Nodainne Baves Guerrero';
     role = 'Certified Aesthetic & Beauty Therapist';
@@ -108,8 +108,14 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     credentials = 'MD · DHA Licensed General Practitioner';
     experience = '10+ Years Clinical Experience';
     link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai';
-    image = '/images/Sahar.png';
-    statement = 'This medical & dermatology guide has been clinically reviewed for medical accuracy, safety, and DHA standards by Dr. Sahar Zomorrodi.';
+    image = '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png';
+    if (contextStr.includes('insomnia') || contextStr.includes('sleep')) {
+      statement = 'This sleep wellness guide has been clinically reviewed for medical accuracy, safety, and DHA standards by Dr. Sahar Zomorrodi.';
+    } else if (contextStr.includes('dermatology') || contextStr.includes('acne') || contextStr.includes('skin') || contextStr.includes('botox') || contextStr.includes('melasma') || contextStr.includes('rosacea')) {
+      statement = 'This medical & dermatology guide has been clinically reviewed for medical accuracy, safety, and DHA standards by Dr. Sahar Zomorrodi.';
+    } else {
+      statement = 'This medical guide has been clinically reviewed for medical accuracy, safety, and DHA standards by Dr. Sahar Zomorrodi.';
+    }
   } else if (isHirbod) {
     name = 'Dr. Hirbod Gilandoust';
     role = 'Specialist Cosmetic Dentist';
@@ -131,6 +137,9 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
   // Override props if explicitly provided
   if (doctorImage) {
     image = doctorImage;
+  }
+  if (customStatement) {
+    statement = customStatement;
   }
 
   return (
@@ -157,7 +166,13 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
               <img
                 src={image}
                 alt={name}
-                className="w-full h-full object-cover object-[center_15%] transform scale-125"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  if (!e.currentTarget.dataset.retried) {
+                    e.currentTarget.dataset.retried = 'true';
+                    e.currentTarget.src = '/images/Sahar.png';
+                  }
+                }}
                 style={{
                   imageRendering: '-webkit-optimize-contrast',
                   WebkitBackfaceVisibility: 'hidden'

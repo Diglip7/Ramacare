@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState, useEffect } from 'react';
@@ -121,19 +122,122 @@ const HowEximiaWorksPage = () => {
     { id: 4, title: 'Structural Lift', progress: 40 },
   ];
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/session.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Aesthetic Dermatology',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/',
+        name: 'How Eximia Body Contouring Works | Science of Sculpting Dubai',
+        description: 'Discover the science behind Eximia HR77 Platinum. Learn how its sequential 4-phase cycle prepares skin, emulsifies fat, and lifts tissue for natural body contouring.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Eximia Body Contouring' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Sonita Sinaga',
+          jobTitle: 'Licensed & Certified Aesthetic Therapist',
+          url: 'https://ramacarepolyclinic.ae/doctors/sonita-sinaga/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Aesthetic Dermatology', item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/' },
+          { '@type': 'ListItem', position: 3, name: 'Eximia Body Contouring', item: 'https://ramacarepolyclinic.ae/services/eximia-body-contouring-dubai/' },
+          { '@type': 'ListItem', position: 4, name: 'How Eximia Body Contouring Works', item: 'https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
       <Head>
         <title key="title">How Eximia Body Contouring Works | Science of Sculpting Dubai</title>
-        <meta name="description" content="Discover the science behind Eximia HR77 Platinum. Learn how its sequential 4-phase cycle prepare skin, emulsify fat, and lift tissue for natural body contouring." key="description" />
+        <meta name="description" content="Discover the science behind Eximia HR77 Platinum. Learn how its sequential 4-phase cycle prepares skin, emulsifies fat, and lifts tissue for natural body contouring." key="description" />
         <meta name="keywords" content="how Eximia works, Eximia HR77 Platinum technology, Eximia body contouring Dubai, non-surgical fat reduction, sequential 4-phase cycle" />
-        
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="How Eximia Body Contouring Works | Science of Sculpting Dubai" key="og:title" />
+        <meta property="og:description" content="Discover the science behind Eximia HR77 Platinum. Learn how its sequential 4-phase cycle prepares skin, emulsifies fat, and lifts tissue for natural body contouring." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/how-eximia-body-contouring-works-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/session.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="How Eximia Body Contouring Works - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="How Eximia Body Contouring Works | Science of Sculpting Dubai" key="twitter:title" />
+        <meta name="twitter:description" content="Learn how Eximia's sequential 4-phase cycle prepares skin, emulsifies fat, and lifts tissue for natural body contouring." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/session.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+          <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/services/eximia-body-contouring-dubai/" className="hover:text-[#1F5E4B] transition-colors">Eximia Body Contouring</Link>
+          <span aria-hidden="true">/</span>
+          <span className="text-[#1F5E4B]">How Eximia Body Contouring Works</span>
+        </nav>
         {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -235,7 +339,7 @@ const HowEximiaWorksPage = () => {
               The 4-Phase Sequential Technology
             </h2>
             <p className="text-[18px] text-[#5F5F5F]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              The secret to Eximia's #1 ranking in clinical results is the order in which the technologies are applied.
+              The secret to Eximia's superior clinical results is the order in which the technologies are applied.
             </p>
           </div>
 
@@ -480,6 +584,30 @@ const HowEximiaWorksPage = () => {
         </div>
       )}
           </div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Aesthetic Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/aesthetic-dermatology-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Aesthetic Dermatology Dubai
+            </Link>
+            <Link href="/services/eximia-body-contouring-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Eximia Body Contouring Dubai
+            </Link>
+            <Link href="/services/how-many-eximia-sessions-needed-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              How Many Eximia Sessions Needed?
+            </Link>
+            <Link href="/services/is-eximia-body-contouring-safe-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Is Eximia Safe?
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> The technical descriptions of the Eximia HR77 Platinum 4-phase technology on this page represent general clinical information. Individual treatment responses, fat emulsification efficiency, and tissue lifting outcomes vary depending on personal physiology, body composition, and adherence to post-care guidelines. Consult with our certified aesthetic specialists at RamaCare Polyclinic for a thorough evaluation.
+          </p>
         </div>
       </section>
 

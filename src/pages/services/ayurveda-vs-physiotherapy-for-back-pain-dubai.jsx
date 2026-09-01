@@ -8,7 +8,7 @@ import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/ayurveda-vs-physiotherapy-for-back-pain-dubai';
+const PAGE_PATH = '/services/ayurveda-vs-physiotherapy-for-back-pain-dubai/';
 
 const causes = [
   'Muscle strain from lifting, overexertion, or sudden movement',

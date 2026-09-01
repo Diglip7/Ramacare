@@ -21,8 +21,8 @@ export const subSubcategoryContent = {
       description: 'Restore your skin\'s natural glow, hydration, and youthful appearance with Skin Boosters in Dubai at RamaCare Polyclinic.Our advanced injectable skin rejuvenation treatment is designed to deeply hydrate the skin from within, improve elasticity, refine texture, and reduce the appearance of fine lines for healthy, radiant-looking skin. Unlike traditional dermal fillers that primarily restore facial volume, skin boosters focus on improving overall skin quality by delivering hydrating hyaluronic acid into the deeper layers of the skin. Whether you are concerned about dry skin, dullness, early signs of ageing, uneven texture, or loss of elasticity, our DHA-licensed aesthetic specialists create a personalized treatment plan tailored to your unique skin type and aesthetic goals.Skin booster treatments are suitable for the face, neck, décolletage, and hands, offering comprehensive skin rejuvenation with minimal discomfort and little to no downtime.',
       rating: '500+ Happy Clients',
       stats: [
-        { id: 1, number: '92%', label: 'Patient Satisfaction' },
-        { id: 2, number: '800+', label: 'Treatments Completed' },
+        { id: 1, number: '98%', label: 'Success Rate' },
+        { id: 2, number: '2,500+', label: 'Patients Treated' },
         { id: 3, number: '15+', label: 'Years Experience' }
       ],
       ctaButtons: {
@@ -746,7 +746,7 @@ export const subSubcategoryContent = {
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
         phone: '+971 56 659 7878',
-        whatsapp: 'Chat with us instantly',
+        whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
@@ -759,8 +759,41 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '800+ Treatments', description: 'Completed' },
+        { title: '2,500+ Patients', description: 'Successfully Treated' },
         { title: '4.9/5 Rating', description: 'Patient Reviews' }
+      ]
+    },
+    testimonials: {
+      stats: [
+        {
+          id: 1,
+          number: '4.9/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '98%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 98
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Skin Boosters',
+          target: 2500
+        }
       ]
     }
   },
@@ -771,8 +804,8 @@ export const subSubcategoryContent = {
       description: 'Restore smoother, healthier, and more radiant skin with derma roller treatment in Dubai at RamaCare Polyclinic.This advanced microneedling treatment stimulates your skin\'s natural healing process by encouraging collagen and elastin production, helping improve acne scars, fine lines, enlarged pores, uneven skin texture, and overall skin quality without surgery. Over time, aging, acne, sun exposure, and environmental factors can affect your skin\'s appearance, leaving it dull, rough, or uneven.As the skin repairs itself, you may notice gradual improvements in texture, elasticity, and overall radiance. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment by our DHA-licensed aesthetic specialists.We create a personalized treatment plan based on your skin type, concerns, and aesthetic goals to deliver safe, natural-looking results.',
       rating: '500+ Happy Clients',
       stats: [
-        { id: 1, number: '91%', label: 'Patient Satisfaction' },
-        { id: 2, number: '1000+', label: 'Treatments Completed' },
+        { id: 1, number: '98%', label: 'Success Rate' },
+        { id: 2, number: '2,500+', label: 'Patients Treated' },
         { id: 3, number: '15+', label: 'Years Experience' }
       ],
       ctaButtons: {
@@ -1472,7 +1505,7 @@ export const subSubcategoryContent = {
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
         phone: '+971 56 659 7878',
-        whatsapp: 'Chat with us instantly',
+        whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
@@ -1485,8 +1518,8 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '1000+ Treatments', description: 'Completed' },
-        { title: '4.8/5 Rating', description: 'Patient Reviews' }
+        { title: '2,500+ Patients', description: 'Treated' },
+        { title: '4.9/5 Rating', description: 'Patient Reviews' }
       ]
     }
   },
@@ -1497,8 +1530,8 @@ export const subSubcategoryContent = {
       description: 'Loose or sagging skin is a natural result of aging, collagen loss, weight changes, pregnancy, and sun exposure.As collagen and elastin levels decline over time, the skin may lose its firmness, making fine lines, wrinkles, and skin laxity more noticeable.Fortunately, modern aesthetic treatments can effectively improve skin tightness and elasticity without the need for surgery. At RamaCare Polyclinic, we offer advanced skin tightening treatment in Dubai to help restore firmer, smoother, and younger-looking skin.Our focus is on achieving gradual, long-lasting improvements while preserving your natural appearance. Choose RamaCare Polyclinic for trusted skin tightening treatment in Dubai and enjoy personalized care designed to help you achieve healthier, firmer, and more youthful-looking skin with confidence.',
       rating: '500+ Happy Clients',
       stats: [
-        { id: 1, number: '94%', label: 'Patient Satisfaction' },
-        { id: 2, number: '1200+', label: 'Treatments Completed' },
+        { id: 1, number: '98%', label: 'Success Rate' },
+        { id: 2, number: '2,500+', label: 'Patients Treated' },
         { id: 3, number: '15+', label: 'Years Experience' }
       ],
       ctaButtons: {
@@ -2197,7 +2230,7 @@ export const subSubcategoryContent = {
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
         phone: '+971 56 659 7878',
-        whatsapp: 'Chat with us instantly',
+        whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
@@ -2210,7 +2243,7 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '1200+ Treatments', description: 'Completed' },
+        { title: '2,500+ Patients', description: 'Treated' },
         { title: '4.9/5 Rating', description: 'Patient Reviews' }
       ]
     }
@@ -2224,18 +2257,18 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '94%',
-          label: 'Patient Satisfaction'
+          number: '98%',
+          label: 'Success Rate'
         },
         {
           id: 2,
-          number: '2500+',
-          label: 'Hair Patients Treated'
+          number: '2,500+',
+          label: 'Skin Treatments Performed'
         },
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Experience'
         }
       ],
       ctaButtons: {
@@ -2257,10 +2290,10 @@ export const subSubcategoryContent = {
       ],
       image: {
         src: '/images/skinbooster.jpg',
-        alt: 'Skin booster treatment in Dubai performed by specialists to deeply hydrate the skin and improve texture and radiance.'
+        alt: 'Microdermabrasion treatment in Dubai performed by specialists to exfoliate and brighten the skin.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin condition and care routine. All Microdermabrasion in Dubai at ramacare polyclinic follows DHA-approved medical and safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin condition and care routine. All Microdermabrasion in Dubai at RamaCare Polyclinic follows DHA-approved medical and safety standards.',
         show: true
       }
     },
@@ -2342,7 +2375,7 @@ export const subSubcategoryContent = {
             'Medical-grade microdermabrasion technology',
             'Personalised treatment plans',
             'Gentle, non-invasive exfoliation',
-            'SSuitable for most skin types',
+            'Suitable for most skin types',
             'Performed by trained skincare professionals',
             'Focus on healthy, naturally radiant skin',
             'Minimal discomfort with little to no downtime'
@@ -2985,18 +3018,18 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '94%',
-          label: 'Patient Satisfaction'
+          number: '98%',
+          label: 'Success Rate'
         },
         {
           id: 2,
-          number: '2500+',
-          label: 'Hair Patients Treated'
+          number: '2,500+',
+          label: 'Patients Treated'
         },
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Experience'
         }
       ],
       ctaButtons: {
@@ -3088,7 +3121,7 @@ export const subSubcategoryContent = {
             'Fine lines and early signs of skin aging',
             'Uneven skin tone or pigmentation concerns',
             'Loss of skin elasticity and firmness',
-            'DDry skin requiring deep hydration',
+            'Dry skin requiring deep hydration',
             'A desire for natural skin and scalp rejuvenation without surgery'
           ]
         },
@@ -3763,18 +3796,18 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '94%',
-          label: 'Patient Satisfaction'
+          number: '98%',
+          label: 'Success Rate'
         },
         {
           id: 2,
-          number: '2500+',
-          label: 'Hair Patients Treated'
+          number: '2,500+',
+          label: 'Patients Treated'
         },
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Experience'
         }
       ],
       ctaButtons: {
@@ -3805,6 +3838,7 @@ export const subSubcategoryContent = {
     },
     doctors: {
       doctors: [
+        DOCTORS.sahar,
         DOCTORS.sonita,
       ]
     },
@@ -4519,31 +4553,31 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: '4.9/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.8
+          target: 4.9
         },
         {
           id: 2,
-          number: '1,200+',
-          label1: 'Patients Treated',
-          label2: 'Success Stories',
-          target: 1200
+          number: '500+',
+          label1: 'Verified Reviews',
+          label2: 'Patient Feedback',
+          target: 500
         },
         {
           id: 3,
-          number: '96%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 96
+          target: 98
         },
         {
           id: 4,
-          number: '15+',
-          label1: 'Years Experience',
+          number: '2,500+',
+          label1: 'Patients Treated',
           label2: 'In Dubai',
-          target: 15
+          target: 2500
         }
       ]
     },
@@ -4657,7 +4691,7 @@ export const subSubcategoryContent = {
     },
     doctors: {
       doctors: [
-        DOCTORS.sonita,
+        DOCTORS.sahar,
       ]
     },
     certifications: {
@@ -5413,8 +5447,8 @@ export const subSubcategoryContent = {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Your Free Skin Consultation Today',
-      description: 'Take the first step towards healthy, radiant skin. Our DHA-licensed dermatologists are ready to help you achieve your skin goals.',
+      title: 'Book Botox Hyperhidrosis Consultation in Dubai',
+      description: 'Take the first step toward sweat-free confidence. Our DHA-licensed doctors deliver personalized Botox hyperhidrosis treatment plans tailored to your needs — from the comfort of our Jumeirah 1 clinic.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -7270,7 +7304,7 @@ export const subSubcategoryContent = {
             'Fillers are suitable for adults who want to improve facial harmony without surgery. You may be an ideal candidate if you experience:',
           listItems: [
             'Loss of facial volume due to aging',
-            'Henous hollow cheeks or temples',
+            'Hollow cheeks or temples',
             'Thin or uneven lips',
             'Deep smile lines or marionette lines',
             'Mild facial asymmetry',
@@ -9743,7 +9777,7 @@ export const subSubcategoryContent = {
   'aesthetic-dermatology-dubai-skin-treatment-botox': {
     hero: {
       subtitle: 'Safe, Natural-Looking Wrinkle Reduction with Medical Expertise',
-      description: 'Botox in Dubai is a popular non-surgical aesthetic treatment designed to reduce the appearance of fine lines and facial wrinkles caused by aging, stress, and repeated facial expressions. \n\n At Rama Care Polyclinic, we provide personalized Botox treatments focused on achieving smooth, natural-looking results while maintaining natural facial expressions and balance. Our experienced aesthetic specialists use advanced Botox injection techniques to safely target specific facial muscles responsible for forehead lines, crow’s feet, frown lines, and other visible signs of aging. The treatment helps soften dynamic wrinkles, refresh facial appearance, and support a more youthful look without surgery or significant downtime. Whether you are looking to reduce visible wrinkles, prevent early signs of aging, or maintain smoother skin, our Botox treatments in Dubai are customized according to your facial anatomy, skin condition, and aesthetic goals to ensure safe and effective results.\n\nPatients seeking comprehensive facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a>, <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a>, and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services for enhanced aesthetic care and overall skin wellness.',
+      description: 'Botox in Dubai is a popular non-surgical aesthetic treatment designed to reduce the appearance of fine lines and facial wrinkles caused by aging, stress, and repeated facial expressions. \n\n At Rama Care Polyclinic, we provide personalized Botox treatments focused on achieving smooth, natural-looking results while maintaining natural facial expressions and balance. Our experienced aesthetic specialists use advanced Botox injection techniques to safely target specific facial muscles responsible for forehead lines, crow’s feet, frown lines, and other visible signs of aging. The treatment helps soften dynamic wrinkles, refresh facial appearance, and support a more youthful look without surgery or significant downtime. Whether you are looking to reduce visible wrinkles, prevent early signs of aging, or maintain smoother skin, our Botox treatments in Dubai are customized according to your facial anatomy, skin condition, and aesthetic goals to ensure safe and effective results.\n\nPatients seeking comprehensive facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a>, <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a>, and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services for enhanced aesthetic care and overall skin wellness.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -9780,7 +9814,7 @@ export const subSubcategoryContent = {
         ' FDA-Approved Botox Treatments'
       ],
       image: {
-        src: '/images/filler.jpg',
+        src: '/images/Facial assessment consultation for Botox price.jpg',
         alt: 'Botox treatment performed by specialists to reduce fine lines and wrinkles for a smoother, youthful appearance.'
       },
       medicalNotice: {
@@ -9838,7 +9872,7 @@ export const subSubcategoryContent = {
         {
           id: 1,
           title: 'What Is Botox?',
-          description: 'Botox is a non-surgical cosmetic injection treatment that uses a purified protein to temporarily relax specific facial muscles responsible for dynamic wrinkles and expression lines. Botox treatment helps soften forehead lines, crow/s feet, frown lines, and other visible signs of facial aging while maintaining natural facial expressions and balance.\n\n Botox in Dubai is widely chosen by individuals seeking safe, minimally invasive facial rejuvenation treatments with minimal downtime and natural-looking results. At Rama Care Polyclinic, our Botox treatments are customized according to facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and personalized care.\n\nPatients interested in complete facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a> services.'
+          description: 'Botox is a non-surgical cosmetic injection treatment that uses a purified protein to temporarily relax specific facial muscles responsible for dynamic wrinkles and expression lines. Botox treatment helps soften forehead lines, crow\'s feet, frown lines, and other visible signs of facial aging while maintaining natural facial expressions and balance.\n\n Botox in Dubai is widely chosen by individuals seeking safe, minimally invasive facial rejuvenation treatments with minimal downtime and natural-looking results. At Rama Care Polyclinic, our Botox treatments are customized according to facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and personalized care.\n\nPatients interested in complete facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services.'
         },
         {
           id: 2,
@@ -9858,7 +9892,7 @@ export const subSubcategoryContent = {
         {
           id: 5,
           title: 'Trusted Botox Care You Can Depend On',
-          description: 'At Rama Care Polyclinic, we focus on providing safe, personalized, and natural-looking Botox treatments performed by experienced aesthetic professionals.\n\nMinimal Downtime\nBotox treatments are minimally invasive and generally allow individuals to return to normal daily routines shortly after the procedure.\n\nPatients looking for complete facial enhancement may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a> services for comprehensive aesthetic care.'
+          description: 'At Rama Care Polyclinic, we focus on providing safe, personalized, and natural-looking Botox treatments performed by experienced aesthetic professionals.\n\nMinimal Downtime\nBotox treatments are minimally invasive and generally allow individuals to return to normal daily routines shortly after the procedure.\n\nPatients looking for complete facial enhancement may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services for comprehensive aesthetic care.'
         }
       ],
       rootCauses: [
@@ -9984,7 +10018,7 @@ export const subSubcategoryContent = {
             'Botox treatments may help support reduction of forehead lines and wrinkles, softer crow’s feet and frown lines, improved facial smoothness, more refreshed appearance, enhanced facial symmetry, and increased aesthetic confidence.',
           hasLearnMore: true,
           expandedContent:
-            'For comprehensive facial rejuvenation, patients may also combine Botox treatments with <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a> and <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> services.'
+            'For comprehensive facial rejuvenation, patients may also combine Botox treatments with <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> and <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> services.'
         }
       ]
     },
@@ -10181,7 +10215,7 @@ export const subSubcategoryContent = {
           },
           {
             title: 'Preventive Botox for Early Signs of Aging',
-            description: 'Some individuals choose preventive Botox treatments to help reduce repetitive muscle movement associated with the early development of fine lines and dynamic wrinkles. Patients seeking preventive skin rejuvenation may also benefit from our <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a> and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services.'
+            description: 'Some individuals choose preventive Botox treatments to help reduce repetitive muscle movement associated with the early development of fine lines and dynamic wrinkles. Patients seeking preventive skin rejuvenation may also benefit from our <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services.'
           }
         ]
       },
@@ -10200,7 +10234,7 @@ export const subSubcategoryContent = {
             'Arrive with clean skin free from heavy makeup when possible',
             'Discuss your aesthetic goals and medical history during consultation'
           ],
-          conclusion: 'Patients preparing for facial rejuvenation treatments may also explore our <a href="/services/signature-hydra-facial-dubai/">HydraFacial Treatment Dubai</a> services for healthier-looking skin support.'
+          conclusion: 'Patients preparing for facial rejuvenation treatments may also explore our <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services for healthier-looking skin support.'
         },
         after: {
           title: 'After Botox Treatment',
@@ -10587,7 +10621,7 @@ export const subSubcategoryContent = {
         alt: 'Pigmentation treatment performed by specialists to reduce dark spots and achieve a more even skin tone.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on muscle activity and individual response. All Botox treatments at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on skin type, pigmentation severity, and individual response. All pigmentation treatments at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
         show: true
       }
     },
@@ -10896,7 +10930,7 @@ export const subSubcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Customized Pigmentation Packages',
       description:
-        'Pigmentation treatments at ramacare polyclinic are personalized based on pigmentation severity, skin type, and aesthetic goals. Choose the package that best fits your needs and desired results.',
+        'Pigmentation treatments at RamaCare Polyclinic are personalized based on pigmentation severity, skin type, and aesthetic goals. Choose the package that best fits your needs and desired results.',
       packages: [
         {
           id: 1,
@@ -11231,8 +11265,8 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '2500+',
-          label: 'Hair Patients Treated'
+          number: '2,500+',
+          label: 'Patients Treated'
         },
         {
           id: 3,
@@ -11262,7 +11296,7 @@ export const subSubcategoryContent = {
         alt: 'Dark circle treatment performed by specialists to reduce under-eye pigmentation and refresh the appearance.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on muscle activity and individual response. All Botox treatments at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on skin type, treatment method, and individual response. All dark circle treatments at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
         show: true
       }
     },
@@ -11522,7 +11556,7 @@ export const subSubcategoryContent = {
           description: null
         },
       ],
-      comparisonTitle: 'Pigmentation Treatment vs. Conventional Skin Care',
+      comparisonTitle: 'Dark Circle Treatment vs. Conventional Skin Care',
       comparisonDescription: 'Understanding the Difference Before Choosing Your Care',
       comparisonHeaders: {
         feature: 'Aspect',
@@ -12125,7 +12159,7 @@ export const subSubcategoryContent = {
         {
           feature: ' Approach',
           ayurvedic: 'Root-cause focused',
-          conventional: 'OSurface-level'
+          conventional: 'Surface-level'
         },
         {
           feature: 'Customization',
@@ -12324,10 +12358,10 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '2,500+',
           label1: 'Patients Treated',
           label2: 'Success Stories',
-          target: 800
+          target: 2500
         },
         {
           id: 3,
@@ -12836,7 +12870,7 @@ export const subSubcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Customized Hair Loss Packages',
       description:
-        'Hair Loss Treatment at ramacare polyclinic is personalized based on hair loss severity, scalp condition, and long-term hair restoration goals. Our structured packages ensure medical supervision, clear expectations, and progressive, visible results.',
+        'Hair Loss Treatment at RamaCare Polyclinic is personalized based on hair loss severity, scalp condition, and long-term hair restoration goals. Our structured packages ensure medical supervision, clear expectations, and progressive, visible results.',
       packages: [
         {
           id: 1,
@@ -13022,10 +13056,10 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '2,500+',
           label1: 'Patients Treated',
           label2: 'Success Stories',
-          target: 800
+          target: 2500
         },
         {
           id: 3,
@@ -13761,10 +13795,10 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '2,500+',
           label1: 'Patients Treated',
           label2: 'Success Stories',
-          target: 800
+          target: 2500
         },
         {
           id: 3,
@@ -14464,27 +14498,27 @@ export const subSubcategoryContent = {
       resources: [
         {
           id: 1,
-          text: 'Skin Treatment Dubai',
+          text: 'Hair Loss',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/skin-treatment-dubai/'
+          link: '/services/hair-loss-dubai/'
         },
         {
           id: 2,
-          text: 'HydraFacial Treatment Dubai',
+          text: 'Hair Growth',
           bgColor: 'bg-[#EFF6FF]',
-          link: '/services/signature-hydra-facial-dubai/'
+          link: '/services/hair-growth-dubai/'
         },
         {
           id: 3,
-          text: 'Botox Treatment Dubai',
+          text: 'Hair PRP',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/botox-dubai/'
+          link: '/services/hair-prp-dubai/'
         },
         {
           id: 4,
-          text: 'Dermal Fillers Dubai',
+          text: 'Hair Removal',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/fillers-in-dubai/'
+          link: '/services/hair-removal-dubai/'
         },
       ]
     },
@@ -14501,10 +14535,10 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '2,500+',
           label1: 'Patients Treated',
           label2: 'Success Stories',
-          target: 800
+          target: 2500
         },
         {
           id: 3,
@@ -14542,7 +14576,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Hair Removal in Dubai Today',
-      description: 'njoy smoother, clearer skin with Hair Removal in Dubai at ramacarepolyclinic, where medical expertise meets comfort-focused, personalized care.',
+      description: 'Enjoy smoother, clearer skin with Hair Removal in Dubai at ramacarepolyclinic, where medical expertise meets comfort-focused, personalized care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -14596,7 +14630,7 @@ export const subSubcategoryContent = {
         },
         {
           id: 2,
-          number: '6000+',
+          number: '2,500+',
           label: 'Laser Sessions Performed'
         },
         {
@@ -15063,13 +15097,13 @@ export const subSubcategoryContent = {
       ]
     },
     faq: {
-      title: 'Frequently Asked Questions (FAQs) – Skin Veins Laser Treatment in Dubai',
+      title: 'Frequently Asked Questions (FAQs) – Spider Veins Laser Treatment in Dubai',
       description: null,
       resourcesHeading: 'Complete Aesthetic-Dermatology Services',
       faqs: [
         {
           id: 1,
-          question: 'What is skin vein laser treatment?',
+          question: 'What is spider vein laser treatment?',
           answer:
             'Skin veins laser treatment in Dubai uses advanced laser technology to target and remove spider veins, broken capillaries, and visible veins safely, improving skin appearance and comfort.'
         },
@@ -15288,7 +15322,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Vein Reduction',
           target: 95
         }
       ]
@@ -15408,24 +15442,24 @@ export const subSubcategoryContent = {
 
     hero: {
       subtitle: 'Clearer, Brighter Skin with Advanced Medical Care',
-      description: 'Restore your skin’s natural glow and hydration with Skin Booster Treatment in Dubai at ramacare polyclinic. This advanced injectable treatment deeply nourishes the skin from within, improving texture, elasticity, and overall skin quality for a fresh, youthful appearance.',
+      description: 'Restore your skin\'s natural glow and clarity with Carbon Laser Treatment in Dubai at RamaCare Polyclinic. This advanced laser-based treatment deeply cleanses pores, reduces oiliness, and improves acne and pigmentation for a brighter, more even complexion.',
       rating: '500+ Happy Clients',
       stats: [
         { id: 1, number: '92%', label: 'Patient Satisfaction' },
-        { id: 2, number: '800+', label: 'Treatments Completed' },
+        { id: 2, number: '2,500+', label: 'Treatments Completed' },
         { id: 3, number: '15+', label: 'Years Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
-      features: [' DHA-Licensed Multispecialty Polyclinic', 'Experienced Doctors & Certified Aesthetic Team', 'Safe, Clinically Approved Laser Technology'],
+      features: ['DHA-Licensed Multispecialty Polyclinic', 'Experienced Doctors & Certified Aesthetic Team', 'Safe, Clinically Approved Laser Technology'],
       image: {
         src: '/images/carbon.jpg',
         alt: 'Carbon laser treatment performed by specialists to rejuvenate the skin, reduce pigmentation, and improve texture.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary based on individual skin condition and treatment plan. All Skin Booster Treatment in Dubai procedures at ramacarepolyclinic follow DHA-approved medical protocols and strict safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary based on individual skin condition and treatment plan. All Carbon Laser Treatment procedures at ramacarepolyclinic follow DHA-approved medical protocols and strict safety standards.',
         show: true
       }
     },
@@ -15467,9 +15501,9 @@ export const subSubcategoryContent = {
     overview: {
       title: 'Understanding Carbon Laser Treatment in Dubai',
       problemIntro: {
-        title: 'The Problem: Skin Imperfections',
+        title: 'The Problem: Clogged Pores, Excess Oil & Dull Complexion',
         description:
-          'Many people struggle with dehydrated skin that topical products cannot fully treat. Environmental exposure, aging, and lifestyle factors worsen skin texture and radiance over time.'
+          'Daily exposure to pollution, excess sebum production, dead skin cell accumulation, and environmental stressors lead to enlarged pores, persistent acne, uneven skin texture, and a dull complexion that standard skincare products cannot effectively clean.'
       },
 
       solutionIntro: {
@@ -15512,90 +15546,90 @@ export const subSubcategoryContent = {
       rootCauses: [
         {
           id: 1,
-          title: 'Advanced Carbon Laser Technology',
+          title: 'Excess Sebum & Clogged Pores',
           description:
-            'Removes dead skin cells, impurities, and pigmentation while stimulating collagen production for healthier skin.',
+            'Overactive sebaceous glands trap oil and dead skin cells, causing blackheads and persistent breakouts.',
           severity: null,
           severityColor: null
         },
         {
           id: 2,
-          title: 'Deep Pore Cleansing',
+          title: 'Environmental Impurities',
           description:
-            'Targets clogged pores, reduces oiliness, and minimizes acne breakouts for a clearer complexion.',
+            'Airborne pollutants and urban dust settle into facial pores, causing oxidative stress and dullness.',
           severity: null,
           severityColor: null
         },
         {
           id: 3,
-          title: 'Skin Rejuvenation',
+          title: 'Sluggish Cell Turnover',
           description:
-            'Reduces fine lines, smooths rough texture, and improves overall skin tone and radiance.',
+            'Accumulated dead skin cells restrict natural skin radiance and create an uneven surface texture.',
           severity: null,
           severityColor: null
         },
         {
           id: 4,
-          title: 'Safe & Comfortable Procedure',
+          title: 'Superficial Hyperpigmentation',
           description:
-            'Non-invasive treatment with minimal downtime, suitable for all skin types.',
+            'Post-acne marks and sun exposure cause localized melanin buildup and uneven skin tone.',
           severity: null,
           severityColor: null
         },
         {
           id: 5,
-          title: 'Long-Lasting Results',
+          title: 'Enlarged Pore Structures',
           description:
-            'Enhances skin glow, clarity, and firmness, providing youthful, revitalized skin for the long term.',
+            'Stretched pore openings collect debris easily, making skin appear rough and unrefined.',
           severity: null,
           severityColor: null
         }
       ],
       quickFacts: [
         { label: 'Treatment Type', value: 'Non-surgical, non-invasive' },
-        { label: 'Anesthesia', value: ' Not required' },
-        { label: 'Recovery Time', value: ' Immediate' },
-        { label: '  Side Effects', value: ' Mild redness (temporary)' }
+        { label: 'Anesthesia', value: 'Not required' },
+        { label: 'Recovery Time', value: 'Immediate' },
+        { label: 'Side Effects', value: 'Mild redness (temporary)' }
       ],
 
       approachCards: [
         {
           id: 1,
-          title: 'Advanced Carbon Laser Technology',
+          title: 'Liquid Carbon Peel Application',
           description:
-            'Removes dead skin cells, impurities, and pigmentation while stimulating collagen production for healthier skin.',
+            'A medical-grade carbon lotion is evenly applied, penetrating deep into pores to absorb oil and impurities.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 2,
-          title: 'Deep Pore Cleansing',
+          title: 'Laser Energy Photo-Vaporization',
           description:
-            'Targets clogged pores, reduces oiliness, and minimizes acne breakouts for a clearer complexion.',
+            'Specialized laser pulses target and vaporize carbon particles, instantly evacuating trapped pore contaminants.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 3,
-          title: 'Skin Rejuvenation',
+          title: 'Gentle Thermal Exfoliation',
           description:
-            'Reduces fine lines, smooths rough texture, and improves overall skin tone and radiance.',
+            'The laser gently removes top dead skin layers while cleansing the epidermal surface for immediate clarity.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 4,
-          title: 'Safe & Comfortable Procedure',
+          title: 'Collagen Remodeling & Pore Tightening',
           description:
-            'Non-invasive treatment with minimal downtime, suitable for all skin types.',
+            'Thermal stimulation encourages deep dermal collagen synthesis to refine pore openings and firm texture.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 5,
-          title: 'Long-Lasting Results',
+          title: 'Instant Glow & Long-Lasting Rejuvenation',
           description:
-            'Enhances skin glow, clarity, and firmness, providing youthful, revitalized skin for the long term.',
+            'Leaves the skin noticeably smoother, brighter, and oil-controlled without downtime or recovery period.',
           hasLearnMore: false,
           expandedContent: null
         }
@@ -15948,14 +15982,14 @@ export const subSubcategoryContent = {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Skin Booster Treatment in Dubai Today',
-      description: 'Refresh, hydrate, and rejuvenate your skin with Skin Booster Treatment in Dubai at ramacarepolyclinic, trusted for safe, natural, and doctor-led aesthetic care.',
+      title: 'Book Carbon Laser Treatment in Dubai Today',
+      description: 'Clear, brighten, and rejuvenate your skin with Carbon Laser Treatment at ramacarepolyclinic, trusted for safe, effective, and doctor-led aesthetic care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
       contactInfo: {
         phone: '+971 56 659 7878',
-        whatsapp: 'Chat with us instantly',
+        whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
@@ -16470,6 +16504,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           question: 'Who is an ideal candidate for Fractional CO₂ Laser Treatment?',
+          answer: 'Ideal candidates include adults with acne scars, wrinkles, uneven texture, or sun damage seeking skin improvement. A consultation at ramacarepolyclinic helps determine suitability based on skin type and goals.'
         },
         {
           id: 4,
@@ -16824,7 +16859,7 @@ export const subSubcategoryContent = {
         'Safe, Clinically Approved Technology',
       ],
       image: {
-        src: '/images/female-gene.jpg',
+        src: '/images/female-genital-rejuvenation-dubai.jpg',
         alt: 'Female genital rejuvenation in Dubai is performed by specialists to restore firmness, improve appearance, and enhance overall comfort.'
       },
       medicalNotice: {
@@ -16874,8 +16909,8 @@ export const subSubcategoryContent = {
         description: 'Many women experience changes in intimate health throughout different stages of life. Childbirth, aging, menopause, hormonal fluctuations, and lifestyle factors can gradually affect the strength, elasticity, hydration, and overall health of vaginal tissues. While these changes are common, they may influence comfort, confidence, and quality of life if left unaddressed.',
       },
       solutionIntro: {
-        title: 'Ayurvedic Female Genital Rejuvenation in Dubai',
-        description: 'At RamaCare Polyclinic, our approach to female genital rejuvenation in Dubai combines the principles of Ayurveda with personalized care to support women\'s intimate wellness naturally. Rather than focusing only on temporary symptom management, our treatments aim to promote overall balance, healthy tissue function, and long-term well-being through individualized Ayurvedic therapies, herbal formulations, dietary guidance, and lifestyle recommendations.Every treatment begins with a detailed consultation to understand your symptoms, health history, constitution (Prakriti), and lifestyle. Based on this assessment, our Ayurvedic practitioners develop a customized treatment plan designed to support intimate comfort, tissue health, and overall wellness while respecting your individual needs and goals.',
+        title: 'Safe & Effective Female Genital Rejuvenation in Dubai',
+        description: 'At RamaCare Polyclinic, our approach to female genital rejuvenation combines advanced, clinically approved technology with personalized care to support intimate wellness. Every treatment begins with a detailed consultation to understand your symptoms, health history, and goals. Based on this assessment, our medical team develops a customized treatment plan using non-surgical techniques designed to stimulate natural collagen production and restore comfort, tone, and confidence.',
       },
       leftCards: [
         {
@@ -16958,6 +16993,7 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent: 'Personalized therapies are designed to help restore dosha balance, supporting healthy tissue function, natural lubrication, and overall intimate well-being.'
         },
+      
         {
           id: 2,
           title: 'Internal Detoxification',
@@ -17428,7 +17464,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Female Genital Rejuvenation',
           target: 95
         }
       ]
@@ -17589,7 +17625,7 @@ export const subSubcategoryContent = {
         alt: 'Mole removal in Dubai performed by specialists using safe and precise techniques to improve skin appearance.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results vary depending on mole type, skin condition, and adherence to aftercare. All Mole Removal in Dubai treatments at ramacarepolyclinic follow DHA-approved safety and medical protocols.',
+        text: 'Safety & Medical Disclaimer: Results vary depending on mole type, skin condition, and adherence to aftercare. All Mole Removal in Dubai treatments at RamaCare Polyclinic follow DHA-approved safety and medical protocols.',
         show: true
       }
     },
@@ -18217,7 +18253,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Clinical Care',
           target: 95
         }
       ]
@@ -18242,7 +18278,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Mole Removal in Dubai Today',
-      description: 'Achieve clearer, healthier-looking skin with Mole Removal in Dubai at ramacarepolyclinic, where medical expertise meets patient-focused, safe, and natural skin care.',
+      description: 'Achieve clearer, healthier-looking skin with Mole Removal in Dubai at RamaCare Polyclinic, where medical expertise meets patient-focused, safe, and natural skin care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -18390,7 +18426,7 @@ export const subSubcategoryContent = {
         alt: 'Nail fungus treatment in Dubai provided by specialists to restore healthy nails and prevent infection recurrence.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results vary depending on nail condition, infection severity, and adherence to aftercare. All Nail Fungus Treatment in Dubai at ramacarepolyclinic follows DHA-approved medical protocols and safety guidelines.',
+        text: 'Safety & Medical Disclaimer: Results vary depending on nail condition, infection severity, and adherence to aftercare. All Nail Fungus Treatment in Dubai at RamaCare Polyclinic follows DHA-approved medical protocols and safety guidelines.',
         show: true
       }
     },
@@ -18455,7 +18491,7 @@ export const subSubcategoryContent = {
             'Yellow, white, brown, or dark nail discoloration',
             'Crumbling or fragile nails',
             'Nails lifting away from the nail bed',
-            'DDistorted nail shape',
+            'Distorted nail shape',
             'Persistent fungal nail infections',
             'Discomfort or pain while walking or wearing shoes',
             'Recurrent nail fungus despite previous treatment'
@@ -18808,7 +18844,7 @@ export const subSubcategoryContent = {
           id: 4,
           question: 'Is Nail Fungus Treatment safe?',
           answer:
-            'Yes, when performed at ramacarepolyclinic, Nail Fungus Treatment in Dubai is safe, DHA-approved, and doctor-supervised, ensuring effective infection removal while protecting surrounding nail tissue and promoting healthy nail regeneration.'
+            'Yes, when performed at RamaCare Polyclinic, Nail Fungus Treatment in Dubai is safe, DHA-approved, and doctor-supervised, ensuring effective infection removal while protecting surrounding nail tissue and promoting healthy nail regeneration.'
         },
         {
           id: 5,
@@ -18872,9 +18908,9 @@ export const subSubcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for Nail Fungus Treatment?',
+          question: 'Why choose RamaCare Polyclinic for Nail Fungus Treatment?',
           answer:
-            'ramacarepolyclinic offers expert, DHA-approved, and personalized Nail Fungus Treatment in Dubai, focusing on safe infection removal, nail health restoration, and long-term prevention for stronger, healthier nails.'
+            'RamaCare Polyclinic offers expert, DHA-approved, and personalized Nail Fungus Treatment in Dubai, focusing on safe infection removal, nail health restoration, and long-term prevention for stronger, healthier nails.'
         }
       ],
       resources: [
@@ -18976,7 +19012,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Clinical Care',
           target: 95
         }
       ]
@@ -19001,7 +19037,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Nail Fungus Treatment in Dubai Today',
-      description: 'Restore strong, healthy, and beautiful nails with Nail Fungus Treatment in Dubai at ramacarepolyclinic, where medical expertise meets patient-focused care.',
+      description: 'Restore strong, healthy, and beautiful nails with Nail Fungus Treatment in Dubai at RamaCare Polyclinic, where medical expertise meets patient-focused care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -19152,7 +19188,7 @@ export const subSubcategoryContent = {
         alt: 'Laser rejuvenation in Dubai performed by specialists to restore skin radiance, reduce fine lines, and improve overall skin texture.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results vary depending on nail condition, infection severity, and adherence to aftercare. All Nail Fungus Treatment in Dubai at ramacarepolyclinic follows DHA-approved medical protocols and safety guidelines.',
+        text: 'Safety & Medical Disclaimer: Results vary depending on skin type, treatment area, and adherence to aftercare. All Laser Rejuvenation Treatment in Dubai at ramacarepolyclinic follows DHA-approved medical protocols and safety guidelines.',
         show: true
       }
     },
@@ -19571,7 +19607,7 @@ export const subSubcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Customized Packages',
       description:
-        'Laser Rejuvenation at ramacare polyclinic is customized based on skin condition, treatment area, and number of sessions required. All treatments include medical supervision and aftercare support.',
+        'Laser Rejuvenation at RamaCare Polyclinic is customized based on skin condition, treatment area, and number of sessions required. All treatments include medical supervision and aftercare support.',
       packages: [
         {
           id: 1,
@@ -19800,7 +19836,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Laser Rejuvenation',
           target: 95
         }
       ]
@@ -19825,7 +19861,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Laser Rejuvenation in Dubai Today',
-      description: 'Reveal brighter, smoother, and healthier-looking skin with Laser Rejuvenation in Dubai at ramacare polyclinic, where medical expertise meets advanced aesthetic care.',
+      description: 'Reveal brighter, smoother, and healthier-looking skin with Laser Rejuvenation in Dubai at RamaCare Polyclinic, where medical expertise meets advanced aesthetic care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -20346,6 +20382,40 @@ export const subSubcategoryContent = {
         }
       ]
     },
+    testimonials: {
+      title: 'Patient Success Stories & Testimonials',
+      description: 'Hear from our patients who have experienced safe, effective laser bleaching for skin at RamaCare Polyclinic in Dubai.',
+      stats: [
+        {
+          id: 1,
+          number: '12+',
+          label1: 'Years Experience',
+          label2: 'Aesthetic Care',
+          target: 12
+        },
+        {
+          id: 2,
+          number: '2,500+',
+          label1: 'Laser Sessions',
+          label2: 'Completed',
+          target: 2500
+        },
+        {
+          id: 3,
+          number: '97%',
+          label1: 'Satisfaction Rate',
+          label2: 'Happy Patients',
+          target: 97
+        },
+        {
+          id: 4,
+          number: '95%',
+          label1: 'Success Rate',
+          label2: 'Laser Bleaching',
+          target: 95
+        }
+      ]
+    },
     pricing: {
       title: 'Transparent Pricing & Customized Packages',
       description:
@@ -20578,7 +20648,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Clinical Care',
           target: 95
         }
       ]
@@ -21390,7 +21460,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Clinical Care',
           target: 95
         }
       ]
@@ -21553,7 +21623,7 @@ export const subSubcategoryContent = {
         alt: 'Scars removal in Dubai performed by specialists using advanced treatments to reduce scar appearance and improve skin texture.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer:Results vary based on scar type, skin condition, and adherence to aftercare. All Scars Removal in Dubai treatments at ramacarepolyclinic follow DHA-approved safety protocols.',
+        text: 'Safety & Medical Disclaimer:Results vary based on scar type, skin condition, and adherence to aftercare. All Scars Removal in Dubai treatments at RamaCare Polyclinic follow DHA-approved safety protocols.',
         show: true
       }
     },
@@ -21618,7 +21688,7 @@ export const subSubcategoryContent = {
             'Surgical scars',
             'Burn scars',
             'Injury or trauma scars',
-            'StStretch marks',
+            'Stretch marks',
             'Uneven skin texture',
             'Post-inflammatory pigmentation',
             'Mild to moderate skin depressions',
@@ -22162,7 +22232,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Scars Removal',
           target: 95
         }
       ]
@@ -22187,7 +22257,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Scars Removal in Dubai Today',
-      description: 'Reveal smoother, healthier-looking skin with Scars Removal in Dubai at ramacarepolyclinic, where medical expertise meets patient-focused aesthetic care.',
+      description: 'Reveal smoother, healthier-looking skin with Scars Removal in Dubai at RamaCare Polyclinic, where medical expertise meets patient-focused aesthetic care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -22328,7 +22398,7 @@ export const subSubcategoryContent = {
         alt: 'Tattoo removal in Dubai performed by specialists using advanced laser technology to safely fade unwanted tattoos.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results vary depending on tattoo color, skin type, and immune response. All Tattoo Removal in Dubai procedures at Rama Care Polyclinic follow DHA-approved safety and medical protocols.',
+        text: 'Safety & Medical Disclaimer: Results vary depending on tattoo color, skin type, and immune response. All Tattoo Removal in Dubai procedures at RamaCare Polyclinic follow DHA-approved safety and medical protocols.',
         show: true
       }
     },
@@ -22395,7 +22465,7 @@ export const subSubcategoryContent = {
             'Reduce cosmetic or permanent makeup tattoos',
             'Remove amateur or professional tattoos',
             'Improve the appearance of poorly executed tattoos',
-            'ReReduce tattoos affecting professional or personal confidence',
+            'Reduce tattoos affecting professional or personal confidence',
             'Lighten tattoos that no longer match personal preferences',
           ]
         },
@@ -22703,7 +22773,7 @@ export const subSubcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Customized Packages',
       description:
-        'Tattoo Removal at Rama Care Polyclinic is customized based on tattoo size, color, depth, and number of sessions required. All treatments include medical supervision and aftercare guidance.',
+        'Tattoo Removal at RamaCare Polyclinic is customized based on tattoo size, color, depth, and number of sessions required. All treatments include medical supervision and aftercare guidance.',
       packages: [
         {
           id: 1,
@@ -22845,7 +22915,7 @@ export const subSubcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for Tattoo Removal in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for Tattoo Removal in Dubai?',
           answer:
             'Doctor-led care, advanced lasers, personalized plans, and strict safety standards.'
         }
@@ -22948,7 +23018,7 @@ export const subSubcategoryContent = {
           id: 4,
           number: '95%',
           label1: 'Success Rate',
-          label2: 'Hair Removal',
+          label2: 'Clinical Care',
           target: 95
         }
       ]
@@ -22973,7 +23043,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Tattoo Removal in Dubai Today',
-      description: 'Remove unwanted ink safely and confidently with Tattoo Removal in Dubai at Rama Care Polyclinic, where medical expertise meets advanced laser care.',
+      description: 'Remove unwanted ink safely and confidently with Tattoo Removal in Dubai at RamaCare Polyclinic, where medical expertise meets advanced laser care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -23114,7 +23184,7 @@ export const subSubcategoryContent = {
         alt: 'Eximia body contouring in Dubai performed by specialists to reduce fat and improve body shape safely.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary based on body type, lifestyle, and treatment consistency. All Eximia Body Contouring in Dubai procedures at Rama Care Polyclinic follow DHA-approved medical and safety protocols.',
+        text: 'Safety & Medical Disclaimer: Results may vary based on body type, lifestyle, and treatment consistency. All Eximia Body Contouring in Dubai procedures at RamaCare Polyclinic follow DHA-approved medical and safety protocols.',
         show: true
       }
     },
@@ -23652,13 +23722,13 @@ export const subSubcategoryContent = {
           id: 14,
           question: 'What is the cost of Eximia Body Contouring in Dubai?',
           answer:
-            'Eximia Body Contouring cost in Dubai varies based on treatment area and number of sessions. Rama Care Polyclinic offers transparent pricing with customized treatment packages.'
+            'Eximia Body Contouring cost in Dubai varies based on treatment area and number of sessions. RamaCare Polyclinic offers transparent pricing with customized treatment packages.'
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for Eximia Body Contouring in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for Eximia Body Contouring in Dubai?',
           answer:
-            'Rama Care Polyclinic offers doctor-supervised Eximia Body Contouring in Dubai using advanced technology, personalized care, and a strong focus on safety and natural results.'
+            'RamaCare Polyclinic offers doctor-supervised Eximia Body Contouring in Dubai using advanced technology, personalized care, and a strong focus on safety and natural results.'
         }
       ],
       resources: [
@@ -23742,7 +23812,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Eximia Body Contouring in Dubai Today',
-      description: 'Redefine your body shape safely and naturally with Eximia Body Contouring in Dubai at Rama Care Polyclinic, where medical expertise meets advanced body sculpting care.',
+      description: 'Redefine your body shape safely and naturally with Eximia Body Contouring in Dubai at RamaCare Polyclinic, where medical expertise meets advanced body sculpting care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -23842,7 +23912,7 @@ export const subSubcategoryContent = {
         {
           id: 2,
           number: '4500+',
-          label: 'Body Shaping Sessions Performed'
+          label: 'IV Drip Sessions Administered'
         },
         {
           id: 3,
@@ -23852,7 +23922,7 @@ export const subSubcategoryContent = {
       ],
       ctaButtons: {
         primary: {
-          text: 'Book Free Body Shaping Consultation',
+          text: 'Book Free IV Drip Consultation',
           icon: 'calendar',
           link: '#book-now'
         },
@@ -23872,7 +23942,7 @@ export const subSubcategoryContent = {
         alt: 'IV drip in Dubai administered by medical professionals to support hydration, immunity, and overall wellness.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual health conditions and lifestyle. All IV Drip Dubai Therapy at ramacarepolyclinic follows DHA-approved medical and safety guidelines.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual health conditions and lifestyle. All IV Drip Therapy in Dubai at RamaCare Polyclinic follows DHA-approved medical and safety guidelines.',
         show: true
       }
     },
@@ -23901,7 +23971,7 @@ export const subSubcategoryContent = {
         },
         {
           id: 4,
-          title: 'Certified Body Contouring Specialists',
+          title: 'Certified Wellness & IV Specialists',
           subtitle: null
         }
       ]
@@ -24281,12 +24351,12 @@ export const subSubcategoryContent = {
         {
           id: 2,
           question: 'Is IV Drip Therapy safe?',
-          answer: 'Yes, IV Drip Therapy is safe when administered by qualified doctors. At ramacarepolyclinic, all treatments follow DHA-approved protocols and strict hygiene standards.'
+          answer: 'Yes, IV Drip Therapy is safe when administered by qualified doctors. At RamaCare Polyclinic, all treatments follow DHA-approved protocols and strict hygiene standards.'
         },
         {
           id: 3,
-          question: 'Who can benefit from IV Drip Dubai Therapy?',
-          answer: 'IV Drip Dubai Therapy benefits adults with fatigue, dehydration, low immunity, stress, travel exhaustion, or nutrient deficiencies, after a proper medical evaluation.'
+          question: 'Who can benefit from IV Drip Therapy in Dubai?',
+          answer: 'IV Drip Therapy in Dubai benefits adults with fatigue, dehydration, low immunity, stress, travel exhaustion, or nutrient deficiencies, after a proper medical evaluation.'
         },
         {
           id: 4,
@@ -24320,8 +24390,8 @@ export const subSubcategoryContent = {
         },
         {
           id: 10,
-          question: 'Is IV Drip Dubai Therapy suitable for skin health?',
-          answer: 'Yes, IV Drip Dubai Therapy can improve skin hydration, glow, and overall health by nourishing skin cells from within using essential nutrients.'
+          question: 'Is IV Drip Therapy in Dubai suitable for skin health?',
+          answer: 'Yes, IV Drip Therapy in Dubai can improve skin hydration, glow, and overall health by nourishing skin cells from within using essential nutrients.'
         },
         {
           id: 11,
@@ -24335,8 +24405,8 @@ export const subSubcategoryContent = {
         },
         {
           id: 13,
-          question: 'How is IV Drip Therapy customized at ramacarepolyclinic?',
-          answer: 'At ramacarepolyclinic, IV Drip Therapy is customized based on medical history, health goals, nutrient needs, and doctor assessment.'
+          question: 'How is IV Drip Therapy customized at RamaCare Polyclinic?',
+          answer: 'At RamaCare Polyclinic, IV Drip Therapy is customized based on medical history, health goals, nutrient needs, and doctor assessment.'
         },
         {
           id: 14,
@@ -24346,7 +24416,7 @@ export const subSubcategoryContent = {
         {
           id: 15,
           question: 'How do I book IV Drip Therapy in Dubai?',
-          answer: 'You can book IV Drip Therapy in Dubai by scheduling a consultation at ramacarepolyclinic, where doctors assess your needs and create a personalized plan.'
+          answer: 'You can book IV Drip Therapy in Dubai by scheduling a consultation at RamaCare Polyclinic, where doctors assess your needs and create a personalized plan.'
         }
       ],
       resources: [
@@ -24368,11 +24438,17 @@ export const subSubcategoryContent = {
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/body-shaping-dubai/'
         },
+        {
+          id: 4,
+          text: 'Eximia Belly Fat Reduction',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/eximia-belly-fat-reduction-dubai/'
+        }
       ]
     },
     testimonials: {
       title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who achieved their body shaping goals',
+      subtitle: 'Verified testimonials from patients who achieved their hydration & wellness goals',
       stats: [
         {
           id: 1,
@@ -24397,10 +24473,10 @@ export const subSubcategoryContent = {
         },
         {
           id: 4,
-          number: '85%',
-          label1: 'Success Rate',
-          label2: 'Fat Reduction',
-          target: 85
+          number: '92%',
+          label1: 'Satisfaction Rate',
+          label2: 'Hydration & Wellness',
+          target: 92
         }
       ]
     },
@@ -24424,7 +24500,7 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book IV Drip Therapy in Dubai Today',
-      description: 'Rehydrate, recharge, and restore your body with IV Drip Therapy in Dubai at ramacarepolyclinic, where medical expertise meets personalized wellness care.',
+      description: 'Rehydrate, recharge, and restore your body with IV Drip Therapy in Dubai at RamaCare Polyclinic, where medical expertise meets personalized wellness care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',

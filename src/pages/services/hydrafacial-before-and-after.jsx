@@ -87,244 +87,116 @@ export default function HydrafacialBeforeAndAfterPage() {
     }
   ];
 
+  const faqs = [
+    { q: 'What does Hydrafacial before and after actually show?', a: 'It typically shows improved hydration, a brighter complexion, and clearer-looking pores immediately after treatment, with more cumulative texture and tone improvement visible after a series of sessions.' },
+    { q: 'How long do Hydrafacial results last?', a: 'The immediate “glow” effect often fades over several days, while cumulative benefits from regular sessions may last longer with consistent maintenance and skincare.' },
+    { q: 'Is one Hydrafacial session enough to see results?', a: 'Many patients notice a visible difference after a single session, particularly in hydration and pore appearance, though more significant texture or tone changes generally develop with a series of sessions.' },
+    { q: 'Are Hydrafacial before-and-after photos accurate?', a: 'They can be informative but are also influenced by lighting, angle, skin preparation, and timing, so they should be viewed as illustrative rather than a guarantee of your own results.' },
+    { q: 'Does Hydrafacial help with acne or congestion?', a: 'It can help reduce the visible appearance of congestion through extraction, though it is not typically considered a primary treatment for active acne, which may require a different approach.' },
+    { q: 'Does Hydrafacial reduce wrinkles?', a: 'It may temporarily soften the appearance of fine, dehydration-related lines through hydration, but it does not significantly change deeper structural wrinkles.' },
+    { q: 'How many Hydrafacial sessions do I need?', a: 'This depends on your skin goals and concerns, and is best determined following a consultation rather than a fixed number.' },
+    { q: 'Is there downtime after Hydrafacial?', a: 'Most patients experience little to no downtime, though mild, temporary redness is possible for some individuals.' },
+    { q: 'Can Hydrafacial help with dull skin?', a: 'Yes, brightening is one of the more commonly reported immediate effects, largely due to exfoliation and hydration.' },
+    { q: 'Is Hydrafacial suitable for sensitive skin?', a: 'It is generally well tolerated, though individual suitability should be assessed during a consultation given your specific skin history.' },
+    { q: 'How often should I get a Hydrafacial?', a: 'Frequency varies by individual goals; some patients get occasional sessions for events, while others schedule regular monthly maintenance sessions.' },
+    { q: 'Can Hydrafacial treat pigmentation?', a: 'It may offer mild support for overall tone evenness, but it is generally not considered a primary treatment for more significant or stubborn pigmentation.' },
+    { q: 'What is the difference between Hydrafacial and a regular facial?', a: 'Hydrafacial uses a vacuum-based device to combine exfoliation, extraction, and hydration in one step, while a traditional facial typically relies on manual techniques and topical products.' },
+    { q: 'Can men get Hydrafacial?', a: 'Yes, Hydrafacial is not gender-specific and can be suitable for a range of skin types and concerns.' },
+    { q: 'How much does Hydrafacial cost in Dubai?', a: 'Cost depends on the specific treatment plan, add-ons, and number of sessions, and is best discussed during a consultation.' }
+  ];
+
   return (
     <Layout>
       <Head>
-        <title>Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic</title>
-        <meta name="description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." />
+        <title key="title">Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic</title>
+        <meta name="description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="description" />
+        <meta name="keywords" content="Hydrafacial before and after, Hydrafacial results Dubai, Hydrafacial treatment Dubai, Hydrafacial skin transformation, Hydrafacial realistic expectations, Hydrafacial pores congestion, Hydrafacial glow results, Hydrafacial sessions needed, RamaCare Hydrafacial Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} />
+        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
 
-        {/* JSON-LD Schemas */}
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} key="og:url" />
+        <meta property="og:image" content={`${SITE_URL}/images/hydrafacial-procedure-ramacare-dubai.jpg`} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hydrafacial Before and After - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Hydrafacial Before and After: What Results to Realistically Expect" key="twitter:title" />
+        <meta name="twitter:description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE_URL}/images/hydrafacial-procedure-ramacare-dubai.jpg`} key="twitter:image" />
+
+        {/* Unified JSON-LD @graph Schema */}
         <script
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "MedicalClinic",
-              "@id": "https://ramacarepolyclinic.ae/#organization",
-              "name": "RamaCare Polyclinic",
-              "url": "https://ramacarepolyclinic.ae",
-              "image": "https://ramacarepolyclinic.ae/images/Logo.png",
-              "telephone": "+971 4 286 2006",
-              "priceRange": "$$",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Jumeirah 1",
-                "addressLocality": "Dubai",
-                "addressRegion": "Dubai",
-                "postalCode": "00000",
-                "addressCountry": "AE"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "25.2281",
-                "longitude": "55.2588"
-              },
-              "openingHoursSpecification": [
+              "@graph": [
                 {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
-                  "opens": "09:00",
-                  "closes": "21:00"
-                }
-              ],
-              "medicalSpecialty": "Dermatology",
-              "availableService": {
-                "@type": "MedicalProcedure",
-                "name": "Hydrafacial Treatment"
-              },
-              "sameAs": [
-                "https://www.instagram.com/ramacarepolyclinic/",
-                "https://www.facebook.com/ramacarepolyclinic/"
-              ]
-            })
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#webpage",
-              "url": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/",
-              "name": "Hydrafacial Before and After: What Results to Realistically Expect",
-              "description": "See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos.",
-              "inLanguage": "en-AE",
-              "isPartOf": {
-                "@id": "https://ramacarepolyclinic.ae/#website"
-              },
-              "about": {
-                "@id": "https://ramacarepolyclinic.ae/#organization"
-              },
-              "primaryImageOfPage": {
-                "@type": "ImageObject",
-                "url": "https://ramacarepolyclinic.ae/images/hydrafacial-treatment-dubai.jpg"
-              },
-              "datePublished": "2026-08-10",
-              "dateModified": "2026-08-10"
-            })
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Skin Treatments",
-                  "item": "https://ramacarepolyclinic.ae/services/skin-treatments/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Hydrafacial Before and After",
-                  "item": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/"
-                }
-              ]
-            })
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "What does Hydrafacial before and after actually show?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It typically shows improved hydration, a brighter complexion, and clearer-looking pores immediately after treatment, with more cumulative texture and tone improvement visible after a series of sessions."
+                  "@type": "WebPage",
+                  "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#webpage",
+                  "url": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/",
+                  "name": "Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic",
+                  "description": "See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos.",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@type": "WebSite",
+                    "url": "https://ramacarepolyclinic.ae/",
+                    "name": "RamaCare Polyclinic"
+                  },
+                  "about": {
+                    "@type": "MedicalProcedure",
+                    "name": "Hydrafacial"
+                  },
+                  "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://ramacarepolyclinic.ae/images/hydrafacial-procedure-ramacare-dubai.jpg"
+                  },
+                  "lastReviewed": "2026-08-29",
+                  "reviewedBy": {
+                    "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#physician"
+                  },
+                  "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+                      { "@type": "ListItem", "position": 2, "name": "Skin Treatments", "item": "https://ramacarepolyclinic.ae/services/skin-treatment-dubai/" },
+                      { "@type": "ListItem", "position": 3, "name": "Hydrafacial Before and After", "item": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/" }
+                    ]
                   }
                 },
                 {
-                  "@type": "Question",
-                  "name": "How long do Hydrafacial results last?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The immediate “glow” effect often fades over several days, while cumulative benefits from regular sessions may last longer with consistent maintenance and skincare."
-                  }
+                  "@type": "Person",
+                  "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#physician",
+                  "name": "Sonita Sinaga",
+                  "jobTitle": "Licensed & Certified Aesthetic Therapist",
+                  "hasCredential": "NCLC Laser Certified",
+                  "worksFor": {
+                    "@type": "MedicalOrganization",
+                    "name": "RamaCare Polyclinic"
+                  },
+                  "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
                 },
                 {
-                  "@type": "Question",
-                  "name": "Is one Hydrafacial session enough to see results?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Many patients notice a visible difference after a single session, particularly in hydration and pore appearance, though more significant texture or tone changes generally develop with a series of sessions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are Hydrafacial before-and-after photos accurate?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "They can be informative but are also influenced by lighting, angle, skin preparation, and timing, so they should be viewed as illustrative rather than a guarantee of your own results."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does Hydrafacial help with acne or congestion?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It can help reduce the visible appearance of congestion through extraction, though it is not typically considered a primary treatment for active acne, which may require a different approach."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does Hydrafacial reduce wrinkles?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It may temporarily soften the appearance of fine, dehydration-related lines through hydration, but it does not significantly change deeper structural wrinkles."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How many Hydrafacial sessions do I need?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "This depends on your skin goals and concerns, and is best determined following a consultation rather than a fixed number."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is there downtime after Hydrafacial?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Most patients experience little to no downtime, though mild, temporary redness is possible for some individuals."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can Hydrafacial help with dull skin?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, brightening is one of the more commonly reported immediate effects, largely due to exfoliation and hydration."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is Hydrafacial suitable for sensitive skin?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It is generally well tolerated, though individual suitability should be assessed during a consultation given your specific skin history."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How often should I get a Hydrafacial?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Frequency varies by individual goals; some patients get occasional sessions for events, while others schedule regular monthly maintenance sessions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can Hydrafacial treat pigmentation?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It may offer mild support for overall tone evenness, but it is generally not considered a primary treatment for more significant or stubborn pigmentation."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is the difference between Hydrafacial and a regular facial?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hydrafacial uses a vacuum-based device to combine exfoliation, extraction, and hydration in one step, while a traditional facial typically relies on manual techniques and topical products."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can men get Hydrafacial?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, Hydrafacial is not gender-specific and can be suitable for a range of skin types and concerns."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How much does Hydrafacial cost in Dubai?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Cost depends on the specific treatment plan, add-ons, and number of sessions, and is best discussed during a consultation."
-                  }
+                  "@type": "FAQPage",
+                  "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#faq",
+                  "mainEntity": faqs.map((f) => ({
+                    "@type": "Question",
+                    "name": f.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": f.a
+                    }
+                  }))
                 }
               ]
             })
@@ -899,7 +771,7 @@ export default function HydrafacialBeforeAndAfterPage() {
               ))}
             </ul>
             <p className="text-[#5F5F5F] leading-relaxed font-light border-t border-[#1F5E4B]/10 pt-4 text-sm">
-              The most accurate way to understand cost for your specific skin plan is through a consultation. For a closer look at pricing considerations, visit our <Link href="/services/hydrafacial-cost-dubai/" className="text-[#1F5E4B] underline font-semibold">Hydrafacial Treatment in Dubai</Link> page.
+              The most accurate way to understand cost for your specific skin plan is through a consultation. For a closer look at pricing considerations, visit our <Link href="/services/hydrafacial-cost-dubai/" className="text-[#1F5E4B] underline font-semibold">Hydrafacial Cost in Dubai</Link> page.
             </p>
           </article>
 
@@ -981,23 +853,7 @@ export default function HydrafacialBeforeAndAfterPage() {
             <h2 className="text-3xl font-sans text-[#1A1A1A] font-bold">FAQ</h2>
 
             <div className="divide-y divide-[#E9E2D6] border-t border-b border-[#E9E2D6]">
-              {[
-                { q: 'What does Hydrafacial before and after actually show?', a: 'It typically shows improved hydration, a brighter complexion, and clearer-looking pores immediately after treatment, with more cumulative texture and tone improvement visible after a series of sessions.' },
-                { q: 'How long do Hydrafacial results last?', a: 'The immediate “glow” effect often fades over several days, while cumulative benefits from regular sessions may last longer with consistent maintenance and skincare.' },
-                { q: 'Is one Hydrafacial session enough to see results?', a: 'Many patients notice a visible difference after a single session, particularly in hydration and pore appearance, though more significant texture or tone changes generally develop with a series of sessions.' },
-                { q: 'Are Hydrafacial before-and-after photos accurate?', a: 'They can be informative but are also influenced by lighting, angle, skin preparation, and timing, so they should be viewed as illustrative rather than a guarantee of your own results.' },
-                { q: 'Does Hydrafacial help with acne or congestion?', a: 'It can help reduce the visible appearance of congestion through extraction, though it is not typically considered a primary treatment for active acne, which may require a different approach.' },
-                { q: 'Does Hydrafacial reduce wrinkles?', a: 'It may temporarily soften the appearance of fine, dehydration-related lines through hydration, but it does not significantly change deeper structural wrinkles.' },
-                { q: 'How many Hydrafacial sessions do I need?', a: 'This depends on your skin goals and concerns, and is best determined following a consultation rather than a fixed number.' },
-                { q: 'Is there downtime after Hydrafacial?', a: 'Most patients experience little to no downtime, though mild, temporary redness is possible for some individuals.' },
-                { q: 'Can Hydrafacial help with dull skin?', a: 'Yes, brightening is one of the more commonly reported immediate effects, largely due to exfoliation and hydration.' },
-                { q: 'Is Hydrafacial suitable for sensitive skin?', a: 'It is generally well tolerated, though individual suitability should be assessed during a consultation given your specific skin history.' },
-                { q: 'How often should I get a Hydrafacial?', a: 'Frequency varies by individual goals; some patients get occasional sessions for events, while others schedule regular monthly maintenance sessions.' },
-                { q: 'Can Hydrafacial treat pigmentation?', a: 'It may offer mild support for overall tone evenness, but it is generally not considered a primary treatment for more significant or stubborn pigmentation.' },
-                { q: 'What is the difference between Hydrafacial and a regular facial?', a: 'Hydrafacial uses a vacuum-based device to combine exfoliation, extraction, and hydration in one step, while a traditional facial typically relies on manual techniques and topical products.' },
-                { q: 'Can men get Hydrafacial?', a: 'Yes, Hydrafacial is not gender-specific and can be suitable for a range of skin types and concerns.' },
-                { q: 'How much does Hydrafacial cost in Dubai?', a: 'Cost depends on the specific treatment plan, add-ons, and number of sessions, and is best discussed during a consultation.' }
-              ].map((faq, idx) => (
+              {faqs.map((faq, idx) => (
                 <div key={idx} className="py-4 font-sans">
                   <button
                     onClick={() => toggleFaq(idx)}

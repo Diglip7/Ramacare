@@ -200,8 +200,12 @@ export default function RFMicroneedlingDubai() {
             "name": "RF Microneedling"
         },
         "lastReviewed": "2026-08-17",
-        "publisher": {
-            "@type": "MedicalOrganization",
+        "procedureType": "Aesthetic Dermatology Procedure",
+        "howPerformed": "A trained clinician uses an RF microneedling device to create controlled microchannels while delivering radiofrequency thermal energy into the dermis.",
+        "preparation": "Skin cleansing and application of topical numbing cream where appropriate.",
+        "followup": "Customized clinical aftercare, gentle hydration, sun protection, and progress evaluation.",
+        "provider": {
+            "@type": "MedicalClinic",
             "name": "RamaCare Polyclinic"
         }
     };   
@@ -209,12 +213,12 @@ export default function RFMicroneedlingDubai() {
     const schema3_FAQPage = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
+        "mainEntity": faqs.map(f => ({
             "@type": "Question",
-            "name": faq.q,
+            "name": f.q,
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": typeof faq.a === 'string' ? faq.a : "In some cases, a clinician may discuss combining RF microneedling with other skin treatments such as PRP treatment as part of a broader plan, depending on individual skin concerns and assessment findings."
+                "text": typeof f.a === 'string' ? f.a : "In some cases, a clinician may discuss combining RF microneedling with other skin treatments such as PRP treatment as part of a broader plan, depending on individual skin concerns and assessment findings."
             }
         }))
     };
@@ -223,24 +227,9 @@ export default function RFMicroneedlingDubai() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://ramacarepolyclinic.ae"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Aesthetic Dermatology",
-                "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "RF Microneedling Dubai",
-                "item": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "RF Microneedling Dubai", "item": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/" }
         ]
     }; 
 
@@ -272,7 +261,26 @@ export default function RFMicroneedlingDubai() {
                     name="description"
                     content="Considering RF Microneedling in Dubai? RamaCare Polyclinic offers personalized skin assessments in Jumeirah 1. Book a consultation to discuss your goals."
                 />
-                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rf-microneedling-dubai" />
+                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="RF Microneedling Dubai | RamaCare Polyclinic" key="og:title" />
+                <meta property="og:description" content="Considering RF Microneedling in Dubai? RamaCare Polyclinic offers personalized skin assessments in Jumeirah 1. Book a consultation to discuss your goals." key="og:description" />
+                <meta property="og:type" content="website" key="og:type" />
+                <meta property="og:url" content="https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/" key="og:url" />
+                <meta property="og:image" content="https://ramacarepolyclinic.ae/images/RF%20Microneedling%20consultation%20in%20Dubai.jpg" key="og:image" />
+                <meta property="og:image:width" content="1200" key="og:image:width" />
+                <meta property="og:image:height" content="630" key="og:image:height" />
+                <meta property="og:image:alt" content="RF Microneedling consultation in Dubai at RamaCare Polyclinic" key="og:image:alt" />
+                <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+                <meta property="og:locale" content="en_AE" key="og:locale" />
+
+                {/* Twitter Card Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+                <meta name="twitter:title" content="RF Microneedling Dubai | RamaCare Polyclinic" key="twitter:title" />
+                <meta name="twitter:description" content="RF Microneedling combines microneedling with radiofrequency energy to support skin texture and firmness. Personalized assessments at RamaCare Polyclinic, Jumeirah 1." key="twitter:description" />
+                <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/RF%20Microneedling%20consultation%20in%20Dubai.jpg" key="twitter:image" />
+
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1_MedicalClinic) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2_MedicalWebPage) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3_FAQPage) }} />
@@ -1191,7 +1199,7 @@ export default function RFMicroneedlingDubai() {
                                 <span>Book an Appointment</span>
                             </Link>
                             <a
-                                href="tel:(+971) 04 286 2006"
+                                href="tel:+97142862006"
                                 className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-7 py-4 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2.5"
                             >
                                 <Phone className="w-4 h-4 shrink-0" />

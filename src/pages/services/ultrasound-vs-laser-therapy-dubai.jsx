@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { MessageCircle, ChevronDown, ChevronUp, Phone, MapPin, Award } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
@@ -133,13 +134,118 @@ Which treatment (Ultrasound or Laser) would be best for me?`;
   const whatsappNumber = "971566597878";
   const whatsappMessage = encodeURIComponent("Hello RamaCare, I want to know the difference between Ultrasound and Laser Therapy.");
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Ultra.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/',
+        name: 'Ultrasound vs. Laser Therapy Dubai | Deep Tissue Healing at RamaCare',
+        description: 'Comparing Ultrasound and Laser therapy for pain? Learn which deep-tissue healing method is best for your injury at RamaCare Polyclinic, Jumeirah 1.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound & Class IV Laser Therapy' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound vs. Laser Therapy', item: 'https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/#faq',
+        mainEntity: faqData.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Choosing Between Ultrasound and Laser Therapy | RamaCare</title>
+        <title key="title">Ultrasound vs. Laser Therapy Dubai | Deep Tissue Healing at RamaCare</title>
         <meta name="description" content="Comparing Ultrasound and Laser therapy for pain? Learn which deep-tissue healing method is best for your injury at RamaCare Polyclinic, Jumeirah 1." key="description" />
-        
+        <meta name="keywords" content="Ultrasound vs laser therapy Dubai, cold laser therapy, deep tissue ultrasound, sports injury treatment Jumeirah" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Ultrasound vs. Laser Therapy Dubai | Deep Tissue Healing at RamaCare" key="og:title" />
+        <meta property="og:description" content="Comparing Ultrasound and Laser therapy for pain? Learn which deep-tissue healing method is best for your injury at RamaCare Polyclinic, Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ultrasound-vs-laser-therapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Ultra.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound and Laser Therapy comparison at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ultrasound vs. Laser Therapy Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Which is right for your injury — deep-penetrating ultrasound or surface-level laser therapy? Compare both at RamaCare Polyclinic Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Ultra.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
@@ -170,6 +276,16 @@ Which treatment (Ultrasound or Laser) would be best for me?`;
         {/* Hero Section */}
         <section className="bg-white py-12 md:py-20 px-4">
           <div className="max-w-7xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Ultrasound vs Laser Therapy</span>
+            </nav>
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               
               {/* Left Column - Text Content */}

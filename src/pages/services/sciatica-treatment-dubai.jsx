@@ -54,7 +54,7 @@ export default function SciaticaTreatmentPage() {
     },
     {
       question: 'Can physiotherapy cure sciatica?',
-      answer: 'Physiotherapy can\'t guarantee a "cure" since outcomes vary by cause and individual, but it\'s highly effective at reducing pain, restoring movement, and addressing the underlying issue for most patients. Consistent Sciatica Treatment Dubai sessions, combined with home exercises, give you the best chance of lasting improvement.'
+      answer: 'Physiotherapy can\'t guarantee a "cure" since outcomes vary by cause and individual, but it\'s highly effective at reducing pain, restoring movement, and addressing the underlying issue for most patients. Consistent physiotherapy sessions, combined with home exercises, give you the best chance of lasting improvement.'
     },
     {
       question: 'How long does recovery take?',
@@ -342,7 +342,7 @@ export default function SciaticaTreatmentPage() {
                   At RamaCare Polyclinic, we see this pattern often: patients wait weeks or months hoping the pain will fade on its own, only to find it getting worse. The truth is, sciatica responds best when it's treated early. The longer nerve irritation continues untreated, the harder recovery can become.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
-                  This page explains what sciatica actually is, what causes it, and how our team approaches Sciatica Treatment Dubai patients trust, using evidence-based physiotherapy. Whether your pain started last week or has lingered for months, understanding your condition is the first step toward relief. If you've been searching for reliable Sciatica Treatment Dubai options, you're in the right place.
+                  This page explains what sciatica actually is, what causes it, and how our team approaches sciatica care, using evidence-based physiotherapy. Whether your pain started last week or has lingered for months, understanding your condition is the first step toward relief. If you've been searching for reliable sciatica treatment in Dubai, you're in the right place.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
                   Sciatica can develop from a herniated disc, muscle tightness, poor posture, or prolonged sitting — all common in Dubai's desk-heavy, car-dependent lifestyle. Patients choose RamaCare because our physiotherapists take time to identify the actual source of nerve irritation, rather than just treating symptoms. That distinction matters for lasting recovery.
@@ -611,7 +611,7 @@ export default function SciaticaTreatmentPage() {
               </p>
             </div>
             <p className="text-white/80 text-lg leading-relaxed">
-              Understanding these distinctions is why patients searching for accurate Sciatica Treatment Dubai guidance should start with a proper clinical assessment, not guesswork.
+              Understanding these distinctions is why patients searching for accurate sciatica care guidance should start with a proper clinical assessment, not guesswork.
             </p>
           </motion.div>
         </div>
@@ -630,7 +630,7 @@ export default function SciaticaTreatmentPage() {
               Common Causes of Sciatica
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Several conditions can lead to sciatic nerve irritation. Getting the right Sciatica Pain Treatment Dubai plan starts with identifying which one applies to you:
+              Several conditions can lead to sciatic nerve irritation. Getting the right sciatica pain treatment plan starts with identifying which cause applies to your specific condition:
             </p>
           </motion.div>
 
@@ -638,7 +638,7 @@ export default function SciaticaTreatmentPage() {
             {[
               {
                 title: "Herniated Disc",
-                desc: "Disc material presses on the nerve root — one of the most common reasons patients seek Herniated Disc Treatment Dubai clinics for relief",
+                desc: "Disc material presses on the nerve root — one of the most common reasons patients seek specialized herniated disc treatment for relief",
                 color: "from-rose-100 to-rose-50"
               },
               {
@@ -648,7 +648,7 @@ export default function SciaticaTreatmentPage() {
               },
               {
                 title: "Spinal Stenosis",
-                desc: "Narrowing of the spinal canal compresses nerves, often requiring focused Nerve Compression Treatment Dubai care",
+                desc: "Narrowing of the spinal canal compresses nerves, often requiring focused nerve compression care",
                 color: "from-purple-100 to-purple-50"
               },
               {
@@ -712,7 +712,7 @@ export default function SciaticaTreatmentPage() {
             viewport={{ once: true }}
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl" >
             <p className="text-lg leading-relaxed">
-              Understanding the root cause matters because effective Sciatica Treatment Dubai clinics offer should be tailored to what's actually driving your symptoms, not a one-size-fits-all routine.
+              Understanding the root cause matters because effective sciatica care should be tailored to what's actually driving your symptoms, not a one-size-fits-all routine.
             </p>
           </motion.div>
         </div>
@@ -730,7 +730,7 @@ export default function SciaticaTreatmentPage() {
               Who is at Risk?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Certain groups are more likely to develop sciatica. Anyone dealing with radiating leg pain should check whether they fall into a higher-risk category. Leg Pain Physiotherapy Dubai care works best when it's tailored to your specific risk profile:
+              Certain groups are more likely to develop sciatica. Anyone dealing with radiating leg pain should check whether they fall into a higher-risk category. Physiotherapy care works best when it's tailored to your specific risk profile:
             </p>
           </motion.div>
 
@@ -767,7 +767,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 text-lg text-[#5F5F5F] leading-relaxed"
           >
             <p className="text-center bg-white p-8 rounded-2xl border border-gray-200">
-              Dubai's working population is heavy on desk jobs, commuting, and shift work. This fits several of these risk categories, which is part of why Lower Back Pain Treatment Dubai clinics see such consistent demand for sciatica care.
+              Dubai's working population is heavy on desk jobs, commuting, and shift work. This fits several of these risk categories, which is part of why our physiotherapy clinic sees such consistent demand for sciatica care.
             </p>
           </motion.div>
         </div>
@@ -848,7 +848,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-[#F9F7F2] p-8 rounded-2xl border border-gray-200"
           >
             <p className="text-lg text-[#5F5F5F] leading-relaxed text-center">
-              For everything short of an emergency, timely Sciatica Treatment Dubai care from a licensed physiotherapist can prevent symptoms from becoming chronic.
+              For everything short of an emergency, timely sciatica treatment from a licensed physiotherapist can prevent symptoms from becoming chronic.
             </p>
           </motion.div>
         </div>
@@ -871,7 +871,7 @@ export default function SciaticaTreatmentPage() {
               How We Diagnose Sciatica
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl">
-              Accurate diagnosis is the foundation of effective sciatica physiotherapy Dubai care. Some patients have true sciatica, while others have a related condition called lumbar radiculopathy. Getting proper Lumbar Radiculopathy Treatment Dubai care depends on telling the two apart, which is why our assessment is thorough. Working with the Best Sciatica Specialist Dubai has to offer starts with this step.
+              Accurate diagnosis is the foundation of effective sciatica care. Some patients have true sciatica, while others have a related condition called lumbar radiculopathy. Getting proper care depends on telling the two apart, which is why our clinical assessment is thorough and comprehensive.
             </p>
           </motion.div>
 
@@ -964,7 +964,7 @@ export default function SciaticaTreatmentPage() {
               Sciatica Treatment at RamaCare
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl">
-              Our approach to Sciatica Treatment Dubai patients rely on is built around a simple principle: treat the cause, not just the pain. Every plan starts with a thorough assessment, and treatment is adjusted as you progress.
+              Our approach to sciatica treatment is built around a simple principle: treat the cause, not just the pain. Every plan starts with a thorough assessment, and treatment is adjusted as you progress.
             </p>
           </motion.div>
 
@@ -1066,7 +1066,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl"
           >
             <p className="text-lg leading-relaxed">
-              Each technique is introduced at the right stage of recovery. Early sessions typically focus on pain relief, while later sessions build strength and prevent recurrence. This staged approach is a core part of effective Sciatica Treatment Dubai management, and why generic exercise routines often fall short. It's also what distinguishes proper sciatic nerve pain Dubai rehabilitation from a quick, one-off session.
+              Each technique is introduced at the right stage of recovery. Early sessions typically focus on pain relief, while later sessions build strength and prevent recurrence. This staged approach is a core part of effective physiotherapy management, which is why generic exercise routines often fall short. It's also what distinguishes proper sciatic nerve rehabilitation from a quick, one-off session.
             </p>
           </motion.div>
         </div>
@@ -1255,7 +1255,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-white p-8 rounded-2xl border border-gray-200"
           >
             <p className="text-lg text-[#5F5F5F] leading-relaxed text-center">
-              These timelines are general guidelines, not guarantees. Recovery depends on the underlying cause, your overall health, and how consistently you follow your treatment plan. Some patients feel relief within days; others need a longer, staged approach through structured Sciatica Treatment Dubai programs.
+              These timelines are general guidelines, not guarantees. Recovery depends on the underlying cause, your overall health, and how consistently you follow your treatment plan. Some patients feel relief within days; others need a longer, staged approach through structured rehabilitation programs.
             </p>
           </motion.div>
         </div>
@@ -1274,7 +1274,7 @@ export default function SciaticaTreatmentPage() {
               Why Choose RamaCare Polyclinic?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              When you're comparing options for Sciatica Treatment Dubai, here's what sets our clinic apart:
+              When you're comparing options for sciatica treatment in Dubai, here's what sets our clinic apart:
             </p>
           </motion.div>
 
@@ -1340,7 +1340,7 @@ export default function SciaticaTreatmentPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-[#5F5F5F]">
-              Here are the questions we hear most often from patients researching Sciatica Treatment Dubai options:
+              Here are the questions we hear most often from patients researching sciatica treatment options in Dubai:
             </p>
           </motion.div>
 
@@ -1394,7 +1394,7 @@ export default function SciaticaTreatmentPage() {
               Book Your Consultation
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              You don't have to manage sciatica pain on your own. Our DHA-licensed physiotherapists at RamaCare Polyclinic are ready to assess your condition and build a Sciatica Treatment Dubai plan around your specific needs.
+              You don't have to manage sciatica pain on your own. Our DHA-licensed physiotherapists at RamaCare Polyclinic are ready to assess your condition and build a personalized treatment plan around your specific needs.
             </p>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Take the first step toward lasting relief. Book your consultation today via WhatsApp or our online booking system, and let our team guide you through a clear, structured path to recovery. Don't wait for the pain to worsen — early action is one of the biggest factors in a smoother, faster recovery.
@@ -1422,7 +1422,7 @@ export default function SciaticaTreatmentPage() {
       </section>
 
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Jeena Mathew" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="sciatica-treatment-dubai" />
 
       {/* Medical Disclaimer */}
       <section className="py-12 px-4 bg-[#F9F7F2] border-t border-gray-200">

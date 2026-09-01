@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, CheckCircle, MapPin, Phone } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -76,18 +77,147 @@ export default function PhysiotherapyInsuranceDubai() {
     window.open('https://wa.me/971566597878', '_blank');
   };
 
+  const faqs = [
+    {
+      question: "Do I need a doctor's referral for ultrasound therapy?",
+      answer: "Yes, for insurance to cover the cost, a referral from a DHA-licensed doctor is usually mandatory. If you are paying out-of-pocket, no referral is needed."
+    },
+    {
+      question: "What is the typical co-payment for physio in Dubai?",
+      answer: "For most plans, the co-payment is 20%. This means if a session is AED 400, you pay AED 80, and the insurance pays AED 320."
+    },
+    {
+      question: "Can my claim be rejected?",
+      answer: "Claims are usually only rejected if the medical report is missing a diagnosis or if you have exceeded your annual session limit (usually 6-12 sessions depending on the plan)."
+    }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/ultrasound.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/',
+        name: 'Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare',
+        description: 'Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Physiotherapy Insurance Coverage' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Physiotherapy Insurance', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
       <Head>
         <title key="title">Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare</title>
         <meta name="description" content="Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="description" />
-        
+        <meta name="keywords" content="Physiotherapy insurance Dubai, Ultrasound therapy insurance coverage, NextCare physiotherapy Dubai, Daman physiotherapy claim, GIG insurance physiotherapy, Direct billing physiotherapy Dubai, Reimbursement physiotherapy Dubai, UAE health insurance physiotherapy" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare" key="og:title" />
+        <meta property="og:description" content="Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Physiotherapy Insurance Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-[1440px] mx-auto">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Physiotherapy Insurance</span>
+          </nav>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
@@ -839,6 +969,33 @@ export default function PhysiotherapyInsuranceDubai() {
               Chat with Our Team
             </button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-[1440px] mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy Dubai
+            </Link>
+            <Link href="/services/ultrasound-therapy-cost-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Ultrasound Therapy Cost
+            </Link>
+            <Link href="/services/professional-vs-home-ultrasound/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Professional vs Home Ultrasound
+            </Link>
+            <Link href="/services/knee-pain-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Knee Pain Treatment
+            </Link>
+            <Link href="/services/sciatica-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Sciatica Treatment
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical & Insurance Disclaimer:</span> Insurance coverage policies, network inclusions, direct billing availability, and co-payment terms are determined by individual insurance providers and plan terms, subject to change without notice. Information provided on this page is for educational guidance only and does not guarantee claim approval or coverage. Please consult with our administrative team and your insurance provider to verify eligibility prior to treatment.
+          </p>
         </div>
       </section>
 

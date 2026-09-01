@@ -46,13 +46,60 @@ export default function HairPRPPage() {
   <title key="title">Hair PRP in Dubai for Natural Hair Regrowth Treatment</title>
   <meta name="description" content="Hair PRP in Dubai uses platelet-rich plasma to strengthen hair follicles, reduce hair fall, and support natural regrowth under expert medical care." key="description" />
   <meta name="keywords" content="Hair PRP in Dubai, PRP hair treatment Dubai, Hair regrowth treatment Dubai, Platelet rich plasma for hair, Hair fall reduction Dubai, Scalp stimulation therapy, Non-surgical hair restoration, Medical hair loss treatment, Professional PRP therapy Dubai" />
-  
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Hair PRP in Dubai for Natural Hair Regrowth Treatment" />
+  <meta property="og:description" content="Hair PRP in Dubai uses platelet-rich plasma to strengthen hair follicles, reduce hair fall, and support natural regrowth under expert medical care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hair-prp-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-prp1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hair PRP Treatment in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hair PRP in Dubai for Natural Hair Regrowth Treatment" />
+  <meta name="twitter:description" content="Platelet-rich plasma therapy in Dubai to strengthen hair follicles, reduce hair fall, and support natural regrowth under expert medical care." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-prp1.jpg" />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/",
+          "name": "Hair PRP in Dubai for Natural Hair Regrowth Treatment",
+          "description": "Hair PRP in Dubai uses platelet-rich plasma to strengthen hair follicles, reduce hair fall, and support natural regrowth under expert medical care.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Hair Thinning / Hair Loss (PRP Therapy)"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Hair PRP", "item": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/" }
+            ]
+          }
+        },
         {
           "@type": "MedicalCondition",
           "@id": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/#condition",
@@ -103,6 +150,31 @@ export default function HairPRPPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/#physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice & Aesthetic Medicine",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-prp-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

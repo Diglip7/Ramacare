@@ -16,6 +16,7 @@ import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
+import { DOCTORS } from '../../data/doctors';
 
 
 export default function BotoxHyperhidrosisPage() {
@@ -24,6 +25,21 @@ export default function BotoxHyperhidrosisPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/botox-hyperhidrosis');
+  const reviewDoctor = DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai'] || DOCTORS.sahar;
+
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
+  const PAGE_URL = 'https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/';
+  const DOCTOR_URL = 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai';
+  const OG_IMAGE = 'https://ramacarepolyclinic.ae/images/botox-hyper.jpg';
 
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
@@ -37,13 +53,32 @@ export default function BotoxHyperhidrosisPage() {
     { id: 'book-now', label: 'Book Now' }
   ];
 
+
+
   return (
     <Layout>
         <Head>
   <title key="title">Botox Hyperhidrosis in Dubai for Excessive Sweating</title>
   <meta name="description" content="Botox hyperhidrosis in Dubai helps manage excessive sweating safely by reducing underarm, palm, and foot sweating under expert medical care." key="description" />
   <meta name="keywords" content="Botox hyperhidrosis in Dubai, Excessive sweating treatment Dubai, Hyperhidrosis treatment Dubai, Botox for sweating Dubai, Underarm sweating treatment, Palmar hyperhidrosis treatment, Non-surgical sweating control, Medical hyperhidrosis care, Sweat reduction treatment Dubai" />
-  
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={PAGE_URL} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Botox Hyperhidrosis in Dubai for Excessive Sweating" />
+  <meta property="og:description" content="Botox hyperhidrosis in Dubai helps manage excessive sweating safely by reducing underarm, palm, and foot sweating under expert medical care." />
+  <meta property="og:url" content={PAGE_URL} />
+  <meta property="og:image" content={OG_IMAGE} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Botox Hyperhidrosis in Dubai for Excessive Sweating" />
+  <meta name="twitter:description" content="Botox hyperhidrosis in Dubai helps manage excessive sweating safely by reducing underarm, palm, and foot sweating under expert medical care." />
+  <meta name="twitter:image" content={OG_IMAGE} />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -51,54 +86,60 @@ export default function BotoxHyperhidrosisPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/#condition",
-          "name": "Hyperhidrosis (Excessive Sweating)",
-          "alternateName": "Excessive Sweating Disorder",
-          "url": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/",
-          "description": "Hyperhidrosis is a medical condition characterized by excessive sweating that can affect the underarms, palms, feet, and other body areas, often beyond what is required for normal thermoregulation, impacting daily comfort and confidence.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Botox (Botulinum Toxin) Therapy for Hyperhidrosis",
-            "description": "Botox therapy for hyperhidrosis involves targeted injections of botulinum toxin into affected areas to temporarily block the nerve signals that stimulate excessive sweat gland activity, reducing sweating for several months."
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ramacarepolyclinic.ae/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Aesthetic Dermatology",
+              "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Botox Hyperhidrosis",
+              "item": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/"
+            }
+          ]
         },
         {
           "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/#procedure",
           "name": "Botox Hyperhidrosis Treatment in Dubai",
-          "alternateName": "Botulinum Toxin Injections for Excessive Sweating",
+          "description": "Non-surgical botulinum toxin injection treatment that temporarily blocks nerve signals to overactive sweat glands, significantly reducing excessive sweating in the underarms, palms, soles of the feet, or forehead.",
           "url": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/botox-hyperhidrosis-dubai/",
-          "description": "Botox Hyperhidrosis treatment in Dubai at RamaCare Polyclinic is a minimally invasive medical procedure that uses botulinum toxin injections to reduce excessive sweating in targeted areas such as the underarms, palms, or soles of the feet.",
-          "procedureType": "Minimally invasive medical injection therapy",
-          "howPerformed": "During the procedure, trained clinicians administer precise injections of botulinum toxin into the sweat gland–rich areas. The toxin blocks nerve signals to sweat glands, significantly reducing excessive sweating.",
-          "preparation": "Patients are advised to arrive with clean, dry skin and provide a full medical history including any medications or previous treatments. Avoidance of certain blood-thinning medications or supplements beforehand may be recommended.",
-          "followup": "Follow-up sessions may be scheduled to evaluate effectiveness and determine retreatment intervals, as results typically last several months.",
-          "indication": [
-            "Excessive underarm sweating (axillary hyperhidrosis)",
-            "Excessive palm sweating",
-            "Excessive foot sweating",
-            "Sweat-related discomfort impacting daily activities"
-          ],
+          "procedureType": "https://schema.org/PercutaneousProcedure",
+          "bodyLocation": "Underarms, Palms, Feet, Forehead",
+          "reviewedBy": {
+            "@type": "Physician",
+            "name": "Dr. Sahar Zomorrodi",
+            "medicalSpecialty": "General Practice",
+            "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+          },
           "provider": {
             "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Medical Care",
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/",
+            "image": "https://ramacarepolyclinic.ae/images/botox-hyper.jpg",
+            "telephone": "+971566597878",
+            "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
               "addressLocality": "Jumeirah 1",
               "addressRegion": "Dubai",
-              "postalCode": "393558",
               "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
+            }
           }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": faqSchema
         }
       ]
     })

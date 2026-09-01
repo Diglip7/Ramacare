@@ -22,27 +22,103 @@ export default function DyslipidemiaDiagnosisandTreatmentPage() {
   // Get content from data file
   const content = getSubcategoryContent('general-physician-dubai', 'dyslipidemia-diagnosis-and-treatment');
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/dyslipidemia-diagnosis-and-treatment/";
+  const PAGE_TITLE = "Dyslipidemia Diagnosis and Treatment in Dubai | RamaCare";
+  const PAGE_DESCRIPTION = "Dyslipidemia diagnosis and treatment focused on managing cholesterol levels, reducing heart disease risk, and supporting long-term cardiovascular health safely.";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "General Physician", "item": "https://ramacarepolyclinic.ae/services/general-physician-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Dyslipidemia Diagnosis and Treatment", "item": CANONICAL_URL }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Dyslipidemia Diagnosis and Treatment",
+        "description": "Diagnosis and management of abnormal cholesterol and triglyceride levels through lipid profile testing, medication, and lifestyle guidance, delivered by DHA-licensed physicians in Dubai.",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1, Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        "areaServed": { "@type": "City", "name": "Dubai" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (content?.faq?.faqs || []).map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Dyslipidemia Diagnosis and Treatment for Healthy Cholesterol</title>
-        <meta name="description" content="Dyslipidemia diagnosis and treatment focused on managing cholesterol levels, reducing heart disease risk, and supporting long-term cardiovascular health safely." key="description" />
-        <meta name="keywords" content="Dyslipidemia diagnosis and treatment, High cholesterol treatment, Lipid profile test, Cholesterol management, Dyslipidemia care, Heart health treatment, High LDL cholesterol, Triglyceride management, Preventive cardiac care" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="Dyslipidemia diagnosis and treatment, High cholesterol treatment, Lipid profile test, Cholesterol management, Dyslipidemia care, Heart health treatment, High LDL cholesterol, Triglyceride management, Preventive cardiac care" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Dyslipidemia Diagnosis and Treatment in Dubai | RamaCare" key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/dyslipidemia1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Dyslipidemia Diagnosis and Treatment in Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Managing cholesterol levels, reducing heart disease risk, and supporting long-term cardiovascular health safely." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/dyslipidemia1.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
-      <TreatmentHero 
+      <TreatmentHero
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
       <QuickNavigation />
-    
-      <TreatmentOverview 
+
+      <TreatmentOverview
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
       <HealingJourney content={content?.healingJourney} />
-      <TreatmentBenefits 
+      <TreatmentBenefits
         content={content?.benefits}
       />
       <PatientTestimonials content={content?.testimonials} />

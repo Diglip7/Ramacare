@@ -90,7 +90,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                 "@id": "https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai/#procedure",
                 "name": "Microneedling & Skin Renewal in Dubai",
                 "alternateName": "Collagen Induction Therapy Dubai",
-                "url": "https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai",
+                "url": "https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai/",
                 "description": "Professional microneedling and skin renewal therapy at RamaCare Polyclinic Dubai. Controlled collagen remodeling for acne scarring, fine lines, and skin texture.",
                 "procedureType": "Aesthetic Dermatology Procedure",
                 "howPerformed": "A trained clinician uses a professional-grade device with fine, sterile needles to create controlled micro-injuries in the skin, triggering natural collagen and elastin remodeling.",
@@ -135,19 +135,19 @@ export default function MicroneedlingSkinRenewalServicePage() {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Services",
-                        "item": "https://ramacarepolyclinic.ae/services"
+                        "item": "https://ramacarepolyclinic.ae/services/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 3,
                         "name": "Aesthetic Dermatology",
-                        "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai"
+                        "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 4,
                         "name": "Microneedling & Skin Renewal",
-                        "item": "https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai"
+                        "item": "https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai/"
                     }
                 ]
             },
@@ -443,6 +443,25 @@ export default function MicroneedlingSkinRenewalServicePage() {
                 />
                 <meta name="keywords" content="Microneedling Dubai, Skin Renewal Dubai, Collagen Induction Therapy, Microneedling for Acne Scars Dubai, Skin Texture Improvement Dubai, RamaCare Polyclinic" />
                 <link rel="canonical" href="https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai/" key="canonical" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Microneedling & Skin Renewal in Dubai | RamaCare Polyclinic" key="og:title" />
+                <meta property="og:description" content="Explore Microneedling & Skin Renewal at RamaCare Polyclinic Dubai. Personalized skin assessments. Book your consultation today." key="og:description" />
+                <meta property="og:type" content="website" key="og:type" />
+                <meta property="og:url" content="https://ramacarepolyclinic.ae/services/microneedling-skin-renewal-dubai/" key="og:url" />
+                <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Microneedling%20%26%20Skin%20Renewal%20consultation.jpg" key="og:image" />
+                <meta property="og:image:width" content="1200" key="og:image:width" />
+                <meta property="og:image:height" content="630" key="og:image:height" />
+                <meta property="og:image:alt" content="Microneedling and Skin Renewal consultation at RamaCare Polyclinic Dubai" key="og:image:alt" />
+                <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+                <meta property="og:locale" content="en_AE" key="og:locale" />
+
+                {/* Twitter Card Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+                <meta name="twitter:title" content="Microneedling & Skin Renewal in Dubai | RamaCare Polyclinic" key="twitter:title" />
+                <meta name="twitter:description" content="Personalized, doctor-assessed microneedling and skin renewal treatment in Dubai — honest expectations, no exaggerated promises." key="twitter:description" />
+                <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Microneedling%20%26%20Skin%20Renewal%20consultation.jpg" key="twitter:image" />
+
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, MessageCircle, ShieldCheck, Award, Activity, ArrowRight, MoveDown } from 'lucide-react';
 import Layout from '../../../components/Layout';
@@ -149,13 +150,132 @@ const DryNeedlingUltrasoundComboPage = () => {
     }
   };
 
+  const faqData = [
+    { question: "Does dry needling hurt?", answer: "Most patients describe a brief pinch or ache when the needle hits the trigger point, followed by immediate relief. The sensation is typically much less painful than the chronic pain you're experiencing." },
+    { question: "How long does the combined treatment take?", answer: "The complete Dual Recovery session typically takes 45-60 minutes. Dry needling is performed first (15-20 minutes), followed immediately by ultrasound therapy (20-25 minutes) to maximize healing." },
+    { question: "How many sessions will I need?", answer: "Most patients experience significant relief within 2-3 sessions. For chronic conditions, we typically recommend a series of 4-6 treatments. Dubai runners with acute injuries often see results within 48 hours." },
+    { question: "Is ultrasound therapy safe?", answer: "Yes, therapeutic ultrasound is completely safe when administered by a licensed professional. The sound waves penetrate deep into tissue to promote healing without any harmful effects." },
+    { question: "Can I exercise after treatment?", answer: "We recommend avoiding intense exercise for 24-48 hours after your first session. Light movement and stretching are encouraged. Your physiotherapist will provide personalized guidance based on your condition." },
+    { question: "Is this treatment covered by insurance?", answer: "Many insurance plans in Dubai cover physiotherapy treatments including dry needling and ultrasound. We recommend checking with your insurance provider. We can provide detailed receipts for reimbursement." },
+    { question: "What should I bring to my appointment?", answer: "Wear comfortable, loose-fitting clothing that allows easy access to the treatment area. Bring your insurance card if applicable, and any previous medical records related to your injury." },
+    { question: "Why combine dry needling with ultrasound?", answer: "Dry needling releases the mechanical knot in the muscle, while ultrasound immediately drives healing blood flow into the freshly released tissue. This synergistic approach accelerates recovery beyond what either treatment can achieve alone." }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Needle.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/',
+        name: 'Dry Needling & Ultrasound Combo Dubai | RamaCare Dual Recovery',
+        description: 'Experience the "Ultimate Recovery Duo" at RamaCare Jumeirah. Learn how combining Dry Needling and Ultrasound therapy accelerates healing for stubborn muscle knots and chronic pain.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: [
+          { '@type': 'MedicalProcedure', name: 'Dry Needling' },
+          { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound' }
+        ],
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Dry Needling & Ultrasound Combo', item: 'https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/#faq',
+        mainEntity: faqData.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Dry Needling & Ultrasound Combo Dubai | RamaCare Dual Recovery</title>
         <meta name="description" content="Experience the 'Ultimate Recovery Duo' at RamaCare Jumeirah. Learn how combining Dry Needling and Ultrasound therapy accelerates healing for stubborn muscle knots and chronic pain." key="description" />
-        
+        <meta name="keywords" content="Dry needling and ultrasound combo Dubai, dual recovery protocol, trigger point release, ultrasound therapy Dubai, sports injury recovery Jumeirah" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Dry Needling & Ultrasound Combo Dubai | RamaCare Dual Recovery" key="og:title" />
+        <meta property="og:description" content="Experience the 'Ultimate Recovery Duo' at RamaCare Jumeirah. Learn how combining Dry Needling and Ultrasound therapy accelerates healing for stubborn muscle knots and chronic pain." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/dry-needling-ultrasound-combo-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Needle.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Dry Needling and Ultrasound Combo Therapy - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Dry Needling & Ultrasound Combo Dubai | RamaCare Dual Recovery" key="twitter:title" />
+        <meta name="twitter:description" content="Experience the 'Ultimate Recovery Duo' at RamaCare Jumeirah. Learn how combining Dry Needling and Ultrasound therapy accelerates healing for stubborn muscle knots and chronic pain." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Needle.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
@@ -181,6 +301,16 @@ const DryNeedlingUltrasoundComboPage = () => {
         {/* Hero Section */}
         <section className="py-16 md:py-20 px-4 bg-white">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Dry Needling & Ultrasound Combo</span>
+            </nav>
             <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Column */}
               <motion.div
@@ -320,7 +450,7 @@ const DryNeedlingUltrasoundComboPage = () => {
               <div className="bg-[#1b5e3f] text-white p-6 md:p-10 rounded-2xl shadow-xl max-w-3xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">The "1+1 = 3" Effect</h2>
                 <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                  Clinical studies show that combining these modalities leads to a faster reduction in VAS (Pain) scores and a quicker return to full range of motion compared to using either treatment alone.
+                  Combining these modalities is often associated with faster pain reduction and quicker return to full range of motion compared to using either treatment alone.
                 </p>
               </div>
             </motion.div>
@@ -706,29 +836,9 @@ const DryNeedlingUltrasoundComboPage = () => {
             </motion.div>
 
             <div className="space-y-4">
-              {/* FAQ Item 1 */}
-              <FAQItem question="Does dry needling hurt?" answer="Most patients describe a brief pinch or ache when the needle hits the trigger point, followed by immediate relief. The sensation is typically much less painful than the chronic pain you're experiencing." />
-              
-              {/* FAQ Item 2 */}
-              <FAQItem question="How long does the combined treatment take?" answer="The complete Dual Recovery session typically takes 45-60 minutes. Dry needling is performed first (15-20 minutes), followed immediately by ultrasound therapy (20-25 minutes) to maximize healing." />
-              
-              {/* FAQ Item 3 */}
-              <FAQItem question="How many sessions will I need?" answer="Most patients experience significant relief within 2-3 sessions. For chronic conditions, we typically recommend a series of 4-6 treatments. Dubai runners with acute injuries often see results within 48 hours." />
-              
-              {/* FAQ Item 4 */}
-              <FAQItem question="Is ultrasound therapy safe?" answer="Yes, therapeutic ultrasound is completely safe when administered by a licensed professional. The sound waves penetrate deep into tissue to promote healing without any harmful effects." />
-              
-              {/* FAQ Item 5 */}
-              <FAQItem question="Can I exercise after treatment?" answer="We recommend avoiding intense exercise for 24-48 hours after your first session. Light movement and stretching are encouraged. Your physiotherapist will provide personalized guidance based on your condition." />
-              
-              {/* FAQ Item 6 */}
-              <FAQItem question="Is this treatment covered by insurance?" answer="Many insurance plans in Dubai cover physiotherapy treatments including dry needling and ultrasound. We recommend checking with your insurance provider. We can provide detailed receipts for reimbursement." />
-              
-              {/* FAQ Item 7 */}
-              <FAQItem question="What should I bring to my appointment?" answer="Wear comfortable, loose-fitting clothing that allows easy access to the treatment area. Bring your insurance card if applicable, and any previous medical records related to your injury." />
-              
-              {/* FAQ Item 8 */}
-              <FAQItem question="Why combine dry needling with ultrasound?" answer="Dry needling releases the mechanical knot in the muscle, while ultrasound immediately drives healing blood flow into the freshly released tissue. This synergistic approach accelerates recovery beyond what either treatment can achieve alone." />
+              {faqData.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
             </div>
           </div>
         </section>

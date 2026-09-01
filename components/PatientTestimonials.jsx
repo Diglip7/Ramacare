@@ -120,6 +120,19 @@ const PatientTestimonials = ({ content }) => {
     const steps = 60;
     const stepDuration = duration / steps;
 
+    const parseTarget = (statItem, fallback) => {
+      if (typeof statItem?.target === 'number') return statItem.target;
+      if (!statItem?.number) return fallback;
+      const cleanStr = String(statItem.number).replace(/,/g, '').split('/')[0];
+      const match = cleanStr.match(/[\d.]+/);
+      return match ? parseFloat(match[0]) : fallback;
+    };
+
+    const targetRating = parseTarget(stats[0], 4.9);
+    const targetReviews = parseTarget(stats[1], 500);
+    const targetSuccess = parseTarget(stats[2], 98);
+    const targetPatients = parseTarget(stats[3], 2500);
+
     let currentStep = 0;
 
     const animate = () => {
@@ -128,20 +141,20 @@ const PatientTestimonials = ({ content }) => {
       const easeOut = 1 - Math.pow(1 - progress, 3);
 
       setStatsValues({
-        rating: 4.9 * easeOut,
-        reviews: 500 * easeOut,
-        success: 98 * easeOut,
-        patients: 2500 * easeOut
+        rating: targetRating * easeOut,
+        reviews: targetReviews * easeOut,
+        success: targetSuccess * easeOut,
+        patients: targetPatients * easeOut
       });
 
       if (currentStep < steps) {
         setTimeout(animate, stepDuration);
       } else {
         setStatsValues({
-          rating: 4.9,
-          reviews: 500,
-          success: 98,
-          patients: 2500
+          rating: targetRating,
+          reviews: targetReviews,
+          success: targetSuccess,
+          patients: targetPatients
         });
       }
     };

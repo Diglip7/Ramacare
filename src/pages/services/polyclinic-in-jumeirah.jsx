@@ -47,10 +47,11 @@ const SEO = {
   title: 'Polyclinic in Jumeirah | RamaCare Multi-Specialty Clinic',
   metaDescription:
     'Trusted polyclinic in Jumeirah offering physiotherapy, dental, dermatology, Ayurveda & GP care. DHA licensed doctors. Same-day appointments available.',
-  canonical: 'https://ramacarepolyclinic.ae/polyclinic-in-jumeirah',
+  canonical: 'https://ramacarepolyclinic.ae/services/polyclinic-in-jumeirah/',
   ogTitle: 'Polyclinic in Jumeirah – RamaCare Polyclinic',
   ogDescription:
     'Multi-specialty polyclinic in Jumeirah 1, Dubai. Physiotherapy, dental, dermatology, Ayurveda & general medicine under one roof. Book same-day appointments today.',
+  ogImage: 'https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dubai-clinic.jpg',
 };
 
 const WHATSAPP_NUMBER = '971566597878';
@@ -295,9 +296,11 @@ export default function PolyclinicInJumeirahPage() {
     '@type': 'MedicalClinic',
     name: 'RamaCare Polyclinic',
     url: SEO.canonical,
+    logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
+    image: SEO.ogImage,
     description: 'RamaCare Polyclinic is a DHA licensed multi-specialty polyclinic in Jumeirah 1, Dubai, offering physiotherapy, dental, dermatology, general medicine, and Ayurveda services.',
     medicalSpecialty: ['Physiotherapy', 'Dentistry', 'Dermatology', 'General Practice', 'Ayurveda'],
-    address: { '@type': 'PostalAddress', streetAddress: 'Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
+    address: { '@type': 'PostalAddress', streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
     hasMap: 'https://maps.google.com/?q=RamaCare+Polyclinic+Jumeirah',
     telephone: '+971566597878',
   };
@@ -322,11 +325,24 @@ export default function PolyclinicInJumeirahPage() {
       <Head>
         <title>{SEO.title}</title>
         <meta name="description" content={SEO.metaDescription} />
+        <meta name="keywords" content="Polyclinic in Jumeirah, Polyclinic in Jumeirah 1, Clinic in Jumeirah, Doctor in Jumeirah, Multi-specialty clinic Jumeirah, DHA licensed polyclinic Dubai, Family clinic Jumeirah" />
         <link rel="canonical" href={SEO.canonical} />
+        <meta name="robots" content="index, follow" key="robots" />
         <meta property="og:title" content={SEO.ogTitle} />
         <meta property="og:description" content={SEO.ogDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SEO.canonical} />
+        <meta property="og:image" content={SEO.ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SEO.ogTitle} />
+        <meta name="twitter:description" content={SEO.ogDescription} />
+        <meta name="twitter:image" content={SEO.ogImage} />
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

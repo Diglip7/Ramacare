@@ -234,8 +234,12 @@ export const newPagesContent = {
         "Patient-centered care, with clear communication throughout",
         "A convenient Dubai location, easy to reach for regular sessions",
         "Clear referral pathways to licensed mental health professionals when clinically appropriate"
-      ]
+      ],
+      tags: ["Stress Management", "Physiotherapy", "Ayurvedic Wellness"]
     },
+    faqsSubtitle: "Browse our answers to popular questions about anxiety and supportive wellness care in Dubai.",
+    consultationDescription: "Take the first step toward feeling calmer and more like yourself, with evidence-based supportive care at RamaCare Polyclinic.",
+    supportTags: ["Stress Management", "Physiotherapy", "Ayurvedic Wellness"],
     faqs: [
       { question: "What causes anxiety?", answer: "Anxiety usually results from a combination of factors — work pressure, financial stress, relationship challenges, poor sleep, major life changes, and sometimes a family history of anxiety — rather than a single cause." },
       { question: "How is anxiety different from stress?", answer: "Stress is typically a response to an identifiable external trigger and tends to ease once that trigger resolves. Anxiety can persist as excessive worry even after the original situation has passed, and often affects several areas of life at once." },
@@ -312,6 +316,12 @@ export const newPagesContent = {
       { label: "Services", href: "/services/" },
       { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
       { label: "Stress Treatment", href: "/services/stress-treatment-dubai/" }
+    ],
+    concerns: [
+      { value: "stress-treatment-dubai", label: "Stress Management Support" },
+      { value: "physiotherapy-dubai", label: "Physiotherapy & Muscle Tension" },
+      { value: "ayurveda-dubai", label: "Ayurvedic Wellness Support" },
+      { value: "lifestyle-wellness", label: "Lifestyle & Routine Support" }
     ],
     hero: {
       badge: "DHA Licensed & Trusted",
@@ -787,8 +797,18 @@ export const newPagesContent = {
         "An experienced aesthetic and dermatology team who explain each step",
         "A genuinely patient-focused approach, where questions are welcomed"
       ],
-      outro: "We also want to be upfront: results vary from person to person depending on scar type, skin type, and how your individual skin heals. We won't promise permanent or guaranteed results, because no responsible dermatologist can — but we will promise an honest assessment and a plan built around evidence-based dermatology."
+      outro: "We also want to be upfront: results vary from person to person depending on scar type, skin type, and how your individual skin heals. We won't promise permanent or guaranteed results, because no responsible dermatologist can — but we will promise an honest assessment and a plan built around evidence-based dermatology.",
+      tags: ["Acne Treatment", "Laser Resurfacing", "Skin Rejuvenation"]
     },
+    faqsSubtitle: "Browse our answers to popular questions about acne scar treatment in Dubai.",
+    consultationDescription: "Get back to smoother, more even-looking skin with evidence-based care at RamaCare Polyclinic.",
+    supportTags: ["Acne Treatment", "Laser Resurfacing", "Skin Rejuvenation"],
+    concerns: [
+      { value: 'acne-scar-treatment-dubai', label: 'Acne Scar Treatment' },
+      { value: 'acne-treatment-dubai', label: 'Active Acne Treatment' },
+      { value: 'laser-treatment-dubai', label: 'Laser Skin Resurfacing' },
+      { value: 'aesthetic-dermatology-dubai', label: 'Aesthetic Dermatology' }
+    ],
     faqs: [
       { question: "Can acne scars be removed permanently?", answer: "Most treatments significantly improve the appearance of acne scars, but 'permanent removal' isn't a realistic promise in dermatology. Results depend on scar type, skin type, and how your individual skin heals." },
       { question: "Which acne scar treatment Dubai option works best?", answer: "There's no single best treatment for everyone. Ice pick, boxcar, and rolling scars often respond to different approaches, which is why a proper assessment matters before choosing the right acne scar treatment Dubai plan for your skin." },

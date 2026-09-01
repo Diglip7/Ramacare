@@ -26,6 +26,16 @@ export default function ElectrolysisPage() {
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/electrolysis');
 
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
@@ -44,8 +54,27 @@ export default function ElectrolysisPage() {
       <Head>
   <title key="title">Electrolysis in Dubai for Permanent Hair Removal Treatment</title>
   <meta name="description" content="Electrolysis in Dubai offers safe, medical-grade permanent hair removal by trained professionals, suitable for all skin types and areas with lasting results." key="description" />
-  <meta name="keywords" content="Electrolysis in Dubai, Permanent hair removal in Dubai, Electrolysis hair removal, Medical hair removal Dubai, Facial hair removal Dubai, Body hair removal treatment, Safe electrolysis treatment, Hair removal for all skin types, Professional electrolysis in Dubai" />
+ <meta name="keywords" content="Electrolysis in Dubai, Permanent hair removal in Dubai, Electrolysis hair removal, Medical hair removal Dubai, Facial hair removal Dubai, Body hair removal treatment, Safe electrolysis treatment, Hair removal for all skin types, Professional electrolysis in Dubai" />
   
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Electrolysis in Dubai for Permanent Hair Removal Treatment" />
+  <meta property="og:description" content="Electrolysis in Dubai offers safe, medical-grade permanent hair removal by trained professionals, suitable for all skin types and areas with lasting results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/electrolysis-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/electrolysis1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Electrolysis in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Electrolysis in Dubai for Permanent Hair Removal Treatment" />
+  <meta name="twitter:description" content="Electrolysis in Dubai offers safe, medical-grade permanent hair removal by trained professionals, suitable for all skin types and areas with lasting results." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/electrolysis1.jpg" />
+
+  {/* JSON-LD Schema */}
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -53,55 +82,50 @@ export default function ElectrolysisPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#condition",
-          "name": "Excess or Unwanted Hair Growth",
-          "alternateName": "Hirsutism & Unwanted Hair",
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#webpage",
           "url": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/",
-          "description": "Excess or unwanted hair growth refers to coarse or persistent hair on areas of the face or body where it is undesirable, often caused by hormonal factors, genetics, or other underlying conditions. This can impact confidence and aesthetic appearance.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Electrolysis Hair Removal Therapy",
-            "description": "A hair removal therapy that uses controlled electrical energy to permanently destroy hair follicles, preventing future hair growth and improving skin smoothness."
+          "name": "Electrolysis in Dubai for Permanent Hair Removal Treatment",
+          "description": "Electrolysis in Dubai offers safe, medical-grade permanent hair removal by trained professionals, suitable for all skin types and areas with lasting results.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalProcedure",
+            "name": "Electrolysis"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Electrolysis", "item": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/" }
+            ]
           }
         },
         {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#procedure",
-          "name": "Electrolysis Hair Removal in Dubai",
-          "alternateName": "Permanent Hair Removal Treatment",
-          "url": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/",
-          "description": "Electrolysis hair removal in Dubai at RamaCare Polyclinic is a precise, minimally invasive procedure that uses an electrical current to ablate individual hair follicles, achieving long‑term reduction or permanent removal of unwanted hair.",
-          "procedureType": "Minimally invasive hair removal therapy",
-          "howPerformed": "A trained clinician inserts a fine probe into the hair follicle and applies controlled electric current to disable the follicle’s ability to produce hair. Each follicle is treated individually for effective permanent results.",
-          "preparation": "Patients should shave the treatment area prior to the session, avoid waxing/plucking for several weeks, and disclose medical history and skin sensitivities to the clinician.",
-          "followup": "Multiple sessions may be advised to target all active follicles, and follow‑up appointments help monitor progress and schedule additional treatments if required.",
-          "indication": [
-            "Unwanted facial hair",
-            "Excess body hair",
-            "Hirsutism due to hormonal imbalance",
-            "Persistent coarse hair",
-            "Areas unsuitable for laser hair removal"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#physician",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/electrolysis-dubai/#faq",
+          "mainEntity": faqSchema
         }
       ]
     })

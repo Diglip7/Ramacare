@@ -46,7 +46,7 @@ function cn(...classes) {
 /* -------------------------------------------------------------------------- */
 
 const SITE_URL = "https://ramacarepolyclinic.ae";
-const PAGE_PATH = "/services/chemical-peel-treatment-dubai";
+const PAGE_PATH = "/services/chemical-peel-treatment-dubai/";
 
 const HERO = {
   eyebrow: "RamaCare Polyclinic · Jumeirah 1, Dubai",
@@ -685,7 +685,19 @@ export default function Page() {
         <meta property="og:title" content="Chemical Peel Treatment Dubai: Benefits, Procedure, Results & Cost" />
         <meta property="og:description" content="Explore Chemical Peel Treatment Dubai at RamaCare Polyclinic, Jumeirah 1. Personalized skin assessments for pigmentation, texture and tone. Book a consultation." />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Chemical%20Peel%20Treatment%20Dubai%20consultation%20session.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Chemical Peel Treatment Dubai consultation session at RamaCare Polyclinic Jumeirah 1" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Chemical Peel Treatment Dubai: Benefits, Procedure, Results & Cost" key="twitter:title" />
+        <meta name="twitter:description" content="Explore Chemical Peel Treatment Dubai at RamaCare Polyclinic, Jumeirah 1. Personalized skin assessments for pigmentation, texture and tone." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Chemical%20Peel%20Treatment%20Dubai%20consultation%20session.jpg" key="twitter:image" />
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
       </Head>
 

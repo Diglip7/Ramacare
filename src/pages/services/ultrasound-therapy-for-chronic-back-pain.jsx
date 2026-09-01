@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -47,28 +48,166 @@ const UltrasoundBackPainPage = () => {
     }
   };
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-for-chronic-back-pain/';
+
+  const faqs = [
+    {
+      q: "Is ultrasound therapy effective for slipped discs?",
+      a: "While ultrasound cannot 'pop' a disc back into place, it is highly effective at reducing the secondary inflammation and muscle spasms that cause the actual pain in slipped disc cases."
+    },
+    {
+      q: "How many sessions do I need for lower back relief?",
+      a: "Most patients feel a noticeable improvement after just one session. For chronic conditions, we typically recommend a course of 3-5 sessions for long-lasting results."
+    },
+    {
+      q: "Can I get ultrasound therapy for back pain during pregnancy?",
+      a: "No, ultrasound therapy is not recommended for pregnant women over the abdominal, pelvic, or lower back areas. We offer other pregnancy-safe treatments for back pain."
+    }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Backpain.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': `${CANONICAL_URL}#webpage`,
+        url: CANONICAL_URL,
+        name: 'Relieve Chronic Back Pain with Ultrasound in Dubai | RamaCare',
+        description: 'Struggle with chronic back pain or sciatica in Dubai? Discover how targeted ultrasound therapy at RamaCare Jumeirah 1 reduces deep-tissue inflammation and speeds up recovery.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: {
+          '@type': 'MedicalCondition',
+          name: 'Chronic Back Pain / Sciatica'
+        },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': `${CANONICAL_URL}#physician`,
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${CANONICAL_URL}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound Therapy for Chronic Back Pain', item: CANONICAL_URL }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${CANONICAL_URL}#faq`,
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
     <Layout>
       <Head>
         <title key="title">Relieve Chronic Back Pain with Ultrasound in Dubai | RamaCare</title>
         <meta name="description" content="Struggle with chronic back pain or sciatica in Dubai? Discover how targeted ultrasound therapy at RamaCare Jumeirah 1 reduces deep-tissue inflammation and speeds up recovery." key="description" />
-        
+        <meta name="keywords" content="Ultrasound therapy for chronic back pain Dubai, sciatica relief Jumeirah, lumbar spine ultrasound Dubai, herniated disc pain therapy Dubai" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Relieve Chronic Back Pain with Ultrasound in Dubai | RamaCare" key="og:title" />
+        <meta property="og:description" content="Struggle with chronic back pain or sciatica in Dubai? Discover how targeted ultrasound therapy at RamaCare Jumeirah 1 reduces deep-tissue inflammation and speeds up recovery." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Backpain.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound Therapy for Chronic Back Pain - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Relieve Chronic Back Pain with Ultrasound in Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Struggle with chronic back pain or sciatica in Dubai? Discover how targeted ultrasound therapy at RamaCare Jumeirah 1 reduces deep-tissue inflammation and speeds up recovery." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Backpain.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
         {/* Hero Section */}
         <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20">
           <div className="max-w-7xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Ultrasound Therapy for Chronic Back Pain</span>
+            </nav>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Column: Content */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-8"
-              >
+                className="space-y-8">
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1A1A1A] leading-tight">
                     Ultrasound Therapy for Back Pain Dubai | Chronic Relief at RamaCare
@@ -149,7 +288,7 @@ const UltrasoundBackPainPage = () => {
               className="bg-white p-10 md:p-12 rounded-2xl shadow-lg border border-gray-100"
             >
               <p className="text-lg md:text-xl text-[#5F5F5F] leading-relaxed">
-                <a href="/services/ultrasound-therapy-dubai/" className="text-[#1b5e3f] hover:underline font-semibold">Ultrasound therapy</a> uses high-frequency sound waves to create deep thermal heat in the lower back (lumbar) tissues. This heat increases "Tissue Extensibility," making your back feel less stiff and more mobile after just one session."
+                <a href="/services/ultrasound-therapy-dubai/" className="text-[#1b5e3f] hover:underline font-semibold">Ultrasound therapy</a> uses high-frequency sound waves to create deep thermal heat in the lower back (lumbar) tissues. This heat increases "Tissue Extensibility," making your back feel less stiff and more mobile.
               </p>
             </motion.div>
           </div>
@@ -229,22 +368,22 @@ const UltrasoundBackPainPage = () => {
                     {
                       feature: 'Approach',
                       traditional: 'Masks pain signals',
-                      ultrasound: 'Targets the root cause (Inflammation)',
+                      ultrasound: 'Targets underlying tissue inflammation',
                     },
                     {
                       feature: 'Invasiveness',
                       traditional: 'Chemical or Needle-based',
-                      ultrasound: '100% Non-Invasive',
+                      ultrasound: 'Non-Invasive',
                     },
                     {
                       feature: 'Side Effects',
                       traditional: 'Potential stomach/kidney issues',
-                      ultrasound: 'Zero side effects',
+                      ultrasound: 'Minimal side effect risks (when screened)',
                     },
                     {
                       feature: 'Healing',
-                      traditional: 'No active tissue repair',
-                      ultrasound: 'Stimulates collagen & cellular repair',
+                      traditional: 'Symptom management focus',
+                      ultrasound: 'Supports collagen & cellular repair',
                     },
                   ].map((item, index) => (
                     <tr key={index} className="hover:bg-gray-50/50 transition-colors">
@@ -345,20 +484,7 @@ const UltrasoundBackPainPage = () => {
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "Is ultrasound therapy effective for slipped discs?",
-                  a: "While ultrasound cannot 'pop' a disc back into place, it is highly effective at reducing the secondary inflammation and muscle spasms that cause the actual pain in slipped disc cases."
-                },
-                {
-                  q: "How many sessions do I need for lower back relief?",
-                  a: "Most patients feel a noticeable improvement after just one session. For chronic conditions, we typically recommend a course of 3-5 sessions for long-lasting results."
-                },
-                {
-                  q: "Can I get ultrasound therapy for back pain during pregnancy?",
-                  a: "No, ultrasound therapy is not recommended for pregnant women over the abdominal, pelvic, or lower back areas. We offer other pregnancy-safe treatments for back pain."
-                }
-              ].map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <details key={index} className="group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
                   <summary className="flex justify-between items-center text-left px-6 py-5 cursor-pointer list-none focus:outline-none">
                     <span className="text-lg font-semibold text-[#1A1A1A]">{faq.q}</span>

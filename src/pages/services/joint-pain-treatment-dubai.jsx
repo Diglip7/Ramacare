@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
-import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
 
 export default function JointPainTreatmentPage() {
@@ -44,9 +43,10 @@ export default function JointPainTreatmentPage() {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
-        "name": PAGE_TITLE,
+        "name": "Joint Pain Treatment Dubai",
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
+        "medicalAudience": "Patient",
         "isPartOf": {
           "@type": "WebSite",
           "url": "https://ramacarepolyclinic.ae/",
@@ -57,12 +57,21 @@ export default function JointPainTreatmentPage() {
           "name": "Joint Pain"
         },
         "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
         },
         "publisher": {
-          "@type": "MedicalOrganization",
+          "@type": "MedicalClinic",
           "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
+          "url": "https://ramacarepolyclinic.ae/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1, Dubai",
+            "addressCountry": "AE"
+          }
         }
       },
       {
@@ -113,6 +122,7 @@ export default function JointPainTreatmentPage() {
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:image:alt" content="Joint Pain Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
@@ -129,7 +139,6 @@ export default function JointPainTreatmentPage() {
       </Head>
 
       <ServicePageTemplate content={content} />
-      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="joint-pain-treatment-dubai" />
     </Layout>
   );
 }

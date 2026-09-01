@@ -251,22 +251,100 @@ export default function PolyclinicNearDubaiMarinaPage() {
           content="Trusted polyclinic near Dubai Marina offering physiotherapy, dental, dermatology, Ayurveda & GP care in Jumeirah 1. Book same-day appointments today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Polyclinic Near Dubai Marina — RamaCare Polyclinic, Jumeirah 1" />
+        <meta
+          name="keywords"
+          content="Polyclinic near Dubai Marina, Clinic near Dubai Marina, Doctor near Dubai Marina, Multi-specialty clinic Dubai Marina, DHA licensed clinic Dubai Marina, Same-day appointment clinic Dubai, Family clinic Dubai Marina, Physiotherapy near Dubai Marina"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Polyclinic Near Dubai Marina — RamaCare Polyclinic, Jumeirah 1" key="og:title" />
         <meta
           property="og:description"
           content="DHA-licensed multi-specialty polyclinic near Dubai Marina. Physiotherapy, dental, dermatology, general medicine & Ayurveda under one roof."
+          key="og:description"
         />
-        <meta property="og:url" content={SITE_URL + PAGE_PATH} />
-        <meta name="twitter:card" content="summary_large_image" />
-        {schemas.map((s, i) => (
-          <script key={`schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
-        ))}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dubai-clinic.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Polyclinic Near Dubai Marina | RamaCare Polyclinic" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="DHA-licensed multi-specialty polyclinic near Dubai Marina. Physiotherapy, dental, dermatology, general medicine & Ayurveda under one roof."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dubai-clinic.jpg" key="twitter:image" />
+
+        {/* Structured JSON-LD Schema (@graph: MedicalClinic, BreadcrumbList, FAQPage) */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/#clinic',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/',
+                  telephone: '+971566597878',
+                  priceRange: '$$',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+                    addressLocality: 'Jumeirah 1',
+                    addressRegion: 'Dubai',
+                    addressCountry: 'AE',
+                  },
+                  medicalSpecialty: ['GeneralPractice', 'Physiotherapy', 'Dermatology', 'Dentistry', 'Ayurveda'],
+                  areaServed: areasServed.map((a) => ({ '@type': 'Place', name: a })),
+                  openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                    opens: '10:00',
+                    closes: '22:00',
+                  },
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/#breadcrumb',
+                  itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+                    {
+                      '@type': 'ListItem',
+                      position: 3,
+                      name: 'Polyclinic Near Dubai Marina',
+                      item: 'https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/',
+                    },
+                  ],
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-dubai-marina/#faq',
+                  mainEntity: faqs.map((f) => ({
+                    '@type': 'Question',
+                    name: f.q,
+                    acceptedAnswer: { '@type': 'Answer', text: f.a },
+                  })),
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">
-        
         {/* ============ HERO — split dynamic grid ============ */}
         <section className="relative overflow-hidden bg-gradient-to-b from-[#F9F7F2] to-white px-4 pb-16 pt-12 sm:pt-20">
           <div className="absolute inset-0 opacity-[0.4] pointer-events-none">
@@ -285,18 +363,15 @@ export default function PolyclinicNearDubaiMarinaPage() {
             <nav aria-label="Breadcrumb" className="mb-8 flex justify-center lg:justify-start items-center gap-2 text-sm font-medium text-[#5F5F5F]">
               <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
               <span aria-hidden="true" className="text-gray-300">/</span>
-              <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
               <span aria-hidden="true" className="text-gray-300">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Polyclinic Near Dubai Marina</span>
             </nav>
 
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 text-center lg:text-left">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1F5E4B]/8 px-3 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#1F5E4B] mb-5">
-                  SEO Landing Page — Publication Ready
-                </span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] leading-tight mb-6 tracking-tight">
-                  Polyclinic Near Dubai Marina <span className="block mt-1 text-[#1F5E4B] font-semibold text-2xl sm:text-3xl">Trusted Multi-Specialty Healthcare at RamaCare Polyclinic</span>
+                  Polyclinic Near Dubai Marina — <span className="block mt-1 text-[#1F5E4B] font-semibold text-2xl sm:text-3xl">Trusted Multi-Specialty Healthcare at RamaCare Polyclinic</span>
                 </h1>
                 <div className="space-y-4 text-sm sm:text-base text-[#5F5F5F] leading-relaxed">
                   <p>

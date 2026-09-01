@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState, useEffect } from 'react';
@@ -164,6 +165,94 @@ const ProfessionalVsHomeUltrasoundPage = () => {
     }
   };
 
+  const faqs = [
+    {
+      question: 'Are home ultrasound machines effective for sciatica?',
+      answer: 'Generally, no. Sciatica involves the sciatic nerve located deep within the gluteal muscles. A home device cannot reach the depth required to reduce the inflammation around that nerve.'
+    },
+    {
+      question: 'Is clinical ultrasound therapy painful?',
+      answer: 'Not at all. While professional machines are much more powerful than home units, the treatment is painless. You will feel a soothing, deep warmth, but never a sharp sensation.'
+    },
+    {
+      question: 'How do I know if a clinic is using professional equipment?',
+      answer: 'In Dubai, always look for the DHA (Dubai Health Authority) License on the machine or in the clinic. All equipment at RamaCare is certified and regularly calibrated for medical accuracy.'
+    }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/ultrasound.jpg',
+        priceRange: '$$',
+        address: { '@type': 'PostalAddress', streetAddress: 'Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed',
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/',
+        name: 'Professional vs. Home Ultrasound Therapy | RamaCare Dubai Guide',
+        description: 'Thinking of buying a home ultrasound device in Dubai? Discover the critical differences in power, frequency, and safety between home units and clinical-grade therapy.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/',
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE',
+          },
+        },
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Professional vs Home Ultrasound', item: 'https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/' },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      },
+    ],
+  };
+
   return (
     <Layout>
       {ToastComponent}
@@ -171,7 +260,33 @@ const ProfessionalVsHomeUltrasoundPage = () => {
         <title key="title">Professional vs. Home Ultrasound Therapy | RamaCare Dubai Guide</title>
         <meta name="description" content="Thinking of buying a home ultrasound device in Dubai? Discover the critical differences in power, frequency, and safety between home units and clinical-grade therapy." key="description" />
         <meta name="keywords" content="professional ultrasound therapy Dubai, home ultrasound device, clinical ultrasound therapy, therapeutic ultrasound Dubai, physiotherapy ultrasound treatment, medical-grade ultrasound, pain relief therapy Dubai" />
-        
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Professional vs. Home Ultrasound Therapy | RamaCare Dubai Guide" key="og:title" />
+        <meta property="og:description" content="Thinking of buying a home ultrasound device in Dubai? Discover the critical differences in power, frequency, and safety between home units and clinical-grade therapy." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/professional-vs-home-ultrasound/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Professional vs Home Ultrasound Therapy - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Professional vs. Home Ultrasound Therapy | RamaCare Dubai Guide" key="twitter:title" />
+        <meta name="twitter:description" content="Thinking of buying a home ultrasound device in Dubai? Discover the critical differences in power, frequency, and safety between home units and clinical-grade therapy." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
         <style>{`
           @keyframes wave-flow {
@@ -203,6 +318,16 @@ const ProfessionalVsHomeUltrasoundPage = () => {
       {/* Hero Section */}
       <section className="min-h-screen bg-[#F5F1EA] px-6 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Professional vs Home Ultrasound</span>
+          </nav>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
@@ -536,7 +661,7 @@ const ProfessionalVsHomeUltrasoundPage = () => {
                     {
                       feature: 'Results',
                       home: { text: 'Temporary "Soothing"', type: 'negative' },
-                      clinical: { text: 'Cellular Repair & Healing', type: 'positive' }
+                      clinical: { text: 'Supports Cellular Repair & Healing (Results vary by individual)', type: 'positive' }
                     }
                   ].map((row, idx) => (
                     <tr 
@@ -908,6 +1033,33 @@ const ProfessionalVsHomeUltrasoundPage = () => {
               🏥 RamaCare Polyclinic • Dubai • Licensed Medical Facility
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy Dubai
+            </Link>
+            <Link href="/services/dry-needling-vs-massage-therapy-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Dry Needling vs Massage Therapy
+            </Link>
+            <Link href="/services/physiotherapy-vs-rest-for-back-pain-recovery/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy vs Rest for Back Pain
+            </Link>
+            <Link href="/services/knee-pain-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Knee Pain Treatment
+            </Link>
+            <Link href="/services/sciatica-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Sciatica Treatment
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> The information provided on this page is for educational purposes only and does not constitute medical advice. It is not intended to replace professional medical consultation, diagnosis, or treatment. Treatment outcomes vary by individual, and no specific results are guaranteed. Please consult a licensed physiotherapist at RamaCare Polyclinic or another qualified provider before beginning any ultrasound or physical therapy program.
+          </p>
         </div>
       </section>
       

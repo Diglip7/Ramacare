@@ -30,7 +30,24 @@ export default function BotoxPage() {
   <title key="title">Botox in Dubai for Wrinkle Reduction and Facial Rejuvenation</title>
   <meta name="description" content="Botox in Dubai helps reduce fine lines and wrinkles, relax facial muscles, and restore a refreshed look through safe, doctor-administered treatment." key="description" />
   <meta name="keywords" content="Botox in Dubai, Botox treatment Dubai, Wrinkle reduction Dubai, Anti-aging Botox, Facial Botox treatment, Forehead lines treatment, Crow’s feet Botox, Non-surgical facial rejuvenation, Medical Botox Dubai" />
-  
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Botox in Dubai for Wrinkle Reduction and Facial Rejuvenation" />
+  <meta property="og:description" content="Botox in Dubai helps reduce fine lines and wrinkles, relax facial muscles, and restore a refreshed look through safe, doctor-administered treatment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/botox-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Facial assessment consultation for Botox price.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Botox in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Botox in Dubai for Wrinkle Reduction and Facial Rejuvenation" />
+  <meta name="twitter:description" content="Botox in Dubai helps reduce fine lines and wrinkles, relax facial muscles, and restore a refreshed look through safe, doctor-administered treatment." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Facial assessment consultation for Botox price.jpg" />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -38,55 +55,58 @@ export default function BotoxPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#condition",
-          "name": "Facial Dynamic Wrinkles and Muscle-Related Aging Signs",
-          "alternateName": "Expression Lines and Wrinkle Formation",
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#webpage",
           "url": "https://ramacarepolyclinic.ae/services/botox-dubai/",
-          "description": "Facial dynamic wrinkles and muscle-related aging signs include forehead lines, frown lines, crow’s feet, and other expression-related creases resulting from repeated facial muscle activity and aging changes.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Botulinum Toxin (Botox) Therapy",
-            "description": "Botox therapy involves controlled injections of botulinum toxin to temporarily relax facial muscles responsible for dynamic wrinkles, reducing their appearance and creating a smoother facial expression."
+          "name": "Botox in Dubai for Wrinkle Reduction and Facial Rejuvenation",
+          "description": "Botox in Dubai helps reduce fine lines and wrinkles, relax facial muscles, and restore a refreshed look through safe, doctor-administered treatment.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalProcedure",
+            "name": "Botox (Botulinum Toxin) Injection"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Botox", "item": "https://ramacarepolyclinic.ae/services/botox-dubai/" }
+            ]
           }
         },
         {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#procedure",
-          "name": "Botox Treatment in Dubai",
-          "alternateName": "Botulinum Toxin Cosmetic Injections",
-          "url": "https://ramacarepolyclinic.ae/services/botox-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/botox-dubai/",
-          "description": "Botox treatment in Dubai at RamaCare Polyclinic is a minimally invasive cosmetic procedure that uses botulinum toxin injections to reduce the appearance of dynamic facial wrinkles and fine lines for a refreshed, youthful look.",
-          "procedureType": "Minimally invasive aesthetic injection therapy",
-          "howPerformed": "During the treatment, trained clinicians administer precise, small doses of botulinum toxin into targeted facial muscles. This temporarily inhibits muscle contraction, softening dynamic wrinkles and expression lines.",
-          "preparation": "Patients are advised to arrive with clean skin and disclose their full medical history, including medications, allergies, and previous aesthetic treatments. Avoiding blood-thinning medications prior may be recommended.",
-          "followup": "Follow-up may include a review of results and touch-ups as necessary to maintain optimal outcomes, usually over subsequent weeks.",
-          "indication": [
-            "Forehead lines",
-            "Frown lines (glabellar lines)",
-            "Crow’s feet",
-            "Bunny lines",
-            "Excessive muscle activity causing expression wrinkles"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner, Diploma from American Aesthetic Academy",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/botox-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

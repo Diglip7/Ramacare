@@ -729,12 +729,12 @@ export default function EximiaTreatmentCostPage() {
                     <div className="text-white/70 text-sm">Happy Clients</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-white mb-2">10+</div>
+                    <div className="text-3xl font-bold text-white mb-2">15+</div>
                     <div className="text-white/70 text-sm">Years Experience</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white mb-2">98%</div>
-                    <div className="text-white/70 text-sm">Satisfaction Rate</div>
+                    <div className="text-white/70 text-sm">Success Rate</div>
                   </div>
                 </div>
               </div>

@@ -82,7 +82,7 @@ export default function Footer() {
         lineHeight: 1.5,
         marginTop: '4px',
       }}>
-        © 2025 Rama Care Polyclinic. All rights reserved. Advertisement License No : ZR478282–271025
+        © 2025 RamaCare Polyclinic. All rights reserved. Advertisement License No : ZR478282–271025
       </p>
 
     </footer>

@@ -40,75 +40,134 @@ export default function LaserRejuvenationPage() {
     { id: 'book-now', label: 'Book Now' },
   ];
 
+  // Dynamically generated FAQPage Schema from page data
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@type": "FAQPage",
+        "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#faq",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const jsonLdGraph = [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
+      "name": "Laser Rejuvenation in Dubai | RamaCare Polyclinic",
+      "description": "Laser rejuvenation in Dubai helps reduce wrinkles, fine lines, and pigmentation while improving skin texture and glow through safe, expert care.",
+      "medicalAudience": { "@type": "Patient" },
+      "about": { "@type": "MedicalProcedure", "name": "Laser Skin Rejuvenation" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#reviewer" },
+      "publisher": {
+        "@type": "MedicalOrganization",
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#reviewer",
+      "name": "Sonita Sinaga",
+      "jobTitle": "Licensed & Certified Aesthetic Therapist",
+      "hasCredential": "NCLC Laser Certified",
+      "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
+      "worksFor": { "@type": "MedicalOrganization", "name": "RamaCare Polyclinic" }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#condition",
+      "name": "Skin Aging, Texture Irregularities & Pigmentation Concerns",
+      "alternateName": "Dull Skin, Fine Lines, Uneven Tone & Texture",
+      "url": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
+      "description": "Skin concerns such as loss of radiance, uneven texture, fine lines, superficial pigmentation, early signs of aging, and dull complexion benefit from advanced laser rejuvenation therapy.",
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Laser Rejuvenation Therapy",
+        "description": "Laser rejuvenation therapy uses controlled laser energy to target skin at various depths, stimulating collagen production and improving skin texture, tone, and radiance."
+      }
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#procedure",
+      "name": "Laser Rejuvenation Treatment in Dubai",
+      "alternateName": "Skin Rejuvenation Laser Therapy",
+      "url": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
+      "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
+      "description": "Laser rejuvenation at RamaCare Polyclinic in Dubai is an advanced dermatologic laser procedure designed to improve skin texture, reduce fine lines and superficial pigmentation, and enhance overall skin clarity.",
+      "procedureType": "Non-invasive cosmetic laser procedure",
+      "howPerformed": "A trained clinician directs controlled laser pulses over the treatment area to remove damaged surface cells, encourage collagen remodeling, and improve evenness of tone.",
+      "preparation": "Patients should avoid sun exposure, discontinue harsh exfoliants or retinoids before treatment, and discuss skin sensitivities during consultation.",
+      "followup": "Follow-up care includes monitoring skin response, advising on gentle skincare, strict sun protection, and scheduling additional sessions.",
+      "indication": [
+        "Dull or tired complexion",
+        "Superficial pigmentation or sun spots",
+        "Fine lines and early signs of aging",
+        "Uneven skin texture"
+      ],
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "postalCode": "393558",
+          "addressCountry": "AE"
+        },
+        "telephone": "+971 56 659 7878",
+        "areaServed": {
+          "@type": "City",
+          "name": "Dubai"
+        },
+        "priceRange": "$$"
+      }
+    },
+    ...(faqSchema ? [faqSchema] : [])
+  ];
+
   return (
     <Layout>
       <Head>
-  <title key="title">Laser Rejuvenation in Dubai for Youthful, Radiant Skin</title>
-  <meta name="description" content="Laser rejuvenation in Dubai helps reduce wrinkles, fine lines, and pigmentation while improving skin texture and glow through safe, expert care." key="description" />
-  <meta name="keywords" content="Laser rejuvenation in Dubai, Skin rejuvenation Dubai, Anti-aging laser treatment Dubai, Wrinkle reduction Dubai, Fine lines treatment Dubai, Pigmentation correction Dubai, Facial laser therapy Dubai, Non-surgical skin rejuvenation, Professional laser skin treatment, Youthful skin treatment Dubai" />
-  
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#condition",
-          "name": "Skin Aging, Texture Irregularities & Pigmentation Concerns",
-          "alternateName": "Dull Skin, Fine Lines, Uneven Tone & Texture",
-          "url": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
-          "description": "Skin concerns such as loss of radiance, uneven texture, fine lines, superficial pigmentation, early signs of aging, and dull complexion can benefit from advanced laser rejuvenation therapy to promote clearer, firmer, and more youthful skin.([turn0search0])",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Laser Rejuvenation Therapy",
-            "description": "Laser rejuvenation therapy uses controlled laser energy to target skin at various depths, stimulating collagen production, resurfacing damaged skin cells, and improving texture, tone, and overall facial radiance.([turn0search0])"
-          }
-        },
-        {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/#procedure",
-          "name": "Laser Rejuvenation Treatment in Dubai",
-          "alternateName": "Skin Rejuvenation Laser Therapy",
-          "url": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/",
-          "description": "Laser rejuvenation at RamaCare Polyclinic in Dubai is an advanced dermatologic laser procedure designed to improve skin texture, reduce fine lines and superficial pigmentation, and enhance overall skin clarity. It uses targeted laser energy to stimulate the skin’s natural repair mechanisms and collagen production.([turn0search0])",
-          "procedureType": "Non‑invasive cosmetic laser procedure",
-          "howPerformed": "During a laser rejuvenation session, a trained clinician directs controlled laser pulses over the treatment area. These energy pulses penetrate the skin to remove damaged surface cells, encourage collagen remodeling, and improve evenness of tone while leaving surrounding tissue unharmed. Protective measures such as eyewear and cooling are used for comfort.([turn0search0])",
-          "preparation": "Patients are advised to avoid extensive sun exposure, discontinue harsh exfoliants or retinoids before treatment, and discuss any skin sensitivities or medical history with their clinician during consultation.([turn0search0])",
-          "followup": "Follow‑up care typically includes monitoring skin response, advising on gentle skincare, strict sun protection, and planning additional sessions to achieve and maintain optimal results.([turn0search0])",
-          "indication": [
-            "Dull or tired complexion",
-            "Superficial pigmentation or sun spots",
-            "Fine lines and early signs of aging",
-            "Uneven skin texture",
-            "Loss of skin radiance"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
-        }
-      ]
-    })
-  }}
-/>
-</Head>
+        <title key="title">Laser Rejuvenation in Dubai | RamaCare Polyclinic</title>
+        <meta name="description" content="Laser rejuvenation in Dubai helps reduce wrinkles, fine lines, and pigmentation while improving skin texture and glow through safe, expert care." key="description" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Laser Rejuvenation in Dubai | RamaCare Polyclinic" />
+        <meta property="og:description" content="Laser rejuvenation in Dubai helps reduce wrinkles, fine lines, and pigmentation while improving skin texture and glow through safe, expert care." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/laser-rejuvenation-dubai/" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/rejuvenation.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Laser Rejuvenation Treatment for youthful skin at RamaCare Polyclinic Dubai" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Laser Rejuvenation in Dubai | RamaCare Polyclinic" />
+        <meta name="twitter:description" content="Laser rejuvenation in Dubai helps reduce wrinkles, fine lines, and pigmentation while improving skin texture and glow through safe, expert care." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/rejuvenation.jpg" />
+
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": jsonLdGraph
+            })
+          }}
+        />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}

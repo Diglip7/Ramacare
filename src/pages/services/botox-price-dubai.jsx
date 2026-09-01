@@ -46,13 +46,13 @@ const priceTable = [
 ];
 
 const priceInfluencers = [
-  { title: 'Age', text: 'Skin elasticity and the depth of existing lines can influence dosing strategy.' },
-  { title: 'Wrinkles', text: 'Static lines (visible at rest) versus dynamic lines (visible only when you move your face) may require different approaches.' },
-  { title: 'Muscle Activity', text: 'More active, expressive muscles typically need more units to achieve the desired softening effect.' },
-  { title: 'Previous Botox', text: 'If you\u2019ve had Botox before, your muscles may respond differently, sometimes requiring less product over time.' },
-  { title: 'Facial Anatomy', text: 'Brow position, natural asymmetry, and bone structure all factor into a safe, natural-looking plan.' },
-  { title: 'Desired Look', text: 'A subtle, "no one can tell" result and a more pronounced smoothing effect are planned differently.' },
-  { title: 'Maintenance Schedule', text: 'How often you plan to return for touch-ups affects your long-term cost, not just your first visit.' },
+  { title: 'Age', text: 'Skin thickness and natural muscle tone change with age, which can affect how much product is needed to achieve a soft, natural result. Your doctor factors this into your treatment plan during assessment.' },
+  { title: 'Wrinkles', text: "The depth and pattern of existing lines — whether they're only visible with expression or present at rest — can influence the recommended dosing strategy for your treatment area." },
+  { title: 'Muscle Activity', text: 'Patients with more expressive or naturally active facial muscles often require a different unit count than those with lighter movement patterns, since Botox works by relaxing muscle activity.' },
+  { title: 'Previous Botox', text: 'Patients who have had Botox before, particularly over a consistent schedule, sometimes find their muscles respond differently over time, which your doctor will factor into your ongoing treatment plan.' },
+  { title: 'Facial Anatomy', text: "Every face has a unique muscle structure and bone shape. Your doctor's assessment of your individual anatomy — not a generic template — is what determines the safest and most effective dosing for your face." },
+  { title: 'Desired Look', text: "Whether you're aiming for subtle softening of lines or a more pronounced reduction in movement affects the dosing approach your doctor recommends, and this is discussed with you directly during consultation." },
+  { title: 'Maintenance Schedule', text: 'How frequently you plan to return for treatment can factor into your overall cost and planning, since some patients on a consistent schedule discuss longer-term treatment planning with their doctor.' },
 ];
 
 const trustSigns = [

@@ -44,13 +44,60 @@ export default function HairGrowthPage() {
   <title key="title">Hair Growth in Dubai with Safe Medical Treatment Options</title>
   <meta name="description" content="Hair growth in Dubai is supported through doctor-guided treatments that strengthen hair follicles, improve scalp health, and promote natural regrowth safely." key="description" />
   <meta name="keywords" content="Hair growth in Dubai, Hair growth treatment Dubai, Hair regrowth solutions, Medical hair growth therapy, Scalp stimulation treatment, Hair restoration Dubai, Non-surgical hair growth, Hair fall control in Dubai, Professional hair care Dubai" />
-  
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Hair Growth in Dubai with Safe Medical Treatment Options" />
+  <meta property="og:description" content="Hair growth in Dubai is supported through doctor-guided treatments that strengthen hair follicles, improve scalp health, and promote natural regrowth safely." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hair-growth-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-growth.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hair Growth Treatment in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hair Growth in Dubai with Safe Medical Treatment Options" />
+  <meta name="twitter:description" content="Doctor-guided hair growth treatment in Dubai — strengthening follicles, improving scalp health, and promoting natural regrowth safely." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-growth.jpg" />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/",
+          "name": "Hair Growth in Dubai with Safe Medical Treatment Options",
+          "description": "Hair growth in Dubai is supported through doctor-guided treatments that strengthen hair follicles, improve scalp health, and promote natural regrowth safely.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Hair Thinning / Slow Hair Growth"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Hair Growth Treatment", "item": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/" }
+            ]
+          }
+        },
         {
           "@type": "MedicalCondition",
           "@id": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/#condition",
@@ -101,6 +148,31 @@ export default function HairGrowthPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/#physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice & Aesthetic Medicine",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-growth-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

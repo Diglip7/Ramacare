@@ -25,6 +25,16 @@ export default function FillersPage() {
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/fillers');
 
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
@@ -43,8 +53,26 @@ export default function FillersPage() {
       <Head>
   <title key="title">Fillers in Dubai for Natural Facial Volume and Contour</title>
   <meta name="description" content="Fillers in Dubai help restore facial volume, smooth lines, and enhance contours using safe, doctor-administered treatments for natural-looking results." key="description" />
-  <meta name="keywords" content="Fillers in Dubai, Dermal fillers Dubai, Facial fillers treatment, Anti-aging fillers Dubai, Lip fillers Dubai, Cheek fillers Dubai, Wrinkle reduction treatment, Non-surgical facial enhancement, Hyaluronic acid fillers, Aesthetic injectables Dubai" />
-  
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Fillers in Dubai for Natural Facial Volume and Contour" />
+  <meta property="og:description" content="Fillers in Dubai help restore facial volume, smooth lines, and enhance contours using safe, doctor-administered treatments for natural-looking results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/fillers-in-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/filler.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Fillers in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fillers in Dubai for Natural Facial Volume and Contour" />
+  <meta name="twitter:description" content="Fillers in Dubai help restore facial volume, smooth lines, and enhance contours using safe, doctor-administered treatments for natural-looking results." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/filler.jpg" />
+
+  {/* JSON-LD Schema */}
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -52,55 +80,51 @@ export default function FillersPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#condition",
-          "name": "Facial Volume Loss and Aging Concerns",
-          "alternateName": "Facial Lines, Wrinkles & Loss of Volume",
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#webpage",
           "url": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/",
-          "description": "Facial volume loss and aging concerns include reduced facial fullness, fine lines, deeper folds, loss of youthful contours, and changes in skin elasticity often seen with aging or environmental effects.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Dermal Filler Therapy",
-            "description": "Aesthetic injectable therapy using hyaluronic acid or other biocompatible fillers to restore facial volume, soften wrinkles, and enhance contours for a more youthful appearance."
+          "name": "Fillers in Dubai for Natural Facial Volume and Contour",
+          "description": "Fillers in Dubai help restore facial volume, smooth lines, and enhance contours using safe, doctor-administered treatments for natural-looking results.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalProcedure",
+            "name": "Dermal Fillers"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Fillers", "item": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/" }
+            ]
           }
         },
         {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#procedure",
-          "name": "Facial Fillers Treatment in Dubai",
-          "alternateName": "Dermal Filler Injections",
-          "url": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/",
-          "description": "Facial fillers treatment in Dubai at RamaCare Polyclinic is a minimally invasive aesthetic procedure that uses injectable dermal fillers to restore volume, reduce lines, and enhance facial contours.",
-          "procedureType": "Minimally invasive aesthetic injection therapy",
-          "howPerformed": "Performed by trained clinicians, the treatment involves precise injections of quality dermal filler products into targeted facial areas such as cheeks, lips, nasolabial folds, and under-eye regions to add volume and smooth lines.",
-          "preparation": "Patients should attend with clean skin and disclose their medical history, any prior injectable treatments, and medication/supplement use. Avoiding blood-thinning medications or supplements before the session may be advised.",
-          "followup": "Follow-up visits may be recommended to assess results and schedule maintenance sessions based on individual goals and treatment outcomes.",
-          "indication": [
-            "Loss of facial volume",
-            "Fine lines and wrinkles",
-            "Flattened or hollowed cheeks",
-            "Thin lips or uneven lip contour",
-            "Under-eye hollows"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/fillers-in-dubai/#faq",
+          "mainEntity": faqSchema
         }
       ]
     })

@@ -187,83 +187,121 @@ export default function PrpVsTransplantPage() {
           content="Deciding between PRP vs Hair Transplant in Dubai? Compare costs, recovery, results, and candidacy honestly at RamaCare Polyclinic, Dubai."
           key="description"
         />
-        <meta property="og:title" content="PRP vs Hair Transplant in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta
+          name="keywords"
+          content="PRP vs hair transplant Dubai, PRP or hair transplant which is better, hair transplant cost Dubai, PRP treatment Dubai, FUE vs FUT hair transplant, non-surgical hair restoration Dubai, hair loss treatment comparison Dubai"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="PRP vs Hair Transplant in Dubai: Which One Fits Your Journey? | RamaCare" key="og:title" />
         <meta
           property="og:description"
-          content="Balanced, medically grounded comparison between PRP therapy and surgical hair transplants."
+          content="A balanced, medically-reviewed comparison of PRP therapy and surgical hair transplants covering candidacy, recovery, cost, and results."
           key="og:description"
         />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta name="twitter:title" content="PRP vs Hair Transplant Comparison — RamaCare Polyclinic" key="twitter:title" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp1.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="PRP vs Hair Transplant in Dubai: Which One Fits Your Journey? | RamaCare" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="Deciding between non-surgical PRP and surgical hair transplants? Learn which suits your stage of hair loss."
+          content="A balanced, medically-reviewed comparison of PRP therapy and surgical hair transplants covering candidacy, recovery, cost, and results."
           key="twitter:description"
         />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp1.jpg" key="twitter:image" />
 
+        {/* Structured JSON-LD Schema (@graph: MedicalWebPage, Physician, FAQPage, MedicalClinic) */}
         <script
-          key="schema-article"
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'MedicalWebPage',
-              about: {
-                '@type': 'MedicalProcedure',
-                name: 'PRP vs Hair Transplant Comparison',
-                description:
-                  'A balanced comparison between Platelet Rich Plasma therapy and surgical hair transplantation methods.',
-                procedureType: 'https://schema.org/NoninvasiveProcedure',
-              },
-            }),
-          }}
-        />
-        <script
-          key="schema-faq"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
-                '@type': 'Question',
-                name: f.question,
-                acceptedAnswer: { '@type': 'Answer', text: f.answer },
-              })),
-            }),
-          }}
-        />
-        <script
-          key="schema-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+              '@graph': [
                 {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'PRP vs Hair Transplant',
-                  item: 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/',
+                  '@type': 'MedicalWebPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/#webpage',
+                  url: 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/',
+                  name: 'PRP vs Hair Transplant in Dubai: Which One Fits Your Journey?',
+                  description:
+                    'A balanced, medically-reviewed comparison of PRP therapy and surgical hair transplants covering candidacy, recovery, cost, and results.',
+                  inLanguage: 'en',
+                  isPartOf: {
+                    '@type': 'WebSite',
+                    url: 'https://ramacarepolyclinic.ae/',
+                    name: 'RamaCare Polyclinic',
+                  },
+                  about: [
+                    { '@type': 'MedicalProcedure', name: 'Platelet Rich Plasma (PRP) Hair Therapy' },
+                    { '@type': 'MedicalProcedure', name: 'Hair Transplant Surgery' },
+                  ],
+                  reviewedBy: {
+                    '@id': 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/#physician',
+                  },
+                  breadcrumb: {
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+                      {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: 'PRP vs Hair Transplant',
+                        item: 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/',
+                      },
+                    ],
+                  },
+                },
+                {
+                  '@type': 'Physician',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/#physician',
+                  name: 'Dr. Sahar Zomorrodi',
+                  jobTitle: 'General Practitioner & Aesthetic Specialist',
+                  medicalSpecialty: 'General Practice',
+                  honorificSuffix: 'MD',
+                  hasCredential: 'DHA Licensed General Practitioner',
+                  worksFor: {
+                    '@type': 'MedicalOrganization',
+                    name: 'RamaCare Polyclinic',
+                    url: 'https://ramacarepolyclinic.ae/',
+                  },
+                  url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-vs-hair-transplant-dubai/#faq',
+                  mainEntity: faqs.map((f) => ({
+                    '@type': 'Question',
+                    name: f.question,
+                    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+                  })),
+                },
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/#organization',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/',
+                  telephone: '+971566597878',
+                  medicalSpecialty: 'Dermatology',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+                    addressLocality: 'Jumeirah 1, Dubai',
+                    addressCountry: 'AE',
+                  },
+                  priceRange: '$$',
                 },
               ],
-            }),
-          }}
-        />
-        <script
-          key="schema-clinic"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'MedicalClinic',
-              name: 'RamaCare Polyclinic',
-              url: 'https://ramacarepolyclinic.ae/',
-              medicalSpecialty: 'Dermatology',
-              address: { '@type': 'PostalAddress', addressLocality: 'Jumeirah 1', addressRegion: 'Dubai', addressCountry: 'AE' },
-              priceRange: '$$',
             }),
           }}
         />
@@ -278,6 +316,8 @@ export default function PrpVsTransplantPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-6 md:mb-8 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
             <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span className="mx-1">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
             <span className="mx-1">/</span>
             <span className="text-[#1F5E4B]">PRP vs Hair Transplant</span>
           </nav>

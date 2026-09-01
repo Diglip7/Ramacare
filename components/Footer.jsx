@@ -291,7 +291,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-600 pt-5 sm:pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs sm:text-sm space-y-3 md:space-y-0">
-          <p className="text-center md:text-left">© 2026 Rama Care Polyclinic. All rights reserved</p>
+          <p className="text-center md:text-left">© 2026 RamaCare Polyclinic. All rights reserved</p>
           <a
             href="https://diglip7.com/"
             target="_blank"

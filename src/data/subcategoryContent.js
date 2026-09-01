@@ -481,12 +481,12 @@ export const subcategoryContent = {
     whyChooseUsClosing: "For athletes and active patients, our broader Sports Injury Physiotherapy Dubai services also support recovery from related conditions through our sports injury rehabilitation, knee pain, back pain, neck pain, and shoulder pain treatment services, since musculoskeletal issues often overlap with foot and gait problems. As part of our sports rehabilitation approach, we also help runners return to training gradually and safely once heel pain has settled. If your heel pain is part of a wider foot or lower-limb issue, our Foot Physiotherapy Dubai team can build a plan that covers the whole picture, not just the fascia.",
 
     relatedServices: [
-      { label: "Sports Injury Physiotherapy Dubai", href: "/services/sports-injury-physiotherapy-dubai" },
-      { label: "Knee Pain Treatment Dubai", href: "/services/knee-pain-treatment-dubai" },
-      { label: "Back Pain Treatment Dubai", href: "/services/back-pain-treatment-dubai" },
-      { label: "Neck Pain Treatment Dubai", href: "/services/neck-pain-treatment-dubai" },
-      { label: "Shoulder Pain Treatment Dubai", href: "/services/shoulder-pain-treatment-dubai" },
-      { label: "Foot Physiotherapy Dubai", href: "/services/foot-physiotherapy-dubai" }
+      { label: "Sports Injury Rehabilitation Dubai", href: "/services/sports-injury-rehabilitation-dubai/" },
+      { label: "Knee Pain Treatment Dubai", href: "/services/knee-pain-treatment-dubai/" },
+      { label: "Back Pain Treatment Dubai", href: "/services/back-pain-treatment-dubai/" },
+      { label: "Neck Pain Treatment Dubai", href: "/services/neck-pain-treatment-dubai/" },
+      { label: "Shoulder Pain Treatment Dubai", href: "/services/shoulder-pain-treatment-dubai/" },
+      { label: "Physiotherapy Dubai", href: "/services/physiotherapy-dubai/" }
     ],
 
     faqs: [
@@ -2330,14 +2330,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Experience'
         },
         {
-          title: '1,200+ Procedures',
+          title: '2,500+ Procedures',
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -3064,14 +3064,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '10+ Years Combined'
+          description: '15+ Years Experience'
         },
         {
-          title: '1,200+ Procedures',
+          title: '2,500+ Procedures',
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -3831,31 +3831,31 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: '4.9/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.8
+          target: 4.9
         },
         {
           id: 2,
-          number: '1,200+',
+          number: '2,500+',
           label1: 'Skin Patients',
           label2: 'Treated',
-          target: 1200
+          target: 2500
         },
         {
           id: 3,
-          number: '92%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 92
+          target: 98
         },
         {
           id: 4,
-          number: '89%',
-          label1: 'Improvement Rate',
-          label2: 'Success Rate',
-          target: 89
+          number: '15+',
+          label1: 'Years Experience',
+          label2: 'In Dubai',
+          target: 15
         }
       ]
     },
@@ -3905,14 +3905,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '15+ Years Combined'
+          description: '15+ Years Experience'
         },
         {
-          title: '1,200+ Patients',
+          title: '2,500+ Patients',
           description: 'Treated'
         },
         {
-          title: '4.8/5 Rating',
+          title: '4.9/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -4400,7 +4400,7 @@ export const subcategoryContent = {
           id: 4,
           question: 'How is my body type determined for the diet plan?',
           answer:
-            'Our Ayurvedic doctors at ramacarepolyclinic assess your Prakriti (Vata, Pitta, Kapha) through consultation, lifestyle review, and health evaluation to create a personalized diet.'
+            'Our Ayurvedic doctors at RamaCare Polyclinic assess your Prakriti (Vata, Pitta, Kapha) through consultation, lifestyle review, and health evaluation to create a personalized diet.'
         },
         {
           id: 5,
@@ -8599,7 +8599,7 @@ export const subcategoryContent = {
 
     faq: {
       title: 'Frequently Asked Questions (FAQs)',
-      description: 'Gastrointestinal Diseases Treatment at ramacarepolyclinic',
+      description: 'Gastrointestinal Diseases Treatment at RamaCare Polyclinic',
       resourcesHeading: 'Complete Ayurvedic Services',
       faqs: [
         {
@@ -8612,7 +8612,7 @@ export const subcategoryContent = {
           id: 2,
           question: 'What digestive conditions can be treated?',
           answer:
-            'Conditions such as acid reflux, gastritis, ulcers, IBS, IBD, constipation, diarrhea, bloating, liver disorders, poor appetite, and digestive imbalance can be effectively managed with personalized treatment at ramacarepolyclinic.'
+            'Conditions such as acid reflux, gastritis, ulcers, IBS, IBD, constipation, diarrhea, bloating, liver disorders, poor appetite, and digestive imbalance can be effectively managed with personalized treatment at RamaCare Polyclinic.'
         },
         {
           id: 3,
@@ -9438,7 +9438,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'How do I book an Ayurvedic PCOS consultation in Dubai?',
-          answer: 'You can book an appointment at ramacarepolyclinic through our clinic contact number or website to begin your personalized Ayurvedic PCOS treatment journey.'
+          answer: 'You can book an appointment at RamaCare Polyclinic through our clinic contact number or website to begin your personalized Ayurvedic PCOS treatment journey.'
         }
       ],
       resources: [
@@ -10083,7 +10083,7 @@ export const subcategoryContent = {
     // Pricing / Investment Section
     pricing: {
       title: 'Transparent Pricing & Therapy Packages',
-      description: 'Ultrasound therapy packages at ramacare polyclinic are customized based on your condition, pain level, and recovery goals.',
+      description: 'Ultrasound therapy packages at RamaCare Polyclinic are customized based on your condition, pain level, and recovery goals.',
       packages: [
         {
           id: 1,
@@ -10948,7 +10948,7 @@ export const subcategoryContent = {
     // Pricing / Investment Section
     pricing: {
       title: 'Transparent Pricing & Therapy Packages',
-      description: 'Electrotherapy packages at ramacarepolyclinic are customised based on your condition, pain severity, and recovery goals.',
+      description: 'Electrotherapy packages at RamaCare Polyclinic are customised based on your condition, pain severity, and recovery goals.',
       packages: [
         {
           id: 1,
@@ -11793,7 +11793,7 @@ export const subcategoryContent = {
     // Pricing / Investment Section
     pricing: {
       title: 'Transparent Pricing & Therapy Packages',
-      description: 'Pelvic floor therapy packages at ramacarepolyclinic are customised based on individual needs and therapy goals.',
+      description: 'Pelvic floor therapy packages at RamaCare Polyclinic are customised based on individual needs and therapy goals.',
       packages: [
         {
           id: 1,
@@ -11918,7 +11918,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'How can I book pelvic floor therapy in Dubai?',
-          answer: 'You can book a pelvic floor therapy consultation at ramacarepolyclinic by calling the clinic or scheduling an appointment online.'
+          answer: 'You can book a pelvic floor therapy consultation at RamaCare Polyclinic by calling the clinic or scheduling an appointment online.'
         }
       ],
       resources: [
@@ -12155,7 +12155,7 @@ export const subcategoryContent = {
   'physiotherapy-dubai-functional-exercises': {
     hero: {
       subtitle: 'Improve Strength, Balance & Everyday Movement with Personalised Care',
-      description: 'Functional exercises focus on improving how your body moves in daily life. At ramacarepolyclinic, we offer expert-guided Functional Exercises in Dubai designed to enhance strength, balance, coordination, and mobility for long-term physical well-being.',
+      description: 'Functional exercises focus on improving how your body moves in daily life. At RamaCare Polyclinic, we offer expert-guided Functional Exercises in Dubai designed to enhance strength, balance, coordination, and mobility for long-term physical well-being.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -12596,7 +12596,7 @@ export const subcategoryContent = {
     // Pricing / Investment Section
     pricing: {
       title: 'Transparent Pricing & Exercise Packages',
-      description: 'Functional exercise programs at ramacarepolyclinic are customised based on your fitness level, condition, and recovery goals.',
+      description: 'Functional exercise programs at RamaCare Polyclinic are customised based on your fitness level, condition, and recovery goals.',
       packages: [
         {
           id: 1,
@@ -12706,7 +12706,7 @@ export const subcategoryContent = {
         {
           id: 12,
           question: 'How long does a functional exercise session last?',
-          answer: 'A typical functional exercise session at ramacarepolyclinic lasts between 30 to 45 minutes, depending on your treatment plan.'
+          answer: 'A typical functional exercise session at RamaCare Polyclinic lasts between 30 to 45 minutes, depending on your treatment plan.'
         },
         {
           id: 13,
@@ -12721,7 +12721,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'Where can I get functional exercises in Dubai?',
-          answer: 'You can receive expert-guided Functional Exercises in Dubai at ramacarepolyclinic, a DHA-licensed clinic offering personalised physiotherapy care.'
+          answer: 'You can receive expert-guided Functional Exercises in Dubai at RamaCare Polyclinic, a DHA-licensed clinic offering personalised physiotherapy care.'
         }
       ],
       resources: [
@@ -12914,7 +12914,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Functional Exercise in Dubai Today',
-      description: 'Restore your fitness naturally with trusted Functional Exercises at Rama Care Polyclinic—safe, personalized, and focused on long-term results for a healthier you.',
+      description: 'Restore your fitness naturally with trusted Functional Exercises at RamaCare Polyclinic—safe, personalized, and focused on long-term results for a healthier you.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
@@ -13397,7 +13397,7 @@ export const subcategoryContent = {
     // Pricing / Investment Section
     pricing: {
       title: 'Transparent Pricing & Therapy Packages',
-      description: 'Scoliosis treatment packages at ramacarepolyclinic are customised based on age, curve severity, and therapy goals.',
+      description: 'Scoliosis treatment packages at RamaCare Polyclinic are customised based on age, curve severity, and therapy goals.',
       packages: [
         {
           id: 1,
@@ -13522,7 +13522,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'How can I book scoliosis treatment in Dubai?',
-          answer: 'Booking scoliosis treatment in Dubai is easy at ramacarepolyclinic by calling the clinic, scheduling online, or visiting for a professional spinal assessment and guidance, tailored care, planning, support, recovery, and goals.'
+          answer: 'Booking scoliosis treatment in Dubai is easy at RamaCare Polyclinic by calling the clinic, scheduling online, or visiting for a professional spinal assessment and guidance, tailored care, planning, support, recovery, and goals.'
         }
       ],
       resources: [
@@ -15793,7 +15793,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -15992,7 +15992,7 @@ export const subcategoryContent = {
   'general-physician-dubai-management-of-allergy': {
     hero: {
       subtitle: 'Effective Relief & Long-Term Allergy Control',
-      description: 'Allergies can affect daily comfort, sleep, work performance, and overall quality of life. At ramacare polyclinic, we offer expert Management of Allergy in Dubai to help identify triggers, reduce symptoms, and prevent recurring allergic reactions through safe, evidence-based care.',
+      description: 'Allergies can affect daily comfort, sleep, work performance, and overall quality of life. At RamaCare Polyclinic, we offer expert Management of Allergy in Dubai to help identify triggers, reduce symptoms, and prevent recurring allergic reactions through safe, evidence-based care.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -16494,7 +16494,7 @@ export const subcategoryContent = {
         },
         {
           id: 4,
-          question: 'How is allergy managed at ramacarepolyclinic?',
+          question: 'How is allergy managed at RamaCare Polyclinic?',
           answer:
             'At ramacarepolyclinic, allergy management begins with detailed consultation, trigger identification, and customized treatment plans focusing on symptom control, immune balance, and preventive strategies for lasting patient relief and well-being care.'
         },
@@ -16562,7 +16562,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book allergy management in Dubai?',
           answer:
-            'You can book allergy management in Dubai at ramacarepolyclinic by contacting the clinic directly, scheduling an appointment online, or visiting for a consultation with experienced doctors for personalized care and guidance.'
+            'You can book allergy management in Dubai at RamaCare Polyclinic by contacting the clinic directly, scheduling an appointment online, or visiting for a consultation with experienced doctors for personalized care and guidance.'
         }
       ],
 
@@ -16581,7 +16581,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -16733,7 +16733,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Management of Allergy in Dubai Today',
-      description: 'Control your allergy symptoms and improve daily comfort with expert Management of Allergy in Dubai at ramacarepolyclinic—safe, personalized, and focused on long-term relief.',
+      description: 'Control your allergy symptoms and improve daily comfort with expert Management of Allergy in Dubai at RamaCare Polyclinic—safe, personalized, and focused on long-term relief.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -16780,7 +16780,7 @@ export const subcategoryContent = {
   'general-physician-dubai-wound-stitching-services': {
     hero: {
       subtitle: 'Prompt, Safe & Professional Wound Care',
-      description: 'Accidental cuts and injuries need timely medical attention to prevent infection and ensure proper healing. At ramacare polyclinic, we provide reliable Wound Stitching Services in Dubai with careful assessment, sterile techniques, and compassionate care to support safe recovery.',
+      description: 'Accidental cuts and injuries need timely medical attention to prevent infection and ensure proper healing. At RamaCare Polyclinic, we provide reliable Wound Stitching Services in Dubai with careful assessment, sterile techniques, and compassionate care to support safe recovery.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -17316,7 +17316,7 @@ export const subcategoryContent = {
         {
           id: 12,
           question: 'Do you provide emergency wound stitching services?',
-          answer: 'Yes, ramacarepolyclinic offers prompt wound stitching services in Dubai to manage accidental injuries quickly and safely.'
+          answer: 'Yes, RamaCare Polyclinic offers prompt wound stitching services in Dubai to manage accidental injuries quickly and safely.'
         },
         {
           id: 13,
@@ -17330,8 +17330,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for wound stitching services in Dubai?',
-          answer: 'ramacarepolyclinic provides skilled doctors, sterile procedures, compassionate care, and personalized treatment for safe and effective wound stitching services in Dubai.'
+          question: 'Why choose RamaCare Polyclinic for wound stitching services in Dubai?',
+          answer: 'RamaCare Polyclinic provides skilled doctors, sterile procedures, compassionate care, and personalized treatment for safe and effective wound stitching services in Dubai.'
         }
       ],
       resources: [
@@ -17349,7 +17349,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -17501,7 +17501,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Wound Stitching Services in Dubai Today',
-      description: 'Get prompt, professional care with expert Wound Stitching Services in Dubai at ramacarepolyclinic—safe treatment focused on healing, comfort, and minimal scarring.',
+      description: 'Get prompt, professional care with expert Wound Stitching Services in Dubai at RamaCare Polyclinic—safe treatment focused on healing, comfort, and minimal scarring.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Book Your Appointment Now ',
       submitButtonText: 'Confirm Consultation',
@@ -17548,7 +17548,7 @@ export const subcategoryContent = {
   'general-physician-dubai-minor-injury-care': {
     hero: {
       subtitle: 'Prompt, Safe & Professional Medical Attention',
-      description: 'Minor injuries may seem small, but without proper medical care, they can lead to infection, pain, or delayed healing. At ramacare polyclinic, we provide trusted Minor Injury Care in Dubai, offering timely assessment, gentle treatment, and professional care to support fast and safe recovery.',
+      description: 'Minor injuries may seem small, but without proper medical care, they can lead to infection, pain, or delayed healing. At RamaCare Polyclinic, we provide trusted Minor Injury Care in Dubai, offering timely assessment, gentle treatment, and professional care to support fast and safe recovery.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -18026,7 +18026,7 @@ export const subcategoryContent = {
         {
           id: 5,
           question: 'Is minor injury care safe for children?',
-          answer: 'Yes, minor injury care at ramacarepolyclinic is safe for children and adults, using gentle techniques and age-appropriate treatment under professional medical supervision.'
+          answer: 'Yes, minor injury care at RamaCare Polyclinic is safe for children and adults, using gentle techniques and age-appropriate treatment under professional medical supervision.'
         },
         {
           id: 6,
@@ -18071,12 +18071,12 @@ export const subcategoryContent = {
         {
           id: 14,
           question: 'Is minor injury care covered by insurance?',
-          answer: 'Insurance coverage for minor injury care depends on your policy. Our team at ramacarepolyclinic can guide you regarding documentation and billing support.'
+          answer: 'Insurance coverage for minor injury care depends on your policy. Our team at RamaCare Polyclinic can guide you regarding documentation and billing support.'
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for minor injury care in Dubai?',
-          answer: 'ramacarepolyclinic offers prompt medical attention, experienced doctors, clean facilities, transparent pricing, and patient-focused minor injury care in Dubai.'
+          question: 'Why choose RamaCare Polyclinic for minor injury care in Dubai?',
+          answer: 'RamaCare Polyclinic offers prompt medical attention, experienced doctors, clean facilities, transparent pricing, and patient-focused minor injury care in Dubai.'
         }
       ],
       resources: [
@@ -18094,7 +18094,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -18246,7 +18246,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Minor Injury Care in Dubai Today',
-      description: 'Receive prompt and professional Minor Injury Care in Dubai at ramacarepolyclinic, where your safety, comfort, and recovery come first.',
+      description: 'Receive prompt and professional Minor Injury Care in Dubai at RamaCare Polyclinic, where your safety, comfort, and recovery come first.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -18293,7 +18293,7 @@ export const subcategoryContent = {
   'general-physician-dubai-treatment-of-acute-infections': {
     hero: {
       subtitle: 'Prompt Diagnosis & Effective Medical Care',
-      description: 'Acute infections can develop suddenly and may worsen quickly if not treated on time. At ramacare polyclinic, we provide trusted Treatment of Acute Infections in Dubai, focusing on early diagnosis, appropriate medication, and patient-centered care to support fast recovery and prevent complications.',
+      description: 'Acute infections can develop suddenly and may worsen quickly if not treated on time. At RamaCare Polyclinic, we provide trusted Treatment of Acute Infections in Dubai, focusing on early diagnosis, appropriate medication, and patient-centered care to support fast recovery and prevent complications.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -18753,7 +18753,7 @@ export const subcategoryContent = {
     },
     faq: {
       title: 'Frequently Asked Questions About Treatment of Acute Infections in Dubai',
-      description: 'Comprehensive answers to common questions about acute infection management at ramacarepolyclinic.',
+      description: 'Comprehensive answers to common questions about acute infection management at RamaCare Polyclinic.',
       resourcesHeading: 'Complete General Physicians Services',
       faqs: [
         {
@@ -18809,7 +18809,7 @@ export const subcategoryContent = {
         {
           id: 11,
           question: 'Is treatment safe for children and elderly patients?',
-          answer: 'Yes, treatment of acute infections at ramacarepolyclinic is safe for children and elderly patients, using age-appropriate medications and medical supervision.'
+          answer: 'Yes, treatment of acute infections at RamaCare Polyclinic is safe for children and elderly patients, using age-appropriate medications and medical supervision.'
         },
         {
           id: 12,
@@ -18828,8 +18828,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for acute infection treatment in Dubai?',
-          answer: 'ramacarepolyclinic offers experienced doctors, accurate diagnosis, safe treatment, transparent pricing, and patient-focused care for effective acute infection management.'
+          question: 'Why choose RamaCare Polyclinic for acute infection treatment in Dubai?',
+          answer: 'RamaCare Polyclinic offers experienced doctors, accurate diagnosis, safe treatment, transparent pricing, and patient-focused care for effective acute infection management.'
         }
       ],
       resources: [
@@ -18847,7 +18847,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -18999,7 +18999,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Treatment of Acute Infections in Dubai Today',
-      description: 'Get timely and professional Treatment of Acute Infections in Dubai at ramacarepolyclinic, focused on safety, comfort, and complete recovery.',
+      description: 'Get timely and professional Treatment of Acute Infections in Dubai at RamaCare Polyclinic, focused on safety, comfort, and complete recovery.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -19046,7 +19046,7 @@ export const subcategoryContent = {
   'general-physician-dubai-dyslipidemia-diagnosis-and-treatment': {
     hero: {
       subtitle: 'Accurate Diagnosis & Personalized Care',
-      description: 'Dyslipidemia, or abnormal cholesterol and lipid levels, can increase the risk of heart disease, stroke, and other health complications. At ramacare polyclinic, we provide trusted Dyslipidemia Diagnosis and Treatment in Dubai, offering precise testing, personalized treatment, and long-term management plans to help you maintain healthy lipid levels.',
+      description: 'Dyslipidemia, or abnormal cholesterol and lipid levels, can increase the risk of heart disease, stroke, and other health complications. At RamaCare Polyclinic, we provide trusted Dyslipidemia Diagnosis and Treatment in Dubai, offering precise testing, personalized treatment, and long-term management plans to help you maintain healthy lipid levels.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -19163,7 +19163,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Comprehensive Dyslipidemia Management in Dubai',
-        description: 'At ramacare polyclinic, our Dyslipidemia Diagnosis and Treatment in Dubai focuses on accurate testing, personalized treatment, and lifestyle counseling.Patient-Centric Approach Includes:'
+        description: 'At RamaCare Polyclinic, our Dyslipidemia Diagnosis and Treatment in Dubai focuses on accurate testing, personalized treatment, and lifestyle counseling.Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
@@ -19378,55 +19378,55 @@ export const subcategoryContent = {
         {
           id: 1,
           title: 'Improved cholesterol and triglyceride levels',
-          percentage: null,
+          percentage: 94,
           description: null
         },
         {
           id: 2,
           title: 'Reduced cardiovascular risk',
-          percentage: null,
+          percentage: 91,
           description: null
         },
         {
           id: 3,
           title: 'Healthy weight management support',
-          percentage: null,
+          percentage: 88,
           description: null
         },
         {
           id: 4,
           title: 'Enhanced energy and well-being',
-          percentage: null,
+          percentage: 89,
           description: null
         },
         {
           id: 5,
           title: 'Long-term preventive care',
-          percentage: null,
+          percentage: 93,
           description: null
         },
         {
           id: 6,
           title: 'Comprehensive lipid profile testing',
-          percentage: null,
+          percentage: 95,
           description: null
         },
         {
           id: 7,
           title: 'Evidence-based treatment plans',
-          percentage: null,
+          percentage: 96,
           description: null
         },
         {
           id: 8,
           title: 'Lifestyle and dietary guidance',
-          percentage: null,
+          percentage: 92,
           description: null
         },
         {
           id: 9,
           title: 'Adult-friendly care with long-term monitoring',
-          percentage: null,
+          percentage: 90,
           description: null
         },
       ],
@@ -19465,7 +19465,7 @@ export const subcategoryContent = {
     },
     pricing: {
       title: 'Transparent Pricing & Personalized Treatment Packages',
-      description: 'At ramacarepolyclinic, we believe in clear pricing and tailored care. Our Dyslipidemia Diagnosis and Treatment in Dubai is designed based on your lab results, cardiovascular risk, and health goals.',
+      description: 'At RamaCare Polyclinic, we believe in clear pricing and tailored care. Our Dyslipidemia Diagnosis and Treatment in Dubai is designed based on your lab results, cardiovascular risk, and health goals.',
       packages: [
         {
           id: 1,
@@ -19587,8 +19587,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for dyslipidemia treatment in Dubai?',
-          answer: 'At ramacarepolyclinic, we offer expert dyslipidemia diagnosis, personalized treatment plans, lifestyle guidance, safe medications, and ongoing monitoring to manage cholesterol and protect long-term cardiovascular health.'
+          question: 'Why choose RamaCare Polyclinic for dyslipidemia treatment in Dubai?',
+          answer: 'At RamaCare Polyclinic, we offer expert dyslipidemia diagnosis, personalized treatment plans, lifestyle guidance, safe medications, and ongoing monitoring to manage cholesterol and protect long-term cardiovascular health.'
         }
       ],
       resources: [
@@ -19606,7 +19606,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -19805,7 +19805,7 @@ export const subcategoryContent = {
   'general-physician-dubai-personalized-slimming-programs': {
     hero: {
       subtitle: 'Achieve Your Ideal Weight Safely & Effectively',
-      description: 'Struggling with weight loss can be frustrating, especially when generic diets fail to work. At ramacare polyclinic, we offer Personalized Slimming Programs in Dubai, tailored to your body type, lifestyle, and health goals, combining nutrition, activity, and holistic guidance for sustainable results.',
+      description: 'Struggling with weight loss can be frustrating, especially when generic diets fail to work. At RamaCare Polyclinic, we offer Personalized Slimming Programs in Dubai, tailored to your body type, lifestyle, and health goals, combining nutrition, activity, and holistic guidance for sustainable results.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -20285,7 +20285,7 @@ export const subcategoryContent = {
           id: 3,
           question: 'How are slimming programs customized?',
           answer:
-            'At ramacarepolyclinic, programs are customized using body assessment, metabolism evaluation, dietary preferences, lifestyle habits, and health conditions, ensuring a practical and effective plan for sustainable weight loss and long-term wellness.'
+            'At RamaCare Polyclinic, programs are customized using body assessment, metabolism evaluation, dietary preferences, lifestyle habits, and health conditions, ensuring a practical and effective plan for sustainable weight loss and long-term wellness.'
         },
         {
           id: 4,
@@ -20321,7 +20321,7 @@ export const subcategoryContent = {
           id: 9,
           question: 'Are these programs suitable for post-pregnancy weight loss?',
           answer:
-            'Yes, personalized slimming programs at ramacarepolyclinic are safe for post-pregnancy weight management. Plans are designed considering hormonal balance, breastfeeding needs, and gradual restoration of body composition.'
+            'Yes, personalized slimming programs at RamaCare Polyclinic are safe for post-pregnancy weight management. Plans are designed considering hormonal balance, breastfeeding needs, and gradual restoration of body composition.'
         },
         {
           id: 10,
@@ -20355,9 +20355,9 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose ramacarepolyclinic for slimming programs in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for slimming programs in Dubai?',
           answer:
-            'ramacarepolyclinic provides expert guidance, DHA-approved protocols, personalized diet and exercise plans, continuous monitoring, and long-term support, ensuring safe, effective, and sustainable weight loss results tailored to each patient.'
+            'RamaCare Polyclinic provides expert guidance, DHA-approved protocols, personalized diet and exercise plans, continuous monitoring, and long-term support, ensuring safe, effective, and sustainable weight loss results tailored to each patient.'
         }
       ],
       resources: [
@@ -20375,7 +20375,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -20527,7 +20527,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Personalized Slimming Programs in Dubai Today',
-      description: 'Achieve safe, effective, and long-lasting weight loss with Personalized Slimming Programs in Dubai at ramacarepolyclinic, combining expert guidance, tailored plans, and continuous support.',
+      description: 'Achieve safe, effective, and long-lasting weight loss with Personalized Slimming Programs in Dubai at RamaCare Polyclinic, combining expert guidance, tailored plans, and continuous support.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -20574,7 +20574,7 @@ export const subcategoryContent = {
   'general-physician-dubai-thyroid-dysfunction-solutions': {
     hero: {
       subtitle: 'Accurate Diagnosis & Effective Management',
-      description: 'Thyroid disorders, including hypothyroidism, hyperthyroidism, thyroid nodules, and autoimmune conditions, can affect energy levels, metabolism, weight, mood, and overall health. At ramacare polyclinic, we provide trusted Thyroid Dysfunction Solutions in Dubai, combining advanced testing, personalized treatment plans, and ongoing support to restore hormonal balance and improve quality of life.\n \n Whether you are experiencing fatigue, unexplained weight changes, or persistent mood swings, our experts offer comprehensive care that addresses root causes, not just symptoms.',
+      description: 'Thyroid disorders, including hypothyroidism, hyperthyroidism, thyroid nodules, and autoimmune conditions, can affect energy levels, metabolism, weight, mood, and overall health. At RamaCare Polyclinic, we provide trusted Thyroid Dysfunction Solutions in Dubai, combining advanced testing, personalized treatment plans, and ongoing support to restore hormonal balance and improve quality of life.\n \n Whether you are experiencing fatigue, unexplained weight changes, or persistent mood swings, our experts offer comprehensive care that addresses root causes, not just symptoms.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -21148,7 +21148,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -21300,7 +21300,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Thyroid Dysfunction Solutions in Dubai Today',
-      description: 'Get precise, effective, and personalized care for thyroid disorders at ramacare polyclinic, focusing on accurate diagnosis, safe treatment, and long-term wellness.',
+      description: 'Get precise, effective, and personalized care for thyroid disorders at RamaCare Polyclinic, focusing on accurate diagnosis, safe treatment, and long-term wellness.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -21347,7 +21347,7 @@ export const subcategoryContent = {
   'general-physician-dubai-asthma-and-copd-expertise': {
     hero: {
       subtitle: 'Breathe Easier with Expert Care & Personalized Treatment',
-      description: 'Respiratory conditions like asthma and COPD can significantly affect daily life, sleep, and physical activity. At ramacare polyclinic, we offer professional Asthma and COPD Expertise in Dubai to manage symptoms, prevent complications, and improve your overall lung health.',
+      description: 'Respiratory conditions like asthma and COPD can significantly affect daily life, sleep, and physical activity. At RamaCare Polyclinic, we offer professional Asthma and COPD Expertise in Dubai to manage symptoms, prevent complications, and improve your overall lung health.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -21771,7 +21771,7 @@ export const subcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Respiratory Care Packages',
       description:
-        'Our packages at ramacare polyclinic are customized based on condition severity, frequency of symptoms, and long-term management goals.',
+        'Our packages at RamaCare Polyclinic are customized based on condition severity, frequency of symptoms, and long-term management goals.',
       packages: [
         {
           id: 1,
@@ -21909,7 +21909,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book asthma and COPD treatment?',
           answer:
-            'You can book expert Asthma and COPD Expertise in Dubai at ramacarepolyclinic by contacting the clinic, scheduling online, or visiting in person for consultation and personalized treatment planning safely.'
+            'You can book expert Asthma and COPD Expertise in Dubai at RamaCare Polyclinic by contacting the clinic, scheduling online, or visiting in person for consultation and personalized treatment planning safely.'
         }
       ],
       resources: [
@@ -21927,7 +21927,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -22079,7 +22079,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Asthma and COPD Expertise in Dubai Today',
-      description: 'Breathe easier, reduce symptoms, and improve lung health with expert Asthma and COPD Expertise in Dubai at ramacarepolyclinic—personalized, safe, and effective care.',
+      description: 'Breathe easier, reduce symptoms, and improve lung health with expert Asthma and COPD Expertise in Dubai at RamaCare Polyclinic—personalized, safe, and effective care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -22126,7 +22126,7 @@ export const subcategoryContent = {
   'general-physician-dubai-diabetes-mellitus-care-dubai': {
     hero: {
       subtitle: 'Personalized Diabetes Management for a Healthier Life',
-      description: 'Living with diabetes requires ongoing care, monitoring, and lifestyle balance. At ramacarepolyclinic, we provide expert Diabetes Mellitus Care in Dubai to help patients control blood sugar levels, prevent complications, and maintain a healthy, active lifestyle through personalized medical support.',
+      description: 'Living with diabetes requires ongoing care, monitoring, and lifestyle balance. At RamaCare Polyclinic, we provide expert Diabetes Mellitus Care in Dubai to help patients control blood sugar levels, prevent complications, and maintain a healthy, active lifestyle through personalized medical support.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -22546,7 +22546,7 @@ export const subcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Diabetes Care Packages',
       description:
-        'Diabetes care packages at ramacarepolyclinic are customized based on diabetes type, severity, and monitoring requirements.',
+        'Diabetes care packages at RamaCare Polyclinic are customized based on diabetes type, severity, and monitoring requirements.',
       packages: [
         {
           id: 1,
@@ -22602,9 +22602,9 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          question: 'Why choose ramacarepolyclinic for diabetes care?',
+          question: 'Why choose RamaCare Polyclinic for diabetes care?',
           answer:
-            'Ramacarepolyclinic offers personalized diabetes care with experienced doctors, accurate testing, patient education, continuous follow-ups, and holistic lifestyle support, ensuring safe management, reduced complications, and improved quality of life for patients daily.'
+            'RamaCare Polyclinic offers personalized diabetes care with experienced doctors, accurate testing, patient education, continuous follow-ups, and holistic lifestyle support, ensuring safe management, reduced complications, and improved quality of life for patients daily.'
         },
         {
           id: 3,
@@ -22632,9 +22632,9 @@ export const subcategoryContent = {
         },
         {
           id: 7,
-          question: 'Is diabetes care safe at ramacarepolyclinic?',
+          question: 'Is diabetes care safe at RamaCare Polyclinic?',
           answer:
-            'Diabetes care at ramacarepolyclinic is safe, evidence-based, and managed by qualified professionals following DHA guidelines, ensuring accurate diagnosis, appropriate medication use, patient safety, and effective long-term disease control and monitoring.'
+            'Diabetes care at RamaCare Polyclinic is safe, evidence-based, and managed by qualified professionals following DHA guidelines, ensuring accurate diagnosis, appropriate medication use, patient safety, and effective long-term disease control and monitoring.'
         },
         {
           id: 8,
@@ -22680,9 +22680,9 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'How can I book diabetes care at ramacarepolyclinic?',
+          question: 'How can I book diabetes care at RamaCare Polyclinic?',
           answer:
-            'Booking diabetes care at ramacarepolyclinic is simple. Patients can schedule consultations by phone or online to receive personalized diabetes management guidance from experienced healthcare professionals in Dubai with confidence today.'
+            'Booking diabetes care at RamaCare Polyclinic is simple. Patients can schedule consultations by phone or online to receive personalized diabetes management guidance from experienced healthcare professionals in Dubai with confidence today.'
         }
       ],
 
@@ -22701,7 +22701,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -22853,7 +22853,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Diabetes Mellitus Care in Dubai Today',
-      description: 'Take control of your health with expert Diabetes Mellitus Care in Dubai at ramacarepolyclinic—personalized, safe, and focused on long-term well-being.',
+      description: 'Take control of your health with expert Diabetes Mellitus Care in Dubai at RamaCare Polyclinic—personalized, safe, and focused on long-term well-being.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -22900,7 +22900,7 @@ export const subcategoryContent = {
   'general-physician-dubai-specialized-hypertension-management': {
     hero: {
       subtitle: 'Advanced Blood Pressure Care for a Healthier Heart',
-      description: 'High blood pressure is one of the most common lifestyle-related health conditions and often shows no early symptoms. At ramacare polyclinic, we offer Specialized Hypertension Management in Dubai with a holistic, medically guided approach to help patients achieve stable blood pressure and prevent long-term complications.',
+      description: 'High blood pressure is one of the most common lifestyle-related health conditions and often shows no early symptoms. At RamaCare Polyclinic, we offer Specialized Hypertension Management in Dubai with a holistic, medically guided approach to help patients achieve stable blood pressure and prevent long-term complications.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -22941,7 +22941,7 @@ export const subcategoryContent = {
         alt: 'Specialized hypertension management in Dubai provided by doctors to control blood pressure and reduce cardiovascular risks.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual health conditions and treatment adherence. All hypertension care at ramacare polyclinic follows DHA-approved medical protocols and clinical safety standards.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual health conditions and treatment adherence. All hypertension care at RamaCare Polyclinic follows DHA-approved medical protocols and clinical safety standards.',
         show: true
       }
     },
@@ -23044,7 +23044,7 @@ export const subcategoryContent = {
           id: 3,
           title: 'Why Patients Choose Specialized Hypertension Management in Dubai',
           description:
-            'At ramacare polyclinic, our Specialized Hypertension Management in Dubai focuses on long-term safety, consistency, and prevention—not just temporary control—helping patients protect their heart, brain, and kidney health.'
+            'At RamaCare Polyclinic, our Specialized Hypertension Management in Dubai focuses on long-term safety, consistency, and prevention—not just temporary control—helping patients protect their heart, brain, and kidney health.'
         }
       ],
       rootCauses: [
@@ -23299,7 +23299,7 @@ export const subcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Personalized Hypertension Care Packages',
       description:
-        'At ramacare polyclinic, our Specialized Hypertension Management in Dubai packages are customized based on your blood pressure levels, medical history, lifestyle factors, and long-term cardiovascular health goals.',
+        'At RamaCare Polyclinic, our Specialized Hypertension Management in Dubai packages are customized based on your blood pressure levels, medical history, lifestyle factors, and long-term cardiovascular health goals.',
       packages: [
         {
           id: 1,
@@ -23370,7 +23370,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          question: 'How is hypertension diagnosed at ramacarepolyclinic?',
+          question: 'How is hypertension diagnosed at RamaCare Polyclinic?',
           answer:
             'At ramacarepolyclinic, hypertension is diagnosed through accurate blood pressure measurements, medical history review, lifestyle assessment, and necessary investigations to identify underlying causes and risk factors.'
         },
@@ -23462,7 +23462,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -23614,7 +23614,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Specialized Hypertension Management in Dubai Today',
-      description: 'Take proactive control of your blood pressure with expert medical care at ramacarepolyclinic, trusted for safe, effective, and long-term hypertension management in Dubai.',
+      description: 'Take proactive control of your blood pressure with expert medical care at RamaCare Polyclinic, trusted for safe, effective, and long-term hypertension management in Dubai.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Consultation',
@@ -23661,7 +23661,7 @@ export const subcategoryContent = {
   'general-physician-dubai-expertise-in-routine-check-ups': {
     hero: {
       subtitle: 'Comprehensive Health Assessments for a Healthy Life',
-      description: 'Maintaining your health starts with regular medical evaluations. At ramacarepolyclinic, we provide expertise in routine check-ups in Dubai, combining preventive health check-ups, comprehensive medical assessments, and personalized guidance to detect potential health issues early and maintain long-term wellness.',
+      description: 'Maintaining your health starts with regular medical evaluations. At RamaCare Polyclinic, we provide expertise in routine check-ups in Dubai, combining preventive health check-ups, comprehensive medical assessments, and personalized guidance to detect potential health issues early and maintain long-term wellness.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -23702,7 +23702,7 @@ export const subcategoryContent = {
         alt: 'Routine check-ups in Dubai performed by doctors to monitor overall health and detect medical issues early.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer:Results may vary depending on individual health conditions and adherence to recommendations. All check-ups at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
+        text: 'Safety & Medical Disclaimer:Results may vary depending on individual health conditions and adherence to recommendations. All check-ups at RamaCare Polyclinic follow DHA-approved medical protocols and safety standards.',
         show: true
       }
     },
@@ -23813,7 +23813,7 @@ export const subcategoryContent = {
         },
         {
           id: 4,
-          title: 'Why Patients Choose Routine Check-Ups at Ramacare Polyclinic',
+          title: 'Why Patients Choose Routine Check-Ups at RamaCare Polyclinic',
           description:
             'Our expertise in routine check-ups in Dubai focuses on prevention, early disease detection, and personalized care. This approach helps patients:',
           listItems: [
@@ -24115,7 +24115,7 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          question: 'Who should get routine check-ups at Ramacare Polyclinic?',
+          question: 'Who should get routine check-ups at RamaCare Polyclinic?',
           answer: 'Adults, seniors, and individuals with a family history of chronic diseases should schedule routine check-ups in Dubai to identify risks early and maintain long-term health and vitality.'
         },
         {
@@ -24126,7 +24126,7 @@ export const subcategoryContent = {
         {
           id: 4,
           question: 'What tests are included in routine check-ups?',
-          answer: 'Routine check-ups typically include blood tests, urine tests, vital signs, and imaging screenings, all tailored at ramacarepolyclinic for comprehensive health monitoring and early risk identification.'
+          answer: 'Routine check-ups typically include blood tests, urine tests, vital signs, and imaging screenings, all tailored at RamaCare Polyclinic for comprehensive health monitoring and early risk identification.'
         },
         {
           id: 5,
@@ -24135,8 +24135,8 @@ export const subcategoryContent = {
         },
         {
           id: 6,
-          question: 'How does Ramacare Polyclinic personalize health assessments?',
-          answer: 'At ramacarepolyclinic, routine check-ups are customized based on age, medical history, and lifestyle, ensuring targeted preventive care and accurate monitoring of your long-term health.'
+          question: 'How does RamaCare Polyclinic personalize health assessments?',
+          answer: 'At RamaCare Polyclinic, routine check-ups are customized based on age, medical history, and lifestyle, ensuring targeted preventive care and accurate monitoring of your long-term health.'
         },
         {
           id: 7,
@@ -24151,7 +24151,7 @@ export const subcategoryContent = {
         {
           id: 9,
           question: 'Do routine check-ups include lifestyle and nutrition advice?',
-          answer: 'Yes, expertise in routine check-ups in Dubai at Ramacare Polyclinic includes personalized diet, exercise, and stress management guidance to prevent diseases and enhance overall health.'
+          answer: 'Yes, expertise in routine check-ups in Dubai at RamaCare Polyclinic includes personalized diet, exercise, and stress management guidance to prevent diseases and enhance overall health.'
         },
         {
           id: 10,
@@ -24165,8 +24165,8 @@ export const subcategoryContent = {
         },
         {
           id: 12,
-          question: 'What makes Ramacare Polyclinic’s check-ups different?',
-          answer: 'Ramacare Polyclinic provides expertise in routine check-ups in Dubai with DHA-licensed doctors, personalized preventive care, advanced diagnostics, and continuous monitoring for safe, reliable, and comprehensive health assessments.'
+          question: 'What makes RamaCare Polyclinic’s check-ups different?',
+          answer: 'RamaCare Polyclinic provides expertise in routine check-ups in Dubai with DHA-licensed doctors, personalized preventive care, advanced diagnostics, and continuous monitoring for safe, reliable, and comprehensive health assessments.'
         },
         {
           id: 13,
@@ -24176,12 +24176,12 @@ export const subcategoryContent = {
         {
           id: 14,
           question: 'How long does a routine check-up appointment take?',
-          answer: 'Routine check-ups at Ramacare Polyclinic typically take 1–3 hours, depending on required tests, consultations, and screenings, providing thorough expertise in routine check-ups in Dubai efficiently.'
+          answer: 'Routine check-ups at RamaCare Polyclinic typically take 1–3 hours, depending on required tests, consultations, and screenings, providing thorough expertise in routine check-ups in Dubai efficiently.'
         },
         {
           id: 15,
           question: 'How do I book a routine check-up in Dubai?',
-          answer: 'You can easily schedule your routine check-up in Dubai at Ramacare Polyclinic by calling, visiting the website, or using the online booking system for convenient preventive healthcare.'
+          answer: 'You can easily schedule your routine check-up in Dubai at RamaCare Polyclinic by calling, visiting the website, or using the online booking system for convenient preventive healthcare.'
         }
       ],
       resources: [
@@ -24199,7 +24199,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -24351,7 +24351,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Expertise in Routine Check-Ups in Dubai Today',
-      description: 'Take proactive control of your health with expertise in routine check-ups in Dubai at ramacarepolyclinic, trusted for safe, thorough, and personalized preventive care.',
+      description: 'Take proactive control of your health with expertise in routine check-ups in Dubai at RamaCare Polyclinic, trusted for safe, thorough, and personalized preventive care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Check-Up',
@@ -24393,18 +24393,18 @@ export const subcategoryContent = {
   'general-physician-dubai-comprehensive-physical-examinations': {
     hero: {
       subtitle: 'Comprehensive Health Check for Long-Term Wellness',
-      description: 'Maintaining good health requires consistent monitoring. At ramacarepolyclinic, we provide regular physical examinations in Dubai to detect early signs of illness, assess overall wellness, and guide patients toward a healthier lifestyle.',
+      description: 'Maintaining good health requires consistent monitoring. At RamaCare Polyclinic, we provide regular physical examinations in Dubai to detect early signs of illness, assess overall wellness, and guide patients toward a healthier lifestyle.',
       rating: '500+ Happy Clients',
       stats: [
         {
           id: 1,
-          number: '95%',
+          number: '96%',
           label: 'Patient Satisfaction'
         },
         {
           id: 2,
-          number: '5000+',
-          label: 'Check-Ups Performed'
+          number: '4500+',
+          label: 'Examinations Completed'
         },
         {
           id: 3,
@@ -24431,10 +24431,10 @@ export const subcategoryContent = {
       ],
       image: {
         src: '/images/routine.jpg',
-        alt: 'Routine check-ups in Dubai performed by doctors to monitor overall health and detect medical issues early.'
+        alt: 'Comprehensive physical examinations in Dubai performed by experienced doctors to assess overall health and detect medical issues early.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer:Results may vary depending on individual health conditions and adherence to recommendations. All physical examinations at ramacarepolyclinic follow DHA-approved medical protocols and safety standards.',
+        text: 'Safety & Medical Disclaimer:Results may vary depending on individual health conditions and adherence to recommendations. All physical examinations at RamaCare Polyclinic follow DHA-approved medical protocols and safety standards.',
         show: true
       }
     },
@@ -24860,9 +24860,9 @@ export const subcategoryContent = {
         },
         {
           id: 6,
-          question: 'How does Ramacare Polyclinic personalize physical examinations?',
+          question: 'How does RamaCare Polyclinic personalize physical examinations?',
           answer:
-            'At Ramacare Polyclinic, physical exams are customized based on age, medical history, and lifestyle, ensuring accurate preventive care and effective long-term health monitoring.'
+            'At RamaCare Polyclinic, physical exams are customized based on age, medical history, and lifestyle, ensuring accurate preventive care and effective long-term health monitoring.'
         },
         {
           id: 7,
@@ -24896,9 +24896,9 @@ export const subcategoryContent = {
         },
         {
           id: 12,
-          question: 'What makes Ramacare Polyclinic’s physical examinations different?',
+          question: 'What makes RamaCare Polyclinic’s physical examinations different?',
           answer:
-            'Ramacare Polyclinic provides expertise in regular physical examinations in Dubai, combining DHA-licensed doctors, advanced diagnostics, personalized preventive care, and follow-ups for safe, effective health management.'
+            'RamaCare Polyclinic provides expertise in regular physical examinations in Dubai, combining DHA-licensed doctors, advanced diagnostics, personalized preventive care, and follow-ups for safe, effective health management.'
         },
         {
           id: 13,
@@ -24916,7 +24916,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book a physical examination in Dubai?',
           answer:
-            'You can easily schedule your regular physical examination in Dubai at Ramacare Polyclinic by calling, visiting our website, or using our online booking system for convenient preventive care.'
+            'You can easily schedule your regular physical examination in Dubai at RamaCare Polyclinic by calling, visiting our website, or using our online booking system for convenient preventive care.'
         }
       ],
       resources: [
@@ -24934,7 +24934,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Wound Stiching Services',
+          text: 'Wound Stitching Services',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/wound-stitching-services-dubai/'
         },
@@ -25086,7 +25086,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Regular Physical Examinations in Dubai Today',
-      description: 'Take proactive control of your health with regular physical examinations in Dubai at ramacarepolyclinic, trusted for safe, thorough, and personalized preventive healthcare.',
+      description: 'Take proactive control of your health with regular physical examinations in Dubai at RamaCare Polyclinic, trusted for safe, thorough, and personalized preventive healthcare.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Check-Up',
@@ -25926,8 +25926,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '3000+',
-          label: 'Hydra Facial Sessions'
+          number: '3,000+',
+          label: 'Face PRP Sessions'
         },
         {
           id: 3,
@@ -26499,7 +26499,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'How can I book Face PRP in Dubai?',
-          answer: 'You can schedule your Face PRP in Dubai at ramacarepolyclinic by calling the clinic, visiting our website, or using our online booking system for personalized consultation and treatment.'
+          answer: 'You can schedule your Face PRP in Dubai at RamaCare Polyclinic by calling the clinic, visiting our website, or using our online booking system for personalized consultation and treatment.'
         }
       ],
       resources: [
@@ -26537,7 +26537,7 @@ export const subcategoryContent = {
     },
     testimonials: {
       title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who received Signature Hydra Facial treatments',
+      subtitle: 'Verified testimonials from patients who received Face PRP treatments',
       testimonials: [
         {
           id: 1,
@@ -26580,8 +26580,8 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '3000+',
-          label1: 'Hydra Facial Sessions',
+          number: '3,000+',
+          label1: 'Face PRP Sessions',
           label2: 'Performed',
           target: 3000
         },
@@ -26726,7 +26726,7 @@ export const subcategoryContent = {
   'facial-dubai-golden-elixir-facial': {
     hero: {
       subtitle: 'Rejuvenate Your Skin with Luxurious 24K Gold Therapy',
-      description: 'Experience the ultimate in luxury skincare with the Golden Elixir (24K Gold) Facial in Dubai at ramacare polyclinic. This premium treatment harnesses the benefits of 24K gold to restore radiance, improve elasticity, and reduce visible signs of aging.',
+      description: 'Experience the ultimate in luxury skincare with the Golden Elixir (24K Gold) Facial in Dubai at RamaCare Polyclinic. This premium treatment harnesses the benefits of 24K gold to restore radiance, improve elasticity, and reduce visible signs of aging.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -26767,7 +26767,7 @@ export const subcategoryContent = {
         alt: 'Golden Elixir (24K Gold) Facial performed to nourish, brighten, and rejuvenate the skin for a radiant glow.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results vary based on individual skin type, conditions, and adherence to aftercare. All Golden Elixir (24K Gold) Facial in Dubai procedures at ramacare polyclinic follow DHA-approved safety and clinical protocols.',
+        text: 'Safety & Medical Disclaimer: Results vary based on individual skin type, conditions, and adherence to aftercare. All Golden Elixir (24K Gold) Facial in Dubai procedures at RamaCare Polyclinic follow DHA-approved safety and clinical protocols.',
         show: true
       }
     },
@@ -26834,7 +26834,7 @@ export const subcategoryContent = {
           id: 3,
           title: 'Why Choose Our Golden Elixir (24K Gold) Facial',
           description:
-            'Patients choose Golden Elixir (24K Gold) Facial in Dubai at ramacarepolyclinic for:',
+            'Patients choose Golden Elixir (24K Gold) Facial in Dubai at RamaCare Polyclinic for:',
           listItems: [
             'Luxurious anti-aging and skin rejuvenation treatment',
             'Luxurious, safe, and non-invasive skin rejuvenation',
@@ -27226,7 +27226,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book the Golden Elixir Facial in Dubai?',
           answer:
-            'You can easily book the Golden Elixir (24K Gold) Facial in Dubai at ramacarepolyclinic by calling the clinic, visiting the website, or using the online booking system for personalized consultation.'
+            'You can easily book the Golden Elixir (24K Gold) Facial in Dubai at RamaCare Polyclinic by calling the clinic, visiting the website, or using the online booking system for personalized consultation.'
         }
       ],
 
@@ -27400,7 +27400,7 @@ export const subcategoryContent = {
   'facial-dubai-exosomes-facial': {
     hero: {
       subtitle: 'Advanced Skin Rejuvenation for Radiant, Youthful Skin',
-      description: 'Revitalize your skin with the Exosomes Facial Dubai at ramacare polyclinic. This cutting-edge treatment uses regenerative exosomes to stimulate collagen, repair damaged cells, and restore a natural, healthy glow.',
+      description: 'Revitalize your skin with the Exosomes Facial Dubai at RamaCare Polyclinic. This cutting-edge treatment uses regenerative exosomes to stimulate collagen, repair damaged cells, and restore a natural, healthy glow.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -27441,7 +27441,7 @@ export const subcategoryContent = {
         alt: 'Exosomes Facial in Dubai performed by specialists to promote advanced skin repair and rejuvenation.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, condition, and adherence to aftercare. All Exosomes Facial Dubai procedures at ramacarepolyclinic follow DHA-approved safety and clinical protocols.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, condition, and adherence to aftercare. All Exosomes Facial Dubai procedures at RamaCare Polyclinic follow DHA-approved safety and clinical protocols.',
         show: true
       }
     },
@@ -27508,13 +27508,9 @@ export const subcategoryContent = {
           id: 3,
           title: 'Why Choose Exosomes Facial Dubai',
           listItems: [
-            'Stimulates collagen and elastin for firmer skin',
-            'Natural skin regeneration and collagen stimulation',
-            'Reduces fine lines, wrinkles, and early aging signs',
-            'Reduction of fine lines, wrinkles, and early aging signs',
+            'Stimulates collagen and elastin for firmer, healthier skin',
+            'Reduces fine lines, wrinkles, and early signs of aging',
             'Improves skin texture, tone, and hydration',
-            'Improved texture, tone, and radiance',
-            'Safe, non-invasive, and effective for all skin types',
             'Safe, non-invasive treatment with minimal downtime',
             'Personalized treatment tailored to your skin concerns'
           ]
@@ -27884,7 +27880,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book Exosomes Facial Dubai at Ramacare Polyclinic?',
           answer:
-            'You can book your Exosomes Facial Dubai at ramacarepolyclinic by calling the clinic, visiting the website, or using the online booking system for personalized consultation and treatment scheduling.'
+            'You can book your Exosomes Facial Dubai at RamaCare Polyclinic by calling the clinic, visiting the website, or using the online booking system for personalized consultation and treatment scheduling.'
         }
       ],
 
@@ -28007,7 +28003,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Exosomes Facial Dubai Today',
-      description: 'Rejuvenate, restore, and revitalize your skin with Exosomes Facial Dubai at ramacare polyclinic, trusted for safe, advanced, and personalized non-surgical skin rejuvenation treatments in Dubai.',
+      description: 'Rejuvenate, restore, and revitalize your skin with Exosomes Facial Dubai at RamaCare Polyclinic, trusted for safe, advanced, and personalized non-surgical skin rejuvenation treatments in Dubai.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Session',
@@ -28054,7 +28050,7 @@ export const subcategoryContent = {
   'facial-dubai-oxygeneo-illuminate-facial': {
     hero: {
       subtitle: 'Revitalize Your Skin with Advanced 3-in-1 Facial Technology',
-      description: 'Discover the ultimate skin revitalization with the OxyGeneo Illuminate Facial in Dubai at ramacare polyclinic. This advanced facial treatment exfoliates, oxygenates, and infuses essential nutrients, leaving your skin radiant, hydrated, and refreshed.',
+      description: 'Discover the ultimate skin revitalization with the OxyGeneo Illuminate Facial in Dubai at RamaCare Polyclinic. This advanced facial treatment exfoliates, oxygenates, and infuses essential nutrients, leaving your skin radiant, hydrated, and refreshed.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -28095,7 +28091,7 @@ export const subcategoryContent = {
         alt: 'OxyGeneo Illuminate Facial in Dubai performed to exfoliate, oxygenate, and brighten the skin for a glowing complexion.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, condition, and adherence to aftercare. All OxyGeneo Illuminate Facial in Dubai procedures at ramacare polyclinic follow DHA-approved safety and clinical protocols.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, condition, and adherence to aftercare. All OxyGeneo Illuminate Facial in Dubai procedures at RamaCare Polyclinic follow DHA-approved safety and clinical protocols.',
         show: true
       }
     },
@@ -28162,14 +28158,10 @@ export const subcategoryContent = {
           id: 3,
           title: 'Why Choose OxyGeneo Illuminate Facial Dubai',
           listItems: [
-            'Provides deep exfoliation and skin oxygenation',
+            'Deep exfoliation and skin oxygenation for a brighter complexion',
             'Boosts hydration and enhances skin radiance',
             'Reduces dullness, uneven texture, and fine lines',
-            'Bright, radiant, and rejuvenated skin',
-            'Improved texture, tone, and hydration',
-            'Reduction of dullness and fine lines',
-            'Safe, non-invasive, and suitable for all skin types',
-            'Safe, non-invasive treatment with immediate results',
+            'Safe, non-invasive treatment with immediate visible results',
             'Personalized treatment tailored to your skin concerns'
           ]
         }
@@ -28536,7 +28528,7 @@ export const subcategoryContent = {
           id: 15,
           question: 'How can I book the OxyGeneo Illuminate Facial Dubai at Ramacare Polyclinic?',
           answer:
-            'You can easily book your OxyGeneo Illuminate Facial in Dubai at ramacarepolyclinic by calling the clinic, visiting the website, or using the online booking system for a personalized consultation.'
+            'You can easily book your OxyGeneo Illuminate Facial in Dubai at RamaCare Polyclinic by calling the clinic, visiting the website, or using the online booking system for a personalized consultation.'
         }
       ],
       resources: [
@@ -28658,7 +28650,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Your OxyGeneo Illuminate Facial Dubai Today',
-      description: 'Revitalize, hydrate, and brighten your skin with the OxyGeneo Illuminate Facial in Dubai at ramacare polyclinic, trusted for safe, advanced, and personalized non-invasive facial treatments.',
+      description: 'Revitalize, hydrate, and brighten your skin with the OxyGeneo Illuminate Facial in Dubai at RamaCare Polyclinic, trusted for safe, advanced, and personalized non-invasive facial treatments.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Session',
@@ -39507,7 +39499,7 @@ Seek a cost-effective smile restoration`
       },
       lumbarVsCervical: {
         title: "Lumbar vs. Cervical Slip Disc",
-        paragraph: "A {{lumbar disc treatment Dubai|/services/slip-disc-treatment-dubai/}} patient typically presents with lower back pain, often paired with sciatica-type leg pain, since lumbar discs sit in the lower spine — a pattern the Cleveland Clinic notes is the most frequent presentation of lumbar disc herniation, and one many clinics address through {{Lower Back Pain Treatment Dubai|/services/back-pain-treatment-dubai/}} programs. A {{cervical disc treatment Dubai|/services/slip-disc-treatment-dubai/}} patient, on the other hand, usually reports neck pain along with pain, tingling, or numbness radiating into the shoulder or arm, since these discs sit in the neck — sometimes searched for as {{Neck Disc Treatment Dubai|/services/neck-pain-treatment-dubai/}}."
+        paragraph: "A {{lumbar disc treatment Dubai|/services/back-pain-treatment-dubai/}} patient typically presents with lower back pain, often paired with sciatica-type leg pain, since lumbar discs sit in the lower spine — a pattern the Cleveland Clinic notes is the most frequent presentation of lumbar disc herniation, and one many clinics address through {{Lower Back Pain Treatment Dubai|/services/back-pain-treatment-dubai/}} programs. A {{cervical disc treatment Dubai|/services/neck-pain-treatment-dubai/}} patient, on the other hand, usually reports neck pain along with pain, tingling, or numbness radiating into the shoulder or arm, since these discs sit in the neck — sometimes searched for as {{Neck Disc Treatment Dubai|/services/neck-pain-treatment-dubai/}}."
       },
       misconceptions: {
         title: "Common Misconceptions",
@@ -39516,7 +39508,7 @@ Seek a cost-effective smile restoration`
     },
     signsSymptoms: {
       title: "Signs & Symptoms",
-      intro: "Symptoms depend on which part of the spine is affected and how much a nerve is involved. The NHS notes that most episodes of spine pain improve within a few weeks with simple measures, though persistent cases benefit from a structured {{Spine Pain Treatment Dubai|/services/slip-disc-treatment-dubai/}} approach. Common signs include:",
+      intro: "Symptoms depend on which part of the spine is affected and how much a nerve is involved. The NHS notes that most episodes of spine pain improve within a few weeks with simple measures, though persistent cases benefit from a structured {{Spine Pain Treatment Dubai|/services/back-pain-treatment-dubai/}} approach. Common signs include:",
       list: [
         { name: "Lower back pain", description: "Often the first and most noticeable symptom for lumbar disc issues" },
         { name: "Neck pain", description: "Common with cervical disc problems" },
@@ -39586,7 +39578,7 @@ Seek a cost-effective smile restoration`
     },
     treatmentOptions: {
       title: "Slip Disc Treatment Dubai Options at RamaCare",
-      intro: "This is the heart of our approach to {{Slip Disc Treatment Dubai|/services/slip-disc-treatment-dubai/}} — a conservative, structured program built around your specific diagnosis. The American Academy of Orthopaedic Surgeons recommends conservative care as an initial approach for most disc-related back pain, and our {{Physiotherapy for Slip Disc Dubai|/services/slip-disc-treatment-dubai/}} program, along with {{Non-Surgical Slip Disc Treatment Dubai|/services/slip-disc-treatment-dubai/}} options, reflects that same evidence-based philosophy.",
+      intro: "This is the heart of our approach to slip disc treatment in Dubai — a conservative, structured program built around your specific diagnosis. The American Academy of Orthopaedic Surgeons recommends conservative care as an initial approach for most disc-related back pain, and our physiotherapy for slip disc program, along with non-surgical treatment options, reflects that same evidence-based philosophy.",
       physioIntro: "{{Physiotherapy|/services/physiotherapy-dubai/}} forms the foundation of treatment, addressing pain, movement restrictions, and muscle imbalances contributing to your symptoms. Explore our {{Physiotherapy Dubai|/services/physiotherapy-dubai/}} services for more detail.",
       list: [
         { name: "Manual therapy", description: "Uses hands-on techniques to ease muscle tension, improve joint mobility, and reduce pain around the affected area." },
@@ -40262,7 +40254,7 @@ Seek a cost-effective smile restoration`
     conclusion: {
       title: "Conclusion",
       paragraph: "Recovering from a sports injury takes more than rest — it takes a structured, evidence-based plan built around your body, your sport, and your goals. Sports Injury Rehabilitation Dubai at RamaCare Polyclinic combines expert assessment, hands-on treatment, and progressive, sports-specific training to help you heal completely and return to what you love, stronger and more resilient than before. If pain, weakness, or instability is holding you back from training, competing, or simply moving freely, don't wait for it to resolve on its own. Book your sports injury assessment with RamaCare Polyclinic today and take the first step toward a safe, complete recovery.",
-      outro: "All clinical treatments require custom evaluation. Timelines and outcomes vary between patients."
+      outro: "Medical Disclaimer: This content is for general educational purposes and does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider regarding your specific condition. Individual results vary, and no treatment outcome is guaranteed."
     },
     images: {
       anatomy: {

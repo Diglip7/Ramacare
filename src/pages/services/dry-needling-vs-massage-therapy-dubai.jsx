@@ -162,7 +162,7 @@ function buildSchema() {
         '@type': 'MedicalWebPage',
         '@id': SITE_URL + PAGE_PATH + '/#webpage',
         url: SITE_URL + PAGE_PATH,
-        name: 'Dry Needling vs Massage Therapy Dubai | Which Is Right?',
+        name: 'Dry Needling vs Massage Therapy Dubai',
         description: 'Comparing Dry Needling vs Massage Therapy Dubai? Learn the key differences, benefits & best uses. Book a physiotherapy assessment at RamaCare today.',
         inLanguage: 'en-AE',
         lastReviewed: '2026-07-15',
@@ -171,6 +171,23 @@ function buildSchema() {
           { '@id': SITE_URL + PAGE_PATH + '/#dryneedling' },
           { '@id': SITE_URL + PAGE_PATH + '/#massage' },
         ],
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/',
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE',
+          },
+        },
       },
       {
         '@type': 'MedicalTherapy',
@@ -227,8 +244,9 @@ function buildSchema() {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-          { '@type': 'ListItem', position: 2, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai' },
-          { '@type': 'ListItem', position: 3, name: 'Dry Needling vs Massage Therapy Dubai', item: SITE_URL + PAGE_PATH },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Dry Needling vs Massage Therapy Dubai', item: SITE_URL + PAGE_PATH },
         ],
       },
       {
@@ -296,19 +314,27 @@ export default function DryNeedlingVsMassagePage() {
         />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
         <meta property="og:image" content={SITE_URL + '/images/dry-needling-vs-massage-therapy-dubai.jpg'} />
+        <meta property="og:image:alt" content="Physiotherapist comparing dry needling vs massage therapy Dubai treatment for a patient at RamaCare Polyclinic" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dry Needling vs Massage Therapy Dubai | Which Is Right?" />
         <meta
           name="twitter:description"
           content="Comparing Dry Needling vs Massage Therapy Dubai? Learn the key differences, benefits & best uses. Book a physiotherapy assessment at RamaCare today."
         />
+        <meta name="twitter:image" content={SITE_URL + '/images/dry-needling-vs-massage-therapy-dubai.jpg'} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
 
       {/* ============ HERO — spectrum motif, image right ============ */}
       <section className="max-w-7xl mx-auto px-6 pt-8 pb-4">
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F]">
+        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
           <Link href="/" className="hover:text-[#1F5E4B]">Home</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
           <span aria-hidden="true">/</span>
           <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
           <span aria-hidden="true">/</span>

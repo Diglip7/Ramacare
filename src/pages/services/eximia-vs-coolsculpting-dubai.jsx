@@ -184,11 +184,108 @@ const EximiaVsCoolSculptingPage = () => {
     }
   };
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/eximia-vs-coolsculpting-dubai/";
+  const PAGE_TITLE = "Eximia vs. CoolSculpting in Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Compare Eximia HR77 Platinum and CoolSculpting (Cryolipolysis) for non-surgical fat reduction in Dubai. Learn about results, comfort, downtime, and choose the right treatment.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/ex2.jpg";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Eximia Body Contouring", "item": "https://ramacarepolyclinic.ae/services/eximia-body-contouring-dubai/" },
+          { "@type": "ListItem", "position": 4, "name": "Eximia vs. CoolSculpting", "item": CANONICAL_URL }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Eximia vs. CoolSculpting: Which is Best for Fat Loss in Dubai?",
+        "description": "A comparison of Eximia HR77 Platinum and CoolSculpting (Cryolipolysis) for non-surgical fat reduction, covering technology, comfort, results timeline, and skin benefits.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalTherapy",
+          "name": "Non-Surgical Body Contouring"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqData.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Eximia vs. CoolSculpting Dubai | Which is Best for Fat Loss?</title>
-        <meta name="description" content="Compare Eximia HR77 Platinum and CoolSculpting (Cryolipolysis) for non-surgical fat reduction in Dubai. Learn about results, comfort, downtime, and choose the right treatment." key="description" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="Eximia vs CoolSculpting Dubai, CoolSculpting Dubai, Eximia HR77 Platinum, Cryolipolysis Dubai, non-surgical fat reduction comparison, fat freezing vs radiofrequency, best fat reduction treatment Dubai" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Eximia vs. CoolSculpting Dubai | Which is Best for Fat Loss?" key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Eximia vs CoolSculpting in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Eximia vs. CoolSculpting Dubai | Which is Best for Fat Loss?" key="twitter:title" />
+        <meta name="twitter:description" content="Compare results, comfort, and downtime between Eximia and CoolSculpting for non-surgical fat reduction in Dubai." key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       {/* Hero Section */}

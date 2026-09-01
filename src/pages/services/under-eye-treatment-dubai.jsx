@@ -316,7 +316,7 @@ const clinicSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     name: "RamaCare Polyclinic",
-    url: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai",
+    url: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai/",
     image: "https://ramacarepolyclinic.ae/images/RamaCare%20Polyclinic%20Aesthetic%20Dermatology.jpg",
     telephone: "+971566597878",
     address: {
@@ -339,7 +339,7 @@ const clinicSchema = {
 const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    url: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai",
+    url: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai/",
     name: "Under Eye Treatment Dubai: Options for Dark Circles, Hollows & Puffiness",
     description:
         "An overview of under-eye treatment options in Dubai, including causes of dark circles, hollowness, and puffiness, and what to expect from professional assessment at RamaCare Polyclinic in Jumeirah 1.",
@@ -372,8 +372,8 @@ const breadcrumbSchema = {
     "@type": "BreadcrumbList",
     itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://ramacarepolyclinic.ae/" },
-        { "@type": "ListItem", position: 2, name: "Aesthetic Dermatology", item: "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
-        { "@type": "ListItem", position: 3, name: "Under Eye Treatment Dubai", item: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai" },
+        { "@type": "ListItem", position: 2, name: "Aesthetic Dermatology", item: "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+        { "@type": "ListItem", position: 3, name: "Under Eye Treatment Dubai", item: "https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai/" },
     ],
 };
 
@@ -487,12 +487,26 @@ export default function UnderEyePage() {
             <Head>
                 <title>{TITLE}</title>
                 <meta name="description" content={DESCRIPTION} />
-                <meta property="og:title" content={TITLE} />
-                <meta property="og:description" content={DESCRIPTION} />
-                <meta property="og:type" content="article" />
-                <meta property="og:url" content="https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai" />
+                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai/" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content={TITLE} key="og:title" />
+                <meta property="og:description" content={DESCRIPTION} key="og:description" />
+                <meta property="og:type" content="article" key="og:type" />
+                <meta property="og:url" content="https://ramacarepolyclinic.ae/services/under-eye-treatment-dubai/" key="og:url" />
+                <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Under%20Eye%20Treatment%20Dubai.jpg" key="og:image" />
+                <meta property="og:image:width" content="1200" key="og:image:width" />
+                <meta property="og:image:height" content="630" key="og:image:height" />
+                <meta property="og:image:alt" content="Under Eye Treatment Dubai consultation at RamaCare Polyclinic" key="og:image:alt" />
+                <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+                <meta property="og:locale" content="en_AE" key="og:locale" />
+
+                {/* Twitter Card Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+                <meta name="twitter:title" content={TITLE} key="twitter:title" />
+                <meta name="twitter:description" content={DESCRIPTION} key="twitter:description" />
+                <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Under%20Eye%20Treatment%20Dubai.jpg" key="twitter:image" />
+
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -1407,7 +1421,7 @@ export default function UnderEyePage() {
                                 </Link>
 
                                 <a
-                                    href="tel:(+971) 04 286 2006"
+                                    href="tel:+97142862006"
                                     className="group rounded-2xl border border-white/30 bg-white/10 backdrop-blur-md text-white p-5 text-sm font-bold shadow-md hover:bg-white/20 transition-all hover:scale-[1.02] flex items-center justify-between"
                                 >
                                     <div className="flex items-center gap-3">

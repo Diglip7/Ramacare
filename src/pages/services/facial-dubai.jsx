@@ -37,12 +37,110 @@ export default function facialdubaiCategoryPage() {
     "At RamaCare, we believe that consistent skin care is essential for maintaining a youthful and healthy appearance. Our team will provide you with expert advice and a personalized home-care regimen to complement your in-clinic treatments. Visit us for the most effective facial treatments in Dubai."
   ];
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/facial-dubai/";
+  const PAGE_TITLE = "Facial Treatments in Dubai | Expert Skin Care Clinic";
+  const PAGE_DESCRIPTION = "Professional facial treatments in Dubai offering safe, personalized care for acne, pigmentation, aging, and dull skin, delivered by experienced skin specialists you can trust.";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://ramacarepolyclinic.ae/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Facial Treatments",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "name": "Facial Treatments Dubai",
+        "url": CANONICAL_URL,
+        "description": PAGE_DESCRIPTION,
+        "medicalAudience": "Patient",
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1, Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (content?.faq?.faqs || []).map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Facial Treatments in Dubai | Expert Skin Care Clinic</title>
-        <meta name="description" content="Professional facial treatments in Dubai offering safe, personalized care for acne, pigmentation, aging, and dull skin, delivered by experienced skin specialists you can trust." key="description" />
-        <meta name="keywords" content="facial treatments in Dubai, skin care clinic Dubai, advanced facial treatment Dubai, acne facial treatment Dubai, anti-aging facial Dubai, pigmentation treatment Dubai, medical facial Dubai, professional skin treatment Dubai, dermatology facial Dubai" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="facial treatments in Dubai, skin care clinic Dubai, advanced facial treatment Dubai, acne facial treatment Dubai, anti-aging facial Dubai, pigmentation treatment Dubai, medical facial Dubai, professional skin treatment Dubai, dermatology facial Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/facial-treat.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content="Safe, personalized facial care for acne, pigmentation, aging, and dull skin from DHA-licensed specialists in Jumeirah 1, Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/facial-treat.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       <HeroSection content={content?.hero} />

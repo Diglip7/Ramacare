@@ -25,6 +25,16 @@ export default function HIFUPage() {
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/hifu');
 
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
@@ -43,8 +53,27 @@ export default function HIFUPage() {
       <Head>
   <title key="title">HIFU in Dubai for Non-Surgical Skin Lifting Treatment</title>
   <meta name="description" content="HIFU in Dubai helps lift and tighten sagging skin using focused ultrasound technology under expert medical supervision for natural-looking results." key="description" />
-  <meta name="keywords" content="HIFU in Dubai, HIFU treatment Dubai, Non-surgical skin tightening Dubai, HIFU face lifting Dubai, Skin lifting treatment Dubai, Anti-aging HIFU treatment, Facial skin tightening Dubai, Ultrasound skin therapy, Aesthetic skin care Dubai" />
+<meta name="keywords" content="HIFU in Dubai, HIFU treatment Dubai, Non-surgical skin tightening Dubai, HIFU face lifting Dubai, Skin lifting treatment Dubai, Anti-aging HIFU treatment, Facial skin tightening Dubai, Ultrasound skin therapy, Aesthetic skin care Dubai" />
   
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="HIFU in Dubai for Non-Surgical Skin Lifting Treatment" />
+  <meta property="og:description" content="HIFU in Dubai helps lift and tighten sagging skin using focused ultrasound technology under expert medical supervision for natural-looking results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hifu-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hifu1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HIFU in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HIFU in Dubai for Non-Surgical Skin Lifting Treatment" />
+  <meta name="twitter:description" content="HIFU in Dubai helps lift and tighten sagging skin using focused ultrasound technology under expert medical supervision for natural-looking results." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hifu1.jpg" />
+
+  {/* JSON-LD Schema */}
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -73,7 +102,7 @@ export default function HIFUPage() {
           "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/hifu-dubai/",
           "description": "HIFU Skin Tightening in Dubai at RamaCare Polyclinic is a non-surgical aesthetic procedure that uses high-intensity focused ultrasound energy to target deep skin layers, stimulate collagen production, and lift and tighten sagging skin.",
           "procedureType": "Non-invasive aesthetic dermatology procedure",
-          "howPerformed": "The clinician uses a specialized HIFU device to deliver focused ultrasound energy to specific layers beneath the skin’s surface. This stimulates collagen remodeling and tissue tightening over following weeks.",
+          "howPerformed": "The clinician uses a specialized HIFU device to deliver focused ultrasound energy to specific layers beneath the skin's surface. This stimulates collagen remodeling and tissue tightening over following weeks.",
           "preparation": "Patients are advised to avoid heavy makeup on the day of treatment and disclose their medical history. No significant pre-treatment preparation is typically required.",
           "followup": "Follow-up sessions may be recommended depending on skin laxity severity and treatment goals, along with clinician-guided aftercare for optimal results.",
           "indication": [
@@ -101,6 +130,52 @@ export default function HIFUPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hifu-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/hifu-dubai/",
+          "name": "HIFU in Dubai for Non-Surgical Skin Lifting Treatment",
+          "description": "HIFU in Dubai helps lift and tighten sagging skin using focused ultrasound technology under expert medical supervision for natural-looking results.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalProcedure",
+            "name": "High-Intensity Focused Ultrasound (HIFU)"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/hifu-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "HIFU", "item": "https://ramacarepolyclinic.ae/services/hifu-dubai/" }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/hifu-dubai/#physician",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hifu-dubai/#faq",
+          "mainEntity": faqSchema
         }
       ]
     })

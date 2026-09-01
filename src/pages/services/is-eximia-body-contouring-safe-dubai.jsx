@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { useState } from 'react';
@@ -133,18 +134,121 @@ const EximiaSafetyPage = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Is-eximia.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Aesthetic Dermatology',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/',
+        name: 'Eximia Safety Guide: Side Effects & Clinical Facts | RamaCare',
+        description: 'Explore Eximia treatment safety and potential side effects of Eximia Dubai. Learn why Eximia Body Contouring Dubai is a safe, non-invasive alternative to surgery.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Eximia Body Contouring' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Sonita Sinaga',
+          jobTitle: 'Licensed & Certified Aesthetic Therapist',
+          url: 'https://ramacarepolyclinic.ae/doctors/sonita-sinaga/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Aesthetic Dermatology', item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/' },
+          { '@type': 'ListItem', position: 3, name: 'Eximia Body Contouring', item: 'https://ramacarepolyclinic.ae/services/eximia-body-contouring-dubai/' },
+          { '@type': 'ListItem', position: 4, name: 'Is Eximia Body Contouring Safe?', item: 'https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/#faq',
+        mainEntity: faqData.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Eximia Safety Guide: Side Effects & Clinical Facts | RamaCare</title>
         <meta name="description" content="Explore Eximia treatment safety and potential side effects of Eximia Dubai. Learn why Eximia Body Contouring Dubai is a safe, non-invasive alternative to surgery." key="description" />
         <meta name="keywords" content="Eximia treatment safety, side effects of Eximia Dubai, Eximia Body Contouring Dubai, Non-surgical body sculpting safety, Dubai aesthetic treatment safety" />
-        
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Eximia Safety Guide: Side Effects & Clinical Facts | RamaCare" key="og:title" />
+        <meta property="og:description" content="Explore Eximia treatment safety and potential side effects of Eximia Dubai. Learn why Eximia Body Contouring Dubai is a safe, non-invasive alternative to surgery." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/is-eximia-body-contouring-safe-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Is-eximia.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Eximia Body Contouring Safety Guide - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Eximia Safety Guide: Side Effects & Clinical Facts | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Learn why Eximia Body Contouring Dubai is a safe, non-invasive alternative to surgery." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Is-eximia.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-16 md:py-24" style={{ backgroundColor: '#F5F1EA' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/eximia-body-contouring-dubai/" className="hover:text-[#1F5E4B] transition-colors">Eximia Body Contouring</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Is Eximia Body Contouring Safe?</span>
+          </nav>
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Left Content */}
             <div className="space-y-8">
@@ -635,6 +739,30 @@ const EximiaSafetyPage = () => {
               </form>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Aesthetic Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/aesthetic-dermatology-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Aesthetic Dermatology Dubai
+            </Link>
+            <Link href="/services/eximia-body-contouring-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Eximia Body Contouring Dubai
+            </Link>
+            <Link href="/services/how-many-eximia-sessions-needed-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              How Many Eximia Sessions Needed?
+            </Link>
+            <Link href="/services/how-eximia-body-contouring-works-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              How Eximia Works
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> The clinical safety information and contraindication guidelines provided on this page are for general educational purposes regarding Eximia HR77 Platinum. While non-invasive and CE-certified, individual suitability depends on personal health history and medical evaluation. Patients with contraindications should consult a licensed aesthetic therapist at RamaCare Polyclinic before proceeding with treatment.
+          </p>
         </div>
       </section>
 

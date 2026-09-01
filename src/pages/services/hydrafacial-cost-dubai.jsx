@@ -13,7 +13,7 @@ import { useRouter } from 'next/router';
    content brief (SEO metadata, pricing table, FAQs, schema).
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/hydrafacial-cost-dubai';
+const PAGE_PATH = '/services/hydrafacial-cost-dubai/';
 
 const nav = [
   { id: 'what-is', label: 'What Is HydraFacial?' },

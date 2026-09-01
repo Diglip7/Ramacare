@@ -145,24 +145,78 @@ const whyChoose = [
 ];
 
 const faqs = [
-  { q: 'Is bed rest good for back pain?', a: 'Only briefly. Short-term rest (a day or two) can help with a severe acute flare-up, but prolonged bed rest generally slows recovery and can weaken supporting muscles.' },
-  { q: 'How long should I rest before starting physiotherapy?', a: 'Most guidelines suggest no more than 1–2 days of reduced activity before gradually reintroducing movement, followed by physiotherapy if pain persists beyond a few days.' },
-  { q: 'When should I start physiotherapy for back pain?', a: 'If pain lasts more than a few days, keeps recurring, or is accompanied by leg pain, numbness, or weakness, a physiotherapy assessment is worth booking promptly.' },
-  { q: 'Can exercise worsen back pain?', a: 'Poorly chosen or incorrectly performed exercise can aggravate pain, which is why a professional assessment matters — a physiotherapist tailors movement to your specific condition rather than a generic routine.' },
-  { q: 'Is walking helpful for back pain?', a: 'For most non-serious back pain, gentle walking is generally encouraged and can support circulation and mobility without overloading the spine.' },
-  { q: 'What if I have a slip disc?', a: 'A slip disc requires proper diagnosis. Many cases respond well to physiotherapy and conservative management, though more severe nerve compression may need further medical evaluation.' },
-  { q: 'What if I have sciatica?', a: 'Sciatica often benefits from physiotherapy, including targeted exercise and manual therapy, though a professional assessment is important to confirm the cause before starting treatment.' },
-  { q: 'How many physiotherapy sessions are typically needed?', a: 'This varies by condition and severity — your physiotherapist will outline an expected timeline after your initial assessment.' },
-  { q: 'Can physiotherapy prevent back pain from recurring?', a: 'Yes, core strengthening, posture correction, and ongoing exercise significantly reduce the likelihood of recurrence for many patients.' },
-  { q: 'When should I see a doctor urgently instead of trying rest or physiotherapy?', a: 'Seek urgent medical care if back pain follows significant trauma, or is accompanied by fever, unexplained weight loss, loss of bladder or bowel control, or progressive leg weakness.' },
-  { q: 'Is physiotherapy painful?', a: "Physiotherapy is generally designed to work within a manageable pain range; some mild discomfort during exercise is normal, but treatment shouldn't cause sharp or severe pain." },
-  { q: 'Can I combine rest and physiotherapy?', a: 'Yes — a short initial rest period followed by physiotherapy-guided movement is a common and reasonable approach for many acute cases.' },
-  { q: 'Does chronic back pain respond to physiotherapy?', a: 'Yes, physiotherapy is generally considered a first-line, evidence-supported approach for chronic non-specific low back pain.' },
-  { q: 'Is physiotherapy suitable for postural back pain from desk jobs?', a: 'Yes, physiotherapy commonly addresses posture-related pain through ergonomic advice, mobility work, and targeted strengthening.' },
-  { q: 'Should I avoid lifting anything while recovering from back pain?', a: "Heavy or improperly performed lifting should generally be avoided until cleared by a physiotherapist, though complete avoidance of all lifting isn't usually necessary or helpful long-term." },
-  { q: "What's the difference between acute and chronic back pain treatment?", a: 'Acute back pain often responds to brief rest followed by early movement, while chronic back pain typically needs a longer, structured rehabilitation programme addressing underlying contributing factors.' },
-  { q: 'Can sports injuries causing back pain be treated with physiotherapy?', a: 'Yes, sports-related back injuries are commonly managed through physiotherapy, often combined with a structured return-to-activity plan.' },
-  { q: 'Will I need imaging (X-ray or MRI) before starting physiotherapy?', a: 'Not always — many cases of back pain are assessed clinically first, with imaging reserved for cases where red-flag symptoms or a specific structural concern are suspected.' },
+  {
+    q: 'Is bed rest good for back pain?',
+    a: 'Only briefly. Short-term rest (a day or two) can help with a severe acute flare-up, but prolonged bed rest generally slows recovery and can weaken supporting muscles.',
+  },
+  {
+    q: 'How long should I rest before starting physiotherapy?',
+    a: 'Most guidelines suggest no more than 1–2 days of reduced activity before gradually reintroducing movement, followed by physiotherapy if pain persists beyond a few days.',
+  },
+  {
+    q: 'When should I start physiotherapy for back pain?',
+    a: 'If pain lasts more than a few days, keeps recurring, or is accompanied by leg pain, numbness, or weakness, a physiotherapy assessment is worth booking promptly.',
+  },
+  {
+    q: 'Can exercise worsen back pain?',
+    a: 'Poorly chosen or incorrectly performed exercise can aggravate pain, which is why a professional assessment matters — a physiotherapist tailors movement to your specific condition rather than a generic routine.',
+  },
+  {
+    q: 'Is walking helpful for back pain?',
+    a: 'For most non-serious back pain, gentle walking is generally encouraged and can support circulation and mobility without overloading the spine.',
+  },
+  {
+    q: 'What if I have a slip disc?',
+    a: 'A slip disc requires proper diagnosis. Many cases respond well to physiotherapy and conservative management, though more severe nerve compression may need further medical evaluation.',
+  },
+  {
+    q: 'What if I have sciatica?',
+    a: 'Sciatica often benefits from physiotherapy, including targeted exercise and manual therapy, though a professional assessment is important to confirm the cause before starting treatment.',
+  },
+  {
+    q: 'How many physiotherapy sessions are typically needed?',
+    a: 'This varies by condition and severity — your physiotherapist will outline an expected timeline after your initial assessment.',
+  },
+  {
+    q: 'Can physiotherapy prevent back pain from recurring?',
+    a: 'Yes, core strengthening, posture correction, and ongoing exercise significantly reduce the likelihood of recurrence for many patients.',
+  },
+  {
+    q: 'When should I see a doctor urgently instead of trying rest or physiotherapy?',
+    a: 'Seek urgent medical care if back pain follows significant trauma, or is accompanied by fever, unexplained weight loss, loss of bladder or bowel control, or progressive leg weakness.',
+  },
+  {
+    q: 'Is physiotherapy painful?',
+    a: "Physiotherapy is generally designed to work within a manageable pain range; some mild discomfort during exercise is normal, but treatment shouldn't cause sharp or severe pain.",
+  },
+  {
+    q: 'Can I combine rest and physiotherapy?',
+    a: 'Yes — a short initial rest period followed by physiotherapy-guided movement is a common and reasonable approach for many acute cases.',
+  },
+  {
+    q: 'Does chronic back pain respond to physiotherapy?',
+    a: 'Yes, physiotherapy is generally considered a first-line, evidence-supported approach for chronic non-specific low back pain.',
+  },
+  {
+    q: 'Is physiotherapy suitable for postural back pain from desk jobs?',
+    a: 'Yes, physiotherapy commonly addresses posture-related pain through ergonomic advice, mobility work, and targeted strengthening.',
+  },
+  {
+    q: 'Should I avoid lifting anything while recovering from back pain?',
+    a: "Heavy or improperly performed lifting should generally be avoided until cleared by a physiotherapist, though complete avoidance of all lifting isn't usually necessary or helpful long-term.",
+  },
+  {
+    q: "What's the difference between acute and chronic back pain treatment?",
+    a: 'Acute back pain often responds to brief rest followed by early movement, while chronic back pain typically needs a longer, structured rehabilitation programme addressing underlying contributing factors.',
+  },
+  {
+    q: 'Can sports injuries causing back pain be treated with physiotherapy?',
+    a: 'Yes, sports-related back injuries are commonly managed through physiotherapy, often combined with a structured return-to-activity plan.',
+  },
+  {
+    q: 'Will I need imaging (X-ray or MRI) before starting physiotherapy?',
+    a: 'Not always — many cases of back pain are assessed clinically first, with imaging reserved for cases where red-flag symptoms or a specific structural concern are suspected.',
+  },
 ];
 
 const resourceHub = [
@@ -220,19 +274,34 @@ const resourceHub = [
 ];
 
 /* ------------------------------------------------------------------
-   JSON-LD schema — Physician schema intentionally omitted per the
-   brief's own note ("added per named practitioner profile once
-   assigned to this page").
+   JSON-LD schema
 ------------------------------------------------------------------- */
 function buildSchema() {
   const medicalWebPage = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    url: SITE_URL + PAGE_PATH,
-    name: 'Physiotherapy vs Rest for Back Pain Recovery | RamaCare',
+    url: 'https://ramacarepolyclinic.ae/services/physiotherapy-vs-rest-for-back-pain-recovery/',
+    name: 'Physiotherapy vs Rest for Back Pain Recovery',
     description: 'Physiotherapy vs Rest for Back Pain Recovery: discover when exercise helps, when rest is useful, and when to see a physiotherapist in Dubai.',
     inLanguage: 'en-AE',
     medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Jeena Mathew',
+      jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+      url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/',
+    },
+    publisher: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1, Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const medicalCondition = {
@@ -258,7 +327,7 @@ function buildSchema() {
     '@type': 'MedicalClinic',
     name: 'RamaCare Polyclinic',
     url: SITE_URL + '/',
-    address: { '@type': 'PostalAddress', streetAddress: 'Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
+    address: { '@type': 'PostalAddress', streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor', addressLocality: 'Jumeirah 1, Dubai', addressCountry: 'AE' },
     medicalSpecialty: 'Physiotherapy',
   };
 
@@ -267,8 +336,9 @@ function buildSchema() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Physiotherapy Dubai', item: SITE_URL + '/services/physiotherapy-dubai' },
-      { '@type': 'ListItem', position: 3, name: 'Physiotherapy vs Rest for Back Pain Recovery', item: SITE_URL + PAGE_PATH },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
+      { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai' },
+      { '@type': 'ListItem', position: 4, name: 'Physiotherapy vs Rest for Back Pain Recovery', item: SITE_URL + PAGE_PATH },
     ],
   };
 
@@ -354,12 +424,18 @@ export default function PhysiotherapyVsRestPage() {
         />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
         <meta property="og:image" content={SITE_URL + '/images/physiotherapy-vs-rest-back-pain-recovery-infographic.jpg'} />
+        <meta property="og:image:alt" content="Physiotherapy vs Rest for Back Pain Recovery comparison infographic" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Physiotherapy vs Rest for Back Pain Recovery | RamaCare" />
         <meta
           name="twitter:description"
           content="Physiotherapy vs Rest for Back Pain Recovery: discover when exercise helps, when rest is useful, and when to see a physiotherapist in Dubai."
         />
+        <meta name="twitter:image" content={SITE_URL + '/images/physiotherapy-vs-rest-back-pain-recovery-infographic.jpg'} />
         {schemaBlocks.map((block, i) => (
           <script key={`schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }} />
         ))}
@@ -367,10 +443,12 @@ export default function PhysiotherapyVsRestPage() {
 
       {/* ============ HERO — chart-led ============ */}
       <section className="max-w-6xl mx-auto px-6 pt-10 pb-16">
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F]">
+        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
           <Link href="/" className="hover:text-[#1F5E4B]">Home</Link>
           <span aria-hidden="true">/</span>
-          <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B]">Physiotherapy Dubai</Link>
+          <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
           <span aria-hidden="true">/</span>
           <span className="text-[#1F5E4B]">Physiotherapy vs Rest for Back Pain Recovery</span>
         </nav>
@@ -755,31 +833,25 @@ export default function PhysiotherapyVsRestPage() {
         </div>
       </section>
 
-      {/* ============ Resource hub — collapsible categories ============ */}
+      {/* ============ Resource hub ============ */}
       <section className="bg-[#F5F1EA] py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-6">Explore More</h2>
-          <div className="space-y-2">
-            {resourceHub.map((group, gi) => {
-              const isOpen = openCategory === gi;
-              return (
-                <div key={group.category} className="bg-white rounded-lg overflow-hidden">
-                  <button onClick={() => setOpenCategory(isOpen ? null : gi)} className="w-full flex items-center justify-between px-5 py-4 text-left">
-                    <span className="text-base font-semibold text-[#1A1A1A]">{group.category}</span>
-                    <LucideIcons.ChevronDown className={`w-4 h-4 text-[#1F5E4B] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  {isOpen && (
-                    <div className="px-5 pb-4 flex flex-wrap gap-2">
-                      {group.links.map((l) => (
-                        <a key={l.label} href={l.href} className="text-sm text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-3 py-1.5 rounded-full">
-                          {l.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-8">Explore More</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
+            {resourceHub.map((group) => (
+              <div key={group.category} className="bg-white rounded-xl p-5">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#1F5E4B] mb-3">{group.category}</p>
+                <ul className="space-y-2">
+                  {group.links.map((l) => (
+                    <li key={l.label}>
+                      <a href={l.href} className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] hover:underline">
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

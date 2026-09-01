@@ -23,7 +23,7 @@ const PatientTestimonials = ({ content }) => {
   const showSeeAllButton = content?.showSeeAllButton !== false; // Default true
   const showSeeMoreButton = content?.showSeeMoreButton || false;
   const showStatsSection = content?.showStatsSection !== false; // Default true
-  
+
   // Simple video array - mixed thumbnail support
   // ✅ MIXED APPROACH - NATURAL FRAMES NOW WORKING:
   // - Videos WITH 'thumbnail' property = show your custom image
@@ -184,9 +184,9 @@ const PatientTestimonials = ({ content }) => {
         <div className="text-center mb-6 md:mb-8">
           {/* Badge */}
           <div className="flex justify-center mb-3">
-           
-              <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
-           
+
+            <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
+
           </div>
 
           {/* Main Heading */}
@@ -206,11 +206,10 @@ const PatientTestimonials = ({ content }) => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-400 ${
-                  hoveredCard === testimonial.id
-                    ? 'transform -translate-y-1 shadow-xl'
-                    : 'hover:transform hover:-translate-y-1 hover:shadow-xl'
-                }`}
+                className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-400 ${hoveredCard === testimonial.id
+                  ? 'transform -translate-y-1 shadow-xl'
+                  : 'hover:transform hover:-translate-y-1 hover:shadow-xl'
+                  }`}
                 onMouseEnter={() => setHoveredCard(testimonial.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -219,9 +218,9 @@ const PatientTestimonials = ({ content }) => {
                   {/* Mixed Thumbnail Support - Custom image or Video Frame (SEO Optimized) */}
                   {playingVideo !== testimonial.id && (
                     testimonial.thumbnail ? (
-                      <img 
-                        src={testimonial.thumbnail} 
-                        alt={testimonial.alt || `Patient testimonial video ${testimonial.id} - RamaCare Polyclinic Dubai`} 
+                      <img
+                        src={testimonial.thumbnail}
+                        alt={testimonial.alt || `Patient testimonial video ${testimonial.id} - RamaCare Polyclinic Dubai`}
                         className="absolute inset-0 w-full h-full object-cover"
                         loading="lazy"
                       />
@@ -237,7 +236,7 @@ const PatientTestimonials = ({ content }) => {
                       </video>
                     )
                   )}
-                  
+
                   {/* Video Element - Only visible and loaded when clicked (Click-to-Play) */}
                   {playingVideo === testimonial.id && (
                     <video
@@ -265,9 +264,8 @@ const PatientTestimonials = ({ content }) => {
                         className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer group"
                         aria-label="Play video"
                       >
-                        <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/95 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${
-                          hoveredCard === testimonial.id ? 'scale-110 bg-white' : 'group-hover:scale-110 group-hover:bg-white'
-                        }`}>
+                        <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/95 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${hoveredCard === testimonial.id ? 'scale-110 bg-white' : 'group-hover:scale-110 group-hover:bg-white'
+                          }`}>
                           <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#2D5F3F] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
                           </svg>
@@ -324,18 +322,18 @@ const PatientTestimonials = ({ content }) => {
           </div>
         )}
 
-          {/* See All Testimonials Button - Show on homepage */}
+        {/* See All Testimonials Button - Show on homepage */}
         {showSeeAllButton && (
           <div className="flex justify-center mt-8 md:mt-12">
-            <a 
+            <a
               href="/testimonials/"
               className="inline-flex items-center px-6 py-3 bg-[#2D5F3F] hover:bg-[#3A7B51] text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group"
             >
               See All Testimonials
-              <svg 
-                className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -389,7 +387,7 @@ const PatientTestimonials = ({ content }) => {
             </div>
           </div>
         )}
-     
+
 
       </div>
     </section>

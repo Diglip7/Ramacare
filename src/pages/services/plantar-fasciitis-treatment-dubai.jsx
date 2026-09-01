@@ -87,6 +87,7 @@ export default function PlantarFasciitisTreatmentPage() {
   const iconMap = {
     Hand,
     Move,
+    Search,
     Dumbbell,
     Syringe,
     Waves,
@@ -222,7 +223,6 @@ export default function PlantarFasciitisTreatmentPage() {
       <Head>
         <title key="title">{PAGE_TITLE}</title>
         <meta name="description" content={PAGE_DESCRIPTION} key="description" />
-        <meta name="keywords" content={seo.keywords} />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 

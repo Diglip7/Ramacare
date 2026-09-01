@@ -29,7 +29,25 @@ export default function HairLossPage() {
   <title key="title">Hair Loss in Dubai Diagnosis and Treatment by Specialists</title>
   <meta name="description" content="Hair loss in Dubai is assessed and treated by specialists using safe medical solutions to reduce hair fall, support regrowth, and improve scalp health." key="description" />
   <meta name="keywords" content="Hair loss in Dubai, Hair loss treatment Dubai, Hair fall treatment Dubai, Hair thinning solutions, Medical hair loss care, Hair regrowth treatment Dubai, Scalp health treatment, Hair loss diagnosis Dubai, Non-surgical hair treatment, Professional hair care Dubai" />
-  
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Hair Loss in Dubai Diagnosis and Treatment by Specialists" />
+  <meta property="og:description" content="Hair loss in Dubai is assessed and treated by specialists using safe medical solutions to reduce hair fall, support regrowth, and improve scalp health." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hair-loss-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hairs.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hair Loss Treatment in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hair Loss in Dubai Diagnosis and Treatment by Specialists" />
+  <meta name="twitter:description" content="Safe, DHA-licensed hair loss treatment in Dubai targeting the root cause of hair fall and supporting natural regrowth." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hairs.jpg" />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -37,16 +55,45 @@ export default function HairLossPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/",
+          "name": "Hair Loss in Dubai Diagnosis and Treatment by Specialists",
+          "description": "Hair loss in Dubai is assessed and treated by specialists using safe medical solutions to reduce hair fall, support regrowth, and improve scalp health.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Hair Loss / Alopecia"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Hair Loss Treatment", "item": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/" }
+            ]
+          }
+        },
+        {
           "@type": "MedicalCondition",
           "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#condition",
           "name": "Hair Loss, Thinning Hair & Scalp Health Concerns",
           "alternateName": "Androgenic Alopecia, Telogen Effluvium, Diffuse Thinning",
           "url": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/",
-          "description": "Hair loss and thinning hair include conditions such as androgenic alopecia, diffuse hair thinning, stress‑related shedding, and other patterns of reduced hair density that impact scalp appearance and self‑confidence.",
+          "description": "Hair loss and thinning hair include conditions such as androgenic alopecia, diffuse hair thinning, stress-related shedding, and other patterns of reduced hair density that impact scalp appearance and self-confidence.",
           "possibleTreatment": {
             "@type": "MedicalTherapy",
             "name": "Hair Loss Management Therapy",
-            "description": "Comprehensive hair loss therapy may involve clinical assessment, topical and injectable treatments, PRP (Platelet‑Rich Plasma), mesotherapy, nutrient supplementation, and personalized scalp care protocols to support hair regrowth and reduce shedding."
+            "description": "Comprehensive hair loss therapy may involve clinical assessment, topical and injectable treatments, PRP (Platelet-Rich Plasma), mesotherapy, nutrient supplementation, and personalized scalp care protocols to support hair regrowth and reduce shedding."
           }
         },
         {
@@ -60,11 +107,11 @@ export default function HairLossPage() {
           "procedureType": "Medical and aesthetic dermatologic procedure",
           "howPerformed": "After a detailed scalp and hair assessment, clinicians may recommend targeted therapies such as topical solutions (e.g., minoxidil), injectables, PRP therapy, mesotherapy, nutritional support, and lifestyle guidance. Treatment plans are customized based on the underlying cause and severity of hair loss.",
           "preparation": "Patients should provide a full medical history, current medication list, and any previous hair loss treatments. Avoiding harsh chemical or heat styling before the assessment may help improve diagnostic accuracy.",
-          "followup": "Follow‑up appointments monitor progress, adjust treatment protocols, and determine any need for additional sessions to support hair regeneration and long‑term scalp health.",
+          "followup": "Follow-up appointments monitor progress, adjust treatment protocols, and determine any need for additional sessions to support hair regeneration and long-term scalp health.",
           "indication": [
             "Diffuse hair thinning",
             "Androgenic hair loss (pattern baldness)",
-            "Stress‑related shedding (telogen effluvium)",
+            "Stress-related shedding (telogen effluvium)",
             "Patchy hair loss patterns",
             "Weak, brittle hair"
           ],
@@ -86,6 +133,31 @@ export default function HairLossPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice & Aesthetic Medicine",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

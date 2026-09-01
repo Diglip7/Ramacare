@@ -31,11 +31,18 @@ import {
   Bone,
 } from 'lucide-react';
 
+const SITE_URL = 'https://ramacarepolyclinic.ae';
+const PAGE_PATH = '/services/ayurveda-vs-physiotherapy-for-arthritis-dubai/';
+const CANONICAL_URL = `${SITE_URL}${PAGE_PATH}`;
+
 const SEO = {
-  title: 'Ayurveda vs Physiotherapy for Arthritis Dubai',
+  title: 'Ayurveda vs Physiotherapy for Arthritis Dubai | RamaCare Polyclinic',
   metaDescription:
     'Comparing Ayurveda vs Physiotherapy for Arthritis Dubai? Explore both approaches with RamaCare Polyclinic and book a personalized joint care assessment today.',
-  canonical: 'https://ramacarepolyclinic.ae/ayurveda-vs-physiotherapy-for-arthritis-dubai',
+  canonical: CANONICAL_URL,
+  keywords:
+    'Ayurveda vs Physiotherapy Arthritis Dubai, Arthritis treatment Dubai, Ayurveda for arthritis Dubai, Physiotherapy for arthritis Dubai, Knee arthritis treatment Dubai, Joint pain clinic Dubai, Rheumatoid arthritis treatment Dubai, Osteoarthritis treatment Dubai, Non-surgical arthritis Dubai, RamaCare Polyclinic arthritis',
+  ogImage: `${SITE_URL}/images/ayurveda-vs-physiotherapy-arthritis-dubai.jpg`,
 };
 
 const WHATSAPP_NUMBER = '971566597878';
@@ -161,31 +168,31 @@ const JOINT_TYPES = [
   },
   {
     name: 'Rheumatoid Arthritis',
-    text: 'Because RA is autoimmune, medical management (often involving a rheumatologist) usually takes priority, and any Ayurveda vs Physiotherapy for Arthritis Dubai decision for RA patients should be made in coordination with that medical team. Physiotherapy plays an important supporting role in preserving joint function and preventing deformity, especially during periods between flares when gentle strengthening can be tolerated. Ayurveda may be considered as a supportive, comfort-focused addition — never as a replacement for immunological treatment — and any herbal formulations should be discussed with your rheumatologist to avoid interactions with prescribed medication.',
+    text: 'Because rheumatoid arthritis is autoimmune rather than purely mechanical, medical management (typically involving a rheumatologist) is the primary treatment path. Physiotherapy plays a supportive but important role here — helping maintain joint range of motion, muscle strength, and function between flares, and adapting exercise intensity during active flare periods rather than pushing through pain. Ayurveda may be considered as a complementary approach for general comfort, stress management, and lifestyle support alongside — not instead of — prescribed medical treatment, since RA requires ongoing immunological management that falls outside either discipline alone.',
   },
   {
     name: 'Knee Arthritis',
-    text: 'Knee arthritis responds well to targeted strengthening (quadriceps and hip stabilizers) through physiotherapy, and most Knee Arthritis Treatment Dubai programs also address gait mechanics, since an altered walking pattern can quietly overload the joint further. Janu Basti and herbal therapies may be used by some patients for comfort alongside their rehabilitation program, though they work best as a supplement to, not a substitute for, structured exercise.',
+    text: 'Knee osteoarthritis is one of the most common presentations physiotherapists treat, and structured quadriceps and hip-strengthening programs are well-supported for reducing knee joint load and improving function. Ayurvedic approaches such as Janu Basti (localized warm-oil retention therapy for the knee) are sometimes used by patients seeking additional comfort and stiffness relief. For many patients, a combined plan — physiotherapy-led strengthening alongside Ayurvedic comfort-focused therapies — is a reasonable option to discuss during a joint assessment.',
   },
   {
     name: 'Hip Arthritis',
-    text: 'Physiotherapy focusing on hip mobility and gait correction is typically central here, often paired with strengthening for the surrounding glute and core muscles to improve stability. Kati Basti and Ayurvedic lifestyle guidance may support comfort for some patients, particularly around reducing morning stiffness and improving sleep quality, which in turn affects daytime pain tolerance.',
+    text: 'Hip arthritis often responds well to targeted physiotherapy focused on hip mobility, glute and core strengthening, and gait retraining, particularly in earlier stages before significant structural changes occur. Ayurvedic therapies like Kati Basti (localized warm-oil therapy over the lower back and hip region) are sometimes used to support comfort and reduce perceived stiffness. As with other joints, the right balance between the two approaches depends on the severity and progression of the condition, which is best assessed in person.',
   },
   {
     name: 'Shoulder Arthritis',
-    text: 'Manual therapy and guided mobility exercises are usually the primary physiotherapy tools, since shoulder stiffness often develops quickly once movement is avoided due to pain. Abhyanga-style warm oil massage may be used by some patients for muscular tension around the joint, particularly where stress or poor posture is contributing to symptoms.',
+    text: 'Shoulder arthritis frequently affects range of motion more noticeably than other joints, making physiotherapy\'s focus on mobility work, scapular stabilization, and progressive strengthening particularly relevant. Ayurvedic warm oil therapies and lifestyle guidance may offer additional comfort, especially for patients managing stiffness that limits daily activities like reaching or dressing. A joint assessment can help determine whether shoulder-specific physiotherapy alone, or a combined approach, better fits your situation.',
   },
   {
     name: 'Hand Arthritis',
-    text: 'Fine motor exercises and splinting guidance from a physiotherapist are commonly used, along with joint protection techniques for daily tasks like gripping or writing. Ayurvedic herbal applications may offer supportive comfort for some patients between sessions, especially where dryness or stiffness in small joints is a dominant symptom.',
+    text: 'Hand arthritis, which can affect fine motor tasks like gripping and writing, often benefits from physiotherapy or occupational-therapy-style approaches focused on joint protection techniques, splinting guidance, and targeted hand exercises. Ayurvedic herbal formulations and warm oil applications are sometimes used by patients for general comfort, though the small, numerous joints in the hand mean a precise, individualized assessment matters more here than with larger joints.',
   },
   {
     name: 'Cervical Arthritis',
-    text: 'Postural correction, manual therapy, and targeted neck exercises are core physiotherapy tools, particularly important for patients whose work involves long hours at a desk or screen. Ayurvedic lifestyle and stress-management guidance may be a useful complement, given how much cervical stiffness is linked to posture and tension rather than joint degeneration alone.',
+    text: 'Cervical (neck) arthritis requires particular care given the proximity to the spinal cord and nerve roots. Physiotherapy typically focuses on posture correction, targeted mobility and strengthening exercises, and ergonomic adjustments, especially for patients with desk-based work. Ayurvedic approaches may support general relaxation and comfort but should be approached cautiously and only under professional guidance for neck-related conditions, given the sensitivity of this region.',
   },
   {
     name: 'Post-Traumatic Arthritis',
-    text: 'Because this type follows an old injury, physiotherapy rehabilitation is usually essential to restore strength and movement patterns that may have been compensated for since the original injury. Ayurveda may be considered supportive rather than primary in these cases, often focused on general recovery and comfort rather than the biomechanical retraining that physiotherapy provides.',
+    text: 'Post-traumatic arthritis develops after a joint injury or fracture and often has its own distinct rehabilitation timeline. Physiotherapy plays a central role in restoring strength, stability, and range of motion following the original injury, working closely with the joint\'s specific healing pattern. Ayurvedic lifestyle and comfort-focused therapies may be considered as a complementary addition once the primary rehabilitation plan is underway, based on individual assessment.',
   },
 ];
 
@@ -298,92 +305,100 @@ export default function AyurvedaVsPhysiotherapyArthritisPage() {
   const active = SIDES[side];
   const ActiveIcon = active.icon;
 
-  // JSON-LD (the source brief notes full schema lives in a separate
-  // schema.json for your developer; these mirror the same shape used
-  // elsewhere on the site so the page isn't left without structured data).
-  const clinicSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalClinic',
-    name: 'RamaCare Polyclinic',
-    url: 'https://ramacarepolyclinic.ae/',
-    image: `https://ramacarepolyclinic.ae${IMAGE.src}`,
-    telephone: '+971566597878',
-    priceRange: 'AED',
-    medicalSpecialty: ['Ayurveda', 'Physiotherapy'],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
-      addressCountry: 'AE',
-    },
-  };
-
-  const medicalConditionSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalCondition',
-    name: 'Arthritis',
-    possibleTreatment: [
-      { '@type': 'MedicalTherapy', name: 'Ayurveda' },
-      { '@type': 'MedicalTherapy', name: 'Physiotherapy' },
-    ],
-    signOrSymptom: SYMPTOMS,
-    riskFactor: RISK_FACTORS,
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Ayurveda vs Physiotherapy for Arthritis Dubai',
-    provider: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic' },
-    areaServed: { '@type': 'City', name: 'Dubai' },
-    availableChannel: { '@type': 'ServiceChannel', servicePhone: '+971566597878' },
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
-      { '@type': 'ListItem', position: 3, name: 'Ayurveda vs Physiotherapy for Arthritis Dubai' },
-    ],
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
-  const physicianSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Physician',
-    name: 'RamaCare Polyclinic Specialists',
-    medicalSpecialty: ['Ayurveda', 'Physiotherapy'],
-    worksFor: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic' },
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Ayurveda vs Physiotherapy for Arthritis Dubai",
+        "description": SEO.metaDescription,
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": `${SITE_URL}/`,
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Arthritis (Osteoarthritis & Rheumatoid Arthritis)"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services` },
+            { "@type": "ListItem", "position": 3, "name": "Ayurveda vs Physiotherapy for Arthritis", "item": CANONICAL_URL }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": `${SITE_URL}/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/`
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": FAQS.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      }
+    ]
   };
 
   return (
     <Layout>
       <Head>
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.metaDescription} />
-        <link rel="canonical" href={SEO.canonical} />
-        <meta property="og:title" content={SEO.title} />
-        <meta property="og:description" content={SEO.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={SEO.canonical} />
-        <meta property="og:image" content={`https://ramacarepolyclinic.ae${IMAGE.src}`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
+        <title key="title">{SEO.title}</title>
+        <meta name="description" content={SEO.metaDescription} key="description" />
+        <meta name="keywords" content={SEO.keywords} key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
+        <link rel="canonical" href={SEO.canonical} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={SEO.title} key="og:title" />
+        <meta property="og:description" content={SEO.metaDescription} key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={SEO.ogImage} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ayurveda vs Physiotherapy for Arthritis Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ayurveda vs Physiotherapy for Arthritis Dubai" key="twitter:title" />
+        <meta name="twitter:description" content="Comparing Ayurveda vs Physiotherapy for Arthritis in Dubai? Explore both approaches with RamaCare Polyclinic and book a personalized joint care assessment." key="twitter:description" />
+        <meta name="twitter:image" content={SEO.ogImage} key="twitter:image" />
+
+        {/* Unified JSON-LD @graph Schema */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">

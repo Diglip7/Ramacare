@@ -32,6 +32,20 @@ export default function HairRemovalPage() {
   <meta name="description" content="Get safe and effective Laser Hair Removal in Dubai at Rama Care Polyclinic. Reduce unwanted hair on the face and body with advanced laser technology and personalized treatment plans." key="description" />
   <meta name="keywords" content="Hair removal in Dubai, Laser hair removal Dubai, Permanent hair removal Dubai, Medical hair removal treatment, Facial hair removal Dubai, Body hair removal Dubai, Safe hair removal methods, Professional hair removal clinic, Skin-friendly hair removal Dubai" />
   
+  <meta property="og:title" content="Laser Hair Removal Dubai | Permanent Hair Reduction Treatment" />
+  <meta property="og:description" content="Get safe and effective Laser Hair Removal in Dubai at Rama Care Polyclinic. Reduce unwanted hair on the face and body with advanced laser technology and personalized treatment plans." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hair-removal-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-removal.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Laser Hair Removal in Dubai - RamaCare Polyclinic" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Laser Hair Removal Dubai | Permanent Hair Reduction Treatment" />
+  <meta name="twitter:description" content="Safe, DHA-supervised laser hair removal in Dubai using advanced technology for face and body, tailored to your skin and hair type." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-removal.jpg" />
+  
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -88,6 +102,58 @@ export default function HairRemovalPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/",
+          "name": "Laser Hair Removal Dubai | Permanent Hair Reduction Treatment",
+          "description": "Get safe and effective Laser Hair Removal in Dubai at Rama Care Polyclinic. Reduce unwanted hair on the face and body with advanced laser technology and personalized treatment plans.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@id": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/#condition"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/#reviewer"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Hair Removal", "item": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/" }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/#reviewer",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/hair-removal-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

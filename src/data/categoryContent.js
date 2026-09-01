@@ -2216,9 +2216,9 @@ export const categoryContent = {
   'general-physician': {
     hero: {
       badge: 'DHA-Licensed General Medicine',
-        titleLine1: 'Advanced General Physician ',
+        titleLine1: 'Advanced General Physician',
       titleHighlight: 'Treatment',
-      titleLine2:' in Jumeirah 1',
+      titleLine2: ' in Dubai',
       // title: 'Advanced General Physician Treatment –in Jumeirah 1',
       subtitle: 'General physicians in Jumeirah 1 offering comprehensive General Physician Treatment in Dubai, including accurate diagnosis, effective treatment for common and chronic conditions, preventive health checkups, and continuous primary care for all age groups.',
       description: 'Dubai\'s trusted general medicine practice offering comprehensive healthcare, preventive medicine, chronic disease management, and acute care with DHA-licensed physicians and personalized treatment plans.',
@@ -2226,10 +2226,10 @@ export const categoryContent = {
       backgroundImage: '/images/gp.jpg',
        backgroundAlt: 'General physician consulting a patient in a modern clinic, friendly interaction, clean medical environment, professional healthcare setting, realistic lighting, no text in image',
       stats: [
-         { number: '15+', label: 'Years Experience' },
+        { number: '15+', label: 'Years Experience' },
     { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+        { number: '98%', label: 'Success Rate' },
+        { number: '40+', label: 'Treatments' }
       ],
       features: [
         ' DHA-Licensed General Physicians',
@@ -2282,15 +2282,15 @@ export const categoryContent = {
     'We follow international medical protocols, strict hygiene standards, and ethical healthcare practices to deliver safe, effective, and compassionate care.'
       ],
      stats: [
-    { number: '1,200+', label: 'Patients Treated' },
-    { number: '98%', label: 'Patient Satisfaction' },
-    { number: '20+', label: 'Medical Services' }
+    { number: '2,500+', label: 'Patients Treated' },
+    { number: '98%', label: 'Success Rate' },
+    { number: '15+', label: 'Years Experience' }
      ],
      ctaText: 'Meet Our Physicians',
       image: '/images/gp2.jpg',
        imageAlt: 'General physician performing a routine health checkup using a stethoscope, calm clinical room, patient-focused care, realistic medical photography, no text',
        overlayCard: {
-    number: '1,200+',
+    number: '2,500+',
     smallText: 'Patients Treated',
     boldText: 'Trusted Primary Care'
   }
@@ -2629,8 +2629,8 @@ programs: {
       description: 'Experienced doctors dedicated to providing accurate diagnosis, compassionate care, and long-term health guidance.',
       stats: [
         { value: '1', label: 'Expert Physician' },
-        { value: '14+', label: 'Years of Experience' },
-        { value: '12,00+', label: ' Successful Consultations' },
+        { value: '15+', label: 'Years of Experience' },
+        { value: '2,500+', label: 'Successful Consultations' },
         { value: '4.9', label: 'Average Rating' }
       ],
       ctaSection: {
@@ -2654,7 +2654,7 @@ programs: {
         {
           icon: 'Shield',
           title: null,
-          description: 'ERegular medical consultations help prevent complications, reduce hospital visits, and maintain optimal health through timely intervention and lifestyle guidance.'
+          description: 'Regular medical consultations help prevent complications, reduce hospital visits, and maintain optimal health through timely intervention and lifestyle guidance.'
         },
         {
           icon: 'Heart',
@@ -2909,12 +2909,12 @@ programs: {
       description: 'Dubai\'s premier facial treatment centre offering advanced facials, PRP therapy, and rejuvenation treatments with DHA-licensed specialists and premium skincare products.',
       ctaText: 'Book Free Consultation',
        backgroundImage: '/images/facial-treat.jpg',
-       backgroundAlt: 'General physician consulting a patient in a modern clinic, friendly interaction, clean medical environment, professional healthcare setting, realistic lighting, no text in image',
+       backgroundAlt: 'DHA-licensed aesthetic specialist performing a premium facial treatment at RamaCare Polyclinic in Jumeirah 1, Dubai',
       stats: [
          { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
+    { number: '2,500+', label: 'Patients Treated' },
     { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+    { number: '12+', label: 'Premium Treatments' }
       ],
       features: [
         'DHA-Licensed Expert Doctors',
@@ -2968,7 +2968,7 @@ programs: {
       ],
       stats: [
         { number: '12+', label: 'Treatment Types' },
-        { number: '500+', label: ' Happy Clients' },
+        { number: '2,500+', label: 'Happy Clients' },
         { number: '98%', label: 'Satisfaction Rate' }
       ],
       ctaText: 'Meet Our Facial Department',
@@ -3063,7 +3063,7 @@ programs: {
           duration: '60 Minutes',
           badgeColor: 'orange',
           benefits: [
-            'GBoosts skin regeneration and collagen',
+            'Boosts skin regeneration and collagen',
             'Reduces fine lines and improves firmness',
             'Enhances overall skin health and glow',
           ],
@@ -3209,10 +3209,10 @@ programs: {
     },
     {
       id: 3,
-      number: '94%',
+      number: '98%',
       label1: 'Success Rate',
       label2: 'Patient Satisfaction',
-      target: 94
+      target: 98
     },
     {
       id: 4,

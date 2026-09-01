@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -63,14 +64,137 @@ const UltrasoundVsShockwavePage = () => {
     }
   };
 
+  const faqs = [
+    {
+      question: "Is Shockwave therapy better than Ultrasound?",
+      answer: "Neither is \"better\"—it depends on the stage of your injury. Shockwave is more powerful for \"restarting\" healing in chronic cases, while Ultrasound is superior for soothing acute inflammation and reducing swelling."
+    },
+    {
+      question: "Why is Shockwave therapy more expensive per session?",
+      answer: "Shockwave therapy uses more advanced technology that delivers powerful mechanical pulses deep into tissues. While it costs more per session, you typically need fewer treatments (3-6 sessions) compared to ultrasound (8-12 sessions), making the overall cost comparable."
+    },
+    {
+      question: "Does insurance cover both treatments in Dubai?",
+      answer: "Coverage varies by provider and plan. Both therapies may be covered when prescribed by a DHA-licensed physician for specific medical conditions. We recommend checking with your insurance provider, and our team can help with pre-authorization if needed."
+    }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Shockwave.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/',
+        name: 'Ultrasound vs. Shockwave Therapy Dubai | RamaCare Comparison Guide',
+        description: 'Confused between Ultrasound and Shockwave therapy? Learn the key differences in depth, intensity, and results to choose the right recovery path at RamaCare Jumeirah.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: [
+          { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound' },
+          { '@type': 'MedicalProcedure', name: 'Extracorporeal Shockwave Therapy (ESWT)' }
+        ],
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound vs Shockwave Therapy', item: 'https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
     <Layout>
       <Head>
         <title key="title">Ultrasound vs. Shockwave Therapy Dubai | RamaCare Comparison Guide</title>
         <meta name="description" content="Confused between Ultrasound and Shockwave therapy? Learn the key differences in depth, intensity, and results to choose the right recovery path at RamaCare Jumeirah." key="description" />
-        
+        <meta name="keywords" content="Ultrasound vs shockwave therapy Dubai, ESWT vs therapeutic ultrasound, plantar fasciitis treatment Jumeirah, chronic injury shockwave Dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Ultrasound vs. Shockwave Therapy Dubai | RamaCare Comparison Guide" key="og:title" />
+        <meta property="og:description" content="Confused between Ultrasound and Shockwave therapy? Learn the key differences in depth, intensity, and results to choose the right recovery path at RamaCare Jumeirah." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ultrasound-vs-shockwave-therapy-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Shockwave.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound vs Shockwave Therapy Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ultrasound vs. Shockwave Therapy Dubai | RamaCare Comparison Guide" key="twitter:title" />
+        <meta name="twitter:description" content="Confused between Ultrasound and Shockwave therapy? Learn the key differences in depth, intensity, and results to choose the right recovery path at RamaCare Jumeirah." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Shockwave.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Fixed Top Banner */}
@@ -114,6 +238,16 @@ const UltrasoundVsShockwavePage = () => {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-b from-secondary to-white pt-16 pb-24 overflow-hidden">
           <div className="container mx-auto px-4 md:px-8 max-w-[1440px]">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Ultrasound vs Shockwave Therapy</span>
+            </nav>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Left Column: Content */}
               <motion.div 
@@ -258,7 +392,7 @@ const UltrasoundVsShockwavePage = () => {
                       { feature: 'Best For', ultrasound: 'Acute injuries (Fresh sprains/swelling).', shockwave: 'Chronic injuries (Old, stubborn pain).' },
                       { feature: 'Depth of Reach', ultrasound: 'Up to 5cm (Muscle/Tendon).', shockwave: 'Up to 12cm (Deep Bone/Calcifications).' },
                       { feature: 'Typical Sessions', ultrasound: '8–12 sessions (2-3 times per week).', shockwave: '3–6 sessions (Once per week).' },
-                      { feature: 'Pain Level', ultrasound: 'Zero pain (Very relaxing).', shockwave: 'Mildly uncomfortable but tolerable.' }
+                      { feature: 'Pain Level', ultrasound: 'Minimal to no discomfort (Very relaxing).', shockwave: 'Mildly uncomfortable but tolerable.' }
                     ].map((row, idx) => (
                       <tr 
                         key={idx} 
@@ -470,28 +604,15 @@ const UltrasoundVsShockwavePage = () => {
               {/* Outer beige container */}
               <div className="bg-[#F5F1EA] rounded-2xl p-6 md:p-8 shadow-lg mb-8">
                 <div className="space-y-4">
-                  {[
-                    {
-                      q: "Is Shockwave therapy better than Ultrasound?",
-                      a: "Neither is \"better\"—it depends on the stage of your injury. Shockwave is more powerful for \"restarting\" healing in chronic cases, while Ultrasound is superior for soothing acute inflammation and reducing swelling."
-                    },
-                    {
-                      q: "Why is Shockwave therapy more expensive per session?",
-                      a: "Shockwave therapy uses more advanced technology that delivers powerful mechanical pulses deep into tissues. While it costs more per session, you typically need fewer treatments (3-6 sessions) compared to ultrasound (8-12 sessions), making the overall cost comparable."
-                    },
-                    {
-                      q: "Does insurance cover both treatments in Dubai?",
-                      a: "Coverage varies by provider and plan. Both therapies may be covered when prescribed by a DHA-licensed physician for specific medical conditions. We recommend checking with your insurance provider, and our team can help with pre-authorization if needed."
-                    }
-                  ].map((faq, index) => (
+                  {faqs.map((faq, index) => (
                     <details key={index} className="group bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300">
                       <summary className="flex justify-between items-center text-left px-6 py-5 cursor-pointer list-none focus:outline-none hover:bg-gray-50 transition-colors">
-                        <span className="text-[17px] md:text-[18px] font-semibold text-[#1A1A1A] pr-8">{faq.q}</span>
+                        <span className="text-[17px] md:text-[18px] font-semibold text-[#1A1A1A] pr-8">{faq.question}</span>
                         <ChevronDown className="w-5 h-5 text-[#1F5E4B] flex-shrink-0 group-open:rotate-180 transition-transform duration-300" />
                       </summary>
                       <div className="px-6 pb-5 pt-2">
                         <p className="text-[15px] md:text-[16px] text-[#5F5F5F] leading-relaxed">
-                          {faq.a}
+                          {faq.answer}
                         </p>
                       </div>
                     </details>

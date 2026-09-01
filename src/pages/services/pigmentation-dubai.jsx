@@ -19,7 +19,6 @@ import { getSubcategoryContent } from '../../data/subcategoryContent';
 export default function PigmentationPage() {
   const categoryName = 'Aesthetic Dermatology';
   const subcategoryName = 'Pigmentation Treatment';
-
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'skin-treatment/pigmentation');
 
@@ -29,63 +28,82 @@ export default function PigmentationPage() {
   <title key="title">Pigmentation Treatment in Dubai for Even Skin Tone</title>
   <meta name="description" content="Pigmentation treatment in Dubai helps reduce dark spots, melasma, and uneven skin tone through safe, doctor-guided dermatology care." key="description" />
   <meta name="keywords" content="Pigmentation treatment in Dubai, Dark spots treatment in Dubai, Pigmentation Dubai, Uneven skin tone treatment, Skin discoloration Dubai, Hyperpigmentation treatment, Dermatology treatment Dubai, Skin brightening therapy Dubai" />
-  
-   <script
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Pigmentation Treatment in Dubai for Even Skin Tone" />
+  <meta property="og:description" content="Pigmentation treatment in Dubai helps reduce dark spots, melasma, and uneven skin tone through safe, doctor-guided dermatology care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/pigmentation-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pig.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Pigmentation Treatment in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pigmentation Treatment in Dubai for Even Skin Tone" />
+  <meta name="twitter:description" content="Reduce dark spots, melasma, and uneven skin tone with safe, doctor-guided pigmentation treatment at RamaCare Polyclinic Dubai." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pig.jpg" />
+
+  <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#condition",
-          "name": "Facial Pigmentation and Uneven Skin Tone",
-          "alternateName": "Melasma, Hyperpigmentation & Dark Spots",
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#webpage",
           "url": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/",
-          "description": "Facial pigmentation and uneven skin tone include conditions such as melasma, post-inflammatory hyperpigmentation, sun-induced dark spots, and other discoloration that can affect the face’s appearance and texture.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Pigmentation Management Therapy",
-            "description": "Comprehensive pigmentation management therapy involving clinical assessment, targeted treatments such as chemical peels, laser therapy, topical agents, and customized skincare protocols designed to reduce pigmentation and even skin tone."
+          "name": "Pigmentation Treatment in Dubai for Even Skin Tone",
+          "description": "Pigmentation treatment in Dubai helps reduce dark spots, melasma, and uneven skin tone through safe, doctor-guided dermatology care.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Hyperpigmentation / Melasma / Uneven Skin Tone"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#reviewer"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Pigmentation Treatment", "item": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/" }
+            ]
           }
         },
         {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#procedure",
-          "name": "Pigmentation Treatment in Dubai",
-          "alternateName": "Pigmentation Reduction & Tone Correction",
-          "url": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/",
-          "description": "Pigmentation treatment in Dubai at RamaCare Polyclinic offers a personalized clinical approach to evaluating and managing facial pigmentation concerns, using advanced aesthetic techniques to reduce discoloration and improve overall skin tone.",
-          "procedureType": "Medical and aesthetic dermatology procedure",
-          "howPerformed": "A detailed clinical assessment identifies the pigmentation type and severity. Treatments may include chemical peels, topical prescription or cosmeceutical agents, and resurfacing procedures tailored to individual needs.",
-          "preparation": "Patients should avoid excessive sun exposure, tanning, and certain skincare products (like retinoids or exfoliants) before treatment. A full medical and skincare history is reviewed prior to therapy.",
-          "followup": "Follow-up appointments help monitor skin response, adjust treatment plans, and ensure long-term management of pigmentation, including maintenance and skincare guidance.",
-          "indication": [
-            "Melasma",
-            "Sun-induced hyperpigmentation",
-            "Post-inflammatory dark spots",
-            "Uneven skin tone",
-            "Freckles and age spots"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Dermatology & Aesthetic Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#reviewer",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/pigmentation-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

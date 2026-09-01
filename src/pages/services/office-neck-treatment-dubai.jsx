@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -35,6 +36,63 @@ const OfficeNeckTreatmentPage = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "MedicalClinic",
+        "@id": "https://ramacarepolyclinic.ae/#clinic",
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "image": "https://ramacarepolyclinic.ae/images/office.jpg",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1, Dubai",
+          "addressCountry": "AE"
+        },
+        "medicalSpecialty": "Physiotherapy",
+        "hasCredential": "DHA Licensed"
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare",
+        "description": "Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare's ultrasound therapy fixes 'Office Neck' and postural strain fast.",
+        "inLanguage": "en-AE",
+        "lastReviewed": "2026-08-29",
+        "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Cervical Myofascial Pain / 'Office Neck'"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jeena Mathew",
+          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1, Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Jeena Mathew",
+        "medicalSpecialty": "Physiotherapy",
+        "honorificSuffix": "BPT, MPT",
+        "hasCredential": "DHA Licensed Physiotherapist",
+        "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" },
+        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+      },
+      {
         "@type": "BreadcrumbList",
         "@id": `${CANONICAL_URL}#breadcrumb`,
         "itemListElement": [
@@ -47,67 +105,22 @@ const OfficeNeckTreatmentPage = () => {
           {
             "@type": "ListItem",
             "position": 2,
+            "name": "Services",
+            "item": "https://ramacarepolyclinic.ae/services/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
             "name": "Physiotherapy",
             "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
           },
           {
             "@type": "ListItem",
-            "position": 3,
+            "position": 4,
             "name": "'Office Neck' Treatment",
             "item": CANONICAL_URL
           }
         ]
-      },
-      {
-        "@type": "MedicalWebPage",
-        "@id": `${CANONICAL_URL}#webpage`,
-        "url": CANONICAL_URL,
-        "name": "'Office Neck' Treatment Dubai | Ultrasound Therapy at RamaCare",
-        "description": "Are you a professional in DIFC or Business Bay suffering from neck stiffness? Discover how RamaCare's ultrasound therapy fixes 'Office Neck' and postural strain fast.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Neck Pain"
-        },
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Jeena Mathew",
-          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "'Office Neck' Treatment (Ultrasound Therapy)",
-        "alternateName": "Postural Strain Treatment",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Ultrasound therapy to treat cervical myofascial pain and postural strain caused by prolonged desk work, commonly known as 'Office Neck' or 'Tech Neck,' for busy professionals in Dubai.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Cervical Spine",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "telephone": "+971 56 659 7878",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
       },
       {
         "@type": "FAQPage",
@@ -214,11 +227,15 @@ const OfficeNeckTreatmentPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
             <li>
-              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
             </li>
             <li className="flex items-center gap-1.5">
               <span className="text-gray-400">/</span>
-              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-gray-400">/</span>
+              <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
             </li>
             <li className="flex items-center gap-1.5">
               <span className="text-gray-400">/</span>
@@ -443,10 +460,10 @@ const OfficeNeckTreatmentPage = () => {
                   </thead>
                   <tbody className="divide-y divide-gray-100">
                     {[
-                      { symptom: 'Tension Headaches', solution: 'Sub-occipital thermal therapy', result: 'Reduced headache frequency within 2 sessions.' },
-                      { symptom: 'Shoulder Knotting', solution: 'Trigger point mechanical vibration', result: 'Immediate increase in range of motion.' },
+                      { symptom: 'Tension Headaches', solution: 'Sub-occipital thermal therapy', result: 'Designed to help reduce headache frequency.' },
+                      { symptom: 'Shoulder Knotting', solution: 'Trigger point mechanical vibration', result: 'Aims to increase range of motion.' },
                       { symptom: 'Radiating Arm Pain', solution: 'Nerve-pathway inflammation reduction', result: 'Easing of "pins and needles" sensations.' },
-                      { symptom: 'Stiff Upper Back', solution: 'Deep-tissue collagen stimulation', result: 'Improved posture and reduced "slumping."' },
+                      { symptom: 'Stiff Upper Back', solution: 'Deep-tissue collagen stimulation', result: 'Improved posture and reduced slumping.' },
                     ].map((row, idx) => (
                       <tr key={idx} className="hover:bg-gray-50/50 transition-colors">
                         <td className="px-8 py-6 font-bold text-[#1A1A1A]">{row.symptom}</td>
@@ -545,20 +562,7 @@ const OfficeNeckTreatmentPage = () => {
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "Can ultrasound therapy help with my tension headaches?",
-                  a: "Absolutely. Most tension headaches in office workers originate from the Cervical Spine (the neck). By relaxing the neck muscles with ultrasound, we reduce the tension pulling on the base of your skull."
-                },
-                {
-                  q: "Is it safe to have ultrasound on my neck?",
-                  a: "Yes. At RamaCare, we use low-intensity medical settings specifically calibrated for the delicate structures of the neck. It is a 100% non-invasive alternative to neck cracking or spinal adjustments."
-                },
-                {
-                  q: "How many sessions do I need for Tech Neck?",
-                  a: "For acute stiffness, 3 to 5 sessions are often enough. For chronic postural issues developed over years, we suggest a 10-session package combined with postural retraining."
-                }
-              ].map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <details key={index} className="group bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300">
                   <summary className="flex justify-between items-center text-left px-8 py-6 cursor-pointer list-none focus:outline-none hover:bg-[#F5F1E8]/50 transition-colors">
                     <span className="text-lg md:text-xl font-semibold text-[#1A1A1A] pr-8">{faq.q}</span>

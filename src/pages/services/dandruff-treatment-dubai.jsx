@@ -3,6 +3,7 @@ import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -428,6 +429,22 @@ export default function DandruffTreatmentDubaiPage() {
           key="description"
         />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Dandruff Treatment Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="Struggling with flaky, itchy scalp? Get expert Dandruff Treatment Dubai at RamaCare Polyclinic. DHA-licensed dermatologists. Book your consultation today." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/dandruff-treatment-dubai/" key="og:url" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/dandruff-treatment-dubai-consultation.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Dandruff Treatment Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:description" content="Struggling with flaky, itchy scalp? Get expert Dandruff Treatment Dubai at RamaCare Polyclinic. DHA-licensed dermatologists. Book your consultation today." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/dandruff-treatment-dubai-consultation.jpg" key="twitter:image" />
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fullPageSchema) }} />
       </Head>
 
@@ -437,6 +454,15 @@ export default function DandruffTreatmentDubaiPage() {
       <section className="relative bg-[#F5F1EA]">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.1fr_0.9fr]">
           <div className="px-4 sm:px-6 lg:px-8 py-16 lg:py-28 flex flex-col justify-center">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#5F5F5F]">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span className="text-[#5F5F5F]/40">/</span>
+              <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Dermatology</Link>
+              <span className="text-[#5F5F5F]/40">/</span>
+              <span aria-current="page" className="text-[#1F5E4B]">Dandruff Treatment Dubai</span>
+            </nav>
+
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -496,10 +522,12 @@ export default function DandruffTreatmentDubaiPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="relative min-h-[340px] lg:min-h-full">
-            <img
+            <Image
               src={content.hero.image}
               alt="Dermatologist examining scalp for dandruff treatment Dubai consultation"
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
             />
           </motion.div>
         </div>

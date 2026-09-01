@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
@@ -175,17 +176,121 @@ const EximiaSessionsNeededPage = () => {
     }
   };
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/session.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Aesthetic Dermatology',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/',
+        name: 'How Many Sessions of Eximia Needed? | Eximia Treatment Protocol Dubai',
+        description: 'Discover how many sessions of Eximia you need for visible results. Learn about the Eximia treatment protocol in Dubai with instant inch loss technology.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Eximia Body Contouring' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Sonita Sinaga',
+          jobTitle: 'Licensed & Certified Aesthetic Therapist',
+          url: 'https://ramacarepolyclinic.ae/doctors/sonita-sinaga/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Aesthetic Dermatology', item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/' },
+          { '@type': 'ListItem', position: 3, name: 'Eximia Body Contouring', item: 'https://ramacarepolyclinic.ae/services/eximia-body-contouring-dubai/' },
+          { '@type': 'ListItem', position: 4, name: 'How Many Eximia Sessions Needed?', item: 'https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/#faq',
+        mainEntity: faqData.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">How Many Sessions of Eximia Needed? | Eximia Treatment Protocol Dubai</title>
         <meta name="description" content="Discover how many sessions of Eximia you need for visible results. Learn about the Eximia treatment protocol in Dubai with instant inch loss technology." key="description" />
-        
+        <meta name="keywords" content="How many Eximia sessions needed, Eximia treatment protocol Dubai, Eximia sessions frequency, Eximia body contouring sessions, Eximia results timeline, Eximia maintenance sessions Dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="How Many Sessions of Eximia Needed? | Eximia Treatment Protocol Dubai" key="og:title" />
+        <meta property="og:description" content="Discover how many sessions of Eximia you need for visible results. Learn about the Eximia treatment protocol in Dubai with instant inch loss technology." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/how-many-eximia-sessions-needed-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/session.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Eximia Body Contouring Sessions Needed - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="How Many Sessions of Eximia Needed? | Eximia Treatment Protocol Dubai" key="twitter:title" />
+        <meta name="twitter:description" content="Discover how many sessions of Eximia you need for visible results, with a personalized treatment protocol in Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/session.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#F5F1EA] to-[#E9E2D6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/eximia-body-contouring-dubai/" className="hover:text-[#1F5E4B] transition-colors">Eximia Body Contouring</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">How Many Eximia Sessions Needed?</span>
+          </nav>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-tight">

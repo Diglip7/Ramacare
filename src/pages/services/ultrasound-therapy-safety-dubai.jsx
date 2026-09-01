@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { ShieldCheck, Award, Clock, Waves, Info, Heart, Thermometer, AlertTriangle, Activity, Settings, ChevronDown, Phone, MapPin } from 'lucide-react';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
@@ -124,13 +125,118 @@ const UltrasoundSafetyPage = () => {
     }
   ];
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Safety.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/',
+        name: 'Ultrasound Therapy Safety & Side Effects Dubai | RamaCare Guide',
+        description: 'Is therapeutic ultrasound safe? Explore the side effects, risks, and medical contraindications for ultrasound therapy at RamaCare Polyclinic, Jumeirah 1.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound Therapy Safety', item: 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
         <title key="title">Ultrasound Therapy Safety & Side Effects Dubai | RamaCare Guide</title>
         <meta name="description" content="Is therapeutic ultrasound safe? Explore the side effects, risks, and medical contraindications for ultrasound therapy at RamaCare Polyclinic, Jumeirah 1." key="description" />
-        
+        <meta name="keywords" content="Ultrasound therapy safety Dubai, therapeutic ultrasound side effects, ultrasound contraindications, non-invasive physiotherapy safety" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Ultrasound Therapy Safety & Side Effects Dubai | RamaCare Guide" key="og:title" />
+        <meta property="og:description" content="Is therapeutic ultrasound safe? Explore the side effects, risks, and medical contraindications for ultrasound therapy at RamaCare Polyclinic, Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ultrasound-therapy-safety-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Safety.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound Therapy Safety Guide - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ultrasound Therapy Safety & Side Effects Dubai | RamaCare Guide" key="twitter:title" />
+        <meta name="twitter:description" content="Is therapeutic ultrasound safe? Explore the side effects, risks, and medical contraindications for ultrasound therapy at RamaCare Polyclinic, Jumeirah 1." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Safety.jpg" key="twitter:image" />
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
@@ -138,6 +244,16 @@ const UltrasoundSafetyPage = () => {
         {/* Hero Section */}
         <section className="bg-white py-20 md:py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+              <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-[#1F5E4B]">Ultrasound Therapy Safety</span>
+            </nav>
             <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Column - Text Content */}
               <div className="space-y-8 order-1 md:order-1">
@@ -152,7 +268,7 @@ const UltrasoundSafetyPage = () => {
                     A 100% Non-Invasive Safety Profile
                   </h3>
                   <p className="text-[#5F5F5F] leading-relaxed">
-                    Therapeutic ultrasound has been used in clinical rehabilitation for over 80 years. It is a non-ionizing technology (unlike X-rays), meaning it does not use radiation. When administered by a DHA-licensed professional at RamaCare, the treatment is exceptionally safe and generally free from side effects.
+                    Therapeutic ultrasound has been used in clinical rehabilitation for over 80 years. It is a non-ionizing technology (unlike X-rays), meaning it does not use radiation. When administered by a DHA-licensed professional at RamaCare following proper medical screening, the treatment is a well-established, non-invasive therapy with a strong clinical safety profile.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">

@@ -30,19 +30,19 @@ export default function ThyroidDysfunctionSolutionsPage() {
         <meta name="keywords" content="Thyroid dysfunction solutions in Dubai, Thyroid treatment Dubai, Hypothyroidism treatment in Dubai, Hyperthyroidism treatment Dubai, Thyroid disorder management in Dubai, Thyroid specialist Dubai, Thyroid diagnosis Dubai, Hormonal imbalance treatment in Dubai, Endocrinology clinic Dubai" />
       </Head>
 
-      <TreatmentHero 
+      <TreatmentHero
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
       <QuickNavigation />
-    
-      <TreatmentOverview 
+
+      <TreatmentOverview
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
       <HealingJourney content={content?.healingJourney} />
-      <TreatmentBenefits 
+      <TreatmentBenefits
         content={content?.benefits}
       />
       <PatientTestimonials content={content?.testimonials} />

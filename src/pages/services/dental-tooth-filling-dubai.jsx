@@ -20,7 +20,7 @@ const meta = {
   title: "Dental Tooth Filling in Dubai | RamaCare Polyclinic",
   description:
     "Get Dental Tooth Filling in Dubai at RamaCare Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation.",
-  url: "/dental-tooth-filling-dubai",
+  url: "/services/dental-tooth-filling-dubai/",
 };
 
 /* ------------------------------------------------------------------ */
@@ -3417,6 +3417,26 @@ export default function DentalToothFillingDubai() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <link rel="canonical" href={`https://ramacarepolyclinic.ae${meta.url}`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Dental Tooth Filling in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="Get Dental Tooth Filling in Dubai at RamaCare Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation." key="og:description" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content={`https://ramacarepolyclinic.ae${meta.url}`} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Dental%20Tooth%20Filling%20in%20Dubai%20consultation.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Dental Tooth Filling in Dubai consultation at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Dental Tooth Filling in Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:description" content="Professional cavity assessment and tooth-colored fillings in Dubai. Book a consultation with RamaCare Polyclinic, Jumeirah 1." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Dental%20Tooth%20Filling%20in%20Dubai%20consultation.jpg" key="twitter:image" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link

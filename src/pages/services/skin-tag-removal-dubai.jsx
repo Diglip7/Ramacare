@@ -42,7 +42,7 @@ const meta = {
   title: "Skin Tag Removal in Dubai | RamaCare Polyclinic",
   description:
     "Explore Skin Tag Removal in Dubai at RamaCare Polyclinic. Get a professional skin assessment and personalised removal options. Book your consultation today.",
-  url: "/skin-tag-removal-dubai",
+  url: "/skin-tag-removal-dubai/",
 };
 
 /* JSON-LD SCHEMAS FOR SEO */
@@ -550,7 +550,7 @@ const internalLinksSkinTag = [
     prefix: "Warts can sometimes be mistaken for skin tags — read about ",
     linkText: "wart removal in Dubai",
     suffix: " for comparison.",
-    url: "/services/nail-fungus-dubai",
+    url: "/services/skin-diseases-treatment/",
   },
   {
     prefix: "Interested in other non-surgical options? Explore ",
@@ -1804,6 +1804,14 @@ export default function SkinTagRemovalDubai() {
         <meta property="og:url" content={`https://ramacarepolyclinic.ae/services${meta.url}`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/skin-tag-removal-consultation-hero.jpg" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/skin-tag-removal-consultation-hero.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -1835,6 +1843,13 @@ export default function SkinTagRemovalDubai() {
         <WhyRamaCareAndJourney />
         <FAQsSkinTag />
         <InternalLinksAndFinalCtaSkinTag />
+        {/* Medical Disclaimer Block */}
+        <div className="mx-auto max-w-4xl px-4 py-8">
+          <div className="rounded-2xl bg-[#F5F8F6] p-6 border-l-4 border-[#1F5E4B] text-xs leading-relaxed text-[#5F5F5F]">
+            <strong className="text-[#0F3B2E] font-bold block mb-1">Medical Disclaimer:</strong>
+            This content is for general educational purposes and does not replace professional medical advice, diagnosis, or treatment. Not every skin growth is a skin tag — always seek a clinical assessment for new, changing, or uncertain lesions rather than self-diagnosing or attempting home removal.
+          </div>
+        </div>
         {/* Content Reviewer Badge */}
         <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/skin-tag-removal-dubai/" />
       </main>

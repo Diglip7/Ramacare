@@ -4,7 +4,31 @@ import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import BeginYourHealingJourneySection from '../../../components/BeginYourHealingJourneySection';
 
+const faqData = [
+  {
+    question: "Is Eximia effective for all cellulite grades?",
+    answer: "Yes, Eximia HR77 Platinum is designed to address Grades 1 through 3 cellulite by combining vacuum mobilization, laserporation, and radiofrequency to release fibrous bands, reduce localized fat, and tighten overlying skin."
+  },
+  {
+    question: "How many sessions are needed to see results?",
+    answer: "Most patients notice initial improvements in skin smoothness within 2–3 sessions. A structured series of 6–10 sessions spaced several days apart is typically recommended for comprehensive and long-lasting cellulite reduction."
+  },
+  {
+    question: "Does Eximia hurt?",
+    answer: "No, Eximia is a non-invasive, pain-free treatment. Most patients describe the sensation as a deep, warm, soothing massage with gentle suction and no downtime required."
+  },
+  {
+    question: "Is cellulite treatment permanent?",
+    answer: "Eximia delivers long-lasting improvements by softening fibrous septae, reducing fat cell volume, and stimulating collagen production. Maintaining results is supported by a healthy lifestyle, good hydration, and periodic maintenance sessions."
+  },
+  {
+    question: "Can Eximia be combined with body contouring treatments?",
+    answer: "Yes, Eximia can be seamlessly combined with other non-invasive body contouring and skin-tightening protocols, tailored to your personal aesthetic goals during your initial consultation."
+  }
+];
+
 const EximiaCellulitePage = () => {
+  const [activeFaq, setActiveFaq] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleBookAppointment = () => {
@@ -13,6 +37,65 @@ const EximiaCellulitePage = () => {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/eximia-cellulite-treatment-dubai/";
+  const PAGE_TITLE = "Eximia Cellulite Treatment in Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = "Eximia cellulite treatment Dubai offers the ultimate solution for smooth skin. Get rid of orange peel skin with advanced non-invasive technology at RamaCare Polyclinic.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/cellulite.jpg";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Eximia Body Contouring", "item": "https://ramacarepolyclinic.ae/services/eximia-body-contouring-dubai/" },
+          { "@type": "ListItem", "position": 4, "name": "Eximia Cellulite Treatment", "item": CANONICAL_URL }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Eximia Cellulite Treatment",
+        "description": "Non-invasive cellulite reduction using Eximia HR77 Platinum's Endoradiomag technology to address fibrous septae, water retention, fat hypertrophy, and skin laxity, delivered by DHA-licensed specialists in Dubai.",
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        "areaServed": { "@type": "City", "name": "Dubai" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqData.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
   };
 
   return (
@@ -27,10 +110,36 @@ const EximiaCellulitePage = () => {
         }
       `}</style>
       <Head>
-        <title key="title">Eximia Cellulite Treatment Dubai | Best Cellulite Removal Clinic</title>
-        <meta name="description" content="Eximia cellulite treatment Dubai offers the ultimate solution for smooth skin. Get rid of orange peel skin with advanced non-invasive technology at RamaCare Polyclinic." key="description" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="keywords" content="Eximia cellulite treatment Dubai, best cellulite removal Dubai, cellulite treatment Dubai, non-surgical cellulite reduction, orange peel skin treatment Dubai, Eximia HR77 Platinum Dubai, smooth skin treatment Dubai, professional cellulite therapy" />
-        
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Eximia Cellulite Treatment Dubai | Best Cellulite Removal Clinic" key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Eximia Cellulite Treatment Dubai - Smooth Skin Solution" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Eximia Cellulite Treatment Dubai | Best Cellulite Removal Clinic" key="twitter:title" />
+        <meta name="twitter:description" content="Get rid of orange peel skin with advanced non-invasive technology at RamaCare Polyclinic." key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       {/* Hero Section */}
@@ -366,6 +475,46 @@ const EximiaCellulitePage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-[#F5F1EA]">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-[#5F5F5F] max-w-2xl mx-auto">
+              Everything you need to know about Eximia cellulite reduction at RamaCare Polyclinic.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <button
+                  className="w-full px-6 py-5 flex items-center justify-between text-left cursor-pointer"
+                  onClick={() => setActiveFaq(activeFaq === index ? null : index)}
+                >
+                  <span className="text-lg font-semibold text-[#1A1A1A] pr-4">{faq.question}</span>
+                  <svg
+                    className={`w-5 h-5 text-[#1F5E4B] flex-shrink-0 transition-transform duration-300 ${activeFaq === index ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeFaq === index && (
+                  <div className="px-6 pb-5">
+                    <p className="text-[#5F5F5F] leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

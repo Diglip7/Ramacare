@@ -765,7 +765,7 @@ export const DOCTORS = {
     id: 6,
     name: 'Dr. Sahar Zomorrodi',
     firstName: 'Dr. Sahar',
-    image: '/images/Sahar.png',
+    image: '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png',
     qualifications: 'DHA-Licensed General Practitioner | Diploma from American Aesthetic Academy',
     rating: 5.0,
     specialization: 'General Practice & Aesthetic Medicine',

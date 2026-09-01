@@ -210,11 +210,28 @@ function buildSchema() {
   const medicalWebPage = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    url: SITE_URL + PAGE_PATH,
+    url: 'https://ramacarepolyclinic.ae/services/prp-vs-mesotherapy-hair-loss-dubai/',
     name: 'PRP vs Mesotherapy for Hair Loss Dubai',
     description: "Weighing PRP vs Mesotherapy for Hair Loss Dubai? Compare benefits, results, recovery & costs with RamaCare Polyclinic's expert guide.",
     medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
     about: [{ '@type': 'MedicalTherapy', name: 'PRP' }, { '@type': 'MedicalTherapy', name: 'Mesotherapy' }],
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Dr. Sahar Zomorrodi',
+      jobTitle: 'General Practitioner & Aesthetic Specialist',
+      url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+    },
+    publisher: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1, Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const article = {
@@ -231,10 +248,11 @@ function buildSchema() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Aesthetic Dermatology', item: SITE_URL + '/services/aesthetic-dermatology-dubai' },
-      { '@type': 'ListItem', position: 3, name: 'Hair Loss Treatment', item: SITE_URL + '/services/hair-loss-dubai' },
-      { '@type': 'ListItem', position: 4, name: 'PRP vs Mesotherapy', item: SITE_URL + PAGE_PATH },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+      { '@type': 'ListItem', position: 3, name: 'Aesthetic Dermatology', item: 'https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/' },
+      { '@type': 'ListItem', position: 4, name: 'Hair Loss Treatment', item: 'https://ramacarepolyclinic.ae/services/hair-loss-dubai/' },
+      { '@type': 'ListItem', position: 5, name: 'PRP vs Mesotherapy', item: 'https://ramacarepolyclinic.ae/services/prp-vs-mesotherapy-hair-loss-dubai/' },
     ],
   };
 
@@ -286,17 +304,40 @@ export default function PrpVsMesotherapyPage() {
           content="Weighing PRP vs Mesotherapy for Hair Loss Dubai? Compare benefits, results, recovery & costs with RamaCare Polyclinic's expert guide. Book a consultation today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="PRP vs Mesotherapy for Hair Loss Dubai | RamaCare" />
+        <meta
+          name="keywords"
+          content="PRP vs Mesotherapy for Hair Loss Dubai, PRP hair treatment Dubai, Hair mesotherapy Dubai, Hair loss treatment Dubai, PRP vs mesotherapy cost Dubai, Non surgical hair loss treatment"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-vs-mesotherapy-hair-loss-dubai/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="PRP vs Mesotherapy for Hair Loss Dubai | RamaCare" key="og:title" />
         <meta
           property="og:description"
           content="Weighing PRP vs Mesotherapy for Hair Loss Dubai? Compare benefits, results, recovery & costs with RamaCare Polyclinic's expert guide."
+          key="og:description"
         />
-        <meta property="og:url" content={SITE_URL + PAGE_PATH} />
-        <meta property="og:image" content={SITE_URL + '/images/hair-consultation-ramacare-prp-mesotherapy.jpg'} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PRP vs Mesotherapy for Hair Loss Dubai | RamaCare" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/prp-vs-mesotherapy-hair-loss-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp-mesotherapy.jpg" key="og:image" />
+        <meta property="og:image:alt" content="Hair consultation for PRP vs Mesotherapy for Hair Loss Dubai at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="PRP vs Mesotherapy for Hair Loss Dubai | RamaCare" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Weighing PRP vs Mesotherapy for Hair Loss Dubai? Compare benefits, results, recovery & costs with RamaCare Polyclinic's expert guide."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-consultation-ramacare-prp-mesotherapy.jpg" key="twitter:image" />
+
         {schemaBlocks.map((block, i) => (
           <script key={`schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }} />
         ))}
@@ -304,8 +345,10 @@ export default function PrpVsMesotherapyPage() {
 
       {/* ============ HERO ============ */}
       <section className="max-w-7xl mx-auto px-6 pt-8 pb-4">
-        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5">
+        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5 flex-wrap">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span>/</span>
+          <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span>/</span>
           <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
           <span>/</span>

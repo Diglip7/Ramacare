@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
    brief. Includes all detailed copy as requested.
   ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/polyclinic-near-jbr';
+const PAGE_PATH = '/services/polyclinic-near-jbr/';
 
 const whyChoose = [
   { 
@@ -303,18 +303,97 @@ export default function PolyclinicNearJbrPage() {
           content="Looking for a trusted polyclinic near JBR? RamaCare Polyclinic in Jumeirah 1 offers DHA-licensed multi-specialty care with same-day appointments. Book today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Polyclinic Near JBR | Trusted Multi-Specialty Healthcare at RamaCare Polyclinic" />
+        <meta
+          name="keywords"
+          content="Polyclinic near JBR, Clinic near Jumeirah Beach Residence, Healthcare near Dubai Marina, Doctor near JBR, Multi-specialty clinic Dubai Marina, DHA licensed clinic near JBR, Same-day appointment clinic Dubai, Family clinic near JBR"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Polyclinic Near JBR | Trusted Multi-Specialty Healthcare at RamaCare Polyclinic" key="og:title" />
         <meta
           property="og:description"
           content="Looking for a trusted polyclinic near JBR? RamaCare Polyclinic in Jumeirah 1 offers DHA-licensed multi-specialty care with same-day appointments."
+          key="og:description"
         />
-        <meta property="og:url" content={SITE_URL + PAGE_PATH} />
-        <meta name="twitter:card" content="summary_large_image" />
-        {schemaBlocks.map((block, i) => (
-          <script key={`schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }} />
-        ))}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dubai-clinic.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Polyclinic Near JBR | Trusted Multi-Specialty Healthcare at RamaCare Polyclinic" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Looking for a trusted polyclinic near JBR? RamaCare Polyclinic in Jumeirah 1 offers DHA-licensed multi-specialty care with same-day appointments."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ramacare-polyclinic-dubai-clinic.jpg" key="twitter:image" />
+
+        {/* Structured JSON-LD Schema (@graph: MedicalClinic, BreadcrumbList, FAQPage) */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/#clinic',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/',
+                  telephone: '+971566597878',
+                  priceRange: '$$',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+                    addressLocality: 'Jumeirah 1',
+                    addressRegion: 'Dubai',
+                    addressCountry: 'AE',
+                  },
+                  medicalSpecialty: ['GeneralPractice', 'Physiotherapy', 'Dermatology', 'Dentistry', 'Ayurveda'],
+                  areaServed: areasServed.map((a) => ({ '@type': 'Place', name: a })),
+                  openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                    opens: '10:00',
+                    closes: '22:00',
+                  },
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/#breadcrumb',
+                  itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+                    {
+                      '@type': 'ListItem',
+                      position: 3,
+                      name: 'Polyclinic Near JBR',
+                      item: 'https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/',
+                    },
+                  ],
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/polyclinic-near-jbr/#faq',
+                  mainEntity: faqs.map((f) => ({
+                    '@type': 'Question',
+                    name: f.q,
+                    acceptedAnswer: { '@type': 'Answer', text: f.a },
+                  })),
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased pb-20 overflow-x-hidden">
@@ -342,13 +421,13 @@ export default function PolyclinicNearJbrPage() {
                 <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-semibold text-[#5F5F5F]">
                   <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
                   <span aria-hidden="true" className="text-gray-300">/</span>
-                  <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+                  <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
                   <span aria-hidden="true" className="text-gray-300">/</span>
                   <span aria-current="page" className="text-[#1F5E4B]">Polyclinic Near JBR</span>
                 </nav>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] leading-tight mb-6 tracking-tight">
-                  Polyclinic Near JBR 
+                  Polyclinic Near JBR — 
                   <span className="block mt-2 text-[#1F5E4B] font-semibold text-xl sm:text-2xl lg:text-3xl">
                     Trusted Multi-Specialty Healthcare at RamaCare Polyclinic
                   </span>

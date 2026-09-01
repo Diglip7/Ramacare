@@ -184,6 +184,64 @@ export default function ClinicInBusinessBayPage() {
           key="description"
         />
         <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Clinic in Business Bay | RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:title" />
+        <meta property="og:description" content="Searching for a clinic in Business Bay? RamaCare Polyclinic in Jumeirah 1 offers multidisciplinary care for nearby residents. Book your consultation today." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} key="og:url" />
+        <meta property="og:image" content={`${SITE_URL}/images/ramacare-polyclinic-jumeirah-1-dubai.jpg`} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="RamaCare Polyclinic reception in Jumeirah 1, Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Clinic in Business Bay | RamaCare Polyclinic, Jumeirah 1, Dubai" key="twitter:title" />
+        <meta name="twitter:description" content="Multidisciplinary healthcare for patients from Business Bay and nearby Dubai communities — general medicine, physiotherapy, dermatology, dental, and Ayurveda under one roof." key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE_URL}/images/ramacare-polyclinic-jumeirah-1-dubai.jpg`} key="twitter:image" />
+
+        <script
+          key="schema-clinic"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'MedicalClinic',
+              '@id': `${SITE_URL}${PAGE_PATH}#clinic`,
+              name: 'RamaCare Polyclinic',
+              description: 'DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai, serving patients from Business Bay and nearby communities with general medicine, physiotherapy, dermatology, dental care, gynecology, pediatrics, and Ayurveda.',
+              url: `${SITE_URL}${PAGE_PATH}`,
+              telephone: '+971566597878',
+              email: 'query@ramacarepolyclinic.com',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+                addressLocality: 'Jumeirah 1, Dubai',
+                addressCountry: 'AE'
+              },
+              openingHours: 'Su-Sa 10:00-22:00',
+              medicalSpecialty: [
+                'General Practice',
+                'Physiotherapy',
+                'Dermatology',
+                'Dentistry',
+                'Gynecology',
+                'Pediatrics',
+                'Ayurveda'
+              ],
+              areaServed: [
+                { '@type': 'Place', name: 'Business Bay' },
+                { '@type': 'Place', name: 'Downtown Dubai' },
+                { '@type': 'Place', name: 'DIFC' },
+                { '@type': 'Place', name: 'Al Wasl' },
+                { '@type': 'Place', name: 'Jumeirah' }
+              ]
+            })
+          }}
+        />
         <script
           key="schema-webpage"
           type="application/ld+json"

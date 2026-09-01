@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
-import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
 
 export default function AnxietyTreatmentPage() {
@@ -45,8 +44,11 @@ export default function AnxietyTreatmentPage() {
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
         "name": PAGE_TITLE,
-        "description": PAGE_DESCRIPTION,
+        "description": "Personalized, supportive physiotherapy and Ayurvedic wellness care for the physical and lifestyle side of anxiety — muscle tension, disrupted sleep, restlessness, and fatigue — with clear referral guidance to licensed mental health professionals when clinically appropriate.",
         "inLanguage": "en",
+        "medicalAudience": {
+          "@type": "Patient"
+        },
         "isPartOf": {
           "@type": "WebSite",
           "url": "https://ramacarepolyclinic.ae/",
@@ -57,12 +59,25 @@ export default function AnxietyTreatmentPage() {
           "name": "Anxiety"
         },
         "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
+          "@type": "Physician",
+          "name": "Jeena Mathew",
+          "medicalSpecialty": "Physiotherapy",
+          "honorificSuffix": "BPT, MPT",
+          "hasCredential": "DHA Licensed Physiotherapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
         },
         "publisher": {
-          "@type": "MedicalOrganization",
+          "@type": "MedicalClinic",
           "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         }
       },
       {
@@ -113,6 +128,7 @@ export default function AnxietyTreatmentPage() {
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:image:alt" content="Anxiety Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
@@ -129,7 +145,6 @@ export default function AnxietyTreatmentPage() {
       </Head>
 
       <ServicePageTemplate content={content} />
-      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="anxiety-treatment-dubai" />
 
       {/* External References Section */}
       <section className="py-12 bg-white border-t border-gray-150 px-4">

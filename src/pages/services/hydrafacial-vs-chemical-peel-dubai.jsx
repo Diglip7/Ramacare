@@ -146,10 +146,28 @@ function buildSchema() {
   const medicalWebPage = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    url: SITE_URL + PAGE_PATH,
-    name: 'HydraFacial vs Chemical Peel Dubai: Which Skin Treatment Is Right for You?',
+    url: 'https://ramacarepolyclinic.ae/services/hydrafacial-vs-chemical-peel-dubai/',
+    name: 'HydraFacial vs Chemical Peel Dubai',
     description: 'Confused between HydraFacial vs Chemical Peel Dubai? Compare benefits, downtime, cost & results with RamaCare\u2019s dermatology team. Book a consult today.',
     medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+    about: [{ '@type': 'MedicalTherapy', name: 'HydraFacial' }, { '@type': 'MedicalTherapy', name: 'Chemical Peel' }],
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Sonita Sinaga',
+      jobTitle: 'Licensed & Certified Aesthetic Therapist',
+      url: 'https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/',
+    },
+    publisher: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1, Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const faqSchema = {
@@ -187,8 +205,9 @@ function buildSchema() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Aesthetic Dermatology', item: SITE_URL + links.aestheticDermatology },
-      { '@type': 'ListItem', position: 3, name: 'HydraFacial vs Chemical Peel Dubai', item: SITE_URL + PAGE_PATH },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
+      { '@type': 'ListItem', position: 3, name: 'Aesthetic Dermatology', item: SITE_URL + links.aestheticDermatology },
+      { '@type': 'ListItem', position: 4, name: 'HydraFacial vs Chemical Peel', item: SITE_URL + PAGE_PATH },
     ],
   };
 
@@ -245,8 +264,15 @@ export default function HydraFacialVsChemicalPeelPage() {
         />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
         <meta property="og:image" content={SITE_URL + '/images/hydrafacial-vs-chemical-peel-dubai-hero.jpg'} />
+        <meta property="og:image:alt" content="HydraFacial vs Chemical Peel Dubai comparison" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="HydraFacial vs Chemical Peel Dubai — Full Comparison Guide" />
+        <meta name="twitter:description" content="Confused between HydraFacial vs Chemical Peel Dubai? Compare benefits, downtime, cost & results with RamaCare's dermatology team." />
+        <meta name="twitter:image" content={SITE_URL + '/images/hydrafacial-vs-chemical-peel-dubai-hero.jpg'} />
         {schemaBlocks.map((block, i) => (
           <script key={`schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }} />
         ))}
@@ -254,8 +280,10 @@ export default function HydraFacialVsChemicalPeelPage() {
 
       {/* ============ HERO ============ */}
       <section className="max-w-7xl mx-auto px-6 pt-8 pb-4">
-        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5">
+        <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#5F5F5F] mb-6 flex items-center gap-1.5 flex-wrap">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+          <span>/</span>
+          <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span>/</span>
           <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors">Aesthetic Dermatology</Link>
           <span>/</span>

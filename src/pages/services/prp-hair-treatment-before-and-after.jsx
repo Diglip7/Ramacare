@@ -366,92 +366,124 @@ export default function PrpHairBeforeAfterPage() {
         <title key="title">PRP Hair Treatment Before and After Results | Dubai</title>
         <meta
           name="description"
-          content="Curious what PRP hair treatment before and after results really look like? See realistic timelines, expert insights & book a consult at RamaCare Polyclinic, Dubai."
+          content="A realistic, medically-reviewed breakdown of PRP hair treatment timelines, candidacy, and how to correctly interpret before-and-after results."
           key="description"
         />
+        <meta
+          name="keywords"
+          content="PRP hair treatment before and after Dubai, PRP hair results timeline, Platelet rich plasma hair Dubai, PRP hair regrowth results, Hair PRP before after photos, PRP vs hair transplant Dubai, PRP hair treatment realistic results"
+          key="keywords"
+        />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/" />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="PRP Hair Treatment Before and After Results | RamaCare Polyclinic" key="og:title" />
         <meta
           property="og:description"
-          content="Realistic PRP hair treatment timelines, week by week and month by month, from RamaCare Polyclinic in Dubai."
+          content="A realistic, medically-reviewed breakdown of PRP hair treatment timelines, candidacy, and how to correctly interpret before-and-after results."
           key="og:description"
         />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta name="twitter:title" content="PRP Hair Treatment Before and After — RamaCare Polyclinic" key="twitter:title" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/patient-results-hair-loss-treatment.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="PRP Hair Treatment Before and After Results | RamaCare Polyclinic" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="What PRP hair treatment before and after results really look like, explained by RamaCare Polyclinic, Dubai."
+          content="A realistic, medically-reviewed breakdown of PRP hair treatment timelines, candidacy, and how to correctly interpret before-and-after results."
           key="twitter:description"
         />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/patient-results-hair-loss-treatment.jpg" key="twitter:image" />
 
+        {/* Structured JSON-LD Schema (@graph: MedicalWebPage, Physician, FAQPage, MedicalClinic) */}
         <script
-          key="schema-article"
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'MedicalWebPage',
-              about: {
-                '@type': 'MedicalProcedure',
-                name: 'PRP Hair Treatment',
-                description:
-                  'A non-surgical procedure using concentrated platelet-rich plasma from the patient\u2019s own blood, injected into the scalp to stimulate dormant hair follicles.',
-                procedureType: 'https://schema.org/NoninvasiveProcedure',
-              },
-            }),
-          }}
-        />
-        <script
-          key="schema-faq"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
-                '@type': 'Question',
-                name: f.question,
-                acceptedAnswer: { '@type': 'Answer', text: f.answer },
-              })),
-            }),
-          }}
-        />
-        <script
-          key="schema-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+              '@graph': [
                 {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Services',
-                  item: 'https://ramacarepolyclinic.ae/services/',
+                  '@type': 'MedicalWebPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/#webpage',
+                  url: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/',
+                  name: 'PRP Hair Treatment Before and After: What Real Results Actually Look Like',
+                  description:
+                    'A realistic, medically-reviewed breakdown of PRP hair treatment timelines, candidacy, and how to correctly interpret before-and-after results.',
+                  inLanguage: 'en',
+                  isPartOf: {
+                    '@type': 'WebSite',
+                    url: 'https://ramacarepolyclinic.ae/',
+                    name: 'RamaCare Polyclinic',
+                  },
+                  about: {
+                    '@type': 'MedicalProcedure',
+                    name: 'Platelet Rich Plasma (PRP) Hair Therapy',
+                  },
+                  reviewedBy: {
+                    '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/#physician',
+                  },
+                  breadcrumb: {
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+                      {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: 'PRP Hair Treatment Before and After',
+                        item: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/',
+                      },
+                    ],
+                  },
                 },
                 {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'PRP Hair Treatment Before and After',
-                  item: 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/',
+                  '@type': 'Physician',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/#physician',
+                  name: 'Dr. Sahar Zomorrodi',
+                  jobTitle: 'General Practitioner & Aesthetic Specialist',
+                  medicalSpecialty: 'General Practice',
+                  honorificSuffix: 'MD',
+                  hasCredential: 'DHA Licensed General Practitioner',
+                  worksFor: {
+                    '@type': 'MedicalOrganization',
+                    name: 'RamaCare Polyclinic',
+                    url: 'https://ramacarepolyclinic.ae/',
+                  },
+                  url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-before-and-after/#faq',
+                  mainEntity: faqs.map((f) => ({
+                    '@type': 'Question',
+                    name: f.question,
+                    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+                  })),
+                },
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/#organization',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/',
+                  telephone: '+971566597878',
+                  medicalSpecialty: 'Dermatology',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+                    addressLocality: 'Jumeirah 1, Dubai',
+                    addressCountry: 'AE',
+                  },
+                  priceRange: '$$',
                 },
               ],
-            }),
-          }}
-        />
-        <script
-          key="schema-clinic"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'MedicalClinic',
-              name: 'RamaCare Polyclinic',
-              url: 'https://ramacarepolyclinic.ae/',
-              medicalSpecialty: 'Dermatology',
-              address: { '@type': 'PostalAddress', addressLocality: 'Jumeirah 1', addressRegion: 'Dubai', addressCountry: 'AE' },
-              priceRange: '$$',
             }),
           }}
         />
@@ -460,7 +492,7 @@ export default function PrpHairBeforeAfterPage() {
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
-          <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+          <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span className="mx-1">/</span>
           <span className="text-[#1F5E4B]">PRP Hair Treatment Before and After</span>
         </nav>

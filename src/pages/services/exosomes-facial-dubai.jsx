@@ -22,76 +22,126 @@ export default function ExosomesFacialDubaiPage() {
   // Get content from data file
   const content = getSubcategoryContent('facial-dubai', 'exosomes-facial');
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/";
+  const PAGE_TITLE = "Exosomes Facial Dubai – Advanced Skin Rejuvenation";
+  const PAGE_DESCRIPTION = "Exosomes Facial in Dubai is performed by specialists to repair skin, boost collagen, reduce fine lines, and restore a youthful, radiant appearance safely.";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Facial",
+            "item": "https://ramacarepolyclinic.ae/services/facial-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Exosomes Facial",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "@id": `${CANONICAL_URL}#procedure`,
+        "name": "Exosomes Facial in Dubai",
+        "description": "Advanced regenerative skin therapy using exosomes to enhance cell-to-cell communication, accelerate skin repair, boost collagen and elastin production, and restore youthful radiance with minimal downtime.",
+        "url": CANONICAL_URL,
+        "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "bodyLocation": "Face",
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "image": "https://ramacarepolyclinic.ae/images/exosomes1.jpg",
+          "telephone": "+971566597878",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Facial Skin Rejuvenation Needs",
+        "alternateName": "Skin Aging and Texture Concerns",
+        "url": CANONICAL_URL,
+        "description": "Facial skin rejuvenation needs include concerns such as fine lines, dull complexion, uneven texture, and early signs of aging — commonly addressed with advanced aesthetic treatments.",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Exosomes Facial Therapy",
+          "description": "A regenerative aesthetic therapy using bioactive exosomes to support cellular communication and rejuvenation, helping improve skin texture, tone, and overall radiance."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (content?.faq?.faqs || []).map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Exosomes Facial Dubai – Advanced Skin Rejuvenation</title>
-        <meta name="description" content="Exosomes Facial in Dubai is performed by specialists to repair skin, boost collagen, reduce fine lines, and restore a youthful, radiant appearance safely." key="description" />
-        <meta name="keywords" content="Exosomes Facial Dubai, Skin rejuvenation Dubai, Anti-aging facial in Dubai, Collagen-boosting facial, Advanced facial treatment, Youthful skin therapy in Dubai, Professional facial Din ubai, Fine lines reduction in Dubai, Skin repair treatment, Cosmetic facial in Dubai" />
-        
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="Exosomes Facial Dubai, Skin rejuvenation Dubai, Anti-aging facial in Dubai, Collagen-boosting facial, Advanced facial treatment, Youthful skin therapy in Dubai, Professional facial in Dubai, Fine lines reduction in Dubai, Skin repair treatment, Cosmetic facial in Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Exosomes Facial Dubai – Advanced Skin Rejuvenation" key="og:title" />
+        <meta property="og:description" content="Exosomes Facial in Dubai is performed by specialists to repair skin, boost collagen, reduce fine lines, and restore a youthful, radiant appearance safely." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/exosomes1.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Exosomes Facial Dubai – Advanced Skin Rejuvenation" key="twitter:title" />
+        <meta name="twitter:description" content="Exosomes Facial in Dubai is performed by specialists to repair skin, boost collagen, reduce fine lines, and restore a youthful, radiant appearance safely." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/exosomes1.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "MedicalCondition",
-                  "@id": "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/#condition",
-                  "name": "Facial Skin Rejuvenation Needs",
-                  "alternateName": "Skin Aging and Texture Concerns",
-                  "url": "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/",
-                  "description": "Facial skin rejuvenation needs include concerns such as fine lines, dull complexion, uneven texture, and early signs of aging — commonly addressed with advanced aesthetic treatments.",
-                  "possibleTreatment": {
-                    "@type": "MedicalTherapy",
-                    "name": "Exosomes Facial Therapy",
-                    "description": "A regenerative aesthetic therapy using bioactive exosomes to support cellular communication and rejuvenation, helping improve skin texture, tone, and overall radiance."
-                  }
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  "@id": "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/#procedure",
-                  "name": "Exosomes Facial in Dubai",
-                  "alternateName": "Advanced Regenerative Facial Treatment",
-                  "url": "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/",
-                  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/exosomes-facial-dubai/",
-                  "description": "The Exosomes Facial treatment in Dubai at RamaCare Polyclinic is an advanced aesthetic procedure designed to promote skin rejuvenation by delivering bioactive exosomes that help stimulate cellular repair, improve texture, and enhance radiance.",
-                  "procedureType": "Regenerative aesthetic dermatology procedure",
-                  "howPerformed": "Performed by trained clinicians, the treatment involves careful preparation of exosome formulations applied or infused into the skin using specialized techniques tailored to each patient’s needs.",
-                  "preparation": "Patients should arrive with clean skin and avoid makeup prior to treatment. Clinicians will review medical history and skincare concerns before starting.",
-                  "followup": "Follow-up sessions may be recommended based on skin goals and clinician assessment to maintain results and support overall rejuvenation.",
-                  "indication": [
-                    "Fine lines and wrinkles",
-                    "Dull or uneven skin tone",
-                    "Signs of aging",
-                    "Dehydrated skin",
-                    "Loss of elasticity"
-                  ],
-                  "provider": {
-                    "@type": "MedicalClinic",
-                    "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                      "addressLocality": "Jumeirah 1",
-                      "addressRegion": "Dubai",
-                      "postalCode": "393558",
-                      "addressCountry": "AE"
-                    },
-                    "telephone": "+971 56 659 7878",
-                    "areaServed": {
-                      "@type": "City",
-                      "name": "Dubai"
-                    },
-                    "priceRange": "$$"
-                  }
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
-
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
@@ -110,7 +160,11 @@ export default function ExosomesFacialDubaiPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="exosomes-facial-dubai" />
+      <ContentReviewBadge 
+        doctorName="Sonita Sinaga" 
+        pageSlug="exosomes-facial-dubai" 
+        customStatement="This regenerative skincare guide has been clinically reviewed for treatment safety, exosome therapy protocols, and skincare excellence by Sonita Sinaga."
+      />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

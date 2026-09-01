@@ -20,11 +20,12 @@ import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 export default function IVdripPage() {
   const categoryName = 'Aesthetic Dermatology';
-  const subcategoryName = 'IV Drip Therepy';
+  const subcategoryName = 'IV Drip Therapy';
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'body-shaping/iv-drip');
-   const navItems = [
+  
+  const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
     { id: 'benefits', label: 'Benefits' },
@@ -37,88 +38,182 @@ export default function IVdripPage() {
     { id: 'book-now', label: 'Book Now' },
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ramacarepolyclinic.ae/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Aesthetic Dermatology",
+        "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "IV Drip Therapy",
+        "item": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/"
+      }
+    ]
+  };
+
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "IV Drip Therapy",
+    "description": "Doctor-supervised intravenous vitamin and hydration therapy delivering fluids, vitamins, minerals, electrolytes, and antioxidants directly into the bloodstream, administered by DHA-licensed healthcare professionals in Dubai.",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "telephone": "+971566597878",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1, Dubai",
+        "addressCountry": "AE"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Dubai"
+    }
+  };
+
+  // Dynamically generated FAQPage Schema from page data
+  const faqSchema = content?.faq?.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": content.faq.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question.trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer.trim()
+          }
+        }))
+      }
+    : null;
+
+  const physicianSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Sahar Zomorrodi",
+      "medicalSpecialty": "General Medicine & Aesthetic Care",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Sonita Sinaga",
+      "medicalSpecialty": "Aesthetic Therapy & Skin Care",
+      "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Soumya Abraham",
+      "medicalSpecialty": "DHA Licensed Nurse",
+      "url": "https://ramacarepolyclinic.ae/doctors/soumya-abraham-dha-licensed-nurse-dubai/",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "RamaCare Polyclinic"
+      }
+    }
+  ];
+
   return (
     <Layout>
       <Head>
         <title key="title">IV Drip Therapy in Dubai | RamaCare Polyclinic</title>
-        <meta name="description" content="IV Drip Therapy in Dubai at RamaCare Polyclinic. Experience the benefits of IV Drip Therapy for weight loss, detoxification, and overall wellness. Book your consultation today!" key="description" />
-        <meta name="keywords" content="IV Drip Therapy, weight loss, detoxification, overall wellness, RamaCare Polyclinic, Dubai" />
+        <meta
+          name="description"
+          content="IV Drip Therapy in Dubai at RamaCare Polyclinic. Experience the benefits of IV Drip Therapy for weight loss, detoxification, and overall wellness. Book your consultation today!"
+          key="description"
+        />
+        <meta
+          name="keywords"
+          content="IV drip therapy Dubai, Vitamin infusion Dubai, IV hydration therapy Dubai, Wellness drip clinic Dubai, Immune boost IV therapy, Energy boost IV drip, Jet lag recovery IV Dubai, Doctor-supervised IV therapy Dubai, IV vitamin therapy Dubai, RamaCare Polyclinic"
+          key="keywords"
+        />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/iv-drip-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="IV Drip Therapy in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta
+          property="og:description"
+          content="IV Drip Therapy in Dubai at RamaCare Polyclinic. Experience the benefits of IV Drip Therapy for weight loss, detoxification, and overall wellness. Book your consultation today!"
+          key="og:description"
+        />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/iv-drip-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/iv-drip.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="IV Drip Therapy in Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Experience the benefits of IV Drip Therapy for weight loss, detoxification, and overall wellness."
+          key="twitter:description"
+        />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/iv-drip.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/#condition",
-          "name": "Dehydration, Nutrient Deficiencies, Fatigue & Low Immunity",
-          "alternateName": "Hydration Imbalance, Vitamin & Mineral Deficit",
-          "url": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/",
-          "description": "Conditions such as dehydration, low immunity, nutrient deficiencies, chronic fatigue, and stress can negatively impact energy levels and overall wellness. These issues may benefit from medically supervised IV nutrient and hydration therapy to support rapid rehydration and nutrient delivery.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Intravenous (IV) Drip Therapy",
-            "description": "Intravenous (IV) drip therapy delivers fluids, vitamins, minerals, and antioxidants directly into the bloodstream under clinical supervision to support hydration, energy levels, immune function, and overall wellness more rapidly and effectively than oral supplementation." 
-          }
-        },
-        {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/#procedure",
-          "name": "IV Drip Therapy in Dubai",
-          "alternateName": "Intravenous Nutrient & Hydration Therapy",
-          "url": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/iv-drip-dubai/",
-          "description": "IV drip therapy at RamaCare Polyclinic in Dubai is a medically supervised treatment that delivers hydration, vitamins, minerals, and antioxidants directly into the bloodstream to replenish essential nutrients, improve energy, support immunity, and enhance overall wellness.",
-          "procedureType": "Intravenous medical wellness procedure",
-          "howPerformed": "A trained clinician conducts a health assessment and determines a personalized IV drip formula. A sterile IV line is placed into a vein to deliver fluids and nutrients directly into the bloodstream over a session typically lasting 30–45 minutes.",
-          "preparation": "Patients should share a full medical history, inform clinicians of existing conditions and medications, and follow any guidance provided for optimal nutrient absorption and safety.",
-          "followup": "Follow‑up care may include monitoring nutrient levels, scheduling additional IV drip sessions based on health goals and outcomes, and ongoing wellness guidance to support hydration and immune function.",
-          "indication": [
-            "Dehydration & rapid fluid replenishment",
-            "Low energy levels & chronic fatigue",
-            "Immune support & nutrient deficiencies",
-            "Travel exhaustion or jet lag",
-            "Support during recovery from illness or stress"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
-        }
-      ]
-    })
-  }}
-/>
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
+        />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+        />
       </Head>
       <TreatmentHero 
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}/>
-    <QuickNavigation navItems={navItems} />
-    <TreatmentOverview 
-      subcategoryName={subcategoryName}
-      content={content?.overview}/>
+      <QuickNavigation navItems={navItems} />
+      <TreatmentOverview 
+        subcategoryName={subcategoryName}
+        content={content?.overview}/>
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}/>
       <SkinTreatmentAdditionalContent 
-              content={{whyChooseSection: content?.whyChooseSection,
-                 whenToConsider: content?.whenToConsider,}} />
+        content={{whyChooseSection: content?.whyChooseSection,
+                  whenToConsider: content?.whenToConsider,}} />
       <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
@@ -126,6 +221,6 @@ export default function IVdripPage() {
       <PaymentInsurance content={content?.paymentInsurance} />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
-      </Layout>
+    </Layout>
   );
 }

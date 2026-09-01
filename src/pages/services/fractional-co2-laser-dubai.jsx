@@ -41,9 +41,23 @@ export default function FractionalCo2LaserPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Fractional CO2 Laser in Dubai for Skin Resurfacing</title>
+  <title key="title">Fractional CO2 Laser in Dubai | RamaCare Polyclinic</title>
   <meta name="description" content="Fractional CO2 laser in Dubai improves skin texture, reduces scars, fine lines, and pigmentation, delivering smoother, youthful skin under expert care." key="description" />
-  <meta name="keywords" content="Fractional CO2 laser Dubai, Skin resurfacing Dubai, Scar removal treatment Dubai, Acne scar treatment Dubai, Fine lines reduction Dubai, Pigmentation treatment Dubai, Non-surgical skin rejuvenation, Laser skin treatment Dubai, Professional CO2 laser therapy, Anti-aging skin treatment" />
+  
+  <meta property="og:title" content="Fractional CO2 Laser in Dubai | RamaCare Polyclinic" />
+  <meta property="og:description" content="Fractional CO2 laser in Dubai improves skin texture, reduces scars, fine lines, and pigmentation, delivering smoother, youthful skin under expert care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/fractional-co2-laser-treatment-dubai.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Fractional CO2 Laser Treatment for skin resurfacing at RamaCare Polyclinic Dubai" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractional CO2 Laser in Dubai | RamaCare Polyclinic" />
+  <meta name="twitter:description" content="Fractional CO2 laser in Dubai improves skin texture, reduces scars, fine lines, and pigmentation, delivering smoother, youthful skin under expert care." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/fractional-co2-laser-treatment-dubai.jpg" />
   
   <script
   type="application/ld+json"
@@ -101,6 +115,42 @@ export default function FractionalCo2LaserPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/",
+          "name": "Fractional CO2 Laser in Dubai | RamaCare Polyclinic",
+          "description": "Fractional CO2 laser in Dubai improves skin texture, reduces scars, fine lines, and pigmentation, delivering smoother, youthful skin under expert care.",
+          "medicalAudience": { "@type": "Patient" },
+          "about": { "@type": "MedicalProcedure", "name": "Fractional CO2 Laser Skin Resurfacing" },
+          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/#reviewer" },
+          "publisher": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/#reviewer",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
+          "worksFor": { "@type": "MedicalOrganization", "name": "RamaCare Polyclinic" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/fractional-co2-laser-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })
@@ -127,10 +177,10 @@ export default function FractionalCo2LaserPage() {
       <ServiceExtrasSection aftercareContent={content?.aftercareContent} />
        <PatientTestimonials content={content?.testimonials} />
        <DoctorsSection content={content?.doctors} />
+       <FAQSection content={content?.faq} />
     
      <PaymentInsurance content={content?.paymentInsurance} />
       <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="fractional-co2-laser-dubai" />
-      <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );

@@ -76,8 +76,7 @@ export default function GoogleReviews() {
                   <Star className="w-3.5 h-3.5 fill-current" />
                 </div>
                 <span className="text-xs font-bold text-gray-700">4.8 / 5.0 Rating</span>
-                <span className="text-gray-300 text-xs">•</span>
-                <span className="text-xs text-gray-500">217 Google reviews</span>
+                
               </div>
             </div>
           </div>

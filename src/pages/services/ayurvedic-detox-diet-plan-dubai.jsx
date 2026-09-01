@@ -171,6 +171,11 @@ export default function AyurvedicDetoxDietPlanPage() {
           "@type": "MedicalCondition",
           "name": "Metabolic Detoxification / Ama Clearance"
         },
+        "image": "https://ramacarepolyclinic.ae/images/detox3.png",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ramacarepolyclinic.ae/images/detox3.png"
+        },
         "lastReviewed": "2026-08-29",
         "reviewedBy": {
           "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/#physician"
@@ -251,7 +256,7 @@ export default function AyurvedicDetoxDietPlanPage() {
         <meta property="og:title" content="Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing" key="og:title" />
         <meta property="og:description" content="Flush out toxins and reset your metabolism. Our DHA-licensed Ayurvedic detox diet plans in Dubai focus on clearing Ama (toxins) and restoring gut health. Visit RamaCare Jumeirah 1." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/" key="og:url" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-detox-diet-plan-dubai-og.jpg" key="og:image" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/detox3.png" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:image:alt" content="Ayurvedic Detox Diet Plan in Dubai - RamaCare Polyclinic" key="og:image:alt" />
@@ -262,7 +267,7 @@ export default function AyurvedicDetoxDietPlanPage() {
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta name="twitter:title" content="Ayurvedic Detox Diet Plan Dubai | Clinical Body Cleansing" key="twitter:title" />
         <meta name="twitter:description" content="Reset your metabolism with a DHA-licensed Ayurvedic detox diet plan in Dubai — clearing Ama (toxins) and restoring gut health in as little as 5–7 days." key="twitter:description" />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-detox-diet-plan-dubai-og.jpg" key="twitter:image" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/detox3.png" key="twitter:image" />
 
         <script
           type="application/ld+json"

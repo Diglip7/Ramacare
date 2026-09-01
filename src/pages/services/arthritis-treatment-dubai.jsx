@@ -113,19 +113,36 @@ export default function ArthritisTreatmentPage() {
     }
   };
 
+  const CANONICAL_URL = seo.canonical || "https://ramacarepolyclinic.ae/services/arthritis-treatment-dubai/";
+  const PAGE_TITLE = seo.title || "Arthritis Treatment Dubai | RamaCare Polyclinic";
+  const PAGE_DESCRIPTION = seo.metaDescription;
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/Healthy%20and%20damaged%20joint%20anatomy%20illustration.jpg";
+
   return (
     <Layout>
       <Head>
-        <title key="title">{seo.title}</title>
-        <meta name="description" content={seo.metaDescription} key="description" />
-        <meta name="keywords" content={seo.keywords} />
-        <link rel="canonical" href={seo.canonical} />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
         
-        {/* OpenGraph */}
-        <meta property="og:title" content={seo.metaTitle} />
-        <meta property="og:description" content={seo.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={seo.canonical} />
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Illustration comparing healthy joint and arthritic joint anatomy for Arthritis Treatment Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
         
         {/* Structured Data Schemas */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

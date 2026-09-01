@@ -157,6 +157,71 @@ export default function HairRegrowthTreatmentDubai() {
     { id: "guides", label: "24. Related Hair Treatment Guides" }
   ];
 
+  const CANONICAL_URL = `${SITE_URL}${PAGE_PATH}`;
+  const OG_IMAGE = `${SITE_URL}/images/hair-regrowth-treatment-dubai-og.jpg`;
+  const META_KEYWORDS =
+    'Hair regrowth treatment Dubai, PRP hair treatment Dubai, Hair mesotherapy Dubai, Hair loss treatment Dubai, Hair thinning treatment Dubai, Best hair regrowth Dubai, Hair specialist Dubai, Scalp treatment Dubai, PRP vs mesotherapy hair, Hair regrowth clinic Dubai';
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Hair Regrowth Treatment Dubai: Options & Results",
+        "description": "Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect. Book a personalized consultation today.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": `${SITE_URL}/`,
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Hair Loss / Hair Regrowth"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@id": `${CANONICAL_URL}#physician`
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services/` },
+            { "@type": "ListItem", "position": 3, "name": "Hair Regrowth Treatment Dubai", "item": CANONICAL_URL }
+          ]
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Dr. Sahar Zomorrodi",
+        "medicalSpecialty": "General Practice",
+        "honorificSuffix": "MD",
+        "hasCredential": "DHA Licensed General Practitioner",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        },
+        "url": `${SITE_URL}/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/`
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
@@ -166,87 +231,34 @@ export default function HairRegrowthTreatmentDubai() {
           content="Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect. Book a personalized consultation today."
           key="description"
         />
-        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} />
+        <meta name="keywords" content={META_KEYWORDS} key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
-        {/* Structured Schema */}
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Hair Regrowth Treatment Dubai: Options & Results" key="og:title" />
+        <meta property="og:description" content="Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect. Book a personalized consultation today." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hair Regrowth Treatment Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Hair Regrowth Treatment Dubai: Options & Results" key="twitter:title" />
+        <meta name="twitter:description" content="Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect. Book a personalized consultation today." key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
+
+        {/* Unified JSON-LD @graph Schema */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebPage",
-                  "@id": `${SITE_URL}${PAGE_PATH}`,
-                  "url": `${SITE_URL}${PAGE_PATH}`,
-                  "name": "Hair Regrowth Treatment Dubai: Options & Results",
-                  "description": "Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect."
-                },
-                {
-                  "@type": "MedicalClinic",
-                  "@id": `${SITE_URL}/#clinic`,
-                  "name": "RamaCare Polyclinic",
-                  "url": SITE_URL,
-                  "logo": `${SITE_URL}/images/Logo.png`,
-                  "telephone": "+971 56 659 7878",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                    "addressLocality": "Jumeirah 1",
-                    "addressRegion": "Dubai",
-                    "addressCountry": "AE"
-                  }
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": `${SITE_URL}${PAGE_PATH}#breadcrumb`,
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": SITE_URL
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Services",
-                      "item": `${SITE_URL}/services/`
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Hair Regrowth Treatment Dubai",
-                      "item": `${SITE_URL}${PAGE_PATH}`
-                    }
-                  ]
-                },
-                {
-                  "@type": "FAQPage",
-                  "@id": `${SITE_URL}${PAGE_PATH}#faq-schema`,
-                  "mainEntity": faqs.map(faq => ({
-                    "@type": "Question",
-                    "name": faq.question,
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": faq.answer
-                    }
-                  }))
-                },
-                {
-                  "@type": "Article",
-                  "@id": `${SITE_URL}${PAGE_PATH}#article`,
-                  "headline": "Hair Regrowth Treatment Dubai: Options, Results & Expectations",
-                  "description": "Explore hair regrowth treatment in Dubai — causes, options like PRP, realistic timelines, and what to expect.",
-                  "publisher": {
-                    "@type": "MedicalOrganization",
-                    "name": "RamaCare Polyclinic",
-                    "url": SITE_URL
-                  }
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
 
@@ -1637,7 +1649,7 @@ export default function HairRegrowthTreatmentDubai() {
               </div>
 
               <div className="bg-white border border-[#1E2E2A]/5 p-6 rounded-2xl shadow-sm space-y-2">
-                <Link href="/services/hair-loss-causes/" className="font-bold text-sm text-[#12392D] hover:underline flex items-center gap-1">
+                <Link href="/services/hair-loss-dubai/" className="font-bold text-sm text-[#12392D] hover:underline flex items-center gap-1">
                   <span>Hair Loss Causes</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>

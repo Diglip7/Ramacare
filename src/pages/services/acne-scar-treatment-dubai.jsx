@@ -109,6 +109,37 @@ export default function AcneScarTreatmentPage() {
     }
   };
 
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Acne Scar Treatment in Dubai",
+    "description": "Personalized, evidence-based acne scar treatment combining microneedling, RF microneedling, fractional CO2 laser, chemical peels, PRP therapy, subcision, and dermal fillers, tailored to individual scar type, skin tone, and severity.",
+    "url": "https://ramacarepolyclinic.ae/services/acne-scar-treatment-dubai/",
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "bodyLocation": "Face",
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Sonita Sinaga",
+      "jobTitle": "Licensed & Certified Aesthetic Therapist",
+      "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+    },
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "image": "https://ramacarepolyclinic.ae/images/Acne scar treatment Dubai.jpg",
+      "telephone": "+971566597878",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  };
+
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
@@ -136,10 +167,10 @@ export default function AcneScarTreatmentPage() {
       }
     ],
     "reviewedBy": {
-      "@type": "Physician",
-      "name": "Jeena Mathew",
-      "medicalSpecialty": "Dermatology",
-      "url": "https://ramacarepolyclinic.ae/doctors/1"
+      "@type": "Person",
+      "name": "Sonita Sinaga",
+      "jobTitle": "Licensed & Certified Aesthetic Therapist",
+      "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
     },
     "author": {
       "@type": "MedicalOrganization",
@@ -154,17 +185,33 @@ export default function AcneScarTreatmentPage() {
         <title key="title">{seo.title}</title>
         <meta name="description" content={seo.metaDescription} key="description" />
         <meta name="keywords" content={seo.keywords} />
+        <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={seo.canonical} key="canonical" />
+
         {/* OpenGraph */}
-        <meta property="og:title" content={seo.title} />
-        <meta property="og:description" content={seo.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={seo.title} key="og:title" />
+        <meta property="og:description" content={seo.metaDescription} key="og:description" />
+        <meta property="og:url" content={seo.canonical} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Acne scar treatment Dubai.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Acne Scar Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={seo.title} key="twitter:title" />
+        <meta name="twitter:description" content={seo.metaDescription} key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Acne scar treatment Dubai.jpg" key="twitter:image" />
+
         {/* Structured Data Schemas */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalTherapySchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />

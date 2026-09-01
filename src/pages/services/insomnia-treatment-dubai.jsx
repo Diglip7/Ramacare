@@ -160,44 +160,127 @@ export default function InsomniaTreatmentPage() {
     faq.answer.toLowerCase().includes(faqSearch.toLowerCase())
   );
 
-  // SEO Schemas
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
-      }
-    }))
-  };
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/insomnia-treatment-dubai/";
+  const PAGE_TITLE = "Insomnia Treatment Dubai | RamaCare Sleep Wellness Clinic";
+  const PAGE_DESCRIPTION = "Struggling with sleep? Get personalized Insomnia Treatment Dubai care from DHA-licensed experts at RamaCare. Book your sleep wellness consultation today.";
+  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/DHA-licensed healthcare professional.jpg";
 
-  const webPageSchema = {
+  // SEO Schemas Graph
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Insomnia Treatment Dubai",
-    "url": "https://ramacarepolyclinic.ae/services/insomnia-treatment-dubai",
-    "description": "DHA-licensed sleep wellness support at RamaCare Polyclinic, Jumeirah, Dubai. Address insomnia using physiotherapy, lifestyle guidance, and Ayurvedic consultations.",
-    "reviewedBy": {
-      "@type": "Physician",
-      "name": "Dr. Sahar Zomorrodi",
-      "medicalSpecialty": "General Practice",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai"
-    }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": breadcrumbs.map((b, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": b.label,
+          "item": b.href.startsWith('http') ? b.href : `https://ramacarepolyclinic.ae${b.href}`
+        }))
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "url": CANONICAL_URL,
+        "name": "Insomnia Treatment Dubai | RamaCare Sleep Wellness Clinic",
+        "description": "Personalized, holistic supportive care for insomnia and sleep difficulties combining lifestyle counseling, physiotherapy for physical tension, and complementary Ayurvedic wellness consultation, with referral to sleep medicine specialists when clinically appropriate.",
+        "inLanguage": "en",
+        "medicalAudience": {
+          "@type": "Patient"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ramacarepolyclinic.ae/",
+          "name": "RamaCare Polyclinic"
+        },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Insomnia"
+        },
+        "lastReviewed": "2026-08-29",
+        "reviewedBy": {
+          "@type": "Physician",
+          "name": "Dr. Sahar Zomorrodi",
+          "medicalSpecialty": "General Practice",
+          "honorificSuffix": "MD",
+          "hasCredential": "DHA Licensed General Practitioner",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Dr. Sahar Zomorrodi",
+        "medicalSpecialty": "General Practice",
+        "honorificSuffix": "MD",
+        "hasCredential": "DHA Licensed General Practitioner",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "RamaCare Polyclinic"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
   };
 
   return (
     <Layout>
       <Head>
-        <title key="title">{seo.title}</title>
-        <meta name="description" content={seo.metaDescription} key="description" />
-        <link rel="canonical" href={seo.canonical} key="canonical" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={OG_IMAGE} key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Insomnia Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
         {/* Structured Data Schemas */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       <div className="bg-[#FCFDFB] text-[#1A1A1A] antialiased">
@@ -777,7 +860,7 @@ export default function InsomniaTreatmentPage() {
         {/* DOCTORS SHOWCASE */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
-            <DoctorsSection customDoctors={[DOCTORS.sahar, DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai']]} />
+            <DoctorsSection customDoctors={[DOCTORS.sahar, DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai'], DOCTORS['jeena-mathew-physiotherapist-dubai']]} />
           </div>
         </section>
 
@@ -800,6 +883,50 @@ export default function InsomniaTreatmentPage() {
                 Contact Us
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* External References Section */}
+        <section className="py-12 bg-white border-t border-gray-150 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-sm font-bold text-[#1A1A1A] uppercase tracking-wider mb-3 text-center">
+              External References Used for Factual Accuracy
+            </h3>
+            <p className="text-xs text-[#5F5F5F] text-center mb-6">
+              These external medical authorities were referenced to verify factual accuracy; no text was copied.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3 text-xs text-[#5F5F5F] max-w-2xl mx-auto">
+              <li className="flex items-start space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+                <a href="https://www.sleepfoundation.org/insomnia" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                  Sleep Foundation — Insomnia symptoms and causes
+                </a>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+                <a href="https://aasm.org/clinical-resources/practice-standards/practice-guidelines/" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                  American Academy of Sleep Medicine (AASM) — Clinical sleep guidelines
+                </a>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+                <a href="https://www.nhs.uk/conditions/insomnia/" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                  NHS — Insomnia self-help and treatment guidance
+                </a>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+                <a href="https://www.mayoclinic.org/diseases-conditions/insomnia/symptoms-causes/syc-20355167" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                  Mayo Clinic — Insomnia overview, symptoms, and causes
+                </a>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A574] mt-1.5 flex-shrink-0" />
+                <a href="https://my.clevelandclinic.org/health/diseases/12119-insomnia" target="_blank" rel="noopener noreferrer" className="text-[#1F5E4B] hover:underline font-medium">
+                  Cleveland Clinic — Insomnia causes and management
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
 

@@ -10,7 +10,6 @@ import { subcategoryContent } from '../../data/subcategoryContent';
 import {
   Footprints,
   Activity,
-  Award,
   Calendar,
   ArrowRight,
   ChevronRight,
@@ -32,7 +31,6 @@ import {
   TrendingUp,
   ShoppingBag,
   Home as HomeIcon,
-  Search,
   ClipboardCheck,
   Quote,
   AlertCircle,
@@ -972,7 +970,7 @@ export default function ShoulderPainTreatmentPage() {
       ) : null}
 
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Jeena Mathew" />
+      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="shoulder-pain-treatment-dubai" />
 
       {/* Medical Disclaimer */}
       <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">

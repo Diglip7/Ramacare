@@ -22,73 +22,136 @@ export default function OxygeneoIlluminateFacialPage() {
   // Get content from data file
   const content = getSubcategoryContent('facial-dubai', 'oxygeneo-illuminate-facial');
 
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Info' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'when-to-consider', label: 'Ideal Candidate' },
+    { id: 'recovery-aftercare', label: 'Aftercare' },
+    { id: 'why-choose-ramacare', label: 'Why Us' },
+    { id: 'testimonials', label: 'Success Stories' },
+    { id: 'our-doctors', label: 'Our Doctors' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' }
+  ];
+
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/";
+  const PAGE_TITLE = "OxyGeneo Illuminate Facial in Dubai – Brighten Your Skin";
+  const PAGE_DESCRIPTION = "OxyGeneo Illuminate Facial in Dubai exfoliates, oxygenates, and brightens skin, leaving it smooth, radiant, and refreshed under professional care.";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Facial",
+            "item": "https://ramacarepolyclinic.ae/services/facial-dubai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OxyGeneo Illuminate Facial",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${CANONICAL_URL}#service`,
+        "serviceType": "OxyGeneo Illuminate Facial",
+        "name": "OxyGeneo Illuminate Facial in Dubai",
+        "description": "Advanced 3-in-1 facial treatment combining exfoliation, oxygenation, and nutrient infusion to brighten skin tone, reduce pigmentation, hydrate deeply, and restore a radiant, healthy glow with no downtime.",
+        "url": CANONICAL_URL,
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "image": "https://ramacarepolyclinic.ae/images/oxy1.jpg",
+          "telephone": "+971566597878",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Facial Skin Dullness and Texture Concerns",
+        "alternateName": "Skin Radiance and Texture Issues",
+        "url": CANONICAL_URL,
+        "description": "Facial skin dullness and texture concerns include lack of radiance, uneven tone, minor congestion, fine lines, and signs of tired or stressed skin caused by environmental exposure, aging, and lifestyle factors.",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "OxyGeneo Illuminate Facial Therapy",
+          "description": "A rejuvenating aesthetic therapy that exfoliates, infuses nutrients, and oxygenates the skin’s surface using advanced 3-in-1 OxyGeneo technology to enhance radiance, texture, and hydration."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (content?.faq?.faqs || []).map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">OxyGeneo Illuminate Facial in Dubai – Brighten Your Skin</title>
-        <meta name="description" content="OxyGeneo Illuminate Facial in Dubai exfoliates, oxygenates, and brightens skin, leaving it smooth, radiant, and refreshed under professional care." key="description" />
-        <meta name="keywords" content="OxyGeneo Illuminate Facial in Dubai, Skin brightening facial in Dubai, Exfoliating facial treatment, Oxygenating facial in Dubai, Radiant skin therapy Dubai, Professional facial treatment, Skin rejuvenation Dubai, Glow-enhancing facial in Dubai, Anti-aging facial in Dubai, Healthy skin facial in Dubai" />
-        
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="OxyGeneo Illuminate Facial in Dubai, Skin brightening facial in Dubai, Exfoliating facial treatment, Oxygenating facial in Dubai, Radiant skin therapy Dubai, Professional facial treatment, Skin rejuvenation Dubai, Glow-enhancing facial in Dubai, Anti-aging facial in Dubai, Healthy skin facial in Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="OxyGeneo Illuminate Facial in Dubai – Brighten Your Skin" key="og:title" />
+        <meta property="og:description" content="OxyGeneo Illuminate Facial in Dubai exfoliates, oxygenates, and brightens skin, leaving it smooth, radiant, and refreshed under professional care." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/oxy1.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="OxyGeneo Illuminate Facial in Dubai – Brighten Your Skin" key="twitter:title" />
+        <meta name="twitter:description" content="OxyGeneo Illuminate Facial in Dubai exfoliates, oxygenates, and brightens skin, leaving it smooth, radiant, and refreshed under professional care." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/oxy1.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "MedicalCondition",
-                  "@id": "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/#condition",
-                  "name": "Facial Skin Dullness and Texture Concerns",
-                  "alternateName": "Skin Radiance and Texture Issues",
-                  "url": "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/",
-                  "description": "Facial skin dullness and texture concerns include lack of radiance, uneven tone, minor congestion, fine lines, and signs of tired or stressed skin caused by environmental exposure, aging, and lifestyle factors.",
-                  "possibleTreatment": {
-                    "@type": "MedicalTherapy",
-                    "name": "OxyGeneo Illuminate Facial Therapy",
-                    "description": "A rejuvenating aesthetic therapy that exfoliates, infuses nutrients, and oxygenates the skin’s surface using advanced 3-in-1 OxyGeneo technology to enhance radiance, texture, and hydration."
-                  }
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  "@id": "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/#procedure",
-                  "name": "OxyGeneo Illuminate Facial in Dubai",
-                  "alternateName": "Oxygenating Glow Facial Treatment",
-                  "url": "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/",
-                  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/oxygeneo-illuminate-facial-dubai/",
-                  "description": "The OxyGeneo Illuminate Facial in Dubai at RamaCare Polyclinic is a non-invasive, advanced skin treatment designed to exfoliate, oxygenate, and nourish the skin for improved radiance, texture, and hydration.",
-                  "procedureType": "Non-invasive aesthetic skin enhancement",
-                  "howPerformed": "Performed using specialized OxyGeneo technology, the treatment combines gentle exfoliation with nutrient infusion and oxygenation to revitalize the skin’s surface and boost glow.",
-                  "preparation": "Patients should arrive with clean skin and avoid makeup prior to the session. Prior consultation on skin concerns and sensitivities helps tailor the treatment.",
-                  "followup": "Follow-up sessions may be recommended to maintain radiance and hydration based on individual skin needs and clinician assessment.",
-                  "indication": [
-                    "Dull or tired complexion",
-                    "Dry or dehydrated skin",
-                    "Uneven skin tone or texture",
-                    "Minor skin congestion",
-                    "Loss of natural glow"
-                  ],
-                  "provider": {
-                    "@type": "MedicalClinic",
-                    "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                      "addressLocality": "Jumeirah 1",
-                      "addressRegion": "Dubai",
-                      "postalCode": "393558",
-                      "addressCountry": "AE"
-                    },
-                    "telephone": "+971 56 659 7878",
-                    "areaServed": {
-                      "@type": "City",
-                      "name": "Dubai"
-                    },
-                    "priceRange": "$$"
-                  }
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
 

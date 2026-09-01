@@ -63,6 +63,93 @@ const UltrasoundShinSplintsPage = () => {
     }
   };
 
+  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/ultrasound-for-shin-splints-dubai/';
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/Shin.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': `${CANONICAL_URL}#webpage`,
+        url: CANONICAL_URL,
+        name: "Runner's Recovery: Ultrasound for Shin Splints in Dubai | RamaCare",
+        description: 'Preparing for the Dubai Run or 30x30? Learn how ultrasound therapy at RamaCare Jumeirah 1 accelerates healing for shin splints and running injuries.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: {
+          '@type': 'MedicalCondition',
+          name: 'Shin Splints (Medial Tibial Stress Syndrome)'
+        },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': `${CANONICAL_URL}#physician`,
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${CANONICAL_URL}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound for Shin Splints', item: CANONICAL_URL }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${CANONICAL_URL}#faq`,
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
     <Layout>
@@ -70,17 +157,50 @@ const UltrasoundShinSplintsPage = () => {
         <title key="title">Runner's Recovery: Ultrasound for Shin Splints in Dubai | RamaCare</title>
         <meta name="description" content="Preparing for the Dubai Run or 30x30? Learn how ultrasound therapy at RamaCare Jumeirah 1 accelerates healing for shin splints and running injuries." key="description" />
         <meta name="keywords" content="ultrasound for shin splints Dubai, shin splints treatment Dubai, Dubai Run recovery, 30x30 injury, Medial Tibial Stress Syndrome Dubai, running injury physiotherapy Dubai" />
-        
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Runner's Recovery: Ultrasound for Shin Splints in Dubai | RamaCare" key="og:title" />
+        <meta property="og:description" content="Preparing for the Dubai Run or 30x30? Learn how ultrasound therapy at RamaCare Jumeirah 1 accelerates healing for shin splints and running injuries." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Shin.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound for Shin Splints in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Runner's Recovery: Ultrasound for Shin Splints in Dubai | RamaCare" key="twitter:title" />
+        <meta name="twitter:description" content="Preparing for the Dubai Run or 30x30? Learn how ultrasound therapy at RamaCare Jumeirah 1 accelerates healing for shin splints and running injuries." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Shin.jpg" key="twitter:image" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* ── Section 1: Hero ── */}
       <section
-        style={{ background: 'linear-gradient(135deg, #F5F1EA 0%, #ffffff 100%)', overflow: 'hidden', position: 'relative' }}
-      >
+        style={{ background: 'linear-gradient(135deg, #F5F1EA 0%, #ffffff 100%)', overflow: 'hidden', position: 'relative' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Ultrasound for Shin Splints</span>
+          </nav>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-
             {/* Left Content */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
 
@@ -97,7 +217,7 @@ const UltrasoundShinSplintsPage = () => {
               >
                 Ultrasound for Shin Splints Dubai | Fast Recovery for Dubai Run
               </h1>
-
+              
               {/* Intro paragraph — green with internal anchor link */}
               <p
                 style={{
@@ -189,7 +309,7 @@ const UltrasoundShinSplintsPage = () => {
                     margin: 0,
                   }}
                 >
-                 <a href="/services/ultrasound-therapy-dubai/" className="text-[#1b5e3f] hover:underline font-semibold">Ultrasound therapy </a>  is the secret weapon for competitive runners. It uses high-frequency sound waves to stimulate blood flow to the periosteum (the bone&apos;s outer layer), reducing inflammation where traditional icing and rest fail.
+                 <a href="/services/ultrasound-therapy-dubai/" className="text-[#1b5e3f] hover:underline font-semibold">Ultrasound therapy </a> is a key non-invasive modality for competitive runners. It uses high-frequency sound waves to stimulate blood flow to the periosteum (the bone&apos;s outer layer), helping reduce inflammation where traditional icing and rest may prove insufficient.
                 </p>
               </div>
 
@@ -377,17 +497,17 @@ const UltrasoundShinSplintsPage = () => {
                   {
                     stage: 'Acute Pain (Week 1)',
                     plan: '3 Ultrasound sessions + Rest',
-                    goal: 'Immediate inflammation reduction.',
+                    goal: 'Targeted inflammation reduction.',
                   },
                   {
                     stage: 'The "Build-Up" (Week 2)',
                     plan: '2 Ultrasound sessions + Low impact',
-                    goal: 'Strengthening the tibial-muscular bond.',
+                    goal: 'Supporting tissue resilience.',
                   },
                   {
                     stage: 'The Final Taper (Week 3)',
                     plan: '1 Session + Full Mobility',
-                    goal: 'Ensuring peak performance for Race Day.',
+                    goal: 'Supporting recovery for Race Day readiness.',
                   },
                 ].map((row, i) => (
                   <tr
@@ -422,7 +542,6 @@ const UltrasoundShinSplintsPage = () => {
             Discuss Your Timeline on WhatsApp
           </button>
         </div>
-
       </div>
     </section>
 

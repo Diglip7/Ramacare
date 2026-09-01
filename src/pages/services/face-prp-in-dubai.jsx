@@ -37,56 +37,123 @@ export default function FacePRPinDubaiPage() {
         { id: 'book-now', label: 'Book Now' },
     ];
 
+    const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/";
+    const PAGE_TITLE = "Face PRP in Dubai – Skin Rejuvenation by Experts";
+    const PAGE_DESCRIPTION = "Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow.";
+
+    const schemaGraph = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${CANONICAL_URL}#breadcrumb`,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ramacarepolyclinic.ae/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Facial",
+              "item": "https://ramacarepolyclinic.ae/services/facial-dubai/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Face PRP",
+              "item": CANONICAL_URL
+            }
+          ]
+        },
+        {
+          "@type": "MedicalProcedure",
+          "@id": `${CANONICAL_URL}#procedure`,
+          "name": "Face PRP in Dubai",
+          "alternateName": "Platelet-Rich Plasma Facial Rejuvenation",
+          "description": "Non-surgical Platelet-Rich Plasma (PRP) skin rejuvenation treatment using the patient's own concentrated platelets to stimulate collagen production, improve skin texture and elasticity, and reduce fine lines and acne scars.",
+          "url": CANONICAL_URL,
+          "mainEntityOfPage": CANONICAL_URL,
+          "procedureType": "https://schema.org/NoninvasiveProcedure",
+          "bodyLocation": "Face",
+          "howPerformed": "After a clinical consultation and skin assessment, a small sample of your blood is drawn and centrifuged to isolate platelet-rich plasma. PRP is then injected into targeted areas of the face to encourage collagen stimulation and cellular regeneration.",
+          "preparation": "Patients should arrive with clean skin and share their medical history before the procedure. Minimal preparation is required.",
+          "followup": "Multiple sessions over weeks are recommended for optimal skin rejuvenation results, with aftercare guidance provided by clinicians.",
+          "indication": [
+            "Fine lines and wrinkles",
+            "Dull or uneven skin tone",
+            "Acne scars and pigmentation concerns",
+            "Loss of facial elasticity",
+            "General facial skin rejuvenation"
+          ],
+          "reviewedBy": {
+            "@type": "Person",
+            "name": "Sonita Sinaga",
+            "jobTitle": "Licensed & Certified Aesthetic Therapist",
+            "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          },
+          "provider": {
+            "@type": "MedicalClinic",
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/",
+            "image": "https://ramacarepolyclinic.ae/images/face-prp1.jpg",
+            "telephone": "+971566597878",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+              "addressLocality": "Jumeirah 1",
+              "addressRegion": "Dubai",
+              "addressCountry": "AE"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${CANONICAL_URL}#faq`,
+          "mainEntity": (content?.faq?.faqs || []).map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }
+      ]
+    };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Face PRP in Dubai – Skin Rejuvenation by Experts</title>
-        <meta name="description" content="Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow." key="description" />
-        <meta name="keywords" content="Face PRP in Dubai, PRP facial treatment Dubai, Skin rejuvenation Dubai, Collagen stimulation facial, Anti-aging PRP treatment, Facial rejuvenation therapy, Fine lines reduction in Dubai, Youthful skin treatment in Dubai, Platelet-rich plasma facial, Professional PRP skin therapy" />
-        
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="Face PRP in Dubai, PRP facial treatment Dubai, Skin rejuvenation Dubai, Collagen stimulation facial, Anti-aging PRP treatment, Facial rejuvenation therapy, Fine lines reduction in Dubai, Youthful skin treatment in Dubai, Platelet-rich plasma facial, Professional PRP skin therapy" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Face PRP in Dubai – Skin Rejuvenation by Experts" key="og:title" />
+        <meta property="og:description" content="Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow." key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/face-prp1.jpg" key="og:image" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Face PRP in Dubai – Skin Rejuvenation by Experts" key="twitter:title" />
+        <meta name="twitter:description" content="Face PRP in Dubai is performed by specialists to stimulate collagen, improve skin texture, reduce fine lines, and restore a youthful, healthy glow." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/face-prp1.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
         <script
+          key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalProcedure",
-              "@id": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/#procedure",
-              "name": "Face PRP Treatment in Dubai",
-              "alternateName": "Platelet-Rich Plasma Facial Rejuvenation",
-              "url": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
-              "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/face-prp-in-dubai/",
-              "description": "Face PRP (Platelet-Rich Plasma) therapy in Dubai is a non-surgical aesthetic treatment that uses your own clinically prepared plasma to stimulate collagen production, improve skin elasticity, reduce fine lines, and rejuvenate facial skin naturally.",
-              "procedureType": "Aesthetic regenerative skin procedure",
-              "howPerformed": "After a clinical consultation and skin assessment, a small sample of your blood is drawn and centrifuged to isolate platelet-rich plasma. PRP is then injected into targeted areas of the face to encourage collagen stimulation and cellular regeneration.",
-              "preparation": "Patients should arrive with clean skin and share their medical history before the procedure. Minimal preparation is required.",
-              "followup": "Multiple sessions over weeks are recommended for optimal skin rejuvenation results, with aftercare guidance provided by clinicians.",
-              "indication": [
-                "Fine lines and wrinkles",
-                "Dull or uneven skin tone",
-                "Acne scars and pigmentation concerns",
-                "Loss of facial elasticity",
-                "General facial skin rejuvenation"
-              ],
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                  "addressLocality": "Jumeirah 1",
-                  "addressRegion": "Dubai",
-                  "postalCode": "393558",
-                  "addressCountry": "AE"
-                },
-                "telephone": "+971566597878",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Dubai"
-                },
-                "priceRange": "$$"
-              }
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
 

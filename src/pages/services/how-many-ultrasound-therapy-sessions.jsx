@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { Zap, TrendingUp, Activity, CheckCircle, Award, Users, Calendar, RefreshCcw, Clock, Dumbbell } from 'lucide-react';
@@ -155,13 +156,117 @@ const UltrasoundSessionsTimelinePage = () => {
     }
   ];
 
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/ultrasound.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/',
+        name: 'How Many Sessions Until HILT & Ultrasound Therapy Work? | RamaCare Dubai',
+        description: 'Evidence-based recovery timeline for HILT (High-Intensity Laser Therapy) & therapeutic ultrasound at RamaCare Polyclinic, Dubai — see typical session counts by condition.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'High-Intensity Laser Therapy (HILT) & Therapeutic Ultrasound' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Recovery Timeline', item: 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/' }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/#faq',
+        mainEntity: faqItems.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">How Many Ultrasound Therapy Sessions? | RamaCare Dubai Timeline</title>
-        <meta name="description" content="Wondering how many sessions of ultrasound therapy are needed for pain relief? See our clinical recovery timeline for sports injuries, back pain, and chronic conditions at RamaCare Jumeirah." key="description" />
-        
+        <title key="title">How Many Sessions Until HILT & Ultrasound Therapy Work? | RamaCare Dubai</title>
+        <meta name="description" content="Evidence-based recovery timeline for HILT (High-Intensity Laser Therapy) & therapeutic ultrasound at RamaCare Polyclinic, Dubai — see typical session counts by condition." key="description" />
+        <meta name="keywords" content="How many HILT therapy sessions, HILT therapy recovery timeline Dubai, ultrasound therapy session count, high intensity laser therapy Dubai, physiotherapy session count Dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="How Many Sessions Until HILT Therapy Works? | RamaCare Dubai" key="og:title" />
+        <meta property="og:description" content="Evidence-based recovery timeline for HILT (High-Intensity Laser Therapy) & therapeutic ultrasound at RamaCare Polyclinic, Dubai — see typical session counts by condition." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="HILT & Ultrasound Therapy Recovery Timeline - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="How Many Sessions Until HILT Therapy Works? | RamaCare Dubai" key="twitter:title" />
+        <meta name="twitter:description" content="Evidence-based recovery timeline for HILT (High-Intensity Laser Therapy) & therapeutic ultrasound at RamaCare Polyclinic, Dubai — see typical session counts by condition." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section */}
@@ -170,6 +275,16 @@ const UltrasoundSessionsTimelinePage = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1A5B4B] rounded-full opacity-5 blur-[100px]" style={{ transform: 'translate(-30%, 30%)' }}></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Recovery Timeline</span>
+          </nav>
           <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
             {/* Left Content */}
             <div className="space-y-8">
@@ -421,7 +536,7 @@ const UltrasoundSessionsTimelinePage = () => {
                   "Just as you wouldn't expect to build muscle with one gym session, healing damaged tissue requires consistent cellular stimulation over time."
                 </p>
                 <p className="mt-4 text-sm font-semibold text-[#5F5F5F]">
-                  — Dr. Ahmed Rama, RamaCare Polyclinic
+                  — Jeena Mathew, DHA Licensed Physiotherapist, RamaCare Polyclinic
                 </p>
               </div>
 
@@ -674,6 +789,33 @@ const UltrasoundSessionsTimelinePage = () => {
               </form>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy Dubai
+            </Link>
+            <Link href="/services/ultrasound-therapy-cost-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Ultrasound Therapy Cost
+            </Link>
+            <Link href="/services/professional-vs-home-ultrasound/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Professional vs Home Ultrasound
+            </Link>
+            <Link href="/services/physiotherapy-insurance-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy Insurance
+            </Link>
+            <Link href="/services/knee-pain-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Knee Pain Treatment
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> The recovery timelines provided on this page represent clinical averages based on general patient responses to High-Intensity Laser Therapy (HILT) and therapeutic ultrasound. Actual recovery times depend on individual health factors, severity of condition, adherence to rehabilitation protocols, and lifestyle factors. This content does not constitute medical advice or a guaranteed timeline. Please consult a licensed physiotherapist at RamaCare Polyclinic for an individualized assessment.
+          </p>
         </div>
       </section>
 

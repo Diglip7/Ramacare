@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MessageCircle, DollarSign, Package, TrendingDown, Stethoscope, Activity, ClipboardList, ShieldCheck, Zap, MapPin, Award, CheckCircle, ChevronDown, MapPin as MapPinIcon, BadgeCheck } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -66,6 +67,112 @@ export default function UltrasoundTherapyCostPage() {
     setIsModalOpen(false);
   };
 
+  const faqs = [
+    {
+      question: 'Is ultrasound therapy worth the money?',
+      answer: 'Yes. Compared to long-term pain medication or invasive injections, ultrasound therapy is a cost-effective, non-invasive solution that targets the root cause of inflammation rather than just masking symptoms.'
+    },
+    {
+      question: 'Why is ultrasound therapy expensive in some Dubai clinics?',
+      answer: 'High costs often reflect the clinic\'s overhead and the use of "Combo-Therapies." At RamaCare, we keep our ultrasound pricing focused and fair, ensuring you only pay for the technology and expertise required for your recovery.'
+    },
+    {
+      question: 'How many sessions will I need to pay for?',
+      answer: 'Most patients see significant relief within 3 to 5 sessions. For chronic conditions like "Office Neck" or Sciatica, a 10-session package is recommended to ensure the tissue fully heals and prevents pain from returning.'
+    }
+  ];
+
+  const schemaGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalClinic',
+        '@id': 'https://ramacarepolyclinic.ae/#clinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        image: 'https://ramacarepolyclinic.ae/images/ultrasound.jpg',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1, Dubai',
+          addressCountry: 'AE'
+        },
+        medicalSpecialty: 'Physiotherapy',
+        hasCredential: 'DHA Licensed'
+      },
+      {
+        '@type': 'MedicalWebPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/#webpage',
+        url: 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/',
+        name: 'Ultrasound Therapy Cost in Dubai: 2026 Price Guide & Packages',
+        description: 'How much is ultrasound therapy in Dubai? View RamaCare\'s 2026 price list, insurance coverage details, and discount packages for physiotherapy in Jumeirah 1.',
+        inLanguage: 'en-AE',
+        lastReviewed: '2026-08-29',
+        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+        about: { '@type': 'MedicalProcedure', name: 'Therapeutic Ultrasound' },
+        reviewedBy: {
+          '@type': 'Person',
+          name: 'Jeena Mathew',
+          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
+          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+        },
+        publisher: {
+          '@type': 'MedicalClinic',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1, Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      },
+      {
+        '@type': 'Physician',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/#physician',
+        name: 'Jeena Mathew',
+        medicalSpecialty: 'Physiotherapy',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: 'DHA Licensed Physiotherapist',
+        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 4, name: 'Ultrasound Therapy Cost', item: 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/' }
+        ]
+      },
+      {
+        '@type': 'MedicalProcedure',
+        name: 'Ultrasound Therapy',
+        description: 'Therapeutic ultrasound for pain relief, inflammation reduction, and tissue healing, delivered by DHA-licensed physiotherapists in Dubai.',
+        provider: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        areaServed: { '@type': 'City', name: 'Dubai' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'AED',
+          price: '450',
+          description: 'Single ultrasound therapy session at RamaCare Polyclinic'
+        }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/#faq',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       {ToastComponent}
@@ -73,12 +180,47 @@ export default function UltrasoundTherapyCostPage() {
         <title key="title">Ultrasound Therapy Cost in Dubai: 2026 Price Guide & Packages</title>
         <meta name="description" content="How much is ultrasound therapy in Dubai? View RamaCare's 2026 price list, insurance coverage details, and discount packages for physiotherapy in Jumeirah 1." key="description" />
         <meta name="keywords" content="ultrasound therapy cost Dubai, physiotherapy prices Dubai, therapeutic ultrasound Dubai, ultrasound treatment cost, physiotherapy package Dubai" />
-        
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/" key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Ultrasound Therapy Cost in Dubai: 2026 Price Guide & Packages" key="og:title" />
+        <meta property="og:description" content="How much is ultrasound therapy in Dubai? View RamaCare's 2026 price list, insurance coverage details, and discount packages for physiotherapy in Jumeirah 1." key="og:description" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ultrasound-therapy-cost-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Ultrasound Therapy Cost in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Ultrasound Therapy Cost in Dubai: 2026 Price Guide & Packages" key="twitter:title" />
+        <meta name="twitter:description" content="View RamaCare's price list, insurance coverage details, and discount packages for physiotherapy in Jumeirah 1." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaGraph)
+          }}
+        />
       </Head>
 
       {/* Hero Section with Pricing */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-7xl mx-auto">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Ultrasound Therapy Cost</span>
+          </nav>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
@@ -216,7 +358,7 @@ export default function UltrasoundTherapyCostPage() {
               <p 
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '24px', fontWeight: '500', color: '#1F5E4B' }}
               >
-                AED 400 – AED 500
+                AED 450
               </p>
             </motion.div>
 
@@ -240,13 +382,13 @@ export default function UltrasoundTherapyCostPage() {
               <p 
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '24px', fontWeight: '500', color: '#1F5E4B' }}
               >
-                AED 1,750
+                AED 1,900
               </p>
               <p 
                 className="mt-2"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#5F5F5F' }}
               >
-                Approx. AED 350 per session
+                AED 380 per session
               </p>
             </motion.div>
 
@@ -270,13 +412,13 @@ export default function UltrasoundTherapyCostPage() {
               <p 
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '24px', fontWeight: '500', color: '#1F5E4B' }}
               >
-                AED 3,000
+                AED 3,200
               </p>
               <p 
                 className="mt-2"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#5F5F5F' }}
               >
-                Best Value for Chronic Pain
+                AED 320 per session - Best Value for Chronic Pain
               </p>
             </motion.div>
 
@@ -938,6 +1080,33 @@ export default function UltrasoundTherapyCostPage() {
               </form>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Services & Disclaimer */}
+      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy Dubai
+            </Link>
+            <Link href="/services/professional-vs-home-ultrasound/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Professional vs Home Ultrasound
+            </Link>
+            <Link href="/services/physiotherapy-vs-rest-for-back-pain-recovery/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Physiotherapy vs Rest for Back Pain
+            </Link>
+            <Link href="/services/knee-pain-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Knee Pain Treatment
+            </Link>
+            <Link href="/services/sciatica-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+              Sciatica Treatment
+            </Link>
+          </div>
+          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> The information provided on this page is for educational purposes only and does not constitute medical advice. It is not intended to replace professional medical consultation, diagnosis, or treatment. Treatment outcomes vary by individual, and no specific results are guaranteed. Please consult a licensed physiotherapist at RamaCare Polyclinic or another qualified provider before beginning any ultrasound or physical therapy program.
+          </p>
         </div>
       </section>
 

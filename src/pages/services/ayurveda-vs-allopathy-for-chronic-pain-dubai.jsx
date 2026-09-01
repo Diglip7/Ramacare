@@ -356,6 +356,10 @@ export default function AyurvedaVsAllopathyPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SEO.canonical} />
         <meta property="og:image" content={`https://ramacarepolyclinic.ae${IMAGES.infographic.src}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ayurveda vs Allopathy for Chronic Pain Dubai | RamaCare" />
+        <meta name="twitter:description" content="Comparing Ayurveda vs Allopathy for chronic pain in Dubai? Get an expert, unbiased guide and book a personalised pain consultation at RamaCare." />
+        <meta name="twitter:image" content={`https://ramacarepolyclinic.ae${IMAGES.infographic.src}`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />

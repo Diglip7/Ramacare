@@ -44,7 +44,21 @@ export default function NailFungusPage() {
       <Head>
   <title key="title">Nail Fungus Treatment in Dubai for Healthy Nails</title>
   <meta name="description" content="Nail fungus treatment in Dubai effectively clears fungal infections, restores nail health, and prevents recurrence using safe, doctor-supervised care." key="description" />
-  <meta name="keywords" content="Nail fungus treatment Dubai, Fungal nail infection Dubai, Toenail fungus treatment, Fingernail fungus removal, Medical nail care Dubai, Laser nail fungus treatment, Anti-fungal therapy Dubai, Professional nail treatment, Healthy nails Dubai, Nail infection treatment" />
+    <meta name="keywords" content="Nail fungus treatment Dubai, Fungal nail infection Dubai, Toenail fungus treatment, Fingernail fungus removal, Medical nail care Dubai, Laser nail fungus treatment, Anti-fungal therapy Dubai, Professional nail treatment, Healthy nails Dubai, Nail infection treatment" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nail Fungus Treatment in Dubai for Healthy Nails" />
+  <meta property="og:description" content="Nail fungus treatment in Dubai effectively clears fungal infections, restores nail health, and prevents recurrence using safe, doctor-supervised care." />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/nail-fungus-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/nail-fungus.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nail Fungus Treatment in Dubai for Healthy Nails" />
+  <meta name="twitter:description" content="Effectively clears fungal infections, restores nail health, and prevents recurrence using safe, doctor-supervised care." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/nail-fungus.jpg" />
   
   <script
   type="application/ld+json"
@@ -102,6 +116,50 @@ export default function NailFungusPage() {
             },
             "priceRange": "$$"
           }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/",
+          "name": "Nail Fungus Treatment in Dubai for Healthy Nails",
+          "description": "Nail fungus treatment in Dubai effectively clears fungal infections, restores nail health, and prevents recurrence using safe, doctor-supervised care.",
+          "medicalAudience": { "@type": "Patient" },
+          "about": { "@id": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/#condition" },
+          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/#reviewer" },
+          "publisher": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+              { "@type": "ListItem", "position": 3, "name": "Nail Fungus Treatment", "item": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/" }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/#reviewer",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
+          "worksFor": { "@type": "MedicalOrganization", "name": "RamaCare Polyclinic" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/nail-fungus-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

@@ -247,26 +247,43 @@ export default function PostSurgeryRehabilitationPage() {
       {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
-        "name": seo.title,
+        "name": "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
         "url": CANONICAL_URL,
-        "description": seo.metaDescription,
+        "description": "Personalized, phase-based post-operative physiotherapy and rehabilitation program supporting recovery after knee replacement, hip replacement, ACL reconstruction, shoulder surgery, spine surgery, and other orthopedic procedures, coordinated with the patient's operating surgeon.",
         "inLanguage": "en",
+        "medicalAudience": {
+          "@type": "Patient"
+        },
         "isPartOf": {
           "@type": "WebSite",
           "url": "https://ramacarepolyclinic.ae/",
           "name": "RamaCare Polyclinic"
         },
-        "medicalAudience": { "@type": "Patient" },
         "about": {
           "@type": "MedicalTherapy",
           "name": "Post-Surgery Rehabilitation",
           "medicineSystem": "https://schema.org/PhysicalTherapy"
         },
         "reviewedBy": {
-          "@type": "Person",
+          "@type": "Physician",
           "name": "Jeena Mathew",
-          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
+          "medicalSpecialty": "Physiotherapy",
+          "honorificSuffix": "BPT, MPT",
+          "hasCredential": "DHA Licensed Physiotherapist",
           "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         }
       },
       {

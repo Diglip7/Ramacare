@@ -44,7 +44,25 @@ export default function MesotherapyPage() {
   <title key="title">Mesotherapy in Dubai for Skin and Hair Rejuvenation</title>
   <meta name="description" content="Mesotherapy in Dubai delivers vitamins and nutrients into the skin to improve texture, reduce hair loss, and support healthy skin and scalp care." key="description" />
   <meta name="keywords" content="Mesotherapy in Dubai, Mesotherapy treatment Dubai, Skin mesotherapy Dubai, Hair mesotherapy Dubai, Skin rejuvenation treatment, Hair loss treatment Dubai, Vitamin injection therapy, Non-surgical aesthetic treatment, Professional mesotherapy care" />
-  
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Mesotherapy in Dubai for Skin and Hair Rejuvenation" />
+  <meta property="og:description" content="Mesotherapy in Dubai delivers vitamins and nutrients into the skin to improve texture, reduce hair loss, and support healthy skin and scalp care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramacarepolyclinic.ae/services/mesotherapy-dubai/" />
+  <meta property="og:image" content="https://ramacarepolyclinic.ae/images/meso.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mesotherapy in Dubai - RamaCare Polyclinic" />
+  <meta property="og:site_name" content="RamaCare Polyclinic" />
+  <meta property="og:locale" content="en_AE" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mesotherapy in Dubai for Skin and Hair Rejuvenation" />
+  <meta name="twitter:description" content="Mesotherapy in Dubai delivers vitamins and nutrients into the skin to improve texture, reduce hair loss, and support healthy skin and scalp care." />
+  <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/meso.jpg" />
+
   <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -52,55 +70,57 @@ export default function MesotherapyPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#condition",
-          "name": "Skin Rejuvenation, Hydration Deficits & Localized Fat/Cellulite Concerns",
-          "alternateName": "Dull Skin, Fine Lines, Uneven Texture & Localized Fat Deposits",
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#webpage",
           "url": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/",
-          "description": "Skin rejuvenation and hydration deficit conditions include premature signs of aging, loss of elasticity or radiance, uneven texture, and localized areas of mild fat or cellulite that may benefit from targeted micro‑injections of vitamins, enzymes, and other solutions.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Mesotherapy",
-            "description": "Mesotherapy is a minimally invasive therapy involving micro‑injections of tailored vitamins, hyaluronic acid, enzymes, and other active agents into the middle layer of the skin to rejuvenate, hydrate, improve texture, and support reduction of mild localized fat or cellulite."
+          "name": "Mesotherapy in Dubai for Skin and Hair Rejuvenation",
+          "description": "Mesotherapy in Dubai delivers vitamins and nutrients into the skin to improve texture, reduce hair loss, and support healthy skin and scalp care.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ramacarepolyclinic.ae/",
+            "name": "RamaCare Polyclinic"
+          },
+          "about": {
+            "@type": "MedicalProcedure",
+            "name": "Mesotherapy"
+          },
+          "lastReviewed": "2026-08-29",
+          "reviewedBy": {
+            "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#physician"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+              { "@type": "ListItem", "position": 3, "name": "Mesotherapy", "item": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/" }
+            ]
           }
         },
         {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#procedure",
-          "name": "Mesotherapy Treatment in Dubai",
-          "alternateName": "Mesotherapy Skin Rejuvenation & Local Contouring",
-          "url": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/",
-          "description": "Mesotherapy at RamaCare Polyclinic in Dubai is a customized minimally invasive cosmetic treatment that uses a series of micro‑injections to deliver vitamins, hyaluronic acid, enzymes, and specialized solutions to improve skin hydration, texture, elasticity, and help with localized contouring.",
-          "procedureType": "Minimally invasive injection therapy",
-          "howPerformed": "A trained clinician administers multiple micro‑injections of a tailored solution into the mesoderm (middle layer) of the skin using fine needles. The selected cocktail of nutrients and actives helps stimulate collagen, improve moisture retention, refine skin texture, and support localized fat reduction.",
-          "preparation": "Patients should arrive with clean skin, avoid blood‑thinning medications or harsh exfoliants prior to treatment, and provide a full medical and skincare history to the clinician to ensure safety and optimal outcomes.",
-          "followup": "Follow‑up care may include monitoring of skin response, scheduling additional sessions for cumulative improvement, and guidance on supportive skincare to maintain results.",
-          "indication": [
-            "Loss of skin hydration and radiance",
-            "Fine lines and early signs of aging",
-            "Uneven skin texture",
-            "Localized cellulite appearance",
-            "Mild localized fat deposits"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
+          "@type": "Person",
+          "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#physician",
+          "name": "Sonita Sinaga",
+          "jobTitle": "Licensed & Certified Aesthetic Therapist",
+          "hasCredential": "NCLC Laser Certified",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "RamaCare Polyclinic"
+          },
+          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ramacarepolyclinic.ae/services/mesotherapy-dubai/#faq",
+          "mainEntity": content?.faq?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          })) || []
         }
       ]
     })

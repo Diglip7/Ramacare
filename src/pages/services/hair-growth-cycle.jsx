@@ -152,6 +152,9 @@ export default function HairGrowthCyclePage() {
           content="Understand the Hair Growth Cycle — its four stages, timeline & how treatments support healthy regrowth. Book a consultation at RamaCare Polyclinic."
           key="description"
         />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/hair-growth-cycle/" />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Hair Growth Cycle Explained: Stages & Timeline" key="og:title" />
         <meta
           property="og:description"
@@ -159,78 +162,108 @@ export default function HairGrowthCyclePage() {
           key="og:description"
         />
         <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/hair-growth-cycle/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/hair-growth-cycle-dubai-og.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Hair Growth Cycle Explained - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
-        {/* Recommended Schema Markup */}
-        <script
-          key="schema-article"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'MedicalWebPage',
-              name: 'Hair Growth Cycle Explained: Stages & Timeline',
-              description: 'Understand the Hair Growth Cycle — its four stages, timeline & how treatments support healthy regrowth.',
-              about: {
-                '@type': 'MedicalCondition',
-                name: 'Hair Growth Cycle',
-                description: 'The natural repeating process every hair follicle goes through, consisting of Anagen, Catagen, Telogen, and Exogen stages.'
-              }
-            }),
-          }}
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Hair Growth Cycle Explained: Stages & Timeline" key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content="Understand the Hair Growth Cycle — its four stages, timeline & how treatments support healthy regrowth. Book a consultation at RamaCare Polyclinic."
+          key="twitter:description"
         />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/hair-growth-cycle-dubai-og.jpg" key="twitter:image" />
+
+        {/* Structured JSON-LD Schema (@graph: WebPage, Physician, FAQPage, MedicalClinic) */}
         <script
-          key="schema-faq"
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqsList.map((f) => ({
-                '@type': 'Question',
-                name: f.q,
-                acceptedAnswer: { '@type': 'Answer', text: f.a },
-              })),
-            }),
-          }}
-        />
-        <script
-          key="schema-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-                { '@type': 'ListItem', position: 2, name: 'Hair Treatments', item: 'https://ramacarepolyclinic.ae/services/hair-treatment-dubai/' },
+              '@graph': [
                 {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'Hair Growth Cycle',
-                  item: 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/',
+                  '@type': 'WebPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/#webpage',
+                  url: 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/',
+                  name: 'Hair Growth Cycle Explained: Stages & Timeline',
+                  description:
+                    'Understand the Hair Growth Cycle — its four stages, timeline & how treatments support healthy regrowth. Book a consultation at RamaCare Polyclinic.',
+                  inLanguage: 'en',
+                  isPartOf: {
+                    '@type': 'WebSite',
+                    url: 'https://ramacarepolyclinic.ae/',
+                    name: 'RamaCare Polyclinic',
+                  },
+                  about: {
+                    '@type': 'MedicalCondition',
+                    name: 'Hair Growth Cycle / Hair Loss',
+                    description:
+                      'The natural repeating process every hair follicle goes through, consisting of Anagen, Catagen, Telogen, and Exogen stages.',
+                  },
+                  lastReviewed: '2026-08-29',
+                  reviewedBy: {
+                    '@id': 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/#physician',
+                  },
+                  breadcrumb: {
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
+                      { '@type': 'ListItem', position: 2, name: 'Hair Treatments', item: 'https://ramacarepolyclinic.ae/services/hair-treatment-dubai/' },
+                      {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: 'Hair Growth Cycle',
+                        item: 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/',
+                      },
+                    ],
+                  },
+                },
+                {
+                  '@type': 'Physician',
+                  '@id': 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/#physician',
+                  name: 'Dr. Sahar Zomorrodi',
+                  medicalSpecialty: 'General Practice',
+                  honorificSuffix: 'MD',
+                  hasCredential: 'DHA Licensed General Practitioner',
+                  worksFor: {
+                    '@type': 'MedicalOrganization',
+                    name: 'RamaCare Polyclinic',
+                    url: 'https://ramacarepolyclinic.ae/',
+                  },
+                  url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/#faq',
+                  mainEntity: faqsList.map((f) => ({
+                    '@type': 'Question',
+                    name: f.q,
+                    acceptedAnswer: { '@type': 'Answer', text: f.a },
+                  })),
+                },
+                {
+                  '@type': 'MedicalClinic',
+                  '@id': 'https://ramacarepolyclinic.ae/#organization',
+                  name: 'RamaCare Polyclinic',
+                  url: 'https://ramacarepolyclinic.ae/',
+                  medicalSpecialty: 'Dermatology',
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+                    addressLocality: 'Jumeirah 1',
+                    addressRegion: 'Dubai',
+                    addressCountry: 'AE',
+                  },
+                  priceRange: '$$',
                 },
               ],
-            }),
-          }}
-        />
-        <script
-          key="schema-clinic"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'MedicalClinic',
-              name: 'RamaCare Polyclinic',
-              url: 'https://ramacarepolyclinic.ae/',
-              medicalSpecialty: 'Dermatology',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-                addressLocality: 'Jumeirah 1',
-                addressRegion: 'Dubai',
-                addressCountry: 'AE'
-              },
-              priceRange: '$$',
             }),
           }}
         />

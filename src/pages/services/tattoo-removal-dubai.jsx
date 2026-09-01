@@ -25,6 +25,17 @@ export default function TattooRemovalPage() {
 
   // Get content from data file - nested path
   const content = getSubcategoryContent('aesthetic-dermatology-dubai', 'laser-treatment/tattoo-removal');
+
+  // Generate FAQ schema dynamically from content
+  const faqSchema = content?.faq?.faqs?.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  })) || [];
+
    const navItems = [
     { id: 'treatment-info', label: 'Treatment Info' },
     { id: 'how-it-works', label: 'How It Works' },
@@ -42,72 +53,101 @@ export default function TattooRemovalPage() {
   return (
     <Layout>
       <Head>
-  <title key="title">Tattoo Removal in Dubai for Safe and Effective Results</title>
-  <meta name="description" content="Tattoo removal in Dubai uses advanced laser treatments to safely fade or remove unwanted tattoos, restoring clear, natural-looking skin under expert care." key="description" />
-  <meta name="keywords" content="Tattoo removal in Dubai, Laser tattoo removal Dubai, Professional tattoo removal, Unwanted tattoo removal, Non-surgical tattoo removal, Safe tattoo fading Dubai, Tattoo lightening treatment, Permanent tattoo removal Dubai, Skin restoration after tattoo, Expert tattoo removal clinic" />
-  
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "@id": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/#condition",
-          "name": "Unwanted Tattoos and Persistent Pigmented Ink",
-          "alternateName": "Regret Tattoos, Unwanted Body Art",
-          "url": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
-          "description": "Unwanted tattoos and persistent pigmented ink may be removed or faded using medically supervised laser treatments. Tattoo removal addresses aesthetic concerns, career or lifestyle changes, and residual ink from amateur or traumatic tattoos.",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Laser Tattoo Removal Therapy",
-            "description": "Laser tattoo removal therapy uses focused light pulses to break tattoo pigment into smaller particles that the body’s natural processes gradually eliminate while preserving the surrounding skin."
-          }
-        },
-        {
-          "@type": "MedicalProcedure",
-          "@id": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/#procedure",
-          "name": "Laser Tattoo Removal in Dubai",
-          "alternateName": "Tattoo Fading and Ink Reduction Treatment",
-          "url": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
-          "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
-          "description": "Laser tattoo removal at RamaCare Polyclinic in Dubai uses advanced Q‑switched and picosecond laser technologies to break down tattoo pigment safely and effectively, tailored to tattoo characteristics, skin type, and treatment goals.",
-          "procedureType": "Dermatologic laser procedure",
-          "howPerformed": "After a detailed consultation and assessment of tattoo size, colors, ink density, and skin type, the clinician selects appropriate laser wavelengths (e.g., Q‑switched Nd:YAG, picosecond lasers) to target tattoo pigment. Protective eyewear is worn and numbing or cooling options are offered for comfort. Multiple sessions spaced over weeks may be required to progressively fade or remove the tattoo.",
-          "preparation": "Patients should share complete medical and skin history, avoid sun exposure and tanning before treatment, stop irritant products as advised, and ensure the treatment area is clean and free of lotions or oils prior to laser sessions.",
-          "followup": "Post‑treatment care includes keeping the area clean, applying recommended ointments or dressings, protecting the skin from sun exposure, and spacing follow‑up sessions as per the clinician’s guidance for optimal pigment clearance and healing.",
-          "indication": [
-            "Unwanted body art or tattoos",
-            "Fading prior cosmetic tattoos or microblading",
-            "Amateur and professional tattoo removal",
-            "Lingering ink from traumatic tattoos",
-            "Preparation for cover‑up tattoo work"
-          ],
-          "provider": {
-            "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-              "addressLocality": "Jumeirah 1",
-              "addressRegion": "Dubai",
-              "postalCode": "393558",
-              "addressCountry": "AE"
-            },
-            "telephone": "+971 56 659 7878",
-            "areaServed": {
-              "@type": "City",
-              "name": "Dubai"
-            },
-            "priceRange": "$$"
-          }
-        }
-      ]
-    })
-  }}
-/>
-</Head>
+        <title key="title">Tattoo Removal in Dubai for Safe and Effective Results</title>
+        <meta name="description" content="Tattoo removal in Dubai uses advanced laser treatments to safely fade or remove unwanted tattoos, restoring clear, natural-looking skin under expert care." key="description" />
+        <meta name="keywords" content="Tattoo removal in Dubai, Laser tattoo removal Dubai, Professional tattoo removal, Unwanted tattoo removal, Non-surgical tattoo removal, Safe tattoo fading Dubai, Tattoo lightening treatment, Permanent tattoo removal Dubai, Skin restoration after tattoo, Expert tattoo removal clinic" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tattoo Removal in Dubai for Safe and Effective Results" />
+        <meta property="og:description" content="Tattoo removal in Dubai uses advanced laser treatments to safely fade or remove unwanted tattoos, restoring clear, natural-looking skin under expert care." />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/tattoo.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tattoo Removal in Dubai for Safe and Effective Results" />
+        <meta name="twitter:description" content="Advanced laser treatments to safely fade or remove unwanted tattoos, restoring clear, natural-looking skin." />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/tattoo.jpg" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+                    { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
+                    { "@type": "ListItem", "position": 3, "name": "Tattoo Removal", "item": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/" }
+                  ]
+                },
+                {
+                  "@type": "MedicalCondition",
+                  "@id": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/#condition",
+                  "name": "Unwanted Tattoos and Persistent Pigmented Ink",
+                  "alternateName": "Regret Tattoos, Unwanted Body Art",
+                  "url": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
+                  "description": "Unwanted tattoos and persistent pigmented ink may be removed or faded using medically supervised laser treatments. Tattoo removal addresses aesthetic concerns, career or lifestyle changes, and residual ink from amateur or traumatic tattoos.",
+                  "possibleTreatment": {
+                    "@type": "MedicalTherapy",
+                    "name": "Laser Tattoo Removal Therapy",
+                    "description": "Laser tattoo removal therapy uses focused light pulses to break tattoo pigment into smaller particles that the body’s natural processes gradually eliminate while preserving the surrounding skin."
+                  }
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  "@id": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/#procedure",
+                  "name": "Laser Tattoo Removal in Dubai",
+                  "alternateName": "Tattoo Fading and Ink Reduction Treatment",
+                  "url": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
+                  "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/tattoo-removal-dubai/",
+                  "description": "Laser tattoo removal at RamaCare Polyclinic in Dubai uses advanced Q‑switched and picosecond laser technologies to break down tattoo pigment safely and effectively, tailored to tattoo characteristics, skin type, and treatment goals.",
+                  "procedureType": "Dermatologic laser procedure",
+                  "howPerformed": "After a detailed consultation and assessment of tattoo size, colors, ink density, and skin type, the clinician selects appropriate laser wavelengths (e.g., Q‑switched Nd:YAG, picosecond lasers) to target tattoo pigment. Protective eyewear is worn and numbing or cooling options are offered for comfort. Multiple sessions spaced over weeks may be required to progressively fade or remove the tattoo.",
+                  "preparation": "Patients should share complete medical and skin history, avoid sun exposure and tanning before treatment, stop irritant products as advised, and ensure the treatment area is clean and free of lotions or oils prior to laser sessions.",
+                  "followup": "Post‑treatment care includes keeping the area clean, applying recommended ointments or dressings, protecting the skin from sun exposure, and spacing follow‑up sessions as per the clinician’s guidance for optimal pigment clearance and healing.",
+                  "indication": [
+                    "Unwanted body art or tattoos",
+                    "Fading prior cosmetic tattoos or microblading",
+                    "Amateur and professional tattoo removal",
+                    "Lingering ink from traumatic tattoos",
+                    "Preparation for cover‑up tattoo work"
+                  ],
+                  "provider": {
+                    "@type": "MedicalClinic",
+                    "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+                      "addressLocality": "Jumeirah 1",
+                      "addressRegion": "Dubai",
+                      "postalCode": "393558",
+                      "addressCountry": "AE"
+                    },
+                    "telephone": "+971 56 659 7878",
+                    "areaServed": {
+                      "@type": "City",
+                      "name": "Dubai"
+                    },
+                    "priceRange": "$$"
+                  }
+                },
+                {
+                  "@type": "FAQPage",
+                  "mainEntity": faqSchema
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
 
       <TreatmentHero 
         categoryName={categoryName}

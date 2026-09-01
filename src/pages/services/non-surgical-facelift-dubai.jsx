@@ -47,7 +47,7 @@ const meta = {
   title: "Non-Surgical Facelift in Dubai | RamaCare",
   description:
     "Explore Non-Surgical Facelift in Dubai at RamaCare Polyclinic. Personalized facial rejuvenation options for laxity, volume loss & aging. Book a consultation.",
-  url: "/services/non-surgical-facelift-dubai",
+  url: "/services/non-surgical-facelift-dubai/",
 };
 
 /* ------------------------------------------------------------------ */
@@ -2077,6 +2077,25 @@ export default function NonSurgicalFacelift() {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={`https://ramacarepolyclinic.ae${meta.url}`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Non-Surgical Facelift in Dubai | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:description" content="Explore Non-Surgical Facelift in Dubai at RamaCare Polyclinic. Personalized facial rejuvenation options for laxity, volume loss & aging. Book a consultation." key="og:description" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={`https://ramacarepolyclinic.ae${meta.url}`} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/non-surgical-facelift-hero-consultation.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:image:alt" content="Non-Surgical Facelift consultation at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Non-Surgical Facelift in Dubai | RamaCare Polyclinic" key="twitter:title" />
+        <meta name="twitter:description" content="Explore Non-Surgical Facelift in Dubai at RamaCare Polyclinic. Personalized facial rejuvenation options for laxity, volume loss & aging. Book a consultation." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/non-surgical-facelift-hero-consultation.jpg" key="twitter:image" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
@@ -2128,6 +2147,13 @@ export default function NonSurgicalFacelift() {
         <PatientJourney />
         <FAQs />
         <InternalLinksAndFinalCta />
+        {/* Medical Disclaimer Block */}
+        <div className="mx-auto max-w-4xl px-4 py-8">
+          <div className="rounded-2xl bg-[#F5F8F6] p-6 border-l-4 border-[#1F5E4B] text-xs leading-relaxed text-[#5F5F5F]">
+            <strong className="text-[#0F3B2E] font-bold block mb-1">Medical Disclaimer:</strong>
+            This content is for general educational purposes and does not replace professional medical advice, diagnosis, or treatment. Non-surgical facelift results vary by individual, treatment type, and skin condition. Always consult a qualified aesthetic practitioner regarding your specific candidacy and expected outcomes.
+          </div>
+        </div>
         {/* Content Reviewer Badge */}
         <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/non-surgical-facelift-dubai/" />
       </main>

@@ -14,7 +14,6 @@ import FAQSection from '../../../components/Faq';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
-
 export default function ExpertiseinRoutineCheckUpsPage() {
   const categoryName = 'General Physician';
   const subcategoryName = 'Expertise in Routine Check-Ups';
@@ -22,12 +21,110 @@ export default function ExpertiseinRoutineCheckUpsPage() {
   // Get content from data file
   const content = getSubcategoryContent('general-physician-dubai', 'expertise-in-routine-check-ups');
 
+  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/routine-check-ups-dubai/";
+  const PAGE_TITLE = "Expertise in Routine Check-Ups in Dubai | Preventive Care";
+  const PAGE_DESCRIPTION = "Expertise in routine check-ups in Dubai with trusted doctors, clear screenings, and personalised health plans to detect issues early and support long-term health.";
+
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${CANONICAL_URL}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ramacarepolyclinic.ae/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "General Physician",
+            "item": "https://ramacarepolyclinic.ae/services/general-physician-dubai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Expertise in Routine Check-Ups",
+            "item": CANONICAL_URL
+          }
+        ]
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${CANONICAL_URL}#webpage`,
+        "name": "Expertise in Routine Check-Ups Dubai",
+        "url": CANONICAL_URL,
+        "description": PAGE_DESCRIPTION,
+        "medicalAudience": "Patient",
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Sahar Zomorrodi",
+          "jobTitle": "General Practitioner & Aesthetic Specialist",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+        },
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "telephone": "+971566597878",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1, Dubai",
+            "addressCountry": "AE"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${CANONICAL_URL}#faq`,
+        "mainEntity": (content?.faq?.faqs || []).map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <Layout>
       <Head>
-        <title key="title">Expertise in Routine Check-Ups in Dubai | Preventive Care</title>
-        <meta name="description" content="Expertise in routine check-ups in Dubai with trusted doctors, clear screenings, and personalised health plans to detect issues early and support long-term health." key="description" />
-        <meta name="keywords" content="routine check-ups in Dubai, general health check-up Dubai, preventive health screening Dubai, Annual medical check-up in Dubai, routine medical examination in Dubai, Primary care check-up in Dubai, health assessment Dubai, Early disease detection in Dubai, preventive healthcare Dubai" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <meta name="keywords" content="routine check-ups in Dubai, general health check-up Dubai, preventive health screening Dubai, Annual medical check-up in Dubai, routine medical examination in Dubai, Primary care check-up in Dubai, health assessment Dubai, Early disease detection in Dubai, preventive healthcare Dubai" key="keywords" />
+        <meta name="robots" content="index, follow" key="robots" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/routine.jpg" key="og:image" />
+        <meta property="og:image:width" content="1200" key="og:image:width" />
+        <meta property="og:image:height" content="630" key="og:image:height" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content="Trusted doctors, clear screenings, and personalised health plans to detect issues early in Jumeirah 1, Dubai." key="twitter:description" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/routine.jpg" key="twitter:image" />
+
+        {/* Structured Data Schemas */}
+        <script
+          key="schema-graph"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        />
       </Head>
 
       <TreatmentHero 

@@ -234,6 +234,23 @@ export default function RootCanalVsExtractionPage() {
     name: SEO.title,
     url: SEO.canonical,
     description: SEO.metaDescription,
+    medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Dr. Hirbod Gilandoust',
+      jobTitle: 'Specialist Cosmetic Dentist',
+      url: 'https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/',
+    },
+    publisher: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1, Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const articleSchema = {
@@ -250,8 +267,9 @@ export default function RootCanalVsExtractionPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Dental Dubai', item: 'https://ramacarepolyclinic.ae/services/dental-dubai/' },
-      { '@type': 'ListItem', position: 3, name: 'Root Canal vs Tooth Extraction Dubai', item: SEO.canonical },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
+      { '@type': 'ListItem', position: 3, name: 'Dental', item: 'https://ramacarepolyclinic.ae/services/dental-dubai/' },
+      { '@type': 'ListItem', position: 4, name: 'Root Canal vs Tooth Extraction Dubai', item: SEO.canonical },
     ],
   };
 
@@ -293,12 +311,31 @@ export default function RootCanalVsExtractionPage() {
       <Head>
         <title>{SEO.title}</title>
         <meta name="description" content={SEO.metaDescription} />
+        <meta
+          name="keywords"
+          content="Root Canal vs Tooth Extraction Dubai, Root canal treatment Dubai, Tooth extraction Dubai, Dentist in Dubai, Dental clinic Jumeirah"
+        />
         <link rel="canonical" href={SEO.canonical} />
+        <meta name="robots" content="index, follow" key="robots" />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={SEO.ogTitle} />
         <meta property="og:description" content={SEO.ogDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SEO.canonical} />
         <meta property="og:image" content={`https://ramacarepolyclinic.ae${IMAGES.hero.src}`} />
+        <meta property="og:image:alt" content="Root Canal vs Tooth Extraction Dubai comparison" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:locale" content="en_AE" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SEO.ogTitle} />
+        <meta name="twitter:description" content={SEO.ogDescription} />
+        <meta name="twitter:image" content={`https://ramacarepolyclinic.ae${IMAGES.hero.src}`} />
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -309,13 +346,14 @@ export default function RootCanalVsExtractionPage() {
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">
-
         <section className="px-4 pb-12 pt-12 sm:pt-16">
           <div className="mx-auto max-w-7xl">
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-[#5F5F5F]">
               <a href="/" className="hover:text-[#1F5E4B]">Home</a>
               <span aria-hidden="true">/</span>
-              <a href="/services/dental-dubai/" className="hover:text-[#1F5E4B]">Dental Dubai</a>
+              <a href="/services/" className="hover:text-[#1F5E4B]">Services</a>
+              <span aria-hidden="true">/</span>
+              <a href="/services/dental-dubai/" className="hover:text-[#1F5E4B]">Dental</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Root Canal vs Tooth Extraction Dubai</span>
             </nav>

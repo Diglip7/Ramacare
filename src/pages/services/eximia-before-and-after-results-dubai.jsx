@@ -1299,7 +1299,7 @@ export default function EximiaBeforeAfterPage() {
                     <div className="text-sm text-white/80">Satisfaction</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-white mb-1">10+</div>
+                    <div className="text-3xl font-bold text-white mb-1">15+</div>
                     <div className="text-sm text-white/80">Years Experience</div>
                   </div>
                 </div>
