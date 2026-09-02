@@ -14,7 +14,7 @@ import ContentReviewBadge from '../../../components/ContentReviewBadge';
    We preserve all SEO titles, canonicals, metadescriptions, and text.
  ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/ayurvedic-clinic-in-jumeirah';
+const PAGE_PATH = '/services/ayurvedic-clinic-in-jumeirah/';
 
 const areasServed = [
   'Jumeirah 1',
@@ -265,6 +265,78 @@ export default function AyurvedicClinicJumeirahPage() {
     ]
   };
 
+  const schemaClinic = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "RamaCare Polyclinic",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/images/Logo.png`,
+    "image": `${SITE_URL}/images/Ayurvedic wellness consultation.jpg`,
+    "description": "DHA-licensed Ayurvedic clinic in Jumeirah 1, Dubai offering authentic Panchakarma, Abhyanga, Shirodhara, and holistic consultations by experienced BAMS doctor.",
+    "telephone": "+97142862006",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+      "addressLocality": "Dubai",
+      "addressRegion": "Dubai",
+      "addressCountry": "AE"
+    },
+    "priceRange": "$$"
+  };
+
+  const schemaWebPage = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${SITE_URL}${PAGE_PATH}`,
+    "url": `${SITE_URL}${PAGE_PATH}`,
+    "name": "Ayurvedic Clinic in Jumeirah | RamaCare Polyclinic",
+    "description": "Visit RamaCare Polyclinic, a DHA-licensed Ayurvedic Clinic in Jumeirah offering personalized Ayurveda, Panchakarma & holistic care. Book today.",
+    "inLanguage": "en-AE",
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": SITE_URL
+    }
+  };
+
+  const schemaBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": `${SITE_URL}/services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ayurvedic Clinic in Jumeirah",
+        "item": `${SITE_URL}${PAGE_PATH}`
+      }
+    ]
+  };
+
+  const schemaFaqs = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
   return (
     <Layout>
       <Head>
@@ -274,15 +346,26 @@ export default function AyurvedicClinicJumeirahPage() {
           content="Visit RamaCare Polyclinic, a DHA-licensed Ayurvedic Clinic in Jumeirah offering personalized Ayurveda, Panchakarma & holistic care. Book today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
+        <link rel="canonical" href={SITE_URL + PAGE_PATH} key="canonical" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
         <meta property="og:title" content="Ayurvedic Clinic in Jumeirah — RamaCare Polyclinic" />
         <meta
           property="og:description"
           content="Authentic, DHA-licensed Ayurvedic care in Jumeirah 1, Dubai. Personalized treatment plans from an experienced BAMS doctor. Book your consultation today."
         />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
+        <meta property="og:image" content={SITE_URL + '/images/Ayurvedic wellness consultation.jpg'} />
+        
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ayurvedic Clinic in Jumeirah — RamaCare Polyclinic" />
+        <meta name="twitter:description" content="Authentic, DHA-licensed Ayurvedic care in Jumeirah 1, Dubai. Book your consultation today." />
+        <meta name="twitter:image" content={SITE_URL + '/images/Ayurvedic wellness consultation.jpg'} />
+
+        <script key="schema-clinic" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaClinic) }} />
+        <script key="schema-webpage" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }} />
+        <script key="schema-breadcrumbs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
+        <script key="schema-faqs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFaqs) }} />
       </Head>
 
       {/* ============ LIGHT MINIMALIST ZEN LAYOUT ============ */}

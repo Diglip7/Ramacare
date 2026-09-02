@@ -60,30 +60,7 @@ export default function AestheticDermatologyCategoryPage() {
         <meta name="twitter:description" content="Advanced aesthetic dermatology in Dubai — laser treatments, PRP therapy, hair restoration & body contouring by DHA-licensed specialists." />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/aesth.jpg" />
 
-        {/* BreadcrumbList Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Aesthetic Dermatology",
-                  "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
-                }
-              ]
-            })
-          }}
-        />
+       
 
         {/* MedicalProcedure Service Schema */}
         <script

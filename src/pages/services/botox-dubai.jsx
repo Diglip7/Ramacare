@@ -26,7 +26,7 @@ export default function BotoxPage() {
 
   return (
     <Layout>
-      <Head>
+    <Head>
   <title key="title">Botox in Dubai for Wrinkle Reduction and Facial Rejuvenation</title>
   <meta name="description" content="Botox in Dubai helps reduce fine lines and wrinkles, relax facial muscles, and restore a refreshed look through safe, doctor-administered treatment." key="description" />
   <meta name="keywords" content="Botox in Dubai, Botox treatment Dubai, Wrinkle reduction Dubai, Anti-aging Botox, Facial Botox treatment, Forehead lines treatment, Crow’s feet Botox, Non-surgical facial rejuvenation, Medical Botox Dubai" />

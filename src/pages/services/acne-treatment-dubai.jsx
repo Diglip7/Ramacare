@@ -1,5 +1,6 @@
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
@@ -26,6 +27,9 @@ import {
   Moon,
   MessageCircle
 } from 'lucide-react';
+
+const SITE_URL = 'https://ramacarepolyclinic.ae';
+const PAGE_PATH = '/services/acne-treatment-dubai/';
 
 export default function AcneTreatmentPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -55,8 +59,81 @@ export default function AcneTreatmentPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // All other content arrays removed - now imported from data file
-  // This reduces file from 1173 lines to ~400 lines!
+  const schemaClinic = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "RamaCare Polyclinic",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/images/Logo.png`,
+    "image": `${SITE_URL}/images/acne.jpg`,
+    "description": "DHA-licensed polyclinic in Jumeirah 1, Dubai providing advanced acne treatment, acne scar removal, and dermatology solutions.",
+    "telephone": "+97142862006",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+      "addressLocality": "Dubai",
+      "addressRegion": "Dubai",
+      "addressCountry": "AE"
+    },
+    "priceRange": "$$"
+  };
+
+  const schemaWebPage = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${SITE_URL}${PAGE_PATH}`,
+    "url": `${SITE_URL}${PAGE_PATH}`,
+    "name": "Acne Treatment in Dubai | Advanced Solutions for Clear, Healthy Skin",
+    "description": "Expert acne treatment in Dubai with advanced dermatology solutions for clear, healthy, and acne-free skin. Personalized treatments for all skin types.",
+    "inLanguage": "en-AE",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Acne vulgaris"
+    },
+    "publisher": {
+      "@type": "MedicalClinic",
+      "name": "RamaCare Polyclinic",
+      "url": SITE_URL
+    }
+  };
+
+  const schemaBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": `${SITE_URL}/services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Acne Treatment in Dubai",
+        "item": `${SITE_URL}${PAGE_PATH}`
+      }
+    ]
+  };
+
+  const schemaFaqs = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
 
   return (
     <Layout>
@@ -65,9 +142,38 @@ export default function AcneTreatmentPage() {
         <meta name="description" content="Expert acne treatment in Dubai with advanced dermatology solutions for clear, healthy, and acne-free skin. Personalized treatments for all skin types." key="description" />
         <meta name="keywords" content="Acne treatment Dubai, Best acne treatment Dubai, Acne scar treatment Dubai, Dermatologist acne treatment, Chemical peel for acne, Laser acne treatment, Hormonal acne treatment" />
         
+        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
         
-        
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:title" content="Acne Treatment in Dubai | Advanced Solutions for Clear, Healthy Skin" />
+        <meta property="og:description" content="Expert acne treatment in Dubai with advanced dermatology solutions for clear, healthy, and acne-free skin. Personalized treatments for all skin types." />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} />
+        <meta property="og:image" content={`${SITE_URL}/images/acne.jpg`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Acne Treatment in Dubai | Advanced Solutions for Clear, Healthy Skin" />
+        <meta name="twitter:description" content="Expert acne treatment in Dubai with advanced dermatology solutions for clear, healthy, and acne-free skin." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/acne.jpg`} />
+
+        <script key="schema-clinic" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaClinic) }} />
+        <script key="schema-webpage" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }} />
+        <script key="schema-breadcrumbs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
+        <script key="schema-faqs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFaqs) }} />
       </Head>
+
+      {/* Breadcrumb Navigation */}
+      <div className="bg-[#1F5E4B] pt-4 pb-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-white/80 gap-1.5">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <span>/</span>
+            <span className="text-white font-semibold">Acne Treatment in Dubai</span>
+          </nav>
+        </div>
+      </div>
 
       {/* Hero Section with Gradient Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">

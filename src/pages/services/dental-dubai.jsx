@@ -18,25 +18,7 @@ import { getCategoryContent } from "../../data/categoryContent";
 export default function dentaldubaiCategoryPage() {
   const content = getCategoryContent('dental');
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ramacarepolyclinic.ae/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Dental Treatment",
-        "item": "https://ramacarepolyclinic.ae/services/dental-dubai/"
-      }
-    ]
-  };
-
+  
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",

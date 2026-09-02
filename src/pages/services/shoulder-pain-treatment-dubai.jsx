@@ -75,7 +75,6 @@ function LinkedText({ text, className }) {
 export default function ShoulderPainTreatmentPage() {
   const [openFaq, setOpenFaq] = useState(null);
   const [scrollY, setScrollY] = useState(0);
-
   const content = subcategoryContent['shoulder-pain-treatment-dubai'];
   const {
     seo,

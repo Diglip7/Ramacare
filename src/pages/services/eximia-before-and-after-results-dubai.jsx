@@ -287,15 +287,32 @@ export default function EximiaBeforeAfterPage() {
     }
   };
 
+const SITE_URL = 'https://ramacarepolyclinic.ae';
+const PAGE_PATH = '/services/eximia-before-and-after-results-dubai/';
+
   return (
     <Layout>
       <Head>
         <title key="title">Eximia Results: Real Patient Before and After | RamaCare</title>
         <meta name="description" content="See real Eximia body contouring results in Dubai. Most patients see 1-3 cm reduction after first session with zero downtime." key="description" />
         
+        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:title" content="Eximia Results: Real Patient Before and After | RamaCare" />
+        <meta property="og:description" content="See real Eximia body contouring results in Dubai. Most patients see 1-3 cm reduction after first session with zero downtime." />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} />
+        <meta property="og:image" content={`${SITE_URL}/images/After1.jpeg`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Eximia Results: Real Patient Before and After | RamaCare" />
+        <meta name="twitter:description" content="See real Eximia body contouring results in Dubai. Most patients see 1-3 cm reduction after first session." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/After1.jpeg`} />
         
         {/* JSON-LD Schema */}
         <script
+          key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -303,9 +320,10 @@ export default function EximiaBeforeAfterPage() {
               "@graph": [
                 {
                   "@type": "MedicalWebPage",
+                  "@id": `${SITE_URL}${PAGE_PATH}`,
                   "name": "Eximia Before and After Results Dubai",
                   "description": "Real Eximia body contouring before and after results from RamaCare Polyclinic Dubai",
-                  "url": "https://ramacare.ae/eximia-before-and-after-results-dubai"
+                  "url": `${SITE_URL}${PAGE_PATH}`
                 },
                 {
                   "@type": "MedicalProcedure",
@@ -314,29 +332,40 @@ export default function EximiaBeforeAfterPage() {
                   "provider": {
                     "@type": "MedicalClinic",
                     "name": "RamaCare Polyclinic",
+                    "url": SITE_URL,
                     "address": {
                       "@type": "PostalAddress",
-                      "streetAddress": "Shop #15, Building 6, Al Meydan Road, Opposite Safa Park",
+                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
                       "addressLocality": "Dubai",
                       "addressRegion": "Dubai",
-                      "postalCode": "393558",
+                      "postalCode": "00000",
                       "addressCountry": "AE"
                     },
-                    "telephone": "+971 56 659 7878"
-                  },
-                  "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Eximia Treatments",
-                    "itemListElement": [
-                      {
-                        "@type": "Offer",
-                        "itemOffered": {
-                          "@type": "MedicalProcedure",
-                          "name": "Eximia Body Contouring"
-                        }
-                      }
-                    ]
+                    "telephone": "+97142862006"
                   }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": SITE_URL
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Services",
+                      "item": `${SITE_URL}/services`
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Eximia Before and After Results",
+                      "item": `${SITE_URL}${PAGE_PATH}`
+                    }
+                  ]
                 }
               ]
             })

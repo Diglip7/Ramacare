@@ -67,14 +67,6 @@ export default function physiotherapydubaiCategoryPage() {
           "jobTitle": "Musculoskeletal Physiotherapy Specialist",
           "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
         },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ramacarepolyclinic.ae/services/" },
-            { "@type": "ListItem", "position": 3, "name": "Physiotherapy Treatment", "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" }
-          ]
-        }
       },
       {
         "@type": "FAQPage",

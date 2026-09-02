@@ -45,30 +45,6 @@ export default function facialdubaiCategoryPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BreadcrumbList",
-        "@id": `${CANONICAL_URL}#breadcrumb`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://ramacarepolyclinic.ae/services/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Facial Treatments",
-            "item": CANONICAL_URL
-          }
-        ]
-      },
-      {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "name": "Facial Treatments Dubai",

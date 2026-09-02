@@ -11,6 +11,9 @@ import * as LucideIcons from 'lucide-react';
 // Brand Light Cream: #FDFCF7
 // Brand Light Sage: #E6EFEA
 
+const SITE_URL = 'https://ramacarepolyclinic.ae';
+const PAGE_PATH = '/services/best-hair-specialist-dubai/';
+
 export default function BestHairSpecialistPage() {
   const [activeTab, setActiveTab] = useState('dermatologist');
   const [faqOpen, setFaqOpen] = useState(null);
@@ -197,7 +200,6 @@ export default function BestHairSpecialistPage() {
     { label: 'PRP Hair Treatment Cost in Dubai', link: '/services/hair-prp-cost-dubai/', desc: 'Useful if you want to understand the general cost considerations involved in a PRP treatment plan.' },
     { label: 'PRP vs Hair Transplant in Dubai', link: '/services/prp-vs-hair-transplant-dubai/', desc: 'A direct comparison to help you understand when a non-surgical approach may be appropriate versus when surgical restoration may be considered.' },
     { label: 'PRP vs Hair Mesotherapy', link: '/services/prp-vs-hair-mesotherapy-dubai/', desc: 'Compares these two non-surgical options side by side to help clarify which may suit your situation.' },
-    { label: 'Hair Mesotherapy in Dubai', link: '/services/mesotherapy-dubai/', desc: 'A closer look at Hair Mesotherapy as a treatment option, including how it differs from PRP.' }
   ];
 
   return (
@@ -210,6 +212,23 @@ export default function BestHairSpecialistPage() {
           key="description"
         />
         <meta name="keywords" content="Best Hair Specialist in Dubai, Hair specialist Dubai, Hair loss doctor Dubai, Jumeirah hair specialist, PRP hair assessment Dubai, Hair clinic Dubai" />
+
+        <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" />
+        <meta property="og:title" content="Best Hair Specialist in Dubai | RamaCare Polyclinic" />
+        <meta
+          property="og:description"
+          content="Looking for a qualified hair specialist in Dubai? Learn how hair loss is properly diagnosed and treated, and book a consultation at RamaCare Polyclinic."
+        />
+        <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} />
+        <meta property="og:image" content={`${SITE_URL}/images/Patient consultation for hair loss.jpg`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best Hair Specialist in Dubai | RamaCare Polyclinic" />
+        <meta name="twitter:description" content="Looking for a qualified hair specialist in Dubai? Learn how hair loss is properly diagnosed and treated." />
+        <meta name="twitter:image" content={`${SITE_URL}/images/Patient consultation for hair loss.jpg`} />
 
         {/* JSON-LD Schema Markup */}
         <script
@@ -250,8 +269,8 @@ export default function BestHairSpecialistPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "@id": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai",
-              "url": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai",
+              "@id": `${SITE_URL}${PAGE_PATH}`,
+              "url": `${SITE_URL}${PAGE_PATH}`,
               "name": "Best Hair Specialist in Dubai | RamaCare Polyclinic",
               "description": "Looking for a qualified hair specialist in Dubai? Learn how hair loss is properly diagnosed and treated, and book a consultation at RamaCare Polyclinic.",
               "inLanguage": "en-AE",
@@ -280,11 +299,11 @@ export default function BestHairSpecialistPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalWebPage",
-              "@id": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai#article",
+              "@id": `${SITE_URL}${PAGE_PATH}#article`,
               "headline": "Best Hair Specialist in Dubai: How to Choose the Right Expert",
               "description": "A patient-focused guide to evaluating hair specialists in Dubai, understanding the causes of hair loss, and choosing appropriate treatment such as PRP or Hair Mesotherapy.",
-              "url": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai",
-              "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai",
+              "url": `${SITE_URL}${PAGE_PATH}`,
+              "mainEntityOfPage": `${SITE_URL}${PAGE_PATH}`,
               "inLanguage": "en-AE",
               "about": {
                 "@type": "MedicalCondition",
@@ -338,13 +357,13 @@ export default function BestHairSpecialistPage() {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Hair Treatment",
-                  "item": "https://ramacarepolyclinic.ae/services/hair-treatment-dubai"
+                  "item": "https://ramacarepolyclinic.ae/services/hair-treatment-dubai/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 4,
                   "name": "Best Hair Specialist in Dubai",
-                  "item": "https://ramacarepolyclinic.ae/services/best-hair-specialist-dubai"
+                  "item": `${SITE_URL}${PAGE_PATH}`
                 }
               ]
             })
