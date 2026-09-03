@@ -260,9 +260,9 @@ export default function HairRegrowthTreatmentDubai() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
-      </Head>
+        </Head>
 
-      <div className="bg-[#FAF9F5] text-[#1E2E2A] font-sans antialiased min-h-screen relative selection:bg-[#A2E3C4] selection:text-[#12392D]">
+        <div className="bg-[#FAF9F5] text-[#1E2E2A] font-sans antialiased min-h-screen relative selection:bg-[#A2E3C4] selection:text-[#12392D]">
         
         {/* ============ OVERLAY BACKGROUND LIGHT PATTERNS ============ */}
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] rounded-full bg-gradient-to-bl from-[#A2E3C4]/15 to-transparent blur-[120px] pointer-events-none z-0" />

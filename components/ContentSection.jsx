@@ -74,7 +74,7 @@ const ContentSection = ({ type, content }) => {
           <div className="bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] rounded-2xl p-8 shadow-lg">
             <p className="text-white text-center leading-relaxed">
               As part of holistic care, some patients may also benefit from{' '}
-              <a href="/services/panchakarma-treatment/" className="font-bold underline hover:text-[#D1FAE5] transition-colors">
+              <a href="/services/panchakarma-treatment-dubai/" className="font-bold underline hover:text-[#D1FAE5] transition-colors">
                 Panchakarma Treatment Dubai
               </a>{' '}
               programs for deeper detoxification and dosha balance support.
@@ -166,7 +166,7 @@ const ContentSection = ({ type, content }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a href="/services/panchakarma-treatment/" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#2D5F3F] text-sm font-semibold rounded-full hover:bg-[#ECFDF5] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+              <a href="/services/panchakarma-treatment-dubai/" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#2D5F3F] text-sm font-semibold rounded-full hover:bg-[#ECFDF5] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
                 Panchakarma Treatment Dubai
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

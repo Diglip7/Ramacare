@@ -101,7 +101,7 @@ const content = {
       },
       {
         question: 'Is a detox the same as Panchakarma?',
-        answer: 'Not quite. A detox diet plan uses food, herbs, and daily routine changes to gently clear Ama (toxins) and can be done independently at home with guidance. Panchakarma is a more intensive, clinic-administered Ayurvedic therapy — including procedures like Virechana, Basti, and Nasya — typically recommended for deeper, long-standing imbalances. Many patients start with a detox diet plan and progress to a full Panchakarma program if needed. Learn more about <a href="/services/panchakarma-treatment/" class="text-[#1F5E4B] underline font-bold">Panchakarma Treatment in Dubai</a>.'
+        answer: 'Not quite. A detox diet plan uses food, herbs, and daily routine changes to gently clear Ama (toxins) and can be done independently at home with guidance. Panchakarma is a more intensive, clinic-administered Ayurvedic therapy — including procedures like Virechana, Basti, and Nasya — typically recommended for deeper, long-standing imbalances. Many patients start with a detox diet plan and progress to a full Panchakarma program if needed. Learn more about <a href="/services/panchakarma-treatment-dubai/" class="text-[#1F5E4B] underline font-bold">Panchakarma Treatment in Dubai</a>.'
       }
     ]
   },
@@ -213,7 +213,7 @@ export default function AyurvedicDetoxDietPlanPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopupOpen(true);
-    }, 2000); 
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -228,15 +228,15 @@ export default function AyurvedicDetoxDietPlanPage() {
 
   const handleWhatsAppDownloadSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!popupData.name || !popupData.email) {
       showToast('Please fill in all fields', 'error');
       return;
     }
-    
+
     const message = encodeURIComponent(`Hello RamaCare, my name is ${popupData.name} (${popupData.email}) and I would like to get my free 5-Day Detox Plan PDF!`);
     window.open(`https://wa.me/971566597878?text=${message}`, '_blank');
-    
+
     showToast('Redirecting to WhatsApp to send your details...', 'success');
     setIsPopupOpen(false);
     setPopupData({ name: '', email: '' });
@@ -287,13 +287,13 @@ export default function AyurvedicDetoxDietPlanPage() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl"
             >
-              <button 
+              <button
                 onClick={() => setIsPopupOpen(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <LucideIcons.X size={20} />
               </button>
-              
+
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4 leading-tight">
                   Wait! Don't Miss This
@@ -341,7 +341,7 @@ export default function AyurvedicDetoxDietPlanPage() {
           <p className="text-[#1A1A1A] text-sm md:text-base flex-1 text-center font-medium">
             {content.hero.topBanner}
           </p>
-          <button 
+          <button
             onClick={handleBookAppointment}
             className="bg-[#1F5E4B] text-white px-6 py-2 rounded-full text-base font-bold hover:bg-[#163f35] transition-all"
           >
@@ -386,7 +386,7 @@ export default function AyurvedicDetoxDietPlanPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <button 
+              <button
                 onClick={handleBookAppointment}
                 className="bg-[#1F5E4B] text-white px-8 py-4 rounded-full font-bold hover:bg-[#163f35] transition-all shadow-lg flex items-center justify-center gap-2"
               >
@@ -417,7 +417,7 @@ export default function AyurvedicDetoxDietPlanPage() {
               </div>
               <div className="flex items-center gap-2">
                 <LucideIcons.Star className="w-5 h-5 text-[#1F5E4B]" />
-                <span className="text-xs font-semibold text-gray-700">4.9/5 Patient Rating</span>
+                <span className="text-xs font-semibold text-gray-700">4.8/5 Patient Rating</span>
               </div>
             </div>
           </motion.div>
@@ -429,9 +429,9 @@ export default function AyurvedicDetoxDietPlanPage() {
             className="relative"
           >
             <div className="relative rounded-[32px] shadow-2xl w-full max-w-[500px] ml-auto mr-4 mb-4">
-              <img 
-                src="/images/detox3.png" 
-                alt="Ayurvedic detox bowl with herbs" 
+              <img
+                src="/images/detox3.png"
+                alt="Ayurvedic detox bowl with herbs"
                 className="rounded-[32px] shadow-2xl w-full h-auto"
               />
               {/* Floating Card */}
@@ -536,9 +536,9 @@ export default function AyurvedicDetoxDietPlanPage() {
             viewport={{ once: true }}
             className="rounded-[32px] overflow-hidden shadow-2xl max-w-5xl mx-auto"
           >
-            <img 
-              src="/images/a-diet.jpg" 
-              alt="Ayurvedic detox diet bowl with wholesome ingredients" 
+            <img
+              src="/images/a-diet.jpg"
+              alt="Ayurvedic detox diet bowl with wholesome ingredients"
               className="w-full h-[300px] sm:h-[450px] object-cover rounded-[32px]"
             />
           </motion.div>
@@ -567,10 +567,10 @@ export default function AyurvedicDetoxDietPlanPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="group bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-[#E9E2D6]/50" >
                 <div className="h-64 overflow-hidden">
-                  <img 
-                    src={spice.image} 
-                    alt={spice.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  <img
+                    src={spice.image}
+                    alt={spice.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-8">
@@ -614,7 +614,7 @@ export default function AyurvedicDetoxDietPlanPage() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div 
+                      <div
                         className="px-6 pb-6 text-[#5F5F5F] leading-relaxed text-base"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       />
@@ -693,7 +693,7 @@ export default function AyurvedicDetoxDietPlanPage() {
             Related Ayurvedic Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a href="/services/panchakarma-treatment/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+            <a href="/services/panchakarma-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Panchakarma Treatment</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>

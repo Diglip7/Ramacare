@@ -23,7 +23,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
     try {
       const all = getAllSubcategories();
       const toTitle = (s) => s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-      
+
       // Simply convert all service keys to display labels - NO FILTERING
       return all.map(({ key }) => {
         const label = toTitle(key).trim();
@@ -66,7 +66,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
     if (name === 'preferredDate') {
       if (!value) return 'Select a preferred date';
       const today = new Date();
-      today.setHours(0,0,0,0);
+      today.setHours(0, 0, 0, 0);
       const selected = new Date(value);
       if (selected < today) return 'Date cannot be in the past';
       return '';
@@ -124,6 +124,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
         })
       });
       if (res.ok) {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_name: 'BeginYourHealingJourneySection',
+          });
+        }
         if (onSubmissionSuccess) {
           onSubmissionSuccess();
         } else {
@@ -190,11 +195,10 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
       `}</style>
       {toast.show && (
         <div className="fixed top-6 right-6 z-[10000]" style={{ animation: 'toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }}>
-          <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${
-            toast.type === 'success' 
-              ? 'bg-emerald-600/95 border-emerald-500 text-white' 
+          <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${toast.type === 'success'
+              ? 'bg-emerald-600/95 border-emerald-500 text-white'
               : 'bg-red-600/95 border-red-500 text-white'
-          }`}>
+            }`}>
             {toast.type === 'success' ? (
               <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
             ) : (
@@ -204,11 +208,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
           </div>
         </div>
       )}
-    
-      <section 
-        id={isModal ? undefined : "appointment"} 
-        className={`${isModal ? '' : 'appointment-page-container'} w-full`} 
-        style={{ 
+
+      <section
+        id={isModal ? undefined : "appointment"}
+        className={`${isModal ? '' : 'appointment-page-container'} w-full`}
+        style={{
           backgroundColor: isModal ? '#FFFFFF' : '#F9FAFB',
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif"
         }}
@@ -217,18 +221,18 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
           /* Extra anchor so older links to #book-consultation scroll correctly */
           <div id="book-consultation" className="h-0 w-0 overflow-hidden" aria-hidden="true" />
         )}
-        
+
         <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
           {/* Badge */}
           <div className="flex justify-center mb-3">
-            <div 
+            <div
               className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm"
-              // style={{ 
-              //   backgroundColor: '#D1FAE5',
-              //   color: '#1b5e3f',
-              //   fontSize: '13px',
-              //   fontWeight: 500
-              // }}
+            // style={{ 
+            //   backgroundColor: '#D1FAE5',
+            //   color: '#1b5e3f',
+            //   fontSize: '13px',
+            //   fontWeight: 500
+            // }}
             >
               {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -238,23 +242,23 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
           </div>
 
           {/* Section Heading */}
-          <h2 
-           className="text-center font-bold mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-          style={{ 
-            color: '#1F2937',
-            lineHeight: '1.2'
-          }}
-        >
-           Begin Your Journey to Better Health Today
+          <h2
+            className="text-center font-bold mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+            style={{
+              color: '#1F2937',
+              lineHeight: '1.2'
+            }}
+          >
+            Begin Your Journey to Better Health Today
           </h2>
 
           {/* Section Description */}
-          <p 
+          <p
             className="text-center mb-12 lg:mb-14 max-w-3xl mx-auto"
-            style={{ 
+            style={{
               color: '#6B7280',
               fontSize: '16px',
-              lineHeight: '1.6',  
+              lineHeight: '1.6',
               fontWeight: 400
             }}
           >
@@ -265,13 +269,13 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
             {/* LEFT COLUMN */}
             <div className="space-y-6">
               {/* What to Expect */}
-              <div 
+              <div
                 className="rounded-2xl p-6 lg:p-7 shadow-sm border border-gray-100"
                 style={{ backgroundColor: '#FFFFFF' }}
               >
-                <h3 
+                <h3
                   className="mb-6"
-                  style={{ 
+                  style={{
                     color: '#000000',
                     fontSize: '18px',
                     fontWeight: 600
@@ -279,13 +283,13 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                 >
                   What to Expect
                 </h3>
-                
+
                 <div className="space-y-5">
                   {/* Step 1 */}
                   <div className="flex gap-4">
-                    <div 
+                    <div
                       className="flex-shrink-0 flex items-center justify-center rounded-full font-bold text-white"
-                      style={{ 
+                      style={{
                         width: '42px',
                         height: '42px',
                         backgroundColor: '#1b5e3f',
@@ -296,9 +300,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       1
                     </div>
                     <div className="pt-0.5">
-                      <h4 
+                      <h4
                         className="mb-2"
-                        style={{ 
+                        style={{
                           color: '#000000',
                           fontSize: '16px',
                           fontWeight: 600
@@ -306,8 +310,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         Comprehensive Medical Assessment
                       </h4>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           lineHeight: '1.6',
@@ -322,9 +326,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                   {/* Step 2 */}
                   <div className="flex gap-4">
-                    <div 
+                    <div
                       className="flex-shrink-0 flex items-center justify-center rounded-full font-bold text-white"
-                      style={{ 
+                      style={{
                         width: '42px',
                         height: '42px',
                         backgroundColor: '#1b5e3f',
@@ -335,34 +339,34 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       2
                     </div>
                     <div className="pt-0.5">
-                      <h4 
+                      <h4
                         className="mb-2"
-                        style={{ 
+                        style={{
                           color: '#000000',
                           fontSize: '16px',
                           fontWeight: 600
                         }}
                       >
-                       Personalized Treatment Plan
+                        Personalized Treatment Plan
                       </h4>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           lineHeight: '1.6',
                           fontWeight: 400
                         }}
                       >
-                       Receive a customized care plan tailored specifically to your needs, ensuring safe, effective, and result-oriented treatment.
+                        Receive a customized care plan tailored specifically to your needs, ensuring safe, effective, and result-oriented treatment.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 3 */}
                   <div className="flex gap-4">
-                    <div 
+                    <div
                       className="flex-shrink-0 flex items-center justify-center rounded-full font-bold text-white"
-                      style={{ 
+                      style={{
                         width: '42px',
                         height: '42px',
                         backgroundColor: '#1b5e3f',
@@ -373,9 +377,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       3
                     </div>
                     <div className="pt-0.5">
-                      <h4 
+                      <h4
                         className="mb-2"
-                        style={{ 
+                        style={{
                           color: '#000000',
                           fontSize: '16px',
                           fontWeight: 600
@@ -383,8 +387,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         Guided Treatment Journey
                       </h4>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           lineHeight: '1.6',
@@ -400,7 +404,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
               </div>
 
               {/* Limited Time Offer */}
-              <div 
+              <div
                 className="rounded-2xl p-6 shadow-md"
                 style={{
                   background: 'linear-gradient(135deg, #1b5e3f 0%, #2d7a56 100%)'
@@ -410,18 +414,18 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 
+                  <h3
                     className="text-white"
                     style={{ fontSize: '17px', fontWeight: 500 }}
                   >
-                   Limited-Time Special Offer
+                    Limited-Time Special Offer
                   </h3>
                 </div>
-                <p 
+                <p
                   className="mb-4 text-white"
                   style={{ fontSize: '14px', fontWeight: 400, lineHeight: '1.5' }}
                 >
-                 Book your first consultation this month and receive:
+                  Book your first consultation this month and receive:
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2.5">
@@ -446,37 +450,37 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
               </div>
 
               {/* Prefer to Talk */}
-              <div 
+              <div
                 className="rounded-2xl p-6 lg:p-7 shadow-sm border border-gray-100"
                 style={{ backgroundColor: '#FFFFFF' }}
               >
-                <h3 
+                <h3
                   className="mb-5"
-                  style={{ 
+                  style={{
                     color: '#000000',
                     fontSize: '18px',
                     fontWeight: 500
                   }}
                 >
-                 Prefer to Speak with Us Directly?
+                  Prefer to Speak with Us Directly?
                 </h3>
-                
+
                 <div className="space-y-4">
                   {/* Call Us */}
                   <div className="flex items-center gap-3.5">
-                    <svg 
-                      className="flex-shrink-0" 
+                    <svg
+                      className="flex-shrink-0"
                       style={{ width: '22px', height: '22px', color: '#6B7280' }}
-                      fill="none" 
-                      stroke="currentColor" 
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <div>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#000000',
                           fontSize: '14px',
                           fontWeight: 500,
@@ -485,8 +489,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         Call Us
                       </p>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           fontWeight: 400
@@ -499,17 +503,17 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                   {/* WhatsApp */}
                   <div className="flex items-center gap-3.5">
-                    <svg 
-                      className="flex-shrink-0" 
+                    <svg
+                      className="flex-shrink-0"
                       style={{ width: '22px', height: '22px', color: '#6B7280' }}
-                      fill="currentColor" 
+                      fill="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                     </svg>
                     <div>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#000000',
                           fontSize: '14px',
                           fontWeight: 500,
@@ -518,8 +522,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         WhatsApp
                       </p>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           fontWeight: 400
@@ -532,19 +536,19 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                   {/* Open Hours */}
                   <div className="flex items-center gap-3.5">
-                    <svg 
-                      className="flex-shrink-0" 
+                    <svg
+                      className="flex-shrink-0"
                       style={{ width: '22px', height: '22px', color: '#6B7280' }}
-                      fill="none" 
-                      stroke="currentColor" 
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#000000',
                           fontSize: '14px',
                           fontWeight: 500,
@@ -553,8 +557,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         Open Hours
                       </p>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: '#6B7280',
                           fontSize: '14px',
                           fontWeight: 400
@@ -569,13 +573,13 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
             </div>
 
             {/* RIGHT COLUMN - Booking Form */}
-            <div 
+            <div
               className="rounded-2xl p-7 lg:p-8 shadow-sm border border-gray-100"
               style={{ backgroundColor: '#FFFFFF' }}
             >
-              <h3 
+              <h3
                 className="mb-2"
-                style={{ 
+                style={{
                   color: '#000000',
                   fontSize: '22px',
                   fontWeight: 600
@@ -583,25 +587,25 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
               >
                 Book Your Consultation
               </h3>
-              <p 
+              <p
                 className="mb-7"
-                style={{ 
+                style={{
                   color: '#6B7280',
                   fontSize: '14px',
                   fontWeight: 400,
                   lineHeight: '1.5'
                 }}
               >
-               Fill in your details below and our team will confirm your appointment shortly.
+                Fill in your details below and our team will confirm your appointment shortly.
 
               </p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Full Name */}
                 <div>
-                  <label 
+                  <label
                     className="block mb-2"
-                    style={{ 
+                    style={{
                       color: '#1F2937',
                       fontSize: '14px',
                       fontWeight: 500
@@ -611,11 +615,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                      <svg 
-                        className="w-5 h-5" 
+                      <svg
+                        className="w-5 h-5"
                         style={{ color: '#9CA3AF' }}
-                        fill="none" 
-                        stroke="currentColor" 
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                       >
@@ -632,7 +636,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       required
                       className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.fullName ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
                       pattern="[A-Za-z\s'-]+"
-                      style={{ 
+                      style={{
                         height: '50px',
                         borderColor: '#E5E7EB',
                         fontSize: '14px',
@@ -648,9 +652,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                 {/* Phone Number */}
                 <div>
-                  <label 
+                  <label
                     className="block mb-2"
-                    style={{ 
+                    style={{
                       color: '#1F2937',
                       fontSize: '14px',
                       fontWeight: 500
@@ -660,11 +664,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                      <svg 
-                        className="w-5 h-5" 
+                      <svg
+                        className="w-5 h-5"
                         style={{ color: '#9CA3AF' }}
-                        fill="none" 
-                        stroke="currentColor" 
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                       >
@@ -681,7 +685,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       placeholder="(+971) XX XXX XXXX"
                       required
                       className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.phone ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                      style={{ 
+                      style={{
                         height: '50px',
                         borderColor: '#E5E7EB',
                         fontSize: '14px',
@@ -697,9 +701,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                 {/* Email Address */}
                 <div>
-                  <label 
+                  <label
                     className="block mb-2"
-                    style={{ 
+                    style={{
                       color: '#1F2937',
                       fontSize: '14px',
                       fontWeight: 500
@@ -709,11 +713,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                      <svg 
-                        className="w-5 h-5" 
+                      <svg
+                        className="w-5 h-5"
                         style={{ color: '#9CA3AF' }}
-                        fill="none" 
-                        stroke="currentColor" 
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                       >
@@ -729,7 +733,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       placeholder="your.email@example.com"
                       required
                       className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.email ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                      style={{ 
+                      style={{
                         height: '50px',
                         borderColor: '#E5E7EB',
                         fontSize: '14px',
@@ -745,9 +749,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                 {/* Treatment of Interest */}
                 <div>
-                  <label 
+                  <label
                     className="block mb-2"
-                    style={{ 
+                    style={{
                       color: '#1F2937',
                       fontSize: '14px',
                       fontWeight: 500
@@ -757,14 +761,14 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                      <svg 
-                        className="w-5 h-5" 
+                      <svg
+                        className="w-5 h-5"
                         style={{ color: '#9CA3AF' }}
-                        fill="none" 
-                        stroke="currentColor" 
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                         strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
                       </svg>
                     </div>
                     <input
@@ -775,7 +779,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       onBlur={() => setTimeout(() => setIsTreatmentOpen(false), 150)}
                       placeholder="Search and select treatment"
                       className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.treatment ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                      style={{ 
+                      style={{
                         height: '50px',
                         borderColor: '#E5E7EB',
                         fontSize: '14px',
@@ -814,9 +818,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {/* Preferred Date */}
                   <div>
-                    <label 
+                    <label
                       className="block mb-2"
-                      style={{ 
+                      style={{
                         color: '#1F2937',
                         fontSize: '14px',
                         fontWeight: 500
@@ -826,11 +830,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <svg 
-                          className="w-5 h-5" 
+                        <svg
+                          className="w-5 h-5"
                           style={{ color: '#9CA3AF' }}
-                          fill="none" 
-                          stroke="currentColor" 
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                           strokeWidth={2}
                         >
@@ -844,7 +848,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                         onChange={handleChange}
                         required
                         className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 ${errors.preferredDate ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                        style={{ 
+                        style={{
                           height: '50px',
                           borderColor: '#E5E7EB',
                           fontSize: '14px',
@@ -860,9 +864,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                   {/* Preferred Time */}
                   <div>
-                    <label 
+                    <label
                       className="block mb-2"
-                      style={{ 
+                      style={{
                         color: '#1F2937',
                         fontSize: '14px',
                         fontWeight: 500
@@ -876,7 +880,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       onChange={handleChange}
                       required
                       className={`w-full px-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 ${errors.preferredTime ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                      style={{ 
+                      style={{
                         height: '50px',
                         borderColor: '#E5E7EB',
                         fontSize: '14px',
@@ -897,9 +901,9 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
 
                 {/* Additional Information */}
                 <div>
-                  <label 
+                  <label
                     className="block mb-2"
-                    style={{ 
+                    style={{
                       color: '#1F2937',
                       fontSize: '14px',
                       fontWeight: 500
@@ -914,7 +918,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                     rows={4}
                     placeholder="Share your health concerns or questions with us."
                     className={`w-full px-4 py-3.5 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all resize-none bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.additionalInfo ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                    style={{ 
+                    style={{
                       borderColor: '#E5E7EB',
                       fontSize: '14px',
                       borderRadius: '10px',
@@ -935,14 +939,14 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                     checked={formData.consent}
                     onChange={handleChange}
                     className="mt-0.5 cursor-pointer"
-                    style={{ 
+                    style={{
                       width: '20px',
                       height: '20px',
                       accentColor: '#f71109ff'
                     }}
                   />
-                  <label 
-                    style={{ 
+                  <label
+                    style={{
                       color: '#4B5563',
                       fontSize: '14px',
                       lineHeight: '1.6',
@@ -961,7 +965,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   <button
                     type="submit"
                     className="w-full text-white  rounded-lg transition-all hover:bg-emerald-700 shadow-sm hover:shadow-md"
-                    style={{ 
+                    style={{
                       height: '52px',
                       backgroundColor: '#1b5e3f',
                       fontSize: '16px',
@@ -982,7 +986,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                     type="button"
                     onClick={handleWhatsApp}
                     className="w-full text-white  rounded-lg transition-all hover:bg-emerald-600 flex items-center justify-center gap-2.5 shadow-sm hover:shadow-md"
-                    style={{ 
+                    style={{
                       height: '52px',
                       backgroundColor: '#25d366',
                       fontSize: '16px',
@@ -991,16 +995,16 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                     }}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                     </svg>
-                   Book Instantly via WhatsApp
+                    Book Instantly via WhatsApp
                   </button>
                 </div>
 
                 {/* Disclaimer */}
-                <p 
+                <p
                   className="text-center pt-3"
-                  style={{ 
+                  style={{
                     color: '#6B7280',
                     fontSize: '13px',
                     lineHeight: '1.5',

@@ -1329,7 +1329,7 @@ const PAGE_PATH = '/services/eximia-before-and-after-results-dubai/';
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white mb-1">15+</div>
-                    <div className="text-sm text-white/80">Years Experience</div>
+                    <div className="text-sm text-white/80">Years Combined Experience</div>
                   </div>
                 </div>
               </div>

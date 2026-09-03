@@ -3,9 +3,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { 
-  Shield, Lock, Eye, FileText, Calendar, Mail, 
-  Phone, MapPin, Search, Download, Printer, 
+import {
+  Shield, Lock, Eye, FileText, Calendar, Mail,
+  Phone, MapPin, Search, Download, Printer,
   ChevronRight, AlertCircle, Check, Clock, CreditCard
 } from 'lucide-react';
 
@@ -69,21 +69,20 @@ const RefundCancellationPage = () => {
       <Head>
         <title key="title">Refund and Cancellation Policy - RamaCare Polyclinic</title>
         <meta name="description" content="Refund and Cancellation Policy for RamaCare Polyclinic Dubai. Learn about our payment terms, cancellation procedures, and refund policies." key="description" />
-        
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" 
-          rel="stylesheet" 
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+          rel="stylesheet"
         />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-emerald-50/30" style={{ fontFamily: "'Inter', sans-serif" }}>
-        
+
         {/* Sticky Header */}
-        <div className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-emerald-100' 
+        <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+            ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-emerald-100'
             : 'bg-transparent'
-        }`}>
+          }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -101,7 +100,7 @@ const RefundCancellationPage = () => {
                   <p className="text-xs text-gray-500">Last Updated: January 2026</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <button
                   onClick={handlePrint}
@@ -124,7 +123,7 @@ const RefundCancellationPage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            
+
             {/* Sidebar - Table of Contents */}
             <aside className="lg:col-span-3 hidden lg:block">
               <div className="sticky top-32">
@@ -155,15 +154,13 @@ const RefundCancellationPage = () => {
                         <button
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
-                          className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg transition-all text-left group ${
-                            activeSection === section.id
+                          className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg transition-all text-left group ${activeSection === section.id
                               ? 'bg-emerald-50 text-emerald-700 font-semibold'
                               : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                          }`}
+                            }`}
                         >
-                          <Icon className={`w-4 h-4 flex-shrink-0 ${
-                            activeSection === section.id ? 'text-emerald-600' : 'text-gray-400 group-hover:text-gray-600'
-                          }`} />
+                          <Icon className={`w-4 h-4 flex-shrink-0 ${activeSection === section.id ? 'text-emerald-600' : 'text-gray-400 group-hover:text-gray-600'
+                            }`} />
                           <span className="flex-1 truncate text-xs">{section.title}</span>
                           {activeSection === section.id && (
                             <ChevronRight className="w-4 h-4 text-emerald-600" />
@@ -184,10 +181,10 @@ const RefundCancellationPage = () => {
                     Contact us for payment or cancellation concerns.
                   </p>
                   <a
-                    href="mailto:query@ramacarepolyclinic.com"
+                    href="mailto:query@ramacarepolyclinic.ae"
                     className="inline-flex items-center gap-2 text-sm font-semibold hover:text-emerald-100 transition-colors"
                   >
-                   query@ramacarepolyclinic.com
+                    query@ramacarepolyclinic.ae
                     <ChevronRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -200,7 +197,7 @@ const RefundCancellationPage = () => {
               <div className="bg-gradient-to-r from-[#0a0a0a]/95 via-[#1b5e3f]/90 to-[#1b5e3f]/80 rounded-3xl p-8 sm:p-12 mb-8 text-white shadow-2xl shadow-emerald-500/30 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-400/10 rounded-full blur-2xl"></div>
-                
+
                 <div className="relative z-10">
                   <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                     <div className="w-5 h-5 flex items-center justify-center">
@@ -214,14 +211,14 @@ const RefundCancellationPage = () => {
                     </div>
                     <span className="text-sm font-semibold">Transparent & Fair</span>
                   </div>
-                  
+
                   <h1 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                     Refund & Cancellation Policy
                   </h1>
                   <p className="text-lg text-emerald-50 max-w-2xl mb-6">
                     At RamaCare Polyclinic, we are committed to providing high-quality healthcare with full transparency. This policy outlines our terms related to payments, cancellations, transfers, and adjustments, in accordance with Dubai Health Authority (DHA) guidelines and UAE consumer protection laws.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 text-sm">
                     <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
                       <Calendar className="w-4 h-4" />
@@ -237,7 +234,7 @@ const RefundCancellationPage = () => {
 
               {/* Content Sections */}
               <div className="space-y-8">
-                
+
                 {/* 1. Appointment Bookings & Payments */}
                 <section id="appointments-payments" className="scroll-mt-32">
                   <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow">
@@ -250,7 +247,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Payment requirements and terms</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -282,7 +279,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">How to cancel or reschedule your appointment</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -314,7 +311,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Important refund information</p>
                       </div>
                     </div>
-                    
+
                     <div className="bg-red-50 rounded-xl p-6 border border-red-100 mb-6">
                       <p className="text-red-900 font-semibold mb-3">Please Note:</p>
                       <ul className="space-y-3 text-gray-700">
@@ -347,7 +344,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Flexible alternatives for your convenience</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <p className="text-gray-700 leading-relaxed mb-6">
                         To provide flexibility to our patients, the following options may be available:
@@ -397,7 +394,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">What happens if we need to cancel</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         If RamaCare Polyclinic needs to cancel or reschedule an appointment due to medical, operational, or unforeseen circumstances:
@@ -444,7 +441,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Third-party payment processing</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -480,7 +477,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Special consideration cases</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -512,7 +509,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Expiration and usage terms</p>
                       </div>
                     </div>
-                    
+
                     <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -540,7 +537,7 @@ const RefundCancellationPage = () => {
                         <p className="text-gray-600">Our commitment to standards</p>
                       </div>
                     </div>
-                    
+
                     <div className="prose prose-emerald max-w-none">
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start gap-3">
@@ -574,11 +571,11 @@ const RefundCancellationPage = () => {
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <a href="mailto:query@ramacarepolyclinic.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
+                      <a href="mailto:query@ramacarepolyclinic.ae" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
                         <Mail className="w-5 h-5" />
                         <div>
                           <div className="text-xs text-emerald-100">Email</div>
-                          <div className="font-semibold">query@ramacarepolyclinic.com</div>
+                          <div className="font-semibold">query@ramacarepolyclinic.ae</div>
                         </div>
                       </a>
 

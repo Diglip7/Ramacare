@@ -1046,20 +1046,20 @@ export default function ServicePageTemplate({ content }) {
         (content?.doctors && Array.isArray(content.doctors) && content.doctors.length > 0)
           ? content.doctors
           : ((contextStr) => {
-              if (contextStr.includes('derma') || contextStr.includes('acne') || contextStr.includes('scar') || contextStr.includes('skin') || contextStr.includes('laser') || contextStr.includes('botox') || contextStr.includes('filler') || contextStr.includes('peel') || contextStr.includes('facial') || contextStr.includes('eximia') || contextStr.includes('hair') || contextStr.includes('aesthetic')) {
-                return DOCTOR_GROUPS.DERMA;
-              }
-              if (contextStr.includes('dental') || contextStr.includes('teeth') || contextStr.includes('veneer') || contextStr.includes('root-canal') || contextStr.includes('crown') || contextStr.includes('smile') || contextStr.includes('braces')) {
-                return DOCTOR_GROUPS.DENTAL;
-              }
-              if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya')) {
-                return DOCTOR_GROUPS.AYURVEDA;
-              }
-              if (contextStr.includes('physician') || contextStr.includes('general-physician') || contextStr.includes('gp') || contextStr.includes('check-up')) {
-                return DOCTOR_GROUPS.GP;
-              }
-              return DOCTOR_GROUPS.PHYSIO;
-            })(((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(content?.breadcrumbs || [])).toLowerCase())
+            if (contextStr.includes('derma') || contextStr.includes('acne') || contextStr.includes('scar') || contextStr.includes('skin') || contextStr.includes('laser') || contextStr.includes('botox') || contextStr.includes('filler') || contextStr.includes('peel') || contextStr.includes('facial') || contextStr.includes('eximia') || contextStr.includes('hair') || contextStr.includes('aesthetic')) {
+              return DOCTOR_GROUPS.DERMA;
+            }
+            if (contextStr.includes('dental') || contextStr.includes('teeth') || contextStr.includes('veneer') || contextStr.includes('root-canal') || contextStr.includes('crown') || contextStr.includes('smile') || contextStr.includes('braces')) {
+              return DOCTOR_GROUPS.DENTAL;
+            }
+            if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya')) {
+              return DOCTOR_GROUPS.AYURVEDA;
+            }
+            if (contextStr.includes('physician') || contextStr.includes('general-physician') || contextStr.includes('gp') || contextStr.includes('check-up')) {
+              return DOCTOR_GROUPS.GP;
+            }
+            return DOCTOR_GROUPS.PHYSIO;
+          })(((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(content?.breadcrumbs || [])).toLowerCase())
       } />
 
       {/* WHY CHOOSE US, DIAGNOSTIC EQUIPMENT (IMAGE 5) & PHYSIOTHERAPISTS */}
@@ -1108,8 +1108,8 @@ export default function ServicePageTemplate({ content }) {
                   <div className="flex flex-wrap gap-2">
                     {(content.supportTags || whyChooseUs?.tags || (
                       (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety')) ? ['Stress Management', 'Physiotherapy', 'Ayurvedic Wellness'] :
-                      (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress')) ? ['Anxiety Support', 'Physiotherapy', 'Ayurvedic Wellness'] :
-                      ['Joint pain', 'Sports Rehab', 'Orthopedic Care']
+                        (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress')) ? ['Anxiety Support', 'Physiotherapy', 'Ayurvedic Wellness'] :
+                          ['Joint pain', 'Sports Rehab', 'Orthopedic Care']
                     )).map((tag, idx) => (
                       <span key={idx} className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">{tag}</span>
                     ))}
@@ -1132,8 +1132,8 @@ export default function ServicePageTemplate({ content }) {
                 (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety'))
                   ? 'Browse our answers to popular questions about anxiety and supportive wellness care in Dubai.'
                   : (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress'))
-                  ? 'Browse our answers to popular questions about stress management and wellness care in Dubai.'
-                  : `Browse our answers to popular questions regarding ${seo?.title?.split('|')[0]?.trim() || 'our treatments'} in Dubai.`
+                    ? 'Browse our answers to popular questions about stress management and wellness care in Dubai.'
+                    : `Browse our answers to popular questions regarding ${seo?.title?.split('|')[0]?.trim() || 'our treatments'} in Dubai.`
               )}
             </p>
           </div>
@@ -1188,11 +1188,11 @@ export default function ServicePageTemplate({ content }) {
               </div>
             )}
           </div>
-  </div>
+        </div>
       </section>
       {/* MEDICAL REVIEWER BADGE */}
-      <ContentReviewBadge 
-        doctorName={content.byline?.reviewer || content.reviewer?.name || (typeof content.reviewer === 'string' ? content.reviewer : undefined)} 
+      <ContentReviewBadge
+        doctorName={content.byline?.reviewer || content.reviewer?.name || (typeof content.reviewer === 'string' ? content.reviewer : undefined)}
         pageSlug={seo?.slug || seo?.canonical || ''}
         category={content.category || ''}
       />
@@ -1207,8 +1207,8 @@ export default function ServicePageTemplate({ content }) {
               (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety'))
                 ? 'Take the first step toward feeling calmer and more like yourself, with evidence-based supportive care at RamaCare Polyclinic.'
                 : (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress'))
-                ? 'Take the first step toward feeling calmer, more energized, and more in control, with evidence-based supportive care at RamaCare Polyclinic.'
-                : 'Get back to comfortable, pain-free joint movement with evidence-based care at RamaCare Polyclinic.'
+                  ? 'Take the first step toward feeling calmer, more energized, and more in control, with evidence-based supportive care at RamaCare Polyclinic.'
+                  : 'Get back to comfortable, pain-free joint movement with evidence-based care at RamaCare Polyclinic.'
             ),
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
@@ -1216,7 +1216,7 @@ export default function ServicePageTemplate({ content }) {
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.com',
+              email: 'query@ramacarepolyclinic.ae',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1232,7 +1232,7 @@ export default function ServicePageTemplate({ content }) {
               { title: 'DHA Licensed', description: 'Certified Facility' },
               { title: 'Experienced Team', description: '10+ Years Combined' },
               { title: 'Personalized Plans', description: 'Built Around Assessment' },
-              { title: '4.9/5 Rating', description: 'Patient Reviews' }
+              { title: '4.8/5 Rating', description: 'Patient Reviews' }
             ],
             concerns: content.concerns || [
               { value: seo.slug.replace('/', ''), label: 'Primary Joint Treatment' },

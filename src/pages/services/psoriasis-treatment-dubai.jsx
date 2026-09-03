@@ -374,7 +374,7 @@ const CONCLUSION_CONTENT = {
     "At RamaCare Polyclinic, our DHA-licensed dermatology team is committed to offering thoughtful, evidence-based Psoriasis Treatment Dubai patients can trust — from topical therapies and phototherapy to systemic options and supportive Ayurvedic care, all guided by an individualized plan built around you.",
     "As with any medical condition, individual results vary, and the right treatment approach depends on a proper clinical evaluation. If you're dealing with persistent skin symptoms, don't wait for them to get worse. Book a consultation with RamaCare Polyclinic's dermatology team today and take the first step toward clearer, healthier skin."
   ],
- 
+
 };
 
 const IMAGES = {
@@ -540,7 +540,7 @@ export default function PsoriasisTreatmentPage() {
       </Head>
 
       <div className="bg-white text-[#1A1A1A] antialiased">
-        
+
         {/* ========================================== */}
         {/* 1. HERO — Split Layout, Clean Brief Content */}
         {/* ========================================== */}
@@ -564,7 +564,7 @@ export default function PsoriasisTreatmentPage() {
                 <h1 className="text-4xl font-black leading-[1.1] text-white sm:text-5xl lg:text-[3.5rem] tracking-tight">
                   {HERO_CONTENT.title}
                 </h1>
-                
+
                 {/* Full Introductory Paragraphs */}
                 <div className="mt-8 space-y-5 text-base leading-relaxed text-white/80 max-w-2xl">
                   <p>
@@ -619,10 +619,10 @@ export default function PsoriasisTreatmentPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-black text-[#1A1A1A] sm:text-4xl">{WHAT_IS_CONTENT.title}</h2>
             </div>
-            
+
             <div className="space-y-6 text-base leading-relaxed text-[#5F5F5F]">
               <p>{WHAT_IS_CONTENT.paragraphs[0]}</p>
-              
+
               <div className="my-8 flex items-start gap-4 rounded-2xl bg-[#F9F7F2] border-l-4 border-[#1F5E4B] p-6 shadow-sm">
                 <ShieldCheck className="h-6 w-6 flex-shrink-0 text-[#1F5E4B] mt-1" />
                 <div>
@@ -657,11 +657,10 @@ export default function PsoriasisTreatmentPage() {
                     <button
                       key={t.name}
                       onClick={() => setActiveType(idx)}
-                      className={`flex items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all ${
-                        active
+                      className={`flex items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all ${active
                           ? 'border-[#1F5E4B] bg-[#1F5E4B] text-white shadow-md'
                           : 'border-gray-200 bg-white text-[#1A1A1A] hover:border-[#1F5E4B]/40'
-                      }`}
+                        }`}
                     >
                       <span className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl ${active ? 'bg-white/10 text-[#D4A574]' : 'bg-[#1F5E4B]/10 text-[#1F5E4B]'}`}>
                         <IconComp className="h-5 w-5" />
@@ -889,7 +888,7 @@ export default function PsoriasisTreatmentPage() {
                       <h3 className="text-lg font-bold text-[#1A1A1A]">{t.name}</h3>
                     </div>
                     <p className="text-sm leading-relaxed text-[#5F5F5F]">{t.desc}</p>
-                    
+
                     {/* Nested bullet points for Topical Medications */}
                     {t.subItems && (
                       <div className="mt-2 grid gap-3 bg-[#F9F7F2] p-5 rounded-2xl border border-gray-100">
@@ -1030,7 +1029,7 @@ export default function PsoriasisTreatmentPage() {
             <div className="mb-12 text-center">
               <h2 className="text-3xl font-black text-[#1A1A1A] sm:text-4xl">{FAQS_CONTENT.title}</h2>
             </div>
-            
+
             <div className="space-y-3">
               {FAQS_CONTENT.items.map((faq, idx) => {
                 const isOpen = openFaq === idx;
@@ -1046,7 +1045,7 @@ export default function PsoriasisTreatmentPage() {
                       <span className="flex-1 text-sm font-bold text-[#1A1A1A] sm:text-base">{faq.q}</span>
                       <ChevronDown className={`h-5 w-5 flex-shrink-0 text-[#5F5F5F] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                     </button>
-                    
+
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
@@ -1071,11 +1070,11 @@ export default function PsoriasisTreatmentPage() {
         {/* ============================================== */}
         {/* 13. CONCLUSION SECTION                         */}
         {/* ============================================== */}
-        
+
         <section className="bg-white py-20 px-4 text-center">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-black text-[#1A1A1A] sm:text-4xl mb-8">{CONCLUSION_CONTENT.title}</h2>
-            
+
             <div className="space-y-6 text-base leading-relaxed text-[#5F5F5F] text-left">
               <p>{CONCLUSION_CONTENT.paragraphs[0]}</p>
               <p>{CONCLUSION_CONTENT.paragraphs[1]}</p>
@@ -1191,7 +1190,7 @@ export default function PsoriasisTreatmentPage() {
               </div>
             </div>
           </div>
-           </footer>
+        </footer>
         {/* Content Reviewer Badge */}
         <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/psoriasis-treatment-dubai/" />
       </div>

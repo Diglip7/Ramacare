@@ -9,17 +9,17 @@ export const categoryContent = {
       badge: 'DHA-Licensed Premier Ayurveda Centre',
       titleLine1: ' Ayurveda Treatment  ',
       titleHighlight: ' in Dubai ',
-      titleLine2:' for Detox, Pain Relief & Wellness',
+      titleLine2: ' for Detox, Pain Relief & Wellness',
       // title: 'Premium Ayurveda Treatment –& Panchakarma in Jumeirah 1',
-      subtitle: 'Discover authentic Ayurveda treatment in Dubai for detoxification, pain relief, stress management, digestive wellness, and complete body–mind rejuvenation. At RamaCare Polyclinic, we combine ancient Ayurvedic wisdom with modern healthcare standards to deliver long-lasting results—not temporary relief.',
+      subtitle: 'Ayurveda treatment at RamaCare Polyclinic in Jumeirah 1, Dubai, focuses on supporting overall wellbeing through personalised traditional therapies and lifestyle-based care. Depending on your needs, Ayurvedic treatment may address concerns such as stress, digestive discomfort, body pain, fatigue, and general wellness through an approach tailored to your individual health goals.',
       description: 'Dubai\'s premier Ayurveda centre offering authentic classical treatments, DHA-licensed practitioners, and personalized wellness plans in the heart of Jumeirah 1.',
       ctaText: 'Book Free Consultation',
       backgroundImage: '/images/a1.jpg',
       stats: [
-        { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '150+', label: 'Treatments' }
       ],
       features: [
         'Classical Panchakarma & Herbal Therapies',
@@ -69,8 +69,8 @@ export const categoryContent = {
       title: 'Authentic Ayurveda Treatment in Dubai Within a Modern Polyclinic',
       description: 'Ayurveda, meaning "science of life," is a 5,000-year-old holistic healing system from India that focuses on balancing the body, mind, and spirit through natural therapies, diet, and lifestyle modifications.',
       paragraphs: [
-        'Our Ayurveda department at RamaCare Polyclinic brings the power of traditional Indian medicine to the modern healthcare system of Dubai.' ,
-        'We specialize in Ayurveda treatment in Dubai for:\n• Detoxification\n• Chronic pain relief\n•Stress and anxiety\n• Digestive disorders\n• Hormonal imbalance\n' ,
+        'Our Ayurveda department at RamaCare Polyclinic brings the power of traditional Indian medicine to the modern healthcare system of Dubai.',
+        'We specialize in Ayurveda treatment in Dubai for:\n• Detoxification\n• Chronic pain relief\n•Stress and anxiety\n• Digestive disorders\n• Hormonal imbalance\n',
         'Led by DHA-licensed Ayurvedic doctors (BAMS/MD), every treatment is personalized after a detailed consultation and dosha analysis. We follow strict hygiene and safety standards while maintaining authentic Ayurvedic practices—giving you the perfect balance of tradition and modern care.'
       ],
       stats: [
@@ -83,7 +83,7 @@ export const categoryContent = {
       imageAlt: 'Ayurvedic medicine bottle',
       overlayCard: {
         number: '15+',
-        smallText: 'Years of Excellence',
+        smallText: 'Years Combined Experience',
         boldText: 'Trusted Ayurvedic Care'
       }
     },
@@ -92,10 +92,10 @@ export const categoryContent = {
       subtitle: 'Explore our specialized therapies designed to restore balance and promote long-term wellness.',
       treatments: [
         {
-          id: 1,  
+          id: 1,
           title: 'Panchakarma Treatment in Dubai',
           slug: 'panchakarma-treatment',
-          fullSlug: '/services/panchakarma-treatment/',
+          fullSlug: '/services/panchakarma-treatment-dubai/',
           icon: 'Sparkles',
           subtitle: 'Deep detox therapy that removes toxins and restores internal balance.',
           duration: '7–21 Days',
@@ -143,14 +143,14 @@ export const categoryContent = {
             'Patients with hair thinning or hair loss',
           ],
           idealFor: 'Patients experiencing hair thinning or hair loss',
-           image: '/images/hairfall1.jpg',
+          image: '/images/hairfall1.jpg',
           alt: 'Ayurvedic hair fall treatment focused on natural therapies to strengthen hair roots and reduce hair loss.'
         },
         {
           id: 4,
           title: 'Skin Diseases Treatment',
           slug: 'skin-diseases-treatment',
-          fullSlug: '/services/skin-diseases-treatment/',
+          fullSlug: '/services/skin-diseases-treatment-dubai/',
           icon: 'Sparkles',
           subtitle: 'Holistic care for acne, pigmentation, and chronic skin conditions.',
           duration: '7–21 Days',
@@ -161,7 +161,7 @@ export const categoryContent = {
             'Uses herbal medicines and detox therapies',
           ],
           idealFor: 'Individuals with chronic or recurring skin issues',
-           image: '/images/skin1.jpg',
+          image: '/images/skin1.jpg',
           alt: 'Skin disease treatment in Ayurveda utilizes natural therapies to support healing and promote long-term skin health.'
         },
       ],
@@ -173,7 +173,7 @@ export const categoryContent = {
         buttonColor: 'bg-[#C9A547]'
       }
     },
-    
+
     experts: {
       badge: 'Expert Medical Team',
 
@@ -187,7 +187,7 @@ export const categoryContent = {
       ],
       ctaSection: {
         title: 'Ready to Meet Your Ayurvedic Physician?',
-        description: 'Schedule a personalized consultation with our expert doctors to begin your healing journey.',
+        description: 'Schedule a personalized consultation with our DHA-licensed Ayurvedic physicians to establish your custom treatment plan.',
         primaryButton: 'Book Consultation Now',
         secondaryButton: 'View Our Team'
       },
@@ -196,7 +196,7 @@ export const categoryContent = {
     whyDubai: {
       badge: 'Ayurveda in Dubai',
       title: 'Why Ayurveda Treatment is Essential for the Dubai Lifestyle?',
-      description: 'Dubai\'s fast-paced, high-stress environment — combined with extreme heat, irregular schedules, and sedentary work routines — creates unique health challenges. Many residents experience digestive issues, hormonal imbalance, chronic stress, sleep disturbances, and low energy levels. \n\n Ayurveda Treatment provides a holistic solution by addressing the root causes of these modern health concerns. Through personalized detox programs, dosha balancing, herbal therapies, and lifestyle guidance, Ayurveda restores your body\'s natural equilibrium and supports long-term wellness rather than temporary relief.',
+      description: 'Living in Dubai presents specific health demands—intense summer climate, constant indoor air conditioning, and long desk hours. At our Jumeirah 1 clinic, our DHA-licensed Ayurvedic physicians focus on identifying your unique body constitution (Dosha) to restore natural digestion, ease chronic tension, and support long-term metabolic health.',
       benefits: [
         {
           icon: 'Droplets',
@@ -223,7 +223,7 @@ export const categoryContent = {
           title: ' Enhance Productivity',
           description: 'Integrates mindfulness and relaxation practices with Ayurveda Treatment, Enhances productivity, reduces stress, and improves sleep quality'
         },
-        
+
       ],
       image: '/images/a3.jpg',
       imageAlt: 'Ayurvedic treatment in Dubai',
@@ -236,139 +236,139 @@ export const categoryContent = {
         description: 'As a leading Ayurveda Treatment clinic in Dubai, RamaCare Polyclinic specializes in Panchakarma detox, chronic pain management, stress relief, and holistic wellness. Our DHA-licensed Ayurvedic practitioners combine centuries-old Ayurvedic wisdom with modern healthcare standards to deliver natural, effective solutions for today’s health challenges. \n\n Whether you are looking for a personalized Ayurvedic consultation, a comprehensive detox program, or specialized women’s wellness care, our Jumeirah 1 clinic offers the perfect fusion of traditional therapies and premium medical excellence. Experience authentic Ayurveda Treatments in a comfortable, safe, and modern setting designed for long-term health and rejuvenation.'
       }
     },
-   programs: {
-  badge: 'Signature Programs',
-  heading: 'Complete Ayurveda Healing Programs in Dubai',
-  subtitle: 'Immersive Ayurveda Treatment programs are designed for transformative health results and lasting wellness.',
-  disclaimer: 'All programs are customized based on your condition and health goals.',
+    programs: {
+      badge: 'Signature Programs',
+      heading: 'Complete Ayurveda Healing Programs in Dubai',
+      subtitle: 'Immersive Ayurveda Treatment programs are designed for transformative health results and lasting wellness.',
+      disclaimer: 'All programs are customized based on your condition and health goals.',
 
-  programs: [
-    {
-      id: 1,
-      title: 'Deep Panchakarma Detox',
-      duration: '7–14 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-emerald-50',
-      durationColor: 'bg-emerald-100',
-      durationTextColor: 'text-emerald-700',
-      icon: 'sparkle',
-      benefits: [
-        'Full body detox at the cellular level',
-        'Boosts immunity & energy',
-        'Improves skin & vitality'
+      programs: [
+        {
+          id: 1,
+          title: 'Deep Panchakarma Detox',
+          duration: '7–14 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-emerald-50',
+          durationColor: 'bg-emerald-100',
+          durationTextColor: 'text-emerald-700',
+          icon: 'sparkle',
+          benefits: [
+            'Full body detox at the cellular level',
+            'Boosts immunity & energy',
+            'Improves skin & vitality'
+          ]
+        },
+        {
+          id: 2,
+          title: 'Chronic Pain Relief Program',
+          duration: '10–21 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-rose-50',
+          durationColor: 'bg-rose-100',
+          durationTextColor: 'text-rose-700',
+          icon: 'heart',
+          benefits: [
+            'Treats arthritis, back pain & joint issues',
+            'Reduces inflammation naturally',
+            'Improves mobility'
+          ]
+        },
+        {
+          id: 3,
+          title: 'Stress & Sleep Therapy',
+          duration: '7–14 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-indigo-50',
+          durationColor: 'bg-indigo-100',
+          durationTextColor: 'text-indigo-700',
+          icon: 'moon',
+          benefits: [
+            'Calms the nervous system',
+            'Reduces anxiety & insomnia',
+            'Improves mental clarity'
+          ]
+        },
+        {
+          id: 4,
+          title: "Women’s Wellness Program",
+          duration: '14–28 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-fuchsia-50',
+          durationColor: 'bg-fuchsia-100',
+          durationTextColor: 'text-fuchsia-700',
+          icon: 'user',
+          benefits: [
+            'Supports PCOS & hormonal balance',
+            'Improves reproductive health',
+            'Natural healing approach'
+          ]
+        },
+        {
+          id: 5,
+          title: 'Digestive & Weight Balance',
+          duration: '14–21 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-amber-50',
+          durationColor: 'bg-amber-100',
+          durationTextColor: 'text-amber-700',
+          icon: 'scale',
+          benefits: [
+            'Improves gut health',
+            'Supports weight management',
+            'Boosts metabolism'
+          ]
+        },
+        {
+          id: 6,
+          title: 'Full Rejuvenation Therapy',
+          duration: '21–28 Days',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-violet-50',
+          durationColor: 'bg-violet-100',
+          durationTextColor: 'text-violet-700',
+          icon: 'users',
+          benefits: [
+            'Anti-aging benefits',
+            'Full body restoration',
+            'Long-term wellness'
+          ]
+        }
       ]
     },
-    {
-      id: 2,
-      title: 'Chronic Pain Relief Program',
-      duration: '10–21 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-rose-50',
-      durationColor: 'bg-rose-100',
-      durationTextColor: 'text-rose-700',
-      icon: 'heart',
-      benefits: [
-        'Treats arthritis, back pain & joint issues',
-        'Reduces inflammation naturally',
-        'Improves mobility'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Stress & Sleep Therapy',
-      duration: '7–14 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-indigo-50',
-      durationColor: 'bg-indigo-100',
-      durationTextColor: 'text-indigo-700',
-      icon: 'moon',
-      benefits: [
-        'Calms the nervous system',
-        'Reduces anxiety & insomnia',
-        'Improves mental clarity'
-      ]
-    },
-    {
-      id: 4,
-      title: "Women’s Wellness Program",
-      duration: '14–28 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-fuchsia-50',
-      durationColor: 'bg-fuchsia-100',
-      durationTextColor: 'text-fuchsia-700',
-      icon: 'user',
-      benefits: [
-        'Supports PCOS & hormonal balance',
-        'Improves reproductive health',
-        'Natural healing approach'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Digestive & Weight Balance',
-      duration: '14–21 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-amber-50',
-      durationColor: 'bg-amber-100',
-      durationTextColor: 'text-amber-700',
-      icon: 'scale',
-      benefits: [
-        'Improves gut health',
-        'Supports weight management',
-        'Boosts metabolism'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Full Rejuvenation Therapy',
-      duration: '21–28 Days',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-violet-50',
-      durationColor: 'bg-violet-100',
-      durationTextColor: 'text-violet-700',
-      icon: 'users',
-      benefits: [
-        'Anti-aging benefits',
-        'Full body restoration',
-        'Long-term wellness'
-      ]
-    }
-  ]
-},
     successStories: {
       badge: 'Patient Success Stories',
       title: 'Real Results from Ayurveda Treatment in Dubai',
       subtitle: 'Hear directly from our patients about their transformative Ayurvedic healing journeys in Dubai.',
       stats: [
         {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '94%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 94
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '94%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 94
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: '15+ Years Combined Clinical Experience',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to write your success story?',
@@ -458,101 +458,101 @@ export const categoryContent = {
       ]
     },
     facility: {
-  badge: 'Our Ayurveda Facility',
-  title: 'Authentic Ayurvedic Healing Centre',
-  description:
-    'Experience traditional Ayurvedic care in our serene Dubai Ayurveda facility, designed with natural elements, advanced diagnostic support, and a calming, healing-focused environment.',
+      badge: 'Our Ayurveda Facility',
+      title: 'Authentic Ayurvedic Healing Centre',
+      description:
+        'Experience traditional Ayurvedic care in our serene Dubai Ayurveda facility, designed with natural elements, advanced diagnostic support, and a calming, healing-focused environment.',
 
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/ay1.png',
-      alt: 'Ayurvedic treatment focused on natural healing and holistic wellness.'
-    },
-    {
-      id: 2,
-      src: '/images/ay2.png',
-      alt: 'Ayurvedic consultation based on traditional health assessment methods.'
-    },
-    {
-      id: 3,
-      src: '/images/ay3.png',
-      alt: 'Ayurvedic therapy using herbal oils for relaxation and healing.'
-    }
-  ],
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/ay1.png',
+          alt: 'Ayurvedic treatment focused on natural healing and holistic wellness.'
+        },
+        {
+          id: 2,
+          src: '/images/ay2.png',
+          alt: 'Ayurvedic consultation based on traditional health assessment methods.'
+        },
+        {
+          id: 3,
+          src: '/images/ay3.png',
+          alt: 'Ayurvedic therapy using herbal oils for relaxation and healing.'
+        }
+      ],
 
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/ay4.png',
-      alt: 'Ayurvedic treatment room designed for calm and natural therapies.'
-    },
-    {
-      id: 5,
-      src: '/images/ay5.png',
-      alt: 'Ayurvedic healing approach supporting long-term health balance.'
-    },
-    {
-      id: 6,
-      src: '/images/ay6.png',
-      alt: 'Personalized Ayurvedic care tailored to individual health needs.'
-    }
-  ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/ay4.png',
+          alt: 'Ayurvedic treatment room designed for calm and natural therapies.'
+        },
+        {
+          id: 5,
+          src: '/images/ay5.png',
+          alt: 'Ayurvedic healing approach supporting long-term health balance.'
+        },
+        {
+          id: 6,
+          src: '/images/ay6.png',
+          alt: 'Personalized Ayurvedic care tailored to individual health needs.'
+        }
+      ],
 
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-      title: 'DHA Licensed',
-      subtitle: 'Certified Ayurvedic practitioners'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      title: 'Authentic Therapies',
-      subtitle: 'Traditional treatments & herbal care'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      title: 'Prime Location',
-      subtitle: 'Jumeirah 1, Dubai'
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          ),
+          title: 'DHA Licensed',
+          subtitle: 'Certified Ayurvedic practitioners'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          ),
+          title: 'Authentic Therapies',
+          subtitle: 'Traditional treatments & herbal care'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          ),
+          title: 'Prime Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ]
-}
 
   },
 
@@ -560,19 +560,19 @@ export const categoryContent = {
     hero: {
       badge: 'DHA-Licensed Aesthetic Dermatology',
       titleLine1: 'Premium Aesthetic ',
-     titleHighlight: 'Dermatology',
-      titleLine2:'  in Dubai',
+      titleHighlight: 'Dermatology',
+      titleLine2: '  in Dubai',
       // title: 'Premium –Aesthetic Dermatology  in Dubai',
-      subtitle: 'Transform your skin with cutting-edge treatments and expert care',
+      subtitle: 'Healthy skin often needs more than a single treatment. At RamaCare Polyclinic in Jumeirah 1, our dermatology team assesses your skin, hair, or aesthetic concern before recommending suitable care. From pigmentation and acne concerns to hair treatments and skin rejuvenation, treatment plans are personalised to your skin type, condition, and desired outcome.',
       description: 'Advanced skin treatments, anti-aging solutions, laser therapies, and personalized dermatology care—provided under one roof for healthier, radiant skin.Your Trusted Destination for Aesthetic Dermatology in Dubai At RamaCare Polyclinic, healthy, glowing skin mirrors overall well-being and confidence. Conveniently located in Jumeirah 1, Dubai, our clinic combines medical expertise, advanced technology, and personalized care to deliver safe, practical, and evidence-based aesthetic dermatology in Dubai. Our DHA-licensed dermatologists have years of clinical experience and a compassionate approach to every consultation. From acne and pigmentation treatments to advanced anti-aging and laser procedures, each treatment plan is carefully customized to fit your skin type, lifestyle, and aesthetic goals—ensuring natural-looking, long-term results.',
       ctaText: 'Book Your Consultation',
-       backgroundImage: '/images/aesth.jpg',
-       backgroundAlt: 'Aesthetic Dermatology Treatment focused on skin rejuvenation, anti-aging solutions, and personalized care.',
+      backgroundImage: '/images/aesth.jpg',
+      backgroundAlt: 'Aesthetic Dermatology Treatment focused on skin rejuvenation, anti-aging solutions, and personalized care.',
       stats: [
-         { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '150+', label: 'Treatments' }
       ],
       features: [
         'DHA-Licensed Dermatologists',
@@ -625,7 +625,7 @@ export const categoryContent = {
         'We use cutting-edge technology and evidence-based treatments to deliver natural-looking, long-lasting results that not only enhance your confidence but also support your overall skin, hair, and body health. Our focus on personalized care and innovative procedures ensures every patient enjoys safe, effective, and satisfying outcomes.'
       ],
       stats: [
-        { number: '15+', label: 'Years Experience' },
+        { number: '15+', label: 'Years Combined Experience' },
         { number: '1,000+', label: 'Satisfied Patients' },
         { number: '98%', label: 'Satisfaction Rate' }
       ],
@@ -634,7 +634,7 @@ export const categoryContent = {
       imageAlt: 'DHA-licensed dermatologist conducting skin consultation and aesthetic treatment at RamaCare Dubai',
       overlayCard: {
         number: '15+',
-        smallText: 'Years of Experience',
+        smallText: 'Years Combined Experience',
         boldText: 'Expert Dermatology Care'
       }
     },
@@ -650,7 +650,7 @@ export const categoryContent = {
       ],
       ctaSection: {
         title: 'Ready to Meet Your Dermatologist?',
-        description: 'Schedule a personalized consultation with our expert dermatologists to begin your aesthetic journey.',
+        description: 'Schedule a comprehensive skin assessment with our DHA-licensed dermatologists at our Jumeirah 1 clinic.',
         primaryButton: 'Book Consultation Now',
         secondaryButton: 'View Our Team'
       },
@@ -659,7 +659,7 @@ export const categoryContent = {
     whyDubai: {
       badge: 'Why Aesthetic Dermatology in Dubai',
       title: 'Why Choose Aesthetic Dermatology in Dubai?',
-      description: `Holistic Skin, Hair, and Body Care for Modern Lifestyles\n\nDubai's fast-paced lifestyle, sun exposure, and environmental stressors can take a toll on your skin, hair, and overall appearance. Many residents face premature aging, pigmentation, hair thinning, acne, and uneven skin texture.\n\n Aesthetic dermatology offers personalized solutions that go beyond temporary fixes. Through advanced treatments, cutting-edge technology, and tailored care, you can restore, rejuvenate, and maintain your natural beauty, supporting long-term skin, hair, and body health.`,
+      description: `Targeted Skin & Scalp Care for Dubai's Climate\n\nYear-round Gulf sun exposure, high humidity, and desalinated tap water mineral buildup take a toll on skin hydration and scalp health. At RamaCare Polyclinic in Jumeirah 1, our DHA-licensed dermatologists and aesthetic specialists conduct thorough skin assessments before recommending targeted treatments—from PRP and laser care to skin barrier restoration.`,
       benefits: [
         {
           icon: 'Sparkles',
@@ -696,7 +696,7 @@ export const categoryContent = {
     programs: {
       badge: 'Signature Aesthetic Dermatology Programs',
       heading: 'Aesthetic Treatment Programs',
-      subtitle: 'Curated Beauty & Wellness Journeys Immersive treatment programs designed for radiant skin, healthy hair, and body confidence Experience personalized aesthetic treatments that rejuvenate your skin, hair, and body. Each program is tailored to your needs and designed to deliver transformative results with lasting beauty and wellness.',
+      subtitle: 'Targeted skin rejuvenation, hair restoration, and laser treatment programs designed for long-term dermal health.',
       disclaimer: 'All aesthetic dermatology programs are customized based on your consultation, skin type, hair condition, and body goals, ensuring safe, effective, and lasting results.',
       programs: [
         {
@@ -709,7 +709,7 @@ export const categoryContent = {
           durationTextColor: 'text-pink-700',
           icon: 'sparkle',
           benefits: [
-            
+
             'Anti-aging treatments to reduce wrinkles and fine lines',
             'Restore Glow and Youthful Radiance',
             'Treatment for acne, pigmentation, scars, and sun damage',
@@ -749,7 +749,7 @@ export const categoryContent = {
           ]
         },
         {
-          id: 4 ,
+          id: 4,
           title: 'Body Contouring & Sculpting',
           duration: '7 to 14 Days',
           backgroundColor: 'bg-white',
@@ -765,7 +765,7 @@ export const categoryContent = {
           ]
         },
         {
-          id: 5 ,
+          id: 5,
           title: 'Anti-Aging & Full Rejuvenation',
           duration: '14 to 21 Days',
           backgroundColor: 'bg-white',
@@ -854,7 +854,7 @@ export const categoryContent = {
           idealFor: 'Individuals looking for body contouring without surgery, Those aiming for a toned and sculpted appearance',
           image: '/images/p4.png'
         },
-        
+
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
@@ -869,35 +869,35 @@ export const categoryContent = {
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their transformative aesthetic dermatology journeys in Dubai.',
       stats: [
-       {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '94%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 94
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+        {
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '94%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 94
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Since 2008',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to transform your skin?',
@@ -987,77 +987,77 @@ export const categoryContent = {
       ]
     },
     facility: {
-  badge: 'Our Aesthetic Facility',
-  title: 'State-of-the-Art Aesthetic Dermatology Clinic',
-  description: 'Experience advanced aesthetic treatments in our premium Dubai facility equipped with cutting-edge technology and luxurious amenities.',
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/1.png',
-      alt: 'Modern dermatology treatment room'
-    },
-    {
-      id: 2,
-      src: '/images/2.png',
-      alt: 'Advanced laser equipment'
-    },
-    {
-      id: 3,
-      src: '/images/3.png',
-      alt: 'Luxury consultation area'
+      badge: 'Our Aesthetic Facility',
+      title: 'State-of-the-Art Aesthetic Dermatology Clinic',
+      description: 'Experience advanced aesthetic treatments in our premium Dubai facility equipped with cutting-edge technology and luxurious amenities.',
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/1.png',
+          alt: 'Modern dermatology treatment room'
+        },
+        {
+          id: 2,
+          src: '/images/2.png',
+          alt: 'Advanced laser equipment'
+        },
+        {
+          id: 3,
+          src: '/images/3.png',
+          alt: 'Luxury consultation area'
+        }
+      ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/4.png',
+          alt: 'Reception and waiting area'
+        },
+        {
+          id: 5,
+          src: '/images/5.png',
+          alt: 'Skin analysis technology'
+        },
+        {
+          id: 6,
+          src: '/images/6.png',
+          alt: 'Post-treatment recovery lounge'
+        }
+      ],
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          ),
+          title: 'DHA Certified',
+          subtitle: 'Licensed dermatology clinic'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          ),
+          title: 'Advanced Technology',
+          subtitle: 'Latest aesthetic devices'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          ),
+          title: 'Premium Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ],
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/4.png',
-      alt: 'Reception and waiting area'
-    },
-    {
-      id: 5,
-      src: '/images/5.png',
-      alt: 'Skin analysis technology'
-    },
-    {
-      id: 6,
-      src: '/images/6.png',
-      alt: 'Post-treatment recovery lounge'
-    }
-  ],
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      title: 'DHA Certified',
-      subtitle: 'Licensed dermatology clinic'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: 'Advanced Technology',
-      subtitle: 'Latest aesthetic devices'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      title: 'Premium Location',
-      subtitle: 'Jumeirah 1, Dubai'
-    }
-  ]
-}
   },
 
   'dental': {
@@ -1066,15 +1066,15 @@ export const categoryContent = {
       titleLine1: 'Dental Treatment in Dubai — ',
       titleHighlight: 'Healthy, Beautiful',
       titleLine2: ' Smiles',
-      subtitle: 'Comprehensive Dental solutions, advanced treatments, and personalized care — all under one roof for your oral health and radiant smile.',
+      subtitle: 'From routine dental care to restorative and cosmetic treatments, RamaCare Polyclinic provides personalised dental care in Jumeirah 1, Dubai. Our dental team focuses on maintaining healthy teeth and gums while addressing concerns such as tooth decay, damaged teeth, missing teeth, and smile aesthetics with treatment plans suited to each patient’s oral health needs.',
       description: 'Achieve a confident, beautiful smile with dental veneers—a modern cosmetic dental solution designed to correct stains, chips, gaps, and uneven teeth. Our expert dentists use advanced techniques and high-quality materials to create natural-looking veneers that enhance your smile while preserving your natural teeth.',
       ctaText: 'Book Free Consultation',
       backgroundImage: '/images/d1.jpg',
       stats: [
-         { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '150+', label: 'Treatments' }
       ],
       features: [
         'DHA-Licensed Dentists',
@@ -1148,223 +1148,223 @@ export const categoryContent = {
       imageAlt: 'Dental consultation room at RamaCare Polyclinic Jumeirah 1',
       overlayCard: {
         number: '15+',
-        smallText: 'Years of Experience',
+        smallText: 'Years Combined Experience',
         boldText: 'Trusted Dental Care'
       }
     },
-   treatments: {
-  heading: 'Dental Treatments',
-  subtitle: 'Advanced Oral Care for Healthy, Confident Smiles',
-  treatments: [
-    {
-      id: 1,
-      title: 'Composite Veneers',
-      slug: 'composite-veneers',
-      fullSlug: '/services/composite-veneers/',
-      icon: 'Sparkles',
-      subtitle: 'Quick Smile Enhancement',
-      duration: '45-60 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Improves tooth shape and color',
-        ' Minimally invasive cosmetic solution',
-        ' Immediate visible results',
-        ' Natural-looking smile enhancement'
+    treatments: {
+      heading: 'Dental Treatments',
+      subtitle: 'Advanced Oral Care for Healthy, Confident Smiles',
+      treatments: [
+        {
+          id: 1,
+          title: 'Composite Veneers',
+          slug: 'composite-veneers',
+          fullSlug: '/services/composite-veneers/',
+          icon: 'Sparkles',
+          subtitle: 'Quick Smile Enhancement',
+          duration: '45-60 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Improves tooth shape and color',
+            ' Minimally invasive cosmetic solution',
+            ' Immediate visible results',
+            ' Natural-looking smile enhancement'
+          ],
+          idealFor:
+            ' Patients with chipped, discolored, or uneven teeth seeking fast cosmetic improvement.',
+          image: '/images/comp.jpg',
+          alt: 'Dental treatment provided in a clean and modern clinical environment.'
+        },
+        {
+          id: 2,
+          title: 'Dental Veneers',
+          slug: 'dental-veneers',
+          fullSlug: '/services/dental-veneers-dubai/',
+          icon: 'Sparkles',
+          subtitle: 'Long-Lasting Smile Makeover',
+          duration: '60-90 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Covers stains, gaps, and minor misalignment',
+            ' Strong and stain-resistant',
+            ' Enhances smile symmetry',
+            ' Durable aesthetic results'
+          ],
+          idealFor:
+            ' Individuals looking for a complete smile transformation with long-term results.',
+          image: '/images/dentalveeners.jpg',
+          alt: 'Dental treatment performed by an experienced dentist using advanced equipment.'
+        },
+        {
+          id: 3,
+          title: 'Root Canal Treatment',
+          slug: 'root-canal-treatment',
+          fullSlug: '/services/root-canal-treatment-dubai/',
+          icon: 'Scissors',
+          subtitle: 'Pain Relief & Tooth Preservation',
+          duration: '45-60 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Eliminates tooth infection and pain',
+            ' Saves natural tooth',
+            ' Prevents extraction',
+            ' Restores chewing comfort'
+          ],
+          idealFor:
+            ' Patients suffering from tooth infection, deep decay, or severe sensitivity.',
+          image: '/images/rootcanal.jpg',
+          alt: 'Patient receiving safe and comfortable Dental treatment.'
+        },
+        {
+          id: 4,
+          title: 'Snap On Smile',
+          slug: 'snap-on-smile',
+          fullSlug: '/services/snap-on-smile-dubai/',
+          icon: 'Sparkles',
+          subtitle: 'Instant Smile Solution',
+          duration: '30-45 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Non-invasive cosmetic solution',
+            ' Covers gaps, stains, and missing teeth',
+            ' Removable and comfortable',
+            ' Immediate smile improvement'
+          ],
+          idealFor:
+            ' Patients seeking a temporary or non-invasive cosmetic smile enhancement.',
+          image: '/images/snap-on-smile.jpg',
+          alt: 'Dental treatment room designed for hygiene, safety, and patient comfort.'
+        },
+        {
+          id: 5,
+          title: 'Teeth Bleaching',
+          slug: 'teeth-bleaching',
+          fullSlug: '/services/teeth-bleaching-dubai/',
+          icon: 'Zap',
+          subtitle: 'Brighten Your Smile',
+          duration: '30-60 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Removes stains and discoloration',
+            ' Enhances smile brightness',
+            ' Safe and effective whitening',
+            ' Boosts confidence'
+          ],
+          idealFor:
+            ' Individuals with stained or dull teeth seeking a brighter smile.',
+          image: '/images/teeth-bleaching.jpg',
+          alt: 'Comprehensive Dental treatment focused on long-term oral health care.'
+        },
+        {
+          id: 6,
+          title: 'Teeth Dentures',
+          slug: 'teeth-dentures',
+          fullSlug: '/services/teeth-dentures-dubai/',
+          icon: 'Target',
+          subtitle: 'Reliable Tooth Replacement',
+          duration: '45-90 Mins',
+          badgeColor: 'orange',
+          benefits: [
+            ' Replaces missing teeth',
+            ' Restores facial structure',
+            ' Improves eating and speech',
+            ' Custom-fit for comfort'
+          ],
+          idealFor:
+            ' Patients with partial or complete tooth loss.',
+          image: '/images/teethdentures.jpg',
+          alt: 'Personalized Dental treatment consultation for accurate diagnosis and planning.'
+        },
+        {
+          id: 7,
+          title: 'Tooth Composite Restoration',
+          slug: 'tooth-composite-restoration',
+          fullSlug: '/services/teeth-composite-restoration-dubai/',
+          icon: 'Sparkles',
+          subtitle: 'Repair & Protect Teeth',
+          duration: '30-45 Mins',
+          badgeColor: 'purple',
+          benefits: [
+            ' Repairs cavities and cracks',
+            ' Matches natural tooth color',
+            ' Preserves tooth structure',
+            ' Quick and effective restoration'
+          ],
+          idealFor:
+            ' Patients with cavities, chipped, or damaged teeth.',
+          image: '/images/composite.jpg',
+          alt: 'Painless Dental treatment using modern dental techniques.'
+        },
+        {
+          id: 8,
+          title: 'Braces (Metal & Ceramic)',
+          slug: 'braces-metal-ceramic',
+          fullSlug: '/services/braces-metal-ceramic-dubai/',
+          icon: 'Target',
+          subtitle: 'Teeth Alignment & Bite Correction',
+          duration: '45-90 Mins',
+          badgeColor: 'orange',
+          benefits: [
+            ' Corrects misaligned teeth',
+            ' Improves bite and jaw balance',
+            ' Enhances smile aesthetics',
+            ' Long-term orthodontic stability'
+          ],
+          idealFor:
+            ' Children, teenagers, and adults with alignment or bite issues.',
+          image: '/images/braces.jpg',
+          alt: 'Routine Dental treatment carried out with professional care.'
+        },
+        {
+          id: 9,
+          title: 'Dental Crown Bridge',
+          slug: 'dental-crown-bridge',
+          fullSlug: '/services/dental-crown-bridges-dubai/',
+          icon: 'Target',
+          subtitle: 'Strong Tooth Restoration',
+          duration: '45-90 Mins',
+          badgeColor: 'orange',
+          benefits: [
+            ' Restores damaged or missing teeth',
+            ' Improves chewing function',
+            ' Maintains facial structure',
+            ' Durable and natural-looking'
+          ],
+          idealFor:
+            ' Patients with broken, weakened, or missing teeth.',
+          image: '/images/dental-crown.jpg',
+          alt: 'Cosmetic and restorative Dental treatment for smile improvement.'
+        },
+        {
+          id: 10,
+          title: 'Gum Disease Treatment',
+          slug: 'gum-disease-treatment',
+          fullSlug: '/services/gum-disease-treatment-dubai/',
+          icon: 'Target',
+          subtitle: 'Healthy Gums, Strong Teeth',
+          duration: '45-90 Mins',
+          badgeColor: 'orange',
+          benefits: [
+            ' Treats gum infection and inflammation',
+            ' Prevents tooth loss',
+            ' Improves gum strength',
+            ' Restores oral health'
+          ],
+          idealFor:
+            ' Patients with bleeding gums, swelling, or chronic bad breath.',
+          image: '/images/gum-disease.jpg',
+          alt: 'High-quality Dental treatment ensuring patient safety and effective results.'
+        }
       ],
-      idealFor:
-        ' Patients with chipped, discolored, or uneven teeth seeking fast cosmetic improvement.',
-      image: '/images/comp.jpg',
-      alt: 'Dental treatment provided in a clean and modern clinical environment.'
+      consultationCTA: {
+        heading: 'Not Sure Which Treatment is Right for You?',
+        subtext: 'Choosing the right dental care can be confusing with so many options available. At RamaCare Polyclinic, we help you make the best choice for your oral health. Schedule a free consultation with our expert dentists to get personalized recommendations on Dental Treatment in Dubai.',
+        buttonText: 'Get Free Consultation',
+        backgroundColor: 'bg-[#1E5A3C]',
+        buttonColor: 'bg-[#C9A547]'
+      }
     },
-    {
-      id: 2,
-      title: 'Dental Veneers',
-      slug: 'dental-veneers',
-      fullSlug: '/services/dental-veneers-dubai/',
-      icon: 'Sparkles',
-      subtitle: 'Long-Lasting Smile Makeover',
-      duration: '60-90 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Covers stains, gaps, and minor misalignment',
-        ' Strong and stain-resistant',
-        ' Enhances smile symmetry',
-        ' Durable aesthetic results'
-      ],
-      idealFor:
-        ' Individuals looking for a complete smile transformation with long-term results.',
-      image: '/images/dentalveeners.jpg',
-      alt: 'Dental treatment performed by an experienced dentist using advanced equipment.'
-    },
-    {
-      id: 3,
-      title: 'Root Canal Treatment',
-      slug: 'root-canal-treatment',
-      fullSlug: '/services/root-canal-treatment-dubai/',
-      icon: 'Scissors',
-      subtitle: 'Pain Relief & Tooth Preservation',
-      duration: '45-60 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Eliminates tooth infection and pain',
-        ' Saves natural tooth',
-        ' Prevents extraction',
-        ' Restores chewing comfort'
-      ],
-      idealFor:
-        ' Patients suffering from tooth infection, deep decay, or severe sensitivity.',
-      image: '/images/rootcanal.jpg',
-      alt: 'Patient receiving safe and comfortable Dental treatment.'
-    },
-    {
-      id: 4,
-      title: 'Snap On Smile',
-      slug: 'snap-on-smile',
-      fullSlug: '/services/snap-on-smile-dubai/',
-      icon: 'Sparkles',
-      subtitle: 'Instant Smile Solution',
-      duration: '30-45 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Non-invasive cosmetic solution',
-        ' Covers gaps, stains, and missing teeth',
-        ' Removable and comfortable',
-        ' Immediate smile improvement'
-      ],
-      idealFor:
-        ' Patients seeking a temporary or non-invasive cosmetic smile enhancement.',
-      image: '/images/snap-on-smile.jpg',
-      alt: 'Dental treatment room designed for hygiene, safety, and patient comfort.'
-    },
-    {
-      id: 5,
-      title: 'Teeth Bleaching',
-      slug: 'teeth-bleaching',
-      fullSlug: '/services/teeth-bleaching-dubai/',
-      icon: 'Zap',
-      subtitle: 'Brighten Your Smile',
-      duration: '30-60 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Removes stains and discoloration',
-        ' Enhances smile brightness',
-        ' Safe and effective whitening',
-        ' Boosts confidence'
-      ],
-      idealFor:
-        ' Individuals with stained or dull teeth seeking a brighter smile.',
-      image: '/images/teeth-bleaching.jpg',
-      alt: 'Comprehensive Dental treatment focused on long-term oral health care.'
-    },
-    {
-      id: 6,
-      title: 'Teeth Dentures',
-      slug: 'teeth-dentures',
-      fullSlug: '/services/teeth-dentures-dubai/',
-      icon: 'Target',
-      subtitle: 'Reliable Tooth Replacement',
-      duration: '45-90 Mins',
-      badgeColor: 'orange',
-      benefits: [
-        ' Replaces missing teeth',
-        ' Restores facial structure',
-        ' Improves eating and speech',
-        ' Custom-fit for comfort'
-      ],
-      idealFor:
-        ' Patients with partial or complete tooth loss.',
-      image: '/images/teethdentures.jpg',
-      alt: 'Personalized Dental treatment consultation for accurate diagnosis and planning.'
-    },
-    {
-      id: 7,
-      title: 'Tooth Composite Restoration',
-      slug: 'tooth-composite-restoration',
-      fullSlug: '/services/teeth-composite-restoration-dubai/',
-      icon: 'Sparkles',
-      subtitle: 'Repair & Protect Teeth',
-      duration: '30-45 Mins',
-      badgeColor: 'purple',
-      benefits: [
-        ' Repairs cavities and cracks',
-        ' Matches natural tooth color',
-        ' Preserves tooth structure',
-        ' Quick and effective restoration'
-      ],
-      idealFor:
-        ' Patients with cavities, chipped, or damaged teeth.',
-      image: '/images/composite.jpg',
-      alt: 'Painless Dental treatment using modern dental techniques.'
-    },
-    {
-      id: 8,
-      title: 'Braces (Metal & Ceramic)',
-      slug: 'braces-metal-ceramic',
-      fullSlug: '/services/braces-metal-ceramic-dubai/',
-      icon: 'Target',
-      subtitle: 'Teeth Alignment & Bite Correction',
-      duration: '45-90 Mins',
-      badgeColor: 'orange',
-      benefits: [
-        ' Corrects misaligned teeth',
-        ' Improves bite and jaw balance',
-        ' Enhances smile aesthetics',
-        ' Long-term orthodontic stability'
-      ],
-      idealFor:
-        ' Children, teenagers, and adults with alignment or bite issues.',
-      image: '/images/braces.jpg',
-      alt: 'Routine Dental treatment carried out with professional care.'
-    },
-    {
-      id: 9,
-      title: 'Dental Crown Bridge',
-      slug: 'dental-crown-bridge',
-      fullSlug: '/services/dental-crown-bridges-dubai/',
-      icon: 'Target',
-      subtitle: 'Strong Tooth Restoration',
-      duration: '45-90 Mins',
-      badgeColor: 'orange',
-      benefits: [
-        ' Restores damaged or missing teeth',
-        ' Improves chewing function',
-        ' Maintains facial structure',
-        ' Durable and natural-looking'
-      ],
-      idealFor:
-        ' Patients with broken, weakened, or missing teeth.',
-      image: '/images/dental-crown.jpg',
-      alt: 'Cosmetic and restorative Dental treatment for smile improvement.'
-    },
-    {
-      id: 10,
-      title: 'Gum Disease Treatment',
-      slug: 'gum-disease-treatment',
-      fullSlug: '/services/gum-disease-treatment-dubai/', 
-      icon: 'Target',
-      subtitle: 'Healthy Gums, Strong Teeth',
-      duration: '45-90 Mins',
-      badgeColor: 'orange',
-      benefits: [
-        ' Treats gum infection and inflammation',
-        ' Prevents tooth loss',
-        ' Improves gum strength',
-        ' Restores oral health'
-      ],
-      idealFor:
-        ' Patients with bleeding gums, swelling, or chronic bad breath.',
-      image: '/images/gum-disease.jpg',
-      alt: 'High-quality Dental treatment ensuring patient safety and effective results.'
-    }
-  ],
-  consultationCTA: {
-    heading: 'Not Sure Which Treatment is Right for You?',
-    subtext: 'Choosing the right dental care can be confusing with so many options available. At RamaCare Polyclinic, we help you make the best choice for your oral health. Schedule a free consultation with our expert dentists to get personalized recommendations on Dental Treatment in Dubai.',
-    buttonText: 'Get Free Consultation',
-    backgroundColor: 'bg-[#1E5A3C]',
-    buttonColor: 'bg-[#C9A547]'
-  }
-},
     experts: {
       badge: 'Expert Medical Team',
       title: 'Meet Our DHA-Licensed\nDentists',
@@ -1488,35 +1488,35 @@ export const categoryContent = {
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their smile transformation journeys in Dubai.',
       stats: [
-      {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '94%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 94
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+        {
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '94%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 94
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Since 2008',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to transform your smile?',
@@ -1524,7 +1524,7 @@ export const categoryContent = {
         buttonText: 'Start your journey today'
       }
     },
-  
+
     faq: {
       title: 'Frequently Asked Questions (FAQs)',
       description: null,
@@ -1620,120 +1620,120 @@ export const categoryContent = {
             'Absolutely. Beyond treatment, we educate patients on proper brushing, flossing, dietary considerations, and follow-ups to ensure lasting oral health and radiant smiles.'
         }
       ]
-    }    ,
+    },
 
     facility: {
-  badge: 'Our Dental Facility',
-  title: 'State-of-the-Art Dental Clinic',
-  description:
-    'Receive comprehensive dental care in our modern Dubai Dental clinic equipped with advanced technology, premium sterilization standards, and patient-centric comfort.',
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/d5.png',
-      alt: 'Modern dental treatment room'
-    },
-    {
-      id: 2,
-      src: '/images/d6.png',
-      alt: 'Advanced dental equipment and chair'
-    },
-    {
-      id: 3,
-      src: '/images/d7.png',
-      alt: 'dental consultation and diagnosis area'
+      badge: 'Our Dental Facility',
+      title: 'State-of-the-Art Dental Clinic',
+      description:
+        'Receive comprehensive dental care in our modern Dubai Dental clinic equipped with advanced technology, premium sterilization standards, and patient-centric comfort.',
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/d5.png',
+          alt: 'Modern dental treatment room'
+        },
+        {
+          id: 2,
+          src: '/images/d6.png',
+          alt: 'Advanced dental equipment and chair'
+        },
+        {
+          id: 3,
+          src: '/images/d7.png',
+          alt: 'dental consultation and diagnosis area'
+        }
+      ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/d8.png',
+          alt: 'dental reception and waiting lounge'
+        },
+        {
+          id: 5,
+          src: '/images/d9.png',
+          alt: 'Sterilization and hygiene room'
+        },
+        {
+          id: 6,
+          src: '/images/d10.png',
+          alt: 'Post-treatment dental care area'
+        }
+      ],
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          ),
+          title: 'DHA Certified',
+          subtitle: 'Licensed dental clinic'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          ),
+          title: 'Advanced Dentistry',
+          subtitle: 'Digital X-rays & modern tools'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          ),
+          title: 'Prime Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ],
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/d8.png',
-      alt: 'dental reception and waiting lounge'
-    },
-    {
-      id: 5,
-      src: '/images/d9.png',
-      alt: 'Sterilization and hygiene room'
-    },
-    {
-      id: 6,
-      src: '/images/d10.png',
-      alt: 'Post-treatment dental care area'
-    }
-  ],
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-      title: 'DHA Certified',
-      subtitle: 'Licensed dental clinic'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      title: 'Advanced Dentistry',
-      subtitle: 'Digital X-rays & modern tools'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      title: 'Prime Location',
-      subtitle: 'Jumeirah 1, Dubai'
-    }
-  ]
-}
   },
 
   'physiotherapy': {
     hero: {
       badge: 'DHA-Licensed Premier Physiotherapy Centre',
-       titleLine1: 'Advanced Physiotherapy ',
+      titleLine1: 'Advanced Physiotherapy ',
       titleHighlight: ' & Rehabilitation',
-      titleLine2:' in Jumeirah 1',
+      titleLine2: ' in Jumeirah 1',
       // title: 'Advanced Physiotherapy– & Rehabilitation in Jumeirah 1',
-      subtitle: 'Evidence-based Physiotherapy Treatment for pain relief, injury recovery, posture modification, and full functional restoration—created for modern lifestyles in Dubai.',
+      subtitle: 'RamaCare Polyclinic provides DHA-licensed physiotherapy in Jumeirah 1, Dubai, offering personalised care for pain relief, injury recovery, posture correction, and rehabilitation. Treatment options include manual therapy, dry needling, electrotherapy, and functional rehabilitation, with care tailored to each patient’s condition, mobility needs, and recovery goals.',
       description: 'Evidence-based Physiotherapy Treatment for pain relief, injury recovery, posture modification, and full functional restoration—created for modern lifestyles in Dubai.',
-      ctaText:  'Book Free Consultation',
-       backgroundImage: '/images/phy3.jpg',
-       backgroundAlt: 'Physiotherapy Treatment focused on pain relief and improved body mobility.',
+      ctaText: 'Book Free Consultation',
+      backgroundImage: '/images/phy3.jpg',
+      backgroundAlt: 'Physiotherapy Treatment focused on pain relief and improved body mobility.',
       stats: [
-        { number: '15+', label: 'Years Experience' },
+        { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
         { number: '98%', label: 'Recovery Success Rate' },
-        { number: '4.9/5', label: 'Patient Rating' }
+        { number: '4.8/5', label: 'Patient Rating' }
       ],
       features: [
         'DHA-Licensed Physiotherapists',
@@ -1786,17 +1786,17 @@ export const categoryContent = {
         'We maintain strict medical hygiene standards while delivering patient-focused physiotherapy designed for long-term results—not temporary relief.'
       ],
       stats: [
-        { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '40+', label: 'Treatments' }
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '40+', label: 'Treatments' }
       ],
       ctaText: 'Meet Our Physiotherapists',
       image: '/images/ph-top.jpg',
       imageAlt: 'Patient receiving safe and effective Physiotherapy Treatment for recovery.',
       overlayCard: {
         number: '15+',
-        smallText: 'Years of Excellence',
+        smallText: 'Years Combined Experience',
         boldText: 'Trusted Physiotherapy Care'
       }
     },
@@ -1866,67 +1866,67 @@ export const categoryContent = {
           alt: 'Pelvic Floor Therapy in Dubai delivered in a private clinic to improve core stability and pelvic health.'
         },
         {
-  id: 4,
-  title: 'Scoliosis Treatment',
-  slug: 'scoliosis-treatment',
-  fullSlug: '/services/scoliosis-treatment-in-dubai/',
-  icon: 'Activity',
-  subtitle: 'Postural Correction & Spine Alignment',
-  duration: '60-90 Mins',
-  badgeColor: 'blue',
-  benefits: [
-    'Improves spinal alignment and posture',
-    'Reduces back pain and muscle imbalance',
-    'Enhances mobility and functional movement',
-    'Prevents progression of spinal curvature'
-  ],
-  idealFor:
-    'Children, adolescents, and adults diagnosed with scoliosis, individuals experiencing postural imbalance or chronic back pain',
-  image: '/images/scoliosis.jpg',
-  alt: 'Scoliosis Treatment in Dubai provided through specialized physiotherapy to improve spinal alignment and posture.'
-},
-{
-  id: 5,
-  title: 'Functional Exercise Therapy',
-  slug: 'functional-exercises',
-  fullSlug: '/services/functional-exercises-dubai/',
-  icon: 'TrendingUp',
-  subtitle: 'Restore Natural Movement & Strength',
-  duration: '45-75 Mins',
-  badgeColor: 'green',
-  benefits: [
-    'Improves balance, flexibility, and coordination',
-    'Strengthens muscles used in daily activities',
-    'Enhances mobility and injury prevention',
-    'Supports faster recovery and long-term function'
-  ],
-  idealFor:
-    'Patients recovering from injury or surgery, athletes, elderly individuals, and those aiming to improve daily movement efficiency',
-  image: '/images/functional excercise.jpg',
-  alt: 'Functional Exercises in Dubai performed under professional guidance to improve strength, balance, and daily movement.'
-},
-{
-  id: 6,
-  title: 'Dry Needling Therapy',
-  slug: 'dry-needling',
-  fullSlug: '/services/dry-needling-dubai/',
-  icon: 'Crosshair',
-  subtitle: 'Targeted Pain & Muscle Release',
-  duration: '30-45 Mins',
-  badgeColor: 'red',
-  benefits: [
-    'Relieves muscle tightness and trigger points',
-    'Reduces pain and inflammation',
-    'Improves blood circulation and muscle activation',
-    'Accelerates recovery and mobility'
-  ],
-  idealFor:
-    'Patients with muscle knots, sports injuries, chronic pain, or restricted movement seeking fast and effective relief',
-  image: '/images/dry needling.jpg',
-  alt: 'Dry Needling Therapy in Dubai performed by a trained physiotherapist to relieve muscle pain and improve mobility.'
-}   
+          id: 4,
+          title: 'Scoliosis Treatment',
+          slug: 'scoliosis-treatment',
+          fullSlug: '/services/scoliosis-treatment-in-dubai/',
+          icon: 'Activity',
+          subtitle: 'Postural Correction & Spine Alignment',
+          duration: '60-90 Mins',
+          badgeColor: 'blue',
+          benefits: [
+            'Improves spinal alignment and posture',
+            'Reduces back pain and muscle imbalance',
+            'Enhances mobility and functional movement',
+            'Prevents progression of spinal curvature'
+          ],
+          idealFor:
+            'Children, adolescents, and adults diagnosed with scoliosis, individuals experiencing postural imbalance or chronic back pain',
+          image: '/images/scoliosis.jpg',
+          alt: 'Scoliosis Treatment in Dubai provided through specialized physiotherapy to improve spinal alignment and posture.'
+        },
+        {
+          id: 5,
+          title: 'Functional Exercise Therapy',
+          slug: 'functional-exercises',
+          fullSlug: '/services/functional-exercises-dubai/',
+          icon: 'TrendingUp',
+          subtitle: 'Restore Natural Movement & Strength',
+          duration: '45-75 Mins',
+          badgeColor: 'green',
+          benefits: [
+            'Improves balance, flexibility, and coordination',
+            'Strengthens muscles used in daily activities',
+            'Enhances mobility and injury prevention',
+            'Supports faster recovery and long-term function'
+          ],
+          idealFor:
+            'Patients recovering from injury or surgery, athletes, elderly individuals, and those aiming to improve daily movement efficiency',
+          image: '/images/functional excercise.jpg',
+          alt: 'Functional Exercises in Dubai performed under professional guidance to improve strength, balance, and daily movement.'
+        },
+        {
+          id: 6,
+          title: 'Dry Needling Therapy',
+          slug: 'dry-needling',
+          fullSlug: '/services/dry-needling-dubai/',
+          icon: 'Crosshair',
+          subtitle: 'Targeted Pain & Muscle Release',
+          duration: '30-45 Mins',
+          badgeColor: 'red',
+          benefits: [
+            'Relieves muscle tightness and trigger points',
+            'Reduces pain and inflammation',
+            'Improves blood circulation and muscle activation',
+            'Accelerates recovery and mobility'
+          ],
+          idealFor:
+            'Patients with muscle knots, sports injuries, chronic pain, or restricted movement seeking fast and effective relief',
+          image: '/images/dry needling.jpg',
+          alt: 'Dry Needling Therapy in Dubai performed by a trained physiotherapist to relieve muscle pain and improve mobility.'
+        }
       ],
-       consultationCTA: {
+      consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
         subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
         buttonText: 'Get Free Consultation',
@@ -1999,35 +1999,35 @@ export const categoryContent = {
       title: 'Real Recovery. Real Results.',
       subtitle: 'Patients experience measurable improvement through structured Physiotherapy Treatment.',
       stats: [
-       {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '98%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 98
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+        {
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '98%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 98
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Since 2008',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to start your recovery?',
@@ -2117,98 +2117,98 @@ export const categoryContent = {
       ]
     },
     facility: {
-  badge: 'Our Physiotherapy Facility',
-  title: 'Advanced Physiotherapy & Rehabilitation Centre',
-  description:
-    'Recover, restore, and strengthen your body in our modern Dubai physiotherapy clinic equipped with advanced rehabilitation technology, evidence-based therapy techniques, and patient-focused care.',
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/ph1.png',
-      alt: 'Personalized Physiotherapy Treatment designed for injury recovery and strength'
-    },
-    {
-      id: 2,
-      src: '/images/ph2.png',
-      alt: 'Physiotherapy Treatment supporting joint flexibility and muscle rehabilitation'
-    },
-    {
-      id: 3,
-      src: '/images/ph3.png',
-      alt: 'Advanced Physiotherapy Treatment for posture correction and movement improvement.'
+      badge: 'Our Physiotherapy Facility',
+      title: 'Advanced Physiotherapy & Rehabilitation Centre',
+      description:
+        'Recover, restore, and strengthen your body in our modern Dubai physiotherapy clinic equipped with advanced rehabilitation technology, evidence-based therapy techniques, and patient-focused care.',
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/ph1.png',
+          alt: 'Personalized Physiotherapy Treatment designed for injury recovery and strength'
+        },
+        {
+          id: 2,
+          src: '/images/ph2.png',
+          alt: 'Physiotherapy Treatment supporting joint flexibility and muscle rehabilitation'
+        },
+        {
+          id: 3,
+          src: '/images/ph3.png',
+          alt: 'Advanced Physiotherapy Treatment for posture correction and movement improvement.'
+        }
+      ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/ph4.png',
+          alt: '“Physiotherapy Treatment session focused on long-term physical wellness.'
+        },
+        {
+          id: 5,
+          src: '/images/ph5.png',
+          alt: 'Professional Physiotherapy Treatment for sports injury and muscle pain relief'
+        },
+        {
+          id: 6,
+          src: '/images/ph6.png',
+          alt: 'Physiotherapy Treatment aimed at restoring movement and daily function.'
+        }
+      ],
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          ),
+          title: 'DHA Licensed',
+          subtitle: 'Certified physiotherapists'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              />
+            </svg>
+          ),
+          title: 'Advanced Rehabilitation',
+          subtitle: 'Modern physiotherapy & recovery tools'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          ),
+          title: 'Prime Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ],
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/ph4.png',
-      alt: '“Physiotherapy Treatment session focused on long-term physical wellness.'
-    },
-    {
-      id: 5,
-      src: '/images/ph5.png',
-      alt: 'Professional Physiotherapy Treatment for sports injury and muscle pain relief'
-    },
-    {
-      id: 6,
-      src: '/images/ph6.png',
-      alt: 'Physiotherapy Treatment aimed at restoring movement and daily function.'
-    }
-  ],
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-      title: 'DHA Licensed',
-      subtitle: 'Certified physiotherapists'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-          />
-        </svg>
-      ),
-      title: 'Advanced Rehabilitation',
-      subtitle: 'Modern physiotherapy & recovery tools'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      title: 'Prime Location',
-      subtitle: 'Jumeirah 1, Dubai'
-    }
-  ]
-}
 
 
   },
@@ -2216,20 +2216,20 @@ export const categoryContent = {
   'general-physician': {
     hero: {
       badge: 'DHA-Licensed General Medicine',
-        titleLine1: 'Advanced General Physician',
+      titleLine1: 'Advanced General Physician',
       titleHighlight: 'Treatment',
       titleLine2: ' in Dubai',
       // title: 'Advanced General Physician Treatment –in Jumeirah 1',
-      subtitle: 'General physicians in Jumeirah 1 offering comprehensive General Physician Treatment in Dubai, including accurate diagnosis, effective treatment for common and chronic conditions, preventive health checkups, and continuous primary care for all age groups.',
+      subtitle: 'RamaCare Polyclinic offers general physician care in Jumeirah 1, Dubai, for everyday health concerns, ongoing conditions, preventive checkups, and routine medical needs. Our doctors assess your symptoms and medical history to guide diagnosis, treatment, and follow-up care, helping patients of different age groups manage their health with practical, personalised medical support.',
       description: 'Dubai\'s trusted general medicine practice offering comprehensive healthcare, preventive medicine, chronic disease management, and acute care with DHA-licensed physicians and personalized treatment plans.',
       ctaText: 'Book Your Consultation',
       backgroundImage: '/images/gp.jpg',
-       backgroundAlt: 'General physician consulting a patient in a modern clinic, friendly interaction, clean medical environment, professional healthcare setting, realistic lighting, no text in image',
+      backgroundAlt: 'General physician consulting a patient in a modern clinic, friendly interaction, clean medical environment, professional healthcare setting, realistic lighting, no text in image',
       stats: [
-        { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Patients' },
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
         { number: '98%', label: 'Success Rate' },
-        { number: '40+', label: 'Treatments' }
+        { number: '150+', label: 'Treatments' }
       ],
       features: [
         ' DHA-Licensed General Physicians',
@@ -2246,30 +2246,30 @@ export const categoryContent = {
       title: 'Dubai’s Trusted General Physician Clinic',
       description: 'Experience reliable, patient-centered medical care delivered by highly qualified doctors in a modern clinical environment.',
       cards: [
-       {
-    title: 'Comprehensive Primary Healthcare',
-    description: 'Accurate diagnosis and treatment for common illnesses, infections, and ongoing medical conditions.'
-  },
-  {
-    title: 'DHA-Licensed Medical Doctors',
-    description: 'Fully certified general physicians with extensive clinical experience across multiple specialties.'
-  },
-  {
-    title: 'Personalized Treatment Plans',
-    description: 'Tailored care based on your medical history, lifestyle, and long-term health goals.'
-  },
-  {
-    title: 'Premium Jumeirah 1 Facility',
-    description: 'Modern polyclinic infrastructure with advanced diagnostic and treatment capabilities.'
-  },
-  {
-    title: 'Preventive & Long-Term Care',
-    description: 'Focus on disease prevention, early detection, and sustained health management.'
-  },
-  {
-    title: 'High Patient Trust & Satisfaction',
-    description: 'Consistent outcomes and trusted care for individuals and families across Dubai.'
-  }
+        {
+          title: 'Comprehensive Primary Healthcare',
+          description: 'Accurate diagnosis and treatment for common illnesses, infections, and ongoing medical conditions.'
+        },
+        {
+          title: 'DHA-Licensed Medical Doctors',
+          description: 'Fully certified general physicians with extensive clinical experience across multiple specialties.'
+        },
+        {
+          title: 'Personalized Treatment Plans',
+          description: 'Tailored care based on your medical history, lifestyle, and long-term health goals.'
+        },
+        {
+          title: 'Premium Jumeirah 1 Facility',
+          description: 'Modern polyclinic infrastructure with advanced diagnostic and treatment capabilities.'
+        },
+        {
+          title: 'Preventive & Long-Term Care',
+          description: 'Focus on disease prevention, early detection, and sustained health management.'
+        },
+        {
+          title: 'High Patient Trust & Satisfaction',
+          description: 'Consistent outcomes and trusted care for individuals and families across Dubai.'
+        }
       ]
     },
     about: {
@@ -2277,359 +2277,359 @@ export const categoryContent = {
       title: 'Complete Medical Care Within a Modern Polyclinic',
       description: 'Our General Physician department provides first-contact medical care within a fully equipped multi-specialty polyclinic in Jumeirah 1. We serve as your primary healthcare partner for diagnosis, treatment, and preventive care.',
       paragraphs: [
-    'Our General Physician department provides first-contact medical care within a fully equipped multi-specialty polyclinic in Jumeirah 1. We serve as your primary healthcare partner for diagnosis, treatment, and preventive care.',
-    'Led by DHA-licensed general physicians, our team manages acute illnesses, chronic conditions, lifestyle-related disorders, and routine health concerns. Every consultation includes a thorough evaluation to ensure accurate diagnosis and appropriate treatment planning.',
-    'We follow international medical protocols, strict hygiene standards, and ethical healthcare practices to deliver safe, effective, and compassionate care.'
+        'Our General Physician department provides first-contact medical care within a fully equipped multi-specialty polyclinic in Jumeirah 1. We serve as your primary healthcare partner for diagnosis, treatment, and preventive care.',
+        'Led by DHA-licensed general physicians, our team manages acute illnesses, chronic conditions, lifestyle-related disorders, and routine health concerns. Every consultation includes a thorough evaluation to ensure accurate diagnosis and appropriate treatment planning.',
+        'We follow international medical protocols, strict hygiene standards, and ethical healthcare practices to deliver safe, effective, and compassionate care.'
       ],
-     stats: [
-    { number: '2,500+', label: 'Patients Treated' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '15+', label: 'Years Experience' }
-     ],
-     ctaText: 'Meet Our Physicians',
+      stats: [
+        { number: '2,500+', label: 'Patients Treated' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '15+', label: 'Years Combined Experience' }
+      ],
+      ctaText: 'Meet Our Physicians',
       image: '/images/gp2.jpg',
-       imageAlt: 'General physician performing a routine health checkup using a stethoscope, calm clinical room, patient-focused care, realistic medical photography, no text',
-       overlayCard: {
-    number: '2,500+',
-    smallText: 'Patients Treated',
-    boldText: 'Trusted Primary Care'
-  }
+      imageAlt: 'General physician performing a routine health checkup using a stethoscope, calm clinical room, patient-focused care, realistic medical photography, no text',
+      overlayCard: {
+        number: '2,500+',
+        smallText: 'Patients Treated',
+        boldText: 'Trusted Primary Care'
+      }
     },
     treatments: {
-  heading: 'Personalized Medical Care for Everyday Health Needs',
-  subtitle: 'Select a service below to learn how our General Physician Treatment supports accurate diagnosis, effective treatment, and long-term preventive healthcare for individuals and families in Dubai.',
-  treatments: [
-    {
-      id: 1,
-      title: 'Gastrointestinal Disorders Management',
-      slug: 'gastrointestinal-disorders',
-      fullSlug: '/services/gastrointestinal-disorders-dubai/',
-      icon: 'Activity',
-      subtitle: 'Relief from Digestive & Gut-Related Conditions',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Diagnosis and treatment of acidity, gastritis, IBS, and constipation',
-        'Targeted medication and dietary guidance',
-        'Improved digestion and nutrient absorption',
-        'Long-term prevention of recurring digestive issues'
+      heading: 'Personalized Medical Care for Everyday Health Needs',
+      subtitle: 'Select a service below to learn how our General Physician Treatment supports accurate diagnosis, effective treatment, and long-term preventive healthcare for individuals and families in Dubai.',
+      treatments: [
+        {
+          id: 1,
+          title: 'Gastrointestinal Disorders Management',
+          slug: 'gastrointestinal-disorders',
+          fullSlug: '/services/gastrointestinal-disorders-dubai/',
+          icon: 'Activity',
+          subtitle: 'Relief from Digestive & Gut-Related Conditions',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Diagnosis and treatment of acidity, gastritis, IBS, and constipation',
+            'Targeted medication and dietary guidance',
+            'Improved digestion and nutrient absorption',
+            'Long-term prevention of recurring digestive issues'
+          ],
+          idealFor: 'Abdominal pain, bloating, acid reflux, constipation, diarrhea',
+          image: '/images/gastro.jpg',
+          alt: 'General physician consulting a patient about gastrointestinal disorders in a modern clinic, calm and professional environment, realistic medical photography, no text in image'
+        },
+        {
+          id: 2,
+          title: 'Allergy Assessment & Management',
+          slug: 'allergy-management',
+          fullSlug: '/services/management-of-allergy-dubai/',
+          icon: 'Shield',
+          subtitle: 'Identify Triggers and Control Symptoms',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Accurate identification of allergic conditions',
+            'Medical management of skin, food, and respiratory allergies',
+            'Reduced frequency and severity of allergic reactions',
+            'Preventive care and lifestyle recommendations'
+          ],
+          idealFor: 'Skin rashes, sneezing, sinus issues, food allergies, seasonal allergies',
+          image: '/images/allergy.jpg',
+          alt: 'Doctor assessing allergy symptoms during a patient consultation, clean clinical setting, caring interaction, realistic healthcare scene, no text'
+        },
+        {
+          id: 3,
+          title: 'Wound Stitching Services',
+          slug: 'wound-stitching',
+          fullSlug: '/services/wound-stitching-services-dubai/',
+          icon: 'Scissors',
+          subtitle: 'Safe and Professional Wound Closure',
+          duration: null,
+          badgeColor: 'orange',
+          benefits: [
+            'Clean and sterile wound management',
+            'Proper suturing to promote faster healing',
+            'Reduced infection and scarring risk',
+            'Follow-up care and dressing guidance'
+          ],
+          idealFor: 'Cuts, deep wounds, and accidental injuries requiring stitches',
+          image: '/images/wound.jpg',
+          alt: 'General physician performing wound stitching using sterile instruments, focused medical care, hygienic clinic environment, no text in image'
+        },
+        {
+          id: 4,
+          title: 'Minor Injury Care',
+          slug: 'minor-injury-care',
+          fullSlug: '/services/minor-injury-care/',
+          icon: 'Plus',
+          subtitle: 'Immediate Care for Everyday Injuries',
+          duration: null,
+          badgeColor: 'orange',
+          benefits: [
+            'Prompt evaluation and pain management',
+            'Treatment for sprains, strains, bruises, minor fractures',
+            'Reduced swelling and faster recovery',
+            'Guidance to prevent complications'
+          ],
+          idealFor: 'Sports injuries, workplace injuries, minor accidents',
+          image: '/images/minor-injury.jpg',
+          alt: 'Doctor treating a minor injury with bandaging in a primary care clinic, patient comfort focused, realistic medical setting, no text'
+        },
+        {
+          id: 5,
+          title: 'Acute Infection Treatment',
+          slug: 'acute-infection-treatment',
+          fullSlug: '/services/treatment-of-acute-infections-dubai/',
+          icon: 'Thermometer',
+          subtitle: 'Fast Relief from Infections and Illness',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Accurate diagnosis of bacterial and viral infections',
+            'Appropriate antibiotic or antiviral therapy',
+            'Fever control and symptom relief',
+            'Monitoring to prevent complications'
+          ],
+          idealFor: 'Fever, flu, throat infections, urinary infections, viral illnesses',
+          image: '/images/acute-infection.jpg',
+          alt: 'General physician diagnosing acute infection during a clinic visit, professional and attentive care, clean medical environment, no text'
+        },
+        {
+          id: 6,
+          title: 'Dyslipidemia Diagnosis & Treatment',
+          slug: 'dyslipidemia-treatment',
+          fullSlug: '/services/dyslipidemia-diagnosis-and-treatment/',
+          icon: 'BarChart',
+          subtitle: 'Cholesterol & Lipid Level Management',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Comprehensive lipid profile assessment',
+            'Medication and lifestyle-based cholesterol control',
+            'Reduced cardiovascular risk',
+            'Ongoing monitoring and preventive care'
+          ],
+          idealFor: 'High cholesterol, heart disease risk, metabolic conditions',
+          image: '/images/dyslipidemia.jpg',
+          alt: 'Doctor reviewing cholesterol test results with a patient, modern clinic interior, preventive healthcare focus, no text in image'
+        },
+        {
+          id: 7,
+          title: 'Personalized Slimming Programs',
+          slug: 'slimming-programs',
+          fullSlug: '/services/personalized-slimming-programs/',
+          icon: 'Target',
+          subtitle: 'Medically Guided Weight Management',
+          duration: null,
+          badgeColor: 'orange',
+          benefits: [
+            'Safe and sustainable weight loss planning',
+            'Metabolic and lifestyle assessment',
+            'Dietary guidance and medical supervision',
+            'Improved energy, metabolism, and overall health'
+          ],
+          idealFor: 'Weight gain, obesity, metabolic syndrome, lifestyle disorders',
+          image: '/images/slim.jpg',
+          alt: 'Physician discussing personalized slimming and weight management plan with a patient, supportive clinical environment, no text'
+        },
+        {
+          id: 8,
+          title: 'Thyroid Dysfunction Management',
+          slug: 'thyroid-management',
+          fullSlug: '/services/thyroid-dysfunction-solutions-dubai/',
+          icon: 'Activity',
+          subtitle: 'Balanced Hormonal Health Care',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Diagnosis of hypothyroidism and hyperthyroidism',
+            'Medication adjustment and monitoring',
+            'Symptom relief including fatigue and weight changes',
+            'Long-term hormonal balance support'
+          ],
+          idealFor: 'Thyroid imbalance, fatigue, weight fluctuation, and hormonal issues',
+          image: '/images/thyroid.jpg',
+          alt: 'Doctor explaining thyroid health and treatment options during consultation, calm clinic atmosphere, realistic medical photography, no tex'
+        },
+        {
+          id: 9,
+          title: 'Asthma & COPD Care',
+          slug: 'asthma-copd-care',
+          fullSlug: '/services/asthma-and-copd-expertise-dubai/',
+          icon: 'Wind',
+          subtitle: 'Respiratory Health & Breathing Support',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Accurate respiratory assessment',
+            'Medication management and inhaler guidance',
+            'Improved lung function and breathing control',
+            'Prevention of flare-ups and complications'
+          ],
+          idealFor: 'Asthma, COPD, chronic cough, breathing difficulty',
+          image: '/images/asthma.jpg',
+          alt: 'Physician evaluating respiratory health using medical equipment, patient-centered care, clean clinic setting, no text in image'
+        },
+        {
+          id: 10,
+          title: 'Diabetes Mellitus Management',
+          slug: 'diabetes-management',
+          fullSlug: '/services/diabetes-mellitus-care-dubai/',
+          icon: 'Droplets',
+          subtitle: 'Comprehensive Blood Sugar Control',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Personalized diabetes care plans',
+            'Medication and lifestyle management',
+            'Prevention of diabetes-related complications',
+            'Regular monitoring and patient education'
+          ],
+          idealFor: 'Type 1 and Type 2 diabetes, prediabetes, metabolic disorders',
+          image: '/images/diabetes.jpg',
+          alt: 'Doctor monitoring blood sugar levels and advising a patient on diabetes care, professional clinic environment, no text'
+        },
+        {
+          id: 11,
+          title: 'Hypertension Management',
+          slug: 'hypertension-management',
+          fullSlug: '/services/specialized-hypertension-management/',
+          icon: 'Heart',
+          subtitle: 'Advanced Blood Pressure Control',
+          duration: null,
+          badgeColor: 'purple',
+          benefits: [
+            'Accurate blood pressure assessment',
+            'Medication optimization and lifestyle guidance',
+            'Reduced risk of heart and kidney complications',
+            'Long-term cardiovascular protection'
+          ],
+          idealFor: 'High blood pressure, cardiac risk, stress-related hypertension',
+          image: '/images/hypertension.jpg',
+          alt: 'General physician measuring blood pressure and discussing hypertension management, modern clinical setting, no text in image'
+        },
+        {
+          id: 12,
+          title: 'Routine Health Check-ups',
+          slug: 'routine-health-checkups',
+          fullSlug: '/services/routine-check-ups-dubai/',
+          icon: 'Clipboard',
+          subtitle: 'Preventive Care for Long-Term Wellness',
+          duration: null,
+          badgeColor: 'orange',
+          benefits: [
+            'Early detection of medical conditions',
+            'Comprehensive health screening',
+            'Personalized preventive recommendations',
+            'Peace of mind through regular monitoring'
+          ],
+          idealFor: 'Annual exams, corporate health checks, preventive care',
+          image: '/images/check-up.jpg',
+          alt: 'General physician performing a routine health check-up in a clean and organized clinic, preventive care focus, no text'
+        },
+        {
+          id: 13,
+          title: 'Comprehensive Physical Examinations',
+          slug: 'physical-examinations',
+          fullSlug: '/services/comprehensive-physical-examinations-dubai/',
+          icon: 'UserCheck',
+          subtitle: 'Complete Medical Evaluation',
+          duration: null,
+          badgeColor: 'orange',
+          benefits: [
+            'Thorough head-to-toe medical assessment',
+            'Identification of hidden health risks',
+            'Baseline health documentation',
+            'Guidance for maintaining optimal health'
+          ],
+          idealFor: 'Pre-employment exams, insurance medicals, routine evaluations',
+          image: '/images/physical-examination.jpg',
+          alt: 'Doctor conducting a comprehensive physical examination in a professional medical clinic, patient comfort focused, no text in image'
+        }
       ],
-      idealFor: 'Abdominal pain, bloating, acid reflux, constipation, diarrhea',
-      image: '/images/gastro.jpg',
-       alt: 'General physician consulting a patient about gastrointestinal disorders in a modern clinic, calm and professional environment, realistic medical photography, no text in image'
-    },
-    {
-      id: 2,
-      title: 'Allergy Assessment & Management',
-      slug: 'allergy-management',
-      fullSlug: '/services/management-of-allergy-dubai/',
-      icon: 'Shield',
-      subtitle: 'Identify Triggers and Control Symptoms',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Accurate identification of allergic conditions',
-        'Medical management of skin, food, and respiratory allergies',
-        'Reduced frequency and severity of allergic reactions',
-        'Preventive care and lifestyle recommendations'
-      ],
-      idealFor: 'Skin rashes, sneezing, sinus issues, food allergies, seasonal allergies',
-      image: '/images/allergy.jpg',
-       alt: 'Doctor assessing allergy symptoms during a patient consultation, clean clinical setting, caring interaction, realistic healthcare scene, no text'
-    },
-    {
-      id: 3,
-      title: 'Wound Stitching Services',
-      slug: 'wound-stitching',
-      fullSlug: '/services/wound-stitching-services-dubai/',
-      icon: 'Scissors',
-      subtitle: 'Safe and Professional Wound Closure',
-      duration: null,
-      badgeColor: 'orange',
-      benefits: [
-        'Clean and sterile wound management',
-        'Proper suturing to promote faster healing',
-        'Reduced infection and scarring risk',
-        'Follow-up care and dressing guidance'
-      ],
-      idealFor: 'Cuts, deep wounds, and accidental injuries requiring stitches',
-      image: '/images/wound.jpg',
-       alt: 'General physician performing wound stitching using sterile instruments, focused medical care, hygienic clinic environment, no text in image'
-    },
-    {
-      id: 4,
-      title: 'Minor Injury Care',
-      slug: 'minor-injury-care',
-      fullSlug: '/services/minor-injury-care/',
-      icon: 'Plus',
-      subtitle: 'Immediate Care for Everyday Injuries',
-      duration: null,
-      badgeColor: 'orange',
-      benefits: [
-        'Prompt evaluation and pain management',
-        'Treatment for sprains, strains, bruises, minor fractures',
-        'Reduced swelling and faster recovery',
-        'Guidance to prevent complications'
-      ],
-      idealFor: 'Sports injuries, workplace injuries, minor accidents',
-      image: '/images/minor-injury.jpg',
-       alt: 'Doctor treating a minor injury with bandaging in a primary care clinic, patient comfort focused, realistic medical setting, no text'
-    },
-    {
-      id: 5,
-      title: 'Acute Infection Treatment',
-      slug: 'acute-infection-treatment',
-      fullSlug: '/services/treatment-of-acute-infections-dubai/',
-      icon: 'Thermometer',
-      subtitle: 'Fast Relief from Infections and Illness',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Accurate diagnosis of bacterial and viral infections',
-        'Appropriate antibiotic or antiviral therapy',
-        'Fever control and symptom relief',
-        'Monitoring to prevent complications'
-      ],
-      idealFor: 'Fever, flu, throat infections, urinary infections, viral illnesses',
-      image: '/images/acute-infection.jpg',
-       alt: 'General physician diagnosing acute infection during a clinic visit, professional and attentive care, clean medical environment, no text'
-    },
-    {
-      id: 6,
-      title: 'Dyslipidemia Diagnosis & Treatment',
-      slug: 'dyslipidemia-treatment',
-      fullSlug: '/services/dyslipidemia-diagnosis-and-treatment/',
-      icon: 'BarChart',
-      subtitle: 'Cholesterol & Lipid Level Management',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Comprehensive lipid profile assessment',
-        'Medication and lifestyle-based cholesterol control',
-        'Reduced cardiovascular risk',
-        'Ongoing monitoring and preventive care'
-      ],
-      idealFor: 'High cholesterol, heart disease risk, metabolic conditions',
-      image: '/images/dyslipidemia.jpg',
-       alt: 'Doctor reviewing cholesterol test results with a patient, modern clinic interior, preventive healthcare focus, no text in image'
-    },
-    {
-      id: 7,
-      title: 'Personalized Slimming Programs',
-      slug: 'slimming-programs',
-      fullSlug: '/services/personalized-slimming-programs/',
-      icon: 'Target',
-      subtitle: 'Medically Guided Weight Management',
-      duration: null,
-      badgeColor: 'orange',
-      benefits: [
-        'Safe and sustainable weight loss planning',
-        'Metabolic and lifestyle assessment',
-        'Dietary guidance and medical supervision',
-        'Improved energy, metabolism, and overall health'
-      ],
-      idealFor: 'Weight gain, obesity, metabolic syndrome, lifestyle disorders',
-      image: '/images/slim.jpg',
-       alt: 'Physician discussing personalized slimming and weight management plan with a patient, supportive clinical environment, no text'
-    },
-    {
-      id: 8,
-      title: 'Thyroid Dysfunction Management',
-      slug: 'thyroid-management',
-      fullSlug: '/services/thyroid-dysfunction-solutions-dubai/',
-      icon: 'Activity',
-      subtitle: 'Balanced Hormonal Health Care',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Diagnosis of hypothyroidism and hyperthyroidism',
-        'Medication adjustment and monitoring',
-        'Symptom relief including fatigue and weight changes',
-        'Long-term hormonal balance support'
-      ],
-      idealFor: 'Thyroid imbalance, fatigue, weight fluctuation, and hormonal issues',
-      image: '/images/thyroid.jpg',
-       alt: 'Doctor explaining thyroid health and treatment options during consultation, calm clinic atmosphere, realistic medical photography, no tex'
-    },
-    {
-      id: 9,
-      title: 'Asthma & COPD Care',
-      slug: 'asthma-copd-care',
-      fullSlug: '/services/asthma-and-copd-expertise-dubai/',
-      icon: 'Wind',
-      subtitle: 'Respiratory Health & Breathing Support',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Accurate respiratory assessment',
-        'Medication management and inhaler guidance',
-        'Improved lung function and breathing control',
-        'Prevention of flare-ups and complications'
-      ],
-      idealFor: 'Asthma, COPD, chronic cough, breathing difficulty',
-      image: '/images/asthma.jpg',
-       alt: 'Physician evaluating respiratory health using medical equipment, patient-centered care, clean clinic setting, no text in image'
-    },
-    {
-      id: 10,
-      title: 'Diabetes Mellitus Management',
-      slug: 'diabetes-management',
-      fullSlug: '/services/diabetes-mellitus-care-dubai/',
-      icon: 'Droplets',
-      subtitle: 'Comprehensive Blood Sugar Control',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Personalized diabetes care plans',
-        'Medication and lifestyle management',
-        'Prevention of diabetes-related complications',
-        'Regular monitoring and patient education'
-      ],
-      idealFor: 'Type 1 and Type 2 diabetes, prediabetes, metabolic disorders',
-      image: '/images/diabetes.jpg',
-       alt: 'Doctor monitoring blood sugar levels and advising a patient on diabetes care, professional clinic environment, no text'
-    },
-    {
-      id: 11,
-      title: 'Hypertension Management',
-      slug: 'hypertension-management',
-      fullSlug: '/services/specialized-hypertension-management/',
-      icon: 'Heart',
-      subtitle: 'Advanced Blood Pressure Control',
-      duration: null,
-      badgeColor: 'purple',
-      benefits: [
-        'Accurate blood pressure assessment',
-        'Medication optimization and lifestyle guidance',
-        'Reduced risk of heart and kidney complications',
-        'Long-term cardiovascular protection'
-      ],
-      idealFor: 'High blood pressure, cardiac risk, stress-related hypertension',
-      image: '/images/hypertension.jpg',
-      alt: 'General physician measuring blood pressure and discussing hypertension management, modern clinical setting, no text in image'
-    },
-    {
-      id: 12,
-      title: 'Routine Health Check-ups',
-      slug: 'routine-health-checkups',
-      fullSlug: '/services/routine-check-ups-dubai/',
-      icon: 'Clipboard',
-      subtitle: 'Preventive Care for Long-Term Wellness',
-      duration: null,
-      badgeColor: 'orange',
-      benefits: [
-        'Early detection of medical conditions',
-        'Comprehensive health screening',
-        'Personalized preventive recommendations',
-        'Peace of mind through regular monitoring'
-      ],
-      idealFor: 'Annual exams, corporate health checks, preventive care',
-      image: '/images/check-up.jpg',
-      alt: 'General physician performing a routine health check-up in a clean and organized clinic, preventive care focus, no text'
-    },
-    {
-      id: 13,
-      title: 'Comprehensive Physical Examinations',
-      slug: 'physical-examinations',
-      fullSlug: '/services/comprehensive-physical-examinations-dubai/',
-      icon: 'UserCheck',
-      subtitle: 'Complete Medical Evaluation',
-      duration: null,
-      badgeColor: 'orange',
-      benefits: [
-        'Thorough head-to-toe medical assessment',
-        'Identification of hidden health risks',
-        'Baseline health documentation',
-        'Guidance for maintaining optimal health'
-      ],
-      idealFor: 'Pre-employment exams, insurance medicals, routine evaluations',
-      image: '/images/physical-examination.jpg',
-      alt: 'Doctor conducting a comprehensive physical examination in a professional medical clinic, patient comfort focused, no text in image'
-    }
-  ],
-   consultationCTA: {
+      consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
         subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
         buttonText: 'Get Free Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
-},
-programs: {
-  badge: 'Health Programs',
-  heading: 'Signature Care Programs',
-  subtitle: 'Structured Medical Care Plans',
-  disclaimer: 'All programs are customized based on your health assessment, medical history, and wellness goals. Duration and follow-ups may vary.',
-  programs: [
-    {
-      id: 1,
-      title: 'Chronic Disease Management Program',
-      duration: 'Ongoing Care',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-red-50',
-      durationColor: 'bg-red-100',
-      durationTextColor: 'text-red-700',
-      icon: 'Heart',
-      benefits: [
-        'Personalized treatment plans for diabetes and hypertension',
-        'Regular monitoring and medication adjustment',
-        'Lifestyle and dietary counseling'
+    },
+    programs: {
+      badge: 'Health Programs',
+      heading: 'Signature Care Programs',
+      subtitle: 'Structured Medical Care Plans',
+      disclaimer: 'All programs are customized based on your health assessment, medical history, and wellness goals. Duration and follow-ups may vary.',
+      programs: [
+        {
+          id: 1,
+          title: 'Chronic Disease Management Program',
+          duration: 'Ongoing Care',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-red-50',
+          durationColor: 'bg-red-100',
+          durationTextColor: 'text-red-700',
+          icon: 'Heart',
+          benefits: [
+            'Personalized treatment plans for diabetes and hypertension',
+            'Regular monitoring and medication adjustment',
+            'Lifestyle and dietary counseling'
+          ]
+        },
+        {
+          id: 2,
+          title: 'Preventive Health Program',
+          duration: 'Annual Plan',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-emerald-50',
+          durationColor: 'bg-emerald-100',
+          durationTextColor: 'text-emerald-700',
+          icon: 'Stethoscope',
+          benefits: [
+            'Comprehensive health screening',
+            'Early disease detection',
+            'Personalized prevention strategies'
+          ]
+        },
+        {
+          id: 3,
+          title: 'Acute Illness Care Program',
+          duration: 'Same-Day Treatment',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-yellow-50',
+          durationColor: 'bg-yellow-100',
+          durationTextColor: 'text-yellow-700',
+          icon: 'Activity',
+          benefits: [
+            'Fast diagnosis and treatment',
+            'Medication and follow-up care',
+            'Referral support if required'
+          ]
+        },
+        {
+          id: 4,
+          title: 'Executive Health Program',
+          duration: 'Customized Plans',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-pink-50',
+          durationColor: 'bg-pink-100',
+          durationTextColor: 'text-pink-700',
+          icon: 'Calendar',
+          benefits: [
+            'Complete health evaluation',
+            'Stress and lifestyle risk assessment',
+            'Time-efficient consultations'
+          ]
+        }
       ]
     },
-    {
-      id: 2,
-      title: 'Preventive Health Program',
-      duration: 'Annual Plan',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-emerald-50',
-      durationColor: 'bg-emerald-100',
-      durationTextColor: 'text-emerald-700',
-      icon: 'Stethoscope',
-      benefits: [
-        'Comprehensive health screening',
-        'Early disease detection',
-        'Personalized prevention strategies'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Acute Illness Care Program',
-      duration: 'Same-Day Treatment',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-yellow-50',
-      durationColor: 'bg-yellow-100',
-      durationTextColor: 'text-yellow-700',
-      icon: 'Activity',
-      benefits: [
-        'Fast diagnosis and treatment',
-        'Medication and follow-up care',
-        'Referral support if required'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Executive Health Program',
-      duration: 'Customized Plans',
-      backgroundColor: 'bg-white',
-      topSectionColor: 'bg-pink-50',
-      durationColor: 'bg-pink-100',
-      durationTextColor: 'text-pink-700',
-      icon: 'Calendar',
-      benefits: [
-        'Complete health evaluation',
-        'Stress and lifestyle risk assessment',
-        'Time-efficient consultations'
-      ]
-    }
-  ]
-},
     experts: {
       badge: 'Expert Medical Team',
       title: 'Meet Our DHA-Licensed General Physicians',
       description: 'Experienced doctors dedicated to providing accurate diagnosis, compassionate care, and long-term health guidance.',
       stats: [
         { value: '1', label: 'Expert Physician' },
-        { value: '15+', label: 'Years of Experience' },
+        { value: '15+', label: 'Years Combined Experience' },
         { value: '2,500+', label: 'Successful Consultations' },
         { value: '4.9', label: 'Average Rating' }
       ],
@@ -2683,35 +2683,35 @@ programs: {
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their healthcare journeys in Dubai.',
       stats: [
-       {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '94%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 94
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+        {
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '94%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 94
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Since 2008',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to prioritize your health?',
@@ -2719,202 +2719,202 @@ programs: {
         buttonText: 'Start your journey today'
       },
     },
-  
-  faq: {
-  title: 'Frequently Asked Questions – General Medicine in Dubai',
-  description: 'Everything you need to know about our comprehensive general medicine and primary healthcare services in Dubai.',
-  faqs: [
-    {
-      id: 1,
-      question: 'What does a general physician treat?',
-      answer: 'A general physician diagnoses and manages acute illnesses, chronic diseases, infections, lifestyle conditions, and preventive health needs through comprehensive medical evaluation and ongoing care.'
-    },
-    {
-      id: 2,
-      question: 'When should I visit a general physician?',
-      answer: 'You should consult a general physician for fever, fatigue, pain, infections, chronic disease monitoring, routine check-ups, or when symptoms are unclear and require medical assessment.'
-    },
-    {
-      id: 3,
-      question: 'Is a general physician suitable for long-term health management?',
-      answer: 'Yes, general physicians provide continuous care for chronic conditions like diabetes, hypertension, asthma, and thyroid disorders with regular monitoring and personalized treatment plans.'
-    },
-    {
-      id: 4,
-      question: 'Do I need a referral to see a general physician in Dubai?',
-      answer: 'No, you can directly book an appointment with a general physician in Dubai without a referral for consultations, diagnosis, or preventive health assessments.'
-    },
-    {
-      id: 5,
-      question: 'What tests can a general physician recommend?',
-      answer: 'General physicians may order blood tests, urine tests, imaging, ECGs, and other diagnostic investigations based on symptoms and clinical evaluation.'
-    },
-    {
-      id: 6,
-      question: 'Can a general physician manage diabetes and hypertension?',
-      answer: 'Yes, general physicians specialize in managing diabetes and high blood pressure through medication, lifestyle counseling, regular follow-ups, and complication prevention strategies.'
-    },
-    {
-      id: 7,
-      question: 'Are general physician treatments covered by insurance?',
-      answer: 'Most health insurance plans in Dubai cover general physician consultations and treatments. Coverage depends on your policy and provider network.'
-    },
-    {
-      id: 8,
-      question: 'Can a general physician treat stomach and digestive problems?',
-      answer: 'Yes, general physicians effectively manage digestive issues such as acidity, gastritis, constipation, IBS, bloating, and gastrointestinal infections.'
-    },
-    {
-      id: 9,
-      question: 'Do general physicians treat respiratory conditions?',
-      answer: 'General physicians diagnose and manage asthma, COPD, allergies, infections, and chronic cough while providing long-term respiratory health guidance.'
-    },
-    {
-      id: 10,
-      question: 'Can I visit a general physician for preventive health check-ups?',
-      answer: 'Absolutely. General physicians perform routine health screenings, annual check-ups, and risk assessments to detect medical conditions early and maintain long-term wellness.'
-    },
-    {
-      id: 11,
-      question: 'What lifestyle advice does a general physician provide?',
-      answer: 'General physicians offer guidance on nutrition, weight management, exercise, stress control, sleep habits, and preventive care to improve overall health outcomes.'
-    },
-    {
-      id: 12,
-      question: 'Are minor injuries treated by a general physician?',
-      answer: 'Yes, general physicians treat minor injuries, including cuts, sprains, bruises, and wounds, and provide stitching, dressings, and follow-up care when needed.'
-    },
-    {
-      id: 13,
-      question: 'How long does a general physician consultation take?',
-      answer: 'A typical consultation lasts 15–30 minutes, depending on your health concern, medical history, and required examination or treatment planning.'
-    },
-    {
-      id: 14,
-      question: 'Is a general physician suitable for elderly care?',
-      answer: 'Yes, general physicians provide comprehensive care for elderly patients, including chronic disease management, medication review, preventive care, and regular monitoring.'
-    },
-    {
-      id: 15,
-      question: 'How do I book a general physician appointment in Jumeirah 1?',
-      answer: 'You can book a general physician appointment by phone, WhatsApp, or online scheduling for same-day or flexible consultation slots in Jumeirah 1, Dubai.'
-    }
-  ]
+
+    faq: {
+      title: 'Frequently Asked Questions – General Medicine in Dubai',
+      description: 'Everything you need to know about our comprehensive general medicine and primary healthcare services in Dubai.',
+      faqs: [
+        {
+          id: 1,
+          question: 'What does a general physician treat?',
+          answer: 'A general physician diagnoses and manages acute illnesses, chronic diseases, infections, lifestyle conditions, and preventive health needs through comprehensive medical evaluation and ongoing care.'
+        },
+        {
+          id: 2,
+          question: 'When should I visit a general physician?',
+          answer: 'You should consult a general physician for fever, fatigue, pain, infections, chronic disease monitoring, routine check-ups, or when symptoms are unclear and require medical assessment.'
+        },
+        {
+          id: 3,
+          question: 'Is a general physician suitable for long-term health management?',
+          answer: 'Yes, general physicians provide continuous care for chronic conditions like diabetes, hypertension, asthma, and thyroid disorders with regular monitoring and personalized treatment plans.'
+        },
+        {
+          id: 4,
+          question: 'Do I need a referral to see a general physician in Dubai?',
+          answer: 'No, you can directly book an appointment with a general physician in Dubai without a referral for consultations, diagnosis, or preventive health assessments.'
+        },
+        {
+          id: 5,
+          question: 'What tests can a general physician recommend?',
+          answer: 'General physicians may order blood tests, urine tests, imaging, ECGs, and other diagnostic investigations based on symptoms and clinical evaluation.'
+        },
+        {
+          id: 6,
+          question: 'Can a general physician manage diabetes and hypertension?',
+          answer: 'Yes, general physicians specialize in managing diabetes and high blood pressure through medication, lifestyle counseling, regular follow-ups, and complication prevention strategies.'
+        },
+        {
+          id: 7,
+          question: 'Are general physician treatments covered by insurance?',
+          answer: 'Most health insurance plans in Dubai cover general physician consultations and treatments. Coverage depends on your policy and provider network.'
+        },
+        {
+          id: 8,
+          question: 'Can a general physician treat stomach and digestive problems?',
+          answer: 'Yes, general physicians effectively manage digestive issues such as acidity, gastritis, constipation, IBS, bloating, and gastrointestinal infections.'
+        },
+        {
+          id: 9,
+          question: 'Do general physicians treat respiratory conditions?',
+          answer: 'General physicians diagnose and manage asthma, COPD, allergies, infections, and chronic cough while providing long-term respiratory health guidance.'
+        },
+        {
+          id: 10,
+          question: 'Can I visit a general physician for preventive health check-ups?',
+          answer: 'Absolutely. General physicians perform routine health screenings, annual check-ups, and risk assessments to detect medical conditions early and maintain long-term wellness.'
+        },
+        {
+          id: 11,
+          question: 'What lifestyle advice does a general physician provide?',
+          answer: 'General physicians offer guidance on nutrition, weight management, exercise, stress control, sleep habits, and preventive care to improve overall health outcomes.'
+        },
+        {
+          id: 12,
+          question: 'Are minor injuries treated by a general physician?',
+          answer: 'Yes, general physicians treat minor injuries, including cuts, sprains, bruises, and wounds, and provide stitching, dressings, and follow-up care when needed.'
+        },
+        {
+          id: 13,
+          question: 'How long does a general physician consultation take?',
+          answer: 'A typical consultation lasts 15–30 minutes, depending on your health concern, medical history, and required examination or treatment planning.'
+        },
+        {
+          id: 14,
+          question: 'Is a general physician suitable for elderly care?',
+          answer: 'Yes, general physicians provide comprehensive care for elderly patients, including chronic disease management, medication review, preventive care, and regular monitoring.'
+        },
+        {
+          id: 15,
+          question: 'How do I book a general physician appointment in Jumeirah 1?',
+          answer: 'You can book a general physician appointment by phone, WhatsApp, or online scheduling for same-day or flexible consultation slots in Jumeirah 1, Dubai.'
+        }
+      ]
     },
 
     facility: {
-  badge: 'Our General Physician Facility',
-  title: 'Comprehensive General Medicine & Family Care Clinic',
-  description:
-    'Receive trusted primary healthcare at our modern Dubai general physician clinic, offering preventive care, accurate diagnosis, and personalized treatment for individuals and families in a comfortable, patient-focused environment.',
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/gp-1.png',
-      alt: 'General physician conducting a physical examination in a hygienic clinical setting, patient comfort focused, realistic medical environment, no text'
-    },
-    {
-      id: 2,
-      src: '/images/gp-2.png',
-      alt: 'General physician providing preventive healthcare advice to a patient, calm and professional clinic environment, realistic photography, no text'
-    },
-    {
-      id: 3,
-      src: '/images/gp-3.png',    
-      alt: '“Interior of a general physician clinic room with examination bed and medical equipment, clean and minimal design, professional healthcare setting, no tex'
+      badge: 'Our General Physician Facility',
+      title: 'Comprehensive General Medicine & Family Care Clinic',
+      description:
+        'Receive trusted primary healthcare at our modern Dubai general physician clinic, offering preventive care, accurate diagnosis, and personalized treatment for individuals and families in a comfortable, patient-focused environment.',
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/gp-1.png',
+          alt: 'General physician conducting a physical examination in a hygienic clinical setting, patient comfort focused, realistic medical environment, no text'
+        },
+        {
+          id: 2,
+          src: '/images/gp-2.png',
+          alt: 'General physician providing preventive healthcare advice to a patient, calm and professional clinic environment, realistic photography, no text'
+        },
+        {
+          id: 3,
+          src: '/images/gp-3.png',
+          alt: '“Interior of a general physician clinic room with examination bed and medical equipment, clean and minimal design, professional healthcare setting, no tex'
+        }
+      ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/gp-4.png',
+          alt: 'General physician listening attentively to patient health concerns, warm and reassuring clinical environment, realistic healthcare scene, no text'
+        },
+        {
+          id: 5,
+          src: '/images/gp-5.png',
+          alt: 'General physician providing primary care treatment in a modern clinic, patient-centered approach, soft lighting, no text in image'
+        },
+        {
+          id: 6,
+          src: '/images/gp-6.png',
+          alt: 'General physician conducting a follow-up consultation to monitor patient recovery, clean clinic interior, professional healthcare atmosphere, no text'
+        }
+      ],
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          ),
+          title: 'DHA Licensed',
+          subtitle: 'Certified general physicians'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          ),
+          title: 'Comprehensive Care',
+          subtitle: 'Preventive, diagnostic & primary treatment'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          ),
+          title: 'Prime Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ],
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/gp-4.png',
-      alt: 'General physician listening attentively to patient health concerns, warm and reassuring clinical environment, realistic healthcare scene, no text'
-    },
-    {
-      id: 5,
-      src: '/images/gp-5.png',  
-      alt: 'General physician providing primary care treatment in a modern clinic, patient-centered approach, soft lighting, no text in image'
-    },
-    {
-      id: 6,
-      src: '/images/gp-6.png',
-      alt: 'General physician conducting a follow-up consultation to monitor patient recovery, clean clinic interior, professional healthcare atmosphere, no text'
-    }
-  ],
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-      title: 'DHA Licensed',
-      subtitle: 'Certified general physicians'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-      ),
-      title: 'Comprehensive Care',
-      subtitle: 'Preventive, diagnostic & primary treatment'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      title: 'Prime Location',
-      subtitle: 'Jumeirah 1, Dubai'
-    }
-  ]
-}
 
   },
 
   'facial': {
     hero: {
       badge: 'DHA-Licensed Premier Facial Centre',
-       titleLine1: 'Premium Facial ',
-      titleHighlight: 'Treatments',
-      titleLine2:' in Jumeirah 1',
+      titleLine1: 'Facial Treatments',
+      titleHighlight: 'in Jumeirah 1,',
+      titleLine2: ' Dubai',
       // title: 'Premium Facial Treatments– in Jumeirah 1',
-      subtitle: 'Advanced skincare solutions for rejuvenation, hydration, anti-aging & radiant complexion',
+      subtitle: 'RamaCare Polyclinic offers personalised facial treatments in Jumeirah 1, Dubai, designed to support smoother, hydrated and more radiant-looking skin. Depending on your skin type and concerns, facial care may focus on hydration, dullness, uneven texture, pigmentation, signs of ageing and skin',
       description: 'Dubai\'s premier facial treatment centre offering advanced facials, PRP therapy, and rejuvenation treatments with DHA-licensed specialists and premium skincare products.',
       ctaText: 'Book Free Consultation',
-       backgroundImage: '/images/facial-treat.jpg',
-       backgroundAlt: 'DHA-licensed aesthetic specialist performing a premium facial treatment at RamaCare Polyclinic in Jumeirah 1, Dubai',
+      backgroundImage: '/images/facial-treat.jpg',
+      backgroundAlt: 'DHA-licensed aesthetic specialist performing a premium facial treatment at RamaCare Polyclinic in Jumeirah 1, Dubai',
       stats: [
-         { number: '15+', label: 'Years Experience' },
-    { number: '2,500+', label: 'Patients Treated' },
-    { number: '98%', label: 'Success Rate' },
-    { number: '12+', label: 'Premium Treatments' }
+        { number: '15+', label: 'Years Combined Experience' },
+        { number: '500+', label: 'Happy Patients' },
+        { number: '98%', label: 'Success Rate' },
+        { number: '150+', label: 'Treatments' }
       ],
       features: [
         'DHA-Licensed Expert Doctors',
@@ -2976,7 +2976,7 @@ programs: {
       imageAlt: 'Facial treatment',
       overlayCard: {
         number: '15+',
-        smallText: ' Years of Excellence',
+        smallText: 'Years Combined Experience',
         boldText: 'Trusted Skincare Care'
       }
     },
@@ -3071,7 +3071,7 @@ programs: {
           image: '/images/exosomes.jpg'
         },
       ],
-       consultationCTA: {
+      consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
         subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
         buttonText: 'Get Free Consultation',
@@ -3084,10 +3084,10 @@ programs: {
       title: 'Meet Our Expert Facial Specialists',
       description: 'Highly qualified DHA-licensed aesthetic physicians with years of experience delivering safe, effective, and personalized facial treatments in Dubai.',
       stats: [
-        
+
         { value: '37+', label: 'Years Combined Experience' },
         { value: '500+', label: 'Successful Treatments' },
-        { value: '4.9/5', label: 'Average Rating' }
+        { value: '4.8/5', label: 'Average Rating' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Aesthetician?',
@@ -3131,7 +3131,7 @@ programs: {
       },
       bottomSection: {
         title: 'Premium Facial Centre in Jumeirah 1, Dubai',
-        description:' Our DHA-licensed specialists provide clinically proven facial treatments with visible results. Whether it’s HydraFacial, PRP, or advanced anti-aging therapies, our Jumeirah 1 clinic combines medical precision with luxury care for safe and effective skin rejuvenation.'
+        description: ' Our DHA-licensed specialists provide clinically proven facial treatments with visible results. Whether it’s HydraFacial, PRP, or advanced anti-aging therapies, our Jumeirah 1 clinic combines medical precision with luxury care for safe and effective skin rejuvenation.'
       }
     },
     programs: {
@@ -3192,35 +3192,35 @@ programs: {
       title: 'Real Results From Real People',
       subtitle: 'Hear from clients who experienced transformation through our facial treatments.',
       stats: [
-       {
-      id: 1,
-      number: '4.9/5',
-      label1: 'Average Rating',
-      label2: 'Google Reviews',
-      target: 4.9,
-      showStars: true
-    },
-    {
-      id: 2,
-      number: '500+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 500
-    },
-    {
-      id: 3,
-      number: '98%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 98
-    },
-    {
-      id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'Since 2008',
-      target: 2500
-    }
+        {
+          id: 1,
+          number: '4.8/5',
+          label1: 'Average Rating',
+          label2: 'Google Reviews',
+          target: 4.9,
+          showStars: true
+        },
+        {
+          id: 2,
+          number: '500+',
+          label1: 'Patient Reviews',
+          label2: 'Verified Testimonials',
+          target: 500
+        },
+        {
+          id: 3,
+          number: '98%',
+          label1: 'Success Rate',
+          label2: 'Patient Satisfaction',
+          target: 98
+        },
+        {
+          id: 4,
+          number: '2,500+',
+          label1: 'Patients Treated',
+          label2: 'Since 2008',
+          target: 2500
+        }
       ],
       ctaSection: {
         title: 'Ready to transform your skin?',
@@ -3309,99 +3309,99 @@ programs: {
         },
       ]
     },
-  facility: {
-  badge: 'Our Facial Treatment Facility',
-  title: 'Advanced Facial & Aesthetic Skin Care Clinic',
-  description:
-    'Experience professional facial treatments in our modern Dubai aesthetic clinic, designed for safe, effective, and personalized skin care. We combine advanced technology with expert dermatological care to rejuvenate, nourish, and protect your skin.',
-  topGalleryImages: [
-    {
-      id: 1,
-      src: '/images/fa1.png',
-      alt: 'Facial treatment room with advanced aesthetic equipment, clean and calming environment, professional skin care setup, realistic clinic interior, no text'
-    },
-    {
-      id: 2,
-      src: '/images/fa2.png',
-      alt: 'Aesthetic specialist performing professional facial treatment for skin rejuvenation, patient relaxed, modern clinic setting, soft lighting, no text'
-    },
-    {
-      id: 3,
-      src: '/images/fa3.png',
-      alt: 'Interior of facial treatment clinic with treatment bed and skincare devices, minimal and hygienic design, professional aesthetic environment, no text'
+    facility: {
+      badge: 'Our Facial Treatment Facility',
+      title: 'Advanced Facial & Aesthetic Skin Care Clinic',
+      description:
+        'Experience professional facial treatments in our modern Dubai aesthetic clinic, designed for safe, effective, and personalized skin care. We combine advanced technology with expert dermatological care to rejuvenate, nourish, and protect your skin.',
+      topGalleryImages: [
+        {
+          id: 1,
+          src: '/images/fa1.png',
+          alt: 'Facial treatment room with advanced aesthetic equipment, clean and calming environment, professional skin care setup, realistic clinic interior, no text'
+        },
+        {
+          id: 2,
+          src: '/images/fa2.png',
+          alt: 'Aesthetic specialist performing professional facial treatment for skin rejuvenation, patient relaxed, modern clinic setting, soft lighting, no text'
+        },
+        {
+          id: 3,
+          src: '/images/fa3.png',
+          alt: 'Interior of facial treatment clinic with treatment bed and skincare devices, minimal and hygienic design, professional aesthetic environment, no text'
+        }
+      ],
+      bottomGalleryImages: [
+        {
+          id: 4,
+          src: '/images/fa4.png',
+          alt: 'Facial treatment consultation focused on skin analysis and personalized care, modern aesthetic clinic, calm professional atmosphere, no text'
+        },
+        {
+          id: 5,
+          src: '/images/fa5.png',
+          alt: 'Advanced facial skin treatment session for hydration and glow, patient comfort focused, realistic skincare clinic environment, no text'
+        },
+        {
+          id: 6,
+          src: '/images/fa6.png',
+          alt: 'Post-facial skincare procedure performed by aesthetic professional, clean clinic interior, soothing and professional environment, no text'
+        }
+      ],
+      trustBadges: [
+        {
+          id: 1,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          ),
+          title: 'DHA Licensed',
+          subtitle: 'Certified aesthetic specialists'
+        },
+        {
+          id: 2,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          ),
+          title: 'Advanced Facial Care',
+          subtitle: 'Modern skin rejuvenation technology'
+        },
+        {
+          id: 3,
+          icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          ),
+          title: 'Prime Location',
+          subtitle: 'Jumeirah 1, Dubai'
+        }
+      ]
     }
-  ],
-  bottomGalleryImages: [
-    {
-      id: 4,
-      src: '/images/fa4.png',
-      alt: 'Facial treatment consultation focused on skin analysis and personalized care, modern aesthetic clinic, calm professional atmosphere, no text'
-    },
-    {
-      id: 5,
-      src: '/images/fa5.png',     
-      alt: 'Advanced facial skin treatment session for hydration and glow, patient comfort focused, realistic skincare clinic environment, no text'
-    },
-    {
-      id: 6,
-      src: '/images/fa6.png',
-      alt: 'Post-facial skincare procedure performed by aesthetic professional, clean clinic interior, soothing and professional environment, no text'
-    }
-  ],
-  trustBadges: [
-    {
-      id: 1,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-      title: 'DHA Licensed',
-      subtitle: 'Certified aesthetic specialists'
-    },
-    {
-      id: 2,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-      ),
-      title: 'Advanced Facial Care',
-      subtitle: 'Modern skin rejuvenation technology'
-    },
-    {
-      id: 3,
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      title: 'Prime Location',
-      subtitle: 'Jumeirah 1, Dubai'
-    }
-  ]
-}
   }
 };
 

@@ -734,9 +734,9 @@ export default function ShoulderPainTreatmentPage() {
               );
             })}
           </div>
-         <LinkedText
-  text={conditionsNote}
-  className="block text-white/85 leading-relaxed max-w-4xl mx-auto mt-10 text-center [&_a]:text-white [&_a]:underline [&_a]:hover:text-[#D4B06A]" />
+          <LinkedText
+            text={conditionsNote}
+            className="block text-white/85 leading-relaxed max-w-4xl mx-auto mt-10 text-center [&_a]:text-white [&_a]:underline [&_a]:hover:text-[#D4B06A]" />
         </div>
       </section>
 
@@ -995,7 +995,7 @@ export default function ShoulderPainTreatmentPage() {
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.com',
+              email: 'query@ramacarepolyclinic.ae',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'

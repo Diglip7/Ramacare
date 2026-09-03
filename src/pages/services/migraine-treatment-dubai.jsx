@@ -6,18 +6,18 @@ import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
-import { 
+import {
   Activity,
-  Target, 
-  MapPin, 
-  Award, 
-  Phone, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Users, 
-  Heart, 
-  Shield, 
+  Target,
+  MapPin,
+  Award,
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Users,
+  Heart,
+  Shield,
   Zap,
   ChevronDown,
   ChevronUp,
@@ -87,7 +87,7 @@ export default function MigraineTreatmentPage() {
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
         "name": "Migraine Treatment in Dubai | Headache Relief",
-        "description": "Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at Rama Care Polyclinic.",
+        "description": "Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic.",
         "inLanguage": "en",
         "isPartOf": {
           "@type": "WebSite",
@@ -177,7 +177,7 @@ export default function MigraineTreatmentPage() {
     <Layout>
       <Head>
         <title key="title">Migraine Treatment in Dubai | Headache Relief</title>
-        <meta name="description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at Rama Care Polyclinic." key="description" />
+        <meta name="description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic." key="description" />
         <meta name="keywords" content="Migraine treatment Dubai, Chronic migraine treatment, Headache treatment Dubai, Tension headache treatment, Stress-related headache Dubai, Migraine specialist Dubai, Physiotherapy for migraine" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
@@ -185,7 +185,7 @@ export default function MigraineTreatmentPage() {
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Migraine Treatment in Dubai | Headache Relief" />
-        <meta property="og:description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at Rama Care Polyclinic." />
+        <meta property="og:description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic." />
         <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/migraine-treatment.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -232,7 +232,7 @@ export default function MigraineTreatmentPage() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#E8F5E9] to-transparent"></div>
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
         <div className="absolute top-40 right-20 w-64 h-64 bg-[#2A7D63]/5 rounded-full blur-2xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content - Spans 7 columns */}
@@ -255,7 +255,7 @@ export default function MigraineTreatmentPage() {
                   </div>
                   <span className="text-[#1F5E4B] font-semibold text-sm">Neurological Headache Care</span>
                 </motion.div>
-                
+
                 {/* Main Heading */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -349,9 +349,9 @@ export default function MigraineTreatmentPage() {
             >
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <Image 
-                    src="/images/migraine-treatment.jpg" 
-                    alt="Migraine and headache treatment consultation at RamaCare Polyclinic Dubai" 
+                  <Image
+                    src="/images/migraine-treatment.jpg"
+                    alt="Migraine and headache treatment consultation at RamaCare Polyclinic Dubai"
                     width={1200}
                     height={630}
                     quality={75}
@@ -407,11 +407,11 @@ export default function MigraineTreatmentPage() {
               className="lg:col-span-2 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] p-8 md:p-12 rounded-3xl text-white"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Expert Migraine Treatment at Rama Care Polyclinic
+                Expert Migraine Treatment at RamaCare Polyclinic
               </h2>
               <div className="space-y-4 text-white/90 leading-relaxed text-lg">
                 <p>
-                  At Rama Care Polyclinic, we provide comprehensive and personalized migraine treatment in Dubai focused on identifying triggers, reducing headache frequency, and improving long-term health naturally and effectively.
+                  At RamaCare Polyclinic, we provide comprehensive and personalized migraine treatment in Dubai focused on identifying triggers, reducing headache frequency, and improving long-term health naturally and effectively.
                 </p>
                 <p>
                   Our experienced healthcare professionals provide customized treatment plans that may include medical management, <a href="/services/physiotherapy-dubai" className="text-white underline hover:text-white/80 font-medium">physiotherapy</a>, stress management, lifestyle guidance, wellness therapies, and holistic support to help patients manage migraines safely and improve their daily comfort.
@@ -446,10 +446,10 @@ export default function MigraineTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose Rama Care for Migraine Treatment in Dubai?
+              Why Choose RamaCare for Migraine Treatment in Dubai?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Patients across Dubai trust Rama Care Polyclinic for compassionate and holistic migraine management solutions.
+              Patients across Dubai trust RamaCare Polyclinic for compassionate and holistic migraine management solutions.
             </p>
           </motion.div>
 
@@ -615,7 +615,7 @@ export default function MigraineTreatmentPage() {
               Types of Headaches We Treat
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At Rama Care Polyclinic, we provide treatment for different types of headaches and migraine-related conditions.
+              At RamaCare Polyclinic, we provide treatment for different types of headaches and migraine-related conditions.
             </p>
           </motion.div>
 
@@ -658,7 +658,7 @@ export default function MigraineTreatmentPage() {
           <div className="absolute top-10 left-10 w-64 h-64 border-2 border-[#1F5E4B] rounded-full"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 border-2 border-[#1F5E4B] rounded-full"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -729,7 +729,7 @@ export default function MigraineTreatmentPage() {
               Our Migraine Treatment Options in Dubai
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At Rama Care Polyclinic, we provide personalized treatment strategies designed according to the patient's symptoms, triggers, lifestyle, and overall health condition.
+              At RamaCare Polyclinic, we provide personalized treatment strategies designed according to the patient's symptoms, triggers, lifestyle, and overall health condition.
             </p>
           </motion.div>
 
@@ -789,7 +789,7 @@ export default function MigraineTreatmentPage() {
                   {index < treatmentProcess.length - 1 && (
                     <div className="absolute left-6 top-20 w-0.5 h-full bg-gradient-to-b from-[#1F5E4B] to-[#1F5E4B]/20"></div>
                   )}
-                  
+
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 relative">
                       <div className="w-12 h-12 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
@@ -901,7 +901,7 @@ export default function MigraineTreatmentPage() {
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
-              
+
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Migraine Treatment Cost in Dubai
@@ -931,7 +931,7 @@ export default function MigraineTreatmentPage() {
                   ))}
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  At Rama Care Polyclinic, we provide personalized and affordable migraine treatment plans tailored to each patient's symptoms, health condition, and treatment goals.
+                  At RamaCare Polyclinic, we provide personalized and affordable migraine treatment plans tailored to each patient's symptoms, health condition, and treatment goals.
                 </p>
               </div>
             </motion.div>
@@ -991,7 +991,7 @@ export default function MigraineTreatmentPage() {
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -1002,23 +1002,23 @@ export default function MigraineTreatmentPage() {
             <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full">
               <span className="text-[#1F5E4B] font-semibold">Start Your Journey</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A]">
               Book Migraine Treatment in Dubai
             </h2>
-            
+
             <div className="space-y-4 text-[#5F5F5F] leading-relaxed text-lg max-w-3xl mx-auto">
               <p>
                 If you are struggling with chronic headaches, migraine attacks, stress-related headaches, or recurring neck tension, professional care can help improve your comfort and quality of life.
               </p>
               <p>
-                At Rama Care Polyclinic, we provide personalized migraine treatment in Dubai focused on trigger management, headache relief, stress reduction, and long-term wellness support.
+                At RamaCare Polyclinic, we provide personalized migraine treatment in Dubai focused on trigger management, headache relief, stress reduction, and long-term wellness support.
               </p>
               <p className="text-[#1A1A1A] font-semibold text-xl">
                 Book your consultation today and take the first step toward a healthier, migraine-free life.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <a
                 href="#book-now"
@@ -1029,7 +1029,7 @@ export default function MigraineTreatmentPage() {
               </a>
               <a rel="nofollow noopener noreferrer" target="_blank" href="https://wa.me/971566597878"
                 className="group inline-flex items-center gap-3 bg-white text-[#1F5E4B] px-10 py-5 rounded-full font-semibold text-lg hover:bg-[#1F5E4B] hover:text-white transition-all border-2 border-[#1F5E4B] hover:scale-105 shadow-lg">
-              
+
                 <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
                 <span>WhatsApp Us</span>
               </a>
@@ -1104,8 +1104,8 @@ export default function MigraineTreatmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {physiotherapyResources.map((resource, index) => (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={resource.link}
                 className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
               >
@@ -1141,18 +1141,18 @@ export default function MigraineTreatmentPage() {
       <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="migraine-treatment-dubai" />
 
       {/* Book Consultation Component */}
-      <BookConsultation 
+      <BookConsultation
         content={{
           badge: 'Start Your Journey',
           title: 'Book Migraine Treatment in Dubai Today',
-          description: 'Restore your wellness and live pain-free with trusted migraine treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+          description: 'Restore your wellness and live pain-free with trusted migraine treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
           submitButtonText: 'Confirm Free Consultation',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
+            email: 'query@ramacarepolyclinic.ae',
             address: {
               line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
               line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1178,7 +1178,7 @@ export default function MigraineTreatmentPage() {
               description: 'Treated'
             },
             {
-              title: '4.9/5 Rating',
+              title: '4.8/5 Rating',
               description: 'Patient Reviews'
             }
           ]

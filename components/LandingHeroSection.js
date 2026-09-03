@@ -10,20 +10,20 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/HOME.png"
-          alt="Dermal Fillers in Dubai - Rama Care Polyclinic"
+          alt="Dermal Fillers in Dubai - RamaCare Polyclinic"
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1200px"
           className="object-cover object-center"
         />
       </div>
-      
+
       <div className="relative z-10 w-full px-6 py-20 md:py-24 lg:py-28 md:px-10 lg:px-16 xl:px-24 bg-white/20">
         <div className="max-w-[1100px] flex flex-col gap-5 text-left">
           {/* Special Offer Badge */}
           <div className="inline-flex items-center self-start border border-[#fca5a5] rounded-[8px] bg-[#fef2f2] px-4 py-2 text-[14px] font-medium tracking-wide text-[#dc2626]">
             <span className="mr-2">🔥</span>
-             SPECIAL OFFER: 40% OFF + FREE Consultation (Worth AED 500) – Ends Tonight!
+            SPECIAL OFFER: 40% OFF + FREE Consultation (Worth AED 500) – Ends Tonight!
           </div>
 
           {/* Main Headline */}
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           {/* Sub copy */}
           <p className="max-w-[600px] text-[15px] leading-relaxed text-[#6b7280]">
-            Join 500+ satisfied clients who&apos;ve enhanced their beauty with us @ Rama Care Polyclinic
+            Join 500+ satisfied clients who&apos;ve enhanced their beauty with us @ RamaCare Polyclinic
           </p>
 
           {/* CTA Buttons - Side by side */}

@@ -6,18 +6,18 @@ import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
-import { 
-  Sparkles, 
-  MapPin, 
-  Award, 
-  Phone, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Users, 
-  Target, 
-  Heart, 
-  Shield, 
+import {
+  Sparkles,
+  MapPin,
+  Award,
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Users,
+  Target,
+  Heart,
+  Shield,
   Zap,
   ChevronDown,
   ChevronUp,
@@ -141,9 +141,9 @@ export default function AcneTreatmentPage() {
         <title key="title">Acne Treatment in Dubai | Advanced Solutions for Clear, Healthy Skin</title>
         <meta name="description" content="Expert acne treatment in Dubai with advanced dermatology solutions for clear, healthy, and acne-free skin. Personalized treatments for all skin types." key="description" />
         <meta name="keywords" content="Acne treatment Dubai, Best acne treatment Dubai, Acne scar treatment Dubai, Dermatologist acne treatment, Chemical peel for acne, Laser acne treatment, Hormonal acne treatment" />
-        
+
         <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
-        
+
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
         <meta property="og:title" content="Acne Treatment in Dubai | Advanced Solutions for Clear, Healthy Skin" />
@@ -179,15 +179,15 @@ export default function AcneTreatmentPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div 
+          <div
             className="absolute w-96 h-96 bg-white/5 rounded-full -top-20 -left-20 blur-3xl"
             style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           ></div>
-          <div 
+          <div
             className="absolute w-72 h-72 bg-white/10 rounded-full bottom-20 right-20 blur-2xl"
             style={{ transform: `translateY(${scrollY * -0.2}px)` }}
           ></div>
-          <div 
+          <div
             className="absolute w-64 h-64 bg-white/8 rounded-full top-1/2 left-1/3 blur-xl"
             style={{ transform: `translateY(${scrollY * 0.15}px)` }}
           ></div>
@@ -211,7 +211,7 @@ export default function AcneTreatmentPage() {
                   <Sparkles className="w-4 h-4" />
                   <span>Advanced Solutions for Clear, Healthy & Acne-Free Skin</span>
                 </motion.div>
-                
+
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -237,7 +237,7 @@ export default function AcneTreatmentPage() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-lg text-white/80 leading-relaxed max-w-xl"
               >
-                At Rama Care Polyclinic, we provide advanced and personalized acne treatment in Dubai designed to target the root cause of acne while improving overall skin texture and long-term skin health.
+                At RamaCare Polyclinic, we provide advanced and personalized acne treatment in Dubai designed to target the root cause of acne while improving overall skin texture and long-term skin health.
               </motion.p>
 
               <motion.div
@@ -246,15 +246,15 @@ export default function AcneTreatmentPage() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <a 
-                  href="#book-now" 
+                <a
+                  href="#book-now"
                   className="inline-flex items-center justify-center gap-2 bg-white text-[#1F5E4B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <Award className="w-5 h-5" />
                   Book Consultation
                 </a>
-                <a 
-                  href="https://wa.me/971566597878" 
+                <a
+                  href="https://wa.me/971566597878"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#20BD5A] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -292,14 +292,14 @@ export default function AcneTreatmentPage() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/acne.jpg" 
-                  alt="Advanced acne scar and pimple treatment in Dubai" 
+                <img
+                  src="/images/acne.jpg"
+                  alt="Advanced acne scar and pimple treatment in Dubai"
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
-              
+
               {/* Floating Stats Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -322,7 +322,7 @@ export default function AcneTreatmentPage() {
         </div>
       </section>
 
-      {/* Why Choose Rama Care Section */}
+      {/* Why Choose RamaCare Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -331,10 +331,10 @@ export default function AcneTreatmentPage() {
             viewport={{ once: true }}
             className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose Rama Care for Acne Treatment in Dubai?
+              Why Choose RamaCare for Acne Treatment in Dubai?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Patients across Dubai trust Rama Care Polyclinic for professional and personalized skincare solutions.
+              Patients across Dubai trust RamaCare Polyclinic for professional and personalized skincare solutions.
             </p>
           </motion.div>
 
@@ -474,7 +474,7 @@ export default function AcneTreatmentPage() {
               Types of Acne We Treat
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At Rama Care Polyclinic, we provide treatment for different forms of acne and acne-related skin concerns.
+              At RamaCare Polyclinic, we provide treatment for different forms of acne and acne-related skin concerns.
             </p>
           </motion.div>
 
@@ -489,7 +489,7 @@ export default function AcneTreatmentPage() {
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{type.title}</h3>
                 <p className="text-[#5F5F5F] mb-4 leading-relaxed">{type.description}</p>
-                
+
                 {type.areas && (
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Common areas affected include:</h4>
@@ -501,7 +501,7 @@ export default function AcneTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {type.consequences && (
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Without proper treatment, cystic acne may lead to:</h4>
@@ -513,7 +513,7 @@ export default function AcneTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {type.treatments && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Treatment options may include:</h4>
@@ -525,7 +525,7 @@ export default function AcneTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {type.focus && (
                   <p className="text-[#1F5E4B] font-medium mt-4 leading-relaxed">{type.focus}</p>
                 )}
@@ -641,66 +641,66 @@ export default function AcneTreatmentPage() {
             {treatmentOptions.map((option, index) => {
               const IconComponent = iconMap[option.icon];
               return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30" >
-                <div className="w-14 h-14 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-6">
-                  {IconComponent && <IconComponent className="w-7 h-7 text-[#1F5E4B]" />}
-                </div>
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
-                <p className="text-[#5F5F5F] mb-6 leading-relaxed">{option.description}</p>
-                
-                {option.benefits && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Benefits include:</h4>
-                    {option.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{benefit}</span>
-                      </div>
-                    ))}
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30" >
+                  <div className="w-14 h-14 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-6">
+                    {IconComponent && <IconComponent className="w-7 h-7 text-[#1F5E4B]" />}
                   </div>
-                )}
-                
-                {option.helps && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Laser acne treatment may help:</h4>
-                    {option.helps.map((item, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                
-                {option.suitable && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">This treatment is suitable for:</h4>
-                    {option.suitable.map((item, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                
-                {option.guidance && (
-                  <div className="space-y-2">
-                    {option.guidance.map((item, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
+                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
+                  <p className="text-[#5F5F5F] mb-6 leading-relaxed">{option.description}</p>
+
+                  {option.benefits && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-[#1A1A1A] mb-2">Benefits include:</h4>
+                      {option.benefits.map((benefit, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
+                          <span className="text-[#5F5F5F] text-sm">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {option.helps && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-[#1A1A1A] mb-2">Laser acne treatment may help:</h4>
+                      {option.helps.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
+                          <span className="text-[#5F5F5F] text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {option.suitable && (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-[#1A1A1A] mb-2">This treatment is suitable for:</h4>
+                      {option.suitable.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
+                          <span className="text-[#5F5F5F] text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {option.guidance && (
+                    <div className="space-y-2">
+                      {option.guidance.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
+                          <span className="text-[#5F5F5F] text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
               );
             })}
           </div>
@@ -875,7 +875,7 @@ export default function AcneTreatmentPage() {
               viewport={{ once: true }}
               className="text-center text-lg text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto"
             >
-              At Rama Care Polyclinic, we provide personalized and affordable acne treatment plans tailored to each patient's skin condition and treatment goals.
+              At RamaCare Polyclinic, we provide personalized and affordable acne treatment plans tailored to each patient's skin condition and treatment goals.
             </motion.p>
           </div>
         </div>
@@ -969,18 +969,18 @@ export default function AcneTreatmentPage() {
       <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="acne-treatment-dubai" />
 
       {/* Book Consultation Section */}
-      <BookConsultation 
+      <BookConsultation
         content={{
           badge: 'Start Your Journey',
           title: 'Book Acne Treatment in Dubai Today',
-          description: 'Achieve clear, healthy skin with trusted acne treatment at Rama Care Polyclinic—personalized, safe, and focused on long-term skin improvement.',
+          description: 'Achieve clear, healthy skin with trusted acne treatment at RamaCare Polyclinic—personalized, safe, and focused on long-term skin improvement.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
           submitButtonText: 'Confirm Free Consultation',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
+            email: 'query@ramacarepolyclinic.ae',
             address: {
               line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
               line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -999,14 +999,14 @@ export default function AcneTreatmentPage() {
             },
             {
               title: 'Experienced Team',
-              description: '15+ Years Experience'
+              description: '15+ Years Combined Experience'
             },
             {
               title: '2,500+ Procedures',
               description: 'Completed'
             },
             {
-              title: '4.9/5 Rating',
+              title: '4.8/5 Rating',
               description: 'Patient Reviews'
             }
           ]

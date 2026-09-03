@@ -63,6 +63,11 @@ export default function DiscountModal() {
       });
 
       if (response.ok) {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_name: 'DiscountModal',
+          });
+        }
         // Redirect to confirmation page instead of WhatsApp
         window.location.href = '/request-confirmed';
       } else {

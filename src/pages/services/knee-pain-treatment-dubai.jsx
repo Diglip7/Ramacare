@@ -5,17 +5,17 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
-import { 
+import {
   Activity,
-  MapPin, 
-  Award, 
-  Phone, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Users, 
-  HeartPulse, 
-  ShieldCheck, 
+  MapPin,
+  Award,
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Users,
+  HeartPulse,
+  ShieldCheck,
   Bone,
   ChevronDown,
   ChevronUp,
@@ -324,7 +324,7 @@ export default function KneePainTreatmentPage() {
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
         "name": "Knee Pain Treatment in Dubai | Joint Pain Relief",
-        "description": "Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic.",
+        "description": "Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic.",
         "inLanguage": "en",
         "isPartOf": {
           "@type": "WebSite",
@@ -404,7 +404,7 @@ export default function KneePainTreatmentPage() {
     <Layout>
       <Head>
         <title key="title">Knee Pain Treatment in Dubai | Joint Pain Relief</title>
-        <meta name="description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic." key="description" />
+        <meta name="description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic." key="description" />
         <meta name="keywords" content="Knee pain treatment Dubai, Knee physiotherapy Dubai, Arthritis knee treatment, Sports injury knee treatment, Chronic knee pain Dubai, Knee rehabilitation Dubai, Joint pain relief Dubai" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
@@ -412,7 +412,7 @@ export default function KneePainTreatmentPage() {
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Knee Pain Treatment in Dubai | Joint Pain Relief" />
-        <meta property="og:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at Rama Care Polyclinic." />
+        <meta property="og:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic." />
         <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/knee-pain.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -459,7 +459,7 @@ export default function KneePainTreatmentPage() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#E8F5E9] to-transparent"></div>
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
         <div className="absolute top-40 right-20 w-64 h-64 bg-[#2A7D63]/5 rounded-full blur-2xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content - Spans 7 columns */}
@@ -482,7 +482,7 @@ export default function KneePainTreatmentPage() {
                   </div>
                   <span className="text-[#1F5E4B] font-semibold text-sm">Joint & Mobility Specialists</span>
                 </motion.div>
-                
+
                 {/* Main Heading */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -552,7 +552,7 @@ export default function KneePainTreatmentPage() {
                   </div>
                   <div>
                     <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">15+</div>
-                    <div className="text-xs md:text-sm text-[#5F5F5F]">Years Experience</div>
+                    <div className="text-xs md:text-sm text-[#5F5F5F]">Years Combined Experience</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -585,9 +585,9 @@ export default function KneePainTreatmentPage() {
             >
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <Image 
-                    src="/images/knee-pain.jpg" 
-                    alt="Knee pain treatment and physiotherapy session at RamaCare Polyclinic Dubai" 
+                  <Image
+                    src="/images/knee-pain.jpg"
+                    alt="Knee pain treatment and physiotherapy session at RamaCare Polyclinic Dubai"
                     width={1200}
                     height={630}
                     quality={75}
@@ -643,11 +643,11 @@ export default function KneePainTreatmentPage() {
               className="lg:col-span-8 bg-white p-8 md:p-12 rounded-2xl shadow-lg border-l-4 border-[#1F5E4B]"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6">
-                Expert Knee Pain Treatment at Rama Care Polyclinic
+                Expert Knee Pain Treatment at RamaCare Polyclinic
               </h2>
               <div className="space-y-4 text-[#5F5F5F] leading-relaxed text-lg">
                 <p>
-                  At Rama Care Polyclinic, we provide comprehensive and personalized knee pain treatment in Dubai focused on reducing pain, improving mobility, and supporting long-term joint health naturally and effectively.
+                  At RamaCare Polyclinic, we provide comprehensive and personalized knee pain treatment in Dubai focused on reducing pain, improving mobility, and supporting long-term joint health naturally and effectively.
                 </p>
                 <p>
                   Our experienced physiotherapists and rehabilitation specialists use advanced physiotherapy techniques, electrotherapy, rehabilitation exercises, posture correction, and holistic wellness support to treat the root cause of knee pain while improving flexibility, strength, and movement.
@@ -696,10 +696,10 @@ export default function KneePainTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose Rama Care for Knee Pain Treatment in Dubai?
+              Why Choose RamaCare for Knee Pain Treatment in Dubai?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Patients across Dubai trust Rama Care Polyclinic for personalized and non-surgical joint pain management solutions.
+              Patients across Dubai trust RamaCare Polyclinic for personalized and non-surgical joint pain management solutions.
             </p>
           </motion.div>
 
@@ -716,7 +716,7 @@ export default function KneePainTreatmentPage() {
                 { bg: 'bg-[#E8EAF6]', border: 'border-[#283593]', icon: 'text-[#283593]' }
               ];
               const colors = colorPairs[index % colorPairs.length];
-              
+
               return (
                 <motion.div
                   key={index}
@@ -831,11 +831,10 @@ export default function KneePainTreatmentPage() {
                   <button
                     key={index}
                     onClick={() => setActiveTab(index)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
-                      activeTab === index
-                        ? tabColors[index]
-                        : 'text-[#5F5F5F] hover:text-[#1A1A1A]'
-                    }`}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${activeTab === index
+                      ? tabColors[index]
+                      : 'text-[#5F5F5F] hover:text-[#1A1A1A]'
+                      }`}
                   >
                     <Icon className="w-5 h-5" />
                     <span>{tab.title}</span>
@@ -863,7 +862,7 @@ export default function KneePainTreatmentPage() {
                     'text-[#F57F17]', 'text-[#283593]', 'text-[#1F5E4B]',
                     'text-[#E65100]', 'text-[#1565C0]', 'text-[#6A1B9A]'
                   ];
-                  
+
                   return (
                     <motion.div
                       key={index}
@@ -896,7 +895,7 @@ export default function KneePainTreatmentPage() {
                     { bg: 'bg-[#E3F2FD]', border: 'border-[#1E88E5]', text: 'text-[#1E88E5]' }
                   ];
                   const colors = symptomColors[index % symptomColors.length];
-                  
+
                   return (
                     <motion.div
                       key={index}
@@ -947,7 +946,7 @@ export default function KneePainTreatmentPage() {
               Types of Knee Pain We Treat
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At Rama Care Polyclinic, we provide treatment for various acute and chronic knee conditions.
+              At RamaCare Polyclinic, we provide treatment for various acute and chronic knee conditions.
             </p>
           </motion.div>
 
@@ -965,7 +964,7 @@ export default function KneePainTreatmentPage() {
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-[#1A1A1A]">{type.title}</h3>
                   <p className="text-[#5F5F5F] leading-relaxed text-lg">{type.description}</p>
-                  
+
                   {type.focus && Array.isArray(type.focus) && (
                     <div className="bg-[#FAFAF8] p-5 rounded-xl border-l-4 border-[#1F5E4B]">
                       <p className="text-[#1A1A1A] font-medium mb-3">Our rehabilitation programs focus on:</p>
@@ -1065,7 +1064,7 @@ export default function KneePainTreatmentPage() {
                   </div>
                   <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
                   <p className="text-[#5F5F5F] leading-relaxed mb-4">{option.description}</p>
-                  
+
                   {option.benefits && (
                     <div className="space-y-2">
                       <p className="text-[#1A1A1A] font-medium text-sm">Benefits include:</p>
@@ -1144,7 +1143,7 @@ export default function KneePainTreatmentPage() {
                   {index < treatmentProcess.length - 1 && (
                     <div className="absolute left-6 top-20 w-0.5 h-full bg-gradient-to-b from-[#1F5E4B] to-[#1F5E4B]/20"></div>
                   )}
-                  
+
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 relative">
                       <div className="w-12 h-12 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
@@ -1265,7 +1264,7 @@ export default function KneePainTreatmentPage() {
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
-              
+
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Knee Pain Treatment Cost in Dubai
@@ -1295,7 +1294,7 @@ export default function KneePainTreatmentPage() {
                   ))}
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  At Rama Care Polyclinic, we provide affordable and personalized treatment plans tailored to each patient's condition, mobility goals, and recovery needs.
+                  At RamaCare Polyclinic, we provide affordable and personalized treatment plans tailored to each patient's condition, mobility goals, and recovery needs.
                 </p>
               </div>
             </motion.div>
@@ -1409,8 +1408,8 @@ export default function KneePainTreatmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {physiotherapyResources.map((resource, index) => (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={resource.link}
                 className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
               >
@@ -1449,7 +1448,7 @@ export default function KneePainTreatmentPage() {
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
           <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full -mr-40 -mb-40"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1459,19 +1458,19 @@ export default function KneePainTreatmentPage() {
             <h2 className="text-4xl md:text-5xl font-bold">
               Book Knee Pain Treatment in Dubai
             </h2>
-            
+
             <div className="space-y-6 text-white/90 leading-relaxed text-lg max-w-4xl mx-auto">
               <p>
                 If you are experiencing knee stiffness, joint pain, sports injuries, arthritis-related discomfort, or mobility limitations, professional physiotherapy and rehabilitation can help improve your movement and quality of life.
               </p>
               <p>
-                At Rama Care Polyclinic, we provide personalized knee pain treatment in Dubai focused on pain relief, mobility improvement, joint stability, and long-term recovery.
+                At RamaCare Polyclinic, we provide personalized knee pain treatment in Dubai focused on pain relief, mobility improvement, joint stability, and long-term recovery.
               </p>
               <p className="text-white font-semibold text-xl">
                 Book your consultation today and take the first step toward healthier and pain-free movement.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <a
                 href="#book-now"
@@ -1495,18 +1494,18 @@ export default function KneePainTreatmentPage() {
       <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="knee-pain-treatment-dubai" />
 
       {/* Book Consultation Component */}
-      <BookConsultation 
+      <BookConsultation
         content={{
           badge: 'Start Your Journey',
           title: 'Book Knee Pain Treatment in Dubai Today',
-          description: 'Restore your mobility and live pain-free with trusted knee pain treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+          description: 'Restore your mobility and live pain-free with trusted knee pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
           submitButtonText: 'Confirm Free Consultation',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
+            email: 'query@ramacarepolyclinic.ae',
             address: {
               line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
               line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1532,7 +1531,7 @@ export default function KneePainTreatmentPage() {
               description: 'Treated'
             },
             {
-              title: '4.9/5 Rating',
+              title: '4.8/5 Rating',
               description: 'Patient Reviews'
             }
           ]

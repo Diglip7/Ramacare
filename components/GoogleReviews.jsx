@@ -16,7 +16,7 @@ const reviewsData = [
     name: "Emma Bianca Reyes",
     rating: 5,
     date: "18 hours ago",
-    text: "Had a great experience at Rama Care Polyclinic! 🥰 Special thanks to Ms. Nodainne for her excellent service during my Oxygeneo and Hydrafacial treatments. She was very professional, gentle, and attentive throughout the session. Highly recommended, and I'll definitely be coming back! 💕",
+    text: "Had a great experience at RamaCare Polyclinic! 🥰 Special thanks to Ms. Nodainne for her excellent service during my Oxygeneo and Hydrafacial treatments. She was very professional, gentle, and attentive throughout the session. Highly recommended, and I'll definitely be coming back! 💕",
     avatar: "E",
     role: "Verified Patient"
   },

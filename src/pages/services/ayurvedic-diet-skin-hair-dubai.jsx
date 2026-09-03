@@ -807,7 +807,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Hairfall Treatment</span>
               <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="/services/skin-diseases-treatment/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+            <a href="/services/skin-diseases-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Skin Diseases Treatment</span>
               <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>

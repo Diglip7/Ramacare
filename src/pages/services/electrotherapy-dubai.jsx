@@ -175,18 +175,18 @@ export default function ElectrotherapyPage() {
           }}
         />
       </Head>
-      <TreatmentHero 
+      <TreatmentHero
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
       <QuickNavigation navItems={navItems} />
-      <TreatmentOverview 
+      <TreatmentOverview
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
       <HealingJourney content={content?.healingJourney} />
-      <TreatmentBenefits 
+      <TreatmentBenefits
         content={content?.benefits}
       />
       <ServiceWhyChoose content={content?.whyChoose} />

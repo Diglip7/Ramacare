@@ -1027,7 +1027,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.com',
+              email: 'query@ramacarepolyclinic.ae',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'

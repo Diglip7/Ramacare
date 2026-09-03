@@ -31,7 +31,19 @@ export default function FloatingButtons() {
       </a>
 
       {/* WhatsApp Button - Green */}
-      <a href="https://wa.me/971501234567" target="_blank" rel="nofollow noopener noreferrer" title="WhatsApp" style={{
+      <a
+        href="https://wa.me/971501234567"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        title="WhatsApp"
+        onClick={() => {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'whatsapp_click', {
+              link_url: 'https://wa.me/971501234567',
+            });
+          }
+        }}
+        style={{
         width: '50px',
         height: '50px',
         borderRadius: '50%',

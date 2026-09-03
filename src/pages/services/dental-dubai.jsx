@@ -18,7 +18,7 @@ import { getCategoryContent } from "../../data/categoryContent";
 export default function dentaldubaiCategoryPage() {
   const content = getCategoryContent('dental');
 
-  
+
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
@@ -45,17 +45,17 @@ export default function dentaldubaiCategoryPage() {
   // Fetch FAQs dynamically from page content
   const faqSchema = content?.faq?.faqs?.length
     ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": content.faq.faqs.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": content.faq.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
     : null;
 
   const physicianSchema = [
@@ -157,10 +157,7 @@ export default function dentaldubaiCategoryPage() {
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/d1.jpg" key="twitter:image" />
 
         {/* Structured Data Schemas */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
+      
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
@@ -180,8 +177,8 @@ export default function dentaldubaiCategoryPage() {
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
-      <TreatmentSection 
-        category="dental" 
+      <TreatmentSection
+        category="dental"
         content={{
           ...content?.treatments,
           consultationHeading: content?.treatments?.consultationCTA?.heading,
@@ -189,7 +186,7 @@ export default function dentaldubaiCategoryPage() {
           consultationButtonText: content?.treatments?.consultationCTA?.buttonText,
           consultationBgColor: content?.treatments?.consultationCTA?.backgroundColor,
           consultationButtonColor: content?.treatments?.consultationCTA?.buttonColor
-        }} 
+        }}
       />
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />

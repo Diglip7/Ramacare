@@ -93,7 +93,7 @@ const content = {
       },
       {
         question: 'What if I\'ve already tried Keto and it didn\'t work?',
-        answer: 'Many of our patients come to us after experiencing Keto burnout. We help you understand why it didn\'t work for your specific constitution and design a personalized Ayurvedic approach that addresses the root causes. If needed, this may include clinic-based metabolic cleansing therapies like <a href=\"/services/panchakarma-treatment/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>.'
+        answer: 'Many of our patients come to us after experiencing Keto burnout. We help you understand why it didn\'t work for your specific constitution and design a personalized Ayurvedic approach that addresses the root causes. If needed, this may include clinic-based metabolic cleansing therapies like <a href=\"/services/panchakarma-treatment-dubai/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>.'
       },
       {
         question: 'How long does it take to see results with Ayurveda?',

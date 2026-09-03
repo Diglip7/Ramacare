@@ -283,7 +283,7 @@ export const DOCTORS = {
       { title: "Personalized Ayurvedic Consultation", desc: "Every consultation is tailored to the individual. Recommendations consider a patient's constitution, current health concerns, lifestyle, and goals rather than following a one-size-fits-all protocol." },
       { title: "Holistic Wellness", desc: "Ayurveda views the body, mind, and daily habits as interconnected. Dr. Shamna's approach considers physical symptoms alongside stress levels, sleep quality, and emotional wellbeing." },
       { title: "Herbal Therapies", desc: "Guidance on classical herbal formulations, selected and personalized based on individual assessment, used to support the body's natural balance." },
-      { title: "Panchakarma Consultation", desc: "For patients interested in deeper detoxification and rejuvenation therapies, Dr. Shamna provides <a href=\"/services/panchakarma-treatment/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">Panchakarma consultation</a> to determine suitability and guide an appropriate approach." },
+      { title: "Panchakarma Consultation", desc: "For patients interested in deeper detoxification and rejuvenation therapies, Dr. Shamna provides <a href=\"/services/panchakarma-treatment-dubai/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">Panchakarma consultation</a> to determine suitability and guide an appropriate approach." },
       { title: "Diet & Nutrition Advice", desc: "Ayurvedic nutrition is highly individualized. She offers dietary guidance based on a patient's constitution and current imbalances, rather than generic diet plans." },
       { title: "Stress Management", desc: "Practical, Ayurveda-informed strategies to help patients manage daily stress, supporting both mental clarity and physical health." },
       { title: "Digestive Health", desc: "Since Ayurveda considers digestive strength (Agni) central to overall health, this is often a key focus area in consultations addressing a wide range of concerns." },
@@ -1616,7 +1616,7 @@ export const DOCTORS = {
       },
       {
         title: 'Panchakarma Support Treatments',
-        desc: 'Panchakarma is a structured Ayurvedic wellness programme traditionally associated with the body\'s natural detoxification processes. Mariya supports these programmes by delivering therapist-guided procedures designed to complement each stage of the process. Because Panchakarma-based therapies can be intensive, her role focuses on ensuring each session is carried out safely, at a pace suited to the individual, and in coordination with the broader treatment plan set by the Ayurveda department. Many patients see her for <a href="/services/panchakarma-treatment/" class="text-[#1F5E4B] hover:underline font-semibold">Panchakarma Therapy</a>.'
+        desc: 'Panchakarma is a structured Ayurvedic wellness programme traditionally associated with the body\'s natural detoxification processes. Mariya supports these programmes by delivering therapist-guided procedures designed to complement each stage of the process. Because Panchakarma-based therapies can be intensive, her role focuses on ensuring each session is carried out safely, at a pace suited to the individual, and in coordination with the broader treatment plan set by the Ayurveda department. Many patients see her for <a href="/services/panchakarma-treatment-dubai/" class="text-[#1F5E4B] hover:underline font-semibold">Panchakarma Therapy</a>.'
       },
       {
         title: 'Abhyanga Therapy',

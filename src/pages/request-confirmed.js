@@ -7,17 +7,17 @@ export default function RequestConfirmed() {
   return (
     <>
       <Head>
-        <title key="title">Request Confirmed | Best Fillers in Dubai - Rama Care Polyclinic</title>
+        <title key="title">Request Confirmed | Best Fillers in Dubai - RamaCare Polyclinic</title>
         <meta name="description" content="Thank you for your interest in our dermal fillers treatment. Our team will contact you shortly." key="description" />
         <meta name="robots" content="noindex, nofollow" />
-        
+
         <link rel="icon" type="image/png" href="/images/Logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-        {/* Google Tag Manager */}
+      {/* Google Tag Manager */}
       <Script id="google-tag-manager" strategy="beforeInteractive">
         {`
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div className="font-sans min-h-screen bg-gradient-to-br from-[#fff8f0] via-[#fce8e8] to-[#fff0f0] flex items-center justify-center px-6 py-12">
 
-           {/* GTM Noscript */}
+        {/* GTM Noscript */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM7WDXBW"

@@ -13,7 +13,7 @@ const BookConsultation = ({ content }) => {
     contactInfo: {
       phone: '+971 04 286 2006',
       whatsapp: '971566597878',
-      email: 'query@ramacarepolyclinic.com',
+      email: 'query@ramacarepolyclinic.ae',
       address: {
         line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
         line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -39,7 +39,7 @@ const BookConsultation = ({ content }) => {
         description: 'Successfully Treated'
       },
       {
-        title: '4.9/5 Rating',
+        title: '4.8/5 Rating',
         description: '500+ Verified Reviews'
       }
     ],
@@ -177,6 +177,11 @@ const BookConsultation = ({ content }) => {
       });
       if (res.ok) {
         showToast('Consultation request submitted successfully', 'success');
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_name: 'BookConsultation',
+          });
+        }
         setFormData({
           fullName: '',
           phone: '',

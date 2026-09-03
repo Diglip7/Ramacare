@@ -29,20 +29,20 @@ Created `src/utils/canonical.js` with utility functions for generating canonical
 - **Status**: ✅ Already implemented
 
 ### 3. Service Pages
-- **Implementation**: Centralized in `components/Layout.jsx`.
-- **Canonical URL Format**: `https://ramacarepolyclinic.ae/services/{service-slug}` (No trailing slash)
+- **Implementation**: Centralized in `components/Layout.jsx` and `src/utils/canonical.js`.
+- **Canonical URL Format**: `https://ramacarepolyclinic.ae/services/{service-slug}/` (With trailing slash matching Next.js `trailingSlash: true`)
 - **Approach**: 
-  - Removed hardcoded canonical tags from individual pages to prevent duplication.
-  - Modified `components/Layout.jsx` to automatically generate canonical tags for all pages.
+  - Centralized canonical generation ensuring all paths end with a trailing slash.
+  - Modified `components/Layout.jsx` and `src/utils/canonical.js` to automatically generate trailing-slash canonical tags.
 - **Examples**:
-  - General Medicine: `https://ramacarepolyclinic.ae/services/general-physician-dubai`
-  - Aesthetic Dermatology: `https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai`
+  - General Medicine: `https://ramacarepolyclinic.ae/services/general-physician-dubai/`
+  - Aesthetic Dermatology: `https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/`
 
 ### 4. Blog Pages
-- **Blog Index**: `https://ramacarepolyclinic.ae/blog`
-- **Individual Blog Posts**: `https://ramacarepolyclinic.ae/blog/{blog-slug}`
+- **Blog Index**: `https://ramacarepolyclinic.ae/blog/`
+- **Individual Blog Posts**: `https://ramacarepolyclinic.ae/blog/{blog-slug}/`
 - **Implementation**: 
-  - Modified `components/Layout.jsx` to generate dynamic canonical URLs.
+  - Modified `components/Layout.jsx` to generate dynamic trailing-slash canonical URLs.
 
 ### 5. Redirects (www to non-www)
 - **Implementation**: `src/middleware.ts`

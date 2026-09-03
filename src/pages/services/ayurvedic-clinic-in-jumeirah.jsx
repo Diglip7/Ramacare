@@ -236,7 +236,7 @@ export default function AyurvedicClinicJumeirahPage() {
     contactInfo: {
       phone: '+971 04 286 2006',
       whatsapp: '971566597878',
-      email: 'query@ramacarepolyclinic.com',
+      email: 'query@ramacarepolyclinic.ae',
       address: {
         line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
         line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -356,7 +356,7 @@ export default function AyurvedicClinicJumeirahPage() {
         />
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
         <meta property="og:image" content={SITE_URL + '/images/Ayurvedic wellness consultation.jpg'} />
-        
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ayurvedic Clinic in Jumeirah — RamaCare Polyclinic" />
         <meta name="twitter:description" content="Authentic, DHA-licensed Ayurvedic care in Jumeirah 1, Dubai. Book your consultation today." />

@@ -22,6 +22,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Enforce trailing slash on non-API, non-file routes
+  if (
+    pathname !== '/' &&
+    !pathname.startsWith('/api') &&
+    !pathname.includes('.') &&
+    !pathname.endsWith('/')
+  ) {
+    url.pathname = `${pathname}/`;
+    return NextResponse.redirect(url, 308);
+  }
+
   return NextResponse.next();
 }
 

@@ -97,14 +97,14 @@ export default function Home() {
                   '@type': ['MedicalClinic', 'LocalBusiness'],
                   '@id': 'https://ramacarepolyclinic.ae/#organization',
                   name: 'RamaCare Polyclinic',
-                  alternateName: 'Rama Care Polyclinic Dubai',
+                  alternateName: 'RamaCare Polyclinic Dubai',
                   url: 'https://ramacarepolyclinic.ae/',
                   logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
                   image: 'https://ramacarepolyclinic.ae/images/homepage.jpg',
                   description:
                     'DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai offering expert care in Dermatology, Dental, Physiotherapy, General Medicine, and Ayurveda.',
                   telephone: '+971566597878',
-                  email: 'query@ramacarepolyclinic.com',
+                  email: 'query@ramacarepolyclinic.ae',
                   priceRange: '$$',
                   openingHoursSpecification: {
                     '@type': 'OpeningHoursSpecification',
@@ -280,18 +280,18 @@ export default function Home() {
           }}
         />
       </Head>
-       <Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-G2WWSZYF7W"
-  strategy="afterInteractive"/>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-G2WWSZYF7W"
+        strategy="afterInteractive" />
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-G2WWSZYF7W');
   `}
-</Script>
+      </Script>
       <HeroSection />
       <WhyChooseUsSection />
       <AboutAyurvedaSection />

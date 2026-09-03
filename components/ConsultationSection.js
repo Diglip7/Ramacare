@@ -230,7 +230,7 @@ export default function ConsultationSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Rama Care Polyclinic Location"
+            title="RamaCare Polyclinic Location"
           />
         </div>
 

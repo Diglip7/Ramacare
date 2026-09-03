@@ -59,17 +59,17 @@ export default function AyurvedaCategoryPage() {
 
   const faqSchema = content?.faq?.faqs?.length
     ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": content.faq.faqs.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question.trim(),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer.trim()
-          }
-        }))
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": content.faq.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question.trim(),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.trim()
+        }
+      }))
+    }
     : null;
 
   const physicianSchema = [
@@ -170,8 +170,8 @@ export default function AyurvedaCategoryPage() {
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
-      <TreatmentSection 
-        category="ayurveda" 
+      <TreatmentSection
+        category="ayurveda"
         content={{
           ...content?.treatments,
           consultationHeading: content?.treatments?.consultationCTA?.heading,
@@ -179,7 +179,7 @@ export default function AyurvedaCategoryPage() {
           consultationButtonText: content?.treatments?.consultationCTA?.buttonText,
           consultationBgColor: content?.treatments?.consultationCTA?.backgroundColor,
           consultationButtonColor: content?.treatments?.consultationCTA?.buttonColor
-        }} 
+        }}
       />
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />
@@ -187,7 +187,7 @@ export default function AyurvedaCategoryPage() {
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
       <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurveda-dubai" />
       <FAQSection content={content?.faq} />
-       {/* <OurFacilitySection content={content?.facility} /> */}
+      {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />
       <SEOContentSection title="Authentic Ayurveda Treatment in Dubai" content={ayurvedaSEOContent} />
     </Layout>

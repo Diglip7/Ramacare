@@ -213,7 +213,7 @@ Each subcategory entry includes **ALL sections**:
     stats: [
       {
         id: 1,
-        number: '4.9/5',
+        number: '4.8/5',
         label1: 'Label 1',
         label2: 'Label 2',
         target: 4.9

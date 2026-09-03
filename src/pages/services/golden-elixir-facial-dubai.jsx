@@ -142,28 +142,28 @@ export default function GoldenElixirFacialPage() {
         />
       </Head>
 
-      <TreatmentHero 
+      <TreatmentHero
         categoryName={categoryName}
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
       <QuickNavigation />
-      
-      <TreatmentOverview 
+
+      <TreatmentOverview
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
       <HealingJourney content={content?.healingJourney} />
-      <TreatmentBenefits 
+      <TreatmentBenefits
         content={content?.benefits}
       />
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge 
-        doctorName="Sonita Sinaga" 
-        pageSlug="golden-elixir-facial-dubai" 
-        customStatement="This gold facial treatment guide has been clinically reviewed for treatment safety, facial protocols, and skincare excellence by Sonita Sinaga." 
+      <ContentReviewBadge
+        doctorName="Sonita Sinaga"
+        pageSlug="golden-elixir-facial-dubai"
+        customStatement="This gold facial treatment guide has been clinically reviewed for treatment safety, facial protocols, and skincare excellence by Sonita Sinaga."
       />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />

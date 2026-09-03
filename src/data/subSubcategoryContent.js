@@ -23,7 +23,7 @@ export const subSubcategoryContent = {
       stats: [
         { id: 1, number: '98%', label: 'Success Rate' },
         { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Experience' }
+        { id: 3, number: '15+', label: 'Years Combined Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
@@ -697,7 +697,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -747,7 +747,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -760,14 +760,14 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: '2,500+ Patients', description: 'Successfully Treated' },
-        { title: '4.9/5 Rating', description: 'Patient Reviews' }
+        { title: '4.8/5 Rating', description: 'Patient Reviews' }
       ]
     },
     testimonials: {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
           target: 4.9,
@@ -806,7 +806,7 @@ export const subSubcategoryContent = {
       stats: [
         { id: 1, number: '98%', label: 'Success Rate' },
         { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Experience' }
+        { id: 3, number: '15+', label: 'Years Combined Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
@@ -1456,7 +1456,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -1506,7 +1506,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -1519,7 +1519,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: '2,500+ Patients', description: 'Treated' },
-        { title: '4.9/5 Rating', description: 'Patient Reviews' }
+        { title: '4.8/5 Rating', description: 'Patient Reviews' }
       ]
     }
   },
@@ -1532,7 +1532,7 @@ export const subSubcategoryContent = {
       stats: [
         { id: 1, number: '98%', label: 'Success Rate' },
         { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Experience' }
+        { id: 3, number: '15+', label: 'Years Combined Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
@@ -2181,7 +2181,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -2231,7 +2231,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -2244,7 +2244,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: '2,500+ Patients', description: 'Treated' },
-        { title: '4.9/5 Rating', description: 'Patient Reviews' }
+        { title: '4.8/5 Rating', description: 'Patient Reviews' }
       ]
     }
   },
@@ -2268,7 +2268,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -2910,7 +2910,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -2977,7 +2977,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3029,7 +3029,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -3054,7 +3054,7 @@ export const subSubcategoryContent = {
         alt: 'Mesotherapy treatment performed by specialists to nourish the skin and promote rejuvenation.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary based on age, lifestyle, and individual response. All Mesotherapy treatments at Rama Care Polyclinic follow DHA-approved safety and medical protocols.',
+        text: 'Safety & Medical Disclaimer: Results may vary based on age, lifestyle, and individual response. All Mesotherapy treatments at RamaCare Polyclinic follow DHA-approved safety and medical protocols.',
         show: true
       }
     },
@@ -3577,8 +3577,8 @@ export const subSubcategoryContent = {
         },
         {
           id: 15,
-          question: "Why choose Rama Care Polyclinic for Mesotherapy in Dubai?",
-          answer: "Rama Care Polyclinic offers doctor-led, personalized Mesotherapy in Dubai using safe, approved protocols. Patients receive natural results, comfort, and long-term guidance for skin and hair health."
+          question: "Why choose RamaCare Polyclinic for Mesotherapy in Dubai?",
+          answer: "RamaCare Polyclinic offers doctor-led, personalized Mesotherapy in Dubai using safe, approved protocols. Patients receive natural results, comfort, and long-term guidance for skin and hair health."
         }
       ],
       resources: [
@@ -3640,7 +3640,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -3701,14 +3701,14 @@ export const subSubcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Mesotherapy in Dubai Today',
-      description: 'Restore your skin’s glow and strengthen your hair naturally with Mesotherapy in Dubai at Rama Care Polyclinic—safe, personalized, and medically guided care.',
+      description: 'Restore your skin’s glow and strengthen your hair naturally with Mesotherapy in Dubai at RamaCare Polyclinic—safe, personalized, and medically guided care.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3807,7 +3807,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -4507,7 +4507,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -4553,7 +4553,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -4608,7 +4608,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -4660,7 +4660,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -5286,11 +5286,11 @@ export const subSubcategoryContent = {
           id: 14,
           question: 'How much does Botox Hyperhidrosis cost in Dubai?',
           answer:
-            'Pricing depends on the treated area and severity. Rama Care Polyclinic provides transparent costs without hidden charges.'
+            'Pricing depends on the treated area and severity. RamaCare Polyclinic provides transparent costs without hidden charges.'
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for Botox Hyperhidrosis in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for Botox Hyperhidrosis in Dubai?',
           answer:
             'We offer DHA-licensed doctors, certified Botox specialists, personalized care, advanced protocols, and proven, safe, long-lasting results.'
         }
@@ -5354,7 +5354,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -5422,7 +5422,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -5455,7 +5455,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -5507,7 +5507,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -6150,7 +6150,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -6218,7 +6218,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -6251,7 +6251,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -6360,7 +6360,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -6919,9 +6919,9 @@ export const subSubcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose electrolysis in Dubai at Rama Care Polyclinic?',
+          question: 'Why choose electrolysis in Dubai at RamaCare Polyclinic?',
           answer:
-            'Rama Care Polyclinic offers certified electrolysis specialists, DHA-licensed safety protocols, personalized treatment plans, and permanent hair removal solutions with professional care in Dubai.'
+            'RamaCare Polyclinic offers certified electrolysis specialists, DHA-licensed safety protocols, personalized treatment plans, and permanent hair removal solutions with professional care in Dubai.'
         }
       ],
       resources: [
@@ -6983,7 +6983,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -7051,7 +7051,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -7163,7 +7163,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -7215,7 +7215,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -7859,7 +7859,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -7927,7 +7927,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -7960,7 +7960,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -8069,7 +8069,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -8663,7 +8663,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -8732,7 +8732,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -8904,7 +8904,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -8956,7 +8956,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -9519,9 +9519,9 @@ export const subSubcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for HIFU in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for HIFU in Dubai?',
           answer:
-            'Rama Care Polyclinic offers DHA-licensed specialists, advanced HIFU devices, personalized treatment plans, and professional medical supervision to ensure safe, effective, and natural-looking results.'
+            'RamaCare Polyclinic offers DHA-licensed specialists, advanced HIFU devices, personalized treatment plans, and professional medical supervision to ensure safe, effective, and natural-looking results.'
         }
       ],
       resources: [
@@ -9583,7 +9583,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -9652,7 +9652,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -9685,7 +9685,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -9777,7 +9777,7 @@ export const subSubcategoryContent = {
   'aesthetic-dermatology-dubai-skin-treatment-botox': {
     hero: {
       subtitle: 'Safe, Natural-Looking Wrinkle Reduction with Medical Expertise',
-      description: 'Botox in Dubai is a popular non-surgical aesthetic treatment designed to reduce the appearance of fine lines and facial wrinkles caused by aging, stress, and repeated facial expressions. \n\n At Rama Care Polyclinic, we provide personalized Botox treatments focused on achieving smooth, natural-looking results while maintaining natural facial expressions and balance. Our experienced aesthetic specialists use advanced Botox injection techniques to safely target specific facial muscles responsible for forehead lines, crow’s feet, frown lines, and other visible signs of aging. The treatment helps soften dynamic wrinkles, refresh facial appearance, and support a more youthful look without surgery or significant downtime. Whether you are looking to reduce visible wrinkles, prevent early signs of aging, or maintain smoother skin, our Botox treatments in Dubai are customized according to your facial anatomy, skin condition, and aesthetic goals to ensure safe and effective results.\n\nPatients seeking comprehensive facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a>, <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a>, and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services for enhanced aesthetic care and overall skin wellness.',
+      description: 'Botox in Dubai is a popular non-surgical aesthetic treatment designed to reduce the appearance of fine lines and facial wrinkles caused by aging, stress, and repeated facial expressions. \n\n At RamaCare Polyclinic, we provide personalized Botox treatments focused on achieving smooth, natural-looking results while maintaining natural facial expressions and balance. Our experienced aesthetic specialists use advanced Botox injection techniques to safely target specific facial muscles responsible for forehead lines, crow’s feet, frown lines, and other visible signs of aging. The treatment helps soften dynamic wrinkles, refresh facial appearance, and support a more youthful look without surgery or significant downtime. Whether you are looking to reduce visible wrinkles, prevent early signs of aging, or maintain smoother skin, our Botox treatments in Dubai are customized according to your facial anatomy, skin condition, and aesthetic goals to ensure safe and effective results.\n\nPatients seeking comprehensive facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a>, <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a>, and <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services for enhanced aesthetic care and overall skin wellness.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -9793,7 +9793,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -9862,17 +9862,17 @@ export const subSubcategoryContent = {
       title: 'Understanding Botox Treatment',
       problemIntro: {
         title: 'The Problem: Common Botox Treatment Concerns',
-        description: 'Many individuals considering Botox in Dubai feel uncertain about treatment safety, unnatural-looking results, overdone facial appearance, or procedures performed without proper medical expertise. Poor injection techniques, excessive dosage, and lack of facial assessment may affect both safety and aesthetic balance. At Rama Care Polyclinic, our Botox treatments are performed under professional medical supervision using personalized facial assessment and DHA-approved aesthetic protocols designed to support natural-looking, balanced, and refined results.'
+        description: 'Many individuals considering Botox in Dubai feel uncertain about treatment safety, unnatural-looking results, overdone facial appearance, or procedures performed without proper medical expertise. Poor injection techniques, excessive dosage, and lack of facial assessment may affect both safety and aesthetic balance. At RamaCare Polyclinic, our Botox treatments are performed under professional medical supervision using personalized facial assessment and DHA-approved aesthetic protocols designed to support natural-looking, balanced, and refined results.'
       },
       solutionIntro: {
         title: 'Our Solution: Advanced Botox Treatment in Dubai',
-        description: 'At Rama Care Polyclinic, our Botox in Dubai treatments are designed to help reduce visible signs of aging, soften facial wrinkles, and support natural-looking facial rejuvenation without surgery. We focus on personalized Botox treatments tailored to your facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and balanced results.'
+        description: 'At RamaCare Polyclinic, our Botox in Dubai treatments are designed to help reduce visible signs of aging, soften facial wrinkles, and support natural-looking facial rejuvenation without surgery. We focus on personalized Botox treatments tailored to your facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and balanced results.'
       },
       leftCards: [
         {
           id: 1,
           title: 'What Is Botox?',
-          description: 'Botox is a non-surgical cosmetic injection treatment that uses a purified protein to temporarily relax specific facial muscles responsible for dynamic wrinkles and expression lines. Botox treatment helps soften forehead lines, crow\'s feet, frown lines, and other visible signs of facial aging while maintaining natural facial expressions and balance.\n\n Botox in Dubai is widely chosen by individuals seeking safe, minimally invasive facial rejuvenation treatments with minimal downtime and natural-looking results. At Rama Care Polyclinic, our Botox treatments are customized according to facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and personalized care.\n\nPatients interested in complete facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services.'
+          description: 'Botox is a non-surgical cosmetic injection treatment that uses a purified protein to temporarily relax specific facial muscles responsible for dynamic wrinkles and expression lines. Botox treatment helps soften forehead lines, crow\'s feet, frown lines, and other visible signs of facial aging while maintaining natural facial expressions and balance.\n\n Botox in Dubai is widely chosen by individuals seeking safe, minimally invasive facial rejuvenation treatments with minimal downtime and natural-looking results. At RamaCare Polyclinic, our Botox treatments are customized according to facial anatomy, muscle movement, skin condition, and aesthetic goals to ensure safe and personalized care.\n\nPatients interested in complete facial rejuvenation may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services.'
         },
         {
           id: 2,
@@ -9892,7 +9892,7 @@ export const subSubcategoryContent = {
         {
           id: 5,
           title: 'Trusted Botox Care You Can Depend On',
-          description: 'At Rama Care Polyclinic, we focus on providing safe, personalized, and natural-looking Botox treatments performed by experienced aesthetic professionals.\n\nMinimal Downtime\nBotox treatments are minimally invasive and generally allow individuals to return to normal daily routines shortly after the procedure.\n\nPatients looking for complete facial enhancement may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services for comprehensive aesthetic care.'
+          description: 'At RamaCare Polyclinic, we focus on providing safe, personalized, and natural-looking Botox treatments performed by experienced aesthetic professionals.\n\nMinimal Downtime\nBotox treatments are minimally invasive and generally allow individuals to return to normal daily routines shortly after the procedure.\n\nPatients looking for complete facial enhancement may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> and <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services for comprehensive aesthetic care.'
         }
       ],
       rootCauses: [
@@ -9988,7 +9988,7 @@ export const subSubcategoryContent = {
           id: 4,
           title: 'Personalized Botox Treatment Plans',
           description:
-            'Every Botox session at Rama Care Polyclinic is customized according to facial anatomy, wrinkle severity, muscle movement patterns, skin condition, aesthetic goals, and desired treatment outcomes.',
+            'Every Botox session at RamaCare Polyclinic is customized according to facial anatomy, wrinkle severity, muscle movement patterns, skin condition, aesthetic goals, and desired treatment outcomes.',
           hasLearnMore: true,
           expandedContent:
             'This personalized approach helps achieve balanced and natural-looking facial rejuvenation results.'
@@ -10187,7 +10187,7 @@ export const subSubcategoryContent = {
       treatmentAreas: {
         title: 'Botox Treatment Areas',
         subtitle: 'Common Areas Treated With Botox in Dubai',
-        intro: 'Botox in Dubai is commonly used to reduce dynamic wrinkles and expression lines caused by repeated facial muscle movement. At Rama Care Polyclinic, our Botox treatments are customized according to facial anatomy, muscle activity, and aesthetic goals to help achieve smooth, natural-looking results while preserving facial balance and expression.',
+        intro: 'Botox in Dubai is commonly used to reduce dynamic wrinkles and expression lines caused by repeated facial muscle movement. At RamaCare Polyclinic, our Botox treatments are customized according to facial anatomy, muscle activity, and aesthetic goals to help achieve smooth, natural-looking results while preserving facial balance and expression.',
         areas: [
           {
             title: 'Forehead Lines Botox',
@@ -10221,7 +10221,7 @@ export const subSubcategoryContent = {
       },
       beforeAfterCare: {
         title: 'Before & After Care for Botox Treatment',
-        intro: 'Proper before and after care plays an important role in supporting safe Botox treatment, minimizing temporary side effects, and helping achieve optimal aesthetic results. At Rama Care Polyclinic, our specialists provide personalized guidance before and after every Botox session to ensure patient comfort and safety.',
+        intro: 'Proper before and after care plays an important role in supporting safe Botox treatment, minimizing temporary side effects, and helping achieve optimal aesthetic results. At RamaCare Polyclinic, our specialists provide personalized guidance before and after every Botox session to ensure patient comfort and safety.',
         before: {
           title: 'Before Botox Treatment',
           subtitle: 'Preparing properly before Botox treatment may help reduce the risk of temporary swelling, redness, or bruising after injections.',
@@ -10443,7 +10443,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -10511,7 +10511,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -10544,7 +10544,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -10596,7 +10596,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -11117,7 +11117,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -11185,7 +11185,7 @@ export const subSubcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -11218,7 +11218,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -11255,7 +11255,7 @@ export const subSubcategoryContent = {
     hero: {
       title: 'Dark Circles Treatment in Dubai',
       subtitle: 'Advanced Under Eye Rejuvenation for Brighter, Younger-Looking Eyes',
-      description: 'Dark circles under the eyes can make your face look tired, dull, stressed, and older than your actual age. At Rama Care Polyclinic, we provide advanced and personalized dark circles treatment in Dubai designed to reduce under-eye pigmentation, puffiness, hollowness, and tired-looking eyes safely and effectively.\n\n Our DHA-licensed dermatology specialists use advanced under-eye rejuvenation treatments and customized skincare solutions to improve skin texture, stimulate collagen production, and restore naturally brighter and fresher-looking eyes. Whether your dark circles are caused by genetics, aging, pigmentation, lack of sleep, eye strain, dehydration, or volume loss, we create personalized treatment plans based on your skin condition and aesthetic goals.\n\nPatients looking to improve overall skin health often combine dark circles treatment with our <a href="/services/skin-boosters-dubai/">Skin Brightening Treatment in Dubai</a>, <a href="/services/face-prp-in-dubai/">PRP Facial Treatment in Dubai</a>, and <a href="/services/pigmentation-dubai/">Pigmentation Treatment in Dubai</a> for complete facial rejuvenation and healthier-looking skin.With modern dermatology technologies, evidence-based procedures, and patient-focused care, we help patients achieve smoother, healthier, and naturally radiant under-eye skin.',
+      description: 'Dark circles under the eyes can make your face look tired, dull, stressed, and older than your actual age. At RamaCare Polyclinic, we provide advanced and personalized dark circles treatment in Dubai designed to reduce under-eye pigmentation, puffiness, hollowness, and tired-looking eyes safely and effectively.\n\n Our DHA-licensed dermatology specialists use advanced under-eye rejuvenation treatments and customized skincare solutions to improve skin texture, stimulate collagen production, and restore naturally brighter and fresher-looking eyes. Whether your dark circles are caused by genetics, aging, pigmentation, lack of sleep, eye strain, dehydration, or volume loss, we create personalized treatment plans based on your skin condition and aesthetic goals.\n\nPatients looking to improve overall skin health often combine dark circles treatment with our <a href="/services/skin-boosters-dubai/">Skin Brightening Treatment in Dubai</a>, <a href="/services/face-prp-in-dubai/">PRP Facial Treatment in Dubai</a>, and <a href="/services/pigmentation-dubai/">Pigmentation Treatment in Dubai</a> for complete facial rejuvenation and healthier-looking skin.With modern dermatology technologies, evidence-based procedures, and patient-focused care, we help patients achieve smoother, healthier, and naturally radiant under-eye skin.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -11271,7 +11271,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -11788,7 +11788,7 @@ export const subSubcategoryContent = {
           id: 10,
           text: 'Facial',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
+          link: '/services/facial-dubai/'
         },
         {
           id: 11,
@@ -12351,7 +12351,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -12406,7 +12406,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -12432,7 +12432,7 @@ export const subSubcategoryContent = {
           description: 'Successfully Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: '500+ Verified Reviews'
         }
       ]
@@ -13049,7 +13049,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -13104,7 +13104,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13130,7 +13130,7 @@ export const subSubcategoryContent = {
           description: 'Successfully Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: '500+ Verified Reviews'
         }
       ]
@@ -13788,7 +13788,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -13843,7 +13843,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13869,7 +13869,7 @@ export const subSubcategoryContent = {
           description: 'Successfully Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: '500+ Verified Reviews'
         }
       ]
@@ -13931,7 +13931,7 @@ export const subSubcategoryContent = {
   'aesthetic-dermatology-dubai-hair-treatment-hair-removal': {
     hero: {
       subtitle: 'Smooth, Hair-Free Skin With Advanced Laser Technology',
-      description: 'Laser Hair Removal in Dubai is a safe and effective cosmetic treatment designed to reduce unwanted hair growth on the face and body with long-lasting results. At Rama Care Polyclinic, we provide personalized laser hair reduction treatments using advanced technology suitable for different skin and hair types. Our experienced aesthetic specialists create customized treatment plans to help target unwanted hair while maintaining skin comfort and safety. Laser hair removal is commonly chosen for areas such as the face, arms, legs, underarms, bikini line, chest, and back. Whether you are looking for smoother skin, reduced ingrown hairs, or a long-term alternative to shaving and waxing, our laser hair removal treatments in Dubai are designed to support effective and comfortable hair reduction results.',
+      description: 'Laser Hair Removal in Dubai is a safe and effective cosmetic treatment designed to reduce unwanted hair growth on the face and body with long-lasting results. At RamaCare Polyclinic, we provide personalized laser hair reduction treatments using advanced technology suitable for different skin and hair types. Our experienced aesthetic specialists create customized treatment plans to help target unwanted hair while maintaining skin comfort and safety. Laser hair removal is commonly chosen for areas such as the face, arms, legs, underarms, bikini line, chest, and back. Whether you are looking for smoother skin, reduced ingrown hairs, or a long-term alternative to shaving and waxing, our laser hair removal treatments in Dubai are designed to support effective and comfortable hair reduction results.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -14010,19 +14010,19 @@ export const subSubcategoryContent = {
       title: 'Understanding Laser Hair Removal Treatment',
       problemIntro: {
         title: 'Common Laser Hair Removal Concerns',
-        description: 'Many individuals searching for Laser Hair Removal Dubai feel frustrated with temporary hair removal methods, inconsistent laser results, or treatments performed without proper medical supervision. Shaving, waxing, and low-quality laser procedures often lead to repeated maintenance, skin irritation, and unsatisfactory long-term outcomes.At Rama Care Polyclinic, we provide personalized Laser Hair Removal Dubai treatments using advanced FDA-approved laser technology and DHA-supervised protocols designed to support safer procedures, improved comfort, and long-lasting hair reduction results.'
+        description: 'Many individuals searching for Laser Hair Removal Dubai feel frustrated with temporary hair removal methods, inconsistent laser results, or treatments performed without proper medical supervision. Shaving, waxing, and low-quality laser procedures often lead to repeated maintenance, skin irritation, and unsatisfactory long-term outcomes.At RamaCare Polyclinic, we provide personalized Laser Hair Removal Dubai treatments using advanced FDA-approved laser technology and DHA-supervised protocols designed to support safer procedures, improved comfort, and long-lasting hair reduction results.'
       },
       solutionIntro: {
         title: 'Advanced Laser Hair Removal in Dubai',
         description:
-          'At Rama Care Polyclinic, we use advanced laser technology designed to target unwanted hair with precision while prioritizing skin safety and comfort.'
+          'At RamaCare Polyclinic, we use advanced laser technology designed to target unwanted hair with precision while prioritizing skin safety and comfort.'
       },
       leftCards: [
         {
           id: 1,
           title: 'What is Laser Hair Removal?',
           description:
-            'Laser Hair Removal is a non-surgical cosmetic procedure that uses concentrated laser energy to target hair follicles and reduce unwanted hair growth over time. The laser energy is absorbed by the pigment in the hair follicle, helping slow future hair growth while minimizing damage to the surrounding skin. At Rama Care Polyclinic, our laser hair removal treatments are tailored according to your skin tone, hair texture, treatment area, and aesthetic goals to ensure safe and effective treatment sessions.'
+            'Laser Hair Removal is a non-surgical cosmetic procedure that uses concentrated laser energy to target hair follicles and reduce unwanted hair growth over time. The laser energy is absorbed by the pigment in the hair follicle, helping slow future hair growth while minimizing damage to the surrounding skin. At RamaCare Polyclinic, our laser hair removal treatments are tailored according to your skin tone, hair texture, treatment area, and aesthetic goals to ensure safe and effective treatment sessions.'
         },
         {
           id: 2,
@@ -14279,7 +14279,7 @@ export const subSubcategoryContent = {
     },
     whyChoose: {
       whyChoose: {
-        title: 'Why Choose Rama Care Polyclinic for Laser Hair Removal in Dubai?',
+        title: 'Why Choose RamaCare Polyclinic for Laser Hair Removal in Dubai?',
         intro: null,
         features: [
           {
@@ -14490,9 +14490,9 @@ export const subSubcategoryContent = {
         },
         {
           id: 10,
-          question: 'Why choose Rama Care Polyclinic for Laser Hair Removal Dubai?',
+          question: 'Why choose RamaCare Polyclinic for Laser Hair Removal Dubai?',
           answer:
-            'Rama Care Polyclinic provides personalized Laser Hair Removal Dubai treatments using advanced laser technology, experienced professionals, hygienic treatment standards, and customized care designed for patient comfort and safety.'
+            'RamaCare Polyclinic provides personalized Laser Hair Removal Dubai treatments using advanced laser technology, experienced professionals, hygienic treatment standards, and customized care designed for patient comfort and safety.'
         }
       ],
       resources: [
@@ -14528,7 +14528,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -14583,7 +14583,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -14609,7 +14609,7 @@ export const subSubcategoryContent = {
           description: 'Successfully Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: '500+ Verified Reviews'
         }
       ]
@@ -15189,7 +15189,7 @@ export const subSubcategoryContent = {
           id: 15,
           question: 'Where can I get skin veins laser treatment in Dubai?',
           answer:
-            'You can receive professional skin veins laser treatment in Dubai at DHA-licensed clinics like Rama Care Polyclinic with experienced dermatologists and advanced equipment.'
+            'You can receive professional skin veins laser treatment in Dubai at DHA-licensed clinics like RamaCare Polyclinic with experienced dermatologists and advanced equipment.'
         }
       ],
       resources: [
@@ -15299,7 +15299,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -15354,7 +15354,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -15380,7 +15380,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -15447,7 +15447,7 @@ export const subSubcategoryContent = {
       stats: [
         { id: 1, number: '92%', label: 'Patient Satisfaction' },
         { id: 2, number: '2,500+', label: 'Treatments Completed' },
-        { id: 3, number: '15+', label: 'Years Experience' }
+        { id: 3, number: '15+', label: 'Years Combined Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
@@ -15990,7 +15990,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -16003,7 +16003,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: '800+ Treatments', description: 'Completed' },
-        { title: '4.9/5 Rating', description: 'Patient Reviews' }
+        { title: '4.8/5 Rating', description: 'Patient Reviews' }
       ]
     }
   },
@@ -16026,7 +16026,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -16689,7 +16689,7 @@ export const subSubcategoryContent = {
     //   stats: [
     //     {
     //       id: 1,
-    //       number: '4.9/5',
+    //       number: '4.8/5',
     //       label1: 'Average Rating',
     //       label2: 'Patient Reviews',
     //       target: 4.9
@@ -16744,7 +16744,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -16770,7 +16770,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -16838,7 +16838,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -16993,7 +16993,7 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent: 'Personalized therapies are designed to help restore dosha balance, supporting healthy tissue function, natural lubrication, and overall intimate well-being.'
         },
-      
+
         {
           id: 2,
           title: 'Internal Detoxification',
@@ -17441,7 +17441,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -17496,7 +17496,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -17522,7 +17522,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -17600,7 +17600,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -18230,7 +18230,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -18285,7 +18285,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -18311,7 +18311,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -18401,7 +18401,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -18989,7 +18989,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -19044,7 +19044,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19070,7 +19070,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -19163,7 +19163,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -19813,7 +19813,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -19868,7 +19868,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19894,7 +19894,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -19970,7 +19970,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -20625,7 +20625,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -20680,7 +20680,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -20706,7 +20706,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -20771,7 +20771,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -21437,7 +21437,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -21492,7 +21492,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -21518,7 +21518,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -21598,7 +21598,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -22209,7 +22209,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -22264,7 +22264,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -22290,7 +22290,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -22373,7 +22373,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -22995,7 +22995,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -23050,7 +23050,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -23076,7 +23076,7 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -23650,7 +23650,7 @@ export const subSubcategoryContent = {
           id: 2,
           question: 'Is Eximia Body Contouring safe?',
           answer:
-            'Yes, Eximia Body Contouring is safe when performed under medical supervision using clinically approved technology, as done at Rama Care Polyclinic following strict DHA safety protocols.'
+            'Yes, Eximia Body Contouring is safe when performed under medical supervision using clinically approved technology, as done at RamaCare Polyclinic following strict DHA safety protocols.'
         },
         {
           id: 3,
@@ -23819,7 +23819,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -24507,7 +24507,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'

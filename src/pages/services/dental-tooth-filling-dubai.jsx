@@ -761,11 +761,11 @@ function TableOfContents() {
 
   const filteredDrawerGroups = searchQuery.trim()
     ? TOC_GROUPS.map((group) => ({
-        ...group,
-        items: group.items.filter((item) =>
-          item.label.toLowerCase().includes(searchQuery.toLowerCase())
-        ),
-      })).filter((group) => group.items.length > 0)
+      ...group,
+      items: group.items.filter((item) =>
+        item.label.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    })).filter((group) => group.items.length > 0)
     : TOC_GROUPS;
 
   return (
@@ -1797,9 +1797,8 @@ function WhatToExpectTreatment() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.55, delay: (i % 4) * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                  className={`relative flex items-start gap-5 md:w-1/2 ${
-                    isLeft ? "md:pr-10" : "md:ml-auto md:flex-row-reverse md:pl-10 md:text-right"
-                  }`}
+                  className={`relative flex items-start gap-5 md:w-1/2 ${isLeft ? "md:pr-10" : "md:ml-auto md:flex-row-reverse md:pl-10 md:text-right"
+                    }`}
                 >
                   {/* node */}
                   <span
@@ -2247,8 +2246,8 @@ function WhenFillingNotEnough() {
               const linkHref = alt.includes("Root canal")
                 ? "/services/root-canal-treatment-dubai"
                 : alt.includes("crown") || alt.includes("Crown")
-                ? "/services/dental-crown-bridges-dubai"
-                : null;
+                  ? "/services/dental-crown-bridges-dubai"
+                  : null;
 
               if (linkHref) {
                 return (
@@ -3034,7 +3033,7 @@ function PatientJourney() {
               {patientJourney.intro}
             </p>
           </motion.div>
-        
+
           {/* ARROW CONTROLS */}
           <div className="flex items-center gap-2 flex-none">
             <button
@@ -3310,10 +3309,10 @@ function BookConsultation() {
 const clinicSchema = {
   "@context": "https://schema.org",
   "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
-  "@id": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai#clinic",
+  "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic",
   "name": "RamaCare Polyclinic",
-  "image": "https://ramacarepolyclinic.com/images/ramacare-dental-clinic-jumeirah-1.jpg",
-  "url": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai",
+  "image": "https://ramacarepolyclinic.ae/images/ramacare-dental-clinic-jumeirah-1.jpg",
+  "url": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai",
   "telephone": "+971-4-286-2006",
   "priceRange": "$$",
   "address": {
@@ -3331,14 +3330,14 @@ const clinicSchema = {
     "name": "Dental Tooth Filling",
     "alternateName": ["Tooth Filling", "Dental Filling", "Cavity Filling"]
   },
-  "sameAs": ["https://ramacarepolyclinic.com/", "https://ramacarepolyclinic.ae/"]
+  "sameAs": ["https://ramacarepolyclinic.ae/", "https://ramacarepolyclinic.ae/"]
 };
 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "@id": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai#webpage",
-  "url": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai",
+  "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#webpage",
+  "url": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai",
   "name": "Dental Tooth Filling in Dubai | RamaCare Polyclinic",
   "description": "Get Dental Tooth Filling in Dubai at RamaCare Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation.",
   "inLanguage": "en-AE",
@@ -3351,7 +3350,7 @@ const webpageSchema = {
     "procedureType": "https://schema.org/NoninvasiveProcedure",
     "bodyLocation": "Tooth"
   },
-  "publisher": { "@id": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai#clinic" },
+  "publisher": { "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic" },
   "reviewedBy": { "@type": "Organization", "name": "RamaCare Polyclinic Dental Team" }
 };
 
@@ -3365,7 +3364,7 @@ const procedureSchema = {
   "howPerformed": "A dentist removes decayed tooth structure, cleans the affected area, restores the tooth using an appropriate filling material such as composite resin, shapes the restoration, and checks the bite.",
   "preparation": "Clinical dental examination and, when clinically indicated, dental X-rays to assess the extent and depth of decay.",
   "followup": "Routine dental check-ups to monitor the restoration and surrounding tooth structure.",
-  "provider": { "@id": "https://ramacarepolyclinic.com/dental-tooth-filling-dubai#clinic" }
+  "provider": { "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic" }
 };
 
 const faqSchema = {
@@ -3382,19 +3381,19 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Dental Services", "item": "https://ramacarepolyclinic.com/services/dental-dubai" },
-    { "@type": "ListItem", "position": 3, "name": "Dental Tooth Filling in Dubai", "item": "https://ramacarepolyclinic.com/services/dental-tooth-filling-dubai" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+    { "@type": "ListItem", "position": 2, "name": "Dental Services", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
+    { "@type": "ListItem", "position": 3, "name": "Dental Tooth Filling in Dubai", "item": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai" }
   ]
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://ramacarepolyclinic.com/#organization",
+  "@id": "https://ramacarepolyclinic.ae/#organization",
   "name": "RamaCare Polyclinic",
-  "url": "https://ramacarepolyclinic.com/",
-  "logo": "https://ramacarepolyclinic.com/images/ramacare-polyclinic-logo.png",
+  "url": "https://ramacarepolyclinic.ae/",
+  "logo": "https://ramacarepolyclinic.ae/images/ramacare-polyclinic-logo.png",
   "telephone": "+971-4-286-2006",
   "address": {
     "@type": "PostalAddress",

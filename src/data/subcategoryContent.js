@@ -265,7 +265,7 @@ export const subcategoryContent = {
       stats: [
         { label: "Patients Treated", value: "2,500+" },
         { label: "Years Combined", value: "15+" },
-        { label: "Patient Rating", value: "4.9/5" }
+        { label: "Patient Rating", value: "4.8/5" }
       ]
     },
 
@@ -1553,7 +1553,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-ayurvedic-hairfall-treatment': {
     hero: {
       subtitle: 'Restore Strong, Healthy Hair Naturally & Safely',
-      description: 'Hair fall is often not just a cosmetic concern—it is usually a sign of internal imbalance in the body, such as stress, hormonal changes, poor nutrition, or weakened scalp health. At Rama Care Polyclinic, we provide Ayurvedic Hair Fall Treatment in Dubai that focuses on identifying and treating the root cause of hair loss, rather than only addressing external symptoms.',
+      description: 'Hair fall is often not just a cosmetic concern—it is usually a sign of internal imbalance in the body, such as stress, hormonal changes, poor nutrition, or weakened scalp health. At RamaCare Polyclinic, we provide Ayurvedic Hair Fall Treatment in Dubai that focuses on identifying and treating the root cause of hair loss, rather than only addressing external symptoms.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -1569,7 +1569,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -1644,7 +1644,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Ayurvedic Hair Fall Treatment in Dubai',
-        description: 'At Rama Care Polyclinic, our Ayurvedic Hair Fall Treatment in Dubai is designed to treat hair loss by addressing the root internal causes, not just external symptoms. According to Ayurveda, healthy hair growth depends on balanced doshas, proper digestion, stress control, and strong scalp nourishment. Our approach focuses on restoring this internal balance to promote natural, long-lasting hair regrowth.'
+        description: 'At RamaCare Polyclinic, our Ayurvedic Hair Fall Treatment in Dubai is designed to treat hair loss by addressing the root internal causes, not just external symptoms. According to Ayurveda, healthy hair growth depends on balanced doshas, proper digestion, stress control, and strong scalp nourishment. Our approach focuses on restoring this internal balance to promote natural, long-lasting hair regrowth.'
       },
       leftCards: [
         {
@@ -1867,7 +1867,7 @@ export const subcategoryContent = {
     // Healing Journey / Process Section
     healingJourney: {
       title: 'Your Ayurvedic Hair Care Journey – Step by Step',
-      description: 'At Rama Care Polyclinic, we follow a structured and transparent Ayurvedic treatment process to ensure effective, safe, and long-term results for hair fall control and regrowth.',
+      description: 'At RamaCare Polyclinic, we follow a structured and transparent Ayurvedic treatment process to ensure effective, safe, and long-term results for hair fall control and regrowth.',
       steps: [
         {
           id: 1,
@@ -1972,7 +1972,7 @@ export const subcategoryContent = {
         }
       ],
       comparisonTitle: 'Ayurvedic Hair Fall Treatment vs Conventional Methods',
-      comparisonDescription: 'Natural Healing vs Chemical-Based Solutions. When choosing a hair fall treatment, it is important to understand the difference between Ayurvedic holistic care and conventional chemical-based treatments. At Rama Care Polyclinic, our focus is on treating the root cause of hair loss, not just masking symptoms.',
+      comparisonDescription: 'Natural Healing vs Chemical-Based Solutions. When choosing a hair fall treatment, it is important to understand the difference between Ayurvedic holistic care and conventional chemical-based treatments. At RamaCare Polyclinic, our focus is on treating the root cause of hair loss, not just masking symptoms.',
       comparisonHeaders: {
         feature: 'Aspect',
         ourTreatment: 'Ayurvedic Treatment',
@@ -2141,8 +2141,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for Ayurvedic hair fall treatment in Dubai?',
-          answer: 'Rama Care Polyclinic offers DHA-licensed Ayurvedic care, experienced doctors, personalized treatment plans, authentic herbal therapies, and a focus on long-term hair health—not temporary solutions.'
+          question: 'Why choose RamaCare Polyclinic for Ayurvedic hair fall treatment in Dubai?',
+          answer: 'RamaCare Polyclinic offers DHA-licensed Ayurvedic care, experienced doctors, personalized treatment plans, authentic herbal therapies, and a focus on long-term hair health—not temporary solutions.'
         }
       ],
       resources: [
@@ -2150,7 +2150,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -2174,7 +2174,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -2304,14 +2304,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Ayurvedic Hair Fall Treatment in Dubai Today',
-      description: 'Restore your hair fitness naturally with trusted Ayurvedic care at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+      description: 'Restore your hair fitness naturally with trusted Ayurvedic care at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -2330,14 +2330,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '15+ Years Experience'
+          description: 'Years Combined Experience'
         },
         {
           title: '2,500+ Procedures',
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -2350,7 +2350,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-analysis-of-individual': {
     hero: {
       subtitle: 'Personalized Health Assessment for Accurate & Effective Treatment',
-      description: 'Every individual has a unique body constitution and biological balance. Although symptoms may appear similar, the underlying cause is often different for each person.At Rama Care Polyclinic, we perform a detailed Analysis of the Individual in Dubai before starting any treatment. This helps us understand your internal health condition, lifestyle patterns, and existing imbalances to ensure a precise and personalized treatment approach. Our goal is to move beyond symptom-based care and focus on identifying and treating the root cause of the health issue, ensuring safe, effective, and long-term results.',
+      description: 'Every individual has a unique body constitution and biological balance. Although symptoms may appear similar, the underlying cause is often different for each person.At RamaCare Polyclinic, we perform a detailed Analysis of the Individual in Dubai before starting any treatment. This helps us understand your internal health condition, lifestyle patterns, and existing imbalances to ensure a precise and personalized treatment approach. Our goal is to move beyond symptom-based care and focus on identifying and treating the root cause of the health issue, ensuring safe, effective, and long-term results.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -2366,7 +2366,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -2442,7 +2442,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Analysis of an Individual',
-        description: 'At Rama Care Polyclinic, our Analysis of the Individual in Dubai focuses on understanding your unique body structure, internal imbalances, and overall health condition before starting any treatment.This ensures that every patient receives a precise, personalized, and result-oriented treatment plan based on their specific needs.'
+        description: 'At RamaCare Polyclinic, our Analysis of the Individual in Dubai focuses on understanding your unique body structure, internal imbalances, and overall health condition before starting any treatment.This ensures that every patient receives a precise, personalized, and result-oriented treatment plan based on their specific needs.'
       },
       leftCards: [
         {
@@ -2798,7 +2798,7 @@ export const subcategoryContent = {
     // FAQ Section
     faq: {
       title: 'Frequently Asked Questions (FAQs)',
-      description: 'Expert answers about Analysis of Individual at Rama Care Polyclinic',
+      description: 'Expert answers about Analysis of Individual at RamaCare Polyclinic',
       resourcesHeading: 'Related Ayurvedic Services',
       faqs: [
         {
@@ -2873,8 +2873,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for the Analysis of Individual?',
-          answer: 'Rama Care Polyclinic offers experienced doctors, detailed one-to-one consultations, personalised care, ethical practices, and a strong focus on long-term health and prevention.'
+          question: 'Why choose RamaCare Polyclinic for the Analysis of Individual?',
+          answer: 'RamaCare Polyclinic offers experienced doctors, detailed one-to-one consultations, personalised care, ethical practices, and a strong focus on long-term health and prevention.'
         }
       ],
 
@@ -2883,7 +2883,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -2907,7 +2907,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -3038,14 +3038,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Analysis of an Individual Today',
-      description: 'Understanding your body is the first step toward effective healing. Start your journey with a detailed Analysis of an individual at Rama Care Polyclinic.',
+      description: 'Understanding your body is the first step toward effective healing. Start your journey with a detailed Analysis of an individual at RamaCare Polyclinic.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3064,14 +3064,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '15+ Years Experience'
+          description: '15+ Years Combined Experience'
         },
         {
           title: '2,500+ Procedures',
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -3085,7 +3085,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-skin-diseases-treatment': {
     hero: {
       subtitle: 'Natural Ayurvedic Care for Healthy, Clear & Balanced Skin',
-      description: 'Skin conditions often reflect internal imbalance rather than only surface-level concerns.At Rama Care Polyclinic, we provide personalized skin disease treatment in Ayurveda in Dubai designed to support natural healing, reduce recurring flare-ups, and improve long-term skin wellness naturally.\n\nOur Ayurvedic approach focuses on identifying the root causes of skin disorders by balancing doshas, supporting digestion, improving blood purification, and strengthening immunity.Instead of temporary cosmetic relief, Ayurvedic skin therapies aim to support healthy, balanced skin from within.\n\nMany individuals choose Ayurvedic skin treatment to help manage acne, eczema, psoriasis, itching, pigmentation, allergic skin reactions, and stress-related skin flare-ups naturally.',
+      description: 'Skin conditions often reflect internal imbalance rather than only surface-level concerns.At RamaCare Polyclinic, we provide personalized skin disease treatment in Ayurveda in Dubai designed to support natural healing, reduce recurring flare-ups, and improve long-term skin wellness naturally.\n\nOur Ayurvedic approach focuses on identifying the root causes of skin disorders by balancing doshas, supporting digestion, improving blood purification, and strengthening immunity.Instead of temporary cosmetic relief, Ayurvedic skin therapies aim to support healthy, balanced skin from within.\n\nMany individuals choose Ayurvedic skin treatment to help manage acne, eczema, psoriasis, itching, pigmentation, allergic skin reactions, and stress-related skin flare-ups naturally.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -3101,7 +3101,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -3188,7 +3188,7 @@ export const subcategoryContent = {
           id: 1,
           title: 'What is Ayurvedic Skin Disease Treatment?',
           description:
-            'Ayurvedic skin disease treatment is a holistic healing approach that focuses on balancing doshas, especially Pitta dosha, while supporting digestion, detoxification, blood purification, and immune balance naturally. \n\n According to Ayurveda, internal toxin accumulation, stress, unhealthy diet, poor digestion, and lifestyle imbalance may contribute to recurring skin concerns. Ayurvedic therapies aim to address these root causes rather than only suppressing visible symptoms temporarily. Unlike chemical-based treatments that may provide short-term relief, Ayurvedic skin care therapies focus on supporting long-term skin wellness, improving skin strength, and reducing recurrence naturally. At Rama Care Polyclinic, each treatment program is customized according to the patient’s skin condition, body constitution, lifestyle habits, and wellness goals.'
+            'Ayurvedic skin disease treatment is a holistic healing approach that focuses on balancing doshas, especially Pitta dosha, while supporting digestion, detoxification, blood purification, and immune balance naturally. \n\n According to Ayurveda, internal toxin accumulation, stress, unhealthy diet, poor digestion, and lifestyle imbalance may contribute to recurring skin concerns. Ayurvedic therapies aim to address these root causes rather than only suppressing visible symptoms temporarily. Unlike chemical-based treatments that may provide short-term relief, Ayurvedic skin care therapies focus on supporting long-term skin wellness, improving skin strength, and reducing recurrence naturally. At RamaCare Polyclinic, each treatment program is customized according to the patient’s skin condition, body constitution, lifestyle habits, and wellness goals.'
         },
         {
           id: 2,
@@ -3327,8 +3327,8 @@ export const subcategoryContent = {
     },
 
     whyChoose: {
-      title: 'Why Choose Rama Care Polyclinic for Ayurvedic Skin Treatment',
-      intro: 'At Rama Care Polyclinic, we combine authentic Ayurvedic principles with personalized patient care to provide safe and holistic skin wellness support.',
+      title: 'Why Choose RamaCare Polyclinic for Ayurvedic Skin Treatment',
+      intro: 'At RamaCare Polyclinic, we combine authentic Ayurvedic principles with personalized patient care to provide safe and holistic skin wellness support.',
       features: [
         {
           id: 1,
@@ -3405,7 +3405,7 @@ export const subcategoryContent = {
     digestiveHealth: {
       title: 'Why Digestive Health Matters for Skin Wellness',
       description: 'According to Ayurveda, digestion and skin health are closely connected. Poor digestion and toxin accumulation may affect blood purification, immunity, and skin balance, contributing to recurring skin concerns over time.',
-      approach: 'Ayurvedic therapies focus on improving digestive wellness naturally while supporting detoxification and internal balance. Many individuals combine skin wellness therapies with <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs to support deeper detoxification and long-term wellness naturally.'
+      approach: 'Ayurvedic therapies focus on improving digestive wellness naturally while supporting detoxification and internal balance. Many individuals combine skin wellness therapies with <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs to support deeper detoxification and long-term wellness naturally.'
     },
 
     dietLifestyle: {
@@ -3424,7 +3424,7 @@ export const subcategoryContent = {
             'Avoid harsh chemical products',
             'Follow personalized wellness guidance'
           ],
-          conclusion: 'For comprehensive wellness support, explore <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> and <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs.'
+          conclusion: 'For comprehensive wellness support, explore <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> and <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs.'
         }
       }
     },
@@ -3685,12 +3685,12 @@ export const subcategoryContent = {
         {
           id: 9,
           question: 'Is Panchakarma helpful for skin detoxification?',
-          answer: 'Many individuals combine Ayurvedic skin therapies with <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs to support detoxification and long-term wellness.'
+          answer: 'Many individuals combine Ayurvedic skin therapies with <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs to support detoxification and long-term wellness.'
         },
         {
           id: 10,
           question: 'Where can I book an Ayurvedic skin treatment in Dubai?',
-          answer: 'You can schedule a consultation at Rama Care Polyclinic for a personalized Ayurvedic skin wellness assessment and treatment plan.'
+          answer: 'You can schedule a consultation at RamaCare Polyclinic for a personalized Ayurvedic skin wellness assessment and treatment plan.'
         }
       ],
       resources: [
@@ -3698,7 +3698,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -3722,7 +3722,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -3831,7 +3831,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -3853,7 +3853,7 @@ export const subcategoryContent = {
         {
           id: 4,
           number: '15+',
-          label1: 'Years Experience',
+          label1: 'Years Combined Experience',
           label2: 'In Dubai',
           target: 15
         }
@@ -3886,7 +3886,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3905,14 +3905,14 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '15+ Years Experience'
+          description: '15+ Years Combined Experience'
         },
         {
           title: '2,500+ Patients',
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -3942,7 +3942,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -4474,7 +4474,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -4498,7 +4498,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -4662,7 +4662,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -4702,7 +4702,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-basti-therapy': {
     hero: {
       subtitle: 'Natural Ayurvedic Detox Therapy for Digestive Health, Joint Pain & Vata Balance',
-      description: 'Ayurvedic Basti Therapy is one of the most important detoxification treatments in Ayurveda, designed to support digestive wellness, remove accumulated toxins, and restore natural body balance. At Rama Care Polyclinic, we provide personalized Basti Treatment using traditional Ayurvedic techniques and DHA-approved wellness protocols to help improve digestion, support joint health, reduce stress, and promote long-term rejuvenation.\n\nAs an essential part of Panchakarma Treatment Dubai programs, this Ayurvedic detox therapy focuses on balancing Vata dosha, which plays a key role in digestion, circulation, nervous system function, and overall vitality. Many individuals choose this holistic therapy to support digestive health, relieve stiffness, improve metabolism, and maintain better wellness naturally.',
+      description: 'Ayurvedic Basti Therapy is one of the most important detoxification treatments in Ayurveda, designed to support digestive wellness, remove accumulated toxins, and restore natural body balance. At RamaCare Polyclinic, we provide personalized Basti Treatment using traditional Ayurvedic techniques and DHA-approved wellness protocols to help improve digestion, support joint health, reduce stress, and promote long-term rejuvenation.\n\nAs an essential part of Panchakarma Treatment Dubai programs, this Ayurvedic detox therapy focuses on balancing Vata dosha, which plays a key role in digestion, circulation, nervous system function, and overall vitality. Many individuals choose this holistic therapy to support digestive health, relieve stiffness, improve metabolism, and maintain better wellness naturally.',
       rating: '500+ Happy Clients',
       promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
       stats: [
@@ -4719,7 +4719,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -4786,18 +4786,18 @@ export const subcategoryContent = {
       title: 'Understanding Ayurvedic Basti Therapy',
       problemIntro: {
         title: 'Common Basti Therapy Concerns in Dubai',
-        description: 'Many individuals searching for Basti Therapy in Dubai feel confused about safety, treatment effectiveness, hygiene standards, and whether Ayurvedic detox therapies are suitable for modern lifestyle-related health issues. Some patients also worry about discomfort, lack of personalization, or treatments performed without proper Ayurvedic diagnosis. At Rama Care Polyclinic, we provide authentic Basti Therapy in Dubai under DHA-licensed Ayurvedic supervision, using personalized treatment protocols designed to support digestive health, Vata balance, detoxification, and long-term wellness.'
+        description: 'Many individuals searching for Basti Therapy in Dubai feel confused about safety, treatment effectiveness, hygiene standards, and whether Ayurvedic detox therapies are suitable for modern lifestyle-related health issues. Some patients also worry about discomfort, lack of personalization, or treatments performed without proper Ayurvedic diagnosis. At RamaCare Polyclinic, we provide authentic Basti Therapy in Dubai under DHA-licensed Ayurvedic supervision, using personalized treatment protocols designed to support digestive health, Vata balance, detoxification, and long-term wellness.'
       },
       solutionIntro: {
         title: 'Our Solution: Basti Therapy in Dubai for Digestive & Vata Balance',
-        description: 'At Rama Care Polyclinic, our approach to Basti Therapy in Dubai is focused on root-cause healing, not temporary symptom relief. We use authentic Ayurvedic principles combined with personalized diagnosis to support digestive health, detoxification, joint wellness, and long-term Vata balance.Each Basti Therapy in Dubai program is customized according to your body constitution (Prakriti), current symptoms, and lifestyle habits to ensure safe, effective, and sustainable results.'
+        description: 'At RamaCare Polyclinic, our approach to Basti Therapy in Dubai is focused on root-cause healing, not temporary symptom relief. We use authentic Ayurvedic principles combined with personalized diagnosis to support digestive health, detoxification, joint wellness, and long-term Vata balance.Each Basti Therapy in Dubai program is customized according to your body constitution (Prakriti), current symptoms, and lifestyle habits to ensure safe, effective, and sustainable results.'
       },
       leftCards: [
         {
           id: 1,
           title: 'Understanding Ayurvedic Basti Therapy',
           description:
-            'Basti is a traditional Ayurvedic cleansing therapy that involves the administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. In Ayurveda, the colon is considered one of the primary locations of Vata dosha, which influences movement, circulation, digestion, nervous system activity, and joint function. When Vata becomes imbalanced due to stress, poor diet, dehydration, irregular routines, or toxin accumulation, it may contribute to digestive discomfort, dryness, fatigue, stiffness, anxiety, and low vitality. \n\n Ayurvedic detox therapies such as Basti aim to restore internal balance naturally while supporting healthy digestion and improved wellness. Unlike temporary detox methods that focus only on short-term cleansing, Ayurvedic Basti Treatment works holistically by improving digestive efficiency, supporting tissue nourishment, and helping the body eliminate toxins naturally. \n\nAt Rama Care Polyclinic, every Panchakarma detox program is customized according to the patient’s body constitution (Prakriti), lifestyle, symptoms, digestive condition, and wellness goals.'
+            'Basti is a traditional Ayurvedic cleansing therapy that involves the administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. In Ayurveda, the colon is considered one of the primary locations of Vata dosha, which influences movement, circulation, digestion, nervous system activity, and joint function. When Vata becomes imbalanced due to stress, poor diet, dehydration, irregular routines, or toxin accumulation, it may contribute to digestive discomfort, dryness, fatigue, stiffness, anxiety, and low vitality. \n\n Ayurvedic detox therapies such as Basti aim to restore internal balance naturally while supporting healthy digestion and improved wellness. Unlike temporary detox methods that focus only on short-term cleansing, Ayurvedic Basti Treatment works holistically by improving digestive efficiency, supporting tissue nourishment, and helping the body eliminate toxins naturally. \n\nAt RamaCare Polyclinic, every Panchakarma detox program is customized according to the patient’s body constitution (Prakriti), lifestyle, symptoms, digestive condition, and wellness goals.'
         },
         {
           id: 2,
@@ -4940,7 +4940,7 @@ export const subcategoryContent = {
             'To maximize results of Basti Therapy in Dubai, we provide personalized Ayurvedic diet and lifestyle recommendations.',
           hasLearnMore: true,
           expandedContent:
-            'This includes warm, easy-to-digest meals, hydration guidance, sleep routine improvement, and stress management practices. <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> and <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a>. Goal: Maintain long-term benefits of Basti Therapy in Dubai.'
+            'This includes warm, easy-to-digest meals, hydration guidance, sleep routine improvement, and stress management practices. <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> and <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a>. Goal: Maintain long-term benefits of Basti Therapy in Dubai.'
         },
         {
           id: 6,
@@ -4984,7 +4984,7 @@ export const subcategoryContent = {
         }
       ],
       internalLinks: [
-        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' },
+        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' },
         { text: 'Shirodhara Therapy Dubai', link: '/services/shirodhara-therapy-in-dubai/' },
         { text: 'Ayurvedic Stress Management Dubai', link: '/services/ayurvedic-stress-management-dubai/' },
         { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' }
@@ -5153,7 +5153,7 @@ export const subcategoryContent = {
     },
     pricing: {
       title: 'Basti Therapy Cost in Dubai',
-      description: 'The cost of Ayurvedic Basti Treatment may vary depending on treatment duration, number of sessions, personalized herbal formulations, combination with Panchakarma therapies, and follow-up consultations.\n\nAt Rama Care Polyclinic, every detoxification plan is customized according to the patient\'s health condition and wellness goals.\n\nBook a consultation to receive a personalized treatment assessment and therapy guidance.'
+      description: 'The cost of Ayurvedic Basti Treatment may vary depending on treatment duration, number of sessions, personalized herbal formulations, combination with Panchakarma therapies, and follow-up consultations.\n\nAt RamaCare Polyclinic, every detoxification plan is customized according to the patient\'s health condition and wellness goals.\n\nBook a consultation to receive a personalized treatment assessment and therapy guidance.'
     },
     costResults: {
       costTitle: 'Basti Therapy Cost in Dubai',
@@ -5164,7 +5164,7 @@ export const subcategoryContent = {
         'Combination with Panchakarma therapies',
         'Follow-up consultations'
       ],
-      recommendation: 'At Rama Care Polyclinic, every detoxification plan is customized according to the patient\'s health condition and wellness goals. Book a consultation to receive a personalized treatment assessment and therapy guidance.',
+      recommendation: 'At RamaCare Polyclinic, every detoxification plan is customized according to the patient\'s health condition and wellness goals. Book a consultation to receive a personalized treatment assessment and therapy guidance.',
       resultsTitle: 'Recovery & Aftercare',
       resultsDescription: 'Most individuals can resume routine activities shortly after therapy, although rest and hydration are generally recommended for optimal recovery. Some people may temporarily experience mild digestive changes during the detoxification process, depending on therapy intensity and body constitution.\n\nOur aftercare guidance focuses on:',
       resultPoints: [
@@ -5187,7 +5187,7 @@ export const subcategoryContent = {
         ],
         internalLinks: [
           { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' },
-          { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' }
+          { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' }
         ]
       },
       relatedTherapies: {
@@ -5225,7 +5225,7 @@ export const subcategoryContent = {
       ],
       internalLinks: [
         { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' },
-        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' }
+        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' }
       ]
     },
     recovery: {
@@ -5249,8 +5249,8 @@ export const subcategoryContent = {
       note: 'A professional Ayurvedic consultation is recommended before beginning treatment.'
     },
     panchakarmaWhyChoose: {
-      title: 'Why Choose Rama Care Polyclinic for Ayurvedic Basti Therapy',
-      intro: 'At Rama Care Polyclinic, we combine authentic Ayurvedic principles with personalized patient care to deliver safe and effective detoxification programs tailored to each individual.',
+      title: 'Why Choose RamaCare Polyclinic for Ayurvedic Basti Therapy',
+      intro: 'At RamaCare Polyclinic, we combine authentic Ayurvedic principles with personalized patient care to deliver safe and effective detoxification programs tailored to each individual.',
       features: [
         {
           id: 1,
@@ -5300,7 +5300,7 @@ export const subcategoryContent = {
       ],
       ayurvedicPrinciple: 'According to Ayurveda, digestive health is fundamental to overall wellness. Ayurvedic detox therapies focus on improving gut health naturally by supporting digestion, promoting healthy elimination, and restoring dosha balance.',
       ayurvedicBenefits: [
-        'Many individuals choose <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> and Ayurvedic wellness therapies to support long-term digestive balance',
+        'Many individuals choose <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> and Ayurvedic wellness therapies to support long-term digestive balance',
         'Therapies such as <a href="/services/nasya-therapy-dubai/">Nasya Therapy Dubai</a>, <a href="/services/abhyanga-massage-dubai/">Abhyanga Massage Dubai</a>, and Shirodhara treatments may be recommended as part of personalized wellness programs',
         'Ayurvedic specialists create individualized detoxification plans to support digestive efficiency, toxin elimination, and holistic rejuvenation'
       ],
@@ -5318,7 +5318,7 @@ export const subcategoryContent = {
           'Irregular appetite and metabolism',
           'Feeling physically or mentally exhausted'
         ],
-        conclusion: 'Ayurvedic cleansing therapies aim to address these concerns holistically by supporting healthy digestion, natural toxin elimination, and internal balance. As part of personalized <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs, additional therapies such as <a href="/services/shirodhara-therapy-in-dubai/">Shirodhara Therapy Dubai</a> and <a href="/services/nasya-therapy-dubai/">Nasya Therapy Dubai</a> may also be recommended to support nervous system balance, stress management, and overall rejuvenation.\n\nAt Rama Care Polyclinic, every wellness plan is customized according to the patient\'s body constitution, lifestyle habits, health condition, and detoxification goals to ensure safe and effective Ayurvedic care.'
+        conclusion: 'Ayurvedic cleansing therapies aim to address these concerns holistically by supporting healthy digestion, natural toxin elimination, and internal balance. As part of personalized <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs, additional therapies such as <a href="/services/shirodhara-therapy-in-dubai/">Shirodhara Therapy Dubai</a> and <a href="/services/nasya-therapy-dubai/">Nasya Therapy Dubai</a> may also be recommended to support nervous system balance, stress management, and overall rejuvenation.\n\nAt RamaCare Polyclinic, every wellness plan is customized according to the patient\'s body constitution, lifestyle habits, health condition, and detoxification goals to ensure safe and effective Ayurvedic care.'
       }
     },
     gutHealth: {
@@ -5350,14 +5350,14 @@ export const subcategoryContent = {
         }
       ],
       internalLinks: [
-        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' },
+        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' },
         { text: 'Shirodhara Therapy Dubai', link: '/services/shirodhara-therapy-in-dubai/' },
         { text: 'Ayurvedic Stress Management Dubai', link: '/services/ayurvedic-stress-management-dubai/' }
       ]
     },
     paymentInsurance: {
       title: 'Payment & Insurance Options',
-      description: 'At Rama Care Polyclinic, we offer flexible payment options for Basti Therapy and Panchakarma treatments. Please contact our clinic to discuss payment plans and insurance coverage details.',
+      description: 'At RamaCare Polyclinic, we offer flexible payment options for Basti Therapy and Panchakarma treatments. Please contact our clinic to discuss payment plans and insurance coverage details.',
       paymentMethods: [
         'Cash',
         'Credit/Debit Cards',
@@ -5374,7 +5374,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -5398,7 +5398,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -5514,7 +5514,7 @@ export const subcategoryContent = {
           id: 8,
           question: 'Is Basti Therapy part of Panchakarma Treatment?',
           answer:
-            'Yes, Basti is considered one of the most important therapies in <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs designed for detoxification, dosha balancing, and long-term wellness support.'
+            'Yes, Basti is considered one of the most important therapies in <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs designed for detoxification, dosha balancing, and long-term wellness support.'
         },
         {
           id: 9,
@@ -5526,7 +5526,7 @@ export const subcategoryContent = {
           id: 10,
           question: 'Where can I book Basti Therapy in Dubai?',
           answer:
-            'You can book a personalized Ayurvedic consultation at Rama Care Polyclinic to receive a customized detoxification and wellness treatment plan based on your health goals and body constitution.'
+            'You can book a personalized Ayurvedic consultation at RamaCare Polyclinic to receive a customized detoxification and wellness treatment plan based on your health goals and body constitution.'
         }
       ],
       bookConsultation: {
@@ -5545,13 +5545,13 @@ export const subcategoryContent = {
   'ayurveda-dubai-nasya-therapy': {
     hero: {
       subtitle: 'Ayurvedic Nasal Detox Therapy for Sinus Relief, Mental Clarity & Respiratory Wellness',
-      description: 'Nasya Therapy in Dubai is a traditional Ayurvedic detoxification treatment designed to cleanse the nasal passages, support respiratory wellness, improve mental clarity, and balance doshas naturally. At Rama Care Polyclinic, we provide personalized Ayurvedic Nasya Therapy using herbal oils and traditional Panchakarma techniques to support sinus health, stress management, nervous system balance, and overall well-being.\n\nAs an important part of Panchakarma Treatment Dubai, this Ayurvedic nasal cleansing therapy focuses on removing accumulated toxins from the head and neck region while supporting healthy breathing, concentration, sleep quality, and emotional balance naturally.\n\nMany individuals choose Ayurvedic Nasya Treatment to support relief from sinus congestion, headaches, allergies, stress, mental fatigue, and respiratory imbalance caused by modern lifestyle habits, pollution, and environmental triggers.',
+      description: 'Nasya Therapy in Dubai is a traditional Ayurvedic detoxification treatment designed to cleanse the nasal passages, support respiratory wellness, improve mental clarity, and balance doshas naturally. At RamaCare Polyclinic, we provide personalized Ayurvedic Nasya Therapy using herbal oils and traditional Panchakarma techniques to support sinus health, stress management, nervous system balance, and overall well-being.\n\nAs an important part of Panchakarma Treatment Dubai, this Ayurvedic nasal cleansing therapy focuses on removing accumulated toxins from the head and neck region while supporting healthy breathing, concentration, sleep quality, and emotional balance naturally.\n\nMany individuals choose Ayurvedic Nasya Treatment to support relief from sinus congestion, headaches, allergies, stress, mental fatigue, and respiratory imbalance caused by modern lifestyle habits, pollution, and environmental triggers.',
       rating: '500+ Happy Clients',
       promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
       stats: [
         { id: 1, number: '98%', label: 'Success Rate' },
         { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Experience' }
+        { id: 3, number: '15+', label: 'Years Combined Experience' }
       ],
       ctaButtons: {
         primary: { text: 'Book Free Nasya Therapy Consultation', icon: 'calendar', link: '#book-now' },
@@ -5577,14 +5577,14 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Our Solution: Personalized Nasya Treatment in Dubai',
-        description: 'Unlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally.\n\nAt Rama Care Polyclinic, every Nasya Therapy program is customized according to the patient\'s body constitution, symptoms, lifestyle habits, and wellness goals.'
+        description: 'Unlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally.\n\nAt RamaCare Polyclinic, every Nasya Therapy program is customized according to the patient\'s body constitution, symptoms, lifestyle habits, and wellness goals.'
       },
       leftCards: [
         {
           id: 1,
           title: 'Understanding Ayurvedic Nasya Therapy',
           description:
-            'Nasya is a traditional Ayurvedic detoxification procedure that involves the controlled administration of herbal oils or herbal extracts through the nasal passages. According to Ayurveda, the nose is considered the gateway to the head, making Nasya Therapy an important treatment for supporting respiratory wellness, mental clarity, sinus health, and nervous system balance. \n\nModern lifestyle factors such as pollution, dust exposure, stress, poor sleep quality, excessive screen time, and unhealthy routines may contribute to toxin accumulation in the head and neck region. Ayurvedic nasal detox therapies aim to cleanse these pathways naturally while promoting relaxation and overall wellness. \n\nUnlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally. \n\nAt Rama Care Polyclinic, every Nasya Therapy program is customized according to the patient’s body constitution, symptoms, lifestyle habits, and wellness goals.'
+            'Nasya is a traditional Ayurvedic detoxification procedure that involves the controlled administration of herbal oils or herbal extracts through the nasal passages. According to Ayurveda, the nose is considered the gateway to the head, making Nasya Therapy an important treatment for supporting respiratory wellness, mental clarity, sinus health, and nervous system balance. \n\nModern lifestyle factors such as pollution, dust exposure, stress, poor sleep quality, excessive screen time, and unhealthy routines may contribute to toxin accumulation in the head and neck region. Ayurvedic nasal detox therapies aim to cleanse these pathways naturally while promoting relaxation and overall wellness. \n\nUnlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally. \n\nAt RamaCare Polyclinic, every Nasya Therapy program is customized according to the patient’s body constitution, symptoms, lifestyle habits, and wellness goals.'
         },
         {
           id: 2,
@@ -5630,7 +5630,7 @@ export const subcategoryContent = {
       ],
       internalLinks: [
         { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' },
-        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' }
+        { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' }
       ],
       quickFacts: [
         { label: 'Treatment Type', value: 'Ayurvedic nasal therapy' },
@@ -5806,7 +5806,7 @@ export const subcategoryContent = {
         'Panchakarma program inclusion',
         'Follow-up consultations'
       ],
-      recommendation: 'At Rama Care Polyclinic, every treatment plan is customized according to the patient\'s wellness goals and Ayurvedic assessment. Book a consultation for a personalized therapy plan and detailed treatment guidance.',
+      recommendation: 'At RamaCare Polyclinic, every treatment plan is customized according to the patient\'s wellness goals and Ayurvedic assessment. Book a consultation for a personalized therapy plan and detailed treatment guidance.',
       resultsTitle: 'Recovery & Aftercare',
       resultsDescription: 'Most individuals can resume normal activities shortly after therapy. Some patients may temporarily experience mild nasal drainage or detoxification-related reactions depending on body constitution and therapy intensity.\n\nOur aftercare recommendations focus on:',
       resultPoints: [
@@ -5829,7 +5829,7 @@ export const subcategoryContent = {
         ],
         internalLinks: [
           { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' },
-          { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment/' }
+          { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' }
         ]
       },
       respiratoryWellness: {
@@ -5838,8 +5838,8 @@ export const subcategoryContent = {
       }
     },
     panchakarmaWhyChoose: {
-      title: 'Why Choose Rama Care Polyclinic for Nasya Therapy in Dubai',
-      intro: 'At Rama Care Polyclinic, we combine authentic Ayurvedic principles with personalized wellness care to deliver safe and effective Nasya Therapy programs tailored to individual needs.',
+      title: 'Why Choose RamaCare Polyclinic for Nasya Therapy in Dubai',
+      intro: 'At RamaCare Polyclinic, we combine authentic Ayurvedic principles with personalized wellness care to deliver safe and effective Nasya Therapy programs tailored to individual needs.',
       features: [
         {
           id: 1,
@@ -5885,7 +5885,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -5909,7 +5909,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -6013,7 +6013,7 @@ export const subcategoryContent = {
           id: 6,
           question: 'Is Nasya Therapy part of Panchakarma Treatment?',
           answer:
-            'Yes, Nasya is considered an important therapy in <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a> programs designed to support detoxification, dosha balance, and long-term wellness naturally.'
+            'Yes, Nasya is considered an important therapy in <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs designed to support detoxification, dosha balance, and long-term wellness naturally.'
         },
         {
           id: 7,
@@ -6037,13 +6037,13 @@ export const subcategoryContent = {
           id: 10,
           question: 'Where can I book Nasya Therapy in Dubai?',
           answer:
-            'You can schedule a personalized Ayurvedic consultation at Rama Care Polyclinic to receive a customized Nasya Therapy treatment plan based on your wellness goals and body constitution.'
+            'You can schedule a personalized Ayurvedic consultation at RamaCare Polyclinic to receive a customized Nasya Therapy treatment plan based on your wellness goals and body constitution.'
         }
       ],
     },
     bookConsultation: {
       title: 'Book Your Nasya Therapy Consultation',
-      description: 'Support sinus wellness, respiratory balance, and mental clarity naturally with personalized Ayurvedic care at Rama Care Polyclinic.',
+      description: 'Support sinus wellness, respiratory balance, and mental clarity naturally with personalized Ayurvedic care at RamaCare Polyclinic.',
       features: [
         'Free initial consultation',
         'Personalized treatment assessment',
@@ -6543,7 +6543,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -6567,7 +6567,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -7216,7 +7216,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -7240,7 +7240,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -7327,7 +7327,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-panchakarma-treatment': {
     hero: {
       subtitle: 'Detoxify, Rejuvenate & Restore Balance Naturally',
-      description: 'Panchakarma Treatment in Dubai is a traditional Ayurvedic detoxification therapy designed to eliminate toxins, restore dosha balance, and improve overall physical and mental wellness naturally. At Rama Care Polyclinic, we provide personalized Panchakarma therapies based on your body constitution, health concerns, and lifestyle needs to support deep healing and long-term rejuvenation.Our holistic Ayurvedic approach combines authentic cleansing therapies, herbal treatments, therapeutic oils, and wellness-focused care to help manage stress, fatigue, digestive issues, poor sleep, body pain, and lifestyle-related imbalances. Panchakarma therapy is widely recommended for individuals seeking natural detoxification, improved energy levels, better immunity, and enhanced mental clarity.Our experienced Ayurveda specialists in Dubai create customized treatment plans that may include Abhyanga massage, Shirodhara therapy, Nasya, and herbal detox procedures to promote complete mind-body balance.',
+      description: 'Panchakarma Treatment in Dubai is a traditional Ayurvedic detoxification therapy designed to eliminate toxins, restore dosha balance, and improve overall physical and mental wellness naturally. At RamaCare Polyclinic, we provide personalized Panchakarma therapies based on your body constitution, health concerns, and lifestyle needs to support deep healing and long-term rejuvenation.Our holistic Ayurvedic approach combines authentic cleansing therapies, herbal treatments, therapeutic oils, and wellness-focused care to help manage stress, fatigue, digestive issues, poor sleep, body pain, and lifestyle-related imbalances. Panchakarma therapy is widely recommended for individuals seeking natural detoxification, improved energy levels, better immunity, and enhanced mental clarity.Our experienced Ayurveda specialists in Dubai create customized treatment plans that may include Abhyanga massage, Shirodhara therapy, Nasya, and herbal detox procedures to promote complete mind-body balance.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -7409,7 +7409,7 @@ export const subcategoryContent = {
       title: 'Understanding Panchakarma Treatment in Dubai',
       problemIntro: {
         title: 'Root Causes of Chronic Health Imbalances',
-        description: 'At Rama Care Polyclinic, our Panchakarma Treatment in Dubai is designed to support natural detoxification, restore dosha balance, and improve overall physical and mental wellness through authentic Ayurvedic therapies. Each treatment plan is personalized according to your body constitution, lifestyle, and health concerns to ensure safe and holistic healing.'
+        description: 'At RamaCare Polyclinic, our Panchakarma Treatment in Dubai is designed to support natural detoxification, restore dosha balance, and improve overall physical and mental wellness through authentic Ayurvedic therapies. Each treatment plan is personalized according to your body constitution, lifestyle, and health concerns to ensure safe and holistic healing.'
       },
       solutionIntro: {
         title: 'Our Solution: Panchakarma Treatment in Dubai',
@@ -7421,7 +7421,7 @@ export const subcategoryContent = {
           id: 1,
           title: 'What is Panchakarma Treatment?',
           description:
-            'Panchakarma is a traditional Ayurvedic detoxification and rejuvenation therapy designed to remove accumulated toxins (Ama) from the body, restore the balance of the three doshas — Vata, Pitta, and Kapha — and support overall wellness naturally. This holistic Ayurvedic treatment combines herbal therapies, medicated oils, cleansing procedures, therapeutic massages, and lifestyle guidance to promote physical, mental, and emotional well-being.At Rama Care Polyclinic, our Panchakarma therapy in Dubai is customized according to your body constitution, health concerns, and wellness goals to ensure safe and effective healing.'
+            'Panchakarma is a traditional Ayurvedic detoxification and rejuvenation therapy designed to remove accumulated toxins (Ama) from the body, restore the balance of the three doshas — Vata, Pitta, and Kapha — and support overall wellness naturally. This holistic Ayurvedic treatment combines herbal therapies, medicated oils, cleansing procedures, therapeutic massages, and lifestyle guidance to promote physical, mental, and emotional well-being.At RamaCare Polyclinic, our Panchakarma therapy in Dubai is customized according to your body constitution, health concerns, and wellness goals to ensure safe and effective healing.'
         },
         {
           id: 2,
@@ -7733,8 +7733,8 @@ export const subcategoryContent = {
     },
     panchakarmaWhyChoose: {
       whyChoose: {
-        title: 'Why Choose Rama Care Polyclinic for Panchakarma Treatment in Dubai?',
-        intro: 'At Rama Care Polyclinic, we provide personalized Panchakarma therapies in a safe, hygienic, and patient-focused environment under the supervision of experienced Ayurveda specialists in Dubai.',
+        title: 'Why Choose RamaCare Polyclinic for Panchakarma Treatment in Dubai?',
+        intro: 'At RamaCare Polyclinic, we provide personalized Panchakarma therapies in a safe, hygienic, and patient-focused environment under the supervision of experienced Ayurveda specialists in Dubai.',
         features: [
           {
             id: 1,
@@ -7936,7 +7936,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -7960,7 +7960,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -8068,7 +8068,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -8123,7 +8123,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -8149,7 +8149,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -8163,7 +8163,7 @@ export const subcategoryContent = {
   'ayurveda-dubai-gastrointestinal-diseases-treatment': {
     hero: {
       subtitle: 'Effective Care for a Healthy Digestive System',
-      description: 'Digestive disorders can affect energy levels, immunity, metabolism, mental wellness, and overall quality of life.At Rama Care Polyclinic, we provide comprehensive Gastrointestinal Diseases Treatment in Dubai using a combination of advanced medical diagnostics and Ayurvedic healing principles to identify and treat the root cause naturally.\n\nOur treatment approach focuses on restoring digestive balance, improving gut function, reducing inflammation, and supporting long-term gastrointestinal wellness instead of offering only temporary symptom relief.\n\nMany patients seek Gastrointestinal Diseases Treatment in Dubai for conditions such as acid reflux, bloating, constipation, IBS, ulcers, gastritis, poor digestion, and chronic digestive discomfort caused by stress, unhealthy eating habits, and lifestyle imbalance.',
+      description: 'Digestive disorders can affect energy levels, immunity, metabolism, mental wellness, and overall quality of life.At RamaCare Polyclinic, we provide comprehensive Gastrointestinal Diseases Treatment in Dubai using a combination of advanced medical diagnostics and Ayurvedic healing principles to identify and treat the root cause naturally.\n\nOur treatment approach focuses on restoring digestive balance, improving gut function, reducing inflammation, and supporting long-term gastrointestinal wellness instead of offering only temporary symptom relief.\n\nMany patients seek Gastrointestinal Diseases Treatment in Dubai for conditions such as acid reflux, bloating, constipation, IBS, ulcers, gastritis, poor digestion, and chronic digestive discomfort caused by stress, unhealthy eating habits, and lifestyle imbalance.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -8179,7 +8179,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -8390,7 +8390,7 @@ export const subcategoryContent = {
           title: 'Diet & Lifestyle Guidance',
           description: 'Healthy daily habits play a major role in digestive wellness and recovery.',
           hasLearnMore: true,
-          expandedContent: 'Patients may receive guidance on personalized meal planning, gut-friendly dietary habits, hydration support, stress management practices, and sleep improvement strategies. <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> and <a href="/services/panchakarma-treatment/">Panchakarma Treatment Dubai</a>. Goal: Maintain long-term digestive stability and prevent recurrence.'
+          expandedContent: 'Patients may receive guidance on personalized meal planning, gut-friendly dietary habits, hydration support, stress management practices, and sleep improvement strategies. <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> and <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a>. Goal: Maintain long-term digestive stability and prevent recurrence.'
         },
         {
           id: 6,
@@ -8699,7 +8699,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -8723,7 +8723,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -8886,7 +8886,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -9447,7 +9447,7 @@ export const subcategoryContent = {
           id: 1,
           text: 'Panchakarma Treatment',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/panchakarma-treatment/'
+          link: '/services/panchakarma-treatment-dubai/'
         },
         {
           id: 2,
@@ -9471,7 +9471,7 @@ export const subcategoryContent = {
           id: 5,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
-          link: '/services/skin-diseases-treatment/'
+          link: '/services/skin-diseases-treatment-dubai/'
         },
         {
           id: 6,
@@ -9579,7 +9579,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -9634,7 +9634,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -9660,7 +9660,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -9691,7 +9691,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -9727,7 +9727,7 @@ export const subcategoryContent = {
       title: 'Meet Our Physiotherapy Specialists',
       description: 'DHA-licensed physiotherapists with extensive experience in musculoskeletal physiotherapy, personalized rehabilitation programs and Ultrasound Therapy in Dubai assessment when clinically indicated.',
       doctors: [
-        DOCTORS.jeena, 
+        DOCTORS.jeena,
       ]
     },
     certifications: {
@@ -10297,7 +10297,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
           target: 4.9
@@ -10348,7 +10348,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd – Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 – Dubai'
@@ -10435,7 +10435,7 @@ export const subcategoryContent = {
       }
     },
 
-   
+
   },
 
   // ============================================
@@ -10462,7 +10462,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -10483,7 +10483,7 @@ export const subcategoryContent = {
         '•	Personalised Rehabilitation Programs',
         '•	Professional Physiotherapy Assessment',
         '•	Individualised Treatment Planning',
-       
+
       ],
       image: {
         src: '/images/electro1.jpg',
@@ -11230,7 +11230,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
           target: 4.9
@@ -11288,7 +11288,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -11314,7 +11314,7 @@ export const subcategoryContent = {
           description: 'Treated Since 2008'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Verified Patient Reviews'
         }
       ]
@@ -11340,7 +11340,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -12111,14 +12111,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Pelvic Floor Therapy in Dubai Today',
-      description: 'Restore your pelvic floor fitness naturally with trusted Pelvic Floor Therapy at Rama Care Polyclinic—safe, personalized, and focused on long-term results for a healthier you.',
+      description: 'Restore your pelvic floor fitness naturally with trusted Pelvic Floor Therapy at RamaCare Polyclinic—safe, personalized, and focused on long-term results for a healthier you.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -12144,7 +12144,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -12171,7 +12171,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -12921,7 +12921,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -12947,7 +12947,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -12958,7 +12958,7 @@ export const subcategoryContent = {
   'physiotherapy-dubai-scoliosis': {
     hero: {
       subtitle: 'Personalised Care to Improve Spine Alignment, Posture & Quality of Life',
-      description: 'Struggling with scoliosis, back pain, or poor posture? Our scoliosis treatment in Dubai offers a safe and effective solution to reduce pain, improve spinal alignment, and restore mobility. At Rama Care Polyclinic, we provide personalized physiotherapy programs designed for long-term results and better quality of life.',
+      description: 'Struggling with scoliosis, back pain, or poor posture? Our scoliosis treatment in Dubai offers a safe and effective solution to reduce pain, improve spinal alignment, and restore mobility. At RamaCare Polyclinic, we provide personalized physiotherapy programs designed for long-term results and better quality of life.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -12974,7 +12974,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -13715,14 +13715,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Scoliosis Treatment in Dubai Today',
-      description: 'Restore your spine fitness naturally with trusted Scoliosis Treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+      description: 'Restore your spine fitness naturally with trusted Scoliosis Treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13748,7 +13748,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -13758,9 +13758,9 @@ export const subcategoryContent = {
 
   'physiotherapy-dubai-dry-needling': {
     hero: {
-      title: 'Dry Needling in Dubai for Effective Pain Relief and Faster Recovery',
-      subtitle: 'Reduce Muscle Pain, Release Trigger Points, and Restore Movement Naturally',
-      description: 'Are you experiencing persistent muscle pain, tightness, stiffness, or limited mobility that affects your daily activities or sports performance? At Rama Care Polyclinic, we provide professional Dry Needling in Dubai to help relieve muscular pain, reduce tension, and support faster recovery.This advanced physiotherapy technique targets myofascial trigger points to improve muscle function, increase flexibility, and restore natural movement without surgery or medication dependence. Our licensed physiotherapists create personalised treatment plans tailored to your condition, helping you achieve long-lasting pain relief and improved physical performance.',
+      title: 'Dry Needling in Dubai for Muscle Pain & Trigger Point Relief',
+      subtitle: 'Targeted Physiotherapy for Muscle Tension, Trigger Points & Movement Restrictions',
+      description: 'Persistent muscle pain, stiffness, tightness or restricted movement can affect your work, exercise, sleep and everyday activities.When muscular tension or myofascial trigger points contribute to your symptoms, dry needling in Dubai may be considered as part of a personalised physiotherapy programme.\n\nAt RamaCare Polyclinic in Jumeirah 1, Dubai, dry needling is provided by qualified {{Physiotherapy Dubai|/services/physiotherapy-dubai/}} professionals following an individual assessment of your symptoms, movement, muscle function and rehabilitation needs. Dry needling uses fine, sterile needles to target selected areas of muscle tissue.Depending on your condition, it may be combined with therapeutic exercise, manual therapy, mobility training, strengthening, posture correction and other physiotherapy techniques.The aim is not simply to treat a painful muscle.Your physiotherapist assesses the factors contributing to your symptoms and develops a rehabilitation plan suited to your condition and goals.',
       rating: '500+ Happy Clients',
       topBadges: [
         { icon: 'location', text: 'Trusted Results ' },
@@ -13808,7 +13808,7 @@ export const subcategoryContent = {
         alt: 'Dry needling therapy performed by a trained physiotherapist to relieve muscle pain and improve mobility.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment outcomes and recovery timelines may vary depending on the patient’s condition, severity of symptoms, adherence to rehabilitation recommendations, and overall health status. Dry Needling Therapy is performed by DHA-licensed physiotherapists following approved clinical protocols and safety standards.',
+        text: 'Medical Disclaimer: Dry needling is not suitable for everyone. Treatment is recommended only after an appropriate clinical assessment. Results vary depending on the underlying condition, contributing factors, treatment plan and individual response.',
         show: true
       }
     },
@@ -13856,7 +13856,7 @@ export const subcategoryContent = {
       solutionIntro: {
         title: 'Our Solution: Expert Dry Needling Therapy in Dubai',
         description:
-          'At Rama Care Polyclinic, we provide advanced Dry Needling Therapy in Dubai to help patients overcome chronic muscle pain, trigger points, movement restrictions, and sports-related injuries. Our licensed physiotherapists use evidence-based techniques to target the root cause of muscular dysfunction rather than simply masking symptoms. Whether you are recovering from an injury, managing chronic pain, or looking to improve athletic performance, our personalised treatment plans are designed to support long-term recovery and improved physical function.'
+          'At RamaCare Polyclinic, we provide advanced Dry Needling Therapy in Dubai to help patients overcome chronic muscle pain, trigger points, movement restrictions, and sports-related injuries. Our licensed physiotherapists use evidence-based techniques to target the root cause of muscular dysfunction rather than simply masking symptoms. Whether you are recovering from an injury, managing chronic pain, or looking to improve athletic performance, our personalised treatment plans are designed to support long-term recovery and improved physical function.'
       },
       leftCards: [
         {
@@ -14024,7 +14024,7 @@ export const subcategoryContent = {
     // Healing Journey / Process Section
     healingJourney: {
       title: 'Dry Needling Therapy in Dubai: Our Step-by-Step Treatment Process',
-      description: 'At Rama Care Polyclinic, we follow a structured and patient-focused approach to Dry Needling Therapy in Dubai. Every treatment plan is tailored to your specific condition, pain levels, mobility restrictions, and recovery goals. Our experienced physiotherapists ensure that each session is performed safely, comfortably, and according to DHA-approved clinical standards.Whether you are seeking relief from chronic muscle pain, sports injuries, neck stiffness, back pain, or movement limitations, our goal is to help you achieve long-lasting results and improved quality of life.',
+      description: 'At RamaCare Polyclinic, we follow a structured and patient-focused approach to Dry Needling Therapy in Dubai. Every treatment plan is tailored to your specific condition, pain levels, mobility restrictions, and recovery goals. Our experienced physiotherapists ensure that each session is performed safely, comfortably, and according to DHA-approved clinical standards.Whether you are seeking relief from chronic muscle pain, sports injuries, neck stiffness, back pain, or movement limitations, our goal is to help you achieve long-lasting results and improved quality of life.',
       steps: [
         {
           id: 1,
@@ -14107,7 +14107,7 @@ export const subcategoryContent = {
     benefits: {
       title: 'Benefits of Dry Needling in Dubai',
       description:
-        'At Rama Care Polyclinic, our Dry Needling in Dubai treatments are designed to address the root cause of muscular pain, trigger points, and movement restrictions. When performed by experienced physiotherapists, dry needling can help reduce discomfort, improve mobility, and support faster recovery from injuries and chronic musculoskeletal conditions. By targeting dysfunctional muscle tissue directly, Dry Needling Therapy in Dubai offers a safe, minimally invasive approach to pain management and rehabilitation.',
+        'At RamaCare Polyclinic, our Dry Needling in Dubai treatments are designed to address the root cause of muscular pain, trigger points, and movement restrictions. When performed by experienced physiotherapists, dry needling can help reduce discomfort, improve mobility, and support faster recovery from injuries and chronic musculoskeletal conditions. By targeting dysfunctional muscle tissue directly, Dry Needling Therapy in Dubai offers a safe, minimally invasive approach to pain management and rehabilitation.',
       benefits: [
         {
           id: 1,
@@ -14347,8 +14347,8 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why Choose Rama Care Polyclinic for Dry Needling in Dubai?',
-          answer: 'Rama Care Polyclinic offers personalised Dry Needling Therapy in Dubai delivered by experienced physiotherapists. Our patient-focused approach combines evidence-based treatment techniques, rehabilitation exercises, and long-term recovery strategies to help patients achieve lasting pain relief and improved mobility.'
+          question: 'Why Choose RamaCare Polyclinic for Dry Needling in Dubai?',
+          answer: 'RamaCare Polyclinic offers personalised Dry Needling Therapy in Dubai delivered by experienced physiotherapists. Our patient-focused approach combines evidence-based treatment techniques, rehabilitation exercises, and long-term recovery strategies to help patients achieve lasting pain relief and improved mobility.'
         },
         {
           id: 16,
@@ -14503,8 +14503,8 @@ export const subcategoryContent = {
 
     detailedContent: [
       {
-        title: "Why Choose Rama Care Polyclinic for Dry Needling in Dubai?",
-        description: "At Rama Care Polyclinic, our experienced physiotherapists provide personalised treatment plans based on a thorough assessment of your condition and recovery goals.",
+        title: "Why Choose RamaCare Polyclinic for Dry Needling in Dubai?",
+        description: "At RamaCare Polyclinic, our experienced physiotherapists provide personalised treatment plans based on a thorough assessment of your condition and recovery goals.",
         type: "why-choose",
         items: [
           "Comprehensive physiotherapy assessment",
@@ -14518,7 +14518,7 @@ export const subcategoryContent = {
       },
       {
         title: "What Makes Our Dry Needling Process Different?",
-        description: "At Rama Care Polyclinic, we focus on treating the underlying cause of pain rather than simply managing symptoms.",
+        description: "At RamaCare Polyclinic, we focus on treating the underlying cause of pain rather than simply managing symptoms.",
         type: "process",
         subtitle: "Our Patient-Centred Approach Includes:",
         items: [
@@ -14559,7 +14559,7 @@ export const subcategoryContent = {
           "Reduce injury recurrence",
           "Support long-term recovery and performance"
         ],
-        footerText: "At Rama Care Polyclinic, our physiotherapists use evidence-based treatment strategies to help patients achieve lasting improvements in pain relief and mobility."
+        footerText: "At RamaCare Polyclinic, our physiotherapists use evidence-based treatment strategies to help patients achieve lasting improvements in pain relief and mobility."
       },
       {
         title: "Is Dry Needling Right for You?",
@@ -14655,14 +14655,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Dry Needling Therapy in Dubai Today',
-      description: 'Restore comfortable movement and reduce muscular pain with trusted Dry Needling Therapy at Rama Care Polyclinic—safe, personalised, and focused on long-term recovery.',
+      description: 'Restore comfortable movement and reduce muscular pain with trusted Dry Needling Therapy at RamaCare Polyclinic—safe, personalised, and focused on long-term recovery.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -14688,7 +14688,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -14700,7 +14700,7 @@ export const subcategoryContent = {
     hero: {
       title: 'Back Pain Treatment in Dubai',
       subtitle: 'Advanced Physiotherapy & Non-Surgical Care for Lasting Pain Relief',
-      description: 'Back pain can affect every aspect of daily life, from sitting and walking to sleeping and working comfortably. Whether caused by long office hours, poor posture, sports injuries, muscle strain, or spinal conditions, chronic back pain can reduce mobility, productivity, and overall quality of life. At Rama Care Polyclinic, we provide comprehensive and personalised back pain treatment in Dubai focused on long-term recovery, mobility improvement, and effective pain management.',
+      description: 'Back pain can affect every aspect of daily life, from sitting and walking to sleeping and working comfortably. Whether caused by long office hours, poor posture, sports injuries, muscle strain, or spinal conditions, chronic back pain can reduce mobility, productivity, and overall quality of life. At RamaCare Polyclinic, we provide comprehensive and personalised back pain treatment in Dubai focused on long-term recovery, mobility improvement, and effective pain management.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -14716,7 +14716,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -14799,7 +14799,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Our Solution: Comprehensive Back Pain Treatment',
-        description: 'At Rama Care Polyclinic, our experienced physiotherapists and rehabilitation specialists use advanced physiotherapy techniques, posture correction therapies, electrotherapy, and holistic rehabilitation programs to treat the root cause of pain naturally. We help patients recover safely without unnecessary surgery while improving flexibility, strength, posture, and spinal health.'
+        description: 'At RamaCare Polyclinic, our experienced physiotherapists and rehabilitation specialists use advanced physiotherapy techniques, posture correction therapies, electrotherapy, and holistic rehabilitation programs to treat the root cause of pain naturally. We help patients recover safely without unnecessary surgery while improving flexibility, strength, posture, and spinal health.'
       },
       leftCards: [
         {
@@ -15244,14 +15244,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Back Pain Treatment in Dubai Today',
-      description: 'Restore your mobility and live pain-free with trusted back pain treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+      description: 'Restore your mobility and live pain-free with trusted back pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -15345,7 +15345,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -15355,7 +15355,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -15952,7 +15952,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -16046,7 +16046,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -16056,7 +16056,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -16740,7 +16740,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -16834,7 +16834,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -16844,7 +16844,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -17453,7 +17453,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -17508,7 +17508,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -17534,7 +17534,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -17602,7 +17602,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -17612,7 +17612,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -18253,7 +18253,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -18347,7 +18347,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -18357,7 +18357,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -19006,7 +19006,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19100,7 +19100,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -19110,7 +19110,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -19765,7 +19765,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19859,7 +19859,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -19869,7 +19869,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -20534,7 +20534,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -20628,7 +20628,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -20638,7 +20638,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -21307,7 +21307,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -21401,7 +21401,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -21411,7 +21411,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -22086,7 +22086,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -22180,7 +22180,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -22190,7 +22190,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -22860,7 +22860,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -22954,7 +22954,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -22964,7 +22964,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -23621,7 +23621,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -23677,7 +23677,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -23715,7 +23715,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -23725,7 +23725,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -24358,7 +24358,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -24409,7 +24409,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -24447,7 +24447,7 @@ export const subcategoryContent = {
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -24457,7 +24457,7 @@ export const subcategoryContent = {
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -25093,7 +25093,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -25131,7 +25131,7 @@ export const subcategoryContent = {
   'facial-dubai-signature-hydra-facial': {
     hero: {
       subtitle: 'Medical-Grade HydraFacial Treatment for Deep Cleansing, Hydration & Radiant Skin',
-      description: 'Reveal healthier, smoother, and more radiant-looking skin with a professional HydraFacial in Dubai at Rama Care Polyclinic. Our DHA-licensed aesthetic specialists provide customized HydraFacial treatments designed to deeply cleanse pores, gently exfoliate dead skin cells, remove impurities, and deliver intensive hydration through advanced medical-grade technology. Whether you are concerned about dull skin, dehydration, clogged pores, uneven texture, or early signs of aging, our personalized HydraFacial treatments help support healthier-looking skin with minimal discomfort and no downtime.',
+      description: 'Reveal healthier, smoother, and more radiant-looking skin with a professional HydraFacial in Dubai at RamaCare Polyclinic. Our DHA-licensed aesthetic specialists provide customized HydraFacial treatments designed to deeply cleanse pores, gently exfoliate dead skin cells, remove impurities, and deliver intensive hydration through advanced medical-grade technology. Whether you are concerned about dull skin, dehydration, clogged pores, uneven texture, or early signs of aging, our personalized HydraFacial treatments help support healthier-looking skin with minimal discomfort and no downtime.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -25147,7 +25147,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -25172,12 +25172,12 @@ export const subcategoryContent = {
         alt: 'Hydra Facial in Dubai performed by specialists to deeply cleanse, hydrate, and rejuvenate the skin.'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, conditions, and adherence to post-treatment care. All facials at Rama Care Polyclinic follow DHA-approved skincare protocols for safety and effectiveness.',
+        text: 'Safety & Medical Disclaimer: Results may vary depending on individual skin type, conditions, and adherence to post-treatment care. All facials at RamaCare Polyclinic follow DHA-approved skincare protocols for safety and effectiveness.',
         show: true
       }
     },
     whyChooseSection: {
-      title: 'Why Patients Choose HydraFacial at Rama Care Polyclinic',
+      title: 'Why Patients Choose HydraFacial at RamaCare Polyclinic',
       badge: 'Why Choose HydraFacial',
       points: [
         'Non-invasive and comfortable procedure',
@@ -25190,7 +25190,7 @@ export const subcategoryContent = {
     conditionsWeTreat: {
       title: 'Who Is HydraFacial Suitable For?',
       badge: 'Ideal Candidates',
-      intro: 'HydraFacial is a gentle, non-invasive skin treatment designed for almost all skin types. It is a great option for people who want clearer, healthier, and more hydrated-looking skin without downtime or discomfort.\n\nAt Rama Care Polyclinic in Dubai, we customize each HydraFacial session based on your skin condition, so the treatment is suitable whether you have specific concerns or simply want to maintain a healthy glow.',
+      intro: 'HydraFacial is a gentle, non-invasive skin treatment designed for almost all skin types. It is a great option for people who want clearer, healthier, and more hydrated-looking skin without downtime or discomfort.\n\nAt RamaCare Polyclinic in Dubai, we customize each HydraFacial session based on your skin condition, so the treatment is suitable whether you have specific concerns or simply want to maintain a healthy glow.',
       conditions: [
         {
           id: 1,
@@ -25271,7 +25271,7 @@ export const subcategoryContent = {
         {
           id: 1,
           title: 'What Is a HydraFacial Treatment?',
-          description: 'HydraFacial is an advanced, non-invasive, medical-grade facial treatment that combines deep cleansing, gentle exfoliation, painless extraction, and intensive hydration in a single session. Using patented Vortex-Fusion® technology, the treatment removes dead skin cells, excess oil, and impurities while simultaneously infusing the skin with hydrating serums, antioxidants, peptides, and skin-nourishing ingredients. Unlike traditional facials that primarily focus on surface cleansing, HydraFacial works at multiple levels to improve skin health, hydration, texture, and overall radiance. Many patients notice smoother, brighter, and healthier-looking skin immediately after treatment, with no downtime required.At Rama Care Polyclinic in Jumeirah, Dubai, every HydraFacial treatment is customized by our DHA-licensed aesthetic professionals according to your skin type, concerns, and skincare goals.'
+          description: 'HydraFacial is an advanced, non-invasive, medical-grade facial treatment that combines deep cleansing, gentle exfoliation, painless extraction, and intensive hydration in a single session. Using patented Vortex-Fusion® technology, the treatment removes dead skin cells, excess oil, and impurities while simultaneously infusing the skin with hydrating serums, antioxidants, peptides, and skin-nourishing ingredients. Unlike traditional facials that primarily focus on surface cleansing, HydraFacial works at multiple levels to improve skin health, hydration, texture, and overall radiance. Many patients notice smoother, brighter, and healthier-looking skin immediately after treatment, with no downtime required.At RamaCare Polyclinic in Jumeirah, Dubai, every HydraFacial treatment is customized by our DHA-licensed aesthetic professionals according to your skin type, concerns, and skincare goals.'
         },
         {
           id: 2,
@@ -25514,7 +25514,7 @@ export const subcategoryContent = {
       ]
     },
     benefits: {
-      title: 'Clinically Observed Benefits of HydraFacial at Rama Care Polyclinic',
+      title: 'Clinically Observed Benefits of HydraFacial at RamaCare Polyclinic',
       description: 'Our patients consistently experience the following results, observed across 3,000+ sessions at our Dubai clinic.',
 
       comparisonTitle: "HydraFacial vs. Regular Facial — What's the Difference?",
@@ -25812,7 +25812,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -25860,7 +25860,7 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Your Signature Hydra Facial in Dubai Today',
-      description: 'Reveal smoother, hydrated, and radiant skin with the Signature Hydra Facial at Rama Care Polyclinic, trusted for safe, advanced, and personalized facial treatments in Dubai.',
+      description: 'Reveal smoother, hydrated, and radiant skin with the Signature Hydra Facial at RamaCare Polyclinic, trusted for safe, advanced, and personalized facial treatments in Dubai.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Session',
@@ -25875,7 +25875,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -25901,7 +25901,7 @@ export const subcategoryContent = {
           description: 'Performed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -25932,7 +25932,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -26573,7 +26573,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -26628,7 +26628,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -26654,7 +26654,7 @@ export const subcategoryContent = {
           description: 'Performed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -26742,7 +26742,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -27301,7 +27301,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -27356,7 +27356,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -27382,7 +27382,7 @@ export const subcategoryContent = {
           description: 'Performed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -27416,7 +27416,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -27955,7 +27955,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -28010,7 +28010,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -28036,7 +28036,7 @@ export const subcategoryContent = {
           description: 'Performed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -28066,7 +28066,7 @@ export const subcategoryContent = {
         {
           id: 3,
           number: '15+',
-          label: 'Years of Experience'
+          label: 'Years Combined Experience'
         }
       ],
       ctaButtons: {
@@ -28657,7 +28657,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -29476,12 +29476,6 @@ export const subcategoryContent = {
           link: '/services/fillers-in-dubai/'
         },
         {
-          id: 10,
-          text: 'Facial',
-          bgColor: 'bg-[#F5F3FF]',
-          link: '/services/facial/'
-        },
-        {
           id: 11,
           text: 'HIFU',
           bgColor: 'bg-[#F5F3FF]',
@@ -29585,7 +29579,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -30391,7 +30385,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -30417,7 +30411,7 @@ export const subcategoryContent = {
           description: 'Successfully Treated'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: '500+ Verified Reviews'
         }
       ]
@@ -31290,7 +31284,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -31316,7 +31310,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -31481,7 +31475,7 @@ export const subcategoryContent = {
       title: 'Why Choose Body Shaping in Dubai?',
       badge: 'Why RamaCare',
       stats: [
-        { number: '15+', label: 'Years Experience' },
+        { number: '15+', label: 'Years Combined Experience' },
         { number: '2,500+', label: 'Sessions Completed' },
         { number: '4.9', label: 'Patient Rating' },
         { number: 'DHA', label: 'Approved' }
@@ -32159,7 +32153,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -32199,7 +32193,7 @@ export const subcategoryContent = {
   'dental-dubai-teeth-bleaching': {
     hero: {
       subtitle: 'Safe, Effective, and Stunning Smile Transformation',
-      description: 'Teeth bleaching in Dubai is a safe and highly effective cosmetic dental procedure designed to remove stains, discoloration, and yellowing from your teeth. At Rama Care Polyclinic, we use professional-grade bleaching systems to give you a brighter, healthier-looking smile without causing damage to enamel or gums.',
+      description: 'Teeth bleaching in Dubai is a safe and highly effective cosmetic dental procedure designed to remove stains, discoloration, and yellowing from your teeth. At RamaCare Polyclinic, we use professional-grade bleaching systems to give you a brighter, healthier-looking smile without causing damage to enamel or gums.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -32271,7 +32265,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Professional Teeth Bleaching in Dubai',
-        description: 'At Rama Care Polyclinic, we offer safe, advanced teeth bleaching treatments tailored to your needs. Our professional approach ensures even whitening, enamel protection, and a natural-looking, bright smile.'
+        description: 'At RamaCare Polyclinic, we offer safe, advanced teeth bleaching treatments tailored to your needs. Our professional approach ensures even whitening, enamel protection, and a natural-looking, bright smile.'
       },
       leftCards: [
         {
@@ -32605,7 +32599,7 @@ export const subcategoryContent = {
         {
           id: 13,
           question: 'How much does teeth bleaching cost in Dubai?',
-          answer: ' The cost of teeth bleaching in Dubai depends on the session number, technique, and severity of discoloration. Rama Care Polyclinic offers transparent pricing with customized treatment plans.'
+          answer: ' The cost of teeth bleaching in Dubai depends on the session number, technique, and severity of discoloration. RamaCare Polyclinic offers transparent pricing with customized treatment plans.'
         },
         {
           id: 14,
@@ -32615,7 +32609,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: ' Where can I get professional teeth bleaching in Dubai?',
-          answer: ' You can get professional teeth bleaching at Rama Care Polyclinic, a DHA-licensed cosmetic dental clinic offering safe, advanced treatments with experienced dentists for a brighter, more confident smile.'
+          answer: ' You can get professional teeth bleaching at RamaCare Polyclinic, a DHA-licensed cosmetic dental clinic offering safe, advanced treatments with experienced dentists for a brighter, more confident smile.'
         }
       ],
       resources: [
@@ -32744,7 +32738,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -32770,7 +32764,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -33487,7 +33481,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -33541,7 +33535,7 @@ export const subcategoryContent = {
       features: [
         ' Jumeirah 1, Dubai',
         ' DHA-Licensed Dental Clinic',
-        ' 4.9/5 Rating (500+ Verified Reviews)',
+        ' 4.8/5 Rating (500+ Verified Reviews)',
       ],
       image: {
         src: '/images/composite-veeners.jpg',
@@ -34285,7 +34279,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -34311,7 +34305,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -34338,7 +34332,7 @@ export const subcategoryContent = {
       features: [
         ' Jumeirah 1, Dubai',
         ' DHA-Licensed Dental Clinic',
-        ' 4.9/5 Rating (500+ Verified Reviews)',
+        ' 4.8/5 Rating (500+ Verified Reviews)',
       ],
       image: {
         src: '/images/dental-veeners1.jpg',
@@ -34908,7 +34902,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -34934,7 +34928,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -34943,7 +34937,7 @@ export const subcategoryContent = {
   'dental-dubai-snap-on-smile': {
     hero: {
       subtitle: 'Instant, Non-Invasive Smile Makeover',
-      description: 'Snap-On Smile in Dubai is a modern, removable smile makeover solution designed to instantly enhance your teeth without drilling, injections, or permanent changes. At Rama Care Polyclinic, our cosmetic dental experts create custom-made Snap-On Smile appliances that fit comfortably over your natural teeth, giving you a confident, natural-looking smile within days.',
+      description: 'Snap-On Smile in Dubai is a modern, removable smile makeover solution designed to instantly enhance your teeth without drilling, injections, or permanent changes. At RamaCare Polyclinic, our cosmetic dental experts create custom-made Snap-On Smile appliances that fit comfortably over your natural teeth, giving you a confident, natural-looking smile within days.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -35016,7 +35010,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Snap-On Smile in Dubai',
-        description: 'At Rama Care Polyclinic, we offer high-quality Snap-On Smile in Dubai as a safe, affordable, and non-invasive cosmetic solution. Our Patient-Centric Approach Includes:'
+        description: 'At RamaCare Polyclinic, we offer high-quality Snap-On Smile in Dubai as a safe, affordable, and non-invasive cosmetic solution. Our Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
@@ -35339,7 +35333,7 @@ export const subcategoryContent = {
         {
           "id": 8,
           "question": "What is the Snap-On Smile cost in Dubai?",
-          "answer": "Snap-On Smile cost in Dubai varies based on customisation, materials used, and smile complexity. A consultation at Rama Care Polyclinic helps determine accurate pricing."
+          "answer": "Snap-On Smile cost in Dubai varies based on customisation, materials used, and smile complexity. A consultation at RamaCare Polyclinic helps determine accurate pricing."
         },
         {
           "id": 9,
@@ -35374,7 +35368,7 @@ export const subcategoryContent = {
         {
           "id": 15,
           "question": "Where can I get Snap-On Smile in Dubai?",
-          "answer": "You can get Snap-On Smile in Dubai at Rama Care Polyclinic, a trusted cosmetic dental clinic offering personalised, non-invasive smile makeover solutions with experienced dentists."
+          "answer": "You can get Snap-On Smile in Dubai at RamaCare Polyclinic, a trusted cosmetic dental clinic offering personalised, non-invasive smile makeover solutions with experienced dentists."
         }
       ],
       resources: [
@@ -35496,14 +35490,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Snap-On Smile in Dubai Today',
-      description: 'Transform your smile instantly with Snap-On Smile in Dubai at Rama Care Polyclinic—safe, affordable, and completely non-invasive cosmetic dentistry.',
+      description: 'Transform your smile instantly with Snap-On Smile in Dubai at RamaCare Polyclinic—safe, affordable, and completely non-invasive cosmetic dentistry.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -35529,7 +35523,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -35538,7 +35532,7 @@ export const subcategoryContent = {
   'dental-dubai-teeth-composite-restoration': {
     hero: {
       subtitle: 'Natural Tooth Repair & Aesthetic Dental Care',
-      description: 'Tooth Composite Restoration is a modern dental treatment that repairs damaged, decayed, or chipped teeth using high-quality tooth-colored materials. At Rama Care Polyclinic, we focus on restoring your tooth’s strength, function, and appearance in a comfortable and minimally invasive way.',
+      description: 'Tooth Composite Restoration is a modern dental treatment that repairs damaged, decayed, or chipped teeth using high-quality tooth-colored materials. At RamaCare Polyclinic, we focus on restoring your tooth’s strength, function, and appearance in a comfortable and minimally invasive way.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -35610,7 +35604,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Tooth Composite Restoration in Dubai',
-        description: 'At Rama Care Polyclinic, we provide precise, aesthetic composite restorations that protect your tooth while maintaining a natural look.'
+        description: 'At RamaCare Polyclinic, we provide precise, aesthetic composite restorations that protect your tooth while maintaining a natural look.'
       },
       leftCards: [
         {
@@ -35833,7 +35827,7 @@ export const subcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Tooth Composite Restoration Packages',
       description:
-        'Our tooth composite restoration packages are customised based on tooth damage, the number of teeth involved, and aesthetic requirements. At Rama Care Polyclinic, we follow transparent pricing with no hidden charges.',
+        'Our tooth composite restoration packages are customised based on tooth damage, the number of teeth involved, and aesthetic requirements. At RamaCare Polyclinic, we follow transparent pricing with no hidden charges.',
       packages: [
         {
           id: 1,
@@ -35929,7 +35923,7 @@ export const subcategoryContent = {
           id: 7,
           question: 'What is the cost of tooth composite restoration in Dubai?',
           answer:
-            'The cost depends on tooth condition, number of teeth treated, and complexity. Rama Care Polyclinic offers transparent pricing with no hidden charges.'
+            'The cost depends on tooth condition, number of teeth treated, and complexity. RamaCare Polyclinic offers transparent pricing with no hidden charges.'
         },
         {
           id: 8,
@@ -35975,9 +35969,9 @@ export const subcategoryContent = {
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for tooth composite restoration?',
+          question: 'Why choose RamaCare Polyclinic for tooth composite restoration?',
           answer:
-            'Rama Care Polyclinic offers experienced dentists, advanced materials, personalised care, and natural-looking results in a comfortable clinical environment.'
+            'RamaCare Polyclinic offers experienced dentists, advanced materials, personalised care, and natural-looking results in a comfortable clinical environment.'
         }
       ],
 
@@ -36100,14 +36094,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Tooth Composite Restoration in Dubai Today',
-      description: 'Restore your tooth naturally, safely, and comfortably with expert tooth composite restoration at Rama Care Polyclinic.',
+      description: 'Restore your tooth naturally, safely, and comfortably with expert tooth composite restoration at RamaCare Polyclinic.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -36133,7 +36127,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -36142,7 +36136,7 @@ export const subcategoryContent = {
   'dental-dubai-braces-metal-ceramic': {
     hero: {
       subtitle: 'Straighten Your Teeth with Confidence & Precision',
-      description: 'Braces are one of the most effective and trusted orthodontic treatments for correcting misaligned teeth and bite issues. At Rama Care Polyclinic, we offer both metal braces and ceramic braces in Dubai, helping patients achieve healthy alignment and confident smiles through personalised orthodontic care.',
+      description: 'Braces are one of the most effective and trusted orthodontic treatments for correcting misaligned teeth and bite issues. At RamaCare Polyclinic, we offer both metal braces and ceramic braces in Dubai, helping patients achieve healthy alignment and confident smiles through personalised orthodontic care.',
       rating: '4500+ Happy Clients',
 
       ctaButtons: {
@@ -36217,7 +36211,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Braces Treatment in Dubai',
-        description: 'At Rama Care Polyclinic, we offer personalised braces treatment in Dubai using modern orthodontic techniques designed for comfort, efficiency, and long-lasting results.Our Patient-Centric Approach Includes:'
+        description: 'At RamaCare Polyclinic, we offer personalised braces treatment in Dubai using modern orthodontic techniques designed for comfort, efficiency, and long-lasting results.Our Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
@@ -36616,7 +36610,7 @@ export const subcategoryContent = {
         {
           id: 15,
           question: 'Where can I get braces in Dubai?',
-          answer: 'You can get metal and ceramic braces at Rama Care Polyclinic, a DHA-licensed orthodontic clinic in Dubai. We offer experienced orthodontists, comprehensive treatment plans, and flexible payment options for optimal results.'
+          answer: 'You can get metal and ceramic braces at RamaCare Polyclinic, a DHA-licensed orthodontic clinic in Dubai. We offer experienced orthodontists, comprehensive treatment plans, and flexible payment options for optimal results.'
         }
       ],
       resources: [
@@ -36738,14 +36732,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Braces (Metal & Ceramic) in Dubai Today',
-      description: 'Achieve a healthy, straight smile with expert braces treatment at Rama Care Polyclinic—safe, effective, and tailored to your needs.',
+      description: 'Achieve a healthy, straight smile with expert braces treatment at RamaCare Polyclinic—safe, effective, and tailored to your needs.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -36771,7 +36765,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -36781,7 +36775,7 @@ export const subcategoryContent = {
   'dental-dubai-teeth-scaling-polishing': {
     hero: {
       subtitle: 'Restore Healthy, Sparkling Teeth',
-      description: 'Professional teeth scaling and polishing in Dubai is a preventive dental procedure designed to remove plaque, tartar, and surface stains, improving oral health and restoring a fresh, bright smile. At Rama Care Polyclinic, we use advanced dental tools and techniques to ensure your cleaning is thorough, comfortable, and safe.',
+      description: 'Professional teeth scaling and polishing in Dubai is a preventive dental procedure designed to remove plaque, tartar, and surface stains, improving oral health and restoring a fresh, bright smile. At RamaCare Polyclinic, we use advanced dental tools and techniques to ensure your cleaning is thorough, comfortable, and safe.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -36853,7 +36847,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Professional Teeth Scaling & Polishing in Dubai',
-        description: 'At Rama Care Polyclinic, we deliver gentle, effective teeth cleaning to restore oral health and brighten your smile, ensuring maximum comfort throughout the procedure.Our Patient-Centric Approach Includes:'
+        description: 'At RamaCare Polyclinic, we deliver gentle, effective teeth cleaning to restore oral health and brighten your smile, ensuring maximum comfort throughout the procedure.Our Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
@@ -37179,7 +37173,7 @@ export const subcategoryContent = {
     pricing: {
       title: 'Transparent Pricing & Teeth Scaling & Polishing Packages',
       description:
-        'Our professional teeth cleaning packages are customized based on your oral condition, plaque buildup, and desired results. At Rama Care Polyclinic, we maintain transparent pricing with no hidden charges.',
+        'Our professional teeth cleaning packages are customized based on your oral condition, plaque buildup, and desired results. At RamaCare Polyclinic, we maintain transparent pricing with no hidden charges.',
       packages: [
         {
           id: 1,
@@ -37274,7 +37268,7 @@ export const subcategoryContent = {
           id: 7,
           question: 'Is teeth scaling and polishing safe?',
           answer:
-            'Teeth scaling and polishing are safe, routine dental procedures when performed by qualified dentists using approved instruments and sterilization protocols, as practiced at Rama Care Polyclinic.'
+            'Teeth scaling and polishing are safe, routine dental procedures when performed by qualified dentists using approved instruments and sterilization protocols, as practiced at RamaCare Polyclinic.'
         },
         {
           id: 8,
@@ -37316,13 +37310,13 @@ export const subcategoryContent = {
           id: 14,
           question: 'What is the cost of teeth scaling and polishing in Dubai?',
           answer:
-            'The cost of teeth scaling and polishing in Dubai depends on the oral condition and treatment needs. Rama Care Polyclinic offers transparent pricing with no hidden charges.'
+            'The cost of teeth scaling and polishing in Dubai depends on the oral condition and treatment needs. RamaCare Polyclinic offers transparent pricing with no hidden charges.'
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for teeth scaling and polishing in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for teeth scaling and polishing in Dubai?',
           answer:
-            'Rama Care Polyclinic provides gentle, professional teeth scaling and polishing in Dubai with experienced dentists, modern equipment, and a strong focus on comfort and preventive care.'
+            'RamaCare Polyclinic provides gentle, professional teeth scaling and polishing in Dubai with experienced dentists, modern equipment, and a strong focus on comfort and preventive care.'
         }
       ],
       resources: [
@@ -37426,7 +37420,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -37474,14 +37468,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Teeth Scaling & Polishing in Dubai Today',
-      description: 'Protect your smile, maintain healthy gums, and enjoy fresher breath with professional teeth scaling and polishing in Dubai at Rama Care Polyclinic.',
+      description: 'Protect your smile, maintain healthy gums, and enjoy fresher breath with professional teeth scaling and polishing in Dubai at RamaCare Polyclinic.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -37507,7 +37501,7 @@ export const subcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -37517,7 +37511,7 @@ export const subcategoryContent = {
   'dental-dubai-gum-disease-treatment': {
     hero: {
       subtitle: 'Gentle, Effective Care for Healthy Gums',
-      description: 'Gum disease can silently affect your teeth, gums, and jawbone, leading to discomfort and tooth loss. At Rama Care Polyclinic, we offer advanced gum disease treatment in Dubai that focuses on eliminating infection, reducing inflammation, and restoring healthy gums.',
+      description: 'Gum disease can silently affect your teeth, gums, and jawbone, leading to discomfort and tooth loss. At RamaCare Polyclinic, we offer advanced gum disease treatment in Dubai that focuses on eliminating infection, reducing inflammation, and restoring healthy gums.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -37589,7 +37583,7 @@ export const subcategoryContent = {
       },
       solutionIntro: {
         title: 'Advanced Gum Disease Treatment in Dubai',
-        description: 'At Rama Care Polyclinic, we provide patient-focused treatment using modern periodontal techniques for comfort, effective infection control, and long-term gum health.Our Approach Includes:'
+        description: 'At RamaCare Polyclinic, we provide patient-focused treatment using modern periodontal techniques for comfort, effective infection control, and long-term gum health.Our Approach Includes:'
       },
       leftCards: [
         {
@@ -37935,7 +37929,7 @@ Recovery: Minimal downtime for non-surgical care
         {
           id: 15,
           question: 'Where can I get reliable gum disease treatment in Dubai?',
-          answer: 'You can receive expert gum disease treatment in Dubai at Rama Care Polyclinic, offering advanced care, experienced dentists, and patient-focused treatment plans.'
+          answer: 'You can receive expert gum disease treatment in Dubai at RamaCare Polyclinic, offering advanced care, experienced dentists, and patient-focused treatment plans.'
         }
       ],
       resources: [
@@ -38039,7 +38033,7 @@ Recovery: Minimal downtime for non-surgical care
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -38094,7 +38088,7 @@ Recovery: Minimal downtime for non-surgical care
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -38120,7 +38114,7 @@ Recovery: Minimal downtime for non-surgical care
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -38130,7 +38124,7 @@ Recovery: Minimal downtime for non-surgical care
   'dental-dubai-dental-crown-bridge': {
     hero: {
       subtitle: 'Restore Strength, Function & Natural Smile',
-      description: 'Dental crowns and bridges are reliable restorative dental solutions designed to repair damaged teeth and replace missing ones. At Rama Care Polyclinic, we offer high-quality dental crowns and bridges in Dubai, enabling patients to regain comfortable chewing, clear speech, and a confident smile with long-lasting results.',
+      description: 'Dental crowns and bridges are reliable restorative dental solutions designed to repair damaged teeth and replace missing ones. At RamaCare Polyclinic, we offer high-quality dental crowns and bridges in Dubai, enabling patients to regain comfortable chewing, clear speech, and a confident smile with long-lasting results.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -38202,7 +38196,7 @@ Recovery: Minimal downtime for non-surgical care
       },
       solutionIntro: {
         title: 'Advanced Dental Crown & Bridges in Dubai',
-        description: 'At Rama Care Polyclinic, we offer personalised crown and bridge solutions designed to restore function, comfort, and natural aesthetics.Our Patient-Centric Approach Includes:'
+        description: 'At RamaCare Polyclinic, we offer personalised crown and bridge solutions designed to restore function, comfort, and natural aesthetics.Our Patient-Centric Approach Includes:'
       },
       leftCards: [
         {
@@ -38581,7 +38575,7 @@ Long-term oral health support
         {
           id: 15,
           question: ' Where can I get professional crown and bridge treatment in Dubai?',
-          answer: ' You can get professional crown and bridge treatment at Rama Care Polyclinic, a DHA-licensed dental clinic offering specialized prosthodontic care with experienced specialists for optimal results.'
+          answer: ' You can get professional crown and bridge treatment at RamaCare Polyclinic, a DHA-licensed dental clinic offering specialized prosthodontic care with experienced specialists for optimal results.'
         }
       ],
       resources: [
@@ -38685,7 +38679,7 @@ Long-term oral health support
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -38740,7 +38734,7 @@ Long-term oral health support
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -38766,7 +38760,7 @@ Long-term oral health support
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -38776,7 +38770,7 @@ Long-term oral health support
   'dental-dubai-teeth-dentures': {
     hero: {
       subtitle: 'Comfortable, Natural-Looking Dentures for a Confident Smile',
-      description: 'Missing teeth can affect your confidence, speech, and ability to eat comfortably. Dentures in Dubai offer a reliable and affordable solution to restore your smile and improve daily function. At Rama Care Polyclinic, we provide high-quality, custom-designed dentures that look natural, feel comfortable, and help you smile with confidence again.',
+      description: 'Missing teeth can affect your confidence, speech, and ability to eat comfortably. Dentures in Dubai offer a reliable and affordable solution to restore your smile and improve daily function. At RamaCare Polyclinic, we provide high-quality, custom-designed dentures that look natural, feel comfortable, and help you smile with confidence again.',
       rating: '500+ Happy Clients',
 
       ctaButtons: {
@@ -38814,7 +38808,7 @@ Long-term oral health support
           qualifications: 'Having 11 years of clinical experience.',
           specializations: 'General Ayurveda & Preventive Care',
           patientsTreated: ' Successfully treated 800+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Shamna Keloth Meethal.jpeg'
         },
         {
@@ -38824,7 +38818,7 @@ Long-term oral health support
           qualifications: 'Having 5 years of experience in dentistry.',
           specializations: 'General Dentistry',
           patientsTreated: 'Successfully treated 500+ patients.',
-          rating: '4.9/5',
+          rating: '4.8/5',
           image: '/images/Dr Anan.jpeg'
         },
         {
@@ -38877,7 +38871,7 @@ Long-term oral health support
       },
       solutionIntro: {
         title: 'Customized Teeth Dentures in Dubai',
-        description: 'At Rama Care Polyclinic, we provide custom-made dentures in Dubai designed to restore comfort, function, and a natural-looking smile.Our Approach Includes:'
+        description: 'At RamaCare Polyclinic, we provide custom-made dentures in Dubai designed to restore comfort, function, and a natural-looking smile.Our Approach Includes:'
       },
       leftCards: [
         {
@@ -39198,7 +39192,7 @@ Seek a cost-effective smile restoration`
           id: 6,
           question: 'What is the cost of dentures in Dubai?',
           answer:
-            'The cost of dentures in Dubai depends on denture type, materials used, and complexity. Pricing at Rama Care Polyclinic is transparent with no hidden charges.'
+            'The cost of dentures in Dubai depends on denture type, materials used, and complexity. Pricing at RamaCare Polyclinic is transparent with no hidden charges.'
         },
         {
           id: 7,
@@ -39250,9 +39244,9 @@ Seek a cost-effective smile restoration`
         },
         {
           id: 15,
-          question: 'Why choose Rama Care Polyclinic for dentures in Dubai?',
+          question: 'Why choose RamaCare Polyclinic for dentures in Dubai?',
           answer:
-            'Rama Care Polyclinic offers customized denture solutions, experienced dentists, modern materials, and patient-focused care for comfortable, natural-looking results.'
+            'RamaCare Polyclinic offers customized denture solutions, experienced dentists, modern materials, and patient-focused care for comfortable, natural-looking results.'
         }
       ],
       resources: [
@@ -39356,7 +39350,7 @@ Seek a cost-effective smile restoration`
       stats: [
         {
           id: 1,
-          number: '4.9/5',
+          number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.9
@@ -39402,14 +39396,14 @@ Seek a cost-effective smile restoration`
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Teeth Dentures in Dubai Today',
-      description: 'Restore your smile, comfort, and confidence with Teeth Dentures in Dubai at Rama Care Polyclinic. Our expert team is here to help you smile comfortably again.',
+      description: 'Restore your smile, comfort, and confidence with Teeth Dentures in Dubai at RamaCare Polyclinic. Our expert team is here to help you smile comfortably again.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
       submitButtonText: 'Confirm Free Consultation',
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.com',
+        email: 'query@ramacarepolyclinic.ae',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -39435,7 +39429,7 @@ Seek a cost-effective smile restoration`
           description: 'Completed'
         },
         {
-          title: '4.9/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]

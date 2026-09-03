@@ -474,7 +474,7 @@ const INTERNAL_LINKS = [
   { text: "Facial Treatments in Dubai", url: "/services/facial-dubai/", desc: "Custom medical facials designed for all skin types." },
   { text: "PRP Facial Therapy", url: "/services/face-prp-in-dubai/", desc: "Platelet-Rich Plasma therapy for natural skin renewal." },
   { text: "Book an Appointment", url: "/book-appointment/", desc: "Schedule your skin consultation with our DHA-licensed team." },
-  { text: "Polyclinic in Jumeirah 1", url: "/services/polyclinic-in-jumeirah/", desc: "Learn about our healthcare facility in Jumeirah 1, Dubai." },
+  { text: "Polyclinic in Jumeirah 1", url: "/services/polyclinic-in-jumeirah-1/", desc: "Learn about our healthcare facility in Jumeirah 1, Dubai." },
 ];
 
 const FINAL_CTA = {
@@ -1354,7 +1354,7 @@ export default function Page() {
                     <p key={i}>{p}</p>
                   ))}
                   <div className="pt-2 text-xs sm:text-sm font-semibold text-[#1F5E4B]">
-                    <Link href="/services/polyclinic-in-jumeirah/" className="underline hover:text-[#184b3c]">
+                    <Link href="/services/polyclinic-in-jumeirah-1/" className="underline hover:text-[#184b3c]">
                       Learn more about our DHA-licensed polyclinic facility in Jumeirah 1 →
                     </Link>
                   </div>

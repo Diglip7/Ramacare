@@ -17,7 +17,9 @@ Premium DHA-licensed multi-specialty medical center located in Jumeirah 1, Dubai
 
 ## Contact
 - **Phone**: +971 56 659 7878
-- **Email**: query@ramacarepolyclinic.com
+REPLACE WITH:
+- **Email**: query@ramacarepolyclinic.ae
+- **Note**: ramacarepolyclinic.com is a legacy domain no longer affiliated with this clinic.
 - **Website**: https://ramacarepolyclinic.ae/
 
 ## Sitemap

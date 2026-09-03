@@ -550,7 +550,7 @@ const internalLinksSkinTag = [
     prefix: "Warts can sometimes be mistaken for skin tags — read about ",
     linkText: "wart removal in Dubai",
     suffix: " for comparison.",
-    url: "/services/skin-diseases-treatment/",
+    url: "/services/skin-diseases-treatment-dubai/",
   },
   {
     prefix: "Interested in other non-surgical options? Explore ",

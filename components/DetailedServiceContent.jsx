@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  CheckCircle2, 
-  ShieldCheck, 
-  Zap, 
-  Activity, 
-  HeartPulse, 
-  Sparkles, 
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Zap,
+  Activity,
+  HeartPulse,
+  Sparkles,
   Target,
   Stethoscope,
   Users,
@@ -26,7 +26,7 @@ const DetailedServiceContent = ({ content }) => {
       case 'early-intervention': return <Clock className={iconClass} />;
       case 'process': return <Stethoscope className={iconClass} />;
       case 'comparison': return <Award className={iconClass} />;
-      case 'benefits-grid': 
+      case 'benefits-grid':
         if (index % 4 === 0) return <Zap className={iconClass} />;
         if (index % 4 === 1) return <Activity className={iconClass} />;
         if (index % 4 === 2) return <HeartPulse className={iconClass} />;
@@ -53,7 +53,7 @@ const DetailedServiceContent = ({ content }) => {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{section.title}</h2>
                   <p className="text-lg text-gray-600 leading-relaxed">{section.description}</p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {section.items.map((item, i) => (
                     <div key={i} className="group p-8 bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#1a5f3f]/30 transition-all duration-500">
@@ -84,7 +84,7 @@ const DetailedServiceContent = ({ content }) => {
                     <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                       {section.description}
                     </p>
-                    
+
                     <div className="grid grid-cols-1 gap-4">
                       {section.items.map((item, i) => (
                         <div key={i} className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#1a5f3f]/20 transition-all duration-300">
@@ -98,7 +98,7 @@ const DetailedServiceContent = ({ content }) => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className={isEven ? 'order-2' : 'order-2 lg:order-1'}>
                     <div className="relative group">
                       <div className="absolute -inset-4 bg-gradient-to-tr from-[#1a5f3f]/20 to-[#c9a961]/20 rounded-[2.5rem] blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
@@ -106,7 +106,7 @@ const DetailedServiceContent = ({ content }) => {
                         <div className="w-20 h-20 bg-[#1a5f3f]/10 rounded-3xl flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                           {getIcon(section.type, 0)}
                         </div>
-                        
+
                         <p className="text-gray-500 italic leading-relaxed">
                           {section.footerText}
                         </p>
@@ -126,7 +126,7 @@ const DetailedServiceContent = ({ content }) => {
   // Render two sections merged side-by-side
   const renderMergedSection = (leftSection, rightSection, groupIndex) => {
     const isGroupEven = groupIndex % 2 === 0;
-    
+
     return (
       <section key={groupIndex} id={`${leftSection.title.toLowerCase().replace(/\s+/g, '-')}-${rightSection.title.toLowerCase().replace(/\s+/g, '-')}`} className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,17 +141,17 @@ const DetailedServiceContent = ({ content }) => {
                   {leftSection.title}
                 </h2>
               </div>
-              
+
               <p className="text-gray-600 leading-relaxed mb-6">
                 {leftSection.description}
               </p>
-              
+
               {leftSection.subtitle && (
                 <h4 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wider">
                   {leftSection.subtitle}
                 </h4>
               )}
-              
+
               <div className="grid grid-cols-1 gap-3 mb-6">
                 {leftSection.items.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50/50 transition-all duration-300 hover:bg-gray-100">
@@ -162,14 +162,14 @@ const DetailedServiceContent = ({ content }) => {
                   </div>
                 ))}
               </div>
-              
+
               {leftSection.footerText && (
                 <div className={`p-5 italic leading-relaxed text-gray-700 ${isGroupEven ? 'bg-[#1a5f3f]/5 border-l-4 border-[#1a5f3f]' : 'bg-[#c9a961]/5 border-l-4 border-[#c9a961]'}`}>
                   {leftSection.footerText}
                 </div>
               )}
             </div>
-            
+
             {/* Right Side - Second Section */}
             <div className={`bg-white p-10 shadow-lg border-l-4 transition-all duration-300 hover:shadow-xl ${isGroupEven ? 'border-[#c9a961]' : 'border-[#1a5f3f]'}`}>
               <div className="flex items-center gap-4 mb-6">
@@ -180,17 +180,17 @@ const DetailedServiceContent = ({ content }) => {
                   {rightSection.title}
                 </h2>
               </div>
-              
+
               <p className="text-gray-600 leading-relaxed mb-6">
                 {rightSection.description}
               </p>
-              
+
               {rightSection.subtitle && (
                 <h4 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wider">
                   {rightSection.subtitle}
                 </h4>
               )}
-            
+
               <div className="grid grid-cols-1 gap-3 mb-6">
                 {rightSection.items.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50/50 transition-all duration-300 hover:bg-gray-100">
@@ -201,7 +201,7 @@ const DetailedServiceContent = ({ content }) => {
                   </div>
                 ))}
               </div>
-              
+
               {rightSection.footerText && (
                 <div className={`p-5 italic leading-relaxed text-gray-700 ${isGroupEven ? 'bg-[#c9a961]/5 border-l-4 border-[#c9a961]' : 'bg-[#1a5f3f]/5 border-l-4 border-[#1a5f3f]'}`}>
                   {rightSection.footerText}
@@ -217,7 +217,7 @@ const DetailedServiceContent = ({ content }) => {
   // Split content: first 2 sections untouched, rest merged in pairs
   const originalSections = content.slice(0, 2);
   const newDesignSections = content.slice(2);
-  
+
   // Create pairs of sections to merge
   const mergedSections = [];
   for (let i = 0; i < newDesignSections.length; i += 2) {
@@ -232,10 +232,10 @@ const DetailedServiceContent = ({ content }) => {
     <div className="detailed-service-content overflow-hidden">
       {/* Original untouched sections */}
       {originalSections.map((section, index) => renderOriginalSection(section, index))}
-      
+
       {/* Merged sections */}
-      {mergedSections.map((sections, groupIndex) => 
-        sections.length === 2 
+      {mergedSections.map((sections, groupIndex) =>
+        sections.length === 2
           ? renderMergedSection(sections[0], sections[1], groupIndex)
           : renderOriginalSection(sections[0], 3 + groupIndex) // Fallback if odd number
       )}

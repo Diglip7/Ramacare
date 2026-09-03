@@ -450,14 +450,14 @@ export default function PostSurgeryRehabilitationPage() {
                 <div className="bg-[#1F5E4B] text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16" />
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#D4A574]/15 rounded-full -ml-12 -mb-12" />
-                  
+
                   <span className="text-xs text-[#D4A574] font-bold uppercase tracking-wider block mb-2">
                     Clinical Focus
                   </span>
                   <h3 className="text-2xl font-extrabold mb-6 leading-tight">
                     Bridging the Gap Between Surgery & Recovery
                   </h3>
-                  
+
                   <div className="space-y-6">
                     <div className="border-l-2 border-[#D4A574] pl-4">
                       <h4 className="font-bold text-sm text-white/90">Objective Protocol</h4>
@@ -994,7 +994,7 @@ export default function PostSurgeryRehabilitationPage() {
               contactInfo: {
                 phone: '+971 04 286 2006',
                 whatsapp: '971566597878',
-                email: 'query@ramacarepolyclinic.com',
+                email: 'query@ramacarepolyclinic.ae',
                 address: {
                   line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                   line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1010,7 +1010,7 @@ export default function PostSurgeryRehabilitationPage() {
                 { title: 'DHA Licensed', description: 'Certified Facility' },
                 { title: 'Experienced Team', description: '10+ Years Combined' },
                 { title: 'Personalized Plans', description: 'Built Around Assessment' },
-                { title: '4.9/5 Rating', description: 'Patient Reviews' }
+                { title: '4.8/5 Rating', description: 'Patient Reviews' }
               ],
               concerns: [
                 { value: 'post-surgery-rehabilitation-dubai', label: 'Post-Surgery Rehab' },
@@ -1025,7 +1025,7 @@ export default function PostSurgeryRehabilitationPage() {
         {/* DOCTORS SHOWCASE */}
 
 
-       
+
 
 
         {/* CONCLUSION AND CLINICAL NOTES */}

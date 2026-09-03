@@ -896,7 +896,7 @@ export default function SensitiveTeethTreatmentPage() {
                 Treatment Dubai later on.
               </p>
             </div>
-            
+
             <div>
               <SectionHeading id="benefits" eyebrow="Why Not Wait" title="Benefits of Early Treatment" />
               <p className="text-sm leading-relaxed text-[#5F5F5F]">

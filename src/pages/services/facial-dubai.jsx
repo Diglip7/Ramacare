@@ -122,8 +122,8 @@ export default function facialdubaiCategoryPage() {
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
-      <TreatmentSection 
-        category="facial" 
+      <TreatmentSection
+        category="facial"
         content={{
           ...content?.treatments,
           consultationHeading: content?.treatments?.consultationCTA?.heading,
@@ -131,7 +131,7 @@ export default function facialdubaiCategoryPage() {
           consultationButtonText: content?.treatments?.consultationCTA?.buttonText,
           consultationBgColor: content?.treatments?.consultationCTA?.backgroundColor,
           consultationButtonColor: content?.treatments?.consultationCTA?.buttonColor
-        }} 
+        }}
       />
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />
@@ -139,7 +139,7 @@ export default function facialdubaiCategoryPage() {
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
       <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="facial-dubai" />
       <FAQSection content={content?.faq} />
-       {/* <OurFacilitySection content={content?.facility} /> */}
+      {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />
       <SEOContentSection title="Advanced Facial Treatments in Dubai" content={facialSEOContent} />
     </Layout>

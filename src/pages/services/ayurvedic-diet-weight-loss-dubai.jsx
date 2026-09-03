@@ -118,41 +118,41 @@ const content = {
       { label: 'Week 3-6', text: 'Customized meal plans, herbal support, weekly progress tracking' },
       { label: 'Month 2-3', text: 'Fine-tuning, sustainable habit formation, long-term maintenance strategy' }
     ],
-     cta: 'Start Your 30-Day Transformation in Jumeirah Today'
-   },
-   retargeting: {
-     title: 'Still Thinking?',
-     cards: [
-       { label: '4.9/5 Patient Rating', icon: 'Star', stars: 5 },
-       { label: '500+', subLabel: 'Successful Transformations', icon: 'Users' },
-       { label: '3-6 Weeks', subLabel: 'To Visible Results', icon: 'Clock' }
-     ],
-     badge: 'Limited consultation slots this week',
-     buttons: {
-       confirm: 'Book Now',
-       whatsapp: 'WhatsApp Instantly'
-     }
-   },
-   leadCapture: {
-     title: 'Ready to Transform Your Health?',
-     subtitle: 'Book your personalized Ayurvedic consultation today',
-     form: {
-       fields: {
-         name: 'Full Name',
-         phone: 'Phone Number',
-         email: 'Email Address',
-         goal: 'Primary Goal',
-         time: 'Preferred Time'
-       },
-       buttons: {
-         confirm: 'Confirm Appointment',
-         whatsapp: 'Chat on WhatsApp'
-       }
-     }
-   }
- };
- 
- export default function AyurvedicDietWeightLossPage() {
+    cta: 'Start Your 30-Day Transformation in Jumeirah Today'
+  },
+  retargeting: {
+    title: 'Still Thinking?',
+    cards: [
+      { label: '4.8/5 Patient Rating', icon: 'Star', stars: 5 },
+      { label: '500+', subLabel: 'Successful Transformations', icon: 'Users' },
+      { label: '3-6 Weeks', subLabel: 'To Visible Results', icon: 'Clock' }
+    ],
+    badge: 'Limited consultation slots this week',
+    buttons: {
+      confirm: 'Book Now',
+      whatsapp: 'WhatsApp Instantly'
+    }
+  },
+  leadCapture: {
+    title: 'Ready to Transform Your Health?',
+    subtitle: 'Book your personalized Ayurvedic consultation today',
+    form: {
+      fields: {
+        name: 'Full Name',
+        phone: 'Phone Number',
+        email: 'Email Address',
+        goal: 'Primary Goal',
+        time: 'Preferred Time'
+      },
+      buttons: {
+        confirm: 'Confirm Appointment',
+        whatsapp: 'Chat on WhatsApp'
+      }
+    }
+  }
+};
+
+export default function AyurvedicDietWeightLossPage() {
   const { showToast, ToastComponent } = useToast();
   const [openFaq, setOpenFaq] = useState(null);
   const [formData, setFormData] = useState({
@@ -224,51 +224,51 @@ const content = {
       }
     ]
   };
- 
-   const scrollToForm = () => {
-     const element = document.getElementById('booking-form');
-     if (element) {
-       element.scrollIntoView({ behavior: 'smooth' });
-     }
-   };
- 
-   const handleFormSubmit = async (e) => {
-     e.preventDefault();
-     
-     if (!formData.name || !formData.phone || !formData.email) {
-       showToast('Please fill in all required fields (Name, Phone, and Email).', 'error');
-       return;
-     }
-     
-     try {
-       const response = await fetch('/api/appointment', {
-         method: 'POST',
-         headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify({
-           fullName: formData.name,
-           phone: formData.phone,
-           email: formData.email,
-           preferredTime: formData.time,
-           concern: formData.goal,
-           source: 'ayurvedic-diet-weight-loss-dubai'
-         }),
-       });
- 
-       const result = await response.json();
- 
-       if (response.ok && result.success) {
-         showToast('Appointment request submitted successfully!', 'success');
-         setFormData({ name: '', phone: '', email: '', goal: '', time: '' });
-       } else {
-         showToast(result.message || 'Failed to submit appointment.', 'error');
-       }
-     } catch (error) {
-       console.error('Form submission error:', error);
-       showToast('An error occurred. Please try again later.', 'error');
-     }
-   };
- 
-   return (
+
+  const scrollToForm = () => {
+    const element = document.getElementById('booking-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.phone || !formData.email) {
+      showToast('Please fill in all required fields (Name, Phone, and Email).', 'error');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/appointment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          preferredTime: formData.time,
+          concern: formData.goal,
+          source: 'ayurvedic-diet-weight-loss-dubai'
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        showToast('Appointment request submitted successfully!', 'success');
+        setFormData({ name: '', phone: '', email: '', goal: '', time: '' });
+      } else {
+        showToast(result.message || 'Failed to submit appointment.', 'error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      showToast('An error occurred. Please try again later.', 'error');
+    }
+  };
+
+  return (
     <Layout>
       {ToastComponent}
       <Head>
@@ -340,7 +340,7 @@ const content = {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <button 
+                <button
                   onClick={scrollToForm}
                   className="bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#164435] transition-all shadow-lg"
                 >
@@ -495,7 +495,7 @@ const content = {
                 className="bg-white p-10 rounded-2xl shadow-sm text-center"
               >
                 <div className="w-12 h-12 bg-[#F9F7F2] rounded-full flex items-center justify-center mx-auto mb-6 text-[#1F5E4B]">
-                   <LucideIcons.Leaf size={24} />
+                  <LucideIcons.Leaf size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">
                   {item.title}
@@ -513,7 +513,7 @@ const content = {
             viewport={{ once: true }}
             className="text-center"
           >
-            <button 
+            <button
               onClick={scrollToForm}
               className="bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#164435] transition-all shadow-lg"
             >
@@ -561,7 +561,7 @@ const content = {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                     >
-                      <div 
+                      <div
                         className="p-6 pt-0 text-[#5F5F5F] leading-relaxed text-sm md:text-[16px] bg-white"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       />
@@ -607,7 +607,7 @@ const content = {
                 ))}
               </div>
 
-              <button 
+              <button
                 onClick={scrollToForm}
                 className="bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#164435] transition-all shadow-lg"
               >
@@ -683,13 +683,13 @@ const content = {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-              <button 
+              <button
                 onClick={scrollToForm}
                 className="flex-1 bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold text-[16px] hover:bg-[#164435] transition-all shadow-lg"
               >
                 {content.retargeting.buttons.confirm}
               </button>
-              <a 
+              <a
                 href={`https://wa.me/${content.hero.ctaButtons.secondary.phone}`}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -728,8 +728,8 @@ const content = {
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="space-y-2">
                 <label className="text-sm font-bold ml-1">{content.leadCapture.form.fields.name}</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Enter your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -739,8 +739,8 @@ const content = {
               </div>
               <div className="space-y-2 text-left">
                 <label className="text-sm font-bold ml-1">{content.leadCapture.form.fields.phone}</label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   placeholder="+971 XX XXX XXXX"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -752,8 +752,8 @@ const content = {
 
             <div className="space-y-2 text-left">
               <label className="text-sm font-bold ml-1">{content.leadCapture.form.fields.email}</label>
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="yourname@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -764,7 +764,7 @@ const content = {
 
             <div className="space-y-2 text-left">
               <label className="text-sm font-bold ml-1">{content.leadCapture.form.fields.goal}</label>
-              <select 
+              <select
                 value={formData.goal}
                 onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
                 className="w-full px-4 py-4 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#1F5E4B] focus:bg-white outline-none transition-all appearance-none cursor-pointer"
@@ -780,7 +780,7 @@ const content = {
 
             <div className="space-y-2 text-left">
               <label className="text-sm font-bold ml-1">{content.leadCapture.form.fields.time}</label>
-              <select 
+              <select
                 value={formData.time}
                 onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                 className="w-full px-4 py-4 rounded-xl bg-[#F5F5F5] border border-transparent focus:border-[#1F5E4B] focus:bg-white outline-none transition-all appearance-none cursor-pointer"
@@ -794,13 +794,13 @@ const content = {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button 
+              <button
                 type="submit"
                 className="flex-1 bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:opacity-80"
               >
                 {content.leadCapture.form.buttons.confirm}
               </button>
-              <a 
+              <a
                 href={`https://wa.me/${content.hero.ctaButtons.secondary.phone}`}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -846,13 +846,13 @@ const content = {
             <p className="text-xs text-white/70">Limited slots available this week</p>
           </div>
           <div className="flex gap-4">
-            <button 
+            <button
               onClick={scrollToForm}
               className="bg-white text-[#1F5E4B] px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-gray-100 transition-all"
             >
               Book Now
             </button>
-            <a 
+            <a
               href={`https://wa.me/${content.hero.ctaButtons.secondary.phone}`}
               target="_blank"
               rel="noopener noreferrer nofollow"

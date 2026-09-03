@@ -4,9 +4,10 @@ import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
+import BastiTherapySections from '../../../components/BastiTherapySections';
+import ContentSection from '../../../components/ContentSection';
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
-import PanchakarmaWhyChoose from '../../../components/PanchakarmaWhyChoose';
 import PatientTestimonials from '../../../components/VideoTestimonials';
 import DoctorsSection from '../../../components/DoctorsSection';
 // import PricingPackages from '../../../components/PricingPackages';
@@ -16,12 +17,26 @@ import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { getSubcategoryContent } from '../../data/subcategoryContent';
 
-export default function PanchakarmaTreatmentPage() {
+
+export default function SkinDiseasesTreatmentPage() {
   const categoryName = 'Ayurveda';
-  const subcategoryName = 'Panchakarma Treatment';
+  const subcategoryName = 'Ayurvedic Skin Disease Treatment';
 
   // Get content from data file
-  const content = getSubcategoryContent('ayurveda-dubai', 'panchakarma-treatment');
+  const content = getSubcategoryContent('ayurveda-dubai', 'skin-diseases-treatment');
+
+  // Custom navigation items for this page
+  const navItems = [
+    { id: 'treatment-info', label: 'Treatment Overview' },
+    { id: 'why-choose-us', label: 'Why Choose' },
+    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'treatment-process', label: 'Treatment Process' },
+    { id: 'digestive-health', label: 'Digestive Health' },
+    { id: 'cost-and-results', label: 'Recovery' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'book-now', label: 'Book Now' },
+  ];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -42,8 +57,8 @@ export default function PanchakarmaTreatmentPage() {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Panchakarma Treatment",
-        "item": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/"
+        "name": "Skin Diseases Treatment",
+        "item": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/"
       }
     ]
   };
@@ -51,10 +66,11 @@ export default function PanchakarmaTreatmentPage() {
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "Panchakarma Treatment in Dubai",
-    "description": "Authentic Ayurvedic Panchakarma detoxification and rejuvenation therapy in Dubai combining oil therapy, herbal steam, cleansing protocols, and personalized care to balance doshas, boost immunity, and relieve stress.",
-    "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment/",
+    "name": "Ayurvedic Skin Disease Treatment in Dubai",
+    "description": "Holistic Ayurvedic treatment for skin conditions including acne, eczema, psoriasis, fungal and allergic skin concerns, and pigmentation, focused on balancing doshas, improving digestion, and supporting long-term skin wellness through herbal medicines, external applications, and detoxification therapies.",
+    "url": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/",
     "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "bodyLocation": "Skin",
     "reviewedBy": {
       "@type": "Physician",
       "name": "Dr. Shamna Keloth Meethal",
@@ -65,9 +81,9 @@ export default function PanchakarmaTreatmentPage() {
       "@type": "MedicalClinic",
       "name": "RamaCare Polyclinic",
       "url": "https://ramacarepolyclinic.ae/",
-      "image": "https://ramacarepolyclinic.ae/images/panchakarma.jpg",
+      "image": "https://ramacarepolyclinic.ae/images/skin1.jpg",
       "telephone": "+971566597878",
-      "priceRange": "$$$",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
@@ -108,45 +124,42 @@ export default function PanchakarmaTreatmentPage() {
   return (
     <Layout>
       <Head>
-        <title key="title">Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness</title>
+        <title key="title">Skin Diseases Treatment Dubai | Expert Dermatology Care</title>
         <meta
           name="description"
-          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
           key="description"
         />
         <meta
           name="keywords"
-          content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai"
+          content="Skin diseases treatment Dubai, Ayurvedic skin treatment Dubai, Acne treatment Dubai, Eczema treatment Dubai, Psoriasis treatment Dubai, Rashes treatment Ayurveda Dubai, Natural skin care Dubai, Holistic skin treatment Dubai, Ayurvedic dermatologist in Dubai, Herbal skin therapy Dubai, Personalized skin care Dubai, Ayurvedic remedies for skin issues"
           key="keywords"
         />
         <meta name="robots" content="index, follow" key="robots" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/panchakarma-treatment/" key="canonical" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="og:title" />
+        <meta property="og:title" content="Skin Diseases Treatment Dubai | Expert Dermatology Care" key="og:title" />
         <meta
           property="og:description"
-          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
           key="og:description"
         />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/panchakarma-treatment/" key="og:url" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/panchakarma.jpg" key="og:image" />
-        <meta property="og:image:width" content="1200" key="og:image:width" />
-        <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Panchakarma Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/" key="og:url" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/skin1.jpg" key="og:image" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="twitter:title" />
+        <meta name="twitter:title" content="Skin Diseases Treatment Dubai | Expert Dermatology Care" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation."
+          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
           key="twitter:description"
         />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/panchakarma.jpg" key="twitter:image" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/skin1.jpg" key="twitter:image" />
 
         {/* Structured Data Schemas */}
         <script
@@ -174,21 +187,45 @@ export default function PanchakarmaTreatmentPage() {
         subcategoryName={subcategoryName}
         hero={content?.hero}
       />
-      <QuickNavigation />
+      <QuickNavigation navItems={navItems} />
     
       <TreatmentOverview 
         subcategoryName={subcategoryName}
         content={content?.overview}
       />
-      <HealingJourney content={content?.healingJourney} />
+    
+      {/* Skin Conditions anchor point - scrolls to the skin conditions card within Treatment Overview */}
+      <div id="skin-conditions" className="invisible -mt-20"></div>
+    
+      {/* Why Choose Section */}
+      <BastiTherapySections 
+        sectionType="whyChoose"
+        content={content?.whyChoose}
+      />
+    
+      {/* How It Works Section */}
+      <ContentSection type="howItWorks" content={content?.howItWorks} />
+    
+      {/* Treatment Process Section */}
+      <HealingJourney content={content?.healingJourney} sectionId="treatment-process" />
+    
+      {/* Digestive Health Section */}
+      <ContentSection type="digestiveHealth" content={content?.digestiveHealth} />
+    
+      {/* Diet & Lifestyle Section */}
+      <ContentSection type="dietLifestyle" content={content?.dietLifestyle} />
+    
+      {/* Recovery & Aftercare Section */}
+      <ContentSection type="recoveryAftercare" content={content?.recoveryAftercare} />
+    
       <TreatmentBenefits 
         content={content?.benefits}
       />
-      <PanchakarmaWhyChoose content={content?.panchakarmaWhyChoose} />
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
+    
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="panchakarma-treatment" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="skin-diseases-treatment-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

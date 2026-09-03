@@ -60,7 +60,7 @@ export default function AestheticDermatologyCategoryPage() {
         <meta name="twitter:description" content="Advanced aesthetic dermatology in Dubai — laser treatments, PRP therapy, hair restoration & body contouring by DHA-licensed specialists." />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/aesth.jpg" />
 
-       
+
 
         {/* MedicalProcedure Service Schema */}
         <script
@@ -183,8 +183,8 @@ export default function AestheticDermatologyCategoryPage() {
       <HeroSection content={content?.hero} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
-      <TreatmentSection 
-        category="aesthetic-dermatology" 
+      <TreatmentSection
+        category="aesthetic-dermatology"
         content={{
           ...content?.treatments,
           consultationHeading: content?.treatments?.consultationCTA?.heading,
@@ -192,7 +192,7 @@ export default function AestheticDermatologyCategoryPage() {
           consultationButtonText: content?.treatments?.consultationCTA?.buttonText,
           consultationBgColor: content?.treatments?.consultationCTA?.backgroundColor,
           consultationButtonColor: content?.treatments?.consultationCTA?.buttonColor
-        }} 
+        }}
       />
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />
@@ -200,7 +200,7 @@ export default function AestheticDermatologyCategoryPage() {
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
       <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="aesthetic-dermatology-dubai" />
       <FAQSection content={content?.faq} />
-     {/* <OurFacilitySection content={content?.facility} /> */}
+      {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />
       <SEOContentSection title="Aesthetic Dermatology Excellence in Dubai" content={dermatologySEOContent} />
     </Layout>

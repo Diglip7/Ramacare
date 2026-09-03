@@ -730,7 +730,7 @@ export default function EximiaTreatmentCostPage() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white mb-2">15+</div>
-                    <div className="text-white/70 text-sm">Years Experience</div>
+                    <div className="text-white/70 text-sm">Years Combined Experience</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white mb-2">98%</div>

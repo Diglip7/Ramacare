@@ -39,6 +39,18 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: '/services/face-prp', destination: '/services/face-prp-in-dubai/', permanent: true },
+      { source: '/services/face-prp/', destination: '/services/face-prp-in-dubai/', permanent: true },
+      { source: '/services/panchakarma-treatment', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
+      { source: '/services/panchakarma-treatment/', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
+      { source: '/services/skin-diseases-treatment', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
+      { source: '/services/skin-diseases-treatment/', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
+      { source: '/services/polyclinic-in-jumeirah', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
+      { source: '/services/polyclinic-in-jumeirah/', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

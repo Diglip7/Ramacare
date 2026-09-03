@@ -5,7 +5,9 @@ const BASE_URL = 'https://ramacarepolyclinic.ae';
 export function generateCanonical(path) {
   // Ensure path starts with /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return `${BASE_URL}${normalizedPath}`;
+  const hasExtension = /\.[a-zA-Z0-9]+$/.test(normalizedPath);
+  const pathWithSlash = (normalizedPath.endsWith('/') || hasExtension) ? normalizedPath : `${normalizedPath}/`;
+  return `${BASE_URL}${pathWithSlash}`;
 }
 
 // Generate canonical URL for service pages
@@ -26,12 +28,12 @@ export function getDoctorCanonical(doctorId) {
 // Common canonical URLs
 export const CANONICAL_URLS = {
   HOME: generateCanonical('/'),
-  SERVICES: generateCanonical('/services'),
-  BLOG: generateCanonical('/blog'),
-  DOCTORS: generateCanonical('/doctors'),
-  PRIVACY_POLICY: generateCanonical('/privacy-policy'),
-  REFUND_POLICY: generateCanonical('/refund-and-cancellation-policy'),
-  TESTIMONIALS: generateCanonical('/testimonials')
+  SERVICES: generateCanonical('/services/'),
+  BLOG: generateCanonical('/blog/'),
+  DOCTORS: generateCanonical('/doctors/'),
+  PRIVACY_POLICY: generateCanonical('/privacy-policy/'),
+  REFUND_POLICY: generateCanonical('/refund-and-cancellation-policy/'),
+  TESTIMONIALS: generateCanonical('/testimonials/')
 };
 
 // Generate canonical tag HTML

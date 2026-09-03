@@ -7,19 +7,19 @@ import BookConsultation from '../../../components/BookConsultation';
 import DoctorsSection from '../../../components/DoctorsSection';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import { subcategoryContent } from '../../data/subcategoryContent';
-import { 
-  Activity, 
-  MapPin, 
-  Award, 
-  Calendar, 
-  Phone, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Users, 
-  Target, 
-  Heart, 
-  Shield, 
+import {
+  Activity,
+  MapPin,
+  Award,
+  Calendar,
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Users,
+  Target,
+  Heart,
+  Shield,
   Zap,
   ChevronDown,
   ChevronUp,
@@ -227,15 +227,15 @@ export default function BackPainTreatmentPage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div 
+          <div
             className="absolute w-96 h-96 bg-white/5 rounded-full -top-20 -left-20 blur-3xl"
             style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           ></div>
-          <div 
+          <div
             className="absolute w-72 h-72 bg-white/10 rounded-full bottom-20 right-20 blur-2xl"
             style={{ transform: `translateY(${scrollY * -0.2}px)` }}
           ></div>
-          <div 
+          <div
             className="absolute w-64 h-64 bg-white/8 rounded-full top-1/2 left-1/3 blur-xl"
             style={{ transform: `translateY(${scrollY * 0.15}px)` }}
           ></div>
@@ -259,7 +259,7 @@ export default function BackPainTreatmentPage() {
                   <Award className="w-4 h-4" />
                   <span>Advanced Physiotherapy & Non-Surgical Care</span>
                 </motion.div>
-                
+
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -268,7 +268,7 @@ export default function BackPainTreatmentPage() {
                 >
                   Back Pain Treatment in Dubai
                 </motion.h1>
-                
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -294,14 +294,14 @@ export default function BackPainTreatmentPage() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <a 
-                  href="#book-now" 
+                <a
+                  href="#book-now"
                   className="inline-flex items-center justify-center gap-2 bg-white text-[#1F5E4B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <Calendar className="w-5 h-5" />
                   Book Consultation
                 </a>
-                <a 
+                <a
                   href="https://wa.me/971566597878"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -339,9 +339,9 @@ export default function BackPainTreatmentPage() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="/images/back-pain.jpg" 
-                  alt="Back Pain Treatment in Dubai" 
+                <Image
+                  src="/images/back-pain.jpg"
+                  alt="Back Pain Treatment in Dubai"
                   width={1200}
                   height={630}
                   quality={75}
@@ -350,7 +350,7 @@ export default function BackPainTreatmentPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
-              
+
               {/* Floating Stats Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -373,7 +373,7 @@ export default function BackPainTreatmentPage() {
         </div>
       </section>
 
-      {/* Why Choose Rama Care Section */}
+      {/* Why Choose RamaCare Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -382,10 +382,10 @@ export default function BackPainTreatmentPage() {
             viewport={{ once: true }}
             className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose Rama Care for Back Pain Treatment in Dubai?
+              Why Choose RamaCare for Back Pain Treatment in Dubai?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Rama Care Polyclinic is trusted by patients across Dubai for effective and patient-focused back pain therapy solutions.
+              RamaCare Polyclinic is trusted by patients across Dubai for effective and patient-focused back pain therapy solutions.
             </p>
           </motion.div>
 
@@ -517,7 +517,7 @@ export default function BackPainTreatmentPage() {
               Types of Back Pain We Treat
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At Rama Care Polyclinic, we provide treatment for various acute and chronic spinal conditions.
+              At RamaCare Polyclinic, we provide treatment for various acute and chronic spinal conditions.
             </p>
           </motion.div>
 
@@ -533,15 +533,15 @@ export default function BackPainTreatmentPage() {
               >
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{type.title}</h3>
                 <p className="text-[#5F5F5F] mb-4 leading-relaxed">{type.description}</p>
-                
+
                 {type.focus && (
                   <p className="text-[#1F5E4B] font-medium mb-4 leading-relaxed">{type.focus}</p>
                 )}
-                
+
                 {type.treatment && (
                   <p className="text-[#1F5E4B] font-medium mb-4 leading-relaxed">{type.treatment}</p>
                 )}
-                
+
                 {type.symptoms && (
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Symptoms may include:</h4>
@@ -553,7 +553,7 @@ export default function BackPainTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {type.benefits && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Our non-surgical rehabilitation programs help:</h4>
@@ -701,7 +701,7 @@ export default function BackPainTreatmentPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
                 <p className="text-[#5F5F5F] mb-6 leading-relaxed">{option.description}</p>
-                
+
                 {option.benefits && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Benefits:</h4>
@@ -713,11 +713,11 @@ export default function BackPainTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {option.note && (
                   <p className="text-[#1F5E4B] font-medium mt-4 text-sm leading-relaxed">{option.note}</p>
                 )}
-                
+
                 {option.treatments && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">We may use:</h4>
@@ -729,7 +729,7 @@ export default function BackPainTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {option.conditions && (
                   <div className="space-y-2 mt-4">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Recommended for:</h4>
@@ -741,7 +741,7 @@ export default function BackPainTreatmentPage() {
                     ))}
                   </div>
                 )}
-                
+
                 {option.therapies && (
                   <div className="space-y-2">
                     <h4 className="font-semibold text-[#1A1A1A] mb-2">Supportive therapies may include:</h4>
@@ -924,7 +924,7 @@ export default function BackPainTreatmentPage() {
               viewport={{ once: true }}
               className="text-center text-lg text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto"
             >
-              At Rama Care Polyclinic, we provide affordable and personalized treatment plans designed according to individual patient needs. Our specialists explain the recommended therapy program and expected treatment duration during consultation.
+              At RamaCare Polyclinic, we provide affordable and personalized treatment plans designed according to individual patient needs. Our specialists explain the recommended therapy program and expected treatment duration during consultation.
             </motion.p>
           </div>
         </div>
@@ -1022,8 +1022,8 @@ export default function BackPainTreatmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {physiotherapyResources.map((resource, index) => (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={resource.link}
                 className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
               >
@@ -1060,18 +1060,18 @@ export default function BackPainTreatmentPage() {
       <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="back-pain-treatment-dubai" />
 
       {/* Book Consultation Section */}
-      <BookConsultation 
+      <BookConsultation
         content={{
           badge: 'Start Your Journey',
           title: 'Book Back Pain Treatment in Dubai Today',
-          description: 'Restore your mobility and live pain-free with trusted back pain treatment at Rama Care Polyclinic—safe, personalized, and focused on long-term results.',
+          description: 'Restore your mobility and live pain-free with trusted back pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
           submitButtonText: 'Confirm Free Consultation',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
+            email: 'query@ramacarepolyclinic.ae',
             address: {
               line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
               line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1097,7 +1097,7 @@ export default function BackPainTreatmentPage() {
               description: 'Treated'
             },
             {
-              title: '4.9/5 Rating',
+              title: '4.8/5 Rating',
               description: 'Patient Reviews'
             }
           ]

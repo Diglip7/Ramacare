@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyChooseSection = ({ content }) => {
   const defaultContent = {
-    title: 'Why Choose Rama Care Polyclinic?',
+    title: 'Why Choose RamaCare Polyclinic?',
     intro: 'We provide personalized treatments in a safe, hygienic, and patient-focused environment.',
     features: []
   };

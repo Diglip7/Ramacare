@@ -141,7 +141,7 @@ const ServiceExtrasSection = ({ aftercareContent, whyChooseContent }) => {
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-semibold text-[#1F2937]">Trusted by 500+ Happy Patients</p>
-                  <p className="text-xs text-[#6B7280]">DHA-Licensed • 4.9/5 Rating • Same-Day Appointments</p>
+                  <p className="text-xs text-[#6B7280]">DHA-Licensed • 4.8/5 Rating • Same-Day Appointments</p>
                 </div>
               </div>
             </div>

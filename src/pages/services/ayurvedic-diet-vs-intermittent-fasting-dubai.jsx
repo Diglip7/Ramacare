@@ -11,7 +11,7 @@ import ContentReviewBadge from '../../../components/ContentReviewBadge';
 const content = {
   hero: {
     title: "Ayurvedic Diet vs. Intermittent Fasting: Navigating Ramadan & Beyond in Dubai",
-    description1: "In the fitness circles of Dubai Marina and the corporate hubs of DIFC, Intermittent Fasting (IF) is hailed as the ultimate health hack. Meanwhile, millions in the UAE practice spiritual fasting during the Holy Month of Ramadan. But how does this stack up against the ancient Ayurvedic practice of Langhana (Lightening Therapy), often used alongside professional detox treatments like <a href=\"/services/panchakarma-treatment/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>?",
+    description1: "In the fitness circles of Dubai Marina and the corporate hubs of DIFC, Intermittent Fasting (IF) is hailed as the ultimate health hack. Meanwhile, millions in the UAE practice spiritual fasting during the Holy Month of Ramadan. But how does this stack up against the ancient Ayurvedic practice of Langhana (Lightening Therapy), often used alongside professional detox treatments like <a href=\"/services/panchakarma-treatment-dubai/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>?",
     description2: "At RamaCare Polyclinic, we believe that fasting is a powerful tool, but without an Ayurvedic foundation, it can often lead to muscle loss, dehydration, and \"rebound\" weight gain in the harsh Dubai climate.",
     graphic: {
       left: { icon: 'Clock', text: 'Modern Fasting', subtext: '16:8 Window' },

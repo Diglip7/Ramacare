@@ -269,7 +269,7 @@ export default function MelasmaTreatmentPage() {
         <title key="title">{seo.metaTitle}</title>
         <meta name="description" content={seo.metaDescription} key="description" />
         <link rel="canonical" href={seo.canonical} key="canonical" />
-        
+
         {/* OpenGraph */}
         <meta property="og:title" content="Struggling With Melasma? RamaCare Dubai Can Help" key="og:title" />
         <meta property="og:description" content="Personalized, evidence-based melasma treatment in Dubai. Meet DHA-licensed dermatology experts at RamaCare Polyclinic and start your skin journey today." key="og:description" />
@@ -376,14 +376,14 @@ export default function MelasmaTreatmentPage() {
               <div className="lg:col-span-4 lg:sticky lg:top-8">
                 <div className="bg-[#1F5E4B] text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16" />
-                  
+
                   <span className="text-xs text-[#D4A574] font-bold uppercase tracking-wider block mb-2">
                     Key Highlight
                   </span>
                   <h3 className="text-2xl font-extrabold mb-6 leading-tight">
                     Dubai Climate Factors
                   </h3>
-                  
+
                   <div className="space-y-6">
                     <div className="border-l-2 border-[#D4A574] pl-4">
                       <h4 className="font-bold text-sm text-white/90">UV Sun Exposure</h4>
@@ -433,7 +433,7 @@ export default function MelasmaTreatmentPage() {
                 <p className="text-base text-[#5F5F5F] leading-relaxed">
                   Melasma is a common skin condition that causes brown, tan, or grayish-brown patches to develop, usually on the face. It happens when the skin produces excess melanin — the pigment responsible for skin color — in certain areas.
                 </p>
-                
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="bg-white p-5 rounded-2xl border border-gray-200">
                     <h4 className="font-bold text-sm text-[#1F5E4B] uppercase tracking-wide mb-1">Melasma vs. Freckles</h4>
@@ -981,7 +981,7 @@ export default function MelasmaTreatmentPage() {
               contactInfo: {
                 phone: '+971 04 286 2006',
                 whatsapp: '971566597878',
-                email: 'query@ramacarepolyclinic.com',
+                email: 'query@ramacarepolyclinic.ae',
                 address: {
                   line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                   line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1128,7 +1128,7 @@ export default function MelasmaTreatmentPage() {
               </div>
             </div>
           </div>
-          </section>
+        </section>
         {/* Content Reviewer Badge */}
         <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/melasma-treatment-dubai/" />
       </div>

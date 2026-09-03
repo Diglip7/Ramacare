@@ -402,9 +402,8 @@ export default function HairPrpCostPage() {
                 {PRICING.map((p) => (
                   <div
                     key={p.name}
-                    className={`rounded-2xl border p-6 ${
-                      p.highlight ? 'border-[#1F5E4B] bg-[#1F5E4B]/5' : 'border-gray-200'
-                    }`}
+                    className={`rounded-2xl border p-6 ${p.highlight ? 'border-[#1F5E4B] bg-[#1F5E4B]/5' : 'border-gray-200'
+                      }`}
                   >
                     <h4 className="text-base font-semibold text-gray-900">{p.name}</h4>
                     <p className={`mt-2 text-2xl font-semibold ${p.highlight ? 'text-[#1F5E4B]' : 'text-gray-900'}`}>
@@ -794,7 +793,7 @@ export default function HairPrpCostPage() {
           </div>
         </section>
         {/* ============================ FINAL CTA / BOOK CONSULTATION ============================ */}
-      <BookConsultation />
+        <BookConsultation />
       </div>
     </Layout>
   );

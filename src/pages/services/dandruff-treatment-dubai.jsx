@@ -699,7 +699,7 @@ export default function DandruffTreatmentDubaiPage() {
                               psoriasis
                             </Link>
                             ,{" "}
-                            <Link href="/services/skin-diseases-treatment/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
+                            <Link href="/services/skin-diseases-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
                               underlying skin conditions such as eczema
                             </Link>
                             , or fungal infections.
@@ -1030,7 +1030,7 @@ export default function DandruffTreatmentDubaiPage() {
                 <Link href="/services/psoriasis-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
                   <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Psoriasis Treatment
                 </Link>
-                <Link href="/services/skin-diseases-treatment/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
+                <Link href="/services/skin-diseases-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">
                   <LucideIcons.ChevronRight className="w-3.5 h-3.5 text-[#D4A574]" /> Eczema Treatment
                 </Link>
                 <Link href="/services/rosacea-treatment-dubai/" className="text-sm text-[#5F5F5F] hover:text-[#1F5E4B] flex items-center gap-1.5 transition-colors font-medium">

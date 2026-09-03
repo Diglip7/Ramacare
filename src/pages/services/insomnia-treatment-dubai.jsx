@@ -830,7 +830,7 @@ export default function InsomniaTreatmentPage() {
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.com',
+              email: 'query@ramacarepolyclinic.ae',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -846,7 +846,7 @@ export default function InsomniaTreatmentPage() {
               { title: 'DHA Licensed', description: 'Certified Clinic' },
               { title: 'Holistic Approach', description: 'Ayurveda & Physio' },
               { title: 'Personalized Plans', description: 'Tailored to Assessment' },
-              { title: '4.9/5 Rating', description: 'Patient Reviews' }
+              { title: '4.8/5 Rating', description: 'Patient Reviews' }
             ],
             concerns: [
               { value: 'insomnia-treatment-dubai', label: 'Insomnia / Sleep wellness' },

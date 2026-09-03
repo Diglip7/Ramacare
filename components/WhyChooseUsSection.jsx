@@ -91,7 +91,7 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
             </h2>
 
             {/* Description Text - Normal weight */}
-           <p  className="text-justify mb-8 lg:mb-10 max-w-3xl mx-auto"
+           <p  className="text-justify mb-4 lg:mb-6 max-w-3xl mx-auto"
             style={{ 
               color: '#6B7280',
               fontSize: '16px',
@@ -101,6 +101,10 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
           >
   {description}
 </p>
+
+          <p className="text-center mb-8 lg:mb-10 text-sm font-semibold text-[#2d5f3f]">
+            Explore our full facility & DHA specialists on the <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">Jumeirah 1 Polyclinic Authority Hub</a>.
+          </p>
 
           </div>
 

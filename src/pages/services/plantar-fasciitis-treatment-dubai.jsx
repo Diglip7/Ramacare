@@ -362,8 +362,8 @@ export default function PlantarFasciitisTreatmentPage() {
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-[4/3] lg:aspect-[1.1]"
             >
               <img
-                 src={images.anatomy.src}
-                  alt={images.anatomy.alt}
+                src={images.anatomy.src}
+                alt={images.anatomy.alt}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
@@ -617,7 +617,7 @@ export default function PlantarFasciitisTreatmentPage() {
               viewport={{ once: true }}
               className="mb-16 max-w-4xl mx-auto"
             >
-             
+
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">
                 {images.physiotherapist.caption}
               </figcaption>
@@ -636,7 +636,7 @@ export default function PlantarFasciitisTreatmentPage() {
                   transition={{ delay: (i % 6) * 0.08 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30 overflow-hidden"
                 >
-                 
+
                   <div className="p-6">
                     <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-4">
                       {IconComp ? <IconComp className="w-6 h-6 text-[#1F5E4B]" /> : null}
@@ -1022,14 +1022,14 @@ export default function PlantarFasciitisTreatmentPage() {
           content={{
             badge: 'Start Your Recovery',
             title: 'Book Plantar Fasciitis Treatment in Dubai Today',
-            description: 'Get back to comfortable, pain-free steps with evidence-based heel pain care at Rama Care Polyclinic.',
+            description: 'Get back to comfortable, pain-free steps with evidence-based heel pain care at RamaCare Polyclinic.',
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
             submitButtonText: 'Confirm Free Consultation',
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.com',
+              email: 'query@ramacarepolyclinic.ae',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -1043,7 +1043,7 @@ export default function PlantarFasciitisTreatmentPage() {
               { title: 'DHA Licensed', description: 'Certified Facility' },
               { title: 'Experienced Team', description: '15+ Years Combined' },
               { title: '2,500+ Patients', description: 'Treated' },
-              { title: '4.9/5 Rating', description: 'Patient Reviews' }
+              { title: '4.8/5 Rating', description: 'Patient Reviews' }
             ]
           }}
         />

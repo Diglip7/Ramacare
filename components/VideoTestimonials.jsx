@@ -64,7 +64,7 @@ const PatientTestimonials = ({ content }) => {
   const stats = content?.stats || [
     {
       id: 1,
-      number: '4.9/5',
+      number: '4.8/5',
       label1: 'Average Rating',
       label2: 'Google Reviews',
       target: 4.9,
