@@ -147,7 +147,8 @@ const DOCTORS_LIST = [
     licensing: 'DHA Licensed Physiotherapist',
     desc: 'Focuses on musculoskeletal physiotherapy, including rehabilitation and management of back, neck, shoulder, and knee concerns. Utilizes an assessment-led approach combining clinical evaluation, manual therapy, and exercise rehabilitation.',
     profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai/',
-    anchorText: 'Jeena Mathew’s physiotherapy profile'
+    anchorText: 'Jeena Mathew’s physiotherapy profile',
+    imageSrc: '/images/Jeena Mathew.jpg'
   },
   {
     name: 'Dr. Shamna Keloth Meethal',
@@ -157,7 +158,8 @@ const DOCTORS_LIST = [
     licensing: 'DHA Licensed Ayurveda Practitioner',
     desc: 'Provides Ayurvedic consultations focused on classical body constitution analysis (Dosha), preventive wellness, chronic condition management, and personalized lifestyle guidance.',
     profileUrl: '/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/',
-    anchorText: 'Dr. Shamna Keloth Meethal’s profile'
+    anchorText: 'Dr. Shamna Keloth Meethal’s profile',
+    imageSrc: '/images/Dr Shamna Keloth Meethal.jpeg'
   },
   {
     name: 'Dr. Sahar Zomorrodi',
@@ -167,8 +169,10 @@ const DOCTORS_LIST = [
     licensing: 'DHA-Licensed General Practitioner',
     desc: 'Encompasses primary general medicine and non-surgical aesthetic procedures, offering skin rejuvenation, preventive health assessments, and ongoing health management.',
     profileUrl: '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
-    anchorText: 'Dr. Sahar Zomorrodi’s profile'
+    anchorText: 'Dr. Sahar Zomorrodi’s profile',
+    imageSrc: '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png'
   },
+
   {
     name: 'Dr. Hirbod Gilandoust',
     qualification: 'DDS / Dental Surgery',
@@ -177,7 +181,8 @@ const DOCTORS_LIST = [
     licensing: 'DHA-Licensed Dentist',
     desc: 'Focuses on aesthetic dental restorations, smile design, prosthetics, tooth fillings, and root canal treatments delivered in an unhurried, patient-centered manner.',
     profileUrl: '/doctors/dr-hirbod-gilandoust-dentist-dubai/',
-    anchorText: 'Dr. Hirbod Gilandoust’s profile'
+    anchorText: 'Dr. Hirbod Gilandoust’s profile',
+    imageSrc: '/images/Hirbod.jpg'
   },
   {
     name: 'Dr. Aparna Balakrishnan',
@@ -187,7 +192,8 @@ const DOCTORS_LIST = [
     licensing: 'DHA-Licensed Cosmetic Dentist',
     desc: 'Provides comprehensive family dental care, cosmetic restorations, root canal treatments, and routine oral hygiene care with an emphasis on gentle dentistry.',
     profileUrl: '/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai/',
-    anchorText: 'Dr. Aparna Balakrishnan’s profile'
+    anchorText: 'Dr. Aparna Balakrishnan’s profile',
+    imageSrc: '/images/Dr Aparna.jpg'
   },
   {
     name: 'Syamkumar Sasidharan',
@@ -197,7 +203,8 @@ const DOCTORS_LIST = [
     licensing: 'DHA Licensed Practitioner',
     desc: 'Delivers classical Ayurvedic therapies including Panchakarma detox, Abhyanga massage, Shirodhara, and specialized body rejuvenation protocols.',
     profileUrl: '/doctors/dr-syamkumar-ayurvedic-doctor-dubai/',
-    anchorText: 'Syamkumar Sasidharan’s profile'
+    anchorText: 'Syamkumar Sasidharan’s profile',
+    imageSrc: '/images/Syam.jpg'
   }
 ];
 
@@ -358,17 +365,17 @@ export default function PolyclinicInJumeirah1Page() {
           <img
             src="/images/ramacare-polyclinic-jumeirah-1-dubai.jpg"
             alt="RamaCare Polyclinic in Jumeirah 1 Dubai"
-            className="w-full h-full object-cover scale-105 filter blur-sm brightness-[0.45]"
+            className="w-full h-full object-cover scale-105 filter blur-[0.5px] brightness-[0.75]"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
             }}
           />
-          {/* Official Project Green Theme (#1F5E4B / #184B3C) Glassmorphic Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1F5E4B]/90 via-[#184B3C]/85 to-[#1F5E4B]/95 backdrop-blur-[1px]" />
+          {/* Balanced Custom Gradient Overlay for Clear Background Image Visibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-[#1b5e3f]/70 to-[#1b5e3f]/65" />
           <div className="absolute inset-0 bg-[radial-gradient(#D4A574_1px,transparent_1px)] [background-size:24px_24px] opacity-15" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <div className="relative z-10 w-full max-w-[95%] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center space-x-2 text-sm text-white/80" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[#D4A574] transition-colors font-medium">Home</Link>
@@ -442,8 +449,8 @@ export default function PolyclinicInJumeirah1Page() {
       </section>
 
       {/* ===== MAIN CONTENT & INTERACTIVE SECTIONS ===== */}
-      <section className="py-14 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-14 md:py-20 bg-white w-full">
+        <div className="w-full max-w-[95%] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
           {/* Section 1: Multispecialty Healthcare in Jumeirah 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -549,69 +556,76 @@ export default function PolyclinicInJumeirah1Page() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <div className="px-6 pb-6 pt-4 border-t border-gray-200 space-y-4 bg-white text-base text-gray-700">
-                            {dept.details.map((para, pIdx) => (
-                              <p key={pIdx} className="leading-relaxed text-sm sm:text-base">{para}</p>
-                            ))}
+                          <div className="px-6 pb-6 pt-4 border-t border-gray-200 bg-white text-base text-gray-700">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                              {/* Left Column: Clinical Text Details, Notes & Internal Links */}
+                              <div className="lg:col-span-8 space-y-4">
+                                {dept.details.map((para, pIdx) => (
+                                  <p key={pIdx} className="leading-relaxed text-sm sm:text-base text-gray-700">{para}</p>
+                                ))}
 
-                            {dept.note && (
-                              <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 font-medium">
-                                {dept.note}
+                                {dept.note && (
+                                  <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 font-medium">
+                                    {dept.note}
+                                  </div>
+                                )}
+
+                                <div className="flex flex-wrap gap-4 pt-3 border-t border-gray-100">
+                                  <Link href={dept.link} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
+                                    <span>{dept.anchorText}</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                  </Link>
+                                  {dept.link2 && (
+                                    <>
+                                      <span className="text-gray-300">|</span>
+                                      <Link href={dept.link2} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
+                                        <span>{dept.anchorText2}</span>
+                                        <ArrowRight className="w-4 h-4" />
+                                      </Link>
+                                    </>
+                                  )}
+                                  {dept.link3 && (
+                                    <>
+                                      <span className="text-gray-300">|</span>
+                                      <Link href={dept.link3} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
+                                        <span>{dept.anchorText3}</span>
+                                        <ArrowRight className="w-4 h-4" />
+                                      </Link>
+                                    </>
+                                  )}
+                                  {dept.link4 && (
+                                    <>
+                                      <span className="text-gray-300">|</span>
+                                      <Link href={dept.link4} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
+                                        <span>{dept.anchorText4}</span>
+                                        <ArrowRight className="w-4 h-4" />
+                                      </Link>
+                                    </>
+                                  )}
+                                </div>
                               </div>
-                            )}
 
-                            {/* IMAGES 3, 4, 5, 6 embedded based on department with exact src and alt text */}
-                            <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden border border-gray-300 bg-slate-200 my-2">
-                              <img
-                                src={dept.imageSrc}
-                                alt={dept.imageAlt}
-                                className="w-full h-full object-cover"
-                                onError={(e) => {
-                                  e.currentTarget.style.display = 'none';
-                                  if (e.currentTarget.nextSibling) {
-                                    e.currentTarget.nextSibling.style.display = 'flex';
-                                  }
-                                }}
-                              />
-                              <div className="hidden w-full h-full bg-[#1F5E4B]/5 flex-col items-center justify-center p-4 text-center">
-                                <ImageIcon className="w-8 h-8 text-[#1F5E4B] mb-2" />
-                                <span className="text-xs font-bold text-gray-800">{dept.imageSrc.replace('/images/', '')}</span>
-                                <span className="text-[11px] text-gray-600 mt-1 font-medium">Alt: {dept.imageAlt}</span>
+                              {/* Right Column: Compact Department Image Card */}
+                              <div className="lg:col-span-4">
+                                <div className="relative w-full aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-gray-300 bg-slate-200 shadow-md">
+                                  <img
+                                    src={dept.imageSrc}
+                                    alt={dept.imageAlt}
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                      e.currentTarget.style.display = 'none';
+                                      if (e.currentTarget.nextSibling) {
+                                        e.currentTarget.nextSibling.style.display = 'flex';
+                                      }
+                                    }}
+                                  />
+                                  <div className="hidden w-full h-full bg-[#1F5E4B]/5 flex-col items-center justify-center p-4 text-center">
+                                    <ImageIcon className="w-8 h-8 text-[#1F5E4B] mb-2" />
+                                    <span className="text-xs font-bold text-gray-800">{dept.imageSrc.replace('/images/', '')}</span>
+                                    <span className="text-[11px] text-gray-600 mt-1 font-medium">Alt: {dept.imageAlt}</span>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-
-                            <div className="flex flex-wrap gap-4 pt-2 border-t border-gray-100">
-                              <Link href={dept.link} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
-                                <span>{dept.anchorText}</span>
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
-                              {dept.link2 && (
-                                <>
-                                  <span className="text-gray-300">|</span>
-                                  <Link href={dept.link2} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
-                                    <span>{dept.anchorText2}</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                  </Link>
-                                </>
-                              )}
-                              {dept.link3 && (
-                                <>
-                                  <span className="text-gray-300">|</span>
-                                  <Link href={dept.link3} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
-                                    <span>{dept.anchorText3}</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                  </Link>
-                                </>
-                              )}
-                              {dept.link4 && (
-                                <>
-                                  <span className="text-gray-300">|</span>
-                                  <Link href={dept.link4} className="inline-flex items-center gap-2 text-sm font-bold text-[#1F5E4B] hover:underline">
-                                    <span>{dept.anchorText4}</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                  </Link>
-                                </>
-                              )}
                             </div>
                           </div>
                         </motion.div>
@@ -625,11 +639,11 @@ export default function PolyclinicInJumeirah1Page() {
 
 
           {/* Section 5: Treatments & Services in Jumeirah 1 (Verbatim Brief Content) */}
-          <div className="bg-gradient-to-br from-[#1F5E4B] via-[#184B3C] to-[#0F3B2E] text-white p-8 sm:p-12 rounded-3xl space-y-8 shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[#1F5E4B] via-[#184B3C] to-[#0F3B2E] text-white p-8 sm:p-12 rounded-3xl space-y-8 shadow-2xl relative overflow-hidden w-full">
             {/* Ambient Background Glow */}
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4A574]/15 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 space-y-4 max-w-4xl">
+            <div className="relative z-10 space-y-4 w-full max-w-full">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 text-[#D4A574] text-xs font-bold rounded-full border border-[#D4A574]/30 uppercase tracking-wider">
                 <Building2 className="w-4 h-4" />
                 <span>Comprehensive Service Directory</span>
@@ -649,9 +663,9 @@ export default function PolyclinicInJumeirah1Page() {
               </p>
             </div>
 
-            <div className="relative z-10 space-y-4">
+            <div className="relative z-10 space-y-4 w-full">
               <h3 className="text-sm font-extrabold text-[#D4A574] uppercase tracking-widest">Examples include:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs sm:text-sm text-white/95">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 text-xs sm:text-sm text-white/95 w-full">
                 {[
                   'General physician consultations and primary healthcare',
                   'Dermatology and aesthetic skin treatments',
@@ -677,7 +691,7 @@ export default function PolyclinicInJumeirah1Page() {
               </div>
             </div>
 
-            <div className="relative z-10 space-y-4 pt-4 border-t border-white/20">
+            <div className="relative z-10 space-y-4 pt-4 border-t border-white/20 w-full">
               <p className="text-white/90 text-base sm:text-lg leading-relaxed">
                 The clinic’s services directory currently organizes its offerings across Aesthetic Dermatology, Dental, Ayurveda, Physiotherapy, General Physician and Facial categories.
               </p>
@@ -688,8 +702,8 @@ export default function PolyclinicInJumeirah1Page() {
           </div>
 
           {/* Section 6: Why Choose RamaCare Polyclinic in Jumeirah 1? (Verbatim Brief Content) */}
-          <div className="space-y-8 border-t border-gray-200 pt-14">
-            <div className="max-w-4xl space-y-3">
+          <div className="space-y-8 border-t border-gray-200 pt-14 w-full">
+            <div className="w-full max-w-full space-y-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold rounded-full">
                 <Award className="w-4 h-4" />
                 <span>Patient-Centered Care Standard</span>
@@ -702,7 +716,7 @@ export default function PolyclinicInJumeirah1Page() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
               <div className="bg-[#F9F7F2] p-6 rounded-3xl border border-gray-200 space-y-3 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div className="space-y-3">
                   <div className="w-12 h-12 rounded-2xl bg-[#1F5E4B]/10 flex items-center justify-center text-[#1F5E4B]">
@@ -758,8 +772,8 @@ export default function PolyclinicInJumeirah1Page() {
           </div>
 
           {/* Section 6: Doctors & Healthcare Professionals (8 Doctor Cards) */}
-          <div className="space-y-8 border-t border-gray-200 pt-12">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="space-y-8 border-t border-gray-200 pt-12 w-full">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
                   Doctors & Healthcare Professionals
@@ -777,13 +791,26 @@ export default function PolyclinicInJumeirah1Page() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
               {DOCTORS_LIST.map((doc, idx) => (
                 <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col justify-between space-y-4 hover:shadow-lg transition-shadow">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-[#1F5E4B] font-bold text-base flex-shrink-0 border border-emerald-200">
-                        {doc.name.charAt(0)}
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-16 h-16 rounded-full overflow-hidden bg-emerald-100 flex-shrink-0 border-2 border-[#1F5E4B] shadow-md relative">
+                        <img
+                          src={doc.imageSrc}
+                          alt={doc.name}
+                          className="w-full h-full object-cover object-[center_15%] scale-110"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            if (e.currentTarget.nextSibling) {
+                              e.currentTarget.nextSibling.style.display = 'flex';
+                            }
+                          }}
+                        />
+                        <div className="hidden w-full h-full bg-emerald-100 flex items-center justify-center text-[#1F5E4B] font-bold text-xl">
+                          {doc.name.charAt(0)}
+                        </div>
                       </div>
                       <div>
                         <h3 className="font-bold text-base text-[#1A1A1A] leading-tight">{doc.name}</h3>
@@ -813,8 +840,8 @@ export default function PolyclinicInJumeirah1Page() {
           </div>
 
           {/* Section 7: What to Expect During Your Visit (Verbatim Brief Content) */}
-          <div className="space-y-6 border-t border-gray-200 pt-12">
-            <div>
+          <div className="space-y-6 border-t border-gray-200 pt-12 w-full">
+            <div className="w-full max-w-full">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold rounded-full mb-3">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Patient Care Sequence</span>
@@ -827,7 +854,7 @@ export default function PolyclinicInJumeirah1Page() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 w-full">
               {[
                 {
                   step: '1',
@@ -855,24 +882,26 @@ export default function PolyclinicInJumeirah1Page() {
                   desc: 'Some conditions or treatments require more than one visit, while others may not. Follow-up recommendations depend on the individual assessment and treatment plan.'
                 }
               ].map((st, i) => (
-                <div key={i} className="bg-white border-2 border-gray-200 p-5 rounded-2xl relative space-y-3 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-9 h-9 rounded-xl bg-[#1F5E4B] text-white flex items-center justify-center text-sm font-bold shadow-md">
-                    {st.step}
+                <div key={i} className="bg-white border-2 border-gray-200 p-5 rounded-2xl relative space-y-3 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-9 h-9 rounded-xl bg-[#1F5E4B] text-white flex items-center justify-center text-sm font-bold shadow-md">
+                      {st.step}
+                    </div>
+                    <h3 className="font-bold text-base text-[#1A1A1A]">{st.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{st.desc}</p>
                   </div>
-                  <h3 className="font-bold text-base text-[#1A1A1A]">{st.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{st.desc}</p>
                 </div>
               ))}
             </div>
 
-            <p className="text-gray-700 text-base leading-relaxed bg-[#F9F7F2] p-4 rounded-xl border border-gray-200">
+            <p className="text-gray-700 text-base leading-relaxed bg-[#F9F7F2] p-4 rounded-xl border border-gray-200 w-full">
               The clinic’s appointment information similarly describes a process involving registration, consultation, assessment and discussion of treatment options.
             </p>
           </div>
 
           {/* Section 8: Who Can Benefit From a Multispecialty Clinic? (Verbatim Brief Content) */}
-          <div className="space-y-6 border-t border-gray-200 pt-12">
-            <div className="max-w-3xl space-y-3">
+          <div className="space-y-6 border-t border-gray-200 pt-12 w-full">
+            <div className="w-full max-w-full space-y-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold rounded-full">
                 <Users className="w-4 h-4" />
                 <span>Multidisciplinary Advantages</span>
@@ -885,9 +914,9 @@ export default function PolyclinicInJumeirah1Page() {
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-3 w-full">
               <h3 className="font-bold text-base text-[#1A1A1A]">You may be looking for:</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                 {[
                   'A general physician for a health concern or routine assessment',
                   'A dermatologist for a skin or hair concern',
@@ -904,11 +933,11 @@ export default function PolyclinicInJumeirah1Page() {
               </div>
             </div>
 
-            <div className="space-y-3 text-gray-700 text-base leading-relaxed pt-2">
+            <div className="space-y-3 text-gray-700 text-base leading-relaxed pt-2 w-full">
               <p className="font-medium">
                 The important step is choosing care based on the actual concern rather than selecting a treatment simply because it is popular online.
               </p>
-              <p className="bg-[#1F5E4B]/5 p-5 rounded-2xl border border-[#1F5E4B]/20 text-[#1A1A1A]">
+              <p className="bg-[#1F5E4B]/5 p-5 rounded-2xl border border-[#1F5E4B]/20 text-[#1A1A1A] w-full">
                 If you are unsure which department is appropriate, the clinic can help direct your enquiry. A qualified healthcare professional can then determine whether the requested treatment is suitable after assessment.
               </p>
             </div>
