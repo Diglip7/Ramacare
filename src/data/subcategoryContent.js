@@ -7342,7 +7342,7 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '18+',
+          number: '15+',
           label: 'Years of Experience'
         }
       ],
@@ -8075,10 +8075,10 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '1,000+',
+          number: '500+',
           label1: 'Panchakarma Sessions',
           label2: 'Completed',
-          target: 1000
+          target: 500
         },
         {
           id: 3,
@@ -8142,10 +8142,10 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '18+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '1,000+ Sessions',
+          title: '500+ Sessions',
           description: 'Completed'
         },
         {
@@ -10457,7 +10457,7 @@ export const subcategoryContent = {
         {
           id: 2,
           number: '2,500+ ',
-          label: 'Patients Treated Since 2008.'
+          label: 'Patients Treated Successfully'
         },
         {
           id: 3,
@@ -11253,7 +11253,7 @@ export const subcategoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ]
@@ -11311,7 +11311,7 @@ export const subcategoryContent = {
         },
         {
           title: '2,500+ Patients',
-          description: 'Treated Since 2008'
+          description: 'Treated Successfully'
         },
         {
           title: '4.8/5 Rating',
@@ -14957,7 +14957,7 @@ export const subcategoryContent = {
       ]
     },
     healingJourney: {
-      title: 'Back Pain Treatment Process at Rama Care',
+      title: 'Back Pain Treatment Process at RamaCare',
       description: 'Experience comprehensive back pain relief with our structured treatment approach focused on long-term recovery and improved mobility.',
       steps: [
         {
@@ -36758,7 +36758,7 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '18+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
           title: '4,500+ Treatments',

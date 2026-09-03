@@ -1121,7 +1121,7 @@ export default function KneePainTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Knee Pain Treatment Process at Rama Care
+              Knee Pain Treatment Process at RamaCare
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
               Our structured approach ensures comprehensive care and long-term recovery.

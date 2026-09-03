@@ -716,7 +716,7 @@ export default function AcneTreatmentPage() {
             viewport={{ once: true }}
             className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Acne Treatment Process at Rama Care
+              Acne Treatment Process at RamaCare
             </h2>
           </motion.div>
 

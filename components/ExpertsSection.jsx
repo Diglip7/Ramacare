@@ -12,7 +12,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
   const description = content?.description || 'Highly qualified doctors with decades of combined experience, committed to your healing journey with expertise, compassion, and authentic care.';
   const stats = content?.stats || [
     { value: '30+', label: 'Expert Doctors' },
-    { value: '37+', label: 'Years of Combined Experience' },
+    { value: '15+', label: 'Years of Combined Experience' },
     { value: '500+', label: 'Successful Treatments' },
     { value: '4.9', label: 'Average Rating' }
   ];

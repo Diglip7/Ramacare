@@ -409,11 +409,11 @@ export default function AyurvedicDetoxDietPlanPage() {
               </div>
               <div className="flex items-center gap-2">
                 <LucideIcons.Clock className="w-5 h-5 text-[#1F5E4B]" />
-                <span className="text-xs font-semibold text-gray-700">18+ Years Experience</span>
+                <span className="text-xs font-semibold text-gray-700">15+ Years Experience</span>
               </div>
               <div className="flex items-center gap-2">
                 <LucideIcons.Users className="w-5 h-5 text-[#1F5E4B]" />
-                <span className="text-xs font-semibold text-gray-700">1,000+ Resets Done</span>
+                <span className="text-xs font-semibold text-gray-700">500+ Resets Done</span>
               </div>
               <div className="flex items-center gap-2">
                 <LucideIcons.Star className="w-5 h-5 text-[#1F5E4B]" />

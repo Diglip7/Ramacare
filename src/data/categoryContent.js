@@ -626,7 +626,7 @@ export const categoryContent = {
       ],
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
-        { number: '1,000+', label: 'Satisfied Patients' },
+        { number: '500+', label: 'Satisfied Patients' },
         { number: '98%', label: 'Satisfaction Rate' }
       ],
       ctaText: 'Meet Our Dermatologists',
@@ -644,8 +644,8 @@ export const categoryContent = {
       description: 'Highly qualified dermatologists with extensive experience in aesthetic and medical dermatology, committed to enhancing your natural beauty and skin health.',
       stats: [
         { value: '4', label: 'Expert Specialists' },
-        { value: '35+', label: 'Years Combined Experience' },
-        { value: '1,000+', label: 'Satisfied Patients' },
+        { value: '15+', label: 'Years Combined Experience' },
+        { value: '500+', label: 'Satisfied Patients' },
         { value: '4.8', label: 'Average Rating' }
       ],
       ctaSection: {
@@ -895,7 +895,7 @@ export const categoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ],
@@ -1140,7 +1140,7 @@ export const categoryContent = {
       ],
       stats: [
         { number: '15+', label: ' Advanced Dental Treatments' },
-        { number: '1,000+', label: ' Happy Dental Patients' },
+        { number: '500+', label: ' Happy Dental Patients' },
         { number: '99%', label: ' Patient Satisfaction' }
       ],
       ctaText: 'Meet Our Dentists',
@@ -1371,9 +1371,9 @@ export const categoryContent = {
       description: 'Highly qualified dentists with extensive experience in cosmetic and restorative dentistry, committed to creating beautiful, healthy smiles.',
       stats: [
         { value: '3', label: 'Expert Specialists' },
-        { value: '35+', label: 'Years Combined Experience' },
-        { value: '5,000+', label: 'Veneers Placed' },
-        { value: '4.9', label: 'Average Rating' }
+        { value: '15+', label: 'Years Combined Experience' },
+        { value: '500+', label: 'Veneers Placed' },
+        { value: '4.8', label: 'Average Rating' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Dentist?',
@@ -1514,7 +1514,7 @@ export const categoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ],
@@ -2025,7 +2025,7 @@ export const categoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ],
@@ -2709,7 +2709,7 @@ export const categoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ],
@@ -3218,7 +3218,7 @@ export const categoryContent = {
           id: 4,
           number: '2,500+',
           label1: 'Patients Treated',
-          label2: 'Since 2008',
+          label2: 'DHA Licensed',
           target: 2500
         }
       ],

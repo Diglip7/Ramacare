@@ -88,7 +88,7 @@ const PatientTestimonials = ({ content }) => {
       id: 4,
       number: '2,500+',
       label1: 'Patients Treated',
-      label2: 'Since 2008',
+      label2: 'DHA Licensed',
       target: 2500
     }
   ];

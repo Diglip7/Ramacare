@@ -769,7 +769,7 @@ export default function BackPainTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Back Pain Treatment Process at Rama Care
+              Back Pain Treatment Process at RamaCare
             </h2>
           </motion.div>
 

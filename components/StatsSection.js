@@ -94,8 +94,8 @@ export default function StatsSection() {
           <polyline points="12 6 12 12 16 14" />
         </svg>
       ),
-      value: '10+',
-      label: 'Years Experience',
+      value: '15+',
+      label: 'Years combined Experience',
     },
   ];
 
