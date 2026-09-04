@@ -75,10 +75,10 @@ const PatientTestimonials = ({ content }) => {
     },
     {
       id: 2,
-      number: '500+',
+      number: '200+',
       label1: 'Patient Reviews',
       label2: 'Verified Testimonials',
-      target: 500
+      target: 200
     },
     {
       id: 3,
