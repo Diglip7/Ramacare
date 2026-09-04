@@ -46,7 +46,8 @@ const nextConfig: NextConfig = {
       { source: '/services/panchakarma-treatment', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
       { source: '/services/panchakarma-treatment/', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
       { source: '/services/skin-diseases-treatment', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
-      { source: '/services/skin-diseases-treatment/', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
+      { source: '/services/facial', destination: '/services/facial-dubai/', permanent: true },
+      { source: '/services/facial/', destination: '/services/facial-dubai/', permanent: true },
       { source: '/services/polyclinic-in-jumeirah', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
       { source: '/services/polyclinic-in-jumeirah/', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
     ];

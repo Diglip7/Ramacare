@@ -63,7 +63,6 @@ export const categoryContent = {
       ]
     },
 
-
     about: {
       badge: 'About Our Ayurveda Department',
       title: 'Authentic Ayurveda Treatment in Dubai Within a Modern Polyclinic',
@@ -181,7 +180,7 @@ export const categoryContent = {
       description: 'Our experienced team specializes in delivering safe, effective, and authentic Ayurveda treatment in Dubai.',
       stats: [
         { value: '2', label: 'Expert Practitioners' },
-        { value: '25+', label: 'Years Combined Experience' },
+        { value: '15+', label: 'Years Combined Experience' },
         { value: '500+', label: 'Successful Treatments' },
         { value: '4.9', label: 'Average Rating' }
       ],
@@ -223,7 +222,6 @@ export const categoryContent = {
           title: ' Enhance Productivity',
           description: 'Integrates mindfulness and relaxation practices with Ayurveda Treatment, Enhances productivity, reduces stress, and improves sleep quality'
         },
-
       ],
       image: '/images/a3.jpg',
       imageAlt: 'Ayurvedic treatment in Dubai',
@@ -241,7 +239,6 @@ export const categoryContent = {
       heading: 'Complete Ayurveda Healing Programs in Dubai',
       subtitle: 'Immersive Ayurveda Treatment programs are designed for transformative health results and lasting wellness.',
       disclaimer: 'All programs are customized based on your condition and health goals.',
-
       programs: [
         {
           id: 1,
@@ -1940,7 +1937,7 @@ export const categoryContent = {
       description: 'Highly qualified professionals committed to restoring movement, reducing pain, and improving long-term function.',
       stats: [
         { value: '2', label: 'Expert Physiotherapists' },
-        { value: '20+', label: 'Years Combined Experience' },
+        { value: '15+', label: 'Years Combined Experience' },
         { value: '500+', label: 'Successful Recoveries' },
         { value: '4.9', label: 'Average Rating' }
       ],
@@ -3228,6 +3225,7 @@ export const categoryContent = {
         buttonText: 'Start your journey today'
       },
     },
+
     faq: {
       title: 'FAQs – Facial Treatments',
       description: 'Everything you need to know about our luxury facial treatments and skincare services in Dubai.',

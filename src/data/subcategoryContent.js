@@ -8941,8 +8941,8 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '12+',
-          label: 'Years of Experience'
+          number: '15+',
+          label: 'Years of combined Experience'
         }
       ],
       ctaButtons: {

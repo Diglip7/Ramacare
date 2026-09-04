@@ -1008,7 +1008,7 @@ export default function PostSurgeryRehabilitationPage() {
               },
               statCards: [
                 { title: 'DHA Licensed', description: 'Certified Facility' },
-                { title: 'Experienced Team', description: '10+ Years Combined' },
+                { title: 'Experienced Team', description: '15+ Years Combined' },
                 { title: 'Personalized Plans', description: 'Built Around Assessment' },
                 { title: '4.8/5 Rating', description: 'Patient Reviews' }
               ],

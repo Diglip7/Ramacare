@@ -14616,7 +14616,6 @@ export const subSubcategoryContent = {
     }
   },
 
-
   'aesthetic-dermatology-dubai-laser-treatment-spider-veins-laser-treatment': {
     hero: {
       subtitle: 'Safe, Non-Surgical Treatment for Clearer, Healthier-Looking Skin',
@@ -14843,9 +14842,9 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent:
             'We monitor your progress during follow-up appointments, evaluate the healing process, and recommend additional sessions only when clinically appropriate. Patients also receive personalized advice on skin care, sun protection, physical activity, and circulation-friendly habits to support long-term results and reduce the likelihood of future spider vein formation.'
-        }
-      ]
-    },
+        } 
+      ]  
+    },  
     healingJourney: {
       title: 'Your Spider Veins Laser Treatment Journey',
       description:
@@ -14885,7 +14884,7 @@ export const subSubcategoryContent = {
             'Pre-treatment instructions and patient education'
           ],
           side: 'left'
-        },
+        },  
         {
           id: 3,
           number: '03',
@@ -23838,10 +23837,10 @@ export const subSubcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '12+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '600+ Patients',
+          title: '500+ Patients',
           description: 'Successfully Treated'
         },
         {
@@ -24526,10 +24525,10 @@ export const subSubcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '12+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '600+ Patients',
+          title: '500+ Patients',
           description: 'Successfully Treated'
         },
         {

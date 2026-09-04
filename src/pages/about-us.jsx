@@ -156,9 +156,9 @@ const whyContent = {
     description: 'Highly qualified doctors with decades of combined experience, committed to your healing journey with expertise, compassion, and personalized care.',
     stats: [
       { value: '30+', label: 'Expert Doctors' },
-      { value: '37+', label: 'Years of Combined Experience' },
+      { value: '15+', label: 'Years of Combined Experience' },
       { value: '500+', label: 'Successful Treatments' },
-      { value: '4.9', label: 'Average Rating' }
+      { value: '4.8', label: 'Average Rating' }
     ],
     ctaSection: {
       title: 'Take the First Step Toward Better Health',
