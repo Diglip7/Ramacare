@@ -295,7 +295,7 @@ export const newPagesContent = {
       }
     }
   },
- 
+
   'stress-treatment-dubai': {
     byline: {
       reviewer: "Jeena Mathew",
@@ -900,5 +900,812 @@ export const newPagesContent = {
         caption: "Our clinic offers a comfortable, professional environment for all your dermatology needs."
       }
     }
+  },
+  'dry-needling-dubai': {
+    hero: {
+      title: 'Dry Needling in Dubai for Muscle Pain & Trigger Point Relief',
+      subtitle: 'Physiotherapy-Led Trigger Point Treatment for Muscle Tension and Restricted Movement',
+      description: `Most weeks I see some version of the same patient — a knot in the shoulder that’s been there for three months, a heating pad and two mattress changes already tried, and finally a question I hear a lot: “why hasn’t this just gone away on its own?” More often than not, the answer is a trigger point — a small, stubborn band of muscle that stays contracted long after whatever caused it has passed, and that rest by itself rarely undoes.
+
+Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
+
+Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
+      rating: '4.8/5 Average Google Rating',
+      topBadges: [
+        { icon: 'location', text: 'Jumeirah 1, Dubai' },
+        { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
+        { icon: 'star', text: 'Assessment-Led Protocol' }
+      ],
+      stats: [
+        { id: 1, number: '4.8/5', label: 'Average Google Rating' },
+        { id: 2, number: '200+', label: 'Verified Patient Reviews' },
+        { id: 3, number: '98%', label: 'Patient Satisfaction' },
+        { id: 4, number: '2,500+', label: 'Patients Treated' }
+      ],
+      ctaButtons: {
+        primary: {
+          text: 'Book Dry Needling Consultation',
+          icon: 'calendar',
+          link: '#book-now'
+        },
+        secondary: {
+          text: 'Call or WhatsApp: +971 56 659 7878',
+          phone: '+971 56 659 7878',
+          link: 'https://wa.me/971566597878?text=' + encodeURIComponent('Hello RamaCare Polyclinic, I would like to book a consultation for Dry Needling in Dubai.'),
+          icon: 'whatsapp'
+        }
+      },
+      features: [
+        'Assessment-led, not needle-first',
+        'Minimally invasive, no medication involved',
+        'Built around your specific pattern of tightness, not a generic protocol',
+        'Common for office workers, athletes, and people a few weeks out from injury',
+        'Aimed at getting you back to normal movement, not just quieting today’s pain'
+      ],
+      image: {
+        src: '/images/dry-needling-physiotherapy-dubai.jpg',
+        alt: 'Dry needling therapy performed by a DHA-licensed physiotherapist in Dubai'
+      },
+      medicalNotice: {
+        text: 'Medical Disclaimer: Dry needling isn’t suitable for everyone, and it isn’t a substitute for medical diagnosis where one is needed. Treatment follows a clinical assessment, and how you respond will depend on your specific condition and how consistently you follow through on the rehab side of things.',
+        show: true
+      }
+    },
+    quickNavItems: [
+      { id: 'treatment-info', label: 'Treatment Info' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'safety-aftercare', label: 'Safety & Aftercare' },
+      { id: 'what-patients-notice', label: 'What Patients Notice' },
+      { id: 'cost', label: 'Cost' },
+      { id: 'testimonials', label: 'Success Stories' },
+      { id: 'our-doctors', label: 'Our Doctors' },
+      { id: 'faq', label: 'FAQ' },
+      { id: 'book-now', label: 'Book Now' }
+    ],
+    atAGlance: [
+      { label: 'What it is', value: 'Physiotherapy-based trigger point treatment' },
+      { label: 'Treats', value: 'Muscle, tendon, and connective tissue tightness' },
+      { label: 'Sensation', value: 'A brief twitch, sometimes nothing, occasionally a dull ache' },
+      { label: 'Recovery', value: 'Most people carry on with their day the same evening' },
+      { label: 'Delivered by', value: 'DHA-licensed physiotherapists, under approved clinical protocols' }
+    ],
+    conditionsTreated: [
+      { title: 'Neck Pain & Stiffness', description: 'Releases stubborn knots in levator scapulae and trapezius muscles from laptop posture and commuting.', link: null },
+      { title: 'Lower Back Tightness', description: 'Releases lumbar muscular guarding often paired with core re-training.', link: '/services/back-pain-treatment-dubai/' },
+      { title: 'Shoulder Pain & Frozen Shoulder', description: 'Deactivates rotator cuff and periscapular trigger points to restore overhead reach.', link: null },
+      { title: 'Sports Strains', description: 'Releases chronic micro-tightness in active athletes across running, CrossFit, and padel.', link: null },
+      { title: 'Stubborn Trigger Points & Spasms', description: 'Targets contracted bands that heat packs and deep tissue massage have failed to resolve.', link: null },
+      { title: 'Tennis & Golfer’s Elbow', description: 'Decompresses forearm extensor and flexor trigger points stressing elbow tendons.', link: null },
+      { title: 'Knee Pain (Muscular Origin)', description: 'Relieves quad and IT band tension pulling unevenly on the patella.', link: '/services/knee-pain-treatment-dubai/' },
+      { title: 'Sciatica-Type Leg Pain', description: 'Releases the deep piriformis muscle where it impinges or irritates the sciatic nerve.', link: null },
+      { title: 'Tension Headaches', description: 'Targets suboccipital and upper trapezius trigger points referring pain over the scalp.', link: '/services/migraine-treatment-dubai/' },
+      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/office-neck-treatment-dubai/' },
+      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-recovery-dubai/' }
+    ],
+    sportsProtocol: [
+      { step: '01', title: 'Clinical Movement Analysis', desc: 'Work out what actually happened and how the injury is affecting movement.' },
+      { step: '02', title: 'Targeted Palpation', desc: 'Find the specific muscles that have tightened up protectively around it.' },
+      { step: '03', title: 'Precision Needling', desc: 'Needle where it’s genuinely indicated to reset muscle tone.' },
+      { step: '04', title: 'Rebuild Mobility', desc: 'Active mobility work while the muscle tissue is relaxed.' },
+      { step: '05', title: 'Progressive Loading', desc: 'Load the muscle back up progressively with targeted resistance.' },
+      { step: '06', title: 'Movement Retraining', desc: 'Retrain the actual movement and biomechanics the sport demands.' },
+      { step: '07', title: 'Gradual Return to Sport', desc: 'Get back to full training gradually, not all at once.' }
+    ],
+    muscleProblems: [
+      {
+        title: 'Chronic Neck & Shoulder Tightness',
+        desc: 'Quietly eats into sleep and focus long before an appointment is booked. Built up over months of desk hours and commuting.',
+        icon: 'Activity'
+      },
+      {
+        title: 'Restricted Movement',
+        desc: 'Trigger points lock muscle fibers down until reaching overhead, turning to check blind spots, or bending to tie shoes feels effortful.',
+        icon: 'ShieldAlert'
+      },
+      {
+        title: 'Post-Injury Guarding',
+        desc: 'The body tightens protectively around an injury. Useful for two weeks, but then actively slows full recovery down.',
+        icon: 'AlertCircle'
+      },
+      {
+        title: 'Athletic Overuse & Plateaus',
+        desc: 'Repetitive training creates chronic muscular tension, leading to decreased power, limited flexibility, and higher injury risk.',
+        icon: 'Zap'
+      },
+      {
+        title: 'Referred Pain Mysteries',
+        desc: 'A knot in the neck triggering headaches, or a shoulder knot radiating down the arm. Patients often look where it hurts, not where it starts.',
+        icon: 'Target'
+      },
+      {
+        title: 'Slow-Burn Posture & Stress',
+        desc: 'Years of desk sitting create structural imbalances, while emotional stress settles permanently into the jaw, neck, and upper back.',
+        icon: 'Clock'
+      }
+    ],
+    whoBenefits: [
+      { profile: 'Desk-Based Professionals', detail: 'Permanent tightness across upper traps from 8+ hours at monitors and Dubai commutes.' },
+      { profile: 'Gym-Goers & Athletes', detail: 'Hit a training plateau or mobility limit because a tight muscle band refuses to extend.' },
+      { profile: 'Post-Surgery Patients', detail: 'A few weeks or months out, where surrounding tissues are still guarding out of habit.' },
+      { profile: 'Trades & Physical Workers', detail: 'Repetitive lifting, reaching, or manual work that overloads specific muscle groups.' },
+      { profile: 'Patients Stuck in Physio', detail: 'Stretching and exercise alone haven’t touched a stubborn knot blocking range of motion.' }
+    ],
+    healingJourney: {
+      title: 'What Happens, Step by Step',
+      description: 'Dry needling is never done on autopilot. Every visit follows a clear four-phase clinical methodology.',
+      image: {
+        src: '/images/dry-needling-trigger-point-shoulder-ramacare.jpg',
+        alt: 'Physiotherapist performing dry needling on a patient’s shoulder at RamaCare Polyclinic'
+      },
+      steps: [
+        {
+          id: 1,
+          number: '01',
+          title: 'The Assessment',
+          duration: 'Phase 1',
+          description: 'History, current symptoms, how you move, what’s tight, what’s weak. This is what tells me whether needling is even the right call, and if so, exactly which muscles need it — not just “where does it hurt.”',
+          keyActivities: [
+            'Detailed movement & postural analysis',
+            'Palpation of active trigger points',
+            'Ruling out disc or non-muscular pathology',
+            'Bespoke treatment mapping'
+          ],
+          side: 'right'
+        },
+        {
+          id: 2,
+          number: '02',
+          title: 'The Needling',
+          duration: 'Phase 2',
+          description: 'Fine, sterile needles inserted directly into the specific trigger points identified. Usually 20 to 30 minutes. Expect a brief twitch response as the muscle releases tension.',
+          keyActivities: [
+            'Hair-fine single-use sterile needles',
+            'Direct anatomical trigger point targeting',
+            'Evoking therapeutic local twitch response',
+            'Gentle technique prioritising patient comfort'
+          ],
+          side: 'left'
+        },
+        {
+          id: 3,
+          number: '03',
+          title: 'The Rehab Work',
+          duration: 'Phase 3',
+          description: 'The part patients often underestimate. Stretches, progressive strengthening, mobility drills, and direct advice on ergonomics and posture. Needling releases the muscle; this part stops it from tightening right back up.',
+          keyActivities: [
+            'Targeted muscle lengthening & stretches',
+            'Joint mobility exercises',
+            'Ergonomic workstation setup guidance',
+            'Daily movement habit adjustments'
+          ],
+          side: 'right'
+        },
+        {
+          id: 4,
+          number: '04',
+          title: 'Check In & Progression',
+          duration: 'Phase 4',
+          description: 'Follow-up sessions track whether pain, mobility, and strength are genuinely improving. The plan is actively modified based on results — never repeated on autopilot.',
+          keyActivities: [
+            'Objective range-of-motion measurements',
+            'Functional strength testing',
+            'Rehab drill adjustments',
+            'Long-term recurrence prevention'
+          ],
+          side: 'left'
+        }
+      ]
+    },
+    safety: {
+      title: 'Safety, Honestly',
+      lead: 'Dry needling is low-risk when it’s done properly by a trained, licensed physiotherapist — but “low-risk” isn’t “no-risk,” and I’d rather say that plainly than pretend otherwise.',
+      whatToExpect: 'Expect the possibility of mild soreness for a day or two, occasional minor bruising if the needle passes near a small blood vessel, or brief tenderness. Soreness doesn’t mean the treatment failed — it usually means the muscle actually responded.',
+      contraindications: [
+        'Bleeding or clotting disorders',
+        'Patients taking blood-thinning medications',
+        'Active skin infection or broken wound near the treatment area',
+        'Uncontrolled systemic medical conditions',
+        'Pregnancy (depending on the anatomical area involved)',
+        'Severe needle phobia where treatment would be counterproductive'
+      ],
+      aftercareRules: [
+        'Normal daily activity is fine immediately following your session.',
+        'Hydrate well throughout the day.',
+        'Perform the gentle mobility and stretching exercises prescribed.',
+        'Skip heavy gym or intense training sessions that same evening if the muscle feels tender.'
+      ]
+    },
+    patientFeedback: {
+      title: 'What Patients Tell Us',
+      subtitle: 'Feedback collected across our clinical caseload in Dubai',
+      quote: 'I don’t love quoting percentages without context, so here’s roughly what we hear back from patients: most people notice faster relief from the specific pain they came in with, a good majority feel trigger points release properly rather than just going quiet temporarily, and flexibility improvements show up often enough that we build stretching into almost every plan.',
+      stats: [
+        { percentage: '92%', label: 'Notice Faster Pain Relief', desc: 'Significant drop in localized muscle ache and tightness' },
+        { percentage: '90%', label: 'Complete Trigger Point Release', desc: 'Knots release properly rather than quieting temporarily' },
+        { percentage: '88%', label: 'Flexibility & Mobility Gains', desc: 'Restored freedom of motion in neck, back, and shoulders' },
+        { percentage: '96%', label: 'Prefer Drug-Free Approach', desc: 'Appreciate a treatment that avoids routine painkiller reliance' }
+      ]
+    },
+    comparison: {
+      title: 'Dry Needling or the Usual Options?',
+      description: 'Painkillers, massage, heat, rest — none of these are wrong, and for plenty of muscle pain, they’re genuinely enough. Dry needling earns its place specifically when there’s a persistent trigger point that hasn’t responded to simpler methods. Quite often, the right answer isn’t “instead of” but “alongside.”',
+      headers: {
+        feature: 'Aspect',
+        dryNeedling: 'Dry Needling Therapy',
+        usual: 'The Usual Approach'
+      },
+      rows: [
+        {
+          feature: 'Targets',
+          dryNeedling: 'The specific trigger point directly',
+          usual: 'General symptoms across the area'
+        },
+        {
+          feature: 'Method',
+          dryNeedling: 'Hair-fine needle directly into contracted muscle tissue',
+          usual: 'Medication, surface massage, rest, or heat packs'
+        },
+        {
+          feature: 'Best For',
+          dryNeedling: 'Persistent, stubborn, localised muscular tightness',
+          usual: 'Milder or generalized temporary discomfort'
+        },
+        {
+          feature: 'Combines with Physio',
+          dryNeedling: 'Almost always (paired with active rehab)',
+          usual: 'Sometimes used as standalone symptom relief'
+        },
+        {
+          feature: 'Downtime',
+          dryNeedling: 'Minimal (mild soreness for 24-48 hours)',
+          usual: 'Minimal'
+        },
+        {
+          feature: 'Possible Side Effects',
+          dryNeedling: 'Brief muscular soreness, occasional light bruising',
+          usual: 'Gastrointestinal upset from medications, temporary relief only'
+        }
+      ],
+      whyPairWithPhysio: 'Loosening a muscle doesn’t fix the posture or the movement habit that made it tight in the first place — that part still needs actual work. Combining dry needling with physiotherapy gets closer to the root cause, rebuilds how the muscle activates, restores mobility around the joint, and meaningfully cuts down how often the same problem returns.'
+    },
+    cost: {
+      title: 'Transparent Pricing & Value',
+      description: 'Pricing depends on your assessment, how many areas need treating, and whether it’s part of a structured rehabilitation programme rather than a single standalone session. I’d rather quote you accurately after seeing what’s actually going on than throw out an arbitrary number that doesn’t match your clinical needs.',
+      callToAction: 'Call or WhatsApp +971 56 659 7878 and our physiotherapy team will talk through your case with complete transparency.',
+      clinicComparisonTip: 'If you’re comparing clinics in Dubai, ask directly whether their quote includes the clinical assessment and follow-up rehab guidance, or just fifteen minutes of needling — that’s usually where the real difference in value sits.'
+    },
+    whyRamaCare: [
+      { title: 'Assessment-First, Always', desc: 'We don’t skip the assessment, even when a patient is fairly sure they already know what’s wrong.' },
+      { title: 'Tailored to Your Movement Story', desc: 'Treatment follows your actual pattern of tightness (commuting vs padel sports), not a rigid protocol.' },
+      { title: 'Combined with Active Rehab', desc: 'Needling releases the knot; manual therapy, stretching, and loading ensure it doesn’t return.' },
+      { title: 'DHA-Licensed Physiotherapists', desc: 'Administered under strict Dubai Health Authority healthcare and hygiene standards.' },
+      { title: 'You Leave with a Real Plan', desc: 'You walk out with actionable exercises and guidance for the week, not just a sore muscle.' },
+      { title: 'Prime Jumeirah 1 Location', desc: 'Easy ground-floor access with dedicated parking in Jumeirah Terrace Building.' }
+    ],
+    isItWorthLookingInto: {
+      title: 'Is This Worth Looking Into for You?',
+      content: `If you’ve had the same tight spot in your neck for months, or your lower back tightens up every time you sit for more than an hour, or a muscle injury from sport just won’t fully settle — that’s usually the profile of someone who benefits from this. Tension headaches that trace back to the neck fit here too, as does general muscle pain that’s started interfering with work or exercise in a way it didn’t used to.
+
+Ignoring it rarely makes it go away on its own. It usually just gets more entrenched, drags your posture and movement down with it over time, and raises the odds of a bigger injury eventually. Catching it early generally means less treatment overall, not more — which is the opposite of what most people assume.`
+    },
+    doctorProfile: {
+      name: 'Jeena Mathew',
+      qualifications: 'BPT, MPT (Physiotherapy)',
+      title: 'DHA Licensed Physiotherapist | Musculoskeletal Physiotherapy Specialist',
+      experience: '8+ Years Clinical Experience | 600+ Patients Treated',
+      bio: 'Jeena has spent most of her career on musculoskeletal cases specifically — the kind of work where the job is figuring out exactly why a muscle or joint isn’t cooperating, not just treating whatever hurts today.',
+      focusAreas: [
+        'Back pain — manual therapy combined with targeted strengthening',
+        'Neck pain — joint mobility work and posture advice that accounts for your real daily routine',
+        'Shoulder and knee rehab — progressive, structured recovery plans'
+      ],
+      languages: 'English',
+      image: '/images/Jeena Mathew.jpeg',
+      alt: 'Jeena Mathew, DHA-licensed physiotherapist, RamaCare Polyclinic Dubai',
+      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai'
+    },
+    clinicallyReviewed: {
+      reviewerName: 'Jeena Mathew',
+      reviewerRole: 'Musculoskeletal Physiotherapy Specialist',
+      reviewerCredentials: 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist',
+      reviewerExperience: '8+ Years Clinical Experience · 600+ Patients Treated',
+      reviewStatement: '“I reviewed this page myself to make sure it reflects how we actually practise here — not a generic description of dry needling copied from somewhere else.” — Jeena Mathew',
+      boardName: 'RamaCare Medical Review Board · Jumeirah 1, Dubai'
+    },
+    faqs: [
+      { id: 1, question: 'What is dry needling, really?', answer: 'A fine, sterile needle placed directly into a tight muscle band to help it release. That’s the whole mechanism — no medication, no incision.' },
+      { id: 2, question: 'Does it hurt?', answer: 'Less than people expect, usually. A brief twitch, sometimes a dull ache, occasionally nothing at all. It varies enough between patients that I don’t try to predict it in advance anymore.' },
+      { id: 3, question: 'Isn’t this the same as acupuncture?', answer: 'No — different history, different mechanism. Acupuncture follows a traditional Chinese medicine framework along meridian points. Dry needling comes from Western physiotherapy and goes straight into the specific muscle causing the problem.' },
+      { id: 4, question: 'What can it actually help with?', answer: 'Muscular tightness and trigger points behind neck pain, back pain, shoulder issues, sports injuries, tension headaches, and similar movement-related problems.' },
+      { id: 5, question: 'Can it help my back pain?', answer: 'If the pain is muscular, often yes. If there’s numbness, weakness, or other red-flag symptoms involved, that needs a different kind of assessment first — I’ll tell you directly if that’s the case.' },
+      { id: 6, question: 'I sit at a desk all day and my neck is always tight — will this help?', answer: 'Probably, yes — it’s the single most common reason people come in. It works best paired with some changes to your setup and posture, though, not on its own.' },
+      { id: 7, question: 'Is it useful for sports injuries?', answer: 'Yes, generally as one part of a broader return-to-training plan rather than a stand-alone fix.' },
+      { id: 8, question: 'How many sessions will I need?', answer: 'Depends entirely on how long the problem has existed. Some patients feel a real shift after two sessions; others need a longer course.' },
+      { id: 9, question: 'How long does a session take?', answer: 'The needling itself is 20 to 30 minutes. The first visit runs longer because of the assessment.' },
+      { id: 10, question: 'Is it safe?', answer: 'Generally, yes, when done by a trained physiotherapist — but no needle-based treatment is entirely risk-free, and we screen for anything that would make it inappropriate before starting.' },
+      { id: 11, question: 'What side effects should I expect?', answer: 'Mild soreness or occasional minor bruising, usually settling within a day or two.' },
+      { id: 12, question: 'Will my flexibility actually improve?', answer: 'Often, especially when tight muscle is what’s limiting your movement in the first place. We usually pair it with mobility work to help it stick.' },
+      { id: 13, question: 'Who shouldn’t get this treatment?', answer: 'People with certain bleeding disorders, active infection at the treatment site, or a few other specific medical situations. Tell your physiotherapist your full history upfront — that’s what the first conversation is for.' },
+      { id: 14, question: 'Why RamaCare specifically?', answer: 'Because the assessment always comes first, and needling gets built into an actual rehab plan rather than treated as the whole solution.' },
+      { id: 15, question: 'How soon will I feel a difference?', answer: 'Varies. Some people notice something after the first session; more often it takes a few sessions alongside the exercises we give you.' },
+      { id: 16, question: 'Can this replace physiotherapy exercises?', answer: 'No, and I’d be doing you a disservice if I said otherwise. It works best as one part of the plan, not the entire plan.' },
+      { id: 17, question: 'Is this a permanent fix?', answer: 'Not on its own. What keeps the improvement long-term is addressing whatever caused the tightness — posture, training load, an old injury pattern — through the rest of the rehab.' }
+    ],
+    relatedServices: [
+      { title: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', desc: 'High-frequency sound waves to speed deep soft-tissue healing and reduce inflammation.' },
+      { title: 'Electrotherapy', link: '/services/electrotherapy-dubai/', desc: 'TENS and therapeutic electrical stimulation to soothe acute and chronic nerve-muscle pain.' },
+      { title: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', desc: 'Targeted strengthening and release for core stability, postnatal care, and pelvic health.' },
+      { title: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-dubai/', desc: 'Specialised spine alignment exercises and muscular rebalancing protocols.' },
+      { title: 'Functional Exercise Therapy', link: '/services/functional-exercise-therapy-dubai/', desc: 'Rebuild functional strength and movement patterns for pain-free daily living.' },
+      { title: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', desc: 'Synergistic deep trigger point release combined with cellular thermal tissue repair.' },
+      { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', desc: 'Comprehensive manual therapy, spinal decompression exercises, and postural restoration.' },
+      { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', desc: 'Targeted rehabilitation for patellofemoral strain, ligament recovery, and osteoarthritis.' },
+      { title: 'Migraine & Tension Headache Care', link: '/services/migraine-treatment-dubai/', desc: 'Relieve cervical muscular triggers and suboccipital nerve compression causing headaches.' },
+      { title: 'Post-Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
+      { title: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
+      { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', desc: 'Guidance and full reimbursement documentation support for major UAE health insurers.' }
+    ],
+    testimonials: {
+      title: 'What Our Patients Say',
+      subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
+      rating: '4.8/5 Average Google Rating',
+      stats: [
+        { number: '4.8/5', label: 'Average Google Rating' },
+        { number: '200+', label: 'Verified Patient Reviews' },
+        { number: '98%', label: 'Patient Satisfaction' },
+        { number: '500+', label: 'Patients Treated' }
+      ],
+      testimonials: [
+        { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },
+        { id: 2, videoUrl: '/Videos/testimonial-2.mp4' },
+        { id: 3, videoUrl: '/Videos/testimonial-3.mp4' },
+        { id: 4, videoUrl: '/Videos/testimonial-4.mp4' },
+        { id: 5, videoUrl: '/Videos/testimonial-5.mp4', thumbnail: '/images/Thumb-5.jpeg' },
+        { id: 6, videoUrl: '/Videos/testimonial-6.mp4' }
+      ]
+    },
+    paymentInsurance: {
+      paymentTitle: 'Payment & Insurance',
+      insuranceTitle: 'Insurance & Reimbursement Policy',
+      paymentOptions: [
+        'Cash Accepted',
+        'Credit & Debit Cards Accepted',
+        'Flexible Payment Plans Available',
+        '0% Interest Installments via Tabby'
+      ],
+      insuranceOptions: [
+        'Reimbursement Basis — You pay at the time of your visit.',
+        'Detailed Invoices Provided with DHA diagnosis codes for prompt submission.',
+        'Full documentation assistance to claim back through your insurer.'
+      ]
+    },
+    bookConsultation: {
+      badge: 'Book In',
+      title: 'If a tight muscle has been running your week for longer than it should...',
+      description: 'It’s worth getting it actually looked at rather than waiting it out again. Our team can tell you fairly quickly during the first visit whether dry needling makes sense for your case.\n\nBook your consultation at RamaCare Polyclinic, Jumeirah 1, Dubai.',
+      getInTouchTitle: 'Get In Touch',
+      requestAppointmentTitle: 'Request Appointment',
+      submitButtonText: 'Book Dry Needling Consultation',
+      contactInfo: {
+        phone: '+971 4 286 2006',
+        whatsapp: '971566597878',
+        email: 'query@ramacarepolyclinic.ae',
+        address: {
+          line1: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor,',
+          line2: 'Jumeirah 1, Dubai, United Arab Emirates'
+        }
+      },
+      clinicHours: {
+        weekdays: 'Sunday - Saturday:',
+        weekdaysTime: '10:00 AM - 10:00 PM',
+        friday: 'Friday:',
+        fridayTime: '10:00 AM - 8:00 PM'
+      }
+    }
+  },
+  'physiotherapy-dubai-dry-needling': {
+    hero: {
+      title: 'Dry Needling in Dubai for Muscle Pain & Trigger Point Relief',
+      subtitle: 'Physiotherapy-Led Trigger Point Treatment for Muscle Tension and Restricted Movement',
+      description: `Most weeks I see some version of the same patient — a knot in the shoulder that’s been there for three months, a heating pad and two mattress changes already tried, and finally a question I hear a lot: “why hasn’t this just gone away on its own?” More often than not, the answer is a trigger point — a small, stubborn band of muscle that stays contracted long after whatever caused it has passed, and that rest by itself rarely undoes.
+
+Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
+
+Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
+      rating: '4.9/5 Average Google Rating',
+      topBadges: [
+        { icon: 'location', text: 'Jumeirah 1, Dubai' },
+        { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
+        { icon: 'star', text: 'Assessment-Led Protocol' }
+      ],
+      stats: [
+        { id: 1, number: '4.9/5', label: 'Average Google Rating' },
+        { id: 2, number: '500+', label: 'Verified Patient Reviews' },
+        { id: 3, number: '98%', label: 'Patient Satisfaction' },
+        { id: 4, number: '2,500+', label: 'Patients Treated' }
+      ],
+      ctaButtons: {
+        primary: {
+          text: 'Book Dry Needling Consultation',
+          icon: 'calendar',
+          link: '#book-now'
+        },
+        secondary: {
+          text: 'Call or WhatsApp: +971 56 659 7878',
+          phone: '+971 56 659 7878',
+          link: 'https://wa.me/971566597878?text=' + encodeURIComponent('Hello RamaCare Polyclinic, I would like to book a consultation for Dry Needling in Dubai.'),
+          icon: 'whatsapp'
+        }
+      },
+      features: [
+        'Assessment-led, not needle-first',
+        'Minimally invasive, no medication involved',
+        'Built around your specific pattern of tightness, not a generic protocol',
+        'Common for office workers, athletes, and people a few weeks out from injury',
+        'Aimed at getting you back to normal movement, not just quieting today’s pain'
+      ],
+      image: {
+        src: '/images/dry-needling-physiotherapy-dubai.jpg',
+        alt: 'Dry needling therapy performed by a DHA-licensed physiotherapist in Dubai'
+      },
+      medicalNotice: {
+        text: 'Medical Disclaimer: Dry needling isn’t suitable for everyone, and it isn’t a substitute for medical diagnosis where one is needed. Treatment follows a clinical assessment, and how you respond will depend on your specific condition and how consistently you follow through on the rehab side of things.',
+        show: true
+      }
+    },
+    quickNavItems: [
+      { id: 'treatment-info', label: 'Treatment Info' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'safety-aftercare', label: 'Safety & Aftercare' },
+      { id: 'what-patients-notice', label: 'What Patients Notice' },
+      { id: 'cost', label: 'Cost' },
+      { id: 'testimonials', label: 'Success Stories' },
+      { id: 'our-doctors', label: 'Our Doctors' },
+      { id: 'faq', label: 'FAQ' },
+      { id: 'book-now', label: 'Book Now' }
+    ],
+    atAGlance: [
+      { label: 'What it is', value: 'Physiotherapy-based trigger point treatment' },
+      { label: 'Treats', value: 'Muscle, tendon, and connective tissue tightness' },
+      { label: 'Sensation', value: 'A brief twitch, sometimes nothing, occasionally a dull ache' },
+      { label: 'Recovery', value: 'Most people carry on with their day the same evening' },
+      { label: 'Delivered by', value: 'DHA-licensed physiotherapists, under approved clinical protocols' }
+    ],
+    conditionsTreated: [
+      { title: 'Neck Pain & Stiffness', description: 'Releases stubborn knots in levator scapulae and trapezius muscles from laptop posture and commuting.', link: null },
+      { title: 'Lower Back Tightness', description: 'Releases lumbar muscular guarding often paired with core re-training.', link: '/services/back-pain-treatment-dubai/' },
+      { title: 'Shoulder Pain & Frozen Shoulder', description: 'Deactivates rotator cuff and periscapular trigger points to restore overhead reach.', link: null },
+      { title: 'Sports Strains', description: 'Releases chronic micro-tightness in active athletes across running, CrossFit, and padel.', link: null },
+      { title: 'Stubborn Trigger Points & Spasms', description: 'Targets contracted bands that heat packs and deep tissue massage have failed to resolve.', link: null },
+      { title: 'Tennis & Golfer’s Elbow', description: 'Decompresses forearm extensor and flexor trigger points stressing elbow tendons.', link: null },
+      { title: 'Knee Pain (Muscular Origin)', description: 'Relieves quad and IT band tension pulling unevenly on the patella.', link: '/services/knee-pain-treatment-dubai/' },
+      { title: 'Sciatica-Type Leg Pain', description: 'Releases the deep piriformis muscle where it impinges or irritates the sciatic nerve.', link: null },
+      { title: 'Tension Headaches', description: 'Targets suboccipital and upper trapezius trigger points referring pain over the scalp.', link: '/services/migraine-treatment-dubai/' },
+      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/office-neck-treatment-dubai/' },
+      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-recovery-dubai/' }
+    ],
+    sportsProtocol: [
+      { step: '01', title: 'Clinical Movement Analysis', desc: 'Work out what actually happened and how the injury is affecting movement.' },
+      { step: '02', title: 'Targeted Palpation', desc: 'Find the specific muscles that have tightened up protectively around it.' },
+      { step: '03', title: 'Precision Needling', desc: 'Needle where it’s genuinely indicated to reset muscle tone.' },
+      { step: '04', title: 'Rebuild Mobility', desc: 'Active mobility work while the muscle tissue is relaxed.' },
+      { step: '05', title: 'Progressive Loading', desc: 'Load the muscle back up progressively with targeted resistance.' },
+      { step: '06', title: 'Movement Retraining', desc: 'Retrain the actual movement and biomechanics the sport demands.' },
+      { step: '07', title: 'Gradual Return to Sport', desc: 'Get back to full training gradually, not all at once.' }
+    ],
+    muscleProblems: [
+      {
+        title: 'Chronic Neck & Shoulder Tightness',
+        desc: 'Quietly eats into sleep and focus long before an appointment is booked. Built up over months of desk hours and commuting.',
+        icon: 'Activity'
+      },
+      {
+        title: 'Restricted Movement',
+        desc: 'Trigger points lock muscle fibers down until reaching overhead, turning to check blind spots, or bending to tie shoes feels effortful.',
+        icon: 'ShieldAlert'
+      },
+      {
+        title: 'Post-Injury Guarding',
+        desc: 'The body tightens protectively around an injury. Useful for two weeks, but then actively slows full recovery down.',
+        icon: 'AlertCircle'
+      },
+      {
+        title: 'Athletic Overuse & Plateaus',
+        desc: 'Repetitive training creates chronic muscular tension, leading to decreased power, limited flexibility, and higher injury risk.',
+        icon: 'Zap'
+      },
+      {
+        title: 'Referred Pain Mysteries',
+        desc: 'A knot in the neck triggering headaches, or a shoulder knot radiating down the arm. Patients often look where it hurts, not where it starts.',
+        icon: 'Target'
+      },
+      {
+        title: 'Slow-Burn Posture & Stress',
+        desc: 'Years of desk sitting create structural imbalances, while emotional stress settles permanently into the jaw, neck, and upper back.',
+        icon: 'Clock'
+      }
+    ],
+    whoBenefits: [
+      { profile: 'Desk-Based Professionals', detail: 'Permanent tightness across upper traps from 8+ hours at monitors and Dubai commutes.' },
+      { profile: 'Gym-Goers & Athletes', detail: 'Hit a training plateau or mobility limit because a tight muscle band refuses to extend.' },
+      { profile: 'Post-Surgery Patients', detail: 'A few weeks or months out, where surrounding tissues are still guarding out of habit.' },
+      { profile: 'Trades & Physical Workers', detail: 'Repetitive lifting, reaching, or manual work that overloads specific muscle groups.' },
+      { profile: 'Patients Stuck in Physio', detail: 'Stretching and exercise alone haven’t touched a stubborn knot blocking range of motion.' }
+    ],
+    healingJourney: {
+      title: 'What Happens, Step by Step',
+      description: 'Dry needling is never done on autopilot. Every visit follows a clear four-phase clinical methodology.',
+      image: {
+        src: '/images/dry-needling-trigger-point-shoulder-ramacare.jpg',
+        alt: 'Physiotherapist performing dry needling on a patient’s shoulder at RamaCare Polyclinic'
+      },
+      steps: [
+        {
+          id: 1,
+          number: '01',
+          title: 'The Assessment',
+          duration: 'Phase 1',
+          description: 'History, current symptoms, how you move, what’s tight, what’s weak. This is what tells me whether needling is even the right call, and if so, exactly which muscles need it — not just “where does it hurt.”',
+          keyActivities: [
+            'Detailed movement & postural analysis',
+            'Palpation of active trigger points',
+            'Ruling out disc or non-muscular pathology',
+            'Bespoke treatment mapping'
+          ],
+          side: 'right'
+        },
+        {
+          id: 2,
+          number: '02',
+          title: 'The Needling',
+          duration: 'Phase 2',
+          description: 'Fine, sterile needles inserted directly into the specific trigger points identified. Usually 20 to 30 minutes. Expect a brief twitch response as the muscle releases tension.',
+          keyActivities: [
+            'Hair-fine single-use sterile needles',
+            'Direct anatomical trigger point targeting',
+            'Evoking therapeutic local twitch response',
+            'Gentle technique prioritising patient comfort'
+          ],
+          side: 'left'
+        },
+        {
+          id: 3,
+          number: '03',
+          title: 'The Rehab Work',
+          duration: 'Phase 3',
+          description: 'The part patients often underestimate. Stretches, progressive strengthening, mobility drills, and direct advice on ergonomics and posture. Needling releases the muscle; this part stops it from tightening right back up.',
+          keyActivities: [
+            'Targeted muscle lengthening & stretches',
+            'Joint mobility exercises',
+            'Ergonomic workstation setup guidance',
+            'Daily movement habit adjustments'
+          ],
+          side: 'right'
+        },
+        {
+          id: 4,
+          number: '04',
+          title: 'Check In & Progression',
+          duration: 'Phase 4',
+          description: 'Follow-up sessions track whether pain, mobility, and strength are genuinely improving. The plan is actively modified based on results — never repeated on autopilot.',
+          keyActivities: [
+            'Objective range-of-motion measurements',
+            'Functional strength testing',
+            'Rehab drill adjustments',
+            'Long-term recurrence prevention'
+          ],
+          side: 'left'
+        }
+      ]
+    },
+    safety: {
+      title: 'Safety, Honestly',
+      lead: 'Dry needling is low-risk when it’s done properly by a trained, licensed physiotherapist — but “low-risk” isn’t “no-risk,” and I’d rather say that plainly than pretend otherwise.',
+      whatToExpect: 'Expect the possibility of mild soreness for a day or two, occasional minor bruising if the needle passes near a small blood vessel, or brief tenderness. Soreness doesn’t mean the treatment failed — it usually means the muscle actually responded.',
+      contraindications: [
+        'Bleeding or clotting disorders',
+        'Patients taking blood-thinning medications',
+        'Active skin infection or broken wound near the treatment area',
+        'Uncontrolled systemic medical conditions',
+        'Pregnancy (depending on the anatomical area involved)',
+        'Severe needle phobia where treatment would be counterproductive'
+      ],
+      aftercareRules: [
+        'Normal daily activity is fine immediately following your session.',
+        'Hydrate well throughout the day.',
+        'Perform the gentle mobility and stretching exercises prescribed.',
+        'Skip heavy gym or intense training sessions that same evening if the muscle feels tender.'
+      ]
+    },
+    patientFeedback: {
+      title: 'What Patients Tell Us',
+      subtitle: 'Feedback collected across our clinical caseload in Dubai',
+      quote: 'I don’t love quoting percentages without context, so here’s roughly what we hear back from patients: most people notice faster relief from the specific pain they came in with, a good majority feel trigger points release properly rather than just going quiet temporarily, and flexibility improvements show up often enough that we build stretching into almost every plan.',
+      stats: [
+        { percentage: '92%', label: 'Notice Faster Pain Relief', desc: 'Significant drop in localized muscle ache and tightness' },
+        { percentage: '90%', label: 'Complete Trigger Point Release', desc: 'Knots release properly rather than quieting temporarily' },
+        { percentage: '88%', label: 'Flexibility & Mobility Gains', desc: 'Restored freedom of motion in neck, back, and shoulders' },
+        { percentage: '96%', label: 'Prefer Drug-Free Approach', desc: 'Appreciate a treatment that avoids routine painkiller reliance' }
+      ]
+    },
+    comparison: {
+      title: 'Dry Needling or the Usual Options?',
+      description: 'Painkillers, massage, heat, rest — none of these are wrong, and for plenty of muscle pain, they’re genuinely enough. Dry needling earns its place specifically when there’s a persistent trigger point that hasn’t responded to simpler methods. Quite often, the right answer isn’t “instead of” but “alongside.”',
+      headers: {
+        feature: 'Aspect',
+        dryNeedling: 'Dry Needling Therapy',
+        usual: 'The Usual Approach'
+      },
+      rows: [
+        {
+          feature: 'Targets',
+          dryNeedling: 'The specific trigger point directly',
+          usual: 'General symptoms across the area'
+        },
+        {
+          feature: 'Method',
+          dryNeedling: 'Hair-fine needle directly into contracted muscle tissue',
+          usual: 'Medication, surface massage, rest, or heat packs'
+        },
+        {
+          feature: 'Best For',
+          dryNeedling: 'Persistent, stubborn, localised muscular tightness',
+          usual: 'Milder or generalized temporary discomfort'
+        },
+        {
+          feature: 'Combines with Physio',
+          dryNeedling: 'Almost always (paired with active rehab)',
+          usual: 'Sometimes used as standalone symptom relief'
+        },
+        {
+          feature: 'Downtime',
+          dryNeedling: 'Minimal (mild soreness for 24-48 hours)',
+          usual: 'Minimal'
+        },
+        {
+          feature: 'Possible Side Effects',
+          dryNeedling: 'Brief muscular soreness, occasional light bruising',
+          usual: 'Gastrointestinal upset from medications, temporary relief only'
+        }
+      ],
+      whyPairWithPhysio: 'Loosening a muscle doesn’t fix the posture or the movement habit that made it tight in the first place — that part still needs actual work. Combining dry needling with physiotherapy gets closer to the root cause, rebuilds how the muscle activates, restores mobility around the joint, and meaningfully cuts down how often the same problem returns.'
+    },
+    cost: {
+      title: 'Transparent Pricing & Value',
+      description: 'Pricing depends on your assessment, how many areas need treating, and whether it’s part of a structured rehabilitation programme rather than a single standalone session. I’d rather quote you accurately after seeing what’s actually going on than throw out an arbitrary number that doesn’t match your clinical needs.',
+      callToAction: 'Call or WhatsApp +971 56 659 7878 and our physiotherapy team will talk through your case with complete transparency.',
+      clinicComparisonTip: 'If you’re comparing clinics in Dubai, ask directly whether their quote includes the clinical assessment and follow-up rehab guidance, or just fifteen minutes of needling — that’s usually where the real difference in value sits.'
+    },
+    whyRamaCare: [
+      { title: 'Assessment-First, Always', desc: 'We don’t skip the assessment, even when a patient is fairly sure they already know what’s wrong.' },
+      { title: 'Tailored to Your Movement Story', desc: 'Treatment follows your actual pattern of tightness (commuting vs padel sports), not a rigid protocol.' },
+      { title: 'Combined with Active Rehab', desc: 'Needling releases the knot; manual therapy, stretching, and loading ensure it doesn’t return.' },
+      { title: 'DHA-Licensed Physiotherapists', desc: 'Administered under strict Dubai Health Authority healthcare and hygiene standards.' },
+      { title: 'You Leave with a Real Plan', desc: 'You walk out with actionable exercises and guidance for the week, not just a sore muscle.' },
+      { title: 'Prime Jumeirah 1 Location', desc: 'Easy ground-floor access with dedicated parking in Jumeirah Terrace Building.' }
+    ],
+    isItWorthLookingInto: {
+      title: 'Is This Worth Looking Into for You?',
+      content: `If you’ve had the same tight spot in your neck for months, or your lower back tightens up every time you sit for more than an hour, or a muscle injury from sport just won’t fully settle — that’s usually the profile of someone who benefits from this. Tension headaches that trace back to the neck fit here too, as does general muscle pain that’s started interfering with work or exercise in a way it didn’t used to.
+
+Ignoring it rarely makes it go away on its own. It usually just gets more entrenched, drags your posture and movement down with it over time, and raises the odds of a bigger injury eventually. Catching it early generally means less treatment overall, not more — which is the opposite of what most people assume.`
+    },
+    doctorProfile: {
+      name: 'Jeena Mathew',
+      qualifications: 'BPT, MPT (Physiotherapy)',
+      title: 'DHA Licensed Physiotherapist | Musculoskeletal Physiotherapy Specialist',
+      experience: '8+ Years Clinical Experience | 600+ Patients Treated',
+      bio: 'Jeena has spent most of her career on musculoskeletal cases specifically — the kind of work where the job is figuring out exactly why a muscle or joint isn’t cooperating, not just treating whatever hurts today.',
+      focusAreas: [
+        'Back pain — manual therapy combined with targeted strengthening',
+        'Neck pain — joint mobility work and posture advice that accounts for your real daily routine',
+        'Shoulder and knee rehab — progressive, structured recovery plans'
+      ],
+      languages: 'English',
+      image: '/images/Jeena Mathew.jpeg',
+      alt: 'Jeena Mathew, DHA-licensed physiotherapist, RamaCare Polyclinic Dubai',
+      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai'
+    },
+    clinicallyReviewed: {
+      reviewerName: 'Jeena Mathew',
+      reviewerRole: 'Musculoskeletal Physiotherapy Specialist',
+      reviewerCredentials: 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist',
+      reviewerExperience: '8+ Years Clinical Experience · 600+ Patients Treated',
+      reviewStatement: '“I reviewed this page myself to make sure it reflects how we actually practise here — not a generic description of dry needling copied from somewhere else.” — Jeena Mathew',
+      boardName: 'RamaCare Medical Review Board · Jumeirah 1, Dubai'
+    },
+    faqs: [
+      { id: 1, question: 'What is dry needling, really?', answer: 'A fine, sterile needle placed directly into a tight muscle band to help it release. That’s the whole mechanism — no medication, no incision.' },
+      { id: 2, question: 'Does it hurt?', answer: 'Less than people expect, usually. A brief twitch, sometimes a dull ache, occasionally nothing at all. It varies enough between patients that I don’t try to predict it in advance anymore.' },
+      { id: 3, question: 'Isn’t this the same as acupuncture?', answer: 'No — different history, different mechanism. Acupuncture follows a traditional Chinese medicine framework along meridian points. Dry needling comes from Western physiotherapy and goes straight into the specific muscle causing the problem.' },
+      { id: 4, question: 'What can it actually help with?', answer: 'Muscular tightness and trigger points behind neck pain, back pain, shoulder issues, sports injuries, tension headaches, and similar movement-related problems.' },
+      { id: 5, question: 'Can it help my back pain?', answer: 'If the pain is muscular, often yes. If there’s numbness, weakness, or other red-flag symptoms involved, that needs a different kind of assessment first — I’ll tell you directly if that’s the case.' },
+      { id: 6, question: 'I sit at a desk all day and my neck is always tight — will this help?', answer: 'Probably, yes — it’s the single most common reason people come in. It works best paired with some changes to your setup and posture, though, not on its own.' },
+      { id: 7, question: 'Is it useful for sports injuries?', answer: 'Yes, generally as one part of a broader return-to-training plan rather than a stand-alone fix.' },
+      { id: 8, question: 'How many sessions will I need?', answer: 'Depends entirely on how long the problem has existed. Some patients feel a real shift after two sessions; others need a longer course.' },
+      { id: 9, question: 'How long does a session take?', answer: 'The needling itself is 20 to 30 minutes. The first visit runs longer because of the assessment.' },
+      { id: 10, question: 'Is it safe?', answer: 'Generally, yes, when done by a trained physiotherapist — but no needle-based treatment is entirely risk-free, and we screen for anything that would make it inappropriate before starting.' },
+      { id: 11, question: 'What side effects should I expect?', answer: 'Mild soreness or occasional minor bruising, usually settling within a day or two.' },
+      { id: 12, question: 'Will my flexibility actually improve?', answer: 'Often, especially when tight muscle is what’s limiting your movement in the first place. We usually pair it with mobility work to help it stick.' },
+      { id: 13, question: 'Who shouldn’t get this treatment?', answer: 'People with certain bleeding disorders, active infection at the treatment site, or a few other specific medical situations. Tell your physiotherapist your full history upfront — that’s what the first conversation is for.' },
+      { id: 14, question: 'Why RamaCare specifically?', answer: 'Because the assessment always comes first, and needling gets built into an actual rehab plan rather than treated as the whole solution.' },
+      { id: 15, question: 'How soon will I feel a difference?', answer: 'Varies. Some people notice something after the first session; more often it takes a few sessions alongside the exercises we give you.' },
+      { id: 16, question: 'Can this replace physiotherapy exercises?', answer: 'No, and I’d be doing you a disservice if I said otherwise. It works best as one part of the plan, not the entire plan.' },
+      { id: 17, question: 'Is this a permanent fix?', answer: 'Not on its own. What keeps the improvement long-term is addressing whatever caused the tightness — posture, training load, an old injury pattern — through the rest of the rehab.' }
+    ],
+    relatedServices: [
+      { title: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', desc: 'High-frequency sound waves to speed deep soft-tissue healing and reduce inflammation.' },
+      { title: 'Electrotherapy', link: '/services/electrotherapy-dubai/', desc: 'TENS and therapeutic electrical stimulation to soothe acute and chronic nerve-muscle pain.' },
+      { title: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', desc: 'Targeted strengthening and release for core stability, postnatal care, and pelvic health.' },
+      { title: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-dubai/', desc: 'Specialised spine alignment exercises and muscular rebalancing protocols.' },
+      { title: 'Functional Exercise Therapy', link: '/services/functional-exercise-therapy-dubai/', desc: 'Rebuild functional strength and movement patterns for pain-free daily living.' },
+      { title: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', desc: 'Synergistic deep trigger point release combined with cellular thermal tissue repair.' },
+      { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', desc: 'Comprehensive manual therapy, spinal decompression exercises, and postural restoration.' },
+      { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', desc: 'Targeted rehabilitation for patellofemoral strain, ligament recovery, and osteoarthritis.' },
+      { title: 'Migraine & Tension Headache Care', link: '/services/migraine-treatment-dubai/', desc: 'Relieve cervical muscular triggers and suboccipital nerve compression causing headaches.' },
+      { title: 'Post-Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
+      { title: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
+      { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', desc: 'Guidance and full reimbursement documentation support for major UAE health insurers.' }
+    ],
+    testimonials: {
+      title: 'What Our Patients Say',
+      subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
+      rating: '4.8/5 Average Google Rating',
+      stats: [
+        { number: '4.8/5', label: 'Average Google Rating' },
+        { number: '200+', label: 'Verified Patient Reviews' },
+        { number: '98%', label: 'Patient Satisfaction' },
+        { number: '500+', label: 'Patients Treated' }
+      ],
+      testimonials: [
+        { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },
+        { id: 2, videoUrl: '/Videos/testimonial-2.mp4' },
+        { id: 3, videoUrl: '/Videos/testimonial-3.mp4' },
+        { id: 4, videoUrl: '/Videos/testimonial-4.mp4' },
+        { id: 5, videoUrl: '/Videos/testimonial-5.mp4', thumbnail: '/images/Thumb-5.jpeg' },
+        { id: 6, videoUrl: '/Videos/testimonial-6.mp4' }
+      ]
+    },
+    paymentInsurance: {
+      paymentTitle: 'Payment & Insurance',
+      insuranceTitle: 'Insurance & Reimbursement Policy',
+      paymentOptions: [
+        'Cash Accepted',
+        'Credit & Debit Cards Accepted',
+        'Flexible Payment Plans Available',
+        '0% Interest Installments via Tabby'
+      ],
+      insuranceOptions: [
+        'Reimbursement Basis — You pay at the time of your visit.',
+        'Detailed Invoices Provided with DHA diagnosis codes for prompt submission.',
+        'Full documentation assistance to claim back through your insurer.'
+      ]
+    },
+    bookConsultation: {
+      badge: 'Book In',
+      title: 'If a tight muscle has been running your week for longer than it should...',
+      description: 'It’s worth getting it actually looked at rather than waiting it out again. Our team can tell you fairly quickly during the first visit whether dry needling makes sense for your case.\n\nBook your consultation at RamaCare Polyclinic, Jumeirah 1, Dubai.',
+      getInTouchTitle: 'Get In Touch',
+      requestAppointmentTitle: 'Request Appointment',
+      submitButtonText: 'Book Dry Needling Consultation',
+      contactInfo: {
+        phone: '+971 4 286 2006',
+        whatsapp: '971566597878',
+        email: 'query@ramacarepolyclinic.ae',
+        address: {
+          line1: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor,',
+          line2: 'Jumeirah 1, Dubai, United Arab Emirates'
+        }
+      },
+      clinicHours: {
+        weekdays: 'Sunday - Saturday:',
+        weekdaysTime: '10:00 AM - 10:00 PM',
+        friday: 'Friday:',
+        fridayTime: '10:00 AM - 8:00 PM'
+      }
+    }
   }
 };
+
+newPagesContent['dry-needling-dubai'] = newPagesContent['physiotherapy-dubai-dry-needling'];
+

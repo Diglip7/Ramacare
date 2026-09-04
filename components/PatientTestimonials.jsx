@@ -70,7 +70,7 @@ const PatientTestimonials = ({ content }) => {
       number: '4.8/5',
       label1: 'Average Rating',
       label2: 'Google Reviews',
-      target: 4.9,
+      target: 4.8,
       showStars: true
     },
     {

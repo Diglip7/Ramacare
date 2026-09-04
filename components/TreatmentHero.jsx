@@ -246,7 +246,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
                 )}
                 {ctaButtons.secondary && (
                   <a
-                    href={`https://wa.me/${ctaButtons.secondary.phone?.replace(/[^0-9]/g, '')}`}
+                    href={ctaButtons.secondary.link || `https://wa.me/${ctaButtons.secondary.phone?.replace(/[^0-9]/g, '')}`}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white border-2 border-[#2D5F3F] text-[#2D5F3F] px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-[#2D5F3F] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 group flex-1 sm:flex-initial min-w-[180px]"

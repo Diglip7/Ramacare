@@ -1919,7 +1919,7 @@ export const categoryContent = {
           ],
           idealFor:
             'Patients with muscle knots, sports injuries, chronic pain, or restricted movement seeking fast and effective relief',
-          image: '/images/dry needling.jpg',
+          image: '/images/dry-needling-physiotherapy-dubai.jpg',
           alt: 'Dry Needling Therapy in Dubai performed by a trained physiotherapist to relieve muscle pain and improve mobility.'
         }
       ],

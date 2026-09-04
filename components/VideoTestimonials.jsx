@@ -67,15 +67,15 @@ const PatientTestimonials = ({ content }) => {
       number: '4.8/5',
       label1: 'Average Rating',
       label2: 'Google Reviews',
-      target: 4.9,
+      target: 4.8,
       showStars: true
     },
     {
       id: 2,
-      number: '500+',
+      number: '200+',
       label1: 'Patient Reviews',
       label2: 'Verified Testimonials',
-      target: 500
+      target: 200
     },
     {
       id: 3,
@@ -117,6 +117,19 @@ const PatientTestimonials = ({ content }) => {
     const steps = 60;
     const stepDuration = duration / steps;
 
+    const parseTarget = (statItem, fallback) => {
+      if (typeof statItem?.target === 'number') return statItem.target;
+      if (!statItem?.number) return fallback;
+      const cleanStr = String(statItem.number).replace(/,/g, '').split('/')[0];
+      const match = cleanStr.match(/[\d.]+/);
+      return match ? parseFloat(match[0]) : fallback;
+    };
+
+    const targetRating = parseTarget(stats[0], 4.8);
+    const targetReviews = parseTarget(stats[1], 200);
+    const targetSuccess = parseTarget(stats[2], 98);
+    const targetPatients = parseTarget(stats[3], 2500);
+
     let currentStep = 0;
 
     const animate = () => {
@@ -125,20 +138,20 @@ const PatientTestimonials = ({ content }) => {
       const easeOut = 1 - Math.pow(1 - progress, 3);
 
       setStatsValues({
-        rating: 4.9 * easeOut,
-        reviews: 500 * easeOut,
-        success: 98 * easeOut,
-        patients: 2500 * easeOut
+        rating: targetRating * easeOut,
+        reviews: targetReviews * easeOut,
+        success: targetSuccess * easeOut,
+        patients: targetPatients * easeOut
       });
 
       if (currentStep < steps) {
         setTimeout(animate, stepDuration);
       } else {
         setStatsValues({
-          rating: 4.9,
-          reviews: 500,
-          success: 98,
-          patients: 2500
+          rating: targetRating,
+          reviews: targetReviews,
+          success: targetSuccess,
+          patients: targetPatients
         });
       }
     };
@@ -184,11 +197,9 @@ const PatientTestimonials = ({ content }) => {
         <div className="text-center mb-6 md:mb-8">
           {/* Badge */}
           <div className="flex justify-center mb-3">
-
             <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
-
           </div>
-
+  
           {/* Main Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight max-w-4xl mx-auto text-center">
             {title}
