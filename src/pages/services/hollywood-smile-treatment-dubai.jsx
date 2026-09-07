@@ -675,17 +675,35 @@ function TableOfContents() {
     if (e) e.preventDefault();
     const targetEl = document.getElementById(id);
     if (targetEl) {
-      let topPos = 0;
-      let curr = targetEl;
-      while (curr) {
-        topPos += curr.offsetTop;
-        curr = curr.offsetParent;
-      }
-      const finalY = Math.max(0, topPos - 130);
-      window.scrollTo({ top: finalY, behavior: "smooth" });
+      const yOffset = -130;
+      const elementPosition = targetEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+      window.scrollTo({ top: Math.max(0, offsetPosition), behavior: "smooth" });
       setActiveSectionId(id);
+      if (typeof window !== "undefined" && window.history && window.history.pushState) {
+        window.history.pushState(null, "", `#${id}`);
+      }
     }
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hashId = window.location.hash.replace("#", "");
+      if (hashId) {
+        const timer = setTimeout(() => {
+          const targetEl = document.getElementById(hashId);
+          if (targetEl) {
+            const yOffset = -130;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, offsetPosition), behavior: "smooth" });
+            setActiveSectionId(hashId);
+          }
+        }, 350);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, []);
 
   return (
     <nav
@@ -721,11 +739,11 @@ function TableOfContents() {
           ref={scrollContainerRef}
           className="no-scrollbar flex w-full items-center gap-2 overflow-x-auto scroll-smooth py-1"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
+          >
           {tocPills.map((item) => {
             const isActive = activeSectionId === item.id;
             return (
-              <a
+              <a 
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => scrollToSection(e, item.id)}
@@ -748,7 +766,7 @@ function TableOfContents() {
         </div>
 
         {/* Scroll Right Button */}
-        <button
+        <button 
           type="button"
           onClick={() => scrollRail("right")}
           className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-white shadow-sm border text-neutral-700 hover:bg-[#1F5E4B] hover:text-white transition-all active:scale-95"

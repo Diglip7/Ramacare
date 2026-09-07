@@ -770,12 +770,12 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
           id: 2,
-          number: '500+',
+          number: '200+',
           label1: 'Patient Reviews',
           label2: 'Verified Testimonials',
           target: 500
@@ -4556,7 +4556,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -12354,7 +12354,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -13052,7 +13052,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -13791,7 +13791,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -14531,7 +14531,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -15301,7 +15301,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -16691,7 +16691,7 @@ export const subSubcategoryContent = {
     //       number: '4.8/5',
     //       label1: 'Average Rating',
     //       label2: 'Patient Reviews',
-    //       target: 4.9
+    //       target: 4.8
     //     },
     //     {
     //       id: 2,
@@ -17443,7 +17443,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -18232,7 +18232,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -18991,7 +18991,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -19815,7 +19815,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -20627,7 +20627,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -21439,7 +21439,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -22211,7 +22211,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -22997,7 +22997,7 @@ export const subSubcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,

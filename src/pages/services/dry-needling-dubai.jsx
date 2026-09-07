@@ -200,13 +200,13 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       'Detailed clinical notes and documentation assistance for smooth reimbursement'
     ]
   };
-
+  
   const otherServices = [
     { title: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/' },
     { title: 'Electrotherapy', link: '/services/electrotherapy-dubai/' },
     { title: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/' },
-    { title: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-dubai/' },
-    { title: 'Functional Exercise Therapy', link: '/services/functional-exercise-therapy-dubai/' },
+    { title: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/' },
+    { title: 'Functional Exercise Therapy', link: '/services/functional-exercises-dubai/' },
     { title: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/' },
     { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/' },
     { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/' },
@@ -243,6 +243,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
           }
         ]
       },
+
       {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
@@ -287,6 +288,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
           }
         }
       },
+
       {
         "@type": "FAQPage",
         "@id": `${CANONICAL_URL}#faq`,
@@ -311,15 +313,13 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         <meta
           name="description"
           content="Physiotherapy-led dry needling for muscle tension and trigger points at RamaCare Polyclinic, Jumeirah 1. Assessed and treated by Jeena Mathew, DHA-licensed physiotherapist."
-          key="description"
-        />
+          key="description"/>
         <meta
           name="keywords"
           content="Dry needling in Dubai, Dry needling Dubai, trigger point therapy Dubai, physiotherapy dry needling Dubai, muscle pain relief Dubai, Jumeirah 1 physiotherapy, Jeena Mathew physiotherapist"
         />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
-
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={CANONICAL_URL} />
@@ -331,7 +331,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/dry-needling-physiotherapy-dubai.jpg" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
         <meta property="og:locale" content="en_AE" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dry Needling in Dubai — Trigger Point Therapy | RamaCare" />
@@ -349,7 +348,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
           }}
         />
       </Head>
-
       {/* Hero Section */}
       <TreatmentHero
         categoryName="Physiotherapy"
@@ -378,7 +376,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 Treatment Overview
               </h2>
             </div>
-
             {/* Subsection: What Is Dry Needling? (Split 2-Column with Image) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-12">
               <div className="lg:col-span-7 space-y-4">
@@ -504,7 +501,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
 
             {/* Specific Clinical Deep Dives (Back Pain, Neck, Sports) */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 items-stretch">
-
               {/* Back Pain, Specifically */}
               <div className="bg-[#FAF9F5] p-6 rounded-2xl border-l-4 border-l-[#1F5E4B] border-y border-r border-[#E0D8CC] flex flex-col justify-between shadow-xs">
                 <div>
@@ -567,7 +563,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   <span>Padel, runners & CrossFit athlete recovery protocols.</span>
                 </div>
               </div>
-
             </div>
 
             {/* Subsections: Who Tends to Benefit & Session Length (2-Column Split) */}
@@ -605,7 +600,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   Assessment: 30–45 min · Needling: 20–30 min · Frequency: 1–2x weekly
                 </div>
               </div>
-
             </div>
 
             {/* Subsection: At a Glance (Full Width Table) */}
@@ -629,7 +623,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 ))}
               </div>
             </div>
-
           </div>
         </section>
 

@@ -36,7 +36,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
       const match = d.rating.match(/[0-9]+(\.[0-9]+)?/);
       ratingNum = match ? parseFloat(match[0]) : 0;
     }
-    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.9';
+    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.8';
     return {
       id: d?.id,
       name,

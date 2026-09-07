@@ -58,7 +58,7 @@ const AllDoctorsPage = ({ content }) => {
     { value: '3', label: 'Expert Physicians' },
     { value: '37+', label: 'Years Combined Experience' },
     { value: '500+', label: 'Successful Treatments' },
-    { value: '4.9', label: 'Average Rating' }
+    { value: '4.8', label: 'Average Rating' }
   ];
   const ctaSection = content?.ctaSection || {
     title: 'Ready to Consult our Expert Physician?',

@@ -57,7 +57,7 @@ export default function StatsSection() {
           <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
         </svg>
       ),
-      value: '4.9★',
+      value: '4.8★',
       label: 'Google Rating',
     },
     {

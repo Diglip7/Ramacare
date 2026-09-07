@@ -128,7 +128,7 @@ const PatientTestimonials = ({ content }) => {
       return match ? parseFloat(match[0]) : fallback;
     };
 
-    const targetRating = parseTarget(stats[0], 4.9);
+    const targetRating = parseTarget(stats[0], 4.8);
     const targetReviews = parseTarget(stats[1], 500);
     const targetSuccess = parseTarget(stats[2], 98);
     const targetPatients = parseTarget(stats[3], 2500);

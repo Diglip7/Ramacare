@@ -108,7 +108,7 @@ export default function SignatureHydraFacialPage() {
         "priceRange": "$$",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
+          "ratingValue": "4.8",
           "reviewCount": "500"
         },
         "hasOfferCatalog": {
@@ -153,7 +153,6 @@ export default function SignatureHydraFacialPage() {
         <meta name="keywords" content="HydraFacial Dubai, HydraFacial treatment Dubai, best HydraFacial Dubai, HydraFacial cost Dubai, deep cleansing facial, Dubai DHA licensed facial clinic, HydraFacial Jumeirah, non-invasive skin treatment Dubai" key="keywords" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
-
         {/* Open Graph Tags */}
         <meta property="og:title" content={PAGE_TITLE} key="og:title" />
         <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
@@ -164,13 +163,11 @@ export default function SignatureHydraFacialPage() {
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
         <meta name="twitter:description" content="Deep cleanse, exfoliate, and hydrate for an instant glow with DHA-licensed specialists in Jumeirah 1, Dubai. Zero downtime." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/signature.jpg" key="twitter:image" />
-
         {/* Structured Data Schemas */}
         <script
           key="schema-graph"
@@ -178,15 +175,13 @@ export default function SignatureHydraFacialPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
-
       <TreatmentHero 
         categoryName="Facial Treatments Dubai"
         subcategoryName="HydraFacial"
         description={content?.hero?.description}
         hero={content?.hero}
       />
-      <QuickNavigation navItems={navItems} />
-      
+      <QuickNavigation navItems={navItems} /> 
       <TreatmentOverview 
         subcategoryName={subcategoryName}
         content={content?.overview}

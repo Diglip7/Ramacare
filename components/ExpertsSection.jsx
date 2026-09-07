@@ -14,7 +14,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
     { value: '30+', label: 'Expert Doctors' },
     { value: '15+', label: 'Years of Combined Experience' },
     { value: '500+', label: 'Successful Treatments' },
-    { value: '4.9', label: 'Average Rating' }
+    { value: '4.8', label: 'Average Rating' }
   ];
   const ctaSection = content?.ctaSection || {
     title: 'Take the First Step Toward Better Health',
@@ -53,7 +53,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
       const match = d.rating.match(/[0-9]+(\.[0-9]+)?/);
       ratingNum = match ? parseFloat(match[0]) : 0;
     }
-    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.9';
+    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.8';
     return {
       id: d?.id,
       name,

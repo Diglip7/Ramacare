@@ -138,7 +138,6 @@ export default function LaserBleachingPage() {
       <Head>
         <title key="title">Laser Bleaching for Skin in Dubai | RamaCare Polyclinic</title>
         <meta name="description" content="Laser bleaching in Dubai reduces dark spots, pigmentation, and uneven skin tone, restoring a radiant, smooth complexion under expert medical care." key="description" />
-        
         {/* Open Graph Tags */}
         <meta property="og:title" content="Laser Bleaching for Skin in Dubai | RamaCare Polyclinic" />
         <meta property="og:description" content="Laser bleaching in Dubai reduces dark spots, pigmentation, and uneven skin tone, restoring a radiant, smooth complexion under expert medical care." />
@@ -149,7 +148,6 @@ export default function LaserBleachingPage() {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Laser Bleaching Treatment for pigmentation at RamaCare Polyclinic Dubai" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Laser Bleaching for Skin in Dubai | RamaCare Polyclinic" />

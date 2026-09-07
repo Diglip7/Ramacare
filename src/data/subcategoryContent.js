@@ -3834,7 +3834,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -8071,7 +8071,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -9582,7 +9582,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -9653,10 +9653,10 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '12+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '800+ Patients',
+          title: '500+ Patients',
           description: 'Treated'
         },
         {
@@ -10300,7 +10300,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -11233,7 +11233,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -12149,7 +12149,6 @@ export const subcategoryContent = {
         }
       ]
     }
-
   },
 
   'physiotherapy-dubai-functional-exercises': {
@@ -15819,10 +15818,10 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '12+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '950+ Patients',
+          title: '500+ Patients',
           description: 'Treated'
         },
         {
@@ -15850,12 +15849,12 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '500+',
           label: 'Wounds Treated'
         },
         {
           id: 3,
-          number: '12+',
+          number: '15+',
           label: 'Years of Experience'
         }
       ],
@@ -16516,7 +16515,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -24875,7 +24874,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -25636,7 +25635,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -26364,7 +26363,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -27018,7 +27017,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -30537,7 +30536,7 @@ export const subcategoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '2,500+', label: 'Sessions Completed' },
-        { number: '4.9', label: 'Patient Rating' },
+        { number: '4.8', label: 'Patient Rating' },
         { number: 'DHA', label: 'Approved' }
       ],
       commitment: {
@@ -31232,10 +31231,10 @@ export const subcategoryContent = {
         },
         {
           title: 'Experienced Team',
-          description: '12+ Years Combined'
+          description: '15+ Years Combined'
         },
         {
-          title: '600+ Patients',
+          title: '500+ Patients',
           description: 'Successfully Treated'
         },
         {
@@ -36483,7 +36482,7 @@ export const subcategoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -37096,7 +37095,7 @@ Recovery: Minimal downtime for non-surgical care
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -37742,7 +37741,7 @@ Long-term oral health support
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -38413,7 +38412,7 @@ Seek a cost-effective smile restoration`
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Patient Reviews',
-          target: 4.9
+          target: 4.8
         },
         {
           id: 2,
@@ -38495,7 +38494,6 @@ Seek a cost-effective smile restoration`
       ]
     }
   },
-
 
   // ============================================
   // Add all other subcategories here following the same structure

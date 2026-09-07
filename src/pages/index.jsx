@@ -130,7 +130,7 @@ export default function Home() {
                   },
                   aggregateRating: {
                     '@type': 'AggregateRating',
-                    ratingValue: '4.9',
+                    ratingValue: '4.8',
                     reviewCount: '542',
                     bestRating: '5',
                     worstRating: '1',

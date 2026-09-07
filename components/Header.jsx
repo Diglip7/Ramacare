@@ -52,6 +52,7 @@ const Header = () => {
       subcategories: [
         { name: 'Composite Veneers', slug: 'composite-veneers' },
         { name: 'Dental Veneers', slug: 'dental-veneers-dubai' },
+        { name: 'Dental Tooth Filling', slug: 'dental-tooth-filling-dubai' },
         { name: 'Root Canal Treatment', slug: 'root-canal-treatment-dubai' },
         { name: 'Snap On Smile', slug: 'snap-on-smile-dubai' },
         { name: 'Teeth Bleaching', slug: 'teeth-bleaching-dubai' },

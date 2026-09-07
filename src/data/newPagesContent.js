@@ -1312,14 +1312,14 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
 Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
 
 Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
-      rating: '4.9/5 Average Google Rating',
+      rating: '4.8/5 Average Google Rating',
       topBadges: [
         { icon: 'location', text: 'Jumeirah 1, Dubai' },
         { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
         { icon: 'star', text: 'Assessment-Led Protocol' }
       ],
       stats: [
-        { id: 1, number: '4.9/5', label: 'Average Google Rating' },
+        { id: 1, number: '4.8/5', label: 'Average Google Rating' },
         { id: 2, number: '500+', label: 'Verified Patient Reviews' },
         { id: 3, number: '98%', label: 'Patient Satisfaction' },
         { id: 4, number: '2,500+', label: 'Patients Treated' }

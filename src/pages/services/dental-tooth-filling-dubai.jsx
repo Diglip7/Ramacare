@@ -728,6 +728,29 @@ function TableOfContents() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle URL hash deep-linking on initial page load (e.g. #what-is-a-filling)
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hashId = window.location.hash.replace("#", "");
+      if (hashId) {
+        const timer = setTimeout(() => {
+          const targetEl = document.getElementById(hashId);
+          if (targetEl) {
+            const yOffset = -140;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+            window.scrollTo({
+              top: Math.max(0, offsetPosition),
+              behavior: "smooth",
+            });
+            setActiveSectionId(hashId);
+          }
+        }, 350);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, []);
+
   // Smooth scroll rail function for arrow buttons
   const scrollRail = (direction) => {
     if (scrollContainerRef.current) {
@@ -739,26 +762,36 @@ function TableOfContents() {
   // Custom scroll to section with exact offset so heading is 100% visible below sticky header
   const scrollToSection = (e, id) => {
     if (e) e.preventDefault();
-    if (isExpanded) setIsExpanded(false);
 
-    const targetEl = document.getElementById(id);
-    if (targetEl) {
-      // Calculate absolute position from document top (immune to drawer collapse layout shifts)
-      let topPos = 0;
-      let curr = targetEl;
-      while (curr) {
-        topPos += curr.offsetTop;
-        curr = curr.offsetParent;
+    const doScroll = (targetId) => {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const yOffset = -140; // sticky main header + sticky TOC bar offset
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: "smooth",
+        });
+        setActiveSectionId(targetId);
+        if (typeof window !== "undefined" && window.history && window.history.pushState) {
+          window.history.pushState(null, "", `#${targetId}`);
+        }
       }
-      const yOffset = -140; // sticky main header + sticky TOC bar offset
-      const finalY = Math.max(0, topPos + yOffset);
-      window.scrollTo({ top: finalY, behavior: "smooth" });
-      setActiveSectionId(id);
+    };
+
+    if (isExpanded) {
+      setIsExpanded(false);
+      // Allow drawer collapse animation to complete before measuring targetEl position
+      setTimeout(() => {
+        doScroll(id);
+      }, 150);
+    } else {
+      doScroll(id);
     }
   };
 
   const totalSections = allTopics.length;
-
   const filteredDrawerGroups = searchQuery.trim()
     ? TOC_GROUPS.map((group) => ({
       ...group,
@@ -901,8 +934,7 @@ function TableOfContents() {
             onClick={() => scrollRail("right")}
             className="absolute right-0 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md border text-neutral-700 hover:bg-[#1F5E4B] hover:text-white transition-all active:scale-95"
             style={{ borderColor: `${BRAND.teal}33` }}
-            aria-label="Scroll right"
-          >
+            aria-label="Scroll right">
             <ChevronRight size={15} />
           </button>
         </div>
@@ -958,12 +990,10 @@ function TableOfContents() {
                   <div
                     key={group.category}
                     className="flex flex-col rounded-2xl border bg-white p-4 shadow-2xs"
-                    style={{ borderColor: `${BRAND.teal}1a` }}
-                  >
+                    style={{ borderColor: `${BRAND.teal}1a` }}>
                     <div
                       className="mb-3 flex items-center justify-between border-b pb-2.5"
-                      style={{ borderColor: `${BRAND.teal}12` }}
-                    >
+                      style={{ borderColor: `${BRAND.teal}12` }}>
                       <span className="flex items-center gap-2">
                         <span
                           className="flex h-5 w-5 items-center justify-center rounded-full text-[10.5px] font-bold"
@@ -1006,8 +1036,7 @@ function TableOfContents() {
                         ) : (
                           <span
                             key={item.id}
-                            className="flex items-center justify-between gap-2 rounded-xl px-2.5 py-1.5 text-[12.5px] text-neutral-400 opacity-60"
-                          >
+                            className="flex items-center justify-between gap-2 rounded-xl px-2.5 py-1.5 text-[12.5px] text-neutral-400 opacity-60">
                             <span className="line-clamp-1">{item.label}</span>
                             <span className="text-[10px] text-neutral-300">Soon</span>
                           </span>
@@ -1038,7 +1067,6 @@ function TableOfContents() {
     </nav>
   );
 }
-
 /* ------------------------------------------------------------------ */
 /*  SECTION: HERO — "diagnostic scan frame" instead of a full bleed    */
 /*  color panel. Copy sits beside a viewfinder-style card with a tooth */

@@ -86,26 +86,19 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
             </div>
 
             {/* Main Heading - Bold, not extrabold */}
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight max-w-4xl">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#111827] leading-tight max-w-4xl">
               {title}
             </h2>
 
             {/* Description Text - Normal weight */}
-           <p  className="text-justify mb-4 lg:mb-6 max-w-3xl mx-auto"
-            style={{ 
-              color: '#6B7280',
-              fontSize: '16px',
-              lineHeight: '1.6',
-              fontWeight: 400
-            }}
+           <p className="text-center md:text-justify mb-4 lg:mb-6 max-w-3xl mx-auto text-xs sm:text-sm md:text-base text-[#6B7280] leading-relaxed font-normal"
           >
   {description}
 </p>
 
-          <p className="text-center mb-8 lg:mb-10 text-sm font-semibold text-[#2d5f3f]">
+          <p className="text-center mb-8 lg:mb-10 text-xs sm:text-sm font-semibold text-[#2d5f3f]">
             Explore our full facility & DHA specialists on the <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">Jumeirah 1 Polyclinic Authority Hub</a>.
           </p>
-
           </div>
 
           {/* Feature Cards Grid */}
@@ -115,7 +108,7 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
                 key={index}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`relative bg-[#E8E3D8] rounded-2xl p-8 flex flex-col transition-all duration-500 ease-out cursor-pointer overflow-hidden ${
+                className={`relative bg-[#E8E3D8] rounded-2xl p-6 flex flex-col transition-all duration-500 ease-out cursor-pointer overflow-hidden ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 } ${
                   hoveredCard === index ? 'scale-105 shadow-2xl' : 'shadow-md'
@@ -137,12 +130,12 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon Badge */}
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-all duration-500 ${
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all duration-500 ${
                     hoveredCard === index 
                       ? 'bg-[#C9A24D] scale-110' 
                       : 'bg-white'
                   }`}>
-                    <svg className={`w-6 h-6 transition-colors duration-500 ${
+                    <svg className={`w-5 h-5 transition-colors duration-500 ${
                       hoveredCard === index ? 'text-white' : 'text-[#0A3D2E]'
                     }`} fill="currentColor" viewBox="0 0 24 24">
                       <path d="M17.08 11.42L12 5.5l-5.08 5.92c-.35.41-.35 1.05 0 1.46.35.41.92.41 1.27 0L12 8.5l3.81 4.38c.35.41.92.41 1.27 0 .35-.41.35-1.05 0-1.46z"/>
@@ -151,14 +144,14 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
                   </div>
 
                   {/* Title */}
-                  <h3 className={`text-xl font-bold mb-3 transition-colors duration-500 ${
+                  <h3 className={`text-base font-bold mb-2 transition-colors duration-500 ${
                     hoveredCard === index ? 'text-white' : 'text-[#111827]'
                   }`}>
                     {card.title}
                   </h3>
 
                   {/* Description */}
-                  <p className={`text-sm leading-relaxed font-normal transition-colors duration-500 ${
+                  <p className={`text-xs sm:text-sm leading-relaxed font-normal transition-colors duration-500 ${
                     hoveredCard === index ? 'text-[#E5E7EB]' : 'text-[#6B7280]'
                   }`}>
                     {card.description}

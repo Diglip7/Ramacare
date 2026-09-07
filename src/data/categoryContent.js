@@ -182,7 +182,7 @@ export const categoryContent = {
         { value: '2', label: 'Expert Practitioners' },
         { value: '15+', label: 'Years Combined Experience' },
         { value: '500+', label: 'Successful Treatments' },
-        { value: '4.9', label: 'Average Rating' }
+        { value: '4.8', label: 'Average Rating' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Ayurvedic Physician?',
@@ -342,7 +342,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
@@ -871,7 +871,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
@@ -1490,7 +1490,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
@@ -1939,7 +1939,7 @@ export const categoryContent = {
         { value: '2', label: 'Expert Physiotherapists' },
         { value: '15+', label: 'Years Combined Experience' },
         { value: '500+', label: 'Successful Recoveries' },
-        { value: '4.9', label: 'Average Rating' }
+        { value: '4.8', label: 'Average Rating' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Physiotherapist?',
@@ -2001,7 +2001,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
@@ -2628,7 +2628,7 @@ export const categoryContent = {
         { value: '1', label: 'Expert Physician' },
         { value: '15+', label: 'Years Combined Experience' },
         { value: '2,500+', label: 'Successful Consultations' },
-        { value: '4.9', label: 'Average Rating' }
+        { value: '4.8', label: 'Average Rating' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Physician?',
@@ -2685,7 +2685,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
@@ -3194,7 +3194,7 @@ export const categoryContent = {
           number: '4.8/5',
           label1: 'Average Rating',
           label2: 'Google Reviews',
-          target: 4.9,
+          target: 4.8,
           showStars: true
         },
         {
