@@ -18,7 +18,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '150+', label: 'Treatments' }
       ],
       features: [
@@ -568,7 +568,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '150+', label: 'Treatments' }
       ],
       features: [
@@ -1070,7 +1070,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '150+', label: 'Treatments' }
       ],
       features: [
@@ -1729,7 +1729,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Recovery Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '4.8/5', label: 'Patient Rating' }
       ],
       features: [
@@ -1785,7 +1785,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '40+', label: 'Treatments' }
       ],
       ctaText: 'Meet Our Physiotherapists',
@@ -2225,7 +2225,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '150+', label: 'Treatments' }
       ],
       features: [
@@ -2280,7 +2280,7 @@ export const categoryContent = {
       ],
       stats: [
         { number: '2,500+', label: 'Patients Treated' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '15+', label: 'Years Combined Experience' }
       ],
       ctaText: 'Meet Our Physicians',
@@ -2910,7 +2910,7 @@ export const categoryContent = {
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
         { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Success Rate' },
+        { number: '98%', label: 'Patient Satisfaction' },
         { number: '150+', label: 'Treatments' }
       ],
       features: [

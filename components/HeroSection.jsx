@@ -53,7 +53,7 @@ const HeroSection = ({ content }) => {
   const stats = content?.stats || [
     { number: '15+', label: 'Years Combined Experience' },
     { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Success Rate' },
+    { number: '98%', label: 'Patient Satisfaction' },
     { number: '150+', label: 'Treatments' }
   ];
   const features = content?.features || [

@@ -107,7 +107,7 @@ const HairfallTreatmentHero = () => {
             <div className="flex flex-wrap gap-3 md:gap-4 mb-6">
               <div className="bg-[#F5F1E8] border border-gray-200 rounded-xl px-4 py-3 min-w-[140px] text-center">
                 <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">98%</div>
-                <div className="text-xs text-[#6B7280]">Success Rate</div>
+                <div className="text-xs text-[#6B7280]">Patient Satisfaction</div>
               </div>
               <div className="bg-[#F5F1E8] border border-gray-200 rounded-xl px-4 py-3 min-w-[140px] text-center">
                 <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">2,500+</div>

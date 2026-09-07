@@ -43,7 +43,7 @@ const AppointmentPage = () => {
   const stats = [
     { number: '500+', label: 'Happy Patients' },
     { number: '15+', label: 'Years Combined Experience' },
-    { number: '98%', label: 'Success Rate' },
+    { number: '98%', label: 'Patient Satisfaction' },
     { number: '30+', label: 'Expert Doctors' }
   ];
 

@@ -16,7 +16,7 @@ const AboutAyurvedaSection = ({ content }) => {
   ];
   const stats = content?.stats || [
     { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Satisfaction Rate' },
+    { number: '98%', label: 'Patient Satisfaction' },
     { number: '12+', label: 'Specialized Treatment Categories' }
   ];
   const ctaText = content?.ctaText || 'Meet Our Experts';
