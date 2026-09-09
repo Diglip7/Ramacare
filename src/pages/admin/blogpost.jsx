@@ -191,7 +191,10 @@ const AdminBlogPost = () => {
     setShowEditor(false);
     fetchPosts();
     fetchDrafts();
-    showToast(message, "success");
+    const finalMsg = typeof message === 'string' && message.trim() 
+      ? message 
+      : "Blog post saved successfully!";
+    showToast(finalMsg, "success");
   };
 
   const handleCopyLink = (paramlink) => {
@@ -218,7 +221,10 @@ const AdminBlogPost = () => {
   
   const showToast = (message, type = 'success') => {
     const id = Date.now();
-    const newToast = { id, message, type };
+    const textMessage = typeof message === 'string' && message.trim()
+      ? message
+      : (typeof message === 'boolean' || !message ? 'Blog post saved successfully!' : String(message));
+    const newToast = { id, message: textMessage, type };
     setToasts(prev => [...prev, newToast]);
     
     // Auto remove after 3 seconds

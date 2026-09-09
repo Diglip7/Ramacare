@@ -918,7 +918,7 @@ export default function MelasmaTreatmentPage() {
         </section>
 
         {/* SEARCHABLE FAQ SECTION */}
-        <section className="py-16 md:py-24 px-4 bg-white">
+        <section id="faq" className="py-16 md:py-24 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
@@ -968,6 +968,9 @@ export default function MelasmaTreatmentPage() {
           </div>
         </section>
 
+        {/* DOCTORS SHOWCASE */}
+        <DoctorsSection customDoctors={DOCTOR_GROUPS.DERMA} />
+
         {/* CLINICAL BOOKING APPOINTMENT / LEAD FORM */}
         <div id="book-now">
           <BookConsultation
@@ -1009,9 +1012,6 @@ export default function MelasmaTreatmentPage() {
           />
         </div>
 
-        {/* DOCTORS SHOWCASE */}
-        <DoctorsSection customDoctors={DOCTOR_GROUPS.DERMA} />
-
         {/* CONCLUSION */}
         <section className="py-16 md:py-24 px-4 bg-[#1F5E4B] text-white">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -1024,7 +1024,7 @@ export default function MelasmaTreatmentPage() {
             </p>
             <div className="w-16 h-0.5 bg-[#D4A574] mx-auto" />
             <div className="pt-4">
-              <a href="/book-appointment" className="px-8 py-4 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-sm transition-all shadow-md">
+              <a href="#book-now" className="px-8 py-4 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-sm transition-all shadow-md">
                 Book Your Appointment at RamaCare Polyclinic Today →
               </a>
             </div>

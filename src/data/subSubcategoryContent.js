@@ -11,6 +11,7 @@ import { devNull } from "os";
 import { DOCTORS, DOCTOR_GROUPS } from './doctors';
 
 export const subSubcategoryContent = {
+
   // ============================================
   // SKIN TREATMENT SUB-CATEGORIES
   // ============================================
@@ -417,7 +418,6 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent: 'Key Advantages: Deep skin hydration from within, supports natural collagen production, improves skin elasticity, enhances skin texture, restores healthy skin radiance, softens early signs of ageing, suitable for most skin types, minimal downtime, gradual, natural-looking results, personalized treatment plans by DHA-licensed aesthetic specialists. Please note: Individual results vary depending on skin type, age, lifestyle, and the recommended treatment plan. Your aesthetic specialist will discuss realistic expectations during your consultation and recommend the number of sessions best suited to your skin goals.'
         }
-
       ],
       comparisonData: [
         {
@@ -12433,7 +12433,7 @@ export const subSubcategoryContent = {
         },
         {
           title: '4.8/5 Rating',
-          description: '500+ Verified Reviews'
+          description: '200+ Verified Reviews'
         }
       ]
     }
@@ -13131,7 +13131,7 @@ export const subSubcategoryContent = {
         },
         {
           title: '4.8/5 Rating',
-          description: '500+ Verified Reviews'
+          description: '200+ Verified Reviews'
         }
       ]
     },
@@ -13870,7 +13870,7 @@ export const subSubcategoryContent = {
         },
         {
           title: '4.8/5 Rating',
-          description: '500+ Verified Reviews'
+          description: '200+ Verified Reviews'
         }
       ]
     },
@@ -14610,7 +14610,7 @@ export const subSubcategoryContent = {
         },
         {
           title: '4.8/5 Rating',
-          description: '500+ Verified Reviews'
+          description: '200+ Verified Reviews'
         }
       ]
     }
@@ -16001,7 +16001,7 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '800+ Treatments', description: 'Completed' },
+        { title: '500+ Treatments', description: 'Completed' },
         { title: '4.8/5 Rating', description: 'Patient Reviews' }
       ]
     }
@@ -16044,7 +16044,6 @@ export const subSubcategoryContent = {
         ' DHA-Licensed Multispecialty Polyclinic',
         '  Experienced Doctors & Certified Laser Specialists',
         ' Safe, Clinically Approved Fractional Laser Technology',
-
       ],
       image: {
         src: '/images/fractional.jpg',
@@ -23147,7 +23146,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '93%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
@@ -23905,7 +23904,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '93%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {

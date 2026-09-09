@@ -224,6 +224,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
                     className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     priority
                     sizes="(max-width: 768px) 100vw, 1200px"
+                    unoptimized
                   />
                 </div>
               )}
@@ -272,7 +273,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
                   ))}
                 </div>
               )}
-            </div>
+             </div>
 
             {/* Right Panel - Treatment Image (Takes 5/12 cols, Centered Vertically) */}
             {image && (
@@ -285,6 +286,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     priority
                     sizes="(max-width: 768px) 100vw, 600px"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2D5F3F]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
@@ -312,5 +314,4 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
     </>
   );
 };
-
 export default TreatmentHero;

@@ -40,7 +40,7 @@ const BookConsultation = ({ content }) => {
       },
       {
         title: '4.8/5 Rating',
-        description: '500+ Verified Reviews'
+        description: '200+ Verified Reviews'
       }
     ],
     concerns: [

@@ -48,7 +48,7 @@ const HeroSection = ({ content }) => {
   const titleLine1 = content?.titleLine1 || 'Expert Ayurveda,';
   const titleHighlight = content?.titleHighlight || '  Physiotherapy & Aesthetic Care ';
   const titleLine2 = content?.titleLine2 || ' in Jumeirah 1';
-  const subtitle = content?.subtitle || 'Quality healthcare in Jumeirah 1 is delivered by experienced DHA-licensed doctors focused on personalized treatment, preventive care, and long-term wellness support.';
+  const subtitle = content?.subtitle || 'RamaCare Polyclinic is a DHA-certified multispecialty polyclinic, located in Jumeirah 1 Dubai. This polyclinic offers physiotherapy, dermatology, dental treatment, aesthetic services, general medicine and ayurvedic services in one place. The specialists, at RamaCare Polyclinic take the time to understand the problems of each patient. They come up with ways to treat the problems. They also make sure to customize the services according to the needs of every patient.';
   const ctaText = content?.ctaText || 'Book Free Consultation';
   const stats = content?.stats || [
     { number: '15+', label: 'Years Combined Experience' },

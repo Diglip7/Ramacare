@@ -170,7 +170,7 @@ const ModernBlogEditorV1 = ({
     const handleMouseUp = () => {
       updateActiveFormats();
     };
-   
+    
     const handleKeyDown = () => {
       // Update formats after key press with slight delay to ensure DOM is updated
       setTimeout(updateActiveFormats, 1);
@@ -184,13 +184,13 @@ const ModernBlogEditorV1 = ({
     const handleBlur = () => {
       setEditorFocused(false);
     };
-   
+    
     document.addEventListener('selectionchange', handleSelectionChange);
     editorRef.current.addEventListener('mouseup', handleMouseUp);
     editorRef.current.addEventListener('keydown', handleKeyDown);
     editorRef.current.addEventListener('focus', handleFocus);
     editorRef.current.addEventListener('blur', handleBlur);
-   
+    
     return () => {
       document.removeEventListener('selectionchange', handleSelectionChange);
       if (editorRef.current) {
@@ -257,7 +257,6 @@ const ModernBlogEditorV1 = ({
     };
     load();
   }, [editBlogId, editDraftId]);
-
 
 
   // Auto-save functionality - saves every 30 seconds (for testing) when user starts writing
@@ -1808,7 +1807,10 @@ const ModernBlogEditorV1 = ({
   }, [title]);
 
   const showToast = (message, type = 'success') => {
-    setToast({ message, type });
+    const textMessage = typeof message === 'string' && message.trim()
+      ? message
+      : (typeof message === 'boolean' || !message ? 'Operation completed successfully!' : String(message));
+    setToast({ message: textMessage, type });
     setTimeout(() => {
       setToast(null);
     }, 3000);
@@ -2302,7 +2304,10 @@ const saveDraft = async (isAutoSave = false) => {
           getAuthHeaders()
         );
       }
-      if (onSave) onSave(true);
+      const successMessage = editBlogId 
+        ? "Blog post updated successfully!" 
+        : "Blog post published successfully!";
+      if (onSave) onSave(successMessage);
       if (onClose) onClose();
     } catch (error) {
       console.error('Error publishing blog:', error);
@@ -2757,6 +2762,7 @@ const saveDraft = async (isAutoSave = false) => {
                 }}
                 className="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold border-none outline-none placeholder-gray-400"
               />
+
             </div>
             {/* URL Slug - Right Side */}
             <div className="w-full md:w-72 lg:w-80 flex-shrink-0">
@@ -3089,7 +3095,7 @@ const saveDraft = async (isAutoSave = false) => {
                         className="p-2.5 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center text-gray-700 hover:text-gray-900"
                         title="Indent"
                         type="button"
-                      >
+                       >
                         <IndentIncrease className="w-4 h-4 text-current" />
                       </button>
                       <button
@@ -3102,7 +3108,7 @@ const saveDraft = async (isAutoSave = false) => {
                         className="p-2.5 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center text-gray-700 hover:text-gray-900"
                         title="Outdent"
                         type="button"
-                      >
+                       >
                         <IndentDecrease className="w-4 h-4 text-current" />
                       </button>
                                       
@@ -3563,8 +3569,6 @@ const saveDraft = async (isAutoSave = false) => {
                 }}
                 suppressContentEditableWarning={true}
               />
-
-
             </div>
 
             {/* Topics */}

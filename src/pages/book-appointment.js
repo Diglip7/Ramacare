@@ -158,10 +158,9 @@ const AppointmentPage = () => {
               <h3 className="text-2xl font-bold mb-2">Call Us Directly</h3>
               <p className="text-gray-100 mb-6">Speak with our friendly staff for immediate assistance</p>
               <a
-                href="tel:+971566597878"
-                className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors"
-              >
-                +971 56 659 7878
+                href="tel:+971042862006"
+                className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors">
+                +971 04 286 2006
               </a>
             </div>
 
@@ -191,8 +190,7 @@ const AppointmentPage = () => {
               <p className="text-gray-100 mb-6">Send us your details and we'll contact you</p>
               <a
                 href="mailto:query@ramacarepolyclinic.ae"
-                className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors"
-              >
+                className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors">
                 Send Email
               </a>
             </div>
@@ -247,7 +245,7 @@ const AppointmentPage = () => {
           </div>
         </div>
       </section>
-
+ 
       {/* Main Booking Form Section */}
       <section className="py-16 bg-gradient-to-br from-[#1a5f3f] to-[#2d5f3f] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,7 +257,6 @@ const AppointmentPage = () => {
               Fill out the form below and our team will confirm your appointment shortly
             </p>
           </div>
-
           <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
             <BeginYourHealingJourneySection />
           </div>

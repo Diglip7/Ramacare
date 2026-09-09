@@ -11,7 +11,6 @@ const Layout = ({ children }) => {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [portalTarget, setPortalTarget] = useState(null);
-
   const isServicesRoute = router.pathname.startsWith('/services');
   const cleanPath = router.pathname.replace(/\/$/, '') || '/';
   const isBlogRoute = router.pathname.startsWith('/blog/') && router.pathname !== '/blog';
@@ -23,16 +22,20 @@ const Layout = ({ children }) => {
     const setupPortal = () => {
       const faqElement = document.getElementById('faq') || document.getElementById('faqs');
       if (faqElement && faqElement.parentNode) {
-        let wrapper = document.getElementById('google-reviews-portal-wrapper');
-        if (!wrapper) {
-          wrapper = document.createElement('div');
-          wrapper.id = 'google-reviews-portal-wrapper';
-          wrapper.className = 'w-full';
+        // Target the outer section/article if faqElement is embedded inside a sub-grid column
+        const targetElement = faqElement.closest('section') || faqElement.closest('article') || faqElement;
+        if (targetElement && targetElement.parentNode) {
+          let wrapper = document.getElementById('google-reviews-portal-wrapper');
+          if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.id = 'google-reviews-portal-wrapper';
+            wrapper.className = 'w-full clear-both';
+          }
+          if (wrapper.nextSibling !== targetElement) {
+            targetElement.parentNode.insertBefore(wrapper, targetElement);
+          }
+          setPortalTarget(wrapper);
         }
-        if (wrapper.nextSibling !== faqElement) {
-          faqElement.parentNode.insertBefore(wrapper, faqElement);
-        }
-        setPortalTarget(wrapper);
       } else {
         const existingWrapper = document.getElementById('google-reviews-portal-wrapper');
         if (existingWrapper) {

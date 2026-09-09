@@ -269,7 +269,7 @@ const ContactUsPage = () => {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">98%</div>
-                  <div className="text-sm text-gray-200">Success Rate</div>
+                  <div className="text-sm text-gray-200">Patient Satisfaction</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">4.8/5</div>

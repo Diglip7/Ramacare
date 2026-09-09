@@ -112,7 +112,7 @@ const PatientTestimonials = ({ content }) => {
     return () => observer.disconnect();
   }, [hasAnimated]);
 
-  const animateCounters = () => {
+    const animateCounters = () => {
     const duration = 1500;
     const steps = 60;
     const stepDuration = duration / steps;

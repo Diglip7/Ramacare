@@ -3931,7 +3931,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '93%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
@@ -4621,10 +4621,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '93%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 93
+          target: 98
         },
         {
           id: 4,
@@ -4986,7 +4986,7 @@ export const subcategoryContent = {
       internalLinks: [
         { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' },
         { text: 'Shirodhara Therapy Dubai', link: '/services/shirodhara-therapy-in-dubai/' },
-        { text: 'Ayurvedic Stress Management Dubai', link: '/services/ayurvedic-stress-management-dubai/' },
+        { text: 'Ayurvedic Stress Management Dubai', link: '/services/stress-treatment-dubai/' },
         { text: 'Ayurveda Treatment Dubai', link: '/services/ayurveda-dubai/' }
       ],
 
@@ -5352,7 +5352,7 @@ export const subcategoryContent = {
       internalLinks: [
         { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' },
         { text: 'Shirodhara Therapy Dubai', link: '/services/shirodhara-therapy-in-dubai/' },
-        { text: 'Ayurvedic Stress Management Dubai', link: '/services/ayurvedic-stress-management-dubai/' }
+        { text: 'Ayurvedic Stress Management Dubai', link: '/services/stress-treatment-dubai/' }
       ]
     },
     paymentInsurance: {
@@ -5975,7 +5975,7 @@ export const subcategoryContent = {
           id: 16,
           text: 'Ayurvedic Stress Management',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/ayurvedic-stress-management-dubai/'
+          link: '/services/stress-treatment-dubai/'
         }
       ],
       faqs: [
@@ -6633,7 +6633,7 @@ export const subcategoryContent = {
           id: 16,
           text: 'Ayurvedic Stress Management',
           bgColor: 'bg-[#ECFDF5]',
-          link: '/services/ayurvedic-stress-management-dubai/'
+          link: '/services/stress-treatment-dubai/'
         }
       ],
       faqs: [
@@ -8082,10 +8082,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '94%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 94
+          target: 98
         },
         {
           id: 4,
@@ -8168,12 +8168,12 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '91%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
           id: 2,
-          number: '900+',
+          number: '500+',
           label: 'Digestive Patients Treated'
         },
         {
@@ -8838,17 +8838,17 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '900+',
+          number: '500+',
           label1: 'Digestive Patients',
           label2: 'Treated',
-          target: 900
+          target: 500
         },
         {
           id: 3,
-          number: '91%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 91
+          target: 98
         },
         {
           id: 4,
@@ -8908,7 +8908,7 @@ export const subcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '900+ Patients',
+          title: '500+ Patients',
           description: 'Treated'
         },
         {
@@ -8931,12 +8931,12 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '91%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
           id: 2,
-          number: '800+',
+          number: '500+',
           label: 'PCOS Patients Treated'
         },
         {
@@ -9586,17 +9586,17 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '500+',
           label1: 'PCOS Patients',
           label2: 'Treated',
-          target: 800
+          target: 500
         },
         {
           id: 3,
-          number: '91%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 91
+          target: 98
         },
         {
           id: 4,
@@ -15056,7 +15056,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '91%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
@@ -15758,10 +15758,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '91%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 91
+          target: 98
         },
         {
           id: 4,
@@ -16519,17 +16519,17 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '800+',
+          number: '500+',
           label1: 'Wounds Treated',
           label2: 'Successfully',
-          target: 800
+          target: 500
         },
         {
           id: 3,
-          number: '95%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 95
+          target: 98
         },
         {
           id: 4,
@@ -16589,7 +16589,7 @@ export const subcategoryContent = {
           description: '12+ Years Combined'
         },
         {
-          title: '800+ Wounds',
+          title: '500+ Wounds',
           description: 'Treated'
         },
         {
@@ -16612,7 +16612,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '93%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
@@ -17271,10 +17271,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '93%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 93
+          target: 98
         },
         {
           id: 4,
@@ -18776,17 +18776,17 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '1100+',
+          number: '500+',
           label1: 'Patients Treated',
           label2: 'Successfully',
           target: 1100
         },
         {
           id: 3,
-          number: '90%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 90
+          target: 98
         },
         {
           id: 4,
@@ -18846,7 +18846,7 @@ export const subcategoryContent = {
           description: '12+ Years Combined'
         },
         {
-          title: '1100+ Patients',
+          title: '500+ Patients',
           description: 'Treated'
         },
         {
@@ -19619,7 +19619,7 @@ export const subcategoryContent = {
           description: 'Weight Loss Achieved'
         },
         {
-          title: '4.7/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -19638,7 +19638,7 @@ export const subcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '91%',
+          number: '98%',
           label: 'Patient Satisfaction'
         },
         {
@@ -21104,10 +21104,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '89%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 89
+          target: 98
         },
         {
           id: 4,
@@ -21171,7 +21171,7 @@ export const subcategoryContent = {
           description: 'Treated'
         },
         {
-          title: '4.7/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -21871,17 +21871,17 @@ export const subcategoryContent = {
         },
         {
           id: 2,
-          number: '1800+',
+          number: '500+',
           label1: 'Diabetes Patients',
           label2: 'Treated',
-          target: 1800
+          target: 500
         },
         {
           id: 3,
-          number: '92%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 92
+          target: 98
         },
         {
           id: 4,
@@ -22639,10 +22639,10 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          number: '90%',
+          number: '98%',
           label1: 'Satisfaction Rate',
           label2: 'Happy Patients',
-          target: 90
+          target: 98
         },
         {
           id: 4,
@@ -22702,11 +22702,11 @@ export const subcategoryContent = {
           description: '12+ Years Combined'
         },
         {
-          title: '1500+ Patients',
+          title: '500+ Patients',
           description: 'Treated'
         },
         {
-          title: '4.7/5 Rating',
+          title: '4.8/5 Rating',
           description: 'Patient Reviews'
         }
       ]
@@ -29471,7 +29471,7 @@ export const subcategoryContent = {
         },
         {
           title: '4.8/5 Rating',
-          description: '500+ Verified Reviews'
+          description: '200+ Verified Reviews'
         }
       ]
     }
@@ -32594,7 +32594,7 @@ export const subcategoryContent = {
       features: [
         ' Jumeirah 1, Dubai',
         ' DHA-Licensed Dental Clinic',
-        ' 4.8/5 Rating (500+ Verified Reviews)',
+        ' 4.8/5 Rating (200+ Verified Reviews)',
       ],
       image: {
         src: '/images/composite-veeners.jpg',
@@ -33391,7 +33391,7 @@ export const subcategoryContent = {
       features: [
         ' Jumeirah 1, Dubai',
         ' DHA-Licensed Dental Clinic',
-        ' 4.8/5 Rating (500+ Verified Reviews)',
+        ' 4.8/5 Rating (200+ Verified Reviews)',
       ],
       image: {
         src: '/images/dental-veeners1.jpg',
@@ -34178,7 +34178,6 @@ export const subcategoryContent = {
           hasLearnMore: true,
           expandedContent: 'Proper care ensures long-term use and optimal hygiene.'
         },
-
       ]
     },
     healingJourney: {
@@ -36655,22 +36654,22 @@ export const subcategoryContent = {
           id: 2,
           title: 'Who Needs Gum Disease Treatment?',
           description: `
-Bleeding or swollen gums
-Persistent bad breath
-Gum recession or loose teeth
-Pain while chewing
-Red, tender, or inflamed gums
-`
+                Bleeding or swollen gums
+                Persistent bad breath
+                Gum recession or loose teeth
+                Pain while chewing
+                Red, tender, or inflamed gums
+                `
         },
         {
           id: 3,
           title: 'Treatment Duration',
           description: `
-Consultation & Assessment: 30–45 minutes
-Non-Surgical Treatment: 1–3 sessions (45–60 min each)
-Surgical Cases: As advised
-Recovery: Minimal downtime for non-surgical care
-`
+                Consultation & Assessment: 30–45 minutes
+                Non-Surgical Treatment: 1–3 sessions (45–60 min each)
+                Surgical Cases: As advised
+                Recovery: Minimal downtime for non-surgical care
+                `
         }
       ],
       rootCauses: [
@@ -37099,10 +37098,10 @@ Recovery: Minimal downtime for non-surgical care
         },
         {
           id: 2,
-          number: '8,000+',
+          number: '500+',
           label1: 'Gum Treatments',
           label2: 'Performed',
-          target: 8000
+          target: 500
         },
         {
           id: 3,
@@ -37113,10 +37112,10 @@ Recovery: Minimal downtime for non-surgical care
         },
         {
           id: 4,
-          number: '95%',
+          number: '98%',
           label1: 'Patient Satisfaction',
           label2: 'Reported Improvement',
-          target: 95
+          target: 98
         }
       ]
     },
