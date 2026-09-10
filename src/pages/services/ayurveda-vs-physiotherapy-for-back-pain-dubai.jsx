@@ -163,16 +163,16 @@ const faqGroups = [
 const allFaqs = faqGroups.flatMap((g) => g.items);
 
 const related = [
-  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai' },
-  { label: 'Ayurveda Dubai', href: '/services/ayurveda-dubai' },
-  { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai' },
-  { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai' },
-  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
-  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai' },
-  { label: 'Ultrasound Therapy for Chronic Back Pain', href: '/services/ultrasound-therapy-for-chronic-back-pain' },
-  { label: 'Post-Surgery Recovery Dubai', href: '/services/post-surgery-recovery-dubai' },
-  { label: 'Panchakarma Treatment', href: '/services/panchakarma-treatment' },
-  { label: 'Book Appointment', href: '#book-now' },
+  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai/' },
+  { label: 'Ayurveda Dubai', href: '/services/ayurveda-dubai/' },
+  { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai/' },
+  { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai/' },
+  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
+  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
+  { label: 'Ultrasound Therapy for Chronic Back Pain', href: '/services/ultrasound-therapy-for-chronic-back-pain/' },
+  { label: 'Post-Surgery Recovery Dubai', href: '/services/post-surgery-recovery-dubai/' },
+  { label: 'Panchakarma Treatment', href: '/services/panchakarma-treatment/' },
+  { label: 'Book Appointment', href: '#book-now/' },
   { label: 'Home Page', href: '/' },
 ];
 
@@ -300,7 +300,7 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
       <section className="relative">
         <p className="text-xs font-medium text-[#5F5F5F] max-w-7xl mx-auto px-6 pt-6">
           <Link href="/" className="hover:underline">Home</Link> <span className="mx-1.5">/</span>{' '}
-          <Link href="/services" className="hover:underline">Services</Link> <span className="mx-1.5">/</span>{' '}
+          <Link href="/services/" className="hover:underline">Services</Link> <span className="mx-1.5">/</span>{' '}
           <span className="text-[#1F5E4B]">Ayurveda vs Physiotherapy for Back Pain Dubai</span>
         </p>
 

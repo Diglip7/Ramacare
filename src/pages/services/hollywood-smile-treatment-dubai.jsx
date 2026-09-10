@@ -521,7 +521,7 @@ function Hero() {
               </li>
               <li>/</li>
               <li>
-                <Link href="/services/dental-dubai" className="transition-colors hover:text-[#1F5E4B]">
+                <Link href="/services/dental-dubai/" className="transition-colors hover:text-[#1F5E4B]">
                   Dental Services
                 </Link>
               </li>
@@ -2164,7 +2164,7 @@ export default function HollywoodSmileTreatmentDubai() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
+      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai/" },
       { "@type": "ListItem", "position": 3, "name": "Hollywood Smile Treatment Dubai", "item": meta.url },
     ],
   };

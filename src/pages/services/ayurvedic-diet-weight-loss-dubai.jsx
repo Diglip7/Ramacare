@@ -199,7 +199,7 @@ export default function AyurvedicDietWeightLossPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Weight Loss", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" }
           ]
         }

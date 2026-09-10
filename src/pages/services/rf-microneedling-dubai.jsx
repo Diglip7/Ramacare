@@ -147,7 +147,7 @@ export default function RFMicroneedlingDubai() {
             q: "Can RF microneedling be combined with other treatments?",
             a: (
                 <span>
-                    In some cases, a clinician may discuss combining RF microneedling with other skin treatments such as <Link href="/services/face-prp-in-dubai" className="text-[#1F5E4B] font-semibold underline hover:text-[#154637]">PRP treatment</Link> as part of a broader plan, depending on individual skin concerns and assessment findings.
+                    In some cases, a clinician may discuss combining RF microneedling with other skin treatments such as <Link href="/services/face-prp-in-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#154637]">PRP treatment</Link> as part of a broader plan, depending on individual skin concerns and assessment findings.
                 </span>
             )
         },
@@ -166,7 +166,7 @@ export default function RFMicroneedlingDubai() {
         "@context": "https://schema.org",
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai",
+        "url": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/",
         "image": "https://ramacarepolyclinic.ae/images/RamaCare%20Polyclinic%20Aesthetic%20Dermatology.jpg",
         "telephone": "+971566597878",
         "priceRange": "$$",
@@ -189,7 +189,7 @@ export default function RFMicroneedlingDubai() {
     const schema2_MedicalWebPage = {
         "@context": "https://schema.org",
         "@type": "MedicalWebPage",
-        "url": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai",
+        "url": "https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/",
         "name": "RF Microneedling Dubai: Skin Tightening, Texture & Rejuvenation",
         "description": "An overview of RF microneedling, how it works, what it may address, and what to expect before, during, and after treatment at RamaCare Polyclinic in Jumeirah 1, Dubai.",
         "medicalAudience": {
@@ -300,7 +300,7 @@ export default function RFMicroneedlingDubai() {
                         <p className="text-xs font-medium uppercase tracking-wider text-white/60 flex items-center gap-2 flex-wrap">
                             <Link href="/" className="hover:text-[#C9A961] transition-colors">Home</Link>
                             <span className="text-white/30">/</span>
-                            <Link href="/services/aesthetic-dermatology-dubai" className="hover:text-[#C9A961] transition-colors">Aesthetic Dermatology</Link>
+                            <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#C9A961] transition-colors">Aesthetic Dermatology</Link>
                             <span className="text-white/30">/</span>
                             <span className="text-[#C9A961]">RF Microneedling Dubai</span>
                         </p>
@@ -318,12 +318,12 @@ export default function RFMicroneedlingDubai() {
                                 </h1>
 
                                 <p className="text-white/85 text-base sm:text-lg leading-relaxed font-light">
-                                    Skin texture, firmness, and tone naturally change over time, and concerns like enlarged pores, fine lines, or acne scarring often prompt people to look into non-surgical treatment options. RF microneedling is one such option — a technique that pairs traditional microneedling with radiofrequency energy to encourage a controlled skin response. It has become a frequently searched treatment among people in Dubai exploring ways to support their skin's texture and firmness without surgery. Because skin type, concerns, and medical history vary widely from person to person, a professional assessment is an important first step before deciding whether this treatment is appropriate. At <Link href="/" className="text-[#C9A961] font-semibold underline hover:text-white">RamaCare Polyclinic</Link> in Jumeirah 1, <Link href="/services/aesthetic-dermatology-dubai" className="text-[#C9A961] font-semibold underline hover:text-white">Aesthetic Dermatology Dubai</Link> services are delivered by DHA-licensed professionals within a broader multidisciplinary healthcare setting, allowing treatment plans to be built around each patient's individual skin condition and goals.
+                                    Skin texture, firmness, and tone naturally change over time, and concerns like enlarged pores, fine lines, or acne scarring often prompt people to look into non-surgical treatment options. RF microneedling is one such option — a technique that pairs traditional microneedling with radiofrequency energy to encourage a controlled skin response. It has become a frequently searched treatment among people in Dubai exploring ways to support their skin's texture and firmness without surgery. Because skin type, concerns, and medical history vary widely from person to person, a professional assessment is an important first step before deciding whether this treatment is appropriate. At <Link href="/" className="text-[#C9A961] font-semibold underline hover:text-white">RamaCare Polyclinic</Link> in Jumeirah 1, <Link href="/services/aesthetic-dermatology-dubai/" className="text-[#C9A961] font-semibold underline hover:text-white">Aesthetic Dermatology Dubai</Link> services are delivered by DHA-licensed professionals within a broader multidisciplinary healthcare setting, allowing treatment plans to be built around each patient's individual skin condition and goals.
                                 </p>
 
                                 <div className="flex flex-wrap items-center gap-4 pt-4">
                                     <Link
-                                        href="/book-appointment"
+                                        href="/book-appointment/"
                                         className="bg-[#C9A961] hover:bg-[#b0914e] text-white font-bold px-8 py-4 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 shadow-xl flex items-center gap-2.5 transform active:scale-95"
                                     >
                                         <Calendar className="w-4 h-4 shrink-0" />
@@ -515,7 +515,7 @@ export default function RFMicroneedlingDubai() {
                                 What Can RF Microneedling Help With?
                             </h2>
                             <p className="text-[#5F5F5F] text-base sm:text-lg font-light max-w-3xl leading-relaxed">
-                                RF microneedling may be considered for several aesthetic concerns based on individual clinical evaluation. Patients looking for overall skin quality can also explore our comprehensive <Link href="/services/skin-treatment-dubai" className="text-[#1F5E4B] font-bold underline hover:text-[#154637]">Skin Treatment Dubai</Link> options:
+                                RF microneedling may be considered for several aesthetic concerns based on individual clinical evaluation. Patients looking for overall skin quality can also explore our comprehensive <Link href="/services/skin-treatment-dubai/" className="text-[#1F5E4B] font-bold underline hover:text-[#154637]">Skin Treatment Dubai</Link> options:
                             </p>
                         </div>
 
@@ -912,7 +912,7 @@ export default function RFMicroneedlingDubai() {
                                         </tr>
                                         <tr className="hover:bg-[#FAF9F5] transition-colors">
                                             <td className="p-4 sm:p-5 font-bold text-[#154637]">
-                                                <Link href="/services/microdermabrasion-dubai" className="text-[#154637] font-bold underline hover:text-[#1F5E4B]">
+                                                <Link href="/services/microdermabrasion-dubai/" className="text-[#154637] font-bold underline hover:text-[#1F5E4B]">
                                                     Microdermabrasion
                                                 </Link>
                                             </td>
@@ -921,7 +921,7 @@ export default function RFMicroneedlingDubai() {
                                         </tr>
                                         <tr className="hover:bg-[#FAF9F5] transition-colors">
                                             <td className="p-4 sm:p-5 font-bold text-[#154637]">
-                                                <Link href="/services/skin-boosters-dubai" className="text-[#154637] font-bold underline hover:text-[#1F5E4B]">
+                                                <Link href="/services/skin-boosters-dubai/" className="text-[#154637] font-bold underline hover:text-[#1F5E4B]">
                                                     Skin Boosters
                                                 </Link>
                                             </td>
@@ -976,7 +976,7 @@ export default function RFMicroneedlingDubai() {
                                 <div className="space-y-4">
                                     <h3 className="text-xl font-bold text-[#154637]">RF Microneedling for Skin Tightening</h3>
                                     <p className="text-sm text-[#5F5F5F] leading-relaxed font-light">
-                                        The radiofrequency component of this treatment is intended to deliver controlled thermal energy within targeted skin layers, which may contribute to collagen remodeling and, in turn, support skin firmness. It is important to distinguish non-surgical <Link href="/services/skin-tightening-dubai" className="text-[#1F5E4B] font-semibold underline hover:text-[#154637]">skin tightening</Link> from surgical lifting procedures — RF microneedling is not a substitute for surgery and works through a gradual, biological remodeling process rather than the immediate, mechanical repositioning of tissue achieved surgically. Setting realistic expectations during consultation is an important part of deciding whether this treatment aligns with a patient's goals.
+                                        The radiofrequency component of this treatment is intended to deliver controlled thermal energy within targeted skin layers, which may contribute to collagen remodeling and, in turn, support skin firmness. It is important to distinguish non-surgical <Link href="/services/skin-tightening-dubai/" className="text-[#1F5E4B] font-semibold underline hover:text-[#154637]">skin tightening</Link> from surgical lifting procedures — RF microneedling is not a substitute for surgery and works through a gradual, biological remodeling process rather than the immediate, mechanical repositioning of tissue achieved surgically. Setting realistic expectations during consultation is an important part of deciding whether this treatment aligns with a patient's goals.
                                     </p>
                                 </div>
                                 <div className="relative h-55 w-full rounded-2xl overflow-hidden mt-4">
@@ -1187,12 +1187,12 @@ export default function RFMicroneedlingDubai() {
                             Ready to Explore RF Microneedling?
                         </h2>
                         <p className="text-white/85 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed font-light">
-                            Deciding whether RF microneedling is right for your skin starts with a professional consultation. During this visit, a clinician can assess your skin condition, discuss your goals, and help you understand what may be realistic for your situation. To take the next step, you can <Link href="/book-appointment" className="text-[#C9A961] font-semibold underline hover:text-white">book an appointment</Link> directly online.
+                            Deciding whether RF microneedling is right for your skin starts with a professional consultation. During this visit, a clinician can assess your skin condition, discuss your goals, and help you understand what may be realistic for your situation. To take the next step, you can <Link href="/book-appointment/" className="text-[#C9A961] font-semibold underline hover:text-white">book an appointment</Link> directly online.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
                             <Link
-                                href="/book-appointment"
+                                href="/book-appointment/"
                                 className="bg-[#C9A961] hover:bg-[#b0914e] text-white font-bold px-8 py-4 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 shadow-xl flex items-center gap-2.5 transform active:scale-95"
                             >
                                 <Calendar className="w-4 h-4 shrink-0" />

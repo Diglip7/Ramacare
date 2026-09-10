@@ -100,7 +100,7 @@ const content = {
       ]
     }
   },
-  
+
   glucoseProtocol: {
     title: '3. The 3-Step Ayurvedic "Glucose Protocol"',
     steps: [
@@ -298,12 +298,12 @@ export default function AyurvedicDietDiabetesPage() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.phone || !formData.email) {
       showToast('Please fill in all required fields (Name, Phone, and Email).', 'error');
       return;
     }
-    
+
     try {
       const response = await fetch('/api/appointment', {
         method: 'POST',
@@ -393,7 +393,7 @@ export default function AyurvedicDietDiabetesPage() {
           </nav>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -416,7 +416,7 @@ export default function AyurvedicDietDiabetesPage() {
                       {content.hero.badge}
                     </div>
                   </div>
-                  <p 
+                  <p
                     className="text-[#1A1A1A] leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: content.hero.summary.content }}
                   />
@@ -424,14 +424,14 @@ export default function AyurvedicDietDiabetesPage() {
               )}
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={scrollToForm}
                   className="bg-[#1F5E4B] text-white px-8 py-4 rounded-lg hover:bg-[#164435] transition-all flex items-center justify-center gap-2 shadow-lg font-bold text-base"
                 >
                   <LucideIcons.Calendar size={20} />
                   {content.hero.ctaButtons.primary.text}
                 </button>
-                <a target="_blank" rel="nofollow noopener noreferrer" 
+                <a target="_blank" rel="nofollow noopener noreferrer"
                   href={`https://wa.me/${content.hero.ctaButtons.secondary.phone.replace(/[\s+]/g, '')}`}
                   className="bg-white text-[#1F5E4B] px-8 py-4 rounded-lg hover:bg-gray-50 transition-all flex items-center justify-center gap-2 border-2 border-[#1F5E4B] font-bold text-base shadow-sm"
                 >
@@ -441,7 +441,7 @@ export default function AyurvedicDietDiabetesPage() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
@@ -455,7 +455,7 @@ export default function AyurvedicDietDiabetesPage() {
                   className="object-cover"
                   priority
                 />
-                
+
                 {/* Blood Sugar Improvement Card Overlay */}
                 <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl">
                   <h4 className="text-sm font-bold text-[#1F5E4B] tracking-wider mb-3 uppercase">
@@ -492,7 +492,7 @@ export default function AyurvedicDietDiabetesPage() {
       {/* Section 1: Environmental Challenges */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -533,7 +533,7 @@ export default function AyurvedicDietDiabetesPage() {
       <section className="py-16 md:py-24 bg-[#F5F1EA]">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="mb-12">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -541,7 +541,7 @@ export default function AyurvedicDietDiabetesPage() {
             >
               {content.dietaryPillars.title}
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -551,13 +551,13 @@ export default function AyurvedicDietDiabetesPage() {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative h-64 md:h-96 rounded-3xl overflow-hidden mb-12 shadow-xl"
           >
-            <Image 
+            <Image
               src={content.dietaryPillars.bannerImage}
               alt="Dietary Pillars for Diabetes"
               fill
@@ -621,7 +621,7 @@ export default function AyurvedicDietDiabetesPage() {
       {/* Section 3: Glucose Protocol */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -642,11 +642,10 @@ export default function AyurvedicDietDiabetesPage() {
                     transition={{ delay: index * 0.1 }}
                     className="bg-[#F5F1EA] p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-[#E9E2D6] flex flex-col items-start gap-6"
                   >
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-sm ${
-                      index === 0 ? 'bg-orange-50 text-orange-500' :
-                      index === 1 ? 'bg-yellow-50 text-yellow-500' :
-                      'bg-blue-50 text-blue-500'
-                    }`}>
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-sm ${index === 0 ? 'bg-orange-50 text-orange-500' :
+                        index === 1 ? 'bg-yellow-50 text-yellow-500' :
+                          'bg-blue-50 text-blue-500'
+                      }`}>
                       <Icon size={28} />
                     </div>
                     <div className="space-y-4">
@@ -675,7 +674,7 @@ export default function AyurvedicDietDiabetesPage() {
       <section className="py-16 md:py-24 bg-[#F5F1EA]">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
           <div className="text-center md:text-left mb-12">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -683,7 +682,7 @@ export default function AyurvedicDietDiabetesPage() {
             >
               {content.faqs.title}
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -714,7 +713,7 @@ export default function AyurvedicDietDiabetesPage() {
                 </button>
                 <motion.div
                   initial={false}
-                  animate={{ 
+                  animate={{
                     height: openFaqIndex === index ? 'auto' : 0,
                     opacity: openFaqIndex === index ? 1 : 0
                   }}
@@ -735,7 +734,7 @@ export default function AyurvedicDietDiabetesPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -743,7 +742,7 @@ export default function AyurvedicDietDiabetesPage() {
             >
               {content.whyChoose.title}
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -830,7 +829,7 @@ export default function AyurvedicDietDiabetesPage() {
                 })}
               </div>
 
-              <button 
+              <button
                 onClick={scrollToForm}
                 className="bg-white text-[#1F5E4B] px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-xl"
               >
@@ -845,7 +844,7 @@ export default function AyurvedicDietDiabetesPage() {
               className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-2xl"
             >
               <h3 className="text-xl font-bold mb-10 text-center">{content.finalCTA.graph.title}</h3>
-              
+
               <div className="space-y-12">
                 <div className="space-y-3">
                   <div className="flex justify-between items-end">
@@ -853,7 +852,7 @@ export default function AyurvedicDietDiabetesPage() {
                     <span className="text-xl font-bold">{content.finalCTA.graph.before.value}</span>
                   </div>
                   <div className="h-3 bg-white/10 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: '85%' }}
                       viewport={{ once: true }}
@@ -876,7 +875,7 @@ export default function AyurvedicDietDiabetesPage() {
                     <span className="text-xl font-bold text-emerald-400">{content.finalCTA.graph.after.value}</span>
                   </div>
                   <div className="h-3 bg-white/10 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: '60%' }}
                       viewport={{ once: true }}
@@ -899,7 +898,7 @@ export default function AyurvedicDietDiabetesPage() {
       <section id="booking-form" className="py-16 md:py-24 bg-[#1F5E4B] text-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -907,7 +906,7 @@ export default function AyurvedicDietDiabetesPage() {
             >
               {content.bookingForm.title}
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -917,7 +916,7 @@ export default function AyurvedicDietDiabetesPage() {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -930,8 +929,8 @@ export default function AyurvedicDietDiabetesPage() {
             <form className="space-y-6" onSubmit={handleFormSubmit}>
               <div>
                 <label className="block text-[#1A1A1A] mb-2">{content.bookingForm.fields.name}</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -942,8 +941,8 @@ export default function AyurvedicDietDiabetesPage() {
 
               <div>
                 <label className="block text-[#1A1A1A] mb-2">{content.bookingForm.fields.phone}</label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   placeholder="+971 XX XXX XXXX"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -954,8 +953,8 @@ export default function AyurvedicDietDiabetesPage() {
 
               <div>
                 <label className="block text-[#1A1A1A] mb-2">{content.bookingForm.fields.email}</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="yourname@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -966,7 +965,7 @@ export default function AyurvedicDietDiabetesPage() {
 
               <div>
                 <label className="block text-[#1A1A1A] mb-2">{content.bookingForm.fields.time}</label>
-                <select 
+                <select
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#1F5E4B] focus:ring-2 focus:ring-[#1F5E4B]/20 outline-none transition-all text-[#1A1A1A] bg-white appearance-none cursor-pointer"
                   value={formData.time}
                   onChange={(e) => setFormData({ ...formData, time: e.target.value })}
@@ -979,14 +978,14 @@ export default function AyurvedicDietDiabetesPage() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                <button 
+                <button
                   type="submit"
                   className="bg-[#1F5E4B] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#164435] transition-all flex items-center justify-center gap-2 shadow-lg"
                 >
                   <LucideIcons.CalendarCheck size={20} />
                   {content.bookingForm.buttons.confirm}
                 </button>
-                <a 
+                <a
                   href={`https://wa.me/${content.hero.ctaButtons.secondary.phone.replace(/[\s+]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -1028,7 +1027,7 @@ export default function AyurvedicDietDiabetesPage() {
 
       {/* Floating Bottom Bar */}
       {showFloatingBar && (
-        <motion.div 
+        <motion.div
           initial={{ y: 100 }}
           animate={{ y: 0 }}
           className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#1F5E4B] to-[#164435] text-white py-4 px-4 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] border-t border-white/10"
@@ -1042,16 +1041,16 @@ export default function AyurvedicDietDiabetesPage() {
                 <span className="font-bold text-emerald-400">Limited Slots Available:</span> Book your glucose assessment today
               </p>
             </div>
-            
+
             <div className="flex items-center gap-2">
-              <button 
+              <button
                 onClick={scrollToForm}
                 className="bg-white text-[#1F5E4B] px-6 py-3 rounded-lg font-bold text-sm hover:bg-gray-100 transition-all flex items-center gap-2 shadow-lg"
               >
                 <LucideIcons.Calendar size={18} />
                 Book Now
               </button>
-              <button 
+              <button
                 onClick={() => setShowFloatingBar(false)}
                 className="p-2 hover:bg-white/10 rounded-full transition-colors text-white/40 hover:text-white"
               >

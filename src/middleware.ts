@@ -5,14 +5,17 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host');
 
-  // Redirect www to non-www
+  let needsRedirect = false;
+
+  // 1. Redirect www to non-www
   if (hostname && hostname.startsWith('www.')) {
     url.hostname = hostname.replace(/^www\./, '');
-    return NextResponse.redirect(url, 301);
+    needsRedirect = true;
   }
 
   const pathname = request.nextUrl.pathname;
 
+  // 2. Redirect malicious / legacy WordPress paths
   if (
     pathname.startsWith('/wp-') ||
     pathname.includes('index.php') ||
@@ -22,15 +25,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  // Enforce trailing slash on non-API, non-file routes
-  if (
-    pathname !== '/' &&
-    !pathname.startsWith('/api') &&
-    !pathname.includes('.') &&
-    !pathname.endsWith('/')
-  ) {
-    url.pathname = `${pathname}/`;
-    return NextResponse.redirect(url, 308);
+  // Note: trailing-slash enforcement is handled natively by
+  // `trailingSlash: true` in next.config.js — confirmed via live
+  // curl test (308 firing correctly). No middleware fallback needed.
+
+  if (needsRedirect) {
+    return NextResponse.redirect(url, 301);
   }
 
   return NextResponse.next();

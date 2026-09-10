@@ -344,7 +344,7 @@ export default function HairLossClinicDubai() {
                 Book Consultation
               </a>
               <a
-                href="/contact-us"
+                href="/contact-us/"
                 className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-extrabold text-lg transition-all"
               >
                 <Phone className="w-5 h-5" />

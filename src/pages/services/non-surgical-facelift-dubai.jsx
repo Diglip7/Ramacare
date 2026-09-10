@@ -57,7 +57,7 @@ const medicalClinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "RamaCare Polyclinic",
-  "url": "https://ramacarepolyclinic.ae//services/non-surgical-facelift-dubai",
+  "url": "https://ramacarepolyclinic.ae//services/non-surgical-facelift-dubai/",
   "image": "/https://ramacarepolyclinic.ae/images/facial-assessment-non-surgical-facelift.jpg",
   "telephone": "+971566597878",
   "address": {
@@ -96,7 +96,7 @@ const medicalWebPageSchema = {
   "@type": "MedicalWebPage",
   "name": "Non-Surgical Facelift in Dubai | RamaCare",
   "description": "Explore Non-Surgical Facelift in Dubai at RamaCare Polyclinic. Personalized facial rejuvenation options for laxity, volume loss & aging. Book a consultation.",
-  "url": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai",
+  "url": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai/",
   "specialty": {
     "@type": "MedicalSpecialty",
     "name": "Dermatology"
@@ -127,13 +127,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 2,
       "name": "Facial Aesthetics",
-      "item": "https://ramacarepolyclinic.ae/services"
+      "item": "https://ramacarepolyclinic.ae/services/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Non-Surgical Facelift in Dubai",
-      "item": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai"
+      "item": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai/"
     }
   ]
 };
@@ -627,13 +627,13 @@ const faqs = [
 ];
 
 const internalLinks = [
-  { label: "Skin Tightening Dubai", href: "/services/skin-tightening-dubai" },
-  { label: "Botox in Dubai", href: "/services/botox-dubai" },
-  { label: "Dermal Fillers Dubai", href: "/services/fillers-in-dubai" },
-  { label: "RF Microneedling Dubai", href: "/services/rf-microneedling-dubai" },
-  { label: "Microneedling Dubai", href: "/services/microneedling-skin-renewal-dubai" },
-  { label: "Under-Eye Treatment Dubai", href: "/services/under-eye-treatment-dubai" },
-  { label: "Chemical Peel Treatment Dubai", href: "/services/chemical-peel-treatment-dubai" },
+  { label: "Skin Tightening Dubai", href: "/services/skin-tightening-dubai/" },
+  { label: "Botox in Dubai", href: "/services/botox-dubai/" },
+  { label: "Dermal Fillers Dubai", href: "/services/fillers-in-dubai/" },
+  { label: "RF Microneedling Dubai", href: "/services/rf-microneedling-dubai/" },
+  { label: "Microneedling Dubai", href: "/services/microneedling-skin-renewal-dubai/" },
+  { label: "Under-Eye Treatment Dubai", href: "/services/under-eye-treatment-dubai/" },
+  { label: "Chemical Peel Treatment Dubai", href: "/services/chemical-peel-treatment-dubai/" },
 ];
 
 const finalCta = {
@@ -808,7 +808,7 @@ function Hero() {
           <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-1.5 text-[12.5px] font-medium text-neutral-600">
             <a href="/" className="transition-colors hover:text-[#1F5E4B]">Home</a>
             <ChevronRight size={12} style={{ color: BRAND.clay }} />
-            <a href="/services" className="transition-colors hover:text-[#1F5E4B]">Facial Aesthetics</a>
+            <a href="/services/" className="transition-colors hover:text-[#1F5E4B]">Facial Aesthetics</a>
             <ChevronRight size={12} style={{ color: BRAND.clay }} />
             <span style={{ color: BRAND.clay }} className="font-semibold">Non-Surgical Facelift in Dubai</span>
           </nav>
@@ -841,7 +841,7 @@ function Hero() {
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="/book-appointment"
+              href="/book-appointment/"
               className="group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[13.5px] font-semibold uppercase tracking-[0.06em] text-white shadow-sm transition-transform hover:-translate-y-0.5"
               style={{ backgroundColor: BRAND.graphite }}
             >
@@ -849,7 +849,7 @@ function Hero() {
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="tel:(+971) 04 286 2006"
+              href="tel:+97142862006"
               className="group inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[13.5px] font-semibold uppercase tracking-[0.06em] transition-transform hover:-translate-y-0.5"
               style={{ borderColor: `${BRAND.graphite}33`, color: BRAND.graphite, backgroundColor: "#FFFFFF" }}
             >
@@ -2040,7 +2040,7 @@ function InternalLinksAndFinalCta() {
               <Send size={16} color={BRAND.claySoft} /> WhatsApp Us
             </a>
             <a
-              href="tel:(+971) 04 286 2006"
+              href="tel:+97142862006"
               className="inline-flex items-center gap-2 rounded-full border px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.05em] text-white/90 transition-transform hover:-translate-y-0.5"
               style={{ borderColor: `${BRAND.claySoft}55` }}>
               <Phone size={16} color={BRAND.claySoft} /> Call Clinic

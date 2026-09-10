@@ -72,7 +72,7 @@ export default function AyurvedicDietPCOSPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for PCOS", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" }
           ]
         }

@@ -260,7 +260,7 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs. Intermittent Fasting", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" }
           ]
         }
@@ -296,7 +296,7 @@ export default function AyurvedicDietVsIntermittentFastingDubaiPage() {
   };
 
   const scrollToForm = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   return (

@@ -202,13 +202,13 @@ const FAQS = [
 ];
 
 const RELATED_LINKS = [
-  { label: 'Dental Services Dubai', href: '/services/dental-dubai' },
-  { label: 'Tooth Pain Treatment Dubai', href: '/services/tooth-pain-treatment-dubai' },
-  { label: 'Root Canal Treatment Dubai', href: '/services/root-canal-treatment-dubai' },
-  { label: 'Gum Disease Treatment Dubai', href: '/services/gum-disease-treatment-dubai' },
-  { label: 'Teeth Whitening Dubai', href: '/services/teeth-whitening-dubai' },
-  { label: 'Composite Veneers Dubai', href: '/services/composite-veneers-dubai' },
-  { label: 'General Physician', href: '/services/general-physician-dubai' },
+  { label: 'Dental Services Dubai', href: '/services/dental-dubai/' },
+  { label: 'Tooth Pain Treatment Dubai', href: '/services/tooth-pain-treatment-dubai/' },
+  { label: 'Root Canal Treatment Dubai', href: '/services/root-canal-treatment-dubai/' },
+  { label: 'Gum Disease Treatment Dubai', href: '/services/gum-disease-treatment-dubai/' },
+  { label: 'Teeth Whitening Dubai', href: '/services/teeth-whitening-dubai/' },
+  { label: 'Composite Veneers Dubai', href: '/services/composite-veneers-dubai/' },
+  { label: 'General Physician', href: '/services/general-physician-dubai/' },
 ];
 
 /* --------------------------- Small building blocks --------------------------- */
@@ -279,7 +279,7 @@ export default function SensitiveTeethTreatmentPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Dental Services', item: 'https://ramacarepolyclinic.ae/services/dental-dubai' },
+      { '@type': 'ListItem', position: 2, name: 'Dental Services', item: 'https://ramacarepolyclinic.ae/services/dental-dubai/' },
       { '@type': 'ListItem', position: 3, name: 'Sensitive Teeth Treatment Dubai', item: SEO.canonical },
     ],
   };
@@ -463,7 +463,7 @@ export default function SensitiveTeethTreatmentPage() {
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F]">
               <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
               <span aria-hidden="true" className="text-gray-300">/</span>
-              <a href="/services/dental-dubai" className="hover:text-[#1F5E4B] transition-colors">Dental Services</a>
+              <a href="/services/dental-dubai/" className="hover:text-[#1F5E4B] transition-colors">Dental Services</a>
               <span aria-hidden="true" className="text-gray-300">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Sensitive Teeth Treatment Dubai</span>
             </nav>
@@ -509,7 +509,7 @@ export default function SensitiveTeethTreatmentPage() {
                     Book a Consultation <ArrowRight className="h-4 w-4" />
                   </a>
                   <a
-                    href="tel:+971042862006"
+                    href="tel:+97142862006"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1F5E4B]/25 px-6 py-3.5 text-sm font-semibold text-[#1F5E4B] hover:bg-[#F9F7F2]"
                   >
                     <Phone className="h-4 w-4" /> Call Now

@@ -76,7 +76,7 @@ export default function BastiTherapyPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Basti Therapy", "item": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" }
           ]
         }

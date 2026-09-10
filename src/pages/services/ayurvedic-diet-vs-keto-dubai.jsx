@@ -167,7 +167,7 @@ export default function AyurvedicDietVsKetoDubaiPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs. Keto Diet", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" }
           ]
         }
@@ -213,7 +213,7 @@ export default function AyurvedicDietVsKetoDubaiPage() {
   };
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   return (

@@ -115,7 +115,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
         "@type": "ListItem",
         "position": 2,
         "name": categoryName || 'Treatments',
-        "item": `https://ramacarepolyclinic.ae${categoryData ? `/services/${categoryData.slug}` : '/services'}`
+        "item": `https://ramacarepolyclinic.ae${categoryData ? `/services/${categoryData.slug}/` : '/services/'}`
       },
       {
         "@type": "ListItem",
@@ -152,7 +152,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
               </li>
               <li>
                 <a
-                  href={categoryData ? `/services/${categoryData.slug}` : '/services'}
+                  href={categoryData ? `/services/${categoryData.slug}/` : '/services/'}
                   className="hover:text-[#2D5F3F] transition-colors"
                 >
                   {categoryName || 'Treatments'}

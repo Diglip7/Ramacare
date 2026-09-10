@@ -168,13 +168,13 @@ const resourceHub = [
   {
     category: 'Services',
     links: [
-      { label: 'PRP Hair Treatment Dubai', href: '/services/hair-prp-dubai' },
-      { label: 'Hair Mesotherapy Dubai', href: '/services/mesotherapy-dubai' },
-      { label: 'Hair Loss Treatment Dubai', href: '/services/hair-loss-dubai' },
-      { label: 'Exosomes Facial Dubai', href: '/services/exosomes-facial-dubai' },
-      { label: 'Skin Boosters Dubai', href: '/services/skin-boosters-dubai' },
-      { label: 'HydraFacial Dubai', href: '/services/hydrafacial-dubai' },
-      { label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai' },
+      { label: 'PRP Hair Treatment Dubai', href: '/services/hair-prp-dubai/' },
+      { label: 'Hair Mesotherapy Dubai', href: '/services/mesotherapy-dubai/' },
+      { label: 'Hair Loss Treatment Dubai', href: '/services/hair-loss-dubai/' },
+      { label: 'Exosomes Facial Dubai', href: '/services/exosomes-facial-dubai/' },
+      { label: 'Skin Boosters Dubai', href: '/services/skin-boosters-dubai/' },
+      { label: 'HydraFacial Dubai', href: '/services/hydrafacial-dubai/' },
+      { label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai/' },
     ],
   },
   {
@@ -667,8 +667,8 @@ export default function PrpVsMesotherapyPage() {
           </ul>
           <p className="text-sm text-[#5F5F5F] leading-relaxed">
             We recommend booking a consultation for an accurate, personalized quote. View our{' '}
-            <a href="/services/hair-prp-cost-dubai" className="text-[#1F5E4B] underline underline-offset-4">hair PRP cost guide</a> or{' '}
-            <a href="/services/hair-loss-dubai" className="text-[#1F5E4B] underline underline-offset-4">hair loss treatment costs</a> for a general overview.
+            <a href="/services/hair-prp-cost-dubai/" className="text-[#1F5E4B] underline underline-offset-4">hair PRP cost guide</a> or{' '}
+            <a href="/services/hair-loss-dubai/" className="text-[#1F5E4B] underline underline-offset-4">hair loss treatment costs</a> for a general overview.
           </p>
         </div>
       </section>

@@ -126,17 +126,17 @@ const faqs = [
 ];
 
 const links = {
-  acne: '/services/acne-treatment-dubai',
-  pigmentation: '/services/pigmentation-dubai',
-  melasma: '/services/melasma-treatment-dubai',
-  aestheticDermatology: '/services/aesthetic-dermatology-dubai',
-  skinBoosters: '/services/skin-boosters-dubai',
-  prpFacial: '/services/face-prp-in-dubai',
-  exosomesFacial: '/services/exosomes-facial-dubai',
-  rosacea: '/services/rosacea-treatment-dubai',
-  eczema: '/services/skin-allergy-dubai',
-  psoriasis: '/services/psoriasis-treatment-dubai',
-  bookAppointment: '/book-appointment',
+  acne: '/services/acne-treatment-dubai/',
+  pigmentation: '/services/pigmentation-dubai/',
+  melasma: '/services/melasma-treatment-dubai/',
+  aestheticDermatology: '/services/aesthetic-dermatology-dubai/',
+  skinBoosters: '/services/skin-boosters-dubai/',
+  prpFacial: '/services/face-prp-in-dubai/',
+  exosomesFacial: '/services/exosomes-facial-dubai/',
+  rosacea: '/services/rosacea-treatment-dubai/',
+  eczema: '/services/skin-allergy-dubai/',
+  psoriasis: '/services/psoriasis-treatment-dubai/',
+  bookAppointment: '/book-appointment/',
 };
 
 /* ------------------------------------------------------------------

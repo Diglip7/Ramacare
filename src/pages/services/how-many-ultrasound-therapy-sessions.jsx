@@ -218,7 +218,7 @@ const UltrasoundSessionsTimelinePage = () => {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
           { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
-          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
           { '@type': 'ListItem', position: 4, name: 'Recovery Timeline', item: 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/' }
         ]
       },
@@ -281,7 +281,7 @@ const UltrasoundSessionsTimelinePage = () => {
             <span aria-hidden="true">/</span>
             <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
             <span aria-hidden="true">/</span>
-            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
             <span aria-hidden="true">/</span>
             <span className="text-[#1F5E4B]">Recovery Timeline</span>
           </nav>
@@ -797,7 +797,7 @@ const UltrasoundSessionsTimelinePage = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
           <div className="flex flex-wrap gap-2.5">
-            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+            <Link href="/services/physiotherapy-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
               Physiotherapy Dubai
             </Link>
             <Link href="/services/ultrasound-therapy-cost-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">

@@ -328,7 +328,7 @@ export default function InsomniaTreatmentPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="/book-appointment" className="px-8 py-4 bg-[#1F5E4B] hover:bg-[#153f32] text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center gap-2">
+                  <a href="/book-appointment/" className="px-8 py-4 bg-[#1F5E4B] hover:bg-[#153f32] text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center gap-2">
                     <Moon className="w-4 h-4" />
                     Book Your Insomnia Treatment Dubai Consultation →
                   </a>
@@ -629,7 +629,7 @@ export default function InsomniaTreatmentPage() {
                   <div className="flex items-center space-x-2"><CheckCircle className="w-4 h-4 text-[#1F5E4B]" /><span className="text-xs sm:text-sm text-gray-750 text-gray-700 font-medium">Night-time settling discomfort</span></div>
                 </div>
                 <p className="text-xs sm:text-sm text-[#5F5F5F] leading-relaxed">
-                  Techniques used may include manual therapy, targeted stretching, exercise therapy, guided relaxation exercises, and postural correction. By reducing physical tension, many patients find it easier to relax both body and mind at bedtime. If pain in specific areas is a major factor for you, our team can also guide you toward focused care, such as <a href="/services/neck-pain-treatment-dubai" className="text-[#D4A574] hover:underline font-bold">Neck Pain Treatment Dubai</a>, <a href="/services/shoulder-pain-treatment-dubai" className="text-[#D4A574] hover:underline font-bold">Shoulder Pain Treatment Dubai</a>, or <a href="/services/back-pain-treatment-dubai" className="text-[#D4A574] hover:underline font-bold">Back Pain Treatment Dubai</a>.
+                  Techniques used may include manual therapy, targeted stretching, exercise therapy, guided relaxation exercises, and postural correction. By reducing physical tension, many patients find it easier to relax both body and mind at bedtime. If pain in specific areas is a major factor for you, our team can also guide you toward focused care, such as <a href="/services/neck-pain-treatment-dubai/" className="text-[#D4A574] hover:underline font-bold">Neck Pain Treatment Dubai</a>, <a href="/services/shoulder-pain-treatment-dubai/" className="text-[#D4A574] hover:underline font-bold">Shoulder Pain Treatment Dubai</a>, or <a href="/services/back-pain-treatment-dubai/" className="text-[#D4A574] hover:underline font-bold">Back Pain Treatment Dubai</a>.
                 </p>
               </div>
 
@@ -672,7 +672,7 @@ export default function InsomniaTreatmentPage() {
             </div>
 
             <p className="text-xs text-[#5F5F5F] text-center italic">
-              Ayurvedic support at RamaCare is offered as a complementary approach within your overall wellness plan, alongside — not instead of — appropriate medical evaluation when needed. Learn more about our broader offering on our <a href="/services/ayurveda-dubai" className="text-[#D4A574] hover:underline font-bold">Ayurveda Dubai</a> page.
+              Ayurvedic support at RamaCare is offered as a complementary approach within your overall wellness plan, alongside — not instead of — appropriate medical evaluation when needed. Learn more about our broader offering on our <a href="/services/ayurveda-dubai/" className="text-[#D4A574] hover:underline font-bold">Ayurveda Dubai</a> page.
             </p>
           </div>
         </section>
@@ -876,10 +876,10 @@ export default function InsomniaTreatmentPage() {
               If poor sleep has been affecting your life, you do not have to manage it alone. Our DHA-licensed team is here to listen, assess, and build a personalized plan to help you move toward calmer, more restorative nights.
             </p>
             <div className="flex justify-center gap-4">
-              <a href="/book-appointment" className="px-6 py-3 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md">
+              <a href="/book-appointment/" className="px-6 py-3 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md">
                 Book Appointment
               </a>
-              <a href="/contact-us" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 rounded-xl text-xs sm:text-sm transition-all">
+              <a href="/contact-us/" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 rounded-xl text-xs sm:text-sm transition-all">
                 Contact Us
               </a>
             </div>

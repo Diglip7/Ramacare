@@ -43,7 +43,7 @@ export default function ComprehensivePhysicalExaminationsPage() {
             "@type": "ListItem",
             "position": 2,
             "name": "General Physician",
-            "item": "https://ramacarepolyclinic.ae/services/general-physician-dubai"
+            "item": "https://ramacarepolyclinic.ae/services/general-physician-dubai/"
           },
           {
             "@type": "ListItem",

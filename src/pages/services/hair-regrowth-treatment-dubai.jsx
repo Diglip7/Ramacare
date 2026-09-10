@@ -307,7 +307,7 @@ export default function HairRegrowthTreatmentDubai() {
                     WhatsApp Consult
                   </a>
                   <a
-                    href="/contact-us"
+                    href="/contact-us/"
                     className="flex-1 border border-[#12392D] hover:bg-[#12392D]/10 text-[#12392D] text-xs font-bold text-center py-3 rounded-lg transition-colors"
                   >
                     View Clinic Page
@@ -1598,7 +1598,7 @@ export default function HairRegrowthTreatmentDubai() {
                 <MessageCircle className="w-4 h-4" /> Book a Hair Regrowth Consultation in Dubai
               </a>
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="border border-white/20 hover:border-white/50 px-8 py-4 rounded-xl text-sm font-bold transition-all inline-flex items-center gap-2"
               >
                 <span>Contact Clinic</span>

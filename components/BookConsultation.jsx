@@ -336,7 +336,7 @@ const BookConsultation = ({ content }) => {
                       placeholder="Enter your name"
                       required
                       className={`w-full px-4 py-3 border rounded-lg text-sm focus:outline-none transition-all duration-200 bg-[#EFF6FF] text-[#1F2937] placeholder-[#6B7280] ${errors.fullName ? 'border-red-500 focus:border-red-500' : 'border-transparent focus:border-[#2D5F3F] focus:ring-2 focus:ring-[#2D5F3F]/20'}`}
-                      pattern="[A-Za-z\s'-]+"
+                      pattern="[-A-Za-z\s']+"
                     />
                     {errors.fullName && (
                       <p className="mt-1.5 text-red-600 text-xs">{errors.fullName}</p>

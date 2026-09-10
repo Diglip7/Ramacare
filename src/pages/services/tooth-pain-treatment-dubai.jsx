@@ -372,7 +372,7 @@ export default function ToothPainTreatmentPage() {
             '@type': 'ListItem',
             position: 2,
             name: 'Dental Services',
-            item: 'https://ramacarepolyclinic.ae/dental-services-dubai'
+            item: 'https://ramacarepolyclinic.ae/dental-services-dubai/'
           },
           {
             '@type': 'ListItem',
@@ -407,7 +407,7 @@ export default function ToothPainTreatmentPage() {
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#5F5F5F]">
                 <a href="/" className="hover:text-[#1F5E4B]">Home</a>
                 <span aria-hidden="true">/</span>
-                <a href="/services/dental-dubai" className="hover:text-[#1F5E4B]">Dental Services</a>
+                <a href="/services/dental-dubai/" className="hover:text-[#1F5E4B]">Dental Services</a>
                 <span aria-hidden="true">/</span>
                 <span aria-current="page" className="text-[#1F5E4B]">Tooth Pain Treatment Dubai</span>
              </nav>
@@ -450,7 +450,7 @@ export default function ToothPainTreatmentPage() {
                     Book Same-Day Appointment <ArrowRight className="h-4 w-4" />
                   </a>
                   <a
-                    href="tel:+971042862006"
+                    href="tel:+97142862006"
                     className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#1F5E4B]/25 px-7 py-4 text-sm font-bold uppercase tracking-wide text-[#1F5E4B] hover:bg-white"
                   >
                     <Phone className="h-4 w-4" /> Call Now

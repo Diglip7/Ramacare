@@ -174,7 +174,7 @@ const ThermalVsMechanicalUltrasound = () => {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
           { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
-          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
           { '@type': 'ListItem', position: 4, name: 'Thermal vs. Mechanical Ultrasound', item: 'https://ramacarepolyclinic.ae/services/thermal-vs-mechanical-ultrasound-therapy-dubai/' }
         ]
       },
@@ -236,7 +236,7 @@ const ThermalVsMechanicalUltrasound = () => {
               <span aria-hidden="true">/</span>
               <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
               <span aria-hidden="true">/</span>
-              <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+              <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
               <span aria-hidden="true">/</span>
               <span className="text-[#1F5E4B]">Thermal vs. Mechanical Ultrasound</span>
             </nav>

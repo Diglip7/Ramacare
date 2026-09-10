@@ -34,7 +34,7 @@ export default function HydrafacialBeforeAndAfterPage() {
   };
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   const toggleFaq = (index) => {

@@ -83,7 +83,7 @@ export default function CarboxyTherapyPage() {
                   "@type": "BreadcrumbList",
                   "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-                    { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai" },
+                    { "@type": "ListItem", "position": 2, "name": "Aesthetic Dermatology", "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/" },
                     { "@type": "ListItem", "position": 3, "name": "Carboxy Therapy", "item": "https://ramacarepolyclinic.ae/services/carboxy-therapy-dubai/" }
                   ]
                 },

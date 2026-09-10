@@ -504,7 +504,7 @@ export default function BlogListPage() {
                   {regularPosts.map((post, index) => (
                     <Link
                       key={post._id}
-                      href={`/blog/${post.paramlink}`}
+                      href={`/blog/${post.paramlink}/`}
                       className="group perspective-card animate-fade-in"
                       style={{animationDelay: `${index * 0.05}s`}}>
                       <div className="card-inner glass-effect rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 hover-lift border-gradient h-full flex flex-col">
@@ -606,7 +606,7 @@ export default function BlogListPage() {
                   {regularPosts.map((post, index) => (
                     <Link
                       key={post._id}
-                      href={`/blog/${post.paramlink}`}
+                      href={`/blog/${post.paramlink}/`}
                       className="group perspective-card block animate-fade-in"
                       style={{animationDelay: `${index * 0.05}s`}}
                     >

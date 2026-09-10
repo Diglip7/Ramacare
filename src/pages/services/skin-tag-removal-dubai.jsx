@@ -50,7 +50,7 @@ const medicalClinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "RamaCare Polyclinic",
-  "url": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai",
+  "url": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai/",
   "image": "https://ramacarepolyclinic.ae/images/ramacare-clinic-exterior.jpg",
   "telephone": "+971-56-659-7878",
   "priceRange": "$$",
@@ -85,7 +85,7 @@ const medicalWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Skin Tag Removal in Dubai",
-  "url": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai",
+  "url": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai/",
   "description": "Information on skin tag causes, clinical assessment, removal methods, recovery, and cost considerations at RamaCare Polyclinic, Dubai.",
   "medicalAudience": {
     "@type": "MedicalAudience",
@@ -182,13 +182,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 2,
       "name": "Services",
-      "item": "https://ramacarepolyclinic.ae/services"
+      "item": "https://ramacarepolyclinic.ae/services/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Skin Tag Removal in Dubai",
-      "item": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai"
+      "item": "https://ramacarepolyclinic.ae/services/skin-tag-removal-dubai/"
     }
   ]
 };
@@ -532,19 +532,19 @@ const internalLinksSkinTag = [
     prefix: "If you're unsure whether a growth is a skin tag or another type of lesion, consider starting with a ",
     linkText: "dermatology consultation in Dubai",
     suffix: " before choosing a removal procedure.",
-    url: "/services/acne-treatment-dubai",
+    url: "/services/acne-treatment-dubai/",
   },
   {
     prefix: "Learn more about our broader approach to ",
     linkText: "skin diseases treatment in Dubai",
     suffix: ".",
-    url: "/services/skin-diseases-treatment",
+    url: "/services/skin-diseases-treatment/",
   },
   {
     prefix: "If the growth in question is a mole rather than a skin tag, see our page on ",
     linkText: "mole removal in Dubai",
     suffix: ".",
-    url: "/services/mole-removal-dubai",
+    url: "/services/mole-removal-dubai/",
   },
   {
     prefix: "Warts can sometimes be mistaken for skin tags — read about ",
@@ -556,19 +556,19 @@ const internalLinksSkinTag = [
     prefix: "Interested in other non-surgical options? Explore ",
     linkText: "laser skin treatment in Dubai",
     suffix: ".",
-    url: "/services/laser-treatment-dubai",
+    url: "/services/laser-treatment-dubai/",
   },
   {
     prefix: "For broader cosmetic skin goals, see ",
     linkText: "skin rejuvenation in Dubai",
     suffix: ".",
-    url: "/services/laser-rejuvenation-dubai",
+    url: "/services/laser-rejuvenation-dubai/",
   },
   {
     prefix: "Curious about aesthetic dermatology more generally? Visit our ",
     linkText: "aesthetic dermatology Dubai",
     suffix: " page.",
-    url: "/services/aesthetic-dermatology-dubai",
+    url: "/services/aesthetic-dermatology-dubai/",
   },
   {
     prefix: "Return to the ",

@@ -89,7 +89,7 @@ export default function AyurvedaCategoryPage() {
       "@type": "Physician",
       "name": "Dr. Syamkumar",
       "medicalSpecialty": "Ayurveda",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-syamkumar-ayurvedic-doctor-dubai/",
+      "url": "https://ramacarepolyclinic.ae/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic"

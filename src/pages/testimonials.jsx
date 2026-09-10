@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import Script from "next/script";
 import Head from "next/head";
 import PatientTestimonials from "../../components/PatientTestimonials";
 import SEOContentSection from "../../components/SEOContentSection";
@@ -130,18 +129,6 @@ export default function TestimonialsPage() {
         <meta name="keywords" content="patient testimonials Dubai, medical clinic reviews, RamaCare patient stories, verified testimonials, healthcare success stories" />
         
       </Head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-G2WWSZYF7W"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-G2WWSZYF7W');
-        `}
-      </Script>
       
       <main>
         <PatientTestimonials content={testimonialsContent} />

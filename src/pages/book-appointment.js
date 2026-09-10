@@ -158,7 +158,7 @@ const AppointmentPage = () => {
               <h3 className="text-2xl font-bold mb-2">Call Us Directly</h3>
               <p className="text-gray-100 mb-6">Speak with our friendly staff for immediate assistance</p>
               <a
-                href="tel:+971042862006"
+                href="tel:+97142862006"
                 className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors">
                 +971 04 286 2006
               </a>

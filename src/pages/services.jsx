@@ -452,7 +452,7 @@ const ServicesPage = ({ initialServicesData }) => {
                             service.subcategories.map(sub => (
                               <a
                                 key={sub.slug}
-                                href={`/services/${sub.slug}`}
+                                href={`/services/${sub.slug}/`}
                                 className="group flex items-center justify-between p-3.5 bg-gray-50 hover:bg-[#1a5f3f]/5 border border-gray-100 hover:border-[#1a5f3f]/20 rounded-xl transition-all duration-200"
                               >
                                 <span className="text-xs sm:text-sm font-semibold text-gray-800 group-hover:text-[#1a5f3f] transition-colors leading-snug break-words pr-2">

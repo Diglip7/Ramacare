@@ -15,7 +15,7 @@ const content = {
     mainDescription: 'When the desert sun peaks and temperatures in Dubai soar above 45°C, your body undergoes an internal "heat wave." In Ayurveda, this season is dominated by Pitta, the energy of fire and water. If left unmanaged, the intense UAE summer can lead to burnout, skin inflammation, and digestive acidity.',
     highlightBox: 'An Ayurvedic Diet for the Dubai Summer is your internal air conditioning. It isn\'t just about drinking cold water—it\'s about choosing foods that chemically cool your blood and calm your nervous system.',
     ctaButtons: {
-      primary: { text: 'Book Summer Cooling Consultation', link: '/book-appointment' },
+      primary: { text: 'Book Summer Cooling Consultation', link: '/book-appointment/' },
       secondary: { text: 'WhatsApp Now', phone: '971566597878' }
     },
     imageCard: {
@@ -221,7 +221,7 @@ export default function AyurvedicDietDubaiSummerPage() {
   };
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   return (
@@ -567,7 +567,7 @@ export default function AyurvedicDietDubaiSummerPage() {
               ))}
             </div>
 
-            <Link href="/book-appointment">
+            <Link href="/book-appointment/">
               <button className="rounded-lg bg-white px-10 py-4 text-lg font-bold text-[#1F5E4B] transition-all hover:bg-gray-100">
                 {content.beatHeat.cta}
               </button>
@@ -592,7 +592,7 @@ export default function AyurvedicDietDubaiSummerPage() {
               {content.authorityFooter.description}
             </p>
 
-            <Link href="/book-appointment">
+            <Link href="/book-appointment/">
               <button className="mb-12 rounded-lg bg-[#1F5E4B] px-12 py-4 text-base font-bold text-white transition-all hover:bg-[#16493a]">
                 {content.authorityFooter.cta}
               </button>
@@ -629,7 +629,7 @@ export default function AyurvedicDietDubaiSummerPage() {
             <p className="text-[#1A1A1A] font-bold text-sm mb-0.5">Ready to beat the Dubai summer heat?</p>
             <p className="text-[#5F5F5F] text-sm">Book your personalized Ayurvedic consultation today</p>
           </div>
-          <Link href="/book-appointment">
+          <Link href="/book-appointment/">
             <button className="whitespace-nowrap rounded-lg bg-[#1F5E4B] px-8 py-3 text-base font-bold text-white transition-all hover:bg-[#16493a]">
               Book Now
             </button>

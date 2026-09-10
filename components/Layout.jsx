@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [portalTarget, setPortalTarget] = useState(null);
-  const isServicesRoute = router.pathname.startsWith('/services');
+  const isServicesRoute = router.pathname.startsWith('/services/');
   const cleanPath = router.pathname.replace(/\/$/, '') || '/';
   const isBlogRoute = router.pathname.startsWith('/blog/') && router.pathname !== '/blog';
   const fontStyle = { fontFamily: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" };

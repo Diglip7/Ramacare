@@ -111,7 +111,7 @@ export default function AcneTreatmentPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": `${SITE_URL}/services`
+        "item": `${SITE_URL}/services/`
       },
       {
         "@type": "ListItem",
@@ -168,7 +168,7 @@ export default function AcneTreatmentPage() {
           <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-white/80 gap-1.5">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
             <span>/</span>
             <span className="text-white font-semibold">Acne Treatment in Dubai</span>
           </nav>

@@ -9973,7 +9973,7 @@ export const subSubcategoryContent = {
             'Repeated facial expressions and muscle activity may gradually contribute to deeper wrinkle formation over time.',
           hasLearnMore: true,
           expandedContent:
-            'Regular Botox treatments may help minimize repetitive muscle movement and support smoother skin appearance for longer periods. Individuals interested in preventive anti-aging care may also explore our <a href="/services/hydrafacial-treatment-dubai/">HydraFacial Treatment Dubai</a> services for additional skin rejuvenation support.'
+            'Regular Botox treatments may help minimize repetitive muscle movement and support smoother skin appearance for longer periods. Individuals interested in preventive anti-aging care may also explore our <a href="/services/hydrafacial-dubai/">HydraFacial Treatment Dubai</a> services for additional skin rejuvenation support.'
         },
         {
           id: 3,
@@ -10000,7 +10000,7 @@ export const subSubcategoryContent = {
             'Our Botox treatments are carefully planned to help soften wrinkles while preserving natural facial movement and expression.',
           hasLearnMore: true,
           expandedContent:
-            'The goal is to create a refreshed and youthful appearance without an overdone look. Patients seeking volume restoration and facial contour enhancement may also explore our <a href="/services/dermal-fillers-dubai/">Dermal Fillers Dubai</a> treatments.'
+            'The goal is to create a refreshed and youthful appearance without an overdone look. Patients seeking volume restoration and facial contour enhancement may also explore our <a href="/services/fillers-in-dubai/">Dermal Fillers Dubai</a> treatments.'
         },
         {
           id: 6,
@@ -11666,7 +11666,7 @@ export const subSubcategoryContent = {
         {
           id: 3,
           question: 'Is PRP treatment effective for dark circles?',
-          answer: 'Yes, <a href="/prp-facial-treatment-dubai/">PRP Facial Treatment in Dubai</a> is highly effective for improving collagen production, skin elasticity, and under-eye brightness naturally. PRP helps rejuvenate thin and tired-looking under-eye skin.'
+          answer: 'Yes, <a href="/services/face-prp-in-dubai/">PRP Facial Treatment in Dubai</a> is highly effective for improving collagen production, skin elasticity, and under-eye brightness naturally. PRP helps rejuvenate thin and tired-looking under-eye skin.'
         },
         {
           id: 4,
@@ -11676,7 +11676,7 @@ export const subSubcategoryContent = {
         {
           id: 5,
           question: 'Which treatment is best for under-eye pigmentation?',
-          answer: 'Laser therapy, chemical peels, and <a href="/pigmentation-treatment-dubai/">Pigmentation Treatment in Dubai</a> are commonly recommended for reducing under-eye pigmentation and improving uneven skin tone.'
+          answer: 'Laser therapy, chemical peels, and <a href="/services/pigmentation-dubai/">Pigmentation Treatment in Dubai</a> are commonly recommended for reducing under-eye pigmentation and improving uneven skin tone.'
         },
         {
           id: 6,
@@ -11701,7 +11701,7 @@ export const subSubcategoryContent = {
         {
           id: 10,
           question: 'Which treatments can be combined with dark circles treatment?',
-          answer: 'Patients often combine dark circles treatment with <a href="/skin-brightening-treatment-dubai/">Skin Brightening Treatment in Dubai</a>, <a href="/hydrafacial-treatment-dubai/">HydraFacial Treatment in Dubai</a>, and <a href="/anti-aging-treatment-dubai/">Anti-Aging Treatment in Dubai</a> for complete facial rejuvenation and healthier-looking skin.'
+          answer: 'Patients often combine dark circles treatment with <a href="/services/skin-boosters-dubai/">Skin Brightening Treatment in Dubai</a>, <a href="/services/hydrafacial-dubai/">HydraFacial Treatment in Dubai</a>, and <a href="/services/aesthetic-dermatology-dubai/">Anti-Aging Treatment in Dubai</a> for complete facial rejuvenation and healthier-looking skin.'
         },
         {
           id: 11,

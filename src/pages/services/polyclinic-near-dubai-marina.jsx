@@ -188,7 +188,7 @@ function buildSchemas() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
       { '@type': 'ListItem', position: 3, name: 'Polyclinic Near Dubai Marina', item: SITE_URL + PAGE_PATH }
     ]
   };
@@ -836,7 +836,7 @@ export default function PolyclinicNearDubaiMarinaPage() {
                 </div>
                 <span className="text-sm font-bold text-[#1A1A1A]">Call Clinic</span>
               </button>
-              <Link href="/contact-us" className="flex flex-col items-center gap-3 rounded-2xl bg-[#F9F7F2] border border-gray-200/60 px-4 py-6 shadow-sm hover:border-[#1F5E4B] hover:shadow-md transition-all duration-200">
+              <Link href="/contact-us/" className="flex flex-col items-center gap-3 rounded-2xl bg-[#F9F7F2] border border-gray-200/60 px-4 py-6 shadow-sm hover:border-[#1F5E4B] hover:shadow-md transition-all duration-200">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4A574]/10 text-[#D4A574]">
                   <LucideIcons.MapPin className="w-5 h-5" />
                 </div>

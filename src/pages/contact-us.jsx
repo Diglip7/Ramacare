@@ -544,7 +544,7 @@ const ContactUsPage = () => {
                   </p>
                   <div className="space-y-4">
                     <a
-                      href="tel:+971042862006"
+                      href="tel:+97142862006"
                       className="block w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 rounded-xl py-3 px-4 text-center font-medium transition-all"
                     >
                       <div className="flex items-center justify-center gap-2">

@@ -36,7 +36,7 @@ export default function PhysiotherapyInsuranceDubai() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('/api/appointment', {
         method: 'POST',
@@ -154,7 +154,7 @@ export default function PhysiotherapyInsuranceDubai() {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
           { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
-          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
           { '@type': 'ListItem', position: 4, name: 'Physiotherapy Insurance', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/' }
         ]
       },
@@ -214,7 +214,7 @@ export default function PhysiotherapyInsuranceDubai() {
             <span aria-hidden="true">/</span>
             <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
             <span aria-hidden="true">/</span>
-            <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
             <span aria-hidden="true">/</span>
             <span className="text-[#1F5E4B]">Physiotherapy Insurance</span>
           </nav>
@@ -224,9 +224,9 @@ export default function PhysiotherapyInsuranceDubai() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }} >
-              <div 
+              <div
                 className="inline-block px-4 py-2 rounded-full bg-[#F5F1EA] mb-6" >
-                <p 
+                <p
                   className="text-sm text-[#5F5F5F]"
                   style={{ fontFamily: "'Nunito Sans', sans-serif" }}
                 >
@@ -234,20 +234,20 @@ export default function PhysiotherapyInsuranceDubai() {
                 </p>
               </div>
 
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-6 leading-tight"
                 style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
                 Is Ultrasound Therapy Covered by Insurance in Dubai?
               </h1>
 
-              <p 
+              <p
                 className="text-lg text-[#5F5F5F] mb-8 leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif" }}
               >
                 Does your UAE health insurance cover <a href="/services/ultrasound-therapy-dubai/" style={{ color: '#1F5E4B', textDecoration: 'underline' }}>ultrasound therapy </a>? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims.
               </p>
 
-              <p 
+              <p
                 className="text-base text-[#1A1A1A] mb-8 leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif" }}
               >
@@ -262,7 +262,7 @@ export default function PhysiotherapyInsuranceDubai() {
                 className="rounded-3xl p-8 mb-8 shadow-sm"
                 style={{ backgroundColor: 'rgb(245, 241, 234)' }}
               >
-                <h3 
+                <h3
                   className="text-xl font-medium text-[#1F5E4B] mb-4"
                   style={{ fontFamily: "'Nunito Sans', sans-serif" }}
                 >
@@ -317,18 +317,18 @@ export default function PhysiotherapyInsuranceDubai() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div 
+              <div
                 className="rounded-3xl p-1 shadow-2xl"
                 style={{ background: 'linear-gradient(to bottom right, rgb(255, 251, 234), rgb(233, 226, 214))' }}
               >
                 <div className="rounded-3xl p-8 shadow-lg" style={{ backgroundColor: 'rgb(245, 241, 234)' }}>
-                  <h2 
+                  <h2
                     className="text-center mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '22px', fontWeight: '600', color: '#1F5E4B' }}
                   >
                     Trusted Insurance Partners
                   </h2>
-                  <p 
+                  <p
                     className="text-center mb-8"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '13px', fontWeight: '400', color: '#6B7280' }}
                   >
@@ -354,26 +354,26 @@ export default function PhysiotherapyInsuranceDubai() {
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-8">
                     <div className="text-center">
-                      <p 
+                      <p
                         className="mb-1"
                         style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '32px', fontWeight: '700', color: '#1F5E4B' }}
                       >
                         5+
                       </p>
-                      <p 
+                      <p
                         style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#6B7280' }}
                       >
                         Insurance Providers
                       </p>
                     </div>
                     <div className="text-center border-l" style={{ borderColor: '#E0D8CC' }}>
-                      <p 
+                      <p
                         className="mb-1"
                         style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '32px', fontWeight: '700', color: '#1F5E4B' }}
                       >
                         24h
                       </p>
-                      <p 
+                      <p
                         style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#6B7280' }}
                       >
                         Approval Time
@@ -396,13 +396,13 @@ export default function PhysiotherapyInsuranceDubai() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 
+            <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: '700' }}
             >
               Direct Billing vs. Reimbursement: Which is Better?
             </h2>
-            <p 
+            <p
               className="text-lg text-[#5F5F5F] max-w-2xl mx-auto"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '18px' }}
             >
@@ -421,21 +421,21 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mb-6">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="32" height="32" rx="16" fill="#1F5E4B"/>
-                  <rect x="8" y="12" width="16" height="8" rx="2" fill="white"/>
-                  <line x1="10" y1="15" x2="22" y2="15" stroke="#1F5E4B" strokeWidth="1.5"/>
-                  <line x1="10" y1="18" x2="22" y2="18" stroke="#1F5E4B" strokeWidth="1.5"/>
+                  <rect width="32" height="32" rx="16" fill="#1F5E4B" />
+                  <rect x="8" y="12" width="16" height="8" rx="2" fill="white" />
+                  <line x1="10" y1="15" x2="22" y2="15" stroke="#1F5E4B" strokeWidth="1.5" />
+                  <line x1="10" y1="18" x2="22" y2="18" stroke="#1F5E4B" strokeWidth="1.5" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-2xl font-bold text-[#1F5E4B] mb-4"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: '700' }}
               >
                 1. Direct Billing (Cashless)
               </h3>
 
-              <p 
+              <p
                 className="text-base text-[#1A1A1A] mb-6 leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
               >
@@ -446,18 +446,18 @@ export default function PhysiotherapyInsuranceDubai() {
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-0.5">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5"/>
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
+                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div>
-                    <p 
+                    <p
                       className="font-medium text-[#1A1A1A] mb-1"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
                       Best for:
                     </p>
-                    <p 
+                    <p
                       className="text-[#5F5F5F]"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
@@ -469,18 +469,18 @@ export default function PhysiotherapyInsuranceDubai() {
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-0.5">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5"/>
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
+                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div>
-                    <p 
+                    <p
                       className="font-medium text-[#1A1A1A] mb-1"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
                       What you need:
                     </p>
-                    <p 
+                    <p
                       className="text-[#5F5F5F]"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
@@ -492,7 +492,7 @@ export default function PhysiotherapyInsuranceDubai() {
 
               {/* Bottom highlight bar */}
               <div className="bg-[#F5F1EA] rounded-2xl p-4 border-l-4 border-[#1F5E4B]">
-                <p 
+                <p
                   className="text-sm font-medium text-[#1A1A1A]"
                   style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}
                 >
@@ -512,22 +512,22 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mb-6">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="32" height="32" rx="16" fill="#1F5E4B"/>
-                  <rect x="9" y="10" width="14" height="12" rx="2" fill="white"/>
-                  <line x1="12" y1="13" x2="20" y2="13" stroke="#1F5E4B" strokeWidth="1.5"/>
-                  <line x1="12" y1="16" x2="20" y2="16" stroke="#1F5E4B" strokeWidth="1.5"/>
-                  <line x1="12" y1="19" x2="18" y2="19" stroke="#1F5E4B" strokeWidth="1.5"/>
+                  <rect width="32" height="32" rx="16" fill="#1F5E4B" />
+                  <rect x="9" y="10" width="14" height="12" rx="2" fill="white" />
+                  <line x1="12" y1="13" x2="20" y2="13" stroke="#1F5E4B" strokeWidth="1.5" />
+                  <line x1="12" y1="16" x2="20" y2="16" stroke="#1F5E4B" strokeWidth="1.5" />
+                  <line x1="12" y1="19" x2="18" y2="19" stroke="#1F5E4B" strokeWidth="1.5" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-2xl font-bold text-[#1F5E4B] mb-4"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: '700' }}
               >
                 2. Reimbursement (Pay and Claim)
               </h3>
 
-              <p 
+              <p
                 className="text-base text-[#1A1A1A] mb-6 leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
               >
@@ -538,17 +538,17 @@ export default function PhysiotherapyInsuranceDubai() {
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-0.5">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5"/>
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
+                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div>
-                    <p 
+                    <p
                       className="font-medium text-[#1A1A1A] mb-1"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>
                       Best for:
                     </p>
-                    <p 
+                    <p
                       className="text-[#5F5F5F]"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }} >
                       International plans or restricted local networks.
@@ -559,18 +559,18 @@ export default function PhysiotherapyInsuranceDubai() {
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-0.5">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5"/>
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
+                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div>
-                    <p 
+                    <p
                       className="font-medium text-[#1A1A1A] mb-1"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
                       Turnaround:
                     </p>
-                    <p 
+                    <p
                       className="text-[#5F5F5F]"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
                     >
@@ -582,7 +582,7 @@ export default function PhysiotherapyInsuranceDubai() {
 
               {/* Bottom highlight bar */}
               <div className="bg-[#F5F1EA] rounded-2xl p-4 border-l-4 border-[#1F5E4B]">
-                <p 
+                <p
                   className="text-sm font-medium text-[#1A1A1A]"
                   style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}
                 >
@@ -603,13 +603,13 @@ export default function PhysiotherapyInsuranceDubai() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 
+            <h2
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
             >
               Step-by-Step: How to Claim Ultrasound Therapy in 2026
             </h2>
-            <p 
+            <p
               className="text-lg text-[#5F5F5F] max-w-3xl mx-auto"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
             >
@@ -638,19 +638,19 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="flex justify-center mb-4">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="6" width="16" height="20" rx="3" stroke="#1F5E4B" strokeWidth="2" fill="none"/>
-                  <path d="M12 12L16 16L20 12" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <rect x="8" y="6" width="16" height="20" rx="3" stroke="#1F5E4B" strokeWidth="2" fill="none" />
+                  <path d="M12 12L16 16L20 12" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
               >
                 Get a Referral
               </h3>
 
-              <p 
+              <p
                 className="text-sm text-[#5F5F5F] text-center leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
               >
@@ -675,21 +675,21 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="flex justify-center mb-4">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="8" width="20" height="16" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none"/>
-                  <line x1="10" y1="13" x2="22" y2="13" stroke="#1F5E4B" strokeWidth="2"/>
-                  <line x1="10" y1="17" x2="22" y2="17" stroke="#1F5E4B" strokeWidth="2"/>
-                  <line x1="10" y1="21" x2="18" y2="21" stroke="#1F5E4B" strokeWidth="2"/>
+                  <rect x="6" y="8" width="20" height="16" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none" />
+                  <line x1="10" y1="13" x2="22" y2="13" stroke="#1F5E4B" strokeWidth="2" />
+                  <line x1="10" y1="17" x2="22" y2="17" stroke="#1F5E4B" strokeWidth="2" />
+                  <line x1="10" y1="21" x2="18" y2="21" stroke="#1F5E4B" strokeWidth="2" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
               >
                 Collect the "Big Three" Documents
               </h3>
 
-              <p 
+              <p
                 className="text-sm text-[#5F5F5F] text-center leading-relaxed mb-4"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
               >
@@ -735,19 +735,19 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="flex justify-center mb-4">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="10" y="6" width="12" height="20" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none"/>
-                  <circle cx="16" cy="22" r="2" fill="#1F5E4B"/>
+                  <rect x="10" y="6" width="12" height="20" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none" />
+                  <circle cx="16" cy="22" r="2" fill="#1F5E4B" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
               >
                 Submit via Mobile App
               </h3>
 
-              <p 
+              <p
                 className="text-sm text-[#5F5F5F] text-center leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
               >
@@ -772,19 +772,19 @@ export default function PhysiotherapyInsuranceDubai() {
               {/* Icon */}
               <div className="flex justify-center mb-4">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10H24L22 24H10L8 10Z" stroke="#1F5E4B" strokeWidth="2" strokeLinejoin="round" fill="none"/>
-                  <path d="M12 10V8C12 6.89543 12.8954 6 14 6H18C19.1046 6 20 6.89543 20 8V10" stroke="#1F5E4B" strokeWidth="2"/>
+                  <path d="M8 10H24L22 24H10L8 10Z" stroke="#1F5E4B" strokeWidth="2" strokeLinejoin="round" fill="none" />
+                  <path d="M12 10V8C12 6.89543 12.8954 6 14 6H18C19.1046 6 20 6.89543 20 8V10" stroke="#1F5E4B" strokeWidth="2" />
                 </svg>
               </div>
 
-              <h3 
+              <h3
                 className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
               >
                 Keep Your Receipts
               </h3>
 
-              <p 
+              <p
                 className="text-sm text-[#5F5F5F] text-center leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
               >
@@ -801,15 +801,15 @@ export default function PhysiotherapyInsuranceDubai() {
             transition={{ delay: 0.4 }}
             className="mt-16 bg-white rounded-3xl p-8 shadow-lg max-w-4xl mx-auto"
           >
-            <p 
+            <p
               className="text-center mb-6"
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: '600', color: '#1A1A1A' }}
             >
               <strong>Pro Tip:</strong> Taking these 4 steps seriously can improve your claim approval rate by over 90%.
             </p>
-            
+
             <div className="text-center">
-              <button 
+              <button
                 onClick={() => window.open('https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20would%20like%20to%20request%20the%20Physiotherapy%20Insurance%20Claim%20Checklist.', '_blank')}
                 className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '600', transform: 'none' }}
@@ -833,7 +833,7 @@ export default function PhysiotherapyInsuranceDubai() {
             style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
           >
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4L8 9V20C8 27.18 13.2 33.9 20 36C26.8 33.9 32 27.18 32 20V9L20 4Z" stroke="#1F5E4B" strokeWidth="2" fill="none"/>
+              <path d="M20 4L8 9V20C8 27.18 13.2 33.9 20 36C26.8 33.9 32 27.18 32 20V9L20 4Z" stroke="#1F5E4B" strokeWidth="2" fill="none" />
             </svg>
             Common Insurance Providers We Support
           </h2>
@@ -864,7 +864,7 @@ export default function PhysiotherapyInsuranceDubai() {
             >
               <div className="w-12 h-12 rounded-xl bg-[#F5F1EA] flex items-center justify-center mb-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z" stroke="#1F5E4B" strokeWidth="1.5" fill="none"/>
+                  <path d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z" stroke="#1F5E4B" strokeWidth="1.5" fill="none" />
                 </svg>
               </div>
               <h3 className="text-base font-medium text-[#1A1A1A] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>{provider.name}</h3>
@@ -897,9 +897,9 @@ export default function PhysiotherapyInsuranceDubai() {
               style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
             >
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="16" stroke="#1F5E4B" strokeWidth="2" fill="none"/>
-                <path d="M16 16C16 13.8 17.8 12 20 12C22.2 12 24 13.8 24 16C24 18.5 20 19 20 22" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round"/>
-                <circle cx="20" cy="27" r="1.5" fill="#1F5E4B"/>
+                <circle cx="20" cy="20" r="16" stroke="#1F5E4B" strokeWidth="2" fill="none" />
+                <path d="M16 16C16 13.8 17.8 12 20 12C22.2 12 24 13.8 24 16C24 18.5 20 19 20 22" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" />
+                <circle cx="20" cy="27" r="1.5" fill="#1F5E4B" />
               </svg>
               Frequently Asked Questions
             </h2>
@@ -941,7 +941,7 @@ export default function PhysiotherapyInsuranceDubai() {
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     className={`flex-shrink-0 ml-4 transition-transform duration-300 ${openFaq === i + 10 ? 'rotate-180' : ''}`}>
-                    <path d="M5 8L10 13L15 8" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 8L10 13L15 8" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
                 {openFaq === i + 10 && (
@@ -977,7 +977,7 @@ export default function PhysiotherapyInsuranceDubai() {
         <div className="max-w-[1440px] mx-auto">
           <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
           <div className="flex flex-wrap gap-2.5">
-            <Link href="/services/physiotherapy-dubai" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+            <Link href="/services/physiotherapy-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
               Physiotherapy Dubai
             </Link>
             <Link href="/services/ultrasound-therapy-cost-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
@@ -1007,14 +1007,14 @@ export default function PhysiotherapyInsuranceDubai() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: '700' }}
               >
                 Verify Your Coverage Today
               </h2>
-              
-              <p 
+
+              <p
                 className="text-base md:text-lg text-white/90 mb-8 leading-relaxed"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
               >
@@ -1065,7 +1065,7 @@ export default function PhysiotherapyInsuranceDubai() {
 
             {/* Right Content - Form Card */}
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <h3 
+              <h3
                 className="text-2xl font-medium text-[#1A1A1A] mb-6"
                 style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '24px', fontWeight: '500' }}
               >
@@ -1075,8 +1075,8 @@ export default function PhysiotherapyInsuranceDubai() {
               <form onSubmit={handleFormSubmit} className="space-y-5">
                 {/* Full Name */}
                 <div>
-                  <label 
-                    htmlFor="fullName" 
+                  <label
+                    htmlFor="fullName"
                     className="block text-sm font-medium text-[#1A1A1A] mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }} >
                     Full Name
@@ -1095,8 +1095,8 @@ export default function PhysiotherapyInsuranceDubai() {
 
                 {/* Phone Number */}
                 <div>
-                  <label 
-                    htmlFor="phone" 
+                  <label
+                    htmlFor="phone"
                     className="block text-sm font-medium text-[#1A1A1A] mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
                   >
@@ -1116,8 +1116,8 @@ export default function PhysiotherapyInsuranceDubai() {
 
                 {/* Email Address */}
                 <div>
-                  <label 
-                    htmlFor="email" 
+                  <label
+                    htmlFor="email"
                     className="block text-sm font-medium text-[#1A1A1A] mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
                   >
@@ -1137,8 +1137,8 @@ export default function PhysiotherapyInsuranceDubai() {
 
                 {/* Insurance Provider */}
                 <div>
-                  <label 
-                    htmlFor="insuranceProvider" 
+                  <label
+                    htmlFor="insuranceProvider"
                     className="block text-sm font-medium text-[#1A1A1A] mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
                   >
@@ -1165,8 +1165,8 @@ export default function PhysiotherapyInsuranceDubai() {
 
                 {/* Preferred Time */}
                 <div>
-                  <label 
-                    htmlFor="preferredTime" 
+                  <label
+                    htmlFor="preferredTime"
                     className="block text-sm font-medium text-[#1A1A1A] mb-2"
                     style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
                   >
@@ -1208,7 +1208,7 @@ export default function PhysiotherapyInsuranceDubai() {
                 </button>
 
                 {/* Helper Text */}
-                <p 
+                <p
                   className="text-xs text-center text-[#5F5F5F] mt-4"
                   style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '12px' }}
                 >

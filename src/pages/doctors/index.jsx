@@ -190,7 +190,7 @@ const AllDoctorsPage = ({ content }) => {
                         {/* Name & Specialization */}
                         <div className="mb-4">
                           <h3 className="text-xl font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] transition-colors leading-tight">
-                            <Link href={`/doctors/${slug}`}>
+                            <Link href={`/doctors/${slug}/`}>
                               {doctor.name}
                             </Link>
                           </h3>
@@ -218,7 +218,7 @@ const AllDoctorsPage = ({ content }) => {
 
                       {/* Single Elegant CTA */}
                       <Link
-                        href={`/doctors/${slug}`}
+                        href={`/doctors/${slug}/`}
                         className="w-full text-center bg-[#FAF9F5] border border-[#E9E2D6] hover:bg-[#1F5E4B] hover:text-white hover:border-[#1F5E4B] text-[#1A1A1A] py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
                       >
                         View Full Profile

@@ -151,14 +151,14 @@ const faqs = [
 ];
 
 const links = {
-  acne: '/services/acne-treatment-dubai',
-  pigmentation: '/services/pigmentation-dubai',
-  aestheticDermatology: '/services/aesthetic-dermatology-dubai',
-  acneScar: '/services/acne-scar-treatment-dubai',
-  melasma: '/services/melasma-treatment-dubai',
-  rosacea: '/services/rosacea-treatment-dubai',
-  hairPrp: '/services/hair-prp-dubai',
-  bookAppointment: '/book-appointment',
+  acne: '/services/acne-treatment-dubai/',
+  pigmentation: '/services/pigmentation-dubai/',
+  aestheticDermatology: '/services/aesthetic-dermatology-dubai/',
+  acneScar: '/services/acne-scar-treatment-dubai/',
+  melasma: '/services/melasma-treatment-dubai/',
+  rosacea: '/services/rosacea-treatment-dubai/',
+  hairPrp: '/services/hair-prp-dubai/',
+  bookAppointment: '/book-appointment/',
 };
 
 /* ------------------------------------------------------------------

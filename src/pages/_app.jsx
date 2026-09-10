@@ -1,47 +1,23 @@
 import "../styles/globals.css";
-import Head from "next/head";
 import Script from "next/script";
-import { useRouter } from "next/router";
 import { ModalProvider } from "../../components/ModalContext";
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-VRn7pg1rAC";
-  const isServicesRoute = router.pathname.startsWith("/services");
-  const isLandingPageRoute = router.pathname === "/best-fillers-in-dubai";
-  
-  const excludedCategoryRoutes = new Set([
-    "/services/ayurveda-dubai/",
-    "/services/dental-dubai/",
-    "/services/physiotherapy-dubai/",
-    "/services/general-physician-dubai/",
-    "/services/aesthetic-dermatology-dubai/",
-    "/services/facial-dubai/",
-  ]);
-  
-  const isSubcategoryRoute = isServicesRoute && !excludedCategoryRoutes.has(router.pathname);
   
   return (
     <ModalProvider>
-      <Head>
-        {isLandingPageRoute && (
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        )}
-        {isSubcategoryRoute && (
-          <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
-        )}
-      </Head>
 
       {/* Google Tag Manager */}
       <Script
         id="google-tag-manager"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PM7WDXBW');`,
+                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PM7WDXBW');`,
         }}
       />
 
@@ -65,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
       />
-
+      
       <Component {...pageProps} />
     </ModalProvider>
   );

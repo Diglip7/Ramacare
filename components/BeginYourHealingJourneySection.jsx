@@ -196,8 +196,8 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
       {toast.show && (
         <div className="fixed top-6 right-6 z-[10000]" style={{ animation: 'toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }}>
           <div className={`flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border backdrop-blur-sm transition-all ${toast.type === 'success'
-              ? 'bg-emerald-600/95 border-emerald-500 text-white'
-              : 'bg-red-600/95 border-red-500 text-white'
+            ? 'bg-emerald-600/95 border-emerald-500 text-white'
+            : 'bg-red-600/95 border-red-500 text-white'
             }`}>
             {toast.type === 'success' ? (
               <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
@@ -635,7 +635,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       placeholder="Enter your full name"
                       required
                       className={`w-full pl-12 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-gray-50 text-gray-900 placeholder-gray-400 ${errors.fullName ? 'border-red-500 focus:ring-red-500' : 'focus:ring-emerald-500'}`}
-                      pattern="[A-Za-z\s'-]+"
+                      pattern="[-A-Za-z\s']+"
                       style={{
                         height: '50px',
                         borderColor: '#E5E7EB',

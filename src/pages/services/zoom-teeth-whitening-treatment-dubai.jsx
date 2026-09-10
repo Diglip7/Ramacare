@@ -11,7 +11,7 @@ const meta = {
   title: "Zoom Teeth Whitening Treatment in Dubai | RamaCare",
   description:
     "Considering Zoom Teeth Whitening Treatment in Dubai? See realistic results, safety info, and cost factors at RamaCare. Book a consultation today.",
-  url: "/services/zoom-teeth-whitening-treatment-dubai",
+  url: "/services/zoom-teeth-whitening-treatment-dubai/",
 };
 
 const hero = {
@@ -546,7 +546,7 @@ function Hero() {
               </li>
               <li>/</li>
               <li>
-                <Link href="/services/dental-dubai" className="transition-colors hover:text-[#1F5E4B]">
+                <Link href="/services/dental-dubai/" className="transition-colors hover:text-[#1F5E4B]">
                   Dental Services
                 </Link>
               </li>
@@ -1774,14 +1774,14 @@ function FAQs() {
 }
 
 const internalLinks = [
-  { text: "Dental Clinic Dubai", href: "/services/dental-dubai", desc: "If your teeth or gums need attention before whitening" },
-  { text: "Dentist Dubai", href: "/services/dental-dubai", desc: "Meet the wider team" },
-  { text: "Dental Tooth Filling Dubai", href: "/services/dental-tooth-filling-dubai", desc: "If your assessment uncovers a cavity" },
+  { text: "Dental Clinic Dubai", href: "/services/dental-dubai/", desc: "If your teeth or gums need attention before whitening" },
+  { text: "Dentist Dubai", href: "/services/dental-dubai/", desc: "Meet the wider team" },
+  { text: "Dental Tooth Filling Dubai", href: "/services/dental-tooth-filling-dubai/", desc: "If your assessment uncovers a cavity" },
   { text: "Dental Cleaning Dubai", href: "/services/teeth-scaling-polishing-dubai/", desc: "Maintaining results starts with good hygiene" },
-  { text: "Dental Veneers Dubai", href: "/services/dental-veneers-dubai", desc: "If whitening alone won't meet your goals" },
-  { text: "Dental Crowns Dubai", href: "/services/dental-crown-bridges-dubai", desc: "For mismatched or damaged restorations" },
-  { text: "Root Canal Treatment Dubai", href: "/services/root-canal-treatment-dubai", desc: "If discoloration is linked to a root-treated tooth" },
-  { text: "Hollywood Smile Dubai", href: "/services/hollywood-smile-treatment-dubai", desc: "For a broader cosmetic change than whitening alone" },
+  { text: "Dental Veneers Dubai", href: "/services/dental-veneers-dubai/", desc: "If whitening alone won't meet your goals" },
+  { text: "Dental Crowns Dubai", href: "/services/dental-crown-bridges-dubai/", desc: "For mismatched or damaged restorations" },
+  { text: "Root Canal Treatment Dubai", href: "/services/root-canal-treatment-dubai/", desc: "If discoloration is linked to a root-treated tooth" },
+  { text: "Hollywood Smile Dubai", href: "/services/hollywood-smile-treatment-dubai/", desc: "For a broader cosmetic change than whitening alone" },
 ];
 
 function InternalLinks() {
@@ -1893,7 +1893,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": meta.title,
-    "url": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai",
+    "url": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai/",
     "description": meta.description,
     "medicalAudience": {
       "@type": "Patient"
@@ -1925,8 +1925,8 @@ export default function ZoomTeethWhiteningBeforeAfter() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
-      { "@type": "ListItem", "position": 3, "name": "Zoom Teeth Whitening Treatment in Dubai", "item": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai" },
+      { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://ramacarepolyclinic.ae/services/dental-dubai/" },
+      { "@type": "ListItem", "position": 3, "name": "Zoom Teeth Whitening Treatment in Dubai", "item": "https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai/" },
     ],
   };
 
@@ -1958,7 +1958,7 @@ export default function ZoomTeethWhiteningBeforeAfter() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/zoom-teeth-whitening-treatment-dubai/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />

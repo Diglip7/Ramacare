@@ -1102,7 +1102,7 @@ function Hero() {
               </li>
               <li>/</li>
               <li>
-                <Link href="/services/dental-dubai" className="transition-colors hover:text-[#1F5E4B]">Dental Services</Link>
+                <Link href="/services/dental-dubai/" className="transition-colors hover:text-[#1F5E4B]">Dental Services</Link>
               </li>
               <li>/</li>
               <li className="text-[#1F5E4B]" aria-current="page">
@@ -2192,7 +2192,7 @@ function FillingVsRootCanalVsCrown() {
 
         <p className="mx-auto mt-10 max-w-3xl text-[14.5px] leading-[1.9] text-neutral-600">
           If the decay has reached the inner part of the tooth, your dentist may discuss whether{" "}
-          <Link href="/services/root-canal-treatment-dubai" className="font-semibold text-[#1F5E4B] underline underline-offset-4 decoration-[#1F5E4B]44 hover:decoration-[#1F5E4B]">
+          <Link href="/services/root-canal-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline underline-offset-4 decoration-[#1F5E4B]44 hover:decoration-[#1F5E4B]">
             root canal treatment in Dubai
           </Link>{" "}
           is more appropriate than a conventional filling. Please don't attempt to self-diagnose based on symptoms alone — pain levels don't always correlate directly with the extent of internal damage, and only a clinical exam (often with an X-ray) can confirm what's actually happening inside the tooth.
@@ -2272,9 +2272,9 @@ function WhenFillingNotEnough() {
           <div className="mt-4 flex flex-wrap gap-3">
             {whenFillingNotEnough.alternatives.map((alt) => {
               const linkHref = alt.includes("Root canal")
-                ? "/services/root-canal-treatment-dubai"
+                ? "/services/root-canal-treatment-dubai/"
                 : alt.includes("crown") || alt.includes("Crown")
-                  ? "/services/dental-crown-bridges-dubai"
+                  ? "/services/dental-crown-bridges-dubai/"
                   : null;
 
               if (linkHref) {
@@ -3410,8 +3410,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-    { "@type": "ListItem", "position": 2, "name": "Dental Services", "item": "https://ramacarepolyclinic.ae/services/dental-dubai" },
-    { "@type": "ListItem", "position": 3, "name": "Dental Tooth Filling in Dubai", "item": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai" }
+    { "@type": "ListItem", "position": 2, "name": "Dental Services", "item": "https://ramacarepolyclinic.ae/services/dental-dubai/" },
+    { "@type": "ListItem", "position": 3, "name": "Dental Tooth Filling in Dubai", "item": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/" }
   ]
 };
 

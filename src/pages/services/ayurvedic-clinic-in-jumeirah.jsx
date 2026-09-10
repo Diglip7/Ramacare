@@ -135,21 +135,21 @@ const treatments = [
 ];
 
 const managedConditions = [
-  { name: 'Arthritis', text: 'Ayurveda addresses arthritis-related joint stiffness and discomfort through a combination of external oil therapies, internal herbal support, and dietary guidance intended to support joint health over time, alongside conventional medical management where appropriate.', link: '/services/arthritis-treatment-dubai' },
-  { name: 'Joint Pain', text: 'General joint pain, whether from overuse, age-related wear, or inflammation, is commonly approached through Abhyanga, localized therapies, and lifestyle modification tailored to the affected joint and the patient\'s constitution.', link: '/services/joint-pain-treatment-dubai' },
-  { name: 'Back Pain', text: 'Persistent back pain is assessed for posture, occupation-related strain, and Dosha imbalance, with treatment plans often combining external therapies with guidance on daily movement and ergonomics.', link: '/services/back-pain-treatment-dubai' },
-  { name: 'Neck Pain', text: 'Neck stiffness and discomfort, often linked to prolonged desk work, is addressed through targeted massage therapy and lifestyle counseling aimed at reducing recurring strain.', link: '/services/neck-pain-treatment-dubai' },
-  { name: 'Sciatica', text: 'Sciatica-related discomfort is approached with a combination of Ayurvedic therapies and lifestyle advice, often alongside physiotherapy referral for a more comprehensive approach to nerve-related pain.', link: '/services/sciatica-treatment-dubai' },
-  { name: 'Migraine', text: 'Recurring headaches and migraines are evaluated in the context of stress, sleep, and digestion, with therapies like Shirodhara sometimes included as part of a broader management plan.', link: '/services/migraine-treatment-dubai' },
-  { name: 'Stress', text: 'Ongoing stress is addressed through calming therapies, herbal support, and lifestyle counseling designed to support the nervous system and improve daily resilience.', link: '/services/stress-treatment-dubai' },
-  { name: 'Anxiety', text: 'Mild anxiety-related symptoms may be supported through Ayurvedic lifestyle counseling and calming therapies, always considered alongside appropriate medical or mental health care when needed.', link: '/services/anxiety-treatment-dubai' },
-  { name: 'Insomnia', text: 'Sleep difficulties are approached by examining daily routine, stress levels, and Dosha imbalance, with therapies and lifestyle changes aimed at supporting more restful sleep.', link: '/services/insomnia-treatment-dubai' },
-  { name: 'Digestive Disorders', text: 'General digestive complaints, including bloating and irregularity, are managed through dietary counseling, herbal support, and attention to digestive fire (Agni).', link: '/services/ayurvedic-gut-health-dubai' },
-  { name: 'IBS', text: 'Irritable Bowel Syndrome-related symptoms may be supported through Ayurvedic dietary and lifestyle guidance, used alongside appropriate medical evaluation and management.', link: '/services/ayurvedic-gut-health-dubai' },
-  { name: 'Gastritis', text: 'Gastritis-related discomfort is approached through dietary modification and herbal support intended to soothe digestive irritation, alongside medical care as needed.', link: '/services/ayurvedic-gut-health-dubai' },
-  { name: 'PCOS', text: 'PCOS-related hormonal symptoms may be supported through a combination of herbal guidance, dietary counseling, and lifestyle changes, always in coordination with appropriate gynecological care.', link: '/services/pcos-treatment-dubai' },
-  { name: 'Hair Loss', text: 'Hair thinning and hair loss concerns are assessed in the context of Dosha imbalance, nutrition, and stress, with Ayurvedic approaches used to support scalp and hair health.', link: '/services/hair-loss-dubai' },
-  { name: 'Skin Disorders', text: 'Chronic skin concerns are approached through internal and external Ayurvedic therapies aimed at supporting skin health from within, alongside dermatological care where needed.', link: '/services/skin-diseases-treatment' }
+  { name: 'Arthritis', text: 'Ayurveda addresses arthritis-related joint stiffness and discomfort through a combination of external oil therapies, internal herbal support, and dietary guidance intended to support joint health over time, alongside conventional medical management where appropriate.', link: '/services/arthritis-treatment-dubai/' },
+  { name: 'Joint Pain', text: 'General joint pain, whether from overuse, age-related wear, or inflammation, is commonly approached through Abhyanga, localized therapies, and lifestyle modification tailored to the affected joint and the patient\'s constitution.', link: '/services/joint-pain-treatment-dubai/' },
+  { name: 'Back Pain', text: 'Persistent back pain is assessed for posture, occupation-related strain, and Dosha imbalance, with treatment plans often combining external therapies with guidance on daily movement and ergonomics.', link: '/services/back-pain-treatment-dubai/' },
+  { name: 'Neck Pain', text: 'Neck stiffness and discomfort, often linked to prolonged desk work, is addressed through targeted massage therapy and lifestyle counseling aimed at reducing recurring strain.', link: '/services/neck-pain-treatment-dubai/' },
+  { name: 'Sciatica', text: 'Sciatica-related discomfort is approached with a combination of Ayurvedic therapies and lifestyle advice, often alongside physiotherapy referral for a more comprehensive approach to nerve-related pain.', link: '/services/sciatica-treatment-dubai/' },
+  { name: 'Migraine', text: 'Recurring headaches and migraines are evaluated in the context of stress, sleep, and digestion, with therapies like Shirodhara sometimes included as part of a broader management plan.', link: '/services/migraine-treatment-dubai/' },
+  { name: 'Stress', text: 'Ongoing stress is addressed through calming therapies, herbal support, and lifestyle counseling designed to support the nervous system and improve daily resilience.', link: '/services/stress-treatment-dubai/' },
+  { name: 'Anxiety', text: 'Mild anxiety-related symptoms may be supported through Ayurvedic lifestyle counseling and calming therapies, always considered alongside appropriate medical or mental health care when needed.', link: '/services/anxiety-treatment-dubai/' },
+  { name: 'Insomnia', text: 'Sleep difficulties are approached by examining daily routine, stress levels, and Dosha imbalance, with therapies and lifestyle changes aimed at supporting more restful sleep.', link: '/services/insomnia-treatment-dubai/' },
+  { name: 'Digestive Disorders', text: 'General digestive complaints, including bloating and irregularity, are managed through dietary counseling, herbal support, and attention to digestive fire (Agni).', link: '/services/ayurvedic-gut-health-dubai/' },
+  { name: 'IBS', text: 'Irritable Bowel Syndrome-related symptoms may be supported through Ayurvedic dietary and lifestyle guidance, used alongside appropriate medical evaluation and management.', link: '/services/ayurvedic-gut-health-dubai/' },
+  { name: 'Gastritis', text: 'Gastritis-related discomfort is approached through dietary modification and herbal support intended to soothe digestive irritation, alongside medical care as needed.', link: '/services/ayurvedic-gut-health-dubai/' },
+  { name: 'PCOS', text: 'PCOS-related hormonal symptoms may be supported through a combination of herbal guidance, dietary counseling, and lifestyle changes, always in coordination with appropriate gynecological care.', link: '/services/pcos-treatment-dubai/' },
+  { name: 'Hair Loss', text: 'Hair thinning and hair loss concerns are assessed in the context of Dosha imbalance, nutrition, and stress, with Ayurvedic approaches used to support scalp and hair health.', link: '/services/hair-loss-dubai/' },
+  { name: 'Skin Disorders', text: 'Chronic skin concerns are approached through internal and external Ayurvedic therapies aimed at supporting skin health from within, alongside dermatological care where needed.', link: '/services/skin-diseases-treatment/' }
 ];
 
 const benefits = [
@@ -221,7 +221,7 @@ export default function AyurvedicClinicJumeirahPage() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      router.push('/book-appointment');
+      router.push('/book-appointment/');
     }
   };
   const handleCall = () => window.open('tel:+97142862006', '_self');
@@ -313,7 +313,7 @@ export default function AyurvedicClinicJumeirahPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": `${SITE_URL}/services`
+        "item": `${SITE_URL}/services/`
       },
       {
         "@type": "ListItem",
@@ -378,7 +378,7 @@ export default function AyurvedicClinicJumeirahPage() {
             <nav aria-label="Breadcrumb" className="mb-6 flex justify-center items-center gap-2 text-sm font-semibold tracking-wider text-[#8A817C] uppercase">
               <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
-              <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+              <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
               <span aria-hidden="true" className="text-gray-300">|</span>
               <span aria-current="page" className="text-[#1F5E4B]">Ayurvedic Clinic in Jumeirah</span>
             </nav>
@@ -422,7 +422,7 @@ export default function AyurvedicClinicJumeirahPage() {
 
               <div className="text-left mt-8 space-y-4 text-sm sm:text-base text-[#5F5F5F] leading-relaxed max-w-5xl mx-auto">
                 <p>
-                  We also understand that patients often want holistic healthcare without giving up access to conventional medical support. That is why RamaCare Polyclinic brings Ayurveda together with general medicine, <Link href="/services/physiotherapy-dubai" className="text-[#1F5E4B] underline">physiotherapy</Link>, <Link href="/services/skin-treatment-dubai" className="text-[#1F5E4B] underline">dermatology</Link>, and dental care, so your wellness journey is supported from multiple angles.
+                  We also understand that patients often want holistic healthcare without giving up access to conventional medical support. That is why RamaCare Polyclinic brings Ayurveda together with general medicine, <Link href="/services/physiotherapy-dubai/" className="text-[#1F5E4B] underline">physiotherapy</Link>, <Link href="/services/skin-treatment-dubai/" className="text-[#1F5E4B] underline">dermatology</Link>, and dental care, so your wellness journey is supported from multiple angles.
                 </p>
                 <p>
                   For residents of Jumeirah, Al Wasl, City Walk, and the surrounding communities, our clinic offers a convenient, welcoming space with same-day appointments available for many services. Whether you are exploring Ayurveda for the first time or looking to continue a treatment plan you have followed for years, RamaCare Polyclinic is here to guide you with care that is both traditional in spirit and responsibly modern in practice.
@@ -682,7 +682,7 @@ export default function AyurvedicClinicJumeirahPage() {
                   At RamaCare Polyclinic, we take the responsibility of practicing medicine seriously, even within a traditional system like Ayurveda.
                 </p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Our Ayurvedic care is delivered by a <strong>DHA-licensed doctor</strong> holding a recognized <strong>BAMS qualification</strong> (<Link href="/about-us" className="text-[#1F5E4B] underline">About Us</Link> / <Link href="/doctors" className="text-[#1F5E4B] underline">Doctors</Link>).</li>
+                  <li>Our Ayurvedic care is delivered by a <strong>DHA-licensed doctor</strong> holding a recognized <strong>BAMS qualification</strong> (<Link href="/about-us/" className="text-[#1F5E4B] underline">About Us</Link> / <Link href="/doctors/" className="text-[#1F5E4B] underline">Doctors</Link>).</li>
                   <li>Our approach is <strong>evidence-informed</strong>, drawing on classical Ayurvedic methodology while remaining transparent about the limits of what any treatment can promise.</li>
                   <li>We practice <strong>ethical healthcare communication</strong> — we do not promise guaranteed cures, and we encourage patients with serious symptoms to seek appropriate conventional medical evaluation.</li>
                   <li>Every treatment plan is <strong>personalized</strong>, based on individual assessment rather than generic packages.</li>

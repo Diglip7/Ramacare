@@ -151,15 +151,15 @@ const ALLOPATHY_BENEFITS = [
 ];
 
 const CONDITIONS = [
-  { icon: Bone, name: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai', approach: 'Allopathy (NSAIDs, injections) often controls acute inflammation, while Ayurveda and physiotherapy support long-term joint mobility.' },
-  { icon: Activity, name: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai', approach: 'Physiotherapy and Ayurvedic therapies work well for chronic, non-structural back pain; allopathic imaging is important to rule out disc involvement first.' },
-  { icon: Stethoscope, name: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai', approach: 'Often responds well to manual therapy, physiotherapy, and Ayurvedic oil-based treatments once serious structural causes are excluded.' },
-  { icon: Zap, name: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai', approach: 'Requires accurate diagnosis (often via MRI); mild to moderate cases often respond to physiotherapy and Ayurvedic management, while severe nerve compression may need allopathic or surgical intervention.' },
-  { icon: HeartPulse, name: 'Frozen Shoulder Treatment Dubai', href: '/services/frozen-shoulder-treatment-dubai', approach: 'A combination of physiotherapy, dry needling, and Ayurvedic therapy is common; allopathic injections can help in resistant cases.' },
-  { icon: ScanLine, name: 'Slip Disc Treatment Dubai', href: '/services/slip-disc-treatment-dubai', approach: 'Requires allopathic diagnostic imaging; conservative management is usually tried first, with surgery reserved for severe cases.' },
-  { icon: Bone, name: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai', approach: 'Best managed with anti-inflammatory care, physiotherapy, and lifestyle-based Ayurvedic support.' },
-  { icon: Brain, name: 'Migraine Treatment Dubai', href: '/services/migraine-treatment-dubai', approach: 'Both stress-reduction-focused Ayurvedic therapies and allopathic preventive medication have roles, depending on frequency and severity.' },
-  { icon: Activity, name: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai', approach: 'Typically allopathy-led in the acute phase, followed by physiotherapy-based rehabilitation.' },
+  { icon: Bone, name: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai/', approach: 'Allopathy (NSAIDs, injections) often controls acute inflammation, while Ayurveda and physiotherapy support long-term joint mobility.' },
+  { icon: Activity, name: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai/', approach: 'Physiotherapy and Ayurvedic therapies work well for chronic, non-structural back pain; allopathic imaging is important to rule out disc involvement first.' },
+  { icon: Stethoscope, name: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai/', approach: 'Often responds well to manual therapy, physiotherapy, and Ayurvedic oil-based treatments once serious structural causes are excluded.' },
+  { icon: Zap, name: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai/', approach: 'Requires accurate diagnosis (often via MRI); mild to moderate cases often respond to physiotherapy and Ayurvedic management, while severe nerve compression may need allopathic or surgical intervention.' },
+  { icon: HeartPulse, name: 'Frozen Shoulder Treatment Dubai', href: '/services/frozen-shoulder-treatment-dubai/', approach: 'A combination of physiotherapy, dry needling, and Ayurvedic therapy is common; allopathic injections can help in resistant cases.' },
+  { icon: ScanLine, name: 'Slip Disc Treatment Dubai', href: '/services/slip-disc-treatment-dubai/', approach: 'Requires allopathic diagnostic imaging; conservative management is usually tried first, with surgery reserved for severe cases.' },
+  { icon: Bone, name: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai/', approach: 'Best managed with anti-inflammatory care, physiotherapy, and lifestyle-based Ayurvedic support.' },
+  { icon: Brain, name: 'Migraine Treatment Dubai', href: '/services/migraine-treatment-dubai/', approach: 'Both stress-reduction-focused Ayurvedic therapies and allopathic preventive medication have roles, depending on frequency and severity.' },
+  { icon: Activity, name: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai/', approach: 'Typically allopathy-led in the acute phase, followed by physiotherapy-based rehabilitation.' },
 ];
 
 const PROCESS = [
@@ -227,10 +227,10 @@ const LINK_GROUPS = [
     icon: Stethoscope,
     color: '#1F5E4B',
     links: [
-      { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
-      { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai' },
-      { label: 'Stress Treatment Dubai', href: '/services/stress-treatment-dubai' },
-      { label: 'Anxiety Treatment Dubai', href: '/services/anxiety-treatment-dubai' },
+      { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
+      { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
+      { label: 'Stress Treatment Dubai', href: '/services/stress-treatment-dubai/' },
+      { label: 'Anxiety Treatment Dubai', href: '/services/anxiety-treatment-dubai/' },
     ],
   },
 ];
@@ -375,7 +375,7 @@ export default function AyurvedaVsAllopathyPage() {
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-[#5F5F5F]">
               <a href="/" className="hover:text-[#1F5E4B]">Home</a>
               <span aria-hidden="true">/</span>
-              <a href="/services" className="hover:text-[#1F5E4B]">Services</a>
+              <a href="/services/" className="hover:text-[#1F5E4B]">Services</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Ayurveda vs Allopathy for Chronic Pain Dubai</span>
             </nav>
@@ -394,8 +394,8 @@ export default function AyurvedaVsAllopathyPage() {
                   disrupted their daily life for months or years.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#5F5F5F]">
-                  <InlineLink href="/services/back-pain-treatment-dubai">Chronic back pain</InlineLink>, <InlineLink href="/services/knee-pain-treatment-dubai">knee osteoarthritis</InlineLink>, <InlineLink href="/services/cervical-spondylosis-treatment-dubai">cervical spondylosis</InlineLink>, <InlineLink href="/services/frozen-shoulder-treatment-dubai">frozen shoulder</InlineLink>,
-                  and <InlineLink href="/services/sciatica-treatment-dubai">sciatica</InlineLink> are among the most common reasons people in Dubai search for both
+                  <InlineLink href="/services/back-pain-treatment-dubai/">Chronic back pain</InlineLink>, <InlineLink href="/services/knee-pain-treatment-dubai/">knee osteoarthritis</InlineLink>, <InlineLink href="/services/cervical-spondylosis-treatment-dubai/">cervical spondylosis</InlineLink>, <InlineLink href="/services/frozen-shoulder-treatment-dubai/">frozen shoulder</InlineLink>,
+                  and <InlineLink href="/services/sciatica-treatment-dubai/">sciatica</InlineLink> are among the most common reasons people in Dubai search for both
                   Ayurvedic and allopathic (modern medicine) treatment options. Each system
                   approaches pain differently — one focused on restoring balance and addressing
                   root causes over time, the other on rapid symptom control, diagnostics, and,
@@ -434,7 +434,7 @@ export default function AyurvedaVsAllopathyPage() {
                 Dubai's healthcare landscape is unusual in a good way: it gives residents
                 access to advanced allopathic hospitals and DHA-licensed Ayurveda and
                 physiotherapy clinics within the same city, sometimes the same building. That
-                access is exactly why so many patients now search for <InlineLink href="/services/ayurveda-dubai">Ayurveda Treatment Dubai</InlineLink>
+                access is exactly why so many patients now search for <InlineLink href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</InlineLink>
                 and Allopathy Treatment Dubai side by side before committing to a plan.
               </p>
               <p className="mt-4 text-base font-semibold text-[#1A1A1A]">A few reasons this comparison has become so common:</p>
@@ -662,7 +662,7 @@ export default function AyurvedaVsAllopathyPage() {
               </table>
             </div>
             <p className="mt-6 text-base leading-relaxed text-[#5F5F5F]">
-              <InlineLink href="/services/ayurveda-dubai">Ayurveda Treatment Dubai</InlineLink> tends to appeal to patients managing long-standing,
+              <InlineLink href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</InlineLink> tends to appeal to patients managing long-standing,
               stable chronic pain who want to reduce medication dependency. Allopathy
               Treatment Dubai tends to be the faster, more evidence-heavy route for acute
               flare-ups, structural injuries, or situations requiring urgent diagnostics.
@@ -724,10 +724,10 @@ export default function AyurvedaVsAllopathyPage() {
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#5F5F5F]">
                   A combined approach might involve using allopathic diagnostics and medication
-                  to control an acute flare-up, while introducing <InlineLink href="/services/physiotherapy-dubai">physiotherapy</InlineLink>, Ayurvedic
-                  <InlineLink href="/services/panchakarma-treatment">Panchakarma</InlineLink>, or manual therapy to address underlying mobility, posture, and
+                  to control an acute flare-up, while introducing <InlineLink href="/services/physiotherapy-dubai/">physiotherapy</InlineLink>, Ayurvedic
+                  <InlineLink href="/services/panchakarma-treatment/">Panchakarma</InlineLink>, or manual therapy to address underlying mobility, posture, and
                   lifestyle factors once the acute phase settles. Some patients also use Ayurveda
-                  alongside ongoing <InlineLink href="/services/physiotherapy-dubai">physiotherapy</InlineLink> and <InlineLink href="/services/dry-needling-dubai">dry needling</InlineLink> to manage chronic stiffness
+                  alongside ongoing <InlineLink href="/services/physiotherapy-dubai/">physiotherapy</InlineLink> and <InlineLink href="/services/dry-needling-dubai/">dry needling</InlineLink> to manage chronic stiffness
                   and reduce recurrence.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#5F5F5F]">
@@ -808,15 +808,15 @@ export default function AyurvedaVsAllopathyPage() {
                 <SectionHeading title="Why Choose RamaCare Polyclinic?" />
                 <p className="text-base leading-relaxed text-[#5F5F5F]">
                   RamaCare Polyclinic is a DHA-licensed, multi-specialty clinic in Jumeirah 1,
-                  Dubai, offering <InlineLink href="/services/physiotherapy-dubai">Physiotherapy Dubai</InlineLink> and <InlineLink href="/services/ayurveda-dubai">Ayurveda Treatment Dubai</InlineLink> under one
+                  Dubai, offering <InlineLink href="/services/physiotherapy-dubai/">Physiotherapy Dubai</InlineLink> and <InlineLink href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</InlineLink> under one
                   roof — which is precisely what makes an honest Ayurveda vs Allopathy for
                   Chronic Pain Dubai comparison possible in practice, not just in theory.
                   Patients don't have to choose blind; they can be assessed by experienced
-                  healthcare professionals on our team (view our <InlineLink href="/doctors">Doctor Profile Pages</InlineLink>) across both disciplines and receive an
+                  healthcare professionals on our team (view our <InlineLink href="/doctors/">Doctor Profile Pages</InlineLink>) across both disciplines and receive an
                   individualised treatment plan based on their actual diagnosis.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[#5F5F5F]">
-                  Have questions before booking? Visit our <InlineLink href="/contact-us">Contact Page</InlineLink> or reserve your consultation directly on our <InlineLink href="/book-appointment">Book Appointment Page</InlineLink>.
+                  Have questions before booking? Visit our <InlineLink href="/contact-us/">Contact Page</InlineLink> or reserve your consultation directly on our <InlineLink href="/book-appointment/">Book Appointment Page</InlineLink>.
                 </p>
               </div>
               <div className="lg:col-span-7">
@@ -892,7 +892,7 @@ export default function AyurvedaVsAllopathyPage() {
                       Book Your Consultation <ArrowRight className="h-4 w-4" />
                     </a>
                     <a
-                      href="tel:+971042862006"
+                      href="tel:+97142862006"
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#1F5E4B]/25 bg-white px-6 py-3.5 text-base font-semibold text-[#1F5E4B] hover:bg-[#F9F7F2] transition-all"
                     >
                       <Phone className="h-4 w-4" /> Call Now

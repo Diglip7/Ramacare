@@ -50,6 +50,8 @@ const nextConfig: NextConfig = {
       { source: '/services/facial/', destination: '/services/facial-dubai/', permanent: true },
       { source: '/services/polyclinic-in-jumeirah', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
       { source: '/services/polyclinic-in-jumeirah/', destination: '/services/polyclinic-in-jumeirah-1/', permanent: true },
+      { source: '/doctors/dr-syamkumar-ayurvedic-doctor-dubai', destination: '/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/', permanent: true },
+      { source: '/doctors/dr-syamkumar-ayurvedic-doctor-dubai/', destination: '/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/', permanent: true },
     ];
   },
 };

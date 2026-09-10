@@ -197,7 +197,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                 `}
                   >
                     {/* Image Container with Overlay - Fixed Height */}
-                    <Link href={`/doctors/${slug}`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                    <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                       {doctor.image ? (
                         <Image
                           src={doctor.image}
@@ -220,7 +220,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                       {doctor.isDHALicensed && (
                         <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
                           <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 00-1.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
                           <span className="text-xs font-medium text-white">DHA Licensed</span>
                         </div>
@@ -291,7 +291,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                       {/* CTA Button - Pushed to bottom with mt-auto */}
                       <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                         <Link
-                          href={`/doctors/${slug}`}
+                          href={`/doctors/${slug}/`}
                           className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                         >
                           View Full Profile

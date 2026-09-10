@@ -71,7 +71,7 @@ export default function MicrodermabrasionPage() {
                       "@type": "ListItem",
                       "position": 2,
                       "name": "Aesthetic Dermatology",
-                      "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai"
+                      "item": "https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/"
                     },
                     {
                       "@type": "ListItem",

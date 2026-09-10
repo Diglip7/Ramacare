@@ -1040,10 +1040,10 @@ export default function PostSurgeryRehabilitationPage() {
               If you're preparing for surgery or recovering from a recent procedure, don't leave your recovery to chance. Book your rehabilitation assessment with RamaCare Polyclinic today and take the next step toward a confident, complete recovery.
             </p>
             <div className="flex justify-center gap-4">
-              <a href="/book-appointment" className="px-6 py-3 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md">
+              <a href="/book-appointment/" className="px-6 py-3 bg-[#D4A574] hover:bg-[#b08455] text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md">
                 Book Appointment
               </a>
-              <a href="/contact-us" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 rounded-xl text-xs sm:text-sm transition-all">
+              <a href="/contact-us/" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 rounded-xl text-xs sm:text-sm transition-all">
                 Contact Us
               </a>
             </div>

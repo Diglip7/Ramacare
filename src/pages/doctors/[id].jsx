@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BeginYourHealingJourneySection from '../../../components/BeginYourHealingJourneySection';
 import { DOCTORS } from '../../../src/data/doctors';
+import { getDoctorCanonical } from '../../utils/canonical';
 
 const getIconForTitle = (title) => {
   const t = title.toLowerCase();
@@ -163,7 +164,7 @@ const DoctorProfilePage = ({ doctor }) => {
       <Head>
         <title key="title">{currentDoctor.metaTitle || `${currentDoctor.name} | Expert Doctor Profile | RamaCare`}</title>
         <meta name="description" content={currentDoctor.metaDescription || `Learn more about ${currentDoctor.name}, specialized in ${currentDoctor.specialization} at RamaCare Polyclinic Jumeirah, Dubai.`} key="description" />
-        <link rel="canonical" href={`https://ramacarepolyclinic.ae/doctors/${currentDoctor.slug}`} key="canonical" />
+        <link rel="canonical" href={getDoctorCanonical(currentDoctor.slug)} key="canonical" />
         {currentDoctor.faqsDetailed && (
           <script
             type="application/ld+json"
@@ -257,7 +258,7 @@ const DoctorProfilePage = ({ doctor }) => {
               <p className="text-xs font-medium uppercase tracking-wider text-white/50">
                 <Link href="/" className="hover:text-[#C9A961] transition-colors">Home</Link>
                 <span className="mx-2 text-white/20">/</span>
-                <Link href="/doctors" className="hover:text-[#C9A961] transition-colors">Doctors</Link>
+                <Link href="/doctors/" className="hover:text-[#C9A961] transition-colors">Doctors</Link>
                 <span className="mx-2 text-white/20">/</span>
                 <span className="text-[#C9A961]">{currentDoctor.name}</span>
               </p>
@@ -305,7 +306,7 @@ const DoctorProfilePage = ({ doctor }) => {
                   </svg>
                   Book with {currentDoctor.firstName}
                 </button>
-                <Link href="/doctors" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center">
+                <Link href="/doctors/" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-8 rounded-2xl text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center">
                   All Doctors
                 </Link>
               </div>
@@ -1161,7 +1162,7 @@ const DoctorProfilePage = ({ doctor }) => {
                     </div>
                   </div>
                   <div className="mt-5 pt-4 border-t border-[#E9E2D6]/40 flex justify-end">
-                    <Link href={otherDoctor.urlSlug || `/doctors/${key}`} className="text-xs font-bold text-[#1F5E4B] hover:underline flex items-center gap-1">
+                    <Link href={otherDoctor.urlSlug || `/doctors/${key}/`} className="text-xs font-bold text-[#1F5E4B] hover:underline flex items-center gap-1">
                       View Full Details <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
                     </Link>
                   </div>

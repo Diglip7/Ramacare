@@ -574,7 +574,7 @@ export default function RosaceaTreatmentDubaiPage() {
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1F5E4B]">
               <Link href="/" className="hover:text-[#D4A574] transition-colors">Home</Link>
               <span className="text-[#1F5E4B]/30">/</span>
-              <Link href="/services/aesthetic-dermatology-dubai" className="hover:text-[#D4A574] transition-colors">Dermatology</Link>
+              <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#D4A574] transition-colors">Dermatology</Link>
               <span className="text-[#1F5E4B]/30">/</span>
               <span aria-current="page" className="text-gray-500">Rosacea Treatment Dubai</span>
             </nav>
@@ -1153,29 +1153,29 @@ export default function RosaceaTreatmentDubaiPage() {
             <div className="space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-wider text-center text-gray-400">Related Treatments at RamaCare</h5>
               <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center text-xs text-[#5F5F5F] font-semibold">
-                <Link href="/services/aesthetic-dermatology-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Aesthetic Dermatology</Link>
+                <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Aesthetic Dermatology</Link>
                 <span>•</span>
-                <Link href="/services/acne-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Acne Treatment</Link>
+                <Link href="/services/acne-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Acne Treatment</Link>
                 <span>•</span>
-                <Link href="/services/acne-scar-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Acne Scar Treatment</Link>
+                <Link href="/services/acne-scar-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Acne Scar Treatment</Link>
                 <span>•</span>
-                <Link href="/services/melasma-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Melasma Treatment</Link>
+                <Link href="/services/melasma-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Melasma Treatment</Link>
                 <span>•</span>
-                <Link href="/services/pigmentation-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Pigmentation Treatment</Link>
+                <Link href="/services/pigmentation-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Pigmentation Treatment</Link>
                 <span>•</span>
-                <Link href="/services/hydrafacial-vs-chemical-peel-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Chemical Peel</Link>
+                <Link href="/services/hydrafacial-vs-chemical-peel-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Chemical Peel</Link>
                 <span>•</span>
-                <Link href="/services/hydrafacial-dubai" className="hover:text-[#1F5E4B] transition-colors underline">HydraFacial</Link>
+                <Link href="/services/hydrafacial-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">HydraFacial</Link>
                 <span>•</span>
-                <Link href="/services/laser-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors underline">Laser Skin Treatments</Link>
+                <Link href="/services/laser-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">Laser Skin Treatments</Link>
                 <span>•</span>
-                <Link href="/services/face-prp-in-dubai" className="hover:text-[#1F5E4B] transition-colors underline">PRP Therapy</Link>
+                <Link href="/services/face-prp-in-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">PRP Therapy</Link>
                 <span>•</span>
-                <Link href="/services/general-physician-dubai" className="hover:text-[#1F5E4B] transition-colors underline">General Physician</Link>
+                <Link href="/services/general-physician-dubai/" className="hover:text-[#1F5E4B] transition-colors underline">General Physician</Link>
                 <span>•</span>
                 <Link href="/" className="hover:text-[#1F5E4B] transition-colors underline">Homepage</Link>
                 <span>•</span>
-                <Link href="/contact-us" className="hover:text-[#1F5E4B] transition-colors underline">Contact Page</Link>
+                <Link href="/contact-us/" className="hover:text-[#1F5E4B] transition-colors underline">Contact Page</Link>
               </div>
             </div>
           </div>

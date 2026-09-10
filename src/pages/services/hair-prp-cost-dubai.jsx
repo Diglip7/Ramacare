@@ -152,12 +152,12 @@ const COMPARE_TABLE = [
 ];
 
 const RELATED_LINKS = [
-  { label: 'Hair PRP Treatment Dubai', href: '/services/hair-prp-dubai' },
-  { label: 'Hair Loss Treatment Dubai', href: '/services/hair-loss-dubai' },
-  { label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai' },
-  { label: 'Dandruff Treatment Dubai', href: '/services/dandruff-treatment-dubai' },
-  { label: 'Contact Us', href: '/contact-us' },
-  { label: 'Book Appointment', href: '/book-appointment' },
+  { label: 'Hair PRP Treatment Dubai', href: '/services/hair-prp-dubai/' },
+  { label: 'Hair Loss Treatment Dubai', href: '/services/hair-loss-dubai/' },
+  { label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai/' },
+  { label: 'Dandruff Treatment Dubai', href: '/services/dandruff-treatment-dubai/' },
+  { label: 'Contact Us', href: '/contact-us/' },
+  { label: 'Book Appointment', href: '/book-appointment/' },
 ];
 
 const FAQS = [
@@ -229,7 +229,7 @@ export default function HairPrpCostPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
       { '@type': 'ListItem', position: 3, name: 'Hair PRP Cost Dubai', item: SEO.canonical },
     ],
   };
@@ -294,7 +294,7 @@ export default function HairPrpCostPage() {
             <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6 flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-gray-600">
               <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
               <span aria-hidden="true">/</span>
-              <a href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</a>
+              <a href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Hair PRP Cost Dubai</span>
             </nav>
@@ -726,7 +726,7 @@ export default function HairPrpCostPage() {
                   WhatsApp Us
                 </a>
                 <a
-                  href="tel:+971042862006"
+                  href="tel:+97142862006"
                   className="flex items-center justify-center gap-2 rounded-xl border border-[#1F5E4B]/25 px-4 py-4 text-base font-bold text-gray-600 hover:bg-[#F9F7F2] transition-all"
                 >
                   <Phone className="h-5 w-5" />

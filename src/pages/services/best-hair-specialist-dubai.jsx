@@ -345,13 +345,13 @@ export default function BestHairSpecialistPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://ramacarepolyclinic.ae"
+                  "item": "https://ramacarepolyclinic.ae/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Services",
-                  "item": "https://ramacarepolyclinic.ae/services"
+                  "item": "https://ramacarepolyclinic.ae/services/"
                 },
                 {
                   "@type": "ListItem",
@@ -393,9 +393,9 @@ export default function BestHairSpecialistPage() {
         <nav aria-label="Breadcrumb" className="mb-4 flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5">
           <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
           <span className="mx-1">/</span>
-          <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+          <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
           <span className="mx-1">/</span>
-          <Link href="/services/hair-treatment-dubai" className="hover:text-[#1F5E4B] transition-colors">Hair Treatment</Link>
+          <Link href="/services/hair-treatment-dubai/" className="hover:text-[#1F5E4B] transition-colors">Hair Treatment</Link>
           <span className="mx-1">/</span>
           <span className="text-[#1F5E4B]">Best Hair Specialist in Dubai</span>
         </nav>
@@ -446,7 +446,7 @@ export default function BestHairSpecialistPage() {
                   <LucideIcons.PhoneCall className="w-5 h-5 text-[#C5A880] shrink-0" />
                   <div>
                     <p className="text-[10px] uppercase tracking-wider text-[#7F7F7F] font-bold">Contact Number</p>
-                    <a href="tel:(+971) 04 286 2006" className="font-semibold text-xs md:text-sm hover:underline text-[#1F5E4B]">(+971) 04 286 2006</a>
+                    <a href="tel:+97142862006" className="font-semibold text-xs md:text-sm hover:underline text-[#1F5E4B]">(+971) 04 286 2006</a>
                   </div>
                 </div>
               </div>

@@ -36,7 +36,7 @@ export default function PCOSTreatmentPage() {
         "@type": "ListItem",
         "position": 2,
         "name": "Ayurveda",
-        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai"
+        "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/"
       },
       {
         "@type": "ListItem",

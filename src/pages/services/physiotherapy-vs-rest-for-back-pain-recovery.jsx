@@ -223,34 +223,34 @@ const resourceHub = [
   {
     category: 'Primary Services',
     links: [
-      { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai' },
-      { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai' },
-      { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
-      { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai' },
-      { label: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai' },
-      { label: 'Post-Surgery Rehabilitation Dubai', href: '/services/post-surgery-rehabilitation-dubai' },
+      { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai/' },
+      { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai/' },
+      { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
+      { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
+      { label: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai/' },
+      { label: 'Post-Surgery Rehabilitation Dubai', href: '/services/post-surgery-rehabilitation-dubai/' },
     ],
   },
   {
     category: 'Condition Pages',
     links: [
-      { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai' },
-      { label: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai' },
-      { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai' },
-      { label: 'Knee Pain Treatment Dubai', href: '/services/knee-pain-treatment-dubai' },
-      { label: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai' },
-      { label: 'Slip Disc Treatment Dubai', href: '/services/slip-disc-treatment-dubai' },
-      { label: 'Cervical Spondylosis Treatment Dubai', href: '/services/cervical-spondylosis-treatment-dubai' },
-      { label: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai' },
-      { label: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai' },
-      { label: 'Frozen Shoulder Treatment Dubai', href: '/services/frozen-shoulder-treatment-dubai' },
+      { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai/' },
+      { label: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai/' },
+      { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai/' },
+      { label: 'Knee Pain Treatment Dubai', href: '/services/knee-pain-treatment-dubai/' },
+      { label: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai/' },
+      { label: 'Slip Disc Treatment Dubai', href: '/services/slip-disc-treatment-dubai/' },
+      { label: 'Cervical Spondylosis Treatment Dubai', href: '/services/cervical-spondylosis-treatment-dubai/' },
+      { label: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai/' },
+      { label: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai/' },
+      { label: 'Frozen Shoulder Treatment Dubai', href: '/services/frozen-shoulder-treatment-dubai/' },
     ],
   },
   {
     category: 'Related Comparisons',
     links: [
-      { label: 'Dry Needling vs Massage Therapy Dubai', href: '/services/dry-needling-vs-massage-therapy-dubai' },
-      { label: 'Ayurveda vs Physiotherapy for Back Pain Dubai', href: '/services/ayurveda-vs-physiotherapy-for-back-pain-dubai' },
+      { label: 'Dry Needling vs Massage Therapy Dubai', href: '/services/dry-needling-vs-massage-therapy-dubai/' },
+      { label: 'Ayurveda vs Physiotherapy for Back Pain Dubai', href: '/services/ayurveda-vs-physiotherapy-for-back-pain-dubai/' },
     ],
   },
   {
@@ -266,9 +266,9 @@ const resourceHub = [
   {
     category: 'Get in Touch',
     links: [
-      { label: 'Contact Page', href: '/contact-us' },
-      { label: 'Book Appointment', href: '/book-appointment' },
-      { label: 'Physiotherapist Profiles', href: '/doctors' },
+      { label: 'Contact Page', href: '/contact-us/' },
+      { label: 'Book Appointment', href: '/book-appointment/' },
+      { label: 'Physiotherapist Profiles', href: '/doctors/' },
     ],
   },
 ];
@@ -337,7 +337,7 @@ function buildSchema() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
       { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
-      { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai' },
+      { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai/' },
       { '@type': 'ListItem', position: 4, name: 'Physiotherapy vs Rest for Back Pain Recovery', item: SITE_URL + PAGE_PATH },
     ],
   };
@@ -448,7 +448,7 @@ export default function PhysiotherapyVsRestPage() {
           <span aria-hidden="true">/</span>
           <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
           <span aria-hidden="true">/</span>
-          <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
+          <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
           <span aria-hidden="true">/</span>
           <span className="text-[#1F5E4B]">Physiotherapy vs Rest for Back Pain Recovery</span>
         </nav>

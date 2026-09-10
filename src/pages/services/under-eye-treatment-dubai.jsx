@@ -535,7 +535,7 @@ export default function UnderEyePage() {
                                 <ol className="flex flex-wrap items-center gap-2">
                                     <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                                     <li aria-hidden>/</li>
-                                    <li><Link href="/services/aesthetic-dermatology-dubai" className="hover:text-white transition-colors">Aesthetic Dermatology</Link></li>
+                                    <li><Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-white transition-colors">Aesthetic Dermatology</Link></li>
                                     <li aria-hidden>/</li>
                                     <li className="text-emerald-200 font-semibold">Under Eye Treatment Dubai</li>
                                 </ol>
@@ -608,7 +608,7 @@ export default function UnderEyePage() {
                                     else &mdash; dark circles caused mainly by pigmentation typically call for a different
                                     strategy than hollowness caused by volume loss under the skin. At RamaCare Polyclinic
                                     in Jumeirah 1,{" "}
-                                    <Link href="/services/aesthetic-dermatology-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
+                                    <Link href="/services/aesthetic-dermatology-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
                                         Aesthetic Dermatology Dubai
                                     </Link>{" "}
                                     consultations start by identifying what's actually driving the concern before any treatment is
@@ -818,7 +818,7 @@ export default function UnderEyePage() {
                                     may be recommended as part of a broader plan. This is not a substitute for medical
                                     treatment where one is needed, and no specific medication is prescribed without
                                     individual clinical assessment. Patients interested in broader skin care in Dubai can explore RamaCare's{" "}
-                                    <Link href="/services/skin-treatment-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
+                                    <Link href="/services/skin-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
                                         Skin Treatment Dubai
                                     </Link>{" "}
                                     services.
@@ -835,7 +835,7 @@ export default function UnderEyePage() {
                                     concentrate platelets, and reintroducing it to targeted areas. It may be considered as
                                     part of a skin-rejuvenation approach around the under-eye area in selected patients,
                                     potentially supporting skin quality over time.{" "}
-                                    <Link href="/services/face-prp-in-dubai" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
+                                    <Link href="/services/face-prp-in-dubai/" className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B] underline-offset-4">
                                         PRP Treatment
                                     </Link>{" "}
                                     is not presented as a treatment that eliminates dark circles, and its role depends on the underlying cause being addressed.
@@ -878,7 +878,7 @@ export default function UnderEyePage() {
                                     Broader skin-rejuvenation approaches may support overall skin quality, texture, and
                                     the appearance of fine lines, and can sometimes be incorporated alongside more
                                     targeted treatments, including RamaCare's{" "}
-                                    <Link href="/services/facial-dubai" className="underline text-emerald-200 font-semibold underline-offset-4">
+                                    <Link href="/services/facial-dubai/" className="underline text-emerald-200 font-semibold underline-offset-4">
                                         Facial Treatments
                                     </Link>
                                     . As with other options, the most useful approach depends on what's actually causing the concern.
@@ -936,7 +936,7 @@ export default function UnderEyePage() {
                         underlying tissue more visible. Pigmentation in this area can be genuinely difficult to
                         treat and may require a comprehensive approach that combines sun protection, appropriate
                         skincare, and, in selected cases, professional treatments such as{" "}
-                        <Link href="/services/laser-rejuvenation-dubai" className="text-[#1F5E4B] font-semibold underline underline-offset-4">
+                        <Link href="/services/laser-rejuvenation-dubai/" className="text-[#1F5E4B] font-semibold underline underline-offset-4">
                             Skin Rejuvenation
                         </Link>{" "}
                         &mdash; rather than expecting a single product or session to resolve it. Daily sun protection
@@ -1020,7 +1020,7 @@ export default function UnderEyePage() {
                                 over time, the cumulative effect of repeated facial movements like smiling and
                                 squinting, ongoing sun exposure, and skin dryness in this thin, delicate area. Potential
                                 approaches may include skin-rejuvenation treatments,{" "}
-                                <Link href="/services/skin-tightening-dubai" className="underline text-emerald-200 underline-offset-4 font-semibold">
+                                <Link href="/services/skin-tightening-dubai/" className="underline text-emerald-200 underline-offset-4 font-semibold">
                                     skin tightening
                                 </Link>
                                 , consistent professional skincare, and selected aesthetic treatments aimed at
@@ -1410,7 +1410,7 @@ export default function UnderEyePage() {
                             {/* INTERACTIVE CTA BUTTON GRID */}
                             <div className="mt-5 grid gap-4 sm:grid-cols-2">
                                 <Link
-                                    href="/book-appointment"
+                                    href="/book-appointment/"
                                     className="group rounded-2xl bg-white text-[#1F5E4B] p-5 text-sm font-bold shadow-xl hover:bg-[#FAF8F5] transition-all hover:scale-[1.02] flex items-center justify-between"
                                 >
                                     <div className="flex items-center gap-3">

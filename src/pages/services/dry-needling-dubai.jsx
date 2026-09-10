@@ -354,10 +354,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         subcategoryName="Dry Needling"
         hero={heroData}
       />
-
       {/* Quick Navigation Sticky Bar */}
       <QuickNavigation navItems={navItems} />
-
       <main className="w-full bg-white text-gray-800 overflow-hidden">
 
         {/* =========================================================================
@@ -1279,7 +1277,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
 
                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                   <Link
-                    href="/doctors/jeena-mathew-physiotherapist-dubai"
+                    href="/doctors/jeena-mathew-physiotherapist-dubai/"
                     className="px-5 py-2.5 rounded-xl bg-white border border-gray-300 hover:bg-gray-50 text-xs sm:text-sm font-semibold text-gray-800 shadow-2xs transition-colors"
                   >
                     View Full Profile
@@ -1325,7 +1323,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
               <div className="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm text-gray-600 pt-2">
                 <span>RamaCare Medical Review Board · Jumeirah 1, Dubai</span>
                 <Link
-                  href="/doctors/jeena-mathew-physiotherapist-dubai"
+                  href="/doctors/jeena-mathew-physiotherapist-dubai/"
                   className="font-semibold text-[#1F5E4B] hover:underline"
                 >
                   [View Doctor Profile]

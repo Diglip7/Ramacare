@@ -204,7 +204,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Skin & Hair", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" }
           ]
         }
@@ -242,7 +242,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.name || !formData.phone || !formData.email) {
       showToast('Please fill in all required fields (Name, Phone, and Email)', 'error');
@@ -250,7 +250,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
     }
 
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/appointment', {
         method: 'POST',
@@ -367,7 +367,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={scrollToForm}
                   className="bg-[#1F5E4B] text-white px-10 py-4 rounded-full hover:bg-[#16493a] transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2 font-bold text-center"
                 >
@@ -390,8 +390,8 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               className="relative"
             >
               <div className="aspect-[4/3] w-full relative overflow-hidden rounded-[2.5rem] shadow-2xl">
-                <img 
-                  src={content.hero.image} 
+                <img
+                  src={content.hero.image}
                   alt="Ayurvedic Treatment for Skin and Hair"
                   className="w-full h-full object-cover"
                 />
@@ -552,8 +552,8 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               className="relative"
             >
               <div className="aspect-video w-full relative overflow-hidden rounded-[2.5rem] shadow-xl">
-                <img 
-                  src={content.dubaiScalp.image} 
+                <img
+                  src={content.dubaiScalp.image}
                   alt="Ayurvedic Secrets for Dubai Scalp"
                   className="w-full h-full object-cover"
                 />
@@ -664,7 +664,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A]">
                     {item.title}
                   </h3>
-                  <p 
+                  <p
                     className="text-[#5F5F5F] leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
@@ -692,7 +692,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button 
+              <button
                 onClick={scrollToForm}
                 className="bg-white text-[#1F5E4B] px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 font-bold flex items-center justify-center gap-2"
               >
@@ -720,43 +720,43 @@ export default function AyurvedicDietSkinHairDubaiPage() {
             <form className="grid gap-6 md:grid-cols-2" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label className="text-sm font-bold text-[#1A1A1A] mb-2 px-1">Name *</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Your name" 
+                  placeholder="Your name"
                   className="bg-[#F5F1EA] border-none rounded-xl p-4 text-[#1A1A1A] focus:ring-2 focus:ring-[#1F5E4B] transition-all outline-none"
                   required
                 />
               </div>
               <div className="flex flex-col">
                 <label className="text-sm font-bold text-[#1A1A1A] mb-2 px-1">Phone *</label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="+971..." 
+                  placeholder="+971..."
                   className="bg-[#F5F1EA] border-none rounded-xl p-4 text-[#1A1A1A] focus:ring-2 focus:ring-[#1F5E4B] transition-all outline-none"
                   required
                 />
               </div>
               <div className="flex flex-col">
                 <label className="text-sm font-bold text-[#1A1A1A] mb-2 px-1">Email *</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="your@email.com" 
+                  placeholder="your@email.com"
                   className="bg-[#F5F1EA] border-none rounded-xl p-4 text-[#1A1A1A] focus:ring-2 focus:ring-[#1F5E4B] transition-all outline-none"
                   required
                 />
               </div>
               <div className="flex flex-col">
                 <label className="text-sm font-bold text-[#1A1A1A] mb-2 px-1">Concern</label>
-                <select 
+                <select
                   name="concern"
                   value={formData.concern}
                   onChange={handleInputChange}
@@ -769,17 +769,17 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               </div>
               <div className="flex flex-col">
                 <label className="text-sm font-bold text-[#1A1A1A] mb-2 px-1">Preferred Time</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleInputChange}
-                  placeholder="e.g., Morning, Afternoon" 
+                  placeholder="e.g., Morning, Afternoon"
                   className="bg-[#F5F1EA] border-none rounded-xl p-4 text-[#1A1A1A] focus:ring-2 focus:ring-[#1F5E4B] transition-all outline-none"
                 />
               </div>
               <div className="md:col-span-2 mt-4">
-                <button 
+                <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-[#1F5E4B] text-white rounded-full py-5 font-bold text-lg hover:bg-[#16493a] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -825,7 +825,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#1F5E4B] py-4 px-4 sm:px-6 shadow-2xl transition-all">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 flex-col sm:flex-row text-center sm:text-left">
           <p className="text-white font-medium text-lg">Ready to restore your natural radiance?</p>
-          <button 
+          <button
             onClick={scrollToForm}
             className="whitespace-nowrap rounded-full bg-white px-8 py-3 text-base font-bold text-[#1F5E4B] transition-all hover:bg-gray-100 flex items-center gap-2"
           >

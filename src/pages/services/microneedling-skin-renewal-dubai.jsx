@@ -481,9 +481,9 @@ export default function MicroneedlingSkinRenewalServicePage() {
                         <nav className="flex items-center text-xs sm:text-sm text-emerald-100/80 mb-8 space-x-2 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">Home</Link>
                             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
-                            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+                            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
                             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
-                            <Link href="/services/aesthetic-dermatology-dubai" className="hover:text-white transition-colors">Aesthetic Dermatology</Link>
+                            <Link href="/services/aesthetic-dermatology-dubai/" className="hover:text-white transition-colors">Aesthetic Dermatology</Link>
                             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
                             <span className="text-white font-semibold">Microneedling & Skin Renewal</span>
                         </nav>
@@ -561,13 +561,13 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                 </div>
                             </div>
 
-                            {/* Hero Image Right Column */}
-                            <div className="lg:col-span-5">
-                                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-emerald-950 group">
+                            {/* Hero Image Right Column - Enlarged to balance left side content */}
+                            <div className="lg:col-span-5 flex flex-col justify-center">
+                                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-emerald-950 group w-full h-[460px] sm:h-[540px] md:h-[600px] lg:h-[660px] xl:h-[720px]">
                                     <img
-                                        src="/images/Microneedling & Skin Renewal consultation.jpg"
+                                        src="/images/Microneedling%20%26%20Skin%20Renewal%20consultation.jpg"
                                         alt="Microneedling & Skin Renewal consultation at RamaCare Polyclinic Dubai"
-                                        className="w-full h-auto object-cover max-h-[520px] group-hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-6 sm:p-8">
                                         <div className="text-white text-xs sm:text-sm bg-black/70 backdrop-blur-md p-4 rounded-2xl border border-white/20 w-full space-y-1">
@@ -642,7 +642,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                 </h2>
                                 <div className="prose max-w-none text-[#5F5F5F] leading-relaxed text-base sm:text-lg space-y-4">
                                     <p>
-                                        Microneedling, sometimes referred to as collagen induction therapy, is a professional aesthetic procedure that uses a device fitted with fine, sterile needles to create controlled micro-injuries in the skin. These micro-channels are extremely small and are made in a structured, clinically controlled way — this is quite different from what an <Link href="/services/derma-roller-dubai" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">at-home roller or device</Link> can achieve.
+                                        Microneedling, sometimes referred to as collagen induction therapy, is a professional aesthetic procedure that uses a device fitted with fine, sterile needles to create controlled micro-injuries in the skin. These micro-channels are extremely small and are made in a structured, clinically controlled way — this is quite different from what an <Link href="/services/derma-roller-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">at-home roller or device</Link> can achieve.
                                     </p>
                                     <p>
                                         The idea behind microneedling is fairly simple: the skin has a natural healing response. When it detects these tiny, controlled injuries, it begins a repair process that involves the production of collagen and elastin — two proteins that give skin its structure, firmness, and smoothness. Over time, this healing response can contribute to changes in skin texture and overall skin quality.
@@ -655,7 +655,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                     </p>
                                 </div>
                             </div>
-
+                            
                             <div className="lg:col-span-5">
                                 <div className="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 group">
                                     <img
@@ -755,7 +755,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                 </div>
                                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Acne Scars</h3>
                                 <p className="text-[#5F5F5F] text-sm leading-relaxed">
-                                    Microneedling may help improve the appearance of certain types of <Link href="/services/acne-treatment-dubai" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">acne scarring</Link>, particularly textural scars where the skin's surface has an uneven contour. Not all acne scars respond the same way — scar depth, age, and type (textural versus pigmented) all influence how a clinician approaches treatment planning.
+                                    Microneedling may help improve the appearance of certain types of <Link href="/services/acne-treatment-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">acne scarring</Link>, particularly textural scars where the skin's surface has an uneven contour. Not all acne scars respond the same way — scar depth, age, and type (textural versus pigmented) all influence how a clinician approaches treatment planning.
                                 </p>
                             </div>
 
@@ -795,7 +795,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                 </div>
                                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Mild Skin Laxity</h3>
                                 <p className="text-[#5F5F5F] text-sm leading-relaxed">
-                                    For patients noticing early, mild skin laxity, microneedling may be considered as part of a wider discussion around <Link href="/services/skin-tightening-dubai" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">skin firmness</Link>. Expectations here should remain realistic — this is a supportive treatment, not a substitute for more invasive procedures aimed at significant tightening.
+                                    For patients noticing early, mild skin laxity, microneedling may be considered as part of a wider discussion around <Link href="/services/skin-tightening-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#164537]">skin firmness</Link>. Expectations here should remain realistic — this is a supportive treatment, not a substitute for more invasive procedures aimed at significant tightening.
                                 </p>
                             </div>
 
@@ -1303,21 +1303,21 @@ export default function MicroneedlingSkinRenewalServicePage() {
                                         </tr>
                                         <tr className="hover:bg-gray-50 transition-colors">
                                             <td className="py-5 px-8 font-semibold">
-                                                <Link href="/services/microdermabrasion-dubai" className="text-[#1F5E4B] underline hover:text-[#164537]">Microdermabrasion</Link>
+                                                <Link href="/services/microdermabrasion-dubai/" className="text-[#1F5E4B] underline hover:text-[#164537]">Microdermabrasion</Link>
                                             </td>
                                             <td className="py-5 px-8">Surface exfoliation</td>
                                             <td className="py-5 px-8">Generally more superficial</td>
                                         </tr>
                                         <tr className="hover:bg-gray-50 transition-colors">
                                             <td className="py-5 px-8 font-semibold">
-                                                <Link href="/services/skin-boosters-dubai" className="text-[#1F5E4B] underline hover:text-[#164537]">Skin Boosters</Link>
+                                                <Link href="/services/skin-boosters-dubai/" className="text-[#1F5E4B] underline hover:text-[#164537]">Skin Boosters</Link>
                                             </td>
                                             <td className="py-5 px-8">Hydration and skin-quality concerns</td>
                                             <td className="py-5 px-8">Injectable treatment</td>
                                         </tr>
                                         <tr className="hover:bg-gray-50 transition-colors">
                                             <td className="py-5 px-8 font-semibold">
-                                                <Link href="/services/face-prp-in-dubai" className="text-[#1F5E4B] underline hover:text-[#164537]">PRP-Based Treatments</Link>
+                                                <Link href="/services/face-prp-in-dubai/" className="text-[#1F5E4B] underline hover:text-[#164537]">PRP-Based Treatments</Link>
                                             </td>
                                             <td className="py-5 px-8">Selected rejuvenation indications</td>
                                             <td className="py-5 px-8">Uses autologous blood-derived components</td>
@@ -1662,7 +1662,7 @@ export default function MicroneedlingSkinRenewalServicePage() {
                             </p>
                             <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
                                 <Link
-                                    href="/book-appointment"
+                                    href="/book-appointment/"
                                     className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-2xl bg-[#C5A880] hover:bg-[#b8986c] text-[#0D2B22] font-bold text-base shadow-xl transition-all"
                                 >
                                     <Calendar className="w-5 h-5" />
@@ -1682,12 +1682,10 @@ export default function MicroneedlingSkinRenewalServicePage() {
                     </div>
                 </section>
 
-                {/* INLINE BOOK CONSULTATION FORM */}
-                <section className="w-full py-16 bg-white border-t border-gray-200">
-                    <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
-                        <BookConsultation />
-                    </div>
-                </section>
+                {/* INLINE BOOK CONSULTATION FORM - Full screen width */}
+                <div id="book-consultation" className="w-full">
+                    <BookConsultation />
+                </div>
 
                 {/* FLOATING ACTION BUTTON FOR WHATSAPP */}
                 <a
@@ -1704,7 +1702,6 @@ export default function MicroneedlingSkinRenewalServicePage() {
              </a>
             {/* Content Reviewer Badge */}
                 <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/microneedling-skin-renewal-dubai/" />
-
             </div>
         </Layout>
     );

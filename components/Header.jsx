@@ -243,7 +243,7 @@ const Header = () => {
   };
 
   const handleCallNow = () => {
-    window.location.href = 'tel:+971042862006';
+    window.location.href = 'tel:+97142862006';
   };
 
   return (

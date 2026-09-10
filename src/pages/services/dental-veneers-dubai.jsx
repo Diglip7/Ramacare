@@ -68,13 +68,13 @@ export default function dentaldubaiVeneersPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": SITE_URL
+        "item": `${SITE_URL}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": `${SITE_URL}/services`
+        "item": `${SITE_URL}/services/`
       },
       {
         "@type": "ListItem",

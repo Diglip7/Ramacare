@@ -931,7 +931,7 @@ export default function FrozenShoulderTreatmentPage() {
                 {
                   icon: Activity,
                   title: "Physiotherapy",
-                  desc: "Forms the backbone of treatment, combining hands-on techniques with guided movement to gradually restore range of motion. Explore our full <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai\" className=\"text-[#1F5E4B] font-semibold hover:underline\">physiotherapy Dubai</a> services for related conditions we treat.",
+                  desc: "Forms the backbone of treatment, combining hands-on techniques with guided movement to gradually restore range of motion. Explore our full <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/\" className=\"text-[#1F5E4B] font-semibold hover:underline\">physiotherapy Dubai</a> services for related conditions we treat.",
                   color: "from-cyan-50 to-blue-50"
                 },
                 {
@@ -987,13 +987,13 @@ export default function FrozenShoulderTreatmentPage() {
                 {
                   icon: Activity,
                   title: "Dry Needling",
-                  desc: "For patients with muscle guarding or trigger points around the shoulder blade and upper back, dry needling can reduce muscle tension and improve movement tolerance. Learn more about <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/dry-needling-dubai\" className=\"text-[#1F5E4B] font-semibold hover:underline\">dry needling Dubai</a>.",
+                  desc: "For patients with muscle guarding or trigger points around the shoulder blade and upper back, dry needling can reduce muscle tension and improve movement tolerance. Learn more about <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/dry-needling-dubai/\" className=\"text-[#1F5E4B] font-semibold hover:underline\">dry needling Dubai</a>.",
                   color: "from-rose-50 to-red-50"
                 },
                 {
                   icon: Shield,
                   title: "Electrotherapy",
-                  desc: "Modalities like TENS can help manage pain signals during the freezing stage, when discomfort is often most intense. Learn more about <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/electrotherapy-dubai\" className=\"text-[#1F5E4B] font-semibold hover:underline\">electrotherapy Dubai</a>.",
+                  desc: "Modalities like TENS can help manage pain signals during the freezing stage, when discomfort is often most intense. Learn more about <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/electrotherapy-dubai/\" className=\"text-[#1F5E4B] font-semibold hover:underline\">electrotherapy Dubai</a>.",
                   color: "from-indigo-50 to-violet-50"
                 }
               ].map((treatment, index) => (
@@ -1031,7 +1031,7 @@ export default function FrozenShoulderTreatmentPage() {
                 {
                   icon: Target,
                   title: "Ultrasound Therapy",
-                  desc: "Therapeutic ultrasound may support tissue healing and reduce localized inflammation around the joint capsule. See our dedicated <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/ultrasound-therapy-dubai\" className=\"text-[#1F5E4B] font-semibold hover:underline\">ultrasound therapy Dubai</a> page for details.",
+                  desc: "Therapeutic ultrasound may support tissue healing and reduce localized inflammation around the joint capsule. See our dedicated <a href=\"https://ramacarepolyclinic.ae/services/physiotherapy-dubai/ultrasound-therapy-dubai/\" className=\"text-[#1F5E4B] font-semibold hover:underline\">ultrasound therapy Dubai</a> page for details.",
                   color: "from-teal-50 to-cyan-50"
                 },
                 {

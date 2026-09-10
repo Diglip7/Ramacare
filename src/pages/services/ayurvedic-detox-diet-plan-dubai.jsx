@@ -184,7 +184,7 @@ export default function AyurvedicDetoxDietPlanPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
             { "@type": "ListItem", "position": 3, "name": "Ayurvedic Detox Diet Plan", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-detox-diet-plan-dubai/" }
           ]
         }
@@ -223,7 +223,7 @@ export default function AyurvedicDetoxDietPlanPage() {
   };
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   const handleWhatsAppDownloadSubmit = (e) => {

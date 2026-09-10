@@ -65,13 +65,13 @@ const comparisonTable = [
 ];
 
 const conditions = [
-  { name: 'Neck Pain', href: '/services/neck-pain-treatment-dubai', text: 'For neck pain linked to tight, well-defined trigger points (common with desk work), dry needling can offer targeted relief. For neck tension linked to stress or general tightness, massage therapy may be more comfortable as a starting point. Many patients benefit from both.' },
-  { name: 'Back Pain', href: '/services/back-pain-treatment-dubai', text: 'Chronic myofascial back pain with identifiable trigger points often responds well to dry needling, while general stiffness and muscular fatigue in the back may respond better to massage.' },
-  { name: 'Shoulder Pain', href: '/services/shoulder-pain-treatment-dubai', text: 'Trigger points in the upper trapezius and rotator cuff region are common contributors to shoulder pain and can respond well to dry needling. Massage therapy can complement this by improving overall mobility.' },
-  { name: 'Tennis Elbow', href: '/services/tennis-elbow-treatment-dubai', text: 'Dry needling is frequently used to address the muscular component around the forearm and elbow, often alongside a structured rehabilitation program.' },
-  { name: 'Plantar Fasciitis', href: '/services/plantar-fasciitis-treatment-dubai', text: 'Dry needling of the calf and foot muscles is sometimes used to reduce tension contributing to plantar fascia strain, while massage may help manage surrounding calf tightness.' },
-  { name: 'Sciatica', href: '/services/sciatica-treatment-dubai', text: 'Trigger points in the deep gluteal muscles can contribute to sciatic-type symptoms, and dry needling is sometimes used as part of a broader plan. Massage may help ease surrounding muscular guarding.' },
-  { name: 'Sports Injuries', href: '/services/sports-injury-rehabilitation-dubai', text: 'Athletes recovering from strains or overuse injuries often benefit from a combination approach — dry needling for specific trigger points and massage for broader recovery.' },
+  { name: 'Neck Pain', href: '/services/neck-pain-treatment-dubai/', text: 'For neck pain linked to tight, well-defined trigger points (common with desk work), dry needling can offer targeted relief. For neck tension linked to stress or general tightness, massage therapy may be more comfortable as a starting point. Many patients benefit from both.' },
+  { name: 'Back Pain', href: '/services/back-pain-treatment-dubai/', text: 'Chronic myofascial back pain with identifiable trigger points often responds well to dry needling, while general stiffness and muscular fatigue in the back may respond better to massage.' },
+  { name: 'Shoulder Pain', href: '/services/shoulder-pain-treatment-dubai/', text: 'Trigger points in the upper trapezius and rotator cuff region are common contributors to shoulder pain and can respond well to dry needling. Massage therapy can complement this by improving overall mobility.' },
+  { name: 'Tennis Elbow', href: '/services/tennis-elbow-treatment-dubai/', text: 'Dry needling is frequently used to address the muscular component around the forearm and elbow, often alongside a structured rehabilitation program.' },
+  { name: 'Plantar Fasciitis', href: '/services/plantar-fasciitis-treatment-dubai/', text: 'Dry needling of the calf and foot muscles is sometimes used to reduce tension contributing to plantar fascia strain, while massage may help manage surrounding calf tightness.' },
+  { name: 'Sciatica', href: '/services/sciatica-treatment-dubai/', text: 'Trigger points in the deep gluteal muscles can contribute to sciatic-type symptoms, and dry needling is sometimes used as part of a broader plan. Massage may help ease surrounding muscular guarding.' },
+  { name: 'Sports Injuries', href: '/services/sports-injury-rehabilitation-dubai/', text: 'Athletes recovering from strains or overuse injuries often benefit from a combination approach — dry needling for specific trigger points and massage for broader recovery.' },
   { name: 'Muscle Tightness', href: null, text: 'General, widespread tightness without a clear trigger point often responds well to massage therapy alone.' },
   { name: 'Office-Related Postural Pain', href: null, text: 'A combination of both treatments frequently works well — massage for overall tension and dry needling for specific problem points that develop from prolonged sitting.' },
   { name: 'Chronic Myofascial Pain', href: null, text: 'Long-standing myofascial pain syndrome often benefits most from a structured, combined approach delivered over several weeks, guided by ongoing physiotherapy assessment.' },
@@ -124,19 +124,19 @@ const faqs = [
 ];
 
 const related = [
-  { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai' },
-  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai' },
-  { label: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai' },
-  { label: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai' },
-  { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai' },
-  { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai' },
-  { label: 'Tennis Elbow Treatment Dubai', href: '/services/tennis-elbow-treatment-dubai' },
-  { label: 'Plantar Fasciitis Treatment Dubai', href: '/services/plantar-fasciitis-treatment-dubai' },
-  { label: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai' },
-  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
-  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai' },
-  { label: 'Contact Us', href: '/contact-us' },
-  { label: 'Book Appointment', href: '/book-appointment' },
+  { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai/' },
+  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai/' },
+  { label: 'Sports Injury Rehabilitation Dubai', href: '/services/sports-injury-rehabilitation-dubai/' },
+  { label: 'Neck Pain Treatment Dubai', href: '/services/neck-pain-treatment-dubai/' },
+  { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai/' },
+  { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai/' },
+  { label: 'Tennis Elbow Treatment Dubai', href: '/services/tennis-elbow-treatment-dubai/' },
+  { label: 'Plantar Fasciitis Treatment Dubai', href: '/services/plantar-fasciitis-treatment-dubai/' },
+  { label: 'Sciatica Treatment Dubai', href: '/services/sciatica-treatment-dubai/' },
+  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
+  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
+  { label: 'Contact Us', href: '/contact-us/' },
+  { label: 'Book Appointment', href: '/book-appointment/' },
   { label: 'Home Page', href: '/' },
 ];
 /* ------------------------------------------------------------------
@@ -245,7 +245,7 @@ function buildSchema() {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
           { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
-          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai' },
+          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: SITE_URL + '/services/physiotherapy-dubai/' },
           { '@type': 'ListItem', position: 4, name: 'Dry Needling vs Massage Therapy Dubai', item: SITE_URL + PAGE_PATH },
         ],
       },
@@ -336,7 +336,7 @@ export default function DryNeedlingVsMassagePage() {
           <span aria-hidden="true">/</span>
           <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
           <span aria-hidden="true">/</span>
-          <Link href="/services/physiotherapy-dubai" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
+          <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
           <span aria-hidden="true">/</span>
           <span className="text-[#1F5E4B]">Dry Needling vs Massage Therapy Dubai</span>
         </nav>

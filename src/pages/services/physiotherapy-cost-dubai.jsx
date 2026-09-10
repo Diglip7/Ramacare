@@ -142,7 +142,7 @@ const related = [
   { label: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai/' },
   { label: 'Slip Disc Treatment Dubai', href: '/services/slip-disc-treatment-dubai/' },
   { label: 'Post-Surgery Rehabilitation Dubai', href: '/services/post-surgery-rehabilitation-dubai/' },
-  { label: 'Contact Us', href: '/contact-us' },
+  { label: 'Contact Us', href: '/contact-us/' },
   { label: 'Book Appointment', href: '/book-appointment/' },
 ];
 

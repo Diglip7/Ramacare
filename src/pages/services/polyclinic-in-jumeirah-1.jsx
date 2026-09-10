@@ -86,7 +86,7 @@ const DEPARTMENTS_EXPANDABLE = [
     id: 'dental',
     title: 'Dental Care',
     icon: Smile,
-    link: '/services/dental-dubai',
+    link: '/services/dental-dubai/',
     anchorText: 'dental treatments in Dubai',
     link2: '/services/dental-tooth-filling-dubai/',
     anchorText2: 'dental tooth filling in Dubai',
@@ -202,7 +202,7 @@ const DOCTORS_LIST = [
     experience: '17+ Years',
     licensing: 'DHA Licensed Practitioner',
     desc: 'Delivers classical Ayurvedic therapies including Panchakarma detox, Abhyanga massage, Shirodhara, and specialized body rejuvenation protocols.',
-    profileUrl: '/doctors/dr-syamkumar-ayurvedic-doctor-dubai/',
+    profileUrl: '/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/',
     anchorText: 'Syamkumar Sasidharan’s profile',
     imageSrc: '/images/Syam.jpg'
   }

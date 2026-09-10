@@ -233,7 +233,7 @@ export default function DandruffTreatmentDubaiPage() {
   };
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   const fullPageSchema = {

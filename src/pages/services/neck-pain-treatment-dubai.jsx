@@ -553,7 +553,7 @@ export default function NeckPainTreatmentPage() {
                     At RamaCare Polyclinic, our DHA-licensed physiotherapists assess the real cause of your discomfort, not just the symptoms. We build a treatment plan around your body, your daily habits, and your recovery goals. Whether your pain started last week or has followed you for months, relief is possible with the right expert physiotherapy care.
                   </p>
                 </div>
-                <Link href="/book-appointment">
+                <Link href="/book-appointment/">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -1477,7 +1477,7 @@ export default function NeckPainTreatmentPage() {
                   <p className="text-lg text-white/90 mb-8 leading-relaxed">
                     Take the first step toward lasting relief. Call RamaCare Polyclinic, message us on WhatsApp, or book your physiotherapy consultation online. Early treatment leads to a smoother, faster recovery — don't wait for stiffness or discomfort to become a bigger problem.
                   </p>
-                  <Link href="/book-appointment">
+                  <Link href="/book-appointment/">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

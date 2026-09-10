@@ -81,10 +81,9 @@ export default function Home() {
         <meta
           name="twitter:description"
           content="DHA-licensed polyclinic in Jumeirah 1, Dubai offering Ayurveda, physiotherapy, dermatology, dental, and general medicine under one roof."
-          key="twitter:description"
-        />
+          key="twitter:description"/>
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/homepage.jpg" key="twitter:image" />
-
+        
         {/* Structured JSON-LD Schema (@graph: MedicalClinic, FAQPage) */}
         <script
           key="schema-graph"

@@ -247,17 +247,17 @@ const FAQS = [
 ];
 
 const RELATED_LINKS = [
-  { label: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai' },
-  { label: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai' },
-  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai' },
-  { label: 'Ayurveda Treatment Dubai', href: '/services/ayurveda-dubai' },
-  { label: 'Knee Pain Treatment Dubai', href: '/services/knee-pain-treatment-dubai' },
-  { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai' },
-  { label: 'Panchakarma Dubai', href: '/services/panchakarma-treatment' },
-  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai' },
-  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy' },
-  { label: 'Contact Us', href: '/contact-us' },
-  { label: 'Book Appointment', href: '#book-now' },
+  { label: 'Arthritis Treatment Dubai', href: '/services/arthritis-treatment-dubai/' },
+  { label: 'Joint Pain Treatment Dubai', href: '/services/joint-pain-treatment-dubai/' },
+  { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai/' },
+  { label: 'Ayurveda Treatment Dubai', href: '/services/ayurveda-dubai/' },
+  { label: 'Knee Pain Treatment Dubai', href: '/services/knee-pain-treatment-dubai/' },
+  { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai/' },
+  { label: 'Panchakarma Dubai', href: '/services/panchakarma-treatment/' },
+  { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
+  { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy/' },
+  { label: 'Contact Us', href: '/contact-us/' },
+  { label: 'Book Appointment', href: '#book-now/' },
   { label: 'Home', href: '/' },
 ];
 
@@ -332,7 +332,7 @@ export default function AyurvedaVsPhysiotherapyArthritisPage() {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services/` },
             { "@type": "ListItem", "position": 3, "name": "Ayurveda vs Physiotherapy for Arthritis", "item": CANONICAL_URL }
           ]
         }
@@ -409,7 +409,7 @@ export default function AyurvedaVsPhysiotherapyArthritisPage() {
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-[#5F5F5F]">
               <a href="/" className="hover:text-[#1F5E4B]">Home</a>
               <span aria-hidden="true">/</span>
-              <a href="/services" className="hover:text-[#1F5E4B]">Services</a>
+              <a href="/services/" className="hover:text-[#1F5E4B]">Services</a>
               <span aria-hidden="true">/</span>
               <span aria-current="page" className="text-[#1F5E4B]">Ayurveda vs Physiotherapy for Arthritis Dubai</span>
             </nav>

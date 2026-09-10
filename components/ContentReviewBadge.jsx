@@ -66,7 +66,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
   let role = 'General Practitioner & Aesthetic Specialist';
   let credentials = 'MD · DHA Licensed General Practitioner';
   let experience = '10+ Years Clinical Experience';
-  let link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai';
+  let link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/';
   let image = '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png';
   let statement = 'This medical guide has been reviewed for clinical accuracy, diagnostic integrity, and DHA healthcare standards by Dr. Sahar Zomorrodi.';
 
@@ -75,7 +75,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Musculoskeletal Physiotherapy Specialist';
     credentials = 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist';
     experience = '8+ Years Clinical Experience · 600+ Patients Treated';
-    link = '/doctors/jeena-mathew-physiotherapist-dubai';
+    link = '/doctors/jeena-mathew-physiotherapist-dubai/';
     image = '/images/Jeena Mathew.jpeg';
     statement = 'This physiotherapy guide has been clinically reviewed and verified for medical accuracy, evidence-based joint care protocols, and DHA guidelines by Jeena Mathew to ensure safe, effective patient care.';
   } else if (isShamna) {
@@ -83,7 +83,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Ayurveda & Holistic Health Specialist';
     credentials = 'BAMS · DHA Licensed Ayurveda Doctor';
     experience = '11+ Years Clinical Experience · 800+ Patients Treated';
-    link = '/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai';
+    link = '/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/';
     image = '/images/Dr Shamna Keloth Meethal.jpeg';
     statement = 'This Ayurvedic medical guide has been reviewed for clinical authenticity and DHA healthcare standards by Dr. Shamna Keloth Meethal to support holistic wellness and evidence-based patient guidance.';
   } else if (isSonita) {
@@ -91,7 +91,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Licensed & Certified Aesthetic Therapist';
     credentials = 'NCLC Laser Certified · Licensed Aesthetic Therapist';
     experience = '14+ Years Clinical Experience';
-    link = '/doctors/sonita-sinaga-aesthetic-therapist-dubai';
+    link = '/doctors/sonita-sinaga-aesthetic-therapist-dubai/';
     image = '/images/Sonita.jpeg';
     statement = `This aesthetic dermatology & skincare guide has been clinically reviewed for treatment safety, ${contextStr.includes('prp') ? 'PRP protocols' : 'laser protocols'}, and skincare excellence by Sonita Sinaga.`;
   } else if (isNodainne) {
@@ -99,7 +99,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Certified Aesthetic & Beauty Therapist';
     credentials = 'Certified Aesthetic & Skincare Specialist';
     experience = 'Professional Aesthetic & Skincare Experience';
-    link = '/doctors/nodainne-baves-guerrero-beauty-therapist-dubai';
+    link = '/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/';
     image = '/images/Nodainne Baves Guerrero.jpeg';
     statement = 'This aesthetic & facial care guide has been reviewed for clinical skincare standards and treatment safety by Nodainne Baves Guerrero.';
   } else if (isSahar) {
@@ -107,7 +107,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'General Practitioner & Aesthetic Specialist';
     credentials = 'MD · DHA Licensed General Practitioner';
     experience = '10+ Years Clinical Experience';
-    link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai';
+    link = '/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/';
     image = '/images/dr-sahar-zomorrodi-general-practitioner-dubai.png';
     if (contextStr.includes('insomnia') || contextStr.includes('sleep')) {
       statement = 'This sleep wellness guide has been clinically reviewed for medical accuracy, safety, and DHA standards by Dr. Sahar Zomorrodi.';
@@ -121,7 +121,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Specialist Cosmetic Dentist';
     credentials = 'DDS · DHA Licensed Specialist Dentist';
     experience = '12+ Years Clinical Experience';
-    link = '/doctors/dr-hirbod-gilandoust-dentist-dubai';
+    link = '/doctors/dr-hirbod-gilandoust-dentist-dubai/';
     image = '/images/Hirbod.jpeg';
     statement = 'This dental care guide has been reviewed for clinical precision, safety, and DHA dental protocols by Dr. Hirbod Gilandoust.';
   } else if (isAparna) {
@@ -129,7 +129,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     role = 'Cosmetic & General Dentist';
     credentials = 'BDS · DHA Licensed Dentist';
     experience = '10+ Years Clinical Experience';
-    link = '/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai';
+    link = '/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai/';
     image = '/images/Dr Aparna.jpg';
     statement = 'This dental treatment guide has been clinically reviewed for medical accuracy and patient safety by Dr. Aparna Balakrishnan.';
   }

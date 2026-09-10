@@ -154,7 +154,7 @@ export default function ServicePageTemplate({ content }) {
           <nav className="flex flex-wrap items-center gap-y-1.5 text-[10px] sm:text-xs font-semibold text-[#5F5F5F] mb-4 sm:mb-6 tracking-wider">
             {(breadcrumbs || []).map((b, index) => (
               <React.Fragment key={index}>
-                <a href={b.href} className="hover:text-[#1F5E4B] transition-colors">
+                <a href={b.href.endsWith('/') || b.href.includes('#') || b.href.includes('?') ? b.href : `${b.href}/`} className="hover:text-[#1F5E4B] transition-colors">
                   {b.label.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}
                 </a>
                 {index < (breadcrumbs || []).length - 1 && <span className="mx-1.5 text-gray-300">/</span>}
@@ -202,7 +202,7 @@ export default function ServicePageTemplate({ content }) {
                   Book Free Consultation
                 </a>
                 <a
-                  href="tel:+971042862006"
+                  href="tel:+97142862006"
                   className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-white hover:bg-gray-50 text-[#1F5E4B] border border-[#1F5E4B]/20 hover:border-[#1F5E4B]/50 rounded-xl font-bold text-base sm:text-lg transition-all shadow-sm"
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />

@@ -1001,8 +1001,8 @@ export const subcategoryContent = {
     treatmentOptions: [
       { icon: "Hand", title: "Manual Therapy", description: "Hands-on techniques used to improve joint mobility, reduce muscle tension, and ease pain in the surrounding soft tissue. Manual therapy is often one of the first steps in restoring comfortable movement." },
       { icon: "Syringe", title: "Dry Needling", description: "Fine needles are inserted into tight or overactive muscle trigger points to help release tension and reduce referred pain, particularly around the upper trapezius and rotator cuff region. Learn more about {{Dry Needling Dubai|/services/dry-needling-dubai}} as a standalone service." },
-      { icon: "Zap", title: "Electrotherapy", description: "Techniques such as TENS or neuromuscular electrical stimulation can help manage pain and support muscle re-activation during early rehabilitation stages. Explore our dedicated {{Electrotherapy Dubai|/services/electrotherapy-dubai}} page for more detail." },
-      { icon: "Radio", title: "Ultrasound Therapy", description: "Therapeutic ultrasound uses sound waves to promote tissue healing and reduce inflammation in conditions like tendinitis and bursitis. Read more about {{Ultrasound Therapy Dubai|/services/ultrasound-therapy-dubai}}." },
+      { icon: "Zap", title: "Electrotherapy", description: "Techniques such as TENS or neuromuscular electrical stimulation can help manage pain and support muscle re-activation during early rehabilitation stages. Explore our dedicated {{Electrotherapy Dubai|/services/electrotherapy-dubai/}} page for more detail." },
+      { icon: "Radio", title: "Ultrasound Therapy", description: "Therapeutic ultrasound uses sound waves to promote tissue healing and reduce inflammation in conditions like tendinitis and bursitis. Read more about {{Ultrasound Therapy Dubai|/services/ultrasound-therapy-dubai/}}." },
       { icon: "Activity", title: "Therapeutic Exercises", description: "A progressive program of guided exercises designed to restore strength and control around the joint safely." },
       { icon: "Dumbbell", title: "Rotator Cuff Strengthening", description: "Targeted strengthening protocols that rebuild stability in the muscles most responsible for shoulder function." },
       { icon: "Move", title: "Mobility Exercises", description: "Gentle, structured movements aimed at restoring range of motion, especially valuable for frozen shoulder cases." },
@@ -1081,15 +1081,15 @@ export const subcategoryContent = {
     },
 
     relatedServices: [
-      { label: "Physiotherapy Dubai", href: "/services/physiotherapy-dubai" },
-      { label: "Frozen Shoulder Treatment Dubai", href: "/services/frozen-shoulder-treatment-dubai" },
-      { label: "Neck Pain Treatment Dubai", href: "/services/neck-pain-treatment-dubai" },
-      { label: "Back Pain Treatment Dubai", href: "/services/back-pain-treatment-dubai" },
-      { label: "Sciatica Treatment Dubai", href: "/services/sciatica-treatment-dubai" },
-      { label: "Dry Needling Dubai", href: "/services/dry-needling-dubai" },
-      { label: "Electrotherapy Dubai", href: "/services/electrotherapy-dubai" },
-      { label: "Ultrasound Therapy Dubai", href: "/services/ultrasound-therapy-dubai" },
-      { label: "Sports Injury Rehabilitation Dubai", href: "/services/sports-injury-rehabilitation-dubai" }
+      { label: "Physiotherapy Dubai", href: "/services/physiotherapy-dubai/" },
+      { label: "Frozen Shoulder Treatment Dubai", href: "/services/frozen-shoulder-treatment-dubai/" },
+      { label: "Neck Pain Treatment Dubai", href: "/services/neck-pain-treatment-dubai/" },
+      { label: "Back Pain Treatment Dubai", href: "/services/back-pain-treatment-dubai/" },
+      { label: "Sciatica Treatment Dubai", href: "/services/sciatica-treatment-dubai/" },
+      { label: "Dry Needling Dubai", href: "/services/dry-needling-dubai/" },
+      { label: "Electrotherapy Dubai", href: "/services/electrotherapy-dubai/" },
+      { label: "Ultrasound Therapy Dubai", href: "/services/ultrasound-therapy-dubai/" },
+      { label: "Sports Injury Rehabilitation Dubai", href: "/services/sports-injury-rehabilitation-dubai/" }
     ],
 
     faqs: [
@@ -38510,7 +38510,7 @@ Seek a cost-effective smile restoration`
       metaTitle: "Slip Disc Treatment Dubai | RamaCare Polyclinic",
       metaDescription: "Get expert Slip Disc Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment in Dubai today.",
       keywords: "Slip Disc Treatment Dubai, Slipped Disc Treatment Dubai, Herniated Disc Treatment Dubai, Disc Bulge Treatment Dubai, Lower Back Pain Treatment Dubai, Spine Pain Treatment Dubai, Spine Rehabilitation Dubai, Back Pain Specialist Dubai, Orthopedic Physiotherapy Dubai",
-      slug: "/services/slip-disc-treatment-dubai",
+      slug: "/services/slip-disc-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/slip-disc-treatment-dubai/"
     },
     breadcrumbs: [
@@ -38774,7 +38774,7 @@ Seek a cost-effective smile restoration`
       metaTitle: "Arthritis Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Personalized Arthritis Treatment Dubai at RamaCare Polyclinic. DHA-licensed doctors & physiotherapists, evidence-based care. Book your consultation now.",
       keywords: "Arthritis Treatment Dubai, Knee Arthritis Dubai, Osteoarthritis Dubai, Rheumatoid Arthritis Dubai, Joint Pain Specialist Dubai, Jumeirah Polyclinic, Spine Pain Treatment",
-      slug: "/services/arthritis-treatment-dubai",
+      slug: "/services/arthritis-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/arthritis-treatment-dubai/"
     },
     breadcrumbs: [

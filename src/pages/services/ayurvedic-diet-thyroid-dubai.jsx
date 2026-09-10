@@ -20,7 +20,7 @@ const content = {
           primary: {
             text: 'Book Thyroid Consultation',
             icon: 'calendar',
-            link: '/book-appointment'
+            link: '/book-appointment/'
           },
       secondary: {
         text: 'WhatsApp Consultation',
@@ -279,7 +279,7 @@ export default function AyurvedicDietThyroidPage() {
     <Layout>
       {/* Sticky Floating Button */}
       <div className="fixed top-1/2 right-0 -translate-y-1/2 z-[999] hidden md:block">
-        <Link href="/book-appointment">
+        <Link href="/book-appointment/">
           <motion.div
             initial={{ x: 100 }}
             animate={{ x: 0 }}
@@ -518,7 +518,7 @@ export default function AyurvedicDietThyroidPage() {
 
           <div className="text-center">
             <Link 
-              href="/book-appointment"
+              href="/book-appointment/"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#1F5E4B] text-white rounded-xl font-bold text-lg hover:bg-[#164435] transition-colors shadow-lg"
             >
               {content.dietaryStrategies.cta}
@@ -586,7 +586,7 @@ export default function AyurvedicDietThyroidPage() {
 
           <div className="text-center">
             <Link 
-              href="/book-appointment"
+              href="/book-appointment/"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#1F5E4B] text-white rounded-xl font-bold text-lg hover:bg-[#164435] transition-colors shadow-lg"
             >
               {content.adaptogens.cta}
@@ -739,7 +739,7 @@ export default function AyurvedicDietThyroidPage() {
             className="mb-12"
           >
             <Link
-              href="/book-appointment"
+              href="/book-appointment/"
               className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[#1F5E4B] rounded-lg font-bold text-xl hover:bg-emerald-50 transition-all shadow-2xl"
             >
               <LucideIcons.Calendar className="text-[#1F5E4B]" size={28} />
@@ -821,7 +821,7 @@ export default function AyurvedicDietThyroidPage() {
 
             <div className="space-y-3">
               <Link
-                href="/book-appointment"
+                href="/book-appointment/"
                 onClick={() => setShowPopup(false)}
                 className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#1F5E4B] text-white rounded-lg font-bold text-lg hover:bg-[#164435] transition-all shadow-lg">
                 <LucideIcons.Calendar size={20} />

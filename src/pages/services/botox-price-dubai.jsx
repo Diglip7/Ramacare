@@ -118,11 +118,11 @@ const faqs = [
 ];
 
 const related = [
-  { icon: 'Syringe', label: 'Botox Treatment Dubai', href: '/services/botox-dubai' },
-  { icon: 'Droplet', label: 'Fillers Dubai', href: '/services/fillers-in-dubai' },
-  { icon: 'Sparkles', label: 'HydraFacial Dubai', href: '/services/hydrafacial-dubai' },
-  { icon: 'HeartPulse', label: 'PRP Hair Treatment Dubai', href: '/services/hair-prp-dubai' },
-  { icon: 'Stethoscope', label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai' },
+  { icon: 'Syringe', label: 'Botox Treatment Dubai', href: '/services/botox-dubai/' },
+  { icon: 'Droplet', label: 'Fillers Dubai', href: '/services/fillers-in-dubai/' },
+  { icon: 'Sparkles', label: 'HydraFacial Dubai', href: '/services/hydrafacial-dubai/' },
+  { icon: 'HeartPulse', label: 'PRP Hair Treatment Dubai', href: '/services/hair-prp-dubai/' },
+  { icon: 'Stethoscope', label: 'Aesthetic Dermatology Dubai', href: '/services/aesthetic-dermatology-dubai/' },
 ];
 
 /* ------------------------------------------------------------------
@@ -214,7 +214,7 @@ export default function BotoxPriceDubaiPage() {
     );
     window.open(`https://wa.me/971566597878?text=${message}`, '_blank');
   };
-  const handleBookAppointment = () => router.push('/book-appointment');
+  const handleBookAppointment = () => router.push('/book-appointment/');
   const handleCall = () => window.open('tel:+97142862006', '_self');
 
   const schema = buildSchema();

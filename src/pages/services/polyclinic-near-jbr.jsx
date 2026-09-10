@@ -234,7 +234,7 @@ function buildSchema() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
       { '@type': 'ListItem', position: 3, name: 'Polyclinic Near JBR', item: SITE_URL + PAGE_PATH },
     ],
   };
@@ -512,7 +512,7 @@ export default function PolyclinicNearJbrPage() {
                         <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span> Free & Stress-Free
                       </p>
                     </div>
-                    <Link href="/contact-us" className="inline-flex items-center gap-1 text-xs font-bold text-[#1F5E4B] hover:underline">
+                    <Link href="/contact-us/" className="inline-flex items-center gap-1 text-xs font-bold text-[#1F5E4B] hover:underline">
                       View Map Route <LucideIcons.ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
@@ -966,7 +966,7 @@ export default function PolyclinicNearJbrPage() {
                 </div>
                 <span className="text-sm font-bold text-[#1A1A1A]">WhatsApp</span>
               </button>
-              <Link href="/contact-us" className="flex flex-col items-center gap-3 rounded-2xl bg-white border border-gray-100 px-4 py-6 shadow-sm hover:border-[#1F5E4B] hover:shadow-md transition-all duration-200">
+              <Link href="/contact-us/" className="flex flex-col items-center gap-3 rounded-2xl bg-white border border-gray-100 px-4 py-6 shadow-sm hover:border-[#1F5E4B] hover:shadow-md transition-all duration-200">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#1F5E4B]/10 text-[#1F5E4B]">
                   <LucideIcons.MapPin className="w-5 h-5" />
                 </div>

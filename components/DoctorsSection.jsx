@@ -170,7 +170,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
                           'w-full md:w-1/2 lg:w-1/3'}
                     `}
                   >
-                    <Link href={`/doctors/${slug}`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                    <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                       {doctor.image ? (
                         <Image
                           src={doctor.image}
@@ -244,7 +244,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
                       </div>
                       <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                         <Link
-                          href={`/doctors/${slug}`}
+                          href={`/doctors/${slug}/`}
                           className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                         >
                           View Full Profile

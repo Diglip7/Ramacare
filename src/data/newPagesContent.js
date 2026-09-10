@@ -13,7 +13,7 @@ export const newPagesContent = {
     byline: {
       reviewer: "Jeena Mathew",
       credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/1",
+      href: "/doctors/jeena-mathew-physiotherapist-dubai/",
       date: "July 2026"
     },
     seo: {
@@ -300,7 +300,7 @@ export const newPagesContent = {
     byline: {
       reviewer: "Jeena Mathew",
       credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/1",
+      href: "/doctors/jeena-mathew-physiotherapist-dubai/",
       date: "July 2026"
     },
     seo: {
@@ -308,7 +308,7 @@ export const newPagesContent = {
       metaTitle: "Stress Treatment Dubai | Supportive Care at RamaCare",
       metaDescription: "Feeling overwhelmed by stress? RamaCare Polyclinic Dubai offers personalized Stress Treatment Dubai support with DHA-licensed professionals. Book today.",
       keywords: "Stress Treatment Dubai, Stress Management Dubai, Chronic Stress Treatment Dubai, Stress Relief Dubai, Stress Therapy Dubai, Workplace Stress Dubai, Emotional Stress Management Dubai, Stress and Anxiety Support Dubai, Burnout Recovery Dubai, Holistic Stress Management Dubai, Ayurvedic Stress Treatment Dubai, Physiotherapy for Stress Dubai, Lifestyle Medicine Dubai, Wellness Clinic Dubai, Mind-Body Wellness Dubai, Relaxation Therapy Dubai",
-      slug: "/services/stress-treatment-dubai",
+      slug: "/services/stress-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/stress-treatment-dubai/"
     },
     breadcrumbs: [
@@ -581,7 +581,7 @@ export const newPagesContent = {
     byline: {
       reviewer: "Sonita Sinaga",
       credentials: "Licensed & Certified Aesthetic Therapist · NCLC Laser Certified",
-      href: "/doctors/sonita-sinaga-aesthetic-therapist-dubai",
+      href: "/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
       date: "July 2026"
     },
     seo: {
@@ -1202,7 +1202,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       languages: 'English',
       image: '/images/Jeena Mathew.jpeg',
       alt: 'Jeena Mathew, DHA-licensed physiotherapist, RamaCare Polyclinic Dubai',
-      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai'
+      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai/'
     },
     clinicallyReviewed: {
       reviewerName: 'Jeena Mathew',
@@ -1604,7 +1604,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       languages: 'English',
       image: '/images/Jeena Mathew.jpeg',
       alt: 'Jeena Mathew, DHA-licensed physiotherapist, RamaCare Polyclinic Dubai',
-      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai'
+      profileUrl: '/doctors/jeena-mathew-physiotherapist-dubai/'
     },
     clinicallyReviewed: {
       reviewerName: 'Jeena Mathew',

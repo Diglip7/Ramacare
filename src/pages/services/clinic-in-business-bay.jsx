@@ -16,7 +16,7 @@ export default function ClinicInBusinessBayPage() {
   const factorsRef = useRef(null);
 
   const handleBookAppointment = () => {
-    router.push('/book-appointment');
+    router.push('/book-appointment/');
   };
 
   const handleWhatsAppClick = () => {
@@ -305,7 +305,7 @@ export default function ClinicInBusinessBayPage() {
           <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-medium text-[#5F5F5F]">
             <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
             <span aria-hidden="true">/</span>
-            <Link href="/services" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page" className="text-[#1F5E4B]">Clinic in Business Bay</span>
           </nav>
