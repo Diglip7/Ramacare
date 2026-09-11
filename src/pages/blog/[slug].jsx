@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
+import Head from "next/head";
 import Layout from "../../../components/Layout";
 import dbConnect from "../../../lib/database";
 import Blog from "../../../models/blog";
@@ -376,6 +377,14 @@ export default function BlogDetailPage({ blog }) {
   
   return (
     <Layout>
+      <Head>
+        <title key="title">{blog.metaTitle || `${blog.title} | RamaCare Polyclinic Blog`}</title>
+        <meta name="description" content={blog.metaDescription || blog.excerpt || blog.title} key="description" />
+        <link rel="canonical" href={`https://ramacarepolyclinic.ae/blog/${blog.paramlink}/`} key="canonical" />
+        <meta property="og:title" content={blog.title} key="og:title" />
+        <meta property="og:description" content={blog.metaDescription || blog.excerpt || blog.title} key="og:description" />
+        <meta property="og:url" content={`https://ramacarepolyclinic.ae/blog/${blog.paramlink}/`} key="og:url" />
+      </Head>
       <div className="force-light">
         <div className="bg-gradient-to-b from-teal-50 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">

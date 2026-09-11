@@ -21,7 +21,7 @@ import { useRouter } from 'next/router';
    paragraphs use text-base (16px) per the readability request.
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/prp-vs-mesotherapy-hair-loss-dubai';
+const PAGE_PATH = '/services/prp-vs-mesotherapy-hair-loss-dubai/';
 
 const quickCompareTable = [
   { icon: 'Droplet', feature: 'Source', prp: "Patient's own blood (autologous)", meso: 'Vitamin, mineral & amino acid solutions' },

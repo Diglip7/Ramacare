@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/prp-vs-hair-mesotherapy-dubai';
+const PAGE_PATH = '/services/prp-vs-hair-mesotherapy-dubai/';
 
 const quickCompareTable = [
   { icon: 'Droplet', feature: 'Source', prp: "Your own blood plasma", meso: 'External vitamin, mineral, and amino acid formula' },

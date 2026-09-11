@@ -56,7 +56,7 @@ const SEO = {
   title: 'Ayurveda vs Allopathy for Chronic Pain Dubai | RamaCare',
   metaDescription:
     'Comparing Ayurveda vs Allopathy for chronic pain in Dubai? Get an expert, unbiased guide and book a personalised pain consultation at RamaCare.',
-  canonical: 'https://ramacarepolyclinic.ae/services/ayurveda-vs-allopathy-for-chronic-pain-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/ayurveda-vs-allopathy-for-chronic-pain-dubai/',
 };
 
 const WHATSAPP_NUMBER = '971566597878';
@@ -725,7 +725,7 @@ export default function AyurvedaVsAllopathyPage() {
                 <p className="mt-4 text-base leading-relaxed text-[#5F5F5F]">
                   A combined approach might involve using allopathic diagnostics and medication
                   to control an acute flare-up, while introducing <InlineLink href="/services/physiotherapy-dubai/">physiotherapy</InlineLink>, Ayurvedic
-                  <InlineLink href="/services/panchakarma-treatment/">Panchakarma</InlineLink>, or manual therapy to address underlying mobility, posture, and
+                  <InlineLink href="/services/panchakarma-treatment-dubai/">Panchakarma</InlineLink>, or manual therapy to address underlying mobility, posture, and
                   lifestyle factors once the acute phase settles. Some patients also use Ayurveda
                   alongside ongoing <InlineLink href="/services/physiotherapy-dubai/">physiotherapy</InlineLink> and <InlineLink href="/services/dry-needling-dubai/">dry needling</InlineLink> to manage chronic stiffness
                   and reduce recurrence.

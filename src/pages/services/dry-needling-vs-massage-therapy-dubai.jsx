@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 
 
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/dry-needling-vs-massage-therapy-dubai';
+const PAGE_PATH = '/services/dry-needling-vs-massage-therapy-dubai/';
 
 const painCauses = [
   { icon: 'Crosshair', title: 'Trigger Points', text: 'Small, hyperirritable knots within a tight band of muscle fibre that can cause local or referred pain.' },

@@ -72,9 +72,9 @@ const Header = () => {
       subcategories: [
         { name: 'Ayurvedic Hairfall Treatment', slug: 'ayurvedic-hairfall-treatment-dubai' },
         { name: 'Analysis Of Individual', slug: 'analysis-of-individual-dubai' },
-        { name: 'Skin Diseases Treatment', slug: 'skin-diseases-treatment' },
+        { name: 'Skin Diseases Treatment', slug: 'skin-diseases-treatment-dubai' },
         { name: 'Ayurvedic Diet Plan', slug: 'ayurvedic-diet-plan-dubai' },
-        { name: 'Panchakarma Treatment', slug: 'panchakarma-treatment' },
+        { name: 'Panchakarma Treatment', slug: 'panchakarma-treatment-dubai' },
         { name: 'Gastrointestinal Diseases Treatment', slug: 'gastrointestinal-diseases-treatment-dubai' },
         { name: 'PCOS Treatment', slug: 'pcos-treatment-dubai' },
         { name: 'Abhyanga Massage', slug: 'abhyanga-massage-dubai' },

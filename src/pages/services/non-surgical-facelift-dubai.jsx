@@ -57,8 +57,8 @@ const medicalClinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "RamaCare Polyclinic",
-  "url": "https://ramacarepolyclinic.ae//services/non-surgical-facelift-dubai/",
-  "image": "/https://ramacarepolyclinic.ae/images/facial-assessment-non-surgical-facelift.jpg",
+  "url": "https://ramacarepolyclinic.ae/services/non-surgical-facelift-dubai/",
+  "image": "https://ramacarepolyclinic.ae/images/facial-assessment-non-surgical-facelift.jpg",
   "telephone": "+971566597878",
   "address": {
     "@type": "PostalAddress",

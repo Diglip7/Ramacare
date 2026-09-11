@@ -19,7 +19,7 @@ import { useRouter } from 'next/router';
    timeline arrow between the two approaches.
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/physiotherapy-vs-rest-for-back-pain-recovery';
+const PAGE_PATH = '/services/physiotherapy-vs-rest-for-back-pain-recovery/';
 
 const jumpLinks = [
   { id: 'understanding', label: '2. Understanding Back Pain' },

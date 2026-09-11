@@ -122,7 +122,7 @@ const AllDoctorsPage = ({ content }) => {
       <Head>
         <title key="title">All Doctors - RamaCare</title>
         <meta name="description" content="Meet all our expert doctors at RamaCare" key="description" />
-
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/doctors/" key="canonical" />
       </Head>
 
       <main style={{ fontFamily: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" }}>

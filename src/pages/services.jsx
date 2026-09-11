@@ -312,6 +312,7 @@ const ServicesPage = ({ initialServicesData }) => {
           <title key="title">Medical Services in Dubai | All Treatments & Specialties</title>
           <meta name="description" content="Explore all medical services at RamaCare Polyclinic Dubai. Ayurveda, Dental, Dermatology, Physiotherapy, General Physician, and Facial treatments with expert care." key="description" />
           <meta name="keywords" content="medical services Dubai, healthcare treatments, Ayurveda Dubai, dental care Dubai, dermatology Dubai, physiotherapy Dubai, general physician Dubai" />
+          <link rel="canonical" href="https://ramacarepolyclinic.ae/services/" key="canonical" />
         </Head>
         
         <style jsx global>{`

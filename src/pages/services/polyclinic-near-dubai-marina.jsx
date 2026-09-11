@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
    We preserve all SEO titles, canonicals, metadescriptions, and text.
  ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/polyclinic-near-dubai-marina';
+const PAGE_PATH = '/services/polyclinic-near-dubai-marina/';
 
 const whyChoose = [
   { icon: 'ShieldCheck', title: 'DHA Licensed and Regulated', text: "RamaCare Polyclinic operates under a full Dubai Health Authority license, meaning every department, doctor, and treatment protocol meets the regulatory standards set for healthcare providers in Dubai. Patients don't have to take quality on faith — it's independently overseen." },

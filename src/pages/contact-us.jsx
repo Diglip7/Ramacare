@@ -195,6 +195,7 @@ const ContactUsPage = () => {
         <Head>
           <title key="title">Contact Us | RamaCare Polyclinic Dubai</title>
           <meta name="description" content="Get in touch with RamaCare Polyclinic in Jumeirah 1, Dubai. Book your appointment, find our location, or call us for any inquiries." key="description" />
+          <link rel="canonical" href="https://ramacarepolyclinic.ae/contact-us/" key="canonical" />
         </Head>
 
         <style jsx global>{`

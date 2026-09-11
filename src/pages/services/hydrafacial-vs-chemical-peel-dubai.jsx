@@ -20,7 +20,7 @@ import { useRouter } from 'next/router';
    lead paragraphs use text-base (16px) per the readability request.
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/services/hydrafacial-vs-chemical-peel-dubai';
+const PAGE_PATH = '/services/hydrafacial-vs-chemical-peel-dubai/';
 
 const hydrafacialSteps = [
   { title: 'Cleanse & Peel', text: 'A gentle exfoliation step lifts away dead skin cells and reveals fresh skin underneath.' },

@@ -12,7 +12,7 @@ import ContentReviewBadge from '../../../components/ContentReviewBadge';
    content brief (pricing, sections, 18 FAQs, schema recommendations).
 ------------------------------------------------------------------- */
 const SITE_URL = 'https://ramacarepolyclinic.ae';
-const PAGE_PATH = '/physiotherapy-cost-dubai';
+const PAGE_PATH = '/services/physiotherapy-cost-dubai/';
 
 const trustPoints = [
   'Sessions starting from AED 500 (60 minutes) and AED 750 (90 minutes)',

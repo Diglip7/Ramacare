@@ -33,7 +33,7 @@ const SEO = {
   title: 'Hair PRP Cost Dubai | Trusted DHA Clinic',
   metaDescription:
     "Hair PRP Cost Dubai starts from AED 500 per session. Explore pricing, what's included, benefits, FAQs, then book your consultation at RamaCare Polyclinic.",
-  canonical: 'https://ramacarepolyclinic.ae/hair-prp-cost-dubai',
+  canonical: 'https://ramacarepolyclinic.ae/services/hair-prp-cost-dubai/',
 };
 
 const WHATSAPP_NUMBER = '971566597878';

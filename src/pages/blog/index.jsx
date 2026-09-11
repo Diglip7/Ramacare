@@ -149,6 +149,7 @@ export default function BlogListPage() {
         <title key="title">Health & Wellness Blog | RamaCare Polyclinic Dubai</title>
         <meta name="description" content="Stay updated with the latest health insights, medical tips, and wellness advice from our expert doctors at RamaCare Polyclinic Dubai. Covering dermatology, dental care, Ayurveda, and more." key="description" />
         <meta name="keywords" content="health blog Dubai, medical news Dubai, wellness tips, dermatology blog, dental care advice, Ayurveda insights, healthcare blog" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/blog/" key="canonical" />
       </Head>
       <style jsx>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
