@@ -534,7 +534,6 @@ export async function getServerSideProps(context) {
   if (processedDoc.content && typeof processedDoc.content === 'string') {
     // Clean the content once on the server
     processedDoc.content = cleanBlogContent(processedDoc.content);
-    
     // Pre-calculate all derived values on server
     const coverImageUrl = extractFirstImageSrc(processedDoc.content);
     processedDoc.coverImageExistsInContent = coverImageUrl && coverImageExistsInContent(processedDoc.content, coverImageUrl);

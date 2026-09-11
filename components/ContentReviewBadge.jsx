@@ -48,15 +48,19 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     else if (contextStr.includes('dental') || contextStr.includes('teeth') || contextStr.includes('veneer') || contextStr.includes('root-canal') || contextStr.includes('crown') || contextStr.includes('braces') || contextStr.includes('smile') || contextStr.includes('filling')) {
       isHirbod = true;
     }
-    // 4. Aesthetic Skincare, Facial, Microneedling & Laser (Sonita Sinaga)
-    else if (contextStr.includes('acne-scar') || contextStr.includes('hydrafacial') || contextStr.includes('microneedling') || contextStr.includes('chemical-peel') || contextStr.includes('under-eye') || contextStr.includes('facelift') || contextStr.includes('eximia') || contextStr.includes('skin-renewal')) {
+    // 4. Facial Treatments & Rejuvenation (Nodainne Baves Guerrero)
+    else if (contextStr.includes('facial') || contextStr.includes('hydrafacial') || contextStr.includes('oxygeneo') || contextStr.includes('golden-elixir') || contextStr.includes('exosomes-facial')) {
+      isNodainne = true;
+    }
+    // 5. Aesthetic Skincare, Microneedling & Laser (Sonita Sinaga)
+    else if (contextStr.includes('acne-scar') || contextStr.includes('microneedling') || contextStr.includes('chemical-peel') || contextStr.includes('under-eye') || contextStr.includes('facelift') || contextStr.includes('eximia') || contextStr.includes('skin-renewal') || contextStr.includes('laser') || contextStr.includes('carbon-laser') || contextStr.includes('hifu') || contextStr.includes('electrolysis') || contextStr.includes('body-shaping')) {
       isSonita = true;
     }
-    // 5. Hair Loss, PRP Hair & Medical Dermatology (Melasma, Rosacea, Psoriasis, Dandruff, Skin Tag, Botox)
+    // 6. Hair Loss, PRP Hair & Medical Dermatology (Melasma, Rosacea, Psoriasis, Dandruff, Skin Tag, Botox)
     else if (contextStr.includes('hair') || contextStr.includes('prp') || contextStr.includes('melasma') || contextStr.includes('rosacea') || contextStr.includes('psoriasis') || contextStr.includes('dandruff') || contextStr.includes('skin-tag') || contextStr.includes('botox')) {
       isSahar = true;
     }
-    // 6. Default for General Medicine
+    // 7. Default for General Medicine
     else {
       isSahar = true;
     }
@@ -96,12 +100,12 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     statement = `This aesthetic dermatology & skincare guide has been clinically reviewed for treatment safety, ${contextStr.includes('prp') ? 'PRP protocols' : 'laser protocols'}, and skincare excellence by Sonita Sinaga.`;
   } else if (isNodainne) {
     name = 'Nodainne Baves Guerrero';
-    role = 'Certified Aesthetic & Beauty Therapist';
-    credentials = 'Certified Aesthetic & Skincare Specialist';
-    experience = 'Professional Aesthetic & Skincare Experience';
+    role = 'DHA Licensed Beauty & Facial Therapist';
+    credentials = 'DHA Licensed · 10+ Years Clinical Experience';
+    experience = 'Facial & Skincare Specialist';
     link = '/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/';
-    image = '/images/Nodainne Baves Guerrero.jpeg';
-    statement = 'This aesthetic & facial care guide has been reviewed for clinical skincare standards and treatment safety by Nodainne Baves Guerrero.';
+    image = '/images/Nodainne.jpeg';
+    statement = 'This facial & skincare guide has been clinically reviewed for treatment safety, facial rejuvenation protocols, and skincare excellence by Nodainne Baves Guerrero.';
   } else if (isSahar) {
     name = 'Dr. Sahar Zomorrodi';
     role = 'General Practitioner & Aesthetic Specialist';

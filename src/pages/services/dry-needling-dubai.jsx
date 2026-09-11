@@ -107,71 +107,71 @@ Before I pick up a needle, though, I want to understand how you actually move, n
   const rawFaqs = [
     {
       q: 'What is dry needling, really?',
-      a: 'A fine, sterile needle placed directly into a tight muscle band to help it release. That’s the whole mechanism — no medication, no incision.'
+      a: 'Dry needling is a physiotherapy technique that uses a very thin, sterile needle to target specific areas of muscle tension and myofascial trigger points. It may be used to reduce muscular pain, ease tightness and support better movement. At RamaCare, dry needling is considered as part of an individual physiotherapy plan rather than as a standalone treatment for every patient.'
     },
     {
-      q: 'Does it hurt?',
-      a: 'Less than people expect, usually. A brief twitch, sometimes a dull ache, occasionally nothing at all. It varies enough between patients that I don’t try to predict it in advance anymore.'
+      q: 'Does dry needling hurt?',
+      a: 'Most people feel a brief prick as the needle passes through the skin. When a sensitive trigger point is stimulated, you may notice a short twitch, cramping sensation or temporary ache. Everyone responds differently, so your physiotherapist will use an appropriate technique and work within your comfort level throughout the session.'
     },
     {
-      q: 'Isn’t this the same as acupuncture?',
-      a: 'No — different history, different mechanism. Acupuncture follows a traditional Chinese medicine framework along meridian points. Dry needling comes from Western physiotherapy and goes straight into the specific muscle causing the problem.'
+      q: 'Isn’t dry needling the same as acupuncture?',
+      a: 'No. Although both treatments use fine needles, they have different clinical approaches. Dry needling is commonly used within physiotherapy to address muscular trigger points, tension and movement-related problems. Acupuncture is traditionally based on principles of traditional Chinese medicine. Your practitioner can explain which approach is appropriate for your particular concern.'
     },
     {
-      q: 'What can it actually help with?',
-      a: 'Muscular tightness and trigger points behind neck pain, back pain, shoulder issues, sports injuries, tension headaches, and similar movement-related problems.'
+      q: 'What can dry needling actually help with?',
+      a: 'Dry needling may be useful as part of physiotherapy for certain types of muscular pain, trigger points, muscle tightness and restricted movement. It may also be included in rehabilitation for some sports injuries and musculoskeletal conditions. Whether it is appropriate depends on the cause of your symptoms and the findings of your physiotherapy assessment.'
     },
     {
-      q: 'Can it help my back pain?',
-      a: 'If the pain is muscular, often yes. If there’s numbness, weakness, or other red-flag symptoms involved, that needs a different kind of assessment first — I’ll tell you directly if that’s the case.'
+      q: 'Can dry needling help with back pain?',
+      a: 'Dry needling may help when muscular tension or trigger points are contributing to back pain. However, back pain can have many different causes, so treatment should begin with an appropriate assessment. Where suitable, dry needling may be combined with therapeutic exercises, manual therapy, mobility work and other physiotherapy techniques to support recovery.'
     },
     {
-      q: 'I sit at a desk all day and my neck is always tight — will this help?',
-      a: 'Probably, yes — it’s the single most common reason people come in. It works best paired with some changes to your setup and posture, though, not on its own.'
+      q: 'Can dry needling help with neck pain and muscle tightness?',
+      a: 'It may help some patients whose neck discomfort is associated with muscular tightness or trigger points. This can be particularly relevant for people who spend long hours at a desk or perform repetitive activities. A physiotherapist can assess your posture, movement and symptoms before deciding whether dry needling should form part of your treatment.'
     },
     {
-      q: 'Is it useful for sports injuries?',
-      a: 'Yes, generally as one part of a broader return-to-training plan rather than a stand-alone fix.'
+      q: 'Is dry needling useful for sports injuries?',
+      a: 'Dry needling can sometimes be incorporated into sports injury rehabilitation when muscle tightness, trigger points or related movement problems are contributing to symptoms. It is not appropriate for every sports injury. Your physiotherapist will consider the type and stage of the injury before recommending dry needling or other rehabilitation techniques.'
     },
     {
-      q: 'How many sessions will I need?',
-      a: 'Depends entirely on how long the problem has existed. Some patients feel a real shift after two sessions; others need a longer course.'
+      q: 'How many dry needling sessions will I need?',
+      a: 'There is no standard number of dry needling sessions that works for everyone. The required treatment depends on your condition, symptoms, response to therapy and overall rehabilitation goals. Some patients may notice changes early, while others need a longer programme combining dry needling with exercise and other physiotherapy approaches.'
     },
     {
-      q: 'How long does a session take?',
-      a: 'The needling itself is 20 to 30 minutes. The first visit runs longer because of the assessment.'
+      q: 'How long does a dry needling session take?',
+      a: 'The duration depends on the area being treated and your overall physiotherapy programme. Dry needling itself is often only one part of the appointment. Your session may also include assessment, manual therapy, therapeutic exercise, stretching or rehabilitation work, depending on what your physiotherapist considers appropriate.'
     },
     {
-      q: 'Is it safe?',
-      a: 'Generally, yes, when done by a trained physiotherapist — but no needle-based treatment is entirely risk-free, and we screen for anything that would make it inappropriate before starting.'
+      q: 'Is dry needling safe?',
+      a: 'Dry needling can be safely used by appropriately trained healthcare professionals when the patient has been properly assessed and suitable clinical and hygiene procedures are followed. However, it is not appropriate for everyone. Your physiotherapist should review your medical history, medications, symptoms and individual circumstances before treatment.'
     },
     {
-      q: 'What side effects should I expect?',
-      a: 'Mild soreness or occasional minor bruising, usually settling within a day or two.'
+      q: 'What side effects can I expect after dry needling?',
+      a: 'Temporary soreness, tenderness, mild bruising or fatigue around the treated area can occur after dry needling. These effects are generally short-lived. Your physiotherapist will explain what you may experience after treatment and provide appropriate aftercare guidance based on your individual session.'
     },
     {
-      q: 'Will my flexibility actually improve?',
-      a: 'Often, especially when tight muscle is what’s limiting your movement in the first place. We usually pair it with mobility work to help it stick.'
+      q: 'Will dry needling improve my flexibility?',
+      a: 'Dry needling may help improve movement when muscle tightness or trigger points are contributing to restricted mobility. However, flexibility is influenced by several factors. For longer-term improvements in movement, your physiotherapy programme may also include mobility exercises, strengthening, movement retraining and other rehabilitation techniques.'
     },
     {
-      q: 'Who shouldn’t get this treatment?',
-      a: 'People with certain bleeding disorders, active infection at the treatment site, or a few other specific medical situations. Tell your physiotherapist your full history upfront — that’s what the first conversation is for.'
+      q: 'Who may not be suitable for dry needling?',
+      a: 'Dry needling is not suitable for every patient. Certain medical conditions, medications, bleeding or clotting problems, infections and other individual factors may require additional consideration. Your physiotherapist should review your health history before treatment and determine whether dry needling is appropriate for you.'
     },
     {
-      q: 'Why RamaCare specifically?',
-      a: 'Because the assessment always comes first, and needling gets built into an actual rehab plan rather than treated as the whole solution.'
+      q: 'Where can I get dry needling in Dubai?',
+      a: 'RamaCare Polyclinic provides dry needling as part of its physiotherapy services in Jumeirah 1, Dubai. The treatment is considered following an assessment of your symptoms and physical condition. Where appropriate, dry needling can be combined with other physiotherapy and rehabilitation techniques to address your individual treatment needs.'
     },
     {
-      q: 'How soon will I feel a difference?',
-      a: 'Varies. Some people notice something after the first session; more often it takes a few sessions alongside the exercises we give you.'
+      q: 'How soon will I feel a difference after dry needling?',
+      a: 'The response varies from person to person. Some patients may notice a change in muscle tightness, pain or movement relatively soon after treatment, while others may need several sessions or additional rehabilitation. Your response depends on the underlying problem and other factors affecting recovery, so your physiotherapist will monitor your progress.'
     },
     {
-      q: 'Can this replace physiotherapy exercises?',
-      a: 'No, and I’d be doing you a disservice if I said otherwise. It works best as one part of the plan, not the entire plan.'
+      q: 'Can dry needling replace physiotherapy exercises?',
+      a: 'No. Dry needling is generally best viewed as one technique within a broader physiotherapy programme rather than a replacement for exercise. Therapeutic exercises can help improve strength, mobility, movement control and function. Where appropriate, dry needling may complement these exercises as part of a personalised rehabilitation plan.'
     },
     {
-      q: 'Is this a permanent fix?',
-      a: 'Not on its own. What keeps the improvement long-term is addressing whatever caused the tightness — posture, training load, an old injury pattern — through the rest of the rehab.'
+      q: 'Is dry needling a permanent fix?',
+      a: 'Dry needling should not be considered a guaranteed permanent solution. It may help manage muscular pain or tightness, but lasting improvement often depends on addressing the factors contributing to the problem. Depending on your condition, this may include strengthening, mobility exercises, posture or movement changes and a structured physiotherapy rehabilitation programme.'
     }
   ];
 

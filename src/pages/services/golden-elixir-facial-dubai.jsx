@@ -62,9 +62,9 @@ export default function GoldenElixirFacialPage() {
         "url": CANONICAL_URL,
         "reviewedBy": {
           "@type": "Person",
-          "name": "Sonita Sinaga",
-          "jobTitle": "Licensed & Certified Aesthetic Therapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          "name": "Nodainne Baves Guerrero",
+          "jobTitle": "DHA Licensed Beauty Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
         },
         "provider": {
           "@type": "MedicalClinic",
@@ -161,9 +161,9 @@ export default function GoldenElixirFacialPage() {
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
       <ContentReviewBadge
-        doctorName="Sonita Sinaga"
+        doctorName="Nodainne Baves Guerrero"
         pageSlug="golden-elixir-facial-dubai"
-        customStatement="This gold facial treatment guide has been clinically reviewed for treatment safety, facial protocols, and skincare excellence by Sonita Sinaga."
+        customStatement="This gold facial treatment guide has been clinically reviewed for treatment safety, facial protocols, and skincare excellence by Nodainne Baves Guerrero."
       />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />

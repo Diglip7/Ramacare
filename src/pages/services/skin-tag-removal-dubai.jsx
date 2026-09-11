@@ -538,7 +538,7 @@ const internalLinksSkinTag = [
     prefix: "Learn more about our broader approach to ",
     linkText: "skin diseases treatment in Dubai",
     suffix: ".",
-    url: "/services/skin-diseases-treatment/",
+    url: "/services/skin-diseases-treatment-dubai/",
   },
   {
     prefix: "If the growth in question is a mole rather than a skin tag, see our page on ",

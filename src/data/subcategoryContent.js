@@ -1000,7 +1000,7 @@ export const subcategoryContent = {
 
     treatmentOptions: [
       { icon: "Hand", title: "Manual Therapy", description: "Hands-on techniques used to improve joint mobility, reduce muscle tension, and ease pain in the surrounding soft tissue. Manual therapy is often one of the first steps in restoring comfortable movement." },
-      { icon: "Syringe", title: "Dry Needling", description: "Fine needles are inserted into tight or overactive muscle trigger points to help release tension and reduce referred pain, particularly around the upper trapezius and rotator cuff region. Learn more about {{Dry Needling Dubai|/services/dry-needling-dubai}} as a standalone service." },
+      { icon: "Syringe", title: "Dry Needling", description: "Fine needles are inserted into tight or overactive muscle trigger points to help release tension and reduce referred pain, particularly around the upper trapezius and rotator cuff region. Learn more about {{Dry Needling Dubai|/services/dry-needling-dubai/}} as a standalone service." },
       { icon: "Zap", title: "Electrotherapy", description: "Techniques such as TENS or neuromuscular electrical stimulation can help manage pain and support muscle re-activation during early rehabilitation stages. Explore our dedicated {{Electrotherapy Dubai|/services/electrotherapy-dubai/}} page for more detail." },
       { icon: "Radio", title: "Ultrasound Therapy", description: "Therapeutic ultrasound uses sound waves to promote tissue healing and reduce inflammation in conditions like tendinitis and bursitis. Read more about {{Ultrasound Therapy Dubai|/services/ultrasound-therapy-dubai/}}." },
       { icon: "Activity", title: "Therapeutic Exercises", description: "A progressive program of guided exercises designed to restore strength and control around the joint safely." },
@@ -1008,7 +1008,7 @@ export const subcategoryContent = {
       { icon: "Move", title: "Mobility Exercises", description: "Gentle, structured movements aimed at restoring range of motion, especially valuable for frozen shoulder cases." },
       { icon: "Layers", title: "Stretching Programs", description: "Guided stretching to release tight muscles and improve flexibility around the shoulder and scapular region." },
       { icon: "TrendingUp", title: "Posture Correction", description: "Addressing the postural habits — often linked to desk work — that place ongoing strain on the shoulder joint." },
-      { icon: "Waves", title: "Sports Rehabilitation", description: "A structured return-to-sport program for athletes recovering from a sports-related shoulder injury. See our {{Sports Injury Rehabilitation Dubai|/services/sports-injury-rehabilitation-dubai}} service for more information." },
+      { icon: "Waves", title: "Sports Rehabilitation", description: "A structured return-to-sport program for athletes recovering from a sports-related shoulder injury. See our {{Sports Injury Rehabilitation Dubai|/services/sports-injury-rehabilitation-dubai/}} service for more information." },
       { icon: "ShoppingBag", title: "Functional Rehabilitation", description: "Training the shoulder to handle real-life movements — lifting, reaching, carrying — not just isolated exercises." },
       { icon: "Home", title: "Home Exercise Program", description: "A personalized set of exercises you can safely continue between sessions to accelerate recovery." }
     ],
@@ -1026,7 +1026,7 @@ export const subcategoryContent = {
       "Arthritis-related shoulder pain",
       "Post-surgical shoulder rehabilitation"
     ],
-    conditionsNote: "If you've recently been told you have a rotator cuff injury Dubai specialists have flagged on imaging, or you're managing chronic shoulder pain Dubai clinics see frequently among long-term desk workers, our team can build a rehabilitation plan around your specific diagnosis. For related conditions, you may also find our {{Frozen Shoulder Treatment Dubai|/services/frozen-shoulder-treatment-dubai}}, {{Neck Pain Treatment Dubai|/services/neck-pain-treatment-dubai}}, {{Back Pain Treatment Dubai|/services/back-pain-treatment-dubai}}, and {{Sciatica Treatment Dubai|/services/sciatica-treatment-dubai}} pages helpful.",
+    conditionsNote: "If you've recently been told you have a rotator cuff injury Dubai specialists have flagged on imaging, or you're managing chronic shoulder pain Dubai clinics see frequently among long-term desk workers, our team can build a rehabilitation plan around your specific diagnosis. For related conditions, you may also find our {{Frozen Shoulder Treatment Dubai|/services/frozen-shoulder-treatment-dubai/}}, {{Neck Pain Treatment Dubai|/services/neck-pain-treatment-dubai/}}, {{Back Pain Treatment Dubai|/services/back-pain-treatment-dubai/}}, and {{Sciatica Treatment Dubai|/services/sciatica-treatment-dubai/}} pages helpful.",
 
     benefits: [
       "Reduced pain and inflammation",
@@ -1063,7 +1063,7 @@ export const subcategoryContent = {
       "Compassionate Patient Care — a supportive, patient-first environment throughout your recovery",
       "Flexible Appointment Scheduling — accommodating both routine and urgent cases"
     ],
-    whyChooseUsClosing: "These standards are part of why patients turn to us as a trusted best physiotherapy clinic Dubai choice for joint and muscle rehabilitation. For general physiotherapy needs beyond the shoulder, you can also explore our full {{Physiotherapy Dubai|/services/physiotherapy-dubai}} services.",
+    whyChooseUsClosing: "These standards are part of why patients turn to us as a trusted best physiotherapy clinic Dubai choice for joint and muscle rehabilitation. For general physiotherapy needs beyond the shoulder, you can also explore our full {{Physiotherapy Dubai|/services/physiotherapy-dubai/}} services.",
 
     treatmentJourney: {
       stages: [

@@ -253,7 +253,7 @@ const RELATED_LINKS = [
   { label: 'Ayurveda Treatment Dubai', href: '/services/ayurveda-dubai/' },
   { label: 'Knee Pain Treatment Dubai', href: '/services/knee-pain-treatment-dubai/' },
   { label: 'Shoulder Pain Treatment Dubai', href: '/services/shoulder-pain-treatment-dubai/' },
-  { label: 'Panchakarma Dubai', href: '/services/panchakarma-treatment/' },
+  { label: 'Panchakarma Dubai', href: '/services/panchakarma-treatment-dubai/' },
   { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
   { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy/' },
   { label: 'Contact Us', href: '/contact-us/' },

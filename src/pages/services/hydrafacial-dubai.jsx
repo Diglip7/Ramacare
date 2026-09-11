@@ -74,9 +74,9 @@ export default function SignatureHydraFacialPage() {
         "medicalAudience": "Patient",
         "reviewedBy": {
           "@type": "Person",
-          "name": "Sonita Sinaga",
-          "jobTitle": "Licensed & Certified Aesthetic Therapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          "name": "Nodainne Baves Guerrero",
+          "jobTitle": "DHA Licensed Beauty Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
         },
         "publisher": {
           "@type": "MedicalClinic",
@@ -194,7 +194,7 @@ export default function SignatureHydraFacialPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} customDoctors={content?.doctors?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="hydrafacial-dubai" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="hydrafacial-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

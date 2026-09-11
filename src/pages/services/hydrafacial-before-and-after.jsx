@@ -177,14 +177,14 @@ export default function HydrafacialBeforeAndAfterPage() {
                 {
                   "@type": "Person",
                   "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#physician",
-                  "name": "Sonita Sinaga",
-                  "jobTitle": "Licensed & Certified Aesthetic Therapist",
-                  "hasCredential": "NCLC Laser Certified",
+                  "name": "Nodainne Baves Guerrero",
+                  "jobTitle": "DHA Licensed Beauty Therapist",
+                  "hasCredential": "DHA Licensed Beauty Therapist",
                   "worksFor": {
                     "@type": "MedicalOrganization",
                     "name": "RamaCare Polyclinic"
                   },
-                  "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+                  "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
                 },
                 {
                   "@type": "FAQPage",
@@ -941,7 +941,7 @@ export default function HydrafacialBeforeAndAfterPage() {
         </div>
         </section>
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-before-and-after/" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="/services/hydrafacial-before-and-after/" />
 
       {/* Floating Bottom Navigation Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

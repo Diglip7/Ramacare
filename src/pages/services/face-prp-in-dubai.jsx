@@ -177,7 +177,7 @@ export default function FacePRPinDubaiPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="face-prp-in-dubai" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="face-prp-in-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

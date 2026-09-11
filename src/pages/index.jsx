@@ -81,9 +81,9 @@ export default function Home() {
         <meta
           name="twitter:description"
           content="DHA-licensed polyclinic in Jumeirah 1, Dubai offering Ayurveda, physiotherapy, dermatology, dental, and general medicine under one roof."
-          key="twitter:description"/>
+          key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/homepage.jpg" key="twitter:image" />
-        
+
         {/* Structured JSON-LD Schema (@graph: MedicalClinic, FAQPage) */}
         <script
           key="schema-graph"
@@ -154,122 +154,98 @@ export default function Home() {
                   mainEntity: [
                     {
                       '@type': 'Question',
-                      name: 'What services do you offer?',
+                      name: 'What is the address of the RamaCare Polyclinic in Jumeirah 1 Dubai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'We provide a wide range of healthcare services, including general medicine, dermatology, dental care, physiotherapy, Ayurveda, and facial treatments—all under one roof.',
+                        text: 'RamaCare Polyclinic is situated at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. Provides medical physiotherapy, Ayurveda, dermatology, dental, and wellness services to patients from Jumeirah 1 and the surrounding areas of Dubai, all within one building.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Where is RamaCare Polyclinic located?',
+                      name: 'Is RamaCare Polyclinic located in Jumeirah 1?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'RamaCare Polyclinic is located in Jumeirah 1, Dubai, with easy access and a comfortable clinical environment for patients and families.',
+                        text: 'RRamaCare Polyclinic is a healthcare clinic situated in Jumeirah 1, Dubai. At this clinic patients are able to obtain a variety of healthcare services in one place, such as physiotherapy, Ayurveda, dermatology and skin care, dental care, and general healthcare. The fact that the clinic is located in Jumeirah 1 means that it is convenient for those patients who are seeking a clinic in Jumeirah.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Are your doctors DHA-licensed?',
+                      name: 'What services are offered by RamaCare Polyclinic in Dubai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, all our doctors and specialists are DHA-licensed and follow strict clinical standards to ensure safe and effective treatment.',
+                        text: 'RamaCare Polyclinic offers a range of healthcare services in Dubai. These services include physiotherapy, Ayurveda, dermatology and skin care, dental care, family healthcare, and other medical treatments. The service that is best for a patient will depend on the patient’s symptoms, needs, and treatment goals. A consultation is necessary to determine the suitable care for a patient’s specific condition.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'How can I book an appointment?',
+                      name: 'Is the RamaCare Polyclinic licensed by the DHA?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'You can book an appointment by calling us, sending a WhatsApp message, or using the online booking option on our website.',
+                        text: 'RamaCare Polyclinic holds a license from the DHA. The license number is 2036418. All healthcare professionals at RamaCare Polyclinic are proper. Work within the limits of their individual clinical roles.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Do you accept health insurance?',
+                      name: 'How do I go about booking an appointment at RamaCare Polyclinic in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we accept selected health insurance plans. Please contact our team to confirm your coverage.',
+                        text: 'You can book an appointment at RamaCare Polyclinic in Jumeirah by using WhatsApp, by phone, or through the appointment system on the website. When you contact the clinic, just let them know the service you need and your preferred time for the appointment. Then the staff will help you find a doctor or a consultation.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'What makes RamaCare different?',
+                      name: 'Does RamaCare offer physiotherapy in Jumeirah 1?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'We focus on personalized care, clear communication, and a combination of modern medical treatment with holistic wellness approaches.',
+                        text: 'Yes, RamaCare Polyclinic provides physiotherapy in Jumeirah 1, Dubai. Physiotherapy can help with pain, sports injuries, mobility issues, rehabilitation needs, and other physical health problems. The physiotherapist will first assess your symptoms, movement patterns, and daily functional needs before recommending a treatment plan.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Do you provide dental treatments?',
+                      name: 'What Ayurveda treatments are on offer at RamaCare in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we offer complete dental care, including routine check-ups, cleaning, fillings, and cosmetic treatments.',
+                        text: 'RamaCare Polyclinic offers Ayurveda consultations and treatments in Jumeirah 1, Dubai. If you have health concerns, an Ayurvedic practitioner may recommend certain therapies, lifestyle changes, and traditional Ayurvedic practices. Each treatment is tailored to the individual after a consultation, ensuring care that fits your unique condition.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'What skin treatments are available?',
+                      name: 'What skin treatments and dermatology services are available at RamaCare in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Our dermatology services include treatment for acne, pigmentation, skin damage, and anti-aging care.',
+                        text: 'RamaCare Polyclinic offers dermatology and skin-care services in Jumeirah 1. The clinic deals with skin problems. The types of services offered can include treatment for acne, pigmentation, uneven skin tone, skin texture, and the signs of aging. These services depend on your needs. A consultation is done to find out which treatment is right for your skin.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Is Ayurveda available?',
+                      name: 'Does RamaCare offer treatment in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we provide Ayurvedic treatments focused on natural healing, detoxification, and long-term wellness.',
+                        text: 'The truth is that RamaCare Polyclinic provides care in Jumeirah 1, Dubai. Dental treatment is part of the clinic\'s range of healthcare services. It can include an assessment, preventive care, and suitable restorative or other dental procedures. The treatment that is suggested depends on your condition and the results of your consultation.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Do you offer physiotherapy services?',
+                      name: 'Is it possible for me to have a health check-up at RamaCare in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we offer physiotherapy for pain relief, injury recovery, and improving mobility and strength.',
+                        text: 'Yes, you can have a health check-up at RamaCare Polyclinic in Jumeirah 1. This includes health assessments and consultations with a healthcare professional. During your visit, the doctor will review your history, discuss any symptoms you may have, and assess your current health condition. If needed, additional tests or referrals to specialists may be suggested based on your needs.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Can I visit for routine check-ups?',
+                      name: ' Does RamaCare offer healthcare services to families in Jumeirah?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we provide regular health check-ups and preventive care for individuals and families.',
+                        text: 'Yes, RamaCare Polyclinic serves families in Jumeirah, Dubai. It provides a range of healthcare services for all ages. These include medicine, dental care, physiotherapy, dermatology, Ayurveda, and other treatments. The services offered depend on each individual’s health needs. Are tailored accordingly.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Do you treat chronic conditions?',
+                      name: 'What can I expect when I go for my visit to RamaCare Polyclinic?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes, we help manage chronic conditions such as diabetes, hypertension, and long-term pain through structured care plans.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Is your clinic suitable for family healthcare?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes, we provide care for patients of all ages, making it convenient for families to access multiple services in one place.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What should I expect during my first visit?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'During your first visit, our doctor will review your medical history, understand your concerns, and recommend a suitable treatment plan.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'How do you ensure quality care?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'We follow strict clinical protocols, use modern diagnostic tools, and prioritize patient safety, hygiene, and transparent communication.',
+                        text: 'On your first visit, the focus will be on understanding your health concern, reviewing your medical background, and identifying your treatment needs. Your doctor or healthcare provider will listen to your symptoms, examine you if required, and explain the options. They will also guide you through the steps based on your condition and the type of care you need.',
                       },
                     },
                   ],

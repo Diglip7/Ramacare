@@ -75,9 +75,9 @@ export default function OxygeneoIlluminateFacialPage() {
         "url": CANONICAL_URL,
         "reviewedBy": {
           "@type": "Person",
-          "name": "Sonita Sinaga",
-          "jobTitle": "Licensed & Certified Aesthetic Therapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          "name": "Nodainne Baves Guerrero",
+          "jobTitle": "DHA Licensed Beauty Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
         },
         "provider": {
           "@type": "MedicalClinic",
@@ -173,7 +173,7 @@ export default function OxygeneoIlluminateFacialPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="oxygeneo-illuminate-facial-dubai" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="oxygeneo-illuminate-facial-dubai" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

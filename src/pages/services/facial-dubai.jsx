@@ -53,9 +53,9 @@ export default function facialdubaiCategoryPage() {
         "medicalAudience": "Patient",
         "reviewedBy": {
           "@type": "Person",
-          "name": "Sonita Sinaga",
-          "jobTitle": "Licensed & Certified Aesthetic Therapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          "name": "Nodainne Baves Guerrero",
+          "jobTitle": "DHA Licensed Beauty Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
         },
         "publisher": {
           "@type": "MedicalClinic",
@@ -137,7 +137,7 @@ export default function facialdubaiCategoryPage() {
       <ExpertsSection content={content?.experts} />
       <VideoTestimonials content={content?.successStories} />
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="facial-dubai" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="facial-dubai" />
       <FAQSection content={content?.faq} />
       {/* <OurFacilitySection content={content?.facility} /> */}
       <BeginYourHealingJourneySection content={content?.booking} />

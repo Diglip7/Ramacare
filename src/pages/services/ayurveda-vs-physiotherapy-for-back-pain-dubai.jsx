@@ -171,7 +171,7 @@ const related = [
   { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
   { label: 'Ultrasound Therapy for Chronic Back Pain', href: '/services/ultrasound-therapy-for-chronic-back-pain/' },
   { label: 'Post-Surgery Recovery Dubai', href: '/services/post-surgery-recovery-dubai/' },
-  { label: 'Panchakarma Treatment', href: '/services/panchakarma-treatment/' },
+  { label: 'Panchakarma Treatment', href: '/services/panchakarma-treatment-dubai/' },
   { label: 'Book Appointment', href: '#book-now/' },
   { label: 'Home Page', href: '/' },
 ];

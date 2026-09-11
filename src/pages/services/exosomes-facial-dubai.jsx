@@ -63,9 +63,9 @@ export default function ExosomesFacialDubaiPage() {
         "bodyLocation": "Face",
         "reviewedBy": {
           "@type": "Person",
-          "name": "Sonita Sinaga",
-          "jobTitle": "Licensed & Certified Aesthetic Therapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/"
+          "name": "Nodainne Baves Guerrero",
+          "jobTitle": "DHA Licensed Beauty Therapist",
+          "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
         },
         "provider": {
           "@type": "MedicalClinic",
@@ -161,9 +161,9 @@ export default function ExosomesFacialDubaiPage() {
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
       <ContentReviewBadge 
-        doctorName="Sonita Sinaga" 
+        doctorName="Nodainne Baves Guerrero" 
         pageSlug="exosomes-facial-dubai" 
-        customStatement="This regenerative skincare guide has been clinically reviewed for treatment safety, exosome therapy protocols, and skincare excellence by Sonita Sinaga."
+        customStatement="This regenerative facial skincare guide has been clinically reviewed for treatment safety, exosome facial protocols, and skincare excellence by Nodainne Baves Guerrero."
       />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />

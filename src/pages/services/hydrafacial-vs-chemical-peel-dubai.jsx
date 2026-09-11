@@ -153,9 +153,9 @@ function buildSchema() {
     about: [{ '@type': 'MedicalTherapy', name: 'HydraFacial' }, { '@type': 'MedicalTherapy', name: 'Chemical Peel' }],
     reviewedBy: {
       '@type': 'Person',
-      name: 'Sonita Sinaga',
-      jobTitle: 'Licensed & Certified Aesthetic Therapist',
-      url: 'https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/',
+      name: 'Nodainne Baves Guerrero',
+      jobTitle: 'DHA Licensed Beauty Therapist',
+      url: 'https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/',
     },
     publisher: {
       '@type': 'MedicalClinic',
@@ -659,7 +659,7 @@ export default function HydraFacialVsChemicalPeelPage() {
         </p>
          </section>
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-vs-chemical-peel-dubai/" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="/services/hydrafacial-vs-chemical-peel-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

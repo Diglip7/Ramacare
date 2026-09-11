@@ -1130,7 +1130,7 @@ export default function HydrafacialForAcnePage() {
         </div>
           </div>
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-for-acne/" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="/services/hydrafacial-for-acne/" />
     </Layout>
   );
 }

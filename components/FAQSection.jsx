@@ -15,82 +15,70 @@ const FAQSection = ({ content }) => {
 
   const rawFaqs = Array.isArray(content?.faqs) ? content.faqs : [
     {
-      question: "What services do you offer?",
-      answer: "We provide a wide range of healthcare services, including general medicine, dermatology, dental care, physiotherapy, Ayurveda, and facial treatments—all under one roof."
+      question: "What is the address of the RamaCare Polyclinic in Jumeirah 1 Dubai?",
+      answer: "RamaCare Polyclinic is situated at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. Provides medical physiotherapy, Ayurveda, dermatology, dental, and wellness services to patients from Jumeirah 1 and the surrounding areas of Dubai, all within one building."
     },
     {
-      question: "Where is RamaCare Polyclinic located?",
-      answer: "RamaCare Polyclinic is located in Jumeirah 1, Dubai, with easy access and a comfortable clinical environment for patients and families."
+      question: "Is RamaCare Polyclinic located in Jumeirah 1?",
+      answer: "RamaCare Polyclinic is a healthcare clinic situated in Jumeirah 1, Dubai. At this clinic patients are able to obtain a variety of healthcare services in one place, such as physiotherapy, Ayurveda, dermatology and skin care, dental care, and general healthcare. The fact that the clinic is located in Jumeirah 1 means that it is convenient for those patients who are seeking a clinic in Jumeirah."
     },
     {
-      question: "Are your doctors DHA-licensed?",
-      answer: "Yes, all our doctors and specialists are DHA-licensed and follow strict clinical standards to ensure safe and effective treatment."
+      question: "What services are offered by RamaCare Polyclinic in Dubai?",
+      answer: "RamaCare Polyclinic offers a range of healthcare services in Dubai. These services include physiotherapy, Ayurveda, dermatology and skin care, dental care, family healthcare, and other medical treatments. The service that is best for a patient will depend on the patient’s symptoms, needs, and treatment goals. A consultation is necessary to determine the suitable care for a patient’s specific condition."
     },
     {
-      question: "How can I book an appointment?",
-      answer: "You can book an appointment by calling us, sending a WhatsApp message, or using the online booking option on our website."
+      question: "Is the RamaCare Polyclinic licensed by the DHA?",
+      answer: "RamaCare Polyclinic holds a license from the DHA. The license number is 2036418. All healthcare professionals at RamaCare Polyclinic are proper. Work within the limits of their individual clinical roles."
     },
     {
-      question: "Do you accept health insurance?",
-      answer: "Yes, we accept selected health insurance plans. Please contact our team to confirm your coverage."
+      question: "How do I go about booking an appointment at RamaCare Polyclinic in Jumeirah?",
+      answer: "You can book an appointment at RamaCare Polyclinic in Jumeirah by using WhatsApp, by phone, or through the appointment system on the website. When you contact the clinic, just let them know the service you need and your preferred time for the appointment. Then the staff will help you find a doctor or a consultation."
     },
     {
-      question: "What makes RamaCare different?",
-      answer: "We focus on personalized care, clear communication, and a combination of modern medical treatment with holistic wellness approaches."
+      question: "Does RamaCare offer physiotherapy in Jumeirah 1?",
+      answer: "Yes, RamaCare Polyclinic provides physiotherapy in Jumeirah 1, Dubai. Physiotherapy can help with pain, sports injuries, mobility issues, rehabilitation needs, and other physical health problems. The physiotherapist will first assess your symptoms, movement patterns, and daily functional needs before recommending a treatment plan."
     },
     {
-      question: "Do you provide dental treatments?",
-      answer: "Yes, we offer complete dental care, including routine check-ups, cleaning, fillings, and cosmetic treatments."
+      question: "What Ayurveda treatments are on offer at RamaCare in Jumeirah?",
+      answer: "RamaCare Polyclinic offers Ayurveda consultations and treatments in Jumeirah 1, Dubai. If you have health concerns, an Ayurvedic practitioner may recommend certain therapies, lifestyle changes, and traditional Ayurvedic practices. Each treatment is tailored to the individual after a consultation, ensuring care that fits your unique condition."
     },
     {
-      question: "What skin treatments are available?",
-      answer: "Our dermatology services include treatment for acne, pigmentation, skin damage, and anti-aging care."
+      question: "What skin treatments and dermatology services are available at RamaCare in Jumeirah?",
+      answer: "RamaCare Polyclinic offers dermatology and skin-care services in Jumeirah 1. The clinic deals with skin problems. The types of services offered can include treatment for acne, pigmentation, uneven skin tone, skin texture, and the signs of aging. These services depend on your needs. A consultation is done to find out which treatment is right for your skin."
     },
     {
-      question: "Is Ayurveda available?",
-      answer: "Yes, we provide Ayurvedic treatments focused on natural healing, detoxification, and long-term wellness."
+      question: "Does RamaCare offer treatment in Jumeirah?",
+      answer: "The truth is that RamaCare Polyclinic provides care in Jumeirah 1, Dubai. Dental treatment is part of the clinic's range of healthcare services. It can include an assessment, preventive care, and suitable restorative or other dental procedures. The treatment that is suggested depends on your condition and the results of your consultation."
     },
     {
-      question: "Do you offer physiotherapy services?",
-      answer: "Yes, we offer physiotherapy for pain relief, injury recovery, and improving mobility and strength."
+      question: "Is it possible for me to have a health check-up at RamaCare in Jumeirah?",
+      answer: "Yes, you can have a health check-up at RamaCare Polyclinic in Jumeirah 1. This includes health assessments and consultations with a healthcare professional. During your visit, the doctor will review your history, discuss any symptoms you may have, and assess your current health condition. If needed, additional tests or referrals to specialists may be suggested based on your needs."
     },
     {
-      question: "Can I visit for routine check-ups?",
-      answer: "Yes, we provide regular health check-ups and preventive care for individuals and families."
+      question: "Does RamaCare offer healthcare services to families in Jumeirah?",
+      answer: "Yes, RamaCare Polyclinic serves families in Jumeirah, Dubai. It provides a range of healthcare services for all ages. These include medicine, dental care, physiotherapy, dermatology, Ayurveda, and other treatments. The services offered depend on each individual’s health needs. Are tailored accordingly."
     },
     {
-      question: "Do you treat chronic conditions?",
-      answer: "Yes, we help manage chronic conditions such as diabetes, hypertension, and long-term pain through structured care plans."
+      question: "What can I expect when I go for my visit to RamaCare Polyclinic?",
+      answer: "On your first visit, the focus will be on understanding your health concern, reviewing your medical background, and identifying your treatment needs. Your doctor or healthcare provider will listen to your symptoms, examine you if required, and explain the options. They will also guide you through the steps based on your condition and the type of care you need."
     },
-    {
-      question: "Is your clinic suitable for family healthcare?",
-      answer: "Yes, we provide care for patients of all ages, making it convenient for families to access multiple services in one place."
-    },
-    {
-      question: "What should I expect during my first visit?",
-      answer: " During your first visit, our doctor will review your medical history, understand your concerns, and recommend a suitable treatment plan."
-    },
-    {
-      question: "How do you ensure quality care?",
-      answer: "We follow strict clinical protocols, use modern diagnostic tools, and prioritize patient safety, hygiene, and transparent communication."
-    }
   ];
 
   const faqs = useMemo(() => {
     if (!Array.isArray(rawFaqs) || rawFaqs.length === 0) return [];
-    
+
     const seen = new Set();
     const uniqueFaqs = [];
-    
+
     for (const faq of rawFaqs) {
       const identifier = faq.id ? `id-${faq.id}` : `q-${faq.question?.trim()}`;
-      
+
       if (!seen.has(identifier)) {
         seen.add(identifier);
         uniqueFaqs.push(faq);
       }
     }
-    
+
     return uniqueFaqs;
   }, [rawFaqs]);
 
@@ -102,16 +90,16 @@ const FAQSection = ({ content }) => {
   };
 
   return (
-    <section 
+    <section
       id="faq"
       className="relative w-full py-12 lg:py-16"
-      style={{ 
+      style={{
         backgroundColor: '#E8E6DF',
         minHeight: 'auto',
         overflow: 'visible'
       }}
     >
-      <div 
+      <div
         className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8"
         style={{
           width: '100%',
@@ -120,9 +108,9 @@ const FAQSection = ({ content }) => {
       >
         {/* Badge with hover effect */}
         <div className="flex justify-center mb-3">
-          <div 
+          <div
             className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm"
-            style={{ 
+            style={{
               backgroundColor: '#D1FAE5',
               color: '#065F46'
             }}
@@ -132,9 +120,9 @@ const FAQSection = ({ content }) => {
         </div>
 
         {/* Heading */}
-        <h2 
+        <h2
           className="text-center font-bold mb-3 text-lg sm:text-xl md:text-2xl lg:text-3xl"
-          style={{ 
+          style={{
             color: '#1F2937',
             lineHeight: '1.2'
           }}
@@ -143,9 +131,9 @@ const FAQSection = ({ content }) => {
         </h2>
 
         {/* Description */}
-        <p 
+        <p
           className="text-center mb-6 md:mb-8 max-w-2xl mx-auto text-xs sm:text-sm"
-          style={{ 
+          style={{
             color: '#6B7280',
             lineHeight: '1.6'
           }}
@@ -154,10 +142,10 @@ const FAQSection = ({ content }) => {
         </p>
 
         {/* FAQ Accordion */}
-        <div 
-          style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
             gap: '12px',
             width: '100%'
           }}
@@ -172,15 +160,15 @@ const FAQSection = ({ content }) => {
                 border: hoveredIndex === index ? '2px solid #2D5F3F' : '1px solid #E5E7EB',
                 overflow: 'hidden',
                 transform: hoveredIndex === index ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
-                boxShadow: hoveredIndex === index 
-                  ? '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 3px rgba(45, 95, 63, 0.1)' 
+                boxShadow: hoveredIndex === index
+                  ? '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 3px rgba(45, 95, 63, 0.1)'
                   : '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Gradient overlay on hover */}
-              <div 
+              <div
                 className="absolute inset-0 transition-opacity duration-300 pointer-events-none"
                 style={{
                   background: 'linear-gradient(135deg, rgba(209, 250, 229, 0.3) 0%, rgba(167, 243, 208, 0.1) 100%)',
@@ -199,7 +187,7 @@ const FAQSection = ({ content }) => {
                 }}
               >
                 {/* Question number indicator on hover */}
-                <div 
+                <div
                   className="absolute left-0 top-0 bottom-0 transition-all duration-300"
                   style={{
                     width: hoveredIndex === index ? '4px' : '0px',
@@ -228,14 +216,14 @@ const FAQSection = ({ content }) => {
                     borderRadius: '50%',
                     backgroundColor: hoveredIndex === index || openIndex === index ? '#2D5F3F' : 'rgba(45, 95, 63, 0.1)',
                     transform: hoveredIndex === index ? 'rotate(90deg) scale(1.1)' : openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-                    boxShadow: hoveredIndex === index 
-                      ? '0 4px 6px -1px rgba(45, 95, 63, 0.3), 0 2px 4px -1px rgba(45, 95, 63, 0.2)' 
+                    boxShadow: hoveredIndex === index
+                      ? '0 4px 6px -1px rgba(45, 95, 63, 0.3), 0 2px 4px -1px rgba(45, 95, 63, 0.2)'
                       : 'none'
                   }}
                 >
                   {/* Pulse effect on hover */}
                   {hoveredIndex === index && (
-                    <div 
+                    <div
                       className="absolute inset-0 rounded-full animate-ping"
                       style={{
                         backgroundColor: '#2D5F3F',
@@ -247,8 +235,8 @@ const FAQSection = ({ content }) => {
                   {openIndex === index ? (
                     <svg
                       className="text-white transition-all duration-300 ease-in-out relative z-10"
-                      style={{ 
-                        width: '18px', 
+                      style={{
+                        width: '18px',
                         height: '18px',
                         transform: hoveredIndex === index ? 'scale(1.2)' : 'scale(1)'
                       }}
@@ -266,8 +254,8 @@ const FAQSection = ({ content }) => {
                   ) : (
                     <svg
                       className="transition-all duration-300 ease-in-out relative z-10"
-                      style={{ 
-                        width: '18px', 
+                      style={{
+                        width: '18px',
                         height: '18px',
                         color: hoveredIndex === index ? '#FFFFFF' : '#2D5F3F',
                         transform: hoveredIndex === index ? 'scale(1.2)' : 'scale(1)'
@@ -289,9 +277,8 @@ const FAQSection = ({ content }) => {
 
               {/* Answer */}
               <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
                 style={{
                   transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out'
                 }}
@@ -303,11 +290,11 @@ const FAQSection = ({ content }) => {
                   }}
                 >
                   {/* Decorative line */}
-                  <div 
+                  <div
                     className="mb-3 transition-all duration-300"
                     style={{
                       height: '2px',
-                      background: hoveredIndex === index 
+                      background: hoveredIndex === index
                         ? 'linear-gradient(90deg, #2D5F3F 0%, #3A7B51 50%, transparent 100%)'
                         : 'linear-gradient(90deg, #E5E7EB 0%, transparent 100%)',
                       width: hoveredIndex === index ? '100%' : '60%'
@@ -355,7 +342,7 @@ const FAQSection = ({ content }) => {
           }}
         >
           {/* Animated gradient background on hover */}
-          <div 
+          <div
             className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
             style={{
               background: 'radial-gradient(circle at 50% 50%, rgba(209, 250, 229, 0.4) 0%, transparent 70%)',
@@ -383,11 +370,11 @@ const FAQSection = ({ content }) => {
           </p>
           <div className="relative flex flex-col sm:flex-row items-center justify-center gap-2" style={{ gap: '12px' }}>
             {/* Book Consultation Button with ripple effect */}
-            <button  onClick={() =>
-    document.getElementById("appointment")?.scrollIntoView({
-      behavior: "smooth",
-    })
-  }
+            <button onClick={() =>
+              document.getElementById("appointment")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
               className="relative transition-all duration-300 ease-in-out text-sm overflow-hidden group/btn"
               style={{
                 padding: '10px 20px',
@@ -407,7 +394,7 @@ const FAQSection = ({ content }) => {
               }}
             >
               {/* Shine effect on hover */}
-              <div 
+              <div
                 className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"
                 style={{
                   background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',

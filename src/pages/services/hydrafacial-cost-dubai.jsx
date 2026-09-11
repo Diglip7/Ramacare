@@ -846,7 +846,7 @@ export default function HydraFacialCostDubaiPage() {
         </div>
         </div>
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Sonita Sinaga" pageSlug="/services/hydrafacial-cost-dubai/" />
+      <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="/services/hydrafacial-cost-dubai/" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E9E2D6] shadow-lg z-40 p-4">

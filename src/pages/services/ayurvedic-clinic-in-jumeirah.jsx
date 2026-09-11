@@ -149,7 +149,7 @@ const managedConditions = [
   { name: 'Gastritis', text: 'Gastritis-related discomfort is approached through dietary modification and herbal support intended to soothe digestive irritation, alongside medical care as needed.', link: '/services/ayurvedic-gut-health-dubai/' },
   { name: 'PCOS', text: 'PCOS-related hormonal symptoms may be supported through a combination of herbal guidance, dietary counseling, and lifestyle changes, always in coordination with appropriate gynecological care.', link: '/services/pcos-treatment-dubai/' },
   { name: 'Hair Loss', text: 'Hair thinning and hair loss concerns are assessed in the context of Dosha imbalance, nutrition, and stress, with Ayurvedic approaches used to support scalp and hair health.', link: '/services/hair-loss-dubai/' },
-  { name: 'Skin Disorders', text: 'Chronic skin concerns are approached through internal and external Ayurvedic therapies aimed at supporting skin health from within, alongside dermatological care where needed.', link: '/services/skin-diseases-treatment/' }
+  { name: 'Skin Disorders', text: 'Chronic skin concerns are approached through internal and external Ayurvedic therapies aimed at supporting skin health from within, alongside dermatological care where needed.', link: '/services/skin-diseases-treatment-dubai/' }
 ];
 
 const benefits = [
