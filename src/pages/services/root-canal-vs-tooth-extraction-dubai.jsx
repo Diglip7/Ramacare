@@ -238,18 +238,31 @@ export default function RootCanalVsExtractionPage() {
     reviewedBy: {
       '@type': 'Person',
       name: 'Dr. Hirbod Gilandoust',
-      jobTitle: 'Specialist Cosmetic Dentist',
+      jobTitle: 'DHA Licensed Dentist',
+      medicalSpecialty: 'Esthetic Dentistry & Dental Surgery',
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'License',
+        name: 'DHA Licensed Dentist'
+      },
       url: 'https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/',
+      worksFor: {
+        '@type': 'MedicalClinic',
+        name: 'RamaCare Polyclinic',
+        url: 'https://ramacarepolyclinic.ae/',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1',
+          addressRegion: 'Dubai',
+          addressCountry: 'AE',
+        },
+      },
     },
     publisher: {
-      '@type': 'MedicalClinic',
+      '@type': 'Organization',
       name: 'RamaCare Polyclinic',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
-        addressLocality: 'Jumeirah 1, Dubai',
-        addressCountry: 'AE',
-      },
+      url: 'https://ramacarepolyclinic.ae/',
     },
   };
 
@@ -257,8 +270,8 @@ export default function RootCanalVsExtractionPage() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Root Canal vs Tooth Extraction Dubai',
-    author: { '@type': 'Organization', name: 'RamaCare Polyclinic' },
-    publisher: { '@type': 'Organization', name: 'RamaCare Polyclinic' },
+    author: { '@type': 'Organization', name: 'RamaCare Polyclinic', url: 'https://ramacarepolyclinic.ae/' },
+    publisher: { '@type': 'Organization', name: 'RamaCare Polyclinic', url: 'https://ramacarepolyclinic.ae/' },
     image: `https://ramacarepolyclinic.ae${IMAGES.hero.src}`,
   };
 
@@ -280,6 +293,19 @@ export default function RootCanalVsExtractionPage() {
     procedureType: 'Endodontic Treatment',
     preparation: 'Diagnosis and local anesthesia following digital X-ray confirmation of infection.',
     followup: 'Crown placement and periodic checkups.',
+    provider: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      telephone: '+971566597878',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const extractionProcedureSchema = {
@@ -289,19 +315,33 @@ export default function RootCanalVsExtractionPage() {
     procedureType: 'Simple or Surgical Dental Extraction',
     preparation: 'Clinical examination and X-ray to assess tooth position and complexity.',
     followup: 'Socket healing; possible dental implant, bridge, or denture planning.',
+    provider: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      telephone: '+971566597878',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE',
+      },
+    },
   };
 
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'MedicalClinic',
     name: 'RamaCare Polyclinic',
     url: 'https://ramacarepolyclinic.ae/',
     medicalSpecialty: 'Dentistry',
     telephone: '+971566597878',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+      addressLocality: 'Jumeirah 1',
+      addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
   };
@@ -309,13 +349,14 @@ export default function RootCanalVsExtractionPage() {
   return (
     <Layout>
       <Head>
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.metaDescription} />
+        <title key="title">{SEO.title}</title>
+        <meta name="description" content={SEO.metaDescription} key="description" />
         <meta
           name="keywords"
           content="Root Canal vs Tooth Extraction Dubai, Root canal treatment Dubai, Tooth extraction Dubai, Dentist in Dubai, Dental clinic Jumeirah"
+          key="keywords"
         />
-        <link rel="canonical" href={SEO.canonical} />
+        <link rel="canonical" href={SEO.canonical} key="canonical" />
         <meta name="robots" content="index, follow" key="robots" />
 
         {/* Open Graph Meta Tags */}

@@ -40,7 +40,7 @@ export default function AyurvedaCategoryPage() {
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "RamaCare Polyclinic — Ayurveda Department",
     "description": "Authentic Ayurveda treatment in Dubai offering Panchakarma detox, chronic pain relief, stress management, digestive wellness, hormonal balance, and holistic body-mind rejuvenation, delivered by DHA-licensed Ayurvedic doctors (BAMS/MD).",
     "url": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/",
@@ -75,35 +75,59 @@ export default function AyurvedaCategoryPage() {
   const physicianSchema = [
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Shamna Keloth Meethal",
-      "medicalSpecialty": "Ayurveda",
+      "jobTitle": "Ayurveda Practitioner",
       "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Syamkumar",
-      "medicalSpecialty": "Ayurveda",
+      "@type": "Person",
+      "name": "Syamkumar Sasidharan",
+      "jobTitle": "Ayurveda Panchakarma Therapist",
       "url": "https://ramacarepolyclinic.ae/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Mariya",
-      "medicalSpecialty": "Ayurvedic Therapy",
-      "url": "https://ramacarepolyclinic.ae/doctors/mariya-ayurvedic-therapist-dubai/",
+      "@type": "Person",
+      "name": "Mariya Thayyil Muhammed",
+      "jobTitle": "Ayurvedic Therapist",
+      "url": "https://ramacarepolyclinic.ae/doctors/mariya-thayyil-muhammed-ayurveda-therapist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     }
   ];

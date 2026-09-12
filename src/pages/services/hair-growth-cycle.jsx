@@ -152,7 +152,7 @@ export default function HairGrowthCyclePage() {
           content="Understand the Hair Growth Cycle — its four stages, timeline & how treatments support healthy regrowth. Book a consultation at RamaCare Polyclinic."
           key="description"
         />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/hair-growth-cycle/" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/hair-growth-cycle/" key="canonical" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Hair Growth Cycle Explained: Stages & Timeline" key="og:title" />
@@ -226,16 +226,27 @@ export default function HairGrowthCyclePage() {
                   },
                 },
                 {
-                  '@type': 'Physician',
+                  '@type': 'Person',
                   '@id': 'https://ramacarepolyclinic.ae/services/hair-growth-cycle/#physician',
                   name: 'Dr. Sahar Zomorrodi',
-                  medicalSpecialty: 'General Practice',
+                  jobTitle: 'General Practitioner',
                   honorificSuffix: 'MD',
-                  hasCredential: 'DHA Licensed General Practitioner',
+                  hasCredential: {
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'License',
+                    name: 'DHA Licensed General Practitioner'
+                  },
                   worksFor: {
-                    '@type': 'MedicalOrganization',
+                    '@type': 'MedicalClinic',
                     name: 'RamaCare Polyclinic',
                     url: 'https://ramacarepolyclinic.ae/',
+                    address: {
+                      '@type': 'PostalAddress',
+                      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+                      addressLocality: 'Jumeirah 1',
+                      addressRegion: 'Dubai',
+                      addressCountry: 'AE'
+                    }
                   },
                   url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
                 },

@@ -166,16 +166,28 @@ export default function CervicalSpondylosisTreatmentPage() {
         }
       },
       {
-        "@type": "Physician",
+        "@type": "Person",
         "@id": `${CANONICAL_URL}#physician`,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Physiotherapy",
+        "jobTitle": "Physiotherapist",
         "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA Licensed Physiotherapist"
+        },
         "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
         "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         }
       },
       {

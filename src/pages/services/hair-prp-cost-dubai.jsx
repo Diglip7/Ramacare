@@ -239,8 +239,22 @@ export default function HairPrpCostPage() {
     '@type': 'Service',
     name: 'Hair PRP Treatment',
     serviceType: 'Platelet-Rich Plasma (PRP) Hair Treatment',
-    provider: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic', url: 'https://ramacarepolyclinic.ae/' },
-    areaServed: 'Dubai',
+    provider: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: 'https://ramacarepolyclinic.ae/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+        addressLocality: 'Jumeirah 1',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE',
+      }
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Dubai'
+    },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'AED',
@@ -252,7 +266,7 @@ export default function HairPrpCostPage() {
 
   const clinicSchema = {
     '@context': 'https://schema.org',
-    '@type': ['MedicalClinic', 'MedicalBusiness', 'LocalBusiness'],
+    '@type': 'MedicalClinic',
     name: 'RamaCare Polyclinic',
     url: 'https://ramacarepolyclinic.ae/',
     logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
@@ -260,8 +274,9 @@ export default function HairPrpCostPage() {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+      addressLocality: 'Jumeirah 1',
+      addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
   };
@@ -269,9 +284,9 @@ export default function HairPrpCostPage() {
   return (
     <Layout>
       <Head>
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.metaDescription} />
-        <link rel="canonical" href={SEO.canonical} />
+        <title key="title">{SEO.title}</title>
+        <meta name="description" content={SEO.metaDescription} key="description" />
+        <link rel="canonical" href={SEO.canonical} key="canonical" />
         <meta property="og:title" content={SEO.title} />
         <meta property="og:description" content={SEO.metaDescription} />
         <meta property="og:type" content="website" />

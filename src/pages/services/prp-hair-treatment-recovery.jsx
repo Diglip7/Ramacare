@@ -229,7 +229,7 @@ export default function PrpHairRecoveryPage() {
           content="PRP hair treatment recovery Dubai, PRP aftercare instructions, PRP hair treatment side effects, PRP recovery timeline, hair PRP downtime, PRP hair treatment day by day recovery"
           key="keywords"
         />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/" key="canonical" />
         <meta name="robots" content="index, follow" key="robots" />
 
         {/* Open Graph Meta Tags */}
@@ -300,17 +300,27 @@ export default function PrpHairRecoveryPage() {
                   },
                 },
                 {
-                  '@type': 'Physician',
+                  '@type': 'Person',
                   '@id': 'https://ramacarepolyclinic.ae/services/prp-hair-treatment-recovery/#physician',
                   name: 'Dr. Sahar Zomorrodi',
-                  jobTitle: 'General Practitioner & Aesthetic Specialist',
-                  medicalSpecialty: 'General Practice',
+                  jobTitle: 'General Practitioner - Aesthetic Medicine',
                   honorificSuffix: 'MD',
-                  hasCredential: 'DHA Licensed General Practitioner',
+                  hasCredential: {
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'License',
+                    name: 'DHA Licensed General Practitioner'
+                  },
                   worksFor: {
-                    '@type': 'MedicalOrganization',
+                    '@type': 'MedicalClinic',
                     name: 'RamaCare Polyclinic',
                     url: 'https://ramacarepolyclinic.ae/',
+                    address: {
+                      '@type': 'PostalAddress',
+                      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+                      addressLocality: 'Jumeirah 1',
+                      addressRegion: 'Dubai',
+                      addressCountry: 'AE'
+                    }
                   },
                   url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
                 },
@@ -332,8 +342,9 @@ export default function PrpHairRecoveryPage() {
                   medicalSpecialty: 'Dermatology',
                   address: {
                     '@type': 'PostalAddress',
-                    streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
-                    addressLocality: 'Jumeirah 1, Dubai',
+                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+                    addressLocality: 'Jumeirah 1',
+                    addressRegion: 'Dubai',
                     addressCountry: 'AE',
                   },
                   priceRange: '$$',

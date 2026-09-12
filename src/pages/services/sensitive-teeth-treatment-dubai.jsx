@@ -305,8 +305,9 @@ export default function SensitiveTeethTreatmentPage() {
     telephone: '+971566597878',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+      addressLocality: 'Jumeirah 1',
+      addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
   };
@@ -321,8 +322,9 @@ export default function SensitiveTeethTreatmentPage() {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-      addressLocality: 'Dubai',
+      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+      addressLocality: 'Jumeirah 1',
+      addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
   };
@@ -341,58 +343,97 @@ export default function SensitiveTeethTreatmentPage() {
       name: 'Dentin Hypersensitivity'
     },
     reviewedBy: {
-      '@type': 'Physician',
+      '@type': 'Person',
       name: 'Dr. Hirbod Gilandoust',
-      medicalSpecialty: 'Dentistry',
+      jobTitle: 'DHA Licensed Dentist',
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'License',
+        name: 'DHA Licensed Dentist'
+      },
       url: 'https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/'
     },
     publisher: {
-      '@type': 'MedicalClinic',
+      '@type': 'Organization',
       name: 'RamaCare Polyclinic',
-      url: 'https://ramacarepolyclinic.ae/',
-      telephone: '+971566597878',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
-        addressLocality: 'Jumeirah 1',
-        addressRegion: 'Dubai',
-        addressCountry: 'AE'
-      }
+      url: 'https://ramacarepolyclinic.ae/'
     }
   };
 
   const physicianSchema = [
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Hirbod Gilandoust",
+      "jobTitle": "DHA Licensed Dentist",
       "medicalSpecialty": "Esthetic Dentistry & Dental Surgery",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Dentist"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Aparna Balakrishnan",
-      "medicalSpecialty": "Cosmetic Dentistry",
+      "jobTitle": "DHA Licensed General & Cosmetic Dentist",
+      "medicalSpecialty": "General & Cosmetic Dentistry",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed General & Cosmetic Dentist"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Soumya Abraham",
-      "medicalSpecialty": "DHA Licensed Nurse",
+      "jobTitle": "DHA Licensed Nurse",
+      "honorificSuffix": "RN",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Nurse"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/soumya-abraham-dha-licensed-nurse-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     }
   ];
@@ -400,9 +441,9 @@ export default function SensitiveTeethTreatmentPage() {
   return (
     <Layout>
       <Head>
-        <title>{SEO.title}</title>
-        <meta name="description" content={SEO.metaDescription} />
-        <meta name="keywords" content={SEO.keywords} />
+        <title key="title">{SEO.title}</title>
+        <meta name="description" content={SEO.metaDescription} key="description" />
+        <meta name="keywords" content={SEO.keywords} key="keywords" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={SEO.canonical} key="canonical" />
 

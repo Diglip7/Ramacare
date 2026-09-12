@@ -108,7 +108,7 @@ export default function HydrafacialBeforeAndAfterPage() {
   return (
     <Layout>
       <Head>
-        <title key="title">Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic</title>
+        <title key="title">HydraFacial Before and After: Real Results | RamaCare</title>
         <meta name="description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="description" />
         <meta name="keywords" content="Hydrafacial before and after, Hydrafacial results Dubai, Hydrafacial treatment Dubai, Hydrafacial skin transformation, Hydrafacial realistic expectations, Hydrafacial pores congestion, Hydrafacial glow results, Hydrafacial sessions needed, RamaCare Hydrafacial Dubai" key="keywords" />
         <meta name="robots" content="index, follow" key="robots" />
@@ -116,7 +116,7 @@ export default function HydrafacialBeforeAndAfterPage() {
         <link rel="canonical" href={`${SITE_URL}${PAGE_PATH}`} key="canonical" />
 
         {/* Open Graph Tags */}
-        <meta property="og:title" content="Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic" key="og:title" />
+        <meta property="og:title" content="HydraFacial Before and After: Real Results | RamaCare" key="og:title" />
         <meta property="og:description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="og:description" />
         <meta property="og:type" content="website" key="og:type" />
         <meta property="og:url" content={`${SITE_URL}${PAGE_PATH}`} key="og:url" />
@@ -129,7 +129,7 @@ export default function HydrafacialBeforeAndAfterPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Hydrafacial Before and After: What Results to Realistically Expect" key="twitter:title" />
+        <meta name="twitter:title" content="HydraFacial Before and After: Real Results | RamaCare" key="twitter:title" />
         <meta name="twitter:description" content="See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos." key="twitter:description" />
         <meta name="twitter:image" content={`${SITE_URL}/images/hydrafacial-procedure-ramacare-dubai.jpg`} key="twitter:image" />
 
@@ -145,7 +145,7 @@ export default function HydrafacialBeforeAndAfterPage() {
                   "@type": "WebPage",
                   "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#webpage",
                   "url": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/",
-                  "name": "Hydrafacial Before and After: What Results to Realistically Expect | RamaCare Polyclinic",
+                  "name": "HydraFacial Before and After: Real Results | RamaCare",
                   "description": "See what to realistically expect from Hydrafacial before and after treatment. Learn how results develop, what affects them, and how to read photos.",
                   "inLanguage": "en",
                   "isPartOf": {
@@ -163,7 +163,7 @@ export default function HydrafacialBeforeAndAfterPage() {
                   },
                   "lastReviewed": "2026-08-29",
                   "reviewedBy": {
-                    "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#physician"
+                    "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#therapist"
                   },
                   "breadcrumb": {
                     "@type": "BreadcrumbList",
@@ -176,13 +176,25 @@ export default function HydrafacialBeforeAndAfterPage() {
                 },
                 {
                   "@type": "Person",
-                  "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#physician",
+                  "@id": "https://ramacarepolyclinic.ae/services/hydrafacial-before-and-after/#therapist",
                   "name": "Nodainne Baves Guerrero",
                   "jobTitle": "DHA Licensed Beauty Therapist",
-                  "hasCredential": "DHA Licensed Beauty Therapist",
+                  "hasCredential": {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "License",
+                    "name": "DHA Licensed Beauty Therapist"
+                  },
                   "worksFor": {
-                    "@type": "MedicalOrganization",
-                    "name": "RamaCare Polyclinic"
+                    "@type": "MedicalClinic",
+                    "name": "RamaCare Polyclinic",
+                    "url": "https://ramacarepolyclinic.ae/",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+                      "addressLocality": "Jumeirah 1",
+                      "addressRegion": "Dubai",
+                      "addressCountry": "AE"
+                    }
                   },
                   "url": "https://ramacarepolyclinic.ae/doctors/nodainne-baves-guerrero-beauty-therapist-dubai/"
                 },
@@ -888,7 +900,7 @@ export default function HydrafacialBeforeAndAfterPage() {
             </div>
           </article>
 
-       
+
           {/* Book a Consultation Callout Block */}
           <article id="book-now" className="rounded-3xl border border-[#E9E2D6] bg-[#F5F1EA] p-8 sm:p-12 text-center relative overflow-hidden shadow-md">
             <div className="absolute right-0 bottom-0 text-[#1F5E4B]/5 pointer-events-none">
@@ -939,7 +951,7 @@ export default function HydrafacialBeforeAndAfterPage() {
           </article>
 
         </div>
-        </section>
+      </section>
       {/* Content Reviewer Badge */}
       <ContentReviewBadge doctorName="Nodainne Baves Guerrero" pageSlug="/services/hydrafacial-before-and-after/" />
 

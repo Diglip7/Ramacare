@@ -319,6 +319,7 @@ export default function PrpHairTreatmentResultsPage() {
           content="Wondering what PRP hair treatment results really look like? Learn the realistic timeline, what to expect, and how to track progress in Dubai."
           key="description"
         />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-hair-treatment-results/" key="canonical" />
         <meta property="og:title" content="PRP Hair Treatment Results: Timeline & Expectations | RamaCare Polyclinic" key="og:title" />
         <meta
           property="og:description"
@@ -343,7 +344,13 @@ export default function PrpHairTreatmentResultsPage() {
               name: 'RamaCare Polyclinic',
               url: 'https://ramacarepolyclinic.ae/',
               medicalSpecialty: 'Dermatology',
-              address: { '@type': 'PostalAddress', addressLocality: 'Jumeirah 1', addressRegion: 'Dubai', addressCountry: 'AE' },
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+                addressLocality: 'Jumeirah 1',
+                addressRegion: 'Dubai',
+                addressCountry: 'AE'
+              },
               priceRange: '$$',
             }),
           }}
@@ -399,7 +406,11 @@ export default function PrpHairTreatmentResultsPage() {
               '@type': 'Article',
               headline: 'PRP Hair Treatment Results: Timeline, Expectations & Progress',
               about: 'PRP hair treatment results, realistic timeline and expectations',
-              publisher: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic' },
+              publisher: {
+                '@type': 'Organization',
+                name: 'RamaCare Polyclinic',
+                url: 'https://ramacarepolyclinic.ae/'
+              },
             }),
           }}
         />

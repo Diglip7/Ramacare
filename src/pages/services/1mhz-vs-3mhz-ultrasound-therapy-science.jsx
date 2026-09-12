@@ -194,12 +194,16 @@ const UltrasoundFrequencyScience = () => {
         }
       },
       {
-        '@type': 'Physician',
+        '@type': 'Person',
         '@id': 'https://ramacarepolyclinic.ae/services/1mhz-vs-3mhz-ultrasound-therapy-science/#physician',
         name: 'Jeena Mathew',
-        medicalSpecialty: 'Physiotherapy',
+        jobTitle: 'Physiotherapist',
         honorificSuffix: 'BPT, MPT',
-        hasCredential: 'DHA Licensed Physiotherapist',
+        hasCredential: {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'License',
+          name: 'DHA Licensed Physiotherapist'
+        },
         worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
         url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
       },
@@ -279,7 +283,7 @@ const UltrasoundFrequencyScience = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A1A1A] leading-[1.1]">
-                    1MHz vs 3MHz Ultrasound Therapy Science | RamaCare Dubai
+                    1MHz vs 3MHz Ultrasound Therapy: The Science of Frequency & Tissue Healing
                   </h1>
                   <p className="text-lg lg:text-xl text-[#5F5F5F] leading-relaxed max-w-2xl">
                     Understanding the physics of healing. Learn the difference between 1MHz and 3MHz ultrasound frequencies and how RamaCare uses sound waves to repair deep tissue in Jumeirah.

@@ -244,8 +244,8 @@ export default function BestHairSpecialistPage() {
               "description": "DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai, offering physiotherapy, Ayurveda, dermatology and aesthetics, and dental services, including hair and scalp assessment and treatment.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                "addressLocality": "Jumeirah 1, Dubai",
+                "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+                "addressLocality": "Jumeirah 1",
                 "addressRegion": "Dubai",
                 "addressCountry": "AE"
               },
@@ -284,7 +284,7 @@ export default function BestHairSpecialistPage() {
                 "name": "Hair loss"
               },
               "publisher": {
-                "@type": "MedicalClinic",
+                "@type": "Organization",
                 "name": "RamaCare Polyclinic",
                 "url": "https://ramacarepolyclinic.ae"
               }
@@ -319,7 +319,7 @@ export default function BestHairSpecialistPage() {
                 "url": "https://ramacarepolyclinic.ae"
               },
               "publisher": {
-                "@type": "MedicalClinic",
+                "@type": "Organization",
                 "name": "RamaCare Polyclinic",
                 "url": "https://ramacarepolyclinic.ae",
                 "logo": {

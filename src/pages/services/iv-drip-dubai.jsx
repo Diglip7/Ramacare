@@ -75,8 +75,9 @@ export default function IVdripPage() {
       "telephone": "+971566597878",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1, Dubai",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
         "addressCountry": "AE"
       }
     },
@@ -105,35 +106,76 @@ export default function IVdripPage() {
   const physicianSchema = [
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Sahar Zomorrodi",
-      "medicalSpecialty": "General Medicine & Aesthetic Care",
+      "jobTitle": "General Practitioner - Aesthetic Medicine",
+      "honorificSuffix": "MD",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed General Practitioner"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Sonita Sinaga",
-      "medicalSpecialty": "Aesthetic Therapy & Skin Care",
+      "jobTitle": "Aesthetic Therapist",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Aesthetic Therapist"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/sonita-sinaga-aesthetic-therapist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Soumya Abraham",
-      "medicalSpecialty": "DHA Licensed Nurse",
+      "jobTitle": "DHA Licensed Nurse",
+      "honorificSuffix": "RN",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Nurse"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/soumya-abraham-dha-licensed-nurse-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     }
   ];

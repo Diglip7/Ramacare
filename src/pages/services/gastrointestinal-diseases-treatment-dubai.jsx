@@ -55,9 +55,10 @@ export default function GastrointestinalDiseasesTreatmentPage() {
     "url": "https://ramacarepolyclinic.ae/services/gastrointestinal-diseases-treatment-dubai/",
     "procedureType": "https://schema.org/NoninvasiveProcedure",
     "reviewedBy": {
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Shamna Keloth Meethal",
-      "medicalSpecialty": "Ayurveda",
+      "jobTitle": "Ayurveda Doctor",
+      "honorificSuffix": "BAMS",
       "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
     },
     "provider": {
@@ -94,13 +95,27 @@ export default function GastrointestinalDiseasesTreatmentPage() {
 
   const physicianSchema = {
     "@context": "https://schema.org",
-    "@type": "Physician",
+    "@type": "Person",
     "name": "Dr. Shamna Keloth Meethal",
-    "medicalSpecialty": "Ayurveda",
+    "jobTitle": "Ayurveda Doctor",
+    "honorificSuffix": "BAMS",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "License",
+      "name": "DHA Licensed Ayurveda Doctor"
+    },
     "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
     "worksFor": {
       "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic"
+      "name": "RamaCare Polyclinic",
+      "url": "https://ramacarepolyclinic.ae/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
     }
   };
 

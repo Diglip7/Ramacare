@@ -56,9 +56,10 @@ export default function DentalCrownBridgePage() {
     "procedureType": "https://schema.org/NoninvasiveProcedure",
     "bodyLocation": "Teeth",
     "reviewedBy": {
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Hirbod Gilandoust",
-      "medicalSpecialty": "Dentistry",
+      "jobTitle": "General Dentist",
+      "honorificSuffix": "DDS",
       "url": "https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/"
     },
     "provider": {
@@ -97,35 +98,77 @@ export default function DentalCrownBridgePage() {
   const physicianSchema = [
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Hirbod Gilandoust",
-      "medicalSpecialty": "Esthetic Dentistry & Dental Surgery",
+      "jobTitle": "General Dentist",
+      "honorificSuffix": "DDS",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Dentist"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/dr-hirbod-gilandoust-dentist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Aparna Balakrishnan",
-      "medicalSpecialty": "Cosmetic Dentistry",
+      "jobTitle": "Cosmetic Dentist",
+      "honorificSuffix": "BDS",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Dentist"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/dr-aparna-balakrishnan-cosmetic-dentist-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Soumya Abraham",
-      "medicalSpecialty": "DHA Licensed Nurse",
+      "jobTitle": "Registered Nurse",
+      "honorificSuffix": "RN",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "License",
+        "name": "DHA Licensed Nurse"
+      },
       "url": "https://ramacarepolyclinic.ae/doctors/soumya-abraham-dha-licensed-nurse-dubai/",
       "worksFor": {
         "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic"
+        "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        }
       }
     }
   ];

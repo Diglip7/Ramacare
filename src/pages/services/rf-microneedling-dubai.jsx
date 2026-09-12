@@ -206,7 +206,15 @@ export default function RFMicroneedlingDubai() {
         "followup": "Customized clinical aftercare, gentle hydration, sun protection, and progress evaluation.",
         "provider": {
             "@type": "MedicalClinic",
-            "name": "RamaCare Polyclinic"
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+                "addressLocality": "Jumeirah 1",
+                "addressRegion": "Dubai",
+                "addressCountry": "AE"
+            }
         }
     };   
 
@@ -237,11 +245,11 @@ export default function RFMicroneedlingDubai() {
         "@context": "https://schema.org",
         "@type": "MedicalOrganization",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "logo": "https://ramacarepolyclinic.ae/images/Logo.png",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
             "addressLocality": "Jumeirah 1",
             "addressRegion": "Dubai",
             "addressCountry": "AE"
@@ -256,12 +264,13 @@ export default function RFMicroneedlingDubai() {
     return (
         <Layout>
             <Head>
-                <title>RF Microneedling Dubai | RamaCare Polyclinic</title>
+                <title key="title">RF Microneedling Dubai | RamaCare Polyclinic</title>
                 <meta
                     name="description"
                     content="Considering RF Microneedling in Dubai? RamaCare Polyclinic offers personalized skin assessments in Jumeirah 1. Book a consultation to discuss your goals."
+                    key="description"
                 />
-                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/" />
+                <link rel="canonical" href="https://ramacarepolyclinic.ae/services/rf-microneedling-dubai/" key="canonical" />
 
                 {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="RF Microneedling Dubai | RamaCare Polyclinic" key="og:title" />

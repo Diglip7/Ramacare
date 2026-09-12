@@ -154,9 +154,19 @@ function buildSchema() {
         url: SITE_URL + '/',
         image: SITE_URL + '/images/dry-needling-vs-massage-therapy-dubai.jpg',
         priceRange: '$$',
-        address: { '@type': 'PostalAddress', streetAddress: 'Jumeirah 1', addressLocality: 'Dubai', addressCountry: 'AE' },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1',
+          addressRegion: 'Dubai',
+          addressCountry: 'AE'
+        },
         medicalSpecialty: 'Physiotherapy',
-        hasCredential: 'DHA Licensed',
+        hasCredential: {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'License',
+          name: 'DHA Licensed'
+        },
       },
       {
         '@type': 'MedicalWebPage',
@@ -178,15 +188,9 @@ function buildSchema() {
           url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/',
         },
         publisher: {
-          '@type': 'MedicalClinic',
+          '@type': 'Organization',
           name: 'RamaCare Polyclinic',
           url: 'https://ramacarepolyclinic.ae/',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
-            addressLocality: 'Jumeirah 1, Dubai',
-            addressCountry: 'AE',
-          },
         },
       },
       {
@@ -235,10 +239,9 @@ function buildSchema() {
         },
       },
       {
-        '@type': 'Physician',
+        '@type': 'Organization',
         name: 'RamaCare Physiotherapy Team',
-        medicalSpecialty: 'Physiotherapy',
-        worksFor: { '@id': SITE_URL + '/#clinic' },
+        parentOrganization: { '@id': SITE_URL + '/#clinic' },
       },
       {
         '@type': 'BreadcrumbList',

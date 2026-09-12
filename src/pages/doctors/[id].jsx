@@ -191,16 +191,22 @@ const DoctorProfilePage = ({ doctor }) => {
               ? JSON.stringify(currentDoctor.customSchema)
               : JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Physician",
+                "@type": "Person",
                 "name": currentDoctor.name,
                 "image": `https://ramacarepolyclinic.ae${currentDoctor.image}`,
                 "description": currentDoctor.biography,
-                "medicalSpecialty": currentDoctor.specialization,
-                "telephone": "+971566597878",
-                "memberOf": {
+                "jobTitle": currentDoctor.qualifications || currentDoctor.specialization,
+                "worksFor": {
                   "@type": "MedicalClinic",
                   "name": "RamaCare Polyclinic",
-                  "url": "https://ramacarepolyclinic.ae/"
+                  "url": "https://ramacarepolyclinic.ae/",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+                    "addressLocality": "Dubai",
+                    "postalCode": "393558",
+                    "addressCountry": "AE"
+                  }
                 },
                 "knowsLanguage": currentDoctor.languages,
                 "occupationalCredential": [
@@ -221,13 +227,6 @@ const DoctorProfilePage = ({ doctor }) => {
                   "reviewCount": "542",
                   "bestRating": "5",
                   "worstRating": "1"
-                },
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-                  "addressLocality": "Dubai",
-                  "postalCode": "393558",
-                  "addressCountry": "AE"
                 }
               })
           }}

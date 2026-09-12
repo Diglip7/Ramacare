@@ -205,15 +205,27 @@ export default function AyurvedicDietWeightLossPage() {
         }
       },
       {
-        "@type": "Physician",
+        "@type": "Person",
         "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#physician",
         "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
+        "jobTitle": "Ayurveda Doctor",
         "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA Licensed Ayurveda Doctor"
+        },
         "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         },
         "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
       },

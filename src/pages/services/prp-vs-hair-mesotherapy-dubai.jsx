@@ -196,7 +196,7 @@ export default function PrpVsHairMesotherapyPage() {
           content="Weighing PRP vs Hair Mesotherapy in Dubai? Compare results, recovery & cost factors, then book a consult with RamaCare Polyclinic today."
           key="description"
         />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-vs-hair-mesotherapy-dubai/" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/prp-vs-hair-mesotherapy-dubai/" key="canonical" />
         <meta name="robots" content="index, follow" key="robots" />
 
         {/* Open Graph Meta Tags */}
@@ -269,16 +269,27 @@ export default function PrpVsHairMesotherapyPage() {
                   },
                 },
                 {
-                  '@type': 'Physician',
+                  '@type': 'Person',
                   '@id': 'https://ramacarepolyclinic.ae/services/prp-vs-hair-mesotherapy-dubai/#physician',
                   name: 'Dr. Sahar Zomorrodi',
-                  medicalSpecialty: 'General Practice',
+                  jobTitle: 'General Practitioner - Aesthetic Medicine',
                   honorificSuffix: 'MD',
-                  hasCredential: 'DHA Licensed General Practitioner',
+                  hasCredential: {
+                    '@type': 'EducationalOccupationalCredential',
+                    credentialCategory: 'License',
+                    name: 'DHA Licensed General Practitioner'
+                  },
                   worksFor: {
-                    '@type': 'MedicalOrganization',
+                    '@type': 'MedicalClinic',
                     name: 'RamaCare Polyclinic',
                     url: 'https://ramacarepolyclinic.ae/',
+                    address: {
+                      '@type': 'PostalAddress',
+                      streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+                      addressLocality: 'Jumeirah 1',
+                      addressRegion: 'Dubai',
+                      addressCountry: 'AE'
+                    }
                   },
                   url: 'https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/',
                 },
@@ -299,7 +310,7 @@ export default function PrpVsHairMesotherapyPage() {
                   medicalSpecialty: 'Dermatology',
                   address: {
                     '@type': 'PostalAddress',
-                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
                     addressLocality: 'Jumeirah 1',
                     addressRegion: 'Dubai',
                     addressCountry: 'AE',

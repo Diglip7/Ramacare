@@ -6,6 +6,7 @@ import ExpertsSection from "../../components/ExpertsSection";
 import BeginYourHealingJourneySection from "../../components/BeginYourHealingJourneySection";
 import SEOContentSection from "../../components/SEOContentSection";
 import { useState, useEffect } from "react";
+import { X } from "lucide-react";
 
 export default function About() {
   const aboutSEOContent = [

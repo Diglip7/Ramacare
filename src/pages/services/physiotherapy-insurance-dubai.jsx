@@ -128,25 +128,34 @@ export default function PhysiotherapyInsuranceDubai() {
           url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
         },
         publisher: {
+          '@type': 'Organization',
+          name: 'RamaCare Polyclinic',
+          url: 'https://ramacarepolyclinic.ae/'
+        }
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#physician',
+        name: 'Jeena Mathew',
+        jobTitle: 'Physiotherapist',
+        honorificSuffix: 'BPT, MPT',
+        hasCredential: {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'License',
+          name: 'DHA Licensed Physiotherapist'
+        },
+        worksFor: {
           '@type': 'MedicalClinic',
           name: 'RamaCare Polyclinic',
           url: 'https://ramacarepolyclinic.ae/',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
-            addressLocality: 'Jumeirah 1, Dubai',
+            streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+            addressLocality: 'Jumeirah 1',
+            addressRegion: 'Dubai',
             addressCountry: 'AE'
           }
-        }
-      },
-      {
-        '@type': 'Physician',
-        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#physician',
-        name: 'Jeena Mathew',
-        medicalSpecialty: 'Physiotherapy',
-        honorificSuffix: 'BPT, MPT',
-        hasCredential: 'DHA Licensed Physiotherapist',
-        worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
+        },
         url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
       },
       {

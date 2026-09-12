@@ -204,12 +204,16 @@ const UltrasoundSessionsTimelinePage = () => {
         }
       },
       {
-        '@type': 'Physician',
+        '@type': 'Person',
         '@id': 'https://ramacarepolyclinic.ae/services/how-many-ultrasound-therapy-sessions/#physician',
         name: 'Jeena Mathew',
-        medicalSpecialty: 'Physiotherapy',
+        jobTitle: 'Physiotherapist',
         honorificSuffix: 'BPT, MPT',
-        hasCredential: 'DHA Licensed Physiotherapist',
+        hasCredential: {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'License',
+          name: 'DHA Licensed Physiotherapist'
+        },
         worksFor: { '@id': 'https://ramacarepolyclinic.ae/#clinic' },
         url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
       },

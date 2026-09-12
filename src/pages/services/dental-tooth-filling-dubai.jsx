@@ -3336,17 +3336,17 @@ function BookConsultation() {
 /* ------------------------------------------------------------------ */
 const clinicSchema = {
   "@context": "https://schema.org",
-  "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
-  "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic",
+  "@type": "MedicalClinic",
+  "@id": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/#clinic",
   "name": "RamaCare Polyclinic",
   "image": "https://ramacarepolyclinic.ae/images/ramacare-dental-clinic-jumeirah-1.jpg",
-  "url": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai",
+  "url": "https://ramacarepolyclinic.ae/",
   "telephone": "+971-4-286-2006",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",
-    "addressLocality": "Dubai",
+    "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+    "addressLocality": "Jumeirah 1",
     "addressRegion": "Dubai",
     "postalCode": "393558",
     "addressCountry": "AE"
@@ -3358,14 +3358,14 @@ const clinicSchema = {
     "name": "Dental Tooth Filling",
     "alternateName": ["Tooth Filling", "Dental Filling", "Cavity Filling"]
   },
-  "sameAs": ["https://ramacarepolyclinic.ae/", "https://ramacarepolyclinic.ae/"]
+  "sameAs": ["https://ramacarepolyclinic.ae/"]
 };
 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#webpage",
-  "url": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai",
+  "@id": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/#webpage",
+  "url": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/",
   "name": "Dental Tooth Filling in Dubai | RamaCare Polyclinic",
   "description": "Get Dental Tooth Filling in Dubai at RamaCare Polyclinic. Professional cavity assessment, tooth-colored fillings and restorative care. Book a consultation.",
   "inLanguage": "en-AE",
@@ -3378,7 +3378,7 @@ const webpageSchema = {
     "procedureType": "https://schema.org/NoninvasiveProcedure",
     "bodyLocation": "Tooth"
   },
-  "publisher": { "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic" },
+  "publisher": { "@id": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/#clinic" },
   "reviewedBy": { "@type": "Organization", "name": "RamaCare Polyclinic Dental Team" }
 };
 
@@ -3392,7 +3392,7 @@ const procedureSchema = {
   "howPerformed": "A dentist removes decayed tooth structure, cleans the affected area, restores the tooth using an appropriate filling material such as composite resin, shapes the restoration, and checks the bite.",
   "preparation": "Clinical dental examination and, when clinically indicated, dental X-rays to assess the extent and depth of decay.",
   "followup": "Routine dental check-ups to monitor the restoration and surrounding tooth structure.",
-  "provider": { "@id": "https://ramacarepolyclinic.ae/dental-tooth-filling-dubai#clinic" }
+  "provider": { "@id": "https://ramacarepolyclinic.ae/services/dental-tooth-filling-dubai/#clinic" }
 };
 
 const faqSchema = {
@@ -3417,7 +3417,7 @@ const breadcrumbSchema = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "MedicalClinic",
   "@id": "https://ramacarepolyclinic.ae/#organization",
   "name": "RamaCare Polyclinic",
   "url": "https://ramacarepolyclinic.ae/",
@@ -3425,8 +3425,9 @@ const organizationSchema = {
   "telephone": "+971-4-286-2006",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Jumeirah Terrace Building, Jumeirah 1",
-    "addressLocality": "Dubai",
+    "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+    "addressLocality": "Jumeirah 1",
+    "addressRegion": "Dubai",
     "addressCountry": "AE"
   },
   "medicalSpecialty": ["Dentistry", "Dermatology", "Ayurveda", "Physiotherapy", "General Medicine"],
@@ -3444,7 +3445,7 @@ export default function DentalToothFillingDubai() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <link rel="canonical" href={`https://ramacarepolyclinic.ae${meta.url}`} />
+        <link rel="canonical" href={`https://ramacarepolyclinic.ae${meta.url}`} key="canonical" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Dental Tooth Filling in Dubai | RamaCare Polyclinic" key="og:title" />

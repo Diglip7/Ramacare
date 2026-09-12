@@ -29,6 +29,7 @@ export default function HairLossPage() {
   <title key="title">Hair Loss in Dubai Diagnosis and Treatment by Specialists</title>
   <meta name="description" content="Hair loss in Dubai is assessed and treated by specialists using safe medical solutions to reduce hair fall, support regrowth, and improve scalp health." key="description" />
   <meta name="keywords" content="Hair loss in Dubai, Hair loss treatment Dubai, Hair fall treatment Dubai, Hair thinning solutions, Medical hair loss care, Hair regrowth treatment Dubai, Scalp health treatment, Hair loss diagnosis Dubai, Non-surgical hair treatment, Professional hair care Dubai" />
+  <link rel="canonical" href="https://ramacarepolyclinic.ae/services/hair-loss-dubai/" key="canonical" />
 
   {/* Open Graph Meta Tags */}
   <meta property="og:title" content="Hair Loss in Dubai Diagnosis and Treatment by Specialists" />
@@ -118,9 +119,10 @@ export default function HairLossPage() {
           "provider": {
             "@type": "MedicalClinic",
             "name": "RamaCare Polyclinic – Aesthetic & Dermatology Care",
+            "url": "https://ramacarepolyclinic.ae/",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
+              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
               "addressLocality": "Jumeirah 1",
               "addressRegion": "Dubai",
               "postalCode": "393558",
@@ -135,15 +137,27 @@ export default function HairLossPage() {
           }
         },
         {
-          "@type": "Physician",
+          "@type": "Person",
           "@id": "https://ramacarepolyclinic.ae/services/hair-loss-dubai/#physician",
           "name": "Dr. Sahar Zomorrodi",
-          "medicalSpecialty": "General Practice & Aesthetic Medicine",
+          "jobTitle": "General Practitioner - Aesthetic Medicine",
           "honorificSuffix": "MD",
-          "hasCredential": "DHA Licensed General Practitioner",
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "License",
+            "name": "DHA Licensed General Practitioner"
+          },
           "worksFor": {
-            "@type": "MedicalOrganization",
-            "name": "RamaCare Polyclinic"
+            "@type": "MedicalClinic",
+            "name": "RamaCare Polyclinic",
+            "url": "https://ramacarepolyclinic.ae/",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+              "addressLocality": "Jumeirah 1",
+              "addressRegion": "Dubai",
+              "addressCountry": "AE"
+            }
           },
           "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
         },

@@ -27,35 +27,44 @@ export default function GeneralPhysicianDubaiCategoryPage() {
     "@graph": [
       
       {
-        "@type": "MedicalBusiness",
-        "@id": `${CANONICAL_URL}#business`,
-        "name": "General Physician Services",
+        "@type": "MedicalClinic",
+        "@id": `${CANONICAL_URL}#clinic`,
+        "name": "RamaCare Polyclinic - General Physician Services",
         "description": "Comprehensive primary healthcare in Dubai including diagnosis, chronic disease management, acute illness treatment, and preventive health checkups by DHA-licensed general physicians.",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1, Dubai",
-            "addressCountry": "AE"
-          }
+        "url": "https://ramacarepolyclinic.ae/",
+        "telephone": "+971566597878",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+          "addressLocality": "Jumeirah 1",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
         },
         "areaServed": { "@type": "City", "name": "Dubai" }
       },
       {
-        "@type": "Physician",
+        "@type": "Person",
         "@id": `${CANONICAL_URL}#physician`,
         "name": "Dr. Sahar Zomorrodi",
-        "medicalSpecialty": "General Practice",
+        "jobTitle": "General Practitioner",
         "honorificSuffix": "MD",
-        "hasCredential": "DHA Licensed General Practitioner",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA Licensed General Practitioner"
+        },
         "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
         "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         }
       },
       {

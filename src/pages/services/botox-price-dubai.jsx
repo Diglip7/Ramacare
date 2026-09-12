@@ -141,15 +141,21 @@ function buildSchema() {
         image: SITE_URL + '/images/logo.jpg',
         priceRange: 'AED',
         medicalSpecialty: 'Dermatology',
-        address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
+          addressLocality: 'Jumeirah 1',
+          addressRegion: 'Dubai',
+          addressCountry: 'AE'
+        },
         hasCredential: { '@type': 'EducationalOccupationalCredential', credentialCategory: 'DHA License' },
-        employee: { '@type': 'Physician', '@id': SITE_URL + '/#dr-sahar-zomorrodi' },
+        employee: { '@type': 'Person', '@id': SITE_URL + '/#dr-sahar-zomorrodi' },
       },
       {
-        '@type': 'Physician',
+        '@type': 'Person',
         '@id': SITE_URL + '/#dr-sahar-zomorrodi',
         name: DOCTOR_NAME,
-        medicalSpecialty: 'Aesthetic Medicine',
+        jobTitle: 'General Practitioner - Aesthetic Medicine',
         worksFor: { '@id': SITE_URL + '/#clinic' },
       },
       {
@@ -232,7 +238,7 @@ export default function BotoxPriceDubaiPage() {
           content="Curious about Botox price in Dubai? See what affects Botox cost at DHA-licensed RamaCare Polyclinic and book a personalized consultation today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
+        <link rel="canonical" href={SITE_URL + PAGE_PATH} key="canonical" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Botox Price Dubai | RamaCare Polyclinic" />
         <meta

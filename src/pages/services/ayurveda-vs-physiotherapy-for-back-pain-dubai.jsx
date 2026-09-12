@@ -212,7 +212,17 @@ function buildSchema() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Ayurveda vs Physiotherapy for Back Pain Dubai',
-    provider: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic' },
+    provider: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: SITE_URL + '/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+        addressLocality: 'Dubai',
+        addressCountry: 'AE',
+      }
+    },
     areaServed: { '@type': 'City', name: 'Dubai' },
     availableChannel: { '@type': 'ServiceChannel', servicePhone: '+971566597878' },
   };
@@ -223,7 +233,7 @@ function buildSchema() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
       { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services/' },
-      { '@type': 'ListItem', position: 3, name: 'Ayurveda vs Physiotherapy for Back Pain Dubai' },
+      { '@type': 'ListItem', position: 3, name: 'Ayurveda vs Physiotherapy for Back Pain Dubai', item: SITE_URL + PAGE_PATH },
     ],
   };
 
@@ -239,10 +249,20 @@ function buildSchema() {
 
   const physician = {
     '@context': 'https://schema.org',
-    '@type': 'Physician',
-    name: 'RamaCare Polyclinic Specialists',
-    medicalSpecialty: ['Ayurveda', 'Physiotherapy'],
-    worksFor: { '@type': 'MedicalClinic', name: 'RamaCare Polyclinic' },
+    '@type': 'Person',
+    name: 'RamaCare Polyclinic Medical Team',
+    jobTitle: 'Ayurveda & Physiotherapy Specialists',
+    worksFor: {
+      '@type': 'MedicalClinic',
+      name: 'RamaCare Polyclinic',
+      url: SITE_URL + '/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
+        addressLocality: 'Dubai',
+        addressCountry: 'AE',
+      }
+    },
   };
 
   const medicalProcedure = {
@@ -270,15 +290,15 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
   return (
     <Layout>
       <Head>
-        <title key="title">Ayurveda vs Physiotherapy for Back Pain Dubai</title>
+        <title key="title">Ayurveda vs Physiotherapy for Back Pain Dubai | RamaCare</title>
         <meta
           name="description"
           content="Ayurveda vs Physiotherapy for Back Pain Dubai — compare both treatments and find the right plan for you. Book your assessment at RamaCare Polyclinic today."
           key="description"
         />
-        <link rel="canonical" href={SITE_URL + PAGE_PATH} />
+        <link rel="canonical" href={SITE_URL + PAGE_PATH} key="canonical" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ayurveda vs Physiotherapy for Back Pain Dubai" />
+        <meta property="og:title" content="Ayurveda vs Physiotherapy for Back Pain Dubai | RamaCare" />
         <meta
           property="og:description"
           content="Ayurveda vs Physiotherapy for Back Pain Dubai — compare both treatments and find the right plan for you. Book your assessment at RamaCare Polyclinic today."
@@ -286,7 +306,7 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
         <meta property="og:url" content={SITE_URL + PAGE_PATH} />
         <meta property="og:image" content={SITE_URL + '/images/ayurveda-vs-physiotherapy-back-pain-dubai.jpg'} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ayurveda vs Physiotherapy for Back Pain Dubai" />
+        <meta name="twitter:title" content="Ayurveda vs Physiotherapy for Back Pain Dubai | RamaCare" />
         <meta
           name="twitter:description"
           content="Ayurveda vs Physiotherapy for Back Pain Dubai — compare both treatments and find the right plan for you. Book your assessment at RamaCare Polyclinic today."
@@ -306,7 +326,7 @@ export default function AyurvedaVsPhysiotherapyBackPainPage() {
 
         <div className="max-w-7xl mx-auto px-6 pt-6 pb-4 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-semibold text-[#1A1A1A] leading-[1.2] max-w-4xl mx-auto">
-            Ayurveda vs Physiotherapy for Back Pain Dubai
+            Ayurveda vs Physiotherapy for Back Pain in Dubai: Treatment Comparison Guide
           </h1>
           <p className="text-lg text-[#5F5F5F] leading-relaxed max-w-3xl mx-auto mt-5">
             If you have been searching for relief and comparing Ayurveda vs Physiotherapy for Back Pain Dubai, you are not alone. This guide compares both approaches honestly, without bias, so you can understand which treatment — or combination of treatments — best fits your specific condition, medical history, and recovery goals.

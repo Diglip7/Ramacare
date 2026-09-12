@@ -54,7 +54,7 @@ export default function Home() {
           content="RamaCare Polyclinic Dubai, Polyclinic in Dubai, Trusted polyclinic in Dubai, Multi-Specialty Clinic Dubai, Medical clinic Dubai, DHA licensed polyclinic, Family healthcare Dubai, Affordable healthcare Dubai, Polyclinic in Jumeirah 1, Medical clinic Jumeirah 1, Best Polyclinic in Jumeirah 1"
           key="keywords"
         />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/" />
+        <link rel="canonical" href="https://ramacarepolyclinic.ae/" key="canonical" />
         <meta name="robots" content="index, follow" key="robots" />
         <meta name="msvalidate.01" content="FB6C6318BA274AFF1EA6E095977EA143" />
         <meta name="google-site-verification" content="VRn7pg1rACQOgcGV13YChuu05_Iu__0QVLXrw9dNGCc" />

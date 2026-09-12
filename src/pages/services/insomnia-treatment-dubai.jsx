@@ -200,18 +200,39 @@ export default function InsomniaTreatmentPage() {
         },
         "lastReviewed": "2026-08-29",
         "reviewedBy": {
-          "@type": "Physician",
+          "@type": "Person",
           "name": "Dr. Sahar Zomorrodi",
-          "medicalSpecialty": "General Practice",
+          "jobTitle": "General Practitioner",
           "honorificSuffix": "MD",
-          "hasCredential": "DHA Licensed General Practitioner",
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "License",
+            "name": "DHA Licensed General Practitioner"
+          },
           "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
         },
         "publisher": {
+          "@type": "Organization",
+          "name": "RamaCare Polyclinic",
+          "url": "https://ramacarepolyclinic.ae/"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": `${CANONICAL_URL}#physician`,
+        "name": "Dr. Sahar Zomorrodi",
+        "jobTitle": "General Practitioner",
+        "honorificSuffix": "MD",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA Licensed General Practitioner"
+        },
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
+        "worksFor": {
           "@type": "MedicalClinic",
           "name": "RamaCare Polyclinic",
           "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
@@ -219,19 +240,6 @@ export default function InsomniaTreatmentPage() {
             "addressRegion": "Dubai",
             "addressCountry": "AE"
           }
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
-        "name": "Dr. Sahar Zomorrodi",
-        "medicalSpecialty": "General Practice",
-        "honorificSuffix": "MD",
-        "hasCredential": "DHA Licensed General Practitioner",
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
         }
       },
       {

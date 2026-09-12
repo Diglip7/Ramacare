@@ -245,15 +245,27 @@ export default function HairLossClinicDubai() {
         }
       },
       {
-        "@type": "Physician",
+        "@type": "Person",
         "@id": `${CANONICAL_URL}#physician`,
         "name": "Dr. Sahar Zomorrodi",
-        "medicalSpecialty": "General Practice",
+        "jobTitle": "General Practitioner",
         "honorificSuffix": "MD",
-        "hasCredential": "DHA Licensed General Practitioner",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA Licensed General Practitioner"
+        },
         "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
+          "@type": "MedicalClinic",
+          "name": "RamaCare Polyclinic",
+          "url": `${SITE_URL}/`,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
+            "addressLocality": "Jumeirah 1",
+            "addressRegion": "Dubai",
+            "addressCountry": "AE"
+          }
         },
         "url": `${SITE_URL}/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/`
       },

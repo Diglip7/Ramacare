@@ -40,15 +40,17 @@ export const DOCTORS = {
     patientEducationDesc: 'Physiotherapy isn\'t only about recovery, it\'s also about prevention. Jeena Mathew encourages patients to adopt simple daily habits that reduce the risk of musculoskeletal injury:',
     customSchema: {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Jeena Mathew",
       "medicalSpecialty": "Musculoskeletal Physiotherapy",
       "jobTitle": "Physiotherapist",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -226,15 +228,17 @@ export const DOCTORS = {
     patientEducationDesc: 'Ayurveda emphasizes that daily habits shape long-term health. Dr. Shamna encourages patients to build the following practices into their routine:',
     customSchema: {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Shamna Keloth Meethal",
       "medicalSpecialty": "Ayurveda",
       "jobTitle": "Ayurveda Practitioner",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -247,7 +251,9 @@ export const DOCTORS = {
           "credentialCategory": "Bachelor of Ayurvedic Medicine and Surgery (BAMS)"
         },
         {
-          "@type": "DHA License",
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "License",
+          "name": "DHA License",
           "recognizedBy": {
             "@type": "Organization",
             "name": "Dubai Health Authority"
@@ -255,7 +261,7 @@ export const DOCTORS = {
         }
       ],
       "knowsLanguage": "English",
-      "url": "https://www.ramacarepolyclinic.ae/dr-shamna-keloth-meethal-ayurveda-doctor-dubai"
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
     },
     introParagraphs: [
       "Modern life in Dubai moves fast, and it often leaves little room for the body's natural balance. If you're looking for care that treats you as a whole person rather than a list of symptoms, Dr. Shamna Keloth Meethal, Ayurveda Doctor in Dubai, offers exactly that. She is a DHA licensed Ayurveda practitioner at <a href=\"/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">RamaCare Polyclinic</a> in <a href=\"/contact-us/\" class=\"text-[#1F5E4B] hover:underline font-semibold\">Jumeirah 1, Dubai location</a>, with more than 11 years of clinical experience in general Ayurveda and preventive care.",
@@ -432,9 +438,10 @@ export const DOCTORS = {
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -620,9 +627,10 @@ export const DOCTORS = {
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -802,16 +810,17 @@ export const DOCTORS = {
     patientEducationDesc: 'Good healthcare outcomes depend as much on informed patients as on skilled doctors. Dr. Sahar encourages every patient to keep the following in mind:',
     customSchema: {
       "@context": "https://schema.org",
-      "@type": "Physician",
+      "@type": "Person",
       "name": "Dr. Sahar Zomorrodi",
       "medicalSpecialty": "General Practice",
       "jobTitle": "DHA Licensed General Practitioner",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -995,16 +1004,17 @@ export const DOCTORS = {
     patientEducationDesc: 'Good long-term dental outcomes depend as much on daily habits as on professional treatment. Dr. Hirbod encourages every patient to keep the following in mind:',
     customSchema: {
       "@context": "https://schema.org",
-      "@type": "Dentist",
+      "@type": "Person",
       "name": "Dr. Hirbod Gilandoust",
       "medicalSpecialty": "Esthetic Dentistry & Dental Surgery",
       "jobTitle": "DHA Licensed Dentist",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -1188,16 +1198,17 @@ export const DOCTORS = {
     patientEducationDesc: 'Good long-term dental outcomes depend as much on daily habits as on professional treatment. Dr. Aparna encourages every patient to keep the following in mind:',
     customSchema: {
       "@context": "https://schema.org",
-      "@type": "Dentist",
+      "@type": "Person",
       "name": "Dr. Aparna Balakrishnan",
       "medicalSpecialty": "General & Cosmetic Dentistry",
       "jobTitle": "DHA Licensed General & Cosmetic Dentist",
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
+        "url": "https://ramacarepolyclinic.ae/",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
           "addressLocality": "Jumeirah 1",
           "addressRegion": "Dubai",
           "addressCountry": "AE"
@@ -1384,7 +1395,6 @@ export const DOCTORS = {
       "worksFor": {
         "@type": "MedicalClinic",
         "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Jumeirah 1",
