@@ -29,16 +29,20 @@ const DoctorsSection = ({ content, customDoctors }) => {
   const normalizeDoctor = (d) => {
     const name = d?.name || '';
     const firstName = d?.firstName || (name.split(' ')[0] || '');
-    let ratingNum = 0;
-    if (typeof d?.rating === 'number') {
+    let ratingNum = 4.8;
+    if (typeof d?.rating === 'number' && Number.isFinite(d.rating) && d.rating > 0) {
       ratingNum = d.rating;
     } else if (typeof d?.rating === 'string') {
       const match = d.rating.match(/[0-9]+(\.[0-9]+)?/);
-      ratingNum = match ? parseFloat(match[0]) : 0;
+      if (match) ratingNum = parseFloat(match[0]);
     }
-    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.8';
+    const ratingLabel = ratingNum.toFixed(1);
+    const slug = Object.keys(DOCTORS).find(key => DOCTORS[key]?.id === d?.id) || '';
+    const profileHref = d?.urlSlug || (slug ? `/doctors/${slug}/` : '/doctors/');
     return {
       id: d?.id,
+      slug,
+      profileHref,
       name,
       firstName,
       image: d?.image || '',
@@ -48,6 +52,8 @@ const DoctorsSection = ({ content, customDoctors }) => {
       isDHALicensed: Boolean(d?.isDHALicensed),
       expertise: Array.isArray(d?.expertise) ? d.expertise : [],
       languages: Array.isArray(d?.languages) ? d.languages : [],
+      rating: ratingNum,
+      ratingLabel,
       _ratingNum: ratingNum,
       _ratingLabel: ratingLabel,
     };
@@ -74,10 +80,11 @@ const DoctorsSection = ({ content, customDoctors }) => {
   }
   const doctors = rawDoctors.filter(Boolean).map(normalizeDoctor);
 
-  const renderStars = (rating, size = 'w-4 h-4') => {
+  const renderStars = (rating = 4.8, size = 'w-4 h-4') => {
+    const num = typeof rating === 'number' && Number.isFinite(rating) && rating > 0 ? rating : 4.8;
     return [1, 2, 3, 4, 5].map((star) => {
-      const isFull = star <= Math.floor(rating);
-      const isHalf = !isFull && star === Math.ceil(rating) && rating % 1 >= 0.5;
+      const isFull = star <= Math.floor(num);
+      const isHalf = !isFull && star === Math.ceil(num) && num % 1 >= 0.5;
       if (isHalf) {
         return (
           <div key={star} className={`relative ${size}`}>
@@ -106,23 +113,10 @@ const DoctorsSection = ({ content, customDoctors }) => {
       style={{ fontFamily: '-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block mb-5 lg:mb-6">
-            <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
-          </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1F2937] text-center mb-3">
-            {title}
-          </h2>
-          <p className="text-sm md:text-base text-[#6B7280] text-center max-w-3xl mx-auto mb-10 md:mb-12">
-            {description}
-          </p>
-        </div>
-
         {/* 1 Doctor: Two-Column Showcase Layout */}
         {doctors.length === 1 ? (
           (() => {
             const doctor = doctors[0];
-            const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
             return (
               <div className="lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-6xl mx-auto mb-12">
                 {/* Left: Department & Specialist Introduction */}
@@ -193,7 +187,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
                 <div className="lg:col-span-5 flex justify-center">
                   <div className="w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col">
                     {/* Image Container with Overlay - Fixed Height */}
-                    <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                    <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                       {doctor.image ? (
                         <Image
                           src={doctor.image}
@@ -222,11 +216,11 @@ const DoctorsSection = ({ content, customDoctors }) => {
                         </div>
                       )}
 
-                      {/* Bottom Info on Overlay */}
+                      {/* Doctor Info at Bottom of Image */}
                       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                         <div className="flex items-center gap-1.5 mb-3">
-                          {renderStars(doctor._ratingNum, 'w-4 h-4')}
-                          <span className="text-white text-sm font-medium ml-1">{doctor._ratingLabel}</span>
+                          {renderStars(doctor.rating, 'w-4 h-4')}
+                          <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                         </div>
                         <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                           {doctor.name}
@@ -278,7 +272,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
 
                       <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                         <Link
-                          href={`/doctors/${slug}/`}
+                          href={doctor.profileHref}
                           className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                         >
                           View Full Profile
@@ -318,14 +312,13 @@ const DoctorsSection = ({ content, customDoctors }) => {
             {doctors.length === 2 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
                 {doctors.map((doctor) => {
-                  const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
                   return (
                     <div
                       key={doctor.id}
                       className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col"
                     >
                       {/* Image Container with Overlay */}
-                      <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                      <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                         {doctor.image ? (
                           <Image
                             src={doctor.image}
@@ -351,8 +344,8 @@ const DoctorsSection = ({ content, customDoctors }) => {
                         )}
                         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                           <div className="flex items-center gap-1.5 mb-3">
-                            {renderStars(doctor._ratingNum, 'w-4 h-4')}
-                            <span className="text-white text-sm font-medium ml-1">{doctor._ratingLabel}</span>
+                            {renderStars(doctor.rating, 'w-4 h-4')}
+                            <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                           </div>
                           <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                             {doctor.name}
@@ -404,7 +397,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
 
                         <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                           <Link
-                            href={`/doctors/${slug}/`}
+                            href={doctor.profileHref}
                             className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                           >
                             View Full Profile
@@ -430,16 +423,15 @@ const DoctorsSection = ({ content, customDoctors }) => {
                 <div className="absolute inset-y-0 left-0 flex items-center z-10">
                   <button
                     onClick={() => {
-                      const el = document.getElementById('doctors-slider');
-                      if (!el) return;
-                      const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-                      const step = el.offsetWidth / visible;
-                      el.scrollBy({ left: -step, behavior: 'smooth' });
+                      const slider = document.getElementById("doctors-slider");
+                      if (slider) {
+                        slider.scrollBy({ left: -350, behavior: "smooth" });
+                      }
                     }}
-                    className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
+                    className="p-3 rounded-full bg-white shadow-md hover:bg-gray-50 border border-gray-200 transition-colors"
                     aria-label="Previous"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
@@ -447,16 +439,15 @@ const DoctorsSection = ({ content, customDoctors }) => {
                 <div className="absolute inset-y-0 right-0 flex items-center z-10">
                   <button
                     onClick={() => {
-                      const el = document.getElementById('doctors-slider');
-                      if (!el) return;
-                      const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-                      const step = el.offsetWidth / visible;
-                      el.scrollBy({ left: step, behavior: 'smooth' });
+                      const slider = document.getElementById("doctors-slider");
+                      if (slider) {
+                        slider.scrollBy({ left: 350, behavior: "smooth" });
+                      }
                     }}
-                    className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
+                    className="p-3 rounded-full bg-white shadow-md hover:bg-gray-50 border border-gray-200 transition-colors"
                     aria-label="Next"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
@@ -469,14 +460,13 @@ const DoctorsSection = ({ content, customDoctors }) => {
                 >
                   <div className="flex gap-6 items-stretch">
                     {doctors.map((doctor) => {
-                      const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
                       return (
                         <div
                           key={doctor.id}
                           className="snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col w-full md:w-1/2 lg:w-1/3"
                         >
                           {/* Image Container with Overlay */}
-                          <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                          <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                             {doctor.image ? (
                               <Image
                                 src={doctor.image}
@@ -505,8 +495,8 @@ const DoctorsSection = ({ content, customDoctors }) => {
 
                             <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                               <div className="flex items-center gap-1.5 mb-3">
-                                {renderStars(doctor._ratingNum, 'w-4 h-4')}
-                                <span className="text-white text-sm font-medium ml-1">{doctor._ratingLabel}</span>
+                                {renderStars(doctor.rating, 'w-4 h-4')}
+                                <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                               </div>
 
                               <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
@@ -560,7 +550,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
 
                             <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                               <Link
-                                href={`/doctors/${slug}/`}
+                                href={doctor.profileHref}
                                 className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                               >
                                 View Full Profile

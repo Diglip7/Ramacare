@@ -91,10 +91,11 @@ const AllDoctorsPage = ({ content }) => {
   // Define all doctors here - you can expand this list
   const doctors = content?.doctors || DOCTOR_GROUPS.ALL;
 
-  const renderStars = (rating, size = 'w-4 h-4') => {
+  const renderStars = (rating = 4.8, size = 'w-4 h-4') => {
+    const num = typeof rating === 'number' && Number.isFinite(rating) && rating > 0 ? rating : 4.8;
     return [1, 2, 3, 4, 5].map((star) => {
-      const isFull = star <= Math.floor(rating);
-      const isHalf = !isFull && star === Math.ceil(rating) && rating % 1 >= 0.5;
+      const isFull = star <= Math.floor(num);
+      const isHalf = !isFull && star === Math.ceil(num) && num % 1 >= 0.5;
 
       if (isHalf) {
         return (

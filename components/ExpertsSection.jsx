@@ -46,16 +46,20 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
   const normalizeDoctor = (d) => {
     const name = d?.name || '';
     const firstName = d?.firstName || (name.split(' ')[0] || '');
-    let ratingNum = 0;
-    if (typeof d?.rating === 'number') {
+    let ratingNum = 4.8;
+    if (typeof d?.rating === 'number' && Number.isFinite(d.rating)) {
       ratingNum = d.rating;
     } else if (typeof d?.rating === 'string') {
       const match = d.rating.match(/[0-9]+(\.[0-9]+)?/);
-      ratingNum = match ? parseFloat(match[0]) : 0;
+      if (match) ratingNum = parseFloat(match[0]);
     }
-    const ratingLabel = Number.isFinite(ratingNum) && ratingNum > 0 ? ratingNum.toFixed(1) : '4.8';
+    const ratingLabel = ratingNum.toFixed(1);
+    const slug = Object.keys(DOCTORS).find(key => DOCTORS[key]?.id === d?.id) || '';
+    const profileHref = d?.urlSlug || (slug ? `/doctors/${slug}/` : '/doctors/');
     return {
       id: d?.id,
+      slug,
+      profileHref,
       name,
       firstName,
       image: d?.image || '',
@@ -65,6 +69,8 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
       isDHALicensed: Boolean(d?.isDHALicensed),
       expertise: Array.isArray(d?.expertise) ? d.expertise : [],
       languages: Array.isArray(d?.languages) ? d.languages : [],
+      rating: ratingNum,
+      ratingLabel,
       _ratingNum: ratingNum,
       _ratingLabel: ratingLabel,
     };
@@ -89,10 +95,11 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
   }
   const doctors = rawDoctors.filter(Boolean).map(normalizeDoctor);
 
-  const renderStars = (rating, size = 'w-4 h-4') => {
+  const renderStars = (rating = 4.8, size = 'w-4 h-4') => {
+    const num = typeof rating === 'number' && Number.isFinite(rating) && rating > 0 ? rating : 4.8;
     return [1, 2, 3, 4, 5].map((star) => {
-      const isFull = star <= Math.floor(rating);
-      const isHalf = !isFull && star === Math.ceil(rating) && rating % 1 >= 0.5;
+      const isFull = star <= Math.floor(num);
+      const isHalf = !isFull && star === Math.ceil(num) && num % 1 >= 0.5;
 
       if (isHalf) {
         return (
@@ -127,7 +134,6 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
         {doctors.length === 1 ? (
           (() => {
             const doctor = doctors[0];
-            const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
             return (
               <div className="lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-6xl mx-auto mb-12">
                 {/* Left: Department & Specialist Introduction */}
@@ -201,7 +207,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                 <div className="lg:col-span-5 flex justify-center">
                   <div className="w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col">
                     {/* Image Container with Overlay - Fixed Height */}
-                    <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                    <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                       {doctor.image ? (
                         <Image
                           src={doctor.image}
@@ -220,7 +226,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                       {/* Dark gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-                      {/* DHA Licensed Badge */}
+                      {/* Top Badges */}
                       {doctor.isDHALicensed && (
                         <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
                           <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -230,12 +236,13 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                         </div>
                       )}
 
-                      {/* Bottom Info on Overlay */}
+                      {/* Doctor Info at Bottom of Image */}
                       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                         <div className="flex items-center gap-1.5 mb-3">
                           {renderStars(doctor.rating, 'w-4 h-4')}
-                          <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
+                          <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                         </div>
+
                         <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                           {doctor.name}
                         </h3>
@@ -286,7 +293,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
 
                       <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                         <Link
-                          href={`/doctors/${slug}/`}
+                          href={doctor.profileHref}
                           className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                         >
                           View Full Profile
@@ -339,14 +346,13 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
             {doctors.length === 2 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
                 {doctors.map((doctor) => {
-                  const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
                   return (
                     <div
                       key={doctor.id}
                       className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col"
                     >
                       {/* Image Container with Overlay */}
-                      <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                      <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                         {doctor.image ? (
                           <Image
                             src={doctor.image}
@@ -361,7 +367,9 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                             </svg>
                           </div>
                         )}
+
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
                         {doctor.isDHALicensed && (
                           <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
                             <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -370,14 +378,17 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                             <span className="text-xs font-medium text-white">DHA Licensed</span>
                           </div>
                         )}
+
                         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                           <div className="flex items-center gap-1.5 mb-3">
                             {renderStars(doctor.rating, 'w-4 h-4')}
-                            <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
+                            <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                           </div>
+
                           <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                             {doctor.name}
                           </h3>
+
                           <p className="text-sm text-white/90 font-normal">
                             {doctor.qualifications}
                           </p>
@@ -425,7 +436,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
 
                         <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                           <Link
-                            href={`/doctors/${slug}/`}
+                            href={doctor.profileHref}
                             className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                           >
                             View Full Profile
@@ -454,7 +465,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                 })}
               </div>
             ) : (
-              /* 3+ Doctors: Full Slider */
+              /* 3+ Doctors: Slider Grid */
               <div className="relative mb-12">
                 <div className="absolute inset-y-0 left-0 flex items-center z-10">
                   <button
@@ -491,6 +502,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                   </button>
                 </div>
 
+                {/* Scrollable Container */}
                 <div
                   id="experts-slider"
                   className="overflow-x-auto scroll-smooth snap-x snap-mandatory px-1"
@@ -498,14 +510,13 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                 >
                   <div className="flex gap-6 items-stretch">
                     {doctors.map((doctor) => {
-                      const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
                       return (
                         <div
                           key={doctor.id}
                           className="snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col w-full md:w-1/2 lg:w-1/3"
                         >
                           {/* Image Container with Overlay */}
-                          <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                          <Link href={doctor.profileHref} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                             {doctor.image ? (
                               <Image
                                 src={doctor.image}
@@ -535,7 +546,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                             <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                               <div className="flex items-center gap-1.5 mb-3">
                                 {renderStars(doctor.rating, 'w-4 h-4')}
-                                <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
+                                <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
                               </div>
 
                               <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
@@ -589,7 +600,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
 
                             <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                               <Link
-                                href={`/doctors/${slug}/`}
+                                href={doctor.profileHref}
                                 className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
                               >
                                 View Full Profile
@@ -609,7 +620,7 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                                 }}
                                 className="w-full bg-[#1b5e3f] hover:bg-[#154637] text-white py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-sm"
                               >
-                                Book with {doctor.firstName}
+                                Book with {doctor.firstName || doctor.name.split(' ')[0]}
                               </button>
                             </div>
                           </div>
