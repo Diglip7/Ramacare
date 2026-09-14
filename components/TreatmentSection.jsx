@@ -257,7 +257,7 @@ const TreatmentSection = ({ category, content }) => {
             </h2>
 
             {/* Subtitle Text */}
-            <p className="text-[15px] text-[#6B7280] leading-relaxed font-normal max-w-3xl mx-auto">
+            <p className="text-[15px] text-[#6B7280] leading-relaxed font-normal max-w-3xl mx-auto whitespace-pre-line">
               {subtitle}
             </p>
           </div>
@@ -354,6 +354,19 @@ const TreatmentSection = ({ category, content }) => {
                         {treatment.subtitle}
                       </p>
 
+                      {/* Content / Description if provided */}
+                      {treatment.content && (
+                        <div className="space-y-3 text-[#4B5563] text-[15px] font-normal leading-relaxed mb-6">
+                          {Array.isArray(treatment.content) ? (
+                            treatment.content.map((p, idx) => (
+                              <p key={idx}>{p}</p>
+                            ))
+                          ) : (
+                            <p>{treatment.content}</p>
+                          )}
+                        </div>
+                      )}
+
                       {/* Treatment Benefits Section */}
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-[#111827] mb-4">
@@ -392,7 +405,7 @@ const TreatmentSection = ({ category, content }) => {
                           onClick={() => window.open('https://wa.me/971566597878', '_blank')}
                           className="flex items-center justify-center bg-[#1E5A3C] text-white px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-[#16472F] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-95"
                         >
-                          <span>Book This Treatment</span>
+                          <span>{treatment.ctaText || 'Book This Treatment'}</span>
                           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>

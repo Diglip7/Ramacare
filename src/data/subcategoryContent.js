@@ -27961,8 +27961,13 @@ export const subcategoryContent = {
       }
     },
     doctors: {
+      badge: 'Expert Medical Team',
+      title: 'Meet Our Skin & Aesthetic Specialists',
+      description: 'Our team of DHA-licensed specialists provides personalized, advanced skincare and rejuvenation treatments.',
       doctors: [
         DOCTORS.sonita,
+        DOCTORS.nodainne,
+        DOCTORS.sahar
       ]
     },
     certifications: {
@@ -28902,8 +28907,11 @@ export const subcategoryContent = {
       }
     },
     doctors: {
+      badge: 'Expert Medical Team',
+      title: 'Meet Our Hair & Scalp Specialists',
+      description: 'Our team of DHA-licensed specialists provides comprehensive assessments and tailored hair restoration treatments.',
       doctors: [
-        DOCTORS.sahar, DOCTORS.sonita, DOCTORS.soumya
+        DOCTORS.sahar, DOCTORS.sonita, DOCTORS.nodainne
       ]
     },
     certifications: {
@@ -29742,10 +29750,13 @@ export const subcategoryContent = {
       }
     },
     doctors: {
+      badge: 'Expert Laser Specialists',
+      title: 'Meet Our Laser & Dermatology Specialists',
+      description: 'Our experienced team of DHA-licensed specialists provides advanced, customized laser treatments with patient safety and results at the forefront.',
       doctors: [
-
-        DOCTORS.hirbod,
-        DOCTORS.soumya
+        DOCTORS.sonita,
+        DOCTORS.nodainne,
+        DOCTORS.sahar
       ]
     },
     certifications: {
@@ -30654,8 +30665,11 @@ export const subcategoryContent = {
       }
     },
     doctors: {
+      badge: 'Expert Medical Team',
+      title: 'Meet Our Body Contouring Specialists',
+      description: 'Our team of DHA-licensed specialists provides non-invasive body shaping and skin tightening treatments.',
       doctors: [
-        DOCTORS.sahar, DOCTORS.sonita, DOCTORS.soumya
+        DOCTORS.sahar, DOCTORS.sonita, DOCTORS.nodainne
       ]
     },
     certifications: {

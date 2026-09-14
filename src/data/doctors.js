@@ -2088,9 +2088,9 @@ Object.defineProperty(DOCTORS, 'sonita', {
 
 export const DOCTOR_GROUPS = {
   AYURVEDA: [DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai'], DOCTORS.syamkumar, DOCTORS.mariya],
-  DENTAL: [DOCTORS.hirbod, DOCTORS.soumya, DOCTORS.aparna],
+  DENTAL: [DOCTORS.hirbod, DOCTORS.aparna, DOCTORS.soumya],
   PHYSIO: [DOCTORS['jeena-mathew-physiotherapist-dubai']],
-  DERMA: [DOCTORS.sahar, DOCTORS.sonita, DOCTORS.soumya, DOCTORS.nodainne],
+  DERMA: [DOCTORS.sahar, DOCTORS.sonita, DOCTORS.nodainne],
   GP: [DOCTORS.sahar],
   ALL: Object.values(DOCTORS)
 };

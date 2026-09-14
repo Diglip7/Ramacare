@@ -1,129 +1,129 @@
 import React from 'react';
+import Link from 'next/link';
 
 const ProgramsSection = ({ content }) => {
-  // Default programs (Ayurveda - for homepage)
+  // Default programs (for homepage / fallback)
   const defaultPrograms = [
-   {
-  id: 1,
-  title: 'Full Facial Rejuvenation & Glow Reset',
-  duration: '3 Months',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'A comprehensive 3-month transformation designed to restore youthful contours, smooth fine lines, and deliver luminous, glass-like skin. This signature program combines advanced injectables with medical-grade skin therapies to create visible yet natural refinement.',
-  includes: [
-    'Up to 50 Units Botox',
-    'Up to 1 ml Premium Dermal Filler',
-    '3 Skin Booster Sessions',
-    '2 Hydrafacial Treatments',
-    '2 Medical-Grade Chemical Peels',
-    '2 IV + Vitamin C Infusions'
-  ],
-  price: 'Starting from AED 15,999'
-},
-{
-  id: 2,
-  title: '60-Day Slim & Sculpt Protocol',
-  duration: '8 Weeks',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'A structured 8-week body transformation designed to contour, tighten, and refine targeted areas with clinically guided treatments. Ideal for patients seeking visible shaping without surgery.',
-  includes: [
-    '4 Targeted Fat Dissolving Sessions',
-    '4 Advanced Body Contouring Machine Sessions',
-    '6 Madero Therapy Treatments',
-    '4 Lymphatic Drainage Sessions',
-    '2 Fat Burn IV Drips'
-  ],
-  price: 'Starting from AED 12,999'
-},
-{
-  id: 3,
-  title: 'Advanced Hair Revival & Density Restoration',
-  duration: '4 Months',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'A medical 4-month program focused on stimulating growth, strengthening follicles, and improving scalp health for both men and women.',
-  includes: [
-    '6 Hair PRP Sessions',
-    '3 Hair Boosters',
-    '3 Hair IV Nutrient Drips',
-    'Comprehensive Scalp Analysis Consultation'
-  ],
-  price: 'Starting from AED 9,999'
-},
-{
-  id: 4,
-  title: 'Pigmentation Correction & Glow Restoration',
-  duration: '2–3 Months',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'Designed for dull, uneven, or pigmented skin, this multi-step program enhances clarity, hydration, and radiance for a refined, luminous complexion.',
-  includes: [
-    '3 Hydrafacial Treatments',
-    '3 Oxygeneo Facials',
-    '2 Medical Chemical Peels',
-    '2 IV Glutathione + Vitamin C Infusions',
-    '2 Radiance Drips'
-  ],
-  price: 'Starting from AED 7,999'
-},
-{
-  id: 5,
-  title: 'Structured 6-Week Rehabilitation Protocol',
-  duration: '6 Weeks',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'A medically guided program designed to restore mobility, reduce chronic pain, and improve functional performance. Ideal for back pain, joint discomfort, muscle injuries, and postural correction.',
-  includes: [
-    '8 Physiotherapy Sessions',
-    '4 Dry Needling Treatments',
-    '4 Cupping Therapy Sessions',
-    '2 Deep Tissue Therapy Sessions',
-    'GP Medical Review'
-  ],
-  price: 'Starting from AED 4,999'
-},
-{
-  id: 6,
-  title: 'Instant Smile Upgrade',
-  duration: '2–4 Weeks',
-  backgroundColor: 'bg-white',
-  topSectionColor: 'bg-[#F0FDF4]',
-  durationColor: 'bg-emerald-50',
-  durationTextColor: 'text-emerald-700',
-  icon: 'sparkle',
-  description:
-    'A cosmetic dental enhancement program designed to brighten, refine, and elevate your smile with natural-looking results. Perfect for events, weddings, professional image enhancement, or personal confidence.',
-  includes: [
-    'Comprehensive Dental Consultation & Smile Analysis',
-    'Professional Scaling & Polishing',
-    'In-Clinic Laser Teeth Whitening',
-    '1 Composite Bonding Enhancement (if required)',
-    'Digital Smile Preview'
-  ],
-  price: 'Starting from AED 3,999'
-}
-
+    {
+      id: 1,
+      title: 'Full Facial Rejuvenation & Glow Reset',
+      duration: '3 Months',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'A comprehensive 3-month transformation designed to restore youthful contours, smooth fine lines, and deliver luminous, glass-like skin. This signature program combines advanced injectables with medical-grade skin therapies to create visible yet natural refinement.',
+      includes: [
+        'Up to 50 Units Botox',
+        'Up to 1 ml Premium Dermal Filler',
+        '3 Skin Booster Sessions',
+        '2 Hydrafacial Treatments',
+        '2 Medical-Grade Chemical Peels',
+        '2 IV + Vitamin C Infusions'
+      ],
+      price: 'Starting from AED 15,999'
+    },
+    {
+      id: 2,
+      title: '60-Day Slim & Sculpt Protocol',
+      duration: '8 Weeks',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'A structured 8-week body transformation designed to contour, tighten, and refine targeted areas with clinically guided treatments. Ideal for patients seeking visible shaping without surgery.',
+      includes: [
+        '4 Targeted Fat Dissolving Sessions',
+        '4 Advanced Body Contouring Machine Sessions',
+        '6 Madero Therapy Treatments',
+        '4 Lymphatic Drainage Sessions',
+        '2 Fat Burn IV Drips'
+      ],
+      price: 'Starting from AED 12,999'
+    },
+    {
+      id: 3,
+      title: 'Advanced Hair Revival & Density Restoration',
+      duration: '4 Months',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'A medical 4-month program focused on stimulating growth, strengthening follicles, and improving scalp health for both men and women.',
+      includes: [
+        '6 Hair PRP Sessions',
+        '3 Hair Boosters',
+        '3 Hair IV Nutrient Drips',
+        'Comprehensive Scalp Analysis Consultation'
+      ],
+      price: 'Starting from AED 9,999'
+    },
+    {
+      id: 4,
+      title: 'Pigmentation Correction & Glow Restoration',
+      duration: '2–3 Months',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'Designed for dull, uneven, or pigmented skin, this multi-step program enhances clarity, hydration, and radiance for a refined, luminous complexion.',
+      includes: [
+        '3 Hydrafacial Treatments',
+        '3 Oxygeneo Facials',
+        '2 Medical Chemical Peels',
+        '2 IV Glutathione + Vitamin C Infusions',
+        '2 Radiance Drips'
+      ],
+      price: 'Starting from AED 7,999'
+    },
+    {
+      id: 5,
+      title: 'Structured 6-Week Rehabilitation Protocol',
+      duration: '6 Weeks',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'A medically guided program designed to restore mobility, reduce chronic pain, and improve functional performance. Ideal for back pain, joint discomfort, muscle injuries, and postural correction.',
+      includes: [
+        '8 Physiotherapy Sessions',
+        '4 Dry Needling Treatments',
+        '4 Cupping Therapy Sessions',
+        '2 Deep Tissue Therapy Sessions',
+        'GP Medical Review'
+      ],
+      price: 'Starting from AED 4,999'
+    },
+    {
+      id: 6,
+      title: 'Instant Smile Upgrade',
+      duration: '2–4 Weeks',
+      backgroundColor: 'bg-white',
+      topSectionColor: 'bg-[#F0FDF4]',
+      durationColor: 'bg-emerald-50',
+      durationTextColor: 'text-emerald-700',
+      icon: 'sparkle',
+      description:
+        'A cosmetic dental enhancement program designed to brighten, refine, and elevate your smile with natural-looking results. Perfect for events, weddings, professional image enhancement, or personal confidence.',
+      includes: [
+        'Comprehensive Dental Consultation & Smile Analysis',
+        'Professional Scaling & Polishing',
+        'In-Clinic Laser Teeth Whitening',
+        '1 Composite Bonding Enhancement (if required)',
+        'Digital Smile Preview'
+      ],
+      price: 'Starting from AED 3,999'
+    }
   ];
 
   // Use content props if provided, otherwise use defaults
@@ -131,7 +131,8 @@ const ProgramsSection = ({ content }) => {
   const heading = content?.heading || 'Curated Healing Journeys';
   const subtitle = content?.subtitle || 'Immersive treatment programs designed for transformative results and lasting wellness.';
   const programs = content?.programs || defaultPrograms;
-  const disclaimer = content?.disclaimer || 'All healthcare programs at RamaCare Polyclinic, a trusted Polyclinic in Dubai, are personalized to your unique needs. Following your initial consultation and health assessment, our experts design customized care plans tailored to your specific concerns, ensuring safe, effective, and long-lasting results.';
+  const disclaimer = content?.disclaimer !== undefined ? content.disclaimer : 'All healthcare programs at RamaCare Polyclinic, a trusted Polyclinic in Dubai, are personalized to your unique needs. Following your initial consultation and health assessment, our experts design customized care plans tailored to your specific concerns, ensuring safe, effective, and long-lasting results.';
+  const bottomCta = content?.bottomCta;
 
   // Icon mapping
   const iconMap = {
@@ -165,6 +166,37 @@ const ProgramsSection = ({ content }) => {
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
       </svg>
+    ),
+    'spine': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m-4-15h8m-6 4h4m-6 4h4m-6 4h4M8 3h8m-8 18h8" />
+      </svg>
+    ),
+    'posture': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <circle cx="12" cy="4" r="2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v8m-4-5h8m-6 11l2-6 2 6" />
+      </svg>
+    ),
+    'shoulder': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+    'knee': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    'sports': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+      </svg>
+    ),
+    'surgery': (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
     )
   };
 
@@ -184,20 +216,19 @@ const ProgramsSection = ({ content }) => {
     <section 
       id="programs" 
       className="py-24 bg-[#FAFAF8] relative overflow-hidden"
-      style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}
     >
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           {/* Pill Label */}
           <div className="inline-block mb-4">
-            <span className="bg-[#E8E3D8] text-[#3d5f4a] px-5 py-2 rounded-full  text-sm tracking-wide">
+            <span className="bg-[#E8E3D8] text-[#3d5f4a] px-5 py-2 rounded-full text-sm font-semibold tracking-wide">
               {badge}
             </span>
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[40px] font-bold text-[#111827] leading-tight mb-4 tracking-tight">
+          <h2 className="text-[32px] sm:text-[40px] font-bold text-[#111827] leading-tight mb-4 tracking-tight">
             {heading}
           </h2>
 
@@ -215,7 +246,7 @@ const ProgramsSection = ({ content }) => {
               className={`${program.backgroundColor || 'bg-white'} rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden border border-gray-100`}
             >
               {/* Top Colored Section with Icon */}
-              <div className={`${program.topSectionColor || 'bg-gray-50'} px-6 pt-8 pb-6 flex flex-col items-center`}>
+              <div className={`${program.topSectionColor || 'bg-[#F0FDF4]'} px-6 pt-8 pb-6 flex flex-col items-center`}>
                 <div className="text-[#1F2937] mb-4">
                   {renderIcon(program.icon)}
                 </div>
@@ -223,7 +254,7 @@ const ProgramsSection = ({ content }) => {
                   {program.title}
                 </h3>
                 {program.duration && (
-                  <div className={`${program.durationColor || 'bg-gray-100'} ${program.durationTextColor || 'text-gray-700'} px-3 py-1 rounded-full text-xs font-medium`}>
+                  <div className={`${program.durationColor || 'bg-emerald-50'} ${program.durationTextColor || 'text-emerald-700'} px-3 py-1 rounded-full text-xs font-medium`}>
                     {program.duration}
                   </div>
                 )}
@@ -237,9 +268,9 @@ const ProgramsSection = ({ content }) => {
                 )}
 
                 {program.includes && Array.isArray(program.includes) && program.includes.length > 0 && (
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <div className="text-[12px] font-semibold text-[#0F4C3A] mb-2">
-                      Program Includes
+                      {program.includesLabel || 'Program Includes'}
                     </div>
                     <ul className="space-y-3">
                       {program.includes.map((item, index) => (
@@ -256,6 +287,12 @@ const ProgramsSection = ({ content }) => {
                       ))}
                     </ul>
                   </div>
+                )}
+
+                {program.note && (
+                  <p className="text-[12px] text-[#6B7280] leading-relaxed mb-4">
+                    {program.note}
+                  </p>
                 )}
 
                 {program.benefits && Array.isArray(program.benefits) && program.benefits.length > 0 && (
@@ -283,32 +320,89 @@ const ProgramsSection = ({ content }) => {
                       </span>
                     </div>
                   )}
-                  <a 
-                    href={`https://wa.me/971566597878?text=Hi, I'm interested in the ${encodeURIComponent(program.title)} program. I'd like to know more details.`}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="block w-full bg-[#0F4C3A] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all duration-300 shadow-sm hover:shadow-md text-center"
-                  >
-                    Book Now
-                  </a>
+                  {program.ctaLink && !program.ctaLink.startsWith('http') ? (
+                    <Link
+                      href={program.ctaLink}
+                      className="block w-full bg-[#0F4C3A] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all duration-300 shadow-sm hover:shadow-md text-center"
+                    >
+                      {program.ctaText || 'Book Now'}
+                    </Link>
+                  ) : (
+                    <a 
+                      href={program.ctaLink || `https://wa.me/971566597878?text=Hi, I'm interested in the ${encodeURIComponent(program.title)} program. I'd like to know more details.`}
+                      target={program.ctaLink && !program.ctaLink.startsWith('http') ? undefined : "_blank"}
+                      rel={program.ctaLink && !program.ctaLink.startsWith('http') ? undefined : "nofollow noopener noreferrer"}
+                      className="block w-full bg-[#0F4C3A] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all duration-300 shadow-sm hover:shadow-md text-center"
+                    >
+                      {program.ctaText || 'Book Now'}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Disclaimer Box */}
-        {disclaimer && (
+        {/* Bottom CTA Block or Disclaimer Box */}
+        {bottomCta ? (
+          <div className="bg-[#FFFBEB] border border-[#FCD34D] rounded-xl p-8 max-w-4xl mx-auto text-center">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#111827] mb-3">
+              {bottomCta.title || 'Not Sure Which Physiotherapy Approach You Need?'}
+            </h3>
+            {bottomCta.paragraphs && Array.isArray(bottomCta.paragraphs) ? (
+              <div className="space-y-2 mb-6 text-[14px] text-[#4B5563] leading-relaxed max-w-2xl mx-auto">
+                {bottomCta.paragraphs.map((p, idx) => (
+                  <p key={idx}>{p}</p>
+                ))}
+              </div>
+            ) : bottomCta.description ? (
+              <p className="text-[14px] text-[#4B5563] leading-relaxed mb-6 max-w-2xl mx-auto">
+                {bottomCta.description}
+              </p>
+            ) : null}
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {bottomCta.buttons?.map((btn, idx) => (
+                btn.href?.startsWith('http') ? (
+                  <a
+                    key={idx}
+                    href={btn.href}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className={btn.primary 
+                      ? "inline-flex items-center justify-center bg-[#0F4C3A] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all shadow-sm"
+                      : "inline-flex items-center justify-center bg-[#25D366] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#20bd5a] transition-all shadow-sm"
+                    }
+                  >
+                    {btn.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={idx}
+                    href={btn.href || '/book-appointment/'}
+                    className={btn.primary 
+                      ? "inline-flex items-center justify-center bg-[#0F4C3A] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all shadow-sm"
+                      : "inline-flex items-center justify-center bg-[#25D366] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#20bd5a] transition-all shadow-sm"
+                    }
+                  >
+                    {btn.label}
+                  </Link>
+                )
+              ))}
+            </div>
+          </div>
+        ) : disclaimer ? (
           <div className="bg-[#FFFBEB] border border-[#FCD34D] rounded-xl p-8 max-w-4xl mx-auto">
             <p className="text-[14px] text-[#4B5563] leading-relaxed text-center">
               <span className="text-[#0F4C3A] font-semibold">Personalized for You:</span>{' '}
               {disclaimer}
             </p>
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );
 };
 
 export default ProgramsSection;
+
+

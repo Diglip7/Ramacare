@@ -79,9 +79,14 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
     return names.includes('Shamna') && names.includes('Anan') && names.includes('Jeena');
   };
 
-  const rawDoctors = (content?.doctors && content.doctors.length > 0 && !isLegacyList(content.doctors))
-    ? content.doctors
-    : DOCTOR_GROUPS.ALL;
+  let rawDoctors = DOCTOR_GROUPS.ALL;
+  if (Array.isArray(content) && content.length > 0 && !isLegacyList(content)) {
+    rawDoctors = content;
+  } else if (Array.isArray(content?.doctors) && content.doctors.length > 0 && !isLegacyList(content.doctors)) {
+    rawDoctors = content.doctors;
+  } else if (Array.isArray(content?.doctors?.doctors) && content.doctors.doctors.length > 0 && !isLegacyList(content.doctors.doctors)) {
+    rawDoctors = content.doctors.doctors;
+  }
   const doctors = rawDoctors.filter(Boolean).map(normalizeDoctor);
 
   const renderStars = (rating, size = 'w-4 h-4') => {
@@ -118,84 +123,83 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
       style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block mb-5 lg:mb-6">
+        {/* 1 Doctor: Two-Column Showcase Layout */}
+        {doctors.length === 1 ? (
+          (() => {
+            const doctor = doctors[0];
+            const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
+            return (
+              <div className="lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-6xl mx-auto mb-12">
+                {/* Left: Department & Specialist Introduction */}
+                <div className="lg:col-span-7 mb-8 lg:mb-0">
+                  <div className="inline-block mb-4">
+                    <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-1.5 rounded-full font-medium text-sm">{badge}</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight mb-4">
+                    {title}
+                  </h2>
+                  <p className="text-[15px] sm:text-base text-[#6B7280] leading-relaxed mb-6">
+                    {description}
+                  </p>
 
-            <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
-          </div>
+                  {/* Highlights Grid */}
+                  <div className="space-y-3.5 mb-6">
+                    <div className="flex items-start gap-3.5 bg-white p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100">
+                      <div className="w-8 h-8 rounded-full bg-[#1b5e3f]/10 text-[#1b5e3f] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-[#111827]">Comprehensive 1-on-1 Consultation</h4>
+                        <p className="text-xs text-[#6B7280] mt-0.5">Individual assessment based on your symptoms, mobility needs, and clinical health goals.</p>
+                      </div>
+                    </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight max-w-4xl">
-            {title.split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                {index < title.split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </h2>
+                    <div className="flex items-start gap-3.5 bg-white p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100">
+                      <div className="w-8 h-8 rounded-full bg-[#1b5e3f]/10 text-[#1b5e3f] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-[#111827]">Personalised Treatment Protocol</h4>
+                        <p className="text-xs text-[#6B7280] mt-0.5">Customized therapy sessions designed specifically to support comfort, recovery, and function.</p>
+                      </div>
+                    </div>
 
-          <p className='text-[15px] text-[#6B7280] leading-relaxed'>
-            {description}
-          </p>
-        </div>
+                    <div className="flex items-start gap-3.5 bg-white p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-gray-100">
+                      <div className="w-8 h-8 rounded-full bg-[#1b5e3f]/10 text-[#1b5e3f] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-[#111827]">DHA-Licensed Medical Quality</h4>
+                        <p className="text-xs text-[#6B7280] mt-0.5">Certified healthcare standards in our modern Jumeirah 1 clinical facility.</p>
+                      </div>
+                    </div>
+                  </div>
 
-        {/* Doctor Cards Slider */}
-        <div className="relative mb-12">
-          {doctors.length > 1 && (
-            <>
-              <div className={`absolute inset-y-0 left-0 flex items-center z-10 ${doctors.length <= 3 ? 'lg:hidden' : ''} ${doctors.length <= 2 ? 'md:hidden' : ''}`}>
-                <button
-                  onClick={() => {
-                    const el = document.getElementById('experts-slider');
-                    if (!el) return;
-                    const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-                    const step = el.offsetWidth / visible;
-                    el.scrollBy({ left: -step, behavior: 'smooth' });
-                  }}
-                  className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
-                  aria-label="Previous"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              </div>
-              <div className={`absolute inset-y-0 right-0 flex items-center z-10 ${doctors.length <= 3 ? 'lg:hidden' : ''} ${doctors.length <= 2 ? 'md:hidden' : ''}`}>
-                <button
-                  onClick={() => {
-                    const el = document.getElementById('experts-slider');
-                    if (!el) return;
-                    const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-                    const step = el.offsetWidth / visible;
-                    el.scrollBy({ left: step, behavior: 'smooth' });
-                  }}
-                  className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
-                  aria-label="Next"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </>
-          )}
-          <div
-            id="experts-slider"
-            className={`overflow-x-auto scroll-smooth snap-x snap-mandatory px-1 ${doctors.length <= 3 ? 'lg:overflow-x-visible' : ''}`}
-            style={{ scrollBehavior: 'smooth' }}
-          >
-            <div className={`flex gap-6 items-stretch ${doctors.length <= 3 ? 'lg:justify-center' : ''} ${doctors.length <= 2 ? 'md:justify-center' : ''}`}>
-              {doctors.map((doctor) => {
-                const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
-                return (
-                  <div
-                    key={doctor.id}
-                    className={`snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col
-                  ${doctors.length === 1 ? 'w-full md:w-3/4 lg:w-1/2 max-w-lg' :
-                        doctors.length === 2 ? 'w-full md:w-1/2 lg:w-1/2 max-w-md' :
-                          'w-full md:w-1/2 lg:w-1/3'}
-                `}
-                  >
+                  <div className="flex flex-wrap items-center gap-3">
+                    <button
+                      onClick={() => {
+                        if (onBookAppointment) {
+                          onBookAppointment();
+                        } else {
+                          document.getElementById("appointment")?.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="bg-[#1b5e3f] hover:bg-[#154637] text-white px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg"
+                    >
+                      Book Consultation with {doctor.firstName || doctor.name.split(' ')[0]}
+                    </button>
+                    <a
+                      href="tel:+971566597878"
+                      className="bg-white hover:bg-gray-50 text-[#1b5e3f] border border-gray-200 px-5 py-3.5 rounded-xl font-semibold text-sm transition-colors"
+                    >
+                      Call Clinic: +971 56 659 7878
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right: Full Doctor Card */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col">
                     {/* Image Container with Overlay - Fixed Height */}
                     <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
                       {doctor.image ? (
@@ -228,27 +232,21 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
 
                       {/* Bottom Info on Overlay */}
                       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                        {/* Rating */}
                         <div className="flex items-center gap-1.5 mb-3">
                           {renderStars(doctor.rating, 'w-4 h-4')}
                           <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
                         </div>
-
-                        {/* Doctor Name */}
                         <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                           {doctor.name}
                         </h3>
-
-                        {/* Qualifications */}
                         <p className="text-sm text-white/90 font-normal">
                           {doctor.qualifications}
                         </p>
                       </div>
                     </Link>
 
-                    {/* Card Body - Flex column with space-between */}
+                    {/* Card Body */}
                     <div className="p-6 flex flex-col flex-grow">
-                      {/* Specialization Section - Fixed spacing */}
                       <div className="mb-5 pb-5 border-b border-gray-100 flex-shrink-0">
                         <div className="flex items-center gap-2 mb-2">
                           <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
@@ -264,7 +262,6 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                         </span>
                       </div>
 
-                      {/* Key Expertise Section - Fixed height container */}
                       <div className="mb-5 flex-shrink-0">
                         <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
                         <ul className="space-y-2.5" style={{ minHeight: '120px' }}>
@@ -277,7 +274,6 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                         </ul>
                       </div>
 
-                      {/* Languages - Fixed spacing */}
                       <div className="mb-5 flex-shrink-0">
                         <div className="flex flex-wrap gap-2">
                           {doctor.languages.map((language, idx) => (
@@ -288,7 +284,6 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                         </div>
                       </div>
 
-                      {/* CTA Button - Pushed to bottom with mt-auto */}
                       <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
                         <Link
                           href={`/doctors/${slug}/`}
@@ -311,16 +306,322 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
                           }}
                           className="w-full bg-[#1b5e3f] hover:bg-[#154637] text-white py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-sm"
                         >
-                          Book with {doctor.firstName}
+                          Book with {doctor.firstName || doctor.name.split(' ')[0]}
                         </button>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              </div>
+            );
+          })()
+        ) : (
+          <>
+            {/* Header Section for 2+ Doctors */}
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="inline-block mb-5 lg:mb-6">
+                <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight max-w-4xl">
+                {title.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < title.split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </h2>
+              <p className='text-[15px] text-[#6B7280] leading-relaxed'>
+                {description}
+              </p>
             </div>
-          </div>
-        </div>
+
+            {/* 2 Doctors: Centered 2-Column Grid */}
+            {doctors.length === 2 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                {doctors.map((doctor) => {
+                  const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
+                  return (
+                    <div
+                      key={doctor.id}
+                      className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col"
+                    >
+                      {/* Image Container with Overlay */}
+                      <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                        {doctor.image ? (
+                          <Image
+                            src={doctor.image}
+                            alt={doctor.name}
+                            fill
+                            className="object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-110"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
+                            <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        {doctor.isDHALicensed && (
+                          <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-xs font-medium text-white">DHA Licensed</span>
+                          </div>
+                        )}
+                        <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
+                          <div className="flex items-center gap-1.5 mb-3">
+                            {renderStars(doctor.rating, 'w-4 h-4')}
+                            <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
+                          </div>
+                          <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
+                            {doctor.name}
+                          </h3>
+                          <p className="text-sm text-white/90 font-normal">
+                            {doctor.qualifications}
+                          </p>
+                        </div>
+                      </Link>
+
+                      {/* Card Body */}
+                      <div className="p-6 flex flex-col flex-grow">
+                        <div className="mb-5 pb-5 border-b border-gray-100 flex-shrink-0">
+                          <div className="flex items-center gap-2 mb-2">
+                            <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Specialization</span>
+                          </div>
+                          <p className="text-base font-normal text-[#111827] mb-3 line-clamp-2">
+                            {doctor.specialization}
+                          </p>
+                          <span className="inline-block bg-[#F9FAFB] text-[#6B7280] px-3 py-1.5 rounded-full text-xs font-normal">
+                            {doctor.experience}
+                          </span>
+                        </div>
+
+                        <div className="mb-5 flex-shrink-0">
+                          <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
+                          <ul className="space-y-2.5" style={{ minHeight: '120px' }}>
+                            {doctor.expertise.slice(0, 3).map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
+                                <span className="text-sm text-[#6B7280] leading-relaxed line-clamp-2">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mb-5 flex-shrink-0">
+                          <div className="flex flex-wrap gap-2">
+                            {doctor.languages.map((language, idx) => (
+                              <span key={idx} className="text-[#1b5e3f] text-xs font-medium">
+                                {language}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
+                          <Link
+                            href={`/doctors/${slug}/`}
+                            className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
+                          >
+                            View Full Profile
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                          <button
+                            onClick={() => {
+                              if (onBookAppointment) {
+                                onBookAppointment();
+                              } else {
+                                document.getElementById("appointment")?.scrollIntoView({
+                                  behavior: "smooth",
+                                });
+                              }
+                            }}
+                            className="w-full bg-[#1b5e3f] hover:bg-[#154637] text-white py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-sm"
+                          >
+                            Book with {doctor.firstName || doctor.name.split(' ')[0]}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              /* 3+ Doctors: Full Slider */
+              <div className="relative mb-12">
+                <div className="absolute inset-y-0 left-0 flex items-center z-10">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('experts-slider');
+                      if (!el) return;
+                      const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+                      const step = el.offsetWidth / visible;
+                      el.scrollBy({ left: -step, behavior: 'smooth' });
+                    }}
+                    className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
+                    aria-label="Previous"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="absolute inset-y-0 right-0 flex items-center z-10">
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById('experts-slider');
+                      if (!el) return;
+                      const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+                      const step = el.offsetWidth / visible;
+                      el.scrollBy({ left: step, behavior: 'smooth' });
+                    }}
+                    className="rounded-full bg-white shadow-md border border-gray-200 text-[#1b5e3f] hover:text-white hover:bg-[#1b5e3f] p-2"
+                    aria-label="Next"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  id="experts-slider"
+                  className="overflow-x-auto scroll-smooth snap-x snap-mandatory px-1"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  <div className="flex gap-6 items-stretch">
+                    {doctors.map((doctor) => {
+                      const slug = Object.keys(DOCTORS).find(key => DOCTORS[key].id === doctor.id) || '';
+                      return (
+                        <div
+                          key={doctor.id}
+                          className="snap-start flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col w-full md:w-1/2 lg:w-1/3"
+                        >
+                          {/* Image Container with Overlay */}
+                          <Link href={`/doctors/${slug}/`} className="block relative h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden group flex-shrink-0">
+                            {doctor.image ? (
+                              <Image
+                                src={doctor.image}
+                                alt={doctor.name}
+                                fill
+                                className="object-cover object-[50%_20%] transition-transform duration-500 group-hover:scale-110"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
+                                <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                              </div>
+                            )}
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+                            {doctor.isDHALicensed && (
+                              <div className="absolute top-4 right-4 bg-[#C9A961] rounded-full px-3 py-1.5 shadow-lg z-10 flex items-center gap-1.5">
+                                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span className="text-xs font-medium text-white">DHA Licensed</span>
+                              </div>
+                            )}
+
+                            <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
+                              <div className="flex items-center gap-1.5 mb-3">
+                                {renderStars(doctor.rating, 'w-4 h-4')}
+                                <span className="text-white text-sm font-medium ml-1">{doctor.rating}</span>
+                              </div>
+
+                              <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
+                                {doctor.name}
+                              </h3>
+
+                              <p className="text-sm text-white/90 font-normal">
+                                {doctor.qualifications}
+                              </p>
+                            </div>
+                          </Link>
+
+                          {/* Card Body */}
+                          <div className="p-6 flex flex-col flex-grow">
+                            <div className="mb-5 pb-5 border-b border-gray-100 flex-shrink-0">
+                              <div className="flex items-center gap-2 mb-2">
+                                <svg className="w-4 h-4 text-[#1b5e3f]" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Specialization</span>
+                              </div>
+                              <p className="text-base font-normal text-[#111827] mb-3 line-clamp-2">
+                                {doctor.specialization}
+                              </p>
+                              <span className="inline-block bg-[#F9FAFB] text-[#6B7280] px-3 py-1.5 rounded-full text-xs font-normal">
+                                {doctor.experience}
+                              </span>
+                            </div>
+
+                            <div className="mb-5 flex-shrink-0">
+                              <h4 className="text-sm font-medium text-[#111827] mb-3">Key Expertise</h4>
+                              <ul className="space-y-2.5" style={{ minHeight: '120px' }}>
+                                {doctor.expertise.slice(0, 3).map((item, idx) => (
+                                  <li key={idx} className="flex items-start gap-2.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></span>
+                                    <span className="text-sm text-[#6B7280] leading-relaxed line-clamp-2">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div className="mb-5 flex-shrink-0">
+                              <div className="flex flex-wrap gap-2">
+                                {doctor.languages.map((language, idx) => (
+                                  <span key={idx} className="text-[#1b5e3f] text-xs font-medium">
+                                    {language}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+
+                            <div className="mt-auto pt-4 border-t border-gray-100 space-y-3.5">
+                              <Link
+                                href={`/doctors/${slug}/`}
+                                className="w-full text-center text-[#1b5e3f] hover:text-[#164738] font-semibold text-sm py-2 flex items-center justify-center gap-1.5 transition-colors"
+                              >
+                                View Full Profile
+                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </Link>
+                              <button
+                                onClick={() => {
+                                  if (onBookAppointment) {
+                                    onBookAppointment();
+                                  } else {
+                                    document.getElementById("appointment")?.scrollIntoView({
+                                      behavior: "smooth",
+                                    });
+                                  }
+                                }}
+                                className="w-full bg-[#1b5e3f] hover:bg-[#154637] text-white py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-sm"
+                              >
+                                Book with {doctor.firstName}
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        )}
         <style jsx>{`
           #experts-slider {
             -ms-overflow-style: none;

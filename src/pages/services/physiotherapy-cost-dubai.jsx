@@ -320,8 +320,8 @@ export default function PhysiotherapyCostDubaiPage() {
       </Head>
 
       {/* ============ HERO — text + pricing snapshot panel, no image ============ */}
-      <section className="bg-[#F5F1EA] px-6 py-14 lg:py-20">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+      <section className="w-full bg-[#F5F1EA] px-4 sm:px-6 lg:px-8 xl:px-12 py-14 lg:py-20">
+        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-[#5F5F5F] gap-1.5 mb-4">
               <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
@@ -333,10 +333,10 @@ export default function PhysiotherapyCostDubaiPage() {
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-[#1A1A1A] leading-[1.15] mb-6">
               Physiotherapy Cost Dubai: A Complete Pricing Guide from RamaCare Polyclinic
             </h1>
-            <p className="text-[#5F5F5F] leading-relaxed mb-4">
+            <p className="text-[#5F5F5F] leading-relaxed mb-4 text-base">
               If you&apos;ve been searching for clear answers on Physiotherapy Cost Dubai, you&apos;re probably dealing with pain that&apos;s affecting your daily life and you want to know what treatment will actually cost before you commit. At RamaCare Polyclinic, our physiotherapy sessions start from AED 500 for a standard 60-minute session and AED 750 for an extended 90-minute session, with our experienced, DHA-licensed physiotherapists guiding every step of your recovery.
             </p>
-            <p className="text-[#5F5F5F] leading-relaxed mb-8">
+            <p className="text-[#5F5F5F] leading-relaxed mb-8 text-base">
               Pricing in physiotherapy isn&apos;t one-size-fits-all, and that&apos;s actually a good thing — it means your treatment plan is built around your body, not a generic template. Below, we&apos;ll walk you through exactly what shapes the cost of physiotherapy in Dubai, what a typical physiotherapy session price Dubai clinics charge actually includes, and how to choose a clinic that gives you real value for your money.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -350,7 +350,7 @@ export default function PhysiotherapyCostDubaiPage() {
           </motion.div>
 
           {/* Pricing snapshot panel */}
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} className="rounded-2xl bg-white border border-[#E9E2D6] p-6 sm:p-7">
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} className="rounded-2xl bg-white border border-[#E9E2D6] p-6 sm:p-7 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#1F5E4B] mb-4">Why Patients Choose RamaCare</p>
             <ul className="space-y-3 mb-6">
               {trustPoints.map((t) => (
@@ -375,43 +375,45 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ Why costs vary ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
-          <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-4">Why Physiotherapy Costs Vary in Dubai</h2>
-            <p className="text-[#5F5F5F] leading-relaxed mb-4 text-sm sm:text-base">
-              Before we get into numbers, it helps to understand why you&apos;ll see different prices when you search around Dubai. Physiotherapy is a hands-on, clinical service — not a fixed product — so the price naturally depends on what your body needs.
-            </p>
-            <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base">
-              Choosing quality care matters here more than almost anywhere else in healthcare. An inexperienced or rushed approach can prolong your recovery or, worse, aggravate your injury — which usually costs more in the long run through additional sessions. This is exactly why RamaCare focuses on getting your treatment plan right from the first assessment.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {whyVaries.map((w) => (
-                <div key={w.title} className="flex items-start gap-3.5 rounded-xl bg-[#F5F1EA] p-4 border border-[#E9E2D6]/60">
-                  <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
-                    <IconTile name={w.icon} />
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-4">Why Physiotherapy Costs Vary in Dubai</h2>
+              <p className="text-[#5F5F5F] leading-relaxed mb-4 text-sm sm:text-base">
+                Before we get into numbers, it helps to understand why you&apos;ll see different prices when you search around Dubai. Physiotherapy is a hands-on, clinical service — not a fixed product — so the price naturally depends on what your body needs.
+              </p>
+              <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base">
+                Choosing quality care matters here more than almost anywhere else in healthcare. An inexperienced or rushed approach can prolong your recovery or, worse, aggravate your injury — which usually costs more in the long run through additional sessions. This is exactly why RamaCare focuses on getting your treatment plan right from the first assessment.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {whyVaries.map((w) => (
+                  <div key={w.title} className="flex items-start gap-3.5 rounded-xl bg-[#F5F1EA] p-4 border border-[#E9E2D6]/60">
+                    <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                      <IconTile name={w.icon} />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-[#1A1A1A]">{w.title}</p>
+                      <p className="text-xs text-[#5F5F5F] leading-relaxed mt-0.5">{w.text}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#1A1A1A]">{w.title}</p>
-                    <p className="text-xs text-[#5F5F5F] leading-relaxed mt-0.5">{w.text}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md w-full">
-            <img
-              src="/images/physiotherapy-shoulder-assessment-ramacare.jpg"
-              alt="Physiotherapy Cost Dubai consultation with a DHA-licensed physiotherapist at RamaCare Polyclinic"
-              className="w-full h-[380px] sm:h-[440px] object-cover"
-            />
+            <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md w-full">
+              <img
+                src="/images/physiotherapy-shoulder-assessment-ramacare.jpg"
+                alt="Physiotherapy Cost Dubai consultation with a DHA-licensed physiotherapist at RamaCare Polyclinic"
+                className="w-full h-[380px] sm:h-[440px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ============ Pricing — tab switcher + overview table ============ */}
-      <section className="bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">Physiotherapy Pricing at RamaCare Polyclinic</h2>
           <p className="text-[#5F5F5F] leading-relaxed mb-8 text-sm sm:text-base">Physiotherapy Cost Dubai at a glance — our transparent, straightforward pricing structure.</p>
 
@@ -452,7 +454,7 @@ export default function PhysiotherapyCostDubaiPage() {
             The final treatment cost depends on your condition, your treatment plan, your therapist&apos;s clinical recommendations, and the total number of sessions required to reach your recovery goals.
           </p>
 
-          <div className="overflow-hidden rounded-xl border border-[#E9E2D6] shadow-sm">
+          <div className="overflow-hidden rounded-xl border border-[#E9E2D6] shadow-sm bg-white">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#F0F7F4]">
@@ -481,46 +483,48 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ What's included — receipt-style checklist ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
-          <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">What Is Included in the Cost?</h2>
-            <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base">
-              A common question we hear is, &quot;What am I actually paying for?&quot; Here&apos;s exactly what&apos;s included in every physiotherapy session at RamaCare:
-            </p>
-            <ul className="rounded-xl border border-[#E9E2D6] bg-white px-6 py-2 divide-y divide-gray-100 shadow-sm">
-              {included.map((i) => (
-                <ReceiptRow key={i} text={i} />
-              ))}
-            </ul>
-            <p className="text-sm text-[#5F5F5F] leading-relaxed mt-5">
-              This is what separates genuine physiotherapy from a quick massage-style session — every part of your visit is working toward measurable recovery.
-            </p>
-          </div>
-          <div className="space-y-5 w-full">
-            <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md">
-              <img
-                src="/images/physiotherapy-clinic-interior-ramacare.jpg"
-                alt="RamaCare Polyclinic physiotherapy clinic in Dubai offering affordable physiotherapy"
-                className="w-full h-[220px] sm:h-[240px] object-cover"
-              />
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">What Is Included in the Cost?</h2>
+              <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base">
+                A common question we hear is, &quot;What am I actually paying for?&quot; Here&apos;s exactly what&apos;s included in every physiotherapy session at RamaCare:
+              </p>
+              <ul className="rounded-xl border border-[#E9E2D6] bg-white px-6 py-2 divide-y divide-gray-100 shadow-sm">
+                {included.map((i) => (
+                  <ReceiptRow key={i} text={i} />
+                ))}
+              </ul>
+              <p className="text-sm text-[#5F5F5F] leading-relaxed mt-5">
+                This is what separates genuine physiotherapy from a quick massage-style session — every part of your visit is working toward measurable recovery.
+              </p>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md">
-              <img
-                src="/images/physiotherapy-exercise-therapy-resistance-bands.jpg"
-                alt="Exercise therapy session included in physiotherapy cost Dubai treatment plan"
-                className="w-full h-[220px] sm:h-[240px] object-cover"
-              />
+            <div className="space-y-5 w-full">
+              <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md">
+                <img
+                  src="/images/physiotherapy-clinic-interior-ramacare.jpg"
+                  alt="RamaCare Polyclinic physiotherapy clinic in Dubai offering affordable physiotherapy"
+                  className="w-full h-[220px] sm:h-[240px] object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-[#E9E2D6] shadow-md">
+                <img
+                  src="/images/physiotherapy-exercise-therapy-resistance-bands.jpg"
+                  alt="Exercise therapy session included in physiotherapy cost Dubai treatment plan"
+                  className="w-full h-[220px] sm:h-[240px] object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============ Conditions — tag cloud ============ */}
-      <section className="bg-[#F0F7F4] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-[#F0F7F4] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">Conditions We Treat</h2>
-          <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base max-w-4xl">
+          <p className="text-[#5F5F5F] leading-relaxed mb-6 text-sm sm:text-base">
             Our physiotherapists at RamaCare Polyclinic manage a wide range of musculoskeletal and neurological conditions. Whether you need back pain physiotherapy Dubai clinics recommend for chronic strain, neck pain physiotherapy Dubai patients seek after desk work, or knee pain physiotherapy Dubai athletes rely on after injury, we build a plan around your diagnosis, not a generic protocol.
           </p>
           <div className="flex flex-wrap gap-2.5 mb-8">
@@ -545,48 +549,50 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ Techniques — dense spec-sheet grid ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">Treatment Techniques We Use</h2>
-        <p className="text-[#5F5F5F] leading-relaxed mb-8 text-sm sm:text-base max-w-4xl">
-          Every treatment plan at RamaCare is built from a combination of evidence-based techniques, chosen specifically for your condition. Your physiotherapist will select and combine these based on your assessment findings — this personalization is a major factor in physiotherapy cost, and also the reason it works.
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techniques.map((t) => (
-            <div key={t.name} className="flex items-start gap-3.5 bg-white p-4 rounded-xl border border-[#E9E2D6] shadow-xs">
-              <div className="w-9 h-9 rounded-lg bg-[#F0F7F4] flex items-center justify-center shrink-0">
-                <IconTile name={t.icon} className="w-4 h-4 text-[#1F5E4B]" />
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">Treatment Techniques We Use</h2>
+          <p className="text-[#5F5F5F] leading-relaxed mb-8 text-sm sm:text-base">
+            Every treatment plan at RamaCare is built from a combination of evidence-based techniques, chosen specifically for your condition. Your physiotherapist will select and combine these based on your assessment findings — this personalization is a major factor in physiotherapy cost, and also the reason it works.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {techniques.map((t) => (
+              <div key={t.name} className="flex items-start gap-3.5 bg-white p-4 rounded-xl border border-[#E9E2D6] shadow-xs">
+                <div className="w-9 h-9 rounded-lg bg-[#F0F7F4] flex items-center justify-center shrink-0">
+                  <IconTile name={t.icon} className="w-4 h-4 text-[#1F5E4B]" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#1A1A1A]">{t.name}</p>
+                  <p className="text-xs text-[#5F5F5F] leading-relaxed mt-0.5">{t.text}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-semibold text-[#1A1A1A]">{t.name}</p>
-                <p className="text-xs text-[#5F5F5F] leading-relaxed mt-0.5">{t.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-6 mt-10">
-          <div className="rounded-2xl overflow-hidden shadow-md border border-[#E9E2D6]">
-            <img
-              src="/images/sports-physiotherapy-knee-rehabilitation.jpg"
-              alt="Sports physiotherapy Dubai knee rehabilitation session"
-              className="w-full h-[260px] sm:h-[300px] object-cover"
-            />
+            ))}
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-md border border-[#E9E2D6]">
-            <img
-              src="/images/electrotherapy-ultrasound-treatment-dubai.jpg"
-              alt="Ultrasound and electrotherapy techniques included in physiotherapy treatment Dubai"
-              className="w-full h-[260px] sm:h-[300px] object-cover"
-            />
+
+          <div className="grid sm:grid-cols-2 gap-6 mt-10">
+            <div className="rounded-2xl overflow-hidden shadow-md border border-[#E9E2D6]">
+              <img
+                src="/images/sports-physiotherapy-knee-rehabilitation.jpg"
+                alt="Sports physiotherapy Dubai knee rehabilitation session"
+                className="w-full h-[260px] sm:h-[300px] object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-md border border-[#E9E2D6]">
+              <img
+                src="/images/electrotherapy-ultrasound-treatment-dubai.jpg"
+                alt="Ultrasound and electrotherapy techniques included in physiotherapy treatment Dubai"
+                className="w-full h-[260px] sm:h-[300px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ============ What Affects Pricing ============ */}
-      <section className="bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-2">What Affects Physiotherapy Cost Dubai Pricing?</h2>
-          <p className="text-[#5F5F5F] leading-relaxed mb-8 text-sm sm:text-base max-w-4xl">
+          <p className="text-[#5F5F5F] leading-relaxed mb-8 text-sm sm:text-base">
             Understanding the factors behind pricing helps you plan for treatment realistically. Your physiotherapist will always explain these factors clearly during your first consultation, so there are no surprises — just an honest plan built around your recovery.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -598,65 +604,67 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ Why choose + comparison table ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-4">Why Choose RamaCare Polyclinic?</h2>
-            <p className="text-sm text-[#5F5F5F] leading-relaxed mb-5">
-              We believe that transparent pricing paired with genuinely personalized care is what real value in physiotherapy looks like — not just the lowest number on a price list. When comparing physiotherapy price Dubai clinics offer, affordable physiotherapy Dubai patients trust isn&apos;t always the cheapest option — it&apos;s the one that gets results without repeat visits caused by rushed treatment. Every physiotherapist Dubai residents work with at RamaCare is chosen for both clinical skill and genuine patient care.
-            </p>
-            <ul className="space-y-2.5">
-              {whyChoose.map((w) => (
-                <li key={w} className="flex gap-2.5 text-sm text-[#1A1A1A]/85 leading-relaxed">
-                  <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {w}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex flex-col justify-between">
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4">How RamaCare Compares</h3>
-              <div className="overflow-hidden rounded-xl border border-[#E9E2D6] shadow-sm">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-[#1F5E4B] text-white">
-                      <th className="text-left px-5 py-3 font-medium">Clinic Feature</th>
-                      <th className="text-right px-5 py-3 font-medium">RamaCare Polyclinic</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {compareTable.map((row, i) => (
-                      <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F5F1EA]'}>
-                        <td className="px-5 py-3 border-t border-[#E9E2D6] text-[#1A1A1A]">{row.feature}</td>
-                        <td className="px-5 py-3 border-t border-[#E9E2D6] text-right">
-                          {row.value === true ? (
-                            <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] inline-block" />
-                          ) : (
-                            <span className="font-semibold text-[#1F5E4B]">{row.value}</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-4">Why Choose RamaCare Polyclinic?</h2>
+              <p className="text-sm text-[#5F5F5F] leading-relaxed mb-5">
+                We believe that transparent pricing paired with genuinely personalized care is what real value in physiotherapy looks like — not just the lowest number on a price list. When comparing physiotherapy price Dubai clinics offer, affordable physiotherapy Dubai patients trust isn&apos;t always the cheapest option — it&apos;s the one that gets results without repeat visits caused by rushed treatment. Every physiotherapist Dubai residents work with at RamaCare is chosen for both clinical skill and genuine patient care.
+              </p>
+              <ul className="space-y-2.5">
+                {whyChoose.map((w) => (
+                  <li key={w} className="flex gap-2.5 text-sm text-[#1A1A1A]/85 leading-relaxed">
+                    <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] shrink-0 mt-0.5" /> {w}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="rounded-xl overflow-hidden mt-6 shadow-sm">
-              <img
-                src="/images/clinic-reception-ramacare-dubai.jpg"
-                alt="RamaCare Polyclinic Dubai reception, best physiotherapy clinic Dubai"
-                className="w-full h-[220px] sm:h-[260px] object-cover"
-              />
+            <div className="flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-[#1A1A1A] mb-4">How RamaCare Compares</h3>
+                <div className="overflow-hidden rounded-xl border border-[#E9E2D6] shadow-sm">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-[#1F5E4B] text-white">
+                        <th className="text-left px-5 py-3 font-medium">Clinic Feature</th>
+                        <th className="text-right px-5 py-3 font-medium">RamaCare Polyclinic</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {compareTable.map((row, i) => (
+                        <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-[#F5F1EA]'}>
+                          <td className="px-5 py-3 border-t border-[#E9E2D6] text-[#1A1A1A]">{row.feature}</td>
+                          <td className="px-5 py-3 border-t border-[#E9E2D6] text-right">
+                            {row.value === true ? (
+                              <LucideIcons.Check className="w-4 h-4 text-[#1F5E4B] inline-block" />
+                            ) : (
+                              <span className="font-semibold text-[#1F5E4B]">{row.value}</span>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="rounded-xl overflow-hidden mt-6 shadow-sm">
+                <img
+                  src="/images/clinic-reception-ramacare-dubai.jpg"
+                  alt="RamaCare Polyclinic Dubai reception, best physiotherapy clinic Dubai"
+                  className="w-full h-[220px] sm:h-[260px] object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============ Patient journey — horizontal stepper ============ */}
-      <section className="bg-[#1F5E4B] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 text-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-[#1F5E4B] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 text-white">
+        <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2">Your Patient Journey at RamaCare</h2>
-          <p className="text-white/75 leading-relaxed mb-10 max-w-3xl text-sm sm:text-base">
+          <p className="text-white/75 leading-relaxed mb-10 text-sm sm:text-base">
             Knowing what to expect makes starting physiotherapy far less daunting. Every stage of this journey is designed to make sure your money is going toward measurable, tracked progress — not guesswork.
           </p>
           <div className="rounded-2xl overflow-hidden mb-10 w-full shadow-lg">
@@ -691,22 +699,24 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ Related services — chip grid ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Services</h2>
-        <div className="flex flex-wrap gap-2.5">
-          {related.map((r) => (
-            <a key={r.label} href={r.href} className="text-sm text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              {r.label}
-            </a>
-          ))}
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Services</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {related.map((r) => (
+              <a key={r.label} href={r.href} className="text-sm text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
+                {r.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ============ FAQ — definition-list style, no boxes ============ */}
-      <section className="bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+      {/* ============ FAQ — full width grid style ============ */}
+      <section className="w-full bg-[#F5F1EA] py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1A1A1A] mb-8">Frequently Asked Questions</h2>
-          <dl>
+          <dl className="grid md:grid-cols-2 gap-x-10 gap-y-2">
             {faqs.map((f, i) => {
               const isOpen = openFaq === i;
               return (
@@ -732,30 +742,32 @@ export default function PhysiotherapyCostDubaiPage() {
       </section>
 
       {/* ============ Final CTA — split bar ============ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid sm:grid-cols-2 rounded-2xl overflow-hidden shadow-md">
-          <div className="bg-[#1F5E4B] text-white p-8 sm:p-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-3">Ready to Start Your Recovery?</h2>
-            <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-6">
-              Understanding Physiotherapy Cost Dubai shouldn&apos;t feel confusing or uncertain. At RamaCare Polyclinic, sessions start from AED 500 for 60 minutes and AED 750 for 90 minutes, with pricing shaped by your specific condition, treatment plan, and recovery goals. What matters most isn&apos;t just the number on the price list — it&apos;s the quality, experience, and personal attention behind every session. If you&apos;re ready to understand your condition and start a treatment plan built around you, we&apos;re here to help.
-            </p>
-            <button onClick={handleBookAppointment} className="inline-flex items-center gap-2 rounded-md bg-white text-[#1F5E4B] px-6 py-3 text-sm font-semibold hover:bg-gray-100 transition-colors shadow-sm">
-              <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
-            </button>
+      <section className="w-full bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid sm:grid-cols-2 rounded-2xl overflow-hidden shadow-md">
+            <div className="bg-[#1F5E4B] text-white p-8 sm:p-12">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-3">Ready to Start Your Recovery?</h2>
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-6">
+                Understanding Physiotherapy Cost Dubai shouldn&apos;t feel confusing or uncertain. At RamaCare Polyclinic, sessions start from AED 500 for 60 minutes and AED 750 for 90 minutes, with pricing shaped by your specific condition, treatment plan, and recovery goals. What matters most isn&apos;t just the number on the price list — it&apos;s the quality, experience, and personal attention behind every session. If you&apos;re ready to understand your condition and start a treatment plan built around you, we&apos;re here to help.
+              </p>
+              <button onClick={handleBookAppointment} className="inline-flex items-center gap-2 rounded-md bg-white text-[#1F5E4B] px-6 py-3 text-sm font-semibold hover:bg-gray-100 transition-colors shadow-sm">
+                <LucideIcons.Calendar className="w-4 h-4" /> Book Appointment
+              </button>
+            </div>
+            <div className="bg-[#F5F1EA] p-8 sm:p-12 flex flex-col justify-center">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#1F5E4B] mb-4">Get In Touch</p>
+              <button onClick={handleWhatsAppClick} className="flex items-center gap-2 text-sm sm:text-base text-[#1A1A1A] hover:text-[#1F5E4B] mb-4">
+                <LucideIcons.MessageCircle className="w-5 h-5 text-[#1F5E4B]" /> Chat with us on WhatsApp
+              </button>
+              <p className="flex items-start gap-2 text-sm sm:text-base text-[#5F5F5F]">
+                <LucideIcons.MapPin className="w-5 h-5 text-[#1F5E4B] shrink-0 mt-0.5" /> RamaCare Polyclinic, Jumeirah 1, Dubai
+              </p>
+            </div>
           </div>
-          <div className="bg-[#F5F1EA] p-8 sm:p-12 flex flex-col justify-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#1F5E4B] mb-4">Get In Touch</p>
-            <button onClick={handleWhatsAppClick} className="flex items-center gap-2 text-sm sm:text-base text-[#1A1A1A] hover:text-[#1F5E4B] mb-4">
-              <LucideIcons.MessageCircle className="w-5 h-5 text-[#1F5E4B]" /> Chat with us on WhatsApp
-            </button>
-            <p className="flex items-start gap-2 text-sm sm:text-base text-[#5F5F5F]">
-              <LucideIcons.MapPin className="w-5 h-5 text-[#1F5E4B] shrink-0 mt-0.5" /> RamaCare Polyclinic, Jumeirah 1, Dubai
-            </p>
-          </div>
+          <p className="text-xs text-[#5F5F5F] leading-relaxed mt-6">
+            <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This content is for educational purposes only and should not replace professional medical advice. Individual treatment plans and costs are determined after a clinical assessment by a qualified physiotherapist. Prices mentioned are starting prices and may vary depending on the patient&apos;s condition, treatment duration, required techniques, and clinical assessment.
+          </p>
         </div>
-        <p className="text-xs text-[#5F5F5F] leading-relaxed mt-6 max-w-4xl">
-          <span className="font-medium text-[#1A1A1A]">Medical Disclaimer:</span> This content is for educational purposes only and should not replace professional medical advice. Individual treatment plans and costs are determined after a clinical assessment by a qualified physiotherapist. Prices mentioned are starting prices and may vary depending on the patient&apos;s condition, treatment duration, required techniques, and clinical assessment.
-        </p>
       </section>
       <ContentReviewBadge doctorName="Jeena Mathew" variant="full" />
       {/* Sticky Bottom Bar */}

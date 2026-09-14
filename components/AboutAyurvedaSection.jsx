@@ -135,11 +135,11 @@ const AboutAyurvedaSection = ({ content }) => {
             
             {/* Statistics Card */}
             <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-lg mb-8 lg:mb-9 transform transition-all duration-500 hover:shadow-xl">
-              <div className="grid grid-cols-3 gap-4 sm:gap-6">
+              <div className={`grid ${stats.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'} gap-4 sm:gap-6`}>
                 {stats.map((stat, index) => (
                   <div 
                     key={index} 
-                    className={`text-center ${index < stats.length - 1 ? 'border-r border-gray-200' : ''}`}>
+                    className={`text-center ${index < stats.length - 1 ? (stats.length === 4 ? 'sm:border-r border-gray-200' : 'border-r border-gray-200') : ''}`}>
                     <div className="text-3xl sm:text-4xl font-bold text-[#3d5f4a] mb-1 leading-none tracking-tight">{stat.number}</div>
                     <div className="text-sm text-gray-700 font-normal leading-tight mt-1">{stat.label}</div>
                   </div>

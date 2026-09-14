@@ -466,6 +466,43 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                 </h3>
 
                 <div className="space-y-4">
+                  {/* Location Address */}
+                  <div className="flex items-start gap-3.5">
+                    <svg
+                      className="flex-shrink-0 mt-0.5"
+                      style={{ width: '22px', height: '22px', color: '#6B7280' }}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div>
+                      <p
+                        style={{
+                          color: '#000000',
+                          fontSize: '14px',
+                          fontWeight: 500,
+                          marginBottom: '2px'
+                        }}
+                      >
+                        Clinic Location
+                      </p>
+                      <p
+                        style={{
+                          color: '#6B7280',
+                          fontSize: '13px',
+                          fontWeight: 400,
+                          lineHeight: '1.4'
+                        }}
+                      >
+                        12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai
+                      </p>
+                    </div>
+                  </div>
+
                   {/* Call Us */}
                   <div className="flex items-center gap-3.5">
                     <svg
@@ -489,15 +526,23 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         Call Us
                       </p>
-                      <p
-                        style={{
-                          color: '#6B7280',
-                          fontSize: '14px',
-                          fontWeight: 400
-                        }}
-                      >
-                        (+971) 04 286 2006
-                      </p>
+                      <div className="flex flex-wrap items-center gap-x-2">
+                        <a
+                          href="tel:+97142862006"
+                          className="hover:underline text-[#1b5e3f] font-medium"
+                          style={{ fontSize: '14px' }}
+                        >
+                          (+971) 04 286 2006
+                        </a>
+                        <span className="text-gray-300">|</span>
+                        <a
+                          href="tel:+971566597878"
+                          className="hover:underline text-[#1b5e3f] font-medium"
+                          style={{ fontSize: '14px' }}
+                        >
+                          (+971) 56 659 7878
+                        </a>
+                      </div>
                     </div>
                   </div>
 
@@ -505,7 +550,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   <div className="flex items-center gap-3.5">
                     <svg
                       className="flex-shrink-0"
-                      style={{ width: '22px', height: '22px', color: '#6B7280' }}
+                      style={{ width: '22px', height: '22px', color: '#25D366' }}
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -522,15 +567,15 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                       >
                         WhatsApp
                       </p>
-                      <p
-                        style={{
-                          color: '#6B7280',
-                          fontSize: '14px',
-                          fontWeight: 400
-                        }}
+                      <a
+                        href="https://wa.me/971566597878"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-[#1b5e3f] font-medium"
+                        style={{ fontSize: '14px' }}
                       >
                         (+971) 56 659 7878
-                      </p>
+                      </a>
                     </div>
                   </div>
 
@@ -564,7 +609,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                           fontWeight: 400
                         }}
                       >
-                        sun-sat: 10:00 AM - 10:00 PM
+                        Sun – Sat: 10:00 AM – 10:00 PM
                       </p>
                     </div>
                   </div>

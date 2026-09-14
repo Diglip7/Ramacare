@@ -1725,12 +1725,12 @@ export const categoryContent = {
       description: 'Evidence-based Physiotherapy Treatment for pain relief, injury recovery, posture modification, and full functional restoration—created for modern lifestyles in Dubai.',
       ctaText: 'Book Free Consultation',
       backgroundImage: '/images/phy3.jpg',
-      backgroundAlt: 'Physiotherapy Treatment focused on pain relief and improved body mobility.',
+      backgroundAlt: 'Physiotherapy consultation at RamaCare Polyclinic in Jumeirah 1 Dubai',
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
+        { number: '500+', label: 'Patients Treated' },
         { number: '98%', label: 'Patient Satisfaction' },
-        { number: '4.8/5', label: 'Patient Rating' }
+        { number: '40+', label: 'Physiotherapy Treatments & Services' }
       ],
       features: [
         'DHA-Licensed Physiotherapists',
@@ -1745,11 +1745,11 @@ export const categoryContent = {
     whyChooseUs: {
       badge: 'Why Choose Us',
       title: 'Dubai\'s Trusted Physiotherapy Centre',
-      description: 'Experience expert physiotherapy with licensed specialists, advanced techniques, and personalized rehabilitation programs for optimal recovery and performance.',
+      description: 'Experience patient-focused physiotherapy with licensed specialists, evidence-based techniques, and personalized rehabilitation programs for pain management, mobility, and functional recovery.',
       cards: [
         {
           title: 'Evidence-Based Physiotherapy',
-          description: 'Modern rehabilitation techniques are supported by clinical research and proven recovery outcomes.'
+          description: 'Modern rehabilitation techniques supported by clinical practice to assist with mobility, pain management and functional recovery.'
         },
         {
           title: 'DHA-Licensed Physiotherapists',
@@ -1757,7 +1757,7 @@ export const categoryContent = {
         },
         {
           title: 'Personalised Treatment Plans',
-          description: 'Customised therapy protocols based on injury type, movement analysis, and recovery goals.'
+          description: 'Customised therapy protocols based on assessment findings, movement analysis, and individual recovery goals.'
         },
         {
           title: 'Premium Jumeirah 1 Facility',
@@ -1765,32 +1765,33 @@ export const categoryContent = {
         },
         {
           title: 'Functional Recovery Focus',
-          description: 'Treatment plans are designed to restore mobility, strength, posture, and daily performance.'
+          description: 'Treatment plans are designed to restore mobility, strength, posture, and everyday physical performance.'
         },
         {
-          title: 'High Patient Satisfaction',
-          description: 'Consistently high recovery rates and positive patient feedback across diverse conditions.'
+          title: 'Patient-Centred Rehabilitation',
+          description: 'Physiotherapy is planned around the patient’s symptoms, movement limitations, daily activities and recovery goals. Progress can be reviewed during treatment so the rehabilitation approach can be adjusted when needed.'
         }
       ]
     },
     about: {
       badge: 'About Our Physiotherapy Department',
-      title: 'Advanced Rehabilitation Within a Modern Polyclinic',
-      description: 'Physiotherapy uses evidence-based techniques to restore function, reduce pain, and improve quality of life through exercise, manual therapy, and specialized treatments tailored to your needs.',
+      title: 'Physiotherapy and Rehabilitation in Jumeirah 1',
+      description: 'Physiotherapy at RamaCare Polyclinic is focused on helping patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
       paragraphs: [
-        'Our Physiotherapy Department delivers comprehensive rehabilitation care within a fully equipped multi-speciality polyclinic in Jumeirah 1. We combine advanced physiotherapy techniques with modern diagnostic assessments to ensure safe, effective recovery.',
-        'Led by experienced DHA-licensed physiotherapists, our team specialises in pain management, post-injury rehabilitation, postural correction, pelvic floor therapy, and functional movement restoration. Every treatment plan is tailored to your condition, lifestyle, and recovery objectives.',
-        'We maintain strict medical hygiene standards while delivering patient-focused physiotherapy designed for long-term results—not temporary relief.'
+        'Physiotherapy at RamaCare Polyclinic is focused on helping patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
+        'Treatment starts with an assessment of symptoms, movement, strength and functional limitations. Based on the findings, the physiotherapist can recommend an appropriate combination of hands-on treatment, therapeutic exercise and rehabilitation techniques.',
+        'Care may be useful for people dealing with back or neck discomfort, shoulder and knee problems, sports injuries, posture-related concerns, reduced mobility or recovery after surgery.',
+        'The goal is not simply to treat a painful area. Rehabilitation also considers how the problem affects everyday activities such as sitting, walking, working, exercising or returning to sport.'
       ],
       stats: [
         { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
+        { number: '500+', label: 'Patients Treated' },
         { number: '98%', label: 'Patient Satisfaction' },
-        { number: '40+', label: 'Treatments' }
+        { number: '40+', label: 'Physiotherapy Treatments & Services' }
       ],
       ctaText: 'Meet Our Physiotherapists',
       image: '/images/ph-top.jpg',
-      imageAlt: 'Patient receiving safe and effective Physiotherapy Treatment for recovery.',
+      imageAlt: 'Physiotherapist providing rehabilitation treatment in Dubai',
       overlayCard: {
         number: '15+',
         smallText: 'Years Combined Experience',
@@ -1798,8 +1799,8 @@ export const categoryContent = {
       }
     },
     treatments: {
-      heading: 'Personalised Treatments for Modern Health Challenges',
-      subtitle: 'Select a treatment below to explore how expert Physiotherapy Treatment can restore your mobility and quality of life.',
+      heading: 'Physiotherapy Treatments at RamaCare',
+      subtitle: 'Different conditions require different physiotherapy approaches. Depending on the assessment, treatment may include hands-on techniques, therapeutic exercises, electrotherapy, dry needling or other rehabilitation methods.\n\nYour physiotherapist will recommend techniques appropriate for your symptoms, movement limitations and recovery goals rather than using the same approach for every patient.',
       consultationCTA: {
         heading: 'Ready to Move Better?',
         subtext: 'Book your physiotherapy consultation today and start your journey to pain-free movement and improved function.',
@@ -1814,15 +1815,22 @@ export const categoryContent = {
           slug: 'ultrasound-therapy',
           fullSlug: '/services/ultrasound-therapy-dubai/',
           icon: 'Activity',
-          subtitle: 'Deep Tissue Pain Relief & Faster Healing',
+          subtitle: 'Targeted Support for Pain, Stiffness and Soft-Tissue Rehabilitation',
           duration: '30-45 Mins',
           badgeColor: 'blue',
-          benefits: [
-            'Reduces inflammation and promotes tissue healing at the cellular level',
-            'Eases muscle spasms, stiffness, and deep-seated joint pain',
-            'Improves blood circulation to accelerate soft tissue recovery'
+          content: [
+            'Ultrasound therapy is a non-invasive physiotherapy technique that may be used as part of a wider rehabilitation plan. Depending on the condition, it can be combined with therapeutic exercise, manual therapy and other physiotherapy techniques.',
+            'At RamaCare Polyclinic in Jumeirah 1, ultrasound therapy may be considered for selected soft-tissue problems, stiffness and musculoskeletal conditions. The physiotherapist assesses the affected area and determines whether ultrasound is appropriate for the individual treatment plan.'
           ],
-          idealFor: 'Patients with soft tissue injuries, tendonitis, or chronic muscle stiffness; those recovering from sprains or strains who need targeted, non-invasive pain relief',
+          benefits: [
+            'May help manage local pain and discomfort',
+            'Can be used alongside other physiotherapy techniques',
+            'May support soft-tissue rehabilitation in selected cases',
+            'Can complement other treatment techniques',
+            'Non-invasive and generally well tolerated when appropriately administered'
+          ],
+          idealFor: 'Ultrasound therapy may be considered for selected soft-tissue problems, muscle stiffness, tendon-related complaints and some sports or activity-related injuries. Suitability depends on the patient’s symptoms and clinical assessment.',
+          ctaText: 'Book a Physiotherapy Assessment',
           image: '/images/ultrasound.jpg',
           alt: 'Ultrasound Therapy in Dubai performed in a modern clinic to support pain relief and muscle recovery.'
         },
@@ -1842,7 +1850,7 @@ export const categoryContent = {
           ],
           idealFor: 'Patients with chronic pain conditions, post-surgical muscle weakness, or nerve-related discomfort seeking a safe, drug-free management option',
           image: '/images/electro-therepy.jpg',
-          alt: 'Electrotherapy in Dubai performed in a professional physiotherapy clinic for pain relief and muscle recovery.'
+          alt: 'Electrotherapy stimulation session at RamaCare Polyclinic Dubai'
         },
         {
           id: 3,
@@ -1860,7 +1868,7 @@ export const categoryContent = {
           ],
           idealFor: 'Postpartum women, patients recovering from pelvic or abdominal surgery, and individuals experiencing pelvic pain or incontinence',
           image: '/images/pelvic.jpg',
-          alt: 'Pelvic Floor Therapy in Dubai delivered in a private clinic to improve core stability and pelvic health.'
+          alt: 'Pelvic floor rehabilitation therapy in Jumeirah 1 Dubai'
         },
         {
           id: 4,
@@ -1880,7 +1888,7 @@ export const categoryContent = {
           idealFor:
             'Children, adolescents, and adults diagnosed with scoliosis, individuals experiencing postural imbalance or chronic back pain',
           image: '/images/scoliosis.jpg',
-          alt: 'Scoliosis Treatment in Dubai provided through specialized physiotherapy to improve spinal alignment and posture.'
+          alt: 'Scoliosis physiotherapy and postural correction in Dubai'
         },
         {
           id: 5,
@@ -1900,7 +1908,7 @@ export const categoryContent = {
           idealFor:
             'Patients recovering from injury or surgery, athletes, elderly individuals, and those aiming to improve daily movement efficiency',
           image: '/images/functional excercise.jpg',
-          alt: 'Functional Exercises in Dubai performed under professional guidance to improve strength, balance, and daily movement.'
+          alt: 'Functional exercise therapy and guided rehabilitation in Dubai'
         },
         {
           id: 6,
@@ -1920,26 +1928,26 @@ export const categoryContent = {
           idealFor:
             'Patients with muscle knots, sports injuries, chronic pain, or restricted movement seeking fast and effective relief',
           image: '/images/dry-needling-physiotherapy-dubai.jpg',
-          alt: 'Dry Needling Therapy in Dubai performed by a trained physiotherapist to relieve muscle pain and improve mobility.'
+          alt: 'Dry needling therapy for targeted muscle release in Dubai'
         }
       ],
       consultationCTA: {
-        heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
-        buttonText: 'Get Free Consultation',
+        heading: 'Not Sure Which Physiotherapy Approach You Need?',
+        subtext: 'Patients do not need to identify the correct treatment before their appointment. The physiotherapist can assess symptoms, movement, physical limitations and recovery goals before recommending an appropriate approach.',
+        buttonText: 'Book a Physiotherapy Assessment',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
     },
     experts: {
       badge: 'Expert Medical Team',
-      title: 'Meet Our DHA-Licensed\nPhysiotherapists',
-      description: 'Highly qualified professionals committed to restoring movement, reducing pain, and improving long-term function.',
+      title: 'Meet Our Physiotherapy Team',
+      description: 'Physiotherapy care at RamaCare is provided by DHA-licensed professionals who work with patients experiencing pain, movement limitations, injuries and rehabilitation needs.',
       stats: [
-        { value: '2', label: 'Expert Physiotherapists' },
         { value: '15+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Successful Recoveries' },
-        { value: '4.8', label: 'Average Rating' }
+        { value: '500+', label: 'Patients Treated' },
+        { value: '98%', label: 'Patient Satisfaction' },
+        { value: '40+', label: 'Physiotherapy Treatments & Services' }
       ],
       ctaSection: {
         title: 'Ready to Meet Your Physiotherapist?',
@@ -1951,44 +1959,44 @@ export const categoryContent = {
     },
     whyDubai: {
       badge: 'Physiotherapy in Dubai',
-      title: 'Why Physiotherapy Is Essential for the Dubai Lifestyle',
-      description: 'Dubai’s modern lifestyle often involves long working hours, extended time spent driving, high stress levels, and limited physical activity. Over time, these factors can lead to chronic pain, stiffness, poor posture, reduced mobility, and recurring injuries. Physiotherapy Treatment plays a vital role in addressing these concerns by focusing on the root causes rather than just temporary symptom relief.',
+      title: 'Physiotherapy for Everyday Movement in Dubai',
+      description: 'Work routines, long periods of sitting, driving, exercise and repetitive activities can all affect how the body moves.',
       paragraphs: [
-        'Dubai\'s modern lifestyle often involves long working hours, extended time spent driving, high stress levels, and limited physical activity. Over time, these factors can lead to chronic pain, stiffness, poor posture, reduced mobility, and recurring injuries. Physiotherapy Treatment plays a vital role in addressing these concerns by focusing on the root causes rather than just temporary symptom relief.',
-        'Through personalised corrective exercises, manual therapy, and evidence-based pain management techniques, physiotherapy helps relieve neck, shoulder, and lower back discomfort commonly associated with desk-based work. It restores strength, flexibility, and joint stability while improving overall movement patterns. Physiotherapy Treatment also helps prevent future injuries by correcting muscular imbalances and faulty posture early, allowing you to move with confidence in daily life, sports, and professional activities.',
-        'To support Dubai\'s busy professionals, flexible appointment options—including evening and weekend slots—ensure consistent care without disrupting your routine.'
+        'Work routines, long periods of sitting, driving, exercise and repetitive activities can all affect how the body moves.',
+        'People may seek physiotherapy when discomfort or stiffness starts affecting everyday activities such as working at a desk, walking, exercising, sleeping or returning to normal activity after an injury.',
+        'At RamaCare in Jumeirah 1, physiotherapy focuses on the individual’s symptoms and functional needs rather than applying the same treatment plan to everyone.'
       ],
       benefits: [
         {
           icon: 'Activity',
-          title: 'Relieve Workplace Pain',
-          description: 'Target neck, shoulder, and lower back strain.'
+          title: 'Relieve Workplace Strain',
+          description: 'Support for neck, shoulder, and lower back discomfort.'
         },
         {
           icon: 'Target',
           title: 'Restore Movement & Strength',
-          description: 'Improve flexibility and muscle balance.'
+          description: 'Improve flexibility, mobility, and muscle balance.'
         },
         {
           icon: 'Heart',
-          title: 'Prevent Injuries',
-          description: 'Correct faulty movement patterns early.'
+          title: 'Practical Rehabilitation',
+          description: 'Rebuild movement habits tailored to your routine.'
         },
         {
           icon: 'Clock',
-          title: 'Enhance Daily Performance',
-          description: 'Move confidently at work, sports, and home. \n\n Flexible appointment slots including evenings and weekends.'
+          title: 'Everyday Activity Support',
+          description: 'Move comfortably at work, exercise, and home with flexible appointment slots.'
         }
       ],
       image: '/images/phy2.jpg',
-      imageAlt: 'Physiotherapy Treatment room equipped for rehabilitation and exercise therapy.',
+      imageAlt: 'Physiotherapy treatment room equipped for rehabilitation and exercise therapy in Jumeirah 1',
       ctaCard: {
-        title: 'Expert Physiotherapy Care in Jumeirah 1',
-        description: 'Book a consultation with our DHA-licensed physiotherapists for personalized rehabilitation and pain relief solutions.'
+        title: 'Physiotherapy Care in Jumeirah 1',
+        description: 'Book a consultation with our DHA-licensed physiotherapy team for personalized rehabilitation and movement support.'
       },
       bottomSection: {
-        title: 'Premium Physiotherapy Centre in Jumeirah 1, Dubai',
-        description: 'As a trusted physiotherapy clinic in Jumeirah 1, we provide advanced Physiotherapy Treatment for pain relief, rehabilitation, and functional recovery. Our DHA-licensed therapists deliver personalised care in a premium medical setting, helping patients return to active, pain-free lives safely and effectively.'
+        title: 'Physiotherapy Centre in Jumeirah 1, Dubai',
+        description: 'At RamaCare Polyclinic in Jumeirah 1, our DHA-licensed physiotherapy team provides structured rehabilitation for pain management, mobility support, and functional recovery. Treatment plans are personalized to help you return to comfortable daily movement safely and effectively.'
       }
     },
     successStories: {
@@ -2033,83 +2041,58 @@ export const categoryContent = {
       },
     },
     faq: {
-      title: 'Frequently Asked Questions – Physiotherapy Treatment',
-      description: 'Everything you need to know about our expert physiotherapy and rehabilitation services in Dubai.',
+      title: 'Frequently Asked Questions – Physiotherapy in Dubai',
+      description: 'Clear, patient-focused information about our physiotherapy and rehabilitation services in Jumeirah 1.',
       faqs: [
         {
           id: 1,
-          question: 'What is Physiotherapy Treatment and how does it work?',
-          answer: 'Physiotherapy Treatment uses movement therapy, manual techniques, and clinical exercises to relieve pain, restore mobility, improve strength, and support long-term physical recovery.'
+          question: 'What is physiotherapy used for?',
+          answer: 'Physiotherapy can help people manage pain, stiffness, weakness and movement limitations. Depending on the condition, treatment may include exercise therapy, manual techniques, mobility work and other rehabilitation methods.'
         },
         {
           id: 2,
-          question: 'Who should consider Physiotherapy Treatment in Dubai?',
-          answer: ' Physiotherapy Treatment is ideal for individuals with back pain, neck stiffness, sports injuries, post-surgery recovery needs, posture problems, or movement limitations.'
+          question: 'How many physiotherapy sessions will I need?',
+          answer: 'There is no fixed number of sessions for everyone. Treatment duration depends on the condition, severity of symptoms, physical function and progress during rehabilitation.'
         },
         {
           id: 3,
-          question: 'How many Physiotherapy Treatment sessions are usually required?',
-          answer: 'The number of Physiotherapy Treatment sessions depends on your condition, severity, and recovery goals. Acute issues may improve quickly, while chronic conditions require structured programs.'
+          question: 'Can physiotherapy help with back pain?',
+          answer: 'Physiotherapy may help people with certain types of back pain by addressing movement, strength, mobility and functional limitations. The appropriate approach depends on the underlying cause and clinical assessment.'
         },
         {
           id: 4,
-          question: 'Is Physiotherapy Treatment safe for chronic pain conditions?',
-          answer: 'Yes, Physiotherapy Treatment is a safe, evidence-based approach that focuses on reducing pain, improving movement, and preventing future injuries without medication.'
+          question: 'Is physiotherapy useful after surgery?',
+          answer: 'Physiotherapy is commonly used as part of rehabilitation after selected surgeries. The timing and exercises depend on the type of surgery, medical advice and the patient’s recovery stage.'
         },
         {
           id: 5,
-          question: 'What conditions can be treated with Physiotherapy Treatment?',
-          answer: 'Physiotherapy Treatment helps manage joint pain, muscle injuries, postural imbalances, sports injuries, pelvic floor dysfunction, scoliosis, and post-operative rehabilitation.'
+          question: 'Do I need a doctor’s referral?',
+          answer: 'Whether a referral is required depends on the patient’s situation and the type of care needed. Patients can contact the clinic to discuss their concern and appointment requirements.'
         },
         {
           id: 6,
-          question: ' Does Physiotherapy Treatment help with posture correction?',
-          answer: 'Yes, Physiotherapy Treatment addresses poor posture by strengthening weak muscles, improving flexibility, and correcting faulty movement patterns caused by sedentary lifestyles.'
+          question: 'Is physiotherapy painful?',
+          answer: 'Some techniques or exercises may cause temporary discomfort, but treatment should be appropriate to the patient’s condition and tolerance. Patients should communicate with their physiotherapist if a technique causes significant or unusual pain.'
         },
         {
           id: 7,
-          question: 'Is Physiotherapy Treatment effective after surgery?',
-          answer: ' Physiotherapy Treatment plays a crucial role in post-surgical recovery by improving mobility, reducing stiffness, restoring strength, and preventing complications safely.'
+          question: 'Can physiotherapy help with neck pain and posture?',
+          answer: 'Yes. Physiotherapy can address neck stiffness, upper back tension, and postural strain through manual therapy, joint mobility exercises, and ergonomic guidance.'
         },
         {
           id: 8,
-          question: 'Can Physiotherapy Treatment prevent future injuries?',
-          answer: 'Yes, Physiotherapy Treatment helps identify movement dysfunctions early, improves muscle balance, and reduces the risk of recurring or new injuries.'
+          question: 'Can athletes benefit from physiotherapy?',
+          answer: 'Yes. Sports physiotherapy helps manage sports injuries, restore strength and flexibility, and support a safe, progressive return to physical activity.'
         },
         {
           id: 9,
-          question: 'What is the difference between physiotherapy and pain medication?',
-          answer: ' Physiotherapy Treatment targets the root cause of pain through movement correction, while medication only provides temporary symptom relief without functional improvement.'
+          question: 'What conditions can be treated with physiotherapy?',
+          answer: 'Physiotherapy helps manage musculoskeletal concerns such as back pain, neck stiffness, shoulder and knee problems, sports injuries, tendon issues, and post-surgical recovery.'
         },
         {
           id: 10,
-          question: 'Is Physiotherapy Treatment suitable for office workers?',
-          answer: 'Physiotherapy Treatment is highly beneficial for office workers suffering from neck pain, lower back pain, shoulder stiffness, and posture-related discomfort.'
-        },
-        {
-          id: 11,
-          question: 'How long does a Physiotherapy Treatment session last?',
-          answer: 'A typical Physiotherapy Treatment session lasts between 30 and 60 minutes, depending on the treatment plan and clinical assessment.'
-        },
-        {
-          id: 12,
-          question: 'Can athletes benefit from Physiotherapy Treatment?',
-          answer: 'Yes, Physiotherapy Treatment improves performance, speeds up injury recovery, enhances flexibility, and supports injury prevention for recreational and professional athletes.'
-        },
-        {
-          id: 13,
-          question: 'Is Physiotherapy Treatment painful?',
-          answer: ' Physiotherapy Treatment is generally comfortable. Some techniques may cause mild discomfort initially, but therapy is always adjusted to the patients tolerance.'
-        },
-        {
-          id: 14,
-          question: 'Do I need a doctor’s referral for Physiotherapy Treatment?',
-          answer: ' In most cases, you can directly book Physiotherapy Treatment without a referral, although referrals are accepted when available.'
-        },
-        {
-          id: 15,
-          question: 'How soon can I see results from Physiotherapy Treatment?',
-          answer: 'Many patients notice improvement within a few sessions of Physiotherapy Treatment, while lasting recovery depends on consistency and personalized care plans.'
+          question: 'How long does a physiotherapy session last?',
+          answer: 'A standard physiotherapy session typically lasts between 30 and 60 minutes depending on your individual treatment plan and the techniques involved.'
         }
       ]
     },
@@ -2205,9 +2188,141 @@ export const categoryContent = {
           subtitle: 'Jumeirah 1, Dubai'
         }
       ]
+    },
+
+    programs: {
+      badge: 'Personalised Rehabilitation Pathways',
+      heading: 'Physiotherapy Plans Built Around Your Recovery',
+      subtitle: 'No two patients experience pain or movement problems in exactly the same way. Your symptoms, daily routine, physical activity, previous injuries, and recovery goals can all influence the type of physiotherapy you may need. At RamaCare Polyclinic in Jumeirah 1, Dubai, our physiotherapy approach starts with understanding your individual needs. Your physiotherapist can then develop a rehabilitation plan that progresses according to your condition, comfort, mobility, and functional goals.',
+      programs: [
+        {
+          id: 1,
+          title: 'Back Pain & Spine Rehabilitation',
+          icon: 'spine',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Back pain can affect simple activities such as sitting, walking, bending, or working comfortably. Physiotherapy may help address movement limitations while gradually improving strength and physical function.',
+          includesLabel: 'Your rehabilitation plan may include:',
+          includes: [
+            'Mobility and movement exercises',
+            'Core and supporting muscle strengthening',
+            'Posture and movement education',
+            'Gradual return to everyday activities'
+          ],
+          note: 'This pathway may be suitable for people experiencing back pain, stiffness, recurring discomfort, or selected spinal and musculoskeletal problems.',
+          ctaText: 'Book a Physiotherapy Assessment',
+          ctaLink: '/book-appointment/'
+        },
+        {
+          id: 2,
+          title: 'Neck Pain & Posture Rehabilitation',
+          icon: 'posture',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Long hours at a desk, driving, repetitive activities, and limited movement can sometimes contribute to neck stiffness and posture-related discomfort. Physiotherapy can focus on improving comfortable movement and developing better movement habits that fit your everyday routine.',
+          includesLabel: 'Your programme may include:',
+          includes: [
+            'Neck and upper-body mobility exercises',
+            'Strength and movement control',
+            'Posture awareness',
+            'Practical strategies for work and daily activities'
+          ],
+          ctaText: 'Book a Physiotherapy Assessment',
+          ctaLink: '/book-appointment/'
+        },
+        {
+          id: 3,
+          title: 'Shoulder Rehabilitation',
+          icon: 'shoulder',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Shoulder pain or restricted movement can make everyday activities more difficult, from reaching overhead to getting dressed or exercising. A personalised rehabilitation plan can gradually work on mobility, strength, control, and functional movement according to your condition.',
+          includesLabel: 'Treatment goals may include:',
+          includes: [
+            'Improving comfortable shoulder movement',
+            'Building appropriate strength',
+            'Developing better movement control',
+            'Supporting a gradual return to normal activities'
+          ],
+          ctaText: 'Book a Shoulder Assessment',
+          ctaLink: '/book-appointment/'
+        },
+        {
+          id: 4,
+          title: 'Knee & Lower-Limb Rehabilitation',
+          icon: 'knee',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Knee or lower-limb problems can affect walking, stairs, exercise, balance, and other everyday activities. Physiotherapy can help develop a progressive plan based on your current mobility and functional needs.',
+          includesLabel: 'Your rehabilitation may focus on:',
+          includes: [
+            'Strength and stability',
+            'Joint and lower-limb mobility',
+            'Balance and coordination',
+            'Functional movement'
+          ],
+          note: 'The appropriate approach depends on the cause of your symptoms and your individual assessment.',
+          ctaText: 'Book a Physiotherapy Assessment',
+          ctaLink: '/book-appointment/'
+        },
+        {
+          id: 5,
+          title: 'Sports Injury Rehabilitation',
+          icon: 'sports',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Returning to exercise after an injury can require more than simply waiting for pain to settle. A gradual rehabilitation programme can help you rebuild movement, strength, confidence, and tolerance for physical activity.',
+          includesLabel: 'Depending on your injury and recovery stage, your physiotherapist may work with you on:',
+          includes: [
+            'Mobility and flexibility',
+            'Strength and movement control',
+            'Balance and coordination',
+            'Gradual return to exercise or sport'
+          ],
+          note: 'Your programme can be adjusted as your physical ability improves.',
+          ctaText: 'Book Sports Injury Assessment',
+          ctaLink: '/book-appointment/'
+        },
+        {
+          id: 6,
+          title: 'Post-Surgical Rehabilitation',
+          icon: 'surgery',
+          backgroundColor: 'bg-white',
+          topSectionColor: 'bg-[#F0FDF4]',
+          description: 'Physiotherapy can form an important part of recovery following selected surgical procedures. The rehabilitation process is gradual and should take into account the type of surgery, medical advice, current mobility, and individual recovery progress.',
+          includesLabel: 'Depending on your needs, physiotherapy may focus on:',
+          includes: [
+            'Restoring movement',
+            'Gradually rebuilding strength',
+            'Improving everyday function',
+            'Increasing confidence with physical activity'
+          ],
+          note: 'Your physiotherapist will work within the appropriate clinical guidance for your recovery.',
+          ctaText: 'Book Rehabilitation Assessment',
+          ctaLink: '/book-appointment/'
+        }
+      ],
+      bottomCta: {
+        title: 'Not Sure Which Physiotherapy Approach You Need?',
+        paragraphs: [
+          'You don’t have to decide which treatment is right for you before your appointment.',
+          'A physiotherapy assessment allows your physiotherapist to understand your symptoms, movement, physical limitations, and recovery goals before recommending an appropriate rehabilitation approach.',
+          'If pain, stiffness, weakness, an injury, or reduced mobility is affecting your daily life, you can speak with the RamaCare physiotherapy team in Jumeirah 1, Dubai.'
+        ],
+        buttons: [
+          {
+            label: 'Book Free Consultation',
+            href: '/book-appointment/',
+            primary: true
+          },
+          {
+            label: 'WhatsApp Now',
+            href: 'https://wa.me/971566597878?text=Hi%2C%20I%20would%20like%20to%20consult%20with%20the%20RamaCare%20physiotherapy%20team%20in%20Jumeirah%201.',
+            primary: false
+          }
+        ]
+      }
     }
-
-
   },
 
   'general-physician': {

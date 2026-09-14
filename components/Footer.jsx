@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">RamaCare</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              Premium Polyclinic in Dubai Trusted Healthcare in Jumeirah 1. Authentic Panchakarma, chronic pain relief, and holistic wellness treatments by DHA-licensed experts.
+              RamaCare Polyclinic in Dubai – Trusted Healthcare in Jumeirah 1 offering physiotherapy, general medicine, aesthetic dermatology, dental care, and holistic wellness by DHA-licensed experts.
             </p>
 
             <button className="flex items-center space-x-2 px-4 py-2 bg-[#3d3d3d] text-white rounded-md hover:bg-[#4d4d4d] transition-colors text-sm w-fit">
@@ -76,7 +76,6 @@ const Footer = () => {
               </svg>
               <span>Advertisement License No - ZR478282–271025</span>
             </button>
-
           </div>
 
           {/* Column 2: Quick Links */}

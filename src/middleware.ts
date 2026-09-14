@@ -15,13 +15,16 @@ export function middleware(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
-  // 2. Redirect malicious / legacy WordPress paths
+  // 2. Redirect malicious / legacy WordPress paths & query params
   if (
     pathname.startsWith('/wp-') ||
     pathname.includes('index.php') ||
-    pathname.includes('xmlrpc.php')
+    pathname.includes('xmlrpc.php') ||
+    request.nextUrl.searchParams.has('p') ||
+    request.nextUrl.searchParams.has('page_id')
   ) {
     url.pathname = '/';
+    url.search = '';
     return NextResponse.redirect(url, 301);
   }
 
