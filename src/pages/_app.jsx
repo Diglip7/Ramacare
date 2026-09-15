@@ -5,7 +5,7 @@ import { ModalProvider } from "../../components/ModalContext";
 
 export default function App({ Component, pageProps }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-VRn7pg1rAC";
-  
+
   useEffect(() => {
     // 1. Delegated click listener for any WhatsApp link or button
     const handleGlobalClick = (event) => {
@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
         const target = event.target;
         const link = target?.closest ? target.closest('a, button') : null;
         const href = link?.getAttribute('href') || link?.dataset?.href || '';
-        
+
         if (typeof href === 'string' && (href.includes('wa.me') || href.includes('whatsapp.com') || href.startsWith('whatsapp:'))) {
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'whatsapp_click', {
@@ -30,6 +30,23 @@ export default function App({ Component, pageProps }) {
             });
           }
         }
+
+        if (typeof href === 'string' && href.startsWith('tel:')) {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'call_click', {
+              event_category: 'engagement',
+              event_label: href,
+              page_location: window.location.href,
+            });
+          }
+          if (window.dataLayer && Array.isArray(window.dataLayer)) {
+            window.dataLayer.push({
+              event: 'call_click',
+              link_url: href,
+              page_location: window.location.href,
+            });
+          }
+        }
       } catch (err) {
         // silent fallback
       }
@@ -40,7 +57,7 @@ export default function App({ Component, pageProps }) {
       const originalOpen = window.open;
       if (originalOpen && !window._waOpenTracked) {
         window._waOpenTracked = true;
-        window.open = function(url, target, features) {
+        window.open = function (url, target, features) {
           if (typeof url === 'string' && (url.includes('wa.me') || url.includes('whatsapp.com') || url.startsWith('whatsapp:'))) {
             if (typeof window.gtag === 'function') {
               window.gtag('event', 'whatsapp_click', {
@@ -76,7 +93,7 @@ export default function App({ Component, pageProps }) {
         id="google-tag-manager"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -104,7 +121,7 @@ export default function App({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
       />
-      
+
       <Component {...pageProps} />
     </ModalProvider>
   );

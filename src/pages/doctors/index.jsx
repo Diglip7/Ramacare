@@ -230,7 +230,6 @@ const AllDoctorsPage = ({ content }) => {
               })}
             </div>
 
-
           </div>
         </section>
         <SEOContentSection title="Our Medical Experts in Dubai" content={doctorsSEOContent} />

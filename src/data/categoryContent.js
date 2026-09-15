@@ -1832,7 +1832,7 @@ export const categoryContent = {
           idealFor: 'Ultrasound therapy may be considered for selected soft-tissue problems, muscle stiffness, tendon-related complaints and some sports or activity-related injuries. Suitability depends on the patient’s symptoms and clinical assessment.',
           ctaText: 'Book a Physiotherapy Assessment',
           image: '/images/ultrasound.jpg',
-          alt: 'Ultrasound Therapy in Dubai performed in a modern clinic to support pain relief and muscle recovery.'
+          alt: 'Ultrasound therapy during a physiotherapy session in Jumeirah 1'
         },
         {
           id: 2,
