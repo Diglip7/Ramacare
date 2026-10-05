@@ -21,11 +21,7 @@ export const subSubcategoryContent = {
       subtitle: 'Deep Hydration & Natural Skin Rejuvenation',
       description: 'Restore your skin\'s natural glow, hydration, and youthful appearance with Skin Boosters in Dubai at RamaCare Polyclinic.Our advanced injectable skin rejuvenation treatment is designed to deeply hydrate the skin from within, improve elasticity, refine texture, and reduce the appearance of fine lines for healthy, radiant-looking skin. Unlike traditional dermal fillers that primarily restore facial volume, skin boosters focus on improving overall skin quality by delivering hydrating hyaluronic acid into the deeper layers of the skin. Whether you are concerned about dry skin, dullness, early signs of ageing, uneven texture, or loss of elasticity, our DHA-licensed aesthetic specialists create a personalized treatment plan tailored to your unique skin type and aesthetic goals.Skin booster treatments are suitable for the face, neck, décolletage, and hands, offering comprehensive skin rejuvenation with minimal discomfort and little to no downtime.',
       rating: '500+ Happy Clients',
-      stats: [
-        { id: 1, number: '98%', label: 'Success Rate' },
-        { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Combined Experience' }
-      ],
+      
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -747,7 +743,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -764,37 +760,7 @@ export const subSubcategoryContent = {
       ]
     },
     testimonials: {
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '200+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'Skin Boosters',
-          target: 2500
-        }
-      ]
+     
     }
   },
 
@@ -803,11 +769,7 @@ export const subSubcategoryContent = {
       subtitle: 'Natural Skin Repair for Smoother, Healthier-Looking Skin',
       description: 'Restore smoother, healthier, and more radiant skin with derma roller treatment in Dubai at RamaCare Polyclinic.This advanced microneedling treatment stimulates your skin\'s natural healing process by encouraging collagen and elastin production, helping improve acne scars, fine lines, enlarged pores, uneven skin texture, and overall skin quality without surgery. Over time, aging, acne, sun exposure, and environmental factors can affect your skin\'s appearance, leaving it dull, rough, or uneven.As the skin repairs itself, you may notice gradual improvements in texture, elasticity, and overall radiance. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment by our DHA-licensed aesthetic specialists.We create a personalized treatment plan based on your skin type, concerns, and aesthetic goals to deliver safe, natural-looking results.',
       rating: '500+ Happy Clients',
-      stats: [
-        { id: 1, number: '98%', label: 'Success Rate' },
-        { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Combined Experience' }
-      ],
+      
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -1506,7 +1468,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -1529,11 +1491,7 @@ export const subSubcategoryContent = {
       subtitle: 'Advanced Non-Surgical Care for Firmer, Youthful Skin',
       description: 'Loose or sagging skin is a natural result of aging, collagen loss, weight changes, pregnancy, and sun exposure.As collagen and elastin levels decline over time, the skin may lose its firmness, making fine lines, wrinkles, and skin laxity more noticeable.Fortunately, modern aesthetic treatments can effectively improve skin tightness and elasticity without the need for surgery. At RamaCare Polyclinic, we offer advanced skin tightening treatment in Dubai to help restore firmer, smoother, and younger-looking skin.Our focus is on achieving gradual, long-lasting improvements while preserving your natural appearance. Choose RamaCare Polyclinic for trusted skin tightening treatment in Dubai and enjoy personalized care designed to help you achieve healthier, firmer, and more youthful-looking skin with confidence.',
       rating: '500+ Happy Clients',
-      stats: [
-        { id: 1, number: '98%', label: 'Success Rate' },
-        { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Combined Experience' }
-      ],
+      
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -2231,7 +2189,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -2254,23 +2212,7 @@ export const subSubcategoryContent = {
       subtitle: 'Gentle Skin Resurfacing for a Brighter, Smoother & Healthier Complexion',
       description: 'Dull skin, uneven texture, clogged pores, and the early signs of aging can affect your skin\'s natural radiance and confidence.Over time, dead skin cells accumulate on the skin\'s surface, making the complexion appear rough, tired, and less vibrant. At RamaCare Polyclinic, we provide professional microdermabrasion in Dubai using advanced exfoliation technology to remove dead skin cells, refine skin texture, minimize the appearance of enlarged pores, and promote healthy skin renewal.Restore your skin\'s natural glow with personalized microdermabrasion treatment in Dubai at RamaCare Polyclinic and enjoy healthier, smoother, and more radiant skin with confidence. ',
       rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Success Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Skin Treatments Performed'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
+     
       ctaButtons: {
         primary: {
           text: 'Book Free Consultation',
@@ -2977,7 +2919,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3015,23 +2957,7 @@ export const subSubcategoryContent = {
       subtitle: 'Revitalize Your Skin & Hair with Advanced Mesotherapy ',
       description: 'Healthy skin and strong hair depend on essential vitamins, minerals, amino acids, and proper hydration. Over time, aging, stress, hormonal changes, nutritional deficiencies, sun exposure, and environmental factors can reduce the skin\'s natural radiance and contribute to hair thinning, pigmentation, fine lines, and loss of elasticity.Because many of these concerns begin beneath the surface, topical products alone may not always provide the desired results.Mesotherapy in Dubai offers a minimally invasive solution that delivers nourishing ingredients directly where they are needed most. At RamaCare Polyclinic, we provide mesotherapy in Dubai using personalized treatment protocols designed to improve both skin and scalp health.The treatment involves administering carefully selected combinations of vitamins, minerals, amino acids, antioxidants, and hyaluronic acid into the targeted area to stimulate cell renewal, enhance hydration, improve circulation, and support natural collagen production.',
       rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Success Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Patients Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
+      
       ctaButtons: {
         primary: {
           text: 'Book Your Mesotherapy Consultation',
@@ -3708,7 +3634,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3793,23 +3719,7 @@ export const subSubcategoryContent = {
       subtitle: 'Expert Care for Itching, Rashes & Sensitive Skin Relief',
       description: 'Skin allergies can cause persistent itching, redness, rashes, swelling, dryness, and irritation that affect both your comfort and confidence. At RamaCare Polyclinic, we provide medically guided Skin Allergy Treatment in Dubai to accurately identify the underlying cause of your symptoms and develop a personalised treatment plan tailored to your needs.Our experienced medical professionals focus on relieving itching, reducing inflammation, calming irritated skin, and helping prevent future flare-ups through evidence-based medical care. Whether you are experiencing allergic skin rashes, eczema, contact dermatitis, hives (urticaria), or other allergy-related skin concerns, we offer comprehensive assessment and treatment to restore healthier skin safely and effectively.Every treatment plan is designed to provide symptom relief while supporting long-term skin health and improving your quality of life.',
       rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Success Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Patients Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
+      
       ctaButtons: {
         primary: {
           text: 'Book Free Consultation',
@@ -4608,7 +4518,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -5455,7 +5365,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -6251,7 +6161,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -7163,7 +7073,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -7960,7 +7870,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -8904,7 +8814,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -9685,7 +9595,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -10544,7 +10454,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -11218,7 +11128,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -12406,7 +12316,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13104,7 +13014,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13843,7 +13753,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -14583,7 +14493,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -14842,9 +14752,9 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent:
             'We monitor your progress during follow-up appointments, evaluate the healing process, and recommend additional sessions only when clinically appropriate. Patients also receive personalized advice on skin care, sun protection, physical activity, and circulation-friendly habits to support long-term results and reduce the likelihood of future spider vein formation.'
-        } 
-      ]  
-    },  
+        }
+      ]
+    },
     healingJourney: {
       title: 'Your Spider Veins Laser Treatment Journey',
       description:
@@ -14884,7 +14794,7 @@ export const subSubcategoryContent = {
             'Pre-treatment instructions and patient education'
           ],
           side: 'left'
-        },  
+        },
         {
           id: 3,
           number: '03',
@@ -15353,7 +15263,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -15989,7 +15899,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: { line1: '12 Al Dhiyafah Rd', line2: 'Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, UAE' }
       },
       clinicHours: {
@@ -16742,7 +16652,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -17494,7 +17404,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -18283,7 +18193,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19042,7 +18952,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19866,7 +19776,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -20678,7 +20588,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -21490,7 +21400,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -22262,7 +22172,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -23048,7 +22958,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -23817,7 +23727,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -24505,7 +24415,7 @@ export const subSubcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'

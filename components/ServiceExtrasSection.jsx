@@ -140,8 +140,8 @@ const ServiceExtrasSection = ({ aftercareContent, whyChooseContent }) => {
                   <div className="w-8 h-8 bg-gradient-to-br from-[#407D54] to-[#2D5F3F] rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white">✓</div>
                 </div>
                 <div className="text-left">
-                  <p className="text-xs sm:text-sm font-semibold text-[#1F2937]">Trusted by 500+ Happy Patients</p>
-                  <p className="text-xs text-[#6B7280]">DHA-Licensed • 4.8/5 Rating • Same-Day Appointments</p>
+                 <p className="text-xs sm:text-sm font-semibold text-[#1F2937]">Rated 4.8 on Google</p>
+                  <p className="text-xs text-[#6B7280]">DHA-licensed • Open daily 10am–10pm • Walk-ins welcome</p>
                 </div>
               </div>
             </div>

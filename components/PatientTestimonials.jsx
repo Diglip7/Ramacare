@@ -19,9 +19,9 @@ const PatientTestimonials = ({ content }) => {
   });
 
   // Use content props or defaults
-  const badge = content?.badge || 'Patient Success Stories';
-  const title = content?.title || 'Real Success Stories from Dubai Patients';
-  const subtitle = content?.subtitle || 'Verified testimonials from patients who received trusted, doctor-led care at our DHA-licensed clinic';
+  const badge = content?.badge || 'Patient stories';
+  const title = content?.title || 'What patients say about RamaCare';
+  const subtitle = content?.subtitle || 'Video stories from patients at our Jumeirah 1 clinic, plus our Google reviews.';
   const showSeeAllButton = content?.showSeeAllButton !== false; // Default true
   const showSeeMoreButton = content?.showSeeMoreButton || false;
   const showStatsSection = content?.showStatsSection !== false; // Default true
@@ -82,17 +82,17 @@ const PatientTestimonials = ({ content }) => {
     },
     {
       id: 3,
-      number: '98%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 98
+      number: '5',
+      label1: 'Departments',
+      label2: 'Under one roof',
+      target: 5
     },
     {
       id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'DHA Licensed',
-      target: 2500
+      number: '7',
+      label1: 'Days a week',
+      label2: 'Open 10am–10pm',
+      target: 7
     }
   ];
 
@@ -181,6 +181,7 @@ const PatientTestimonials = ({ content }) => {
         }, 200);
       }
     };
+
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [zoomVideoId]);
@@ -223,8 +224,8 @@ const PatientTestimonials = ({ content }) => {
               <div
                 key={testimonial.id}
                 className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-400 ${hoveredCard === testimonial.id
-                    ? 'transform -translate-y-1 shadow-xl'
-                    : 'hover:transform hover:-translate-y-1 hover:shadow-xl'
+                  ? 'transform -translate-y-1 shadow-xl'
+                  : 'hover:transform hover:-translate-y-1 hover:shadow-xl'
                   }`}
                 onMouseEnter={() => setHoveredCard(testimonial.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -374,8 +375,7 @@ const PatientTestimonials = ({ content }) => {
                     <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] bg-clip-text text-transparent mb-2 leading-none">
                       {index === 0 && hasAnimated && `${statsValues.rating.toFixed(1)}/5`}
                       {index === 1 && hasAnimated && `${Math.round(statsValues.reviews)}+`}
-                      {index === 2 && hasAnimated && `${Math.round(statsValues.success)}%`}
-                      {index === 3 && hasAnimated && `${Math.round(statsValues.patients).toLocaleString()}+`}
+                      {index >= 2 && hasAnimated && stat.number}
                       {!hasAnimated && stat.number}
                     </div>
 

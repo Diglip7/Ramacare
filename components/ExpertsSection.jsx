@@ -8,17 +8,12 @@ const ExpertsSection = ({ content, onBookAppointment }) => {
   const sectionRef = useRef(null);
   // Use content props or defaults
   const badge = content?.badge || 'Expert Medical Team';
-  const title = content?.title || 'Meet Our DHA-Licensed Expertise';
-  const description = content?.description || 'Highly qualified doctors with decades of combined experience, committed to your healing journey with expertise, compassion, and authentic care.';
-  const stats = content?.stats || [
-    { value: '30+', label: 'Expert Doctors' },
-    { value: '15+', label: 'Years of Combined Experience' },
-    { value: '500+', label: 'Successful Treatments' },
-    { value: '4.8', label: 'Average Rating' }
-  ];
+  const title = content?.title || 'Meet the team in Jumeirah 1';
+  const description = content?.description || 'Doctors, dentists, physiotherapists, nurses and therapists, each holding a DHA licence for their own role. Open a profile to see qualifications and experience.';
+  const stats = content?.stats || [];
   const ctaSection = content?.ctaSection || {
     title: 'Take the First Step Toward Better Health',
-    description: 'Connect with our DHA-licensed specialists at RamaCare Polyclinic, a leading Polyclinic in Dubai, and receive expert guidance tailored specifically to you.',
+    description: 'Book the GP first, or message us on WhatsApp and we will match you with the right clinician in Jumeirah 1.',
     primaryButton: 'Book Consultation Now',
     secondaryButton: 'View Our Team'
   };

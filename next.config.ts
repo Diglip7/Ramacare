@@ -34,6 +34,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/admin/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
         source: "/(.*)",
         headers: [
           {
@@ -59,6 +68,11 @@ const nextConfig: NextConfig = {
       { source: '/services/face-prp/', destination: '/services/face-prp-in-dubai/', permanent: true },
       { source: '/services/panchakarma-treatment', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
       { source: '/services/panchakarma-treatment/', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
+      { source: '/services/analysis-of-individual-dubai', destination: '/services/prakriti-dosha-assessment-dubai/', permanent: true },
+      { source: '/services/analysis-of-individual-dubai/', destination: '/services/prakriti-dosha-assessment-dubai/', permanent: true },
+      // Only after the clinic approves (see Open Items):
+      { source: '/blog/best-ayurveda-treatment-in-dubai', destination: '/services/ayurveda-dubai/', permanent: true },
+      { source: '/blog/best-ayurveda-treatment-in-dubai/', destination: '/services/ayurveda-dubai/', permanent: true },
       { source: '/services/skin-diseases-treatment', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
       { source: '/services/skin-diseases-treatment/', destination: '/services/skin-diseases-treatment-dubai/', permanent: true },
       { source: '/services/facial', destination: '/services/facial-dubai/', permanent: true },

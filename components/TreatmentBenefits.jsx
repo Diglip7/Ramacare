@@ -176,10 +176,10 @@ const TreatmentBenefits = ({ content }) => {
 
   // Use provided content or defaults
   const sectionTitle = content?.title || 'Clinically-Observed Benefits';
-  const sectionDescription = content?.description || 'Based on 15+ years of treating 2,500+ patients at our Ayurvedic clinic in Dubai';
+  const sectionDescription = content?.description || 'Based on assessments by our DHA-licensed Ayurveda team in Jumeirah 1';
   const benefits = content?.benefits || defaultBenefits;
   const comparisonData = content?.comparisonData || defaultComparisonData;
-  const comparisonTitle = content?.comparisonTitle || 'Ayurvedic vs. Conventional Hairfall Treatment';
+  const comparisonTitle = content?.comparisonTitle || 'How Ayurveda Fits With Other Care';
   const comparisonDescription = content?.comparisonDescription || null;
 
   // Customizable column headers
@@ -212,7 +212,7 @@ const TreatmentBenefits = ({ content }) => {
         {/* Benefits Grid - New Horizontal Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mb-12 md:mb-16">
           {benefits.map((benefit) => (
-            <BenefitCard key={benefit.id} benefit={benefit} defaultBenefits={defaultBenefits} hidePercentages={content?.hidePercentages} />
+            <BenefitCard key={benefit.id} benefit={benefit} defaultBenefits={defaultBenefits} hidePercentages={content?.hidePercentages ?? true} />
           ))}
         </div>
 

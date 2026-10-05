@@ -1298,7 +1298,7 @@ export default function AyurvedicDietPCOSPage() {
                       fontWeight: '400',
                       color: '#5F5F5F'
                     }}>
-                      query@ramacarepolyclinic.ae
+                      query@ramacarepolyclinic.com
                     </span>
                   </div>
                 </div>

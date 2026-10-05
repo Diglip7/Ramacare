@@ -160,6 +160,23 @@ const DoctorProfilePage = ({ doctor }) => {
     ));
   };
 
+  const doctorSlug = (currentDoctor?.urlSlug || currentDoctor?.slug || '').toLowerCase();
+  const isShamna = doctorSlug.includes('shamna');
+  const isSyamkumar = doctorSlug.includes('syamkumar');
+  const isMariya = doctorSlug.includes('mariya');
+
+  const doctorBadge = isSyamkumar || isMariya
+    ? 'DHA Licensed Ayurveda Therapist'
+    : isShamna
+    ? 'DHA Licensed Ayurveda Doctor'
+    : 'DHA Licensed Specialist';
+
+  const therapistExtraBadge = isSyamkumar
+    ? 'Kerala-trained · treats male patients'
+    : isMariya
+    ? 'Kerala-trained · treats female patients'
+    : null;
+
   return (
     <Layout>
       <Head>
@@ -264,9 +281,16 @@ const DoctorProfilePage = ({ doctor }) => {
               </p>
 
               <div>
-                <span className="inline-block bg-[#C9A961]/20 text-[#C9A961] text-[10px] tracking-widest font-bold uppercase px-3.5 py-1.5 rounded-full mb-4 border border-[#C9A961]/30">
-                  DHA Licensed Specialist
-                </span>
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="inline-block bg-[#C9A961]/20 text-[#C9A961] text-[10px] tracking-widest font-bold uppercase px-3.5 py-1.5 rounded-full border border-[#C9A961]/30">
+                    {doctorBadge}
+                  </span>
+                  {therapistExtraBadge && (
+                    <span className="inline-block bg-white/10 text-white/90 text-[10px] tracking-wider font-semibold px-3 py-1.5 rounded-full border border-white/20">
+                      {therapistExtraBadge}
+                    </span>
+                  )}
+                </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
                   {currentDoctor.name}
                 </h1>
@@ -563,11 +587,11 @@ const DoctorProfilePage = ({ doctor }) => {
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-[#E9E2D6]/40">
                             <div className="flex gap-3 items-start text-xs text-[#5F5F5F]">
                               <span className="w-5 h-5 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B] flex items-center justify-center shrink-0 font-bold">✓</span>
-                              <span>DHA Licensed Specialist Practice</span>
+                              <span>{isSyamkumar || isMariya ? 'DHA Licensed Ayurveda Therapist' : isShamna ? 'DHA Licensed Ayurveda Doctor' : 'DHA Licensed Specialist Practice'}</span>
                             </div>
                             <div className="flex gap-3 items-start text-xs text-[#5F5F5F]">
                               <span className="w-5 h-5 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B] flex items-center justify-center shrink-0 font-bold">✓</span>
-                              <span>Evidence-Based Rehabilitation</span>
+                              <span>{isSyamkumar ? 'Kerala-trained · treats male patients' : isMariya ? 'Kerala-trained · treats female patients' : isShamna ? 'Classical Kerala Ayurveda Protocols' : 'Evidence-Based Rehabilitation'}</span>
                             </div>
                             <div className="flex gap-3 items-start text-xs text-[#5F5F5F]">
                               <span className="w-5 h-5 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B] flex items-center justify-center shrink-0 font-bold">✓</span>
@@ -979,7 +1003,7 @@ const DoctorProfilePage = ({ doctor }) => {
                         </div>
                         <div>
                           <span className="inline-block bg-[#C9A961] text-[#154637] text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md tracking-wider mb-1">
-                            DHA Licensed Specialist
+                            {doctorBadge}
                           </span>
                           <h3 className="font-bold text-base text-white leading-tight">{currentDoctor.name}</h3>
                           <p className="text-xs text-white/70 mt-0.5">{currentDoctor.specialization}</p>

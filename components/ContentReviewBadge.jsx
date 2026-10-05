@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, CheckCircle2, Award, Calendar, ExternalLink } from 'lucide-react';
 
-export default function ContentReviewBadge({ doctorName, doctorRole, doctorCredentials, profileUrl, doctorImage, category, pageSlug, customStatement }) {
+export default function ContentReviewBadge({ doctorName, doctorRole, doctorCredentials, profileUrl, doctorImage, category, pageSlug, customStatement, lastReviewed }) {
   const contextStr = ((doctorName || '') + ' ' + (category || '') + ' ' + (pageSlug || '')).toLowerCase();
 
   // Location and General Clinic Pages do NOT display a Content Reviewer Badge
@@ -156,9 +156,17 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
             <ShieldCheck className="w-4 h-4 text-[#1F5E4B]" />
             <span>Medically & Clinically Reviewed</span>
           </div>
-          <div className="inline-flex items-center gap-1.5 text-xs text-[#5F5F5F] font-medium bg-[#F5F1EA] px-3 py-1 rounded-full">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#1F5E4B]" />
-            <span>DHA Licensed Polyclinic Standards</span>
+          <div className="flex flex-wrap items-center gap-2">
+            {lastReviewed && (
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#5F5F5F] font-medium bg-[#F5F1EA] px-3 py-1 rounded-full">
+                <Calendar className="w-3.5 h-3.5 text-[#1F5E4B]" />
+                <span>Reviewed: {lastReviewed}</span>
+              </div>
+            )}
+            <div className="inline-flex items-center gap-1.5 text-xs text-[#5F5F5F] font-medium bg-[#F5F1EA] px-3 py-1 rounded-full">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#1F5E4B]" />
+              <span>DHA Licensed Polyclinic Standards</span>
+            </div>
           </div>
         </div>
 

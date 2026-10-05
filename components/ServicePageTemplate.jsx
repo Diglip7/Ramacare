@@ -199,7 +199,7 @@ export default function ServicePageTemplate({ content }) {
                   className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-[#1F5E4B] hover:bg-[#1a4f3e] text-white rounded-xl font-bold text-base sm:text-lg transition-all shadow-md hover:shadow-lg"
                 >
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Book Free Consultation
+                  Book an Appointment
                 </a>
                 <a
                   href="tel:+97142862006"
@@ -1212,11 +1212,11 @@ export default function ServicePageTemplate({ content }) {
             ),
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
-            submitButtonText: 'Confirm Free Consultation',
+           submitButtonText: 'Confirm Appointment Request',
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
-              email: 'query@ramacarepolyclinic.ae',
+               email: 'query@ramacarepolyclinic.com',
               address: {
                 line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
                 line2: 'Ground Floor, Jumeirah 1 - Dubai'

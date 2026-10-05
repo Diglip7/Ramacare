@@ -162,13 +162,11 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
-  // Generate time slots (9 AM to 8 PM)
+  // Generate time slots within opening hours (10:00 to 21:30; clinic closes at 22:00)
   const timeSlots = [];
-  for (let hour = 9; hour <= 20; hour++) {
+  for (let hour = 10; hour <= 21; hour++) {
     timeSlots.push(`${hour.toString().padStart(2, '0')}:00`);
-    if (hour < 20) {
-      timeSlots.push(`${hour.toString().padStart(2, '0')}:30`);
-    }
+    timeSlots.push(`${hour.toString().padStart(2, '0')}:30`);
   }
   return (
     <>
@@ -402,53 +400,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                   </div>
                 </div>
               </div>
-
-              {/* Limited Time Offer */}
-              <div
-                className="rounded-2xl p-6 shadow-md"
-                style={{
-                  background: 'linear-gradient(135deg, #1b5e3f 0%, #2d7a56 100%)'
-                }}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <h3
-                    className="text-white"
-                    style={{ fontSize: '17px', fontWeight: 500 }}
-                  >
-                    Limited-Time Special Offer
-                  </h3>
-                </div>
-                <p
-                  className="mb-4 text-white"
-                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '1.5' }}
-                >
-                  Book your first consultation this month and receive:
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-2.5">
-                    <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-white" style={{ fontSize: '14px', fontWeight: 400 }}>Complimentary health assessment report</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-white" style={{ fontSize: '14px', fontWeight: 400 }}>Free wellness guide</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-white" style={{ fontSize: '14px', fontWeight: 400 }}>15% off your first treatment package</span>
-                  </li>
-                </ul>
-              </div>
-
+              
               {/* Prefer to Talk */}
               <div
                 className="rounded-2xl p-6 lg:p-7 shadow-sm border border-gray-100"

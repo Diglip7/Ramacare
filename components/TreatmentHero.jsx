@@ -71,11 +71,11 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
   const heroSubtitle = heroData.subtitle || null;
 
   // Rating badge
-  const rating = heroData.rating || '500+ Happy Clients';
+  const rating = '4.8 Google rating';
 
   // CTA Buttons
   const ctaButtons = heroData.ctaButtons || {
-    primary: { text: 'Book Free Consultation', link: '#book-now' },
+    primary: { text: 'Book an Appointment', link: '#book-now' },
     secondary: { text: 'WhatsApp', phone: '+971 56 659 7878' }
   };
 
@@ -90,8 +90,8 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
 
   // Top Badges
   const topBadges = heroData.topBadges || [
-    { icon: 'location', text: 'Premium Medical Facility' },
-    { icon: 'building', text: 'Proven Treatment Results' },
+    { icon: 'location', text: 'Jumeirah 1, Dubai' },
+    { icon: 'building', text: 'DHA-licensed polyclinic' },
     { icon: 'star', text: rating }
   ];
 
@@ -273,7 +273,7 @@ const TreatmentHero = ({ categoryName, subcategoryName, description, hero }) => 
                   ))}
                 </div>
               )}
-             </div>
+            </div>
 
             {/* Right Panel - Treatment Image (Takes 5/12 cols, Centered Vertically) */}
             {image && (

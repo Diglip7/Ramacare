@@ -1557,8 +1557,8 @@ export default function PolyclinicInJumeirah1Page() {
                     </div>
                     <div>
                       <span className="text-white/70">Email: </span>
-                      <a href="mailto:query@ramacarepolyclinic.ae" className="underline font-bold text-[#D4A574] hover:text-white">
-                        query@ramacarepolyclinic.ae
+                      <a href="mailto:query@ramacarepolyclinic.com" className="underline font-bold text-[#D4A574] hover:text-white">
+                        query@ramacarepolyclinic.com
                       </a>
                     </div>
                   </div>

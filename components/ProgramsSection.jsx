@@ -325,7 +325,7 @@ const ProgramsSection = ({ content }) => {
                       href={program.ctaLink}
                       className="block w-full bg-[#0F4C3A] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all duration-300 shadow-sm hover:shadow-md text-center"
                     >
-                      {program.ctaText || 'Book Now'}
+                      {program.ctaText || 'Ask about this programme'}
                     </Link>
                   ) : (
                     <a 
@@ -334,7 +334,7 @@ const ProgramsSection = ({ content }) => {
                       rel={program.ctaLink && !program.ctaLink.startsWith('http') ? undefined : "nofollow noopener noreferrer"}
                       className="block w-full bg-[#0F4C3A] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#0a3828] transition-all duration-300 shadow-sm hover:shadow-md text-center"
                     >
-                      {program.ctaText || 'Book Now'}
+                      {program.ctaText || 'Ask about this programme'}
                     </a>
                   )}
                 </div>

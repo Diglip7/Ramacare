@@ -5,15 +5,15 @@ const BookConsultation = ({ content }) => {
   // Default content
   const defaultContent = {
     badge: 'Start Your Journey',
-    title: 'Book Your Free Consultation Today',
+    title: 'Book Your Consultation Today',
     description: 'Take the first step towards better health and wellness. Our DHA-licensed specialists are ready to help.',
     getInTouchTitle: 'Get In Touch',
     requestAppointmentTitle: 'Request Appointment',
-    submitButtonText: 'Confirm Free Consultation',
+    submitButtonText: 'Confirm Appointment Request',
     contactInfo: {
       phone: '+971 04 286 2006',
       whatsapp: '971566597878',
-      email: 'query@ramacarepolyclinic.ae',
+      email: 'query@ramacarepolyclinic.com',
       address: {
         line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
         line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -31,12 +31,12 @@ const BookConsultation = ({ content }) => {
         description: 'Certified Healthcare Facility'
       },
       {
-        title: 'Experienced Team',
-        description: '15+ Years Combined'
+       title: 'DHA-Licensed Team',
+       description: 'Doctors, dentists and therapists'
       },
       {
-        title: '2,500+ Patients',
-        description: 'Successfully Treated'
+       title: 'Open 7 Days',
+      description: '10am to 10pm, walk-ins welcome'
       },
       {
         title: '4.8/5 Rating',

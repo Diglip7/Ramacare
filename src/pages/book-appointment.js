@@ -41,10 +41,10 @@ const AppointmentPage = () => {
 
   // Stats data for the hero section
   const stats = [
-    { number: '500+', label: 'Happy Patients' },
-    { number: '15+', label: 'Years Combined Experience' },
-    { number: '98%', label: 'Patient Satisfaction' },
-    { number: '30+', label: 'Expert Doctors' }
+    { number: '7', label: 'Days a week, 10am–10pm' },
+    { number: '5', label: 'Departments' },
+    { number: '4.8', label: 'Google rating' },
+    { number: 'DHA', label: 'Licensed facility' }
   ];
 
   // Features for why choose us section
@@ -57,7 +57,7 @@ const AppointmentPage = () => {
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Experienced professionals with 15+ years expertise'
+      description: 'Doctors, dentists and therapists with individual DHA licences'
     },
     {
       icon: Shield,
@@ -67,7 +67,7 @@ const AppointmentPage = () => {
     {
       icon: Star,
       title: '4.8/5 Rating',
-      description: '500+ verified patient reviews'
+      description: '200+ reviews on Google'
     }
   ];
 
@@ -189,7 +189,7 @@ const AppointmentPage = () => {
               <h3 className="text-2xl font-bold mb-2">Email Us</h3>
               <p className="text-gray-100 mb-6">Send us your details and we'll contact you</p>
               <a
-                href="mailto:query@ramacarepolyclinic.ae"
+                href="mailto:query@ramacarepolyclinic.com"
                 className="inline-block bg-[#d4a574] text-[#1a5f3f] px-6 py-3 rounded-xl font-semibold hover:bg-[#c19463] transition-colors">
                 Send Email
               </a>
@@ -245,7 +245,7 @@ const AppointmentPage = () => {
           </div>
         </div>
       </section>
- 
+
       {/* Main Booking Form Section */}
       <section className="py-16 bg-gradient-to-br from-[#1a5f3f] to-[#2d5f3f] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

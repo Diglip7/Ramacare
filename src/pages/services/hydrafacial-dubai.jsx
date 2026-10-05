@@ -106,11 +106,6 @@ export default function SignatureHydraFacialPage() {
         "openingHours": "Su-Sa 10:00-22:00",
         "medicalSpecialty": "Dermatology",
         "priceRange": "$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "500"
-        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Facial Treatments",

@@ -215,7 +215,7 @@ export default function ClinicInBusinessBayPage() {
               description: 'DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai, serving patients from Business Bay and nearby communities with general medicine, physiotherapy, dermatology, dental care, gynecology, pediatrics, and Ayurveda.',
               url: `${SITE_URL}${PAGE_PATH}`,
               telephone: '+971566597878',
-              email: 'query@ramacarepolyclinic.ae',
+              email: 'query@ramacarepolyclinic.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',

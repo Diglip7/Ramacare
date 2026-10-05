@@ -180,7 +180,7 @@ const ContactUsPage = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      highlight: 'query@ramacarepolyclinic.ae'
+      highlight: 'query@ramacarepolyclinic.com'
     },
     {
       icon: Clock,
@@ -261,16 +261,16 @@ const ContactUsPage = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">500+</div>
-                  <div className="text-sm text-gray-200">Happy Patients</div>
+                   <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">7</div>
+                  <div className="text-sm text-gray-200">Days a week, 10am–10pm</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">15+</div>
-                  <div className="text-sm text-gray-200">Years Combined Experience</div>
+                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">5</div>
+                  <div className="text-sm text-gray-200">Departments</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">98%</div>
-                  <div className="text-sm text-gray-200">Patient Satisfaction</div>
+                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">DHA</div>
+                  <div className="text-sm text-gray-200">Licensed facility</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">4.8/5</div>

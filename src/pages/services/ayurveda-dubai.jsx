@@ -1,6 +1,8 @@
 import Layout from "../../../components/Layout";
 import Head from "next/head";
+import Link from "next/link";
 import HeroSection from "../../../components/HeroSection";
+import AyurvedaInfoSection from "../../../components/AyurvedaInfoSection";
 import WhyChooseUsSection from "../../../components/WhyChooseUsSection";
 import AboutAyurvedaSection from "../../../components/AboutAyurvedaSection";
 import TreatmentSection from "../../../components/TreatmentSection";
@@ -19,44 +21,129 @@ export default function AyurvedaCategoryPage() {
   const content = getCategoryContent('ayurveda');
 
   const ayurvedaSEOContent = [
-    "Experience the profound healing power of traditional Ayurveda in Dubai at RamaCare Polyclinic. Our Ayurveda department is dedicated to restoring balance and harmony to your mind, body, and spirit through authentic therapies and personalized wellness plans. Led by experienced Ayurvedic doctors, we provide a holistic alternative for those seeking natural health solutions in Jumeirah 1.",
-    {
-      type: "heading",
-      text: "Authentic Ayurvedic Therapies in Jumeirah 1"
-    },
-    "Our clinic offers a wide range of classical Ayurvedic treatments, each tailored to your unique body constitution (Dosha). We focus on identifying the root cause of health issues rather than just managing symptoms.",
-    {
-      type: "list",
-      items: [
-        "Panchakarma: Deep detoxification and rejuvenation programs.",
-        "Abhyanga: Therapeutic herbal oil massages for relaxation and pain relief.",
-        "Shirodhara: Specialized head therapy for stress, sleep, and mental clarity.",
-        "Ayurvedic Diet & Lifestyle: Personalized nutrition plans based on your body type.",
-        "Chronic Condition Management: Natural support for digestive issues, joint pain, and more."
-      ]
-    },
-    "At RamaCare, we blend the wisdom of ancient traditions with modern medical standards to ensure a safe and effective healing journey. Whether you are looking to detoxify, manage stress, or address a specific health concern, our team is here to guide you toward lasting wellness. Discover authentic Ayurveda in Dubai with us."
+    "RamaCare Polyclinic's Ayurveda department offers doctor-led Ayurvedic care in Jumeirah 1, Dubai. Every patient is first assessed by Dr. Shamna Keloth Meethal (BAMS), and therapies are given by Kerala-trained, DHA-licensed therapists: a male therapist for men and a female therapist for women.",
+    <>
+      Read more about{" "}
+      <Link href="/services/abhyanga-massage-dubai/" className="text-[#007474] hover:underline font-medium">
+        therapeutic Kerala massage
+      </Link>
+      ,{" "}
+      <Link href="/services/panchakarma-treatment-dubai/" className="text-[#007474] hover:underline font-medium">
+        Panchakarma
+      </Link>
+      ,{" "}
+      <Link href="/services/kizhi-therapy-dubai/" className="text-[#007474] hover:underline font-medium">
+        Kizhi therapy
+      </Link>{" "}
+      and our{" "}
+      <Link href="/services/ayurvedic-clinic-in-jumeirah/" className="text-[#007474] hover:underline font-medium">
+        Jumeirah clinic
+      </Link>
+      .
+    </>
   ];
 
-  const medicalBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "RamaCare Polyclinic — Ayurveda Department",
-    "description": "Authentic Ayurveda treatment in Dubai offering Panchakarma detox, chronic pain relief, stress management, digestive wellness, hormonal balance, and holistic body-mind rejuvenation, delivered by DHA-licensed Ayurvedic doctors (BAMS/MD).",
-    "url": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/",
-    "image": "https://ramacarepolyclinic.ae/images/a1.jpg",
-    "telephone": "+971566597878",
-    "priceRange": "$$",
-    "medicalSpecialty": "Ayurveda",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-      "addressLocality": "Jumeirah 1",
-      "addressRegion": "Dubai",
-      "addressCountry": "AE"
+const ayurvedaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/",
+      "name": "Ayurvedic Clinic in Dubai, Jumeirah 1 | Ayurveda Treatment",
+      "inLanguage": "en-AE",
+      "about": { "@id": "https://ramacarepolyclinic.ae/#clinic" },
+      "specialty": "https://schema.org/Ayurvedic",
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ramacarepolyclinic.ae/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" }
+      ]
+    },
+    {
+      "@type": ["MedicalClinic", "LocalBusiness"],
+      "@id": "https://ramacarepolyclinic.ae/#clinic",
+      "name": "RamaCare Polyclinic",
+      "legalName": "Rama Care Polyclinic LLC",
+      "url": "https://ramacarepolyclinic.ae/",
+      "telephone": "+971566597878",
+      "contactPoint": [{ "@type": "ContactPoint", "telephone": "+97142862006", "contactType": "customer service", "availableLanguage": ["en", "ar", "hi", "ml", "tl"] }],
+      "email": "query@ramacarepolyclinic.com",
+      "image": "https://ramacarepolyclinic.ae/images/ayurveda-therapy-room-jumeirah-1.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor",
+        "addressLocality": "Jumeirah 1, Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 25.2395, "longitude": 55.2705 },
+      "hasMap": "https://maps.google.com/maps?cid=4290863257518002596",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00", "closes": "22:00"
+      }],
+      "areaServed": ["Jumeirah 1", "Jumeirah 2", "Al Satwa", "Al Wasl", "City Walk", "Palm Jumeirah", "Emirates Hills", "Al Karama", "Bur Dubai", "Dubai"],
+      "knowsLanguage": ["en", "ar", "hi", "ml", "tl"],
+      "identifier": { "@type": "PropertyValue", "propertyID": "DHA Facility Licence", "value": "2036418" },
+      "isAcceptingNewPatients": true,
+      "medicalSpecialty": ["https://schema.org/Ayurvedic", "https://schema.org/Physiotherapy", "https://schema.org/Dermatology", "https://schema.org/Dentistry"],
+      "sameAs": [
+        "https://maps.google.com/maps?cid=4290863257518002596",
+        "https://www.facebook.com/RamaCarePolyClinic/",
+        "https://www.instagram.com/ramacarepolyclinic/",
+        "https://www.linkedin.com/company/ramacarepolyclinics/",
+        "https://www.youtube.com/@ramacarepolyclinic"
+      ],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Ayurvedic consultation and Prakriti assessment" },
+        { "@type": "MedicalTherapy", "name": "Panchakarma", "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Therapeutic Kerala massage (Abhyanga)", "url": "https://ramacarepolyclinic.ae/services/abhyanga-massage-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Kizhi (herbal bolus) therapy", "url": "https://ramacarepolyclinic.ae/services/kizhi-therapy-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Shirodhara", "url": "https://ramacarepolyclinic.ae/services/shirodhara-therapy-in-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Nasya", "url": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Basti", "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" },
+        { "@type": "MedicalTherapy", "name": "Pizhichil" },
+        { "@type": "MedicalTherapy", "name": "Udwarthanam" }
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "BAMS (Bachelor of Ayurvedic Medicine and Surgery)" },
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "Person",
+      "name": "Syamkumar Sasidharan",
+      "jobTitle": "Ayurveda Panchakarma Therapist",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "diploma", "name": "Diploma in Ayurveda Panchakarma Therapy" },
+      "url": "https://ramacarepolyclinic.ae/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/",
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "Person",
+      "name": "Mariya Thayyil Muhammed",
+      "jobTitle": "Ayurveda Therapist",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "url": "https://ramacarepolyclinic.ae/doctors/mariya-thayyil-muhammed-ayurveda-therapist-dubai/",
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
     }
-  };
-
+  ]
+};
   const faqSchema = content?.faq?.faqs?.length
     ? {
       "@context": "https://schema.org",
@@ -72,93 +159,28 @@ export default function AyurvedaCategoryPage() {
     }
     : null;
 
-  const physicianSchema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Dr. Shamna Keloth Meethal",
-      "jobTitle": "Ayurveda Practitioner",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-      "worksFor": {
-        "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae/",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-          "addressLocality": "Jumeirah 1",
-          "addressRegion": "Dubai",
-          "addressCountry": "AE"
-        }
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Syamkumar Sasidharan",
-      "jobTitle": "Ayurveda Panchakarma Therapist",
-      "url": "https://ramacarepolyclinic.ae/doctors/syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai/",
-      "worksFor": {
-        "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae/",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-          "addressLocality": "Jumeirah 1",
-          "addressRegion": "Dubai",
-          "addressCountry": "AE"
-        }
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mariya Thayyil Muhammed",
-      "jobTitle": "Ayurvedic Therapist",
-      "url": "https://ramacarepolyclinic.ae/doctors/mariya-thayyil-muhammed-ayurveda-therapist-dubai/",
-      "worksFor": {
-        "@type": "MedicalClinic",
-        "name": "RamaCare Polyclinic",
-        "url": "https://ramacarepolyclinic.ae/",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-          "addressLocality": "Jumeirah 1",
-          "addressRegion": "Dubai",
-          "addressCountry": "AE"
-        }
-      }
-    }
-  ];
-
   return (
     <Layout>
       <Head>
-        <title key="title">Ayurveda Treatment in Dubai | Best Ayurvedic Clinic & Care</title>
+       <title key="title">Ayurvedic Clinic in Dubai, Jumeirah 1 | Ayurveda Treatment</title>
         <meta
           name="description"
-          content="Restore health naturally with Ayurveda treatment in Dubai. Personalized herbal therapies, Panchakarma, and holistic care by certified Ayurvedic doctors for wellness."
+          content="DHA-licensed Ayurvedic clinic in Jumeirah 1, Dubai. BAMS doctor, Kerala-trained therapists, Panchakarma, Abhyanga and Kizhi. Open daily 10am–10pm."
           key="description"
-        />
-        <meta
-          name="keywords"
-          content="Ayurveda treatment Dubai, Ayurvedic clinic Dubai, Ayurvedic doctor in Dubai, Panchakarma treatment in Dubai, Herbal therapy Dubai, Holistic health Dubai, Ayurvedic massage Dubai, Traditional Ayurveda Dubai, Ayurveda wellness Dubai, Dosha balancing treatment, Ayurveda Hospital Dubai, Natural healing Dubai"
-          key="keywords"
         />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurveda-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurveda Treatment in Dubai | Best Ayurvedic Clinic & Care" key="og:title" />
+        <meta property="og:title" content="Ayurvedic Clinic in Dubai, Jumeirah 1 | Ayurveda Treatment" key="og:title" />
         <meta
           property="og:description"
-          content="Restore health naturally with Ayurveda treatment in Dubai. Personalized herbal therapies, Panchakarma, and holistic care by certified Ayurvedic doctors for wellness."
+         content="DHA-licensed Ayurvedic clinic in Jumeirah 1, Dubai. BAMS doctor, Kerala-trained therapists, Panchakarma, Abhyanga and Kizhi. Open daily 10am–10pm."
           key="og:description"
         />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurveda-dubai/" key="og:url" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/a1.jpg" key="og:image" />
+        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurveda-therapy-room-jumeirah-1.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
@@ -166,34 +188,31 @@ export default function AyurvedaCategoryPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurveda Treatment in Dubai | Best Ayurvedic Clinic & Care" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic Clinic in Dubai, Jumeirah 1 | Ayurveda Treatment" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="Restore health naturally with Ayurveda treatment in Dubai. Personalized herbal therapies, Panchakarma, and holistic care by certified Ayurvedic doctors for wellness."
+          content="DHA-licensed Ayurvedic clinic in Jumeirah 1, Dubai. BAMS doctor, Kerala-trained therapists, Panchakarma, Abhyanga and Kizhi. Open daily 10am–10pm."
           key="twitter:description"
         />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/a1.jpg" key="twitter:image" />
+        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurveda-therapy-room-jumeirah-1.jpg" key="twitter:image" />
 
         {/* Structured Data Schemas */}
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }}
-        />
-        {faqSchema && (
-          <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(ayurvedaSchema) }}
           />
-        )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-        />
+          {faqSchema && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+          )}
       </Head>
 
       <HeroSection content={content?.hero} />
-      <WhyChooseUsSection content={content?.whyChooseUs} />
-      <AboutAyurvedaSection content={content?.about} />
+      <AboutAyurvedaSection content={content?.about} />            {/* answer-first paragraph */}
+      <AyurvedaInfoSection content={content?.atAGlance} />          {/* NEW */}
+      <ExpertsSection content={content?.experts} />  
       <TreatmentSection
         category="ayurveda"
         content={{
@@ -205,15 +224,19 @@ export default function AyurvedaCategoryPage() {
           consultationButtonColor: content?.treatments?.consultationCTA?.buttonColor
         }}
       />
+      <AyurvedaInfoSection content={content?.conditions} />         {/* NEW */}
+      <WhyChooseUsSection content={content?.whyChooseUs} />         {/* now "Ayurveda inside a polyclinic" */}
       <ProgramsSection content={content?.programs} />
-      <ExpertsSection content={content?.experts} />
-      <PatientTestimonials content={content?.successStories} />
+      <AyurvedaInfoSection content={content?.firstVisit} />         {/* NEW */}
+      <AyurvedaInfoSection content={content?.cost} />               {/* NEW */}
+      <AyurvedaInfoSection content={content?.chooseClinic} />       {/* NEW */}
       <WhyAyurvedaDubaiSection content={content?.whyDubai} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurveda-dubai" />
+      <PatientTestimonials content={content?.successStories} />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurveda-dubai" lastReviewed="2026-01-12" />
       <FAQSection content={content?.faq} />
-      {/* <OurFacilitySection content={content?.facility} /> */}
+      <AyurvedaInfoSection content={content?.gettingHere} />        {/* NEW */}
       <BeginYourHealingJourneySection content={content?.booking} />
-      <SEOContentSection title="Authentic Ayurveda Treatment in Dubai" content={ayurvedaSEOContent} />
+      <SEOContentSection title="Ayurveda at RamaCare, Jumeirah 1" content={ayurvedaSEOContent} />
     </Layout>
   );
 }

@@ -1,272 +1,321 @@
 import Layout from "../../components/Layout";
-import Script from "next/script";
 import Head from "next/head";
 import HeroSection from "../../components/HeroSection";
 import WhyChooseUsSection from "../../components/WhyChooseUsSection";
 import AboutAyurvedaSection from "../../components/AboutAyurvedaSection";
 import TreatmentSection from "../../components/TreatmentSection";
-import ProgramsSection from "../../components/ProgramsSection";
+// import ProgramsSection from "../../components/ProgramsSection";
 import ExpertsSection from "../../components/ExpertsSection";
 import PatientTestimonials from "../../components/PatientTestimonials";
 import WhyAyurvedaDubaiSection from "../../components/WhyAyurvedaDubaiSection";
 import FAQSection from "../../components/FAQSection";
 // import OurFacilitySection from "../../components/OurFacilitySection";
 import BeginYourHealingJourneySection from "../../components/BeginYourHealingJourneySection";
-import SEOContentSection from "../../components/SEOContentSection";
+// import SEOContentSection from "../../components/SEOContentSection";
 
-export default function Home() {
-  const homeSEOContent = [
-    "RamaCare Polyclinic is your premier destination for high-quality healthcare in Dubai. Located in the heart of Jumeirah 1, our DHA-licensed medical center is dedicated to providing comprehensive medical services that cater to the diverse needs of our patients. We believe in a holistic approach to healing, combining the wisdom of traditional Ayurveda with the precision of modern medicine.",
-    {
-      type: "heading",
-      text: "Comprehensive Medical Services in Jumeirah 1"
-    },
-    "Our polyclinic offers a wide range of specialized treatments, ensuring that you and your family receive the best possible care under one roof. Whether you are seeking physiotherapy in Dubai for pain management, advanced dental care for a perfect smile, or expert dermatology services for healthy skin, our team of experienced doctors is here to support you.",
-    {
-      type: "list",
-      items: [
-        "Expert Ayurveda Treatments: Authentic healing for mind and body balance.",
-        "Advanced Physiotherapy: Helping you move better and live pain-free with personalized rehab plans.",
-        "Dermatology & Skin Care: Specialized treatments for acne, pigmentation, and anti-aging.",
-        "Premium Dental Services: Complete oral healthcare from routine checkups to cosmetic dentistry.",
-        "General Physician Consultations: Primary care for everyday health and chronic condition management."
+
+const PAGE_TITLE = "RamaCare Polyclinic Jumeirah 1 | Physio, Skin, Dental, Ayurveda";
+const PAGE_DESCRIPTION = "DHA-licensed polyclinic on Al Dhiyafah Road, Jumeirah 1, near Al Satwa. GP, dental, physiotherapy, dermatology and Ayurveda. Open daily 10am to 10pm.";
+const SITE = "https://ramacarepolyclinic.ae";
+const LAST_REVIEWED = "2026-09-27"; // update whenever homepage facts are re-checked
+
+// Current clinicians with profile pages (source: src/data/doctors.js)
+const CLINICIANS = [
+  { slug: "dr-sahar-zomorrodi-general-practitioner-dubai", name: "Dr. Sahar Zomorrodi", jobTitle: "General Practitioner", type: "Physician" },
+  { slug: "dr-hirbod-gilandoust-dentist-dubai", name: "Dr. Hirbod Gilandoust", jobTitle: "Dentist", type: "Physician" },
+  { slug: "dr-aparna-balakrishnan-cosmetic-dentist-dubai", name: "Dr. Aparna Balakrishnan", jobTitle: "General and Cosmetic Dentist", type: "Physician" },
+  { slug: "dr-shamna-keloth-meethal-ayurveda-doctor-dubai", name: "Dr. Shamna Keloth Meethal", jobTitle: "Ayurveda Physician (BAMS)", type: "Physician" },
+  { slug: "jeena-mathew-physiotherapist-dubai", name: "Jeena Mathew", jobTitle: "Physiotherapist", type: "Person" },
+  { slug: "soumya-abraham-dha-licensed-nurse-dubai", name: "Soumya Abraham", jobTitle: "DHA-Licensed Nurse", type: "Person" },
+  { slug: "syamkumar-sasidharan-ayurveda-panchakarma-therapist-dubai", name: "Syamkumar Sasidharan", jobTitle: "Ayurveda Panchakarma Therapist", type: "Person" },
+  { slug: "mariya-thayyil-muhammed-ayurveda-therapist-dubai", name: "Mariya Thayyil Muhammed", jobTitle: "Ayurveda Therapist", type: "Person" },
+  { slug: "nodainne-baves-guerrero-beauty-therapist-dubai", name: "Nodainne Baves Guerrero", jobTitle: "Beauty Therapist", type: "Person" },
+  { slug: "sonita-sinaga-aesthetic-therapist-dubai", name: "Sonita Sinaga", jobTitle: "Aesthetic Therapist", type: "Person" }
+];
+
+// Single source for the homepage FAQ: rendered on the page AND used for FAQPage schema.
+const HOME_FAQS = [
+  {
+    question: "Where is RamaCare Polyclinic?",
+    answer: "RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, ground floor, Jumeirah 1, Dubai. The clinic is on Al Dhiyafah Road between Jumeirah 1 and Al Satwa. Both free and paid parking are available near the building."
+  },
+  {
+    question: "What are the opening hours?",
+    answer: "The clinic is open every day, including weekends, from 10am to 10pm. Public holiday hours are posted on our Google Business Profile."
+  },
+  {
+    question: "Is RamaCare licensed by the Dubai Health Authority?",
+    answer: "Yes. RamaCare Polyclinic holds DHA facility licence 2036418, and each doctor, dentist, physiotherapist, nurse and therapist holds an individual DHA licence for their role."
+  },
+  {
+    question: "Which services are available under one roof?",
+    answer: "General medicine, dentistry, physiotherapy, dermatology and aesthetic treatments, and Ayurveda. If a problem needs care the clinic does not provide, such as imaging or a hospital specialist, the doctor will refer you."
+  },
+  {
+    question: "Do you accept insurance?",
+    answer: "RamaCare works on a reimbursement basis. You pay at the clinic and we give you an itemised invoice and the medical report your insurer needs, so you can claim the eligible amount back under your policy."
+  },
+  {
+    question: "Do I need a referral, and can I walk in?",
+    answer: "No referral is needed to see the GP, dentist, dermatologist, physiotherapist or Ayurveda physician, and walk-ins are welcome, just as at a walk-in clinic. Booking ahead by phone or WhatsApp is the best way to avoid waiting. Some insurers ask for a doctor's referral before they reimburse physiotherapy, so check your policy first."
+  },
+  {
+    question: "Does RamaCare treat emergencies?",
+    answer: "No. RamaCare is an outpatient clinic. For chest pain, difficulty breathing, heavy bleeding, signs of stroke or a serious injury, call 998 or go to the nearest hospital emergency department."
+  },
+  {
+    question: "How do I book an appointment?",
+    answer: "Call 04 286 2006, send a WhatsApp message to 056 659 7878, or use the booking form on this page. Tell us which department you need and your preferred time."
+  }
+];
+const heroContent = {
+  badge: "DHA-licensed polyclinic, Jumeirah 1",
+  titleLine1: "Polyclinic for GP, Dental, Physiotherapy,",
+  titleHighlight: " Skin & Ayurveda",
+  titleLine2: " in Jumeirah 1",
+  subtitle: "RamaCare Polyclinic is a DHA-licensed clinic at 12 Al Dhiyafah Road, Jumeirah 1, close to Al Satwa. Five departments under one roof: general medicine, dentistry, physiotherapy, dermatology and aesthetics, and Ayurveda. Open every day, 10am to 10pm. Walk-ins welcome.",
+  ctaText: "Book an appointment",
+  stats: [
+    { number: "7", label: "Days a week, 10am–10pm" },
+    { number: "5", label: "Departments under one roof" },
+    { number: "4.8", label: "Google rating" },
+    { number: "DHA", label: "Licensed facility" }
+  ],
+  features: [
+    "GP, dental, physiotherapy, dermatology and Ayurveda in one clinic",
+    "DHA-licensed doctors, dentists and therapists",
+    "Walk-ins welcome, or book by phone or WhatsApp",
+    "12 Al Dhiyafah Road, Jumeirah 1"
+  ],
+  location: "12 Al Dhiyafah Road, Jumeirah 1",
+  timing: "Open daily, 10am to 10pm",
+  backgroundAlt: "RamaCare Polyclinic, Jumeirah 1, Dubai",
+  whatsappMessage: "Hello, I would like to book an appointment at RamaCare Polyclinic."
+};
+const whyChooseContent = {
+  badge: "Why patients choose RamaCare",
+  title: "A clinic in Jumeirah 1 with five departments under one roof",
+  description: "See a GP, dentist, dermatologist, physiotherapist or Ayurveda doctor at one address, open 10am to 10pm every day. Walk-ins are welcome, so RamaCare also works as a walk-in clinic, and our team speaks English, Arabic, Hindi, Malayalam and Tagalog. Not sure where to start? Book the GP, who can refer you to the right department.",
+  cards: [
+    { title: "General practitioner (GP)", description: "Many local families use our GP as their family doctor: for fevers, infections, minor injuries and wound stitching, routine check-ups and blood tests, and ongoing care for blood pressure, diabetes, cholesterol and thyroid problems." },
+    { title: "Dental clinic", description: "Our dental clinic in Jumeirah 1 offers check-ups, scaling and polishing, fillings, root canal treatment, crowns and bridges, extractions, teeth whitening and veneers with DHA-licensed dentists." },
+    { title: "Physiotherapy", description: "Assessment and treatment for back, neck, shoulder and knee pain, sports injuries and rehabilitation after surgery, using exercise therapy, manual therapy, dry needling and electrotherapy where suitable." },
+    { title: "Dermatology and aesthetic clinic", description: "See a DHA-licensed dermatologist for acne, pigmentation, hair loss and other skin concerns. Aesthetic treatments include Botox and fillers, laser hair removal, HydraFacial, HIFU and RF microneedling, each offered after a skin consultation." },
+    { title: "Ayurvedic clinic", description: "Consultation with a DHA-licensed Ayurveda physician, with therapies such as Abhyanga, Shirodhara and Panchakarma treatment planned after that consultation. Ayurveda is offered alongside, not instead of, medical care." },
+    { title: "Insurance and payment", description: "RamaCare works on a reimbursement basis. You receive an itemised invoice and medical report to claim from your insurer. Card and mobile payments are accepted." }
+  ]
+};
+const aboutContent = {
+  badge: "About RamaCare Polyclinic",
+  title: "A DHA-licensed polyclinic in Jumeirah 1",
+  description: "RamaCare Polyclinic is licensed by the Dubai Health Authority (facility licence 2036418) and is operated by Rama Care Polyclinic LLC.",
+  paragraphs: [
+    "RamaCare Polyclinic is licensed by the Dubai Health Authority (facility licence 2036418) and is operated by Rama Care Polyclinic LLC. Every clinician holds a DHA licence for their own role, and each profile on this website lists their qualifications and experience.",
+    "As a multispecialty medical centre, the clinic brings general medicine, dentistry, physiotherapy, dermatology and aesthetic treatments, and Ayurveda together at one address on Al Dhiyafah Road, Jumeirah 1. This means your GP, dentist or physiotherapist can refer you to a colleague down the corridor and share your history, with your consent.",
+    "Treatment starts with an assessment. The clinician explains what they found, the options, and what each option involves before anything begins."
+  ],
+  stats: [
+    { number: "7", label: "Days a week" },
+    { number: "5", label: "Departments" },
+    { number: "4.8", label: "Google rating" }
+  ],
+  ctaText: "Meet our clinicians",
+  imageAlt: "RamaCare Polyclinic, Jumeirah Terrace Building, Jumeirah 1",
+  overlayCard: {
+    number: "7",
+    smallText: "days a week",
+    boldText: "Open 10am to 10pm in Jumeirah 1"
+  }
+};
+const locationContent = {
+  badge: "Visiting the clinic",
+  title: "Finding RamaCare in Jumeirah 1",
+  description: "RamaCare is on the ground floor of the Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1.\n\nAl Dhiyafah Road runs between Jumeirah 1 and Al Satwa, so the clinic is a short drive for patients in Jumeirah 1, Al Satwa and nearby areas. Both free and paid parking are available near the building.\n\nThe clinic is open every day from 10am to 10pm. Walk-ins are welcome; to avoid waiting, call 04 286 2006 or WhatsApp 056 659 7878 before you come.",
+  benefits: [
+    { icon: "Activity", title: "Open 7 days", description: "10am to 10pm, including weekends." },
+   { icon: "Sparkles", title: "Walk-ins welcome", description: "Or book ahead by phone, WhatsApp or online." },
+    { icon: "Brain", title: "Parking", description: "Free and paid parking near the building." },
+    { icon: "Droplets", title: "Insurance", description: "Reimbursement basis, with an itemised invoice and medical report for your claim." }
+  ],
+ imageAlt: "RamaCare Polyclinic, Jumeirah 1",
+  ctaCard: {
+    title: "Not an emergency service",
+   description: "For chest pain, breathing difficulty, heavy bleeding or a serious injury, call 998 or go to the nearest hospital emergency department."
+  },
+  bottomSection: {
+    title: "RamaCare Polyclinic, Jumeirah 1",
+    description: "Ground Floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai. Phone 04 286 2006. WhatsApp 056 659 7878. Email query@ramacarepolyclinic.com. Open daily 10am to 10pm. Information last reviewed: 27 September 2026."
+ }
+};
+const treatmentsContent = {
+  badge: "Our departments",
+  heading: "Our medical services in Jumeirah 1",
+  subtitle: "Choose a department to see what it treats, then book with the right clinician."
+};
+const faqContent = {
+  title: "Frequently asked questions",
+  description: "Location, hours, licensing, insurance and booking at RamaCare Polyclinic in Jumeirah 1.",
+  faqs: HOME_FAQS
+};
+const testimonialsContent = {
+  badge: "Patient stories",
+  title: "What patients say about RamaCare",
+  subtitle: "Video stories from patients at our Jumeirah 1 clinic, plus our Google reviews.",
+  stats: [
+    { id: 1, number: "4.8/5", label1: "Average Rating", label2: "Google Reviews", target: 4.8, showStars: true },
+    { id: 2, number: "200", label1: "Patient Reviews", label2: "On Google", target: 200 },
+    { id: 3, number: "5", label1: "Departments", label2: "Under one roof", target: 5 },
+    { id: 4, number: "7", label1: "Days a week", label2: "Open 10am–10pm", target: 7 }
+  ]
+};
+const expertsContent = {
+  stats: [],
+  ctaSection: {
+    title: "Not sure who to see?",
+    description: "Book the GP first, or message us on WhatsApp and we will match you with the right clinician in Jumeirah 1.",
+    primaryButton: "Book an appointment",
+    secondaryButton: "View our team"
+  },
+  badge: "Our clinical team",
+ title: "Meet the team in Jumeirah 1",
+  description: "Doctors, dentists, physiotherapists, nurses and therapists, each holding a DHA licence for their own role. Open a profile to see qualifications and experience."
+};
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+     {
+      "@type": "MedicalClinic",
+      "@id": `${SITE}/#clinic`,
+      name: "RamaCare Polyclinic",
+      legalName: "Rama Care Polyclinic LLC",
+      identifier: { "@type": "PropertyValue", propertyID: "DHA Facility Licence", value: "2036418" },
+      url: `${SITE}/`,
+      logo: `${SITE}/images/Logo.png`,
+      image: `${SITE}/images/homepage.jpg`,
+      description: "DHA-licensed outpatient polyclinic in Jumeirah 1, Dubai, offering general medicine, dentistry, physiotherapy, dermatology and aesthetic treatments, and Ayurveda.",
+      telephone: "+97142862006",
+      email: "query@ramacarepolyclinic.com",
+      contactPoint: [
+        { "@type": "ContactPoint", contactType: "appointments", telephone: "97142862006", availableLanguage: ["English", "Arabic", "Hindi", "Malayalam", "Tagalog"] },
+        { "@type": "ContactPoint", contactType: "appointments (WhatsApp)", telephone: "+971566597878", url: "https://wa.me/971566597878", availableLanguage: ["English", "Arabic", "Hindi", "Malayalam", "Tagalog"] }
+      ],
+      currenciesAccepted: "AED",
+      paymentAccepted: "Credit card, debit card, mobile payment",
+     openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "10:00",
+        closes: "22:00"
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Ground Floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road",
+        addressLocality: "Jumeirah 1",
+        addressRegion: "Dubai",
+        postOfficeBoxNumber: "393558",
+        addressCountry: "AE"
+      },
+      geo: { "@type": "GeoCoordinates", latitude: 25.2395, longitude: 55.2705 },
+      hasMap: "https://maps.google.com/?cid=4290863257518002596",
+      areaServed: [
+        { "@type": "Place", name: "Jumeirah 1, Dubai" },
+        { "@type": "Place", name: "Al Satwa, Dubai" },
+        { "@type": "City", name: "Dubai" }
+      ],
+      medicalSpecialty: ["PrimaryCare", "Dentistry", "PhysicalTherapy", "Dermatology"],
+      availableService: [
+        { "@type": "MedicalTherapy", name: "General medicine consultations", url: `${SITE}/services/general-physician-dubai/` },
+        { "@type": "MedicalProcedure", name: "Dental care", url: `${SITE}/services/dental-dubai/` },
+        { "@type": "MedicalTherapy", name: "Physiotherapy", url: `${SITE}/services/physiotherapy-dubai/` },
+        { "@type": "MedicalProcedure", name: "Dermatology and aesthetic treatments", url: `${SITE}/services/aesthetic-dermatology-dubai/` },
+        { "@type": "MedicalTherapy", name: "Ayurveda", url: `${SITE}/services/ayurveda-dubai/` }
+      ],
+     employee: CLINICIANS.map((c) => ({
+        "@type": c.type,
+        "@id": `${SITE}/doctors/${c.slug}/#person`,
+        name: c.name,
+        jobTitle: c.jobTitle,
+       url: `${SITE}/doctors/${c.slug}/`
+      })),
+      sameAs: [
+        "https://www.facebook.com/RamaCarePolyClinic/",
+        "https://www.instagram.com/ramacarepolyclinic/",
+        "https://www.linkedin.com/company/ramacarepolyclinics/",
+        "https://www.youtube.com/@ramacarepolyclinic"
       ]
-    },
+ },
     {
-      type: "heading",
-      text: "Why Choose RamaCare Polyclinic Dubai?"
-    },
-    "Choosing the right polyclinic in Dubai is crucial for your health journey. At RamaCare, we prioritize patient satisfaction and ethical medical practices. Our facility is equipped with modern medical technology, and our DHA-licensed specialists are committed to delivering results-oriented care. We understand that every patient is unique, which is why we create customized wellness plans tailored to your specific health goals.",
-    "Visit us in Jumeirah 1 today and experience a new standard of healthcare. From our welcoming environment to our professional medical team, we are dedicated to helping you achieve and maintain optimal health. Book your free consultation now and take the first step toward a healthier, happier life."
-  ];
-
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: "RamaCare Polyclinic",
+     publisher: { "@id": `${SITE}/#clinic` }
+     },
+    {
+     "@type": "MedicalWebPage",
+      "@id": `${SITE}/#webpage`,
+      url: `${SITE}/`,
+      name: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      isPartOf: { "@id": `${SITE}/#website` },
+      about: { "@id": `${SITE}/#clinic` },
+      lastReviewed: LAST_REVIEWED,
+      dateModified: LAST_REVIEWED,
+      inLanguage: "en"
+     },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE}/#faq`,
+      mainEntity: HOME_FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer }
+      }))
+    }
+  ]
+};
+export default function Home() {
   return (
     <Layout>
       <Head>
-        <title key="title">Polyclinic in Dubai | Multispecialty Healthcare | RamaCare</title>
-        <meta
-          name="description"
-          content="Looking for a polyclinic in Dubai? RamaCare offers Ayurveda, physiotherapy & skin treatments in Jumeirah with expert doctors. Book your consultation today."
-          key="description"
-        />
-        <meta
-          name="keywords"
-          content="RamaCare Polyclinic Dubai, Polyclinic in Dubai, Trusted polyclinic in Dubai, Multi-Specialty Clinic Dubai, Medical clinic Dubai, DHA licensed polyclinic, Family healthcare Dubai, Affordable healthcare Dubai, Polyclinic in Jumeirah 1, Medical clinic Jumeirah 1, Best Polyclinic in Jumeirah 1"
-          key="keywords"
-        />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/" key="canonical" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <link rel="canonical" href={`${SITE}/`} key="canonical" />
         <meta name="robots" content="index, follow" key="robots" />
         <meta name="msvalidate.01" content="FB6C6318BA274AFF1EA6E095977EA143" />
         <meta name="google-site-verification" content="VRn7pg1rACQOgcGV13YChuu05_Iu__0QVLXrw9dNGCc" />
-
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Polyclinic in Dubai | Multispecialty Healthcare | RamaCare" key="og:title" />
-        <meta
-          property="og:description"
-          content="Looking for a polyclinic in Dubai? RamaCare offers Ayurveda, physiotherapy & skin treatments in Jumeirah with expert doctors. Book your consultation today."
-          key="og:description"
-        />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/" key="og:url" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/homepage.jpg" key="og:image" />
-        <meta property="og:image:alt" content="RamaCare Polyclinic — Premium healthcare clinic in Dubai, Jumeirah 1" key="og:image:alt" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+         <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:url" content={`${SITE}/`} key="og:url" />
+        <meta property="og:image" content={`${SITE}/images/homepage.jpg`} key="og:image" />
+        <meta property="og:image:alt" content="RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Polyclinic in Dubai | Multispecialty Healthcare | RamaCare" key="twitter:title" />
-        <meta
-          name="twitter:description"
-          content="DHA-licensed polyclinic in Jumeirah 1, Dubai offering Ayurveda, physiotherapy, dermatology, dental, and general medicine under one roof."
-          key="twitter:description" />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/homepage.jpg" key="twitter:image" />
-
-        {/* Structured JSON-LD Schema (@graph: MedicalClinic, FAQPage) */}
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE}/images/homepage.jpg`} key="twitter:image" />
         <script
           key="schema-graph"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': ['MedicalClinic', 'LocalBusiness'],
-                  '@id': 'https://ramacarepolyclinic.ae/#organization',
-                  name: 'RamaCare Polyclinic',
-                  alternateName: 'RamaCare Polyclinic Dubai',
-                  url: 'https://ramacarepolyclinic.ae/',
-                  logo: 'https://ramacarepolyclinic.ae/images/Logo.png',
-                  image: 'https://ramacarepolyclinic.ae/images/homepage.jpg',
-                  description:
-                    'DHA-licensed multi-specialty polyclinic in Jumeirah 1, Dubai offering expert care in Dermatology, Dental, Physiotherapy, General Medicine, and Ayurveda.',
-                  telephone: '+971566597878',
-                  email: 'query@ramacarepolyclinic.ae',
-                  priceRange: '$$',
-                  openingHoursSpecification: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                    opens: '10:00',
-                    closes: '22:00',
-                  },
-                  address: {
-                    '@type': 'PostalAddress',
-                    streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1',
-                    addressLocality: 'Dubai',
-                    postalCode: '393558',
-                    addressCountry: 'AE',
-                  },
-                  geo: {
-                    '@type': 'GeoCoordinates',
-                    latitude: '25.2345',
-                    longitude: '55.2712',
-                  },
-                  areaServed: {
-                    '@type': 'City',
-                    name: 'Dubai',
-                  },
-                  aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '4.8',
-                    reviewCount: '542',
-                    bestRating: '5',
-                    worstRating: '1',
-                  },
-                  medicalSpecialty: [
-                    'General Medicine',
-                    'Dermatology',
-                    'Dental Care',
-                    'Physiotherapy',
-                    'Ayurveda',
-                  ],
-                  sameAs: [
-                    'https://www.facebook.com/RamaCarePolyClinic/',
-                    'https://www.instagram.com/ramacarepolyclinic/',
-                    'https://www.linkedin.com/company/ramacarepolyclinics/',
-                    'https://www.youtube.com/@ramacarepolyclinic',
-                  ],
-                },
-                {
-                  '@type': 'FAQPage',
-                  '@id': 'https://ramacarepolyclinic.ae/#faq',
-                  mainEntity: [
-                    {
-                      '@type': 'Question',
-                      name: 'What is the address of the RamaCare Polyclinic in Jumeirah 1 Dubai?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RamaCare Polyclinic is situated at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. Provides medical physiotherapy, Ayurveda, dermatology, dental, and wellness services to patients from Jumeirah 1 and the surrounding areas of Dubai, all within one building.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Is RamaCare Polyclinic located in Jumeirah 1?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RRamaCare Polyclinic is a healthcare clinic situated in Jumeirah 1, Dubai. At this clinic patients are able to obtain a variety of healthcare services in one place, such as physiotherapy, Ayurveda, dermatology and skin care, dental care, and general healthcare. The fact that the clinic is located in Jumeirah 1 means that it is convenient for those patients who are seeking a clinic in Jumeirah.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What services are offered by RamaCare Polyclinic in Dubai?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RamaCare Polyclinic offers a range of healthcare services in Dubai. These services include physiotherapy, Ayurveda, dermatology and skin care, dental care, family healthcare, and other medical treatments. The service that is best for a patient will depend on the patient’s symptoms, needs, and treatment goals. A consultation is necessary to determine the suitable care for a patient’s specific condition.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Is the RamaCare Polyclinic licensed by the DHA?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RamaCare Polyclinic holds a license from the DHA. The license number is 2036418. All healthcare professionals at RamaCare Polyclinic are proper. Work within the limits of their individual clinical roles.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'How do I go about booking an appointment at RamaCare Polyclinic in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'You can book an appointment at RamaCare Polyclinic in Jumeirah by using WhatsApp, by phone, or through the appointment system on the website. When you contact the clinic, just let them know the service you need and your preferred time for the appointment. Then the staff will help you find a doctor or a consultation.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Does RamaCare offer physiotherapy in Jumeirah 1?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes, RamaCare Polyclinic provides physiotherapy in Jumeirah 1, Dubai. Physiotherapy can help with pain, sports injuries, mobility issues, rehabilitation needs, and other physical health problems. The physiotherapist will first assess your symptoms, movement patterns, and daily functional needs before recommending a treatment plan.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What Ayurveda treatments are on offer at RamaCare in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RamaCare Polyclinic offers Ayurveda consultations and treatments in Jumeirah 1, Dubai. If you have health concerns, an Ayurvedic practitioner may recommend certain therapies, lifestyle changes, and traditional Ayurvedic practices. Each treatment is tailored to the individual after a consultation, ensuring care that fits your unique condition.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What skin treatments and dermatology services are available at RamaCare in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'RamaCare Polyclinic offers dermatology and skin-care services in Jumeirah 1. The clinic deals with skin problems. The types of services offered can include treatment for acne, pigmentation, uneven skin tone, skin texture, and the signs of aging. These services depend on your needs. A consultation is done to find out which treatment is right for your skin.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Does RamaCare offer treatment in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'The truth is that RamaCare Polyclinic provides care in Jumeirah 1, Dubai. Dental treatment is part of the clinic\'s range of healthcare services. It can include an assessment, preventive care, and suitable restorative or other dental procedures. The treatment that is suggested depends on your condition and the results of your consultation.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Is it possible for me to have a health check-up at RamaCare in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes, you can have a health check-up at RamaCare Polyclinic in Jumeirah 1. This includes health assessments and consultations with a healthcare professional. During your visit, the doctor will review your history, discuss any symptoms you may have, and assess your current health condition. If needed, additional tests or referrals to specialists may be suggested based on your needs.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: ' Does RamaCare offer healthcare services to families in Jumeirah?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes, RamaCare Polyclinic serves families in Jumeirah, Dubai. It provides a range of healthcare services for all ages. These include medicine, dental care, physiotherapy, dermatology, Ayurveda, and other treatments. The services offered depend on each individual’s health needs. Are tailored accordingly.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What can I expect when I go for my visit to RamaCare Polyclinic?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'On your first visit, the focus will be on understanding your health concern, reviewing your medical background, and identifying your treatment needs. Your doctor or healthcare provider will listen to your symptoms, examine you if required, and explain the options. They will also guide you through the steps based on your condition and the type of care you need.',
-                      },
-                    },
-                  ],
-                },
-              ],
-            }),
-          }}
-        />
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+         />
       </Head>
-      <HeroSection />
-      <WhyChooseUsSection />
-      <AboutAyurvedaSection />
-      <TreatmentSection />
-      <ProgramsSection />
-      <ExpertsSection />
-      <PatientTestimonials />
-      <WhyAyurvedaDubaiSection />
-      <FAQSection />
-      {/* <OurFacilitySection /> */}
-      <BeginYourHealingJourneySection />
-      <SEOContentSection title="Your Health, Our Priority: Leading Polyclinic in Jumeirah 1" content={homeSEOContent} />
+         <HeroSection content={heroContent} />
+      <WhyChooseUsSection content={whyChooseContent} />
+      <AboutAyurvedaSection content={aboutContent} />
+      <TreatmentSection content={treatmentsContent} />
+      <ExpertsSection content={expertsContent} />
+      <PatientTestimonials content={testimonialsContent} />
+      <WhyAyurvedaDubaiSection content={locationContent} />
+      <FAQSection content={faqContent} />
+       <BeginYourHealingJourneySection />
+      {/* <SEOContentSection title="Your Health, Our Priority: Leading Polyclinic in Jumeirah 1" content={homeSEOContent} /> */}
     </Layout>
   );
 }

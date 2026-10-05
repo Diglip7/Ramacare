@@ -62,15 +62,15 @@ function getFileLastMod(relativePagePath, fallbackDate) {
 // Function to get all published blogs with persistent disk fallback and sanity checks
 async function getAllPublishedBlogs() {
   const now = Date.now();
-  
+
   // Return in-memory cache if still within TTL
   if (cachedBlogs && cachedBlogs.length > 0 && (now - lastBlogFetchTime < CACHE_TTL_MS)) {
     return cachedBlogs;
   }
 
   // Get previous fallback baseline from memory or disk
-  const previousKnownBlogs = (cachedBlogs && cachedBlogs.length > 0) 
-    ? cachedBlogs 
+  const previousKnownBlogs = (cachedBlogs && cachedBlogs.length > 0)
+    ? cachedBlogs
     : readPersistentCache();
 
   try {
@@ -186,8 +186,7 @@ async function generateSitemap(blogs, services, doctorSlugs) {
       urlSet.add(fullUrl);
       xml += `  <url>
     <loc>${fullUrl}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <priority>${priority}</priority>
+${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ''}    <priority>${priority}</priority>
     <changefreq>${changefreq}</changefreq>
   </url>
 `;
@@ -209,15 +208,13 @@ async function generateSitemap(blogs, services, doctorSlugs) {
   ];
 
   for (const page of staticPages) {
-    const lastmod = getFileLastMod(page.file, currentDate);
-    addUrl(page.path, lastmod, page.priority, page.changefreq);
+    addUrl(page.path, null, page.priority, page.changefreq);
   }
 
-  // 2. Add Service Pages with actual file modification dates
+  // 2. Add Service Pages (no lastmod)
   services.forEach(service => {
     const servicePath = typeof service === 'string' ? service : service.path;
-    const lastmod = typeof service === 'object' && service.lastmod ? service.lastmod : currentDate;
-    addUrl(servicePath, lastmod, '0.8', 'weekly');
+    addUrl(servicePath, null, '0.8', 'weekly');
   });
 
   // 3. Add Doctor Profiles with doctor file modification date
@@ -228,8 +225,8 @@ async function generateSitemap(blogs, services, doctorSlugs) {
 
   // 4. Add Blog Pages with actual content modification dates
   blogs.forEach(blog => {
-    const lastmod = blog.updatedAt 
-      ? new Date(blog.updatedAt).toISOString().split('T')[0] 
+    const lastmod = blog.updatedAt
+      ? new Date(blog.updatedAt).toISOString().split('T')[0]
       : (blog.createdAt ? new Date(blog.createdAt).toISOString().split('T')[0] : currentDate);
     addUrl(`/blog/${blog.paramlink}/`, lastmod, '0.6', 'weekly');
   });

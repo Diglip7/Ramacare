@@ -106,12 +106,12 @@ const HairfallTreatmentHero = () => {
             {/* Statistics Section */}
             <div className="flex flex-wrap gap-3 md:gap-4 mb-6">
               <div className="bg-[#F5F1E8] border border-gray-200 rounded-xl px-4 py-3 min-w-[140px] text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">98%</div>
-                <div className="text-xs text-[#6B7280]">Patient Satisfaction</div>
+               <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">4.8</div>
+                <div className="text-xs text-[#6B7280]">Google rating</div>
               </div>
               <div className="bg-[#F5F1E8] border border-gray-200 rounded-xl px-4 py-3 min-w-[140px] text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">2,500+</div>
-                <div className="text-xs text-[#6B7280]">Patients Treated</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">7</div>
+                <div className="text-xs text-[#6B7280]">Days a week</div>
               </div>
               <div className="bg-[#F5F1E8] border border-gray-200 rounded-xl px-4 py-3 min-w-[140px] text-center">
                 <div className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-0.5">15+</div>
@@ -125,7 +125,7 @@ const HairfallTreatmentHero = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span>Book Free Consultation</span>
+                <span>Book an Appointment</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

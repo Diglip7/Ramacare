@@ -5,197 +5,149 @@ import { DOCTORS, DOCTOR_GROUPS } from './doctors';
 
 export const categoryContent = {
   'ayurveda': {
-    hero: {
-      badge: 'DHA-Licensed Premier Ayurveda Centre',
-      titleLine1: ' Ayurveda Treatment  ',
-      titleHighlight: ' in Dubai ',
-      titleLine2: ' for Detox, Pain Relief & Wellness',
-      // title: 'Premium Ayurveda Treatment –& Panchakarma in Jumeirah 1',
-      subtitle: 'Ayurveda treatment at RamaCare Polyclinic in Jumeirah 1, Dubai, focuses on supporting overall wellbeing through personalised traditional therapies and lifestyle-based care. Depending on your needs, Ayurvedic treatment may address concerns such as stress, digestive discomfort, body pain, fatigue, and general wellness through an approach tailored to your individual health goals.',
-      description: 'Dubai\'s premier Ayurveda centre offering authentic classical treatments, DHA-licensed practitioners, and personalized wellness plans in the heart of Jumeirah 1.',
-      ctaText: 'Book Free Consultation',
-      backgroundImage: '/images/a1.jpg',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '150+', label: 'Treatments' }
-      ],
-      features: [
-        'Classical Panchakarma & Herbal Therapies',
-        'DHA-Licensed Ayurvedic Experts',
-        'Personalized Wellness Programs',
-        'Luxury Facility in Jumeirah 1'
-      ],
-      whatsappText: 'WhatsApp Now',
-      location: 'Heart of Jumeirah 1, Dubai',
-      timing: 'Same Day Appointments'
-    },
-    whyChooseUs: {
-      badge: 'Why Choose Us',
-      title: 'Dubai\'s Trusted Ayurveda Treatment Centre',
-      description: 'At RamaCare Polyclinic, we offer result-driven Ayurveda treatment in Dubai focused on treating the root cause of health issues—not just symptoms. Our holistic approach supports physical vitality, mental clarity, and emotional balance.',
-      cards: [
-        {
-          title: 'Authentic Ayurvedic Therapies',
-          description: 'Experience time-tested Panchakarma and classical herbal treatments designed for deep healing.'
-        },
-        {
-          title: 'DHA-Licensed Practitioners',
-          description: 'Highly qualified Ayurvedic doctors ensure safe and effective treatments.'
-        },
-        {
-          title: 'Personalized Treatment Plans',
-          description: 'Customized therapies based on your dosha (body constitution) and health goals.'
-        },
-        {
-          title: 'Premium Facility',
-          description: 'Clean, modern, and relaxing environment designed for complete comfort.'
-        },
-        {
-          title: 'Holistic Healing',
-          description: 'We treat body, mind, and lifestyle together for long-term wellness.'
-        },
-        {
-          title: 'Proven Results',
-          description: 'Hundreds of patients have achieved lasting relief and improved quality of life.'
-        }
-      ]
-    },
+   hero: {
+  badge: 'DHA-licensed polyclinic · Licence 2036418',
+  titleLine1: 'Ayurvedic Clinic & Ayurveda Treatment',
+  titleHighlight: ' in Dubai ',
+  titleLine2: '– Jumeirah 1',
+  subtitle: 'Doctor-led Ayurveda at RamaCare Polyclinic in Jumeirah 1. Every plan starts with a consultation with our BAMS doctor, and every therapy is given by a Kerala-trained therapist of the same gender as the patient.',
+  description: 'Kerala Ayurveda at a DHA-licensed polyclinic in Jumeirah 1: ayurvedic treatment in Dubai led by an Ayurvedic doctor, including consultation, Panchakarma, therapeutic Kerala massage (Abhyanga), Kizhi and Shirodhara.',
+  ctaText: 'Book Ayurveda Consultation',
+  backgroundImage: '/images/ayurveda-therapy-room-jumeirah-1.jpg',
+  backgroundAlt: 'Ayurveda therapy room at RamaCare Polyclinic, Jumeirah 1, Dubai',
+  stats: [
+    { number: '4.8★', label: 'Google rating ' },   
+    { number: '1,000+', label: 'Ayurveda patients in 2 years' },
+    { number: '11+ yrs', label: 'Dr. Shamna, BAMS' },
+    { number: '10am–10pm', label: 'Open every day' }
+  ],
+  features: [
+    'BAMS doctor assesses every patient',
+    'Kerala-trained, DHA-licensed therapists',
+    'Male therapist for men, female therapist for women',
+    'English, Malayalam and Hindi spoken'
+  ],
+  whatsappText: 'WhatsApp 056 659 7878',
+  location: 'Al Dhiyafah Road, Jumeirah 1, Dubai',
+  timing: 'Walk-ins welcome'
+},
+   whyChooseUs: {
+  badge: 'Integrated care',
+  title: 'Ayurveda Inside a DHA-Licensed Polyclinic',
+  description: 'RamaCare\'s Ayurveda department shares a building with our general physician, physiotherapists and dermatologist. If your Ayurveda doctor thinks a medical check or physiotherapy would help, you can see the right colleague here.',
+  cards: [
+    { title: 'Doctor first', description: 'A BAMS doctor assesses you before any therapy is given.' },
+    { title: 'Kerala-trained therapists', description: 'Authentic Kerala Ayurveda therapies, given by DHA-licensed therapists trained in Kerala.' },
+    { title: 'Same-gender care', description: 'Male patients are treated by a male therapist and female patients by a female therapist.' },
+    { title: 'Works with your medicines', description: 'Bring your prescriptions to the consultation. Never stop prescribed medicine on your own.' },
+    { title: 'Several specialties, one building', description: 'Ayurveda, general medicine, physiotherapy and dermatology under one roof.' },
+    { title: 'Written plan and cost', description: 'You receive your plan and its cost in writing before treatment starts.' }
+  ]
+},
 
-    about: {
-      badge: 'About Our Ayurveda Department',
-      title: 'Authentic Ayurveda Treatment in Dubai Within a Modern Polyclinic',
-      description: 'Ayurveda, meaning "science of life," is a 5,000-year-old holistic healing system from India that focuses on balancing the body, mind, and spirit through natural therapies, diet, and lifestyle modifications.',
-      paragraphs: [
-        'Our Ayurveda department at RamaCare Polyclinic brings the power of traditional Indian medicine to the modern healthcare system of Dubai.',
-        'We specialize in Ayurveda treatment in Dubai for:\n• Detoxification\n• Chronic pain relief\n•Stress and anxiety\n• Digestive disorders\n• Hormonal imbalance\n',
-        'Led by DHA-licensed Ayurvedic doctors (BAMS/MD), every treatment is personalized after a detailed consultation and dosha analysis. We follow strict hygiene and safety standards while maintaining authentic Ayurvedic practices—giving you the perfect balance of tradition and modern care.'
-      ],
-      stats: [
-        { number: '12+', label: 'Treatment Types' },
-        { number: '500+', label: ' Happy Patients' },
-        { number: '98%', label: 'Satisfaction Rate' }
-      ],
-      ctaText: 'Book Your Ayurveda Consultation Today',
-      image: '/images/a2.jpg',
-      imageAlt: 'Ayurvedic medicine bottle',
-      overlayCard: {
-        number: '15+',
-        smallText: 'Years Combined Experience',
-        boldText: 'Trusted Ayurvedic Care'
-      }
-    },
+      about: {
+        badge: 'About our Ayurveda department',
+        title: 'Ayurvedic Treatment in Dubai, Led by a BAMS Ayurvedic Doctor',
+        description: 'RamaCare Polyclinic is a DHA-licensed polyclinic (licence 2036418) at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. Its Ayurveda department is led by Dr. Shamna Keloth Meethal (BAMS, 11+ years) with two Kerala-trained, DHA-licensed therapists: a male therapist for men and a female therapist for women. It offers Ayurvedic consultation, Panchakarma, Abhyanga, Kizhi and Shirodhara, open daily 10am–10pm.',
+        paragraphs: [
+          'Every patient first sees our Ayurveda doctor, who assesses your constitution (Prakriti) and writes a personal plan covering diet, daily routine, any herbal medicines and the therapies that suit you.',
+          'Because we are a polyclinic, our Ayurvedic doctor works alongside our general physician, physiotherapists and dermatologist in the same building.',
+          'If you are looking for an Ayurvedic hospital in Dubai, our outpatient Ayurveda department offers doctor-supervised Ayurvedic therapies, including Panchakarma, without a hospital stay.'
+        ],
+        stats: [
+          { number: '1', label: 'BAMS Ayurveda doctor' },
+          { number: '2', label: 'Kerala-trained therapists' },
+          { number: '3', label: 'Languages: EN, ML, HI' }
+        ],
+        ctaText: 'Book Ayurveda Consultation',
+        image: '/images/ayurveda-consultation-dubai.jpg',
+        imageAlt: 'Ayurvedic consultation with Dr. Shamna Keloth Meethal at RamaCare Polyclinic, Jumeirah 1',
+        overlayCard: { number: '42+', smallText: 'Years combined experience', boldText: 'Doctor-led Ayurveda' }
+      },
     treatments: {
-      heading: 'Personalized Ayurveda Treatment in Dubai for Every Health Need',
-      subtitle: 'Explore our specialized therapies designed to restore balance and promote long-term wellness.',
+      heading: 'Ayurvedic Treatment in Dubai: Therapies at RamaCare, Jumeirah 1',
+      subtitle: 'Every therapy is prescribed after your consultation and given by a Kerala-trained therapist of your gender.',
       treatments: [
-        {
-          id: 1,
-          title: 'Panchakarma Treatment in Dubai',
-          slug: 'panchakarma-treatment',
-          fullSlug: '/services/panchakarma-treatment-dubai/',
-          icon: 'Sparkles',
-          subtitle: 'Deep detox therapy that removes toxins and restores internal balance.',
-          duration: '7–21 Days',
-          badgeColor: 'violet',
-          benefits: [
-            ' Eliminates toxins from the body',
-            'Improves digestion and immunity',
-            ' Enhances mental clarity',
-          ],
-          idealFor: 'Detox, stress, lifestyle disorders',
-          image: '/images/panchakarma.jpg',
-          alt: 'Panchakarma treatment using traditional Ayurvedic therapies to detoxify the body and restore balance.'
-        },
-        {
-          id: 2,
-          title: 'Analysis of Individual Constitution',
-          slug: 'analysis-of-individual-constitution',
-          fullSlug: '/services/analysis-of-individual-dubai/',
-          icon: 'Sparkles',
-          subtitle: 'Understand your body type and receive a personalized treatment plan.',
-          duration: '7–21 Days',
-          badgeColor: 'cyan',
-          benefits: [
-            'Detailed dosha analysis to determine body constitution',
-            'Tailored treatment and diet recommendations',
-            'Maximizes the effectiveness of all Ayurveda Treatments',
-          ],
-          idealFor: 'Anyone new to Ayurveda,Individuals seeking customized wellness plans',
-          image: '/images/analysis.jpg',
-          alt: 'Individual health analysis conducted by a specialist to understand patient needs and plan personalized treatment.'
-        },
-        {
-          id: 3,
-          title: 'Ayurvedic Hairfall Treatment',
-          slug: 'ayurvedic-hairfall-treatment',
-          fullSlug: '/services/ayurvedic-hairfall-treatment-dubai/',
-          icon: 'Sparkles',
-          subtitle: 'Natural solutions to control hair fall and improve scalp health.',
-          duration: '7–21 Days',
-          badgeColor: 'teal',
-          benefits: [
-            'Strengthens hair follicles naturally',
-            'Reduces hairfall and premature graying',
-            'Nourishes the scalp with herbal therapies',
-            'Patients with hair thinning or hair loss',
-          ],
-          idealFor: 'Patients experiencing hair thinning or hair loss',
-          image: '/images/hairfall1.jpg',
-          alt: 'Ayurvedic hair fall treatment focused on natural therapies to strengthen hair roots and reduce hair loss.'
-        },
-        {
-          id: 4,
-          title: 'Skin Diseases Treatment',
-          slug: 'skin-diseases-treatment',
-          fullSlug: '/services/skin-diseases-treatment-dubai/',
-          icon: 'Sparkles',
-          subtitle: 'Holistic care for acne, pigmentation, and chronic skin conditions.',
-          duration: '7–21 Days',
-          badgeColor: 'pink',
-          benefits: [
-            'Treats eczema, acne, pigmentation, and other skin conditions',
-            'Improves skin texture and radiance naturally',
-            'Uses herbal medicines and detox therapies',
-          ],
-          idealFor: 'Individuals with chronic or recurring skin issues',
-          image: '/images/skin1.jpg',
-          alt: 'Skin disease treatment in Ayurveda utilizes natural therapies to support healing and promote long-term skin health.'
-        },
-      ],
-      consultationCTA: {
-        heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Get expert guidance from our specialists.👉 Book a FREE Consultation today and receive a personalized Ayurveda treatment plan in Dubai.',
-        buttonText: 'Get Free Consultation',
-        backgroundColor: 'bg-[#1E5A3C]',
-        buttonColor: 'bg-[#C9A547]'
-      }
-    },
+        { id: 1, title: 'Panchakarma Treatment', slug: 'panchakarma-treatment', fullSlug: '/services/panchakarma-treatment-dubai/', icon: 'Sparkles',
+          subtitle: "Ayurveda's classical cleansing programme, planned after your assessment.", duration: '7–21 days', badgeColor: 'violet',
+          benefits: ['Preparatory oil therapies, then cleansing procedures', 'Length set by the doctor', 'Not suitable for everyone; assessed first'],
+          idealFor: 'Adults cleared by the doctor for a cleansing programme', image: '/images/panchakarma.jpg', alt: 'Panchakarma therapy at RamaCare Polyclinic, Jumeirah 1' },
+        { 
+      id: 2, 
+      title: 'Therapeutic Kerala Massage (Abhyanga)', 
+      slug: 'abhyanga-massage', 
+      fullSlug: '/services/abhyanga-massage-dubai/', 
+      icon: 'Sparkles',
+      subtitle: 'A therapeutic massage with medicated oils chosen after your consultation.', 
+      duration: 'Per session', 
+      badgeColor: 'teal',
+      benefits: ['Traditionally used for muscle stiffness and tension', 'Same-gender, Kerala-trained therapist', 'Oils selected by the doctor'],
+      idealFor: 'Back and neck tension, stiffness, stress', 
+      image: '/images/abhyanga.jpg', 
+      alt: 'Therapeutic Kerala Ayurvedic massage (Abhyanga) in Jumeirah 1' 
+       },
+      
+    { id: 3, title: 'Kizhi (Potli) Therapy', slug: 'kizhi-therapy', fullSlug: '/services/kizhi-therapy-dubai/', icon: 'Sparkles',   // show only after the Kizhi page is live
+      subtitle: 'Warm herbal boluses pressed over stiff muscles and joints, including Njavarakizhi.', duration: 'Per session', badgeColor: 'amber',
+      benefits: ['Podikizhi, Elakizhi and Njavarakizhi', 'Traditionally used for muscle and joint stiffness', 'Given after the doctor\'s assessment'],
+      idealFor: 'Joint and muscle stiffness', image: '/images/kizhi.jpg', alt: 'Kizhi herbal bolus therapy at RamaCare Polyclinic, Dubai' },
+    { id: 4, title: 'Shirodhara', slug: 'shirodhara-therapy', fullSlug: '/services/shirodhara-therapy-in-dubai/', icon: 'Sparkles',
+      subtitle: 'A slow stream of warm medicated oil over the forehead.', duration: 'Per session', badgeColor: 'cyan',
+      benefits: ['Traditionally used for stress and sleep', 'Calm, private therapy room', 'Often part of a wider plan'],
+      idealFor: 'Stress and poor sleep', image: '/images/shirodhara.jpg', alt: 'Shirodhara therapy at RamaCare Polyclinic, Jumeirah 1' },
+    { id: 5, title: 'Nasya (Nasyam) Therapy', slug: 'nasya-therapy', fullSlug: '/services/nasya-therapy-dubai/', icon: 'Sparkles',
+      subtitle: 'Medicated nasal therapy, given within a supervised plan.', duration: 'Per session', badgeColor: 'teal',
+      benefits: ['Classical Ayurvedic procedure', 'Prescribed after consultation', 'Often combined with oil therapies'],
+      idealFor: 'Patients the doctor clears for Nasya', image: '/images/nasya.jpg', alt: 'Nasya therapy in Dubai' },
+    { id: 6, title: 'Basti Therapy', slug: 'basti-therapy', fullSlug: '/services/basti-therapy-dubai/', icon: 'Sparkles',
+      subtitle: 'Medicated enema therapy, one of the classical Panchakarma procedures.', duration: 'As prescribed', badgeColor: 'violet',
+      benefits: ['Part of a supervised plan', 'Prepared and given by trained staff', 'Assessed by the doctor first'],
+      idealFor: 'Patients the doctor clears for Basti', image: '/images/basti.jpg', alt: 'Basti therapy in Dubai' },
+    { id: 7, title: 'Prakriti (Body Constitution) Assessment', slug: 'prakriti-dosha-assessment',fullSlug: '/services/prakriti-dosha-assessment-dubai/', icon: 'Sparkles',
+      subtitle: 'Find out your dosha and get a personal Ayurveda plan.', duration: '45–60 min consultation', badgeColor: 'cyan',
+      benefits: ['Detailed Prakriti and dosha assessment', 'Diet and daily-routine guidance', 'Basis for every therapy we recommend'],
+      idealFor: 'Anyone new to Ayurveda', image: '/images/analysis.jpg', alt: 'Ayurvedic Prakriti assessment with a BAMS doctor in Dubai' },
+    { id: 8, title: 'Ayurvedic Hair Fall Care', slug: 'ayurvedic-hairfall-treatment', fullSlug: '/services/ayurvedic-hairfall-treatment-dubai/', icon: 'Sparkles',
+      subtitle: 'Herbal scalp therapies and diet guidance for hair fall.', duration: 'After consultation', badgeColor: 'teal',
+      benefits: ['Scalp oil therapies', 'Diet and routine guidance', 'May support scalp health'],
+      idealFor: 'Hair thinning and hair fall', image: '/images/hairfall1.jpg', alt: 'Ayurvedic hair fall care in Dubai' },
+    { id: 9, title: 'Ayurvedic Skin Care', slug: 'skin-diseases-treatment', fullSlug: '/services/skin-diseases-treatment-dubai/', icon: 'Sparkles',
+      subtitle: 'Complementary Ayurvedic care for recurring skin concerns.', duration: 'After consultation', badgeColor: 'pink',
+      benefits: ['Herbal medicines and external applications', 'Diet guidance', 'Alongside your dermatologist if needed'],
+      idealFor: 'Eczema, acne and recurring skin concerns', image: '/images/skin1.jpg', alt: 'Ayurvedic skin care in Dubai' }
+  ],
+  consultationCTA: {
+    heading: 'Not sure which therapy is right for you?',
+    subtext: 'Start with a consultation with Dr. Shamna. She will assess you and recommend the therapies that suit you.',
+    buttonText: 'Book Ayurveda Consultation',
+    backgroundColor: 'bg-[#1E5A3C]',
+    buttonColor: 'bg-[#C9A547]'
+  }
+},
 
-    experts: {
-      badge: 'Expert Medical Team',
-
-      title: 'Meet Our DHA-Licensed Ayurveda Experts in Dubai',
-      description: 'Our experienced team specializes in delivering safe, effective, and authentic Ayurveda treatment in Dubai.',
+      experts: {
+      badge: 'Your Ayurveda team',
+      title: 'Your Ayurvedic Doctor and Therapists in Jumeirah 1',
+      description: 'Every patient first sees Dr. Shamna Keloth Meethal (BAMS), our DHA-licensed Ayurvedic doctor in Dubai. Therapies are then given by a Kerala-trained therapist of your own gender: Syamkumar Sasidharan for men and Mariya Thayyil Muhammed for women. All three speak English, Malayalam and Hindi.',
       stats: [
-        { value: '2', label: 'Expert Practitioners' },
-        { value: '15+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Successful Treatments' },
-        { value: '4.8', label: 'Average Rating' }
+        { value: '1', label: 'BAMS doctor' },
+        { value: '2', label: 'Kerala-trained therapists' },
+        { value: '42+', label: 'Years combined experience' },
+        { value: '4.8', label: 'Google rating' }
       ],
       ctaSection: {
-        title: 'Ready to Meet Your Ayurvedic Physician?',
-        description: 'Schedule a personalized consultation with our DHA-licensed Ayurvedic physicians to establish your custom treatment plan.',
-        primaryButton: 'Book Consultation Now',
+        title: 'Book a consultation with Dr. Shamna',
+        description: 'Your first consultation takes 45–60 minutes and includes a Prakriti assessment and a written plan.',
+        primaryButton: 'Book Ayurveda Consultation',
         secondaryButton: 'View Our Team'
       },
       doctors: DOCTOR_GROUPS.AYURVEDA
     },
+
     whyDubai: {
       badge: 'Ayurveda in Dubai',
       title: 'Why Ayurveda Treatment is Essential for the Dubai Lifestyle?',
-      description: 'Living in Dubai presents specific health demands—intense summer climate, constant indoor air conditioning, and long desk hours. At our Jumeirah 1 clinic, our DHA-licensed Ayurvedic physicians focus on identifying your unique body constitution (Dosha) to restore natural digestion, ease chronic tension, and support long-term metabolic health.',
+      description: 'Living in Dubai brings intense summer heat, constant air conditioning and long desk hours. At our Jumeirah 1 clinic, our Ayurveda doctor assesses your constitution (Prakriti) and plans care that fits this lifestyle.',
       benefits: [
         {
           icon: 'Droplets',
@@ -217,11 +169,6 @@ export const categoryContent = {
           title: 'Improve Digestion',
           description: 'Strengthens Agni (digestive fire) disrupted by irregular eating and sedentary habits, Improves metabolism, nutrient absorption, and gut function'
         },
-        {
-          icon: 'Sparkles',
-          title: ' Enhance Productivity',
-          description: 'Integrates mindfulness and relaxation practices with Ayurveda Treatment, Enhances productivity, reduces stress, and improves sleep quality'
-        },
       ],
       image: '/images/a3.jpg',
       imageAlt: 'Ayurvedic treatment in Dubai',
@@ -230,230 +177,160 @@ export const categoryContent = {
         description: 'Evening and weekend schedules are available to fit the busy lifestyle of Dubai residents, making authentic Ayurveda Treatment accessible and convenient.'
       },
       bottomSection: {
-        title: 'Premium Ayurveda Clinic In Dubai',
-        description: 'As a leading Ayurveda Treatment clinic in Dubai, RamaCare Polyclinic specializes in Panchakarma detox, chronic pain management, stress relief, and holistic wellness. Our DHA-licensed Ayurvedic practitioners combine centuries-old Ayurvedic wisdom with modern healthcare standards to deliver natural, effective solutions for today’s health challenges. \n\n Whether you are looking for a personalized Ayurvedic consultation, a comprehensive detox program, or specialized women’s wellness care, our Jumeirah 1 clinic offers the perfect fusion of traditional therapies and premium medical excellence. Experience authentic Ayurveda Treatments in a comfortable, safe, and modern setting designed for long-term health and rejuvenation.'
+        title: 'Evening appointments in Jumeirah 1',
+        description: 'We are open every day from 10am to 10pm, so you can book Ayurvedic therapy after work. Walk-ins are accepted; booking ahead secures your therapist.'
       }
-    },
-    programs: {
-      badge: 'Signature Programs',
-      heading: 'Complete Ayurveda Healing Programs in Dubai',
-      subtitle: 'Immersive Ayurveda Treatment programs are designed for transformative health results and lasting wellness.',
-      disclaimer: 'All programs are customized based on your condition and health goals.',
-      programs: [
-        {
-          id: 1,
-          title: 'Deep Panchakarma Detox',
-          duration: '7–14 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-emerald-50',
-          durationColor: 'bg-emerald-100',
-          durationTextColor: 'text-emerald-700',
-          icon: 'sparkle',
-          benefits: [
-            'Full body detox at the cellular level',
-            'Boosts immunity & energy',
-            'Improves skin & vitality'
-          ]
-        },
-        {
-          id: 2,
-          title: 'Chronic Pain Relief Program',
-          duration: '10–21 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-rose-50',
-          durationColor: 'bg-rose-100',
-          durationTextColor: 'text-rose-700',
-          icon: 'heart',
-          benefits: [
-            'Treats arthritis, back pain & joint issues',
-            'Reduces inflammation naturally',
-            'Improves mobility'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Stress & Sleep Therapy',
-          duration: '7–14 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-indigo-50',
-          durationColor: 'bg-indigo-100',
-          durationTextColor: 'text-indigo-700',
-          icon: 'moon',
-          benefits: [
-            'Calms the nervous system',
-            'Reduces anxiety & insomnia',
-            'Improves mental clarity'
-          ]
-        },
-        {
-          id: 4,
-          title: "Women’s Wellness Program",
-          duration: '14–28 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-fuchsia-50',
-          durationColor: 'bg-fuchsia-100',
-          durationTextColor: 'text-fuchsia-700',
-          icon: 'user',
-          benefits: [
-            'Supports PCOS & hormonal balance',
-            'Improves reproductive health',
-            'Natural healing approach'
-          ]
-        },
-        {
-          id: 5,
-          title: 'Digestive & Weight Balance',
-          duration: '14–21 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-amber-50',
-          durationColor: 'bg-amber-100',
-          durationTextColor: 'text-amber-700',
-          icon: 'scale',
-          benefits: [
-            'Improves gut health',
-            'Supports weight management',
-            'Boosts metabolism'
-          ]
-        },
-        {
-          id: 6,
-          title: 'Full Rejuvenation Therapy',
-          duration: '21–28 Days',
-          backgroundColor: 'bg-white',
-          topSectionColor: 'bg-violet-50',
-          durationColor: 'bg-violet-100',
-          durationTextColor: 'text-violet-700',
-          icon: 'users',
-          benefits: [
-            'Anti-aging benefits',
-            'Full body restoration',
-            'Long-term wellness'
-          ]
-        }
-      ]
-    },
-    successStories: {
-      badge: 'Patient Success Stories',
-      title: 'Real Results from Ayurveda Treatment in Dubai',
-      subtitle: 'Hear directly from our patients about their transformative Ayurvedic healing journeys in Dubai.',
+ },
+   programs: {
+  badge: 'Ayurveda programmes',
+  heading: 'Ayurveda Programmes in Dubai',
+  subtitle: 'Each programme is planned by Dr. Shamna after your consultation. Length and therapies depend on your assessment.',
+  disclaimer: 'Ayurveda is offered as complementary care. Results vary from person to person.',
+  programs: [
+    // DELETE the old id 1 "Deep Panchakarma Detox" card completely.
+    { id: 2, title: 'Pain and Stiffness Programme', duration: 'After consultation', /* keep existing colour fields */ icon: 'heart',
+      benefits: ['Kizhi, Abhyanga and Basti as prescribed', 'Traditionally used for back and joint stiffness', 'Can run alongside physiotherapy'] },
+    { id: 3, title: 'Stress and Sleep Programme', duration: 'After consultation', icon: 'moon',
+      benefits: ['Shirodhara and Abhyanga', 'Daily-routine guidance', 'May support better rest'] },
+    { id: 4, title: "Women's Wellness Programme", duration: 'After consultation', icon: 'user',
+      benefits: ['Female therapist for all therapies', 'Diet and routine guidance', 'Complements care from your gynaecologist'] },
+    { id: 5, title: 'Digestive and Weight Balance Programme', duration: 'After consultation', icon: 'scale',
+      benefits: ['Diet plan by Dr. Shamna', 'Udwarthanam herbal powder massage', 'May support digestion and weight management'] },
+    { id: 6, title: 'Rejuvenation Programme', duration: 'After consultation', icon: 'users',
+      benefits: ['Oil therapies and Rasayana guidance', 'Planned around your constitution', 'Suitable after the doctor\'s assessment'] }
+  ]
+},
+
+        successStories: {
+      badge: 'Patient experiences',
+      title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic. Individual results vary.',
       stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '94%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 94
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: '15+ Years Combined Clinical Experience',
-          target: 2500
-        }
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
       ],
       ctaSection: {
-        title: 'Ready to write your success story?',
-        description: 'Join thousands of satisfied patients who have transformed their health with authentic Ayurvedic treatments in Dubai.',
-        buttonText: 'Start your journey today'
-      },
+        title: 'Read our Google reviews',
+        description: 'See what patients say about RamaCare Polyclinic on Google.',
+        buttonText: 'Open Google reviews'   // link to https://maps.google.com/maps?cid=4290863257518002596
+      }
     },
-    faq: {
-      title: 'Frequently Asked Questions – Ayurveda in Dubai',
-      description: 'Everything you need to know about our authentic Ayurvedic treatments and services in Dubai.',
+    
+
+      faq: {
+      title: 'Ayurveda in Dubai: Frequently Asked Questions',
+      description: 'Clear answers about Ayurvedic treatment at RamaCare Polyclinic, Jumeirah 1.',
       faqs: [
-        {
-          id: 1,
-          question: 'What is Ayurveda Treatment and how does it work?',
-          answer: 'Ayurveda Treatment is a holistic healing system that restores balance to body, mind, and spirit through detox, dosha analysis, herbal therapies, diet, and lifestyle guidance for long-term wellness.'
-        },
-        {
-          id: 2,
-          question: 'Are Ayurveda Treatments safe for everyone?',
-          answer: 'Yes, Ayurveda Treatments are natural and safe when administered by DHA-licensed practitioners. Treatments are customized according to individual constitution, health conditions, and lifestyle for effective, risk-free healing.'
-        },
-        {
-          id: 3,
-          question: 'How long does an Ayurveda Treatment program take?',
-          answer: 'The duration of an Ayurveda Treatment varies depending on the therapy and health goals. Programs range from 7 to 28 days, with personalized schedules for detox, pain relief, or rejuvenation.'
-        },
-        {
-          id: 4,
-          question: 'Can Ayurveda Treatment help with chronic pain?',
-          answer: 'Yes, specialized Ayurveda Treatments using Panchakarma, herbal oils, and joint therapies provide long-term relief from arthritis, back pain, and joint discomfort, enhancing mobility and overall quality of life.'
-        },
-        {
-          id: 5,
-          question: 'Is Ayurveda Treatment effective for stress and sleep issues?',
-          answer: 'Absolutely. Ayurveda Treatments like Shirodhara, herbal therapies, and lifestyle guidance reduce anxiety, calm the nervous system, and improve sleep quality, promoting mental clarity and emotional balance naturally.'
-        },
-        {
-          id: 6,
-          question: 'Can Ayurveda help with digestive health problems?',
-          answer: 'Yes, Ayurveda Treatments strengthen Agni (digestive fire), improve gut function, reduce bloating, acidity, and IBS symptoms, and promote natural metabolism through personalized diet, herbal therapies, and lifestyle adjustments.'
-        },
-        {
-          id: 7,
-          question: 'Are Ayurveda Treatments suitable for women’s health issues?',
-          answer: 'Yes, specialized Ayurveda Treatments support hormonal balance, PCOS management, menstrual cycle regulation, fertility, and menopause care, using natural therapies and personalized diet plans to restore women’s wellness effectively.'
-        },
-        {
-          id: 8,
-          question: 'How is Panchakarma Detox performed in Ayurveda Treatment?',
-          answer: 'Panchakarma Detox in Ayurveda Treatment involves a series of therapies including herbal massages, oil treatments, and detoxification techniques, designed to eliminate toxins, rejuvenate the body, and restore vitality naturally.'
-        },
-        {
-          id: 9,
-          question: 'Can Ayurveda Treatment help with hair and skin problems?',
-          answer: 'Yes, Ayurveda Treatments target hairfall, scalp health, acne, pigmentation, and other skin conditions using herbal oils, therapies, and dietary guidance, promoting healthy hair and radiant skin naturally.'
-        },
-        {
-          id: 10,
-          question: 'How personalized is the Ayurveda Treatment at your clinic?',
-          answer: 'Every Ayurveda Treatment is fully personalized based on dosha analysis, lifestyle, and health goals, ensuring each therapy, diet, and detox program is tailored for optimal results and long-term wellness.'
-        },
-        {
-          id: 11,
-          question: 'Can I combine Ayurveda Treatment with modern medicine?',
-          answer: 'Yes, Ayurveda Treatments can safely complement modern medicine. Our DHA-licensed practitioners provide guidance to integrate therapies, herbal remedies, and lifestyle changes without interfering with ongoing medical treatments.'
-        },
-        {
-          id: 12,
-          question: 'How soon can I see results from Ayurveda Treatment?',
-          answer: 'Results vary depending on the therapy and individual health conditions. Many patients notice improved digestion, energy, and stress relief within the first week, with long-term benefits over the full program.'
-        },
-        {
-          id: 13,
-          question: ' What makes your Ayurveda Treatment in Dubai different?',
-          answer: 'Our clinic offers authentic Ayurveda Treatments delivered by DHA-licensed experts, combining classical Panchakarma protocols, herbal therapies, and modern hygiene standards, personalized for each patient in a premium Dubai facility.'
-        },
-        {
-          id: 14,
-          question: 'Are Ayurveda Treatments covered by insurance in Dubai?',
-          answer: 'Coverage depends on your insurance provider. While some plans include wellness therapies, most Ayurveda Treatments are considered complementary care. Our clinic can provide invoices and documentation for insurance purposes.'
-        },
-        {
-          id: 15,
-          question: 'How do I book a consultation for Ayurveda Treatment?',
-          answer: 'Booking a consultation is easy. Contact us via WhatsApp or online form, schedule a personalized appointment, and receive expert guidance for choosing the most suitable Ayurveda Treatment for your health goals.'
-        }
+        { id: 1, question: "Is Ayurveda legal and regulated in Dubai?", answer: "Yes. Ayurveda is a licensed traditional and complementary medicine in Dubai, regulated by the Dubai Health Authority (DHA). At RamaCare Polyclinic (DHA licence 2036418) in Jumeirah 1, every patient is assessed by a DHA-licensed BAMS doctor, and therapies are given by DHA-licensed therapists." },
+        { id: 2, question: "Who will I see in the Ayurveda department?", answer: "Your consultation is with Dr. Shamna Keloth Meethal, a DHA-licensed Ayurveda doctor with a BAMS degree and 11+ years of experience. Therapies are given by Kerala-trained therapists: Syamkumar Sasidharan (17+ years) for men and Mariya Thayyil Muhammed (14+ years in the UAE) for women." },
+        { id: 3, question: "Do you have male and female therapists?", answer: "Yes. Male patients are treated by a male therapist and female patients by a female therapist, for every Ayurvedic massage and therapy." },
+        { id: 4, question: "Which languages does the Ayurveda team speak?", answer: "Dr. Shamna, Syamkumar and Mariya all speak English, Malayalam and Hindi. Other clinic staff also speak Arabic and Tagalog." },
+        { id: 5, question: "What happens at the first Ayurveda consultation?", answer: "Dr. Shamna reviews your health history, current medicines and lifestyle, then assesses your constitution (Prakriti) and current imbalance. You leave with a written plan covering diet, routine, any herbal medicines, and whether therapies such as Abhyanga, Kizhi or Panchakarma suit you." },
+        { id: 6, question: "Which Ayurvedic therapies do you offer in Jumeirah 1?", answer: "Ayurvedic consultation, Panchakarma, Abhyanga (therapeutic Kerala massage), Kizhi, Njavarakizhi, Pizhichil, Udwarthanam, Shirodhara, Nasya, Basti and herbal steam. Therapies are prescribed after the doctor's assessment." },
+        { id: 7, question: "How much does an Ayurveda consultation cost?", answer: "At RamaCare, a 45–60 minute first consultation with Dr. Shamna costs AED 200 and includes a Prakriti assessment and a written plan. Therapy cost depends on the number of sessions, medicines and programme length, and is confirmed in writing before treatment starts." },
+        { id: 8, question: "Does health insurance cover Ayurveda in Dubai?", answer: "It depends on your policy; many plans treat Ayurveda as complementary care. RamaCare works on a reimbursement basis and provides itemised invoices and reports for you to submit to your insurer." },
+        { id: 9, question: "Can I take Ayurvedic and allopathic medicine together?", answer: "Often yes, but only under supervision. Never stop prescribed medicine on your own. Bring all your medicines to the consultation; as a polyclinic, RamaCare can coordinate between the Ayurveda doctor and our general physician when needed." },
+        { id: 10, question: "Does Ayurvedic treatment have side effects?", answer: "Like any treatment, Ayurvedic medicines and therapies can cause reactions in some people, which is why a doctor's assessment comes first. Tell the doctor about allergies, pregnancy and existing conditions, and your plan is adjusted accordingly." },
+        { id: 11, question: "What is Panchakarma and how long does it take?", answer: "Panchakarma is Ayurveda's classical cleansing programme: preparatory oil therapies followed by one or more cleansing procedures. At RamaCare it usually runs 7–21 days, depending on your assessment. It is not suitable for everyone; the doctor decides first." },
+        { id: 12, question: "Is Ayurvedic massage the same as a spa massage?", answer: "No. At RamaCare, Kerala Ayurvedic massage is a therapeutic massage given in a DHA-licensed clinic, given after a doctor's consultation with medicated oils chosen for you. It is typically used for muscle stiffness, back and neck tension or stress, as part of a care plan." },
+        { id: 13, question: "How do I know my Ayurvedic body type (dosha)?", answer: "Your Prakriti is assessed at the first consultation through questions about your body, digestion, sleep and temperament, together with an examination. Online quizzes give a rough idea, but the doctor's assessment is what guides your treatment." },
+        { id: 14, question: "What is the difference between Ayurveda and homeopathy?", answer: "Ayurveda is a traditional Indian system that uses diet, routine, herbal medicines and body therapies such as oil treatments. Homeopathy is a separate system based on highly diluted remedies. RamaCare offers Ayurveda, not homeopathy." },
+        { id: 15, question: "Who should check with a doctor before Ayurvedic therapy?", answer: "Tell the doctor if you are pregnant or breastfeeding, have a fever, a heart condition, uncontrolled blood pressure or diabetes, or are recovering from surgery. Some therapies are adapted or postponed in these cases." },
+        { id: 16, question: "Where are you, and is there parking?", answer: "RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, close to Satwa, Al Wasl, City Walk and Karama. Free and paid parking is available nearby." },
+        { id: 17, question: "What are your hours, and do you accept walk-ins?", answer: "We are open every day from 10am to 10pm. Walk-ins are accepted, but booking ahead secures a therapy room and your therapist." },
+        { id: 18, question: "How do I book an Ayurveda consultation?", answer: "Call or WhatsApp 056 659 7878, call 04 286 2006, or book online at ramacarepolyclinic.ae/book-appointment." }
       ]
     },
+
+          atAGlance: {
+        id: 'at-a-glance',
+        heading: 'Ayurveda at RamaCare: At a Glance',
+        table: [
+          ['Licence', 'DHA facility licence 2036418'],
+          ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, 11+ years'],
+          ['Therapists', 'Syamkumar Sasidharan (male patients, 17+ years) and Mariya Thayyil Muhammed (female patients, 14+ years in the UAE), both Kerala-trained'],
+          ['Languages', 'English, Malayalam, Hindi (clinic staff also speak Arabic and Tagalog)'],
+          ['Therapies', 'Consultation and Prakriti assessment, Panchakarma, Abhyanga, Kizhi, Njavarakizhi, Pizhichil, Udwarthanam, Shirodhara, Nasya (Nasyam), Basti, herbal steam'],
+          ['Consultation fee', 'AED 200, 45–60 minutes with Dr. Shamna'],
+          ['Hours', 'Every day, 10am–10pm; walk-ins accepted'],
+          ['Insurance', 'Reimbursement basis; itemised invoices provided'],
+          ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai; free and paid parking nearby'],
+          ['Contact', '056 659 7878 (call and WhatsApp) · 04 286 2006']
+        ]
+      },
+
+      conditions: {
+        id: 'conditions',
+        heading: 'Conditions Our Ayurveda Team Commonly Sees',
+        intro: 'Ayurveda is offered as complementary care alongside your regular medical treatment. Results vary from person to person.',
+        items: [
+          { text: 'Back, neck and joint stiffness', href: '/services/back-pain-treatment-dubai/' },
+          { text: 'Stress and poor sleep', href: '/services/stress-treatment-dubai/' },
+          { text: 'Acidity, bloating and IBS', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
+          { text: 'PCOS and hormonal balance', href: '/services/pcos-treatment-dubai/' },
+          { text: 'Skin concerns such as eczema and acne', href: '/services/skin-diseases-treatment-dubai/' },
+          { text: 'Hair fall and dandruff', href: '/services/ayurvedic-hairfall-treatment-dubai/' },
+          { text: 'Weight management', href: '/services/ayurvedic-diet-weight-loss-dubai/' }
+        ]
+      },
+
+      firstVisit: {
+        id: 'first-visit',
+        heading: 'What Happens at Your First Ayurveda Visit',
+        ordered: true,
+        items: [
+          { text: 'History: Dr. Shamna reviews your health history, current medicines, sleep, digestion and daily routine.' },
+          { text: 'Prakriti assessment: she assesses your constitution and current imbalance (your dosha).' },
+          { text: 'Written plan: diet and routine guidance, any herbal medicines, and which therapies suit you, with cost.' },
+          { text: 'Therapies: booked with a Kerala-trained therapist of your gender.' },
+          { text: 'Follow-up: the doctor reviews your progress and adjusts the plan.' }
+        ],
+        note: 'A first consultation takes 45–60 minutes. Bring your medicines and any recent test reports.'
+      },
+
+      cost: {
+        id: 'cost',
+        heading: 'What Does Ayurvedic Treatment Cost in Dubai?',
+        intro: 'The Ayurveda consultation fee at RamaCare is AED 200 for a 45–60 minute first consultation with Dr. Shamna, including your Prakriti assessment and a written plan.',
+        itemsTitle: 'What your therapy costs depends on:',
+        items: [
+          { text: 'which therapies the doctor recommends' },
+          { text: 'how many sessions you need' },
+          { text: 'whether herbal medicines are prescribed' },
+          { text: 'for Panchakarma, the length of the programme' }
+        ],
+        note: 'We confirm the full cost in writing before any therapy starts. Insurance is on a reimbursement basis: you pay at the clinic, and we provide itemised invoices and reports for your claim.'
+      },
+
+      chooseClinic: {
+        id: 'choose-clinic',
+        heading: 'How to Choose an Ayurvedic Centre or Clinic in Dubai',
+        intro: 'Dubai has many Ayurvedic centres and clinics. Before you book, check these points:',
+        items: [
+          { text: 'Check the licence. The clinic should hold a DHA facility licence and the doctor a DHA professional licence; you can check both on the DHA Sheryan directory.' },
+          { text: 'A doctor should see you first. A BAMS-qualified doctor should assess you before any therapy.' },
+          { text: 'Ask about therapists: who will treat you, their training, and whether a same-gender therapist is available.' },
+          { text: 'Ask how they work with your doctor. Ayurveda should fit around your existing medical care, not replace it.' },
+          { text: 'Get the plan and cost in writing before you start.' },
+          { text: 'Consider access: opening hours, parking and travel time for repeat sessions.' }
+        ],
+        note: 'At RamaCare each of these is in place: DHA licence 2036418, a BAMS doctor, Kerala-trained same-gender therapists, a polyclinic setting, written plans, and opening hours of 10am–10pm daily in Jumeirah 1.'
+      },
+
+      gettingHere: {
+        id: 'getting-here',
+        heading: 'Getting to Our Ayurveda Clinic in Jumeirah 1',
+        intro: 'RamaCare Polyclinic is on Al Dhiyafah Road in Jumeirah 1, in the Jumeirah Terrace Building, ground floor. Free and paid parking is available nearby.',
+        items: [
+          { text: 'From Satwa and Al Wasl: a few minutes by car' },
+          { text: 'From City Walk, La Mer and Jumeirah 2: about 10 minutes' },
+          { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
+          { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes via Sheikh Zayed Road' }
+        ],
+        mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
+      },
     facility: {
       badge: 'Our Ayurveda Facility',
       title: 'Authentic Ayurvedic Healing Centre',
@@ -565,12 +442,6 @@ export const categoryContent = {
       ctaText: 'Book Your Consultation',
       backgroundImage: '/images/aesth.jpg',
       backgroundAlt: 'Aesthetic Dermatology Treatment focused on skin rejuvenation, anti-aging solutions, and personalized care.',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '150+', label: 'Treatments' }
-      ],
       features: [
         'DHA-Licensed Dermatologists',
         'Advanced Laser Technology',
@@ -621,17 +492,12 @@ export const categoryContent = {
         'At RamaCare Polyclinic, our DHA-licensed dermatologists provide comprehensive aesthetic solutions, including advanced laser treatments, skin rejuvenation, hair restoration, PRP therapy, and body contouring services, all tailored to your individual needs.',
         'We use cutting-edge technology and evidence-based treatments to deliver natural-looking, long-lasting results that not only enhance your confidence but also support your overall skin, hair, and body health. Our focus on personalized care and innovative procedures ensures every patient enjoys safe, effective, and satisfying outcomes.'
       ],
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Satisfied Patients' },
-        { number: '98%', label: 'Satisfaction Rate' }
-      ],
       ctaText: 'Meet Our Dermatologists',
       image: '/images/aesthetic.png',
       imageAlt: 'DHA-licensed dermatologist conducting skin consultation and aesthetic treatment at RamaCare Dubai',
       overlayCard: {
-        number: '15+',
-        smallText: 'Years Combined Experience',
+        number: '7',
+        smallText: 'Days a week, 10am–10pm',
         boldText: 'Expert Dermatology Care'
       }
     },
@@ -639,12 +505,6 @@ export const categoryContent = {
       badge: 'Expert Medical Team',
       title: 'Meet Our DHA-Licensed\nDermatologists',
       description: 'Highly qualified dermatologists with extensive experience in aesthetic and medical dermatology, committed to enhancing your natural beauty and skin health.',
-      stats: [
-        { value: '4', label: 'Expert Specialists' },
-        { value: '15+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Satisfied Patients' },
-        { value: '4.8', label: 'Average Rating' }
-      ],
       ctaSection: {
         title: 'Ready to Meet Your Dermatologist?',
         description: 'Schedule a comprehensive skin assessment with our DHA-licensed dermatologists at our Jumeirah 1 clinic.',
@@ -855,8 +715,8 @@ export const categoryContent = {
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Wondering which aesthetic dermatology treatment will best suit your skin, hair, or body goals? Schedule a free consultation with our expert dermatologists and receive personalized recommendations tailored to your unique needs. We assess your concerns carefully and guide you toward safe, effective, and natural-looking results.',
-        buttonText: 'Get Free Consultation',
+        subtext: 'Wondering which aesthetic dermatology treatment will best suit your skin, hair, or body goals? Schedule a consultation with our expert dermatologists and receive personalized recommendations tailored to your unique needs. We assess your concerns carefully and guide you toward safe, effective, and natural-looking results.',
+        buttonText: 'Book a Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
@@ -865,37 +725,6 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their transformative aesthetic dermatology journeys in Dubai.',
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '94%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 94
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'DHA Licensed',
-          target: 2500
-        }
-      ],
       ctaSection: {
         title: 'Ready to transform your skin?',
         description: 'Join hundreds of satisfied patients who have achieved radiant, healthy skin with our advanced aesthetic dermatology treatments in Dubai.',
@@ -1065,14 +894,8 @@ export const categoryContent = {
       titleLine2: ' Smiles',
       subtitle: 'From routine dental care to restorative and cosmetic treatments, RamaCare Polyclinic provides personalised dental care in Jumeirah 1, Dubai. Our dental team focuses on maintaining healthy teeth and gums while addressing concerns such as tooth decay, damaged teeth, missing teeth, and smile aesthetics with treatment plans suited to each patient’s oral health needs.',
       description: 'Achieve a confident, beautiful smile with dental veneers—a modern cosmetic dental solution designed to correct stains, chips, gaps, and uneven teeth. Our expert dentists use advanced techniques and high-quality materials to create natural-looking veneers that enhance your smile while preserving your natural teeth.',
-      ctaText: 'Book Free Consultation',
+      ctaText: 'Book an Appointment',
       backgroundImage: '/images/d1.jpg',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '150+', label: 'Treatments' }
-      ],
       features: [
         'DHA-Licensed Dentists',
         'Advanced Cosmetic Procedures',
@@ -1135,17 +958,12 @@ export const categoryContent = {
         'Led by DHA-licensed dentists with extensive clinical experience, our skilled team offers a full spectrum of services, including preventive dentistry, cosmetic smile enhancement, restorative treatments, orthodontics, and minor oral surgical procedures. Each treatment plan is personalized to meet your dental needs, lifestyle, and long-term oral health goals.',
         'We adhere to strict international sterilization and hygiene protocols, using modern equipment and minimally invasive techniques to ensure precision, comfort, and lasting results. Whether you need routine dental care, smile enhancement, or advanced restorative solutions, our Dental Department provides trusted care with the professionalism and comfort of a premium medical facility.'
       ],
-      stats: [
-        { number: '15+', label: ' Advanced Dental Treatments' },
-        { number: '500+', label: ' Happy Dental Patients' },
-        { number: '99%', label: ' Patient Satisfaction' }
-      ],
       ctaText: 'Meet Our Dentists',
       image: '/images/d4.jpg',
       imageAlt: 'Dental consultation room at RamaCare Polyclinic Jumeirah 1',
       overlayCard: {
-        number: '15+',
-        smallText: 'Years Combined Experience',
+        number: '7',
+        smallText: 'Days a week, 10am–10pm',
         boldText: 'Trusted Dental Care'
       }
     },
@@ -1356,8 +1174,8 @@ export const categoryContent = {
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Choosing the right dental care can be confusing with so many options available. At RamaCare Polyclinic, we help you make the best choice for your oral health. Schedule a free consultation with our expert dentists to get personalized recommendations on Dental Treatment in Dubai.',
-        buttonText: 'Get Free Consultation',
+        subtext: 'Choosing the right dental care can be confusing with so many options available. At RamaCare Polyclinic, we help you make the best choice for your oral health. Schedule a consultation with our expert dentists to get personalized recommendations on Dental Treatment in Dubai.',
+        buttonText: 'Book a Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
@@ -1366,12 +1184,6 @@ export const categoryContent = {
       badge: 'Expert Medical Team',
       title: 'Meet Our DHA-Licensed\nDentists',
       description: 'Highly qualified dentists with extensive experience in cosmetic and restorative dentistry, committed to creating beautiful, healthy smiles.',
-      stats: [
-        { value: '3', label: 'Expert Specialists' },
-        { value: '15+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Veneers Placed' },
-        { value: '4.8', label: 'Average Rating' }
-      ],
       ctaSection: {
         title: 'Ready to Meet Your Dentist?',
         description: 'Schedule a personalized consultation with our expert dentists to begin your smile transformation.',
@@ -1484,37 +1296,6 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their smile transformation journeys in Dubai.',
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '94%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 94
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'DHA Licensed',
-          target: 2500
-        }
-      ],
       ctaSection: {
         title: 'Ready to transform your smile?',
         description: 'Join thousands of satisfied patients who have achieved beautiful, confident smiles with our expert dental care in Dubai.',
@@ -1723,15 +1504,9 @@ export const categoryContent = {
       // title: 'Advanced Physiotherapy– & Rehabilitation in Jumeirah 1',
       subtitle: 'RamaCare Polyclinic provides DHA-licensed physiotherapy in Jumeirah 1, Dubai, offering personalised care for pain relief, injury recovery, posture correction, and rehabilitation. Treatment options include manual therapy, dry needling, electrotherapy, and functional rehabilitation, with care tailored to each patient’s condition, mobility needs, and recovery goals.',
       description: 'Evidence-based Physiotherapy Treatment for pain relief, injury recovery, posture modification, and full functional restoration—created for modern lifestyles in Dubai.',
-      ctaText: 'Book Free Consultation',
+      ctaText: 'Book an Appointment',
       backgroundImage: '/images/phy3.jpg',
       backgroundAlt: 'Physiotherapy consultation at RamaCare Polyclinic in Jumeirah 1 Dubai',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Patients Treated' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '40+', label: 'Physiotherapy Treatments & Services' }
-      ],
       features: [
         'DHA-Licensed Physiotherapists',
         'Personalised Rehabilitation Programs',
@@ -1783,18 +1558,12 @@ export const categoryContent = {
         'Care may be useful for people dealing with back or neck discomfort, shoulder and knee problems, sports injuries, posture-related concerns, reduced mobility or recovery after surgery.',
         'The goal is not simply to treat a painful area. Rehabilitation also considers how the problem affects everyday activities such as sitting, walking, working, exercising or returning to sport.'
       ],
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Patients Treated' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '40+', label: 'Physiotherapy Treatments & Services' }
-      ],
       ctaText: 'Meet Our Physiotherapists',
       image: '/images/ph-top.jpg',
       imageAlt: 'Physiotherapist providing rehabilitation treatment in Dubai',
       overlayCard: {
-        number: '15+',
-        smallText: 'Years Combined Experience',
+         number: '7',
+        smallText: 'Days a week, 10am–10pm',
         boldText: 'Trusted Physiotherapy Care'
       }
     },
@@ -1943,12 +1712,6 @@ export const categoryContent = {
       badge: 'Expert Medical Team',
       title: 'Meet Our Physiotherapy Team',
       description: 'Physiotherapy care at RamaCare is provided by DHA-licensed professionals who work with patients experiencing pain, movement limitations, injuries and rehabilitation needs.',
-      stats: [
-        { value: '15+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Patients Treated' },
-        { value: '98%', label: 'Patient Satisfaction' },
-        { value: '40+', label: 'Physiotherapy Treatments & Services' }
-      ],
       ctaSection: {
         title: 'Ready to Meet Your Physiotherapist?',
         description: 'Schedule a personalized consultation with our expert therapists to begin your recovery journey.',
@@ -2003,37 +1766,7 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Recovery. Real Results.',
       subtitle: 'Patients experience measurable improvement through structured Physiotherapy Treatment.',
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'DHA Licensed',
-          target: 2500
-        }
-      ],
+      
       ctaSection: {
         title: 'Ready to start your recovery?',
         description: 'Join thousands of satisfied patients who have regained mobility and returned to an active lifestyle with our expert physiotherapy in Dubai.',
@@ -2311,7 +2044,7 @@ export const categoryContent = {
         ],
         buttons: [
           {
-            label: 'Book Free Consultation',
+           label: 'Book an Appointment',
             href: '/book-appointment/',
             primary: true
           },
@@ -2337,12 +2070,6 @@ export const categoryContent = {
       ctaText: 'Book Your Consultation',
       backgroundImage: '/images/gp.jpg',
       backgroundAlt: 'General physician consulting a patient in a modern clinic, friendly interaction, clean medical environment, professional healthcare setting, realistic lighting, no text in image',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '150+', label: 'Treatments' }
-      ],
       features: [
         ' DHA-Licensed General Physicians',
         ' Comprehensive Primary Care Solutions',
@@ -2393,17 +2120,12 @@ export const categoryContent = {
         'Led by DHA-licensed general physicians, our team manages acute illnesses, chronic conditions, lifestyle-related disorders, and routine health concerns. Every consultation includes a thorough evaluation to ensure accurate diagnosis and appropriate treatment planning.',
         'We follow international medical protocols, strict hygiene standards, and ethical healthcare practices to deliver safe, effective, and compassionate care.'
       ],
-      stats: [
-        { number: '2,500+', label: 'Patients Treated' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '15+', label: 'Years Combined Experience' }
-      ],
       ctaText: 'Meet Our Physicians',
       image: '/images/gp2.jpg',
       imageAlt: 'General physician performing a routine health checkup using a stethoscope, calm clinical room, patient-focused care, realistic medical photography, no text',
       overlayCard: {
-        number: '2,500+',
-        smallText: 'Patients Treated',
+        number: '7',
+        smallText: 'Days a week, 10am–10pm',
         boldText: 'Trusted Primary Care'
       }
     },
@@ -2661,8 +2383,7 @@ export const categoryContent = {
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
-        buttonText: 'Get Free Consultation',
+         subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book a consultation today and receive a personalized treatment plan tailored to your needs.',        buttonText: 'Book a Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
@@ -2739,12 +2460,7 @@ export const categoryContent = {
       badge: 'Expert Medical Team',
       title: 'Meet Our DHA-Licensed General Physicians',
       description: 'Experienced doctors dedicated to providing accurate diagnosis, compassionate care, and long-term health guidance.',
-      stats: [
-        { value: '1', label: 'Expert Physician' },
-        { value: '15+', label: 'Years Combined Experience' },
-        { value: '2,500+', label: 'Successful Consultations' },
-        { value: '4.8', label: 'Average Rating' }
-      ],
+
       ctaSection: {
         title: 'Ready to Meet Your Physician?',
         description: 'Schedule a personalized consultation with our expert physicians to begin your healthcare journey.',
@@ -2794,37 +2510,6 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Results From Real People',
       subtitle: 'Hear directly from our patients about their healthcare journeys in Dubai.',
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '94%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 94
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'DHA Licensed',
-          target: 2500
-        }
-      ],
       ctaSection: {
         title: 'Ready to prioritize your health?',
         description: 'Join thousands of satisfied patients who trust us with their family\'s healthcare needs in Dubai.',
@@ -3019,15 +2704,9 @@ export const categoryContent = {
       // title: 'Premium Facial Treatments– in Jumeirah 1',
       subtitle: 'RamaCare Polyclinic offers personalised facial treatments in Jumeirah 1, Dubai, designed to support smoother, hydrated and more radiant-looking skin. Depending on your skin type and concerns, facial care may focus on hydration, dullness, uneven texture, pigmentation, signs of ageing and skin',
       description: 'Dubai\'s premier facial treatment centre offering advanced facials, PRP therapy, and rejuvenation treatments with DHA-licensed specialists and premium skincare products.',
-      ctaText: 'Book Free Consultation',
+      ctaText: 'Book an Appointment',
       backgroundImage: '/images/facial-treat.jpg',
       backgroundAlt: 'DHA-licensed aesthetic specialist performing a premium facial treatment at RamaCare Polyclinic in Jumeirah 1, Dubai',
-      stats: [
-        { number: '15+', label: 'Years Combined Experience' },
-        { number: '500+', label: 'Happy Patients' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '150+', label: 'Treatments' }
-      ],
       features: [
         'DHA-Licensed Expert Doctors',
         'Premium Jumeirah 1 Location',
@@ -3078,17 +2757,13 @@ export const categoryContent = {
         'Led by DHA-licensed aesthetic physicians, our expert team specializes in PRP facials, HydraFacial, Golden Elixir Facial, Oxygeneo Illuminate, and Exosomes Facial. Each plan is customized to your unique skin type and goals.',
         'We maintain the highest standards of hygiene and safety while using advanced devices and premium skincare products. Whether you want immediate glow, long-term skin rejuvenation, or anti-aging results, our approach merges expert care with luxury comfort.'
       ],
-      stats: [
-        { number: '12+', label: 'Treatment Types' },
-        { number: '2,500+', label: 'Happy Clients' },
-        { number: '98%', label: 'Satisfaction Rate' }
-      ],
+      
       ctaText: 'Meet Our Facial Department',
       image: '/images/facial.jpg',
       imageAlt: 'Facial treatment',
       overlayCard: {
-        number: '15+',
-        smallText: 'Years Combined Experience',
+        number: '7',
+        smallText: 'Days a week, 10am–10pm',
         boldText: 'Trusted Skincare Care'
       }
     },
@@ -3185,8 +2860,8 @@ export const categoryContent = {
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
-        subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
-        buttonText: 'Get Free Consultation',
+        subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book a consultation today and receive a personalized treatment plan tailored to your needs.',
+        buttonText: 'Book a Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
@@ -3195,12 +2870,6 @@ export const categoryContent = {
       badge: 'Expert Medical Team',
       title: 'Meet Our Expert Facial Specialists',
       description: 'Highly qualified DHA-licensed aesthetic physicians with years of experience delivering safe, effective, and personalized facial treatments in Dubai.',
-      stats: [
-
-        { value: '37+', label: 'Years Combined Experience' },
-        { value: '500+', label: 'Successful Treatments' },
-        { value: '4.8/5', label: 'Average Rating' }
-      ],
       ctaSection: {
         title: 'Ready to Meet Your Aesthetician?',
         description: 'Schedule a personalized consultation with our expert aestheticians to begin your facial treatment journey.',
@@ -3303,37 +2972,7 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Results From Real People',
       subtitle: 'Hear from clients who experienced transformation through our facial treatments.',
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Google Reviews',
-          target: 4.8,
-          showStars: true
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Patient Reviews',
-          label2: 'Verified Testimonials',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Success Rate',
-          label2: 'Patient Satisfaction',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '2,500+',
-          label1: 'Patients Treated',
-          label2: 'DHA Licensed',
-          target: 2500
-        }
-      ],
+      
       ctaSection: {
         title: 'Ready to transform your skin?',
         description: 'Join thousands of satisfied clients who have achieved radiant, healthy skin with our luxury facial treatments in Dubai.',

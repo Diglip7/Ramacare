@@ -55,10 +55,10 @@ const AllDoctorsPage = ({ content }) => {
   const title = content?.title || 'Find A Doctor';
   const description = content?.description || 'Your trusted healthcare partner in Dubai, delivering comprehensive medical care with compassion, expertise, and a strong commitment to patient well-being in Jumeirah 1.';
   const stats = content?.stats || [
-    { value: '3', label: 'Expert Physicians' },
-    { value: '37+', label: 'Years Combined Experience' },
-    { value: '500+', label: 'Successful Treatments' },
-    { value: '4.8', label: 'Average Rating' }
+    { value: '5', label: 'Departments' },
+    { value: '7', label: 'Days a week' },
+    { value: '4.8', label: 'Google rating' },
+    { value: 'DHA', label: 'Licensed team' }
   ];
   const ctaSection = content?.ctaSection || {
     title: 'Ready to Consult our Expert Physician?',

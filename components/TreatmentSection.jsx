@@ -1,143 +1,143 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { 
-  Sparkles, Scissors, Zap, Target, Heart, Activity, Stethoscope, 
-  Smile, Droplets, Brain, Shield, Pill, Users, Calendar, 
-  PlusCircle, Thermometer, BarChart, ClipboardList, UserCheck, Wind , TrendingUp,
+import {
+  Sparkles, Scissors, Zap, Target, Heart, Activity, Stethoscope,
+  Smile, Droplets, Brain, Shield, Pill, Users, Calendar,
+  PlusCircle, Thermometer, BarChart, ClipboardList, UserCheck, Wind, TrendingUp,
   Crosshair, CheckCircle2,
 } from 'lucide-react';
 
 const TreatmentSection = ({ category, content }) => {
   const router = useRouter();
   const [hoveredCard, setHoveredCard] = useState(null);
-  
+
   // Default treatments (Ayurveda - for homepage)
   const defaultTreatments = [
     {
-    id: 1,
-    title: 'Dermatology Clinic in Dubai',
-    slug: 'aesthetic-dermatology-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.69C12 2.69 7 7.69 7 12.69c0 3.31 2.69 6 6 6s6-2.69 6-6c0-5-5-10-7-10z" />
-      </svg>
-    ),
-    subtitle: 'Advanced care for healthy skin and hair',
-    duration: '30–90 Minutes',
-    badgeColor: 'purple',
-    benefits: [
-      'Treats acne, pigmentation, and skin damage',
-      'Improves skin texture and reduces signs of aging',
-      
-    ],
-    idealFor: 'Skin concerns caused by sun, pollution, or lifestyle factors , Safe, long-lasting skin and hair treatments',
-    image: '/images/aesthetic.png',
-    alt: 'Advanced aesthetic dermatology treatment room designed for safe, modern skin care procedures.'
-  },
-  {
-    id: 2,
-    title: 'Dental Clinic in Dubai',
-    slug: 'dental-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
-    subtitle: 'Complete care for strong teeth and a confident smile',
-    duration: '30–120 Minutes',
-    badgeColor: 'blue',
-    benefits: [
-      'Treats cavities, gum issues, and tooth pain',
-      'Improves smile with cleaning and cosmetic care',
-     
-    ],
-    idealFor: 'Routine check-ups and oral health care ,Restoring comfort, function, and smile appearance',
-    image: '/images/dental.png',
-    alt: 'Modern dental clinic interior offering advanced dental in Dubai with a clean and comfortable environment.'
-  },
-  {
-    id: 3,
-    title: 'Ayurveda Clinic in Dubai',
-    slug: 'ayurveda-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
-    subtitle: 'Holistic healing for mind and body balance',
-    duration: '7–21 Days',
-    badgeColor: 'teal',
-    benefits: [
-      'Supports natural healing and long-term wellness',
-      'Improves immunity, digestion, and stress balance',
-    ],
-    idealFor: 'People seeking natural, chemical-free treatments , Long-term wellness and lifestyle improvement',
-    image: '/images/ayurveda.png',
-    alt: 'Ayurveda consultation focused on holistic health assessment and natural healing methods'
-  },
-  {
-    id: 4,
-    title: 'Physiotherapy in Dubai ',
-    slug: 'physiotherapy-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-      </svg>
-    ),
-    subtitle: ' Helping you move better and live pain-free',
-    duration: '45–60 Minutes',
-    badgeColor: 'orange',
-    benefits: [
-      'Relief from pain and stiffness',
-      'Improves mobility and strength',
-    ],
-    idealFor: 'Pain, injury, or mobility issues , Post-surgery or recovery support',
-    image: '/images/physio.png',
-    alt: 'Physiotherapy session focused on pain relief, mobility improvement, and physical rehabilitation.'
-  },
-  {
-    id: 5,
-    title: 'General Physician in Dubai',
-    slug: 'general-physician-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-      </svg>
-    ),
-    subtitle: 'Complete primary care for everyday health',
-    duration: '20–30 Minutes',
-    badgeColor: 'green',
-    benefits: [
-      'Diagnosis and treatment for common illnesses',
-      'Ongoing care for chronic health conditions',
-      
-    ],
-    idealFor: 'Routine check-ups and general health concerns , Managing long-term or recurring health issues',
-    image: '/images/genral.png',
-    alt: 'General physician consultation providing primary healthcare, diagnosis, and preventive care.'
-  },
-  {
-    id: 6,
-    title: 'Facial Treatments in Dubai',
-    slug: 'facial-dubai',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-    subtitle: 'Advanced care for radiant, healthy skin',
-    duration: '45–75 Minutes',
-    badgeColor: 'pink',
-    benefits: [
-      'Deep cleansing and hydration for glowing skin',
-      'Improves dullness, texture, and early signs of aging',
-      
-    ],
-    idealFor: 'Skin affected by sun, pollution, or daily stress , Safe and effective skin rejuvenation treatments',
-    image: '/images/facial.png',
-    alt: 'Facial treatment designed to cleanse, nourish, and rejuvenate the skin in a professional clinic.'
-  },
+      id: 1,
+      title: 'Dermatology & Aesthetic Clinic in Jumeirah 1',
+      slug: 'aesthetic-dermatology-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.69C12 2.69 7 7.69 7 12.69c0 3.31 2.69 6 6 6s6-2.69 6-6c0-5-5-10-7-10z" />
+        </svg>
+      ),
+      subtitle: 'Advanced care for healthy skin and hair',
+      duration: '30–90 Minutes',
+      badgeColor: 'purple',
+      benefits: [
+        'Treats acne, pigmentation, and skin damage',
+        'Improves skin texture and reduces signs of aging',
+
+      ],
+      idealFor: 'Skin concerns caused by sun, pollution, or lifestyle factors, Acne, pigmentation, hair loss and signs of ageing',
+      image: '/images/aesthetic.png',
+      alt: 'Advanced aesthetic dermatology treatment room designed for safe, modern skin care procedures.'
+    },
+    {
+      id: 2,
+      title: 'Dental Clinic in Jumeirah 1',
+      slug: 'dental-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+      subtitle: 'Complete care for strong teeth and a confident smile',
+      duration: '30–120 Minutes',
+      badgeColor: 'blue',
+      benefits: [
+        'Treats cavities, gum issues, and tooth pain',
+        'Improves smile with cleaning and cosmetic care',
+
+      ],
+      idealFor: 'Routine check-ups and oral health care ,Restoring comfort, function, and smile appearance',
+      image: '/images/dental.png',
+      alt: 'Modern dental clinic interior offering advanced dental in Dubai with a clean and comfortable environment.'
+    },
+    {
+      id: 3,
+      title: 'Ayurvedic Clinic in Jumeirah 1',
+      slug: 'ayurveda-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+      subtitle: 'Holistic healing for mind and body balance',
+      duration: '7–21 Days',
+      badgeColor: 'teal',
+      benefits: [
+        'Supports natural healing and long-term wellness',
+        'Improves immunity, digestion, and stress balance',
+      ],
+      idealFor: 'People who want an Ayurvedic assessment alongside their usual medical care, Long-term wellness and lifestyle support',
+      image: '/images/ayurveda.png',
+      alt: 'Ayurveda consultation focused on holistic health assessment and natural healing methods'
+    },
+    {
+      id: 4,
+      title: 'Physiotherapy in Jumeirah 1',
+      slug: 'physiotherapy-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+        </svg>
+      ),
+      subtitle: ' Helping you move better and live pain-free',
+      duration: '45–60 Minutes',
+      badgeColor: 'orange',
+      benefits: [
+        'Relief from pain and stiffness',
+        'Improves mobility and strength',
+      ],
+      idealFor: 'Pain, injury, or mobility issues , Post-surgery or recovery support',
+      image: '/images/physio.png',
+      alt: 'Physiotherapy session focused on pain relief, mobility improvement, and physical rehabilitation.'
+    },
+    {
+      id: 5,
+       title: 'General Practitioner (GP) in Jumeirah 1',
+      slug: 'general-physician-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+        </svg>
+      ),
+      subtitle: 'Complete primary care for everyday health',
+      duration: '20–30 Minutes',
+      badgeColor: 'green',
+      benefits: [
+        'Diagnosis and treatment for common illnesses',
+        'Ongoing care for chronic health conditions',
+
+      ],
+      idealFor: 'Routine check-ups and general health concerns , Managing long-term or recurring health issues',
+      image: '/images/genral.png',
+      alt: 'General physician consultation providing primary healthcare, diagnosis, and preventive care.'
+    },
+    {
+      id: 6,
+      title: 'Facial Treatments in Jumeirah 1',
+      slug: 'facial-dubai',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      ),
+      subtitle: 'Advanced care for radiant, healthy skin',
+      duration: '45–75 Minutes',
+      badgeColor: 'pink',
+      benefits: [
+        'Deep cleansing and hydration for glowing skin',
+        'Improves dullness, texture, and early signs of aging',
+
+      ],
+      idealFor: 'Skin affected by sun, pollution, or daily stress , Safe and effective skin rejuvenation treatments',
+      image: '/images/facial.png',
+      alt: 'Facial treatment designed to cleanse, nourish, and rejuvenate the skin in a professional clinic.'
+    },
   ];
 
   // Icon mapping for string-based icon names
@@ -163,7 +163,7 @@ const TreatmentSection = ({ category, content }) => {
     'TrendingUp': TrendingUp,
     'Crosshair': Crosshair,
     'Clipboard': ClipboardList,
-    'UserCheck': UserCheck   
+    'UserCheck': UserCheck
   };
 
   // Helper function to get icon component
@@ -185,16 +185,16 @@ const TreatmentSection = ({ category, content }) => {
   const heading = content?.heading || 'Our Medical Services in Dubai';
   const subtitle = content?.subtitle || 'Explore our specialized treatments and find the right care for your needs in Dubai.';
   const treatmentsList = content?.treatments || defaultTreatments;
-  
+
   // Consultation CTA Section Content - Configurable for different pages
   const consultationContent = {
     heading: content?.consultationHeading || 'Not Sure Which Treatment is Right for You?',
-    subtext: content?.consultationSubtext || 'Get expert guidance from our DHA-licensed healthcare specialists in Dubai and receive a personalized treatment plan tailored to your needs. Book your FREE consultation today and receive a personalized treatment plan tailored to your needs.',
-    buttonText: content?.consultationButtonText || 'Get Free Consultation',
+    subtext: content?.consultationSubtext || 'Book a consultation with one of our DHA-licensed clinicians in Jumeirah 1. They will assess your concern and explain your options before any treatment starts.',
+    buttonText: content?.consultationButtonText || 'Book consultation',
     backgroundColor: content?.consultationBgColor || 'bg-[#1E5A3C]',
     buttonColor: content?.consultationButtonColor || 'bg-[#C9A547] hover:bg-[#B8944A]'
   };
-  
+
   const [selectedTreatmentId, setSelectedTreatmentId] = useState(treatmentsList.length > 0 ? treatmentsList[0].id : null);
   const selectedTreatment = treatmentsList.find(t => t.id === selectedTreatmentId) || treatmentsList[0];
 
@@ -209,8 +209,8 @@ const TreatmentSection = ({ category, content }) => {
       const categorySlug = category.replace(/\s+/g, '-').toLowerCase();
       router.push(`/services/${categorySlug}-dubai/${selectedTreatment.slug}`);
     } else {
-      const slugWithDubai = selectedTreatment.slug.endsWith('-dubai') 
-        ? selectedTreatment.slug 
+      const slugWithDubai = selectedTreatment.slug.endsWith('-dubai')
+        ? selectedTreatment.slug
         : `${selectedTreatment.slug}-dubai`;
       router.push(`/services/${slugWithDubai}`);
     }
@@ -225,9 +225,9 @@ const TreatmentSection = ({ category, content }) => {
 
   return (
     <>
-      <link 
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
-        rel="stylesheet" 
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
       />
 
       <section id="treatments" className="py-24 bg-white relative overflow-hidden">
@@ -243,7 +243,7 @@ const TreatmentSection = ({ category, content }) => {
                 {badge}
               </span>
             </div>
-            
+
             {/* Large Bold Heading */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#111827] leading-tight max-w-4xl mb-4">
               {heading.includes('\n') ? (
@@ -276,7 +276,7 @@ const TreatmentSection = ({ category, content }) => {
                   className={`
                     relative rounded-2xl p-5 cursor-pointer
                     transition-all duration-200
-                    ${isSelected 
+                    ${isSelected
                       ? 'bg-[#1E5A3C] border-2 border-[#C9A547] shadow-lg text-white'
                       : isHovered
                         ? 'bg-white border-2 border-[#C9A547] shadow-md'
@@ -288,16 +288,15 @@ const TreatmentSection = ({ category, content }) => {
                     w-14 h-14 rounded-xl
                     flex items-center justify-center mb-3.5 mx-auto
                     transition-all duration-200
-                    ${isSelected 
-                      ? 'bg-[#C9A547]' 
+                    ${isSelected
+                      ? 'bg-[#C9A547]'
                       : isHovered
                         ? 'bg-[#1E5A3C]'
                         : 'bg-[#F5F3EE]'
                     }
                   `}>
-                    <div className={`transition-colors duration-200 ${
-                      isSelected || isHovered ? 'text-white' : 'text-[#1E5A3C]'
-                    }`}>
+                    <div className={`transition-colors duration-200 ${isSelected || isHovered ? 'text-white' : 'text-[#1E5A3C]'
+                      }`}>
                       {getIconComponent(treatment.icon)}
                     </div>
                   </div>
@@ -306,8 +305,8 @@ const TreatmentSection = ({ category, content }) => {
                   <h3 className={`
                     text-center text-sm font-semibold leading-tight
                     transition-colors duration-200
-                    ${isSelected 
-                      ? 'text-white' 
+                    ${isSelected
+                      ? 'text-white'
                       : isHovered
                         ? 'text-[#111827]'
                         : 'text-[#111827]'
@@ -325,14 +324,14 @@ const TreatmentSection = ({ category, content }) => {
             {treatmentsList.map((treatment) => {
               const isSelected = treatment.id === selectedTreatmentId;
               return (
-                <div 
-                  key={treatment.id} 
+                <div
+                  key={treatment.id}
                   className={`${isSelected ? 'block' : 'hidden'} animate-in fade-in duration-500`}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                     {/* Left Side - Image */}
                     <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[450px] bg-gray-100 overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none">
-                      <Image 
+                      <Image
                         src={treatment.image || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'}
                         alt={treatment.alt || `${treatment.title} - ${treatment.subtitle}`}
                         fill
@@ -401,7 +400,7 @@ const TreatmentSection = ({ category, content }) => {
 
                       {/* CTA Buttons */}
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <button 
+                        <button
                           onClick={() => window.open('https://wa.me/971566597878', '_blank')}
                           className="flex items-center justify-center bg-[#1E5A3C] text-white px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-[#16472F] transition-all duration-300 shadow-md hover:shadow-lg hover:scale-95"
                         >
@@ -426,7 +425,7 @@ const TreatmentSection = ({ category, content }) => {
 
           {/* Consultation CTA Block */}
           <div className="mt-12">
-            <div 
+            <div
               className={`rounded-2xl shadow-lg py-10 px-8 text-center transition-all duration-300 hover:shadow-xl ${consultationContent.backgroundColor}`}
             >
               {/* Heading */}

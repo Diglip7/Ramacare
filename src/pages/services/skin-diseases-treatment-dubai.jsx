@@ -4,6 +4,7 @@ import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';  
 import BastiTherapySections from '../../../components/BastiTherapySections';
 import ContentSection from '../../../components/ContentSection';
 import HealingJourney from '../../../components/HealingJourney';
@@ -20,7 +21,7 @@ import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 export default function SkinDiseasesTreatmentPage() {
   const categoryName = 'Ayurveda';
-  const subcategoryName = 'Ayurvedic Skin Disease Treatment';
+  const subcategoryName = 'Ayurvedic Skin Treatment';
 
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'skin-diseases-treatment');
@@ -28,12 +29,11 @@ export default function SkinDiseasesTreatmentPage() {
   // Custom navigation items for this page
   const navItems = [
     { id: 'treatment-info', label: 'Treatment Overview' },
-    { id: 'why-choose-us', label: 'Why Choose' },
-    { id: 'how-it-works', label: 'How It Works' },
+    { id: 'skin-condition-guide', label: 'Conditions', href: '#skin-condition-guide' },
+    { id: 'which-doctor', label: 'Which Doctor', href: '#which-doctor' },
     { id: 'benefits', label: 'Benefits' },
     { id: 'treatment-process', label: 'Treatment Process' },
-    { id: 'digestive-health', label: 'Digestive Health' },
-    { id: 'cost-and-results', label: 'Recovery' },
+    { id: 'dubai-skin', label: 'Heat Rash', href: '#dubai-skin' },
     { id: 'faq', label: 'FAQ' },
     { id: 'book-now', label: 'Book Now' },
   ];
@@ -63,36 +63,41 @@ export default function SkinDiseasesTreatmentPage() {
     ]
   };
 
-  const medicalProcedureSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Ayurvedic Skin Disease Treatment in Dubai",
-    "description": "Holistic Ayurvedic treatment for skin conditions including acne, eczema, psoriasis, fungal and allergic skin concerns, and pigmentation, focused on balancing doshas, improving digestion, and supporting long-term skin wellness through herbal medicines, external applications, and detoxification therapies.",
-    "url": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/",
-    "procedureType": "https://schema.org/NoninvasiveProcedure",
-    "bodyLocation": "Skin",
-    "reviewedBy": {
-      "@type": "Physician",
-      "name": "Dr. Shamna Keloth Meethal",
-      "medicalSpecialty": "Ayurveda",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-    },
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae/",
-      "image": "https://ramacarepolyclinic.ae/images/skin1.jpg",
-      "telephone": "+971566597878",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
-    }
-  };
+      const skinSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/",
+          "name": "Ayurvedic Skin Treatment Dubai | Eczema, Psoriasis, Acne",
+          "inLanguage": "en-AE",
+          "about": { "@id": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/#therapy" },
+          "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+          "lastReviewed": "YYYY-MM-DD"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "@id": "https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/#therapy",
+          "name": "Ayurvedic skin treatment",
+          "alternateName": ["Ayurvedic treatment for eczema", "Ayurvedic treatment for psoriasis", "Ayurvedic treatment for acne", "Ayurvedic treatment for skin allergy", "Kushtha chikitsa", "Takradhara", "Virechana", "Lepa"],
+          "description": "Doctor-led Ayurvedic care for eczema, psoriasis, acne, skin allergies, urticaria, fungal infections, pigmentation and heat rash: consultation with a BAMS doctor, herbal medicines, external applications (Lepa, medicated oils), Takradhara and Virechana when suitable, and diet guidance, offered as complementary care alongside dermatology.",
+          "relevantSpecialty": "https://schema.org/Ayurvedic",
+          "bodyLocation": "Skin",
+          "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+          "name": "Dr. Shamna Keloth Meethal",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+          "medicalSpecialty": "https://schema.org/Ayurvedic",
+          "knowsLanguage": ["en", "ml", "hi"],
+          "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+        }
+      ]
+    };
 
   const faqSchema = content?.faq?.faqs?.length
     ? {
@@ -109,41 +114,25 @@ export default function SkinDiseasesTreatmentPage() {
       }
     : null;
 
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Shamna Keloth Meethal",
-    "medicalSpecialty": "Ayurveda",
-    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-    "worksFor": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic"
-    }
-  };
-
   return (
     <Layout>
       <Head>
-        <title key="title">Skin Diseases Treatment Dubai | Expert Dermatology Care</title>
+        <title key="title">Ayurvedic Skin Treatment Dubai | Eczema, Psoriasis, Acne</title>
         <meta
           name="description"
-          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
+          content="Ayurvedic treatment for eczema, psoriasis, acne, skin allergy and heat rash in Jumeirah 1, Dubai. BAMS doctor, dermatologist on site. From AED 200."
           key="description"
         />
-        <meta
-          name="keywords"
-          content="Skin diseases treatment Dubai, Ayurvedic skin treatment Dubai, Acne treatment Dubai, Eczema treatment Dubai, Psoriasis treatment Dubai, Rashes treatment Ayurveda Dubai, Natural skin care Dubai, Holistic skin treatment Dubai, Ayurvedic dermatologist in Dubai, Herbal skin therapy Dubai, Personalized skin care Dubai, Ayurvedic remedies for skin issues"
-          key="keywords"
-        />
+       
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Skin Diseases Treatment Dubai | Expert Dermatology Care" key="og:title" />
+        <meta property="og:title" content="Ayurvedic Skin Treatment Dubai | Eczema, Psoriasis, Acne" key="og:title" />
         <meta
           property="og:description"
-          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
+          content="Ayurvedic treatment for eczema, psoriasis, acne, skin allergy and heat rash in Jumeirah 1, Dubai. BAMS doctor, dermatologist on site. From AED 200."
           key="og:description"
         />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/skin-diseases-treatment-dubai/" key="og:url" />
@@ -153,10 +142,10 @@ export default function SkinDiseasesTreatmentPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Skin Diseases Treatment Dubai | Expert Dermatology Care" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic Skin Treatment Dubai | Eczema, Psoriasis, Acne" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="Receive safe and natural Ayurvedic treatment for skin diseases in Dubai. Personalized care for acne, eczema, psoriasis, rashes, and healthy glowing skin."
+          content="Ayurvedic treatment for eczema, psoriasis, acne, skin allergy and heat rash in Jumeirah 1, Dubai. BAMS doctor, dermatologist on site. From AED 200."
           key="twitter:description"
         />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/skin1.jpg" key="twitter:image" />
@@ -166,20 +155,16 @@ export default function SkinDiseasesTreatmentPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
-        />
+            <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(skinSchema) }}
+    />
         {faqSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           />
         )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-        />
       </Head>
 
       <TreatmentHero 
@@ -189,19 +174,12 @@ export default function SkinDiseasesTreatmentPage() {
       />
       <QuickNavigation navItems={navItems} />
     
-      <TreatmentOverview 
-        subcategoryName={subcategoryName}
-        content={content?.overview}
-      />
-    
-      {/* Skin Conditions anchor point - scrolls to the skin conditions card within Treatment Overview */}
+     <TreatmentOverview subcategoryName={subcategoryName} content={content?.overview} />
       <div id="skin-conditions" className="invisible -mt-20"></div>
-    
-      {/* Why Choose Section */}
-      <BastiTherapySections 
-        sectionType="whyChoose"
-        content={content?.whyChoose}
-      />
+      <AyurvedaInfoSection content={content?.conditionGuide} />       {/* NEW: condition-by-condition guide */}
+      <AyurvedaInfoSection content={content?.eczemaVsPsoriasis} />    {/* NEW: eczema vs psoriasis */}
+      <AyurvedaInfoSection content={content?.whichDoctor} />          {/* NEW: which doctor to see */}
+      <BastiTherapySections sectionType="whyChoose" content={content?.whyChoose} />
     
       {/* How It Works Section */}
       <ContentSection type="howItWorks" content={content?.howItWorks} />
@@ -214,6 +192,7 @@ export default function SkinDiseasesTreatmentPage() {
     
       {/* Diet & Lifestyle Section */}
       <ContentSection type="dietLifestyle" content={content?.dietLifestyle} />
+      <AyurvedaInfoSection content={content?.dubaiSkin} />            {/* NEW: heat rash, sweat, AC and water */}
     
       {/* Recovery & Aftercare Section */}
       <ContentSection type="recoveryAftercare" content={content?.recoveryAftercare} />
@@ -225,8 +204,9 @@ export default function SkinDiseasesTreatmentPage() {
       <DoctorsSection content={content?.doctors} />
     
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="skin-diseases-treatment-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="skin-diseases-treatment-dubai" lastReviewed="2026-01-12" />
       <FAQSection content={content?.faq} />
+      <AyurvedaInfoSection content={content?.sources} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );

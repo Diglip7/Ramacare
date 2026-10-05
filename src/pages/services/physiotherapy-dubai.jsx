@@ -136,8 +136,7 @@ export default function physiotherapydubaiCategoryPage() {
           }}
         />
       </Head>
-
-      <HeroSection content={content?.hero} />
+      <HeroSection content={{ ...content?.hero, disableBreadcrumbSchema: true }} />
       <WhyChooseUsSection content={content?.whyChooseUs} />
       <AboutAyurvedaSection content={content?.about} />
       <TreatmentSection
@@ -148,6 +147,7 @@ export default function physiotherapydubaiCategoryPage() {
           consultationSubtext: content?.treatments?.consultationCTA?.subtext,
         }}
       />
+      
       <ProgramsSection content={content?.programs} />
       <ExpertsSection content={content?.experts} />
       <PatientTestimonials content={content?.successStories} />

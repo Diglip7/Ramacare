@@ -1,40 +1,39 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ChevronRight, Home } from 'lucide-react';
 import Head from 'next/head';
 
 const HeroSection = ({ content }) => {
+  const router = useRouter();
   const [hoveredStat, setHoveredStat] = useState(null);
   const [hoveredFeature, setHoveredFeature] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   // Extract category from content or derive from current path
-  const categoryName = content?.titleLine1?.replace(/,/g, '').trim() || 'Service';
-  const categoryUrl = typeof window !== 'undefined' ? window.location.pathname : '';
+  // asPath is available during server rendering too (window is not), so the breadcrumb URL is correct in the HTML Google reads
+  const currentPath = ((router && router.asPath) || '/').split(/[?#]/)[0] || '/';
+  const categoryUrl = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+  const categoryName = content?.breadcrumbName || content?.titleLine1?.replace(/,/g, '').trim() || 'Service';
+  const showBreadcrumbSchema = categoryUrl !== '/' && !content?.disableBreadcrumbSchema;
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ramacarepolyclinic.ae/"
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ramacarepolyclinic.ae/'
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://ramacarepolyclinic.ae/services/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": categoryName,
-        "item": `https://ramacarepolyclinic.ae${categoryUrl}`
+        '@type': 'ListItem',
+        position: 2,
+        name: categoryName,
+        item: `https://ramacarepolyclinic.ae${categoryUrl}`
       }
     ]
   };
@@ -45,29 +44,29 @@ const HeroSection = ({ content }) => {
 
   // Use content props or defaults
   const badge = content?.badge || 'DHA-Licensed Healthcare Clinic in Dubai';
-  const titleLine1 = content?.titleLine1 || 'Expert Ayurveda,';
-  const titleHighlight = content?.titleHighlight || '  Physiotherapy & Aesthetic Care ';
-  const titleLine2 = content?.titleLine2 || ' in Jumeirah 1';
-  const subtitle = content?.subtitle || 'RamaCare Polyclinic is a DHA-certified multispecialty polyclinic, located in Jumeirah 1 Dubai. This polyclinic offers physiotherapy, dermatology, dental treatment, aesthetic services, general medicine and ayurvedic services in one place. The specialists, at RamaCare Polyclinic take the time to understand the problems of each patient. They come up with ways to treat the problems. They also make sure to customize the services according to the needs of every patient.';
-  const ctaText = content?.ctaText || 'Book Free Consultation';
+  const titleLine1 = (content?.titleLine1 || 'Polyclinic for').trim();
+  const titleHighlight = (content?.titleHighlight || 'GP, Dental, Physiotherapy, Skin & Ayurveda').trim();
+  const titleLine2 = (content?.titleLine2 || 'in Jumeirah 1').trim();
+  const subtitle = content?.subtitle || 'RamaCare Polyclinic is a DHA-licensed clinic at 12 Al Dhiyafah Road, Jumeirah 1, close to Al Satwa. Five departments under one roof: general medicine, dentistry, physiotherapy, dermatology and aesthetics, and Ayurveda. Open every day, 10am to 10pm. Walk-ins welcome.';
+  const ctaText = content?.ctaText || 'Book an appointment';
   const stats = content?.stats || [
-    { number: '15+', label: 'Years Combined Experience' },
-    { number: '500+', label: 'Happy Patients' },
-    { number: '98%', label: 'Patient Satisfaction' },
-    { number: '150+', label: 'Treatments' }
+    { number: '7', label: 'Days a week, 10am–10pm' },
+    { number: '5', label: 'Departments under one roof' },
+    { number: '4.8', label: 'Google rating' },
+    { number: 'DHA', label: 'Licensed facility' }
   ];
   const features = content?.features || [
-    'Authentic Classical Healing with Modern Medical Excellence',
-    'DHA-Licensed Specialist Doctors Committed to Your Care',
-    'Customized Wellness & Treatment Plans Designed Just for You',
-    'Prime Jumeirah 1 Location – Your Trusted Polyclinic in Dubai',
+    'GP, dental, physiotherapy, dermatology and Ayurveda in one clinic',
+    'DHA-licensed doctors, dentists and therapists',
+    'Walk-ins welcome, or book by phone or WhatsApp',
+    '12 Al Dhiyafah Road, Jumeirah 1',
   ];
   const whatsappText = content?.whatsappText || 'WhatsApp Now';
-  const location = content?.location || 'Heart of Jumeirah 1, Dubai';
-  const timing = content?.timing || 'Same Day Appointments';
+  const location = content?.location || '12 Al Dhiyafah Road, Jumeirah 1';
+  const timing = content?.timing || 'Open daily, 10am to 10pm';
   const backgroundImage = content?.backgroundImage || '/images/homepage.jpg';
-  const backgroundAlt = content?.backgroundAlt || 'Premium healthcare clinic in Dubai';
-  const whatsappMessage = content?.whatsappMessage || 'Hello! I would like to book a free consultation at your polyclinic.';
+  const backgroundAlt = content?.backgroundAlt || 'RamaCare Polyclinic, Jumeirah 1, Dubai';
+  const whatsappMessage = content?.whatsappMessage || 'Hello, I would like to book an appointment at RamaCare Polyclinic.';
   const appointmentSectionId = content?.appointmentSectionId || 'appointment';
 
   // Function to scroll to appointment section
@@ -93,12 +92,14 @@ const HeroSection = ({ content }) => {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      </Head>
+      {showBreadcrumbSchema && (
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
+        </Head>
+      )}
       {/* ✅ Google Font Import */}
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -160,6 +161,7 @@ const HeroSection = ({ content }) => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a961] to-[#e5d4a5] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
                   {titleHighlight}
                 </span>
+                {' '}
                 <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
                   {titleLine2}
                 </span>
@@ -244,8 +246,8 @@ const HeroSection = ({ content }) => {
                   <div
                     key={index}
                     className={`bg-white/10 backdrop-blur-md border border-[#C9A24D]/30 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-5 md:py-4 flex items-center space-x-2.5 sm:space-x-3 cursor-pointer transition-all duration-300 ${hoveredFeature === index
-                        ? 'scale-105 shadow-2xl border-[#C9A24D]/70 bg-white/20'
-                        : 'shadow-lg hover:shadow-xl'
+                      ? 'scale-105 shadow-2xl border-[#C9A24D]/70 bg-white/20'
+                      : 'shadow-lg hover:shadow-xl'
                       }`}
                     onMouseEnter={() => setHoveredFeature(index)}
                     onMouseLeave={() => setHoveredFeature(null)}
@@ -260,7 +262,7 @@ const HeroSection = ({ content }) => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1 sm:pt-2">
-                {/* Book Free Consultation Button */}
+                {/* Book appointment button */}
                 <button
                   onClick={scrollToAppointment}
                   className="group relative flex items-center justify-center space-x-2.5 sm:space-x-3 bg-[#c9a961] text-[#F5F5F5] font-normal px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-2xl text-sm sm:text-base shadow-xl transition-all duration-300 overflow-hidden hover:scale-105 cursor-pointer"
@@ -327,22 +329,6 @@ const HeroSection = ({ content }) => {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Lives Transformed Badge */}
-        <div className={`absolute bottom-8 sm:bottom-10 lg:bottom-12 xl:bottom-16 right-4 sm:right-6 lg:right-8 xl:right-12 z-40 hidden xl:block transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-x-10'
-          }`}>
-          <div className="bg-white/10 backdrop-blur-md border border-[#C9A24D]/30 rounded-xl px-4 py-3 flex items-center gap-3 shadow-2xl transition-all duration-300 hover:scale-105 hover:border-[#C9A24D]/70 hover:bg-white/20">
-            <div className="w-11 h-11 bg-[#C9A24D]/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="w-6 h-6 text-[#C9A24D]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-              </svg>
-            </div>
-            <div>
-              <div className="text-[#C9A24D] text-2xl leading-none mb-0.5">500+</div>
-              <div className="text-[#F5F5F5] text-[10px]">Lives Transformed</div>
             </div>
           </div>
         </div>

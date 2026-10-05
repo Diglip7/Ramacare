@@ -67,10 +67,10 @@ export default function About() {
     
   ],
     stats: [
-      { number: '15+', label: 'Years of Excellence' },
-      { number: '500+', label: 'Happy Patients' },
-      { number: '30+', label: 'Expert Doctors' },
-      { number: '98%', label: 'Satisfaction Rate' }
+     { number: '7', label: 'Days a week, 10am–10pm' },
+      { number: '5', label: 'Departments' },
+      { number: '4.8', label: 'Google rating' },
+      { number: 'DHA', label: 'Licensed facility' }
     ],
     ctaText: 'Meet Our Experts',
     image: '/images/about.jpg',
@@ -154,12 +154,12 @@ const whyContent = {
   const expertsContent = {
     badge: 'Our Medical Team',
     title: 'Meet Our DHA-Licensed Experts',
-    description: 'Highly qualified doctors with decades of combined experience, committed to your healing journey with expertise, compassion, and personalized care.',
+    description: 'Doctors, dentists, physiotherapists, nurses and therapists, each holding a DHA licence for their own role.',
     stats: [
-      { value: '30+', label: 'Expert Doctors' },
-      { value: '15+', label: 'Years of Combined Experience' },
-      { value: '500+', label: 'Successful Treatments' },
-      { value: '4.8', label: 'Average Rating' }
+      { value: '5', label: 'Departments' },
+      { value: '7', label: 'Days a week' },
+      { value: '4.8', label: 'Google rating' },
+      { value: 'DHA', label: 'Licensed team' }
     ],
     ctaSection: {
       title: 'Take the First Step Toward Better Health',

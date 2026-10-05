@@ -40,7 +40,7 @@ export default function ConsultationSection() {
         textAlign: 'center',
         maxWidth: '820px',
       }}>
-        Book Your Free Consultation Today
+        Book Your Consultation Today
       </h2>
 
       {/* Subtitle */}

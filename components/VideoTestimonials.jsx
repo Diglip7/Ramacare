@@ -18,8 +18,8 @@ const PatientTestimonials = ({ content }) => {
 
   // Use content props or defaults
   const badge = content?.badge || 'Patient Success Stories';
-  const title = content?.title || 'Real Success Stories from Dubai Patients';
-  const subtitle = content?.subtitle || 'Verified testimonials from patients who received trusted, doctor-led care at our DHA-licensed clinic';
+  const title = content?.title || 'What Patients Say About Their Visit';
+  const subtitle = content?.subtitle || 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.';
   const showSeeAllButton = content?.showSeeAllButton !== false; // Default true
   const showSeeMoreButton = content?.showSeeMoreButton || false;
   const showStatsSection = content?.showStatsSection !== false; // Default true
@@ -61,7 +61,7 @@ const PatientTestimonials = ({ content }) => {
     }
   ];
 
-  const stats = content?.stats || [
+  const stats = [
     {
       id: 1,
       number: '4.8/5',
@@ -74,22 +74,22 @@ const PatientTestimonials = ({ content }) => {
       id: 2,
       number: '200+',
       label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
+      label2: 'On Google',
       target: 200
     },
     {
       id: 3,
-      number: '98%',
-      label1: 'Success Rate',
-      label2: 'Patient Satisfaction',
-      target: 98
+      number: '5',
+      label1: 'Departments',
+      label2: 'Under one roof',
+      target: 5
     },
     {
       id: 4,
-      number: '2,500+',
-      label1: 'Patients Treated',
-      label2: 'DHA Licensed',
-      target: 2500
+      number: '7',
+      label1: 'Days a week',
+      label2: 'Open 10am–10pm',
+      target: 7
     }
   ];
 
@@ -112,7 +112,7 @@ const PatientTestimonials = ({ content }) => {
     return () => observer.disconnect();
   }, [hasAnimated]);
 
-    const animateCounters = () => {
+  const animateCounters = () => {
     const duration = 1500;
     const steps = 60;
     const stepDuration = duration / steps;
@@ -199,7 +199,7 @@ const PatientTestimonials = ({ content }) => {
           <div className="flex justify-center mb-3">
             <span className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">{badge}</span>
           </div>
-  
+
           {/* Main Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] leading-tight max-w-4xl mx-auto text-center">
             {title}
@@ -367,8 +367,7 @@ const PatientTestimonials = ({ content }) => {
                     <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] bg-clip-text text-transparent mb-2 leading-none">
                       {index === 0 && hasAnimated && `${statsValues.rating.toFixed(1)}/5`}
                       {index === 1 && hasAnimated && `${Math.round(statsValues.reviews)}+`}
-                      {index === 2 && hasAnimated && `${Math.round(statsValues.success)}%`}
-                      {index === 3 && hasAnimated && `${Math.round(statsValues.patients).toLocaleString()}+`}
+                      {index >= 2 && hasAnimated && stat.number}
                       {!hasAnimated && stat.number}
                     </div>
 

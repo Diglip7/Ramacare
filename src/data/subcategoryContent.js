@@ -1551,61 +1551,47 @@ export const subcategoryContent = {
   // AYURVEDA CATEGORY
   // ============================================
   'ayurveda-dubai-ayurvedic-hairfall-treatment': {
-    hero: {
-      subtitle: 'Restore Strong, Healthy Hair Naturally & Safely',
-      description: 'Hair fall is often not just a cosmetic concern—it is usually a sign of internal imbalance in the body, such as stress, hormonal changes, poor nutrition, or weakened scalp health. At RamaCare Polyclinic, we provide Ayurvedic Hair Fall Treatment in Dubai that focuses on identifying and treating the root cause of hair loss, rather than only addressing external symptoms.',
-      rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '95%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '6000+',
-          label: 'Hair Sessions Performed'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
-      ctaButtons: {
-        primary: {
-          text: '  Book Hair Fall Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
-      },
-      features: [
-        'Strengthen hair follicles from the root',
-        ' Improve scalp blood circulation and nourishment',
-        ' Balance internal doshas (Vata, Pitta, Kapha)',
-        ' Reduce excessive hair shedding',
-        'Support long-term, natural hair regrowth',
-
-      ],
-      image: {
-        src: '/images/hairfall1.jpg',
-        alt: 'Ayurvedic hair fall treatment focused on natural therapies to strengthen hair roots and reduce hair loss.'
-      },
-      medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual body constitution, hair condition, and adherence to the treatment plan. All Ayurvedic treatments are provided at a DHA-licensed clinic using approved herbal formulations and protocols.',
-        show: true
-      }
-    },
-    doctors: {
-      badge: 'MEET YOUR SPECIALISTS',
-      title: "Your Hairfall Treatment Is Performed by Dubai's Licensed Ayurveda Experts",
-      doctors: DOCTOR_GROUPS.AYURVEDA
-    },
+   hero: {
+  title: 'Ayurvedic Hair Fall Treatment in Dubai',
+  subtitle: 'Doctor-led Ayurvedic hair loss treatment in Jumeirah 1, with a dermatologist in the same building',
+  description: 'At RamaCare Polyclinic in Jumeirah 1, Dubai, Ayurvedic hair fall treatment starts with a consultation with Dr. Shamna Keloth Meethal (BAMS). She looks for the likely causes, such as stress, diet, scalp condition or hormonal changes, and plans scalp therapies like Shiro Abhyanga, Shirolepa and Nasya with medicated oils, alongside diet guidance. If a medical cause is suspected, you can see our dermatologist or general physician in the same building.',
+  rating: '4.8★ Google rating',
+  topBadges: [
+    { icon: 'location', text: 'Jumeirah 1, Dubai' },
+    { icon: 'building', text: 'DHA-licensed polyclinic' },
+    { icon: 'star', text: '4.8★ Google rating' }
+  ],
+  stats: [
+    { id: 1, number: 'AED 200', label: 'Consultation from' },
+    { id: 2, number: '45–60 min', label: 'First visit' },
+    { id: 3, number: '11+ yrs', label: 'Dr. Shamna, BAMS' }
+  ],
+  ctaButtons: {
+    primary: { text: 'Book Hair Fall Consultation', icon: 'calendar', link: '#book-now' },
+    secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
+  },
+  features: [
+    'Consultation with a BAMS Ayurvedic doctor',
+    'Shiro Abhyanga, Shirolepa, Nasya and Shirodhara',
+    'Medicated hair oils such as Neelibringadi and Bhringraj',
+    'Dermatologist and GP in the same building',
+    'Same-gender, Kerala-trained therapists'
+  ],
+  image: {
+    src: '/images/hairfall1.jpg',
+    alt: 'Ayurvedic hair fall treatment with medicated oil at RamaCare Polyclinic, Jumeirah 1, Dubai'
+  },
+  medicalNotice: {
+    text: 'Ayurvedic hair care is offered as complementary care. Results vary from person to person. If a medical cause is suspected, we refer you to our dermatologist or general physician. Provided at a DHA-licensed polyclinic (licence 2036418).',
+    show: true
+  }
+},
+   doctors: {
+  badge: 'YOUR AYURVEDA TEAM',
+  title: 'Your Ayurvedic Doctor for Hair Fall, and Your Therapists',
+  description: 'Dr. Shamna Keloth Meethal (BAMS) assesses your hair and scalp and plans your care. Scalp therapies are given by Kerala-trained therapists of your own gender. All three speak English, Malayalam and Hindi.',
+  doctors: DOCTOR_GROUPS.AYURVEDA
+},
     certifications: {
       title: 'Certifications & Accreditations',
       certifications: [
@@ -1647,82 +1633,50 @@ export const subcategoryContent = {
         description: 'At RamaCare Polyclinic, our Ayurvedic Hair Fall Treatment in Dubai is designed to treat hair loss by addressing the root internal causes, not just external symptoms. According to Ayurveda, healthy hair growth depends on balanced doshas, proper digestion, stress control, and strong scalp nourishment. Our approach focuses on restoring this internal balance to promote natural, long-lasting hair regrowth.'
       },
       leftCards: [
-        {
+              {
           id: 1,
           icon: 'Leaf',
-          title: 'What is Ayurvedic Hair Fall Treatment?',
-          description: 'Ayurvedic Hair Fall Treatment is a holistic, root-cause-based approach that treats hair loss by restoring balance in the body’s doshas (Vata, Pitta, and Kapha).Unlike temporary cosmetic solutions, Ayurveda focuses on internal healing and long-term hair restoration. It combines:',
+          title: 'What Is Ayurvedic Hair Fall Treatment?',
+          description: 'Ayurvedic treatment for hair loss looks at why hair is falling, not only at the scalp. In Ayurveda, hair fall is often linked to aggravated Pitta, weak digestion and stress. A plan usually combines:',
           listItems: [
-            'Herbal scalp therapies',
-            'Internal Ayurvedic medicines',
-            'Detox and stress management',
-            'Diet and lifestyle correction',
-
+            'Scalp therapies with medicated oils',
+            'Ayurvedic medicine for hair fall, if the doctor finds it suitable',
+            'Diet and daily-routine guidance',
+            'Stress and sleep support'
           ]
         },
         {
           id: 2,
           icon: 'Target',
-          title: 'Types of Ayurvedic Hair Fall Therapies We Offer :',
+          title: 'Ayurvedic Hair and Scalp Therapies We Offer',
           sections: [
-            {
-              heading: 'Shiro Abhyanga (Herbal Oil Head Massage)',
-              items: [
-                'Traditional Ayurvedic head massage using medicated oils',
-                'Improves blood circulation to hair roots',
-                'Reduces stress and mental fatigue',
-                'Strengthens hair follicles and reduces breakage',
-              ]
-            },
-            {
-              heading: 'Herbal Hair Packs (Lepam Therapy)',
-              items: [
-                'Customized herbal scalp applications',
-                'Reduces dandruff, itching, and inflammation',
-                'Improves scalp cleanliness and health',
-                'Supports new hair growth and thickness',
-              ]
-            },
-            {
-              heading: 'Internal Ayurvedic Medicines',
-              items: [
-                'Herbal formulations to balance body doshas',
-                'Improves digestion and nutrient absorption',
-                'Helps manage hormonal and stress-related hair fall',
-                'Strengthens hair from within',
-              ]
-            },
-            {
-              heading: 'Diet & Lifestyle Guidance',
-              items: [
-                'Personalized Ayurvedic diet plan',
-                'Lifestyle correction to reduce hair fall triggers',
-                'Stress and sleep management advice',
-                'Long-term scalp and hair maintenance plan',
-              ]
-            }
+            { heading: 'Shiro Abhyanga (Ayurvedic Head Massage)', items: ['Head and scalp massage with warm medicated oil', 'Traditionally used to nourish the scalp and ease stress', 'Given by a therapist of your gender'] },
+            { heading: 'Shirolepa (Herbal Hair Pack)', items: ['Herbal paste applied to the scalp and left to rest', 'Traditionally used for a hot, itchy or flaky scalp', 'Chosen for your scalp type'] },
+            { heading: 'Nasya', items: ['Medicated drops given through the nose', 'A classical therapy for conditions of the head', 'Prescribed only after the doctor\'s assessment'] },
+            { heading: 'Shirodhara and Takradhara', items: ['A steady stream of warm oil or medicated buttermilk over the forehead', 'Traditionally used for stress and heat', 'Often recommended when stress is linked to hair fall'] },
+            { heading: 'Medicated Hair Oils', items: ['Oils such as Neelibringadi and Bhringraj, selected by the doctor', 'Used in clinic therapies', 'Prescribed for home use when suitable'] },
+            { heading: 'Internal Medicines and Diet', items: ['Herbal medicines, if the doctor finds them suitable', 'Diet guidance for digestion and Pitta', 'Sleep and stress advice'] }
           ]
         },
         {
           id: 3,
           icon: 'Users',
-          title: 'Who Needs Ayurvedic Hair Fall Treatment?',
-          description: 'This treatment is suitable for individuals experiencing:',
+          title: 'Who Comes to Us for Ayurvedic Hair Care?',
+          description: 'Men and women (18+) with:',
           listItems: [
-            'Excessive hair fall or thinning',
-            'Early-stage baldness',
-            'Stress or hormonal hair loss',
-            'Dandruff and itchy scalp',
-            'Post-illness or postpartum hair fall',
-            'Dry, weak, or damaged hair'
-
+            'Increased daily hair fall or thinning',
+            'Dandruff, itching or a hot, oily scalp',
+            'Hair fall linked to stress or poor sleep',
+            'Postpartum hair fall (after the doctor\'s review)',
+            'Premature greying',
+            'Patchy hair loss (alopecia areata) alongside dermatology care'
           ]
         },
         {
           id: 4,
           icon: 'Clock',
           title: 'Duration',
-          description: 'Initial Consultation: 30–45 minutes \n\n Active Treatment Phase: 3–6 months (based on condition) \n\n Follow-ups: As advised by the doctor'
+          description: 'First consultation: 45–60 minutes, from AED 200 \n\n Therapy sessions: planned after your assessment \n\n Follow-ups: as advised by the doctor; progress is reviewed at each visit'
         }
       ],
       rootCauses: [
@@ -1761,19 +1715,19 @@ export const subcategoryContent = {
           severity: 'High',
           severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
         },
-        {
-          id: 6,
-          title: 'Fear of Chemical Treatments',
-          description: 'Many patients avoid treatments due to concerns about chemical side effects from shampoos, dyes, or topical products, leading to delayed treatment and worsening of hair condition. Safe, medically supervised treatments provide natural and side-effect-free results.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+        { 
+          id: 6, 
+          title: 'Dubai Heat, Sweat and Water', 
+          description: 'Long summers, heavy sweating, air conditioning and hard, desalinated water can dry the scalp and increase dandruff and breakage. Ayurveda links heat to aggravated Pitta, which is traditionally associated with hair fall and early greying.', 
+          severity: 'High', 
+          severityColor: 'bg-[#FEE2E2] text-[#991B1B]' 
         },
-        {
-          id: 7,
-          title: 'Genetic Hair Loss',
-          description: 'Hereditary conditions like androgenetic alopecia increase the risk of early hair thinning and progressive hair loss. Proper medical and Ayurvedic support can slow progression and improve regrowth.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
+        { 
+          id: 7, 
+          title: 'Genetic Hair Loss', 
+          description: 'Hereditary hair loss (androgenetic alopecia) should be assessed by a dermatologist. Ayurvedic scalp care can be used alongside medical treatment as complementary care.', 
+          severity: 'Medium', 
+          severityColor: 'bg-[#FED7AA] text-[#9A3412]' 
         },
         {
           id: 8,
@@ -1791,12 +1745,12 @@ export const subcategoryContent = {
         }
       ],
       quickFacts: [
-        { label: 'Treatment Type', value: 'Ayurvedic Hair Fall Management' },
-        { label: 'Methods Used', value: 'Herbal oils, scalp therapy, and internal medicine' },
+       { label: 'Treatment Type', value: 'Ayurvedic hair fall care (complementary)' },
+        { label: 'Methods Used', value: 'Medicated oils, scalp therapies, herbal medicines, diet' },
         { label: 'Suitable For', value: 'Men & Women (18+)' },
-        { label: 'Pain Level', value: 'Painless & relaxing' },
-        { label: 'Downtime', value: 'None' },
-        { label: 'Safety', value: 'DHA-guided Ayurvedic protocols' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Therapists', value: 'Same-gender, Kerala-trained' },
+        { label: 'Setting', value: 'DHA-licensed polyclinic, Jumeirah 1' }
       ],
       approachCards: [
         {
@@ -1823,7 +1777,7 @@ export const subcategoryContent = {
         {
           id: 4,
           title: 'Natural Scalp Therapies',
-          description: 'Scalp treatments are used to improve blood circulation, nourish hair follicles, and stimulate inactive roots for healthy hair regrowth.',
+          description: 'Scalp therapies such as Shiro Abhyanga and Shirolepa use medicated oils and herbal pastes, traditionally used to nourish the scalp and calm irritation.',
           hasLearnMore: true,
           expandedContent: 'Regular therapies help improve scalp health, hair strength, and density.'
         },
@@ -1856,18 +1810,42 @@ export const subcategoryContent = {
           expandedContent: null
         },
         {
-          id: 9,
-          title: 'Result',
-          description: 'Patients experience reduced hair fall, stronger hair roots, improved scalp health, thicker and healthier hair, better texture and shine, and long-term natural hair regrowth without chemical dependency.',
-          hasLearnMore: true,
-          expandedContent: 'This comprehensive Ayurvedic approach ensures sustainable and natural hair wellness.'
+          id: 9, 
+          title: 'What to Expect', 
+          description: 'Ayurvedic hair care works gradually. Many patients notice changes in scalp comfort and daily hair fall over several weeks, but response varies. Your doctor reviews progress at each follow-up and refers you to our dermatologist if needed.', 
+          hasLearnMore: false 
         }
       ]
     },
+    whichDoctor: {
+        id: 'which-doctor',
+        heading: 'Which Doctor Should You See for Hair Fall?',
+        intro: 'It depends on the cause. At RamaCare you can see both in the same building.',
+        table: [
+          ['Sudden or patchy hair loss, scalp pain, redness or scarring', 'See our dermatologist first'],
+          ['Tiredness, weight change, heavy periods or recent illness', 'See our general physician to check for a medical cause'],
+          ['Gradual hair fall with dandruff, stress, poor sleep or digestion', 'An Ayurvedic consultation with Dr. Shamna is a good starting point'],
+          ['Genetic thinning (receding hairline, widening parting)', 'Dermatologist for medical options; Ayurvedic scalp care can be added alongside']
+        ],
+        note: 'Not sure? [Book an Ayurvedic consultation](#book-now). If Dr. Shamna suspects a medical cause, she will refer you to the right colleague here.'
+      },
+
+      dubaiHairFall: {
+        id: 'dubai-hair-fall',
+        heading: 'Why Hair Fall Increases in Dubai, and What Helps',
+        intro: 'Many people notice more hair fall after moving to Dubai or during summer. Common reasons:',
+        items: [
+          { text: 'Heat and sweat, which can make the scalp oily and itchy' },
+          { text: 'Air conditioning and hard, desalinated water, which can dry the scalp and hair' },
+          { text: 'Stress, long working hours and irregular sleep' },
+          { text: 'Diet changes and low iron or protein intake' }
+        ],
+        note: 'Simple steps help: wash sweat off the scalp, avoid very hot water, keep a regular sleep routine, and eat enough protein. If hair fall continues for more than a few weeks, get it assessed. Read more: [Does Dubai water cause hair loss?](/blog/does-dubai-water-cause-hair-loss-expert-answers-ramacare/)'
+      },
     // Healing Journey / Process Section
     healingJourney: {
       title: 'Your Ayurvedic Hair Care Journey – Step by Step',
-      description: 'At RamaCare Polyclinic, we follow a structured and transparent Ayurvedic treatment process to ensure effective, safe, and long-term results for hair fall control and regrowth.',
+      description: 'At RamaCare Polyclinic, your Ayurvedic hair care follows four clear steps, reviewed by the doctor at every stage.',
       steps: [
         {
           id: 1,
@@ -1880,7 +1858,8 @@ export const subcategoryContent = {
             'Lifestyle and dietary review',
             'Dosha (Vata, Pitta, Kapha) imbalance assessment',
             'Medical and stress history review',
-            'Personalized treatment planning'
+            'Personalized treatment planning',
+            'Referral to our dermatologist or GP if a medical cause is suspected'
           ],
           side: 'right'
         },
@@ -1889,7 +1868,7 @@ export const subcategoryContent = {
           number: '02',
           title: 'Start of Ayurvedic Therapies',
           duration: 'Step 2',
-          description: 'Once the diagnosis is complete, we begin targeted Ayurvedic treatments to activate hair regrowth.',
+          description: 'Once your assessment is complete, your therapist begins the scalp therapies in your plan.',
           keyActivities: [
             'Shiro Abhyanga (herbal oil scalp massage)',
             'Ayurvedic herbal hair pack application',
@@ -1903,7 +1882,7 @@ export const subcategoryContent = {
           number: '03',
           title: 'Monitoring & Progress Evaluation',
           duration: 'Step 3',
-          description: 'We continuously monitor your progress to ensure visible and effective results.',
+          description: 'The doctor reviews your scalp and hair fall at each follow-up and adjusts the plan if needed.',
           keyActivities: [
             'Regular scalp and hair assessment',
             'Tracking the reduction in hair fall',
@@ -1930,87 +1909,29 @@ export const subcategoryContent = {
       ]
     },
     // Benefits Section
-    benefits: {
-      title: 'Clinically Attended Benefits',
-      description: 'Evidence-based results from our comprehensive Ayurvedic treatment approach.',
-      benefits: [
-        {
-          id: 1,
-          title: ' Reduced hair fall',
-          percentage: 85,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Stronger hair roots',
-          percentage: 92,
-          description: null
-        },
-        {
-          id: 3,
-          title: ' Improved scalp health',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Reduced dandruff and itching',
-          percentage: 79,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Natural hair regrowth support',
-          percentage: 83,
-          description: null
-        },
-        {
-          id: 6,
-          title: ' Better hair texture and shine',
-          percentage: 90,
-          description: null
-        }
-      ],
-      comparisonTitle: 'Ayurvedic Hair Fall Treatment vs Conventional Methods',
-      comparisonDescription: 'Natural Healing vs Chemical-Based Solutions. When choosing a hair fall treatment, it is important to understand the difference between Ayurvedic holistic care and conventional chemical-based treatments. At RamaCare Polyclinic, our focus is on treating the root cause of hair loss, not just masking symptoms.',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Treatment',
-        traditional: 'Conventional Methods'
+      benefits: {
+        title: 'What Ayurvedic Hair Care Aims to Do',
+        description: 'Ayurvedic scalp therapies and medicines are traditionally used to support scalp and hair health. Results vary from person to person.',
+        hidePercentages: true,
+        benefits: [
+          { id: 1, title: 'Calm a hot, itchy or flaky scalp', description: null },
+          { id: 2, title: 'Nourish the scalp with medicated oils', description: null },
+          { id: 3, title: 'Address stress and sleep linked to hair fall', description: null },
+          { id: 4, title: 'Support digestion and diet', description: null },
+          { id: 5, title: 'Reduce breakage from dryness', description: null },
+          { id: 6, title: 'Fit alongside dermatology care', description: null }
+        ],
+        comparisonTitle: 'Ayurveda and Dermatology: How They Fit Together',
+        comparisonDescription: 'Both are available at RamaCare. Many patients use them together.',
+        comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Ayurvedic hair care', traditional: 'Dermatology hair care' },
+        comparisonData: [
+          { feature: 'Starts with', ayurvedic: 'Ayurvedic consultation and Prakriti assessment', conventional: 'Medical examination and, if needed, tests' },
+          { feature: 'Main methods', ayurvedic: 'Medicated oils, scalp therapies, herbal medicines, diet', conventional: 'Prescription treatments, PRP, other procedures' },
+          { feature: 'Best suited to', ayurvedic: 'Scalp comfort, stress- and diet-related hair fall', conventional: 'Medical and genetic hair loss, scalp disease' },
+          { feature: 'Pace', ayurvedic: 'Gradual; reviewed at follow-ups', conventional: 'Depends on the treatment chosen' },
+          { feature: 'At RamaCare', ayurvedic: 'Dr. Shamna (BAMS) and Ayurveda therapists', conventional: 'Our dermatologist, same building' }
+        ]
       },
-      comparisonData: [
-        {
-          feature: 'Treatment Approach',
-          ayurvedic: 'Holistic, natural, and root-cause based',
-          conventional: 'Symptom-focused, often chemical-based'
-        },
-        {
-          feature: 'Side Effects',
-          ayurvedic: 'Minimal to none',
-          conventional: 'May cause dryness, irritation, or dependency'
-        },
-        {
-          feature: 'Results Timeline',
-          ayurvedic: 'Gradual improvement over 3–6 months',
-          conventional: 'Quick initial results, but often temporary'
-        },
-        {
-          feature: 'Long-term Sustainability',
-          ayurvedic: 'Promotes natural hair health and balance',
-          conventional: 'Requires continuous maintenance treatments'
-        },
-        {
-          feature: 'Cost Effectiveness',
-          ayurvedic: 'One-time structured treatment approach',
-          conventional: 'Repeated expenses for ongoing care'
-        },
-        {
-          feature: 'Overall Wellness Impact',
-          ayurvedic: 'Improves overall body balance, digestion, and stress levels',
-          conventional: 'Focuses mainly on external hair appearance'
-        }
-      ]
-    },
 
     // Pricing / Investment Section
     pricing: {
@@ -2064,87 +1985,27 @@ export const subcategoryContent = {
     },
 
     // FAQ Section
-    faq: {
-      title: 'Frequently Asked Questions (FAQs)',
-      description: 'Expert answers about Ayurvedic hairfall treatment in Dubai',
-      resourcesHeading: 'Related Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Ayurvedic hair fall treatment?',
-          answer: 'Ayurvedic hair fall treatment is a natural approach that treats hair loss by correcting internal imbalances in the body. It uses herbal medicines, scalp treatments, diet guidance, and lifestyle changes to reduce hair fall and support healthy hair growth.'
-        },
-        {
-          id: 2,
-          question: 'How is Ayurvedic hair fall treatment different from chemical treatments?',
-          answer: 'Unlike chemical treatments that offer temporary results, Ayurveda focuses on treating the root cause of hair fall. It strengthens hair from within and enhancesscalp health without harsh chemicals or long-term side effects.'
-        },
-        {
-          id: 3,
-          question: 'Is Ayurvedic hair fall treatment safe?',
-          answer: 'Yes, Ayurvedic hair fall treatment is safe when performed by qualified doctors. It uses natural herbs and therapies and is suitable for long-term use under professional guidance.'
-        },
-        {
-          id: 4,
-          question: 'Who can take Ayurvedic hair fall treatment?',
-          answer: 'This treatment is suitable for both men and women experiencing hair fall, thinning, dandruff, stress-related hair loss, or early-stage baldness.'
-        },
-        {
-          id: 5,
-          question: 'How long does Ayurvedic hair fall treatment take to show results?',
-          answer: 'Most patients notice reduced hair fall within 4–6 weeks. Visible improvement in hair strength and texture usually appears within 2–3 months, while regrowth support may take 3–6 months.'
-        },
-        {
-          id: 6,
-          question: 'Can Ayurveda help with dandruff and an itchy scalp?',
-          answer: 'Yes, Ayurvedic treatments are very effective for dandruff, dry scalp, and itching. Herbal therapies help cleanse the scalp, reduce inflammation, and restore natural moisture balance.'
-        },
-        {
-          id: 7,
-          question: ' Does stress-related hair fall respond to Ayurvedic treatment?',
-          answer: 'Yes. Ayurveda addresses stress-related hair fall by calming the nervous system, improving sleep, balancing hormones, and restoring the natural hair growth cycle.'
-        },
-        {
-          id: 8,
-          question: 'Will I need to stop using my current hair products?',
-          answer: 'Your doctor will guide you during the consultation. In many cases, harsh chemical products are reduced or avoided to support better treatment results.'
-        },
-        {
-          id: 9,
-          question: 'Is Ayurvedic hair fall treatment painful?',
-          answer: 'No. Ayurvedic scalp therapies are gentle, relaxing, and painless. Many patients find the treatments calming and stress-relieving.'
-        },
-        {
-          id: 10,
-          question: 'Can Ayurveda help with genetic hair fall?',
-          answer: 'Ayurveda may help slow down hair fall, strengthen existing hair, and improve scalp health in genetic cases. Results vary depending on the stage and consistency of treatment.'
-        },
-        {
-          id: 11,
-          question: 'Do Ayurvedic medicines have side effects?',
-          answer: 'When prescribed correctly, Ayurvedic medicines are generally safe and well-tolerated. Your doctor customizes the dosage based on your body type and condition.'
-        },
-        {
-          id: 12,
-          question: ' Is diet important during hair fall treatment?',
-          answer: 'Yes. Diet plays a major role in hair health. Ayurvedic treatment includes personalized dietary guidance to improve digestion, nutrient absorption, and hair nourishment.'
-        },
-        {
-          id: 13,
-          question: 'Can women take Ayurvedic hair fall treatment after pregnancy?',
-          answer: 'Yes. Ayurvedic hair fall treatment is commonly recommended for postpartum hair fall, but it should always be taken under medical supervision.'
-        },
-        {
-          id: 14,
-          question: 'How often do I need to visit the clinic?',
-          answer: 'Visit frequency depends on your treatment plan. Typically, patients visit once or twice a week initially, followed by periodic follow-ups.'
-        },
-        {
-          id: 15,
-          question: 'Why choose RamaCare Polyclinic for Ayurvedic hair fall treatment in Dubai?',
-          answer: 'RamaCare Polyclinic offers DHA-licensed Ayurvedic care, experienced doctors, personalized treatment plans, authentic herbal therapies, and a focus on long-term hair health—not temporary solutions.'
-        }
-      ],
+   faq: {
+  title: 'Ayurvedic Hair Fall Treatment: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is Ayurvedic hair fall and hair loss treatment?", answer: "Ayurvedic treatment for hair fall is a doctor-led approach that looks for why your hair is falling, such as stress, diet, scalp condition or hormonal change, and combines scalp therapies with medicated oils, herbal medicines if suitable, and diet guidance. At RamaCare it starts with a consultation with Dr. Shamna Keloth Meethal (BAMS)." },
+    { id: 2, question: "Which doctor should I see for hair fall?", answer: "It depends on the cause. See a dermatologist for sudden, patchy or genetic hair loss, a general physician if you feel unwell or tired, and an Ayurvedic doctor for gradual hair fall linked to stress, dandruff or diet. RamaCare has all three in the same Jumeirah 1 building." },
+    { id: 3, question: "Can dandruff cause hair fall?", answer: "Dandruff itself does not usually make hair fall out permanently, but constant itching, scratching and scalp inflammation can increase shedding and breakage. Treating the scalp condition often helps. Ayurvedic dandruff treatment at RamaCare uses scalp therapies such as Shirolepa, traditionally used for an itchy, flaky scalp." },
+    { id: 4, question: "How much hair fall is normal?", answer: "Losing around 50–100 hairs a day is generally considered normal. If you notice clumps, visible thinning, a widening parting or bald patches, have your hair and scalp assessed." },
+    { id: 5, question: "How to stop hair fall in Dubai?", answer: "To reduce and prevent hair fall in Dubai, wash sweat off the scalp, avoid very hot water, protect hair from sun and air-conditioning dryness, sleep regularly and eat enough protein and iron-rich food. If hair fall continues for more than a few weeks, get it assessed rather than changing products repeatedly." },
+    { id: 6, question: "Which Ayurvedic therapies do you use for hair fall?", answer: "Depending on your assessment: Shiro Abhyanga (Ayurvedic head massage with medicated oil), Shirolepa (herbal hair pack), Nasya (medicated nasal drops), Shirodhara or Takradhara, plus herbal medicines and diet guidance. Therapies are given by a Kerala-trained therapist of your gender." },
+    { id: 7, question: "Which Ayurvedic hair oils do you use?", answer: "Dr. Shamna selects medicated oils for your scalp type, such as Neelibringadi or Bhringraj-based oils. They are used during clinic therapies and can be prescribed for home use when suitable." },
+    { id: 8, question: "How long does Ayurvedic treatment for hair growth take?", answer: "Ayurvedic treatment for hair growth and hair fall works gradually. Many patients notice changes in scalp comfort and daily hair fall over several weeks, but response varies from person to person. Your doctor reviews progress at each follow-up." },
+    { id: 9, question: "Is there an Ayurvedic treatment for alopecia or genetic hair loss?", answer: "Genetic hair loss and alopecia areata should be assessed and treated by a dermatologist. Ayurvedic scalp care can be used alongside medical treatment as complementary care; at RamaCare both are available in one building." },
+    { id: 10, question: "Can I have Ayurvedic hair treatment after pregnancy?", answer: "Postpartum hair fall is common and often settles on its own within months. Ayurvedic scalp care and diet guidance can be considered after the doctor reviews your health, and whether you are breastfeeding, at the consultation." },
+    { id: 11, question: "Is there an Ayurvedic treatment for grey hair?", answer: "Ayurveda links premature grey hair and early greying with aggravated Pitta, and uses oils, diet and routine changes traditionally aimed at scalp and hair health. Response varies; the doctor will explain what to expect for you." },
+    { id: 12, question: "Do Ayurvedic hair medicines have side effects?", answer: "Like any medicine, Ayurvedic medicines can cause reactions in some people. That is why the doctor reviews your health, allergies and current medicines before prescribing, and adjusts the plan at follow-ups." },
+    { id: 13, question: "Can I combine Ayurveda with PRP or dermatology treatment?", answer: "Often yes. Many patients use Ayurvedic scalp care alongside dermatology treatments such as PRP. Tell both doctors about all treatments you are using; at RamaCare they can coordinate in the same building." },
+    { id: 14, question: "How much does Ayurvedic hair fall treatment cost?", answer: "An Ayurvedic hair consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Therapy costs depend on the sessions and medicines in your plan and are confirmed in writing before you start. Insurance is on a reimbursement basis." },
+    { id: 15, question: "Do you have male and female therapists?", answer: "Yes. Male patients are treated by a male therapist and female patients by a female therapist for all scalp and oil therapies." }
+  ],
       resources: [
         {
           id: 1,
@@ -2160,9 +2021,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -2247,8 +2108,14 @@ export const subcategoryContent = {
 
     // Patient Testimonials Section
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who experienced natural hair restoration',
+    title: 'What Patients Say About Their Visit',
+    subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+    stats: [
+      { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.9, showStars: true },
+      { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+      { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+      { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+    ],
       testimonials: [
         {
           id: 1,
@@ -2304,14 +2171,14 @@ export const subcategoryContent = {
     bookConsultation: {
       badge: 'Start Your Journey',
       title: 'Book Ayurvedic Hair Fall Treatment in Dubai Today',
-      description: 'Restore your hair fitness naturally with trusted Ayurvedic care at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
+      description: 'Book an Ayurvedic hair consultation with Dr. Shamna in Jumeirah 1, from AED 200. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -2320,8 +2187,7 @@ export const subcategoryContent = {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
+        
       },
       statCards: [
         {
@@ -2332,13 +2198,13 @@ export const subcategoryContent = {
           title: 'Experienced Team',
           description: 'Years Combined Experience'
         },
-        {
-          title: '2,500+ Procedures',
-          description: 'Completed'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+         { 
+          title: '1,000+ Ayurveda patients', 
+          description: 'In the last 2 years'
+         },
+        { 
+          title: '4.8/5 Google rating', 
+          description: '218 reviews' 
         }
       ]
     }
@@ -2348,61 +2214,46 @@ export const subcategoryContent = {
   // AYURVEDA DUBAI - ANALYSIS OF INDIVIDUAL
   // ============================================
   'ayurveda-dubai-analysis-of-individual': {
-    hero: {
-      subtitle: 'Personalized Health Assessment for Accurate & Effective Treatment',
-      description: 'Every individual has a unique body constitution and biological balance. Although symptoms may appear similar, the underlying cause is often different for each person.At RamaCare Polyclinic, we perform a detailed Analysis of the Individual in Dubai before starting any treatment. This helps us understand your internal health condition, lifestyle patterns, and existing imbalances to ensure a precise and personalized treatment approach. Our goal is to move beyond symptom-based care and focus on identifying and treating the root cause of the health issue, ensuring safe, effective, and long-term results.',
-      rating: '500+ Happy Clients',
+      hero: {
+      title: 'Prakriti & Dosha Assessment in Dubai',
+      subtitle: 'An in-person Ayurveda consultation to find your dosha, with a BAMS doctor in Jumeirah 1',
+      description: 'A Prakriti assessment is an Ayurvedic consultation that finds your natural constitution (Prakriti) and your current imbalance (Vikriti) of the three doshas: Vata, Pitta and Kapha. At RamaCare Polyclinic in Jumeirah 1, Dr. Shamna Keloth Meethal (BAMS) uses pulse diagnosis (Nadi Pariksha), tongue and eye examination and a detailed history. It takes 45–60 minutes, starts from AED 200, and ends with advice or a written plan based on your needs.',
+      rating: '4.9★ Google rating',
+      topBadges: [
+        { icon: 'location', text: 'Jumeirah 1, Dubai' },
+        { icon: 'building', text: 'DHA-licensed polyclinic' },
+        { icon: 'star', text: '4.9★ Google rating' }
+      ],
       stats: [
-        {
-          id: 1,
-          number: '95%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Assessments Completed'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
+        { id: 1, number: 'AED 200', label: 'Consultation from' },
+        { id: 2, number: '45–60 min', label: 'In person' },
+        { id: 3, number: '11+ yrs', label: 'Dr. Shamna, BAMS' }
       ],
       ctaButtons: {
-        primary: {
-          text: ' Book Individual Analysis Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
+        primary: { text: 'Book Prakriti Assessment', icon: 'calendar', link: '#book-now' },
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: [
-        'DHA-Licensed Clinic',
-        ' Experienced Ayurvedic Doctors',
-        ' Root-Cause Based Health Evaluation',
-
+        'Pulse diagnosis (Nadi Pariksha) by a BAMS doctor',
+        'Tongue, eye and body examination (Ashtavidha Pariksha)',
+        'Your Vata, Pitta and Kapha balance explained',
+        'Diet and routine advice, with a written plan when needed',
+        'GP and dermatologist in the same building'
       ],
       image: {
         src: '/images/analysis.jpg',
-        alt: 'Individual health analysis conducted by a specialist to understand patient needs and plan personalized treatment.'
+        alt: 'Ayurvedic Prakriti and dosha assessment with pulse diagnosis at RamaCare Polyclinic, Jumeirah 1, Dubai'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results and recommendations may vary based on individual body constitution, health condition, and compliance. All consultations and assessments are conducted at a DHA-licensed clinic following approved protocols.',
+        text: 'A Prakriti assessment is an Ayurvedic consultation and does not replace medical tests or diagnosis. If a medical concern is found, we refer you to our general physician. Provided at a DHA-licensed polyclinic (licence 2036418).',
         show: true
       }
     },
-    doctors: {
-      badge: 'Medical Expertise',
-      title: 'Meet Our Analysis Treatment Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic doctors with extensive experience in personalized health analysis.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
+      doctors: {
+      badge: 'Your Ayurvedic Doctor',
+      title: 'Your Prakriti Assessment Is Done by Dr. Shamna Keloth Meethal',
+      description: 'Dr. Shamna (BAMS, DHA-licensed, 11+ years) carries out every Prakriti and dosha assessment herself. She speaks English, Malayalam and Hindi.',
+      doctors: [ DOCTORS.shamna ]
     },
     certifications: {
       title: 'Certifications & Accreditations',
@@ -2435,132 +2286,73 @@ export const subcategoryContent = {
       ]
     },
     overview: {
-      title: 'Understanding the Analysis of an Individual',
+      title: 'Understanding Prakriti, Vikriti and Your Dosha',
       problemIntro: {
-        title: 'Common Health Concerns',
-        description: 'Many people seek treatment without understanding the real cause of their health issues. While temporary relief is common, symptoms often return when the root cause is not addressed properly.'
-      },
-      solutionIntro: {
-        title: 'Advanced Analysis of an Individual',
-        description: 'At RamaCare Polyclinic, our Analysis of the Individual in Dubai focuses on understanding your unique body structure, internal imbalances, and overall health condition before starting any treatment.This ensures that every patient receives a precise, personalized, and result-oriented treatment plan based on their specific needs.'
+          title: 'Signs Your Doshas May Be Out of Balance',
+          description: 'In Ayurveda, many everyday complaints are linked to an imbalance of Vata, Pitta or Kapha. These signs are common reasons people book an assessment. They can also have medical causes, so persistent symptoms should be checked by a doctor.'
+        },
+     solutionIntro: {
+        title: 'What Happens at Your Prakriti Assessment',
+        description: 'At RamaCare Polyclinic in Jumeirah 1, Dr. Shamna Keloth Meethal (BAMS) assesses your constitution and current imbalance through a detailed history, pulse diagnosis (Nadi Pariksha) and examination of the tongue, eyes, skin and body build, then explains what it means for your diet, routine and any therapies.'
       },
       leftCards: [
-        {
-          id: 1,
-          title: 'What is the Analysis of the Individual?',
-          description: 'An Analysis of the Individual in Dubai is a comprehensive health evaluation that studies how the body functions as a complete system. Instead of treating only symptoms, this analysis helps identify the real root cause of health issues. It forms the foundation for creating a personalized treatment plan tailored to your body type, lifestyle, and health goals.In Ayurveda, this includes assessing:',
-          listItems: [
-            ' Prakriti (natural body constitution)',
-            'Vikriti (current dosha imbalance)',
-          ]
-        },
-        {
-          id: 2,
-          title: 'Key Areas Assessed During Individual Analysis',
-          sections: [
-            {
-              heading: 'Body Constitution (Prakriti)',
-              items: [
-                'Understanding whether your dominant constitution is Vata, Pitta, Kapha, or a combination of doshas.',
-              ]
-            },
-            {
-              heading: 'Current Health Imbalance (Vikriti)',
-              items: [
-                'Identifying imbalances caused by: Stress, Diet , Lifestyle habits , Illness or environmental factors',
-              ]
-            },
-            {
-              heading: 'Digestive Strength',
-              items: [
-                'Assessing appetite, digestion, metabolism, and toxin buildup (Ama).',
-              ]
-            },
-            {
-              heading: 'Lifestyle & Daily Routine',
-              items: [
-                'Sleep patterns, work stress, physical activity, and daily habits.',
-              ]
-            },
-
-          ]
-        },
-        {
-          id: 3,
-          title: 'Who Needs an Analysis of an Individual?',
-          description: 'This assessment is recommended for individuals experiencing:',
-          listItems: [
-            'Chronic or recurring health issues',
-            'Digestive problems',
-            'Hair fall or skin concerns',
-            'Stress, anxiety, or sleep disorders',
-
-          ]
-        },
-        {
-          id: 4,
-          title: 'Duration',
-          description: 'Initial Consultation: 30–45 minutes \n\n Follow-Up Review: As advised by the physician'
-        }
+          {
+            id: 1,
+            icon: 'Leaf',
+            title: 'What Is a Prakriti Assessment?',
+            description: 'A Prakriti assessment is the first Ayurvedic consultation. It identifies two things:',
+            listItems: [
+              'Prakriti: your natural constitution, the Vata, Pitta and Kapha balance you were born with',
+              'Vikriti: your current imbalance, shaped by stress, diet, climate and routine',
+              'Your Agni (digestive strength) and signs of Ama (undigested toxins)',
+              'What this means for your diet, daily routine and any therapies'
+            ]
+          },
+          {
+            id: 2,
+            icon: 'Target',
+            title: 'How Dr. Shamna Assesses Your Dosha',
+            sections: [
+              { heading: 'Nadi Pariksha (Pulse Diagnosis)', items: ['The pulse is read at the wrist with three fingers', 'Used to assess Vata, Pitta and Kapha', 'Gentle and non-invasive'] },
+              { heading: 'Tongue and Eye Examination', items: ['Tongue coating and colour (Jihva)', 'Eyes (Drik), skin (Sparsha) and voice (Shabda)', 'Part of the classical eight-fold examination'] },
+              { heading: 'Body Build and History', items: ['Body frame (Akriti)', 'Digestion, appetite, stools and urine', 'Sleep, stress, work pattern and climate'] },
+              { heading: 'Your Results Explained', items: ['Your dominant dosha or doshas', 'Your current imbalance', 'Diet, routine and therapy advice; a written plan when needed'] }
+            ]
+          },
+          {
+            id: 3,
+            icon: 'Users',
+            title: 'Who Books a Prakriti Assessment?',
+            description: 'Adults (18+) who want to:',
+            listItems: [
+              'Find out their dosha and Ayurvedic body type',
+              'Start any Ayurvedic therapy, including Panchakarma',
+              'Get Ayurvedic advice for recurring digestion, skin, hair, stress or sleep concerns, alongside medical care',
+              'Plan a diet and routine that suits their constitution and the Dubai climate'
+            ]
+          },
+          {
+            id: 4,
+            icon: 'Clock',
+            title: 'Duration and Fee',
+            description: 'Consultation: 45–60 minutes, in person \n\n Fee: from AED 200 \n\n Follow-up: as advised by the doctor'
+          }
       ],
       rootCauses: [
-        {
-          id: 1,
-          title: 'Recurring Symptoms',
-          description: 'Patients often experience symptoms that improve temporarily but return after a short period. This cycle of recurring health issues can: Reduce quality of life , Cause frustration , Indicate the untreated underlying imbalance',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Temporary Relief Without Long-Term Improvement',
-          description: 'Symptom-focused treatments may provide quick relief but do not treat the underlying root cause. Without proper diagnosis and corrective treatment, patients may experience:Repeated treatments , Short-term improvement only , Gradual worsening of health conditions',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 3,
-          title: 'Misdiagnosis or Generic Treatment',
-          description: 'Standardized treatments often fail to consider individual body differences. This can result in: Ineffective results ,Prolonged discomfort , Delayed recovery',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 4,
-          title: 'Lifestyle-Related Inequalities',
-          description: 'Stress, poor diet, lack of sleep, and irregular routines significantly contribute to chronic health issues. If not corrected, these factors can: Prevent long-term healing ,Worsen existing conditions , Disrupt body balance',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 5,
-          title: 'Poor Digestion and Toxin Buildup',
-          description: 'Weak metabolism and poor digestion can lead to toxin accumulation (Ama), which may cause: Fatigue , Digestive discomfort , Low immunity , Overall health decline',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 6,
-          title: 'Lack of Personalized Guidance',
-          description: 'Without individualized assessment, patients often struggle to understand their body’s unique needs, leading to: Confusion in treatment , Slow progress , Ineffective health management',
-          severity: 'Low',
-          severityColor: 'bg-[#DCFCE7] text-[#166534]'
-        },
-        {
-          id: 7,
-          title: 'Hormonal Imbalances',
-          description: 'Imbalances in hormones such as: Thyroid , Insulin , Cortisol can affect: Energy levels , Metabolism , Organ function',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
+        { id: 1, title: 'Vata Imbalance', description: 'Dry skin, bloating, constipation, light sleep, worry and feeling cold. Often aggravated by air-conditioning, travel and irregular routines.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+        { id: 2, title: 'Pitta Imbalance', description: 'Acidity, heartburn, skin redness or rashes, irritability, feeling hot and early greying. Often aggravated by Dubai heat, spicy food and skipped meals.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+        { id: 3, title: 'Kapha Imbalance', description: 'Heaviness, slow digestion, congestion, low motivation and weight gain. Often aggravated by long sitting hours, heavy food and daytime sleep.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+        { id: 4, title: 'Weak Digestion (Agni) and Ama', description: 'Ayurveda links a weak digestive fire to undigested residue (Ama), felt as tiredness, a coated tongue and heaviness after meals.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+        { id: 5, title: 'Stress and Poor Sleep', description: 'Long working hours and irregular sleep are common in Dubai and, in Ayurveda, disturb Vata first.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+        { id: 6, title: 'Hormonal Changes', description: 'Thyroid, blood sugar and other hormonal problems need medical testing. Ayurvedic advice can be added alongside; our general physician is in the same building.', severity: 'Check medically', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
       ],
       quickFacts: [
-        { label: 'Review Type:', value: 'Holistic health evaluation' },
-        { label: 'Approach:', value: 'Root-cause analysis' },
-        { label: 'Generation Group', value: 'Adults (18+)' },
-        { label: 'Pain Level:', value: 'None' },
-        { label: 'Downtime:', value: 'None' },
-        { label: 'Safety: ', value: 'DHA-approved clinical protocols' },
+        { label: 'Assessed by', value: 'Dr. Shamna Keloth Meethal, BAMS' },
+        { label: 'Methods', value: 'Nadi Pariksha, tongue and eye exam, history' },
+        { label: 'Duration', value: '45–60 minutes, in person' },
+        { label: 'Fee', value: 'From AED 200' },
+        { label: 'Suitable for', value: 'Adults (18+)' },
+        { label: 'Pain', value: 'None; non-invasive' },
       ],
       approachCards: [
         {
@@ -2605,20 +2397,58 @@ export const subcategoryContent = {
           hasLearnMore: true,
           expandedContent: 'This helps identify internal imbalances affecting immunity and energy.'
         },
-        {
-          id: 9,
-          title: 'Expected Results',
-          description: 'Clear understanding of your health condition , Accurate and personalized diagnosis ,Customized treatment plan ,Improved treatment outcomes ,Balanced metabolism and digestion ,Restored hormonal and mind-body harmony ,Long-term sustainable health improvement',
-          hasLearnMore: false,
-          expandedContent: null
-        }
+        { 
+          id: 7, 
+          title: 'What You Leave With', 
+          description: 'An explanation of your Prakriti and current imbalance, practical diet and routine advice for your dosha, and recommendations on any therapies. A written plan is provided when your needs call for one.', 
+          hasLearnMore: false }
       ]
     },
 
+        doshaGuide: {
+          id: 'three-doshas',
+          heading: 'The Three Doshas: Vata, Pitta and Kapha',
+          intro: 'Ayurveda describes three doshas, or functional energies, known together as tridosha: vata pitta kapha. Everyone has all three; your Prakriti is the mix you were born with.',
+          table: [
+            ['Vata (air and space)', 'Governs movement: breathing, circulation, nerves. In balance: creative and energetic. Out of balance: dryness, bloating, poor sleep, worry. Dubai triggers: air-conditioning, travel, irregular routines.'],
+            ['Pitta (fire and water)', 'Governs digestion and metabolism. In balance: focused, strong appetite. Out of balance: acidity, skin redness, irritability, early greying. Dubai triggers: summer heat, spicy food, skipped meals.'],
+            ['Kapha (earth and water)', 'Governs structure and stability. In balance: calm, steady, strong. Out of balance: heaviness, slow digestion, congestion, weight gain. Dubai triggers: long sitting hours, heavy food, daytime sleep.']
+          ],
+          note: 'Most people are a combination of two doshas (for example Vata-Pitta). Try the dosha test below for a first idea, then confirm it at an in-person assessment.'
+        },
+
+        ashtavidha: {
+          id: 'ashtavidha-pariksha',
+          heading: 'Ashtavidha Pariksha: The Eight-Fold Ayurvedic Examination',
+          intro: 'Classical Ayurveda assesses a patient in eight ways. At your consultation, Dr. Shamna uses them as follows:',
+          table: [
+            ['Nadi (pulse)', 'Pulse diagnosis at the wrist to assess Vata, Pitta and Kapha'],
+            ['Jihva (tongue)', 'Tongue colour and coating, linked to digestion and Ama'],
+            ['Drik (eyes)', 'Colour and clarity of the eyes'],
+            ['Sparsha (touch)', 'Skin temperature and texture'],
+            ['Shabda (voice)', 'Voice and speech'],
+            ['Akriti (build)', 'Body frame and build'],
+            ['Mala (stools)', 'Questions about bowel habits'],
+            ['Mutra (urine)', 'Questions about urine and fluid intake']
+          ],
+          note: 'Everything is non-invasive: no needles, no samples taken. If a medical test is needed, our general physician can arrange it in the same building.'
+        },
+
+      balanceDoshas: {
+        id: 'balance-doshas',
+        heading: 'How to Balance Vata, Pitta and Kapha Dosha',
+        intro: 'General Ayurvedic guidance. Your own plan depends on your assessment.',
+        items: [
+          { text: 'Balance Vata with a Vata diet and routine: keep regular meal and sleep times, favour warm cooked food, stay warm in air-conditioning; oil massage (Abhyanga) is traditionally used', href: '/services/abhyanga-massage-dubai/' },
+          { text: 'Balance Pitta with a Pitta diet: avoid the midday heat and very spicy food, never skip meals, favour cooling foods; see our Ayurvedic summer diet for Dubai', href: '/services/ayurvedic-diet-dubai-summer/' },
+          { text: 'Reduce Kapha with a Kapha diet and routine: move every day, eat lighter warm meals, cut sweets and avoid daytime naps', href: '/services/ayurvedic-diet-weight-loss-dubai/' },
+          { text: 'Get a personal Ayurvedic diet plan for your dosha', href: '/services/ayurvedic-diet-plan-dubai/' }
+        ]
+      },
     // Healing Journey / Process Section
     healingJourney: {
       title: 'Your Personalized Health Evaluation Journey',
-      description: 'Transparent, structured approach to ensure optimal results and patient comfort.',
+      description: 'Three clear steps, all with Dr. Shamna: assessment, your plan, and follow-up if needed.',
       steps: [
         {
           id: 1,
@@ -2664,87 +2494,29 @@ export const subcategoryContent = {
     },
 
     // Benefits Section
-    benefits: {
-      title: 'Clinically Observed Benefits',
-      description: 'Evidence-based results from our comprehensive Ayurvedic treatment approach.',
-      benefits: [
-        {
-          id: 1,
-          title: 'Accurate diagnosis',
-          percentage: 85,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Personalized treatment approach',
-          percentage: 92,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Improved treatment effectiveness',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Better digestion and energy levels',
-          percentage: 79,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Reduced recurrence of health issues',
-          percentage: 83,
-          description: null
-        },
-        {
-          id: 6,
-          title: 'Long-term wellness support',
-          percentage: 90,
-          description: null
-        }
-      ],
-      comparisonTitle: 'Ayurvedic Individual Analysis vs Generic Care',
-      comparisonDescription: 'Compare our personalized Ayurvedic health assessment with generic symptom-based care',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Individual Analysis',
-        traditional: 'Generic Care'
+      benefits: {
+        title: 'Why Know Your Dosha?',
+        description: 'Knowing your Prakriti helps you make everyday choices that suit your body. Individual experiences vary.',
+        hidePercentages: true,
+        benefits: [
+          { id: 1, title: 'Know which foods suit you', description: null },
+          { id: 2, title: 'Plan a daily routine for your body type', description: null },
+          { id: 3, title: 'Understand your digestion (Agni)', description: null },
+          { id: 4, title: 'Adjust for the Dubai climate', description: null },
+          { id: 5, title: 'Choose suitable Ayurvedic therapies', description: null },
+          { id: 6, title: 'Prepare safely for Panchakarma', description: null }
+        ],
+        comparisonTitle: 'Online Dosha Quiz vs In-Person Prakriti Assessment',
+        comparisonDescription: 'A quiz is a useful start. An in-person assessment adds what a questionnaire cannot.',
+        comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Prakriti assessment at RamaCare', traditional: 'Online dosha quiz' },
+        comparisonData: [
+          { feature: 'Done by', ayurvedic: 'A BAMS Ayurvedic doctor', conventional: 'You, answering questions' },
+          { feature: 'Methods', ayurvedic: 'Nadi Pariksha, tongue, eyes, history', conventional: 'Self-reported answers' },
+          { feature: 'Prakriti and Vikriti', ayurvedic: 'Both assessed and separated', conventional: 'Usually mixed together' },
+          { feature: 'Advice', ayurvedic: 'Diet, routine and therapies for you', conventional: 'General tips' },
+          { feature: 'Time and cost', ayurvedic: '45–60 min, from AED 200', conventional: 'A few minutes, free' }
+        ]
       },
-      comparisonData: [
-        {
-          feature: 'Diagnostic Focus',
-          ayurvedic: 'Root cause & dosha constitution assessment',
-          conventional: 'Surface symptom masking only'
-        },
-        {
-          feature: 'Personalization',
-          ayurvedic: 'Fully customized to individual body type',
-          conventional: 'One-size-fits-all generic prescriptions'
-        },
-        {
-          feature: 'Assessment Depth',
-          ayurvedic: 'Prakriti, Vikriti & lifestyle evaluation',
-          conventional: 'Brief single-symptom evaluation'
-        },
-        {
-          feature: 'Long-term Health Impact',
-          ayurvedic: 'Prevents recurrence & promotes vitality',
-          conventional: 'Temporary relief with recurring symptoms'
-        },
-        {
-          feature: 'Treatment Planning',
-          ayurvedic: 'Targeted diet, herbs & natural therapies',
-          conventional: 'Standard pharmaceutical management'
-        },
-        {
-          feature: 'Overall Wellness',
-          ayurvedic: 'Restores mind, body & metabolic balance',
-          conventional: 'Focuses on isolated complaints'
-        }
-      ]
-    },
 
     // Pricing / Investment Section
     pricing: {
@@ -2797,87 +2569,29 @@ export const subcategoryContent = {
 
     // FAQ Section
     faq: {
-      title: 'Frequently Asked Questions (FAQs)',
-      description: 'Expert answers about Analysis of Individual at RamaCare Polyclinic',
-      resourcesHeading: 'Related Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is the Analysis of Individual?',
-          answer: 'An analysis of an individual is a detailed health assessment that helps understand your body constitution, current health imbalance, lifestyle, and digestion. It allows doctors to plan personalised treatment instead of using a general approach.'
-        },
-        {
-          id: 2,
-          question: 'Why is individual analysis important before treatment?',
-          answer: 'Every person is different. Individual analysis helps identify the root cause of health problems, ensuring treatments are accurate, effective, and suitable for your body type.'
-        },
-        {
-          id: 3,
-          question: 'Is the Analysis of Individual only for Ayurveda treatments?',
-          answer: 'While commonly used in Ayurveda, individual analysis is beneficial for anyone seeking personalised, preventive, or holistic healthcare, regardless of the treatment type.'
-        },
-        {
-          id: 4,
-          question: 'What does the doctor check during the analysis?',
-          answer: 'The doctor evaluates body constitution (Prakriti), current imbalance (Vikriti), digestion, lifestyle habits, stress levels, sleep patterns, and overall health history.'
-        },
-        {
-          id: 5,
-          question: 'How long does the individual analysis consultation take?',
-          answer: 'The initial consultation usually takes about 30–45 minutes, allowing enough time for proper assessment and discussion.'
-        },
-        {
-          id: 6,
-          question: 'Is the analysis of Individual painful or invasive?',
-          answer: 'No. It is a completely non-invasive and painless process based on consultation, observation, and discussion.'
-        },
-        {
-          id: 7,
-          question: 'Who should undergo the Analysis of Individual?',
-          answer: 'Anyone with recurring health issues, digestive problems, stress, hair or skin concerns, lifestyle disorders, or those seeking preventive care can benefit from this assessment.'
-        },
-        {
-          id: 8,
-          question: 'Can healthy individuals also do individual analysis?',
-          answer: 'Yes. Even if you feel healthy, an analysis of individual helps maintain balance, prevent future health problems, and improve overall well-being.'
-        },
-        {
-          id: 9,
-          question: 'Will I receive a personalised treatment plan after the analysis?',
-          answer: 'Yes. Based on the findings, the doctor provides personalised treatment, diet, lifestyle, or wellness recommendations suited to your body’s needs.'
-        },
-        {
-          id: 10,
-          question: 'Is diet discussed during individual analysis?',
-          answer: 'Yes. Diet plays a key role in health. The doctor may suggest dietary changes based on your digestion, body constitution, and health condition.'
-        },
-        {
-          id: 11,
-          question: 'Does stress affect the analysis results?',
-          answer: 'Yes. Stress and emotional health are important factors and are considered during the analysis, as they significantly impact overall well-being.'
-        },
-        {
-          id: 12,
-          question: 'How often should individual analysis be done?',
-          answer: 'Usually, one detailed analysis is enough initially. Follow-up assessments may be advised depending on your health condition or treatment progress.'
-        },
-        {
-          id: 13,
-          question: 'Is the analysis of Individual safe for all age groups?',
-          answer: 'It is safe for adults. For children or elderly patients, the assessment is adjusted carefully based on age and health condition.'
-        },
-        {
-          id: 14,
-          question: 'Is this analysis done at a licensed clinic?',
-          answer: 'Yes. Analysis of Individual is conducted at a DHA-licensed clinic following approved medical and consultation protocols.'
-        },
-        {
-          id: 15,
-          question: 'Why choose RamaCare Polyclinic for the Analysis of Individual?',
-          answer: 'RamaCare Polyclinic offers experienced doctors, detailed one-to-one consultations, personalised care, ethical practices, and a strong focus on long-term health and prevention.'
-        }
-      ],
-
+  title: 'Prakriti and Dosha Assessment: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is a Prakriti assessment?", answer: "A Prakriti assessment (also called Prakriti analysis) is an Ayurvedic consultation that identifies your natural constitution (Prakriti) and your current imbalance (Vikriti) of Vata, Pitta and Kapha. At RamaCare in Jumeirah 1 it is done in person by Dr. Shamna Keloth Meethal (BAMS), takes 45–60 minutes and starts from AED 200." },
+    { id: 2, question: "How do I know my dosha?", answer: "A dosha test or quiz gives a first idea based on your body frame, digestion, sleep and temperament. An Ayurvedic doctor confirms it with pulse diagnosis (Nadi Pariksha), tongue and eye examination and a detailed history. Try the quiz on this page, then book an assessment to confirm." },
+    { id: 3, question: "What are the 3 doshas (Vata Pitta Kapha)?", answer: "The three doshas, known together as tridosha, are Vata (air and space) governs movement, Pitta (fire and water) governs digestion and metabolism, and Kapha (earth and water) governs structure and stability. Everyone has all three; most people have one or two that dominate." },
+    { id: 4, question: "What is the difference between Prakriti and Vikriti?", answer: "Prakriti is the dosha balance you are born with and it stays largely the same. Vikriti is your current state, which changes with stress, diet, climate and routine. Ayurvedic advice aims to bring your Vikriti back towards your Prakriti." },
+    { id: 5, question: "What is Nadi Pariksha (Ayurvedic pulse diagnosis)?", answer: "Nadi Pariksha is the Ayurvedic method of reading the pulse at the wrist with three fingers to assess Vata, Pitta and Kapha. It is gentle and non-invasive, and it is one part of the assessment alongside the tongue, eyes and your history." },
+    { id: 6, question: "What is Ashtavidha Pariksha?", answer: "Ashtavidha Pariksha is the classical eight-fold Ayurvedic examination: pulse (Nadi), tongue (Jihva), eyes (Drik), touch (Sparsha), voice (Shabda), body build (Akriti), stools (Mala) and urine (Mutra). At RamaCare the last two are covered by questions; no samples are taken." },
+    { id: 7, question: "What happens at an Ayurvedic consultation in Dubai?", answer: "At RamaCare, Dr. Shamna reviews your health history, medicines, diet, sleep and stress, reads your pulse, examines your tongue, eyes and skin, and explains your Prakriti and current imbalance. You leave with diet and routine advice, therapy recommendations if needed, and a written plan when your needs call for one." },
+    { id: 8, question: "How much does an Ayurvedic consultation cost in Dubai?", answer: "At RamaCare Polyclinic in Jumeirah 1, a Prakriti and dosha assessment with Dr. Shamna starts from AED 200 for 45–60 minutes. Any therapies recommended afterwards are priced separately and confirmed in writing before they start." },
+    { id: 9, question: "Will I get a written plan or dosha report?", answer: "Dr. Shamna always explains your results. A written plan covering your dosha, diet, routine and any therapies is provided when your needs call for one, for example before Panchakarma or for a longer care plan." },
+    { id: 10, question: "Is an online dosha test accurate?", answer: "An online dosha quiz is a useful start, but it relies on your own answers and often mixes your natural constitution with your current state. An in-person assessment adds pulse, tongue and eye examination and separates Prakriti from Vikriti." },
+    { id: 11, question: "How can I balance Pitta dosha in Dubai's heat?", answer: "Avoid the midday sun and very spicy, fried or sour food, do not skip meals, drink enough water, and favour cooling foods such as cucumber, coconut water and sweet fruits. Shirodhara is traditionally used to calm Pitta. Your plan depends on your assessment." },
+    { id: 12, question: "How do I balance Vata dosha?", answer: "Keep regular meal and sleep times, favour warm, cooked and slightly oily food, stay warm in air-conditioned spaces and avoid rushing. Warm oil massage (Abhyanga) is traditionally used to calm Vata." },
+    { id: 13, question: "How do I reduce Kapha dosha?", answer: "Stay active every day, choose lighter, warm meals with fewer sweets and dairy, avoid long daytime naps and keep a stimulating routine. Udwarthanam (herbal powder massage) is traditionally used for Kapha." },
+    { id: 14, question: "How should I prepare for my Prakriti assessment?", answer: "If you can, come in the morning without a heavy meal in the previous two hours, as the pulse is traditionally read before eating. Bring a list of your medicines and any recent test reports." },
+    { id: 15, question: "Does a Prakriti assessment replace medical tests?", answer: "No. It is an Ayurvedic consultation, not a medical diagnosis. If Dr. Shamna suspects a medical problem, she will refer you to our general physician in the same building for tests." },
+    { id: 16, question: "Can I book an assessment if I feel healthy?", answer: "Yes. Many people book simply to know their dosha and plan a diet and routine that suits them and the Dubai climate." },
+    { id: 17, question: "Which languages does the doctor speak?", answer: "Dr. Shamna Keloth Meethal speaks English, Malayalam and Hindi. Other clinic staff also speak Arabic and Tagalog." },
+    { id: 18, question: "Is the consultation covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic and we provide an itemised invoice for your claim." }
+  ],
       resources: [
         {
           id: 1,
@@ -2893,9 +2607,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -2979,9 +2693,15 @@ export const subcategoryContent = {
     },
 
     // Patient Testimonials Section
-    testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who received a personalized health analysis',
+   testimonials: {
+      title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+      ],
       testimonials: [
         {
           id: 1,
@@ -3037,15 +2757,15 @@ export const subcategoryContent = {
 
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Analysis of an Individual Today',
-      description: 'Understanding your body is the first step toward effective healing. Start your journey with a detailed Analysis of an individual at RamaCare Polyclinic.',
+      title: 'Book Your Prakriti & Dosha Assessment',
+      description: 'Find your dosha with Dr. Shamna in Jumeirah 1: 45–60 minutes, from AED 200. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3054,26 +2774,24 @@ export const subcategoryContent = {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
-        {
-          title: 'DHA Licensed',
-          description: 'Certified Healthcare Facility'
-        },
-        {
-          title: 'Experienced Team',
-          description: '15+ Years Combined Experience'
-        },
-        {
-          title: '2,500+ Procedures',
-          description: 'Completed'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+          {
+            title: 'DHA Licensed',
+            description: 'Certified Healthcare Facility'
+          },
+          { 
+            title: 'Experienced Team', 
+            description: 'Dr. Shamna, BAMS, 11+ years' 
+          }, 
+          { 
+            title: '1,000+ Ayurveda patients', 
+            description: 'In the last 2 years' 
+          }, 
+          { 
+            title: '4.8/5 Google rating', 
+            description: '218 reviews' 
+          }
       ]
     }
   },
@@ -3083,61 +2801,46 @@ export const subcategoryContent = {
   // ============================================
 
   'ayurveda-dubai-skin-diseases-treatment': {
-    hero: {
-      subtitle: 'Natural Ayurvedic Care for Healthy, Clear & Balanced Skin',
-      description: 'Skin conditions often reflect internal imbalance rather than only surface-level concerns.At RamaCare Polyclinic, we provide personalized skin disease treatment in Ayurveda in Dubai designed to support natural healing, reduce recurring flare-ups, and improve long-term skin wellness naturally.\n\nOur Ayurvedic approach focuses on identifying the root causes of skin disorders by balancing doshas, supporting digestion, improving blood purification, and strengthening immunity.Instead of temporary cosmetic relief, Ayurvedic skin therapies aim to support healthy, balanced skin from within.\n\nMany individuals choose Ayurvedic skin treatment to help manage acne, eczema, psoriasis, itching, pigmentation, allergic skin reactions, and stress-related skin flare-ups naturally.',
-      rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '92%',
-          label: 'Patient Satisfaction'
+        hero: {
+        title: 'Ayurvedic Skin Treatment in Dubai',
+        subtitle: 'Doctor-led Ayurvedic care for eczema, psoriasis, acne and skin allergies in Jumeirah 1, with a dermatologist in the same building',
+        description: 'At RamaCare Polyclinic in Jumeirah 1, Dubai, Ayurvedic skin treatment starts with a consultation with Dr. Shamna Keloth Meethal (BAMS). She looks for triggers such as heat, diet, stress and digestion, and plans herbal medicines, external applications (Lepa and medicated oils) and therapies such as Takradhara or Virechana when suitable. It is offered as complementary care; if you need a medical skin diagnosis, our dermatologist is in the same building.',
+        rating: '4.9★ Google rating',
+        topBadges: [
+          { icon: 'location', text: 'Jumeirah 1, Dubai' },
+          { icon: 'building', text: 'DHA-licensed polyclinic' },
+          { icon: 'star', text: '4.9★ Google rating' }
+        ],
+        stats: [
+          { id: 1, number: 'AED 200', label: 'Consultation from' },
+          { id: 2, number: '45–60 min', label: 'First visit' },
+          { id: 3, number: '11+ yrs', label: 'Dr. Shamna, BAMS' }
+        ],
+        ctaButtons: {
+          primary: { text: 'Book Ayurvedic Skin Consultation', icon: 'calendar', link: '#book-now' },
+          secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
         },
-        {
-          id: 2,
-          number: '1200+',
-          label: 'Skin Patients Treated'
+        features: [
+          'Consultation with a BAMS Ayurvedic doctor',
+          'Eczema, psoriasis, acne, urticaria, fungal and pigmentation concerns',
+          'Lepa, medicated oils, Takradhara and Virechana when suitable',
+          'Dermatologist and GP in the same building',
+          'Same-gender, Kerala-trained therapists'
+        ],
+        image: {
+          src: '/images/skin1.jpg',
+          alt: 'Ayurvedic skin treatment with herbal paste (Lepa) at RamaCare Polyclinic, Jumeirah 1, Dubai'
         },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
-      ctaButtons: {
-        primary: {
-          text: 'Book Free Skin Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
+        medicalNotice: {
+          text: 'Ayurvedic skin care is offered as complementary care and does not replace a dermatologist\'s diagnosis. Do not stop prescribed creams or medicines without your doctor\'s advice. Results vary. Provided at a DHA-licensed polyclinic (licence 2036418).',
+          show: true
         }
       },
-      features: [
-        'DHA-Licensed Ayurvedic Clinic',
-        'Experienced Ayurvedic Doctors',
-        ' Safe, Chemical-Free Skin Treatments',
-        'Personalized Holistic Wellness Programs'
-      ],
-      image: {
-        src: '/images/skin1.jpg',
-        alt: 'Skin disease treatment in Ayurveda utilizes natural therapies to support healing and promote long-term skin health.'
-      },
-      medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment duration and results may vary depending on body constitution, skin condition, lifestyle habits, and treatment compliance. All Ayurvedic therapies are provided under DHA-approved protocols and professional supervision.',
-        show: true
-      }
-    },
-    doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Skin Disease Treatment Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in dermatology and skin disease management.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
+        doctors: {
+      badge: 'Your Ayurveda Team',
+      title: 'Your Ayurvedic Doctor and Therapists for Skin Care',
+      description: 'Dr. Shamna Keloth Meethal (BAMS) assesses your skin and plans your care. External therapies such as Lepa, Abhyanga and Takradhara are given by Kerala-trained therapists of your own gender. All three speak English, Malayalam and Hindi.',
+      doctors: DOCTOR_GROUPS.AYURVEDA
     },
     certifications: {
       title: 'Certifications & Accreditations',
@@ -3170,113 +2873,71 @@ export const subcategoryContent = {
       ]
     },
     overview: {
-      title: 'Understanding Ayurvedic Skin Disease Treatment',
+          title: 'Understanding Ayurvedic Skin Treatment',
       problemIntro: {
-        title: 'Common Skin Disease Concerns',
-        description:
-          'Skin diseases can affect consolation, faith, and daily life. Multiple patients depend on chemical creams or short-term answers that suppress symptoms but forget to address the root reason.'
+        title: 'Common Skin Triggers in Dubai',
+        description: 'Skin conditions can affect confidence, sleep and daily life. In Dubai, heat, sweat, dry air-conditioned air, hard water, stress and diet often trigger flare-ups.'
       },
-
       solutionIntro: {
-        title: 'Advanced Skin Diseases Treatment in Ayurveda in Dubai',
-        description:
-          'At Ramacarepolyclinic, our Skin Diseases Treatment in Ayurveda in Dubai focuses on internal cleansing, dosha balance, and natural skin repair. Our Patient-Centric Approach Includes:'
+        title: 'How Ayurveda Approaches Skin Conditions',
+        description: 'In Ayurveda, most skin conditions (Kushtha) are linked to aggravated Pitta and Kapha, an imbalance in the blood tissue (Rakta Dhatu) and undigested residue (Ama). At RamaCare, Dr. Shamna combines herbal medicines, external applications, diet correction and, when suitable, cleansing therapies, alongside any care from your dermatologist.'
       },
 
-      leftCards: [
-        {
-          id: 1,
-          title: 'What is Ayurvedic Skin Disease Treatment?',
-          description:
-            'Ayurvedic skin disease treatment is a holistic healing approach that focuses on balancing doshas, especially Pitta dosha, while supporting digestion, detoxification, blood purification, and immune balance naturally. \n\n According to Ayurveda, internal toxin accumulation, stress, unhealthy diet, poor digestion, and lifestyle imbalance may contribute to recurring skin concerns. Ayurvedic therapies aim to address these root causes rather than only suppressing visible symptoms temporarily. Unlike chemical-based treatments that may provide short-term relief, Ayurvedic skin care therapies focus on supporting long-term skin wellness, improving skin strength, and reducing recurrence naturally. At RamaCare Polyclinic, each treatment program is customized according to the patient’s skin condition, body constitution, lifestyle habits, and wellness goals.'
-        },
-        {
-          id: 2,
-          title: 'Skin Conditions Commonly Treated',
-          description: 'Our Ayurvedic skin disease treatment helps manage and heal:',
-          listItems: [
-            'Acne & Pimples – Hormonal imbalance, excess oil production, poor digestion, and internal heat may contribute to recurring acne and breakouts. Ayurvedic therapies help support skin balance naturally while improving overall wellness.',
-            'Eczema & Dermatitis – Persistent itching, dryness, redness, and irritation may affect skin comfort and quality of life. Ayurvedic skin treatments focus on calming inflammation and supporting long-term skin balance naturally.',
-            'Psoriasis Support – Ayurvedic wellness therapies may help support skin hydration, reduce dryness, and improve skin comfort associated with psoriasis flare-ups.',
-            'Fungal & Allergic Skin Concerns – Many individuals seek Ayurvedic skin treatment to support immunity, reduce sensitivity, and help manage recurring fungal infections or allergic skin reactions naturally.',
-            'Pigmentation & Uneven Skin Tone – Ayurvedic skin care therapies may help support healthy skin texture, reduce dullness, and improve overall skin appearance naturally.'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Who Can Benefit from Ayurvedic Skin Treatment?',
-          description: 'This treatment may be suitable for individuals experiencing:',
-          listItems: [
-            'Chronic or recurring skin conditions',
-            'Acne and pimple breakouts',
-            'Itching and skin irritation',
-            'Eczema or psoriasis concerns',
-            'Skin allergies and sensitivity',
-            'Pigmentation and uneven skin tone',
-            'Stress-related skin flare-ups',
-            'Chemical sensitivity to cosmetic products',
-            'Long-term skin wellness concerns'
-          ]
-        },
-        {
-          id: 4,
-          title: 'Treatment Duration',
-          description:
-            'Initial Consultation: 30–45 minutes. Active Therapy Phase: 1–6 months depending on the condition and severity. Follow-up visits are scheduled as advised by the doctor.'
-        }
-      ],
+            leftCards: [
+          {
+            id: 1,
+            title: 'What Is Ayurvedic Skin Treatment?',
+            description: 'Ayurvedic skin treatment looks at what is driving your skin condition, not only the rash. In Ayurveda, skin diseases (Kushtha) are linked to Pitta and Kapha imbalance, Rakta Dhatu (blood tissue) and Ama. A plan usually combines internal herbal medicines, external applications, diet and routine changes, and, when suitable, cleansing therapies. It is complementary care and can be used alongside treatment from your dermatologist.'
+          },
+          {
+            id: 2,
+            title: 'Skin Conditions We See',
+            description: 'Our Ayurvedic doctor commonly sees:',
+            listItems: [
+              'Eczema and atopic dermatitis (Vicharchika)',
+              'Psoriasis, including scalp and plaque psoriasis (Kitibha / Ekakushtha)',
+              'Acne and pimples (Yauvana Pidaka)',
+              'Skin allergy, hives and urticaria (Sheetapitta)',
+              'Contact and seborrhoeic dermatitis',
+              'Fungal infections and ringworm (Dadru), alongside medical treatment',
+              'Pigmentation, melasma and vitiligo (Shvitra)',
+              'Heat rash (prickly heat) and itchy skin'
+            ]
+          },
+          {
+            id: 3,
+            title: 'Ayurvedic Therapies and Medicines for Skin',
+            sections: [
+              { heading: 'Lepa (Herbal Paste)', items: ['Herbal paste applied to affected skin', 'Traditionally used to calm itching and redness', 'Chosen for your skin condition'] },
+              { heading: 'Takradhara', items: ['Medicated buttermilk poured over the forehead', 'Traditionally used for psoriasis, heat and stress', 'Given by a therapist of your gender'] },
+              { heading: 'Virechana', items: ['A supervised Panchakarma cleansing therapy', 'Traditionally used for Pitta-related skin conditions', 'Only after the doctor\'s assessment'] },
+              { heading: 'Medicated Oils and Abhyanga', items: ['Oils such as Nalpamaradi or Nimbadi, and Kumkumadi for the face', 'Selected by the doctor for your skin', 'Prescribed for home use when suitable'] },
+              { heading: 'Herbal Medicines', items: ['Herbs such as Neem, Manjistha, Guduchi and Turmeric', 'Prescribed according to your assessment', 'Reviewed at each follow-up'] },
+              { heading: 'Diet and Routine', items: ['Avoiding your personal trigger foods', 'A Pitta-calming diet in the Dubai summer', 'Sleep and stress guidance'] }
+            ]
+          },
+          {
+            id: 4,
+            title: 'Duration and Fee',
+            description: 'First consultation: 45–60 minutes, from AED 200. Therapy length depends on your condition and response, and progress is reviewed at each follow-up. Suitable for adults (18+).'
+          }
+        ],
       rootCauses: [
-        {
-          id: 1,
-          title: 'Recurring Skin Flare-Ups',
-          description: 'Frequent outbreaks or flare-ups of skin conditions like eczema, psoriasis, or acne indicate that the underlying cause remains untreated. Temporary creams may provide relief, but symptoms often return without long-term solutions.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Quick Relief Without Continuing Results',
-          description: 'Symptom-focused treatments may ease discomfort initially, but they fail to resolve the root causes. Patients often experience repeated visits and ongoing frustration due to the lack of sustained improvement.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 3,
-          title: 'Inflammation, Itching, and Redness',
-          description: 'Persistent skin inflammation, itching, and redness can disrupt daily life, cause discomfort, and increase the risk of infection if untreated. Proper diagnosis is essential to calm the skin and prevent complications.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 4,
-          title: 'Internal Heat and Toxin Imbalance',
-          description: 'According to Ayurveda, internal heat (Pitta imbalance) and toxin accumulation in the body contribute to rashes, acne, and other inflammatory skin conditions. Treating the skin without addressing internal imbalances is often ineffective.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 5,
-          title: 'Sensitivity to Chemical Products',
-          description: 'Many patients react to harsh chemical creams, detergents, or cosmetic products. Sensitivity worsens irritation, dryness, and redness, making symptom management more challenging.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 6,
-          title: 'Worsening of the Skin Condition Over Time',
-          description: 'Without timely and holistic intervention, minor skin issues can progress into chronic conditions. Repeated inflammation can leave scars, pigmentation, or permanent skin damage.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-      ],
+          { id: 1, title: 'Heat, Sweat and Humidity', description: 'Dubai summers block sweat ducts and cause prickly heat, and can worsen acne, fungal infections and eczema in skin folds.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 2, title: 'Dry Air-Conditioning and Hard Water', description: 'Long hours in air-conditioning and hard, desalinated water can dry the skin barrier and trigger eczema flare-ups.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 3, title: 'Stress and Poor Sleep', description: 'Stress is a well-known trigger for eczema, psoriasis and hives flare-ups.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 4, title: 'Diet and Incompatible Foods', description: 'Ayurveda links very sour, salty, spicy and fried food, and incompatible combinations such as fish with milk (Viruddha Ahara), to aggravated Pitta and skin flare-ups.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 5, title: 'Detergents, Cosmetics and Allergens', description: 'Soaps, cleaning products, fragrances and some foods can cause contact dermatitis or hives.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 6, title: 'Weak Digestion (Agni) and Ama', description: 'In Ayurveda, poor digestion leaves Ama, which is believed to disturb the blood tissue and show on the skin.', severity: 'Ayurvedic view', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
+        ],
 
       quickFacts: [
-        { label: 'Therapy Type', value: 'Ayurvedic skin disease control' },
-        { label: 'Approach', value: 'Root-cause recovery' },
-        { label: 'Therapies Used', value: 'Herbal medicines, external applications, detox (if needed)' },
-        { label: 'Age Group', value: 'Adults (18+)' },
-        { label: 'Pain Level', value: 'None' },
-        { label: 'Safety', value: 'DHA-approved Ayurvedic protocols' }
+        { label: 'Treatment Type', value: 'Ayurvedic skin care (complementary)' },
+        { label: 'Methods', value: 'Herbal medicines, Lepa, medicated oils, Takradhara, Virechana' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Suitable For', value: 'Adults (18+)' },
+        { label: 'Therapists', value: 'Same-gender, Kerala-trained' },
+        { label: 'Setting', value: 'DHA-licensed polyclinic with a dermatologist on site' }
       ],
 
       approachCards: [
@@ -3290,7 +2951,7 @@ export const subcategoryContent = {
         {
           id: 2,
           title: 'Identification of the Root Cause of Skin Disease',
-          description: 'Rather than just suppressing symptoms, our specialists detect the underlying causes of skin problems, including internal toxin accumulation, dosha imbalance, and digestive or hormonal issues, ensuring a long-lasting solution.',
+          description:  'Dr. Shamna looks for your triggers, such as heat, diet, stress, digestion and products, and, in Ayurvedic terms, the doshas and tissues involved.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -3304,7 +2965,7 @@ export const subcategoryContent = {
         {
           id: 4,
           title: 'External Herbal Applications for Skin Healing',
-          description: 'Medicated oils, pastes, and herbal packs are applied directly to affected areas to reduce inflammation, soothe irritation, promote healing, and restore natural skin texture.',
+          description: 'Medicated oils, Lepa (herbal pastes) and herbal packs are applied to affected areas, traditionally used to calm itching, redness and dryness.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -3318,7 +2979,7 @@ export const subcategoryContent = {
         {
           id: 6,
           title: 'Detoxification and Panchakarma Therapies for Skin Health',
-          description: 'Ayurvedic detox procedures like Panchakarma remove accumulated toxins, improve metabolism, and enhance the body’s natural ability to heal, leading to clearer and healthier skin.',
+          description: 'For some chronic conditions, the doctor may recommend Virechana or other Panchakarma cleansing therapies, only after assessing that they are suitable for you.' ,
           hasLearnMore: false,
           expandedContent: null
         },
@@ -3326,32 +2987,75 @@ export const subcategoryContent = {
 
     },
 
+    conditionGuide: {
+  id: 'skin-condition-guide',
+  heading: 'Ayurvedic Treatment for Skin Conditions: A Guide',
+  intro: 'How Ayurveda describes each condition, and what Dr. Shamna may use. Every plan depends on your assessment; for a medical diagnosis, see our dermatologist.',
+  table: [
+    ['Eczema (Vicharchika)', 'Dry, itchy, inflamed patches. Ayurveda links it to Kapha and Pitta. Ayurvedic treatment for eczema may include Lepa, medicated oils, herbal medicines and diet changes.'],
+    ['Psoriasis (Kitibha / Ekakushtha)', 'Thick, scaly plaques on the elbows, knees or scalp (scalp psoriasis). Ayurvedic treatment for psoriasis may include Takradhara, medicated oils, herbal medicines and, when suitable, Virechana.'],
+    ['Acne and pimples (Yauvana Pidaka)', 'Linked to Pitta and Kapha. Ayurvedic treatment for acne and Ayurvedic treatment for pimples may include herbal medicines, face packs and diet changes.'],
+    ['Skin allergy, hives and urticaria (Sheetapitta)', 'Raised, itchy welts that come and go. Ayurvedic treatment for skin allergy and Ayurvedic treatment for urticaria may include herbal medicines and trigger-avoidance advice.'],
+    ['Contact and seborrhoeic dermatitis', 'Rashes from products or a flaky, itchy scalp and face. Care may include Lepa and scalp therapies.'],
+    ['Fungal infections and ringworm (Dadru)', 'Itchy, ring-shaped or damp-area rashes. Ayurvedic treatment for fungal infection can support medical antifungal treatment, not replace it.'],
+    ['Pigmentation, melasma and vitiligo (Shvitra)', 'Dark patches, or white patches in vitiligo. Ayurvedic treatment for pigmentation, melasma or vitiligo may include herbal medicines, oils such as Kumkumadi, and sun protection.'],
+    ['Heat rash (prickly heat)', 'Tiny itchy bumps from blocked sweat ducts, very common in Dubai. Care focuses on cooling the skin and calming Pitta.'],
+    ['Dry, itchy skin', 'Common with air-conditioning and hard water. Ayurvedic treatment for dry skin may include medicated oils (Abhyanga) and diet guidance.']
+  ],
+  note: 'For medical treatment of these conditions, see our dermatology pages: [psoriasis](/services/psoriasis-treatment-dubai/), [acne](/services/acne-treatment-dubai/), [skin allergy](/services/skin-allergy-dubai/) and [pigmentation](/services/pigmentation-dubai/).'
+},
+
+eczemaVsPsoriasis: {
+  id: 'eczema-vs-psoriasis',
+  heading: 'Eczema vs Psoriasis: What Is the Difference?',
+  intro: 'They can look similar but are different conditions. A doctor can confirm which one you have.',
+  table: [
+    ['What it is', 'Eczema: an itchy inflammation of a weakened skin barrier. Psoriasis: an immune condition that makes skin cells build up too fast.'],
+    ['How it looks', 'Eczema: red, dry, sometimes weeping patches, often in folds. Psoriasis: thick, raised plaques with silvery scale, often on the scalp, elbows and knees.'],
+    ['How it feels', 'Eczema: usually very itchy. Psoriasis: itchy or sore, sometimes burning.'],
+    ['Contagious?', 'Neither eczema nor psoriasis is contagious.'],
+    ['Ayurvedic view', 'Eczema: Vicharchika (Kapha and Pitta). Psoriasis: Kitibha or Ekakushtha (Vata and Kapha).']
+  ]
+},
+
+whichDoctor: {
+  id: 'which-doctor',
+  heading: 'Should You See an Ayurvedic Doctor or a Dermatologist?',
+  intro: 'At RamaCare you can see both in the same building.',
+  table: [
+    ['Sudden rash with fever, swelling of lips or face, or spreading infection', 'Seek urgent medical care'],
+    ['New or unclear rash, a changing mole, or a diagnosis you need confirmed', 'See our dermatologist first'],
+    ['Long-standing eczema, psoriasis or acne already diagnosed, with frequent flare-ups', 'Ayurvedic care with Dr. Shamna can be added alongside your dermatology treatment'],
+    ['Flare-ups linked to heat, diet, digestion or stress', 'An Ayurvedic consultation is a good starting point']
+  ],
+  note: 'Do not stop prescribed creams or medicines without your doctor\'s advice. Dr. Shamna will refer you to our dermatologist or general physician if needed.'
+},
+
+dubaiSkin: {
+  id: 'dubai-skin',
+  heading: 'Heat Rash (Prickly Heat) and Other Dubai Skin Problems',
+  intro: 'Prickly heat is a rash of tiny, itchy bumps caused by blocked sweat ducts. It is very common in Dubai from May to October and usually settles within a few days once the skin is kept cool.',
+  itemsTitle: 'How to get rid of heat rash quickly:',
+  items: [
+    { text: 'Move to a cool place and let the skin breathe' },
+    { text: 'Take a cool shower and pat the skin dry' },
+    { text: 'Wear loose cotton clothing and avoid heavy creams on the rash' },
+    { text: 'Tap or pat the rash instead of scratching it' },
+    { text: 'In Ayurveda, cooling applications such as sandalwood paste are traditionally used for Pitta-type rashes' }
+  ],
+  note: 'See a doctor if the rash lasts more than a few days, becomes painful or pus-filled, or comes with fever. Dry air-conditioned air and hard water can also dry the skin and trigger eczema; use lukewarm showers and moisturise straight afterwards.'
+},
+
     whyChoose: {
-      title: 'Why Choose RamaCare Polyclinic for Ayurvedic Skin Treatment',
-      intro: 'At RamaCare Polyclinic, we combine authentic Ayurvedic principles with personalized patient care to provide safe and holistic skin wellness support.',
-      features: [
-        {
-          id: 1,
-          title: 'Personalized Ayurvedic Consultation',
-          description: 'Every patient undergoes a detailed skin and wellness assessment to identify dosha imbalance, lifestyle triggers, digestive concerns, and skin health goals before treatment begins.'
-        },
-        {
-          id: 2,
-          title: 'DHA-Licensed Ayurvedic Clinic',
-          description: 'All Ayurvedic therapies are provided in a hygienic and professionally supervised environment following DHA-approved wellness protocols.'
-        },
-        {
-          id: 3,
-          title: 'Experienced Ayurvedic Doctors',
-          description: 'Our Ayurvedic specialists create customized treatment plans according to the patient\'s skin condition, symptoms, and response to therapy.'
-        },
-        {
-          id: 4,
-          title: 'Holistic Skin Wellness Support',
-          description: 'Patients may also receive recommendations related to Ayurvedic diet, hydration support, stress management, detoxification therapies, lifestyle balance, and skin-friendly wellness practices.'
-        }
-      ]
-    },
+  title: 'Why Patients Choose RamaCare for Ayurvedic Skin Care',
+  intro: 'Ayurveda and dermatology in one Jumeirah 1 building, so you can use both.',
+  features: [
+    { id: 1, title: 'Dermatologist in the Same Building', description: 'If your skin needs a medical diagnosis, tests or prescription treatment, Dr. Shamna refers you to our dermatologist, and both plans can run together.' },
+    { id: 2, title: 'A BAMS Doctor Assesses You First', description: 'Every plan starts with a consultation with Dr. Shamna Keloth Meethal (BAMS, 11+ years).' },
+    { id: 3, title: 'Same-Gender, Kerala-Trained Therapists', description: 'External therapies are given by a therapist of your gender, trained in Kerala.' },
+    { id: 4, title: 'Clear Plan and Cost', description: 'From AED 200 for the consultation; therapy costs confirmed in writing before you start. Open every day, 10am–10pm.' }
+  ]
+},
 
     howItWorks: {
       treatmentAreas: {
@@ -3361,45 +3065,37 @@ export const subcategoryContent = {
         areas: [
           {
             id: 1,
-            title: 'herbal medicines',
-            description: 'Customized herbal formulations support internal healing and skin balance naturally.'
+            title: 'Herbal Medicines',
+            description: 'Herbs such as Neem, Manjistha and Guduchi, prescribed according to your assessment.'
           },
           {
             id: 2,
-            title: 'external applications',
-            description: 'Medicated oils, pastes, and herbal packs applied to affected areas to reduce inflammation and promote healing.'
+            title: 'External Applications',
+            description: 'Lepa (herbal pastes), medicated oils and herbal packs applied to affected skin.'
           },
           {
             id: 3,
-            title: 'detoxification therapies',
-            description: 'Ayurvedic detox procedures remove accumulated toxins and improve metabolism for clearer skin.'
+            title: 'Cleansing Therapies',
+            description: 'Virechana and other Panchakarma therapies, only when the doctor finds them suitable.'
           },
           {
             id: 4,
-            title: 'Ayurvedic dietary guidance',
-            description: 'Personalized diet recommendations to support digestion and skin wellness from within.'
+            title: 'Ayurvedic Dietary Guidance',
+            description:  'Avoiding your trigger foods and incompatible combinations (Viruddha Ahara).'
           },
           {
             id: 5,
-            title: 'lifestyle modifications',
-            description: 'Stress management and lifestyle balance support long-term skin health and reduced flare-ups.'
+            title: 'Lifestyle Changes',
+            description: 'Takradhara and Shirodhara are traditionally used when stress drives flare-ups.'
           },
           {
             id: 6,
-            title: 'stress management support',
+            title: 'Stress Support',
             description: 'Holistic wellness practices to manage stress-related skin concerns and improve overall balance.'
           }
         ]
       },
-      benefitsList: [
-        'healthier skin texture',
-        'reduced inflammation',
-        'balanced digestion',
-        'improved immunity',
-        'toxin elimination',
-        'reduced flare-ups',
-        'better long-term skin wellness'
-      ]
+     benefitsList: [ 'calmer, less itchy skin', 'understanding your triggers', 'a diet that suits your skin', 'support alongside dermatology care' ]
     },
 
     digestiveHealth: {
@@ -3410,21 +3106,21 @@ export const subcategoryContent = {
 
     dietLifestyle: {
       beforeAfterCare: {
-        title: 'Diet & Lifestyle Recommendations for Healthy Skin',
+        title: 'Eczema Diet and Psoriasis Diet: Foods to Avoid and Habits That Help',
         intro: 'Maintaining healthy lifestyle habits may help support skin balance and long-term wellness benefits after treatment.',
         after: {
           title: 'Recommended Lifestyle Practices',
           subtitle: 'Patients may be advised to:',
           items: [
-            'Stay hydrated throughout the day',
-            'Avoid excessively processed foods',
-            'Follow a balanced Ayurvedic diet',
-            'Improve sleep routines',
-            'Manage stress levels',
-            'Avoid harsh chemical products',
-            'Follow personalized wellness guidance'
-          ],
-          conclusion: 'For comprehensive wellness support, explore <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> and <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs.'
+                'Limit very sour, salty, spicy and fried food, which Ayurveda links to Pitta flare-ups',
+                'Avoid incompatible combinations such as fish with milk or yoghurt at night',
+                'Notice your own triggers: common ones include dairy, eggs, nuts, shellfish and alcohol',
+                'Drink enough water, especially in the Dubai summer',
+                'Use lukewarm (not hot) showers and fragrance-free moisturiser',
+                'Wear loose cotton clothing in the heat',
+                'Keep a regular sleep routine and manage stress'
+              ],
+          conclusion: 'For a personal plan, see our <a href="/services/ayurvedic-diet-skin-hair-dubai/">Ayurvedic diet for skin and hair</a>.' 
         }
       }
     },
@@ -3637,61 +3333,32 @@ export const subcategoryContent = {
       ]
     },
 
-    faq: {
-      title: 'Frequently Asked Questions',
-      description: 'Ayurvedic Skin Disease Treatment in Dubai',
-      resourcesHeading: 'Related Skin & Ayurvedic Care Services',
+        faq: {
+      title: 'Ayurvedic Skin Treatment: Frequently Asked Questions',
+      description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+      resourcesHeading: 'Related Skin and Ayurvedic Services',
       faqs: [
-        {
-          id: 1,
-          question: 'What is Ayurvedic skin disease treatment?',
-          answer: 'Ayurvedic skin treatment is a holistic wellness approach that focuses on balancing doshas, improving digestion, reducing toxins, and supporting long-term skin health naturally.'
-        },
-        {
-          id: 2,
-          question: 'Can Ayurveda help with acne and pimples?',
-          answer: 'Ayurvedic therapies may help support healthy skin balance, reduce inflammation, and improve recurring acne naturally through internal wellness support.'
-        },
-        {
-          id: 3,
-          question: 'Is Ayurvedic skin treatment safe?',
-          answer: 'When performed under professional supervision at a DHA-licensed clinic, Ayurvedic skin therapies are generally considered safe for suitable candidates.'
-        },
-        {
-          id: 4,
-          question: 'Can Ayurveda help with eczema and psoriasis?',
-          answer: 'Many individuals choose Ayurvedic skin wellness programs to support hydration, reduce irritation, and improve overall skin comfort naturally.'
-        },
-        {
-          id: 5,
-          question: 'Does digestion affect skin health in Ayurveda?',
-          answer: 'According to Ayurveda, poor digestion and toxin accumulation may contribute to recurring skin concerns and internal imbalance affecting overall skin wellness.'
-        },
-        {
-          id: 6,
-          question: 'How long does Ayurvedic skin treatment take?',
-          answer: 'Treatment duration varies depending on the skin condition, severity, lifestyle factors, and individual response to therapy.'
-        },
-        {
-          id: 7,
-          question: 'Are Ayurvedic skin treatments chemical-free?',
-          answer: 'Ayurvedic therapies commonly use herbal formulations and holistic wellness approaches designed to support natural skin balance.'
-        },
-        {
-          id: 8,
-          question: 'Can stress affect skin conditions?',
-          answer: 'Stress and poor sleep may contribute to recurring skin flare-ups and inflammation. Holistic wellness support may help improve overall skin balance naturally.'
-        },
-        {
-          id: 9,
-          question: 'Is Panchakarma helpful for skin detoxification?',
-          answer: 'Many individuals combine Ayurvedic skin therapies with <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs to support detoxification and long-term wellness.'
-        },
-        {
-          id: 10,
-          question: 'Where can I book an Ayurvedic skin treatment in Dubai?',
-          answer: 'You can schedule a consultation at RamaCare Polyclinic for a personalized Ayurvedic skin wellness assessment and treatment plan.'
-        }
+        { id: 1, question: "What is Ayurvedic skin treatment?", answer: "Ayurvedic skin treatment is a doctor-led approach that looks at what drives a skin condition, such as heat, diet, stress and digestion, and combines herbal medicines, external applications like Lepa and medicated oils, diet changes and, when suitable, cleansing therapies. At RamaCare it starts with a consultation with Dr. Shamna Keloth Meethal (BAMS)." },
+        { id: 2, question: "Is there an Ayurvedic treatment for eczema?", answer: "Yes. Ayurveda calls eczema Vicharchika and links it to Kapha and Pitta. Care may include Ayurvedic medicine for eczema prescribed by the doctor, Lepa, medicated oils such as Nalpamaradi, and diet changes. It is complementary care and can be used alongside treatment from your dermatologist." },
+        { id: 3, question: "Is there an Ayurvedic treatment for psoriasis?", answer: "Yes. Ayurveda describes psoriasis as Kitibha or Ekakushtha. Care may include Takradhara, medicated oils, Ayurvedic medicine for psoriasis and, for some patients, Virechana. Psoriasis is long-term, so the aim is fewer and milder flare-ups, reviewed at each follow-up." },
+        { id: 4, question: "Is there a way to cure eczema permanently?", answer: "Eczema usually cannot be cured permanently, but it can often be well controlled, and many people have long periods without flare-ups. Knowing your triggers, protecting the skin barrier and treating flare-ups early all help. Be cautious of any clinic that promises a permanent cure." },
+        { id: 5, question: "Is there a way to cure psoriasis permanently?", answer: "Psoriasis is a long-term immune condition with no permanent cure, but flare-ups can often be reduced and controlled. Dermatology and Ayurvedic care can be combined; at RamaCare both are in the same building." },
+        { id: 6, question: "What is eczema, and what causes it?", answer: "Eczema is an itchy inflammation of the skin. It comes from a weakened skin barrier together with an overactive immune response. Common triggers include dry air, hot showers, soaps and detergents, sweat, stress, and sometimes foods or allergens. In Ayurveda it is linked to aggravated Kapha and Pitta." },
+        { id: 7, question: "What causes psoriasis?", answer: "Psoriasis is an immune condition that makes skin cells build up too quickly. It often runs in families, and flare-ups can be triggered by stress, infections, skin injury, alcohol, smoking and some medicines." },
+        { id: 8, question: "Is psoriasis or eczema contagious?", answer: "No. Neither psoriasis nor eczema can be passed to another person by touch. An eczema patch can become infected, and that infection may need medical treatment." },
+        { id: 9, question: "What is the difference between eczema and psoriasis?", answer: "Eczema is usually very itchy with dry, red patches, often in skin folds. Psoriasis tends to form thicker, raised plaques with silvery scale on the scalp, elbows and knees. A doctor can confirm which you have." },
+        { id: 10, question: "How do I get rid of heat rash quickly, and how long does it last?", answer: "Cool the skin: move to a cool place, take a cool shower, wear loose cotton and avoid heavy creams. Heat rash (prickly heat) usually settles within a few days. See a doctor if it lasts longer, becomes painful or pus-filled, or comes with fever." },
+        { id: 11, question: "Is there an Ayurvedic treatment for acne and pimples?", answer: "Ayurveda describes acne as Yauvana Pidaka, linked to Pitta and Kapha. Care may include herbal medicines, face packs and diet changes. For severe or scarring acne, our dermatologist can advise on medical options too." },
+        { id: 12, question: "Can Ayurveda help with skin allergy, hives or urticaria?", answer: "Ayurveda calls hives Sheetapitta and uses herbal medicines and trigger-avoidance advice as complementary care. Hives with swelling of the lips, face or throat, or difficulty breathing, need urgent medical care." },
+        { id: 13, question: "Can Ayurveda help with fungal infections or ringworm?", answer: "Ayurveda calls ringworm Dadru. Ayurvedic care can support medical antifungal treatment, for example by advising on sweat, clothing and diet in the Dubai heat, but it should not replace antifungal medicine when that is needed." },
+        { id: 14, question: "Is there an Ayurvedic treatment for pigmentation, melasma or vitiligo?", answer: "Ayurvedic treatment for melasma and pigmentation may use herbal medicines, oils such as Kumkumadi, and diet guidance. Vitiligo (Shvitra) needs assessment by a dermatologist; Ayurvedic treatment for vitiligo can be added alongside. Daily sun protection matters for all pigmentation." },
+        { id: 15, question: "Which Ayurvedic herbs and oils are used for skin?", answer: "Commonly used herbs include Neem, Manjistha, Guduchi and Turmeric, and oils such as Nalpamaradi, Nimbadi and Kumkumadi. Dr. Shamna prescribes them according to your skin, condition and health, not as a standard package." },
+        { id: 16, question: "Which foods should I avoid with eczema or psoriasis?", answer: "Common triggers include very spicy, sour, salty and fried food, alcohol, and for some people dairy, eggs, nuts or shellfish. Ayurveda also advises avoiding incompatible combinations such as fish with milk. Your own triggers are identified at the consultation." },
+        { id: 17, question: "Can I use Ayurveda with my dermatologist's treatment or steroid creams?", answer: "Often yes, but never stop prescribed creams or medicines on your own. Tell both doctors about every treatment you use; at RamaCare the Ayurvedic doctor and dermatologist can coordinate in the same building." },
+        { id: 18, question: "Do Ayurvedic skin medicines have side effects?", answer: "Like any medicine, Ayurvedic medicines and applications can cause reactions in some people. That is why the doctor reviews your health, allergies and current medicines before prescribing, and adjusts the plan at each follow-up." },
+        { id: 19, question: "How long does Ayurvedic skin treatment take?", answer: "It depends on the condition and how long you have had it. Short-term problems such as heat rash may settle in days; long-term conditions such as eczema or psoriasis need care over months, with progress reviewed at each follow-up." },
+        { id: 20, question: "How much does Ayurvedic skin treatment cost in Dubai?", answer: "An Ayurvedic skin consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Medicines and therapies are priced according to your plan and confirmed in writing before you start. Insurance is on a reimbursement basis." },
+        { id: 21, question: "Do you have male and female therapists?", answer: "Yes. Male patients are treated by a male therapist and female patients by a female therapist for all external therapies." }
       ],
       resources: [
         {
@@ -3708,9 +3375,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -3793,9 +3460,29 @@ export const subcategoryContent = {
       ]
     },
 
+    sources: {
+      id: 'sources',
+      heading: 'Medical Sources and Review',
+      intro: 'Medical facts on this page (what eczema and psoriasis are, whether they are contagious, and heat rash care) follow these public health sources. The Ayurvedic content has been reviewed by Dr. Shamna Keloth Meethal (BAMS, DHA-licensed).',
+      items: [
+        { text: 'NHS: Atopic eczema', href: 'https://www.nhs.uk/conditions/atopic-eczema/' },
+        { text: 'NHS: Psoriasis', href: 'https://www.nhs.uk/conditions/psoriasis/' },
+        { text: 'NHS: Hives (urticaria)', href: 'https://www.nhs.uk/conditions/hives/' },
+        { text: 'NHS: Heat rash (prickly heat)', href: 'https://www.nhs.uk/conditions/heat-rash-prickly-heat/' },
+        { text: 'NHS: Ringworm (fungal skin infection)', href: 'https://www.nhs.uk/conditions/ringworm/' }
+      ],
+      note: 'Last reviewed: [date of Dr. Shamna\'s approval]. This page is for information and does not replace a consultation.'
+    },
+    
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who managed skin diseases with Ayurvedic treatment',
+       title: 'What Patients Say About Their Visit',
+        subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+        stats: [
+          { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.9, showStars: true },
+          { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+          { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+          { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+        ],
       testimonials: [
         {
           id: 1,
@@ -3828,36 +3515,7 @@ export const subcategoryContent = {
           // No thumbnail = shows video's natural frame
         }
       ],
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Patient Reviews',
-          target: 4.8
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label1: 'Skin Patients',
-          label2: 'Treated',
-          target: 2500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Satisfaction Rate',
-          label2: 'Happy Patients',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '15+',
-          label1: 'Years Combined Experience',
-          label2: 'In Dubai',
-          target: 15
-        }
-      ]
+      
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -3878,15 +3536,15 @@ export const subcategoryContent = {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Skin Diseases Treatment in Ayurveda in Dubai Today',
-      description: 'Heal your skin naturally with trusted Ayurvedic care at Ramacarepolyclinic—safe, personalized, and focused on long-term results.',
+     title: 'Book Your Ayurvedic Skin Consultation',
+    description: 'See Dr. Shamna in Jumeirah 1, from AED 200, with a dermatologist in the same building. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -3895,26 +3553,15 @@ export const subcategoryContent = {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
         {
           title: 'DHA Licensed',
           description: 'Certified Ayurvedic Facility'
         },
-        {
-          title: 'Experienced Team',
-          description: '15+ Years Combined Experience'
-        },
-        {
-          title: '2,500+ Patients',
-          description: 'Treated'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+        { title: 'Experienced Team', description: 'Dr. Shamna, BAMS, 11+ years' },
+        { title: '1,000+ Ayurveda patients', description: 'In the last 2 years' }, 
+        { title: '4.8/5 Google rating', description: '218 reviews' }
       ]
     }
   },
@@ -3928,26 +3575,10 @@ export const subcategoryContent = {
       subtitle: 'Personalized Nutrition for Health & Wellness',
       description: 'Food is medicine, and a diet suited to your body type can improve digestion, immunity, and overall health. At Ramacarepolyclinic, we provide an Ayurvedic Diet Plan in Dubai that is personalized for your unique constitution (Prakriti) and lifestyle. Our holistic approach focuses on long-term wellness, balance, and vitality.',
       rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '1500+',
-          label: 'Diet Plans Created'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
+     
       ctaButtons: {
         primary: {
-          text: 'Book Free Ayurvedic Diet Consultation',
+          text: 'Book Ayurvedic Diet Consultation',
           icon: 'calendar',
           link: '#book-now'
         },
@@ -4484,9 +4115,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -4604,36 +4235,7 @@ export const subcategoryContent = {
           // No thumbnail = shows video's natural frame
         }
       ],
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Patient Reviews',
-          target: 4.8
-        },
-        {
-          id: 2,
-          number: '1,500+',
-          label1: 'Diet Plans Created',
-          label2: 'Successfully',
-          target: 1500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Satisfaction Rate',
-          label2: 'Happy Patients',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '90%',
-          label1: 'Digestive Improvement',
-          label2: 'Success Rate',
-          target: 90
-        }
-      ]
+      
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -4662,7 +4264,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -4705,26 +4307,9 @@ export const subcategoryContent = {
       description: 'Ayurvedic Basti Therapy is one of the most important detoxification treatments in Ayurveda, designed to support digestive wellness, remove accumulated toxins, and restore natural body balance. At RamaCare Polyclinic, we provide personalized Basti Treatment using traditional Ayurvedic techniques and DHA-approved wellness protocols to help improve digestion, support joint health, reduce stress, and promote long-term rejuvenation.\n\nAs an essential part of Panchakarma Treatment Dubai programs, this Ayurvedic detox therapy focuses on balancing Vata dosha, which plays a key role in digestion, circulation, nervous system function, and overall vitality. Many individuals choose this holistic therapy to support digestive health, relieve stiffness, improve metabolism, and maintain better wellness naturally.',
       rating: '500+ Happy Clients',
       promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Success Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Patients Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
       ctaButtons: {
         primary: {
-          text: 'Book Free Basti Therapy Consultation',
+          text: 'Book Basti Therapy Consultation',
           icon: 'calendar',
           link: '#book-now'
         },
@@ -5384,9 +4969,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -5548,11 +5133,7 @@ export const subcategoryContent = {
       description: 'Nasya Therapy in Dubai is a traditional Ayurvedic detoxification treatment designed to cleanse the nasal passages, support respiratory wellness, improve mental clarity, and balance doshas naturally. At RamaCare Polyclinic, we provide personalized Ayurvedic Nasya Therapy using herbal oils and traditional Panchakarma techniques to support sinus health, stress management, nervous system balance, and overall well-being.\n\nAs an important part of Panchakarma Treatment Dubai, this Ayurvedic nasal cleansing therapy focuses on removing accumulated toxins from the head and neck region while supporting healthy breathing, concentration, sleep quality, and emotional balance naturally.\n\nMany individuals choose Ayurvedic Nasya Treatment to support relief from sinus congestion, headaches, allergies, stress, mental fatigue, and respiratory imbalance caused by modern lifestyle habits, pollution, and environmental triggers.',
       rating: '500+ Happy Clients',
       promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
-      stats: [
-        { id: 1, number: '98%', label: 'Success Rate' },
-        { id: 2, number: '2,500+', label: 'Patients Treated' },
-        { id: 3, number: '15+', label: 'Years Combined Experience' }
-      ],
+     
       ctaButtons: {
         primary: { text: 'Book Free Nasya Therapy Consultation', icon: 'calendar', link: '#book-now' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -5895,9 +5476,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -6061,23 +5642,7 @@ export const subcategoryContent = {
       subtitle: 'Deep Relaxation, Stress Relief & Ayurvedic Mind Healing',
       description: 'Shirodhara Therapy in Dubai is one of the most powerful Ayurvedic treatments designed to calm the nervous system, reduce stress, improve sleep quality, and restore deep mental balance. In this traditional therapy, warm medicated herbal oil is gently poured over the forehead in a continuous stream, creating a deeply meditative, calming, and healing state. At Ramacare Polyclinic, we provide authentic Shirodhara Therapy in Dubai based on classical Ayurvedic principles. Each treatment is carefully personalized according to your body constitution (Dosha) to ensure maximum therapeutic benefit.Our goal is not just temporary relaxation, but long-term improvement in mental clarity, emotional stability, and neurological balance through natural Ayurvedic healing.',
       rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Patient Satisfaction Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Patients Successfully Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Ayurvedic Clinical Experience'
-        }
-      ],
+     
       ctaButtons: {
         primary: {
           text: 'Book Shirodhara Consultation',
@@ -6553,9 +6118,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -6732,23 +6297,7 @@ export const subcategoryContent = {
       subtitle: 'Full Body Ayurvedic Oil Massage for Deep Relaxation, Detox & Rejuvenation',
       description: 'Abhyanga massage in Dubai is a traditional Ayurvedic full-body oil therapy designed to relax the body, detoxify naturally, and restore inner balance. This deeply soothing treatment uses warm, medicated herbal oils applied in gentle, rhythmic strokes to improve blood circulation, relieve muscle tension, and calm the nervous system.More than just a massage, Abhyanga works at both physical and mental levels—helping reduce stress, improve sleep quality, and support overall well-being. It nourishes the skin, boosts energy flow, and leaves you feeling refreshed, lighter, and more balanced.',
       rating: '2,500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Patient Satisfaction Rate'
-        },
-        {
-          id: 2,
-          number: '2,500+',
-          label: 'Happy Clients'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Ayurvedic Experience'
-        }
-      ],
+      
       ctaButtons: {
         primary: {
           text: 'Book Free Consultation',
@@ -7226,9 +6775,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -7946,9 +7495,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -8065,36 +7614,7 @@ export const subcategoryContent = {
           // No thumbnail = shows video's natural frame
         }
       ],
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Patient Reviews',
-          target: 4.8
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Panchakarma Sessions',
-          label2: 'Completed',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Satisfaction Rate',
-          label2: 'Happy Patients',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '95%',
-          label1: 'Detoxification Success',
-          label2: 'Rate',
-          target: 95
-        }
-      ]
+      
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -8123,7 +7643,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -8709,9 +8229,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -8886,7 +8406,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -9457,9 +8977,9 @@ export const subcategoryContent = {
         },
         {
           id: 3,
-          text: 'Analysis of Individual',
+          text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
-          link: '/services/analysis-of-individual-dubai/'
+          link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
           id: 4,
@@ -9634,7 +9154,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -10348,7 +9868,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd – Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 – Dubai'
@@ -11288,7 +10808,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -11376,7 +10896,7 @@ export const subcategoryContent = {
       title: 'Meet Our Pelvic Floor Therapy Specialists in Dubai',
       description: 'DHA-licensed physiotherapists with extensive experience in advanced pelvic floor therapy .',
       doctors: [
-        DOCTORS.jeena, DOCTORS.hafsina
+        DOCTORS.jeena, 
       ]
     },
     certifications: {
@@ -12118,7 +11638,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -12206,7 +11726,7 @@ export const subcategoryContent = {
       title: 'Meet Our Functional Exercises Specialists in Dubai',
       description: 'DHA-licensed physiotherapists with extensive experience in functional exercises.',
       doctors: [
-        DOCTORS.jeena, DOCTORS.hafsina
+        DOCTORS.jeena, 
       ]
     },
     certifications: {
@@ -12920,7 +12440,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -13006,7 +12526,7 @@ export const subcategoryContent = {
     },
     doctors: {
       doctors: [
-        DOCTORS.jeena, DOCTORS.hafsina
+        DOCTORS.jeena,
       ]
     },
     certifications: {
@@ -13721,7 +13241,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -14310,7 +13830,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -15011,7 +14531,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -15799,7 +15319,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -16567,7 +16087,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -17312,7 +16832,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -18065,7 +17585,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -18824,7 +18344,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -19593,7 +19113,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -20366,7 +19886,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -21145,7 +20665,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -21919,7 +21439,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -22680,7 +22200,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -23417,7 +22937,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -24152,7 +23672,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -24934,7 +24454,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -25687,7 +25207,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -26415,7 +25935,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -27069,7 +26589,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -27716,7 +27236,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -28614,7 +28134,6 @@ export const subcategoryContent = {
           // No thumbnail = shows video's natural frame
         }
       ],
-
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -28643,7 +28162,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -29452,7 +28971,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -30354,7 +29873,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -31226,7 +30745,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -31811,7 +31330,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -32554,7 +32073,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -33352,7 +32871,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -33975,7 +33494,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -34569,7 +34088,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -35173,7 +34692,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -35811,7 +35330,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -36547,7 +36066,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -37160,7 +36679,7 @@ export const subcategoryContent = {
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -37806,7 +37325,7 @@ Long-term oral health support
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'
@@ -38475,7 +37994,7 @@ Seek a cost-effective smile restoration`
       contactInfo: {
         phone: '+971 04 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
           line2: 'Ground Floor, Jumeirah 1 - Dubai'

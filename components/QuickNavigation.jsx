@@ -20,12 +20,13 @@ const QuickNavigation = ({ navItems }) => {
   useEffect(() => {
     const handleScroll = () => {
       // Update active section based on scroll position
-      const sections = items.map(item => document.getElementById(item.id));
+      const sections = items.map(item => document.getElementById(item.id || item.href?.replace('#', '')));
       const scrollPosition = window.scrollY + 150; // Offset for better detection
 
       for (let i = sections.length - 1; i >= 0; i--) {
+        const itemId = items[i].id || items[i].href?.replace('#', '');
         if (sections[i] && sections[i].offsetTop <= scrollPosition) {
-          setActiveSection(items[i].id);
+          setActiveSection(itemId);
           break;
         }
       }
@@ -35,7 +36,8 @@ const QuickNavigation = ({ navItems }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [items]);
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (item) => {
+    const id = typeof item === 'string' ? item : (item.id || item.href?.replace('#', ''));
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
@@ -64,23 +66,26 @@ const QuickNavigation = ({ navItems }) => {
 
           {/* Navigation Links - Centered */}
           <div className="flex items-center justify-center gap-4 lg:gap-8 overflow-x-auto scrollbar-hide h-10">
-            {items.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`relative flex-shrink-0 font-medium text-sm transition-all duration-300 ease-in-out whitespace-nowrap h-full flex items-center ${
-                  activeSection === item.id
-                    ? 'bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] bg-clip-text text-transparent'
-                    : 'text-[#6B7280] hover:text-[#1F2937]'
-                }`}
-              >
-                {item.label}
-                {/* Active Indicator */}
-                {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] transition-all duration-300 ease-in-out"></span>
-                )}
-              </button>
-            ))}
+            {items.map((item) => {
+              const itemId = item.id || item.href?.replace('#', '');
+              return (
+                <button
+                  key={itemId}
+                  onClick={() => handleNavClick(itemId)}
+                  className={`relative flex-shrink-0 font-medium text-sm transition-all duration-300 ease-in-out whitespace-nowrap h-full flex items-center ${
+                    activeSection === itemId
+                      ? 'bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] bg-clip-text text-transparent'
+                      : 'text-[#6B7280] hover:text-[#1F2937]'
+                  }`}
+                >
+                  {item.label}
+                  {/* Active Indicator */}
+                  {activeSection === itemId && (
+                    <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2D5F3F] to-[#3A7B51] transition-all duration-300 ease-in-out"></span>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

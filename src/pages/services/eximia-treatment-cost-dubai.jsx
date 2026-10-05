@@ -722,22 +722,7 @@ export default function EximiaTreatmentCostPage() {
                 </button>
               </div>
 
-              <div className="border-t border-white/20 pt-8">
-                <div className="grid grid-cols-3 gap-8">
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-2">500+</div>
-                    <div className="text-white/70 text-sm">Happy Clients</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-2">15+</div>
-                    <div className="text-white/70 text-sm">Years Combined Experience</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-2">98%</div>
-                    <div className="text-white/70 text-sm">Patient Satisfaction</div>
-                  </div>
-                </div>
-              </div>
+             
             </div>
 
             {/* Right Content - Form */}

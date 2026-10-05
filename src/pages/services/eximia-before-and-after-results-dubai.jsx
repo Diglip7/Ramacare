@@ -1316,23 +1316,8 @@ const PAGE_PATH = '/services/eximia-before-and-after-results-dubai/';
                 </button>
               </div>
 
-              {/* Stats Box */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-1">500+</div>
-                    <div className="text-sm text-white/80">Happy Patients</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-1">98%</div>
-                    <div className="text-sm text-white/80">Satisfaction</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-1">15+</div>
-                    <div className="text-sm text-white/80">Years Combined Experience</div>
-                  </div>
-                </div>
-              </div>
+              
+                
             </div>
 
             {/* Right Column - Appointment Form */}

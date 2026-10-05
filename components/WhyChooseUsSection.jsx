@@ -14,35 +14,35 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
 `;
   const cards = content?.cards || [
     {
-    title: 'Complete & Compassionate Medical Care in Dubai',
-    description:
-      'At RamaCare Polyclinic, we provide care that’s practical, effective, and built around your needs. As a well-established healthcare clinic in Jumeirah, we support individuals and families with treatments designed to improve long-term health—not just short-term relief.',
-  },
-  {
-    title: 'DHA-Licensed Expert Doctors',
-    description:
-      'Our DHA-licensed doctors and specialists bring years of clinical experience across multiple fields. Every treatment is delivered with attention to detail, safety, and a clear focus on achieving the best possible outcome for you.',
-  },
-  {
-    title: 'Personalized Treatment Plans',
-    description:
-      'No two patients are the same. We take the time to understand your condition, lifestyle, and goals before recommending a treatment plan—so you receive care that truly fits your needs.',
-  },
-  {
-    title: 'Convenient Jumeirah 1 Location',
-    description:
-      'Located in Jumeirah 1, our clinic is easy to access and designed to make your visit comfortable. From a clean environment to a calm setting, everything is built around patient convenience and privacy.',
-  },
-  {
-    title: 'Holistic Approach to Wellness',
-    description:
-      'We don’t just treat symptoms. Our approach combines medical care with guidance on lifestyle, recovery, and prevention—helping you maintain better health over time.',
-  },
-  {
-    title: 'Trusted by Patients Across Dubai',
-    description:
-      'Patients choose RamaCare because of clear communication, honest advice, and consistent care. Our goal is simple: help you feel confident about your treatment and your health.',
-  },
+      title: 'Complete & Compassionate Medical Care in Dubai',
+      description:
+        'At RamaCare Polyclinic, we provide care that’s practical, effective, and built around your needs. As a well-established healthcare clinic in Jumeirah, we support individuals and families with treatments designed to improve long-term health—not just short-term relief.',
+    },
+    {
+      title: 'DHA-Licensed Expert Doctors',
+      description:
+        'Our DHA-licensed doctors and specialists bring years of clinical experience across multiple fields. Every treatment is delivered with attention to detail, safety, and a clear focus on achieving the best possible outcome for you.',
+    },
+    {
+      title: 'Personalized Treatment Plans',
+      description:
+        'No two patients are the same. We take the time to understand your condition, lifestyle, and goals before recommending a treatment plan—so you receive care that truly fits your needs.',
+    },
+    {
+      title: 'Convenient Jumeirah 1 Location',
+      description:
+        'Located in Jumeirah 1, our clinic is easy to access and designed to make your visit comfortable. From a clean environment to a calm setting, everything is built around patient convenience and privacy.',
+    },
+    {
+      title: 'Holistic Approach to Wellness',
+      description:
+        'We don’t just treat symptoms. Our approach combines medical care with guidance on lifestyle, recovery, and prevention—helping you maintain better health over time.',
+    },
+    {
+      title: 'Trusted by Patients Across Dubai',
+      description:
+        'Patients choose RamaCare because of clear communication, honest advice, and consistent care. Our goal is simple: help you feel confident about your treatment and your health.',
+    },
   ];
 
   useEffect(() => {
@@ -69,17 +69,16 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
   return (
     <>
       {/* Google Font Import for Inter */}
-      <link 
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
-        rel="stylesheet" 
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
       />
 
       <section ref={sectionRef} className="relative w-full bg-[#F9FAFB] overflow-hidden font-inter">
         {/* Content Container */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className={`flex flex-col items-center text-center space-y-4 mb-6 transform transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+          <div className={`flex flex-col items-center text-center space-y-4 mb-6 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
             {/* Badge */}
             <div className="bg-[#E8E3D8] text-[#3d5f4a] px-4 py-2 rounded-full font-medium text-sm">
               {badge}
@@ -91,37 +90,34 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
             </h2>
 
             {/* Description Text - Normal weight */}
-           <p className="text-center md:text-justify mb-4 lg:mb-6 max-w-3xl mx-auto text-xs sm:text-sm md:text-base text-[#6B7280] leading-relaxed font-normal"
-          >
-  {description}
-</p>
+            <p className="text-center md:text-justify mb-4 lg:mb-6 max-w-3xl mx-auto text-xs sm:text-sm md:text-base text-[#6B7280] leading-relaxed font-normal"
+            >
+              {description}
+            </p>
 
-          <p className="text-center mb-8 lg:mb-10 text-xs sm:text-sm font-semibold text-[#2d5f3f]">
-            Explore our full facility & DHA specialists on the <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">Jumeirah 1 Polyclinic Authority Hub</a>.
+            <p className="text-center mb-8 lg:mb-10 text-xs sm:text-sm font-semibold text-[#2d5f3f]">
+            Directions, parking and opening hours: <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">visiting our Jumeirah 1 clinic</a>.
           </p>
           </div>
 
           {/* Feature Cards Grid */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cards.map((card, index) => (
-              <div 
+              <div
                 key={index}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`relative bg-[#E8E3D8] rounded-2xl p-6 flex flex-col transition-all duration-500 ease-out cursor-pointer overflow-hidden ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                } ${
-                  hoveredCard === index ? 'scale-105 shadow-2xl' : 'shadow-md'
-                }`}
-                style={{ 
+                className={`relative bg-[#E8E3D8] rounded-2xl p-6 flex flex-col transition-all duration-500 ease-out cursor-pointer overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  } ${hoveredCard === index ? 'scale-105 shadow-2xl' : 'shadow-md'
+                  }`}
+                style={{
                   transitionDelay: isVisible ? `${index * 0.1}s` : '0s'
                 }}
               >
                 {/* Green Overlay on Hover */}
-                <div 
-                  className={`absolute inset-0 bg-[#2d5f3f] transition-all duration-500 ease-out ${
-                    hoveredCard === index ? 'opacity-100' : 'opacity-0'
-                  }`}
+                <div
+                  className={`absolute inset-0 bg-[#2d5f3f] transition-all duration-500 ease-out ${hoveredCard === index ? 'opacity-100' : 'opacity-0'
+                    }`}
                   style={{
                     borderRadius: '1rem'
                   }}
@@ -130,30 +126,26 @@ Whether you're looking for preventive care, recovery support, or aesthetic treat
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon Badge */}
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all duration-500 ${
-                    hoveredCard === index 
-                      ? 'bg-[#C9A24D] scale-110' 
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all duration-500 ${hoveredCard === index
+                      ? 'bg-[#C9A24D] scale-110'
                       : 'bg-white'
-                  }`}>
-                    <svg className={`w-5 h-5 transition-colors duration-500 ${
-                      hoveredCard === index ? 'text-white' : 'text-[#0A3D2E]'
-                    }`} fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.08 11.42L12 5.5l-5.08 5.92c-.35.41-.35 1.05 0 1.46.35.41.92.41 1.27 0L12 8.5l3.81 4.38c.35.41.92.41 1.27 0 .35-.41.35-1.05 0-1.46z"/>
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    }`}>
+                    <svg className={`w-5 h-5 transition-colors duration-500 ${hoveredCard === index ? 'text-white' : 'text-[#0A3D2E]'
+                      }`} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.08 11.42L12 5.5l-5.08 5.92c-.35.41-.35 1.05 0 1.46.35.41.92.41 1.27 0L12 8.5l3.81 4.38c.35.41.92.41 1.27 0 .35-.41.35-1.05 0-1.46z" />
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
                     </svg>
                   </div>
 
                   {/* Title */}
-                  <h3 className={`text-base font-bold mb-2 transition-colors duration-500 ${
-                    hoveredCard === index ? 'text-white' : 'text-[#111827]'
-                  }`}>
+                  <h3 className={`text-base font-bold mb-2 transition-colors duration-500 ${hoveredCard === index ? 'text-white' : 'text-[#111827]'
+                    }`}>
                     {card.title}
                   </h3>
 
                   {/* Description */}
-                  <p className={`text-xs sm:text-sm leading-relaxed font-normal transition-colors duration-500 ${
-                    hoveredCard === index ? 'text-[#E5E7EB]' : 'text-[#6B7280]'
-                  }`}>
+                  <p className={`text-xs sm:text-sm leading-relaxed font-normal transition-colors duration-500 ${hoveredCard === index ? 'text-[#E5E7EB]' : 'text-[#6B7280]'
+                    }`}>
                     {card.description}
                   </p>
                 </div>

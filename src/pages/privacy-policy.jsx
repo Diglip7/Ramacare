@@ -101,8 +101,8 @@ const PolicyPages = () => {
 
         {/* Sticky Header */}
         <div className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-emerald-100'
-            : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-emerald-100'
+          : 'bg-transparent'
           }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
@@ -161,8 +161,8 @@ const PolicyPages = () => {
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg transition-all text-left group ${activeSection === section.id
-                              ? 'bg-emerald-50 text-emerald-700 font-semibold'
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                            ? 'bg-emerald-50 text-emerald-700 font-semibold'
+                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                             }`}
                         >
                           <Icon className={`w-4 h-4 flex-shrink-0 ${activeSection === section.id ? 'text-emerald-600' : 'text-gray-400 group-hover:text-gray-600'
@@ -186,10 +186,10 @@ const PolicyPages = () => {
                     Contact us for any concerns.
                   </p>
                   <a
-                    href="mailto:query@ramacarepolyclinic.ae"
+                    href="mailto:query@ramacarepolyclinic.com"
                     className="inline-flex items-center gap-2 text-sm font-semibold hover:text-emerald-100 transition-colors"
                   >
-                    query@ramacarepolyclinic.ae
+                    query@ramacarepolyclinic.com
                     <ChevronRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -214,11 +214,11 @@ const PolicyPages = () => {
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <a href="mailto:query@ramacarepolyclinic.ae" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
+                    <a href="mailto:query@ramacarepolyclinic.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
                       <Mail className="w-5 h-5" />
                       <div>
                         <div className="text-xs text-emerald-100">Email</div>
-                        <div className="font-semibold">query@ramacarepolyclinic.ae</div>
+                        <div className="font-semibold">query@ramacarepolyclinic.com</div>
                       </div>
                     </a>
 
@@ -565,8 +565,8 @@ const PrivacyContent = () => (
 
           <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100">
             <p className="text-gray-700 mb-2">To exercise these rights, please contact us at:</p>
-            <a href="mailto:query@ramacarepolyclinic.ae" className="text-emerald-600 font-semibold hover:text-emerald-700">
-              📧 query@ramacarepolyclinic.ae
+            <a href="mailto:query@ramacarepolyclinic.com" className="text-emerald-600 font-semibold hover:text-emerald-700">
+              📧 query@ramacarepolyclinic.com
             </a>
             <p className="text-sm text-gray-600 mt-3">We aim to respond to all valid requests within 30 days.</p>
           </div>
@@ -688,7 +688,7 @@ const PrivacyContent = () => (
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                <span>You may withdraw consent at any time by contacting: <a href="mailto:query@ramacarepolyclinic.ae" className="text-emerald-600 font-semibold hover:text-emerald-700">query@ramacarepolyclinic.ae</a></span>
+                <span>You may withdraw consent at any time by contacting: <a href="mailto:query@ramacarepolyclinic.com" className="text-emerald-600 font-semibold hover:text-emerald-700">query@ramacarepolyclinic.com</a></span>
               </li>
             </ul>
           </div>

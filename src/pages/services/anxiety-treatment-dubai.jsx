@@ -145,7 +145,6 @@ export default function AnxietyTreatmentPage() {
       </Head>
 
       <ServicePageTemplate content={content} />
-
       {/* External References Section */}
       <section className="py-12 bg-white border-t border-gray-150 px-4">
         <div className="max-w-4xl mx-auto">

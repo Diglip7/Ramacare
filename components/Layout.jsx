@@ -59,8 +59,8 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>RamaCare Polyclinic Dubai | Trusted Polyclinic in Dubai</title>
-        <meta name="description" content=" RamaCare Polyclinic Dubai provides multi-specialty medical care with experienced doctors, modern diagnostics, and patient-focused treatment in a DHA-licensed clinic." />
+        <title key="title">RamaCare Polyclinic, Jumeirah 1, Dubai</title>
+        <meta name="description" key="description" content="DHA-licensed polyclinic in Jumeirah 1, Dubai: general medicine, dentistry, physiotherapy, dermatology and Ayurveda." />
         <link rel="icon" href="/images/Logo.png" />
       </Head>
       <Header />

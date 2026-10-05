@@ -1,25 +1,32 @@
-# RamaCare Polyclinic Dubai
+# RamaCare Polyclinic, Jumeirah 1, Dubai
 
-Premium DHA-licensed multi-specialty medical center located in Jumeirah 1, Dubai.
+DHA-licensed outpatient polyclinic in Jumeirah 1, Dubai, close to Al Satwa. Operated by Rama Care Polyclinic LLC.
 
 ## Core Information
-- **Location**: Jumeirah 1, Ground Floor, Jumeirah Terrace Building, Dubai, UAE.
-- **Hours**: Sunday - Saturday, 10:00 AM - 10:00 PM.
-- **License**: DHA Licensed Polyclinic.
-- **Specialties**: Ayurveda, Physiotherapy, Aesthetic Dermatology, Dental Care, General Medicine.
+- **Name**: RamaCare Polyclinic (legal name: Rama Care Polyclinic LLC)
+- **Address**: Ground Floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, UAE (PO Box 393558)
+- **Google Maps**: https://maps.google.com/?cid=4290863257518002596
+- **Hours**: Every day, 10:00 to 22:00. Walk-ins welcome.
+- **DHA facility licence**: 2036418
+- **Languages spoken**: English, Arabic, Hindi, Malayalam, Tagalog
+- **Insurance**: Reimbursement basis. Patients pay at the clinic and receive an itemised invoice and medical report to claim from their insurer.
+- **Parking**: Free and paid parking near the building.
+- **Emergencies**: Not an emergency service. Call 998 or go to a hospital emergency department.
 
-## Key Services
-- **Ayurveda**: Authentic Panchakarma, Detoxification, Shirodhara, and Abhyanga.
-- **Physiotherapy**: Sports injury rehab, post-surgery recovery, and chronic pain management.
-- **Dermatology**: Laser hair removal, facial rejuvenation, PRP, and anti-aging treatments.
-- **Dental**: Cosmetic dentistry, root canal, teeth whitening, and general oral care.
-- **General Medicine**: Routine checkups, chronic disease management, and family healthcare.
+
+## Departments
+- **General medicine (GP)**: consultations, infections, minor injuries and wound stitching, check-ups, blood pressure, diabetes, cholesterol and thyroid care. https://ramacarepolyclinic.ae/services/general-physician-dubai/
+- **Dentistry**: check-ups, scaling and polishing, fillings, root canal treatment, crowns and bridges, extractions, whitening, veneers. https://ramacarepolyclinic.ae/services/dental-dubai/
+- **Physiotherapy**: assessment and rehabilitation for back, neck, shoulder and knee pain, sports injuries and post-surgery recovery. https://ramacarepolyclinic.ae/services/physiotherapy-dubai/
+- **Dermatology and aesthetics**: DHA-licensed dermatologist; acne, pigmentation, hair loss; Botox and fillers, laser hair removal, HydraFacial, HIFU, RF microneedling. https://ramacarepolyclinic.ae/services/aesthetic-dermatology-dubai/
+- **Ayurveda**: consultation with a DHA-licensed Ayurveda physician; Abhyanga, Shirodhara and Panchakarma planned after consultation. https://ramacarepolyclinic.ae/services/ayurveda-dubai/
 
 ## Contact
-- **Phone**: +971 56 659 7878
-- **Email**: query@ramacarepolyclinic.ae
-- **Note**: Note that ramacarepolyclinic.com is not affiliated.
+- **Phone**: +971 4 286 2006
+- **WhatsApp**: +971 56 659 7878
+- **Email**: query@ramacarepolyclinic.com
 - **Website**: https://ramacarepolyclinic.ae/
+- **Clinicians**: https://ramacarepolyclinic.ae/doctors/
 
 ## Sitemap
-- Full sitemap: https://ramacarepolyclinic.ae/sitemap.xml
+- https://ramacarepolyclinic.ae/sitemap.xml

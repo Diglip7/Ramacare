@@ -3,7 +3,6 @@ User-agent: *
 Disallow: /wp-admin/
 Disallow: /wp-content/
 Disallow: /wp-includes/
-Disallow: /admin/
 Disallow: /api/admin/
 Disallow: /tag/
 Disallow: /author/

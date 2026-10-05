@@ -87,7 +87,7 @@ const ServiceWhyChoose = ({ content, customExpectationTitle }) => {
 
             <div className="mt-6 pt-4 border-t border-[#2D5F3F]/20">
               <p className="text-xs md:text-sm text-[#2D5F3F] font-semibold">
-                Looking for multi-specialty care in Jumeirah 1? Visit our <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">Jumeirah 1 Polyclinic Authority Hub</a> to view all DHA-licensed doctors, clinic directions, and parking details.
+               Looking for multi-specialty care in Jumeirah 1? See <a href="/services/polyclinic-in-jumeirah-1/" className="underline font-bold hover:text-[#17493B]">visiting our Jumeirah 1 clinic</a> for directions, parking and opening hours.
               </p>
             </div>
           </div>

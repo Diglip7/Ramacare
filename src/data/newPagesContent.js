@@ -916,12 +916,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
         { icon: 'star', text: 'Assessment-Led Protocol' }
       ],
-      stats: [
-        { id: 1, number: '4.8/5', label: 'Average Google Rating' },
-        { id: 2, number: '200+', label: 'Verified Patient Reviews' },
-        { id: 3, number: '98%', label: 'Patient Satisfaction' },
-        { id: 4, number: '2,500+', label: 'Patients Treated' }
-      ],
+      
       ctaButtons: {
         primary: {
           text: 'Book Dry Needling Consultation',
@@ -1249,12 +1244,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       title: 'What Our Patients Say',
       subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
       rating: '4.8/5 Average Google Rating',
-      stats: [
-        { number: '4.8/5', label: 'Average Google Rating' },
-        { number: '200+', label: 'Verified Patient Reviews' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '500+', label: 'Patients Treated' }
-      ],
+    
       testimonials: [
         { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },
         { id: 2, videoUrl: '/Videos/testimonial-2.mp4' },
@@ -1289,7 +1279,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       contactInfo: {
         phone: '+971 4 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor,',
           line2: 'Jumeirah 1, Dubai, United Arab Emirates'
@@ -1318,12 +1308,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
         { icon: 'star', text: 'Assessment-Led Protocol' }
       ],
-      stats: [
-        { id: 1, number: '4.8/5', label: 'Average Google Rating' },
-        { id: 2, number: '500+', label: 'Verified Patient Reviews' },
-        { id: 3, number: '98%', label: 'Patient Satisfaction' },
-        { id: 4, number: '2,500+', label: 'Patients Treated' }
-      ],
+     
       ctaButtons: {
         primary: {
           text: 'Book Dry Needling Consultation',
@@ -1651,12 +1636,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       title: 'What Our Patients Say',
       subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
       rating: '4.8/5 Average Google Rating',
-      stats: [
-        { number: '4.8/5', label: 'Average Google Rating' },
-        { number: '200+', label: 'Verified Patient Reviews' },
-        { number: '98%', label: 'Patient Satisfaction' },
-        { number: '500+', label: 'Patients Treated' }
-      ],
+      
       testimonials: [
         { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },
         { id: 2, videoUrl: '/Videos/testimonial-2.mp4' },
@@ -1691,7 +1671,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       contactInfo: {
         phone: '+971 4 286 2006',
         whatsapp: '971566597878',
-        email: 'query@ramacarepolyclinic.ae',
+        email: 'query@ramacarepolyclinic.com',
         address: {
           line1: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor,',
           line2: 'Jumeirah 1, Dubai, United Arab Emirates'

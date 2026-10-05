@@ -68,12 +68,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
       { icon: 'star', text: 'Assessment-Led Protocol' }
     ],
-    stats: [
-      { id: 1, number: '4.8/5', label: 'Average Google Rating' },
-      { id: 2, number: '200+', label: 'Verified Patient Reviews' },
-      { id: 3, number: '98%', label: 'Patient Satisfaction' },
-      { id: 4, number: '2,500+', label: 'Patients Treated' }
-    ],
     ctaButtons: {
       primary: {
         text: 'Book Dry Needling Consultation',
