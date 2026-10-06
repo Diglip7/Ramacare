@@ -133,7 +133,7 @@ const content = {
     items: [
       {
         question: 'Can Ayurveda cure Type 2 Diabetes?',
-        answer: 'Ayurveda does not "cure" diabetes in the conventional sense, but it can significantly manage and even reverse insulin resistance when combined with lifestyle and dietary changes. The goal is to restore metabolic balance (Agni) and reduce Kapha accumulation.'
+        answer: 'No. Diabetes needs ongoing medical care. An Ayurvedic diet and lifestyle plan can support blood sugar management alongside your prescribed treatment; never stop or change diabetes medicines without your doctor.'
       },
       {
         question: 'Is an Ayurvedic diet safe alongside my current diabetes medication?',
@@ -159,7 +159,7 @@ const content = {
   },
   whyChoose: {
     title: '5. Why Choose RamaCare Polyclinic for Diabetes?',
-    subtitle: "As a premier Polyclinic in Jumeirah 1, we don't just provide a PDF diet plan. We offer:",
+    subtitle:  "As a DHA-licensed polyclinic in Jumeirah 1, we don't just provide a PDF diet plan. We offer:",
     features: [
       {
         title: 'Prakriti Analysis',

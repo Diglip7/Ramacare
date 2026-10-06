@@ -1,6 +1,7 @@
 import Layout from "../../../components/Layout";
 import ContentReviewBadge from "../../../components/ContentReviewBadge";
 import Head from "next/head";
+import Link from "next/link";
 import HeroSection from "../../../components/HeroSection";
 import WhyChooseUsSection from "../../../components/WhyChooseUsSection";
 import AboutAyurvedaSection from "../../../components/AboutAyurvedaSection";
@@ -21,7 +22,14 @@ export default function physiotherapydubaiCategoryPage() {
     "RamaCare Polyclinic provides physiotherapy and rehabilitation services in Jumeirah 1, Dubai. Patients can receive an individual assessment for pain, stiffness, reduced mobility, sports injuries, posture-related concerns and rehabilitation needs.",
     "Depending on the assessment, physiotherapy may include therapeutic exercise, manual therapy, dry needling, electrotherapy and other rehabilitation techniques.",
     "The clinic is located on Al Dhiyafah Road in Jumeirah 1, making it convenient for patients looking for physiotherapy near Jumeirah, Al Satwa and surrounding Dubai areas.",
-    "Treatment recommendations depend on the patient’s condition and clinical assessment."
+    "Treatment recommendations depend on the patient’s condition and clinical assessment.",
+    <>
+      Prefer an Ayurvedic massage? See{" "}
+      <Link href="/services/abhyanga-massage-dubai/" className="text-[#007474] hover:underline font-medium">
+        Kerala Ayurvedic massage in Dubai
+      </Link>
+      .
+    </>
   ];
 
   const faqsForSchema = (content?.faq?.faqs || []).map(faq => ({

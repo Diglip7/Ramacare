@@ -5,48 +5,87 @@ const TreatmentOverview = ({ content, subcategoryName }) => {
   const [activeTab, setActiveTab] = useState('problem');
   const [expandedCard, setExpandedCard] = useState(null);
 
+  // Helper function to render inline formatted text (markdown links / html)
+  const renderFormattedText = (text) => {
+    if (!text) return null;
+    if (typeof text !== 'string') return text;
+
+    let processed = text;
+    if (processed.includes('[') && processed.includes('](')) {
+      processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    }
+
+    if (/<[^>]*>/.test(processed)) {
+      return (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: processed.replace(
+              /<a\s/gi,
+              '<a class="font-semibold text-[#2D5F3F] hover:text-[#407D54] underline transition-colors duration-200" '
+            ),
+          }}
+        />
+      );
+    }
+    return text;
+  };
+
   // Helper function to render HTML content with styled links
   const renderHTMLContent = (html, className = 'text-sm text-[#4B5563] leading-relaxed') => {
     if (!html) return null;
-    
-    // Check if content contains HTML tags
-    const hasHTML = /<[^>]*>/.test(html);
-    
+
+    let processedText = html;
+    if (typeof processedText === 'string' && processedText.includes('[') && processedText.includes('](')) {
+      processedText = processedText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    }
+
+    const hasHTML = /<[^>]*>/.test(processedText);
+
     if (hasHTML) {
-      // Split by paragraph breaks
-      const paragraphs = html.split(/\n\n|<br\s*\/?>/gi).filter(p => p.trim());
-      
+      const paragraphs = processedText.split(/\n\n|<br\s*\/?>/gi).filter((p) => p.trim());
+
       if (paragraphs.length <= 1) {
         return (
-          <div className={className}>
-            <div dangerouslySetInnerHTML={{ 
-              __html: html.replace(
-                /<a\s/gi, 
-                '<a class="font-semibold text-[#2D5F3F] hover:text-[#407D54] transition-colors duration-200" '
-              ) 
-            }} />
-          </div>
+          <p
+            className={className}
+            dangerouslySetInnerHTML={{
+              __html: processedText.replace(
+                /<a\s/gi,
+                '<a class="font-semibold text-[#2D5F3F] hover:text-[#407D54] underline transition-colors duration-200" '
+              ),
+            }}
+          />
         );
       }
-      
-      // Multiple paragraphs
+
       return (
         <div className={`${className} space-y-3`}>
           {paragraphs.map((para, index) => (
-            <p key={index}>
-              <span dangerouslySetInnerHTML={{ 
+            <p
+              key={index}
+              dangerouslySetInnerHTML={{
                 __html: para.replace(
-                  /<a\s/gi, 
-                  '<a class="font-semibold text-[#2D5F3F] hover:text-[#407D54] transition-colors duration-200" '
-                ) 
-              }} />
-            </p>
+                  /<a\s/gi,
+                  '<a class="font-semibold text-[#2D5F3F] hover:text-[#407D54] underline transition-colors duration-200" '
+                ),
+              }}
+            />
           ))}
         </div>
       );
     }
-    
-    // Plain text
+
+    const paragraphs = typeof html === 'string' ? html.split(/\n\n+/).filter((p) => p.trim()) : [html];
+    if (paragraphs.length > 1) {
+      return (
+        <div className={`${className} space-y-3`}>
+          {paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+      );
+    }
+
     return <p className={className}>{html}</p>;
   };
 
@@ -145,10 +184,10 @@ const TreatmentOverview = ({ content, subcategoryName }) => {
   ];
 
   const defaultQuickFacts = [
-    { label: 'Treatment Type', value: 'Non-invasive' },
-    { label: 'Anesthesia', value: 'Not required' },
-    { label: 'Recovery Time', value: 'Immediate' },
-    { label: 'Side Effects', value: 'Minimal to none' }
+      { label: 'Planned by', value: 'Dr. Shamna Keloth Meethal, BAMS' },
+      { label: 'First step', value: 'Consultation, from AED 200' },
+      { label: 'Therapists', value: 'Same-gender, Kerala-trained' },
+      { label: 'Setting', value: 'DHA-licensed polyclinic, Jumeirah 1' }
   ];
 
   const defaultApproachCards = [
@@ -257,30 +296,30 @@ const TreatmentOverview = ({ content, subcategoryName }) => {
                               {section.items.map((item, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                   <span className="text-[#047857] mt-1 flex-shrink-0 font-bold">•</span>
-                                  <span>{item}</span>
+                                  <span>{renderFormattedText(item)}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
                         ))}
                         {card.description && (
-                          <p className="text-sm text-[#4B5563] leading-relaxed mt-3 pt-2 border-t border-gray-100">
-                            {card.description}
-                          </p>
+                          <div className="mt-3 pt-2 border-t border-gray-100">
+                            {renderHTMLContent(card.description, 'text-sm text-[#4B5563] leading-relaxed')}
+                          </div>
                         )}
                       </div>
                     ) : card.listItems && card.listItems.length > 0 ? (
                       <div>
                         {card.description && (
-                          <p className="text-sm text-[#4B5563] leading-relaxed mb-2">
-                            {card.description}
-                          </p>
+                          <div className="mb-2">
+                            {renderHTMLContent(card.description, 'text-sm text-[#4B5563] leading-relaxed')}
+                          </div>
                         )}
                         <ul className="text-sm text-[#4B5563] leading-relaxed space-y-2 list-none">
                           {card.listItems.map((item, index) => (
                             <li key={index} className="flex items-start gap-2">
                               <span className="text-[#047857] mt-1 flex-shrink-0 font-bold">•</span>
-                              <span>{item}</span>
+                              <span>{renderFormattedText(item)}</span>
                             </li>
                           ))}
                         </ul>

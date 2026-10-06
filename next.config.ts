@@ -66,6 +66,8 @@ const nextConfig: NextConfig = {
     return [
       { source: '/services/face-prp', destination: '/services/face-prp-in-dubai/', permanent: true },
       { source: '/services/face-prp/', destination: '/services/face-prp-in-dubai/', permanent: true },
+      { source: '/services/ayurvedic-dandruff-treatment-dubai', destination: '/services/pcos-treatment-dubai/', permanent: true },
+      { source: '/services/ayurvedic-dandruff-treatment-dubai/', destination: '/services/pcos-treatment-dubai/', permanent: true },
       { source: '/services/panchakarma-treatment', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
       { source: '/services/panchakarma-treatment/', destination: '/services/panchakarma-treatment-dubai/', permanent: true },
       { source: '/services/analysis-of-individual-dubai', destination: '/services/prakriti-dosha-assessment-dubai/', permanent: true },

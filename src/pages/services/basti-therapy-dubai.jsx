@@ -5,6 +5,7 @@ import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
 import BastiTherapySections from '../../../components/BastiTherapySections';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
 import ScientificExplanation from '../../../components/ScientificExplanation';
@@ -28,17 +29,14 @@ export default function BastiTherapyPage() {
 
   // Custom navigation items for Basti Therapy page
   const navItems = [
-    { id: 'treatment-info', label: 'Overview' },
-    { id: 'conditions-treated', label: 'Conditions' },
-    { id: 'how-it-works', label: 'How It Works' },
-    { id: 'benefits', label: 'Benefits' },
-    { id: 'treatment-process', label: 'Treatment Types' },
-    { id: 'why-choose-us', label: 'Why Choose Us' },
-    { id: 'gut-health', label: 'Gut Health' },
-    { id: 'cost-and-results', label: 'Cost & Recovery' },
-    { id: 'faq', label: 'FAQ' },
-    { id: 'book-now', label: 'Book Now' },
-  ];
+  { id: 'treatment-info', label: 'What Is Basti' },
+  { id: 'basti-types', label: 'Types & Courses' },
+  { id: 'basti-procedure', label: 'What Happens' },
+  { id: 'basti-vs-kati-basti', label: 'Basti vs Kati Basti' },
+  { id: 'who-should-not', label: 'Who Should Not' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'book-now', label: 'Book Now' },
+];
 
   const faqsForSchema = content?.faq?.faqs?.map(faq => ({
     "@type": "Question",
@@ -50,123 +48,78 @@ export default function BastiTherapyPage() {
   })) || [];
 
   const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
-        "name": "Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment",
-        "description": "Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalTherapy",
-          "name": "Basti Therapy"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Basti Therapy", "item": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#procedure",
-        "name": "Basti Therapy in Dubai",
-        "alternateName": "Ayurvedic Basti Detox & Vata Balance Treatment",
-        "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
-        "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
-        "description": "Basti Therapy in Dubai at RamaCare Polyclinic offers traditional Ayurvedic detoxification treatment designed to support digestive wellness, remove accumulated toxins, and restore natural Vata dosha balance through personalized herbal therapies.",
-        "procedureType": "Ayurvedic detox treatment",
-        "bodyLocation": "Colon and digestive system",
-        "howPerformed": "Basti Therapy involves administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. Preparatory procedures such as Abhyanga Massage and mild steam therapy may be recommended before the main detox procedure.",
-        "preparation": "Patients undergo initial Ayurvedic consultation and assessment of body constitution (dosha), digestive health, and lifestyle habits before beginning Basti Therapy.",
-        "followup": "Post-therapy guidance and follow-up assessments are recommended to support balanced recovery and monitor digestive wellness progress.",
-        "indication": [
-          "Digestive disorders",
-          "Vata dosha imbalance",
-          "Joint pain and stiffness",
-          "Chronic constipation",
-          "Stress and nervous system imbalance",
-          "Detoxification and wellness"
-        ],
-        "possibleComplication": "Mild temporary digestive changes may occur during detoxification depending on therapy intensity and individual body constitution.",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "telephone": "+971 56 659 7878",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          },
-          "priceRange": "$$$"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#faq",
-        "mainEntity": faqsForSchema
-      }
-    ]
-  };
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MedicalWebPage",
+                "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#webpage",
+                "url": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/",
+                "name": "Basti Therapy Dubai | Ayurvedic Medicated Enema, Jumeirah 1",
+                "inLanguage": "en-AE",
+                "about": { "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#therapy" },
+                "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+                "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+                "lastReviewed": "YYYY-MM-DD",
+                "breadcrumb": {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+                    { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+                    { "@type": "ListItem", "position": 3, "name": "Basti Therapy", "item": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" }
+                  ]
+                }
+              },
+              {
+                "@type": "MedicalTherapy",
+                "@id": "https://ramacarepolyclinic.ae/services/basti-therapy-dubai/#therapy",
+                "name": "Basti (Ayurvedic medicated enema therapy)",
+                "alternateName": ["Basti", "Vasti", "Basti Karma", "Ayurvedic enema", "Anuvasana Basti", "Niruha Basti", "Matra Basti"],
+                "description": "Basti is the Panchakarma therapy in which medicated oil or herbal decoction is given as an enema. It is considered the principal Ayurvedic therapy for Vata. At RamaCare Polyclinic, Jumeirah 1, Dubai, it follows a consultation with a BAMS doctor and is given by a same-gender therapist in 60–90 minute sessions.",
+                "relevantSpecialty": "https://schema.org/Ayurvedic",
+                "contraindication": ["Diarrhoea", "Rectal bleeding", "Painful piles or fissure", "Pregnancy", "Recent abdominal surgery"],
+                "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+              },
+              {
+                "@type": "Physician",
+                "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+                "name": "Dr. Shamna Keloth Meethal",
+                "gender": "Female",
+                "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+                "medicalSpecialty": "https://schema.org/Ayurvedic",
+                "knowsLanguage": ["en", "ml", "hi"],
+                "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqsForSchema
+              }
+            ]
+        };
 
   return (
     <Layout>
       <Head>
-        <title key="title">Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment</title>
-        <meta name="description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs." key="description" />
+        <title key="title">Basti Therapy Dubai | Ayurvedic Medicated Enema, Jumeirah 1</title>
+        <meta name="description" content="Basti (Vasti), the Ayurvedic medicated enema therapy for Vata, in Jumeirah 1, Dubai. BAMS doctor consultation first, same-gender therapists, 60–90 min sessions." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment" key="og:title" />
-        <meta property="og:description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance. DHA-licensed clinic with personalized Panchakarma detox programs." key="og:description" />
+        <meta property="og:title" content="Basti Therapy Dubai | Ayurvedic Medicated Enema, Jumeirah 1" key="og:title" />
+        <meta property="og:description" content="Basti (Vasti), the Ayurvedic medicated enema therapy for Vata, in Jumeirah 1, Dubai. BAMS doctor consultation first, same-gender therapists, 60–90 min sessions." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/basti-therapy-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/basti-therapy.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Basti Therapy in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic Basti therapy room at RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Basti Therapy in Dubai | Ayurvedic Detox & Vata Balance Treatment" key="twitter:title" />
-        <meta name="twitter:description" content="Experience authentic Basti Therapy in Dubai for digestive health, joint pain relief, and Vata dosha balance." key="twitter:description" />
+        <meta name="twitter:title" content="Basti Therapy Dubai | Ayurvedic Medicated Enema, Jumeirah 1" key="twitter:title" />
+        <meta name="twitter:description" content="Basti (Vasti), the Ayurvedic medicated enema therapy for Vata, in Jumeirah 1, Dubai. BAMS doctor consultation first, same-gender therapists, 60–90 min sessions." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/basti-therapy.jpg" key="twitter:image" />
 
         {/* Structured Data Schemas */}
@@ -194,8 +147,12 @@ export default function BastiTherapyPage() {
         />
       </div>
 
-      {/* 2. Conditions Treated */}
       <BastiTherapySections sectionType="conditions" content={content?.overview} />
+      <AyurvedaInfoSection content={content?.bastiTypes} />       {/* NEW: types and classical courses */}
+      <AyurvedaInfoSection content={content?.bastiProcedure} />   {/* NEW: what happens, step by step */}
+      <AyurvedaInfoSection content={content?.bastiVsKati} />      {/* NEW: Basti vs Kati, Janu, Greeva Basti */}
+      <AyurvedaInfoSection content={content?.whoShouldNot} />     {/* NEW: who should not have Basti */}
+      <AyurvedaInfoSection content={content?.gettingHere} /> 
 
       {/* 3. How It Works - Healing Journey */}
       <div id="how-it-works">
@@ -231,7 +188,7 @@ export default function BastiTherapyPage() {
         <DoctorsSection content={content?.doctors} />
         
         <PaymentInsurance content={content?.paymentInsurance} />
-        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="basti-therapy-dubai" />
+        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="basti-therapy-dubai" lastReviewed="2026-01-12" />
         <FAQSection content={content?.faq} />
       </div>
 

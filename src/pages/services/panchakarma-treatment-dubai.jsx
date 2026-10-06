@@ -4,6 +4,7 @@ import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
 import PanchakarmaWhyChoose from '../../../components/PanchakarmaWhyChoose';
@@ -48,35 +49,41 @@ export default function PanchakarmaTreatmentPage() {
     ]
   };
 
-  const medicalProcedureSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Panchakarma Treatment in Dubai",
-    "description": "Authentic Ayurvedic Panchakarma detoxification and rejuvenation therapy in Dubai combining oil therapy, herbal steam, cleansing protocols, and personalized care to balance doshas, boost immunity, and relieve stress.",
-    "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/",
-    "procedureType": "https://schema.org/NoninvasiveProcedure",
-    "reviewedBy": {
-      "@type": "Physician",
-      "name": "Dr. Shamna Keloth Meethal",
-      "medicalSpecialty": "Ayurveda",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+const panchakarmaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/",
+      "name": "Panchakarma Treatment Dubai | 7, 14 & 21-Day Programmes",
+      "inLanguage": "en-AE",
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/#therapy" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD"
     },
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae/",
-      "image": "https://ramacarepolyclinic.ae/images/panchakarma.jpg",
-      "telephone": "+971566597878",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/#therapy",
+      "name": "Panchakarma",
+      "alternateName": ["Panchakarma treatment", "Ayurvedic detox programme", "Vamana", "Virechana", "Basti", "Nasya", "Raktamokshana", "Karkidaka Chikitsa"],
+      "description": "Classical Ayurvedic cleansing programme of 7, 14 or 21 days at RamaCare Polyclinic, Jumeirah 1, Dubai: preparation (Snehapana, Abhyanga, Swedana), one or more of the five main therapies (Vamana, Virechana, Basti, Nasya, Raktamokshana) and a recovery diet, planned by a BAMS doctor after a consultation.",
+      "relevantSpecialty": "https://schema.org/Ayurvedic",
+      "contraindication": ["Pregnancy", "Acute fever or infection", "Severe heart or kidney disease", "Recent surgery"],
+      "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
     }
-  };
+  ]
+};
 
   const faqSchema = content?.faq?.faqs?.length
     ? {
@@ -93,41 +100,25 @@ export default function PanchakarmaTreatmentPage() {
       }
     : null;
 
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Shamna Keloth Meethal",
-    "medicalSpecialty": "Ayurveda",
-    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-    "worksFor": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic"
-    }
-  };
 
   return (
     <Layout>
       <Head>
-        <title key="title">Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness</title>
+        <title key="title">Panchakarma Treatment Dubai | 7, 14 & 21-Day Programmes</title>
         <meta
           name="description"
-          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          content="Classical Panchakarma in Jumeirah 1, Dubai: Vamana, Virechana, Basti, Nasya and Raktamokshana in 7–21 day programmes by a BAMS doctor. From AED 200."
           key="description"
-        />
-        <meta
-          name="keywords"
-          content="Panchakarma treatment in Dubai, Ayurvedic Panchakarma Dubai, Panchakarma treatment cost in Dubai, Panchakarma treatment price list, Panchakarma Bur Dubai, Panchakarma Ayurvedic Centre, Panchakarma Ayurveda centre reviews, Panchakarma Al Nahda, Ayurvedic treatment in Dubai, Panchakarma treatment near me, Body detox Ayurveda Dubai, Stress Relief Ayurveda Dubai"
-          key="keywords"
         />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="og:title" />
+        <meta property="og:title" content="Panchakarma Treatment Dubai | 7, 14 & 21-Day Programmes" key="og:title" />
         <meta
           property="og:description"
-          content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation. Affordable pricing, Bur Dubai & Al Nahda centers available."
+          content="Classical Panchakarma in Jumeirah 1, Dubai: Vamana, Virechana, Basti, Nasya and Raktamokshana in 7–21 day programmes by a BAMS doctor. From AED 200."
           key="og:description"
         />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/panchakarma-treatment-dubai/" key="og:url" />
@@ -140,7 +131,7 @@ export default function PanchakarmaTreatmentPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Panchakarma Treatment in Dubai | Ayurvedic Detox & Wellness" key="twitter:title" />
+        <meta name="twitter:title" content="Panchakarma Treatment Dubai | 7, 14 & 21-Day Programmes" key="twitter:title" />
         <meta
           name="twitter:description"
           content="Discover authentic Panchakarma treatment in Dubai for detox, stress relief, immunity boost, and rejuvenation."
@@ -153,20 +144,16 @@ export default function PanchakarmaTreatmentPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
-        />
+          <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(panchakarmaSchema) }}
+    />
         {faqSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           />
         )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-        />
       </Head>
 
       <TreatmentHero 
@@ -176,10 +163,13 @@ export default function PanchakarmaTreatmentPage() {
       />
       <QuickNavigation />
     
-      <TreatmentOverview 
-        subcategoryName={subcategoryName}
-        content={content?.overview}
-      />
+      <TreatmentOverview subcategoryName={subcategoryName} content={content?.overview} />
+      <AyurvedaInfoSection content={content?.fiveTherapies} />    {/* NEW: the 5 main therapies */}
+      <AyurvedaInfoSection content={content?.threePhases} />      {/* NEW: Purva, Pradhana, Paschat Karma */}
+      <AyurvedaInfoSection content={content?.programmes} />       {/* NEW: 7, 14 and 21-day programmes */}
+      <AyurvedaInfoSection content={content?.bestTime} />         {/* NEW: best time of year, Karkidaka */}
+      <AyurvedaInfoSection content={content?.prepareAftercare} /> {/* NEW: before, during, after */}
+      <AyurvedaInfoSection content={content?.whoShouldNot} />     {/* NEW: who should not have it */}
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
@@ -188,7 +178,7 @@ export default function PanchakarmaTreatmentPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="panchakarma-treatment-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="panchakarma-treatment-dubai" lastReviewed="2026-01-12" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

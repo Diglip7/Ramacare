@@ -25,7 +25,7 @@ export default function AyurvedaCategoryPage() {
     <>
       Read more about{" "}
       <Link href="/services/abhyanga-massage-dubai/" className="text-[#007474] hover:underline font-medium">
-        therapeutic Kerala massage
+        Kerala Ayurvedic massage in Dubai
       </Link>
       ,{" "}
       <Link href="/services/panchakarma-treatment-dubai/" className="text-[#007474] hover:underline font-medium">

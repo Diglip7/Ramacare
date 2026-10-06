@@ -5,6 +5,7 @@ import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
 import HealingJourney from '../../../components/HealingJourney';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
 import PatientTestimonials from '../../../components/VideoTestimonials';
 import DoctorsSection from '../../../components/DoctorsSection';
@@ -47,35 +48,41 @@ export default function AyurvedicDietPlanPage() {
     ]
   };
 
-  const medicalProcedureSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Ayurvedic Diet Plan in Dubai",
-    "description": "Personalized nutrition program based on individual body constitution (Prakriti) and current imbalances (Vikriti), including dosha-based meal planning, food timing guidance, herbal supplements, and lifestyle advice to support digestion, immunity, and long-term wellness.",
-    "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/",
-    "procedureType": "https://schema.org/NoninvasiveProcedure",
-    "reviewedBy": {
-      "@type": "Person",
-      "name": "Dr. Shamna Keloth Meethal",
-      "jobTitle": "Ayurveda Doctor",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+const dietSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/",
+      "name": "Ayurvedic Diet Plan Dubai | Dosha Diet by a BAMS Doctor",
+      "inLanguage": "en-AE",
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/#diet" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD"
     },
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae/",
-      "image": "https://ramacarepolyclinic.ae/images/a-diet.jpg",
-      "telephone": "+971566597878",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
+    {
+      "@type": "Diet",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/#diet",
+      "name": "Personalised Ayurvedic diet plan",
+      "alternateName": ["Ayurvedic diet chart", "Dosha diet", "Vata diet", "Pitta diet", "Kapha diet", "Ayurvedic meal plan"],
+      "description": "A diet plan based on your Ayurvedic constitution (Prakriti) and current imbalance, prepared by a BAMS doctor after an in-person consultation: foods to favour and avoid for Vata, Pitta or Kapha, meal timing, incompatible foods (Viruddha Ahara) and seasonal advice for Dubai.",
+      "dietFeatures": "Dosha-based food choices, main meal at midday, warm freshly cooked food, the six tastes (Shad Rasa), avoiding incompatible foods",
+      "expertConsiderations": "Not a replacement for medical treatment. People with diabetes, thyroid disease, kidney disease, pregnancy or food allergies should follow their doctor's advice; prescribed medicines should not be stopped.",
+      "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
     }
-  };
+  ]
+};
 
   const faqSchema = content?.faq?.faqs?.length
     ? {
@@ -92,49 +99,26 @@ export default function AyurvedicDietPlanPage() {
       }
     : null;
 
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dr. Shamna Keloth Meethal",
-    "jobTitle": "Ayurveda Doctor",
-    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-    "worksFor": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
-    }
-  };
+
 
   return (
     <Layout>
       <Head>
-        <title key="title">Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance</title>
+        <title key="title">Ayurvedic Diet Plan Dubai | Dosha Diet by a BAMS Doctor</title>
         <meta
           name="description"
-          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          content="Personalised Ayurvedic diet plan in Jumeirah 1, Dubai: foods for your Vata, Pitta or Kapha dosha, meal timing and a written plan from a BAMS doctor. From AED 200."
           key="description"
-        />
-        <meta
-          name="keywords"
-          content="Ayurvedic diet plan Dubai, Dosha-based diet Dubai, Ayurvedic meal plan Dubai, Personalized diet plan Dubai, Ayurvedic nutrition Dubai, Weight Management Ayurveda Dubai, Digestive Health Ayurveda Dubai, Immunity-boosting diet in Dubai, Healthy eating Ayurveda Dubai, Ayurveda lifestyle Dubai, Herbal diet recommendations in Dubai, Ayurvedic food types in Dubai"
-          key="keywords"
         />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance" key="og:title" />
+        <meta property="og:title" content="Ayurvedic Diet Plan Dubai | Dosha Diet by a BAMS Doctor" key="og:title" />
         <meta
           property="og:description"
-          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          content="Personalised Ayurvedic diet plan in Jumeirah 1, Dubai: foods for your Vata, Pitta or Kapha dosha, meal timing and a written plan from a BAMS doctor. From AED 200."
           key="og:description"
         />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-dubai/" key="og:url" />
@@ -144,10 +128,10 @@ export default function AyurvedicDietPlanPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet Plan in Dubai | Personalized Meal Guidance" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic Diet Plan Dubai | Dosha Diet by a BAMS Doctor" key="twitter:title" />
         <meta
           name="twitter:description"
-          content="Follow a personalized Ayurvedic diet plan in Dubai to balance your doshas, support digestion, boost immunity, and maintain a healthy weight naturally and safely."
+          content="Personalised Ayurvedic diet plan in Jumeirah 1, Dubai: foods for your Vata, Pitta or Kapha dosha, meal timing and a written plan from a BAMS doctor. From AED 200."
           key="twitter:description"
         />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/a-diet.jpg" key="twitter:image" />
@@ -157,20 +141,16 @@ export default function AyurvedicDietPlanPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
-        />
+          <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(dietSchema) }}
+    />
         {faqSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           />
         )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-        />
       </Head>
 
       <TreatmentHero 
@@ -180,10 +160,12 @@ export default function AyurvedicDietPlanPage() {
       />
       <QuickNavigation />
     
-      <TreatmentOverview 
-        subcategoryName={subcategoryName}
-        content={content?.overview}
-      />
+      <TreatmentOverview subcategoryName={subcategoryName} content={content?.overview} />
+      <AyurvedaInfoSection content={content?.doshaFoods} />      {/* NEW: foods by dosha */}
+      <AyurvedaInfoSection content={content?.dietRules} />       {/* NEW: core Ayurvedic eating principles */}
+      <AyurvedaInfoSection content={content?.sampleDay} />       {/* NEW: example day of meals */}
+      <AyurvedaInfoSection content={content?.dietByGoal} />      {/* NEW: links to all 9 diet pages */}
+      <AyurvedaInfoSection content={content?.dubaiEating} />     {/* NEW: Ramadan, summer, office eating */}
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
@@ -191,7 +173,7 @@ export default function AyurvedicDietPlanPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-dubai" lastReviewed="2026-01-12" />
       <FAQSection content={content?.faq} />
       <BookConsultation content={content?.bookConsultation} />
     </Layout>

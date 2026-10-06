@@ -21,7 +21,7 @@ const BastiTherapySections = ({ sectionType, content }) => {
               </svg>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1F2937] mb-3">Conditions Commonly Treated</h2>
-            <p className="text-base text-[#6B7280] max-w-2xl mx-auto">Comprehensive Ayurvedic care for digestive, musculoskeletal, and lifestyle-related health concerns</p>
+            <p className="text-base text-[#6B7280] max-w-2xl mx-auto">{content.conditionsSubtitle || 'Common reasons patients see our Ayurveda team'}</p>
           </div>
           
           {/* Conditions Grid */}

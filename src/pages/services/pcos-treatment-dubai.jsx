@@ -4,6 +4,7 @@ import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
 // import CertificationsSection from '../../../components/CertificationsSection';
 import TreatmentOverview from '../../../components/TreatmentOverview';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
 import PatientTestimonials from '../../../components/VideoTestimonials';
@@ -17,7 +18,7 @@ import { getSubcategoryContent } from '../../data/subcategoryContent';
 
 export default function PCOSTreatmentPage() {
   const categoryName = 'Ayurveda';
-  const subcategoryName = 'PCOS Treatment';
+  const subcategoryName = 'Ayurvedic PCOS Treatment';
 
   // Get content from data file
   const content = getSubcategoryContent('ayurveda-dubai', 'pcos-treatment');
@@ -47,35 +48,42 @@ export default function PCOSTreatmentPage() {
     ]
   };
 
-  const medicalProcedureSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Ayurvedic PCOS Treatment in Dubai",
-    "description": "Comprehensive Ayurvedic PCOS management in Dubai combining hormonal assessment, Panchakarma detox, herbal medicine, and lifestyle guidance for hormonal balance and fertility support.",
-    "url": "https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/",
-    "procedureType": "https://schema.org/NoninvasiveProcedure",
-    "reviewedBy": {
-      "@type": "Physician",
-      "name": "Dr. Shamna Keloth Meethal",
-      "medicalSpecialty": "Ayurveda",
-      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-    },
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic",
-      "url": "https://ramacarepolyclinic.ae/",
-      "image": "https://ramacarepolyclinic.ae/images/pcos.jpg",
-      "telephone": "+971566597878",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-        "addressLocality": "Jumeirah 1",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
-      }
-    }
-  };
+      const pcosSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/",
+          "name": "Ayurvedic PCOS & PCOD Treatment Dubai | Female Doctors",
+          "inLanguage": "en-AE",
+          "about": { "@id": "https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/#therapy" },
+          "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+          "audience": { "@type": "PeopleAudience", "suggestedGender": "female" },
+          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+          "lastReviewed": "YYYY-MM-DD"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "@id": "https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/#therapy",
+          "name": "Ayurvedic PCOS treatment",
+          "alternateName": ["Ayurvedic PCOD treatment", "Ayurveda for PCOS", "Ayurvedic treatment for polycystic ovary syndrome", "Ayurvedic treatment for irregular periods"],
+          "description": "Ayurvedic care for PCOS and PCOD at RamaCare Polyclinic, Jumeirah 1, Dubai, by a female BAMS doctor, with a female GP in the same building who arranges hormone and blood-sugar tests: herbal medicines, Virechana, Basti, Nasya, Udwarthanam and Shirodhara when suitable, and a PCOS diet, usually over at least three to six menstrual cycles. Complementary to medical care.",
+          "relevantSpecialty": "https://schema.org/Ayurvedic",
+          "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+          "name": "Dr. Shamna Keloth Meethal",
+          "gender": "Female",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+          "medicalSpecialty": "https://schema.org/Ayurvedic",
+          "knowsLanguage": ["en", "ml", "hi"],
+          "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+        }
+      ]
+    };
 
   const faqSchema = content?.faq?.faqs?.length
     ? {
@@ -92,41 +100,24 @@ export default function PCOSTreatmentPage() {
       }
     : null;
 
-  const physicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Shamna Keloth Meethal",
-    "medicalSpecialty": "Ayurveda",
-    "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-    "worksFor": {
-      "@type": "MedicalClinic",
-      "name": "RamaCare Polyclinic"
-    }
-  };
-
   return (
     <Layout>
       <Head>
-        <title key="title">Ayurvedic PCOS Treatment in Dubai | Hormone Balance Naturally</title>
+        <title key="title">Ayurvedic PCOS & PCOD Treatment Dubai | Female Doctors</title>
         <meta
           name="description"
-          content="Manage PCOS naturally in Dubai with Ayurvedic therapies, Panchakarma detox, herbal remedies, diet, and lifestyle guidance for hormonal balance and fertility support."
+          content="Ayurvedic PCOS care in Jumeirah 1, Dubai by a female BAMS doctor, with a female GP for hormone tests. Herbs, Virechana, Basti and diet. From AED 200."
           key="description"
-        />
-        <meta
-          name="keywords"
-          content="Ayurvedic PCOS treatment Dubai, PCOS management Dubai, Hormone balance Dubai, Panchakarma for PCOS Dubai, Herbal PCOS remedies Dubai, Women’s Health Dubai, PCOS diet and lifestyle in Dubai, Ayurvedic gynecology Dubai, Fertility support Dubai, PCOS therapy Dubai, DHA licensed Ayurvedic doctor in Dubai, Holistic PCOS treatment Dubai"
-          key="keywords"
         />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic PCOS Treatment in Dubai | Hormone Balance Naturally" key="og:title" />
+        <meta property="og:title" content="Ayurvedic PCOS & PCOD Treatment Dubai | Female Doctors" key="og:title" />
         <meta
           property="og:description"
-          content="Manage PCOS naturally in Dubai with Ayurvedic therapies, Panchakarma detox, herbal remedies, diet, and lifestyle guidance for hormonal balance and fertility support."
+          content="Ayurvedic PCOS care in Jumeirah 1, Dubai by a female BAMS doctor, with a female GP for hormone tests. Herbs, Virechana, Basti and diet. From AED 200."
           key="og:description"
         />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/pcos-treatment-dubai/" key="og:url" />
@@ -139,7 +130,7 @@ export default function PCOSTreatmentPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic PCOS Treatment in Dubai | Hormone Balance Naturally" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic PCOS & PCOD Treatment Dubai | Female Doctors" key="twitter:title" />
         <meta
           name="twitter:description"
           content="Manage PCOS naturally in Dubai with Ayurvedic therapies, Panchakarma detox, herbal remedies, diet, and lifestyle guidance."
@@ -152,10 +143,6 @@ export default function PCOSTreatmentPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalProcedureSchema) }}
-        />
         {faqSchema && (
           <script
             type="application/ld+json"
@@ -163,9 +150,9 @@ export default function PCOSTreatmentPage() {
           />
         )}
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pcosSchema) }}
+      />
       </Head>
 
       <TreatmentHero 
@@ -174,10 +161,12 @@ export default function PCOSTreatmentPage() {
         hero={content?.hero}
       />
       <QuickNavigation />
-      <TreatmentOverview 
-        subcategoryName={subcategoryName}
-        content={content?.overview}
-      />
+     <TreatmentOverview subcategoryName={subcategoryName} content={content?.overview} />
+      <AyurvedaInfoSection content={content?.testsFirst} />       {/* NEW: tests with our female GP */}
+      <AyurvedaInfoSection content={content?.pcosTypes} />        {/* NEW: PCOS types */}
+      <AyurvedaInfoSection content={content?.therapiesHerbs} />   {/* NEW: therapies and herbs */}
+      <AyurvedaInfoSection content={content?.timeline} />         {/* NEW: what to expect, cycle by cycle */}
+      <AyurvedaInfoSection content={content?.lifestyle} />        {/* NEW: diet, exercise, Dubai and Ramadan */}
       <HealingJourney content={content?.healingJourney} />
       <TreatmentBenefits 
         content={content?.benefits}
@@ -185,8 +174,9 @@ export default function PCOSTreatmentPage() {
       <PatientTestimonials content={content?.testimonials} />
       <DoctorsSection content={content?.doctors} />
       <PaymentInsurance content={content?.paymentInsurance} />
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="pcos-treatment-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="pcos-treatment-dubai" lastReviewed="2026-01-12" />
       <FAQSection content={content?.faq} />
+      <AyurvedaInfoSection content={content?.sources} />          {/* NEW: medical sources and review */}
       <BookConsultation content={content?.bookConsultation} />
     </Layout>
   );

@@ -74,7 +74,7 @@ export const categoryContent = {
           idealFor: 'Adults cleared by the doctor for a cleansing programme', image: '/images/panchakarma.jpg', alt: 'Panchakarma therapy at RamaCare Polyclinic, Jumeirah 1' },
         { 
       id: 2, 
-      title: 'Therapeutic Kerala Massage (Abhyanga)', 
+      title: 'Kerala Ayurvedic Massage in Dubai', 
       slug: 'abhyanga-massage', 
       fullSlug: '/services/abhyanga-massage-dubai/', 
       icon: 'Sparkles',

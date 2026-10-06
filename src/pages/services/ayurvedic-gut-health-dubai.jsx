@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
+import AgniQuiz from '../../../components/AgniQuiz';
 
 const content = {
   hero: {
-    title: "Ayurvedic Gut Health: Restoring 'Agni' for Better Digestion in Dubai",
-    description1: "In the medical world of 2026, the gut is recognized as the \"second brain.\" In Ayurveda, this has been known for 5,000 years through the concept of Agni—your metabolic fire. When your Agni is strong, you feel energized and light. When it is weak or flickering, it leads to Ama (toxins), which manifests as bloating, sluggishness, and chronic digestive disorders common in the UAE.",
-    description2: "An Ayurvedic Gut Health plan in Dubai is designed to relight this fire, ensuring that every meal you eat in our city's world-class restaurants is processed into vitality rather than waste.",
+    title: "Ayurvedic Gut Health in Dubai: Your Guide to Agni and Better Digestion",
+    description1: "In Ayurveda, gut health depends on Agni, your digestive fire. When Agni is balanced, you feel light and energetic after meals; when it is weak or irregular, undigested residue (Ama) builds up, felt as bloating, heaviness, irregular bowels and tiredness. Classical texts say most disease begins with weak Agni (Roga sarve api mandagnau).",
+    description2: "This guide from RamaCare Polyclinic in Jumeirah 1 explains the four types of Agni, the Dubai habits that upset digestion, simple kitchen remedies and when to see a doctor. Take the Agni self-check below, or book a digestive assessment with Dr. Shamna Keloth Meethal (BAMS), from AED 200.",
     ctaButtons: {
       primary: { text: 'Book Digestive Assessment' },
-      secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
+      secondary: { text: 'WhatsApp Us', phone: '971566597878' }
     },
     image: '/images/gut.jpg'
   },
   summary: {
-    title: 'The "Answer-First" Summary for Digestive Wellness',
-    question: 'How can I improve my gut health with Ayurveda?',
-    answer: 'The secret lies in "kindling" your Agni. To restore digestion, start by drinking warm ginger water 20 minutes before meals, eating your largest meal at midday when the sun is highest, and avoiding "incompatible foods" (like fruit with dairy). In Dubai\'s climate, managing gut health also requires balancing the cold of air conditioning with warm, spiced, easy-to-digest meals.'
+   title: 'How Can I Improve My Gut Health With Ayurveda?',
+   question: 'In short:',
+   answer: 'Keep your digestive fire (Agni) steady. Eat at regular times, make lunch your largest meal, sip warm water or ginger water before meals instead of iced drinks, avoid incompatible combinations such as fruit with dairy or fish with milk, and keep dinner light and early. In Dubai, balance long hours in air-conditioning with warm, lightly spiced, freshly cooked food.'
   },
   dubaiGut: {
-    title: '1. The "Dubai Gut" Syndrome: Why Digestion Struggles Here',
+    title: 'Why Digestion Struggles in Dubai',
     items: [
       {
         title: 'The "Ice Water" Habit',
-        description: 'Drinking ice-cold water during a 45°C Dubai summer is like throwing water on a campfire. It instantly kills your Agni, leading to undigested food and bloating.',
+        description: 'Ice-cold drinks with meals during a 45°C summer are, in Ayurvedic terms, like water on a campfire: they dampen Agni and can leave you bloated and heavy.',
         icon: 'Droplets'
       },
       {
@@ -40,6 +43,11 @@ const content = {
         title: 'High-Stress Rushing',
         description: 'Eating while standing, driving, or answering emails in DIFC keeps the body in "fight or flight" mode, which shuts down the digestive system (The Enteric Nervous System).',
         icon: 'Activity'
+      },
+      { 
+        title: 'Long Hours in Air-Conditioning', 
+        description: 'Cold, dry air all day aggravates Vata in Ayurveda, which shows up as gas, dryness and irregular digestion.', 
+        icon: 'Wind' 
       }
     ]
   },
@@ -48,7 +56,7 @@ const content = {
     items: [
       {
         name: 'Vishamagni',
-        subtitle: '(Irregular)',
+        subtitle: '(Irregular – linked to Vata)',
         description: 'Inconsistent hunger and digestion. One day you can eat anything; the next, everything feels heavy.',
         icon: 'Wind',
         color: 'bg-blue-50',
@@ -56,7 +64,7 @@ const content = {
       },
       {
         name: 'Tikshnagni',
-        subtitle: '(Sharp/Hyper)',
+        subtitle: '(Sharp – linked to Pitta)',
         description: 'Intense hunger that turns into irritability. You can digest large meals but feel acidic or burnt.',
         icon: 'Flame',
         color: 'bg-red-50',
@@ -64,7 +72,7 @@ const content = {
       },
       {
         name: 'Mandagni',
-        subtitle: '(Slow/Sluggish)',
+        subtitle: '(Slow – linked to Kapha)',
         description: 'Low appetite, slow metabolism. You feel full quickly and bloated for hours after eating.',
         icon: 'Droplets',
         color: 'bg-[#F0F7F4]',
@@ -72,7 +80,7 @@ const content = {
       },
       {
         name: 'Samagni',
-        subtitle: '(Balanced)',
+        subtitle: '(Balanced – the goal)',
         description: 'Regular hunger, smooth digestion, energized after meals. The ideal state of metabolic fire.',
         icon: 'Sparkles',
         color: 'bg-green-50',
@@ -81,90 +89,107 @@ const content = {
     ]
   },
   kitchenPharmacy: {
-    title: '3. The "Gut-Healing" Kitchen Pharmacy',
+    title: 'Ayurvedic Kitchen Remedies for Digestion',
+    caution: 'Herbal formulas (Deepana-Pachana herbs such as Trikatu or Hingvastak) should only be taken as prescribed by a doctor.',
     items: [
       {
         name: 'CCF Tea',
-        badge: 'Cleanses Ama',
-        description: 'Cumin, Coriander, Fennel tea—the Ayurvedic "reset button" for digestion. Drink warm throughout the day.',
+        badge: 'Traditionally eases bloating',
+        description: 'Cumin, coriander and fennel tea, sipped warm through the day; a classic Ayurvedic drink for gas and heaviness.',
         image: '/images/gut1.jpg',
         alt: 'CCF tea (cumin, coriander, fennel) for Ayurvedic gut health in Dubai'
       },
       {
         name: 'Ginger',
-        badge: 'Ignites Agni',
-        description: 'The digestive fire starter. A thin slice before meals or warm ginger water kindles Agni.',
+        badge: 'Kindles Agni',
+        description: 'A thin slice of fresh ginger with a pinch of rock salt, or warm ginger water, before meals is traditionally used to wake up appetite.',
         image: '/images/gut2.jpg',
         alt: 'Fresh ginger used to ignite Agni in Ayurvedic gut health treatment'
       },
       {
-        name: 'A2 Ghee',
-        badge: 'Nourishes Tissues',
-        description: 'Pure, grass-fed ghee lubricates the intestines and carries nutrients deep into tissues.',
+        name: 'Ghee',
+        badge: 'Traditionally nourishing',
+        description: 'A small spoon of ghee with meals is valued in Ayurveda for digestion, especially for Vata and Pitta; the right amount depends on your health.',
         image: '/images/gut3.jpg',
-        alt: 'A2 ghee for tissue nourishment in Ayurvedic gut health'
+        alt: 'Ghee for digestion in Ayurvedic gut health'
       },
       {
-        name: 'Buttermilk',
-        badge: 'Balances Flora',
-        description: 'Spiced buttermilk (with cumin, salt, and coriander) is the Ayurvedic "probiotic" for gut flora.',
+        name: 'Buttermilk (Takra)',
+        badge: 'Light and cooling',
+        description: 'Thin spiced buttermilk with cumin and coriander after lunch is the classical Ayurvedic drink for digestion, especially in summer.',
         image: '/images/gut4.jpg',
-        alt: 'Spiced buttermilk as an Ayurvedic probiotic for gut flora balance'
+        alt: 'Spiced buttermilk Takra for Ayurvedic digestion'
       }
     ]
   },
   paa: {
-    title: '4. People Also Ask (PAA) - Gut Health Dubai',
+    title: 'Gut Health and Agni: Frequently Asked Questions',
     items: [
-      {
-        question: 'What is Agni in Ayurveda?',
-        answer: 'Agni is your digestive fire—the metabolic force that transforms food into energy, tissues, and vitality. When Agni is strong, digestion is smooth and complete. When weak, it creates Ama (toxins).'
-      },
-      {
-        question: 'How do I know if my Agni is weak?',
-        answer: 'Signs include: bloating after meals, white coating on the tongue, sluggishness, brain fog, irregular bowel movements, and feeling heavy even after light meals.'
-      },
-      {
-        question: 'Can Ayurveda help with IBS or acid reflux?',
-        answer: 'Yes. Ayurveda addresses the root cause—imbalanced Agni. By restoring digestive fire through diet, herbs, and lifestyle, symptoms like IBS, acid reflux, and constipation often resolve naturally.'
-      },
-      {
-        question: 'What foods should I avoid for gut health in Dubai?',
-        answer: 'Ice-cold drinks, heavy late-night meals, incompatible food combinations (fruit with dairy, fish with milk), and excessive raw foods in air-conditioned environments.'
-      },
-      {
-        question: 'How long does it take to restore gut health with Ayurveda?',
-        answer: 'Most people notice improvements in 2-4 weeks with consistent dietary changes. Deep healing typically takes 3-6 months as your body rebuilds digestive strength and clears accumulated toxins.'
-      }
+      { question: 'What is Agni in Ayurveda?', answer: 'Agni is your digestive fire: the force that digests food and turns it into energy and tissue. Ayurveda describes four states: irregular (Vishama), sharp (Tikshna), slow (Manda) and balanced (Sama).' },
+      { question: 'How do I know if my Agni is weak?', answer: 'Common signs are heaviness or bloating after meals, a white coating on the tongue in the morning, low appetite, irregular bowels and tiredness after eating. Try the Agni self-check on this page.' },
+      { question: 'What is Ama?', answer: 'In Ayurveda, Ama is undigested residue that forms when Agni is weak. It is associated with a coated tongue, heaviness, sluggishness and poor appetite.' },
+      { question: 'How can I improve my gut health naturally with Ayurveda?', answer: 'Eat at regular times, make lunch your main meal, sip warm water instead of iced drinks, avoid incompatible food combinations, keep dinner light and early, and manage stress.' },
+      { question: 'What is CCF tea and how do I make it?', answer: 'CCF tea is cumin, coriander and fennel seeds (about half a teaspoon each) simmered in water for 5–10 minutes. It is sipped warm through the day and is traditionally used for gas and bloating.' },
+      { question: 'Which foods should I avoid for better digestion in Dubai?', answer: 'Iced drinks with meals, heavy late-night dinners, incompatible combinations (fruit with dairy, fish with milk), and lots of raw food in air-conditioned environments.' },
+      { question: 'Does air-conditioning affect digestion?', answer: 'In Ayurveda, long hours in cold, dry air aggravate Vata, which can show up as gas, bloating and irregular digestion. Warm, cooked food and warm drinks help balance it.' },
+      { question: 'Can Ayurveda help with IBS or acid reflux?', answer: 'Ayurvedic care can support digestion alongside medical care. For treatment of acidity, IBS, bloating and constipation, see our Ayurvedic digestive treatment page; warning signs should be checked by a doctor first.' },
+      { question: 'When should I see a doctor about my digestion?', answer: 'See a doctor first if you have weight loss, blood in the stool or black stools, vomiting blood, difficulty swallowing, severe or night-time pain, or a new change in bowel habit lasting weeks. Our GP is in the same building.' },
+      { question: 'Can I get gut tests at RamaCare?', answer: 'If needed, our GP can arrange medical tests such as blood tests, stool tests and H. pylori testing. RamaCare does not offer gut microbiome or food-intolerance tests.' },
+      { question: 'What happens at a digestive assessment?', answer: 'Dr. Shamna (BAMS) reviews your digestion, diet, routine and stress, reads your pulse, examines your tongue, identifies your Agni type and gives you a personal plan. It takes 45–60 minutes and starts from AED 200.' },
+      { question: 'How long before I notice a difference?', answer: 'Many people notice changes in bloating and energy within a few weeks of regular meal timing and simple diet changes. Experiences vary, and longer-standing problems take longer.' }
     ]
   },
   clinicalCare: {
-    title: '5. Experience Clinical Digestive Care at RamaCare',
+    title: 'Your Digestive Assessment at RamaCare',
     steps: [
-      {
-        id: 'Step 1',
-        title: 'Agni-Mapping',
-        description: 'We assess your unique digestive fire type through pulse diagnosis, intake analysis, and symptom mapping to create a personalized gut health protocol.',
-        icon: 'Activity'
-      },
-      {
-        id: 'Step 2',
-        title: 'Tongue Diagnosis',
-        description: 'Your tongue reveals your digestive state. We examine coating, color, and texture to identify Ama buildup and organ imbalances.',
-        icon: 'Eye'
-      },
-      {
-        id: 'Step 3',
-        title: 'Personalized Spicing',
-        description: 'Based on your Agni type and Dubai lifestyle, we create custom spice blends and meal timing strategies to optimize your digestion.',
-        icon: 'Utensils'
-      }
+      { id: 'Step 1', title: 'Agni Assessment', description: 'Dr. Shamna (BAMS) reviews your digestion, diet, routine and stress and reads your pulse to identify your Agni type.', icon: 'Activity' },
+      { id: 'Step 2', title: 'Tongue Examination', description: 'Your tongue\'s coating and colour help the doctor judge your digestion and signs of Ama.', icon: 'Eye' },
+      { id: 'Step 3', title: 'Your Personal Plan', description: 'Meal timing, foods and spices for your Agni type and Dubai routine, with herbal medicines or therapies if needed.', icon: 'Utensils' },
+      { id: 'Step 4', title: 'Medical Checks if Needed', description: 'If anything needs a medical check, our GP in the same building can examine you and arrange tests.', icon: 'Stethoscope' }
     ]
   },
+      whenToSeeDoctor: {
+      id: 'when-to-see-a-doctor',
+      heading: 'When to See a Doctor About Your Digestion',
+      intro: 'Ayurvedic self-care is for everyday digestion. See a doctor first if you have:',
+      items: [
+        { text: 'unexplained weight loss or loss of appetite' },
+        { text: 'blood in the stool, black stools, or vomiting blood' },
+        { text: 'difficulty or pain when swallowing' },
+        { text: 'severe, constant or night-time abdominal pain' },
+        { text: 'a new change in bowel habit lasting several weeks' }
+      ],
+      note: 'At RamaCare, our general physician is in the same building and can arrange blood tests, stool tests and H. pylori testing if needed (/services/general-physician-dubai/). We do not offer gut microbiome or food-intolerance testing.'
+    },
+    yourVisit: {
+      id: 'your-visit',
+      heading: 'Your Ayurvedic Digestive Assessment in Jumeirah 1',
+      table: [
+        ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+        ['Therapies, if needed', 'Given by Kerala-trained therapists of your own gender, always'],
+        ['Consultation', 'From AED 200, 45–60 minutes'],
+        ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+        ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+        ['Hours', 'Every day, 10am–10pm']
+      ]
+    },
+    relatedGuides: {
+      id: 'related-guides',
+      heading: 'Related Ayurvedic Guides and Treatments',
+      items: [
+        { text: 'Ayurvedic treatment for acidity, IBS and digestive problems', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
+        { text: 'Ayurvedic diet plan in Dubai', href: '/services/ayurvedic-diet-plan-dubai/' },
+        { text: 'Take the dosha test (Prakriti and dosha assessment)', href: '/services/prakriti-dosha-assessment-dubai/' },
+        { text: 'Ayurvedic summer diet for Dubai', href: '/services/ayurvedic-diet-dubai-summer/' },
+        { text: 'Ayurvedic detox diet', href: '/services/ayurvedic-detox-diet-plan-dubai/' },
+        { text: 'Basti therapy (for Vata digestion)', href: '/services/basti-therapy-dubai/' }
+      ]
+    },
+
   authorityFooter: {
-    title: 'The "Authority" Footer',
-    description: 'Transform your energy by healing your core. Start your journey with a professional Ayurvedic Diet Plan Dubai specifically designed for gut health and Agni restoration.',
-    cta: 'Book Your Digestive Assessment in Jumeirah Today'
+    title: 'Ready to Look After Your Digestion?',
+    description: 'Book a digestive assessment with Dr. Shamna in Jumeirah 1, from AED 200, or explore our Ayurvedic diet plan and Ayurvedic digestive treatment.',
+    cta: 'Book Your Digestive Assessment'
   }
 };
 
@@ -192,102 +217,80 @@ export default function AyurvedicGutHealthDubaiPage() {
     }
   }));
 
-  const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/",
-        "name": "Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion",
-        "description": "Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Digestive Health / Gut Health (Agni Balance)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Gut Health", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "jobTitle": "Ayurveda Doctor",
-        "honorificSuffix": "BAMS",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Ayurveda Doctor"
-        },
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
+ const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#webpage",
+          "url": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/",
+          "name": "Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion",
+          "description": "An Ayurvedic guide to gut health and Agni (digestive fire) by RamaCare Polyclinic, Jumeirah 1, Dubai: the four types of Agni, Dubai habits that upset digestion, kitchen remedies, an Agni self-check and when to see a doctor.",
+          "inLanguage": "en-AE",
+          "about": [
+            { "@type": "Thing", "name": "Agni (digestive fire) in Ayurveda" },
+            { "@type": "Thing", "name": "Gut health" }
+          ],
+          "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+          "lastReviewed": "2026-01-12",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+              { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+              { "@type": "ListItem", "position": 3, "name": "Ayurvedic Gut Health", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" }
+            ]
           }
         },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#faq",
-        "mainEntity": faqsForSchema
-      }
-    ]
-  };
+        {
+          "@type": "Physician",
+          "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+          "name": "Dr. Shamna Keloth Meethal",
+          "gender": "Female",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+          "medicalSpecialty": "https://schema.org/Ayurvedic",
+          "knowsLanguage": ["en", "ml", "hi"],
+          "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": faqsForSchema
+        }
+      ]
+    };
 
   return (
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion</title>
-        <meta name="description" content="Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1." key="description" />
+        <title key="title">Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion</title>
+        <meta name="description" content="Ayurvedic gut health guide from RamaCare, Jumeirah 1: the 4 types of Agni, Dubai habits that upset digestion, kitchen remedies and a free Agni self-check." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion" key="og:title" />
-        <meta property="og:description" content="Heal your gut naturally. Our DHA-licensed Ayurvedic plans in Dubai focus on restoring 'Agni' to eliminate bloating, IBS, and toxins. Visit RamaCare Polyclinic in Jumeirah 1." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion" key="og:title" />
+        <meta property="og:description" content="Ayurvedic gut health guide from RamaCare, Jumeirah 1: the 4 types of Agni, Dubai habits that upset digestion, kitchen remedies and a free Agni self-check." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-gut-health-dubai-og.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Gut Health in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic gut health and Agni guide by RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Gut Health Dubai | Restore Agni & Better Digestion" key="twitter:title" />
-        <meta name="twitter:description" content="Heal your gut naturally with DHA-licensed Ayurvedic plans in Dubai focused on restoring 'Agni' and eliminating bloating, IBS, and toxins." key="twitter:description" />
+        <meta name="twitter:title" content="Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion" key="twitter:title" />
+        <meta name="twitter:description" content="Ayurvedic gut health guide from RamaCare, Jumeirah 1: the 4 types of Agni, Dubai habits that upset digestion, kitchen remedies and a free Agni self-check." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-gut-health-dubai-og.jpg" key="twitter:image" />
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaGraph)
+            __html: JSON.stringify(schemaData)
           }}
         />
       </Head>
@@ -316,8 +319,14 @@ export default function AyurvedicGutHealthDubaiPage() {
               <p className="text-lg text-[#5F5F5F] leading-relaxed mb-6">
                 {content.hero.description1}
               </p>
-              <p className="text-lg text-[#5F5F5F] leading-relaxed mb-8">
+              <p className="text-lg text-[#5F5F5F] leading-relaxed mb-6">
                 {content.hero.description2}
+              </p>
+              <p className="text-sm text-[#5F5F5F] leading-relaxed mb-4">
+                For Ayurvedic treatment of acidity, IBS and constipation, see <Link href="/services/gastrointestinal-diseases-treatment-dubai/" className="text-[#2D5A41] underline font-semibold hover:text-[#234733]">Ayurvedic digestive treatment in Dubai</Link>.
+              </p>
+              <p className="text-sm text-[#5F5F5F] leading-relaxed mb-8">
+                Part of our <Link href="/services/ayurvedic-diet-plan-dubai/" className="text-[#2D5A41] underline font-semibold hover:text-[#234733]">Ayurvedic diet plan in Dubai</Link> guides: see foods for your dosha and diet plans for other health goals.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
@@ -424,6 +433,8 @@ export default function AyurvedicGutHealthDubaiPage() {
         </div>
       </section>
 
+<AgniQuiz />
+
       {/* 5. Kitchen Pharmacy Section */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -455,6 +466,11 @@ export default function AyurvedicGutHealthDubaiPage() {
               </motion.div>
             ))}
           </div>
+          {content.kitchenPharmacy.caution && (
+            <p className="text-center text-sm text-[#5F5F5F] mt-8 max-w-2xl mx-auto">
+              {content.kitchenPharmacy.caution}
+            </p>
+          )}
         </div>
       </section>
 
@@ -495,11 +511,10 @@ export default function AyurvedicGutHealthDubaiPage() {
             whileInView={{ opacity: 1, x: 0 }}
             className="hidden lg:block fixed top-1/2 right-8 -translate-y-1/2 z-40"
           >
-            <button 
-              onClick={handleWhatsAppClick}
-              className="bg-[#2D5A41] text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 font-bold text-sm">
-              Save Your Agni Score
-            </button>
+            <a href="#agni-quiz"
+              className="bg-[#2D5A41] text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all font-bold text-sm">
+              Take the Agni Self-Check
+            </a>
           </motion.div>
         </div>
       </section>
@@ -536,7 +551,9 @@ export default function AyurvedicGutHealthDubaiPage() {
           </div>
         </div>
       </section>
-
+<AyurvedaInfoSection content={content.whenToSeeDoctor} />
+<AyurvedaInfoSection content={content.yourVisit} />
+<AyurvedaInfoSection content={content.relatedGuides} />
 
       {/* 8. Authority Footer Section */}
       <section className="bg-[#1A5F3F] py-20 px-6 text-white text-center">
@@ -558,7 +575,7 @@ export default function AyurvedicGutHealthDubaiPage() {
       </section>
 
       {/* Reviewer Section */}
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-gut-health-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-gut-health-dubai" lastReviewed="2026-01-12" />
 
 
       {/* Sticky Bottom Bar */}

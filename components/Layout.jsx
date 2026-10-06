@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { createPortal } from 'react-dom';
 import Header from './Header';
-// import PromoBanner from './PromoBanner';
 import GoogleReviews from './GoogleReviews';
 import Footer from './Footer';
 

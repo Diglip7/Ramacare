@@ -1,20 +1,28 @@
 import Link from "next/link";
 import { Info, MapPin, ExternalLink, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 
-// Helper function to render text containing markdown links [text](url)
+// Helper function to render text containing markdown links [text](url) or unbracketed text (url)
 function renderFormattedText(text) {
   if (!text || typeof text !== "string") return text;
-  // If no markdown link syntax is present, return the original text directly with zero overhead
-  if (!text.includes("[") || !text.includes("](") || !text.includes(")")) return text;
+
+  // Auto-normalize unbracketed patterns like "Basti therapy (/services/basti-therapy-dubai/)" into "[Basti therapy](/services/basti-therapy-dubai/)"
+  let normalizedText = text;
+  if (!text.includes("](") && text.includes("(") && text.includes(")")) {
+    normalizedText = text.replace(/([A-Za-z0-9\s&,–—'-]+?)\s*\(((\/|#|https?:\/\/)[^)]+)\)/g, "[$1]($2)");
+  }
+
+  if (!normalizedText.includes("[") || !normalizedText.includes("](") || !normalizedText.includes(")")) {
+    return text;
+  }
 
   const markdownRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts = [];
   let lastIndex = 0;
   let match;
 
-  while ((match = markdownRegex.exec(text)) !== null) {
+  while ((match = markdownRegex.exec(normalizedText)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index));
+      parts.push(normalizedText.substring(lastIndex, match.index));
     }
 
     const linkText = match[1];
@@ -57,8 +65,8 @@ function renderFormattedText(text) {
     lastIndex = markdownRegex.lastIndex;
   }
 
-  if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
+  if (lastIndex < normalizedText.length) {
+    parts.push(normalizedText.substring(lastIndex));
   }
 
   return parts.length > 0 ? parts : text;

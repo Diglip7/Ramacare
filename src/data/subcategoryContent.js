@@ -2992,8 +2992,8 @@ export const subcategoryContent = {
   heading: 'Ayurvedic Treatment for Skin Conditions: A Guide',
   intro: 'How Ayurveda describes each condition, and what Dr. Shamna may use. Every plan depends on your assessment; for a medical diagnosis, see our dermatologist.',
   table: [
-    ['Eczema (Vicharchika)', 'Dry, itchy, inflamed patches. Ayurveda links it to Kapha and Pitta. Ayurvedic treatment for eczema may include Lepa, medicated oils, herbal medicines and diet changes.'],
-    ['Psoriasis (Kitibha / Ekakushtha)', 'Thick, scaly plaques on the elbows, knees or scalp (scalp psoriasis). Ayurvedic treatment for psoriasis may include Takradhara, medicated oils, herbal medicines and, when suitable, Virechana.'],
+    ['Eczema (Vicharchika)', 'Dry, itchy, inflamed patches. Ayurveda links it to Kapha and Pitta. Ayurvedic treatment for eczema may include Lepa, medicated oils, herbal medicines, diet changes, and, when suitable, [leech therapy (Raktamokshana)](/services/panchakarma-treatment-dubai/#five-therapies).'],
+    ['Psoriasis (Kitibha / Ekakushtha)', 'Thick, scaly plaques on the elbows, knees or scalp (scalp psoriasis). Ayurvedic treatment for psoriasis may include Takradhara, medicated oils, herbal medicines, and, when suitable, Virechana and [leech therapy (Raktamokshana)](/services/panchakarma-treatment-dubai/#five-therapies).'],
     ['Acne and pimples (Yauvana Pidaka)', 'Linked to Pitta and Kapha. Ayurvedic treatment for acne and Ayurvedic treatment for pimples may include herbal medicines, face packs and diet changes.'],
     ['Skin allergy, hives and urticaria (Sheetapitta)', 'Raised, itchy welts that come and go. Ayurvedic treatment for skin allergy and Ayurvedic treatment for urticaria may include herbal medicines and trigger-avoidance advice.'],
     ['Contact and seborrhoeic dermatitis', 'Rashes from products or a flaky, itchy scalp and face. Care may include Lepa and scalp therapies.'],
@@ -3571,45 +3571,48 @@ dubaiSkin: {
   // ============================================
 
   'ayurveda-dubai-ayurvedic-diet-plan': {
-    hero: {
-      subtitle: 'Personalized Nutrition for Health & Wellness',
-      description: 'Food is medicine, and a diet suited to your body type can improve digestion, immunity, and overall health. At Ramacarepolyclinic, we provide an Ayurvedic Diet Plan in Dubai that is personalized for your unique constitution (Prakriti) and lifestyle. Our holistic approach focuses on long-term wellness, balance, and vitality.',
-      rating: '500+ Happy Clients',
-     
+   hero: {
+      title: 'Ayurvedic Diet Plan in Dubai',
+      subtitle: 'A diet based on your dosha, prepared by a BAMS doctor in Jumeirah 1',
+      description: 'An Ayurvedic diet plan tells you which foods suit your constitution (Vata, Pitta or Kapha), when to eat, and which combinations to avoid. At RamaCare Polyclinic in Jumeirah 1, Dubai, Dr. Shamna Keloth Meethal (BAMS) prepares it after an in-person consultation that assesses your dosha, digestion (Agni) and health goals. The consultation starts from AED 200, and you receive a written plan when your needs call for one.',
+      rating: '4.8★ Google rating',
+      topBadges: [
+        { icon: 'location', text: 'Jumeirah 1, Dubai' },
+        { icon: 'building', text: 'DHA-licensed polyclinic' },
+        { icon: 'star', text: '4.8★ Google rating' }
+      ],
+      stats: [
+        { id: 1, number: 'AED 200', label: 'Consultation from' },
+        { id: 2, number: '45–60 min', label: 'First visit' },
+        { id: 3, number: '11+ yrs', label: 'Dr. Shamna, BAMS' }
+      ],
       ctaButtons: {
-        primary: {
-          text: 'Book Ayurvedic Diet Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
+        primary: { text: 'Book Ayurvedic Diet Consultation', icon: 'calendar', link: '#book-now' },
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: [
-        ' DHA-Licensed Ayurvedic Clinic',
-        ' Experienced Ayurvedic Doctors',
-        'Customized, Natural Diet Plans'
+        'Foods to favour and avoid for your dosha',
+        'Meal timing and food combinations (Viruddha Ahara)',
+        'Seasonal advice for Dubai summers and Ramadan',
+        'Written diet plan when needed',
+        'GP in the same building for blood tests if needed'
       ],
       image: {
         src: '/images/a-diet.jpg',
-        alt: 'Ayurvedic diet plan in Dubai designed to support balanced nutrition and holistic wellness.'
+        alt: 'Ayurvedic diet plan with dosha-based meals at RamaCare Polyclinic, Jumeirah 1, Dubai'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual body constitution, health condition, and adherence to diet and lifestyle guidance. All consultations are conducted at a DHA-licensed clinic using approved Ayurvedic protocols.',
+        text: 'An Ayurvedic diet plan supports, and does not replace, medical care. If you have diabetes, thyroid or kidney disease, are pregnant, or take regular medicines, follow your doctor\'s advice and do not stop prescribed medicines. Results vary. Provided at a DHA-licensed polyclinic (licence 2036418).',
         show: true
       }
     },
-    doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Ayurvedic Diet Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in nutrition, dosha analysis, and personalized diet planning.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
-    },
+   doctors: {
+    badge: 'Your Ayurvedic Doctor',
+    title: 'Your Diet Plan Is Prepared by Dr. Shamna Keloth Meethal',
+    description: 'Dr. Shamna (BAMS, DHA-licensed Ayurveda doctor, 11+ years) assesses your dosha and digestion and prepares your Ayurvedic diet plan herself. She speaks English, Malayalam and Hindi.',
+    doctors: [ DOCTORS.shamna ]
+  },
+
     certifications: {
       title: 'Certifications & Accreditations',
       certifications: [
@@ -3641,16 +3644,14 @@ dubaiSkin: {
       ]
     },
     overview: {
-      title: 'Understanding Ayurvedic Diet Plan',
+     title: 'Understanding the Ayurvedic Diet',
       problemIntro: {
-        title: 'Common Health & Nutrition Concerns',
-        description:
-          'Many people follow generic diets without understanding their body type, leading to digestive issues, low energy, weight imbalance, and lifestyle diseases.'
+        title: 'Why Eating Habits Matter in Ayurveda',
+        description: 'Ayurveda sees digestion (Agni) as the centre of health. Irregular meals, late dinners, cold drinks, heavy food in the heat and stress can weaken it. In Dubai, long working hours, eating out and the summer heat make this common.'
       },
       solutionIntro: {
-        title: 'Advanced Ayurvedic Diet Plan in Dubai',
-        description:
-          'At Ramacarepolyclinic, our Ayurvedic Diet Plan in Dubai is planned to restore balance, enhance digestion, and enhance overall wellness with personalized food guidance.'
+        title: 'How Your Ayurvedic Diet Plan Is Made',
+        description: 'Dr. Shamna assesses your constitution (Prakriti), current imbalance (Vikriti), digestion and goals, then tells you what to eat, when and in what combinations, adjusted for the Dubai climate and your routine.'
       },
       leftCards: [
         {
@@ -3685,11 +3686,9 @@ dubaiSkin: {
             'Choose preventative healthcare and holistic food'
           ]
         },
-        {
-          id: 4,
-          title: 'Treatment Duration',
-          description:
-            'Initial Consultation: 30–45 minutes , Diet Plan: 1 session , Follow-Up Visits: As advised for monitoring and adjustments'
+        { id: 4, 
+          title: 'Duration and Fee', 
+          description: 'Consultation: 45–60 minutes, from AED 200 \n\n Written diet plan: when your needs call for one \n\n Follow-ups: as advised, to adjust the plan' 
         },
       ],
       rootCauses: [
@@ -3751,13 +3750,13 @@ dubaiSkin: {
         }
       ],
       quickFacts: [
-        { label: 'Therapy Type', value: 'Personalized Ayurvedic Diet Plan' },
-        { label: 'Approach', value: 'Root-cause & constitution-based' },
-        { label: 'Age Group', value: 'Adults (18+)' },
-        { label: 'Pain Level', value: 'None' },
-        { label: 'Downtime', value: 'None' },
-        { label: 'Safety', value: 'DHA-approved Ayurvedic protocols' }
-      ],
+        { label: 'Prepared by', value: 'Dr. Shamna Keloth Meethal, BAMS' },
+        { label: 'Based on', value: 'Your dosha (Prakriti), digestion and goals' },
+        { label: 'Includes', value: 'Foods to favour and avoid, meal timing, combinations' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Suitable for', value: 'Adults (18+)' },
+        { label: 'Setting', value: 'DHA-licensed polyclinic, Jumeirah 1' }
+          ],
       approachCards: [
         {
           id: 1,
@@ -3789,15 +3788,15 @@ dubaiSkin: {
         },
         {
           id: 5,
-          title: 'Detoxification Support Through Diet',
-          description: 'Our diet plans include foods and practices that gently detoxify the body, improve liver function, and enhance nutrient absorption, helping reduce internal toxins that affect energy and skin health.',
+          title: 'Lighter Eating and Detox Days',
+          description:  'When suitable, the plan may include simple days of kitchari (mung dal and rice) and warm spiced water, traditionally used in Ayurveda to rest digestion. See our Ayurvedic detox diet.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 6,
-          title: 'Weight Management and Metabolic Optimization',
-          description: 'Tailored Ayurvedic nutrition supports healthy weight loss, weight gain, or maintenance based on your body type, metabolism, and lifestyle, helping prevent obesity and metabolic disorders.',
+          title: 'Weight Goals',
+          description: 'For weight goals, the plan follows Kapha-balancing principles: a lighter dinner, more vegetables and warming spices. See our Ayurvedic diet for weight loss.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -3810,14 +3809,82 @@ dubaiSkin: {
         },
         {
           id: 8,
-          title: 'Result',
-          description: 'Balanced digestion, improved metabolism, stronger immunity, regulated doshas, enhanced energy, better weight management, reduced stress, and long-term overall wellness.',
+          title: 'What You Leave With',
+          description: 'Clear advice on what to eat, when and in what combinations for your dosha, adjusted for Dubai\'s climate and your routine, and a written plan when needed. Your doctor reviews progress at follow-ups.' ,
           hasLearnMore: true,
           expandedContent: 'Patients experience sustainable health improvements without reliance on harsh diets or chemicals.'
         }
       ]
     },
+      doshaFoods: {
+        id: 'dosha-foods',
+        heading: 'Ayurvedic Diet by Dosha: What to Eat for Vata, Pitta and Kapha',
+        intro: 'A simple Ayurvedic diet chart by dosha. General Ayurvedic guidance. Your own plan depends on your assessment; take the dosha test if you are not sure of your type.',
+        table: [
+          ['Vata diet (air and space)', 'Favour: warm, cooked, slightly oily food; soups, stews, rice, oats, root vegetables, ghee, sweet ripe fruit, warm milk with spices. Foods to avoid: raw salads, cold drinks, dry snacks, crackers, skipping meals.'],
+          ['Pitta diet (fire and water)', 'Favour: cooling, mildly spiced food; cucumber, leafy greens, coconut water, sweet fruits, rice, mung dal, ghee, mint, coriander. Foods to avoid: very spicy, sour, salty and fried food, excess coffee, alcohol, eating in the midday heat. Important in Dubai summers.'],
+          ['Kapha diet (earth and water)', 'Favour: light, warm, dry and spiced food; vegetables, lentils, millet, barley, ginger, black pepper, honey (never heated). Foods to avoid: heavy, oily, sweet and cold food, excess dairy, daytime snacking, late heavy dinners.']
+        ],
+        note: 'Not sure of your dosha? [Take our dosha test](/services/prakriti-dosha-assessment-dubai/#dosha-quiz) or book a Prakriti assessment.'
+      },
 
+      dietRules: {
+        id: 'ayurvedic-diet-principles',
+        heading: 'Seven Principles of the Ayurvedic Diet',
+        ordered: true,
+        items: [
+          { text: 'Eat your main meal at midday, when Agni (digestive fire) is strongest; keep dinner light and early.' },
+          { text: 'Prefer warm, freshly cooked food over cold, raw or reheated food.' },
+          { text: 'Include all six tastes (Shad Rasa) across the day: sweet, sour, salty, pungent, bitter and astringent.' },
+          { text: 'Avoid incompatible combinations (Viruddha Ahara), such as milk with fish, milk with sour fruit, yoghurt at night, and heated honey.' },
+          { text: 'Eat when truly hungry, and avoid constant snacking between meals.' },
+          { text: 'Sip warm water or cumin-coriander-fennel tea instead of iced drinks with meals.' },
+          { text: 'Finish dinner two to three hours before sleep.' }
+        ]
+      },
+
+    sampleDay: {
+      id: 'sample-day',
+      heading: 'Sample Ayurvedic Meal Plan for One Day (Pitta, Dubai Summer)',
+      intro: 'An example only, to show how the principles work. Your plan is made for your dosha, health and routine.',
+      table: [
+        ['On waking', 'A glass of warm (not hot) water'],
+        ['Breakfast', 'Oats or semolina porridge with dates and a little ghee, or fresh sweet fruit'],
+        ['Lunch (main meal)', 'Rice or chapati, mung dal, a cooked green vegetable, cucumber raita, a spoon of ghee'],
+        ['Afternoon', 'Coconut water or a handful of soaked almonds'],
+        ['Dinner (by 8pm)', 'Light vegetable soup or kitchari with steamed vegetables'],
+        ['Through the day', 'Room-temperature water or cumin-coriander-fennel tea; avoid iced drinks with meals']
+      ]
+    },
+
+      dietByGoal: {
+        id: 'diet-by-goal',
+        heading: 'Ayurvedic Diet Plans by Health Goal',
+        intro: 'RamaCare has a dedicated Ayurvedic diet guide for each of these goals:',
+        items: [
+          { text: 'Ayurvedic diet for weight loss', href: '/services/ayurvedic-diet-weight-loss-dubai/' },
+          { text: 'Ayurvedic diet for diabetes', href: '/services/ayurvedic-diet-diabetes-dubai/' },
+          { text: 'Ayurvedic diet for thyroid', href: '/services/ayurvedic-diet-thyroid-dubai/' },
+          { text: 'Ayurvedic diet for PCOS', href: '/services/ayurvedic-diet-pcos-dubai/' },
+          { text: 'New to Ayurveda? Start with our Ayurvedic gut health guide and Agni self-check', href: '/services/ayurvedic-gut-health-dubai/' },
+          { text: 'Ayurvedic detox diet', href: '/services/ayurvedic-detox-diet-plan-dubai/' },
+          { text: 'Ayurvedic diet for skin and hair', href: '/services/ayurvedic-diet-skin-hair-dubai/' },
+          { text: 'Ayurvedic summer diet for Dubai', href: '/services/ayurvedic-diet-dubai-summer/' },
+          { text: 'Ayurvedic diet for busy professionals', href: '/services/ayurvedic-diet-plan-busy-professionals-dubai/' }
+        ],
+        note: 'For diabetes, thyroid and PCOS, our general physician in the same building can arrange blood tests, and your Ayurvedic diet works alongside your medical treatment.'
+      },
+
+      dubaiEating: {
+        id: 'dubai-eating',
+        heading: 'Ayurvedic Eating in Dubai: Ramadan, Summer and Office Life',
+        items: [
+          { text: 'Ramadan: break the fast gently with dates and water, then warm soup, before a balanced meal; avoid heavy fried food at iftar; at suhoor, choose warm cooked grains, dal and fluids; drink water steadily between iftar and suhoor. If you have diabetes or take regular medicines, ask your doctor before fasting.' },
+          { text: 'Summer heat (May–October): Pitta rises, so favour cooling foods, coconut water and sweet fruits, and limit spicy, fried and sour food. See our summer diet guide.', href: '/services/ayurvedic-diet-dubai-summer/' },
+          { text: 'Office and desk days: pack a warm lunch instead of cold sandwiches, eat away from the screen, and keep a light, early dinner after late meetings.', href: '/services/ayurvedic-diet-plan-busy-professionals-dubai/' },
+          { text: 'Eating out: choose dal, grilled vegetables, rice and soups; avoid iced drinks and heavy desserts late at night.' }
+        ]
+      },
     healingJourney: {
       title: 'Your Personalized Nutrition Journey',
       description: 'A step-by-step Ayurvedic approach to personalized nutrition and long-term wellness.',
@@ -3871,85 +3938,27 @@ dubaiSkin: {
       cta: 'Book an Ayurvedic Diet Plan in Dubai'
     },
 
-    benefits: {
-      title: 'Clinically-Observed Benefits',
-      description: 'Evidence-based results from our personalized Ayurvedic diet plans.',
-      comparisonTitle: 'Ayurvedic Diet Plan vs Conventional Diet Plans',
-      comparisonDescription: 'Compare our personalized Ayurvedic approach with generic diet plans',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Diet Plan',
-        traditional: 'Conventional Diet Plans'
-      },
+      benefits: {
+      title: 'What an Ayurvedic Diet Plan Helps You Do',
+      description: 'Practical changes you can keep. Individual experiences vary.',
+      hidePercentages: true,
       benefits: [
-        {
-          id: 1,
-          title: 'Improved Digestion & Metabolism',
-          percentage: 85,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Balanced Doshas',
-          percentage: 87,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Increased Energy & Vitality',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Weight Management Support',
-          percentage: 97,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Enhanced Immunity',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 6,
-          title: 'Preventive Healthcare',
-          percentage: 87,
-          description: null
-        }
+        { id: 1, title: 'Know which foods suit your dosha', description: null },
+        { id: 2, title: 'Eat at the right times for your digestion', description: null },
+        { id: 3, title: 'Avoid combinations that upset you', description: null },
+        { id: 4, title: 'Adapt to Dubai summers and Ramadan', description: null },
+        { id: 5, title: 'Work towards weight and energy goals', description: null },
+        { id: 6, title: 'Fit diet around your medical care', description: null }
       ],
+      comparisonTitle: 'Ayurvedic Diet Plan vs Calorie-Based Diet: How They Differ',
+      comparisonDescription: 'Two different ways of looking at food. Some patients use both.',
+      comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Ayurvedic diet plan', traditional: 'Calorie-based diet' },
       comparisonData: [
-        {
-          feature: 'Personalization',
-          ayurvedic: 'Based on individual dosha and constitution',
-          conventional: 'Generic, one-size-fits-all approach'
-        },
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic, addresses root cause',
-          conventional: 'Focuses on calories and macros only'
-        },
-        {
-          feature: 'Sustainability',
-          ayurvedic: 'Long-term lifestyle integration',
-          conventional: 'Short-term, often unsustainable'
-        },
-        {
-          feature: 'Digestive Health',
-          ayurvedic: 'Emphasizes digestive fire and food combinations',
-          conventional: 'Limited focus on digestion'
-        },
-        {
-          feature: 'Food Quality',
-          ayurvedic: 'Emphasizes natural, whole foods',
-          conventional: 'May include processed foods'
-        },
-        {
-          feature: 'Long-term Results',
-          ayurvedic: 'Sustainable health improvements',
-          conventional: 'Temporary results, often rebound'
-        }
+        { feature: 'Starting point', ayurvedic: 'Your dosha and digestion (Agni)', conventional: 'Calories and macronutrients' },
+        { feature: 'Focus', ayurvedic: 'What, when and how you eat', conventional: 'How much you eat' },
+        { feature: 'Food choice', ayurvedic: 'Warm, fresh food suited to your type', conventional: 'Any food that fits the targets' },
+        { feature: 'Timing', ayurvedic: 'Main meal at midday, light dinner', conventional: 'Usually flexible' },
+        { feature: 'Prepared by', ayurvedic: 'Dr. Shamna (BAMS)', conventional: 'A dietitian or self-guided' }
       ]
     },
     pricing: {
@@ -4005,101 +4014,29 @@ dubaiSkin: {
     },
 
     faq: {
-      title: 'Frequently Asked Questions',
-      description: 'Ayurvedic Diet Plans in Dubai',
-      resourcesHeading: 'Complete Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is an Ayurvedic diet plan?',
-          answer:
-            'An Ayurvedic Diet Plan is a personalized nutrition plan based on your body constitution (Prakriti) and health needs. It helps balance doshas, improve digestion, and support overall wellness.'
-        },
-        {
-          id: 2,
-          question: 'How is an Ayurvedic Diet Plan different from regular diets?',
-          answer:
-            'Unlike generic diets, Ayurvedic diet plans are tailored to your unique body type, lifestyle, and health goals, focusing on long-term balance rather than quick fixes.'
-        },
-        {
-          id: 3,
-          question: 'Who can benefit from an Ayurvedic Diet Plan?',
-          answer:
-            'Adults with digestive issues, lifestyle disorders, weight concerns, skin or hair problems, low energy, or those seeking preventive health care can benefit from this diet.'
-        },
-        {
-          id: 4,
-          question: 'How is my body type determined for the diet plan?',
-          answer:
-            'Our Ayurvedic doctors at RamaCare Polyclinic assess your Prakriti (Vata, Pitta, Kapha) through consultation, lifestyle review, and health evaluation to create a personalized diet.'
-        },
-        {
-          id: 5,
-          question: 'Does the diet plan include herbal supplements?',
-          answer:
-            'Yes, Ayurvedic herbs and spices may be recommended to support digestion, immunity, detoxification, and overall health, depending on your body type and health goals.'
-        },
-        {
-          id: 6,
-          question: 'Can the diet plan help with weight management?',
-          answer:
-            'Absolutely. By balancing doshas, improving metabolism, and guiding portion sizes, an Ayurvedic diet plan can naturally support healthy weight management.'
-        },
-        {
-          id: 7,
-          question: 'How long does it take to see results?',
-          answer:
-            'Many patients notice improvements in digestion and energy within a few weeks. Long-term results, like weight management and dosha balance, usually take 1–3 months or more.'
-        },
-        {
-          id: 8,
-          question: 'Is the Ayurvedic diet safe for all adults?',
-          answer:
-            'Yes. When guided by certified doctors at a DHA-licensed clinic like ramacarepolyclinic, Ayurvedic diets are safe, natural, and suitable for adults of all ages.'
-        },
-        {
-          id: 9,
-          question: 'Can this diet help with lifestyle disorders like diabetes or hypertension?',
-          answer:
-            'Yes. Ayurvedic diets can support the management of lifestyle-related conditions by improving digestion, metabolism, and overall body balance.'
-        },
-        {
-          id: 10,
-          question: 'Will I need to change my daily routine?',
-          answer:
-            'Yes. Along with a personalized meal plan, we provide guidance on daily routines, hydration, and lifestyle adjustments to optimize digestion and wellness.'
-        },
-        {
-          id: 11,
-          question: 'Can I follow this diet if I have food allergies?',
-          answer:
-            'Yes. The diet plan is fully customized, and any allergies or food preferences are taken into account when creating your personalized plan.'
-        },
-        {
-          id: 12,
-          question: 'How often will I need follow-up visits?',
-          answer:
-            'Follow-ups are scheduled based on your progress and goals. Initially, weekly or bi-weekly visits may be recommended to monitor digestion, energy, and adherence to the plan.'
-        },
-        {
-          id: 13,
-          question: 'Can Ayurveda improve skin and hair health?',
-          answer:
-            'Yes. A balanced Ayurvedic diet supports internal health, which naturally enhances skin texture, hair strength, and overall vitality.'
-        },
-        {
-          id: 14,
-          question: 'Can I combine the Ayurvedic diet plan with my current medications?',
-          answer:
-            'Yes, but it is important to inform our doctors about any ongoing medications so the diet and herbal recommendations are safely tailored to your health needs.'
-        },
-        {
-          id: 15,
-          question: 'Why choose ramacarepolyclinic for an Ayurvedic Diet Plan in Dubai?',
-          answer:
-            'ramacarepolyclinic offers DHA-licensed care, experienced Ayurvedic doctors, personalized diet plans, authentic herbal guidance, and a patient-focused approach for long-term health and wellness.'
-        }
-      ],
+  title: 'Ayurvedic Diet Plan: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is an Ayurvedic diet plan?", answer: "An Ayurvedic diet plan is eating guidance based on your constitution (Vata, Pitta or Kapha): which foods suit you, when to eat and which combinations to avoid. At RamaCare in Jumeirah 1, Dr. Shamna Keloth Meethal (BAMS) prepares it after an in-person consultation, from AED 200." },
+    { id: 2, question: "What happens at an Ayurvedic diet consultation?", answer: "Dr. Shamna reviews your health, digestion, routine, food habits and goals, assesses your dosha with pulse and tongue examination, and explains which foods, timings and combinations suit you. You receive a written diet plan (diet chart) when your needs call for one." },
+    { id: 3, question: "How much does an Ayurvedic diet plan cost in Dubai?", answer: "At RamaCare Polyclinic, the Ayurvedic diet consultation with Dr. Shamna starts from AED 200 for 45–60 minutes. Follow-up visits, if needed, are advised by the doctor." },
+    { id: 4, question: "What should I eat for my dosha?", answer: "Vata types do best with warm, cooked, slightly oily food; Pitta types with cooling, mildly spiced food; Kapha types with light, warm, spiced food and less dairy and sugar. The tables on this page give examples; your own plan depends on your assessment." },
+    { id: 5, question: "Which foods should Pitta types avoid, especially in Dubai's heat?", answer: "Reduce very spicy, sour, salty and fried food, excess coffee and alcohol, and eating in the midday heat. Sour foods such as lemon in large amounts can aggravate Pitta; small amounts in cooling dishes are usually fine." },
+    { id: 6, question: "What are incompatible foods (Viruddha Ahara) in Ayurveda?", answer: "Ayurveda advises against certain combinations, such as milk with fish, milk with sour fruit, yoghurt at night, and heating honey. They are believed to upset digestion and create Ama (undigested residue)." },
+    { id: 7, question: "What are the six tastes in an Ayurvedic diet?", answer: "Sweet, sour, salty, pungent, bitter and astringent (Shad Rasa). Ayurveda recommends including all six across the day, with the balance adjusted to your dosha." },
+    { id: 8, question: "When should I eat my main meal?", answer: "At midday, when Ayurveda considers digestive fire (Agni) strongest. Keep breakfast moderate and dinner light, ideally two to three hours before sleep." },
+    { id: 9, question: "What is kitchari and why is it used in Ayurveda?", answer: "Kitchari is a simple dish of mung dal and rice cooked with mild spices and ghee. Ayurveda uses it on lighter days to rest digestion, during detox programmes and when recovering from illness." },
+    { id: 10, question: "Is ghee good for you in an Ayurvedic diet?", answer: "In Ayurveda, small amounts of ghee are valued for digestion, especially for Vata and Pitta types. The right amount depends on your dosha, weight and cholesterol, which the doctor considers." },
+    { id: 11, question: "Can an Ayurvedic diet help with weight loss?", answer: "An Ayurvedic diet can support weight goals with Kapha-balancing choices such as a lighter early dinner, more vegetables and warming spices. See our Ayurvedic diet for weight loss; results vary from person to person." },
+    { id: 12, question: "Can an Ayurvedic diet help with diabetes or thyroid problems?", answer: "It can support your medical treatment but must not replace it. Never stop prescribed medicines. Our general physician can arrange blood tests in the same building, and Dr. Shamna plans your diet around your treatment." },
+    { id: 13, question: "How should I eat during Ramadan the Ayurvedic way?", answer: "Break the fast gently with dates and water, then warm soup, before a balanced meal; avoid heavy fried food at iftar; choose warm cooked grains and dal at suhoor; and drink water steadily between iftar and suhoor. If you have diabetes or take regular medicines, ask your doctor before fasting." },
+    { id: 14, question: "Do I have to be vegetarian to follow an Ayurvedic diet?", answer: "No. Ayurveda traditionally favours vegetarian meals, but your plan can include meat, fish and eggs according to your dosha, digestion and preferences." },
+    { id: 15, question: "Is an Ayurvedic diet plan the same as seeing a dietitian?", answer: "No. An Ayurvedic diet plan is prepared by an Ayurvedic doctor using Ayurvedic principles such as dosha and digestion. A dietitian works with calories and nutrients. Some patients use both." },
+    { id: 16, question: "Can I follow an Ayurvedic diet with food allergies or regular medicines?", answer: "Yes. Tell the doctor about allergies, intolerances and all your medicines at the consultation; the plan is built around them." },
+    { id: 17, question: "How long before I notice a difference?", answer: "Many people notice changes in digestion and energy within a few weeks of regular meal timing, but experiences vary. Your doctor reviews progress at each follow-up." },
+    { id: 18, question: "Which languages does the doctor speak?", answer: "Dr. Shamna Keloth Meethal speaks English, Malayalam and Hindi. Other clinic staff also speak Arabic and Tagalog." }
+  ],
       resources: [
         {
           id: 1,
@@ -4109,100 +4046,130 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
+        },
+        {
+          id: 16,
+          text: 'Ayurvedic Diet for Weight Loss',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-diet-weight-loss-dubai/'
+        },
+        {
+          id: 17,
+          text: 'Ayurvedic Diet for Diabetes',
+          bgColor: 'bg-[#EFF6FF]',
+          link: '/services/ayurvedic-diet-diabetes-dubai/'
+        },
+        {
+          id: 18,
+          text: 'Ayurvedic Summer Diet',
+          bgColor: 'bg-[#FEF2F2]',
+          link: '/services/ayurvedic-diet-dubai-summer/'
+        },
+        {
+          id: 19,
+          text: 'Ayurvedic Diet for Skin & Hair',
+          bgColor: 'bg-[#F5F3FF]',
+          link: '/services/ayurvedic-diet-skin-hair-dubai/'
+        },
+        {
+          id: 20,
+          text: 'Ayurvedic Diet for Busy Professionals',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-diet-plan-busy-professionals-dubai/'
         }
       ]
     },
 
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who transformed their health with Ayurvedic diet plans',
+     title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+      ],
       testimonials: [
         {
           id: 1,
@@ -4256,13 +4223,13 @@ dubaiSkin: {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Your Ayurvedic Diet Plan in Dubai Today',
-      description: 'Achieve better digestion, energy, and long-term wellness with a customized Ayurvedic Diet Plan in Dubai at Ramacarepolyclinic.',
+      title: 'Book Your Ayurvedic Diet Consultation',
+      description: 'Get a diet plan for your dosha from Dr. Shamna in Jumeirah 1, from AED 200. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: {
@@ -4273,26 +4240,15 @@ dubaiSkin: {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
         {
           title: 'DHA Licensed',
           description: 'Certified Ayurvedic Facility'
         },
-        {
-          title: 'Experienced Team',
-          description: '15+ Years Combined'
-        },
-        {
-          title: '1,500+ Plans',
-          description: 'Created'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+        { title: 'Experienced Doctor', description: 'Dr. Shamna, BAMS, 11+ years' }, 
+        { title: '1,000+ Ayurveda patients', description: 'In the last 2 years' }, 
+        { title: '4.8/5 Google rating', description: '218 reviews' }
       ]
     }
   },
@@ -4303,86 +4259,63 @@ dubaiSkin: {
 
   'ayurveda-dubai-basti-therapy': {
     hero: {
-      subtitle: 'Natural Ayurvedic Detox Therapy for Digestive Health, Joint Pain & Vata Balance',
-      description: 'Ayurvedic Basti Therapy is one of the most important detoxification treatments in Ayurveda, designed to support digestive wellness, remove accumulated toxins, and restore natural body balance. At RamaCare Polyclinic, we provide personalized Basti Treatment using traditional Ayurvedic techniques and DHA-approved wellness protocols to help improve digestion, support joint health, reduce stress, and promote long-term rejuvenation.\n\nAs an essential part of Panchakarma Treatment Dubai programs, this Ayurvedic detox therapy focuses on balancing Vata dosha, which plays a key role in digestion, circulation, nervous system function, and overall vitality. Many individuals choose this holistic therapy to support digestive health, relieve stiffness, improve metabolism, and maintain better wellness naturally.',
-      rating: '500+ Happy Clients',
-      promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
+      title: 'Basti Therapy in Dubai',
+      subtitle: 'Ayurvedic medicated enema therapy for Vata, in Jumeirah 1',
+      description: 'Basti (also spelled Vasti) is the Ayurvedic therapy in which warm medicated oil or a herbal decoction is given as an enema. It is one of the five Panchakarma therapies and is considered the principal Ayurvedic treatment for Vata, traditionally used for constipation, bloating, lower back and joint stiffness, and dryness. At RamaCare Polyclinic in Jumeirah 1, Dubai, every patient first sees Dr. Shamna Keloth Meethal (BAMS). Basti is then given privately by a Kerala-trained therapist of your own gender, in sessions of 60–90 minutes including preparation.',
+      rating: '4.9★ Google rating',
+      topBadges: [
+        { icon: 'location', text: 'Jumeirah 1, Dubai' },
+        { icon: 'building', text: 'DHA-licensed polyclinic' },
+        { icon: 'star', text: '4.9★ Google rating' }
+      ],
+      stats: [
+        { id: 1, number: '60–90 min', label: 'Per session' },
+        { id: 2, number: 'Same-gender', label: 'Therapists' },
+        { id: 3, number: '17+ yrs', label: 'Panchakarma therapist' }
+      ],
       ctaButtons: {
-        primary: {
-          text: 'Book Basti Therapy Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
+        primary: { text: 'Book Basti Consultation', icon: 'calendar', link: '#book-now' },
+        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
       },
       features: [
-        'DHA-Licensed Ayurvedic Clinic',
-        'Experienced Ayurvedic Doctors',
-        'Personalized Panchakarma Programs',
-        'Authentic Herbal Detox Therapies'
+        'Consultation with a BAMS doctor first',
+        'Anuvasana, Niruha and Matra Basti, chosen for you',
+        'Private sessions with a same-gender, Kerala-trained therapist',
+        'Part of Panchakarma, or as a stand-alone course',
+        'Open daily 10am–10pm in Jumeirah 1'
       ],
       image: {
         src: '/images/basti-therapy.jpg',
-        alt: 'Ayurvedic Basti Therapy procedure in Dubai'
+        alt: 'Ayurvedic Basti therapy room at RamaCare Polyclinic, Jumeirah 1, Dubai'
       },
       medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results may vary depending on individual body constitution, health condition, lifestyle habits, and treatment compliance. All therapies are performed using approved Ayurvedic treatment protocols under professional supervision.',
+        text: 'Basti is a medical procedure given after a doctor\'s assessment. It is not suitable during diarrhoea, rectal bleeding, pregnancy or after recent abdominal surgery. Session prices are confirmed when you book. Provided at a DHA-licensed polyclinic (licence 2036418).',
         show: true
       }
-    },
+   },
     doctors: {
-      badge: 'Basti Therapy Expertise',
-      title: 'Meet Our Ayurvedic Basti Therapy Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in authentic Basti therapies and Panchakarma detoxification treatments.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
+      badge: 'Your Basti Team',
+      title: 'Your Ayurvedic Doctor and Same-Gender Therapists',
+      description: 'Dr. Shamna Keloth Meethal (BAMS) assesses you and plans your Basti course. Basti is given privately by Syamkumar Sasidharan (Diploma in Panchakarma Therapy, 17+ years) for men and Mariya Thayyil Muhammed (14+ years in the UAE) for women. All three speak English, Malayalam and Hindi.',
+      doctors: DOCTOR_GROUPS.AYURVEDA
     },
-    certifications: {
-      title: 'Certifications & Accreditations',
-      certifications: [
-        {
-          id: 1,
-          title: 'DHA Licensed',
-          subtitle: 'Dubai Health Authority'
-        },
-        {
-          id: 2,
-          title: 'BAMS Certified',
-          subtitle: 'Bachelor of Ayurvedic Medicine'
-        },
-        {
-          id: 3,
-          title: 'ISO 9001:2015',
-          subtitle: 'Quality Standards'
-        },
-        {
-          id: 4,
-          title: 'Certified Panchakarma Practitioners',
-          subtitle: null
-        }
-      ]
-    },
+    
     overview: {
-      title: 'Understanding Ayurvedic Basti Therapy',
+      title: 'What Is Basti Therapy?',
       problemIntro: {
-        title: 'Common Basti Therapy Concerns in Dubai',
-        description: 'Many individuals searching for Basti Therapy in Dubai feel confused about safety, treatment effectiveness, hygiene standards, and whether Ayurvedic detox therapies are suitable for modern lifestyle-related health issues. Some patients also worry about discomfort, lack of personalization, or treatments performed without proper Ayurvedic diagnosis. At RamaCare Polyclinic, we provide authentic Basti Therapy in Dubai under DHA-licensed Ayurvedic supervision, using personalized treatment protocols designed to support digestive health, Vata balance, detoxification, and long-term wellness.'
+        title: 'Why People Choose Basti',
+        description: 'Basti is usually recommended for Vata-related problems: long-standing constipation and bloating, lower back and joint stiffness, dryness, and some nerve-related and menstrual complaints. In Ayurveda, the colon is the main seat of Vata, which is why Basti is given there.'
       },
       solutionIntro: {
-        title: 'Our Solution: Basti Therapy in Dubai for Digestive & Vata Balance',
-        description: 'At RamaCare Polyclinic, our approach to Basti Therapy in Dubai is focused on root-cause healing, not temporary symptom relief. We use authentic Ayurvedic principles combined with personalized diagnosis to support digestive health, detoxification, joint wellness, and long-term Vata balance.Each Basti Therapy in Dubai program is customized according to your body constitution (Prakriti), current symptoms, and lifestyle habits to ensure safe, effective, and sustainable results.'
+        title: 'How Basti Works at RamaCare',
+        description: 'Dr. Shamna first checks whether Basti is suitable and chooses the type and course. Before each Basti you receive a warm oil massage and gentle steam on the abdomen and back; the medicated oil or decoction is then given privately by a therapist of your own gender.'
       },
       leftCards: [
         {
           id: 1,
           title: 'Understanding Ayurvedic Basti Therapy',
           description:
-            'Basti is a traditional Ayurvedic cleansing therapy that involves the administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. In Ayurveda, the colon is considered one of the primary locations of Vata dosha, which influences movement, circulation, digestion, nervous system activity, and joint function. When Vata becomes imbalanced due to stress, poor diet, dehydration, irregular routines, or toxin accumulation, it may contribute to digestive discomfort, dryness, fatigue, stiffness, anxiety, and low vitality. \n\n Ayurvedic detox therapies such as Basti aim to restore internal balance naturally while supporting healthy digestion and improved wellness. Unlike temporary detox methods that focus only on short-term cleansing, Ayurvedic Basti Treatment works holistically by improving digestive efficiency, supporting tissue nourishment, and helping the body eliminate toxins naturally. \n\nAt RamaCare Polyclinic, every Panchakarma detox program is customized according to the patient’s body constitution (Prakriti), lifestyle, symptoms, digestive condition, and wellness goals.'
+            'Basti is one of the five classical Panchakarma therapies; see our <a href="/services/panchakarma-treatment-dubai/">Panchakarma treatment in Dubai</a> for full 7, 14 and 21-day programmes. Basti is a traditional Ayurvedic cleansing therapy that involves the administration of herbal oils or medicated decoctions to support colon cleansing, detoxification, and Vata balance. In Ayurveda, the colon is considered one of the primary locations of Vata dosha, which influences movement, circulation, digestion, nervous system activity, and joint function. When Vata becomes imbalanced due to stress, poor diet, dehydration, irregular routines, or toxin accumulation, it may contribute to digestive discomfort, dryness, fatigue, stiffness, anxiety, and low vitality. \n\n Ayurvedic detox therapies such as Basti aim to restore internal balance naturally while supporting healthy digestion and improved wellness. Unlike temporary detox methods that focus only on short-term cleansing, Ayurvedic Basti Treatment works holistically by improving digestive efficiency, supporting tissue nourishment, and helping the body eliminate toxins naturally. \n\nAt RamaCare Polyclinic, every Panchakarma detox program is customized according to the patient’s body constitution (Prakriti), lifestyle, symptoms, digestive condition, and wellness goals.'
         },
         {
           id: 2,
@@ -4421,66 +4354,24 @@ dubaiSkin: {
             'Shirodhara Therapy Dubai'
           ]
         },
+      ],
+      quickFacts: [
+          { label: 'What it is', value: 'Ayurvedic medicated enema (oil or decoction)' },
+          { label: 'Main use', value: 'Vata conditions: constipation, stiffness, dryness' },
+          { label: 'First step', value: 'Consultation with Dr. Shamna (BAMS)' },
+          { label: 'Session', value: '60–90 minutes, including preparation' },
+          { label: 'Therapist', value: 'Same gender as the patient, always' },
+          { label: 'Cost', value: 'Consultation from AED 200; sessions confirmed at booking' }
+        ],
 
-      ],
       rootCauses: [
-        {
-          id: 1,
-          title: 'Digestive Issues & Chronic Constipation',
-          description:
-            'Irregular bowel movements, bloating, constipation, and poor digestion are common concerns linked to lifestyle habits, stress, and dietary imbalance. Many individuals choose Basti Therapy in Dubai to support natural colon cleansing and digestive balance.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Joint Pain, Stiffness & Vata Imbalance',
-          description:
-            'Lower back pain, arthritis, muscle stiffness, and body dryness are often associated with Vata imbalance in Ayurveda. Without addressing internal imbalance, these conditions may continue to worsen over time.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 3,
-          title: 'Toxin Accumulation & Low Energy',
-          description:
-            'Poor digestion and lifestyle habits may lead to toxin buildup (Ama), resulting in fatigue, heaviness, low energy, and reduced immunity. Ayurvedic detox therapies like Basti are used to support internal cleansing and rejuvenation.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 4,
-          title: 'Fear of Discomfort or Misunderstanding the Procedure',
-          description:
-            'Some patients hesitate due to lack of awareness about how Basti Therapy works. When performed correctly under medical supervision, Ayurvedic Basti is a structured and personalized detox procedure focused on comfort, safety, and wellness support.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 5,
-          title: 'Lack of Personalized Ayurvedic Diagnosis',
-          description:
-            'Generic detox treatments may not address individual body constitution (Prakriti) or dosha imbalance. Personalized Basti Therapy in Dubai is designed based on digestive health, symptoms, and lifestyle factors for better results.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 6,
-          title: 'Unqualified or Non-Licensed Practitioners',
-          description:
-            'Improperly performed Ayurvedic procedures without qualified supervision may reduce effectiveness and raise safety concerns. Choosing a DHA-licensed Ayurvedic clinic ensures proper diagnosis, hygiene, and treatment protocols.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 7,
-          title: 'Temporary Solutions Without Root-Cause Healing',
-          description:
-            'Many modern detox methods focus only on short-term cleansing without addressing internal imbalance. Ayurvedic Basti Therapy focuses on root-cause correction by balancing Vata dosha and improving digestive and nervous system health naturally.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        }
-      ],
+          { id: 1, title: 'Constipation and Bloating', description: 'Long-standing constipation, gas and bloating are classic Vata complaints in Ayurveda and among the commonest reasons for Basti.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 2, title: 'Lower Back and Joint Stiffness', description: 'Stiffness and dryness in the back and joints are linked to Vata; Basti is the classical internal therapy, often combined with Kati or Janu Basti outside.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 3, title: 'Dryness and Vata Imbalance', description: 'Dry skin, light sleep and restlessness, aggravated by air-conditioning and irregular routines.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 4, title: 'Part of Panchakarma', description: 'Basti is one of the five main Panchakarma therapies, often given as a course during a 7, 14 or 21-day programme.', severity: 'Programme', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 5, title: 'Worried About the Procedure?', description: 'Basti is given privately by a therapist of your own gender, with the procedure explained beforehand and the doctor available throughout.', severity: 'Reassurance', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
+        ],
+
       approachCards: [
         {
           id: 1,
@@ -4502,18 +4393,18 @@ dubaiSkin: {
         },
         {
           id: 3,
-          title: 'Detoxification & Toxin Elimination',
+          title: 'Cleansing and Nourishing',
           description:
-            'One of the key benefits of Basti Therapy in Dubai is deep detoxification of the colon and removal of accumulated toxins (Ama) from the body.',
+            'Niruha (decoction) Basti is cleansing; Anuvasana (oil) Basti is nourishing. Most courses alternate the two, as classical texts describe.',
           hasLearnMore: true,
           expandedContent:
             'Benefits include improved digestion, reduced toxin buildup, better bowel regularity, and enhanced metabolism. Goal: Support internal cleansing through Basti Therapy in Dubai.'
         },
         {
           id: 4,
-          title: 'Vata Balance & Nervous System Support',
+          title: 'Vata Balance',
           description:
-            'Basti Therapy in Dubai is highly effective for balancing Vata dosha, which influences movement, digestion, nerves, and joint health.',
+            'Basti is regarded in Ayurveda as the principal therapy for Vata, which governs movement, elimination and the nervous system.',
           hasLearnMore: true,
           expandedContent:
             'This may help with joint stiffness and dryness, lower back discomfort, stress and anxiety, and nervous system imbalance. Goal: Restore Vata balance naturally through Basti Therapy in Dubai.'
@@ -4529,18 +4420,18 @@ dubaiSkin: {
         },
         {
           id: 6,
-          title: 'Gut & Long-Term Wellness Restoration',
+          title: 'Your Course',
           description:
-            'The ultimate goal of Basti Therapy in Dubai is not just symptom relief but long-term wellness restoration.',
+            'The doctor sets the number of Basti sessions and reviews your response as the course goes on.',
           hasLearnMore: true,
           expandedContent:
             'Expected improvements include better digestive health, reduced inflammation, improved energy levels, stronger immunity, and long-term Vata balance. Goal: Achieve sustainable health improvements through Basti Therapy in Dubai.'
         },
         {
           id: 7,
-          title: 'Final Result',
+          title: 'What to Expect',
           description:
-            'With properly guided Basti Therapy in Dubai, patients may experience improved digestion and bowel health, reduced joint pain and stiffness, better stress management, enhanced detoxification, and long-term holistic wellness.',
+            'Many people notice changes in bowel regularity and stiffness over a course; responses vary. You may feel tired on some days, and rest is advised.',
           hasLearnMore: false,
           expandedContent: null
         }
@@ -4627,114 +4518,106 @@ dubaiSkin: {
         }
       ],
     },
+
+    bastiTypes: {
+  id: 'basti-types',
+  heading: 'Basti Courses: Yoga, Kala and Karma Basti',
+  intro: 'Classical Ayurveda describes Basti courses by their length. Oil and decoction Bastis are alternated, starting and ending with oil. Dr. Shamna decides the course for you.',
+  table: [
+    ['Yoga Basti', 'About 8 Bastis; a shorter course, often within a Panchakarma programme.'],
+    ['Kala Basti', 'About 15–16 Bastis; a medium course for long-standing Vata problems.'],
+    ['Karma Basti', 'About 30 Bastis; the longest classical course, for chronic conditions.'],
+    ['Matra Basti', 'Small daily oil Bastis that can be given on their own, for gentle Vata care.']
+  ],
+  note: 'Basti is one of the five Panchakarma therapies. See Panchakarma treatment in Dubai (/services/panchakarma-treatment-dubai/) for full 7, 14 and 21-day programmes.'
+},
+
+bastiProcedure: {
+  id: 'basti-procedure',
+  heading: 'What Happens During a Basti Session',
+  ordered: true,
+  items: [
+    { text: 'Consultation: your first visit is with Dr. Shamna, who checks that Basti is suitable and chooses the type.' },
+    { text: 'Preparation: a warm oil massage and gentle steam on the abdomen, back and legs.' },
+    { text: 'The Basti: you lie on your left side; your therapist, always of your own gender, gently gives the warm medicated oil or decoction through a soft, lubricated nozzle. This takes a few minutes and is done in a private room.' },
+    { text: 'Resting: you rest for a while; a decoction Basti is usually released within about 45 minutes, while an oil Basti may be held longer.' },
+    { text: 'After: you use the private bathroom, rest briefly and follow the diet advice. The whole visit takes 60–90 minutes.' }
+  ],
+  note: 'Before Niruha (decoction) Basti, eat nothing heavy; before Anuvasana (oil) Basti, a light meal is usually advised. Your therapist will tell you what to do for each session.'
+},
+
+bastiVsKati: {
+  id: 'basti-vs-kati-basti',
+  heading: 'Basti vs Kati Basti, Janu Basti and Greeva Basti',
+  intro: 'The names are similar, but these are different therapies. RamaCare offers all of them.',
+  table: [
+    ['Basti (Vasti)', 'An internal therapy: medicated oil or decoction given as an enema. Used for Vata conditions such as constipation, bloating and stiffness.'],
+    ['Kati Basti', 'An external therapy: warm medicated oil held over the lower back inside a ring of dough. Used for lower back stiffness.'],
+    ['Janu Basti', 'The same external method over the knee, for knee stiffness.'],
+    ['Greeva Basti', 'The same external method over the neck, for neck stiffness.']
+  ],
+  note: 'For Kati, Janu and Greeva Basti, see Kerala Ayurvedic massage (/services/abhyanga-massage-dubai/). The doctor may combine internal Basti with an external one.'
+},
+
+whoShouldNot: {
+  id: 'who-should-not',
+  heading: 'Who Should Not Have Basti (or Should Wait)?',
+  intro: 'Dr. Shamna checks your health first. Basti may be postponed or unsuitable if you have:',
+  items: [
+    { text: 'diarrhoea, an acute stomach infection or vomiting' },
+    { text: 'rectal bleeding, or painful piles, fissure or fistula' },
+    { text: 'pregnancy' },
+    { text: 'recent abdominal or rectal surgery' },
+    { text: 'a flare of inflammatory bowel disease' },
+    { text: 'severe heart or kidney disease, or are very weak' }
+  ],
+  note: 'If you have new bowel symptoms, blood in the stool or unexplained weight loss, see our general physician first (/services/general-physician-dubai/).'
+},
+
+gettingHere: {
+  id: 'getting-here',
+  heading: 'Basti Treatment in Jumeirah 1, Close to Satwa, Al Wasl and City Walk',
+  intro: 'RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. Open every day, 10am–10pm.',
+  items: [
+    { text: 'From Satwa and Al Wasl: a few minutes by car' },
+    { text: 'From Jumeirah 2, City Walk and La Mer: about 10 minutes' },
+    { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
+    { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes' }
+  ],
+  note: 'Free and paid parking is available nearby.',
+  mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
+},
+
     treatmentProcess: {
-      title: 'Types of Basti Therapy',
-      description: 'Treatment type and duration are personalized according to the patient\'s body constitution and wellness goals.',
+      title: 'Types of Basti',
+      description: 'Your doctor chooses the type and course after your consultation.',
       types: [
-        {
-          id: 1,
-          title: 'Anuvasana Basti',
-          description: 'An oil-based Ayurvedic therapy commonly used for nourishment, dryness reduction, and nervous system support.'
-        },
-        {
-          id: 2,
-          title: 'Niruha Basti',
-          description: 'A herbal decoction-based cleansing therapy is often recommended for detoxification and digestive support.'
-        },
-        {
-          id: 3,
-          title: 'Matra Basti',
-          description: 'A gentle Ayurvedic oil therapy designed for regular Vata balancing and wellness maintenance.'
-        }
-      ]
+          { id: 1, title: 'Anuvasana Basti (oil enema)', description: 'Warm medicated oil, usually given after a light meal and held for longer. Nourishing; traditionally used for dryness and Vata.' },
+          { id: 2, title: 'Niruha Basti (decoction enema)', description: 'A herbal decoction mixed with oil, honey and rock salt, given on an empty stomach and released within about 45 minutes. Cleansing.' },
+          { id: 3, title: 'Matra Basti (small oil dose)', description: 'A small daily dose of medicated oil; gentle enough for regular Vata care.' }
+        ]
     },
     benefits: {
-      title: 'Treatment Benefits',
-      description: 'Clinically Observed Wellness Benefits',
-      comparisonTitle: 'Ayurvedic Detox Therapy vs Modern Colon Cleansing Programs',
-      comparisonDescription: 'Compare holistic Ayurvedic detoxification with conventional cleansing programs.',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Detox Therapy',
-        traditional: 'Conventional Detox Programs'
-      },
-      benefits: [
-        {
-          id: 1,
-          title: 'Improved digestion and bowel regularity',
-          percentage: 85,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Reduced bloating and toxin accumulation',
-          percentage: 87,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Better flexibility and mobility',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Relief from stiffness and dryness',
-          percentage: 97,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Improved energy and vitality',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 6,
-          title: 'Better stress management support',
-          percentage: 87,
-          description: null
-        },
-        {
-          id: 7,
-          title: 'Enhanced Vata balance',
-          percentage: 89,
-          description: null
-        },
-        {
-          id: 8,
-          title: 'Long-term wellness improvement',
-          percentage: 91,
-          description: null
-        }
-      ],
-      comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic & root-cause focused',
-          conventional: 'Temporary cleansing'
-        },
-        {
-          feature: 'Personalization',
-          ayurvedic: 'Customized according to dosha',
-          conventional: 'Generic detox plans'
-        },
-        {
-          feature: 'Ingredients',
-          ayurvedic: 'Herbal oils & Ayurvedic formulations',
-          conventional: 'May include harsh laxatives'
-        },
-        {
-          feature: 'Wellness Focus',
-          ayurvedic: 'Digestive, nervous system & body balance',
-          conventional: 'Mainly digestive cleansing'
-        },
-        {
-          feature: 'Long-Term Benefits',
-          ayurvedic: 'Supports sustainable wellness',
-          conventional: 'Often temporary results'
-        }
-      ]
+        title: 'What Basti Is Traditionally Used For',
+        description: 'Basti is a classical Ayurvedic therapy; experiences vary from person to person.',
+        hidePercentages: true,
+        benefits: [
+          { id: 1, title: 'Bowel regularity and bloating', description: null },
+          { id: 2, title: 'Lower back and joint stiffness', description: null },
+          { id: 3, title: 'Dryness and Vata imbalance', description: null },
+          { id: 4, title: 'Part of a Panchakarma programme', description: null },
+          { id: 5, title: 'Supporting rest and sleep', description: null }
+        ],
+        comparisonTitle: 'Anuvasana (Oil) vs Niruha (Decoction) Basti',
+        comparisonDescription: 'The two main types are usually alternated in a course.',
+        comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Anuvasana Basti', traditional: 'Niruha Basti' },
+        comparisonData: [
+          { feature: 'Main ingredient', ayurvedic: 'Warm medicated oil', conventional: 'Herbal decoction with oil, honey and rock salt' },
+          { feature: 'Action', ayurvedic: 'Nourishing, lubricating', conventional: 'Cleansing' },
+          { feature: 'Timing', ayurvedic: 'After a light meal', conventional: 'On an empty stomach' },
+          { feature: 'Held for', ayurvedic: 'Longer; may be absorbed', conventional: 'Released within about 45 minutes' },
+          { feature: 'Traditionally used for', ayurvedic: 'Dryness, Vata, nourishment', conventional: 'Constipation, heaviness, cleansing' }
+        ]
     },
     pricing: {
       title: 'Basti Therapy Cost in Dubai',
@@ -4749,7 +4632,7 @@ dubaiSkin: {
         'Combination with Panchakarma therapies',
         'Follow-up consultations'
       ],
-      recommendation: 'At RamaCare Polyclinic, every detoxification plan is customized according to the patient\'s health condition and wellness goals. Book a consultation to receive a personalized treatment assessment and therapy guidance.',
+      recommendation: 'Your first step is a consultation with Dr. Shamna (from AED 200). The number of Basti sessions and their price are confirmed when you book.',
       resultsTitle: 'Recovery & Aftercare',
       resultsDescription: 'Most individuals can resume routine activities shortly after therapy, although rest and hydration are generally recommended for optimal recovery. Some people may temporarily experience mild digestive changes during the detoxification process, depending on therapy intensity and body constitution.\n\nOur aftercare guidance focuses on:',
       resultPoints: [
@@ -4839,40 +4722,40 @@ dubaiSkin: {
       features: [
         {
           id: 1,
-          title: 'Personalized Ayurvedic Consultation',
-          description: 'Each patient receives a detailed assessment that evaluates body constitution, digestive health, dosha imbalance, stress levels, and lifestyle habits before treatment begins.'
+          title: 'Doctor First',
+          description: 'every patient sees Dr. Shamna (BAMS) before any Basti.'
         },
         {
           id: 2,
-          title: 'DHA-Licensed Ayurvedic Clinic',
-          description: 'All therapies are performed under professional supervision in a hygienic environment using DHA-approved Ayurvedic treatment protocols.'
+          title: 'Same-Gender Therapists, Always',
+          description: 'men are treated by Syamkumar, women by Mariya, in private rooms.'
         },
         {
           id: 3,
-          title: 'Experienced Ayurvedic Doctors',
-          description: 'Our Ayurvedic specialists design customized wellness plans based on the patient\'s symptoms, treatment goals, and response to therapy.'
+          title: 'Classical Formulations',
+          description: 'medicated oils and decoctions prepared to classical methods.'
         },
         {
           id: 4,
-          title: 'Holistic Wellness Support',
-          description: 'Patients may also receive guidance related to Ayurvedic diet, lifestyle habits, hydration, stress management, sleep support, and wellness maintenance.'
+          title: 'All Basti Types Available',
+          description: 'Anuvasana, Niruha, Matra and external Kati, Janu and Greeva Basti.'
         },
         {
           id: 5,
-          title: 'Authentic Herbal Therapies',
-          description: 'We use traditional Ayurvedic formulations and medicated oils prepared according to classical texts for maximum therapeutic benefit.'
+          title: 'Inside a Polyclinic',
+          description: 'our GP and physiotherapists are in the same building if you need them.'
         },
         {
           id: 6,
-          title: 'Comprehensive Aftercare',
-          description: 'Our support continues after treatment with personalized diet plans, lifestyle recommendations, and follow-up consultations to ensure optimal results.'
+          title: 'Clear Plan',
+          description: 'consultation from AED 200; course and session prices confirmed when you book.'
         }
       ]
     },
     scientificExplanation: {
       title: 'Why Gut Health Matters in Ayurveda',
       scientificPoints: [
-        'Digestive health plays a central role in maintaining overall wellness, energy levels, immunity, and mental balance',
+        'Digestive health plays a central role in maintaining overall wellness, energy levels, and mental balance',
         'Poor digestion may lead to accumulation of toxins (Ama), contributing to fatigue, bloating, sluggish metabolism, and reduced vitality',
         'The colon is one of the primary locations of Vata dosha, influencing movement, circulation, and nervous system function',
         'Cleansing and nourishing the colon may positively influence multiple body systems'
@@ -4890,7 +4773,7 @@ dubaiSkin: {
         'Ayurvedic specialists create individualized detoxification plans to support digestive efficiency, toxin elimination, and holistic rejuvenation'
       ],
       additionalContent: {
-        title: 'Signs Your Body May Need Ayurvedic Detoxification',
+        title: 'Signs of Vata Imbalance',
         description: 'Modern lifestyle habits such as irregular eating patterns, processed food consumption, stress, poor sleep quality, dehydration, and lack of physical activity may gradually affect digestion and overall wellness. Common signs may include:',
         symptoms: [
           'Frequent bloating or constipation',
@@ -4903,12 +4786,12 @@ dubaiSkin: {
           'Irregular appetite and metabolism',
           'Feeling physically or mentally exhausted'
         ],
-        conclusion: 'Ayurvedic cleansing therapies aim to address these concerns holistically by supporting healthy digestion, natural toxin elimination, and internal balance. As part of personalized <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs, additional therapies such as <a href="/services/shirodhara-therapy-in-dubai/">Shirodhara Therapy Dubai</a> and <a href="/services/nasya-therapy-dubai/">Nasya Therapy Dubai</a> may also be recommended to support nervous system balance, stress management, and overall rejuvenation.\n\nAt RamaCare Polyclinic, every wellness plan is customized according to the patient\'s body constitution, lifestyle habits, health condition, and detoxification goals to ensure safe and effective Ayurvedic care.'
+        conclusion: 'Ayurvedic cleansing therapies aim to address these concerns holistically by supporting healthy digestion, healthy elimination, and internal balance. As part of personalized <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs, additional therapies such as <a href="/services/shirodhara-therapy-in-dubai/">Shirodhara Therapy Dubai</a> and <a href="/services/nasya-therapy-dubai/">Nasya Therapy Dubai</a> may also be recommended to support nervous system balance, stress management, and overall rejuvenation.\n\nAt RamaCare Polyclinic, every wellness plan is customized according to the patient\'s body constitution, lifestyle habits, health condition, and detoxification goals to ensure safe and effective Ayurvedic care.'
       }
     },
     gutHealth: {
       title: 'Why Gut Health Matters in Ayurveda',
-      description: 'According to Ayurveda, digestive health plays a central role in maintaining overall wellness, energy levels, immunity, and mental balance. Poor digestion may lead to the accumulation of toxins, also known as Ama, which can contribute to fatigue, bloating, sluggish metabolism, joint discomfort, skin concerns, and reduced vitality over time.\n\nAyurvedic detox therapies focus on improving gut health naturally by supporting digestion, promoting healthy elimination, and restoring dosha balance. Since the colon is considered one of the primary locations of Vata dosha, cleansing and nourishing this area may positively influence multiple body systems, including the nervous system, circulation, and musculoskeletal health.'
+      description: 'According to Ayurveda, digestive health plays a central role in maintaining overall wellness, energy levels, and mental balance. Poor digestion may lead to the accumulation of toxins, also known as Ama, which can contribute to fatigue, bloating, sluggish metabolism, joint discomfort, skin concerns, and reduced vitality over time.\n\nAyurvedic detox therapies focus on improving gut health naturally by supporting digestion, promoting healthy elimination, and restoring dosha balance. Since the colon is considered one of the primary locations of Vata dosha, cleansing and nourishing this area may positively influence multiple body systems, including the nervous system, circulation, and musculoskeletal health.'
     },
     conditionsTreated: {
       title: 'Conditions Commonly Treated',
@@ -4950,10 +4833,30 @@ dubaiSkin: {
         'Insurance (Selected Providers)'
       ]
     },
-    faq: {
-      title: 'Frequently Asked Questions',
-      description: 'Basti Therapy at Ramacarepolyclinic',
-      resourcesHeading: 'Complete Ayurvedic Services',
+   faq: {
+  title: 'Basti Therapy: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is Basti therapy in Ayurveda?", answer: "Basti (Vasti) is an Ayurvedic therapy in which warm medicated oil or a herbal decoction is given as an enema. It is one of the five Panchakarma therapies and the principal Ayurvedic treatment for Vata. At RamaCare in Jumeirah 1 it follows a consultation with Dr. Shamna Keloth Meethal (BAMS)." },
+    { id: 2, question: "Is Basti the same as an enema?", answer: "Basti is an Ayurvedic enema: it is given in the same way as an enema, but uses medicated oils and herbal decoctions chosen for your dosha and condition, as part of an Ayurvedic treatment plan, rather than plain water or a laxative solution." },
+    { id: 3, question: "What are the types of Basti?", answer: "The main types are Anuvasana (oil, nourishing), Niruha (herbal decoction, cleansing) and Matra (a small daily oil dose). Courses are described by length: Yoga Basti (about 8), Kala Basti (about 15–16) and Karma Basti (about 30)." },
+    { id: 4, question: "What is the difference between Anuvasana and Niruha Basti?", answer: "Anuvasana uses warm medicated oil, is given after a light meal and is held for longer; it is nourishing. Niruha uses a herbal decoction, is given on an empty stomach and is released within about 45 minutes; it is cleansing. Most courses alternate the two." },
+    { id: 5, question: "What is the difference between Basti and Kati Basti?", answer: "Basti is an internal therapy given as an enema. Kati Basti is an external therapy where warm oil is held over the lower back in a ring of dough; Janu Basti does the same over the knee and Greeva Basti over the neck. RamaCare offers all of them." },
+    { id: 6, question: "What happens during a Basti session?", answer: "After a warm oil massage and gentle steam, you lie on your left side and a therapist of your own gender gives the warm medicated oil or decoction through a soft nozzle in a private room. You then rest and use the private bathroom. The visit takes 60–90 minutes." },
+    { id: 7, question: "Is Basti painful or embarrassing?", answer: "Most people find it comfortable; you may feel warmth, fullness or an urge to pass stool. It is given privately by a therapist of your own gender, always, and the procedure is explained beforehand." },
+    { id: 8, question: "Who gives the Basti?", answer: "Dr. Shamna (BAMS) assesses you first. Basti is then given by Syamkumar Sasidharan for men and Mariya Thayyil Muhammed for women, both Kerala-trained and DHA-licensed." },
+    { id: 9, question: "How many Basti sessions will I need?", answer: "It depends on your condition. Short courses are about 8 Bastis; longer classical courses run to about 16 or 30. Matra Basti can also be given on its own. The doctor decides and reviews your progress." },
+    { id: 10, question: "Can Basti help with constipation and bloating?", answer: "Basti is the classical Ayurvedic therapy for Vata problems such as constipation, gas and bloating. Responses vary. New bowel symptoms, blood in the stool or weight loss should be checked by a doctor first." },
+    { id: 11, question: "Can Basti help with back and joint pain?", answer: "In Ayurveda, back and joint stiffness are linked to Vata, and Basti is the main internal therapy for it, often combined with external Kati or Janu Basti. For pain after an injury, see our physiotherapy team." },
+    { id: 12, question: "Is Basti part of Panchakarma?", answer: "Yes. Basti is one of the five main Panchakarma therapies, alongside Vamana, Virechana, Nasya and Raktamokshana. It can be given within a 7, 14 or 21-day Panchakarma programme or as a stand-alone course." },
+    { id: 13, question: "How should I prepare for Basti, and what should I eat after?", answer: "Before a decoction Basti, avoid a heavy meal; before an oil Basti, a light meal is usually advised. Afterwards, eat light, warm food such as rice gruel or kitchari, drink warm water and avoid cold drinks and heavy exercise that day." },
+    { id: 14, question: "Who should not have Basti?", answer: "Basti may be postponed or unsuitable during diarrhoea or stomach infection, rectal bleeding, painful piles or fissure, pregnancy, after recent abdominal surgery, during a bowel-disease flare, or with severe heart or kidney disease." },
+    { id: 15, question: "Does Basti have side effects?", answer: "Some people feel tired, crampy or have loose stools on some days, especially with decoction Basti. That is why the doctor assesses you first and adjusts the course; tell your therapist if anything feels wrong." },
+    { id: 16, question: "How much does Basti therapy cost in Dubai?", answer: "Your first step is a consultation with Dr. Shamna, from AED 200. The number of Basti sessions and their price depend on your course and are confirmed when you book." },
+    { id: 17, question: "Where can I have Basti therapy near Jumeirah 1?", answer: "At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah 1, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm." },
+    { id: 18, question: "Is Basti covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic, and we provide itemised invoices for your claim." }
+  ],
       resources: [
         {
           id: 1,
@@ -4963,209 +4866,162 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
-          text: 'Nasya Therapy',
+          id: 11,
+          text: 'Nasya (Nasyam) therapy in Dubai',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
         }
       ],
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Basti Therapy in Ayurveda?',
-          answer:
-            'Basti Therapy is a traditional Ayurvedic detoxification treatment that uses herbal oils or medicated decoctions to help cleanse the colon, support digestion, balance Vata dosha, and improve overall wellness naturally.'
-        },
-        {
-          id: 2,
-          question: 'What are the benefits of Basti Therapy?',
-          answer:
-            'Ayurvedic Basti Therapy may help support digestion, detoxification, bowel regularity, joint flexibility, stress management, metabolism, and overall body balance when included in a personalized Panchakarma wellness program.'
-        },
-        {
-          id: 3,
-          question: 'Is Basti Therapy safe?',
-          answer:
-            'When performed under professional supervision at a DHA-licensed Ayurvedic clinic, Basti Therapy is generally considered safe for suitable candidates following a proper consultation and personalized treatment assessment.'
-        },
-        {
-          id: 4,
-          question: 'How many sessions of Basti Therapy are needed?',
-          answer:
-            'The number of sessions depends on the individual’s body constitution, health condition, detoxification goals, and response to therapy. Some patients may require short programs, while others benefit from extended Panchakarma treatments.'
-        },
-        {
-          id: 5,
-          question: 'Can Basti Therapy help with constipation?',
-          answer:
-            'Ayurvedic detox therapies are commonly recommended for individuals experiencing constipation, bloating, poor digestion, and toxin accumulation because they help support healthy bowel movements and digestive balance naturally.'
-        },
-        {
-          id: 6,
-          question: 'Does Basti Therapy help with stress and fatigue?',
-          answer:
-            'Basti Therapy may help support nervous system relaxation, improve mental clarity, and reduce fatigue associated with stress, poor digestion, and Vata imbalance when combined with holistic Ayurvedic wellness practices.'
-        },
-        {
-          id: 7,
-          question: 'What should I eat after Basti Therapy?',
-          answer:
-            'Patients are usually advised to follow a light Ayurvedic diet, stay hydrated, avoid processed foods, and maintain healthy lifestyle habits to support detoxification benefits and digestive recovery after therapy.'
-        },
-        {
-          id: 8,
-          question: 'Is Basti Therapy part of Panchakarma Treatment?',
-          answer:
-            'Yes, Basti is considered one of the most important therapies in <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs designed for detoxification, dosha balancing, and long-term wellness support.'
-        },
-        {
-          id: 9,
-          question: 'Can Basti Therapy help with joint pain and stiffness?',
-          answer:
-            'Many individuals choose Ayurvedic Basti Treatment to help support mobility, flexibility, and comfort associated with dryness, stiffness, lower back discomfort, and Vata-related joint imbalance naturally.'
-        },
-        {
-          id: 10,
-          question: 'Where can I book Basti Therapy in Dubai?',
-          answer:
-            'You can book a personalized Ayurvedic consultation at RamaCare Polyclinic to receive a customized detoxification and wellness treatment plan based on your health goals and body constitution.'
-        }
-      ],
       bookConsultation: {
-        title: 'Book Your Free Basti Therapy Consultation',
-        description: 'Schedule a consultation with our experienced Ayurvedic doctors to discuss your wellness goals and receive a personalized Basti Therapy treatment plan.',
-        features: [
-          'Free initial consultation',
-          'Personalized treatment assessment',
-          'Expert Ayurvedic guidance',
-          'Flexible scheduling'
-        ]
-      }
+          title: 'Book Your Basti Consultation',
+          description: 'See Dr. Shamna first (from AED 200), then your private Basti sessions with a therapist of your own gender. Jumeirah 1, open daily 10am–10pm.',
+          features: [ 'Consultation with a BAMS doctor', 'Same-gender therapists, always', 'Private treatment rooms', 'Open daily 10am–10pm' ],
+          submitButtonText: 'Request Appointment',
+          phone: '+971 56 659 7878',
+          email: 'query@ramacarepolyclinic.com'
+        },
+        testimonials: {
+          title: 'What Patients Say About Their Visit',
+          subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+          stats: [
+            { id: 1, number: '4.9/5', label1: 'Google rating', label2: 'Google reviews', target: 4.9, showStars: true },
+            { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+            { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+            { id: 4, number: '17+', label1: 'Years in Panchakarma', label2: 'Syamkumar Sasidharan', target: 17 }
+          ]
+        },
     },
   },
 
   'ayurveda-dubai-nasya-therapy': {
-    hero: {
-      subtitle: 'Ayurvedic Nasal Detox Therapy for Sinus Relief, Mental Clarity & Respiratory Wellness',
-      description: 'Nasya Therapy in Dubai is a traditional Ayurvedic detoxification treatment designed to cleanse the nasal passages, support respiratory wellness, improve mental clarity, and balance doshas naturally. At RamaCare Polyclinic, we provide personalized Ayurvedic Nasya Therapy using herbal oils and traditional Panchakarma techniques to support sinus health, stress management, nervous system balance, and overall well-being.\n\nAs an important part of Panchakarma Treatment Dubai, this Ayurvedic nasal cleansing therapy focuses on removing accumulated toxins from the head and neck region while supporting healthy breathing, concentration, sleep quality, and emotional balance naturally.\n\nMany individuals choose Ayurvedic Nasya Treatment to support relief from sinus congestion, headaches, allergies, stress, mental fatigue, and respiratory imbalance caused by modern lifestyle habits, pollution, and environmental triggers.',
-      rating: '500+ Happy Clients',
-      promoBanner: 'Limited Time Offer: Get 15% Off Your First Treatment + Complimentary FREE Consultation!',
-     
-      ctaButtons: {
-        primary: { text: 'Book Free Nasya Therapy Consultation', icon: 'calendar', link: '#book-now' },
-        secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
+   hero: {
+        title: 'Nasya (Nasyam) Therapy in Dubai',
+        subtitle: 'Ayurvedic nasal therapy for the head, sinuses and neck, in Jumeirah 1',
+        description: 'Nasya (also called Nasyam) is the Ayurvedic therapy in which medicated oils, herbal juices or powders are given through the nose. It is one of the five Panchakarma therapies and is traditionally used for sinus congestion, allergies, dryness, headaches and stress. At RamaCare Polyclinic in Jumeirah 1, Dubai, Dr. Shamna Keloth Meethal (BAMS) assesses you first and chooses the oil, such as Anu Taila, Shadbindu Taila or Ksheerabala Taila. A Kerala-trained therapist of your own gender then gives the Nasya after a face massage and steam, in sessions of 60–90 minutes.',
+        rating: '4.8★ Google rating',
+        topBadges: [
+          { icon: 'location', text: 'Jumeirah 1, Dubai' },
+          { icon: 'building', text: 'DHA-licensed polyclinic' },
+          { icon: 'star', text: '4.8★ Google rating' }
+        ],
+        stats: [
+          { id: 1, number: '60–90 min', label: 'Per session' },
+          { id: 2, number: '7–21 days', label: 'Typical course' },
+          { id: 3, number: 'Same-gender', label: 'Therapists' }
+        ],
+        ctaButtons: {
+          primary: { text: 'Book Nasya Consultation', icon: 'calendar', link: '#book-now' },
+          secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
+        },
+        features: [
+          'Consultation with a BAMS doctor first',
+          'Oil, powder and herbal-juice Nasya, chosen for you',
+          'Classical oils such as Anu Taila, from Kerala',
+          'Same-gender, Kerala-trained therapists',
+          'GP in the same building if you need a medical check'
+        ],
+        image: {
+          src: '/images/nasya-therapy.jpg',
+          alt: 'Nasya (Nasyam) Ayurvedic nasal therapy at RamaCare Polyclinic, Jumeirah 1, Dubai'
+        },
+        medicalNotice: {
+          text: 'Nasya is given after a doctor\'s assessment. It is postponed during an acute cold or fever, nosebleeds or pregnancy. Sinus problems with fever, facial swelling or severe headache need a medical check first. Provided at a DHA-licensed polyclinic (licence 2036418).',
+          show: true
+        }
       },
-      features: [
-        'DHA-Licensed Ayurvedic Clinic',
-        'Experienced Ayurvedic Doctors',
-        'Authentic Panchakarma Therapies',
-        'Personalized Ayurvedic Wellness Programs'
-      ],
-      image: {
-        src: '/images/nasya-therapy.jpg',
-        alt: 'Traditional Nasya Therapy procedure in Dubai'
-      },
-      disclaimer: 'Safety & Medical Disclaimer: Results may vary depending on individual body constitution, lifestyle habits, medical condition, and treatment compliance. All Ayurvedic therapies are performed using DHA-approved treatment protocols under professional supervision.'
-    },
     overview: {
-      title: 'Understanding Ayurvedic Nasya Therapy',
+      title: 'What Is Nasya (Nasyam) Therapy?',
       problemIntro: {
-        title: 'The Challenge: Sinus & Respiratory Imbalance',
-        description: 'Living in urban environments like Dubai exposes individuals to air conditioning, ambient dust, dry desert air, and environmental pollutants that can irritate the respiratory tract and block sinus passages. Chronic sinus congestion, frequent headaches, dry nasal passages, and mental fatigue often arise when toxins accumulate in the head and neck region, impacting daily productivity, sleep quality, and overall well-being.'
+        title: 'Why Nasya Is Popular in Dubai',
+        description: 'Dust, sandstorms, dry desert air and long hours in air-conditioning often leave people in Dubai with blocked or dry noses, sinus congestion, allergies and headaches. Ayurveda calls the nose the gateway to the head (Nasa hi shiraso dwaram), which is why Nasya is used for conditions of the head, sinuses and neck.'
       },
       solutionIntro: {
-        title: 'Our Solution: Personalized Nasya Treatment in Dubai',
-        description: 'Unlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally.\n\nAt RamaCare Polyclinic, every Nasya Therapy program is customized according to the patient\'s body constitution, symptoms, lifestyle habits, and wellness goals.'
+        title: 'How Nasya Works at RamaCare',
+        description: 'Dr. Shamna (BAMS) assesses you and chooses the type of Nasya and the oil. Your therapist, always of your own gender, gives a face and head massage and gentle steam, then the medicated drops in each nostril. The doctor may also prescribe daily Pratimarsha drops to continue at home.'
       },
       leftCards: [
         {
           id: 1,
           title: 'Understanding Ayurvedic Nasya Therapy',
           description:
-            'Nasya is a traditional Ayurvedic detoxification procedure that involves the controlled administration of herbal oils or herbal extracts through the nasal passages. According to Ayurveda, the nose is considered the gateway to the head, making Nasya Therapy an important treatment for supporting respiratory wellness, mental clarity, sinus health, and nervous system balance. \n\nModern lifestyle factors such as pollution, dust exposure, stress, poor sleep quality, excessive screen time, and unhealthy routines may contribute to toxin accumulation in the head and neck region. Ayurvedic nasal detox therapies aim to cleanse these pathways naturally while promoting relaxation and overall wellness. \n\nUnlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally. \n\nAt RamaCare Polyclinic, every Nasya Therapy program is customized according to the patient’s body constitution, symptoms, lifestyle habits, and wellness goals.'
+            'Nasya is one of the five classical Panchakarma therapies; see our <a href="/services/panchakarma-treatment-dubai/">Panchakarma treatment in Dubai</a> for full 7, 14 and 21-day programmes. Nasya is a traditional Ayurvedic detoxification procedure that involves the controlled administration of herbal oils or herbal extracts through the nasal passages. According to Ayurveda, the nose is considered the gateway to the head, making Nasya Therapy an important treatment for supporting respiratory wellness, mental clarity, sinus health, and nervous system balance. \n\nModern lifestyle factors such as pollution, dust exposure, stress, poor sleep quality, excessive screen time, and unhealthy routines may contribute to toxin accumulation in the head and neck region. Ayurvedic nasal detox therapies aim to cleanse these pathways naturally while promoting relaxation and overall wellness. \n\nUnlike temporary nasal cleansing methods, Ayurvedic Nasya Therapy focuses on restoring balance holistically by supporting the respiratory system, improving circulation, reducing dryness, and calming the nervous system naturally. \n\nAt RamaCare Polyclinic, every Nasya Therapy program is customized according to the patient’s body constitution, symptoms, lifestyle habits, and wellness goals.'
         },
         {
           id: 2,
@@ -5182,11 +5038,13 @@ dubaiSkin: {
             'Sleep disturbances',
             'Chronic sinus irritation',
             'Excess mucus accumulation',
-            'Emotional imbalance and fatigue'
+            'Stress and tiredness',
+            'Dryness from air-conditioning'
           ]
         }
       ],
       rightCards: [],
+      conditionsSubtitle: 'Common reasons people in Dubai book Nasya',
       conditionsTreated: [
         {
           id: 1,
@@ -5214,12 +5072,13 @@ dubaiSkin: {
         { text: 'Panchakarma Treatment Dubai', link: '/services/panchakarma-treatment-dubai/' }
       ],
       quickFacts: [
-        { label: 'Treatment Type', value: 'Ayurvedic nasal therapy' },
-        { label: 'Session Duration', value: '30-45 minutes' },
-        { label: 'Anesthesia', value: 'Not required' },
-        { label: 'Downtime', value: 'None' },
-        { label: 'Safety', value: 'DHA-approved Ayurvedic protocols' }
-      ],
+          { label: 'What it is', value: 'Medicated oil, juice or powder given through the nose' },
+          { label: 'Oils', value: 'Such as Anu Taila, Shadbindu, Ksheerabala (chosen by the doctor)' },
+          { label: 'First step', value: 'Consultation with Dr. Shamna (BAMS)' },
+          { label: 'Session', value: '60–90 minutes, with face massage and steam' },
+          { label: 'Course', value: 'Usually about 7 days; 14–21 if needed' },
+          { label: 'Therapist', value: 'Same gender as the patient, always' }
+        ],
       approachCards: [
         {
           id: 1,
@@ -5245,7 +5104,7 @@ dubaiSkin: {
         {
           id: 4,
           title: 'Respiratory & Nervous System Support',
-          description: 'Nasya Therapy works holistically to support respiratory wellness, improve nasal comfort, reduce stress, and restore nervous system balance naturally.',
+          description: 'Nasya is traditionally used to soothe dry or blocked nasal passages and to calm stress, as part of your plan.',
           hasLearnMore: true,
           expandedContent: 'Benefits may include improved sinus drainage, better breathing support, reduced nasal dryness, enhanced mental clarity, stress reduction, and improved sleep quality. Goal: Deliver comprehensive respiratory and mental wellness support through authentic Ayurvedic care.'
         },
@@ -5265,12 +5124,11 @@ dubaiSkin: {
           severity: 'High',
           severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
         },
-        {
-          id: 2,
-          title: 'Toxin Accumulation in Head & Neck Region',
-          description: 'Modern lifestyle factors such as pollution, stress, poor sleep quality, and excessive screen time contribute to toxin buildup in the head and neck area. This accumulation can affect mental clarity, cause headaches, and disrupt nervous system balance over time.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
+        { id: 2, 
+          title: 'Dust, Sandstorms and Dry Air', 
+          description: 'Dubai\'s dust, sandstorms and dry, air-conditioned air irritate and dry the nasal lining, a common trigger for congestion and allergies.', 
+          severity: 'Common', 
+          severityColor: 'bg-[#FEE2E2] text-[#991B1B]' 
         },
         {
           id: 3,
@@ -5282,7 +5140,7 @@ dubaiSkin: {
         {
           id: 4,
           title: 'Respiratory Imbalance & Allergies',
-          description: 'Recurring allergies, respiratory discomfort, and breathing irregularities often result from environmental triggers and lifestyle habits. These conditions may lead to chronic nasal irritation, excess mucus production, and reduced oxygen intake.',
+          description: 'Recurring allergies, respiratory discomfort, and breathing irregularities often result from environmental triggers and lifestyle habits. These conditions may lead to chronic nasal irritation, excess mucus production .',
           severity: 'Medium',
           severityColor: 'bg-[#FEF3C7] text-[#92400E]'
         },
@@ -5328,56 +5186,119 @@ dubaiSkin: {
         }
       ]
     },
+      nasyaTypes: {
+        id: 'nasya-types',
+        heading: 'Oils Used in Nasya (Nasyam)',
+        intro: 'Dr. Shamna chooses the oil for your condition and dosha. Classical oils, prepared in Kerala, include:',
+        table: [
+          ['Anu Taila (Anu Thailam)', 'The best-known Nasya oil, used for clinic Nasya and daily Pratimarsha drops; traditionally used for dryness, congestion and the head and neck.'],
+          ['Shadbindu Taila', 'A classical oil traditionally used for sinus congestion, heaviness in the head and headaches.'],
+          ['Ksheerabala Taila', 'A milk-processed oil traditionally used for Vata, dryness and nerve-related complaints.']
+        ],
+        note: 'Herbal powders (Pradhamana) and herbal juices (Navana) are chosen in the same way. Do not start using Nasya oils at home without the doctor\'s advice.'
+      },
 
+      nasyaProcedure: {
+        id: 'nasya-procedure',
+        heading: 'What Happens During a Nasya Session',
+        ordered: true,
+        items: [
+          { text: 'Consultation: your first visit is with Dr. Shamna, who checks that Nasya suits you and chooses the type and oil.' },
+          { text: 'Preparation: a gentle oil massage of the face, head, neck and shoulders, followed by mild steam to the face.' },
+          { text: 'The Nasya: you lie back with your head slightly tilted and your eyes covered; your therapist, always of your own gender, places warm drops in each nostril while you breathe in gently.' },
+          { text: 'After the drops: the face and soles may be massaged again; you spit out any oil or mucus that reaches the throat and gargle with warm water.' },
+          { text: 'Rest: you rest for a few minutes. The whole visit takes 60–90 minutes.' }
+        ],
+        note: 'Afterwards, avoid cold water, cold drinks, dust, wind and strong air-conditioning for the rest of the day. A course is usually about 7 days, extended to 14–21 days if needed.'
+      },
+
+      sinusAllergy: {
+        id: 'sinus-or-allergy',
+        heading: 'Nasya for Sinus Problems and Allergies in Dubai',
+        table: [
+          ['Sinus congestion (sinusitis)', 'Blocked nose, facial pressure, thick mucus. Ayurveda links it to Kapha; Shadbindu or Anu Taila Nasya and steam are traditionally used.'],
+          ['Allergic rhinitis', 'Sneezing, runny or itchy nose, often worse with dust, sandstorms or seasonal pollen. Pratimarsha drops and avoiding triggers are commonly advised.'],
+          ['Dry nose from air-conditioning', 'Dryness, crusting and irritation. Oil Nasya with Anu or Ksheerabala Taila is traditionally used.'],
+          ['Tension headaches', 'Heaviness in the head and neck with stress or screen time. Nasya with head and neck massage may be combined with Shirodhara.']
+        ],
+        note: 'See our general physician first (/services/general-physician-dubai/) if you have a high fever, facial swelling, symptoms lasting more than 10 days or getting worse, a sudden severe headache, or nosebleeds.'
+      },
+
+      whoShouldNot: {
+        id: 'who-should-not',
+        heading: 'Who Should Not Have Nasya (or Should Wait)?',
+        intro: 'Dr. Shamna checks your health first. Nasya may be postponed or unsuitable if you:',
+        items: [
+          { text: 'have an acute cold, fever or chest infection' },
+          { text: 'have nosebleeds or a recent nose or sinus surgery' },
+          { text: 'are pregnant or menstruating (some types are postponed)' },
+          { text: 'have just eaten, bathed or exercised' },
+          { text: 'have a severe headache that has not been checked by a doctor' }
+        ]
+      },
+
+      gettingHere: {
+        id: 'getting-here',
+        heading: 'Nasya Treatment in Jumeirah 1, Close to Satwa, Al Wasl and City Walk',
+        intro: 'RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. Open every day, 10am–10pm.',
+        items: [
+          { text: 'From Satwa and Al Wasl: a few minutes by car' },
+          { text: 'From Jumeirah 2, City Walk and La Mer: about 10 minutes' },
+          { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
+          { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes' }
+        ],
+        note: 'Free and paid parking is available nearby.',
+        mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
+      },
     treatmentProcess: {
-      title: 'Types of Nasya Therapy',
-      description: 'Treatment type and duration are customized according to the patient\'s symptoms, body constitution, and wellness goals.',
+      title: 'Types of Nasya',
+      subtitle: 'Dr. Shamna chooses the type after your consultation.',
+      description: 'Dr. Shamna chooses the type after your consultation.',
       types: [
         {
           id: 1,
-          title: 'Pradhamana Nasya',
-          description: 'A cleansing Ayurvedic therapy traditionally used to help remove excess Kapha and support sinus detoxification.'
+          title: 'Sneha (Marsha) Nasya – oil',
+          description: 'Warm medicated oil, such as Anu Taila or Ksheerabala Taila, given in a measured dose in the clinic. Nourishing; traditionally used for dryness and Vata.'
         },
         {
           id: 2,
-          title: 'Sneha Nasya',
-          description: 'This therapy uses medicated herbal oils to support lubrication, nourishment, and nervous system relaxation.'
+          title: 'Pratimarsha Nasya – daily drops',
+          description: 'A small daily dose of oil, often Anu Taila, that the doctor may prescribe for you to use at home.'
         },
         {
           id: 3,
-          title: 'Marsha Nasya',
-          description: 'A deeper Ayurvedic nasal detox therapy is often included in Panchakarma wellness programs.'
+          title: 'Pradhamana Nasya – powder',
+          description: 'A fine herbal powder blown gently into the nose; cleansing, traditionally used for Kapha and heavy congestion.'
+        },
+        {
+          id: 4,
+          title: 'Navana Nasya – herbal juice or decoction',
+          description: 'Fresh herbal juice or decoction drops; traditionally used for congestion and heaviness in the head.'
         }
       ]
     },
-    benefits: {
-      title: 'Treatment Benefits',
-      description: 'Clinically Observed Wellness Benefits',
-      comparisonTitle: 'Nasya Therapy vs Conventional Nasal Cleansing Programs',
-      comparisonDescription: 'Compare holistic Ayurvedic nasal therapy with conventional treatments.',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Nasya Therapy',
-        traditional: 'Conventional Nasal Treatments'
+  benefits: {
+        title: 'What Nasya Is Traditionally Used For',
+        description: 'Nasya is a classical Ayurvedic therapy; experiences vary from person to person.',
+        hidePercentages: true,
+        benefits: [
+          { id: 1, title: 'Blocked or congested nose', description: null },
+          { id: 2, title: 'Dry nasal passages from air-conditioning', description: null },
+          { id: 3, title: 'Allergy-type sneezing and irritation', description: null },
+          { id: 4, title: 'Tension headaches and heaviness', description: null },
+          { id: 5, title: 'Stress and sleep', description: null }
+        ],
+        comparisonTitle: 'Clinic Nasya vs Daily Pratimarsha Drops',
+        comparisonDescription: 'Two ways Nasya is used. The doctor tells you which you need.',
+        comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Clinic Nasya (Marsha, Pradhamana, Navana)', traditional: 'Pratimarsha at home' },
+        comparisonData: [
+          { feature: 'Where', ayurvedic: 'At the clinic, by a therapist', conventional: 'At home, by you' },
+          { feature: 'Dose', ayurvedic: 'Larger, measured dose', conventional: 'One or two drops' },
+          { feature: 'Preparation', ayurvedic: 'Face massage and steam first', conventional: 'Usually none' },
+          { feature: 'How often', ayurvedic: 'A course, usually about 7 days', conventional: 'Daily, as prescribed' },
+          { feature: 'Used for', ayurvedic: 'Treating a current problem', conventional: 'Ongoing care and prevention' }
+        ]
       },
-      benefits: [
-        { id: 1, title: 'Improved sinus comfort', percentage: 90, description: null },
-        { id: 2, title: 'Better breathing support', percentage: 92, description: null },
-        { id: 3, title: 'Reduced nasal dryness', percentage: 88, description: null },
-        { id: 4, title: 'Improved mental clarity', percentage: 91, description: null },
-        { id: 5, title: 'Better focus and concentration', percentage: 89, description: null },
-        { id: 6, title: 'Stress reduction support', percentage: 93, description: null },
-        { id: 7, title: 'Relaxation and sleep support', percentage: 90, description: null },
-        { id: 8, title: 'Enhanced emotional wellness', percentage: 87, description: null }
-      ],
-      comparisonData: [
-        { feature: 'Approach', ayurvedic: 'Holistic & dosha-based', conventional: 'Symptom-focused' },
-        { feature: 'Ingredients', ayurvedic: 'Herbal oils & Ayurvedic formulations', conventional: 'Chemical-based products' },
-        { feature: 'Wellness Focus', ayurvedic: 'Respiratory, nervous system & mental wellness', conventional: 'Temporary nasal relief' },
-        { feature: 'Personalization', ayurvedic: 'Customized according to body constitution', conventional: 'Generic treatment methods' },
-        { feature: 'Long-Term Support', ayurvedic: 'Supports overall wellness', conventional: 'Mostly short-term symptom management' }
-      ]
-    },
     costResults: {
       costTitle: 'Nasya Therapy Cost in Dubai',
       costFactors: [
@@ -5387,7 +5308,7 @@ dubaiSkin: {
         'Panchakarma program inclusion',
         'Follow-up consultations'
       ],
-      recommendation: 'At RamaCare Polyclinic, every treatment plan is customized according to the patient\'s wellness goals and Ayurvedic assessment. Book a consultation for a personalized therapy plan and detailed treatment guidance.',
+      recommendation: 'Your first step is a consultation with Dr. Shamna (from AED 200). The Nasya course and session prices are confirmed when you book.',
       resultsTitle: 'Recovery & Aftercare',
       resultsDescription: 'Most individuals can resume normal activities shortly after therapy. Some patients may temporarily experience mild nasal drainage or detoxification-related reactions depending on body constitution and therapy intensity.\n\nOur aftercare recommendations focus on:',
       resultPoints: [
@@ -5395,7 +5316,7 @@ dubaiSkin: {
         'Hydration support',
         'Stress management',
         'Sleep balance',
-        'Long-term detoxification support'
+        'Daily Pratimarsha drops if prescribed'
       ],
       additionalInfo: {
         title: 'Diet & Lifestyle Recommendations',
@@ -5424,43 +5345,61 @@ dubaiSkin: {
       features: [
         {
           id: 1,
-          title: 'Personalized Ayurvedic Consultation',
-          description: 'Each patient undergoes a detailed Ayurvedic assessment to evaluate dosha imbalance, respiratory concerns, stress levels, sinus health, and lifestyle factors before therapy begins.'
+          title: 'Doctor First',
+          description: 'every patient sees Dr. Shamna (BAMS) before Nasya.'
         },
         {
           id: 2,
-          title: 'DHA-Licensed Ayurvedic Clinic',
-          description: 'All therapies are performed in a hygienic and professionally supervised environment using DHA-approved Ayurvedic treatment protocols.'
+          title: 'Same-Gender Therapists, Always',
+          description: ' Syamkumar for men, Mariya for women.'
         },
         {
           id: 3,
-          title: 'Experienced Ayurvedic Specialists',
-          description: 'Our Ayurvedic doctors create customized detoxification and wellness plans according to the patient\'s symptoms, body constitution, and treatment goals.'
+          title: 'All Nasya Types',
+          description: 'oil, powder and herbal-juice Nasya, and daily Pratimarsha drops.'
         },
         {
           id: 4,
-          title: 'Holistic Wellness Support',
-          description: 'Patients may also receive recommendations related to Ayurvedic diet, stress management, sleep support, hydration, breathing wellness, and lifestyle balance.'
+          title: 'Inside a Polyclinic',
+          description: 'our GP is in the same building for sinus or headache checks.'
         }
       ]
     },
-    doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Nasya Therapy Specialists in Dubai',
-      description: 'Our experienced Ayurvedic doctors are committed to providing personalized care and effective treatments.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
-    },
+   doctors: {
+    badge: 'Your Nasya Team',
+    title: 'Your Ayurvedic Doctor and Same-Gender Therapists',
+    description: 'Dr. Shamna Keloth Meethal (BAMS) assesses you and plans your Nasya. It is given by Syamkumar Sasidharan (17+ years) for men and Mariya Thayyil Muhammed (14+ years in the UAE) for women. All three speak English, Malayalam and Hindi.',
+    doctors: DOCTOR_GROUPS.AYURVEDA
+  },
     paymentInsurance: {
       title: 'Payment & Insurance',
       description: 'We accept various payment methods and work with insurance providers to make your treatment accessible.'
     },
 
     faq: {
-      title: 'Frequently Asked Questions About Nasya Therapy in Dubai',
-      description: 'Personalized Ayurvedic Nasya Therapy & Wellness Support',
-      resourcesHeading: 'Complete Ayurvedic Services',
+    title: 'Nasya (Nasyam) Therapy: Frequently Asked Questions',
+    description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+    resourcesHeading: 'Related Ayurvedic Services',
+    faqs: [
+      { id: 1, question: "What is Nasya therapy?", answer: "Nasya (Nasyam) is an Ayurvedic therapy in which medicated oils, herbal juices or powders are given through the nose. It is one of the five Panchakarma therapies and is traditionally used for the head, sinuses and neck. At RamaCare in Jumeirah 1 it follows a consultation with Dr. Shamna Keloth Meethal (BAMS)." },
+      { id: 2, question: "Is Nasya the same as Nasyam?", answer: "Yes. Nasyam is the Malayalam and South Indian form of the Sanskrit word Nasya. Both refer to the same Ayurvedic nasal therapy." },
+      { id: 3, question: "What are the types of Nasya?", answer: "The main types are oil Nasya (Sneha or Marsha), daily small-dose drops (Pratimarsha), powder Nasya (Pradhamana) and herbal-juice Nasya (Navana). RamaCare offers all of them; the doctor chooses the right one for you." },
+      { id: 4, question: "Which oil is used for Nasya?", answer: "Common classical oils include Anu Taila, Shadbindu Taila and Ksheerabala Taila, prepared in Kerala. Dr. Shamna chooses the oil according to your condition and dosha." },
+      { id: 5, question: "What happens during a Nasya session?", answer: "After a gentle face, head and neck massage and mild steam, you lie back with your eyes covered while a therapist of your own gender places warm drops in each nostril. You then gargle with warm water and rest. The visit takes 60–90 minutes." },
+      { id: 6, question: "Is Nasya painful?", answer: "No. Most people feel warmth and a strong sensation in the nose and throat for a moment, and sometimes sneezing or watery eyes. Powder Nasya can feel stronger; the therapist goes at your pace." },
+      { id: 7, question: "Can Nasya help with sinusitis?", answer: "Nasya with oils such as Shadbindu or Anu Taila, together with steam, is the classical Ayurvedic therapy for sinus congestion. If you have a high fever, facial swelling or symptoms lasting more than 10 days, see our GP first." },
+      { id: 8, question: "Can Nasya help with allergies and Dubai dust?", answer: "Nasya and daily Pratimarsha drops are traditionally used to soothe and protect the nasal lining, which helps many people with dust, sandstorm and seasonal allergies. Avoiding triggers matters too." },
+      { id: 9, question: "Can Nasya help with headaches or migraine?", answer: "Nasya with head and neck massage is traditionally used for tension headaches and heaviness in the head. A sudden, severe or unusual headache, or migraine that is changing, should be checked by a doctor first." },
+      { id: 10, question: "How many Nasya sessions will I need?", answer: "A course is usually about 7 days, extended to 14–21 days if needed, as the doctor decides. You may then be prescribed daily Pratimarsha drops to continue at home." },
+      { id: 11, question: "Can I do Nasya at home?", answer: "Only the gentle daily form (Pratimarsha), usually one or two drops of Anu Taila, and only if the doctor prescribes it. Stronger Nasya types are given in the clinic." },
+      { id: 12, question: "What should I avoid after Nasya?", answer: "Avoid cold water, cold drinks, dust, wind and strong air-conditioning for the rest of the day, and do not blow your nose hard. Eat light, warm food." },
+      { id: 13, question: "Who should not have Nasya?", answer: "Nasya is postponed during an acute cold, fever or chest infection, with nosebleeds or after recent nose surgery, in pregnancy, and right after eating, bathing or exercising. The doctor checks this first." },
+      { id: 14, question: "Is Nasya part of Panchakarma?", answer: "Yes. Nasya is one of the five main Panchakarma therapies, with Vamana, Virechana, Basti and Raktamokshana. It can be part of a Panchakarma programme or a stand-alone course." },
+      { id: 15, question: "Who gives the Nasya?", answer: "Dr. Shamna (BAMS) assesses you first. Nasya is given by Syamkumar Sasidharan for men and Mariya Thayyil Muhammed for women, both Kerala-trained and DHA-licensed." },
+      { id: 16, question: "How much does Nasya cost in Dubai?", answer: "Your first step is a consultation with Dr. Shamna, from AED 200. The course and session prices depend on the type and number of sessions and are confirmed when you book." },
+      { id: 17, question: "Where can I have Nasya near Jumeirah 1?", answer: "At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah 1, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm." },
+      { id: 18, question: "Is Nasya covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic, and we provide itemised invoices for your claim." }
+    ],
       resources: [
         {
           id: 1,
@@ -5470,168 +5409,108 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Stress Management',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/stress-treatment-dubai/'
         }
       ],
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Nasya Therapy in Ayurveda?',
-          answer:
-            'Nasya Therapy is a traditional Ayurvedic detoxification treatment that uses herbal oils or herbal extracts to help cleanse nasal passages, support sinus health, improve breathing comfort, and promote mental clarity naturally.'
-        },
-        {
-          id: 2,
-          question: 'What are the benefits of Nasya Therapy?',
-          answer:
-            'Ayurvedic Nasya Therapy may help support sinus cleansing, respiratory wellness, stress reduction, better concentration, improved sleep quality, and nervous system balance as part of a holistic wellness program.'
-        },
-        {
-          id: 3,
-          question: 'Is Nasya Therapy safe?',
-          answer:
-            'When performed under professional supervision at a DHA-licensed Ayurvedic clinic, Nasya Therapy is generally considered safe for suitable candidates following a proper Ayurvedic consultation and treatment assessment.'
-        },
-        {
-          id: 4,
-          question: 'Can Nasya Therapy help with sinus congestion?',
-          answer:
-            'Ayurvedic nasal detox therapies are commonly used to support sinus drainage, reduce nasal blockage, improve breathing comfort, and help maintain respiratory wellness naturally.'
-        },
-        {
-          id: 5,
-          question: 'Does Nasya Therapy help with stress and mental fatigue?',
-          answer:
-            'Nasya Therapy may help calm the nervous system, support emotional balance, improve focus, and reduce stress-related mental fatigue when included in personalized Ayurvedic wellness programs.'
-        },
-        {
-          id: 6,
-          question: 'Is Nasya Therapy part of Panchakarma Treatment?',
-          answer:
-            'Yes, Nasya is considered an important therapy in <a href="/services/panchakarma-treatment-dubai/">Panchakarma Treatment Dubai</a> programs designed to support detoxification, dosha balance, and long-term wellness naturally.'
-        },
-        {
-          id: 7,
-          question: 'How long does a Nasya Therapy session take?',
-          answer:
-            'The duration of Ayurvedic Nasya Therapy sessions may vary depending on the treatment plan, wellness goals, and individual body constitution assessed during consultation.'
-        },
-        {
-          id: 8,
-          question: 'Can Nasya Therapy improve sleep quality?',
-          answer:
-            'Many individuals choose Ayurvedic Nasya Treatment to support relaxation, mental calmness, better breathing comfort, and healthier sleep routines naturally through holistic wellness support.'
-        },
-        {
-          id: 9,
-          question: 'What should I avoid after Nasya Therapy?',
-          answer:
-            'Patients are generally advised to avoid dust exposure, cold air, dehydration, smoking, and unhealthy lifestyle habits immediately after therapy to support recovery and wellness benefits.'
-        },
-        {
-          id: 10,
-          question: 'Where can I book Nasya Therapy in Dubai?',
-          answer:
-            'You can schedule a personalized Ayurvedic consultation at RamaCare Polyclinic to receive a customized Nasya Therapy treatment plan based on your wellness goals and body constitution.'
-        }
-      ],
     },
     bookConsultation: {
-      title: 'Book Your Nasya Therapy Consultation',
-      description: 'Support sinus wellness, respiratory balance, and mental clarity naturally with personalized Ayurvedic care at RamaCare Polyclinic.',
-      features: [
-        'Free initial consultation',
-        'Personalized treatment assessment',
-        'Expert Ayurvedic guidance',
-        'Flexible scheduling'
+      title: 'Book Your Nasya Consultation',
+      description: 'See Dr. Shamna first (from AED 200), then your Nasya sessions with a therapist of your own gender. Jumeirah 1, open daily 10am–10pm.',
+      features: [ 'Consultation with a BAMS doctor', 'Same-gender therapists, always', 'Classical oils from Kerala', 'Open daily 10am–10pm' ],
+      submitButtonText: 'Request Appointment',
+      phone: '+971 56 659 7878',
+      email: 'query@ramacarepolyclinic.com'
+    },
+    testimonials: {
+      title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
       ]
-    }
+    },
   },
   // ============================================
   // AYURVEDA CATEGORY (Shirodhara Therapy)
@@ -5684,7 +5563,7 @@ dubaiSkin: {
           id: 1,
           icon: 'Leaf',
           title: 'What is Shirodhara Therapy?',
-          description: 'Shirodhara Therapy in Dubai is a traditional Ayurvedic relaxation treatment where warm medicated herbal oil is continuously poured over the forehead (third eye region). This therapy is designed to calm the nervous system, reduce mental stress, and restore emotional balance. It works by directly influencing the mind-body connection, helping to regulate stress hormones, improve sleep quality, and bring deep mental relaxation.',
+          description: 'Shirodhara Therapy in Dubai is a traditional Ayurvedic relaxation treatment where warm medicated herbal oil is continuously poured over the forehead (third eye region). Often paired with [Kerala Ayurvedic massage in Dubai](/services/abhyanga-massage-dubai/) (Abhyanga), this therapy is designed to calm the nervous system, reduce mental stress, and restore emotional balance. It works by directly influencing the mind-body connection, helping to regulate stress hormones, improve sleep quality, and bring deep mental relaxation.',
         },
         {
           id: 2,
@@ -5768,7 +5647,7 @@ dubaiSkin: {
         {
           id: 7,
           title: 'Chronic Tension & Headaches',
-          description: 'Tightness in the head, neck, and shoulder region due to stress often leads to tension headaches, migraines, and persistent discomfort, affecting daily life quality.',
+          description: 'Tightness in the head, neck, and shoulder region due to stress often leads to tension headaches, migraines, and persistent discomfort, affecting daily life quality. For head and sinus tension, see [Nasya (Nasyam) therapy in Dubai](/services/nasya-therapy-dubai/).',
           severity: 'Medium',
           severityColor: 'bg-[#FED7AA] text-[#9A3412]'
         }
@@ -6154,7 +6033,7 @@ dubaiSkin: {
         },
         {
           id: 9,
-          text: 'Abhyanga Massage',
+          text: 'Kerala Ayurvedic Massage in Dubai',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
@@ -6172,7 +6051,7 @@ dubaiSkin: {
         },
         {
           id: 12,
-          text: 'Nasya Therapy',
+          text: 'Nasya (Nasyam) therapy in Dubai',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
@@ -6294,144 +6173,112 @@ dubaiSkin: {
   // ============================================
   'ayurveda-dubai-abhyanga-massage': {
     hero: {
-      subtitle: 'Full Body Ayurvedic Oil Massage for Deep Relaxation, Detox & Rejuvenation',
-      description: 'Abhyanga massage in Dubai is a traditional Ayurvedic full-body oil therapy designed to relax the body, detoxify naturally, and restore inner balance. This deeply soothing treatment uses warm, medicated herbal oils applied in gentle, rhythmic strokes to improve blood circulation, relieve muscle tension, and calm the nervous system.More than just a massage, Abhyanga works at both physical and mental levels—helping reduce stress, improve sleep quality, and support overall well-being. It nourishes the skin, boosts energy flow, and leaves you feeling refreshed, lighter, and more balanced.',
-      rating: '2,500+ Happy Clients',
-      
-      ctaButtons: {
-        primary: {
-          text: 'Book Free Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
-      },
-      features: [
-        'Natural Detox & Stress Relief',
-        ' Improves Circulation & Skin Health',
-        'Safe, Non-Invasive Ayurvedic Therapy',
-      ],
-      image: {
-        src: '/images/abhyanga.jpg',
-        alt: 'Abhyanga massage - traditional Ayurvedic full body oil massage for relaxation and detox.'
-      },
-      medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual body constitution, health condition, and adherence to the treatment plan. All Abhyanga therapies are provided at a DHA-licensed clinic using approved herbal formulations and protocols.',
-        show: true
-      }
+    title: 'Therapeutic Kerala Ayurvedic Massage (Abhyanga) in Dubai',
+    subtitle: 'Doctor-assessed Kerala massage in Jumeirah 1, with same-gender, Kerala-trained therapists',
+    description: 'Abhyanga is the classical Kerala Ayurvedic full-body massage with warm medicated oil. At RamaCare Polyclinic in Jumeirah 1, Dubai, it is a therapeutic treatment: your first visit is a consultation with Dr. Shamna Keloth Meethal (BAMS), who chooses the oil and the type of massage for your condition. Sessions last 60 or 90 minutes and are given by Kerala-trained therapists of your own gender, using classical medicated oils from Kerala. It is traditionally used for muscle stiffness, back and neck tension, stress and poor sleep.',
+    rating: '4.8★ Google rating',
+    topBadges: [
+      { icon: 'location', text: 'Jumeirah 1, Dubai' },
+      { icon: 'building', text: 'DHA-licensed polyclinic' },
+      { icon: 'star', text: '4.8★ Google rating' }
+    ],
+    stats: [
+      { id: 1, number: '60 / 90 min', label: 'Session length' },
+      { id: 2, number: 'Same-gender', label: 'Kerala-trained therapists' },
+      { id: 3, number: '17+ yrs', label: 'Therapist experience' }
+    ],
+    ctaButtons: {
+      primary: { text: 'Book Consultation and Massage', icon: 'calendar', link: '#book-now' },
+      secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
     },
+    features: [
+      'Consultation with a BAMS doctor before your first massage',
+      'Classical medicated oils from Kerala, chosen for you',
+      'Male therapist for men, female therapist for women',
+      'Abhyanga, Shiro and Pada Abhyanga, Kizhi, Pizhichil, Udwarthanam',
+      'Open daily 10am–10pm in Jumeirah 1'
+    ],
+    image: {
+      src: '/images/abhyanga.jpg',
+      alt: 'Therapeutic Kerala Ayurvedic massage (Abhyanga) with medicated oil at RamaCare Polyclinic, Jumeirah 1, Dubai'
+    },
+    medicalNotice: {
+      text: 'Kerala Ayurvedic massage at RamaCare is a therapeutic treatment given after a doctor\'s consultation. It is not suitable during fever, infection or on broken skin, and may be adapted in pregnancy. Provided at a DHA-licensed polyclinic (licence 2036418).',
+      show: true
+    }
+  },
     overview: {
-      title: 'Understanding Abhyanga Massage Dubai',
+      title: 'Understanding Kerala Ayurvedic Massage',
       problemIntro: {
-        title: 'Root Causes of Physical & Mental Imbalance',
-        description: 'Modern lifestyle leads to multiple health issues due to sedentary habits, work pressure, poor digestion, and irregular routines. These factors cause muscle stiffness, chronic stress, toxin accumulation, sleep disorders, and low energy levels.'
+        title: 'Why People in Dubai Book Ayurvedic Massage',
+        description: 'Long desk hours, driving, air-conditioning, stress and irregular sleep often show up as stiff necks and backs, tight shoulders and tiredness. In Ayurveda, these are mainly signs of aggravated Vata, which warm oil massage is traditionally used to calm.'
       },
       solutionIntro: {
-        title: 'Abhyanga Massage Dubai – Natural Healing Solution',
-        description: 'Abhyanga massage in Dubai provides a holistic solution to these problems through Ayurvedic healing techniques. It works at both physical and energetic levels, helping improve blood circulation, remove toxins, relax muscles and joints, and balance Vata, Pitta, and Kapha doshas.'
+        title: 'How Therapeutic Kerala Massage Works at RamaCare',
+        description: 'Dr. Shamna first assesses your health and dosha and chooses the oil and type of massage. A Kerala-trained therapist of your own gender then gives the massage in 60 or 90-minute sessions, and the doctor reviews your progress.'
       },
       leftCards: [
         {
           id: 1,
-          icon: 'Leaf',
-          title: 'What is Abhyanga Massage?',
-          description: 'Abhyanga massage in Dubai is a classical Ayurvedic therapy that involves applying warm medicated herbal oil to the entire body using synchronized rhythmic movements. It is one of the most recommended Ayurvedic therapies for daily wellness and preventive healthcare.',
+          title: 'What Is Abhyanga (Kerala Ayurvedic Massage)?',
+          description: 'Abhyanga, also called Abhyangam, is the foundational Kerala Ayurvedic massage: warm medicated oil applied to the whole body with long, rhythmic strokes. Unlike a spa massage, the oil and technique are chosen by an Ayurvedic doctor for your dosha and condition.',
           listItems: [
-            'Improves blood circulation',
-            'Removes toxins (Ama)',
-            'Relaxes muscles and joints',
-            'Balances Vata, Pitta, and Kapha doshas'
+            'Warm, classical medicated oils from Kerala',
+            'Rhythmic strokes suited to your dosha',
+            'Traditionally used to calm Vata, ease stiffness and support sleep'
           ]
         },
         {
           id: 2,
-          icon: 'Target',
-          title: 'Who Can Benefit from Abhyanga Massage in Dubai?',
-          description: 'Abhyanga massage is ideal for individuals experiencing:',
+          title: 'Who Books Therapeutic Ayurvedic Massage?',
+          description: 'Adults (18+) with:',
           listItems: [
-            'Stress and anxiety',
-            'Muscle stiffness and joint pain',
-            'Poor blood circulation',
-            'Dry skin and dull complexion',
-            'Fatigue and low energy',
-            'Sleep disturbances',
-            'Sedentary lifestyle issues',
-            'Need for relaxation and detox'
+            'Back, neck and shoulder stiffness, often from desk work or driving',
+            'Muscle tightness after exercise or travel',
+            'Stress, tension and poor sleep',
+            'Dry skin and Vata-type tiredness',
+            'Joint stiffness, alongside physiotherapy if needed'
           ]
         },
         {
           id: 3,
-          icon: 'Users',
-          title: 'Abhyanga Therapies at Ramacare Polyclinic',
-          description: '',
+          title: 'Kerala Ayurvedic Massages at RamaCare',
           listItems: [
-            'Full Body Abhyanga Massage – Deep relaxation and detoxification',
-            'Herbal Oil Abhyanga – Nourishes skin and improves circulation',
-            'Stress Relief Abhyanga – Reduces anxiety and mental fatigue',
-            'Therapeutic Abhyanga – Supports pain relief and mobility'
+            'Abhyanga – full-body medicated oil massage',
+            'Shiro Abhyanga – head, neck and shoulder massage',
+            'Pada Abhyanga – foot massage',
+            'Pizhichil – warm oil poured over the body with gentle massage',
+            'Udwarthanam – herbal powder massage',
+            'Kizhi and Njavarakizhi – warm herbal or rice boluses',
+            'Kati, Greeva and Janu Basti – warm oil pooled over the lower back, neck or knee'
           ]
         },
         {
           id: 4,
-          icon: 'Clock',
-          title: 'Duration',
-          description: 'Consultation: 30–45 minutes\nMassage Session: 45–75 minutes\nRecommended Plan: 5–10 sessions\nFollow-ups: Based on the doctor\'s advice'
+          title: 'Session Length and Booking',
+          description: 'First visit: consultation with Dr. Shamna, from AED 200 \n\n Massage sessions: 60 or 90 minutes \n\n Number of sessions: depends on your needs, as advised by the doctor; session prices are confirmed when you book'
         }
       ],
       rootCauses: [
-        {
-          id: 1,
-          title: 'Muscle Stiffness & Poor Circulation',
-          description: 'Sedentary lifestyle and lack of physical activity cause stiffness, reduced flexibility, and poor blood circulation, leading to discomfort and fatigue.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Chronic Stress & Mental Fatigue',
-          description: 'Work pressure and digital overload increase stress levels, affecting mental clarity, sleep, and emotional balance.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 3,
-          title: 'Toxin Accumulation (Ama)',
-          description: 'Poor digestion and lifestyle habits lead to toxin buildup, affecting metabolism, immunity, and overall health.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 4,
-          title: 'Sleep Disorders',
-          description: 'Stress and irregular routines disrupt sleep cycles, causing fatigue and low productivity.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 5,
-          title: 'Low Energy & Vitality',
-          description: 'Body fatigue and stress reduce natural energy levels and motivation.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        }
-      ],
+          { id: 1, title: 'Desk Work and Driving', description: 'Hours at a screen or behind the wheel tighten the neck, shoulders and lower back.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 2, title: 'Stress and Poor Sleep', description: 'Work pressure and late nights keep the body tense; Ayurveda links this to Vata.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 3, title: 'Air-Conditioning and Dry Skin', description: 'Long hours in cool, dry air dry the skin and, in Ayurvedic terms, aggravate Vata.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 4, title: 'Exercise and Travel', description: 'Gym sessions, long flights and jet lag leave muscles tight and sleep disturbed.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 5, title: 'Joint Stiffness', description: 'Stiff knees or backs, where local therapies such as Janu or Kati Basti and Kizhi are traditionally used.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
+        ],
       quickFacts: [
-        { label: 'Treatment Type', value: 'Ayurvedic oil massage therapy' },
-        { label: 'Approach', value: 'Personalized herbal oil treatment' },
-        { label: 'Age Group', value: 'Adults (18+)' },
-        { label: 'Pain Level', value: 'Gentle and relaxing' },
-        { label: 'Downtime', value: 'None' },
-        { label: 'Safety', value: 'DHA-approved Ayurvedic therapy' }
+        { label: 'Treatment', value: 'Therapeutic Kerala Ayurvedic massage' },
+        { label: 'First step', value: 'Consultation with Dr. Shamna (BAMS)' },
+        { label: 'Session', value: '60 or 90 minutes' },
+        { label: 'Oils', value: 'Classical medicated oils from Kerala' },
+        { label: 'Therapists', value: 'Same-gender, Kerala-trained' },
+        { label: 'Hours', value: 'Daily 10am–10pm, Jumeirah 1' }
       ],
       approachCards: [
         {
           id: 1,
-          title: 'Deep Detoxification',
-          description: 'Warm herbal oils penetrate tissues and help eliminate toxins from the body.',
+          title: 'Oil Chosen for You',
+          description: 'Dr. Shamna selects a classical Kerala medicated oil for your dosha and condition, for example a Vata-calming oil for stiffness and dryness.',
           hasLearnMore: true,
           expandedContent: 'This supports natural cleansing and improves overall metabolic function.'
         },
@@ -6444,8 +6291,8 @@ dubaiSkin: {
         },
         {
           id: 3,
-          title: 'Stress Reduction & Nervous System Calm',
-          description: 'Abhyanga relaxes the mind, reduces stress hormones, and promotes emotional balance.',
+          title: 'Stress and Sleep',
+          description: 'Abhyanga and Shiro Abhyanga are traditionally used to relax the body and support better sleep.',
           hasLearnMore: true,
           expandedContent: 'This therapy calms the nervous system at a deep level.'
         },
@@ -6458,22 +6305,22 @@ dubaiSkin: {
         },
         {
           id: 5,
-          title: 'Energy Restoration',
-          description: 'Boosts circulation and oxygen flow, increasing energy and vitality.',
+          title: 'Local Therapies for Stiff Areas',
+          description: 'Kati, Greeva and Janu Basti and Kizhi focus warmth and oil on the lower back, neck or knees.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 6,
-          title: 'Skin Nourishment',
-          description: 'Herbal oils deeply nourish skin, improving texture and glow.',
+          title: 'Skin Care',
+          description: 'Warm oil massage is traditionally used for dry skin, especially in air-conditioned environments.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 7,
-          title: 'Result',
-          description: 'Improved circulation, detoxification, stress relief, better sleep, reduced pain, enhanced energy, glowing skin, and overall wellness through Abhyanga massage in Dubai.',
+          title: 'What to Expect',
+          description: 'Most people feel relaxed and looser after a session; for stiffness, a course of sessions is usually advised. Experiences vary, and the doctor reviews your progress.',
           hasLearnMore: false,
           expandedContent: null
         }
@@ -6486,7 +6333,7 @@ dubaiSkin: {
         {
           id: 1,
           number: '01',
-          title: 'Visit 1 – Consultation & Detailed Assessment',
+          title: 'Visit 1 – Consultation with Dr. Shamna (BAMS): health, dosha and the right massage and oil for you ',
           duration: 'Step 1',
           description: 'Comprehensive Ayurvedic consultation including Prakriti (body constitution), dosha imbalance (Vata, Pitta, Kapha), lifestyle, stress levels, and physical concerns to identify root causes and create a personalized Abhyanga therapy plan.',
           keyActivities: [
@@ -6501,9 +6348,9 @@ dubaiSkin: {
         {
           id: 2,
           number: '02',
-          title: 'Visit 2 – Abhyanga Massage Therapy Begins',
+          title: 'Visit 2 onwards – Your Massage Sessions (60 or 90 minutes) with a Kerala-trained therapist of your gender',
           duration: 'Step 2',
-          description: 'Personalized Abhyanga therapy using warm medicated herbal oils with rhythmic full-body massage techniques to improve circulation, support detoxification, relax muscles, and calm the nervous system.',
+          description: 'Personalized Abhyanga therapy using warm medicated herbal oils with rhythmic full-body massage techniques to improve circulation, remove toxins, support detoxification for maximum benefit and lymphatic flow.',
           keyActivities: [
             'Full-body Abhyanga massage using warm herbal oils',
             'Application of dosha-specific medicated oils for maximum benefit',
@@ -6531,122 +6378,122 @@ dubaiSkin: {
         }
       ]
     },
+
+    massageTypes: {
+    id: 'massage-types',
+    heading: 'Types of Kerala Ayurvedic Massage at RamaCare',
+    table: [
+      ['Abhyanga (Abhyangam)', 'Full-body warm medicated oil massage; the foundation of Kerala Ayurvedic massage. Traditionally used for stiffness, stress, sleep and dry skin.'],
+      ['Shiro Abhyanga', 'Head, neck and shoulder oil massage; traditionally used for tension, headaches linked to stress, and sleep. For sinus and nasal therapy, see [Nasya (Nasyam) therapy in Dubai](/services/nasya-therapy-dubai/).'],
+      ['Pada Abhyanga', 'Foot oil massage; traditionally used for tired feet and to calm the mind before sleep.'],
+      ['Pizhichil', 'Warm medicated oil poured continuously over the body with gentle massage; traditionally used for stiffness and Vata conditions.'],
+      ['Udwarthanam', 'Brisk massage with herbal powder instead of oil; traditionally used in Kapha and weight-management plans.'],
+      ['Kizhi (Potli massage)', 'Warm herbal boluses (Podikizhi, Elakizhi) pressed over stiff muscles and joints.'],
+      ['Njavarakizhi', 'Boluses of medicated Njavara rice cooked in milk and herbs; traditionally used to nourish tissues.'],
+      ['Kati, Greeva and Janu Basti', 'Warm medicated oil held over the lower back (Kati), neck (Greeva) or knee (Janu) inside a dough ring. For internal Basti therapy, see [Basti therapy in Dubai](/services/basti-therapy-dubai/).']
+    ],
+    note: 'The doctor recommends the right massage for you at your consultation. For stress, see also [Shirodhara](/services/shirodhara-therapy-in-dubai/); for sinus and nasal therapy, see [Nasya (Nasyam) therapy in Dubai](/services/nasya-therapy-dubai/); for a full cleansing programme, see [Panchakarma](/services/panchakarma-treatment-dubai/).'
+  },
+
+  whichMassage: {
+    id: 'which-massage',
+    heading: 'Which Ayurvedic Massage Is Right for You?',
+    intro: 'A general guide. Your doctor decides after your consultation.',
+    table: [
+      ['Neck and shoulder stiffness from desk work', 'Abhyanga with Shiro Abhyanga or Greeva Basti'],
+      ['Lower back stiffness', 'Abhyanga with Kati Basti or Kizhi'],
+      ['Stiff knees', 'Janu Basti and Kizhi'],
+      ['Stress, tension and poor sleep', 'Abhyanga with Shiro or Pada Abhyanga; Shirodhara'],
+      ['Muscle tightness after exercise or travel', 'Abhyanga or Kizhi'],
+      ['Heaviness and weight goals (Kapha)', 'Udwarthanam'],
+      ['Dry skin and Vata-type tiredness', 'Abhyanga or Pizhichil']
+    ],
+    note: 'For pain after an injury, or if pain is severe or spreading, see our physiotherapy team first (/services/physiotherapy-dubai/).'
+  },
+
+  yourSession: {
+    id: 'your-session',
+    heading: 'What Happens During Your Ayurvedic Massage Session',
+    ordered: true,
+    items: [
+      { text: 'First visit: a consultation with Dr. Shamna (from AED 200), who chooses your massage and oil.' },
+      { text: 'Arrive 10 minutes early; tell your therapist about any pain, injuries or sensitive areas.' },
+      { text: 'Your therapist, of your own gender, warms the oil and keeps you draped throughout for privacy.' },
+      { text: 'The massage lasts 60 or 90 minutes, depending on what the doctor advised.' },
+      { text: 'Rest for a few minutes afterwards; a warm shower is available.' },
+      { text: 'Afterwards: avoid cold showers, strong air-conditioning and heavy meals for a few hours, and drink warm water.' }
+    ]
+  },
+
+  whoShouldAvoid: {
+    id: 'who-should-avoid',
+    heading: 'Who Should Avoid or Postpone Ayurvedic Massage?',
+    intro: 'The doctor checks your health at the consultation. Massage may be postponed or adapted if you have:',
+    items: [
+      { text: 'a fever, cold or active infection' },
+      { text: 'broken skin, rashes or a skin infection in the area' },
+      { text: 'a recent injury, fracture or surgery' },
+      { text: 'severe heart disease or uncontrolled blood pressure' },
+      { text: 'pregnancy (some massages are adapted or avoided)' },
+      { text: 'just eaten a heavy meal' }
+    ]
+  },
+
+  gettingHere: {
+    id: 'getting-here',
+    heading: 'Ayurvedic Massage in Jumeirah 1, Close to Satwa, Al Wasl and City Walk',
+    intro: 'RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. We are open every day from 10am to 10pm, so you can book an evening massage after work.',
+    items: [
+      { text: 'From Satwa and Al Wasl: a few minutes by car' },
+      { text: 'From Jumeirah 2, City Walk and La Mer: about 10 minutes' },
+      { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
+      { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes via Sheikh Zayed Road' }
+    ],
+    note: 'Free and paid parking is available nearby.',
+    mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
+  },
+
     benefits: {
-      title: 'Clinically Observed Benefits',
-      description: 'Evidence-based results from our authentic Abhyanga massage therapy.',
-      benefits: [
-        {
-          id: 1,
-          title: 'Stress reduction',
-          percentage: 95,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Improved circulation',
-          percentage: 92,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Muscle relaxation',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Improved sleep',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Skin improvement',
-          percentage: 91,
-          description: null
-        }
-      ],
-      comparisonTitle: 'Abhyanga Massage Dubai vs Modern Body Massage Therapies',
-      comparisonDescription: 'Compare authentic Ayurvedic Abhyanga with conventional massage and spa treatments',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Abhyanga Massage Dubai',
-        traditional: 'Modern Massage Therapies'
-      },
-      comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic Ayurvedic therapy that balances body, mind, and doshas',
-          conventional: 'Primarily focused on muscle relaxation and temporary relief'
-        },
-        {
-          feature: 'Depth of Treatment',
-          ayurvedic: 'Works at deep tissue, nervous system, and energy levels',
-          conventional: 'Mostly surface-level muscle relaxation'
-        },
-        {
-          feature: 'Personalization',
-          ayurvedic: 'Customized herbal oils and techniques based on body constitution (Dosha)',
-          conventional: 'Standardized techniques, same for most individuals'
-        },
-        {
-          feature: 'Safety',
-          ayurvedic: 'Natural, herbal oil-based therapy with no chemicals',
-          conventional: 'May include synthetic oils or pressure-based techniques'
-        },
-        {
-          feature: 'Stress Relief',
-          ayurvedic: 'Calms nervous system and reduces stress hormones naturally',
-          conventional: 'Provides short-term relaxation without addressing root cause'
-        },
-        {
-          feature: 'Circulation & Detox',
-          ayurvedic: 'Improves blood circulation and supports toxin elimination (Ama)',
-          conventional: 'Limited impact on detoxification processes'
-        },
-        {
-          feature: 'Skin Benefits',
-          ayurvedic: 'Nourishes skin deeply, improves texture, and natural glow',
-          conventional: 'Minimal skin nourishment benefits'
-        },
-        {
-          feature: 'Long-term Benefits',
-          ayurvedic: 'Enhances overall wellness, energy, sleep, and balance',
-          conventional: 'Temporary relief, effects fade quickly'
-        },
-        {
-          feature: 'Rejuvenation',
-          ayurvedic: 'Full mind-body rejuvenation and vitality restoration',
-          conventional: 'Mostly physical relaxation only'
-        }
-      ]
+        title: 'What Kerala Ayurvedic Massage Is Traditionally Used For',
+        description: 'Experiences vary from person to person.',
+        hidePercentages: true,
+        benefits: [
+          { id: 1, title: 'Easing muscle stiffness', description: null },
+          { id: 2, title: 'Relaxation and stress relief', description: null },
+          { id: 3, title: 'Supporting better sleep', description: null },
+          { id: 4, title: 'Caring for dry skin', description: null },
+          { id: 5, title: 'Calming Vata', description: null }
+        ],
+        comparisonTitle: 'Kerala Ayurvedic Massage vs Spa Massage: How They Differ',
+        comparisonDescription: 'Both have their place. Here is what is different at a clinic like RamaCare.',
+        comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Therapeutic Kerala Ayurvedic massage', traditional: 'Typical spa massage' },
+        comparisonData: [
+          { feature: 'Who decides the treatment', ayurvedic: 'A BAMS doctor, after a consultation', conventional: 'You choose from a menu' },
+          { feature: 'Oil', ayurvedic: 'Classical medicated oils from Kerala, chosen for your dosha', conventional: 'Usually aromatic massage oils' },
+          { feature: 'Therapist', ayurvedic: 'Kerala-trained Ayurveda therapist of your gender', conventional: 'Spa therapist' },
+          { feature: 'Purpose', ayurvedic: 'Therapeutic: stiffness, Vata, sleep, as part of a plan', conventional: 'Mainly relaxation' },
+          { feature: 'Setting', ayurvedic: 'DHA-licensed polyclinic, with records and follow-up', conventional: 'Spa or salon' }
+        ]
     },
     doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Abhyanga Massage Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in Abhyanga and relaxation therapies.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar
-      ]
+      badge: 'Your Massage Team',
+      title: 'Your Ayurvedic Doctor and Kerala-Trained Massage Therapists',
+      description: 'Dr. Shamna Keloth Meethal (BAMS) assesses you first and chooses your massage and oil. Massages are given by Syamkumar Sasidharan (17+ years, Diploma in Panchakarma Therapy) for men and Mariya Thayyil Muhammed (14+ years in the UAE) for women. All three speak English, Malayalam and Hindi.',
+      doctors: DOCTOR_GROUPS.AYURVEDA
     },
     costResults: {
-      costTitle: 'ABHYANGA MASSAGE DUBAI COST',
-      resultsTitle: 'RESULTS & OUTCOMES',
+     costTitle: 'Ayurvedic Massage Cost in Dubai',
       costFactors: [
-        'Session duration',
-        'Oil type',
-        'Number of sessions'
+        'Your first consultation with Dr. Shamna (from AED 200)',
+        'Session length: 60 or 90 minutes',
+        'Type of massage (for example Abhyanga, Kizhi or Pizhichil)',
+        'Number of sessions the doctor advises'
       ],
-      recommendation: 'Average packages are available for 5–10 sessions for best results.',
-      costNote: '',
-      results: [
-        { label: 'Reduced stress and anxiety', percentage: 95 },
-        { label: 'Better sleep quality', percentage: 92 },
-        { label: 'Improved flexibility', percentage: 90 },
-        { label: 'Enhanced energy levels', percentage: 88 },
-        { label: 'Healthier skin', percentage: 91 }
-      ],
-      resultsNote: ''
+      recommendation: 'Session prices are confirmed when you book. The number of sessions depends on your needs.',
+      costNote: 'Insurance is on a reimbursement basis; we provide itemised invoices for your claim.',
+      resultsTitle: 'What Most People Notice',
+      results: [],
+      resultsNote: 'Most people feel relaxed and looser after a session. For stiffness, a short course is usually advised. Experiences vary.'
     },
     paymentInsurance: {
       title: 'Payment & Insurance Information',
@@ -6656,109 +6503,39 @@ dubaiSkin: {
           'Cash',
           'Credit/Debit Cards',
           'Bank Transfers',
-          'Insurance Cards (Select Providers)'
-        ]
-      },
-      insurancePartners: {
-        title: 'Insurance Partners',
-        description: 'We work with select insurance providers. Please contact us to verify your coverage.',
-        providers: [
-          'AXA',
-          'Al Madallah',
-          'NAS',
-          'MSH',
-          'Mednet',
-          'Saada'
         ]
       },
       consultationFee: {
         title: 'Consultation Fee',
-        amount: 'AED 300',
-        description: 'Follow-up consultations available at discounted rates'
+        amount: 'From AED 200',
+        description: 'Consultation with Dr. Shamna before your first massage'
       }
     },
     faq: {
-      title: 'Frequently Asked Questions (FAQs)',
-      description: 'Expert answers about Abhyanga Massage in Dubai',
-      resourcesHeading: null,
-      resources: [],
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Abhyanga massage in Dubai?',
-          answer: 'Abhyanga massage in Dubai is a traditional Ayurvedic full-body oil massage using warm herbal oils to improve circulation, relieve stress, detoxify the body, and restore overall balance naturally.'
-        },
-        {
-          id: 2,
-          question: 'Is Abhyanga massage safe?',
-          answer: 'Yes, Abhyanga massage is completely safe when performed by trained Ayurvedic therapists. It uses natural herbal oils and gentle techniques, making it suitable for relaxation, detox, and overall wellness.'
-        },
-        {
-          id: 3,
-          question: 'What are the benefits of Abhyanga massage?',
-          answer: 'Abhyanga massage helps improve blood circulation, reduce stress, relax muscles, nourish the skin, support detoxification, enhance sleep quality, and boost overall physical and mental well-being.'
-        },
-        {
-          id: 4,
-          question: 'How long does an Abhyanga session take?',
-          answer: 'A typical Abhyanga massage session lasts between 45 and 75 minutes, depending on individual needs, body condition, and the personalized Ayurvedic treatment plan recommended by the doctor.'
-        },
-        {
-          id: 5,
-          question: 'How many sessions are needed for the best results?',
-          answer: 'For optimal results, 5 to 10 sessions of Abhyanga massage in Dubai are usually recommended, depending on your health goals, stress levels, and overall body condition.'
-        },
-        {
-          id: 6,
-          question: 'Does Abhyanga massage help with stress?',
-          answer: 'Yes, Abhyanga massage is highly effective in reducing stress by calming the nervous system, lowering stress hormones, and promoting deep relaxation and emotional balance.'
-        },
-        {
-          id: 7,
-          question: 'Can Abhyanga improve sleep quality?',
-          answer: 'Abhyanga massage helps improve sleep by relaxing the body and mind, reducing anxiety, and promoting a natural sleep cycle, making it beneficial for individuals suffering from insomnia.'
-        },
-        {
-          id: 8,
-          question: 'What oils are used in Abhyanga massage?',
-          answer: 'Abhyanga uses warm medicated herbal oils selected based on your body constitution (Dosha) to provide maximum therapeutic benefits, including detoxification, nourishment, and relaxation.'
-        },
-        {
-          id: 9,
-          question: 'Is there any downtime after an Abhyanga massage?',
-          answer: 'No downtime is required after an Abhyanga massage. Patients can resume normal activities, although resting briefly after the session is recommended for better absorption and relaxation benefits.'
-        },
-        {
-          id: 10,
-          question: 'Who should avoid Abhyanga massage?',
-          answer: 'People with fever, acute illness, infections, or certain medical conditions should avoid Abhyanga massage unless advised by a qualified Ayurvedic doctor after proper consultation.'
-        },
-        {
-          id: 11,
-          question: 'What is the cost of an Abhyanga massage in Dubai?',
-          answer: 'The cost of an Abhyanga massage in Dubai depends on session duration, the type of herbal oils used, and the number of sessions. Clinics usually offer packages for better value and results.'
-        },
-        {
-          id: 12,
-          question: 'Can Abhyanga help with body pain?',
-          answer: 'Yes, Abhyanga massage helps relieve muscle stiffness, joint pain, and body aches by improving circulation, reducing inflammation, and relaxing tight muscles effectively.'
-        },
-        {
-          id: 13,
-          question: 'Is Abhyanga massage good for the skin?',
-          answer: 'Abhyanga nourishes and hydrates the skin using herbal oils, improving texture, reducing dryness, and giving a natural, healthy glow through deep skin rejuvenation.'
-        },
-        {
-          id: 14,
-          question: 'Can Abhyanga boost energy levels?',
-          answer: 'Yes, Abhyanga massage improves blood circulation and oxygen flow, helping reduce fatigue, increase energy levels, and enhance overall vitality and physical performance.'
-        },
-        {
-          id: 15,
-          question: 'Why choose Abhyanga massage in Dubai?',
-          answer: 'Abhyanga massage in Dubai offers a natural, Ayurvedic approach to relaxation, detoxification, and wellness, making it ideal for managing stress, improving health, and restoring body balance.'
-        }
-      ],
+  title: 'Kerala Ayurvedic Massage: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is Abhyanga massage?", answer: "Abhyanga (Abhyangam) is the classical Kerala Ayurvedic full-body massage with warm medicated oil, applied in long, rhythmic strokes. At RamaCare in Jumeirah 1 it is given after a consultation with Dr. Shamna Keloth Meethal (BAMS), in 60 or 90-minute sessions." },
+    { id: 2, question: "What is Kerala Ayurvedic massage?", answer: "Kerala Ayurvedic massage is the family of traditional massage therapies from Kerala, India, including Abhyanga, Shiro and Pada Abhyanga, Pizhichil, Kizhi and Udwarthanam. They use classical medicated oils or herbal powders and are chosen by an Ayurvedic doctor for your dosha and condition." },
+    { id: 3, question: "How is Ayurvedic massage different from a spa massage?", answer: "At RamaCare it is a therapeutic massage, sometimes called a medical massage: a BAMS doctor assesses you first, chooses a classical Kerala medicated oil for you, and a Kerala-trained therapist of your gender gives the massage in a DHA-licensed clinic, with follow-up." },
+    { id: 4, question: "Do I need a consultation before the massage?", answer: "Yes. Your first visit is a consultation with Dr. Shamna (from AED 200). She checks your health, chooses the massage and oil, and then your therapist sessions begin." },
+    { id: 5, question: "How long is an Ayurvedic massage session?", answer: "Sessions last 60 or 90 minutes, depending on the massage and what the doctor advises." },
+    { id: 6, question: "How many sessions will I need?", answer: "It depends on why you are coming. A single session can help you relax; for stiffness or sleep problems, the doctor usually advises a short course and reviews your progress." },
+    { id: 7, question: "How much does Ayurvedic massage cost in Dubai?", answer: "Your first step is the consultation with Dr. Shamna, from AED 200. Session prices depend on the type of massage and whether it is 60 or 90 minutes, and are confirmed when you book." },
+    { id: 8, question: "Do you have male and female therapists?", answer: "Yes. Syamkumar Sasidharan gives massages to male patients and Mariya Thayyil Muhammed to female patients. Both are Kerala-trained and DHA-licensed." },
+    { id: 9, question: "Which oils do you use?", answer: "We use classical medicated oils made in Kerala. Dr. Shamna chooses the oil for your dosha and condition, for example a Vata-calming oil for stiffness and dryness." },
+    { id: 10, question: "What should I expect during the massage?", answer: "You are kept draped throughout for privacy, and the therapist checks the pressure with you. Afterwards you rest briefly and can take a warm shower." },
+    { id: 11, question: "Can Ayurvedic massage help back and neck pain?", answer: "Abhyanga with Kati Basti (lower back) or Greeva Basti (neck) is traditionally used for stiffness. For pain after an injury, or severe or spreading pain, see our physiotherapy team first." },
+    { id: 12, question: "Can Ayurvedic massage help with stress and sleep?", answer: "Abhyanga, Shiro Abhyanga and Pada Abhyanga are traditionally used to relax the body and support sleep. Shirodhara is another option the doctor may suggest." },
+    { id: 13, question: "What is Kizhi or Potli massage?", answer: "Kizhi (Potli massage) uses warm boluses of herbs (Podikizhi, Elakizhi) or medicated rice (Njavarakizhi) pressed over stiff muscles and joints. It is often combined with Abhyanga." },
+    { id: 14, question: "What is Pizhichil?", answer: "Pizhichil is a Kerala therapy in which warm medicated oil is poured continuously over the body while the therapist massages gently. It is traditionally used for stiffness and Vata conditions." },
+    { id: 15, question: "Can I have an Ayurvedic massage during pregnancy?", answer: "Some massages can be adapted in pregnancy and others are avoided. Tell the doctor at your consultation; she will advise what is suitable for you." },
+    { id: 16, question: "Who should not have an Ayurvedic massage?", answer: "Massage is postponed during fever or infection, over broken skin or rashes, soon after injury or surgery, and with severe heart disease or uncontrolled blood pressure. The doctor checks this at your consultation." },
+    { id: 17, question: "Can I combine Ayurvedic massage with physiotherapy?", answer: "Often yes. RamaCare has a physiotherapy team in the same building, and the Ayurvedic doctor and physiotherapist can plan your care together." },
+    { id: 18, question: "Where is the clinic, and is it near Satwa or City Walk?", answer: "RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. We are open every day from 10am to 10pm." },
+    { id: 19, question: "Is Ayurvedic massage covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic, and we provide itemised invoices for your claim." }
+  ],
       resourcesHeading: 'Complete Ayurvedic Services',
       resources: [
         {
@@ -6769,90 +6546,84 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
@@ -6860,14 +6631,63 @@ dubaiSkin: {
       ]
     },
     bookConsultation: {
-      title: 'Book Your Abhyanga Massage Consultation',
-      subtitle: 'Begin Your Journey to Deep Relaxation & Rejuvenation',
-      description: 'Take the first step towards natural healing with our authentic Abhyanga Massage in Dubai.',
+      title: 'Book Your Ayurvedic Massage',
+      subtitle: 'Consultation with Dr. Shamna first, then your 60 or 90-minute massage',
+      description: 'Kerala Ayurvedic massage in Jumeirah 1 with same-gender, Kerala-trained therapists. Open every day, 10am–10pm.',
+      submitButtonText: 'Request Appointment',
       phone: '+971 56 659 7878',
-      hours: 'Sun–Thu: 9 AM – 9 PM | Fri–Sat: 10 AM – 6 PM',
-      ctaText: 'Book Consultation Now'
-    }
+      email: 'query@ramacarepolyclinic.com',
+      statCards: [ 
+        { title: 'Same-Gender Therapists', description: 'Kerala-trained' }, 
+        { title: '1,000+ Ayurveda patients', description: 'In the last 2 years' }, 
+        { title: '4.8/5 Google rating', description: '218 reviews' } 
+      ],
+          }
+          
   },
+
+  testimonials: {
+  title: 'What Patients Say About Their Visit',
+  subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+  stats: [
+    { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+    { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+    { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+    { id: 4, number: '17+', label1: 'Years in Kerala therapies', label2: 'Syamkumar Sasidharan', target: 17 }
+  ],
+  testimonials: [
+        {
+          id: 1,
+          videoUrl: '/Videos/testimonial-1.mp4',
+          thumbnail: '/images/Thumb-1.jpeg'
+        },
+        {
+          id: 2,
+          videoUrl: '/Videos/testimonial-2.mp4',
+          // thumbnail: '/images/patient-success-2.jpg'  // ✅ Custom image
+        },
+        {
+          id: 3,
+          videoUrl: '/Videos/testimonial-3.mp4'
+          // No thumbnail = shows video's natural frame
+        },
+        {
+          id: 4,
+          videoUrl: '/Videos/testimonial-4.mp4'
+          // No thumbnail = shows video's natural frame
+        },
+        {
+          id: 5,
+          videoUrl: '/Videos/testimonial-5.mp4',
+          thumbnail: '/images/Thumb-5.jpeg'  // ✅ Custom image
+        },
+        {
+          id: 6,
+          videoUrl: '/Videos/testimonial-6.mp4'
+          // No thumbnail = shows video's natural frame
+        }
+      ],
+},
 
   // ============================================
   // AYURVEDA CATEGORY (Panchakarma Treatment)
@@ -6875,94 +6695,56 @@ dubaiSkin: {
 
   'ayurveda-dubai-panchakarma-treatment': {
     hero: {
-      subtitle: 'Detoxify, Rejuvenate & Restore Balance Naturally',
-      description: 'Panchakarma Treatment in Dubai is a traditional Ayurvedic detoxification therapy designed to eliminate toxins, restore dosha balance, and improve overall physical and mental wellness naturally. At RamaCare Polyclinic, we provide personalized Panchakarma therapies based on your body constitution, health concerns, and lifestyle needs to support deep healing and long-term rejuvenation.Our holistic Ayurvedic approach combines authentic cleansing therapies, herbal treatments, therapeutic oils, and wellness-focused care to help manage stress, fatigue, digestive issues, poor sleep, body pain, and lifestyle-related imbalances. Panchakarma therapy is widely recommended for individuals seeking natural detoxification, improved energy levels, better immunity, and enhanced mental clarity.Our experienced Ayurveda specialists in Dubai create customized treatment plans that may include Abhyanga massage, Shirodhara therapy, Nasya, and herbal detox procedures to promote complete mind-body balance.',
-      rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '94%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '1000+',
-          label: 'Panchakarma Sessions'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years of Experience'
-        }
-      ],
-      ctaButtons: {
-        primary: {
-          text: 'Book Free Panchakarma Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
-      },
-      features: [
-        ' DHA-Licensed Ayurvedic Clinic',
-        'Professional Ayurvedic Doctors',
-        'Authentic Panchakarma Therapies'
-      ],
-      image: {
-        src: '/images/panchakarma.jpg',
-        alt: 'Panchakarma treatment using traditional Ayurvedic therapies to detoxify the body and restore balance.'
-      },
-      medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Treatment results and duration may vary depending on individual body constitution, health condition, and compliance. All Panchakarma therapies are performed at a DHA-licensed clinic using approved Ayurvedic protocols.',
-        show: true
-      }
+    title: 'Panchakarma Treatment in Dubai',
+    subtitle: 'Classical Ayurvedic cleansing in 7, 14 or 21-day programmes, in Jumeirah 1',
+    description: 'Panchakarma is Ayurveda\'s classical cleansing programme. It has three phases: preparation with medicated ghee, oil massage and steam; one or more of the five main therapies (Vamana, Virechana, Basti, Nasya and Raktamokshana); and a gradual recovery diet. At RamaCare Polyclinic in Jumeirah 1, Dubai, Dr. Shamna Keloth Meethal (BAMS) decides whether it suits you and plans a 7, 14 or 21-day programme after a consultation from AED 200. Kerala-trained therapists of your own gender give the therapies.',
+    rating: '4.8★ Google rating',
+    topBadges: [
+      { icon: 'location', text: 'Jumeirah 1, Dubai' },
+      { icon: 'building', text: 'DHA-licensed polyclinic' },
+      { icon: 'star', text: '4.8★ Google rating' }
+    ],
+    stats: [
+      { id: 1, number: '7–21 days', label: 'Programme length' },
+      { id: 2, number: 'AED 200', label: 'Consultation from' },
+      { id: 3, number: '17+ yrs', label: 'Panchakarma therapist' }
+    ],
+    ctaButtons: {
+      primary: { text: 'Book Panchakarma Consultation', icon: 'calendar', link: '#book-now' },
+      secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
     },
+    features: [
+      'All five classical therapies: Vamana, Virechana, Basti, Nasya, Raktamokshana',
+      'Preparation with Snehapana, Abhyanga and Swedana',
+      '7, 14 or 21-day programmes, planned by a BAMS doctor',
+      'Kerala-trained, same-gender therapists',
+      'GP in the same building for checks before you start'
+    ],
+    image: {
+      src: '/images/panchakarma.jpg',
+      alt: 'Panchakarma treatment room at RamaCare Polyclinic, Jumeirah 1, Dubai'
+    },
+    medicalNotice: {
+      text: 'Panchakarma is not suitable for everyone. The doctor assesses you first; some therapies are postponed or adapted in pregnancy, illness, or heart or kidney disease. Programme length and cost are confirmed after your consultation. Provided at a DHA-licensed polyclinic (licence 2036418).',
+      show: true
+    }
+  },
     doctors: {
-      badge: 'Panchakarma Expertise',
-      title: 'Meet Our Panchakarma Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in authentic Panchakarma therapies and detoxification treatments.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar, DOCTORS.mariya
-      ]
-    },
-    certifications: {
-      title: 'Certifications & Accreditations',
-      certifications: [
-        {
-          id: 1,
-          title: 'DHA Licensed',
-          subtitle: 'Dubai Health Authority'
-        },
-        {
-          id: 2,
-          title: 'BAMS Certified',
-          subtitle: 'Bachelor of Ayurvedic Medicine'
-        },
-        {
-          id: 3,
-          title: 'ISO 9001:2015',
-          subtitle: 'Quality Standards'
-        },
-        {
-          id: 4,
-          title: 'Certified Panchakarma Practitioners',
-          subtitle: null
-        }
-      ]
-    },
+    badge: 'Your Panchakarma Team',
+    title: 'Your Panchakarma Doctor and Therapists in Jumeirah 1',
+    description: 'Dr. Shamna Keloth Meethal (BAMS, 11+ years) assesses you and plans your programme. Therapies are given by Kerala-trained therapists of your own gender: Syamkumar Sasidharan (Diploma in Panchakarma Therapy, 17+ years) for men and Mariya Thayyil Muhammed (14+ years in the UAE) for women. All three speak English, Malayalam and Hindi.',
+    doctors: DOCTOR_GROUPS.AYURVEDA
+  },
+   
     overview: {
-      title: 'Understanding Panchakarma Treatment in Dubai',
+      title: 'Understanding Panchakarma Treatment',
       problemIntro: {
-        title: 'Root Causes of Chronic Health Imbalances',
-        description: 'At RamaCare Polyclinic, our Panchakarma Treatment in Dubai is designed to support natural detoxification, restore dosha balance, and improve overall physical and mental wellness through authentic Ayurvedic therapies. Each treatment plan is personalized according to your body constitution, lifestyle, and health concerns to ensure safe and holistic healing.'
+        title: 'Why People Choose Panchakarma',
+        description: 'In Ayurveda, weak digestion (Agni) leaves undigested residue (Ama) that disturbs Vata, Pitta and Kapha. People looking for Panchakarma in Dubai usually book it for long-standing digestive, skin, joint, stress or weight concerns, or as a yearly Ayurvedic detox at a change of season.'
       },
       solutionIntro: {
-        title: 'Our Solution: Panchakarma Treatment in Dubai',
-        description: 'Our panchakarama treatment in Dubai is a comprehensive detoxification and rejuvenation program designed to eliminate deep-seated toxins and restore the body’s natural balance.'
+        title: 'How Panchakarma Works at RamaCare',
+        description: 'Your programme follows the classical three phases: preparation (Purva Karma), main cleansing with one or more of the five therapies (Pradhana Karma), and a gradual recovery diet (Paschat Karma). Dr. Shamna chooses the therapies and length for you.'
       },
 
       leftCards: [
@@ -6987,91 +6769,49 @@ dubaiSkin: {
             'General body detoxification and rejuvenation needs'
           ]
         },
-        {
-          id: 3,
-          title: 'Panchakarma Therapies at Ramacarepolyclinic',
-          listItems: [
-            'Abhyanga (Herbal Oil Massage) – A therapeutic full-body Ayurvedic massage using warm herbal oils to improve circulation, relax muscles, nourish the skin, and support detoxification. Learn more about Abhyanga Massage Dubai.',
-            'Shirodhara (Oil Dripping on Forehead) – A deeply calming Ayurvedic therapy where medicated oil is gently poured over the forehead to reduce stress, improve sleep quality, and promote mental relaxation. Explore our Shirodhara Treatment Dubai services.',
-            'Virechana (Purgation Therapy) – A cleansing Ayurvedic therapy focused on eliminating toxins from the digestive system and supporting liver health naturally.',
-            'Basti (Herbal Enema Therapy) – An Ayurvedic colon cleansing therapy that helps balance Vata dosha, improve digestion, and support detoxification.',
-            'Nasya (Nasal Therapy) – A traditional Ayurvedic nasal therapy that helps clear sinus congestion, improve breathing, and enhance mental clarity.'
-          ]
-        },
-        {
-          id: 4,
-          title: 'Duration',
-          description:
-            'Initial Consultation: 30–45 minutes. Active Panchakarma Program: 7–21 days (based on personal needs). Follow-Ups: As advised by the doctor.'
-        }
+            {
+              id: 3,
+              title: 'The Five Panchakarma Therapies and Supporting Treatments',
+              description: 'RamaCare offers all five classical Panchakarma therapies. Your doctor chooses which ones you need:',
+              listItems: [
+                'Vamana – therapeutic emesis (controlled, medicine-induced vomiting) for Kapha',
+                'Virechana – therapeutic purgation for Pitta',
+                'Basti – medicated enema therapy for Vata (see Basti therapy)',
+                'Nasya – medicated nasal therapy for the head and neck (see Nasya therapy)',
+                'Raktamokshana – bloodletting, including leech therapy, for certain skin and blood conditions',
+                'Supporting treatments: Snehapana (medicated ghee), [Kerala Ayurvedic massage in Dubai](/services/abhyanga-massage-dubai/) (Abhyanga), Swedana (herbal steam), Shirodhara and Kizhi'
+              ]
+            },
+            {
+              id: 4,
+              title: 'Duration and Fee',
+              description: 'Consultation: 45–60 minutes, from AED 200 \n\n Programme: 7, 14 or 21 days, depending on your needs \n\n Cost of the programme: confirmed in writing after your consultation'
+            }
       ],
 
       rootCauses: [
-        {
-          id: 1,
-          title: 'Toxin Accumulation & Poor Digestion',
-          description: 'Poor digestion and toxin buildup can interfere with nutrient absorption, slow metabolism, and contribute to fatigue, bloating, skin concerns, and reduced immunity. Ayurvedic detoxification therapies help support digestive health and promote natural cleansing of the body.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Dosha Imbalance & Physical Discomfort',
-          description: 'Imbalances in Vata, Pitta, or Kapha doshas may contribute to issues such as joint discomfort, poor sleep, digestive irregularities, inflammation, low energy, and emotional imbalance. Restoring dosha balance is considered essential in Ayurveda for maintaining long-term wellness.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 3,
-          title: 'Stress, Mental Fatigue & Poor Sleep',
-          description: 'Chronic stress and mental exhaustion can affect the nervous system, reduce concentration, disturb sleep patterns, and impact emotional well-being. Panchakarma therapies such as Shirodhara are traditionally used to promote relaxation and mental calmness naturally.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 4,
-          title: 'Low Immunity & Reduced Vitality',
-          description: 'A weakened immune system may increase susceptibility to frequent illness, low stamina, and delayed recovery. Ayurvedic rejuvenation therapies aim to support natural immunity, improve energy levels, and enhance overall vitality.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 5,
-          title: 'Lifestyle-Related Health Concerns',
-          description: 'Irregular eating habits, sedentary routines, inadequate rest, and daily stress can negatively affect physical and mental wellness. Panchakarma focuses on restoring balance through detoxification, personalized therapies, dietary guidance, and healthier lifestyle practices.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 6,
-          title: 'Hormonal Dysregulation',
-          description: 'Modern lifestyles, poor nutrition, and chronic stress can cause imbalances in thyroid, cortisol, and reproductive hormones, contributing to weight issues, fatigue, and emotional instability.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 7,
-          title: 'Chronic Inflammation',
-          description: 'Persistent low-grade inflammation from poor diet, toxin buildup, or stress damages organs, joints, and tissues. This increases the risk of chronic diseases such as diabetes, arthritis, and cardiovascular conditions.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-      ],
+          { id: 1, title: 'Long-Standing Digestive Problems', description: 'Bloating, acidity, constipation or heaviness after meals that keep returning; Ayurveda links them to weak Agni and Ama.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 2, title: 'Panchakarma for Back Pain and Joint Stiffness', description: 'Recurring stiffness in the back, neck or knees, often linked to Vata; Basti is the classical therapy for Vata.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+          { id: 3, title: 'Panchakarma for Psoriasis and Skin Conditions', description: 'Psoriasis, eczema and acne that flare repeatedly; Virechana and Raktamokshana are traditionally used for Pitta-related skin conditions.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 4, title: 'Stress, Poor Sleep and Fatigue', description: 'Long working hours and irregular sleep; supporting therapies such as Shirodhara are traditionally used alongside the programme.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 5, title: 'Panchakarma for Weight Loss (Kapha)', description: 'Heaviness, sluggish metabolism and weight gain; Vamana and Udwarthanam are traditionally used for Kapha.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+          { id: 6, title: 'A Yearly Reset', description: 'Many people book Panchakarma once a year, often at a change of season, as preventive care.', severity: 'Prevention', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
+        ],
 
       quickFacts: [
-        { label: 'Treatment Type', value: 'Ayurvedic detoxification and rejuvenation' },
-        { label: 'Approach', value: 'Personalized Panchakarma therapies' },
-        { label: 'Age Group', value: 'Adults above 18 years' },
-        { label: 'Comfort Level', value: 'Mild discomfort may occur during certain cleansing therapies' },
-        { label: 'Downtime', value: 'Minimal downtime; adequate rest is recommended' },
-        { label: 'Safety', value: 'Performed under DHA-licensed Ayurvedic supervision' }
+        { label: 'Programme', value: '7, 14 or 21 days' },
+        { label: 'Main therapies', value: 'Vamana, Virechana, Basti, Nasya, Raktamokshana' },
+        { label: 'Planned by', value: 'Dr. Shamna Keloth Meethal, BAMS' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Therapists', value: 'Same-gender, Kerala-trained' },
+        { label: 'Comfort', value: 'Some cleansing days can be tiring; rest is advised' }
       ],
 
       approachCards: [
         {
           id: 1,
-          title: 'Deep Internal Detoxification',
-          description: 'Personalized Ayurvedic cleansing therapies such as Virechana, Basti, and Nasya help eliminate accumulated toxins (Ama), support digestive health, and promote internal purification naturally.',
+          title: 'Main Cleansing (Pradhana Karma)',
+          description: 'One or more of Vamana, Virechana, Basti, Nasya or Raktamokshana, chosen by the doctor for your dosha and condition.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -7084,8 +6824,8 @@ dubaiSkin: {
         },
         {
           id: 3,
-          title: 'Rejuvenation & Energy Restoration',
-          description: 'Traditional Ayurvedic therapies such as Abhyanga massage, Shirodhara therapy, and Rasayana treatments help improve circulation, restore energy levels, reduce fatigue, and support natural rejuvenation.',
+          title: 'Rejuvenation (Rasayana)',
+          description:  'After cleansing, Rasayana herbs and a nourishing diet may be advised to help you recover your strength.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -7105,211 +6845,178 @@ dubaiSkin: {
         },
         {
           id: 6,
-          title: 'Improved Skin Health & Natural Detoxification',
-          description: 'Panchakarma therapies help improve circulation, support internal cleansing, and nourish the body naturally, contributing to healthier-looking skin and improved wellness. Explore our Skin Treatment Dubai services for additional skin care support.',
+          title: 'Skin Conditions',
+          description: 'For recurring skin problems, Virechana and Raktamokshana (including leech therapy) are the classical options. See our Ayurvedic skin treatment.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 7,
-          title: 'Result',
-          description: 'Panchakarma treatment may help support improved digestion, natural detoxification, balanced doshas, enhanced energy levels, stress reduction, better sleep quality, improved skin wellness, joint and muscle comfort, stronger immunity, and overall holistic well-being.',
+          title: 'What You Leave With',
+          description: 'A completed programme planned around your needs, diet guidance for the weeks after, and follow-up with the doctor. Experiences vary from person to person.',
           hasLearnMore: false,
           expandedContent: null
         }
       ]
     },
     healingJourney: {
-      title: 'Your Panchakarma Journey',
-      description: 'A structured and personalized Panchakarma treatment process designed to support safe detoxification, dosha balance, and long-term wellness under the guidance of experienced Ayurveda specialists in Dubai.',
+      title: 'Your Panchakarma Journey: Three Phases',
+      description: 'Every programme follows the classical sequence, supervised by Dr. Shamna.',
       steps: [
         {
           id: 1,
           number: '01',
-          title: 'Step 1 – Consultation & Ayurvedic Assessment',
+          title: 'Step 1 – Consultation and Preparation (Purva Karma)',
           duration: 'Step 1',
           description: 'During your first visit, our Ayurveda specialist performs a detailed assessment of your body constitution (Prakriti), dosha balance, lifestyle habits, dietary patterns, and current health concerns. Based on this evaluation, a personalized Panchakarma treatment plan is created according to your individual wellness needs.',
           keyActivities: [
-            'Prakriti and dosha assessment',
-            'Lifestyle and dietary evaluation',
-            'Review of current health concerns',
-            'Personalized Panchakarma treatment planning',
-            'Wellness and detoxification consultation'
+            'Prakriti and health assessment',
+            'Checks with our GP if needed', 
+            'Snehapana (medicated ghee for a few days)',
+            'Daily Abhyanga and Swedana',
+            
           ],
           side: 'right'
         },
         {
           id: 2,
           number: '02',
-          title: 'Step 2 – Panchakarma Therapy Sessions',
+          title: 'Step 2 – Main Cleansing (Pradhana Karma)',
           duration: 'Step 2',
           description: 'Your Panchakarma therapy program begins with carefully selected Ayurvedic cleansing and rejuvenation therapies designed to eliminate toxins, support digestion, reduce stress, and restore internal balance naturally.',
           keyActivities: [
-            'Abhyanga herbal oil massage',
-            'Shirodhara relaxation therapy',
-            'Basti detoxification therapy',
-            'Nasya cleansing therapy',
-            'Virechana Ayurvedic cleansing procedures',
-            'Personalized dietary and lifestyle guidance'
+            'Vamana', 
+            'Virechana', 
+            'Basti', 
+            'Nasya or Raktamokshana as planned', 
+            'Rest on cleansing days',
+            'Close monitoring by the doctor',
           ],
           side: 'left'
         },
         {
           id: 3,
           number: '03',
-          title: 'Step 3 – Follow-Up & Wellness Monitoring',
+          title: ' Step 3 – Recovery (Paschat Karma)',
           duration: 'Step 3',
           description: 'Regular follow-up sessions help monitor your progress, assess the effectiveness of the therapies, and make necessary adjustments to support optimal healing and long-term wellness.',
           keyActivities: [
-            'Progress and wellness evaluation',
-            'Therapy adjustments when required',
-            'Personalized diet and lifestyle recommendations',
-            'Guidance for maintaining dosha balance',
-            'Long-term wellness support'
+            'Samsarjana Krama', 
+            'a step-by-step diet from thin rice gruel back to normal food',
+            'Rasayana when suitable', 
+            'follow-up review',
           ],
           side: 'right'
         }
       ]
     },
+
+    fiveTherapies: {
+  id: 'five-therapies',
+  heading: 'What Are the 5 Treatments of Panchakarma?',
+  intro: 'Panchakarma means "five actions". RamaCare offers all five; most people need only one to three, chosen by the doctor.',
+  table: [
+    ['Vamana (therapeutic emesis)', 'Controlled, medicine-induced vomiting, done once in the morning after preparation, to clear excess Kapha from the stomach and chest. Traditionally used for Kapha conditions such as some respiratory, skin and weight concerns.'],
+    ['Virechana (therapeutic purgation)', 'Medicated purgation to clear excess Pitta from the liver and intestines. Traditionally used for Pitta conditions such as acidity, heat and some skin problems.'],
+    ['Basti (medicated enema)', 'Herbal decoction and oil enemas given as a course. Considered the main therapy for Vata: joints, back, digestion and nerves. See [Basti therapy in Dubai](/services/basti-therapy-dubai/).'],
+    ['Nasya (nasal therapy)', 'Medicated oil or herbal drops through the nose, for conditions of the head, sinuses and neck. See [Nasya (Nasyam) therapy in Dubai](/services/nasya-therapy-dubai/).'],
+    ['Raktamokshana (bloodletting)', 'Removal of a small amount of blood, including the gentle method of leech therapy (Jalaukavacharana). Traditionally used for certain skin and blood-related conditions.']
+  ],
+  note: 'Read more: [Kerala Ayurvedic massage in Dubai](/services/abhyanga-massage-dubai/) · [Basti therapy in Dubai](/services/basti-therapy-dubai/) · [Nasya (Nasyam) therapy in Dubai](/services/nasya-therapy-dubai/) · [Ayurvedic skin treatment](/services/skin-diseases-treatment-dubai/)'
+},
+
+threePhases: {
+  id: 'three-phases',
+  heading: 'The Three Phases of Panchakarma',
+  table: [
+    ['1. Purva Karma (preparation)', 'Snehapana (small doses of medicated ghee for a few days), daily [Kerala Ayurvedic massage in Dubai](/services/abhyanga-massage-dubai/) (Abhyanga), Swedana (herbal steam) and sometimes Patrapottali (herbal leaf bolus), to loosen Ama and prepare the body.'],
+    ['2. Pradhana Karma (main cleansing)', 'One or more of the five therapies, chosen by the doctor, with rest on cleansing days.'],
+    ['3. Paschat Karma (recovery)', 'Samsarjana Krama: a gradual diet from thin rice gruel back to normal food over several days, plus Rasayana (rejuvenation) when suitable.']
+  ]
+},
+
+programmes: {
+  id: 'programmes',
+  heading: 'How Long Does Panchakarma Take? 7, 14 and 21-Day Programmes',
+  table: [
+    ['7-day Panchakarma', 'A shorter programme: preparation and a focused main therapy, or a yearly maintenance course.'],
+    ['14-day Panchakarma', 'Preparation, main cleansing and recovery for most adults with long-standing concerns.'],
+    ['21-day Panchakarma', 'A deeper programme for chronic conditions, for example a full Basti course.']
+  ],
+  note: 'The right length depends on your assessment. Programmes are outpatient: you come to the clinic for your sessions and go home afterwards. The consultation is from AED 200; the programme cost is confirmed in writing after the consultation, before you start.'
+},
+
+bestTime: {
+  id: 'best-time',
+  heading: 'When Is the Best Time for Panchakarma in Dubai?',
+  items: [
+    { text: 'Traditionally, Kerala Ayurveda considers Karkidakam (mid-July to mid-August, the monsoon month) the most favourable season for Panchakarma, known as Karkidaka Chikitsa.' },
+    { text: 'Ayurveda also recommends cleansing at a change of season (Ritu Sandhi), so many people choose the spring and autumn transitions (around March–April and October–November).' },
+    { text: 'In Dubai all therapies are given indoors, so Panchakarma can be done in any month. Many patients plan it during the summer holidays or the Karkidakam month.' },
+    { text: 'If you fast during Ramadan, plan Panchakarma before or after Ramadan, as the programme needs a specific diet.' },
+    { text: 'How often: once a year is common for prevention; the doctor may suggest twice a year for some conditions.' }
+  ]
+},
+
+prepareAftercare: {
+  id: 'prepare-aftercare',
+  heading: 'How to Prepare for Panchakarma, and What to Do After',
+  items: [
+    { text: 'Before: tell the doctor about all your medicines and health conditions, keep your work schedule light, and avoid alcohol and heavy meals for a few days.' },
+    { text: 'During: eat the light, warm diet advised, rest well, avoid cold drinks, strong air-conditioning drafts, midday sun, heavy exercise and late nights.' },
+    { text: 'After: follow the step-by-step recovery diet (Samsarjana Krama) for several days, return to normal food gradually, and attend your follow-up.' },
+    { text: 'On cleansing days (Vamana, Virechana) you may feel tired, so plan to rest at home that day.' }
+  ]
+},
+
+whoShouldNot: {
+  id: 'who-should-not',
+  heading: 'Who Should Not Have Panchakarma (or Should Wait)?',
+  intro: 'The doctor checks your health first. Panchakarma, or some of its therapies, may be postponed or not suitable if you:',
+  items: [
+    { text: 'are pregnant or breastfeeding' },
+    { text: 'have a fever, an active infection or are menstruating (some therapies are postponed)' },
+    { text: 'have severe heart, kidney or liver disease' },
+    { text: 'have uncontrolled blood pressure or diabetes' },
+    { text: 'are recovering from surgery, very weak or frail' }
+  ],
+  note: 'Vamana in particular is not given to children, older adults or people with heart disease. If needed, our general physician in the same building can check you before you start.'
+},
+
     benefits: {
-      title: 'Clinically-Observed Benefits',
-      description: 'Evidence-based results from our comprehensive Panchakarma treatment.',
-      comparisonTitle: 'Panchakarma Treatment vs Modern Detox Programs',
-      comparisonDescription: 'Compare our authentic Ayurvedic Panchakarma approach with modern detox programs',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Panchakarma Treatment',
-        traditional: 'Modern Detox Programs'
-      },
+      title: 'What Panchakarma Is Traditionally Used For',
+      description: 'Panchakarma is a classical Ayurvedic practice; experiences vary from person to person.',
+      hidePercentages: true,
       benefits: [
-        {
-          id: 1,
-          title: 'Supports Natural Detoxification',
-          percentage: 95,
-          description: 'Panchakarma therapies help remove accumulated toxins (Ama) from the body through traditional Ayurvedic cleansing procedures.',
-          hasLearnMore: true,
-          expandedContent: 'These therapies support internal purification, digestive wellness, and natural metabolic balance. Learn more about our <a href="/services/ayurveda-dubai/">Ayurveda Treatment Dubai</a> services.'
-        },
-        {
-          id: 2,
-          title: 'Improves Digestion & Metabolism',
-          percentage: 90,
-          description: 'Ayurvedic detox therapies may help improve digestive function and nutrient absorption naturally.',
-          hasLearnMore: true,
-          expandedContent: 'Panchakarma is commonly recommended for individuals experiencing bloating, digestive discomfort, and toxin accumulation.'
-        },
-        {
-          id: 3,
-          title: 'Helps Reduce Stress & Mental Fatigue',
-          percentage: 93,
-          description: 'Therapies such as <a href="/services/shirodhara-therapy-in-dubai/">Shirodhara Treatment Dubai</a> and <a href="/services/abhyanga-massage-dubai/">Abhyanga Massage Dubai</a> calm the nervous system.',
-          hasLearnMore: true,
-          expandedContent: 'These therapies are traditionally used to promote relaxation, improve sleep quality, and reduce mental stress naturally.'
-        },
-        {
-          id: 4,
-          title: 'Enhances Energy & Vitality',
-          percentage: 88,
-          description: 'Panchakarma therapies may help reduce fatigue and improve energy levels naturally.',
-          hasLearnMore: true,
-          expandedContent: 'Ayurvedic rejuvenation treatments are designed to restore balance and promote long-term wellness.'
-        },
-        {
-          id: 5,
-          title: 'Supports Better Sleep Quality',
-          percentage: 94,
-          description: 'Panchakarma therapies help promote relaxation and emotional balance.',
-          hasLearnMore: true,
-          expandedContent: 'Stress, mental exhaustion, and lifestyle imbalances can negatively affect sleep patterns. These therapies may contribute to improved sleep quality and mental calmness.'
-        },
-        {
-          id: 6,
-          title: 'Promotes Healthy Skin & Natural Glow',
-          percentage: 89,
-          description: 'Internal detoxification and improved circulation may help support healthier-looking skin.',
-          hasLearnMore: true,
-          expandedContent: 'Panchakarma is often recommended as part of a holistic wellness approach for individuals experiencing stress-related skin concerns. Explore our <a href="/services/skin-treatment-dubai/">Skin Treatment Dubai</a> services for additional skin care support.'
-        },
-        {
-          id: 7,
-          title: 'Helps Maintain Dosha Balance',
-          percentage: 91,
-          description: 'According to Ayurveda, maintaining balance between Vata, Pitta, and Kapha doshas is important for overall wellness.',
-          hasLearnMore: true,
-          expandedContent: 'Panchakarma therapies are designed to restore this balance and support better physical and emotional health naturally.'
-        },
-        {
-          id: 8,
-          title: 'Supports Joint & Muscle Comfort',
-          percentage: 92,
-          description: 'Panchakarma therapies, herbal oils, and Ayurvedic massage treatments may help support flexibility and muscle relaxation.',
-          hasLearnMore: true,
-          expandedContent: 'Individuals experiencing stiffness or physical discomfort may also benefit from our services.'
-        }
+        { id: 1, title: 'Resting and resetting digestion', description: null },
+        { id: 2, title: 'Balancing Vata, Pitta and Kapha', description: null },
+        { id: 3, title: 'Support for joint and back stiffness', description: null },
+        { id: 4, title: 'Support for recurring skin conditions', description: null },
+        { id: 5, title: 'Rest, sleep and stress relief', description: null },
+        { id: 6, title: 'A yearly preventive routine', description: null }
       ],
+      comparisonTitle: '7-Day vs 14–21-Day Panchakarma',
+      comparisonDescription: 'How shorter and longer programmes differ. The doctor recommends the length.',
+      comparisonHeaders: { feature: 'Aspect', ourTreatment: '7-day programme', traditional: '14–21-day programme' },
       comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic, addresses root causes',
-          conventional: 'Symptom-focused, temporary results'
-        },
-        {
-          feature: 'Depth of Detox',
-          ayurvedic: 'Deep tissue-level detoxification',
-          conventional: 'Surface-level cleansing'
-        },
-        {
-          feature: 'Personalization',
-          ayurvedic: 'Based on individual dosha and constitution',
-          conventional: 'Generic, one-size-fits-all'
-        },
-        {
-          feature: 'Safety',
-          ayurvedic: 'Natural, time-tested procedures',
-          conventional: 'May involve harsh chemicals or fasting'
-        },
-        {
-          feature: 'Long-term Benefits',
-          ayurvedic: 'Sustainable health improvements',
-          conventional: 'Temporary results, often rebound'
-        },
-        {
-          feature: 'Rejuvenation',
-          ayurvedic: 'Complete body and mind rejuvenation',
-          conventional: 'Limited to physical detox'
-        }
+        { feature: 'Best for', ayurvedic: 'Yearly maintenance or a first, gentle programme', conventional: 'Long-standing digestive, skin or joint concerns' },
+        { feature: 'Preparation', ayurvedic: 'Shorter Snehapana and oil therapies', conventional: 'Full preparation phase' },
+        { feature: 'Main therapies', ayurvedic: 'Usually one', conventional: 'One or more, or a full Basti course' },
+        { feature: 'Recovery diet', ayurvedic: 'A few days', conventional: 'Longer, step-by-step return to normal food' },
+        { feature: 'Time off work', ayurvedic: 'Rest on the cleansing day', conventional: 'A lighter schedule for most of the programme' }
       ]
     },
+
     panchakarmaWhyChoose: {
       whyChoose: {
         title: 'Why Choose RamaCare Polyclinic for Panchakarma Treatment in Dubai?',
         intro: 'At RamaCare Polyclinic, we provide personalized Panchakarma therapies in a safe, hygienic, and patient-focused environment under the supervision of experienced Ayurveda specialists in Dubai.',
         features: [
-          {
-            id: 1,
-            title: 'Experienced Ayurveda Specialists',
-            description: 'Our DHA-licensed Ayurveda professionals create customized Panchakarma treatment plans based on your body constitution, health concerns, and wellness goals.'
-          },
-          {
-            id: 2,
-            title: 'Personalized Holistic Approach',
-            description: 'Each Panchakarma program is tailored according to your dosha balance, lifestyle, and individual wellness needs to ensure effective and holistic healing.'
-          },
-          {
-            id: 3,
-            title: 'Authentic Ayurvedic Therapies',
-            description: 'We combine traditional Ayurvedic principles with modern patient care standards to provide safe and effective detoxification and rejuvenation therapies.'
-          },
-          {
-            id: 4,
-            title: 'Comprehensive Wellness Support',
-            description: 'Our treatments focus on physical wellness, mental relaxation, stress management, detoxification, and long-term lifestyle improvement.'
-          },
-          {
-            id: 5,
-            title: 'Comfortable & Hygienic Environment',
-            description: 'We maintain high standards of hygiene, patient safety, and comfort throughout every stage of the Panchakarma treatment process.'
-          }
+          { title: 'All Five Classical Therapies', description: 'Vamana, Virechana, Basti, Nasya and Raktamokshana, including leech therapy, all available in one clinic.' },
+          { title: 'Planned by a BAMS Doctor', description: 'Dr. Shamna Keloth Meethal assesses you and sets the programme length and therapies.' },
+          { title: 'Experienced, Same-Gender Therapists', description: 'Syamkumar (17+ years in Panchakarma) for men and Mariya (14+ years in the UAE) for women, both Kerala-trained.' },
+          { title: 'Inside a Polyclinic', description: 'Our general physician can check you before and during your programme if needed.' },
+          { title: 'Clear Plan and Cost', description: 'Consultation from AED 200; programme length and cost confirmed in writing before you start. Open every day, 10am–10pm.' }
         ]
       },
       conditions: {
@@ -7327,159 +7034,34 @@ dubaiSkin: {
           'General detoxification and wellness needs'
         ]
       }
-    },
-    pricing: {
-      title: 'Honest Pricing | Personalised Panchakarma Programs',
-      description: 'Your body and mind deserve a holistic, results-driven approach. Our treatment packages are designed with transparent pricing and customised care, ensuring you get the right [Panchakarma Treatment in Dubai] based on your dosha, health concerns, and long-term wellness goals.',
-      packages: [
-        {
-          id: 1,
-          title: 'Essential Care Package',
-          subtitle: 'Ideal for mild detoxification and wellness improvement',
-          duration: '6 sessions over 3 months',
-          features: [
-            'Comprehensive Prakriti and health assessment',
-            '6 rejuvenating Shiro Abhyanga therapy sessions',
-            'Herbal body nourishment and detox treatments',
-            'Personalised diet and lifestyle guidance',
-            'At-home care instructions for ongoing support'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        },
-        {
-          id: 2,
-          title: 'Advanced Panchakarma Package – Most Popular',
-          subtitle: 'Recommended for chronic conditions and deeper rejuvenation',
-          duration: '12 sessions over 4 months',
-          features: [
-            'Detailed dosha and root-cause evaluation',
-            '12 Shirodhara with therapeutic massage sessions',
-            'Nasya Karma therapy (6 sessions)',
-            'Customised herbal formulations for internal balance',
-            'Personalised diet and lifestyle coaching',
-            'Monthly progress monitoring and adjustments'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: true
-        },
-        {
-          id: 3,
-          title: 'Premium Transformation Package',
-          subtitle: 'Complete body, mind & wellness rejuvenation program',
-          duration: '24 sessions over 6 months',
-          features: [
-            'All the benefits of the Advanced Package',
-            'Full Panchakarma detoxification for deep internal cleansing',
-            'Specialised body rejuvenation therapies',
-            'Stress management and relaxation sessions',
-            'Quarterly health and progress evaluations',
-            'Long-term wellness and maintenance support'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        }
-      ]
     }
     ,
 
     faq: {
-      title: 'Frequently Asked Questions (FAQs)',
-      description: 'Panchakarma Treatment at Ramacarepolyclinic',
-      resourcesHeading: 'Complete Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Panchakarma treatment?',
-          answer:
-            'Panchakarma is an Ayurvedic detox and rejuvenation therapy that removes toxins, balances doshas, improves digestion, strengthens immunity, and enhances overall physical and mental health through natural, personalized treatments.'
-        },
-        {
-          id: 2,
-          question: 'How does Panchakarma work?',
-          answer:
-            'Panchakarma works by combining internal cleansing, herbal therapies, massages, and lifestyle guidance. This holistic approach detoxifies the body, supports organ function, reduces stress, and restores physical and mental balance naturally.'
-        },
-        {
-          id: 3,
-          question: 'Who can benefit from Panchakarma treatment?',
-          answer:
-            'Adults with chronic fatigue, digestive issues, stress, joint pain, skin problems, obesity, or lifestyle disorders can benefit. Panchakarma also supports overall wellness, energy levels, and long-term prevention of illnesses.'
-        },
-        {
-          id: 4,
-          question: 'Is Panchakarma safe?',
-          answer:
-            'Yes. Panchakarma is completely safe when performed under the supervision of qualified Ayurvedic doctors at a DHA-licensed clinic, following traditional protocols, personalized assessments, and using authentic herbal medicines and therapies.'
-        },
-        {
-          id: 5,
-          question: 'How long does a Panchakarma program take?',
-          answer:
-            'A typical Panchakarma program lasts between 7 and 21 days, depending on individual needs, health conditions, and treatment goals. Duration may vary based on detox requirements and patient constitution.'
-        },
-        {
-          id: 6,
-          question: 'What therapies are included in Panchakarma?',
-          answer:
-            'Panchakarma includes therapies like Abhyanga (herbal oil massage), Shirodhara (oil dripping on forehead), Basti (herbal enema), Virechana (purgation therapy), and Nasya (nasal therapy), all customized for individual health conditions.'
-        },
-        {
-          id: 7,
-          question: 'Can Panchakarma help with stress and mental fatigue?',
-          answer:
-            'Yes. Panchakarma therapies like Shirodhara and Abhyanga calm the nervous system, reduce stress and anxiety, improve sleep quality, enhance mental clarity, and restore emotional balance naturally and effectively.'
-        },
-        {
-          id: 8,
-          question: 'Can it help with joint pain or arthritis?',
-          answer:
-            'Yes. Panchakarma therapies improve blood circulation, reduce inflammation, strengthen muscles and joints, relieve stiffness and chronic pain, and provide long-term support for joint mobility and overall physical wellness.'
-        },
-        {
-          id: 9,
-          question: 'Do I need to follow a special diet during Panchakarma?',
-          answer:
-            'Yes. A personalized Ayurvedic diet is recommended to enhance detoxification, support digestion, and promote healing. The diet includes easily digestible, seasonal, herbal foods suitable for your dosha type.'
-        },
-        {
-          id: 10,
-          question: 'Will I feel discomfort during the therapy?',
-          answer:
-            'Most therapies are relaxing, but mild discomfort or temporary detox reactions may occur. These are normal and indicate the body is releasing toxins and adjusting to treatments for optimal results.'
-        },
-        {
-          id: 11,
-          question: 'Can Panchakarma improve skin and hair health?',
-          answer:
-            'Yes. By eliminating toxins, improving digestion, and balancing doshas, Panchakarma supports healthier skin and hair, reduces acne or eczema, strengthens hair roots, and promotes natural radiance and glow.'
-        },
-        {
-          id: 12,
-          question: 'Is Panchakarma suitable for everyone?',
-          answer:
-            'Panchakarma is generally suitable for healthy adults. Pregnant women, patients with serious medical conditions, or those with acute illness should consult our Ayurvedic doctors before starting a personalized treatment program.'
-        },
-        {
-          id: 13,
-          question: 'How often should Panchakarma be done?',
-          answer:
-            'Frequency depends on individual constitution, lifestyle, and health goals. Some patients may benefit from one or two programs per year, while chronic conditions may require more regular detox and rejuvenation therapy.'
-        },
-        {
-          id: 14,
-          question: 'Can Panchakarma help with lifestyle disorders?',
-          answer:
-            'Yes. Panchakarma supports weight management, blood sugar control, hypertension, and other lifestyle-related disorders by detoxifying the body, improving metabolism, balancing doshas, reducing inflammation, and enhancing overall health naturally.'
-        },
-        {
-          id: 15,
-          question: 'Why choose ramacarepolyclinic for Panchakarma in Dubai?',
-          answer:
-            'ramacarepolyclinic offers DHA-licensed care, experienced Ayurvedic doctors, personalized Panchakarma programs, authentic herbal therapies, and a patient-focused approach to ensure safe, effective, and long-term detoxification and rejuvenation results.'
-        }
-      ],
-
+  title: 'Panchakarma Treatment: Frequently Asked Questions',
+  description: 'Answers from our Ayurveda team in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is Panchakarma treatment?", answer: "Panchakarma is Ayurveda's classical cleansing programme. It has three phases: preparation (medicated ghee, oil massage and steam), one or more of the five main therapies, and a gradual recovery diet. At RamaCare in Jumeirah 1 it is planned by Dr. Shamna Keloth Meethal (BAMS) as a 7, 14 or 21-day programme." },
+    { id: 2, question: "What are the 5 treatments of Panchakarma?", answer: "Vamana (therapeutic emesis), Virechana (therapeutic purgation), Basti (medicated enema), Nasya (nasal therapy) and Raktamokshana (bloodletting, including leech therapy). RamaCare offers all five; most people need one to three, chosen by the doctor." },
+    { id: 3, question: "How long does Panchakarma take?", answer: "Programmes usually last 7, 14 or 21 days. Seven days suits maintenance or a first programme; 14 to 21 days suits long-standing concerns. The doctor recommends the length after your consultation." },
+    { id: 4, question: "How much does Panchakarma cost in Dubai?", answer: "At RamaCare the first step is a consultation with Dr. Shamna, from AED 200. Because each programme is planned for you (length and therapies), the programme cost is confirmed in writing after the consultation, before you start." },
+    { id: 5, question: "What happens on a typical Panchakarma day?", answer: "On preparation days you receive oil massage, herbal steam and, in the early days, a measured dose of medicated ghee. On cleansing days you have the main therapy, such as Virechana or Basti, then rest. You come to the clinic for your sessions and go home afterwards." },
+    { id: 6, question: "What is Vamana, and is it uncomfortable?", answer: "Vamana is controlled vomiting induced with herbal medicines, done once in the morning after preparation, to clear excess Kapha. It is done under close supervision and only when the doctor finds it suitable; you rest afterwards." },
+    { id: 7, question: "What is Virechana?", answer: "Virechana is therapeutic purgation with herbal medicines, used mainly for Pitta-related conditions. You can expect several bowel movements on the day, so plan to rest at home." },
+    { id: 8, question: "What is Raktamokshana or leech therapy?", answer: "Raktamokshana is the classical removal of a small amount of blood. Leech therapy (Jalaukavacharana) is its gentlest form and is traditionally used for certain skin and blood-related conditions. It is only done after the doctor's assessment." },
+    { id: 9, question: "What is Snehapana?", answer: "Snehapana is taking small, gradually increasing doses of medicated ghee for a few days before cleansing. It is part of the preparation phase and is always measured by the doctor." },
+    { id: 10, question: "What should I eat during and after Panchakarma?", answer: "During the programme you eat a light, warm diet such as rice gruel, kitchari and soups. Afterwards you follow Samsarjana Krama, a step-by-step return from thin gruel to normal food over several days." },
+    { id: 11, question: "When is the best time for Panchakarma in Dubai?", answer: "Kerala tradition favours Karkidakam (mid-July to mid-August), and Ayurveda also recommends seasonal transitions. Because all therapies are indoors in Dubai, any month works; plan around Ramadan if you fast." },
+    { id: 12, question: "How often should Panchakarma be done?", answer: "Once a year is common as preventive care. The doctor may suggest twice a year for some long-standing conditions." },
+    { id: 13, question: "Can I work during Panchakarma?", answer: "On preparation days many people keep a light work schedule. On main cleansing days, such as Vamana or Virechana, plan to rest at home." },
+    { id: 14, question: "Does Panchakarma have side effects?", answer: "Tiredness, loose stools on Virechana days and mild discomfort during some therapies are expected and monitored. That is why the doctor checks your health first and supervises every cleansing step." },
+    { id: 15, question: "Who should not have Panchakarma?", answer: "It may be postponed or unsuitable during pregnancy or breastfeeding, fever or infection, severe heart, kidney or liver disease, uncontrolled blood pressure or diabetes, or after recent surgery. Vamana is not given to children, older adults or people with heart disease." },
+    { id: 16, question: "Can Panchakarma help with back pain, psoriasis or weight loss?", answer: "Basti is the classical therapy for Vata conditions such as back and joint stiffness, Virechana and Raktamokshana for Pitta skin conditions such as psoriasis, and Vamana for Kapha and weight. It is complementary care; results vary, and medical treatment should continue." },
+    { id: 17, question: "Do you have male and female therapists?", answer: "Yes. Syamkumar Sasidharan treats male patients and Mariya Thayyil Muhammed treats female patients; both are Kerala-trained." },
+    { id: 18, question: "Is RamaCare convenient from Palm Jumeirah and Emirates Hills?", answer: "Yes. RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah 1, about 20–25 minutes from Palm Jumeirah and Emirates Hills via Sheikh Zayed Road, and a few minutes from Satwa, Al Wasl and City Walk. Parking is available nearby." },
+    { id: 19, question: "Is Panchakarma covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic, and we provide itemised invoices and reports for your claim." }
+  ],
       resources: [
         {
           id: 1,
@@ -7489,90 +7071,84 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
@@ -7580,8 +7156,14 @@ dubaiSkin: {
       ]
     },
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who experienced transformation with Panchakarma treatment',
+     title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 182 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '17+', label1: 'Years in Panchakarma', label2: 'Syamkumar Sasidharan', target: 17 }
+      ],
       testimonials: [
         {
           id: 1,
@@ -7635,13 +7217,13 @@ dubaiSkin: {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Panchakarma Treatment in Dubai Today',
-      description: 'Detoxify your body, restore balance, and rejuvenate naturally with Panchakarma Treatment in Dubai at Ramacarepolyclinic.',
+      title: 'Book Your Panchakarma Consultation',
+      description: 'See Dr. Shamna in Jumeirah 1, from AED 200, to plan your 7, 14 or 21-day programme. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: {
@@ -7652,26 +7234,21 @@ dubaiSkin: {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
         {
           title: 'DHA Licensed',
           description: 'Certified Ayurvedic Facility'
         },
-        {
-          title: 'Experienced Team',
-          description: '15+ Years Combined'
-        },
-        {
-          title: '500+ Sessions',
-          description: 'Completed'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+       { title: 'Panchakarma Therapist', 
+        description: 'Syamkumar, 17+ years' 
+      }, 
+       { title: '1,000+ Ayurveda patients', 
+        description: 'In the last 2 years' 
+      }, 
+       { title: '4.8/5 Google rating', 
+        description: '218 reviews' 
+      }
       ]
     }
   },
@@ -7682,198 +7259,112 @@ dubaiSkin: {
 
   'ayurveda-dubai-gastrointestinal-diseases-treatment': {
     hero: {
-      subtitle: 'Effective Care for a Healthy Digestive System',
-      description: 'Digestive disorders can affect energy levels, immunity, metabolism, mental wellness, and overall quality of life.At RamaCare Polyclinic, we provide comprehensive Gastrointestinal Diseases Treatment in Dubai using a combination of advanced medical diagnostics and Ayurvedic healing principles to identify and treat the root cause naturally.\n\nOur treatment approach focuses on restoring digestive balance, improving gut function, reducing inflammation, and supporting long-term gastrointestinal wellness instead of offering only temporary symptom relief.\n\nMany patients seek Gastrointestinal Diseases Treatment in Dubai for conditions such as acid reflux, bloating, constipation, IBS, ulcers, gastritis, poor digestion, and chronic digestive discomfort caused by stress, unhealthy eating habits, and lifestyle imbalance.',
-      rating: '500+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '500+',
-          label: 'Digestive Patients Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years Combined Experience'
-        }
-      ],
-      ctaButtons: {
-        primary: {
-          text: 'Book Free Digestive Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
-      },
-      features: [
-        'DHA-Licensed Clinic',
-        'Experienced Gastroenterologists and Ayurvedic Doctors',
-        'Personalized Digestive Health Solutions'
-      ],
-      image: {
-        src: '/images/gastroin.jpg',
-        alt: 'Gastrointestinal diseases treatment provided by specialists to improve digestive health and manage related symptoms effectively.'
-      },
-      medicalNotice: {
-        text: 'Medical Notice: Results may vary depending on factors such as condition severity, treatment adherence, and individual response. Ayurvedic gastrointestinal treatment is designed to complement medical care, not replace it. All treatments are provided in a DHA-approved Ayurvedic facility.',
-        show: true
-      }
+    title: 'Ayurvedic Treatment for Acidity, IBS and Digestive Problems in Dubai',
+    subtitle: 'Ayurvedic gastrointestinal care in Jumeirah 1, with a GP in the same building',
+    description: 'At RamaCare Polyclinic in Jumeirah 1, Dubai, Ayurvedic treatment for digestive problems such as acidity, GERD, IBS, bloating and constipation starts with a consultation with Dr. Shamna Keloth Meethal (BAMS), from AED 200. If your symptoms need medical checks, our general physician in the same building can examine you and arrange tests. Your plan may include herbal medicines such as Triphala, Avipattikar or Hingvastak, therapies such as Takradhara, Dhanyamla Dhara, Virechana or Basti, and diet changes for your dosha.',
+    rating: '4.8★ Google rating',
+    topBadges: [
+      { icon: 'location', text: 'Jumeirah 1, Dubai' },
+      { icon: 'building', text: 'DHA-licensed polyclinic' },
+      { icon: 'star', text: '4.8★ Google rating' }
+    ],
+    stats: [
+      { id: 1, number: 'AED 200', label: 'Consultation from' },
+      { id: 2, number: 'GP + BAMS', label: 'Doctors in one building' },
+      { id: 3, number: '11+ yrs', label: 'Dr. Shamna, BAMS' }
+    ],
+    ctaButtons: {
+      primary: { text: 'Book Digestive Consultation', icon: 'calendar', link: '#book-now' },
+      secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
     },
+    features: [
+      'Ayurvedic doctor (BAMS) and GP in the same building',
+      'Acidity, GERD, IBS, bloating, constipation and indigestion',
+      'Takradhara, Dhanyamla Dhara, Virechana and Basti when suitable',
+      'Herbal medicines such as Triphala, Avipattikar and Hingvastak',
+      'Diet plan for your dosha and the Dubai climate'
+    ],
+    image: {
+      src: '/images/gastroin.jpg',
+      alt: 'Ayurvedic treatment for acidity and digestive problems at RamaCare Polyclinic, Jumeirah 1, Dubai'
+    },
+    medicalNotice: {
+      text: 'Ayurvedic digestive care supports, and does not replace, medical care. Warning signs such as weight loss, blood in the stool, vomiting blood, difficulty swallowing or severe pain need a medical check first. Do not stop prescribed medicines without your doctor\'s advice. Provided at a DHA-licensed polyclinic (licence 2036418).',
+      show: true
+    }
+  },
     doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our Gastrointestinal Treatment Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in digestive health and gastrointestinal disorders.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar, DOCTORS.mariya
-      ]
-    },
-    certifications: {
-      title: 'Certifications & Accreditations',
-      certifications: [
-        {
-          id: 1,
-          title: 'DHA Licensed',
-          subtitle: 'Dubai Health Authority'
-        },
-        {
-          id: 2,
-          title: 'AYUSH Certified',
-          subtitle: 'Ministry of Ayurveda'
-        },
-        {
-          id: 3,
-          title: 'ISO 9001:2015',
-          subtitle: 'Quality Management'
-        },
-        {
-          id: 4,
-          title: 'NABH Accredited',
-          subtitle: 'Healthcare Standards'
-        },
-        {
-          id: 5,
-          title: 'Member NAMA',
-          subtitle: 'National Association'
-        }
-      ]
-    },
+    badge: 'Your Ayurveda Team',
+    title: 'Your Ayurvedic Doctor and Therapists for Digestive Care',
+    description: 'Dr. Shamna Keloth Meethal (BAMS, 11+ years) assesses your digestion and plans your care, working with our general physician when medical checks are needed. Therapies such as Takradhara and Basti are given by Kerala-trained therapists of your own gender. All three speak English, Malayalam and Hindi.',
+    doctors: DOCTOR_GROUPS.AYURVEDA
+  },
+   
     overview: {
-      title: 'Understanding Gastrointestinal Diseases Treatment in Dubai',
+      title: 'Understanding Ayurvedic Digestive Treatment',
       problemIntro: {
-        title: 'The Problem: Common Digestive Health Concerns',
-        description: 'Many individuals searching for gastrointestinal disease treatment in Dubai experience chronic digestive issues caused by poor dietary habits, stress, gut inflammation, irregular lifestyle patterns, and weakened digestive function.Without proper treatment, digestive disorders may continue to affect energy, immunity, metabolism, and overall health.'
+        title: 'Common Digestive Problems in Dubai',
+        description: 'Acidity, bloating, IBS and constipation are common in Dubai, often linked to late meals, eating out, spicy and fried food, cold drinks, stress and the summer heat. Ayurveda traces most digestive problems to weak digestive fire (Agni) and the build-up of Ama.'
       },
       solutionIntro: {
-        title: 'Our Solution: Gastrointestinal Care in Dubai',
-        description: 'Our Gastrointestinal Diseases Treatment in Dubai focuses on identifying the root cause of digestive imbalance and creating personalized treatment plans that support long-term digestive wellness.We combine modern diagnostics, digestive therapies, Ayurvedic support, and lifestyle modification strategies to improve gut function naturally.'
+        title: 'How RamaCare Approaches Digestive Problems',
+        description: 'Our general physician can check for medical causes and arrange tests when needed. Dr. Shamna (BAMS) then plans Ayurvedic care: herbal medicines, therapies such as Takradhara or Basti, and diet and routine changes suited to your dosha.'
       },
 
       leftCards: [
-        {
-          id: 1,
-          title: 'Understanding Gastrointestinal Diseases Treatment in Dubai',
-          description:
-            'Gastrointestinal diseases affect the digestive tract, including the stomach, intestines, liver, pancreas, and colon. Poor digestion and gut imbalance may interfere with nutrient absorption, immunity, metabolism, and overall body function. Our Gastrointestinal Diseases Treatment in Dubai combines evidence-based medical evaluation with Ayurvedic therapies to improve digestive efficiency and support natural healing. Unlike symptom-focused approaches, we focus on correcting internal imbalance, improving digestive fire (Agni), restoring healthy gut flora, and supporting long-term digestive health naturally.'
-        },
-        {
-          id: 2,
-          title: 'What Are Gastrointestinal Diseases?',
-          description:
-            'Gastrointestinal diseases include a wide range of digestive conditions that affect normal digestive function. Proper diagnosis and treatment are essential to prevent long-term digestive complications and improve overall wellness.',
-          listItems: [
-            'Acid reflux and GERD',
-            'Gastritis and stomach inflammation',
-            'Constipation and irregular bowel movement',
-            'Diarrhea and digestive infection',
-            'Irritable Bowel Syndrome (IBS)',
-            'Inflammatory Bowel Disease (IBD)',
-            'Bloating and gas formation',
-            'Peptic ulcers',
-            'Poor digestion and weak metabolism',
-            'Liver and digestive imbalance'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Who Needs Gastrointestinal Diseases Treatment in Dubai?',
-          description:
-            'This treatment may be recommended for individuals experiencing:',
-          listItems: [
-            'Chronic indigestion or acidity',
-            'Frequent bloating and gas',
-            'Constipation or irregular digestion',
-            'Acid reflux and heartburn',
-            'IBS symptoms and abdominal discomfort',
-            'Poor appetite or nutrient absorption',
-            'Digestive fatigue and weakness',
-            'Chronic gut inflammation',
-            'Stress-related digestive problems',
-            'Recurring digestive imbalance'
-          ]
-        }
-      ],
+          {
+            id: 1,
+            title: 'What Is Ayurvedic Treatment for Digestive Problems?',
+            description: 'Ayurvedic gastrointestinal treatment looks at why digestion is disturbed: your dosha, digestive fire (Agni), meal timing, food choices and stress. It combines herbal medicines, digestive therapies, and diet and routine changes, and works alongside medical care from our GP when needed.'
+          },
+          {
+            id: 2,
+            title: 'Digestive Problems We See',
+            description: 'Our Ayurvedic doctor commonly sees:',
+            listItems: [
+              'Acidity, heartburn and GERD (Amlapitta)',
+              'IBS, with diarrhoea, constipation or both (Grahani)',
+              'Constipation (Vibandha)',
+              'Gas and bloating (Anaha / Adhmana)',
+              'Indigestion and heaviness after meals (Ajirna)',
+              'Gastritis, alongside medical treatment from our GP',
+              'Stress-related digestive problems'
+            ]
+          },
+          {
+            id: 3,
+            title: 'Who Comes to Us?',
+            description: 'Adults (18+) who:',
+            listItems: [
+              'Have recurring acidity, bloating or bowel changes',
+              'Have IBS diagnosed and want to add Ayurvedic care',
+              'Rely on antacids and want to understand their triggers',
+              'Want a diet that suits their digestion and the Dubai climate'
+            ]
+          },
+          {
+            id: 4,
+            title: 'Duration and Fee',
+            description: 'Consultation: 45–60 minutes, from AED 200 \n\n Care plan: often several weeks, reviewed at each follow-up \n\n Therapy costs: confirmed in writing before you start'
+          }
+        ],
 
       rootCauses: [
-        {
-          id: 1,
-          title: 'Chronic Indigestion & Bloating',
-          description: 'Poor digestion may lead to heaviness, bloating, excessive gas, discomfort after meals, and sluggish metabolism. Weak digestive fire (Agni) in Ayurveda is often associated with toxin accumulation and digestive imbalance.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Acid Reflux & Heartburn',
-          description: 'Excess stomach acid and poor digestive function may contribute to acidity, burning sensation, chest discomfort, and acid reflux symptoms that affect daily comfort and sleep quality.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 3,
-          title: 'IBS & Irregular Bowel Movement',
-          description: 'Irritable bowel symptoms such as constipation, diarrhea, abdominal pain, and irregular digestion may significantly affect quality of life and emotional wellness.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 4,
-          title: 'Gut Inflammation & Ulcers',
-          description: 'Persistent inflammation in the stomach or intestines may lead to gastritis, ulcers, pain, digestive irritation, and reduced digestive efficiency if left untreated.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 5,
-          title: 'Poor Nutrient Absorption & Low Energy',
-          description: 'Weak digestion may reduce the body’s ability to absorb nutrients properly, leading to fatigue, weakness, reduced immunity, and poor metabolism.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 6,
-          title: 'Lifestyle & Dietary Imbalance',
-          description: 'Stress, irregular eating habits, processed food, dehydration, and poor sleep patterns can negatively affect digestive health and worsen gastrointestinal disorders over time.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        }
-      ],
+            { id: 1, title: 'Late and Heavy Dinners', description: 'Eating late, large meals, especially after long working days, is one of the commonest triggers of acidity and bloating.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+            { id: 2, title: 'Spicy, Fried and Sour Food', description: 'Ayurveda links them to aggravated Pitta, felt as burning, acidity and loose stools.', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+            { id: 3, title: 'Iced Drinks and Air-Conditioning', description: 'Cold drinks with meals are believed in Ayurveda to dampen digestive fire (Agni), leading to heaviness and gas.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+            { id: 4, title: 'Stress and Irregular Routines', description: 'Stress, irregular meals and poor sleep are strongly linked to IBS and acidity flare-ups.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+            { id: 5, title: 'Coffee, Energy Drinks and Alcohol', description: 'Common in office life, and frequent triggers of heartburn and reflux.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+            { id: 6, title: 'Weak Agni and Ama', description: 'In Ayurveda, weak digestive fire leaves undigested residue (Ama), felt as a coated tongue, heaviness and tiredness.', severity: 'Ayurvedic view', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
+          ],
 
       quickFacts: [
-        { label: 'Treatment Type', value: 'Digestive health management' },
-        { label: 'Approach', value: 'Current medicine and Ayurveda' },
-        { label: 'Age Group', value: 'Adults (18+)' },
-        { label: 'Pain Level', value: 'Benign or none' },
-        { label: 'Downtime', value: 'Tiniest' },
-        { label: 'Safety', value: 'DHA-approved protocols' }
+        { label: 'Treatment', value: 'Ayurvedic digestive care (complementary)' },
+        { label: 'Doctors', value: 'Ayurvedic doctor (BAMS) with a GP in the same building' },
+        { label: 'Therapies', value: 'Takradhara, Dhanyamla Dhara, Virechana, Basti' },
+        { label: 'Medicines', value: 'Triphala, Avipattikar, Hingvastak (as prescribed)' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Suitable for', value: 'Adults (18+)' }
       ],
 
       approachCards: [
@@ -7893,15 +7384,15 @@ dubaiSkin: {
         },
         {
           id: 3,
-          title: 'Inflammation Control & Gut Healing',
-          description: 'Reducing gut inflammation is essential for improving digestive comfort and restoring healthy digestion.',
+          title: 'Calming Acidity (Pitta)',
+          description: 'Cooling herbs such as Avipattikar, Takradhara and a Pitta-calming diet are traditionally used for acidity and heartburn.',
           hasLearnMore: true,
           expandedContent: 'Benefits may include reduced stomach irritation, healing support for the intestinal lining, improved digestive comfort, and better digestive stability. Goal: Promote long-term gut healing and digestive balance.'
         },
         {
           id: 4,
-          title: 'Improved Digestion & Nutrient Absorption',
-          description: 'Healthy digestion supports energy production, metabolism, and immunity.',
+          title: 'Relieving Gas and Bloating (Vata)',
+          description: 'Hingvastak, warm cooked food and regular meal times are traditionally used for gas and bloating; Basti is the classical therapy for Vata.',
           hasLearnMore: true,
           expandedContent: 'Our digestive wellness programs may help improve digestion efficiency, enhance nutrient absorption, support healthy metabolism, and increase vitality and energy levels. Goal: Strengthen digestion and overall body function naturally.'
         },
@@ -7914,13 +7405,82 @@ dubaiSkin: {
         },
         {
           id: 6,
-          title: 'Gut Microbiome Restoration',
-          description: 'Balanced gut bacteria are essential for digestive health, immunity, and metabolism.',
+          title: 'Regular Bowels',
+          description: 'Triphala (as prescribed), enough fluids, ghee and fibre are traditionally used for constipation; Virechana may be advised for some patients.',
           hasLearnMore: true,
           expandedContent: 'Our programs may help reduce bloating and gas, improve bowel regularity, strengthen immunity, and restore healthy gut flora. Goal: Improve long-term digestive wellness naturally.'
         }
       ]
     },
+
+  redFlags: {
+  id: 'see-a-doctor-first',
+  heading: 'When to See a Doctor First',
+  intro: 'Some digestive symptoms need a medical check before any Ayurvedic treatment. At RamaCare, our general physician is in the same building. See a doctor first if you have:',
+  items: [
+    { text: 'unexplained weight loss or loss of appetite' },
+    { text: 'blood in the stool, black stools, or vomiting blood' },
+    { text: 'difficulty or pain when swallowing' },
+    { text: 'severe, constant or night-time abdominal pain' },
+    { text: 'a new change in bowel habit lasting several weeks, especially over the age of 50' },
+    { text: 'fever, persistent vomiting, or signs of anaemia such as unusual tiredness' }
+  ],
+  note: 'See our [GP page for gastrointestinal disorders](/services/gastrointestinal-disorders-dubai/). Ayurvedic care can then be added alongside your medical treatment.'
+},
+
+conditionGuide: {
+  id: 'digestive-condition-guide',
+  heading: 'Ayurvedic Treatment for Common Digestive Problems',
+  table: [
+    ['Acidity, heartburn and GERD (Amlapitta)', 'Linked to aggravated Pitta. Ayurvedic treatment for acidity may include Avipattikar, Takradhara, a Pitta-calming diet and earlier, lighter dinners.'],
+    ['IBS (Grahani)', 'Linked to weak Agni and Vata. Ayurvedic treatment for IBS may include digestive herbs, Takra (medicated buttermilk), regular warm meals, stress support and, when suitable, Basti.'],
+    ['Constipation (Vibandha)', 'Linked to Vata. Ayurvedic treatment for constipation may include Triphala as prescribed, fluids, ghee, fibre and, for some patients, Virechana or Basti.'],
+    ['Gas and bloating (Anaha / Adhmana)', 'Linked to Vata and weak Agni. Ayurvedic treatment for gas and bloating may include Hingvastak, ginger and cumin, warm cooked food and avoiding cold drinks with meals.'],
+    ['Indigestion (Ajirna)', 'Heaviness after meals. Care may include digestive spices, smaller meals, the main meal at midday and Dhanyamla Dhara for some patients.'],
+    ['Gastritis', 'Burning or pain in the upper stomach. Our GP checks for causes such as H. pylori; Ayurvedic Pitta-calming care can be added alongside.']
+  ],
+  note: 'Each plan depends on your assessment. New to Ayurveda? Start with our [Ayurvedic gut health guide and Agni self-check](/services/ayurvedic-gut-health-dubai/).'
+},
+
+therapiesHerbs: {
+  id: 'digestive-therapies',
+  heading: 'Ayurvedic Therapies and Herbal Medicines for Digestion',
+  table: [
+    ['Takradhara and Takra therapy', 'Medicated buttermilk poured over the forehead (Takradhara) or taken as part of the diet; traditionally used for Pitta, heat and stress-related digestive problems.'],
+    ['Dhanyamla Dhara', 'A warm stream of fermented herbal liquid over the body; traditionally used for heaviness, sluggish digestion and Vata-Kapha conditions.'],
+    ['Virechana', 'Supervised therapeutic purgation, one of the Panchakarma therapies; traditionally used for Pitta-related digestive problems.'],
+    ['Basti', 'Medicated enema therapy, the classical Panchakarma therapy for Vata conditions such as IBS with constipation and bloating. See [Basti therapy in Dubai](/services/basti-therapy-dubai/).'],
+    ['Triphala', 'A classical three-fruit formula traditionally used for regular bowels; taken only as prescribed.'],
+    ['Avipattikar churna', 'A classical formula traditionally used for acidity and heartburn (Pitta).'],
+    ['Hingvastak churna', 'A classical formula with asafoetida, traditionally used for gas, bloating and poor appetite.']
+  ],
+  note: 'Herbal medicines are prescribed by Dr. Shamna after your assessment, not sold as standard packages. Tell the doctor about any other medicines you take. Read more: [Panchakarma](/services/panchakarma-treatment-dubai/) · [Basti therapy in Dubai](/services/basti-therapy-dubai/).'
+},
+
+dubaiDigestion: {
+  id: 'dubai-digestion',
+  heading: 'Why Acidity and Bloating Get Worse in Dubai, and What Helps',
+  items: [
+    { text: 'Summer heat (May–October): Pitta rises, so acidity and loose stools increase. Favour cooling foods, coconut water and buttermilk, and limit spicy, fried and sour food.' },
+    { text: 'Late dinners and eating out: keep the main meal at midday, eat dinner at least two to three hours before bed, and choose dal, rice, soups and grilled vegetables.' },
+    { text: 'Iced drinks and air-conditioning: sip room-temperature water or cumin-coriander-fennel tea with meals instead of iced drinks.' },
+    { text: 'Ramadan: break the fast gently with dates and water, then soup; avoid heavy fried food at iftar to prevent acidity at night.' },
+    { text: 'Office stress: eat away from your desk, at regular times; stress is one of the strongest IBS triggers.' }
+  ]
+},
+
+foodsToAvoid: {
+  id: 'foods-to-avoid',
+  heading: 'Foods to Avoid with Acidity, IBS and Bloating',
+  items: [
+    { text: 'Acidity: very spicy, sour, fried and fermented food, coffee, energy drinks, alcohol, and lying down soon after meals.' },
+    { text: 'IBS: your personal triggers, often large raw salads, very rich or fried food, excess coffee, and irregular meals; keep a simple food diary.' },
+    { text: 'Bloating: cold drinks with meals, fizzy drinks, eating fast, and heavy, late dinners.' },
+    { text: 'Constipation: too little water, very dry or processed snacks, and skipping meals.' }
+  ],
+  note: 'For a personal plan, see our Ayurvedic diet plan (/services/ayurvedic-diet-plan-dubai/).'
+},
+
     healingJourney: {
       title: 'Your Digestive Health Journey',
       description:
@@ -7934,10 +7494,10 @@ dubaiSkin: {
           description:
             'A detailed consultation is conducted to evaluate digestive symptoms, medical history, diet, stress levels, and lifestyle habits.',
           keyActivities: [
-            'Medical & Ayurvedic assessment',
-            'Digestive evaluation',
-            'Diagnostic recommendations',
-            'Personalized treatment planning'
+            'Ayurvedic consultation with Dr. Shamna (BAMS)', 
+            'Prakriti and Agni assessment', 
+            'Check for warning signs; referral to our GP for tests if needed', 
+            'Written care plan'
           ],
           side: 'right'
         },
@@ -7976,244 +7536,53 @@ dubaiSkin: {
         'Relief from indigestion and bloating, improved bowel regularity, reduced acidity and reflux, better IBS symptom management, improved nutrient absorption, enhanced energy and metabolism, better gut balance and immunity, and long-term digestive wellness.'
     },
     benefits: {
-      title: 'Clinically-Observed Benefits',
-      description: 'Patients undergoing Gastrointestinal Diseases Treatment in Dubai may experience:',
-      comparisonTitle: 'Ayurvedic Gastrointestinal Treatment vs Conventional Medication',
-      comparisonDescription: 'Compare our holistic Ayurvedic approach with conventional digestive treatment',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic Gastrointestinal Treatment',
-        traditional: 'Conventional Medication'
-      },
+      title: 'What Ayurvedic Digestive Care Aims to Do',
+      description: 'Ayurvedic care is traditionally used to support these areas. Results vary from person to person.',
+      hidePercentages: true,
       benefits: [
-        {
-          id: 1,
-          title: 'Relief from indigestion and bloating',
-          percentage: 92,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Improved bowel regularity',
-          percentage: 89,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Reduced acidity and reflux',
-          percentage: 87,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Better IBS symptom management',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 5,
-          title: 'Improved nutrient absorption',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 6,
-          title: 'Enhanced energy and metabolism',
-          percentage: 91,
-          description: null
-        },
-        {
-          id: 7,
-          title: 'Better gut balance and immunity',
-          percentage: 86,
-          description: null
-        },
-        {
-          id: 8,
-          title: 'Long-term digestive wellness',
-          percentage: 93,
-          description: null
-        }
+        { id: 1, title: 'Understand your triggers', description: null },
+        { id: 2, title: 'Calm acidity and heartburn', description: null },
+        { id: 3, title: 'Ease gas and bloating', description: null },
+        { id: 4, title: 'Support regular bowels', description: null },
+        { id: 5, title: 'Fit meals to your routine and climate', description: null },
+        { id: 6, title: 'Work alongside your GP\'s treatment', description: null }
       ],
+      comparisonTitle: 'GP Care and Ayurvedic Care for Digestion: How They Fit Together',
+      comparisonDescription: 'Both are available at RamaCare. Many patients use both.',
+      comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Ayurvedic care', traditional: 'GP care' },
       comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic root-cause healing',
-          conventional: 'Symptom-focused treatment'
-        },
-        {
-          feature: 'Digestive Health',
-          ayurvedic: 'Improves digestive fire (Agni)',
-          conventional: 'Often temporary relief'
-        },
-        {
-          feature: 'Side Effects',
-          ayurvedic: 'Natural and minimal',
-          conventional: 'Possible dependency'
-        },
-        {
-          feature: 'Long-Term Use',
-          ayurvedic: 'Supports sustainable wellness',
-          conventional: 'May require prolonged medication'
-        },
-        {
-          feature: 'Overall Health',
-          ayurvedic: 'Improves immunity and metabolism',
-          conventional: 'Primarily digestive symptom control'
-        }
-      ]
-    },
-
-    pricing: {
-      title: 'Transparent Pricing | Personalised Gastrointestinal Care',
-      description: 'Your digestive health is the cornerstone of overall wellness. Our treatment packages offer a results-driven, holistic approach with clear pricing and customised programs, tailored to your digestive condition, severity of symptoms, and long-term wellness goals.',
-      packages: [
-        {
-          id: 1,
-          title: 'Essential Digestive Care Package',
-          subtitle: 'Ideal for mild to moderate gastrointestinal issues',
-          duration: '6 sessions over 3 months',
-          features: [
-            'Comprehensive gastrointestinal assessment and evaluation',
-            'Dietary and lifestyle guidance for optimal gut health',
-            'Herbal and natural therapies to support digestion',
-            'Personalised at-home care instructions for ongoing support',
-            'Monitoring and advice for symptom management'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        },
-        {
-          id: 2,
-          title: 'Advanced Gastrointestinal Restoration Package – Most Popular',
-          subtitle: 'Recommended for chronic digestive disorders and symptom relief',
-          duration: '12 sessions over 4 months',
-          features: [
-            'Detailed root-cause analysis of gastrointestinal issues',
-            'Targeted therapeutic sessions to improve gut function',
-            'Customised herbal and natural formulations for internal balance',
-            'Personalised diet and lifestyle coaching',
-            'Monthly progress monitoring and adjustments'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: true
-        },
-        {
-          id: 3,
-          title: 'Premium Gastrointestinal Transformation Package',
-          subtitle: 'Comprehensive digestive health and wellness program',
-          duration: '24 sessions over 6 months',
-          features: [
-            'All the benefits of the Advanced Package',
-            'Detoxification therapies for deep gut cleansing',
-            'Specialised treatments for digestive system rejuvenation',
-            'Stress management and relaxation sessions',
-            'Quarterly health and progress evaluations',
-            'Long-term digestive wellness support'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        }
+        { feature: 'Starts with', ayurvedic: 'Ayurvedic consultation, Prakriti and Agni assessment', conventional: 'Medical examination and tests if needed' },
+        { feature: 'Main methods', ayurvedic: 'Herbal medicines, Takradhara, Basti, diet and routine', conventional: 'Diagnosis and prescription treatment' },
+        { feature: 'Best suited to', ayurvedic: 'Triggers, diet, stress and long-term habits', conventional: 'Warning signs, infections such as H. pylori, medical causes' },
+        { feature: 'At RamaCare', ayurvedic: 'Dr. Shamna (BAMS) and Ayurveda therapists', conventional: 'Our general physician, same building' }
       ]
     },
 
     faq: {
-      title: 'Frequently Asked Questions (FAQs)',
-      description: 'Gastrointestinal Diseases Treatment at RamaCare Polyclinic',
-      resourcesHeading: 'Complete Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is Gastrointestinal Diseases Treatment?',
-          answer:
-            'Gastrointestinal Diseases Treatment involves diagnosing, managing, and treating disorders of the digestive system, including the stomach, intestines, liver, and pancreas, to improve digestion, nutrient absorption, and overall health naturally.'
-        },
-        {
-          id: 2,
-          question: 'What digestive conditions can be treated?',
-          answer:
-            'Conditions such as acid reflux, gastritis, ulcers, IBS, IBD, constipation, diarrhea, bloating, liver disorders, poor appetite, and digestive imbalance can be effectively managed with personalized treatment at RamaCare Polyclinic.'
-        },
-        {
-          id: 3,
-          question: 'Who can benefit from gastrointestinal treatment?',
-          answer:
-            'Adults experiencing chronic indigestion, bloating, irregular bowel movements, reflux, liver issues, IBS, poor nutrient absorption, or fatigue can benefit from targeted treatment and long-term digestive wellness plans.'
-        },
-        {
-          id: 4,
-          question: 'How is the treatment personalized?',
-          answer:
-            'At ramacarepolyclinic, treatment is customized based on your condition, severity, lifestyle, and body constitution, combining modern diagnostics, medications, Ayurvedic therapies, dietary guidance, and lifestyle modifications for optimal digestive health.'
-        },
-        {
-          id: 5,
-          question: 'Is Gastrointestinal Diseases Treatment safe?',
-          answer:
-            'Yes. Treatments are performed under the supervision of qualified gastroenterologists and Ayurvedic doctors at a DHA-licensed clinic, using evidence-based protocols and natural therapies for safe, effective, and long-term digestive health.'
-        },
-        {
-          id: 6,
-          question: 'How long does treatment take?',
-          answer:
-            'Duration varies depending on condition and severity. Mild digestive issues may require a few weeks, while chronic or complex gastrointestinal disorders may need several months of monitoring, therapy, and dietary guidance.'
-        },
-        {
-          id: 7,
-          question: 'Can diet help improve digestive health?',
-          answer:
-            'Yes. Personalized diet plans tailored to your condition, body type, and digestive needs are crucial. They improve nutrient absorption, reduce symptoms, support treatment, and prevent the recurrence of gastrointestinal problems naturally.'
-        },
-        {
-          id: 8,
-          question: 'Can this treatment help with IBS and IBD?',
-          answer:
-            'Absolutely. Gastrointestinal Diseases Treatment focuses on identifying triggers, balancing gut function, reducing inflammation, and supporting overall digestive health, which helps manage IBS, IBD, and other chronic digestive conditions effectively.'
-        },
-        {
-          id: 9,
-          question: 'Will I experience side effects from treatment?',
-          answer:
-            'Most treatments are safe with minimal side effects. Some patients may experience mild digestive adjustments initially, which are temporary and indicate the body responding to therapy and dietary changes.'
-        },
-        {
-          id: 10,
-          question: 'How often are follow-ups required?',
-          answer:
-            'Follow-ups are scheduled based on your condition, progress, and treatment type. Initial visits may be weekly, then spaced out to monitor improvement, adjust therapies, and ensure long-term digestive health.'
-        },
-        {
-          id: 11,
-          question: 'Can stress affect digestion?',
-          answer:
-            'Yes. Stress negatively impacts gut function, digestion, and absorption. Our treatment includes lifestyle guidance, stress management techniques, and therapies to support a healthy gut-brain connection for optimal digestive wellness.'
-        },
-        {
-          id: 12,
-          question: 'Can gastrointestinal treatment help with liver disorders?',
-          answer:
-            'Yes. Treatments target liver health by improving detoxification, supporting metabolism, balancing doshas, and enhancing digestion, which can help manage liver-related issues and maintain long-term digestive system balance.'
-        },
-        {
-          id: 13,
-          question: 'Can this treatment help with chronic constipation or diarrhea?',
-          answer:
-            'Yes. Personalized treatment addresses underlying causes, regulates bowel movements, improves gut function, reduces inflammation, and restores normal digestive rhythm for patients suffering from constipation, diarrhea, or irregular bowel habits.'
-        },
-        {
-          id: 14,
-          question: 'Is this treatment suitable for all adults?',
-          answer:
-            'Yes. Gastrointestinal Diseases Treatment is suitable for adults of all ages. Pregnant women or patients with severe medical conditions should consult doctors before starting the program to ensure safety and effectiveness.'
-        },
-        {
-          id: 15,
-          question:
-            'Why choose ramacarepolyclinic for Gastrointestinal Diseases Treatment in Dubai?',
-          answer:
-            'ramacarepolyclinic offers DHA-licensed care, experienced gastroenterologists and Ayurvedic doctors, personalized treatment plans, dietary guidance, and holistic therapies to ensure safe, effective, and long-term digestive health improvement.'
-        }
-      ],
+        title: 'Ayurvedic Digestive Treatment: Frequently Asked Questions',
+        description: 'Answers from our Ayurveda team and GP in Jumeirah 1, Dubai',
+        resourcesHeading: 'Related Ayurvedic Services',
+        faqs: [
+          { id: 1, question: "What is Ayurvedic treatment for digestive problems?", answer: "Ayurvedic gastrointestinal treatment looks at your dosha, digestive fire (Agni), meal timing, food and stress, and combines herbal medicines, digestive therapies and diet changes. At RamaCare in Jumeirah 1 it starts with a consultation with Dr. Shamna Keloth Meethal (BAMS), with a GP in the same building for any medical checks." },
+          { id: 2, question: "Is there an Ayurvedic treatment for acidity and GERD?", answer: "Yes. Ayurveda calls acidity Amlapitta and links it to aggravated Pitta. Care may include Avipattikar churna, Takradhara, a cooling diet and lighter, earlier dinners. Persistent reflux, trouble swallowing or weight loss need a medical check first." },
+          { id: 3, question: "Is there an Ayurvedic treatment for IBS?", answer: "Yes. Ayurveda describes IBS as Grahani, linked to weak Agni and Vata. Care may include digestive herbs, Takra (medicated buttermilk), regular warm meals, stress support and, when suitable, Basti. IBS is long-term, so the aim is fewer and milder flare-ups." },
+          { id: 4, question: "What is the Ayurvedic treatment for constipation?", answer: "Ayurveda links constipation (Vibandha) to Vata. Care may include Triphala as prescribed, more fluids, ghee and fibre, regular meals and, for some patients, Virechana or Basti." },
+          { id: 5, question: "How does Ayurveda treat gas and bloating?", answer: "Bloating is usually linked to Vata and weak Agni. Hingvastak churna, ginger and cumin, warm cooked food, eating slowly and avoiding cold drinks with meals are traditionally used." },
+          { id: 6, question: "Which Ayurvedic medicines are used for acidity and digestion?", answer: "Common classical formulas include Avipattikar churna for acidity, Hingvastak churna for gas and bloating, and Triphala for regular bowels. Dr. Shamna prescribes them according to your assessment; do not self-medicate long term." },
+          { id: 7, question: "What is Takradhara, and how does it help digestion?", answer: "Takradhara is medicated buttermilk poured in a steady stream over the forehead. It is traditionally used to calm Pitta, heat and stress, which are common drivers of acidity and IBS." },
+          { id: 8, question: "What is Dhanyamla Dhara?", answer: "Dhanyamla Dhara is a warm stream of fermented herbal liquid poured over the body, traditionally used for heaviness, sluggish digestion and Vata-Kapha conditions. The doctor decides whether it suits you." },
+          { id: 9, question: "Can Virechana or Basti help digestive problems?", answer: "Virechana (therapeutic purgation) is traditionally used for Pitta-related digestive problems, and Basti (medicated enema) for Vata problems such as IBS with constipation and bloating. Both are supervised Panchakarma therapies, given only after assessment." },
+          { id: 10, question: "When should I see a doctor instead of Ayurveda?", answer: "See a doctor first for weight loss, blood in the stool or black stools, vomiting blood, difficulty swallowing, severe or night-time pain, fever, or a new change in bowel habit lasting weeks. At RamaCare our GP is in the same building." },
+          { id: 11, question: "Why is acidity worse in the Dubai summer?", answer: "Heat raises Pitta in Ayurvedic terms, and summer habits such as iced drinks, late meals and less sleep add to it. Cooling foods, regular meals and avoiding spicy, fried and sour food usually help." },
+          { id: 12, question: "Which foods should I avoid with acidity?", answer: "Very spicy, sour, fried and fermented food, coffee, energy drinks and alcohol, and lying down soon after meals. Your own triggers are identified at the consultation." },
+          { id: 13, question: "Can stress cause IBS or acidity?", answer: "Yes. Stress is one of the strongest triggers of IBS and can worsen acidity. Regular meals, sleep and stress support, including therapies such as Takradhara, are part of Ayurvedic care." },
+          { id: 14, question: "Can I take Ayurvedic medicines with antacids or other prescribed medicines?", answer: "Often yes, but never stop prescribed medicines on your own. Tell both doctors about everything you take; at RamaCare the GP and Ayurvedic doctor can coordinate in the same building." },
+          { id: 15, question: "How long does Ayurvedic digestive treatment take?", answer: "It depends on the problem and how long you have had it. Many plans run for several weeks with follow-ups; long-term conditions such as IBS need ongoing care. Progress is reviewed at each visit." },
+          { id: 16, question: "How much does it cost?", answer: "An Ayurvedic digestive consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Medicines and therapies are priced according to your plan and confirmed in writing before you start." },
+          { id: 17, question: "Do you have male and female therapists?", answer: "Yes. Male patients are treated by a male therapist and female patients by a female therapist for therapies such as Takradhara and Basti." },
+          { id: 18, question: "Where is the clinic, and is it convenient from nearby areas?", answer: "RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai. It is a few minutes from Satwa and Al Wasl, about 10 minutes from Jumeirah 2, City Walk and Karama, and open every day from 10am to 10pm with parking nearby." }
+        ],
+      
       resources: [
         {
           id: 1,
@@ -8223,90 +7592,84 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
-          text: 'Gastric Disorder Treatment',
+          id: 6,
+          text: 'Ayurvedic Digestive Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
@@ -8314,8 +7677,14 @@ dubaiSkin: {
       ]
     },
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who restored digestive health with Ayurvedic treatment',
+      title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+      ],
       testimonials: [
         {
           id: 1,
@@ -8348,36 +7717,7 @@ dubaiSkin: {
           // No thumbnail = shows video's natural frame
         }
       ],
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Patient Reviews',
-          target: 4.8
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'Digestive Patients',
-          label2: 'Treated',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Satisfaction Rate',
-          label2: 'Happy Patients',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '92%',
-          label1: 'Digestive Improvement',
-          label2: 'Success Rate',
-          target: 92
-        }
-      ]
+     
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -8398,13 +7738,13 @@ dubaiSkin: {
     },
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Gastrointestinal Diseases Treatment in Dubai Today',
-      description: 'Restore digestive health, improve nutrient absorption, and enhance overall well-being with Gastrointestinal Diseases Treatment at Ramacarepolyclinic.',
+      title: 'Book Your Ayurvedic Digestive Consultation',
+      description: 'See Dr. Shamna in Jumeirah 1, from AED 200, with a GP in the same building if you need medical checks. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+      submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: {
@@ -8415,26 +7755,21 @@ dubaiSkin: {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
         {
           title: 'DHA Licensed',
           description: 'Certified Ayurvedic Facility'
         },
-        {
-          title: 'Experienced Team',
-          description: '15+ Years Combined'
-        },
-        {
-          title: '500+ Patients',
-          description: 'Treated'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+       { title: 'GP + Ayurvedic Doctor', 
+        description: 'In the same building' 
+      }, 
+       { title: '1,000+ Ayurveda patients', 
+        description: 'In the last 2 years' 
+      }, 
+       { title: '4.8/5 Google rating', 
+        description: '218 reviews' 
+      }
       ]
     }
   },
@@ -8445,204 +7780,122 @@ dubaiSkin: {
 
   'ayurveda-dubai-pcos-treatment': {
     hero: {
-      subtitle: 'Natural Hormonal Balance & Women’s Wellness Care',
-      description: 'Polycystic Ovary Syndrome (PCOS) is a common hormonal condition that affects menstrual cycles, fertility, weight, skin, and emotional well-being. At Ramacarepolyclinic, we offer Ayurvedic PCOS Treatment in Dubai that focuses on correcting hormonal imbalance naturally, improving metabolism, and supporting long-term women’s health.',
-      rating: '400+ Happy Clients',
-      stats: [
-        {
-          id: 1,
-          number: '98%',
-          label: 'Patient Satisfaction'
-        },
-        {
-          id: 2,
-          number: '500+',
-          label: 'PCOS Patients Treated'
-        },
-        {
-          id: 3,
-          number: '15+',
-          label: 'Years of combined Experience'
-        }
-      ],
-      ctaButtons: {
-        primary: {
-          text: 'Book Free PCOS Consultation',
-          icon: 'calendar',
-          link: '#book-now'
-        },
-        secondary: {
-          text: 'WhatsApp',
-          phone: '+971 56 659 7878',
-          icon: 'whatsapp'
-        }
-      },
-      features: [
-        ' DHA-Licensed Ayurvedic Clinic',
-        ' Experienced Ayurvedic Doctors',
-        ' Root-Cause Based PCOS Management'
-      ],
-      image: {
-        src: '/images/pcos.jpg',
-        alt: 'Ayurvedic PCOS treatment using natural therapies and lifestyle guidance to balance hormones and support reproductive health.'
-      },
-      medicalNotice: {
-        text: 'Safety & Medical Disclaimer: Results and treatment duration may vary depending on individual hormonal balance, lifestyle, and adherence. All treatments are provided at a DHA-licensed clinic following approved Ayurvedic protocols.',
-        show: true
-      }
+    title: 'Ayurvedic PCOS Treatment in Dubai',
+    subtitle: 'PCOS and PCOD care by a female Ayurvedic doctor, with a female GP for tests, in Jumeirah 1',
+    description: 'PCOS (polycystic ovary syndrome, also called PCOD) is a common hormonal condition that can cause irregular periods, weight gain, acne, excess hair growth and hair thinning. At RamaCare Polyclinic in Jumeirah 1, Dubai, our female GP arranges the hormone and blood-sugar tests that confirm PCOS, and our female Ayurvedic doctor, Dr. Shamna Keloth Meethal (BAMS), plans herbal medicines, therapies such as Virechana or Basti, and a PCOS diet. Ayurvedic care usually runs over at least three to six menstrual cycles, alongside your medical care. Consultations start from AED 200.',
+    rating: '4.8★ Google rating',
+    topBadges: [
+      { icon: 'location', text: 'Jumeirah 1, Dubai' },
+      { icon: 'building', text: 'DHA-licensed polyclinic' },
+      { icon: 'star', text: '4.8★ Google rating' }
+    ],
+    stats: [
+      { id: 1, number: 'Female', label: 'GP and Ayurvedic doctor' },
+      { id: 2, number: 'AED 200', label: 'Consultation from' },
+      { id: 3, number: '3–6 cycles', label: 'Typical first course' }
+    ],
+    ctaButtons: {
+      primary: { text: 'Book PCOS Consultation', icon: 'calendar', link: '#book-now' },
+      secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
     },
-    doctors: {
-      badge: 'Ayurvedic Expertise',
-      title: 'Meet Our PCOS Treatment Specialists in Dubai',
-      description: 'DHA-licensed Ayurvedic practitioners with extensive experience in women\'s health and PCOS management.',
-      doctors: [
-        DOCTORS.shamna, DOCTORS.syamkumar, DOCTORS.mariya
-      ]
+    features: [
+      'Female Ayurvedic doctor and female GP in the same building',
+      'Hormone and blood-sugar tests arranged by our GP',
+      'Herbal medicines, Virechana, Basti and Udwarthanam when suitable',
+      'PCOS diet and lifestyle plan for Dubai',
+      'Female therapist for all therapies'
+    ],
+    image: {
+      src: '/images/pcos.jpg',
+      alt: 'Ayurvedic PCOS consultation with a female doctor at RamaCare Polyclinic, Jumeirah 1, Dubai'
     },
-    certifications: {
-      title: 'Certifications & Accreditations',
-      certifications: [
-        {
-          id: 1,
-          title: 'DHA Licensed',
-          subtitle: 'Dubai Health Authority'
-        },
-        {
-          id: 2,
-          title: 'AYUSH Certified',
-          subtitle: 'Ministry of Ayurveda'
-        },
-        {
-          id: 3,
-          title: 'ISO 9001:2015',
-          subtitle: 'Quality Management'
-        },
-        {
-          id: 4,
-          title: 'NABH Accredited',
-          subtitle: 'Healthcare Standards'
-        },
-        {
-          id: 5,
-          title: 'Member NAMA',
-          subtitle: 'National Association'
-        }
-      ]
-    },
+    medicalNotice: {
+      text: 'Ayurvedic PCOS care is complementary and does not replace medical or fertility treatment. Do not stop the pill, metformin or other prescribed medicines without your doctor\'s advice. Results vary. Provided at a DHA-licensed polyclinic (licence 2036418).',
+      show: true
+    }
+  },
+   doctors: {
+    badge: 'Your Female Care Team',
+    title: 'Your Female Ayurvedic Doctor and Therapist for PCOS',
+    description: 'Dr. Shamna Keloth Meethal (BAMS, 11+ years), a female DHA-licensed Ayurvedic doctor, plans your PCOS care. Therapies are given by Mariya Thayyil Muhammed, a Kerala-trained female therapist (14+ years in the UAE). Our female GP in the same building arranges your tests. All speak English; Dr. Shamna and Mariya also speak Malayalam and Hindi.',
+    doctors: [ DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai'], DOCTORS.mariya ]
+  },
+    
     overview: {
-      title: 'Understanding PCOS in Ayurveda',
+      title: 'Understanding PCOS and PCOD in Ayurveda',
       problemIntro: {
-        title: 'The Problem: Common PCOS-Related Health Concerns',
-        description: 'Many women rely only on hormonal medications that manage signs temporarily without correcting the underlying imbalance, leading to recurrence and long-term dependency.'
+        title: 'Common PCOS Symptoms',
+        description: 'PCOS affects each woman differently. The most common signs are irregular or missed periods, weight gain around the waist, acne, excess facial or body hair, and thinning scalp hair. It is often linked to insulin resistance.'
       },
       solutionIntro: {
-        title: 'Our Solution: PCOS Treatment in Dubai',
-        description: 'Our PCOS Treatment in Dubai focuses on addressing the root cause of hormonal imbalance through personalised, evidence-based care to restore reproductive and metabolic health.'
+        title: 'How RamaCare Approaches PCOS',
+        description: 'Our female GP confirms PCOS with hormone and blood-sugar tests and rules out other causes such as thyroid problems. Our female Ayurvedic doctor then plans herbal medicines, therapies, diet and routine changes, which work alongside any medicines you already take.'
       },
       leftCards: [
-        {
-          id: 1,
-          title: 'What is PCOS?',
-          description:
-            'PCOS is a hormonal disorder where the ovaries produce excess androgens, leading to irregular periods, cyst formation, weight gain, acne, hair loss, and fertility issues. Ayurveda views PCOS as an imbalance of Kapha and Vata doshas, along with weakened digestion and metabolic disturbance.'
+            {
+              id: 1,
+              title: 'What Is PCOS (PCOD) in Ayurveda?',
+              description: 'PCOS is a hormonal condition in which the ovaries produce more androgens (male-type hormones) than usual, often with irregular ovulation. Ayurveda links it to Kapha and Vata imbalance, weak digestion (Agni) and Ama blocking the channels of the reproductive system, and to Artava Kshaya, reduced or irregular menstruation.'
+            },
+            {
+              id: 2,
+              title: 'Who Comes to Us for PCOS Care?',
+              description: 'Women (18+) with:',
+              listItems: [
+                'Irregular, scanty or missed periods',
+                'Diagnosed PCOS or PCOD, or polycystic ovaries on ultrasound',
+                'Weight gain or difficulty losing weight',
+                'Acne, oily skin or excess facial hair',
+                'Thinning scalp hair',
+                'PCOS alongside the pill or metformin, wanting to add Ayurvedic care'
+              ]
+            },
+            {
+              id: 3,
+              title: 'Ayurvedic PCOS Care at RamaCare',
+              description: 'Each plan is personal. It may include:',
+              listItems: [
+                'A detailed consultation: menstrual history, digestion, weight, stress and Prakriti',
+                'Tests with our female GP if you have not had them',
+                'Herbal medicines prescribed by Dr. Shamna',
+                'Therapies such as Virechana, Basti, Udwarthanam or Shirodhara when suitable',
+                'A PCOS diet, exercise and sleep plan'
+              ]
+            },
+            {
+              id: 4,
+              title: 'Duration and Fee',
+              description: 'Consultation: 45–60 minutes, from AED 200 \n\n Ayurvedic care: usually at least 3–6 menstrual cycles; some women continue for 6–12 cycles \n\n Follow-ups: monthly, or as advised'
+            }
+          ],
+     rootCauses: [
+        { 
+          id: 1, 
+          title: 'Insulin Resistance', 
+          description: 'Many women with PCOS process sugar less efficiently, which can drive weight gain, cravings and higher androgen levels. Ayurveda links this to Kapha and weak Agni.', 
+          severity: 'Common', 
+          severityColor: 'bg-[#FEE2E2] text-[#991B1B]' 
         },
-        {
-          id: 2,
-          title: 'Who Needs Ayurvedic PCOS Treatment?',
-          description:
-            'Ayurvedic PCOS treatment is recommended for women experiencing:',
-          listItems: [
-            'Irregular or missed periods',
-            'Polycystic ovaries on ultrasound',
-            'Weight gain or difficulty losing weight',
-            'Acne, oily skin, or facial hair growth',
-            'Hair fall or thinning hair',
-            'Fertility challenges',
-            'Mood swings, stress, or fatigue'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Ayurvedic PCOS Treatment at Ramacarepolyclinic',
-          description:
-            'The treatment focuses on addressing the root cause of PCOS through personalized Ayurvedic care, including detailed consultation, hormonal balance, detox therapies, and lifestyle correction.',
-          listItems: [
-            'Detailed Ayurvedic consultation assessing menstrual history, digestion, lifestyle, and body constitution (Prakriti)',
-            'Root cause identification including metabolic imbalance, insulin resistance, stress, and hormonal disruption',
-            'Herbal medicines to regulate hormones, improve ovulation, reduce cyst formation, and support reproductive health',
-            'Detox and Panchakarma therapies (if required) to remove toxins and balance doshas',
-            'Personalized diet and lifestyle correction for weight control, stress management, and long-term results'
-          ]
-        },
-        {
-          id: 4,
-          title: 'Treatment Duration',
-          description:
-            'Initial consultation: 30–45 minutes. Active treatment phase: 3–6 months depending on individual condition. Follow-up consultations are conducted monthly or as advised by the physician.'
-        }
-      ],
-      rootCauses: [
-        {
-          id: 1,
-          title: 'Hormonal Imbalance',
-          description: 'Imbalances in estrogen, progesterone, and androgens lead to irregular menstrual cycles, weight gain, acne, hair thinning, and unwanted facial or body hair growth. Without root-cause treatment, these symptoms often persist or worsen over time.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 2,
-          title: 'Ovarian Dysfunction',
-          description: 'Multiple ovarian cysts, irregular ovulation, and reduced ovarian function can make conception difficult and increase the risk of long-term reproductive issues. Hormonal medications may mask symptoms without restoring natural ovarian health.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 3,
-          title: 'Insulin Resistance & Metabolic Issues',
-          description: 'PCOS often disrupts insulin sensitivity, leading to sugar cravings, fatigue, weight fluctuations, and an increased risk of type 2 diabetes and metabolic syndrome. Ignoring metabolic health exacerbates hormonal imbalance.',
-          severity: 'High',
-          severityColor: 'bg-[#FEE2E2] text-[#991B1B]'
-        },
-        {
-          id: 4,
-          title: 'Stress & Emotional Imbalance',
-          description: 'Chronic stress and emotional disturbances worsen hormonal symptoms, causing anxiety, mood swings, poor sleep quality, and difficulty managing PCOS symptoms effectively.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 5,
-          title: 'Lifestyle & Dietary Factors',
-          description: 'Sedentary lifestyle, irregular eating habits, and poor nutrition aggravate PCOS symptoms, interfere with weight management, and hinder hormonal balance.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 6,
-          title: 'Inflammation & Oxidative Stress',
-          description: 'Chronic low-grade inflammation associated with PCOS can worsen insulin resistance, hormone imbalance, and increase the risk of long-term complications such as cardiovascular disease.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
-        {
-          id: 7,
-          title: 'Skin & Hair Problems',
-          description: 'Hormonal imbalance contributes to persistent acne, oily skin, scalp hair thinning, and excessive hair growth on the body, impacting confidence and emotional well-being.',
-          severity: 'Medium',
-          severityColor: 'bg-[#FED7AA] text-[#9A3412]'
-        },
+
+        { id: 2, title: 'Irregular Periods', description: 'Ovulation that is irregular or absent leads to late, scanty or missed periods (Artava Kshaya in Ayurveda).', severity: 'Common', severityColor: 'bg-[#FEE2E2] text-[#991B1B]' },
+        { id: 3, title: 'Weight Gain', description: 'Weight around the waist is common, and even a modest weight loss often helps cycles and symptoms.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+        { id: 4, title: 'Acne, Excess Hair and Hair Thinning', description: 'Higher androgens can cause acne, facial or body hair and thinning scalp hair. Our dermatologist can help alongside Ayurvedic care.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+        { id: 5, title: 'Stress and Poor Sleep', description: 'Stress and irregular sleep can worsen cycles and cravings; Ayurveda relates this to Vata.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' },
+        { id: 6, title: 'Sedentary Routine', description: 'Long desk hours, little activity and the summer heat make regular exercise harder in Dubai.', severity: 'Common', severityColor: 'bg-[#FED7AA] text-[#9A3412]' }
       ],
       quickFacts: [
-        { label: 'Treatment Type', value: 'Holistic Ayurvedic therapy' },
-        { label: 'Consultation Duration', value: '60-90 minutes' },
-        { label: 'Treatment Course', value: '3-6 months' },
-        { label: 'Follow-up', value: 'Monthly consultations' }
+        { label: 'Doctors', value: 'Female Ayurvedic doctor (BAMS) and female GP' },
+        { label: 'Tests', value: 'Hormone and blood-sugar tests via our GP' },
+        { label: 'Consultation', value: 'From AED 200, 45–60 minutes' },
+        { label: 'Typical course', value: 'At least 3–6 menstrual cycles' },
+        { label: 'Follow-up', value: 'Monthly, or as advised' },
+        { label: 'Therapist', value: 'Female, Kerala-trained' }
       ],
       approachCards: [
         {
           id: 1,
-          title: 'Hormonal Balance Support',
-          description: 'We design therapies and interventions to regulate menstrual cycles, promote regular ovulation, and restore harmony among key reproductive hormones.',
+          title: 'Cycle Support',
+          description: 'Herbal medicines, diet and routine changes traditionally used to support more regular cycles. We track your cycles together at each follow-up.',
           hasLearnMore: true,
           expandedContent: 'Balancing hormones reduces symptoms such as acne, excessive hair growth, and mood swings.'
         },
@@ -8655,8 +7908,8 @@ dubaiSkin: {
         },
         {
           id: 3,
-          title: 'Reproductive Health Improvement',
-          description: 'PCOS often affects ovarian function and fertility.',
+          title: 'Planning a Pregnancy',
+          description: 'If you are trying to conceive, Ayurvedic care can support general health alongside your gynaecologist or fertility specialist, who manages fertility treatment.',
           hasLearnMore: true,
           expandedContent: 'Our holistic approach enhances ovarian health, encourages regular ovulation, and supports women planning conception, improving fertility outcomes naturally.'
         },
@@ -8676,27 +7929,88 @@ dubaiSkin: {
         },
         {
           id: 6,
-          title: 'Ayurvedic Herbal Support',
-          description: 'Natural herbal formulations are used to regulate hormones, enhance metabolism, and support liver and digestive health, providing gentle yet effective relief from PCOS symptoms.',
+          title: 'Ayurvedic Herbal Medicines',
+          description: 'Examples include Shatavari, Kanchanar Guggulu, Triphala and Ashoka, prescribed by Dr. Shamna according to your assessment.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 7,
-          title: 'Reduction of Skin & Hair Symptoms',
-          description: 'Targeted therapies reduce acne, oily skin, hair thinning, and unwanted hair growth caused by androgen imbalance, improving appearance and boosting confidence.',
+          title: 'Skin and Hair',
+          description: 'For acne and hair thinning, Ayurvedic care can be combined with our Ayurvedic skin and hair fall services and our dermatologist.',
           hasLearnMore: false,
           expandedContent: null
         },
         {
           id: 8,
-          title: 'Result',
-          description: 'Regulated menstrual cycles, balanced hormones, improved insulin sensitivity, healthier weight, enhanced fertility, reduced stress, improved skin and hair health, and long-term management of PCOS.',
+          title: 'What to Expect',
+          description: 'Changes in cycles, weight and skin are gradual and vary from woman to woman. Your progress is reviewed each month, and your GP can repeat tests when needed.',
           hasLearnMore: true,
           expandedContent: 'Patients achieve holistic well-being with natural, sustainable results.'
         }
       ]
     },
+
+    testsFirst: {
+          id: 'pcos-tests',
+          heading: 'How Is PCOS Diagnosed? Tests With Our Female GP',
+          intro: 'PCOS is usually diagnosed when at least two of these are present, after other causes such as thyroid problems are ruled out:',
+          items: [
+            { text: 'irregular or absent periods (irregular ovulation)' },
+            { text: 'signs of higher androgens, such as acne or excess hair, or raised levels on a blood test' },
+            { text: 'polycystic ovaries on an ultrasound scan' }
+          ],
+          note: 'At RamaCare, our female GP can arrange hormone tests, thyroid and prolactin checks, blood sugar (HbA1c) and cholesterol, and refer you for an ultrasound. See our general physician page (/services/general-physician-dubai/).'
+        },
+
+        pcosTypes: {
+          id: 'pcos-types',
+          heading: 'PCOS Types: Medical and Ayurvedic Views',
+          table: [
+            ['Classic PCOS', 'Irregular periods with signs of higher androgens (acne, excess hair), often with insulin resistance and weight gain. Ayurveda usually sees Kapha predominance.'],
+            ['Ovulatory PCOS', 'Regular periods but higher androgens and polycystic ovaries. Acne and hair concerns are common; Ayurveda often relates these to Pitta.'],
+            ['Milder (non-androgenic) PCOS', 'Irregular periods and polycystic ovaries without high androgen signs. Ayurveda often relates thin, irregular cycles to Vata.']
+          ],
+          note: 'Your type guides your plan, so two women with PCOS may receive quite different advice.'
+        },
+
+        therapiesHerbs: {
+          id: 'pcos-therapies',
+          heading: 'Ayurvedic Therapies and Herbs Used for PCOS',
+          table: [
+            ['Virechana', 'Supervised therapeutic purgation (a Panchakarma therapy), traditionally used to clear Pitta and Kapha.'],
+            ['Basti', 'Medicated enema therapy, the classical Panchakarma therapy for Vata, often used for menstrual irregularity in Ayurveda. See [Basti therapy in Dubai](/services/basti-therapy-dubai/).'],
+            ['Udwarthanam', 'Herbal powder massage traditionally used in Kapha and weight-management plans.'],
+            ['Nasya and Shirodhara', 'Traditionally used to calm stress and Vata, which can affect cycles.'],
+            ['Herbal medicines', 'Examples include Shatavari, Kanchanar Guggulu, Triphala and Ashoka, prescribed by Dr. Shamna according to your type and health.']
+          ],
+          note: 'Therapies are given by our female therapist. Read more: [Panchakarma](/services/panchakarma-treatment-dubai/) · [Basti therapy in Dubai](/services/basti-therapy-dubai/).'
+        },
+
+        timeline: {
+          id: 'pcos-timeline',
+          heading: 'What to Expect: Ayurvedic PCOS Care, Cycle by Cycle',
+          ordered: true,
+          items: [
+            { text: 'First visit: consultation, tests with our GP if needed, and your personal plan.' },
+            { text: 'Cycles 1–2: diet, routine and digestion first; herbal medicines started; therapies if suitable.' },
+            { text: 'Cycles 3–6: we review cycle regularity, weight, skin and energy each month and adjust the plan.' },
+            { text: 'After 6 cycles: your GP can repeat tests; some women continue Ayurvedic care for 6–12 cycles.' }
+          ],
+          note: 'Response varies from woman to woman. PCOS is long-term, so diet and lifestyle habits matter after the course ends.'
+        },
+
+        lifestyle: {
+          id: 'pcos-lifestyle',
+          heading: 'PCOS Diet and Lifestyle in Dubai',
+          items: [
+            { text: 'Diet: regular meals, more vegetables, lentils and protein, fewer sweets, white bread and sugary drinks. See our Ayurvedic diet for PCOS.', href: '/services/ayurvedic-diet-pcos-dubai/' },
+            { text: 'Exercise: aim for about 150 minutes a week; in summer, walk early in the morning, indoors or in a mall, or swim.' },
+            { text: 'Sleep and stress: a regular bedtime and stress support help cycles and cravings.' },
+            { text: 'Ramadan: choose protein and slow carbohydrates at suhoor, go easy on sweets at iftar, and ask your doctor before fasting if you take metformin.' },
+            { text: 'Skin and hair: see Ayurvedic skin treatment and Ayurvedic hair fall care.', href: '/services/skin-diseases-treatment-dubai/' }
+          ]
+        },
     healingJourney: {
       title: 'Your PCOS Healing Journey',
       description: 'A structured Ayurvedic approach to restore hormonal balance and overall well-being.',
@@ -8709,9 +8023,10 @@ dubaiSkin: {
           description:
             'Detailed evaluation of menstrual health, hormonal signs, digestion, and lifestyle.',
           keyActivities: [
-            'Menstrual and medical history review',
-            'Dosha and metabolic assessment',
-            'Personalized treatment planning'
+           'Menstrual and medical history review', 
+           'Hormone and blood-sugar tests with our female GP if needed', 
+           'Prakriti and Agni assessment', 
+           'Personal PCOS plan'
           ],
           side: 'right'
         },
@@ -8746,221 +8061,56 @@ dubaiSkin: {
       ]
     },
     benefits: {
-      title: 'Clinically-Observed Benefits',
-      description: 'Evidence-based results from our comprehensive Ayurvedic PCOS treatment.',
-      comparisonTitle: 'Ayurvedic PCOS Treatment vs Conventional Medication',
-      comparisonDescription: 'Compare our holistic Ayurvedic approach with conventional PCOS treatment',
-      comparisonHeaders: {
-        feature: 'Aspect',
-        ourTreatment: 'Ayurvedic PCOS Treatment',
-        traditional: 'Conventional Medication'
-      },
+      title: 'What Ayurvedic PCOS Care Aims to Support',
+      description: 'Ayurvedic care is traditionally used to support these areas. Results vary from woman to woman.',
+      hidePercentages: true,
       benefits: [
-        {
-          id: 1,
-          title: 'Regular menstrual cycles',
-          percentage: 88,
-          description: null
-        },
-        {
-          id: 2,
-          title: 'Natural hormonal balance',
-          percentage: 85,
-          description: null
-        },
-        {
-          id: 3,
-          title: 'Weight and metabolism improvement',
-          percentage: 82,
-          description: null
-        },
-        {
-          id: 4,
-          title: 'Reduced acne and hair fall',
-          percentage: 86,
-          description: null
-        },
-        {
-          id: 5,
-          title: ' Improved fertility support',
-          percentage: 90,
-          description: null
-        },
-        {
-          id: 6,
-          title: 'Better emotional and mental well-being',
-          percentage: 78,
-          description: null
-        }
+        { id: 1, title: 'More regular cycles', description: null },
+        { id: 2, title: 'Healthier weight habits', description: null },
+        { id: 3, title: 'Better digestion and energy', description: null },
+        { id: 4, title: 'Skin and hair care', description: null },
+        { id: 5, title: 'Stress and sleep', description: null },
+        { id: 6, title: 'Care alongside your GP', description: null }
       ],
+      comparisonTitle: 'Medical Care and Ayurvedic Care for PCOS: How They Fit Together',
+      comparisonDescription: 'Both are available at RamaCare, with female doctors. Many women use both.',
+      comparisonHeaders: { feature: 'Aspect', ourTreatment: 'Ayurvedic care', traditional: 'Medical care (GP)' },
       comparisonData: [
-        {
-          feature: 'Approach',
-          ayurvedic: 'Holistic, addresses root causes',
-          conventional: 'Symptom management with medications'
-        },
-        {
-          feature: 'Side Effects',
-          ayurvedic: 'Minimal, natural herbs',
-          conventional: 'Hormonal side effects, medication risks'
-        },
-        {
-          feature: 'Weight Management',
-          ayurvedic: 'Natural weight loss through diet and lifestyle',
-          conventional: 'May cause weight gain with some medications'
-        },
-        {
-          feature: 'Fertility',
-          ayurvedic: 'Improves overall reproductive health',
-          conventional: 'May require additional fertility treatments'
-        },
-        {
-          feature: 'Long-term Sustainability',
-          ayurvedic: 'Sustainable lifestyle changes',
-          conventional: 'Often requires long-term medication'
-        },
-        {
-          feature: 'Overall Health',
-          ayurvedic: 'Improves overall health and wellbeing',
-          conventional: 'Focuses primarily on PCOS symptoms'
-        }
+        { feature: 'Starts with', ayurvedic: 'Consultation, Prakriti and Agni assessment', conventional: 'Hormone, thyroid and blood-sugar tests' },
+        { feature: 'Main methods', ayurvedic: 'Herbal medicines, Virechana, Basti, diet and routine', conventional: 'Diagnosis, the pill, metformin or other prescriptions when needed' },
+        { feature: 'Best suited to', ayurvedic: 'Diet, weight habits, stress and digestion', conventional: 'Diagnosis, monitoring and medical treatment' },
+        { feature: 'Fertility', ayurvedic: 'Supports general health', conventional: 'Referral to a gynaecologist or fertility specialist' },
+        { feature: 'At RamaCare', ayurvedic: 'Dr. Shamna (female BAMS doctor) and a female therapist', conventional: 'Our female GP, same building' }
       ]
     },
-    pricing: {
-      title: 'Honest Pricing | Personalised PCOS Care',
-      description: 'Managing PCOS requires a thoughtful, results-driven approach. Our treatment packages offer transparent pricing and customised programs designed for your hormonal health, symptom severity, and long-term wellness goals with expert [PCOS Treatment in Dubai].',
-      packages: [
-        {
-          id: 1,
-          title: 'Essential Care Package',
-          subtitle: 'Ideal for mild PCOS symptoms and early management',
-          duration: '6 sessions over 3 months',
-          features: [
-            'Comprehensive hormonal and health assessment',
-            'Lifestyle and dietary guidance for PCOS management',
-            'Herbal and natural therapies for hormonal balance',
-            'Personalised at-home care instructions for ongoing support',
-            'Monitoring for symptom improvement'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        },
-        {
-          id: 2,
-          title: 'Advanced PCOS Restoration Package – Most Popular',
-          subtitle: 'Recommended for moderate PCOS symptoms and irregular cycles',
-          duration: '12 sessions over 4 months',
-          features: [
-            'Detailed hormonal and root-cause evaluation',
-            'Targeted therapies to support ovulation and hormonal regulation',
-            'Customised herbal formulations for internal balance',
-            'Personalised diet and lifestyle coaching',
-            'Monthly progress monitoring and adjustments'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: true
-        },
-        {
-          id: 3,
-          title: 'Premium Transformation Package',
-          subtitle: 'Complete hormonal balance and long-term wellness program',
-          duration: '24 sessions over 6 months',
-          features: [
-            'All the benefits of the Advanced Package',
-            'Detoxification and wellness therapies for deep internal balance',
-            'Stress management and relaxation sessions',
-            'Specialised treatments for metabolic and reproductive health',
-            'Quarterly health and progress evaluations',
-            'Long-term maintenance and wellness support'
-          ],
-          pricing: 'Pricing starts from AED XXX',
-          isPopular: false
-        }
-      ]
-    }
-    ,
+    
 
-    faq: {
-      title: 'Frequently Asked Questions',
-      description: 'Ayurvedic PCOS Treatment in Dubai',
-      resourcesHeading: 'Complete Ayurvedic Services',
-      faqs: [
-        {
-          id: 1,
-          question: 'What is PCOS according to Ayurveda?',
-          answer: 'Ayurveda considers PCOS as an imbalance of Vata and Kapha doshas, affecting hormones, metabolism, digestion, and reproductive health, leading to irregular cycles and cyst formation.'
-        },
-        {
-          id: 2,
-          question: 'How does Ayurvedic PCOS treatment work?',
-          answer: 'Ayurvedic PCOS treatment focuses on correcting root causes through herbal medicines, detox therapies, diet correction, and lifestyle changes to restore hormonal balance naturally.'
-        },
-        {
-          id: 3,
-          question: 'Is Ayurvedic PCOS treatment safe?',
-          answer: 'Yes, Ayurvedic PCOS treatment is safe when guided by qualified doctors. It uses natural herbs and therapies, avoiding harsh chemicals and long-term side effects.'
-        },
-        {
-          id: 4,
-          question: 'How long does Ayurvedic PCOS treatment take?',
-          answer: 'Treatment duration varies based on symptoms and body type. Most patients notice improvement within 2–3 months, while complete balance may take 4–6 months.'
-        },
-        {
-          id: 5,
-          question: 'Can Ayurveda regulate irregular periods in PCOS?',
-          answer: 'Yes, Ayurveda helps regulate menstrual cycles by balancing hormones, improving digestion, and reducing ovarian cysts naturally over time.'
-        },
-        {
-          id: 6,
-          question: 'Does Ayurvedic treatment help with PCOS weight gain?',
-          answer: 'Ayurveda addresses slow metabolism and insulin resistance, helping manage weight through personalized diet plans, herbs, and lifestyle guidance.'
-        },
-        {
-          id: 7,
-          question: 'Can Ayurveda help with PCOS-related acne and hair fall?',
-          answer: 'Yes, Ayurvedic treatment detoxifies the body and balances hormones, which helps reduce acne, hair fall, and unwanted hair growth associated with PCOS.'
-        },
-        {
-          id: 8,
-          question: 'Is Panchakarma used in PCOS treatment?',
-          answer: 'In some cases, Panchakarma detox therapies are recommended to remove toxins, improve hormonal function, and enhance the effectiveness of Ayurvedic PCOS treatment.'
-        },
-        {
-          id: 9,
-          question: 'Can I take Ayurvedic treatment along with allopathic medicines?',
-          answer: 'Yes, Ayurveda can be integrated with modern medicine, but it should be done under medical supervision to avoid interactions and ensure safe results.'
-        },
-        {
-          id: 10,
-          question: 'Does Ayurvedic PCOS treatment improve fertility?',
-          answer: 'Ayurvedic treatment supports ovulation, uterine health, and hormonal balance, which can improve fertility and increase chances of natural conception.'
-        },
-        {
-          id: 11,
-          question: 'Are Ayurvedic medicines for PCOS permanent solutions?',
-          answer: 'Ayurveda focuses on long-term correction of imbalance. With proper diet and lifestyle follow-up, results can be sustainable and long-lasting.'
-        },
-        {
-          id: 12,
-          question: 'Is Ayurvedic PCOS treatment suitable for unmarried women?',
-          answer: 'Yes, Ayurvedic PCOS treatment is suitable for unmarried women as it focuses on hormonal balance, cycle regulation, and overall health.'
-        },
-        {
-          id: 13,
-          question: 'What diet is recommended during Ayurvedic PCOS treatment?',
-          answer: 'A customized diet focusing on easy digestion, low sugar, fresh foods, and hormonal balance is advised based on individual body constitution.'
-        },
-        {
-          id: 14,
-          question: 'Why choose ramacarepolyclinic for Ayurvedic PCOS treatment in Dubai?',
-          answer: 'ramacarepolyclinic offers experienced Ayurvedic doctors, personalized treatment plans, safe therapies, and a holistic approach for PCOS management in Dubai.'
-        },
-        {
-          id: 15,
-          question: 'How do I book an Ayurvedic PCOS consultation in Dubai?',
-          answer: 'You can book an appointment at RamaCare Polyclinic through our clinic contact number or website to begin your personalized Ayurvedic PCOS treatment journey.'
-        }
-      ],
+   faq: {
+  title: 'Ayurvedic PCOS Treatment: Frequently Asked Questions',
+  description: 'Answers from our female Ayurvedic doctor and GP in Jumeirah 1, Dubai',
+  resourcesHeading: 'Related Ayurvedic Services',
+  faqs: [
+    { id: 1, question: "What is PCOS in Ayurveda?", answer: "PCOS (polycystic ovary syndrome) is a hormonal condition with irregular ovulation and higher androgens. Ayurveda links it to Kapha and Vata imbalance, weak Agni and Ama, and to irregular or scanty periods (Artava Kshaya). At RamaCare, a female Ayurvedic doctor plans your care, with a female GP for tests." },
+    { id: 2, question: "What is the difference between PCOS and PCOD?", answer: "The two names are often used for the same condition. PCOS (polycystic ovary syndrome) is the medical term used today; PCOD (polycystic ovarian disease) is an older name still widely used." },
+    { id: 3, question: "How is PCOS diagnosed?", answer: "Usually when at least two of these are present: irregular periods, signs of higher androgens (acne, excess hair, or raised blood levels), and polycystic ovaries on ultrasound, after ruling out thyroid and other causes. Our female GP can arrange the tests and an ultrasound referral." },
+    { id: 4, question: "Is there an Ayurvedic treatment for PCOS?", answer: "Yes. Ayurvedic PCOS care combines herbal medicines, therapies such as Virechana, Basti or Udwarthanam when suitable, and diet, exercise and sleep changes. It is complementary to medical care and planned for your PCOS type." },
+    { id: 5, question: "Which Ayurvedic herbs are used for PCOS?", answer: "Commonly used herbs include Shatavari, Kanchanar Guggulu, Triphala and Ashoka. Dr. Shamna prescribes them according to your type and health; do not self-medicate." },
+    { id: 6, question: "How long does Ayurvedic PCOS treatment take?", answer: "Usually at least three to six menstrual cycles, and some women continue for six to twelve cycles. Progress is reviewed monthly, and your GP can repeat tests." },
+    { id: 7, question: "Can Ayurveda help with irregular periods in PCOS?", answer: "Ayurvedic care is traditionally used to support more regular cycles through diet, routine and herbs. Response varies; we track your cycles together at each follow-up." },
+    { id: 8, question: "Can Ayurveda help with PCOS weight gain?", answer: "Yes, as part of a plan. A Kapha-balancing diet, regular exercise, Udwarthanam and better sleep can support weight goals. Even modest weight loss often helps PCOS symptoms." },
+    { id: 9, question: "Can it help with PCOS acne, facial hair and hair loss?", answer: "Ayurvedic care can be combined with our Ayurvedic skin and hair fall services, and our dermatologist can advise on medical options such as hair removal or acne treatment." },
+    { id: 10, question: "Can Ayurveda help me get pregnant with PCOS?", answer: "Ayurvedic care can support general health, weight and cycles, but fertility treatment should be managed by a gynaecologist or fertility specialist. If you have been trying for 12 months (or 6 months if you are over 35), see a specialist." },
+    { id: 11, question: "Can I continue the pill or metformin during Ayurvedic treatment?", answer: "Usually yes. Never stop prescribed medicines on your own. Tell both doctors about everything you take; at RamaCare the GP and Ayurvedic doctor can coordinate in the same building." },
+    { id: 12, question: "Are your PCOS doctors female?", answer: "Yes. Our Ayurvedic doctor, Dr. Shamna Keloth Meethal, and our GP are both female, and therapies are given by a female therapist." },
+    { id: 13, question: "Is Ayurvedic PCOS treatment suitable for unmarried women?", answer: "Yes. Consultations, tests and therapies are planned for adult women regardless of marital status, with privacy and female staff." },
+    { id: 14, question: "What diet is best for PCOS?", answer: "Regular meals with vegetables, lentils, protein and whole grains, and fewer sweets, white bread and sugary drinks. See our Ayurvedic diet for PCOS for a full guide." },
+    { id: 15, question: "Can I fast in Ramadan with PCOS?", answer: "Many women do. Choose protein and slow carbohydrates at suhoor, go easy on sweets at iftar, and ask your doctor before fasting if you take metformin or other medicines." },
+    { id: 16, question: "How much does Ayurvedic PCOS treatment cost in Dubai?", answer: "An Ayurvedic PCOS consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Tests, medicines and therapies are priced according to your plan and confirmed before you start." },
+    { id: 17, question: "Is it covered by insurance?", answer: "It depends on your policy. RamaCare works on a reimbursement basis: you pay at the clinic, and we provide itemised invoices and reports for your claim." },
+    { id: 18, question: "Where is the clinic?", answer: "RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and Karama. Open every day, 10am–10pm." },
+    { id: 19, question: "Does PCOS mean I have cysts on my ovaries?", answer: "No. Despite the name, polycystic ovaries contain many small, harmless follicles (egg sacs), not true cysts. Some women with PCOS have normal-looking ovaries on ultrasound." },
+    { id: 20, question: "Can PCOS be cured?", answer: "There is no cure for PCOS, but its symptoms can be managed. Weight loss if needed, regular exercise, diet changes and medical or Ayurvedic care can all help cycles, skin and energy. Be cautious of any clinic that promises a permanent cure." }
+  ],
       resources: [
 
         {
@@ -8971,99 +8121,109 @@ dubaiSkin: {
         },
         {
           id: 2,
-          text: 'Diet Advice',
-          bgColor: 'bg-[#EFF6FF]',
-          link: '/services/ayurvedic-diet-plan-dubai/'
-        },
-        {
-          id: 3,
           text: 'Prakriti & Dosha Assessment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/prakriti-dosha-assessment-dubai/'
         },
         {
-          id: 4,
+          id: 3,
           text: 'Ayurvedic Hairfall Treatment',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-hairfall-treatment-dubai/'
         },
         {
-          id: 5,
+          id: 4,
           text: 'Skin Diseases Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/skin-diseases-treatment-dubai/'
         },
         {
-          id: 6,
+          id: 5,
           text: 'Ayurvedic Diet Plan',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-plan-dubai/'
         },
         {
-          id: 7,
+          id: 6,
           text: 'Gastric Disorder Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/gastrointestinal-diseases-treatment-dubai/'
         },
         {
-          id: 8,
+          id: 7,
           text: 'PCOS Treatment',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/pcos-treatment-dubai/'
         },
         {
-          id: 9,
+          id: 8,
           text: 'Abhyanga Massage',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/abhyanga-massage-dubai/'
         },
         {
-          id: 10,
+          id: 9,
           text: 'Basti Therapy',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/basti-therapy-dubai/'
         },
         {
-          id: 11,
+          id: 10,
           text: 'Shirodhara Therapy',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/shirodhara-therapy-in-dubai/'
         },
         {
-          id: 12,
+          id: 11,
           text: 'Nasya Therapy',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/nasya-therapy-dubai/'
         },
         {
-          id: 13,
+          id: 12,
           text: 'Ayurvedic Gut Health',
           bgColor: 'bg-[#ECFDF5]',
           link: '/services/ayurvedic-gut-health-dubai/'
         },
         {
-          id: 14,
+          id: 13,
           text: 'Ayurvedic Detox Diet',
           bgColor: 'bg-[#EFF6FF]',
           link: '/services/ayurvedic-detox-diet-plan-dubai/'
         },
         {
-          id: 15,
+          id: 14,
           text: 'Ayurvedic Diet for PCOS',
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/ayurvedic-diet-pcos-dubai/'
         },
         {
-          id: 16,
+          id: 15,
           text: 'Ayurvedic Diet for Thyroid',
           bgColor: 'bg-[#F5F3FF]',
           link: '/services/ayurvedic-diet-thyroid-dubai/'
         },
       ]
     },
+
+    sources: {
+        id: 'sources',
+        heading: 'Medical Sources and Review',
+        intro: 'Medical facts on this page (how PCOS is diagnosed, its symptoms and the role of weight and lifestyle) follow public health guidance. The Ayurvedic content is reviewed by Dr. Shamna Keloth Meethal (female BAMS doctor, DHA-licensed), and medical content by our female GP.',
+        items: [
+          { text: 'NHS: Polycystic ovary syndrome (PCOS)', href: 'https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/' }
+        ],
+        note: 'Last reviewed: [2026-01-12]. This page is for information and does not replace a consultation.'
+      },
     testimonials: {
-      title: 'Real Success Stories from Dubai Patients',
-      subtitle: 'Verified testimonials from patients who managed PCOS with Ayurvedic treatment',
+     title: 'What Patients Say About Their Visit',
+      subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
+      stats: [
+        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
+        { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
+        { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
+      ],
       testimonials: [
         {
           id: 1,
@@ -9096,36 +8256,6 @@ dubaiSkin: {
           // No thumbnail = shows video's natural frame
         }
       ],
-      stats: [
-        {
-          id: 1,
-          number: '4.8/5',
-          label1: 'Average Rating',
-          label2: 'Patient Reviews',
-          target: 4.8
-        },
-        {
-          id: 2,
-          number: '500+',
-          label1: 'PCOS Patients',
-          label2: 'Treated',
-          target: 500
-        },
-        {
-          id: 3,
-          number: '98%',
-          label1: 'Satisfaction Rate',
-          label2: 'Happy Patients',
-          target: 98
-        },
-        {
-          id: 4,
-          number: '88%',
-          label1: 'Hormone Balance',
-          label2: 'Success Rate',
-          target: 88
-        }
-      ]
     },
     paymentInsurance: {
       paymentTitle: 'Payment & Insurance',
@@ -9144,15 +8274,16 @@ dubaiSkin: {
         'Complete Documentation Assistance for Smooth Reimbursement Process.'
       ]
     },
+    
     bookConsultation: {
       badge: 'Start Your Journey',
-      title: 'Book Ayurvedic PCOS Treatment in Dubai Today',
-      description: 'Restore hormonal balance naturally and take control of your reproductive health with Ayurvedic PCOS Treatment in Dubai at Ramacarepolyclinic.',
+      title: 'Book Your PCOS Consultation',
+      description: 'See our female Ayurvedic doctor in Jumeirah 1, from AED 200, with a female GP for tests. Open every day, 10am–10pm.',
       getInTouchTitle: 'Get In Touch',
       requestAppointmentTitle: 'Request Appointment',
-      submitButtonText: 'Confirm Free Consultation',
+     submitButtonText: 'Request Appointment',
       contactInfo: {
-        phone: '+971 04 286 2006',
+        phone: '+971 56 659 7878',
         whatsapp: '971566597878',
         email: 'query@ramacarepolyclinic.com',
         address: {
@@ -9163,26 +8294,20 @@ dubaiSkin: {
       clinicHours: {
         weekdays: 'Sunday - Saturday:',
         weekdaysTime: '10:00 AM - 10:00 PM',
-        friday: 'Friday:',
-        fridayTime: '10:00 AM - 8:00 PM'
       },
       statCards: [
         {
           title: 'DHA Licensed',
           description: 'Certified Ayurvedic Facility'
         },
+        { title: 'Female Doctors', 
+          description: 'Ayurvedic doctor and GP' }, 
+
+        { title: '1,000+ Ayurveda patients',
+           description: 'In the last 2 years' }, 
         {
-          title: 'Experienced Team',
-          description: '15+ Years Combined'
-        },
-        {
-          title: '500+ Patients',
-          description: 'Treated'
-        },
-        {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
-        }
+           title: '4.8/5 Google rating',
+            description: '218 reviews' }
       ]
     }
   },
@@ -13870,7 +12995,7 @@ dubaiSkin: {
   'general-physician-dubai-gastrointestinal-disorders': {
     hero: {
       subtitle: 'Expert Diagnosis & Treatment for Gastrointestinal Disorders in Dubai',
-      description: 'Receive comprehensive care for gastrointestinal disorders from our experienced general physicians in Dubai. At our DHA-licensed clinic, we provide expert diagnosis, personalized treatment plans, and ongoing management for various digestive conditions—delivered with compassion and clinical excellence.',
+      description: 'Receive comprehensive care for gastrointestinal disorders from our experienced general physicians in Dubai. At our DHA-licensed clinic, we provide expert diagnosis, personalized treatment plans, and ongoing management for various digestive conditions—delivered with compassion and clinical excellence. Prefer to add Ayurvedic care? See <a href="/services/gastrointestinal-diseases-treatment-dubai/">Ayurvedic treatment for acidity and IBS</a>.',
       rating: '500+ Happy Clients',
       stats: [
         {
@@ -13993,7 +13118,7 @@ dubaiSkin: {
         {
           id: 1,
           title: 'What are Gastrointestinal Disorders?',
-          description: 'Gastrointestinal disorders are conditions affecting the digestive system, including the esophagus, stomach, intestines, and colon. Common disorders include GERD, gastritis, IBS, IBD, constipation, diarrhea, and functional digestive disorders.'
+          description: 'Gastrointestinal disorders are conditions affecting the digestive system, including the esophagus, stomach, intestines, and colon. Common disorders include GERD, gastritis, IBS, IBD, constipation, diarrhea, and functional digestive disorders. Prefer to add Ayurvedic care? See <a href="/services/gastrointestinal-diseases-treatment-dubai/">Ayurvedic treatment for acidity and IBS</a>.'
         },
         {
           id: 2,

@@ -14,7 +14,7 @@ const content = {
     summary: {
       title: 'The "Answer-First" Summary for Weight Loss',
       question: 'How does Ayurveda help with weight loss in Dubai?',
-      answer: 'Unlike restrictive diets, Ayurveda identifies that weight gain is often a result of a sluggish Kapha dosha and poor digestion. By shifting your heaviest meal to midday, incorporating fat-burning spices like ginger and black pepper, and following a "Kapha-pacifying" plan, residents can see visible results within 3 to 6 weeks while improving overall energy and sleep.'
+      answer: 'Unlike restrictive diets, Ayurveda identifies that weight gain is often a result of a sluggish Kapha dosha and poor digestion. By shifting your heaviest meal to midday, incorporating fat-burning spices like ginger and black pepper, and following a "Kapha-pacifying" plan, residents often notice better digestion and energy, and weight changes follow gradually; results vary from person to person.'
     },
     ctaButtons: {
       primary: { text: 'Start Your 30-Day Transformation' },
@@ -98,7 +98,7 @@ const content = {
       },
       {
         question: 'How long until I see results?',
-        answer: 'Many patients notice reduced bloating and improved energy within the first 7-10 days of shifting meal timing. Visible weight changes typically begin within 3 to 6 weeks, with continued, sustainable progress over the following months as digestive strength (Agni) improves.'
+        answer: 'Many people notice less bloating and better energy within the first couple of weeks of regular meal timing. Weight changes are gradual and vary from person to person; your doctor reviews progress at each follow-up.'
       },
       {
         question: 'Is this safe alongside my medications?',

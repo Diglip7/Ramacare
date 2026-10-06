@@ -4,6 +4,7 @@ import TreatmentHero from '../../../components/TreatmentHero';
 import QuickNavigation from '../../../components/QuickNavigation';
 import TreatmentOverview from '../../../components/TreatmentOverview';
 import BastiTherapySections from '../../../components/BastiTherapySections';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 import HealingJourney from '../../../components/HealingJourney';
 import TreatmentBenefits from '../../../components/TreatmentBenefits';
 import CostAndResults from '../../../components/CostAndResults';
@@ -24,16 +25,14 @@ export default function NasyaTherapyPage() {
 
   // Custom navigation items for Nasya Therapy page
   const navItems = [
-    { id: 'treatment-info', label: 'Overview' },
-    { id: 'conditions-treated', label: 'Conditions' },
-    { id: 'how-it-works', label: 'How It Works' },
-    { id: 'benefits', label: 'Benefits' },
-    { id: 'treatment-process', label: 'Treatment Types' },
-    { id: 'why-choose-us', label: 'Why Choose Us' },
-    { id: 'cost-and-results', label: 'Cost & Recovery' },
-    { id: 'faq', label: 'FAQ' },
-    { id: 'book-now', label: 'Book Now' },
-  ];
+  { id: 'treatment-info', label: 'What Is Nasya' },
+  { id: 'nasya-types', label: 'Types & Oils' },
+  { id: 'nasya-procedure', label: 'What Happens' },
+  { id: 'sinus-or-allergy', label: 'Sinus & Allergies' },
+  { id: 'who-should-not', label: 'Who Should Not' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'book-now', label: 'Book Now' },
+];
 
   const faqsForSchema = content?.faq?.faqs?.map(faq => ({
     "@type": "Question",
@@ -45,123 +44,79 @@ export default function NasyaTherapyPage() {
   })) || [];
 
   const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/",
-        "name": "Nasya Therapy in Dubai | Ayurvedic Nasal Detox & Sinus Relief Treatment",
-        "description": "Experience authentic Nasya Therapy in Dubai for sinus relief, respiratory wellness, mental clarity, and stress management. DHA-licensed clinic with personalized Ayurvedic nasal detox programs.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalTherapy",
-          "name": "Nasya Therapy"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Nasya Therapy", "item": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#procedure",
-        "name": "Nasya Therapy in Dubai",
-        "alternateName": "Ayurvedic Nasal Detox & Sinus Relief Treatment",
-        "url": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/",
-        "mainEntityOfPage": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/",
-        "description": "Nasya Therapy in Dubai at RamaCare Polyclinic offers traditional Ayurvedic nasal detoxification treatment designed to support sinus health, respiratory wellness, mental clarity, and nervous system balance through personalized herbal therapies.",
-        "procedureType": "Ayurvedic nasal detox treatment",
-        "bodyLocation": "Nasal passages and head region",
-        "howPerformed": "Nasya Therapy involves administration of herbal oils or herbal extracts through the nasal passages to support sinus cleansing, respiratory wellness, and mental clarity. Preparatory procedures such as facial massage and mild steam therapy may be recommended before the main procedure.",
-        "preparation": "Patients undergo initial Ayurvedic consultation and assessment of body constitution (dosha), sinus health, respiratory condition, and lifestyle habits before beginning Nasya Therapy.",
-        "followup": "Post-therapy guidance and follow-up assessments are recommended to support balanced recovery and monitor respiratory wellness progress.",
-        "indication": [
-          "Sinus congestion",
-          "Respiratory imbalance",
-          "Mental fatigue",
-          "Stress and nervous tension",
-          "Headaches",
-          "Detoxification and wellness"
-        ],
-        "possibleComplication": "Mild temporary nasal drainage may occur during detoxification depending on therapy intensity and individual body constitution.",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic – Ayurvedic & Wellness Department",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "telephone": "+971 56 659 7878",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          },
-          "priceRange": "$$$"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#faq",
-        "mainEntity": faqsForSchema
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/",
+      "name": "Nasya (Nasyam) Therapy Dubai | Ayurvedic Sinus Care, Jumeirah 1",
+      "inLanguage": "en-AE",
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#therapy" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Nasya Therapy", "item": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/" }
+        ]
       }
-    ]
-  };
+    },
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/#therapy",
+      "name": "Nasya (Ayurvedic nasal therapy)",
+      "alternateName": ["Nasyam", "Nasya Karma", "Ayurvedic nasal therapy", "Sneha Nasya", "Marsha Nasya", "Pratimarsha Nasya", "Pradhamana Nasya", "Navana Nasya"],
+      "description": "Nasya is the Panchakarma therapy in which medicated oils, herbal juices or powders are given through the nose, traditionally used for conditions of the head, sinuses and neck. At RamaCare Polyclinic, Jumeirah 1, Dubai, it follows a consultation with a BAMS doctor, uses oils such as Anu Taila chosen for the patient, and is given by a same-gender therapist in 60–90 minute sessions including face massage and steam.",
+      "relevantSpecialty": "https://schema.org/Ayurvedic",
+      "bodyLocation": "Nose, sinuses, head and neck",
+      "contraindication": ["Acute cold or fever", "Nosebleeds", "Pregnancy", "Immediately after meals or bathing"],
+      "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "gender": "Female",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqsForSchema
+    }
+  ]
+};
 
   return (
     <Layout>
       <Head>
-        <title key="title">Nasya Therapy in Dubai | Ayurvedic Nasal Detox & Sinus Relief Treatment</title>
-        <meta name="description" content="Experience authentic Nasya Therapy in Dubai for sinus relief, respiratory wellness, mental clarity, and stress management. DHA-licensed clinic with personalized Ayurvedic nasal detox programs." key="description" />
+        <title key="title">Nasya (Nasyam) Therapy Dubai | Ayurvedic Sinus Care, Jumeirah 1</title>
+        <meta name="description" content="Nasya (Nasyam) in Jumeirah 1, Dubai: medicated oil nasal therapy with Anu Taila and other oils, after a BAMS doctor consultation. Same-gender therapists." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Nasya Therapy in Dubai | Ayurvedic Nasal Detox & Sinus Relief Treatment" key="og:title" />
-        <meta property="og:description" content="Experience authentic Nasya Therapy in Dubai for sinus relief, respiratory wellness, mental clarity, and stress management. DHA-licensed clinic with personalized Ayurvedic nasal detox programs." key="og:description" />
+        <meta property="og:title" content="Nasya (Nasyam) Therapy Dubai | Ayurvedic Sinus Care, Jumeirah 1" key="og:title" />
+        <meta property="og:description" content="Nasya (Nasyam) in Jumeirah 1, Dubai: medicated oil nasal therapy with Anu Taila and other oils, after a BAMS doctor consultation. Same-gender therapists." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/nasya-therapy-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/nasya-therapy-dubai-og.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Nasya Therapy in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Nasya (Nasyam) Ayurvedic nasal therapy at RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Nasya Therapy in Dubai | Ayurvedic Nasal Detox & Sinus Relief Treatment" key="twitter:title" />
-        <meta name="twitter:description" content="Experience authentic Nasya Therapy in Dubai for sinus relief, respiratory wellness, mental clarity, and stress management." key="twitter:description" />
+        <meta name="twitter:title" content="Nasya (Nasyam) Therapy Dubai | Ayurvedic Sinus Care, Jumeirah 1" key="twitter:title" />
+        <meta name="twitter:description" content="Nasya (Nasyam) in Jumeirah 1, Dubai: medicated oil nasal therapy with Anu Taila and other oils, after a BAMS doctor consultation. Same-gender therapists." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/nasya-therapy-dubai-og.jpg" key="twitter:image" />
 
         <script
@@ -187,8 +142,12 @@ export default function NasyaTherapyPage() {
         />
       </div>
 
-      {/* 2. Conditions Treated */}
       <BastiTherapySections sectionType="conditions" content={content?.overview} />
+      <AyurvedaInfoSection content={content?.nasyaTypes} />       {/* NEW: types and oils */}
+      <AyurvedaInfoSection content={content?.nasyaProcedure} />   {/* NEW: what happens */}
+      <AyurvedaInfoSection content={content?.sinusAllergy} />     {/* NEW: sinus, allergies, Dubai triggers, when to see the GP */}
+      <AyurvedaInfoSection content={content?.whoShouldNot} />     {/* NEW: who should not */}
+      <AyurvedaInfoSection content={content?.gettingHere} />      {/* NEW: Jumeirah 1 and nearby areas */}
 
       {/* 3. How It Works - Healing Journey */}
       <div id="how-it-works">
@@ -218,7 +177,7 @@ export default function NasyaTherapyPage() {
         <PatientTestimonials content={content?.testimonials} />
         <DoctorsSection content={content?.doctors} />
         <PaymentInsurance content={content?.paymentInsurance} />
-        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="nasya-therapy-dubai" />
+        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="nasya-therapy-dubai" lastReviewed="2026-01-12" />
         <FAQSection content={content?.faq} />
       </div>
 

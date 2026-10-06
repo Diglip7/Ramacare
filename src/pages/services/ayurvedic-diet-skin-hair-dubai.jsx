@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from "next/head";
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
@@ -375,6 +376,9 @@ export default function AyurvedicDietSkinHairDubaiPage() {
                 </h3>
                 <p className="text-base leading-relaxed text-[#1A1A1A]">
                   {content.hero.summaryBox.description}
+                </p>
+                <p className="text-sm leading-relaxed text-[#5F5F5F] pt-1">
+                  Part of our <Link href="/services/ayurvedic-diet-plan-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#16493a]">Ayurvedic diet plan in Dubai</Link> guides: see foods for your dosha and diet plans for other health goals.
                 </p>
               </div>
 
