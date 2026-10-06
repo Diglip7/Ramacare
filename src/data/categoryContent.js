@@ -207,7 +207,7 @@ export const categoryContent = {
       subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic. Individual results vary.',
       stats: [
         { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
-        { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+        { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
         { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
         { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
       ],

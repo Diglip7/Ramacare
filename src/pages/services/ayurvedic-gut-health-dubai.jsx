@@ -433,7 +433,7 @@ export default function AyurvedicGutHealthDubaiPage() {
         </div>
       </section>
 
-<AgniQuiz />
+      <AgniQuiz />
 
       {/* 5. Kitchen Pharmacy Section */}
       <section className="py-20 px-6 bg-white">

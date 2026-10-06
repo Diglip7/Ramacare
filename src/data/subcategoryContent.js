@@ -2111,8 +2111,8 @@ export const subcategoryContent = {
     title: 'What Patients Say About Their Visit',
     subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
     stats: [
-      { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.9, showStars: true },
-      { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+      { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+      { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
       { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
       { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
     ],
@@ -2218,11 +2218,11 @@ export const subcategoryContent = {
       title: 'Prakriti & Dosha Assessment in Dubai',
       subtitle: 'An in-person Ayurveda consultation to find your dosha, with a BAMS doctor in Jumeirah 1',
       description: 'A Prakriti assessment is an Ayurvedic consultation that finds your natural constitution (Prakriti) and your current imbalance (Vikriti) of the three doshas: Vata, Pitta and Kapha. At RamaCare Polyclinic in Jumeirah 1, Dr. Shamna Keloth Meethal (BAMS) uses pulse diagnosis (Nadi Pariksha), tongue and eye examination and a detailed history. It takes 45–60 minutes, starts from AED 200, and ends with advice or a written plan based on your needs.',
-      rating: '4.9★ Google rating',
+      rating: '4.8★ Google rating',
       topBadges: [
         { icon: 'location', text: 'Jumeirah 1, Dubai' },
         { icon: 'building', text: 'DHA-licensed polyclinic' },
-        { icon: 'star', text: '4.9★ Google rating' }
+        { icon: 'star', text: '4.8★ Google rating' }
       ],
       stats: [
         { id: 1, number: 'AED 200', label: 'Consultation from' },
@@ -2805,11 +2805,11 @@ export const subcategoryContent = {
         title: 'Ayurvedic Skin Treatment in Dubai',
         subtitle: 'Doctor-led Ayurvedic care for eczema, psoriasis, acne and skin allergies in Jumeirah 1, with a dermatologist in the same building',
         description: 'At RamaCare Polyclinic in Jumeirah 1, Dubai, Ayurvedic skin treatment starts with a consultation with Dr. Shamna Keloth Meethal (BAMS). She looks for triggers such as heat, diet, stress and digestion, and plans herbal medicines, external applications (Lepa and medicated oils) and therapies such as Takradhara or Virechana when suitable. It is offered as complementary care; if you need a medical skin diagnosis, our dermatologist is in the same building.',
-        rating: '4.9★ Google rating',
+        rating: '4.8★ Google rating',
         topBadges: [
           { icon: 'location', text: 'Jumeirah 1, Dubai' },
           { icon: 'building', text: 'DHA-licensed polyclinic' },
-          { icon: 'star', text: '4.9★ Google rating' }
+          { icon: 'star', text: '4.8★ Google rating' }
         ],
         stats: [
           { id: 1, number: 'AED 200', label: 'Consultation from' },
@@ -4262,11 +4262,11 @@ dubaiSkin: {
       title: 'Basti Therapy in Dubai',
       subtitle: 'Ayurvedic medicated enema therapy for Vata, in Jumeirah 1',
       description: 'Basti (also spelled Vasti) is the Ayurvedic therapy in which warm medicated oil or a herbal decoction is given as an enema. It is one of the five Panchakarma therapies and is considered the principal Ayurvedic treatment for Vata, traditionally used for constipation, bloating, lower back and joint stiffness, and dryness. At RamaCare Polyclinic in Jumeirah 1, Dubai, every patient first sees Dr. Shamna Keloth Meethal (BAMS). Basti is then given privately by a Kerala-trained therapist of your own gender, in sessions of 60–90 minutes including preparation.',
-      rating: '4.9★ Google rating',
+      rating: '4.8★ Google rating',
       topBadges: [
         { icon: 'location', text: 'Jumeirah 1, Dubai' },
         { icon: 'building', text: 'DHA-licensed polyclinic' },
-        { icon: 'star', text: '4.9★ Google rating' }
+        { icon: 'star', text: '4.8★ Google rating' }
       ],
       stats: [
         { id: 1, number: '60–90 min', label: 'Per session' },
@@ -4961,8 +4961,8 @@ gettingHere: {
           title: 'What Patients Say About Their Visit',
           subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic, with their consent. Individual results vary.',
           stats: [
-            { id: 1, number: '4.9/5', label1: 'Google rating', label2: 'Google reviews', target: 4.9, showStars: true },
-            { id: 2, number: '183', label1: 'Google reviews', label2: 'Whole clinic', target: 183 },
+            { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+            { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
             { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
             { id: 4, number: '17+', label1: 'Years in Panchakarma', label2: 'Syamkumar Sasidharan', target: 17 }
           ]
