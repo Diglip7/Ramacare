@@ -66,6 +66,7 @@ const categorizeSlug = (slug) => {
     s.includes('basti') || 
     s.includes('nasya') || 
     s.includes('gut-health') || 
+    s.includes('kizhi') || 
     s.includes('allopathy')
   ) {
     return 'ayurveda-dubai';

@@ -186,15 +186,14 @@ const content = {
       ]
     },
 
-  authorityFooter: {
-    title: 'Ready to Look After Your Digestion?',
-    description: 'Book a digestive assessment with Dr. Shamna in Jumeirah 1, from AED 200, or explore our Ayurvedic diet plan and Ayurvedic digestive treatment.',
-    cta: 'Book Your Digestive Assessment'
-  }
-};
+      authorityFooter: {
+        title: 'Ready to Look After Your Digestion?',
+        description: 'Book a digestive assessment with Dr. Shamna in Jumeirah 1, from AED 200, or explore our Ayurvedic diet plan and Ayurvedic digestive treatment.',
+        cta: 'Book Your Digestive Assessment'
+      }
+    };
 
-
-export default function AyurvedicGutHealthDubaiPage() {
+    export default function AyurvedicGutHealthDubaiPage() {
   const { showToast, ToastComponent } = useToast();
   const [activeAccordion, setActiveAccordion] = useState(1);
   const router = useRouter();
@@ -403,6 +402,7 @@ export default function AyurvedicGutHealthDubaiPage() {
       </section>
 
       {/* 4. 4 Types of Agni Section */}
+      
       <section className="bg-[#F5F1EA] py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] text-center mb-12">
@@ -432,7 +432,6 @@ export default function AyurvedicGutHealthDubaiPage() {
           </div>
         </div>
       </section>
-
       <AgniQuiz />
 
       {/* 5. Kitchen Pharmacy Section */}
@@ -485,12 +484,10 @@ export default function AyurvedicGutHealthDubaiPage() {
             {content.paa.items.map((item, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
-              >
+                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <button
                   onClick={() => setActiveAccordion(activeAccordion === index ? null : index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                >
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
                   <span className="font-bold text-[#1A1A1A]">{item.question}</span>
                   <LucideIcons.ChevronDown 
                     className={`w-5 h-5 text-gray-400 transition-transform ${activeAccordion === index ? 'rotate-180' : ''}`} 
