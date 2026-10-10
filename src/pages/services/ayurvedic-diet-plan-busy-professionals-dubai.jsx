@@ -6,23 +6,24 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 
 const content = {
   hero: {
-    title: 'Ayurvedic Diet Plan for Busy Professionals in Dubai: Sustain High Performance Naturally',
-    description: 'In the fast-paced corridors of DIFC, Business Bay, and Dubai Media City, the "hustle" often comes at a physical cost. Late-night emails, back-to-back meetings, and the constant hum of air conditioning lead to what Ayurveda calls a Vata imbalance—manifesting as anxiety, digestive "jitters," and the dreaded 3 PM brain fog.\n\nAn Ayurvedic Diet Plan for Busy Professionals in Dubai is not a time-consuming luxury; it is a bio-hacking tool designed to optimize your cognitive function and physical resilience without disrupting your schedule.',
+    title: 'Ayurvedic Diet Plan for Busy Professionals in Dubai: Office Meals, Energy and Sleep',
+    description: 'Long hours, back-to-back meetings, air-conditioning and late dinners often show up as the 3pm slump, bloating at the desk and poor sleep. In Ayurveda these are signs of disturbed Vata and Pitta. This practical guide from RamaCare Polyclinic in Jumeirah 1 shows how to eat well around a busy Dubai workday, and you can see Dr. Shamna Keloth Meethal (BAMS) after work, up to 10pm.',
     ctaButtons: {
       primary: { text: 'Book Executive Wellness Assessment' },
       secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
     },
     imageCard: {
-      title: 'Premium Corporate Wellness',
-      subtitle: 'Herbal tea • Laptop • minimal luxury'
+      title: 'Ayurveda for office life',
+      subtitle: 'Warm lunches • steady energy • better sleep'
     }
   },
   summary: {
-    title: 'The "Answer-First" Summary for Corporate Wellness',
-    description: 'How can busy Dubai professionals stay healthy with Ayurveda? The key is Consistency over Complexity. By shifting your heaviest caloric intake to the "Business Lunch" window (12:00 PM – 2:00 PM) when digestion is strongest, replacing your third espresso with a Brahmi infusion to lower cortisol, and finishing a light dinner 3 hours before sleep, you can reset your circadian rhythm and sustain peak energy levels throughout the workday.',
+    title: 'How Can Busy Professionals Eat Well With Ayurveda?',
+    description: 'Keep it simple and consistent. Make lunch your main meal, with protein, vegetables and whole grains, because Ayurveda considers digestion strongest at midday; it also avoids a heavy, carb-rich lunch that often brings on the 3pm slump. Pack a warm lunchbox instead of cold sandwiches, keep nuts or fruit for snacks, cap coffee at one or two cups before 2pm, sip water or CCF tea in the air-conditioning, and finish a light dinner two to three hours before bed.',
     items: [
       {
         title: 'Smart Lunch Timing',
@@ -40,109 +41,140 @@ const content = {
     cta: 'Learn More About Our Approach'
   },
   syndrome: {
-    title: '1. The "Dubai Executive" Syndrome: Vata & Pitta Imbalance',
+    title: 'Office Life in Ayurvedic Terms: Vata and Pitta',
     items: [
       {
-        title: 'Vata Aggravation (The Overworked Mind)',
-        description: 'Constant multitasking and screen time lead to restlessness, dry eyes, and erratic digestion.',
+        title: 'Vata (the overworked mind)', 
+        description: 'Multitasking, screens, travel and air-conditioning are linked in Ayurveda to Vata, felt as restlessness, dry eyes, irregular appetite and light sleep.',
         icon: 'Brain',
         bgColor: 'bg-[#E9F2FF]'
       },
       {
-        title: 'Pitta Flare-up (The Burnout)',
-        description: 'Tight deadlines and high competition increase "fire" in the system, leading to acidity, irritability, and inflammatory responses.',
+       title: 'Pitta (the pressure cooker)', 
+       description: 'Tight deadlines, skipped meals and lots of coffee are linked to Pitta, felt as acidity, irritability and feeling overheated.',
         icon: 'Coffee',
         bgColor: 'bg-[#FFF5E9]'
       }
     ]
   },
   protocol: {
-    title: '2. The 3-Step "Desk-Side" Ayurvedic Protocol',
+    title: 'Three Simple Habits for the Workday',
     items: [
       {
         letter: 'A',
-        title: 'The Power Business Lunch',
-        description: 'In Dubai, lunch is often a networking event. The Ayurvedic Choice: When dining at DIFC favorites, opt for warm, cooked meals over raw salads. Raw food requires immense digestive energy—energy your brain needs for that 2 PM presentation.',
-        favor: 'Favor: Grilled fish, lentil soups (Dal), or Mediterranean-style roasted vegetables with quinoa.'
+        title: 'Make Lunch the Main Meal', 
+        description: 'Whether it is a business lunch or your desk, choose warm, cooked food: grilled fish or chicken, dal or lentil soup, roasted vegetables, and a moderate portion of rice, quinoa or roti. Ayurveda favours cooked over raw food, especially for Vata types, and a balanced lunch helps avoid the afternoon slump.', 
+        favor: 'Favour: grilled protein, dal, cooked vegetables, a small portion of whole grains.'
       },
       {
         letter: 'B',
-        title: 'Smart Caffeine Alternatives',
-        description: 'The "third coffee" often leads to a crash. The Switch: Try Tulsi (Holy Basil) Tea or Ashwagandha-infused milk. These are "Adaptogens" that help your body adapt to stress rather than just masking fatigue.',
-        favor: 'The "Agni" Tea: Keep a flask of Cumin-Coriander-Fennel (CCF) water at your desk to prevent the bloating caused by sitting for long hours.'
+        title: 'Smarter Caffeine', 
+        description: 'Keep coffee to one or two cups before 2pm, then switch to tulsi (holy basil) tea, ginger tea or cumin-coriander-fennel (CCF) water from a flask at your desk.', 
+        favor: 'Herbal powders or tonics such as Ashwagandha should only be taken if Dr. Shamna prescribes them.'
       },
       {
         letter: 'C',
-        title: 'Screen Recovery & Eye Care',
-        description: 'Digital eye strain is a major professional complaint in Dubai.',
-        favor: 'Action: Apply a drop of pure Rose Water or perform a quick <a href="/services/ayurveda-dubai/" class="text-[#1F5E4B] underline font-bold">Netra Tarpana (eye nourishment) at our Jumeirah clinic</a> to soothe the "Pitta" in the eyes caused by blue light.'
+        title: 'Screen Breaks for Eyes and Neck', 
+        description: 'Follow the 20-20-20 rule (every 20 minutes, look 20 feet away for 20 seconds), blink often in air-conditioning, and stand up every hour. For tired eyes, Netra Tarpana (a traditional Ayurvedic eye therapy) is available at RamaCare after a consultation; for neck and shoulder pain, see our <a href="/services/office-neck-treatment-dubai/" class="text-[#1F5E4B] underline font-bold hover:text-[#164435]">physiotherapy team</a>.', 
+        favor: 'Do not put home remedies such as rose water into your eyes; ask a doctor first.'
       }
     ]
   },
+  // In the content object:
+sampleDay: {
+  id: 'office-day',
+  heading: 'Sample Ayurvedic Workday',
+  intro: 'An example only. Your plan depends on your dosha and routine.',
+  table: [
+    ['7:00am', 'Warm water; a calm breakfast such as oats with nuts, or eggs with toast'],
+    ['10:30am', 'CCF tea or herbal tea; a fruit if hungry'],
+    ['1:00pm (main meal)', 'Warm lunchbox: dal, vegetables and brown rice or roti, or grilled chicken with quinoa'],
+    ['After lunch', 'A 10-minute walk, even inside the office building'],
+    ['4:00pm', 'Nuts, roasted chickpeas or buttermilk instead of sweets'],
+    ['7:30pm', 'Light dinner: soup or a small plate of cooked vegetables with protein'],
+    ['10:30pm', 'Screens off, lights low, sleep']
+  ]
+},
+eatingOut: {
+  id: 'business-lunches',
+  heading: 'Business Lunches and Eating Out Near DIFC and Business Bay',
+  items: [
+    { text: 'Choose grilled fish or chicken, lentil soup, dal or roasted vegetables; ask for sauces on the side.' },
+    { text: 'Keep bread, rice and desserts to small portions, especially at lunch meetings with an afternoon ahead.' },
+    { text: 'Order water or unsweetened iced tea instead of juices or soft drinks.' },
+    { text: 'At brunches and late dinners, eat slowly and stop before you feel full.' }
+  ]
+},
+yourVisit: {
+  id: 'your-visit',
+  heading: 'Your Consultation in Jumeirah 1',
+  table: [
+    ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+    ['When', 'Every day, 10am–10pm, including after-work evenings'],
+    ['Consultation', 'From AED 200, 45–60 minutes'],
+    ['Also in the building', 'Physiotherapy for neck and back strain, and a GP'],
+    ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+    ['From the office', 'About 10–15 minutes from DIFC, Downtown and Business Bay; a few minutes from Satwa, Al Wasl and City Walk']
+  ]
+},
+
   herbs: {
-    title: '3. Top 3 "Cognitive" Herbs for Productivity',
+    title: 'Ayurvedic Herbs Traditionally Used for Stress and Sleep',
     items: [
       {
-        title: 'Brahmi (Gotu Kola)',
-        description: 'The premier "Brain Tonic" that enhances memory and focus while calming the nervous system.',
+        title: 'Brahmi', 
+        description: 'Traditionally used in Ayurveda for the mind and to support calm focus.',
         icon: 'Leaf'
       },
       {
-        title: 'Shankhapushpi',
-        description: 'Improves concentration and reduces the mental "noise" that prevents deep work.',
+        title: 'Shankhapushpi', 
+        description: 'Traditionally used in Ayurveda for mental fatigue and restlessness.',
         icon: 'Leaf'
       },
       {
-        title: 'Jatamansi',
-        description: 'Excellent for those who struggle to "switch off" after a long day in the office; it promotes restful, restorative sleep.',
+        title: 'Jatamansi', 
+        description: 'Traditionally used in Ayurveda when it is hard to switch off and sleep.',
         icon: 'Leaf'
       }
     ],
     footer: 'A professional in a Dubai office holding a cup of herbal tea with a bowl of almonds and walnuts on the desk'
   },
   faq: {
-    title: '4. People Also Ask (PAA) - Professional Life Dubai',
+   title: 'Busy Professionals: Frequently Asked Questions',
     items: [
-      {
-        question: 'I travel frequently for work; can I still follow an Ayurvedic diet?',
-        answer: 'Yes. Ayurveda is about principles, not just recipes. When traveling through DXB, choose warm soups or stews over cold sandwiches and always stay hydrated with room-temperature water to counter the Vata of air travel.'
-      },
-      {
-        question: 'How can I manage my diet during Ramadan or late-night corporate events?',
-        answer: 'Focus on "Sattvic" (pure) foods that are easy on the liver. If you must eat late, keep the portion small and sip warm ginger tea afterward to aid the overnight digestive process.'
-      },
-      {
-        question: 'Do you offer corporate wellness consultations at the clinic?',
-        answer: 'Yes. RamaCare Polyclinic in Jumeirah 1 provides group assessments and personalized "Office Vitality" plans for teams looking to reduce sick leave and boost collective productivity.'
-      }
+      { question: 'What is a healthy Ayurvedic lunch for the office?', answer: 'A warm, cooked meal with protein, vegetables and a moderate portion of whole grains, such as dal, a vegetable sabzi and brown rice or roti, or grilled fish with roasted vegetables and quinoa. Pack it in an insulated lunchbox.' },
+      { question: 'Why do I feel sleepy at 3pm?', answer: 'A large, carb-heavy lunch often brings an afternoon dip in energy, made worse by poor sleep and dehydration. A balanced lunch with protein and vegetables, water, and a short walk afterwards usually help.' },
+      { question: 'How can I meal prep for a busy week?', answer: 'Cook a pot of dal or lentil soup and a grain such as brown rice or millet on Sunday, roast a tray of vegetables, and prepare a protein for two or three days. Reheat and pack warm each morning.' },
+      { question: 'How many coffees are too many?', answer: 'For most people, one or two cups before early afternoon is a sensible limit. Late coffee can affect sleep. Ayurveda advises against coffee on an empty stomach, especially for Pitta and Vata types.' },
+      { question: 'What snacks are best at the desk?', answer: 'Nuts, seeds, fruit, roasted chickpeas or buttermilk. Avoid sweets and biscuits from the office pantry, which bring a quick energy crash.' },
+      { question: 'I travel often for work. Can I still follow an Ayurvedic diet?', answer: 'Yes. Choose warm soups, stews or rice and dal over cold sandwiches, drink room-temperature water on flights, and keep regular meal times as much as you can.' },
+      { question: 'How do I manage late-night work dinners?', answer: 'Make lunch your largest meal, have a small snack in the late afternoon, and at dinner choose lighter dishes and smaller portions. A warm ginger or fennel tea afterwards is a traditional Ayurvedic habit.' },
+      { question: 'Which Ayurvedic herbs help with work stress and sleep?', answer: 'Brahmi, Shankhapushpi, Jatamansi and Ashwagandha are traditionally used, but only take them if Dr. Shamna prescribes them, especially if you take other medicines.' },
+      { question: 'What is Netra Tarpana?', answer: 'A traditional Ayurvedic eye therapy in which warm medicated ghee is held over the eyes inside a ring of dough. At RamaCare it is given after a consultation with Dr. Shamna.' },
+      { question: 'Can I book an appointment after work?', answer: 'Yes. RamaCare is open every day from 10am to 10pm, and consultations with Dr. Shamna can be booked in the evening.' },
+      { question: 'Do you offer corporate wellness consultations?', answer: 'Yes. RamaCare offers group assessments and diet and lifestyle guidance for teams. Contact us to plan a session for your company.' },
+      { question: 'How far is RamaCare from DIFC, Downtown and Business Bay?', answer: 'RamaCare Polyclinic is at 12 Al Dhiyafah Road, Jumeirah 1, about 10–15 minutes by car from DIFC, Downtown Dubai and Business Bay, and a few minutes from Satwa, Al Wasl and City Walk.' },
+      { question: 'How much does a consultation cost?', answer: 'A consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes.' }
     ]
   },
   whyChoice: {
-    title: "5. Why RamaCare is the Choice for Dubai's Leaders",
-    subtitle: 'We understand that your time is your most valuable asset.',
-    items: [
-      {
-        title: 'Efficient Consultations',
-        description: 'Our Jumeirah 1 clinic is designed for the professional schedule, providing clear, actionable plans you can implement immediately.',
-        icon: 'CheckCircle'
-      },
-      {
-        title: 'Science-Backed Ayurveda',
-        description: 'We combine ancient wisdom with an understanding of modern metabolic stress.',
-        icon: 'Award'
-      },
-      {
-        title: 'Central Location',
-        description: 'Located conveniently in Jumeirah 1, easily accessible from Downtown and DIFC.',
-        icon: 'MapPin'
-      }
-    ],
-    badges: ['DHA Licensed', 'Dubai Clinic', 'Expert Reviewed']
+  title: 'Why Busy Professionals Choose RamaCare',
+  subtitle: 'Care that fits a working day.',
+  items: [
+    { title: 'After-Work Appointments', 
+      description: 'Open every day until 10pm, so you can see Dr. Shamna after the office.', 
+      icon: 'Clock' 
+    },
+    { title: 'Doctor-Led Ayurveda', description: 'Dr. Shamna Keloth Meethal (BAMS, 11+ years) gives a clear, practical plan you can start the next day.', icon: 'UserCheck' },
+    { title: 'Close to DIFC and Downtown', description: 'Jumeirah 1, about 10–15 minutes from DIFC, Downtown and Business Bay, with physiotherapy and a GP in the same building.', icon: 'MapPin' }
+  ]
   },
+
   authorityFooter: {
-    title: 'The "Authority" Footer',
-    description: 'Don\'t wait for burnout to take action. Optimize your career and your health with a strategic <a href="/services/ayurvedic-diet-plan-dubai/" class="underline font-bold text-white">Ayurvedic Diet Plan Dubai</a>.',
-    buttonText: 'Book Your Executive Wellness Assessment in Jumeirah Today'
+    title: 'Make Your Workday Easier on Your Body',
+    description: 'Book a consultation with Dr. Shamna in Jumeirah 1, from AED 200, including after-work slots. For a full plan, see our Ayurvedic diet plan in Dubai.',
+    cta: 'Book an After-Work Consultation',
+    buttonText: 'Book an After-Work Consultation'
   },
   assessmentForm: {
     title: 'Book Your Executive Wellness Assessment',
@@ -184,57 +216,54 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
   }));
 
   const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/",
-        "name": "Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy",
-        "description": "Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Work-Related Stress & Burnout (Vata-Pitta Imbalance)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Busy Professionals", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#faq",
-        "mainEntity": faqsForSchema
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/",
+      "name": "Ayurvedic Diet Plan for Busy Professionals Dubai | Office Meals",
+      "inLanguage": "en-AE",
+      "audience": { "@type": "Audience", "audienceType": "Office workers and busy professionals in Dubai" },
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#diet" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Busy Professionals", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" }
+        ]
       }
-    ]
-  };
+    },
+    {
+      "@type": "Diet",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/#diet",
+      "name": "Ayurvedic diet plan for busy professionals",
+      "alternateName": ["Ayurvedic office diet", "Healthy office lunch plan", "Ayurvedic meal prep for work"],
+      "description": "Practical Ayurvedic eating for office workers in Dubai from RamaCare Polyclinic, Jumeirah 1: a main meal at lunch, warm meal-prep lunchboxes, steady snacks, smarter caffeine habits, hydration in air-conditioned offices, travel and sleep routines, with consultations up to 10pm.",
+      "dietFeatures": "Main meal at midday with protein, vegetables and whole grains; warm home-cooked lunchboxes; nuts or fruit instead of sweets; water and herbal teas; light, early dinner",
+      "expertConsiderations": "Herbs such as Brahmi, Ashwagandha or Jatamansi should only be taken if prescribed, especially with other medicines.",
+      "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "gender": "Female",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqsForSchema
+    }
+  ]
+};
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in the Ayurvedic Diet Plan for Busy Professionals. Please help me book a consultation.");
@@ -306,26 +335,26 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy</title>
-        <meta name="description" content="Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1." key="description" />
+        <title key="title">Ayurvedic Diet Plan for Busy Professionals Dubai | Office Meals</title>
+        <meta name="description" content="Ayurvedic diet plan for busy professionals in Dubai: office lunches, meal prep, the 3pm slump, travel and sleep. Evening appointments to 10pm in Jumeirah 1." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy" key="og:title" />
-        <meta property="og:description" content="Stop the burnout. Our DHA-licensed Ayurvedic diet plans for Dubai professionals target DIFC/Business Bay lifestyles. Balance stress, improve sleep, and boost productivity. Visit RamaCare Jumeirah 1." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Diet Plan for Busy Professionals Dubai | Office Meals" key="og:title" />
+        <meta property="og:description" content="Ayurvedic diet plan for busy professionals in Dubai: office lunches, meal prep, the 3pm slump, travel and sleep. Evening appointments to 10pm in Jumeirah 1." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-plan-busy-professionals-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diet3.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet Plan for Busy Professionals in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic office lunch and herbal tea for busy professionals, RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet for Busy Professionals Dubai | Optimize Focus & Energy" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic Diet Plan for Busy Professionals Dubai | Office Meals" key="twitter:title" />
         <meta name="twitter:description" content="A DHA-licensed Ayurvedic approach for DIFC and Business Bay professionals — balance stress, improve sleep, and sustain energy through the workday." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diet3.jpg" key="twitter:image" />
 
@@ -514,9 +543,10 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4 tracking-tight">
                   {step.letter}. {step.title}
                 </h3>
-                <p className="text-[#5F5F5F] text-base leading-relaxed mb-4">
-                  {step.description}
-                </p>
+                <p 
+                  className="text-[#5F5F5F] text-base leading-relaxed mb-4"
+                  dangerouslySetInnerHTML={{ __html: step.description }}
+                />
                 {step.favor && (
                   <div className="bg-[#E9E2D6] p-4 rounded-lg border-l-4 border-[#1F5E4B]">
                     <p 
@@ -530,6 +560,9 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
           </div>
         </div>
       </section>
+
+      <AyurvedaInfoSection content={content.sampleDay} />  
+      <AyurvedaInfoSection content={content.eatingOut} />
 
       {/* Section 3: Cognitive Herbs */}
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
@@ -657,17 +690,6 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
             })}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {content.whyChoice.badges.map((badge, idx) => (
-              <div 
-                key={idx}
-                className="bg-[#F5F1EA] px-8 py-3 rounded-full text-[#1A1A1A] font-bold text-sm flex items-center gap-3 border border-[#E9E2D6] shadow-sm hover:shadow-md transition-all cursor-default"
-              >
-                <LucideIcons.CheckCircle size={18} className="text-[#1F5E4B]" />
-                {badge}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -694,7 +716,7 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
           </motion.button>
         </div>
       </section>
-
+      <AyurvedaInfoSection content={content.yourVisit} />
       {/* Section 7: Assessment Form */}
       <section id="assessment-form" className="bg-[#F5F1EA] py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
@@ -754,9 +776,9 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
                 className="w-full px-4 py-3 border border-[#E9E2D6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] bg-white"
               >
                 <option value="">Select a time</option>
-                <option value="morning">Morning</option>
-                <option value="afternoon">Afternoon</option>
-                <option value="evening">Evening</option>
+                <option value="morning">Morning (10 AM - 1 PM)</option>
+                <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                <option value="evening">After work (5 PM - 10 PM)</option>
               </select>
             </div>
             <div>
@@ -801,23 +823,35 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
             Related Ayurvedic Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
-              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
-            </a>
             <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
+            <a href="/services/office-neck-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Office Neck Pain Physiotherapy</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
             <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Diet vs. Fasting</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Intermittent Fasting</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-weight-loss-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Weight Loss</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/abhyanga-massage-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Kerala Ayurvedic Massage</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
       </section>
 
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-busy-professionals-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-plan-busy-professionals-dubai" lastReviewed="2026-01-12" />
 
       {/* Bottom Sticky CTA for Mobile */}
       <div className="fixed bottom-6 right-6 z-50 md:hidden">

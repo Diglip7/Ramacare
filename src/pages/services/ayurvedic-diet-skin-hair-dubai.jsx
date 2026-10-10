@@ -5,149 +5,146 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 
 const content = {
   hero: {
-    title: 'Ayurvedic Diet for Skin & Hair: Countering Dubai\'s Hard Water from Within',
-    mainDescription: 'If you have noticed increased hair fall, a flaky scalp, or dull skin since moving to the UAE, you are likely experiencing the "Dubai Beauty Dilemma." While external filters help, the real secret to resilience lies in your internal nutrition. An Ayurvedic Diet for Skin & Hair in Dubai focuses on building Ojas (vitality) and balancing the Pitta dosha to protect your natural beauty from the harsh desert environment.',
+   title: 'Ayurvedic Diet for Healthy Skin and Hair in Dubai',
+    mainDescription: 'Hair and skin reflect what you eat and digest. Ayurveda sees hair as a by-product of Asthi Dhatu (bone tissue) and links most skin and hair problems in Dubai\'s heat to aggravated Pitta. This guide from RamaCare Polyclinic in Jumeirah 1 covers foods for your dosha, the nutrients hair and skin need, what to limit, and when to check your blood levels with our GP.',
     summaryBox: {
-      title: 'The "Answer-First" Summary for Beauty & Vitality',
-      description: 'Can diet stop hair fall caused by Dubai\'s water? While desalinated water is harsh on the exterior, hair fall in the UAE is often accelerated by "internal dryness" and high Pitta (heat). By incorporating Amla (Indian Gooseberry), healthy fats like Ghee, and cooling herbs that detoxify the blood (Rakta Dhatu), you can strengthen hair follicles and improve skin elasticity within 30 to 60 days.'
+      title: 'Can Diet Help Hair Fall and Dull Skin in Dubai?',
+      description: 'Diet is one part of the picture. Hair needs enough protein, iron, zinc and vitamin D, and skin needs healthy fats, water and vitamin C. In Ayurveda, cooling, Pitta-balancing food, amla, curry leaves and a little ghee are traditionally used for hair and skin. Hard water and sun affect the outside, but low iron, vitamin D or thyroid problems are common hidden causes of hair fall, so it is worth a blood test with our GP. Changes in hair are gradual and take months, not weeks.'
     },
     ctaButtons: {
-      primary: { text: 'Book Your Beauty Consultation in Jumeirah Today' },
+      primary: { text: 'Book a Skin & Hair Diet Consultation' },
       secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
     },
     image: '/images/ayurvedic-skin-hair-treatment-dubai.jpg'
   },
   dubaiFactors: {
-    title: '1. The "Dubai Factors" Destroying Your Skin and Hair',
+    title: 'Dubai Factors That Affect Skin and Hair',
     description: 'At RamaCare Polyclinic, we\'ve identified three specific local triggers that an Ayurvedic diet can neutralize:',
     items: [
-      {
-        title: 'Desalinated Water "Dryness"',
-        description: 'The minerals in UAE tap water can strip the skin\'s natural oils. Ayurveda counters this by increasing "internal oleation"—eating specific fats that moisturize your cells from the inside out.',
-        icon: 'Droplets'
-      },
-      {
-        title: 'High Chlorine & Heat',
-        description: 'The intense Dubai sun and chlorinated pool water aggravate Pitta, leading to scalp inflammation, premature greying, and skin redness.',
-        icon: 'Flame'
-      },
-      {
-        title: 'Micro-Nutrient Depletion',
-        description: 'The fast-paced lifestyle often leads to a reliance on "dead" or processed foods that lack the silica and biotin found in fresh, Sattvic ingredients.',
-        icon: 'AlertCircle'
-      }
+      { title: 'Hard, Desalinated Water', description: 'Hard water can leave hair dry and the scalp flaky. It affects the outside of the hair; diet and gentle hair care work together.', icon: 'Droplets' },
+      { title: 'Sun, Heat and Pool Chlorine', description: 'Strong sun, heat and chlorine dry the skin and scalp; in Ayurveda they aggravate Pitta, linked to redness, breakouts and early greying.', icon: 'Sun' },
+      { title: 'Low Vitamin D and Iron', description: 'Despite the sunshine, low vitamin D is common in the UAE because many people spend most of the day indoors; low iron is also common, especially in women. Both are linked to hair fall and are easy to check with a blood test.', icon: 'TestTube' },
+      { title: 'Air-Conditioning and Busy Routines', description: 'Long hours in cool, dry air and quick processed meals leave skin dry and diets low in protein and fresh food.', icon: 'Wind' }
     ]
   },
   glowGrow: {
-    title: '2. The "Glow & Grow" Dietary Protocol',
-    subtitle: 'Our approach centers on Rakta-Mansa (Blood and Muscle tissue) nourishment — the Ayurvedic foundation for healthy hair and skin regeneration.',
+    title: 'What to Eat for Healthy Skin and Hair',
+    subtitle: 'Ayurveda nourishes Rasa, Rakta and Asthi Dhatu (plasma, blood and bone tissue), which it links to skin and hair. In everyday terms, that means:',
     favor: {
-      title: 'Foods to Favor (The "Radiance" List)',
-      intro: 'Available at Organic Foods & Café or Spinneys:',
+      title: 'Foods to Favour',
+      intro: 'Fresh, home-cooked versions are best:',
       items: [
-        {
-          title: 'The Hair Savior: Amla',
-          description: 'High in Vitamin C and antioxidants, Amla is the premier Ayurvedic fruit for preventing hair thinning and greying.',
-          icon: 'CheckCircle'
-        },
-        {
-          title: 'Hydrating Seeds',
-          description: 'Pumpkin and sunflower seeds are rich in Zinc and Vitamin E, essential for skin repair and hair follicle strength.',
-          icon: 'CheckCircle'
-        },
-        {
-          title: 'The "Liquid Gold": Ghee',
-          description: 'Consuming a small amount of A2 Ghee helps lubricate the tissues, countering the drying effects of Dubai\'s AC and water.',
-          icon: 'CheckCircle'
-        },
-        {
-          title: 'Sweet, Juicy Fruits',
-          description: 'Pomegranates and sweet grapes help cool the blood and reduce skin breakouts.',
-          icon: 'CheckCircle'
-        }
+        { title: 'Protein at Every Meal', description: 'Hair is made of protein (keratin). Include lentils and mung dal, milk or yoghurt, paneer, eggs, fish or chicken, as your diet allows.', icon: 'Egg' },
+        { title: 'Iron- and Zinc-Rich Foods', description: 'Spinach and other leafy greens, lentils, pumpkin and sesame seeds, dates and raisins; pair them with vitamin C foods to help absorb iron.', icon: 'Leaf' },
+        { title: 'Amla and Vitamin C Fruits', description: 'Amla (Indian gooseberry), oranges and pomegranate are rich in vitamin C, which skin needs to make collagen. Amla is traditionally valued in Ayurveda for hair.', icon: 'Citrus' },
+        { title: 'Healthy Fats', description: 'A small spoon of ghee, nuts, sesame and coconut, traditionally used in Ayurveda for dry skin and hair, especially for Vata types.', icon: 'Droplet' },
+        { title: 'Curry Leaves, Coconut and Methi', description: 'Curry leaves, fresh coconut and fenugreek (methi) are traditional South Indian foods for hair, easy to add to daily cooking.', icon: 'Sprout' },
+        { title: 'Cooling Foods in Summer', description: 'Cucumber, coconut water, sweet ripe fruit and buttermilk help balance Pitta in the Dubai heat.', icon: 'Snowflake' }
       ]
     },
-    avoid: {
-      title: 'Foods to Avoid',
+   avoid: {
+      title: 'Foods to Limit',
       items: [
-        {
-          title: 'Excessive Spicy & Salty Foods',
-          description: 'These increase heat (Pitta) in the body, which "burns" the hair follicles and leads to oily, acne-prone skin.',
-          icon: 'XCircle'
-        },
-        {
-          title: 'Fermented Foods (in excess)',
-          description: 'While popular, too much vinegar or fermented pickles can aggravate skin conditions like Eczema or Psoriasis in the Dubai heat.',
-          icon: 'XCircle'
-        }
+        { title: 'Very Spicy, Salty and Fried Food', description: 'These aggravate Pitta in Ayurveda, which is linked to oily, breakout-prone skin, scalp irritation and early greying.', icon: 'Flame' },
+        { title: 'Sugar, Sugary Drinks and Refined Flour', description: 'High-sugar diets are linked to acne in many people; Ayurveda sees them as heavy and Kapha-increasing.', icon: 'Candy' },
+        { title: 'Excess Fermented and Sour Food', description: 'Large amounts of vinegar, pickles and very sour food can aggravate Pitta and may worsen eczema in the heat.', icon: 'AlertCircle' },
+        { title: 'Crash Diets', description: 'Very low-calorie or low-protein diets are a common cause of hair shedding a few months later.', icon: 'TrendingDown' }
       ]
     }
   },
   dubaiScalp: {
-    title: '3. Ayurvedic Secrets for the "Dubai Scalp"',
+    title: 'Ayurvedic Herbs Used for Skin and Hair',
     image: '/images/diet.jpg',
     items: [
-      {
-        title: 'Aloe Vera Juice',
-        description: 'A cooling tonic that cleanses the liver (the seat of skin health).',
-        icon: 'Leaf'
-      },
-      {
-        title: 'Bhringraj',
-        description: 'Known as the "King of Hair," we prescribe this internally to improve blood circulation to the scalp.',
-        icon: 'Leaf'
-      },
-      {
-        title: 'Coconut & Curry Leaves',
-        description: 'Incorporating these into your cooking provides the essential minerals needed to combat the minerals found in hard water.',
-        icon: 'Leaf'
-      }
-    ]
+      { title: 'Amla', description: 'Indian gooseberry, eaten fresh, as juice or in classical preparations; traditionally used in Ayurveda for hair and to balance Pitta.', icon: 'Citrus' },
+      { title: 'Bhringraj', description: 'Traditionally called the "king of hair" in Ayurveda; used as an oil on the scalp or, if suitable, as a medicine prescribed by the doctor.', icon: 'Leaf' },
+      { title: 'Brahmi', description: 'Traditionally used for the scalp and to calm the mind, which matters when stress is linked to hair fall.', icon: 'Brain' }
+    ],
+    note: 'Herbs are prescribed by Dr. Shamna according to your health and any other medicines you take; do not self-medicate.'
   },
+
+  // In the content object:
+doshaTable: {
+  id: 'skin-hair-by-dosha',
+  heading: 'Skin and Hair Foods by Dosha',
+  table: [
+    ['Vata (dry skin, dry or frizzy hair)', 'Favour warm, cooked, slightly oily food, ghee, nuts, sesame, soups and sweet ripe fruit. Limit raw salads, dry snacks and cold drinks.'],
+    ['Pitta (sensitive, red or breakout-prone skin; early greying or thinning)', 'Favour cooling food: cucumber, leafy greens, coconut, sweet fruit, mung dal, rice, a little ghee. Limit very spicy, sour, salty and fried food.'],
+    ['Kapha (oily skin, oily scalp, dandruff)', 'Favour lighter, warm, spiced food, vegetables, lentils and barley. Limit sweets, heavy dairy and fried food.']
+  ],
+  note: 'Not sure of your dosha? Take our dosha test (/services/prakriti-dosha-assessment-dubai/#dosha-quiz).'
+},
+bloodTests: {
+  id: 'blood-tests',
+  heading: 'Check Your Blood Levels: Common Hidden Causes of Hair Fall',
+  intro: 'Diet works best once medical causes are ruled out. Our GP in the same building can arrange tests for:',
+  items: [
+    { text: 'iron stores (ferritin) and a blood count' },
+    { text: 'vitamin D' },
+    { text: 'vitamin B12' },
+    { text: 'thyroid function' }
+  ],
+  note: 'For sudden or patchy hair loss, scalp disease or severe acne, see our dermatologist. Hair loss with irregular periods, acne or excess hair can be linked to PCOS (/services/pcos-treatment-dubai/).'
+},
+sampleDay: {
+  id: 'sample-day',
+  heading: 'Sample Day for Healthy Skin and Hair (Pitta, Dubai Summer)',
+  intro: 'An example only. Your plan is made for your dosha and health.',
+  table: [
+    ['Breakfast', 'Oats with milk, soaked almonds and dates, or two eggs with toast'],
+    ['Mid-morning', 'Fresh amla or an orange, or coconut water'],
+    ['Lunch', 'Rice or chapati, mung dal, a leafy green vegetable with curry leaves, cucumber raita, a little ghee'],
+    ['Afternoon', 'A handful of pumpkin and sunflower seeds'],
+    ['Dinner (early)', 'Vegetable soup with paneer or fish, and lightly cooked vegetables'],
+    ['Through the day', 'Room-temperature water; limit sugary drinks and very spicy snacks']
+  ]
+},
+yourVisit: {
+  id: 'your-visit',
+  heading: 'Your Skin and Hair Diet Consultation in Jumeirah 1',
+  table: [
+    ['Ayurvedic doctor', 'Dr. Shamna Keloth Meethal, BAMS, female, DHA-licensed (11+ years)'],
+    ['Also in the building', 'Female GP for blood tests; dermatologist for medical skin and hair conditions'],
+    ['Consultation', 'From AED 200, 45–60 minutes'],
+    ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+    ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+    ['Hours', 'Every day, 10am–10pm']
+  ]
+},
   paa: {
-    title: '4. People Also Ask (PAA) - Dubai Beauty Edition',
+    title: 'Skin and Hair Diet: Frequently Asked Questions',
     items: [
-      {
-        question: 'Will an Ayurvedic diet help if I already have a shower filter?',
-        answer: 'Yes. A filter only addresses the external contact. An Ayurvedic diet strengthens the "building blocks" of your hair and skin, making them less susceptible to damage from hard water and UV rays.'
-      },
-      {
-        question: 'How soon will I see a reduction in hair fall?',
-        answer: 'Hair grows in cycles. Most patients at RamaCare see a significant reduction in "comb-loss" and an increase in skin hydration after one full lunar cycle (28 days) of following their personalized plan.'
-      },
-      {
-        question: 'Is there a specific diet for "Dubai Acne"?',
-        answer: 'Yes. Skin breakouts in the UAE are usually due to "Liquid Pitta" (toxins in the blood). We prescribe a Blood Purifying Diet rich in bitter greens and cooling herbs to clear the complexion.'
-      }
+      { question: 'What is the best Ayurvedic diet for hair fall and hair growth?', answer: 'A diet with enough protein (dal, dairy, eggs or fish), iron- and zinc-rich foods (leafy greens, lentils, seeds, dates), amla and curry leaves, a little ghee, and cooling, Pitta-balancing food in the heat. Your plan is adjusted to your dosha.' },
+      { question: 'Which foods should I avoid for hair fall?', answer: 'Very spicy, salty and fried food, too much sugar, and crash diets. Very low-calorie or low-protein diets are a common cause of hair shedding.' },
+      { question: 'What should I eat for glowing skin, by dosha?', answer: 'Vata (dry skin): warm, cooked, slightly oily food and healthy fats. Pitta (sensitive, breakout-prone skin): cooling, sweet and bitter foods; less spicy and sour food. Kapha (oily skin): lighter, warm, less sugary and fried food.' },
+      { question: 'Can diet help acne?', answer: 'For some people, cutting sugary drinks, sweets and very oily food helps. Ayurveda links acne to Pitta and Kapha. Persistent or scarring acne should be seen by our dermatologist.' },
+      { question: 'Does Dubai\'s hard water cause hair fall?', answer: 'Hard water can make hair dry and the scalp flaky, but it is rarely the main cause of hair fall. Low iron, low vitamin D, thyroid problems, stress, PCOS and genetics are more common causes.' },
+      { question: 'Can low vitamin D or iron cause hair fall?', answer: 'Both are linked to hair shedding, and low vitamin D is common in the UAE. Our GP can arrange blood tests for iron (ferritin), vitamin D, B12 and thyroid.' },
+      { question: 'Will diet help if I already use a shower filter?', answer: 'Yes. A filter helps the outside of the hair; diet supports the nutrients hair and skin need. They work best together.' },
+      { question: 'How long before I see a change?', answer: 'Hair grows slowly, so changes in hair fall usually take three months or more; skin may respond sooner. Experiences vary, and the doctor reviews your progress.' },
+      { question: 'Which Ayurvedic herbs help skin and hair?', answer: 'Amla, Bhringraj and Brahmi are commonly used. Dr. Shamna prescribes them according to your health; do not self-medicate.' },
+      { question: 'Should I take biotin or hair supplements?', answer: 'Only if a deficiency is found or your doctor advises it. Many hair supplements are unnecessary, and biotin can affect some blood test results.' },
+      { question: 'Do I need a dermatologist or an Ayurvedic doctor?', answer: 'See our dermatologist for sudden or patchy hair loss, scalp disease or severe acne. For diet and Ayurvedic care, see Dr. Shamna. Both are in the same Jumeirah 1 building.' },
+      { question: 'How much does a skin and hair diet consultation cost?', answer: 'A consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Blood tests, if needed, are arranged by our GP and priced separately.' },
+      { question: 'Where can I get an Ayurvedic skin and hair diet plan near Jumeirah 1?', answer: 'At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm.' }
     ]
   },
   whyLeader: {
-    title: '5. Why RamaCare Polyclinic is the Leader in Aesthetic Ayurveda',
+    title: 'Why Patients Choose RamaCare for Skin and Hair',
     items: [
-      {
-        title: 'DHA-Licensed Expertise',
-        description: 'Your skin and hair health are managed by professionals who understand both clinical dermatology and Ayurvedic science.',
-        icon: 'Award'
-      },
-      {
-        title: 'Personalized Dosha Mapping',
-        description: 'We don\'t just give you "beauty foods"; we find out why your body is reacting to the Dubai environment.',
-        icon: 'UserCheck'
-      },
-      {
-        title: 'Integrative Care',
-        description: 'We can combine your diet plan with our in-house Ayurvedic scalp treatments (<a href="/services/shirodhara-therapy-in-dubai/" class="text-[#1F5E4B] underline font-bold">Shirodhara</a>) for maximum results.',
-        icon: 'Stethoscope'
-      }
+      { title: 'Ayurveda, GP and Dermatology in One Building', description: 'Dr. Shamna (BAMS) plans your diet; our GP can check iron, vitamin D, B12 and thyroid; our dermatologist sees medical skin and hair conditions.', icon: 'Building2' },
+      { title: 'Female Doctors', description: 'Our Ayurvedic doctor and GP are both female, which many women prefer for hair, skin and PCOS concerns.', icon: 'UserCheck' },
+      { title: 'Scalp and Skin Therapies', description: 'If needed, add Ayurvedic hair fall care (Shiro Abhyanga, Shirolepa) or Ayurvedic skin treatment, with a therapist of your own gender.', icon: 'Sparkles' }
     ]
   },
   ctaFinal: {
-    title: "Don't let the Dubai environment dictate your confidence",
-    subtitle: "Restore your natural radiance with a professional Ayurvedic diet plan in Dubai specifically tailored for skin and hair health.",
+    title: "Look After Your Skin and Hair From the Inside",
+    subtitle: "Book a consultation with Dr. Shamna in Jumeirah 1, from AED 200, for a diet plan for your dosha, and blood tests through our GP if needed.",
     buttons: {
       appointment: "Book Appointment",
       whatsapp: "WhatsApp Instantly"
@@ -179,69 +176,53 @@ export default function AyurvedicDietSkinHairDubaiPage() {
   }));
 
   const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/",
-        "name": "Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally",
-        "description": "Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Hair Fall / Skin Health (Ojas & Pitta Balance)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Skin & Hair", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "jobTitle": "Ayurveda Doctor",
-        "honorificSuffix": "BAMS",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Ayurveda Doctor"
-        },
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#faq",
-        "mainEntity": faqsForSchema
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/",
+      "name": "Ayurvedic Diet for Skin & Hair Dubai | Foods for Hair Fall",
+      "inLanguage": "en-AE",
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#diet" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Skin & Hair", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" }
+        ]
       }
-    ]
-  };
+    },
+    {
+      "@type": "Diet",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/#diet",
+      "name": "Ayurvedic diet for skin and hair",
+      "alternateName": ["Ayurvedic diet for hair fall", "Ayurvedic diet for glowing skin", "Foods for hair growth Ayurveda", "Pitta-balancing diet for skin"],
+      "description": "Dosha-based Ayurvedic eating guidance for skin and hair from RamaCare Polyclinic, Jumeirah 1, Dubai: protein, iron, zinc and healthy fats, cooling foods for Pitta, foods to limit, and blood tests through the GP for iron, vitamin D, B12 and thyroid when hair fall is a concern.",
+      "dietFeatures": "Foods by dosha (Vata, Pitta, Kapha); adequate protein; iron- and zinc-rich foods; amla and curry leaves; limiting very spicy, fried, salty and sugary food",
+      "expertConsiderations": "Hair fall and skin problems can have medical causes such as iron or vitamin D deficiency, thyroid problems, PCOS or skin disease; these should be checked by a doctor.",
+      "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "gender": "Female",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqsForSchema
+    }
+  ]
+};
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello RamaCare, I'm interested in the Ayurvedic Diet for Skin & Hair. Please help me book a consultation.");
@@ -280,7 +261,6 @@ export default function AyurvedicDietSkinHairDubaiPage() {
         }),
       });
 
-
       const result = await response.json();
 
       if (response.ok && result.success) {
@@ -314,27 +294,27 @@ export default function AyurvedicDietSkinHairDubaiPage() {
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally</title>
-        <meta name="description" content="Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah." key="description" />
+        <title key="title">Ayurvedic Diet for Skin & Hair Dubai | Foods for Hair Fall</title>
+        <meta name="description" content="Ayurvedic diet for healthy skin and hair in Jumeirah 1, Dubai: foods by dosha, key nutrients, foods to avoid, and blood tests via our GP. From AED 200." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally" key="og:title" />
-        <meta property="og:description" content="Combat the effects of Dubai's hard water and harsh climate. Our Ayurvedic diet plans for skin and hair focus on 'Ojas' to restore glow and stop hair fall from within. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Diet for Skin & Hair Dubai | Foods for Hair Fall" key="og:title" />
+        <meta property="og:description" content="Ayurvedic diet for healthy skin and hair in Jumeirah 1, Dubai: foods by dosha, key nutrients, foods to avoid, and blood tests via our GP. From AED 200." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-skin-hair-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-skin-hair-dubai-og.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet for Skin and Hair in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic diet for healthy skin and hair from RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet for Skin & Hair Dubai | Fix Hair Fall Naturally" key="twitter:title" />
-        <meta name="twitter:description" content="Stop hair fall and restore skin glow with an Ayurvedic diet plan built for Dubai's hard water and harsh climate — DHA-licensed care in Jumeirah." key="twitter:description" />
+        <meta name="twitter:title" content="Ayurvedic Diet for Skin & Hair Dubai | Foods for Hair Fall" key="twitter:title" />
+        <meta name="twitter:description" content="Ayurvedic diet for healthy skin and hair in Jumeirah 1, Dubai: foods by dosha, key nutrients, foods to avoid, and blood tests via our GP. From AED 200." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-skin-hair-dubai-og.jpg" key="twitter:image" />
 
         <script
@@ -461,7 +441,8 @@ export default function AyurvedicDietSkinHairDubaiPage() {
           </div>
         </div>
       </section>
-
+        <AyurvedaInfoSection content={content.doshaTable} />  
+        <AyurvedaInfoSection content={content.sampleDay} />
       {/* 3. Glow & Grow Section */}
       <section className="bg-[#F5F1EA] px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl">
@@ -497,7 +478,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               </div>
               <div className="space-y-6">
                 {content.glowGrow.favor.items.map((item, idx) => {
-                  const Icon = LucideIcons[item.icon];
+                  const Icon = LucideIcons[item.icon] || LucideIcons.Check;
                   return (
                     <div key={idx} className="flex gap-4">
                       <div className="flex-shrink-0 mt-1">
@@ -527,7 +508,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
               </h3>
               <div className="space-y-6">
                 {content.glowGrow.avoid.items.map((item, idx) => {
-                  const Icon = LucideIcons[item.icon];
+                  const Icon = LucideIcons[item.icon] || LucideIcons.XCircle;
                   return (
                     <div key={idx} className="flex gap-4">
                       <div className="flex-shrink-0 mt-1">
@@ -578,7 +559,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
 
             <div className="space-y-6">
               {content.dubaiScalp.items.map((item, idx) => {
-                const Icon = LucideIcons[item.icon];
+                const Icon = LucideIcons[item.icon] || LucideIcons.Leaf;
                 return (
                   <motion.div
                     key={idx}
@@ -598,11 +579,17 @@ export default function AyurvedicDietSkinHairDubaiPage() {
                   </motion.div>
                 );
               })}
+
+              {content.dubaiScalp.note && (
+                <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#E9E2D6] text-sm text-[#5F5F5F] italic">
+                  <p>{content.dubaiScalp.note}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
-
+      <AyurvedaInfoSection content={content.bloodTests} />
       {/* 5. PAA Section */}
       <section className="bg-[#F5F1EA] px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="mx-auto max-w-4xl">
@@ -690,7 +677,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
           </div>
         </div>
       </section>
-
+    <AyurvedaInfoSection content={content.yourVisit} />
       {/* 7. Final CTA Section */}
       <section className="bg-[#1F5E4B] px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
         <div className="mx-auto max-w-7xl">
@@ -814,17 +801,21 @@ export default function AyurvedicDietSkinHairDubaiPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
             Related Ayurvedic Therapies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-            <a href="/services/shirodhara-therapy-in-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Shirodhara Therapy</span>
-              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
             <a href="/services/ayurvedic-hairfall-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Hairfall Treatment</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Ayurvedic Hair Fall Treatment</span>
               <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/skin-diseases-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Skin Diseases Treatment</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Ayurvedic Skin Treatment</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/pcos-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Ayurvedic PCOS Treatment</span>
+              <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B] text-sm">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
@@ -835,7 +826,7 @@ export default function AyurvedicDietSkinHairDubaiPage() {
         </div>
       </section>
 
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-skin-hair-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-skin-hair-dubai" lastReviewed="2026-01-12" />
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#1F5E4B] py-4 px-4 sm:px-6 shadow-2xl transition-all">

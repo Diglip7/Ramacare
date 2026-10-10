@@ -3863,7 +3863,8 @@ dubaiSkin: {
         intro: 'RamaCare has a dedicated Ayurvedic diet guide for each of these goals:',
         items: [
           { text: 'Ayurvedic diet for weight loss', href: '/services/ayurvedic-diet-weight-loss-dubai/' },
-          { text: 'Ayurvedic diet for diabetes', href: '/services/ayurvedic-diet-diabetes-dubai/' },
+          { text: 'Ayurvedic diet vs keto', href: '/services/ayurvedic-diet-vs-keto-dubai/' },
+          { text: 'Diabetes diet plan', href: '/services/ayurvedic-diet-diabetes-dubai/' },
           { text: 'Ayurvedic diet for thyroid', href: '/services/ayurvedic-diet-thyroid-dubai/' },
           { text: 'Ayurvedic diet for PCOS', href: '/services/ayurvedic-diet-pcos-dubai/' },
           { text: 'New to Ayurveda? Start with our Ayurvedic gut health guide and Agni self-check', href: '/services/ayurvedic-gut-health-dubai/' },
@@ -3875,7 +3876,7 @@ dubaiSkin: {
         note: 'For diabetes, thyroid and PCOS, our general physician in the same building can arrange blood tests, and your Ayurvedic diet works alongside your medical treatment.'
       },
 
-      dubaiEating: {
+    dubaiEating: {
         id: 'dubai-eating',
         heading: 'Ayurvedic Eating in Dubai: Ramadan, Summer and Office Life',
         items: [
@@ -7936,7 +7937,7 @@ foodsToAvoid: {
         {
           id: 7,
           title: 'Skin and Hair',
-          description: 'For acne and hair thinning, Ayurvedic care can be combined with our Ayurvedic skin and hair fall services and our dermatologist.',
+          description: 'For acne and hair thinning, Ayurvedic care can be combined with our Ayurvedic skin and hair fall services and our dermatologist. Read our <a href="/services/ayurvedic-diet-skin-hair-dubai/">Ayurvedic diet for skin and hair</a>.',
           hasLearnMore: false,
           expandedContent: null
         },
@@ -20068,9 +20069,9 @@ foodsToAvoid: {
         {
           id: 3,
           title: 'Nutrition & Lifestyle Guidance',
-          description: 'A balanced diet and active lifestyle are essential for diabetes management.',
+          description: 'A balanced diet and active lifestyle are essential for diabetes management. For food guidance, see our [diabetes diet plan in Dubai](/services/ayurvedic-diet-diabetes-dubai/).',
           hasLearnMore: true,
-          expandedContent: 'We provide personalized meal planning, portion control strategies, and physical activity recommendations to support stable glucose levels and healthy weight management.'
+          expandedContent: 'We provide personalized meal planning, portion control strategies, and physical activity recommendations to support stable glucose levels and healthy weight management. For food guidance, see our [diabetes diet plan in Dubai](/services/ayurvedic-diet-diabetes-dubai/).'
         },
         {
           id: 4,

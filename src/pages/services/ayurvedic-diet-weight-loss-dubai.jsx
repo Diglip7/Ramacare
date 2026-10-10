@@ -41,7 +41,11 @@ const content = {
       },
       {
         title: 'One-Size-Fits-All Plans',
-        description: 'Generic keto or fasting plans ignore your unique Prakriti (constitution), causing frustration and rebound weight gain.',
+        description: (
+          <>
+            Generic keto or fasting plans ignore your unique Prakriti (constitution), causing frustration and rebound weight gain. Compare approaches in our <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#16442d]">Ayurvedic diet vs keto</a> guide.
+          </>
+        ),
         icon: 'Thermometer'
       }
     ]
@@ -841,7 +845,7 @@ export default function AyurvedicDietWeightLossPage() {
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Diet vs. Keto</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic diet vs keto</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>

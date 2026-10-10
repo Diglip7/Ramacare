@@ -5,34 +5,78 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MessageCircle, Snowflake, Sun, Moon, X, ArrowRight, ShieldCheck, Clock, Users, Star } from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection'; 
 
 export default function AyurvedicDietPCOSPage() {
   const { showToast, ToastComponent } = useToast();
   const [openFaq, setOpenFaq] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [showBottomBar, setShowBottomBar] = useState(false);
 
   // FAQ Data
   const faqData = [
     {
-      question: "How long does it take to see results with an Ayurvedic PCOS diet?",
-      answer: "Most women notice improvements in energy levels and digestion within 2–3 weeks. Menstrual regularity typically improves in 3–6 months. However, consistency is key—Ayurveda works gradually to restore balance, not as a quick fix."
+      question: "What is the best Ayurvedic diet for PCOS?",
+      answer: "Low-GI grains (millet, oats, lentils, brown rice), vegetables at every meal, protein at every meal, healthy fats, and warm, freshly cooked food with an early, light dinner. In Ayurveda this balances Kapha and Vata, which are linked to PCOS."
     },
     {
-      question: "Can I follow an Ayurvedic diet while on Metformin or birth control?",
-      answer: "Yes, but coordination is essential. Metformin and Ayurvedic herbs like fenugreek both lower blood sugar—combining them without medical supervision can cause hypoglycemia. Always inform your Ayurvedic practitioner about medications."
+      question: "What are the foods to avoid with PCOS?",
+      answer: "Sugar, sweets and sweet drinks (including fruit juice), white bread and refined flour, fried and heavily processed food, processed meats, and large portions of white rice without vegetables or protein."
     },
     {
-      question: "Where can I buy Ayurvedic ingredients in Dubai?",
-      answer: "Spinneys, Waitrose, and Organic Foods & Cafe stock items like quinoa, ghee, and turmeric. For specialized herbs (Shatavari, Ashwagandha), visit licensed Ayurvedic clinics or pharmacies like Aster Pharmacy or Dubai Herbal & Treatment Centre."
+      question: "Can I eat white rice with PCOS?",
+      answer: "In small portions, with plenty of vegetables and protein on the plate. Brown rice, millet and other whole grains raise blood sugar more slowly, so they are better choices most of the time."
     },
     {
-      question: "Is the Ayurvedic diet suitable for vegetarians/vegans?",
-      answer: "Absolutely. The Ayurvedic PCOS diet is naturally plant-based, focusing on legumes, whole grains, and vegetables. Vegans can substitute ghee with sesame oil or coconut oil (though ghee is preferred for its digestive properties)."
+      question: "Is dairy bad for PCOS?",
+      answer: "It affects women differently. Some feel better with less milk and cheese; yoghurt and buttermilk are often easier to digest. Ayurveda advises avoiding cold, heavy dairy. Your doctor can help you decide."
     },
     {
-      question: "What if I can't avoid late dinners due to my work schedule in Dubai?",
-      answer: "If late dinners are unavoidable, opt for the lightest option possible—soup or moong dal. Avoid heavy proteins or fried foods. Consider making lunch your largest meal and having a small snack (like spearmint tea + almonds) around 4–5 PM to reduce evening hunger."
+      question: "Which fruits are good for PCOS?",
+      answer: "Whole fruits such as berries, apple, pear, guava and orange are good choices. Limit fruit juice and very sweet fruits like mango or dates in large amounts."
+    },
+    {
+      question: "Is spearmint tea good for PCOS?",
+      answer: "Small studies suggest two cups a day may lower some androgen levels in women with excess hair growth. It is a safe drink for most women, but not a treatment on its own."
+    },
+    {
+      question: "Do cinnamon and fenugreek help PCOS?",
+      answer: "Small studies suggest they may help blood sugar. They are safe in food amounts, but supplements or large amounts should be checked with your doctor, especially if you take metformin or diabetes medicines."
+    },
+    {
+      question: "Can I follow an Ayurvedic diet while on metformin or the pill?",
+      answer: "Yes. Diet changes work alongside your medicines. Tell your doctors about any herbs or supplements, because some (such as fenugreek) also lower blood sugar."
+    },
+    {
+      question: "Is an Ayurvedic PCOS diet suitable for vegetarians?",
+      answer: "Yes. Lentils, chickpeas, beans, paneer, yoghurt, nuts and seeds provide protein. Vegans can use plant proteins and oils instead of dairy and ghee."
+    },
+    {
+      question: "How long does it take to see changes?",
+      answer: "Many women notice better energy and digestion within weeks. Changes in cycles and weight take several months; even a 5-10% weight loss often helps PCOS symptoms when weight is a factor."
+    },
+    {
+      question: "What exercise is best for PCOS?",
+      answer: "Regular exercise of any kind helps. Aim for about 150 minutes a week of moderate activity, such as brisk walking, swimming or cycling, plus strength training twice a week. In the Dubai summer, exercise indoors or early in the morning."
+    },
+    {
+      question: "Should I try intermittent fasting or keto for PCOS?",
+      answer: "Some women do well with a moderate eating window or lower-carb eating, but very long fasts or strict diets can affect cycles and are hard to keep up. See our guides on Ayurvedic diet vs intermittent fasting and vs keto, and speak to a doctor first."
+    },
+    {
+      question: "Which blood tests should I have for PCOS?",
+      answer: "Our female GP can arrange hormone tests, blood sugar (HbA1c), cholesterol, thyroid and vitamin D, which help confirm PCOS and track your progress."
+    },
+    {
+      question: "What if I cannot avoid late dinners because of work?",
+      answer: "Make lunch your largest meal, have a small snack in the late afternoon, and keep the late dinner light, such as soup or dal with vegetables."
+    },
+    {
+      question: "How much does a PCOS diet consultation cost?",
+      answer: "A consultation with Dr. Shamna, our female Ayurvedic doctor, starts from AED 200 and takes 45-60 minutes. Blood tests, if needed, are arranged by our female GP."
+    },
+    {
+      question: "Where can I get a PCOS diet plan near Jumeirah 1?",
+      answer: "At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am-10pm, with female doctors."
     }
   ];
 
@@ -45,135 +89,126 @@ export default function AyurvedicDietPCOSPage() {
     }
   }));
 
-  const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/",
-        "name": "Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare",
-        "description": "Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Polycystic Ovary Syndrome (PCOS)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for PCOS", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#faq",
-        "mainEntity": faqsForSchema
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/",
+      "name": "Ayurvedic Diet for PCOS Dubai | Foods to Eat & Avoid",
+      "inLanguage": "en-AE",
+      "audience": { "@type": "PeopleAudience", "suggestedGender": "female" },
+      "about": { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#diet" },
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for PCOS", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" }
+        ]
       }
-    ]
-  };
-
-  useEffect(() => {
-    // Show modal on page render
-    const timer = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    },
+    {
+      "@type": "Diet",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/#diet",
+      "name": "Ayurvedic diet for PCOS",
+      "alternateName": ["PCOS diet", "PCOD diet", "Ayurvedic PCOS diet plan", "Low-GI diet for PCOS"],
+      "description": "Low-glycaemic, high-fibre eating with protein at every meal, healthy fats and Kapha-balancing Ayurvedic principles, for women with PCOS, from RamaCare Polyclinic, Jumeirah 1, Dubai, with a female Ayurvedic doctor and a female GP for tests.",
+      "dietFeatures": "Low-GI carbohydrates, vegetables and fibre at every meal, protein at every meal, healthy fats, warm freshly cooked food, early light dinner; limit sugar, sweet drinks, refined flour and fried food",
+      "expertConsiderations": "PCOS should be diagnosed and monitored by a doctor. Women on metformin, the contraceptive pill or other medicines should check before adding herbs or supplements.",
+      "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "gender": "Female",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqsForSchema
+    }
+  ]
+};
 
   const content = {
     challenges: [
       {
-        title: "AC Effect",
+        title: "Indoor Life and Low Vitamin D",
         icon: Snowflake,
-        description: "Constant 18–21°C indoor air conditioning disrupts natural body thermoregulation, making your metabolism sluggish and worsening Kapha imbalance."
+        description: "Long hours indoors and in cars mean many women in the UAE have low vitamin D, which is linked to insulin resistance. It is easy to check with a blood test."
       },
       {
-        title: "Sunlight Gap",
+        title: "Late Dinners and Eating Out" ,
         icon: Sun,
-        description: "Limited outdoor time (Mall culture + car-to-office routine) reduces Vitamin D synthesis, which directly affects ovarian function and insulin resistance."
+        description: "Late, heavy dinners and frequent restaurant meals make it harder to keep blood sugar steady. Ayurveda advises an early, light dinner."
       },
       {
-        title: "Late-Night Dining",
+        title: "Less Activity in the Heat", 
         icon: Moon,
-        description: "Dubai's 9–10 PM dinner culture disrupts circadian rhythms and slows digestion, contributing to weight retention and hormonal dysregulation."
+        description: "The summer heat makes outdoor exercise harder, and regular activity is one of the most helpful things for PCOS. Plan indoor or early-morning exercise."
       }
     ],
     dietaryPillars: {
       favor: [
-        { title: "Warm, Cooked Foods", description: "Kitchari, vegetable stews, soups" },
-        { title: "Bitter & Astringent Vegetables", description: "Leafy greens, bitter gourd, turmeric" },
-        { title: "Whole Grains", description: "Quinoa, barley, millet (avoid wheat/white rice)" },
-        { title: "Metabolism-Boosting Spices", description: "Cinnamon, fenugreek, turmeric, ginger" },
-        { title: "Healthy Fats", description: "Ghee (in moderation), flaxseeds, sesame oil" },
-        { title: "Herbal Teas", description: "Spearmint, cinnamon, fennel" }
+        { title: "Low-GI Grains", description: "Millet, oats, barley, quinoa and brown rice, in moderate portions" },
+        { title: "Vegetables at Every Meal", description: "Leafy greens, bitter gourd, broccoli, okra; fill half your plate" },
+        { title: "Protein at Every Meal", description: "Lentils, chickpeas, eggs, fish, chicken, paneer or yoghurt" },
+        { title: "Healthy Fats", description: "A little ghee, nuts, flaxseeds, sesame and olive oil" },
+        { title: "Warm, Cooked Meals", description: "Soups, stews, dal and stir-fries, as Ayurveda advises for Kapha" },
+        { title: "Spices and Herbal Teas", description: "Cinnamon, fenugreek, turmeric, ginger; spearmint or fennel tea" }
       ],
       avoid: [
-        "Cold/Frozen Foods (smoothie bowls, iced drinks)",
-        "Dairy (especially pasteurized milk, cheese)",
-        "Refined Sugar & White Flour",
-        "Fried/Oily Foods",
-        "Red Meat & Processed Meats",
-        "Soy Products (may disrupt hormones further)"
-      ]
+        "Sugar, sweets and sweet drinks, including fruit juice",
+        "White bread, pastries and refined flour",
+        "Fried and heavily processed food",
+        "Processed meats",
+        "Large portions of white rice without vegetables or protein",
+        "Iced drinks and heavy late-night meals (Ayurvedic advice for Kapha)"
+      ],
+      avoidNote: "Dairy affects women differently; some do better with less. Your doctor can help you decide."
     },
     routine: [
       {
-        time: "6:00 AM",
+        time: "6:30 AM",
         title: "Wake-Up Ritual",
-        description: "Drink warm water with 1 tsp fenugreek seeds (soaked overnight) + a pinch of turmeric. This kickstarts metabolism and balances blood sugar.",
+        description: "Warm water; soaked fenugreek seeds if your doctor agrees (avoid if you take diabetes medicines without advice).",
         icon: (props) => <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v4m0 12v4m-7.07-3.93l2.83-2.83m8.48-8.48l2.83-2.83M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
       },
       {
-        time: "7:30 AM",
+        time: "8:00 AM",
         title: "Breakfast",
-        description: "Vegetable upma (semolina with carrots, peas, curry leaves) OR warm quinoa porridge with cinnamon and flaxseeds. Avoid cold cereals/smoothies.",
+        description: "Vegetable oats upma, or two eggs with sautéed spinach and a slice of whole-grain toast.",
         icon: (props) => <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
       },
       {
-        time: "12:30 PM",
-        title: "Lunch (Largest Meal)",
-        description: "Kitchari (mung dal + rice + vegetables) with a side of sautéed bitter greens. Include 1 tsp ghee and ginger-turmeric paste.",
+        time: "1:00 PM",
+        title: "Lunch (Main Meal)",
+        description: "Millet or brown rice with dal, a large portion of vegetables, and yoghurt or buttermilk.",
         icon: (props) => <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="white" strokeWidth="2" /><path d="M12 2v4m0 12v4m-7.07-3.93l2.83-2.83m8.48-8.48l2.83-2.83M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
       },
       {
         time: "4:00 PM",
         title: "Afternoon Snack",
-        description: "Spearmint tea (proven to reduce androgen levels) + a handful of soaked almonds or roasted chickpeas.",
+        description: "Spearmint or cinnamon tea, with a handful of nuts or roasted chickpeas.",
         icon: (props) => <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 8c0-2.76-2.24-5-5-5s-5 2.24-5 5c0 2.76 2.24 5 5 5s5-2.24 5-5zM12 13v7m-4 0h8" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
       },
       {
         time: "7:00 PM",
-        title: "Early Dinner",
-        description: "Light vegetable soup or moong dal with steamed veggies. Avoid heavy meals post-sunset (critical for Dubai's late-night culture).",
+        title: "Light Dinner",
+        description: "Light dinner: Lentil and vegetable soup, or grilled fish or paneer with vegetables.",
         icon: (props) => <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="white" strokeWidth="2" strokeLinecap="round" /></svg>
       }
     ],
+    routineNote: "An example only. Your plan depends on your health, weight goals and medicines.",
     herbs: [
       { name: "Shatavari", use: "Hormonal balance and fertility support." },
       { name: "Ashwagandha", use: "Stress reduction and cortisol management." },
@@ -181,18 +216,62 @@ export default function AyurvedicDietPCOSPage() {
       { name: "Cinnamon", use: "Blood sugar and insulin sensitivity." }
     ]
   };
+  const testsAndDoctors = {
+  id: 'pcos-tests',
+  heading: 'Female Doctors and Blood Tests for PCOS',
+  intro: 'Diet works best alongside medical care. At RamaCare, our female GP can arrange tests to confirm PCOS and track your progress:',
+  items: [
+    { text: 'hormone tests' },
+    { text: 'blood sugar (HbA1c) and cholesterol' },
+    { text: 'thyroid function' },
+    { text: 'vitamin D' }
+  ],
+  note: 'Our female Ayurvedic doctor, Dr. Shamna Keloth Meethal (BAMS), then plans your diet and Ayurvedic care. For full PCOS care, see Ayurvedic PCOS treatment (/services/pcos-treatment-dubai/).'
+};
+const eatingOut = {
+  id: 'eating-out',
+  heading: 'Eating Out in Dubai With PCOS',
+  items: [
+    { text: 'Arabic restaurants: grilled chicken or fish, lentil soup, hummus with vegetables, salads; go easy on white bread and rice.' },
+    { text: 'Indian restaurants: tandoori dishes, dal, vegetable curries, raita; choose roti over naan and keep rice small.' },
+    { text: 'Cafés and brunches: eggs, avocado and whole-grain toast; skip sweet drinks and pastries.' },
+    { text: 'Late dinners: keep them light and make lunch your main meal.' }
+  ]
+};
+const yourVisit = {
+  id: 'your-visit',
+  heading: 'Your PCOS Diet Consultation in Jumeirah 1',
+  table: [
+    ['Ayurvedic doctor', 'Dr. Shamna Keloth Meethal, BAMS, female, DHA-licensed (11+ years)'],
+    ['GP', 'Female GP in the same building, for blood tests'],
+    ['Consultation', 'From AED 200, 45–60 minutes'],
+    ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+    ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+    ['Hours', 'Every day, 10am–10pm']
+  ]
+};
 
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    preferredTime: ''
+    preferredTime: '',
+    concern: ''
   });
-  const [popupData, setPopupData] = useState({
-    name: '',
-    phone: '',
-    email: ''
-  });
+
+  // Show bottom bar on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowBottomBar(true);
+      } else {
+        setShowBottomBar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -213,6 +292,7 @@ export default function AyurvedicDietPCOSPage() {
           phone: formData.phone,
           email: formData.email,
           preferredTime: formData.preferredTime,
+          concern: formData.concern,
           source: 'ayurvedic-diet-pcos-dubai'
         }),
       });
@@ -225,10 +305,11 @@ export default function AyurvedicDietPCOSPage() {
           name: '',
           phone: '',
           email: '',
-          preferredTime: ''
+          preferredTime: '',
+          concern: ''
         });
       } else {
-        showToast(result.message || 'Failed to submit appointment. Please try again or contact us directly.', 'error');
+        showToast(result.message || 'Failed to submit appointment. Please try again.', 'error');
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -236,79 +317,30 @@ export default function AyurvedicDietPCOSPage() {
     }
   };
 
-  const handlePopupSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!popupData.name || !popupData.phone || !popupData.email) {
-      showToast('Please fill in all required fields (Name, Phone, and Email).', 'error');
-      return;
-    }
-
-    try {
-      const response = await fetch('/api/appointment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fullName: popupData.name,
-          phone: popupData.phone,
-          email: popupData.email,
-          source: 'ayurvedic-diet-pcos-dubai-popup'
-        }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        showToast('Thank you! Your free diet plan will be sent shortly.', 'success');
-        setIsModalOpen(false);
-        setPopupData({ name: '', phone: '', email: '' });
-      } else {
-        showToast(result.message || 'Failed to submit. Please try again.', 'error');
-      }
-    } catch (error) {
-      console.error('Popup submission error:', error);
-      showToast('An error occurred. Please try again later.', 'error');
-    }
-  };
-
-  // Show bottom bar on scroll
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) {
-        setShowBottomBar(true);
-      } else {
-        setShowBottomBar(false);
-      }
-    });
-  }
-
   return (
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare</title>
-        <meta name="description" content="Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah." key="description" />
-        <meta name="keywords" content="Ayurvedic diet for PCOS Dubai, PCOS treatment Dubai, hormonal balance Ayurveda, PCOS diet plan UAE, natural PCOS remedy Dubai" />
+        <title key="title">Ayurvedic Diet for PCOS Dubai | Foods to Eat & Avoid</title>
+        <meta name="description" content="Ayurvedic diet for PCOS in Jumeirah 1, Dubai: low-GI foods to eat and avoid, a sample day, and care from a female Ayurvedic doctor with a female GP for tests." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally | RamaCare" key="og:title" />
-        <meta property="og:description" content="Struggling with PCOS in the UAE? Discover a personalized Ayurvedic Diet Plan in Dubai designed to balance hormones, improve insulin sensitivity, and regularize cycles. Reviewed by DHA-licensed experts at RamaCare Jumeirah." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Diet for PCOS Dubai | Foods to Eat & Avoid" key="og:title" />
+        <meta property="og:description" content="Ayurvedic diet for PCOS in Jumeirah 1, Dubai: low-GI foods to eat and avoid, a sample day, and care from a female Ayurvedic doctor with a female GP for tests." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-pcos-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pcos1.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet for PCOS in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic diet for PCOS from RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet for PCOS Dubai | Balance Hormones Naturally" key="twitter:title" />
+        <meta name="twitter:title" content="Ayurvedic Diet for PCOS Dubai | Foods to Eat & Avoid" key="twitter:title" />
         <meta name="twitter:description" content="A DHA-licensed Ayurvedic diet plan for PCOS in Dubai — balancing hormones, improving insulin sensitivity, and regularizing cycles naturally." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pcos1.jpg" key="twitter:image" />
 
@@ -346,7 +378,7 @@ export default function AyurvedicDietPCOSPage() {
                 lineHeight: '1.2',
                 color: '#1A1A1A'
               }}>
-                Ayurvedic Diet for PCOS in Dubai: The Definitive Guide to Hormonal Balance
+                Ayurvedic Diet for PCOS in Dubai: Foods to Eat and Avoid
               </h1>
 
               <p className="mb-8 leading-relaxed" style={{
@@ -356,7 +388,7 @@ export default function AyurvedicDietPCOSPage() {
                 color: '#5F5F5F',
                 lineHeight: '1.7'
               }}>
-                If you are struggling with irregular cycles, sudden weight gain, or persistent acne while living in the UAE, you are likely looking for an <strong style={{ fontWeight: '500' }}>Ayurvedic Diet Plan for PCOS in Dubai</strong>. PCOS (Polycystic Ovary Syndrome) affects nearly 1 in 5 women in the UAE, often exacerbated by the high-stress, indoor-centric "Dubai lifestyle."
+                PCOS (polycystic ovary syndrome, also called PCOD) is a common hormonal condition in the UAE, often linked to insulin resistance. Diet is one of the most useful things you can change. This guide from RamaCare Polyclinic in Jumeirah 1 combines the evidence-based PCOS diet (low-GI foods, fibre and protein at every meal) with Ayurvedic principles, and is reviewed by our female Ayurvedic doctor, Dr. Shamna Keloth Meethal (BAMS).
               </p>
 
               {/* Answer-First Summary Box */}
@@ -367,7 +399,7 @@ export default function AyurvedicDietPCOSPage() {
                   fontWeight: '700',
                   color: '#1A1A1A'
                 }}>
-                  The "Answer-First" Summary for PCOS Management
+                  Can Diet Help PCOS?
                 </h3>
 
                 <p style={{
@@ -377,7 +409,7 @@ export default function AyurvedicDietPCOSPage() {
                   color: '#5F5F5F',
                   lineHeight: '1.7'
                 }}>
-                  <strong style={{ fontWeight: '500' }}>Can an Ayurvedic diet cure PCOS?</strong> While Ayurveda views PCOS as a manageable condition rather than a "cure," a structured Ayurvedic diet can restore hormonal balance, improve insulin sensitivity, and regularize ovulation within 3 to 6 months. In Dubai, this involves balancing "Kapha" (sluggishness) and "Vata" (stress) by avoiding cold, processed foods and incorporating warming, metabolism-boosting spices like cinnamon and fenugreek.
+                  Yes, diet is one of the most effective ways to manage PCOS symptoms, though it does not cure PCOS. Choose low-GI carbohydrates (millet, oats, lentils, brown rice), fill half your plate with vegetables, include protein at every meal, use healthy fats, and limit sugar, sweet drinks and refined flour. In Ayurveda, PCOS is linked to Kapha and Vata imbalance, so warm, freshly cooked, lightly spiced food and an early, light dinner are favoured. Changes in cycles and weight come gradually over months; our female GP can arrange blood tests to track your progress.
                 </p>
               </div>
 
@@ -585,18 +617,6 @@ export default function AyurvedicDietPCOSPage() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-6 pt-6 border-t" style={{ borderColor: '#E9E2D6' }}>
-                <p style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontSize: '14px',
-                  fontWeight: '400',
-                  color: '#5F5F5F',
-                  lineHeight: '1.6'
-                }}>
-                  <strong style={{ fontWeight: '600', color: '#1A1A1A' }}>Dubai Shopping Tip:</strong> Available at premium supermarkets (Spinneys, Waitrose, Organic Foods & Cafe)
-                </p>
-              </div>
             </motion.div>
 
             {/* Foods to Avoid */}
@@ -635,17 +655,19 @@ export default function AyurvedicDietPCOSPage() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-6 border-t" style={{ borderColor: '#E9E2D6' }}>
-                <p style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontSize: '14px',
-                  fontWeight: '400',
-                  color: '#5F5F5F',
-                  lineHeight: '1.6'
-                }}>
-                  <strong style={{ fontWeight: '600', color: '#1A1A1A' }}>Why avoid these?</strong> These foods increase Kapha (mucus, heaviness), disrupt insulin sensitivity, and promote inflammation.
-                </p>
-              </div>
+              {content.dietaryPillars.avoidNote && (
+                <div className="mt-6 pt-6 border-t" style={{ borderColor: '#E9E2D6' }}>
+                  <p style={{
+                    fontFamily: "'Nunito Sans', sans-serif",
+                    fontSize: '14px',
+                    fontWeight: '400',
+                    color: '#5F5F5F',
+                    lineHeight: '1.6'
+                  }}>
+                    {content.dietaryPillars.avoidNote}
+                  </p>
+                </div>
+              )}
             </motion.div>
           </div>
         </div>
@@ -734,6 +756,10 @@ export default function AyurvedicDietPCOSPage() {
             })}
           </div>
 
+          <p className="text-center text-sm text-[#5F5F5F] mt-8 italic" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+            Note: {content.routineNote}
+          </p>
+
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -757,6 +783,7 @@ export default function AyurvedicDietPCOSPage() {
           </motion.div>
         </div>
       </section>
+        <AyurvedaInfoSection content={eatingOut} />
 
       {/* Section 4: Ayurvedic Herbs for PCOS */}
       <section className="py-16 md:py-24 bg-[#F5F1EA] px-4 md:px-6 lg:px-8">
@@ -775,7 +802,7 @@ export default function AyurvedicDietPCOSPage() {
               color: '#1A1A1A',
               lineHeight: '1.2'
             }}>
-              4. Ayurvedic Herbs for PCOS: The Medical Evidence
+              Ayurvedic Herbs Used for PCOS
             </h2>
 
             <p className="max-w-3xl mx-auto mb-6" style={{
@@ -785,23 +812,9 @@ export default function AyurvedicDietPCOSPage() {
               color: '#5F5F5F',
               lineHeight: '1.6'
             }}>
-              These herbs are available in Dubai through licensed Ayurvedic practitioners and align with DHA (Dubai Health Authority) regulations.
+              Ayurveda uses herbs as part of a wider plan, prescribed by the doctor according to your health and any other medicines. Research on herbs in PCOS is still limited.
             </p>
 
-            {/* DHA Badge */}
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full" style={{ backgroundColor: 'white' }}>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10 2L12.09 7.26L18 8.27L13.5 12.14L14.82 18L10 15.27L5.18 18L6.5 12.14L2 8.27L7.91 7.26L10 2Z" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontSize: '15px',
-                fontWeight: '600',
-                color: '#1F5E4B'
-              }}>
-                DHA-Aligned Ayurvedic Approach
-              </span>
-            </div>
           </motion.div>
 
           {/* Three Herb Cards */}
@@ -809,18 +822,18 @@ export default function AyurvedicDietPCOSPage() {
             {[
               {
                 name: "Shatavari (Asparagus racemosus)",
-                benefits: "Regulates estrogen, supports ovarian health, and improves follicular maturation.",
-                evidence: "Clinical observations and preliminary studies indicate that Shatavari supplementation supports regular menstrual cycles and ovarian function in women with PCOS."
+                benefits: "Traditionally used in Ayurveda for women's reproductive health."  ,
+                evidence: "Studies in PCOS are limited; it is used as part of a doctor-prescribed plan.",
               },
               {
                 name: "Ashwagandha (Withania somnifera)",
-                benefits: "Reduces cortisol (stress hormone), which indirectly lowers androgen levels and improves insulin sensitivity.",
-                evidence: "Research published in the Indian Journal of Psychological Medicine (2012) showed a 27.9% reduction in cortisol levels, correlating with improved stress response and hormonal balance."
+                benefits: "Traditionally used in Ayurveda for stress, which can affect cycles and cravings." ,
+                evidence: "Studies in adults show it may help with stress; it has not been well studied in PCOS itself."
               },
               {
                 name: "Triphala (Three Fruits)",
-                benefits: "Detoxifies the liver (critical for hormone metabolism) and improves gut health (linked to PCOS via the gut-hormone axis).",
-                evidence: "Research suggests that the antioxidant properties of Triphala help reduce markers of metabolic stress and support healthy glucose metabolism."
+                 benefits: "A classical formula traditionally used for digestion and regular bowels.",
+                evidence: "Used for digestive support; take only as prescribed."
               }
             ].map((herb, index) => (
               <motion.div
@@ -868,7 +881,7 @@ export default function AyurvedicDietPCOSPage() {
             <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden">
               <img
                 src="/images/example.jpg"
-                alt="Ayurvedic herbs for PCOS treatment - Shatavari, Ashwagandha, Triphala"
+                alt="Ayurvedic herbs traditionally used for PCOS care at RamaCare Polyclinic, Jumeirah 1"
                 className="w-full h-auto object-cover"
                 style={{ maxHeight: '400px' }}
               />
@@ -890,12 +903,12 @@ export default function AyurvedicDietPCOSPage() {
               lineHeight: '1.7',
               textAlign: 'center'
             }}>
-              <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Important:</strong> Always consult with a licensed Ayurvedic practitioner before starting herbal supplements, especially if you're on medication (e.g., Metformin, birth control pills). At RamaCare Polyclinic, we ensure all treatments comply with DHA guidelines.
+              <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Important:</strong> Always consult with a licensed Ayurvedic practitioner before starting herbal supplements, especially if you're on medication (e.g., Metformin, birth control pills). At RamaCare, herbs are prescribed by Dr. Shamna Keloth Meethal, our female Ayurvedic doctor.
             </p>
           </motion.div>
         </div>
       </section>
-
+<AyurvedaInfoSection content={testsAndDoctors} />
       {/* Section 5: People Also Ask (PAA) */}
       <section className="py-16 md:py-24 bg-white px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -913,7 +926,7 @@ export default function AyurvedicDietPCOSPage() {
               color: '#1A1A1A',
               lineHeight: '1.2'
             }}>
-              5. People Also Ask (PAA) - PCOS Dubai Edition
+              PCOS Diet: Frequently Asked Questions
             </h2>
 
             <p className="max-w-3xl mx-auto" style={{
@@ -1042,7 +1055,7 @@ export default function AyurvedicDietPCOSPage() {
                 color: '#1A1A1A',
                 lineHeight: '1.2'
               }}>
-                6. The "Hidden" Step: Beyond the Diet
+                Beyond Diet: Daily Routine, Sleep and Movement
               </h2>
 
               <p className="mb-8" style={{
@@ -1079,7 +1092,7 @@ export default function AyurvedicDietPCOSPage() {
                       color: '#5F5F5F',
                       lineHeight: '1.7'
                     }}>
-                      Nadi Shodhana (alternate nostril breathing) for 10 minutes daily reduces cortisol and balances the hypothalamic-pituitary-ovarian axis.
+                      Nadi Shodhana (alternate-nostril breathing) for 10 minutes a day is a simple Ayurvedic practice to help you relax; stress management is part of PCOS care.
                     </p>
                   </div>
                 </div>
@@ -1107,7 +1120,7 @@ export default function AyurvedicDietPCOSPage() {
                       color: '#5F5F5F',
                       lineHeight: '1.7'
                     }}>
-                      Aim for 10 PM–6 AM sleep (aligning with Dubai's sunrise/sunset). Poor sleep disrupts leptin and ghrelin, worsening insulin resistance.
+                      Aim for 10 PM–6 AM sleep . Poor sleep disrupts leptin and ghrelin, worsening insulin resistance.
                     </p>
                   </div>
                 </div>
@@ -1135,7 +1148,7 @@ export default function AyurvedicDietPCOSPage() {
                       color: '#5F5F5F',
                       lineHeight: '1.7'
                     }}>
-                      Gentle yoga (not high-intensity cardio, which can spike cortisol). Try studios like YogaLa or SEVA Experience in Dubai.
+                      Regular exercise is one of the most helpful things for PCOS. Mix brisk walking, swimming or cycling with strength training; yoga is a good addition for stress. In summer, exercise indoors or early in the morning.
                     </p>
                   </div>
                 </div>
@@ -1150,7 +1163,7 @@ export default function AyurvedicDietPCOSPage() {
                   color: '#5F5F5F',
                   lineHeight: '1.7'
                 }}>
-                  <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Why This Matters:</strong> Clinical evidence shows that integrating dietary changes with stress management leads to significantly faster improvements in ovulation compared to dietary changes alone.
+                  <strong style={{ fontWeight: '700', color: '#1A1A1A' }}>Why This Matters:</strong> Diet, regular exercise, sleep and stress management work best together for PCOS.
                 </p>
               </div>
             </motion.div>
@@ -1174,7 +1187,7 @@ export default function AyurvedicDietPCOSPage() {
           </div>
         </div>
       </section>
-
+<AyurvedaInfoSection content={yourVisit} />
       {/* Consultation CTA Section */}
       <section id="consultation" className="py-16 md:py-24 bg-[#F5F1EA] px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1226,11 +1239,11 @@ export default function AyurvedicDietPCOSPage() {
               <div className="space-y-4 mb-8">
                 {/* Benefit Items */}
                 {[
-                  'DHA-licensed Ayurvedic specialists',
-                  'Personalized PCOS treatment plans',
-                  'Integration with conventional medicine',
-                  'Premium clinic environment',
-                  'Convenient Jumeirah 1 location'
+                  'Female Ayurvedic doctor (BAMS) and female GP',
+                  'Blood tests arranged by our GP in the same building',
+                  'Diet plan for your body and routine',
+                  'Female therapists for any therapies',
+                  'Jumeirah 1, near Satwa and Al Wasl; open daily 10am–10pm'
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#1F5E4B' }}>
@@ -1284,7 +1297,7 @@ export default function AyurvedicDietPCOSPage() {
                       fontWeight: '400',
                       color: '#5F5F5F'
                     }}>
-                      (+971) 04 286 2006
+                      056 659 7878 (WhatsApp and call) · 04 286 2006
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -1439,6 +1452,8 @@ export default function AyurvedicDietPCOSPage() {
                   <input
                     type="text"
                     placeholder="e.g., Irregular periods, weight gain, acne..."
+                    value={formData.concern}
+                    onChange={(e) => setFormData({ ...formData, concern: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border-2 focus:border-[#1F5E4B] focus:ring-0 transition-colors"
                     style={{
                       fontFamily: "'Nunito Sans', sans-serif",
@@ -1488,156 +1503,35 @@ export default function AyurvedicDietPCOSPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-10">
             Related Ayurvedic Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
-              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="/services/ayurvedic-diet-thyroid-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Thyroid Diet Plan</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+            <a href="/services/pcos-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic PCOS Treatment</span>
               <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-diet-weight-loss-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Weight Loss Plan</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Weight Loss</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Intermittent Fasting</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Keto</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-skin-hair-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Skin & Hair</span>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
       </section>
-
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-pcos-dubai" />
-
-      {/* Exit Intent Popup Modal */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-            style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-            onClick={() => setIsModalOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-3xl p-8 shadow-2xl relative max-w-md w-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors z-[101]"
-              >
-                <X size={24} className="text-[#5F5F5F]" />
-              </button>
-
-              {/* Gift Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#1F5E4B' }}>
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M16 8V24M8 12h16M10 12V8a2 2 0 012-2h2a2 2 0 012 2v4M18 12V8a2 2 0 012-2h2a2 2 0 012 2v4M8 16h16v8a2 2 0 01-2 2H10a2 2 0 01-2-2v-8z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-center mb-4" style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontSize: '30px',
-                fontWeight: '700',
-                color: '#1A1A1A'
-              }}>
-                Wait! Before You Go...
-              </h3>
-
-              {/* Subtitle */}
-              <p className="text-center mb-6" style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontSize: '16px',
-                fontWeight: '400',
-                color: '#5F5F5F',
-                lineHeight: '1.6'
-              }}>
-                Get a <strong style={{ fontWeight: '600' }}>Personalized Ayurvedic PCOS Diet Plan</strong> tailored for Dubai lifestyle — absolutely free!
-              </p>
-
-              {/* Form */}
-              <form onSubmit={handlePopupSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={popupData.name}
-                  onChange={(e) => setPopupData({ ...popupData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 focus:border-[#1F5E4B] focus:ring-0 transition-colors"
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontSize: '15px',
-                    color: '#1A1A1A',
-                    borderColor: '#E9E2D6',
-                    backgroundColor: '#F5F5F5'
-                  }}
-                  required
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number (+971)"
-                  value={popupData.phone}
-                  onChange={(e) => setPopupData({ ...popupData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 focus:border-[#1F5E4B] focus:ring-0 transition-colors"
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontSize: '15px',
-                    color: '#1A1A1A',
-                    borderColor: '#E9E2D6',
-                    backgroundColor: '#F5F5F5'
-                  }}
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  value={popupData.email}
-                  onChange={(e) => setPopupData({ ...popupData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 focus:border-[#1F5E4B] focus:ring-0 transition-colors"
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontSize: '15px',
-                    color: '#1A1A1A',
-                    borderColor: '#E9E2D6',
-                    backgroundColor: '#F5F5F5'
-                  }}
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full px-6 py-4 rounded-full transition-all duration-300 hover:opacity-90"
-                  style={{
-                    fontFamily: "'Nunito Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: '600',
-                    backgroundColor: '#1F5E4B',
-                    color: 'white'
-                  }}
-                >
-                  Get My Free Diet Plan
-                </button>
-              </form>
-
-              {/* Privacy Note */}
-              <p className="text-center mt-4" style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontSize: '12px',
-                fontWeight: '400',
-                color: '#5F5F5F'
-              }}>
-                We respect your privacy. No spam, ever.
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-pcos-dubai" lastReviewed="2026-01-12" />
 
       {/* Fixed Bottom Bar */}
       <AnimatePresence>

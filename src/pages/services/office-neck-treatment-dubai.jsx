@@ -277,6 +277,9 @@ const OfficeNeckTreatmentPage = () => {
                       <p>
                         At RamaCare Polyclinic, we provide a targeted medical intervention using clinical <a href="/services/ultrasound-therapy-dubai/" className="text-[#1F5E4B] hover:underline font-semibold">ultrasound therapy</a> to "reset" these muscles without the need for invasive injections or long-term medication.
                       </p>
+                      <p>
+                        Long desk days? See our <a href="/services/ayurvedic-diet-plan-busy-professionals-dubai/" className="text-[#1F5E4B] hover:underline font-semibold">Ayurvedic diet plan for busy professionals</a>.
+                      </p>
                     </div>
                   </div>
 

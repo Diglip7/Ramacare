@@ -201,8 +201,8 @@ const hairfallSchema = {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-sm font-bold text-[#2D5A41] flex items-center gap-2">
-            Compare options: <Link href="/services/hair-treatment-dubai/">hair loss treatment with our dermatologist</Link> · <Link href="/blog/ayurveda-vs-prp-for-hair-loss-in-dubai-which-treatment-is-ri/">Ayurveda vs PRP for hair loss</Link>
+            <p className="mt-6 text-sm font-bold text-[#2D5A41] flex flex-wrap items-center gap-2">
+            Compare options: <Link href="/services/hair-treatment-dubai/">hair loss treatment with our dermatologist</Link> · <Link href="/blog/ayurveda-vs-prp-for-hair-loss-in-dubai-which-treatment-is-ri/">Ayurveda vs PRP for hair loss</Link> · <Link href="/services/ayurvedic-diet-skin-hair-dubai/">Ayurvedic diet for skin and hair</Link>
             </p>
           </div>
         </div>

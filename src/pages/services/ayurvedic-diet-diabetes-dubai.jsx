@@ -6,198 +6,204 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 
 const content = {
   hero: {
-    badge: 'Ayurvedic Diet for Diabetes',
-    title: 'Ayurvedic Diet for Diabetes in Dubai: A Clinical Path to Blood Sugar Balance',
-    description: 'Managing Type 2 Diabetes or Prediabetes while living in a high-convenience environment like Dubai can be challenging. An Ayurvedic Diet for Diabetes in Dubai is not just about "cutting sugar"; it is about reviving your body\'s metabolic intelligence to process glucose effectively.',
+    badge: 'Diabetes Diet Plan',
+    title: 'Diabetes Diet Plan in Dubai: Ayurvedic Foods to Eat and Avoid',
+    description: 'Food choices make a real difference to blood sugar in type 2 diabetes and prediabetes. This guide from RamaCare Polyclinic in Jumeirah 1 combines the plate method and low-GI eating with the Ayurvedic diet for diabetes, with local Arabic and Indian food swaps. It supports, and does not replace, your medical care: our female GP provides diabetes care and blood tests in the same building.',
     summary: {
-      title: 'The "Answer-First" Summary for Diabetes Management',
-      content: 'Can Ayurveda help manage Diabetes in the UAE? <strong className="text-[#1F5E4B]">Yes.</strong> Ayurveda classifies diabetes as Madhumeha. By focusing on a "Kapha-reducing" diet—incorporating bitter herbs (Amla, Karela), low-glycemic ancient grains, and strictly timed meals—residents in Dubai can significantly improve their HbA1c levels and reduce insulin resistance within 90 days of clinical adherence.'
+      title: 'What Is the Best Diet for Diabetes?',
+      content: 'Fill half your plate with vegetables, a quarter with protein (dal, fish, chicken, eggs or paneer) and a quarter with whole-grain carbohydrates such as barley, millet or brown rice. Choose whole fruit over juice, avoid sugary drinks and sweets, eat at regular times and walk after meals. Ayurveda calls diabetes Madhumeha and favours Kapha-reducing, bitter and astringent foods such as bitter gourd and fenugreek. Never change your diabetes medicines without your doctor.'
     },
     ctaButtons: {
-      primary: {
-        text: 'Book Your Glucose Assessment',
-        icon: 'Calendar'
-      },
-      secondary: {
-        text: 'WhatsApp Consultation',
-        phone: '+971 56 659 7878'
-      }
+      primary: { text: 'Book a Diabetes Diet Consultation', icon: 'Calendar' },
+      secondary: { text: 'WhatsApp Consultation', phone: '+971 56 659 7878' }
     },
-    image: {
-      src: '/images/diab.jpg',
-      alt: 'Ayurvedic diabetes diet in Dubai'
-    },
-    stats: {
-      title: 'BLOOD SUGAR IMPROVEMENT',
-      before: { label: 'Before', value: '180 mg/dL' },
-      after: { label: 'After 90 Days', value: '110 mg/dL' },
-      note: '*Disclaimer: Individual results may vary. This program complements but does not replace standard medical care or prescribed treatments.'
-    }
+    image: { src: '/images/diab.jpg', alt: 'Diabetes diet plan with Ayurvedic advice at RamaCare Polyclinic, Jumeirah 1, Dubai' }
   },
   environmentalChallenges: {
     title: '1. The "Dubai Diabetes" Factor: Environmental Challenges',
     items: [
       {
         id: 1,
-        title: 'Sedentary Lifestyle',
-        icon: 'Car',
-        description: 'The reliance on cars and the lack of "incidental walking" in Dubai leads to stagnant Kapha, which is the root cause of metabolic slowdown.'
+        title: 'Less Daily Walking', 
+        description: 'Driving everywhere and long desk hours mean less activity, and walking after meals is one of the simplest ways to lower blood sugar. Ayurveda links inactivity to Kapha.', 
+        icon: 'Car'
       },
       {
         id: 2,
-        title: 'The "Desert Thirst"',
-        icon: 'Coffee',
-        description: 'Many residents mistake thirst for hunger, leading to overeating. Furthermore, drinking sugary "fresh" juices common in Dubai cafes causes dangerous glucose spikes.'
+        title: 'Juices, Karak and Sweet Drinks', 
+        description: 'Fresh juices, sweetened karak chai and café drinks raise blood sugar quickly. Water, unsweetened tea and buttermilk are better choices.', 
+        icon: 'CupSoda'
       },
       {
         id: 3,
-        title: 'High-Stress Work Culture',
-        icon: 'Briefcase',
-        description: 'Stress triggers cortisol, which directly opposes insulin, making diabetes management harder for those in DIFC or Business Bay.'
+        title: 'Stress and Late Meals', 
+        description: 'Work stress, poor sleep and late, heavy dinners all make blood sugar harder to control.', 
+        icon: 'Clock'
       }
     ]
   },
   dietaryPillars: {
-    title: '2. Dietary Pillars for Blood Sugar Control',
-    subtitle: 'Managing blood sugar effectively starts with understanding Low-Glycemic Load (GL) — a core principle in Ayurvedic dietary planning.',
+    title: 'Foods to Eat and Avoid With Diabetes',
+    subtitle: 'Low-GI, high-fibre foods raise blood sugar more slowly. Ayurveda adds Kapha-reducing, bitter and astringent foods.',
     bannerImage: '/images/diab1.jpg',
     favor: {
-      title: 'Foods to Favor',
-      description: 'The "Sugar-Balance" List - These are easily accessible at Organic Foods & Café or Spinneys:',
+      title: 'Foods to Favour',
+      description: 'Everyday foods that fit a diabetes diet:',
       items: [
-        {
-          title: 'The "Diamond" Grain: Barley (Yava)',
-          description: 'Ayurveda considers barley the premier grain for diabetics because it is "scraping" in nature, helping to clear excess fat and sugar from the channels.'
-        },
-        {
-          title: 'Bitter Power',
-          description: 'Incorporating bitter gourd (Karela), fenugreek leaves, and turmeric. Bitterness is the natural antagonist to the "sweetness" of diabetes.'
-        },
-        {
-          title: 'Protein-First',
-          description: 'Moong dal and chickpeas provide the fiber necessary to slow down sugar absorption.'
-        }
+        { title: 'Barley, Millet and Other Whole Grains', description: 'Ayurveda traditionally favours barley (Yava) for Madhumeha. Barley, millet, oats and brown rice raise blood sugar more slowly than white rice or bread.' },
+        { title: 'Vegetables and Bitter Foods', description: 'Fill half your plate with vegetables. Bitter gourd (karela), fenugreek leaves and other greens are traditional Ayurvedic choices.' },
+        { title: 'Protein at Every Meal', description: 'Dal, chickpeas, eggs, fish, chicken or paneer help keep blood sugar steadier.' }
       ]
     },
     avoid: {
-      title: 'Foods to Avoid',
+      title: 'Foods to Limit or Avoid',
       items: [
-        {
-          title: 'Deep-Fried Arabic Sweets',
-          description: 'High in both trans-fats and refined sugar, these are "Agni" killers.'
-        },
-        {
-          title: 'Sweet Tropical Fruits',
-          description: 'While "natural," excessive consumption of high-sugar dates or mangoes can hinder progress. Limit these to small morning portions.'
-        },
-        {
-          title: 'Heavy Evening Meals',
-          description: 'Digestion is weakest at night. A heavy dinner in Dubai is the fastest way to wake up with high fasting blood sugar.'
-        }
+        { title: 'Sweets and Sugary Drinks', description: 'Arabic and Indian sweets, cakes, sweetened karak, soft drinks and fruit juice raise blood sugar quickly.' },
+        { title: 'Very Sweet Fruits in Large Amounts', description: 'Dates, mango and grapes are best in small portions with a meal; choose apple, guava, orange or berries more often.' },
+        { title: 'Large, Late Dinners', description: 'Keep dinner moderate and early; make lunch your main meal, as Ayurveda advises.' }
       ]
     }
   },
-
+    plateMethod: {
+      id: 'plate-method',
+      heading: 'The Plate Method for Diabetes',
+      table: [
+        ['Half the plate', 'Non-starchy vegetables: salad, okra, spinach, cauliflower, beans, bitter gourd'],
+        ['A quarter', 'Protein: dal, chickpeas, fish, chicken, eggs or paneer'],
+        ['A quarter', 'Whole-grain carbohydrate: barley, millet, brown rice, oats or one whole-wheat roti'],
+        ['To drink', 'Water, buttermilk or unsweetened tea']
+      ]
+    },
+    foodSwaps: {
+      id: 'dubai-food-swaps',
+      heading: 'Diabetes-Friendly Food Swaps in Dubai',
+      table: [
+        ['Arabic', 'Choose shorbat adas (lentil soup), grilled chicken or fish, fattoush with light dressing, hummus with vegetables. Limit white bread, large rice portions, kunafa and luqaimat.'],
+        ['Indian', 'Choose dal, vegetable sabzi, tandoori dishes, raita and whole-wheat roti instead of naan. Keep biryani and rice portions small; limit sweets and fried snacks.'],
+        ['Western and cafés', 'Choose eggs, salads with protein and whole-grain bread. Limit pastries, sweetened coffees and smoothies.'],
+        ['Drinks', 'Swap juice, soft drinks and sweet karak for water, buttermilk or unsweetened tea.']
+      ]
+    },
+    sampleDay: {
+      id: 'sample-day',
+      heading: 'Sample Diabetes-Friendly Day',
+      intro: 'An example only. Your plan depends on your medicines and blood sugar.',
+      table: [
+        ['Breakfast', 'Vegetable oats or millet upma, or two eggs with sautéed vegetables and one whole-wheat toast'],
+        ['Mid-morning', 'A guava or apple, or a handful of nuts'],
+        ['Lunch (main meal)', 'Plate method: vegetables, dal or grilled fish, and a small portion of barley or brown rice'],
+        ['After lunch', 'A 10–15 minute walk'],
+        ['Afternoon', 'Buttermilk or unsweetened tea with roasted chickpeas'],
+        ['Dinner (early)', 'Vegetable soup with paneer, chicken or lentils']
+      ]
+    },
+    safety: {
+      id: 'blood-sugar-safety',
+      heading: 'Blood Sugar Safety: When to Act',
+      items: [
+        { text: 'Low blood sugar (shaking, sweating, dizziness, confusion, sudden hunger): follow the plan your doctor gave you, usually a fast-acting sugar such as juice or glucose tablets, then recheck.' },
+        { text: 'High blood sugar (strong thirst, passing a lot of urine, blurred vision, unusual tiredness): check your levels and contact your doctor.' },
+        { text: 'Seek urgent medical help for vomiting, drowsiness, confusion, difficulty breathing or very high readings.' },
+        { text: 'Never stop or change diabetes medicines on your own, and tell your doctor before starting herbs or supplements.' }
+      ]
+    },
+    medicalCare: {
+      id: 'medical-diabetes-care',
+      heading: 'Medical Diabetes Care at RamaCare',
+      intro: 'Diet works alongside medical care. Our female GP, in the same Jumeirah 1 building, provides diabetes diagnosis, medicines, HbA1c and other blood tests, and regular reviews.',
+      items: [
+        { text: 'Medical diabetes care at RamaCare', href: '/services/diabetes-mellitus-care-dubai/' }
+      ],
+      note: 'Dr. Shamna Keloth Meethal (BAMS) then plans your diet around your medicines and routine. Consultation from AED 200.'
+    },
+    yourVisit: {
+      id: 'your-visit',
+      heading: 'Your Diabetes Diet Consultation in Jumeirah 1',
+      table: [
+        ['Diet and Ayurveda', 'Dr. Shamna Keloth Meethal, BAMS, female, DHA-licensed (11+ years)'],
+        ['Medical diabetes care', 'Our female GP, same building'],
+        ['Consultation', 'From AED 200, 45–60 minutes'],
+        ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+        ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+        ['Hours', 'Every day, 10am–10pm']
+      ]
+    },
   glucoseProtocol: {
-    title: '3. The 3-Step Ayurvedic "Glucose Protocol"',
+    title: 'Ayurvedic Daily Habits for Blood Sugar',
     steps: [
       {
         id: 1,
-        title: 'Step 1',
-        subtitle: 'Ushapan (Early Morning)',
-        description: 'Drinking copper-charged water with crushed Jamun (Indian Blackberry) seed powder or cinnamon.',
+        title: 'Morning', 
+        subtitle: 'Ushapan (warm water)', 
+        description: 'Start the day with a glass of warm water. Herbal powders such as Jamun seed or cinnamon should only be taken if your doctor prescribes them, because they can lower blood sugar further with diabetes medicines.',
         icon: 'Sunrise'
       },
       {
         id: 2,
-        title: 'Step 2',
-        subtitle: 'Laghubhojana (Light Eating)',
-        description: 'Ensuring the largest meal is at noon when the sun (and your internal fire) is at its peak.',
+        title: 'Midday', 
+        subtitle: 'Main meal at lunch', 
+        description: 'Make lunch your largest meal, using the plate method, when Ayurveda considers digestion (Agni) strongest.',
         icon: 'Sun'
       },
       {
         id: 3,
-        title: 'Step 3',
-        subtitle: 'Triphala Integration',
-        description: 'Taking Triphala at night to ensure healthy bowel movements, which is essential for clearing metabolic waste (Ama).',
+        title: 'After Meals', 
+        subtitle: 'A 10–15 minute walk', 
+        description: 'A short walk after meals helps lower blood sugar. Ayurveda also advises against long daytime sleep in Madhumeha.',
         icon: 'Moon'
       }
     ]
   },
   faqs: {
-    title: '4. People Also Ask (PAA) - Diabetes Dubai',
-    subtitle: 'Common questions about Ayurvedic diabetes management in Dubai',
+    title: 'Diabetes Diet: Frequently Asked Questions',
+    subtitle: 'Answers reviewed by Dr. Shamna Keloth Meethal (BAMS), RamaCare Polyclinic, Jumeirah 1',
     items: [
-      {
-        question: 'Can Ayurveda cure Type 2 Diabetes?',
-        answer: 'No. Diabetes needs ongoing medical care. An Ayurvedic diet and lifestyle plan can support blood sugar management alongside your prescribed treatment; never stop or change diabetes medicines without your doctor.'
-      },
-      {
-        question: 'Is an Ayurvedic diet safe alongside my current diabetes medication?',
-        answer: 'Yes, an Ayurvedic diet can complement modern diabetes treatment. However, it is crucial to work with both your endocrinologist and Ayurvedic practitioner to monitor your blood sugar levels and adjust medications as needed. Never stop prescribed medication without medical supervision.'
-      },
-      {
-        question: 'How long does it take to see results with an Ayurvedic diet for diabetes?',
-        answer: 'Most patients begin to see improvements in their fasting blood sugar within 2-4 weeks of strict adherence. HbA1c levels typically show significant improvement within 90 days. However, results vary based on individual constitution (Prakriti) and level of compliance.'
-      },
-      {
-        question: 'What is the best time to eat for diabetes management in Ayurveda?',
-        answer: 'Ayurveda emphasizes eating your largest meal at midday (12-1 PM) when your digestive fire (Agni) is strongest. Breakfast should be light, and dinner should be the smallest meal, preferably before 7 PM to allow proper digestion before sleep.'
-      },
-      {
-        question: 'Can I find Ayurvedic herbs in Dubai?',
-        answer: 'Yes! Many Ayurvedic herbs like turmeric, fenugreek, cinnamon, and bitter gourd are readily available at stores like Organic Foods & Café, Spinneys, and specialized Indian grocery stores. For therapeutic-grade herbs, consult with an Ayurvedic clinic.'
-      },
-      {
-        question: 'Do I need to follow a strict vegetarian diet for diabetes management?',
-        answer: 'While Ayurveda often recommends a plant-based diet for Kapha-related conditions like diabetes, it is not mandatory to be strictly vegetarian. The focus is on light, easily digestible proteins like moong dal, fish, and chicken, while avoiding heavy red meats and fried foods.'
-      }
+      { question: 'What is the best diabetic diet plan?', answer: 'Use the plate method: half vegetables, a quarter protein and a quarter whole-grain carbohydrate. Choose low-GI grains such as barley, millet or brown rice, whole fruit instead of juice, and avoid sugary drinks and sweets. Eat at regular times and walk after meals.' },
+      { question: 'Which foods should I avoid with diabetes?', answer: 'Sugary drinks (including fruit juice and sweetened karak), sweets and desserts, white bread and large portions of white rice, fried snacks, and large late dinners.' },
+      { question: 'Can I eat rice if I have diabetes?', answer: 'Yes, in a small portion (about a quarter of your plate) with plenty of vegetables and protein. Brown rice, millet or barley are better choices most of the time.' },
+      { question: 'Can I eat dates if I have diabetes?', answer: 'Dates are high in natural sugar. One or two with a meal may fit, if your doctor agrees and your blood sugar is well controlled; avoid eating many at once.' },
+      { question: 'Which fruits are best for diabetes?', answer: 'Whole fruits such as apple, guava, orange, pear and berries, in portions. Limit mango, grapes, dates and all fruit juices.' },
+      { question: 'What can I drink?', answer: 'Water, unsweetened tea or coffee, buttermilk and herbal teas. Avoid soft drinks, fruit juices and sweetened karak or café drinks.' },
+      { question: 'Do bitter gourd, fenugreek, cinnamon or Jamun help diabetes?', answer: 'They are traditional Ayurvedic foods for Madhumeha, and some small studies suggest they may lower blood sugar. In food amounts they are fine; as supplements or powders, take them only if your doctor agrees, because they can cause low blood sugar with diabetes medicines.' },
+      { question: 'Can Ayurveda cure type 2 diabetes?', answer: 'No. Diabetes needs ongoing medical care. An Ayurvedic diet and lifestyle plan can support blood sugar management alongside your prescribed treatment; never stop or change diabetes medicines without your doctor.' },
+      { question: 'Is an Ayurvedic diet safe with my diabetes medicines?', answer: 'Diet changes are safe and helpful alongside medicines, but they can lower your blood sugar, so your doses may need adjusting. Our GP in the same building can review your medicines and blood tests.' },
+      { question: 'How soon will my blood sugar change?', answer: 'Daily readings can change within days or weeks of diet changes. HbA1c reflects about three months, so your doctor usually rechecks it after that. Results vary from person to person.' },
+      { question: 'What is the best time to eat for diabetes in Ayurveda?', answer: 'Eat at regular times, make lunch your largest meal, and have a moderate dinner early in the evening. Avoid long gaps followed by large meals.' },
+      { question: 'Can diet help prediabetes?', answer: 'Yes. For many people with prediabetes, diet changes, regular activity and modest weight loss lower blood sugar and the risk of developing type 2 diabetes. Our GP can check your HbA1c.' },
+      { question: 'Do I need to be vegetarian?', answer: 'No. Fish, chicken and eggs fit well. Ayurveda favours lighter proteins such as dal and fish over heavy red and processed meats.' },
+      { question: 'Where can I get a diabetes diet plan near Jumeirah 1?', answer: 'At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm.' },
+      { question: 'How much does a diabetes diet consultation cost?', answer: 'A consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Medical diabetes care and blood tests are provided by our GP.' }
     ]
   },
   whyChoose: {
-    title: '5. Why Choose RamaCare Polyclinic for Diabetes?',
-    subtitle:  "As a DHA-licensed polyclinic in Jumeirah 1, we don't just provide a PDF diet plan. We offer:",
+    title: 'Why Patients Choose RamaCare for Diabetes Diet Care',
+    subtitle: "As a DHA-licensed polyclinic in Jumeirah 1, we don't just provide a PDF diet plan. We offer:",
     features: [
       {
-        title: 'Prakriti Analysis',
-        description: 'Understanding if your diabetes is Vata, Pitta, or Kapha dominant.',
-        icon: 'UserRound'
+       title: 'Medical Diabetes Care in the Same Building', 
+       description: 'Our female GP diagnoses and manages diabetes, prescribes medicines and arranges HbA1c and other blood tests.', 
+       icon: 'Stethoscope' 
+      },
+       { 
+        title: 'Diet Plan for Your Body', 
+        description: 'Dr. Shamna (BAMS) builds an eating plan around your dosha, routine, food culture and medicines.', 
+        icon: 'Leaf' 
       },
       {
-        title: 'DHA-Licensed Expertise',
-        description: 'Professional medical oversight for your safety.',
-        icon: 'Shield'
-      },
-      {
-        title: 'Integrative Monitoring',
-        description: 'We encourage you to bring your latest blood reports so we can track your HbA1c progress together.',
-        icon: 'TrendingUp'
+        title: 'Progress Reviewed Together',
+        description: 'Bring your latest reports; your diet and medical care are reviewed side by side.',
+        icon: 'LineChart'
       }
     ],
     trustBadges: [
-      { label: 'Licensed by', value: 'DHA Dubai', icon: 'Shield' },
-      { label: 'Certified', value: 'Ayurvedic Specialists', icon: 'Award' },
-      { label: 'Trusted by', value: '500+ Patients', icon: 'Users' }
+      { label: 'Licensed by', value: 'DHA Dubai', icon: 'ShieldCheck' },
+      { label: 'Doctors', value: 'Female GP and Ayurvedic doctor', icon: 'UserCheck' },
+      { label: 'Location', value: 'Jumeirah 1, Dubai', icon: 'MapPin' }
     ]
-  },
-  finalCTA: {
-    badge: 'EXCLUSIVE OFFER',
-    title: 'Still Thinking?',
-    description: "We understand that starting a new health journey can feel overwhelming. That's why we're offering a FREE glucose consultation to help you take the first step.",
-    stats: [
-      { label: 'Limited Slots This Week', value: 'Only 5 consultation slots remaining this month', icon: 'Clock' },
-      { label: 'Proven Results', value: 'Significant HbA1c improvement observed within 90 days*', icon: 'TrendingUp' }
-    ],
-    graph: {
-      title: 'Average Patient HbA1c Improvement',
-      before: { label: 'Before Treatment', value: '8.5%' },
-      after: { label: 'After Treatment', value: '6.0%' },
-      duration: 'After 90 Days'
-    },
-    buttonText: 'Claim Your Free Consultation'
   },
   bookingForm: {
     title: 'Ready to Take Control of Your Metabolic Health?',
@@ -243,59 +249,44 @@ export default function AyurvedicDietDiabetesPage() {
         "@type": "MedicalWebPage",
         "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#webpage",
         "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/",
-        "name": "Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control",
-        "description": "Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Type 2 Diabetes / Prediabetes (Madhumeha)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#physician"
-        },
+        "name": "Diabetes Diet Plan Dubai | Ayurvedic Foods to Eat & Avoid",
+        "inLanguage": "en-AE",
+        "about": { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#diet" },
+        "relatedLink": "https://ramacarepolyclinic.ae/services/diabetes-mellitus-care-dubai/",
+        "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+        "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+        "lastReviewed": "YYYY-MM-DD",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
             { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Diabetes", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" }
+            { "@type": "ListItem", "position": 3, "name": "Diabetes Diet Plan", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" }
           ]
         }
       },
       {
-        "@type": "Person",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#physician",
+        "@type": "Diet",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#diet",
+        "name": "Diabetes diet plan with Ayurvedic advice",
+        "alternateName": ["Diabetic diet plan", "Ayurvedic diet for diabetes", "Diet for prediabetes", "Madhumeha diet"],
+        "description": "Eating guidance for type 2 diabetes and prediabetes from RamaCare Polyclinic, Jumeirah 1, Dubai: the plate method, low-GI carbohydrates, protein and vegetables at every meal, local food swaps and Ayurvedic Kapha-balancing principles, alongside medical diabetes care from our GP.",
+        "dietFeatures": "Plate method (half vegetables, a quarter protein, a quarter whole-grain carbohydrate), low-GI grains such as barley and millet, whole fruit in portions, no sugary drinks, regular meal times, walking after meals",
+        "expertConsiderations": "Supports, and does not replace, medical diabetes care. Do not stop or change diabetes medicines without your doctor. Some foods and herbs that lower blood sugar can cause low blood sugar with medication.",
+        "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
         "name": "Dr. Shamna Keloth Meethal",
-        "jobTitle": "Ayurveda Doctor",
-        "honorificSuffix": "BAMS",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Ayurveda Doctor"
-        },
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+        "gender": "Female",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+        "medicalSpecialty": "https://schema.org/Ayurvedic",
+        "knowsLanguage": ["en", "ml", "hi"],
+        "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/#faq",
         "mainEntity": faqsForSchema
       }
     ]
@@ -354,17 +345,18 @@ export default function AyurvedicDietDiabetesPage() {
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control</title>
-        <meta name="description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." key="description" />
+        <title key="title">Diabetes Diet Plan Dubai | Ayurvedic Foods to Eat & Avoid</title>
+        <meta name="description" content="Diabetes diet plan in Jumeirah 1, Dubai: the plate method, Arabic and Indian food swaps, foods to avoid and a sample day, with Ayurvedic advice and GP care." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" key="og:title" />
-        <meta property="og:description" content="Manage Type 2 Diabetes and Prediabetes naturally. Our DHA-licensed Ayurvedic diet plans in Dubai focus on insulin sensitivity and glucose balance through ancient wisdom. Book at RamaCare Jumeirah." key="og:description" />
+        <meta property="og:title" content="Diabetes Diet Plan Dubai | Ayurvedic Foods to Eat & Avoid" key="og:title" />
+        <meta property="og:description" content="Diabetes diet plan in Jumeirah 1, Dubai: the plate method, Arabic and Indian food swaps, foods to avoid and a sample day, with Ayurvedic advice and GP care." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-diabetes-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" key="og:image" />
+        <meta property="og:image:alt" content="Diabetes diet plan with Ayurvedic advice at RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
@@ -372,8 +364,8 @@ export default function AyurvedicDietDiabetesPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet for Diabetes Dubai | Natural Blood Sugar Control" key="twitter:title" />
-        <meta name="twitter:description" content="Manage Type 2 Diabetes and Prediabetes naturally with DHA-licensed Ayurvedic diet plans at RamaCare Polyclinic Dubai." key="twitter:description" />
+        <meta name="twitter:title" content="Diabetes Diet Plan Dubai | Ayurvedic Foods to Eat & Avoid" key="twitter:title" />
+        <meta name="twitter:description" content="Diabetes diet plan in Jumeirah 1, Dubai: the plate method, Arabic and Indian food swaps, foods to avoid and a sample day, with Ayurvedic advice and GP care." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diab.jpg" key="twitter:image" />
 
         <script
@@ -467,34 +459,6 @@ export default function AyurvedicDietDiabetesPage() {
                   className="object-cover"
                   priority
                 />
-
-                {/* Blood Sugar Improvement Card Overlay */}
-                <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl">
-                  <h4 className="text-sm font-bold text-[#1F5E4B] tracking-wider mb-3 uppercase">
-                    {content.hero.stats.title}
-                  </h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <p className="text-xs text-gray-500 font-medium">{content.hero.stats.before.label}</p>
-                      <div className="bg-red-100 h-16 rounded flex items-end justify-center pb-2">
-                        <span className="text-sm  text-[#1A1A1A]">
-                          {content.hero.stats.before.value}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-xs text-gray-500 font-medium">{content.hero.stats.after.label}</p>
-                      <div className="bg-emerald-100 h-16 rounded flex items-end justify-center pb-2">
-                        <span className="text-sm  text-[#1A1A1A]">
-                          {content.hero.stats.after.value}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-[12px] text-gray-400">
-                    {content.hero.stats.note}
-                  </p>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -629,7 +593,8 @@ export default function AyurvedicDietDiabetesPage() {
           </div>
         </div>
       </section>
-
+<AyurvedaInfoSection content={content.plateMethod} />  
+<AyurvedaInfoSection content={content.foodSwaps} />
       {/* Section 3: Glucose Protocol */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
@@ -681,6 +646,9 @@ export default function AyurvedicDietDiabetesPage() {
           </div>
         </div>
       </section>
+ <AyurvedaInfoSection content={content.sampleDay} />  
+ <AyurvedaInfoSection content={content.safety} />  
+ <AyurvedaInfoSection content={content.medicalCare} />
 
       {/* Section 4: People Also Ask */}
       <section className="py-16 md:py-24 bg-[#F5F1EA]">
@@ -806,106 +774,7 @@ export default function AyurvedicDietDiabetesPage() {
           </div>
         </div>
       </section>
-
-      {/* Final CTA Section: Still Thinking? */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#1F5E4B] to-[#164435] text-white overflow-hidden relative">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10">
-              <div className="space-y-4">
-                <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase border border-white/20">
-                  {content.finalCTA.badge}
-                </span>
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                  {content.finalCTA.title}
-                </h2>
-                <p className="text-white/80 text-lg leading-relaxed max-w-xl">
-                  {content.finalCTA.description}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {content.finalCTA.stats.map((stat, idx) => {
-                  const Icon = LucideIcons[stat.icon] || LucideIcons.Info;
-                  return (
-                    <div key={idx} className="flex items-start gap-4 group">
-                      <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white shrink-0 group-hover:bg-white group-hover:text-[#1F5E4B] transition-colors">
-                        <Icon size={20} />
-                      </div>
-                      <div>
-                        <p className="font-bold text-white text-base">{stat.label}</p>
-                        <p className="text-white/60 text-sm">{stat.value}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <button
-                onClick={scrollToForm}
-                className="bg-white text-[#1F5E4B] px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-xl"
-              >
-                {content.finalCTA.buttonText}
-              </button>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 shadow-2xl"
-            >
-              <h3 className="text-xl font-bold mb-10 text-center">{content.finalCTA.graph.title}</h3>
-
-              <div className="space-y-12">
-                <div className="space-y-3">
-                  <div className="flex justify-between items-end">
-                    <span className="text-sm font-medium text-white/80">{content.finalCTA.graph.before.label}</span>
-                    <span className="text-xl font-bold">{content.finalCTA.graph.before.value}</span>
-                  </div>
-                  <div className="h-3 bg-white/10 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: '85%' }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.5 }}
-                      className="h-full bg-rose-400 rounded-full shadow-[0_0_20px_rgba(251,113,133,0.5)]"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex justify-center relative">
-                  <div className="bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold border border-white/10">
-                    {content.finalCTA.graph.duration}
-                  </div>
-                  <div className="absolute top-1/2 left-0 right-0 h-px bg-white/10 -z-10" />
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex justify-between items-end">
-                    <span className="text-sm font-medium text-white/80">{content.finalCTA.graph.after.label}</span>
-                    <span className="text-xl font-bold text-emerald-400">{content.finalCTA.graph.after.value}</span>
-                  </div>
-                  <div className="h-3 bg-white/10 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: '60%' }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 1 }}
-                      className="h-full bg-emerald-400 rounded-full shadow-[0_0_20px_rgba(52,211,153,0.5)]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <p className="mt-10 text-[11px] text-center text-white/40 italic">
-                *Based on clinical observations of patient compliance at RamaCare Polyclinic. Individual results may vary.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
+ <AyurvedaInfoSection content={content.yourVisit} />
       {/* Section 6: Booking Form Section */}
       <section id="booking-form" className="py-16 md:py-24 bg-[#1F5E4B] text-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
@@ -983,9 +852,9 @@ export default function AyurvedicDietDiabetesPage() {
                   onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                 >
                   <option value="">Select a time slot</option>
-                  <option value="morning">Morning (9 AM - 12 PM)</option>
-                  <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                  <option value="evening">Evening (4 PM - 8 PM)</option>
+                  <option value="morning">Morning (10 AM - 1 PM)</option>
+<option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+<option value="evening">Evening (5 PM - 10 PM)</option>
                 </select>
               </div>
 
@@ -1019,23 +888,35 @@ export default function AyurvedicDietDiabetesPage() {
             Related Ayurvedic Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+            <a href="/services/diabetes-mellitus-care-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Medical Diabetes Care</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+            <a href="/services/ayurvedic-diet-weight-loss-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Weight Loss</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Intermittent Fasting</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Keto</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-pcos-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for PCOS</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
       </section>
 
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-diabetes-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-diabetes-dubai" lastReviewed="2026-01-12" />
 
       {/* Floating Bottom Bar */}
       {showFloatingBar && (
@@ -1050,7 +931,7 @@ export default function AyurvedicDietDiabetesPage() {
                 <LucideIcons.Clock size={16} />
               </div>
               <p className="text-xs sm:text-sm font-medium tracking-wide">
-                <span className="font-bold text-emerald-400">Limited Slots Available:</span> Book your glucose assessment today
+                Diabetes diet consultation in Jumeirah 1 – book with Dr. Shamna
               </p>
             </div>
 

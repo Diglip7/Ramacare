@@ -6,118 +6,150 @@ import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import { useRouter } from 'next/router';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 
 const content = {
   hero: {
-    title: "Ayurvedic Diet vs. Keto Diet: A Dubai Perspective on Sustainable Wellness",
-    highlight: "In Dubai's extreme climate, not every diet works the same.",
-    description1: "In the quest for the perfect body in the city of gold, two heavyweights dominate the conversation: the modern, high-fat Keto Diet and the ancient, balance-based Ayurvedic Diet. While both promise weight loss, their impact on the body—especially in the extreme climate of the UAE—is vastly different. Ayurveda uses a constitutional approach to health, starting with a custom <a href=\"/services/ayurvedic-diet-plan-dubai/\" class=\"text-[#2D5A41] underline font-bold\">Ayurvedic Diet Plan</a> tailored to your specific body type.",
-    description2: "At RamaCare Polyclinic, we often see patients who have \"burned out\" on Keto and are looking for a more personalized, long-term solution. Here is a clinical breakdown of how these two diets perform in the Dubai environment.",
+    title: "Ayurvedic Diet vs Keto Diet: Which Suits You in Dubai?",
+    highlight: "Two very different ways of eating. The right one depends on your body, health and routine.",
+    description1: "The keto (ketogenic) diet is very low in carbohydrates and high in fat, so the body burns fat for fuel (ketosis). The Ayurvedic diet has no fixed macros: it adjusts what, when and how much you eat to your dosha, your digestion (Agni) and the season. This guide compares them honestly, including side effects and who should avoid keto.",
+    description2: "Prepared by RamaCare Polyclinic in Jumeirah 1 and reviewed by Dr. Shamna Keloth Meethal (BAMS). If you have a health condition or take regular medicines, speak to a doctor before changing your diet.",
     ctaButtons: {
-      primary: { text: 'Book Your Comparative Consultation in Jumeirah Today' },
+      primary: { text: 'Book a Diet Consultation in Jumeirah 1' },
       secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
     },
-    footer: "DHA-Licensed Experts • Personalized Plan"
+    footer: "DHA-licensed polyclinic • Jumeirah 1, Dubai"
   },
   summary: {
-    title: 'The "Answer-First" Summary: Which is Better?',
-    description: 'Should I choose Keto or Ayurveda in Dubai? While Keto offers rapid short-term weight loss by inducing ketosis, it is often too "heating" and "drying" for the Dubai climate, leading to irritability and digestive heat. Ayurveda offers a personalized alternative that promotes sustainable fat loss by balancing your specific Dosha, making it safer for long-term health and better suited for the high-heat UAE environment.'
+    title: 'Keto or Ayurvedic Diet: Which Is Better?',
+    description: 'Neither is best for everyone. Keto can lead to quick early weight loss (partly water) but is hard for many people to keep up, and it is not suitable for some health conditions. An Ayurvedic diet is more flexible and easier to fit into Dubai life, and many people use a lower-carb Ayurvedic approach, cutting sugar and refined carbs while keeping whole grains and lentils in moderation. In Ayurvedic terms, Kapha types usually do best with lower-carb eating, while Vata and Pitta types often feel better with more balance.' 
   },
   philosophy: {
-    title: 'The Core Philosophy: Fat vs. Fire',
+  title: 'How Each Diet Works',
     items: [
       {
         title: 'The Keto Diet:',
-        description: 'Focuses on shifting the body\'s fuel source from glucose to fats. It is a "one-size-fits-all" metabolic hack that requires strict macronutrient counting (75% fat, 20% protein, 5% carbs).',
+        description: 'Usually about 70–75% of calories from fat, 20–25% from protein and 5–10% from carbohydrates (often under 50g of carbs a day). Cutting carbs this far makes the body produce ketones from fat for energy. It follows the same basic rules for everyone.',
         icon: 'Activity'
       },
       {
         title: 'The Ayurvedic Diet:',
-        description: 'Focuses on Agni (Digestive Fire). It views food as information. Instead of counting macros, you eat according to your body type (Vata, Pitta, or Kapha) and the current Dubai season.',
+        description: 'Focuses on Agni (digestive fire) and your dosha (Vata, Pitta or Kapha). Instead of counting macros, you choose foods, meal times and portions that suit your body and the season, such as warm, freshly cooked meals and an early, light dinner.',
         icon: 'Leaf'
       }
     ]
   },
   riskySummer: {
-    title: '2. Why Keto Can Be Risky in the Dubai Summer',
+    title: 'Keto in the Dubai Heat: What to Watch For',
     items: [
       {
-        title: 'The Problem',
-        description: 'High-fat diets generate internal heat, compounding Dubai\'s already extreme temperatures and causing metabolic stress.',
+        title: 'Fluids and Electrolytes', 
+        description: 'Low-carb diets make the body lose more water and salts at first. In Dubai\'s heat and air-conditioning, that can mean headaches, cramps and tiredness, so drinking enough and getting enough salts matters.',
         icon: 'AlertTriangle',
         iconColor: 'text-red-500'
       },
       {
-        title: 'The Result',
-        description: 'Dehydration, irritability, skin dryness, and digestive discomfort become common side effects in hot climates.',
+        title: 'Common Early Side Effects', 
+        description: 'Many people get "keto flu" in the first days (headache, tiredness, irritability, poor sleep), and constipation is common because of lower fibre.',
         icon: 'Thermometer',
         iconColor: 'text-orange-500'
       },
       {
-        title: 'The Ayurvedic Fix',
-        description: 'Cooling foods, hydration-focused meals, and climate-adapted nutrition that works with Dubai\'s environment, not against it.',
+        title: 'The Ayurvedic View', 
+        description: 'Ayurveda regards very heavy, oily food in hot weather as aggravating Pitta, and favours lighter, cooling, freshly cooked meals in summer, whichever approach you follow.',
         icon: 'Droplets',
         iconColor: 'text-[#1F5E4B]'
       }
     ]
   },
   comparisonTable: {
-    title: '3. Comparison Table: At a Glance',
+    title: 'Keto vs Ayurvedic Diet: At a Glance',
     headers: ['Feature', 'Keto Diet', 'Ayurvedic Diet'],
-    rows: [
-      { feature: 'Primary Goal', keto: 'Ketosis (Fat Burning)', ayurveda: 'Agni (Metabolic Balance)' },
-      { feature: 'Sustainability', keto: 'Hard to maintain socially in Dubai', ayurveda: 'Easy to adapt to local restaurants' },
-      { feature: 'Personalization', keto: 'Low (Same for everyone)', ayurveda: 'High (Based on your Dosha)' },
-      { feature: 'Effect on Energy', keto: 'Initial "crash" followed by focus', ayurveda: 'Consistent energy from Day 1' },
-      { feature: 'Digestive Impact', keto: 'Can cause constipation/heaviness', ayurveda: 'Promotes daily detoxification' }
-    ],
+   rows: [
+    { feature: 'Main idea', keto: 'Very low carb, high fat, to reach ketosis', ayurveda: 'Eat for your dosha, digestion and the season' },
+    { feature: 'Carbohydrates', keto: 'Usually under 50g a day', ayurveda: 'Whole grains and lentils in amounts that suit you' },
+    { feature: 'Personalisation', keto: 'Same basic rules for everyone', ayurveda: 'Adjusted to your dosha and health' },
+    { feature: 'Early weeks', keto: 'Quick early weight loss (partly water); "keto flu" is common', ayurveda: 'Gradual changes; fewer early side effects' },
+    { feature: 'Eating out in Dubai', keto: 'Possible, but needs careful ordering', ayurveda: 'Flexible; easier with family and work meals' },
+    { feature: 'Medical check advised', keto: 'Yes, especially with diabetes, kidney disease or medicines', ayurveda: 'Yes, if you have a health condition' }
+      ],
     cta: 'Book Your Comparative Consultation in Jumeirah Today'
   },
   middlePath: {
-    title: '4. The "Middle Path" for Dubai Professionals',
-    description1: 'You work in DIFC. You travel frequently. You attend high-end brunches and business dinners. The Keto Diet requires you to turn down the bread basket and explain your choices every time.',
-    description2: 'Ayurveda allows you to eat intelligently based on your constitution, not based on rigid rules. It\'s not about restriction—it\'s about optimization.',
+    title: 'A Middle Path: The Ayurvedic Lower-Carb Approach',
+    description1: 'If keto feels too strict, many people do well with a lower-carb Ayurvedic approach: cut sugar, sweet drinks and refined flour; fill half the plate with vegetables; include protein at every meal (dal, paneer, eggs, fish or chicken); keep whole grains such as millet, barley or brown rice to a small portion at lunch; use healthy fats in moderation; and have an early, light dinner.',
+    description2: 'In Ayurvedic terms this is Kapha-balancing eating, and it fits Dubai life: business lunches, brunches and family meals, without counting macros.',
     quote: '"We work with your lifestyle, not against it."',
     cta: 'Book Your Comparative Consultation in Jumeirah Today'
   },
+  whoShouldNot: {
+  id: 'who-should-not-keto',
+  heading: 'Who Should Not Do a Keto Diet Without Medical Advice?',
+  items: [
+    { text: 'pregnant or breastfeeding women' },
+    { text: 'people with diabetes treated with medication' },
+    { text: 'people with kidney, liver, pancreas or gallbladder disease' },
+    { text: 'people with a history of eating disorders' },
+    { text: 'under-18s' }
+  ],
+  note: 'Our GP in the same building can check blood sugar, cholesterol and kidney function before you start.'
+},
+sampleDay: {
+  id: 'lower-carb-sample-day',
+  heading: 'Sample Day: Ayurvedic Lower-Carb Eating in Dubai',
+  intro: 'An example only. Your plan is set for your dosha and health.',
+  table: [
+    ['Morning', 'Warm water, then two eggs or paneer with sautéed vegetables'],
+    ['Lunch (main meal)', 'Grilled fish or chicken, or dal; a large portion of vegetables; a small portion of millet or brown rice'],
+    ['Afternoon', 'A handful of nuts, or cucumber and buttermilk'],
+    ['Dinner (early)', 'Vegetable and lentil soup, or a light salad with grilled protein'],
+    ['Avoid', 'Sugary drinks, sweets, white bread and heavy late-night meals']
+  ]
+},
+yourVisit: {
+  id: 'your-visit',
+  heading: 'Your Diet Consultation in Jumeirah 1',
+  table: [
+    ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+    ['Consultation', 'From AED 200, 45–60 minutes'],
+    ['Also in the building', 'Our GP, for blood tests if needed'],
+    ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+    ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+    ['Hours', 'Every day, 10am–10pm']
+  ]
+},
   paa: {
-    title: '5. People Also Ask (PAA) - Dubai Perspective',
+    title: 'Keto vs Ayurvedic Diet: Frequently Asked Questions',
     items: [
-      {
-        question: 'Can I lose weight as quickly on Ayurveda as I can on Keto?',
-        answer: 'While Keto may show rapid initial water weight loss, Ayurveda focuses on sustainable fat loss that doesn\'t compromise your metabolic health. Most patients see consistent, healthy weight reduction within 2-4 weeks while maintaining energy and digestive comfort.'
-      },
-      {
-        question: 'Is Ayurveda compatible with Dubai\'s restaurant scene?',
-        answer: 'Absolutely. Unlike Keto, which requires strict macro counting, Ayurveda teaches you how to make intelligent choices at any restaurant based on your body type and the season. You\'ll learn to navigate menus with confidence.'
-      },
-      {
-        question: 'What if I\'ve already tried Keto and it didn\'t work?',
-        answer: 'Many of our patients come to us after experiencing Keto burnout. We help you understand why it didn\'t work for your specific constitution and design a personalized Ayurvedic approach that addresses the root causes. If needed, this may include clinic-based metabolic cleansing therapies like <a href=\"/services/panchakarma-treatment-dubai/\" class=\"text-[#1F5E4B] underline font-bold\">Panchakarma Treatment in Dubai</a>.'
-      },
-      {
-        question: 'How long does it take to see results with Ayurveda?',
-        answer: 'Most patients notice improved energy and digestion within the first week. Visible weight loss and body composition changes typically occur within 2-4 weeks, with sustainable results continuing long-term.'
-      },
-      {
-        question: 'Do I need to give up my favorite foods?',
-        answer: 'Not necessarily. Ayurveda is about balance and timing, not elimination. We help you understand when and how to enjoy your favorite foods in a way that supports your health goals and body type.'
-      }
+      { question: 'Is keto or an Ayurvedic diet better for weight loss?', answer: 'Both can help. Keto often brings faster weight loss in the first weeks, partly from water, while longer-term results are similar to other calorie-controlled diets. The best diet is one you can keep up safely; many people find a lower-carb Ayurvedic approach easier to sustain.' },
+      { question: 'What is the keto diet?', answer: 'A very low-carbohydrate, high-fat diet, usually under 50g of carbs a day, with about 70–75% of calories from fat. Cutting carbs this far makes the body burn fat and produce ketones for energy (ketosis).' },
+      { question: 'Does Ayurveda allow a keto diet?', answer: 'Ayurveda has no keto tradition, but it does recommend lighter, lower-sugar eating for Kapha imbalance and weight gain. A strict keto diet is usually seen as too heavy and oily for Pitta types, especially in hot weather.' },
+      { question: 'Is keto safe in Dubai\'s heat?', answer: 'Low-carb diets cause extra water and salt loss at first, which can add to dehydration in the heat. If you follow keto, drink enough, get enough electrolytes and watch for headaches, cramps or dizziness.' },
+      { question: 'What is keto flu?', answer: 'A group of symptoms many people get in the first days of keto: headache, tiredness, irritability, nausea and poor sleep. It usually passes within a week or two.' },
+      { question: 'Who should not do a keto diet?', answer: 'People who are pregnant or breastfeeding, have diabetes treated with medication, have kidney, liver, pancreas or gallbladder disease, have a history of eating disorders, or are under 18, unless a doctor supervises it.' },
+      { question: 'Can keto raise cholesterol?', answer: 'In some people, keto raises LDL ("bad") cholesterol. If you follow keto, have your cholesterol checked before and after a few months.' },
+      { question: 'What is an Ayurvedic lower-carb diet?', answer: 'Cutting sugar, sweet drinks and refined flour, filling half the plate with vegetables, including protein at each meal, keeping whole grains to small portions, and eating an early, light dinner. In Ayurveda this is Kapha-balancing eating.' },
+      { question: 'Which dosha suits low-carb eating?', answer: 'Kapha types usually do best with lower-carb, lighter food. Vata types often feel worse on very low-carb diets, and Pitta types need cooling, regular meals. A dosha assessment helps you choose.' },
+      { question: 'Can I eat out in Dubai on either diet?', answer: 'Yes. For keto, choose grilled meat or fish with vegetables and skip bread and rice. For an Ayurvedic approach, choose freshly cooked dishes like dal, grilled fish, vegetables and a small portion of rice, and avoid heavy late dinners.' },
+      { question: 'Should I get blood tests before trying keto?', answer: 'It is a good idea, especially if you have a health condition. Our GP in the same building can check blood sugar, cholesterol and kidney function before you start and after a few months.' },
+      { question: 'Does RamaCare offer a keto diet plan in Dubai?', answer: 'No. RamaCare does not offer keto diet plans or meal plans. We offer Ayurvedic diet consultations with Dr. Shamna (from AED 200), and our GP can arrange blood tests if you are following or considering keto.' },
+      { question: 'How long before I see results?', answer: 'It varies. Keto often shows early weight change in the first weeks; Ayurvedic eating usually brings gradual changes in digestion, energy and weight. Your doctor reviews progress at follow-ups.' },
+      { question: 'Where is RamaCare?', answer: 'At 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm.' }
     ]
   },
   idealPlan: {
-    title: '6. Discover Your Ideal Plan at RamaCare',
-    description: 'Whether you\'re exploring Ayurveda for the first time or recovering from a restrictive diet, our DHA-licensed practitioners provide personalized consultations that consider your body type, lifestyle, and the unique demands of living in Dubai.',
+    title: 'Get a Diet Plan That Suits Your Body',
+    description: 'Book a consultation with Dr. Shamna Keloth Meethal (BAMS) in Jumeirah 1, from AED 200. She assesses your dosha, digestion and health and builds an eating plan you can keep, with blood tests through our GP if needed.',
     features: [
-      { text: 'DHA Licensed', icon: 'ShieldCheck' },
-      { text: 'Jumeirah 1 Location', icon: 'MapPin' },
-      { text: 'Clinical Consultation', icon: 'Stethoscope' }
+      { text: 'DHA-licensed polyclinic', icon: 'ShieldCheck' },
+      { text: 'Jumeirah 1, near Satwa and Al Wasl', icon: 'MapPin' },
+      { text: 'GP in the same building', icon: 'Stethoscope' }
     ],
-    cta1: 'Book Your Comparative Consultation in Jumeirah Today',
-    cta2: 'Explore our Ayurvedic Diet Plan Dubai'
+    cta1: 'Book a Diet Consultation',
+    cta2: 'Explore our Ayurvedic Diet Plan' 
   },
   retargeting: {
-    text: '"Still unsure? Get a personalized diagnosis in 15 minutes."',
+    text: 'Still unsure which approach suits you? Talk to Dr. Shamna in Jumeirah 1.',
     cta: 'WhatsApp Now'
   },
   reviewer: {
@@ -141,57 +173,47 @@ export default function AyurvedicDietVsKetoDubaiPage() {
   }));
 
   const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#webpage",
-        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/",
-        "name": "Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?",
-        "description": "Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Weight Management / Dietary Comparison (Ayurveda vs Keto)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#physician"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs. Keto Diet", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" }
-          ]
-        }
-      },
-      {
-        "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#physician",
-        "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#faq",
-        "mainEntity": faqsForSchema
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/#webpage",
+      "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/",
+      "name": "Ayurvedic Diet vs Keto Diet Plan Dubai | Which Suits You?",
+      "description": "A balanced, doctor-reviewed comparison of the ketogenic (keto) diet and the Ayurvedic diet from RamaCare Polyclinic, Jumeirah 1, Dubai: how each works, common side effects, who should avoid keto, eating in the Dubai heat, and a lower-carb Ayurvedic option.",
+      "inLanguage": "en-AE",
+      "about": [
+        { "@type": "Thing", "name": "Ketogenic diet" },
+        { "@type": "Thing", "name": "Ayurvedic diet" }
+      ],
+      "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+      "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+      "lastReviewed": "YYYY-MM-DD",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+          { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+          { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet vs Keto Diet", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" }
+        ]
       }
-    ]
-  };
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+      "name": "Dr. Shamna Keloth Meethal",
+      "gender": "Female",
+      "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+      "medicalSpecialty": "https://schema.org/Ayurvedic",
+      "knowsLanguage": ["en", "ml", "hi"],
+      "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqsForSchema
+    }
+  ]
+};
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -243,27 +265,27 @@ export default function AyurvedicDietVsKetoDubaiPage() {
       </motion.div>
 
       <Head>
-        <title key="title">Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?</title>
-        <meta name="description" content="Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah." key="description" />
+        <title key="title">Ayurvedic Diet vs Keto Diet Plan Dubai | Which Suits You?</title>
+        <meta name="description" content="Keto or Ayurvedic diet? A balanced, doctor-reviewed comparison: how each works, side effects, who should avoid keto, and a lower-carb Ayurvedic option. RamaCare, Jumeirah 1." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?" key="og:title" />
-        <meta property="og:description" content="Comparing the Keto Diet and Ayurvedic Diet for the Dubai lifestyle. Discover which plan offers sustainable weight loss and better energy for the UAE climate. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Diet vs Keto Diet Plan Dubai | Which Suits You?" key="og:title" />
+        <meta property="og:description" content="Keto or Ayurvedic diet? A balanced, doctor-reviewed comparison: how each works, side effects, who should avoid keto, and a lower-carb Ayurvedic option. RamaCare, Jumeirah 1." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-vs-keto-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-vs-keto-dubai-og.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet vs Keto Diet Comparison in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic diet vs keto diet comparison from RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet vs. Keto Diet Dubai | Which is Better for You?" key="twitter:title" />
-        <meta name="twitter:description" content="Keto or Ayurveda? See which approach offers safer, more sustainable weight loss for Dubai's climate and lifestyle." key="twitter:description" />
+        <meta name="twitter:title" content="Ayurvedic Diet vs Keto Diet Plan Dubai | Which Suits You?" key="twitter:title" />
+        <meta name="twitter:description" content="Keto or Ayurvedic diet? A balanced, doctor-reviewed comparison: how each works, side effects, who should avoid keto, and a lower-carb Ayurvedic option. RamaCare, Jumeirah 1." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ayurvedic-diet-vs-keto-dubai-og.jpg" key="twitter:image" />
 
         <script
@@ -490,7 +512,8 @@ export default function AyurvedicDietVsKetoDubaiPage() {
           </div>
         </div>
       </section>
-
+<AyurvedaInfoSection content={content.sampleDay} />
+<AyurvedaInfoSection content={content.whoShouldNot} />
       {/* 7. PAA Section */}
       <section className="bg-white">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-16">
@@ -570,7 +593,7 @@ export default function AyurvedicDietVsKetoDubaiPage() {
         </div>
       </section>
 
-    
+    <AyurvedaInfoSection content={content.yourVisit} />
 
       {/* Related Reading */}
       <section className="bg-white py-16 md:py-24 border-t border-[#E9E2D6]/40">
@@ -579,16 +602,28 @@ export default function AyurvedicDietVsKetoDubaiPage() {
             Related Ayurvedic Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
+            <a href="/services/ayurvedic-diet-weight-loss-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Weight Loss</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Intermittent Fasting</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-diabetes-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for Diabetes</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/pcos-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic PCOS Treatment</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+            <a href="/services/prakriti-dosha-assessment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Prakriti & Dosha Assessment</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -596,7 +631,7 @@ export default function AyurvedicDietVsKetoDubaiPage() {
       </section>
 
       {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-vs-keto-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-vs-keto-dubai" lastReviewed="2026-01-12" />
   {/* 9. Retargeting Strip */}
       <section className="sticky bottom-0 z-40 bg-[#E9E2D6] border-t-2 border-b-2 border-[#1F5E4B] py-3 md:py-4">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
