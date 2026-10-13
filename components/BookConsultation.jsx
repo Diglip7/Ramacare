@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { getAllSubcategories } from '../src/data/subcategoryContent';
+import { getAllSubcategories } from '../src/data/subcategoryContent';import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
+
 
 const BookConsultation = ({ content }) => {
   // Default content
@@ -39,8 +40,8 @@ const BookConsultation = ({ content }) => {
       description: '10am to 10pm, walk-ins welcome'
       },
       {
-        title: '4.8/5 Rating',
-        description: '200+ Verified Reviews'
+        title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+        description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
       }
     ],
     concerns: [

@@ -38,15 +38,24 @@ import {
   AlertCircle,
   Stethoscope
 } from 'lucide-react';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+
 
 // Renders text containing {{Label|/href}} tokens as real inline links.
-function LinkedText({ text, className }) {
+function LinkedText({ text, className, linkClassName, variant = 'default' }) {
   if (!text) return null;
   const regex = /\{\{([^|]+)\|([^}]+)\}\}/g;
   const parts = [];
   let lastIndex = 0;
   let match;
   let key = 0;
+
+  const defaultLinkClass =
+    variant === 'light' || variant === 'onDark'
+      ? "text-white font-semibold underline decoration-white/70 hover:text-[#C9A961] hover:decoration-[#C9A961] underline-offset-4 transition-colors"
+      : "text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors";
+
+  const resolvedLinkClass = linkClassName || defaultLinkClass;
 
   while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
@@ -56,7 +65,7 @@ function LinkedText({ text, className }) {
       <a
         key={key++}
         href={match[2]}
-        className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors"
+        className={resolvedLinkClass}
       >
         {match[1]}
       </a>
@@ -122,6 +131,16 @@ export default function CervicalSpondylosisTreatmentPage() {
   const heroBlobStyleOne = { transform: 'translateY(' + (scrollY * 0.25) + 'px)' };
   const heroBlobStyleTwo = { transform: 'translateY(' + (scrollY * -0.15) + 'px)' };
   const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/cervical-spondylosis-treatment-dubai/";
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+  const PAGE_TITLE = seo.title;
+  const PAGE_DESCRIPTION = seo.metaDescription;
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -134,7 +153,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             "@type": "ListItem",
             "position": i + 1,
             "name": b.label,
-            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+            "item": b.href && b.href.startsWith('http') ? b.href : SITE + b.href
           };
         })
       },
@@ -142,82 +161,45 @@ export default function CervicalSpondylosisTreatmentPage() {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
-        "name": "Cervical Spondylosis Treatment Dubai | RamaCare Polyclinic",
-        "description": seo.metaDescription,
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
         "medicalAudience": { "@type": "Patient" },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Cervical Spondylosis",
-          "alternateName": "Neck Arthritis, Cervical Osteoarthritis, Neck Wear and Tear"
-        },
-        "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
-        },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
+      },
+      {
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Cervical spondylosis",
+        "alternateName": ["Neck arthritis", "Cervical osteoarthritis", "Degenerative disc disease of the neck", "Cervical radiculopathy", "Cervical myelopathy"],
+        "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Cervical spine" },
+        "signOrSymptom": symptoms.list.map(function (s) { return { "@type": "MedicalSymptom", "name": s }; }),
+        "possibleTreatment": [
+          therapy("Exercise-based physiotherapy", "/services/physiotherapy-dubai/"),
+          therapy("Deep neck strengthening"),
+          therapy("Manual therapy and joint mobilisation"),
+          therapy("Nerve mobilisation"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Posture correction")
+        ]
       },
       {
         "@type": "Person",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "jobTitle": "Physiotherapist",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Physiotherapist"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Cervical Spondylosis Treatment",
-        "alternateName": "Physiotherapy for Cervical Spondylosis",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Comprehensive physiotherapy for cervical spondylosis including cervical traction, manual therapy, posture correction, and strengthening exercises.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Cervical Spine",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+97142862006",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -226,10 +208,7 @@ export default function CervicalSpondylosisTreatmentPage() {
           return {
             "@type": "Question",
             "name": f.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": f.answer
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": f.answer }
           };
         })
       }
@@ -253,26 +232,26 @@ export default function CervicalSpondylosisTreatmentPage() {
   return (
     <Layout>
       <Head>
-        <title key="title">Cervical Spondylosis Treatment Dubai | RamaCare Polyclinic</title>
+        <title key="title">{seo.title}</title>
         <meta name="description" content={seo.metaDescription} key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Cervical Spondylosis Treatment Dubai | RamaCare Polyclinic" />
+        <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.metaDescription} />
         <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/Cervical%20Spine%20Anatomy%20Illustration.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Cervical spine anatomy diagram for cervical spondylosis treatment Dubai" />
+        <meta property="og:image:alt" content="Cervical spondylosis physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
         <meta property="og:locale" content="en_AE" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cervical Spondylosis Treatment Dubai | RamaCare Polyclinic" />
+        <meta name="twitter:title" content={seo.title} />
         <meta name="twitter:description" content={seo.metaDescription} />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/Cervical%20Spine%20Anatomy%20Illustration.jpg" />
 
@@ -402,8 +381,8 @@ export default function CervicalSpondylosisTreatmentPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#1F5E4B]/10">
-                <p className="text-[#1F5E4B] font-bold text-sm">Cervical Spine Specialist Care</p>
-                <p className="text-[#5F5F5F] text-xs mt-1">DHA-Licensed Specialist Physiotherapists in Jumeirah, Dubai</p>
+                <p className="text-[#1F5E4B] font-bold text-sm">Neck Arthritis Physiotherapy in Jumeirah 1</p>
+                <p className="text-[#5F5F5F] text-xs mt-1">DHA-licensed physiotherapist · GP, X-ray and ultrasound on site</p>
               </div>
             </motion.div>
           </div>
@@ -519,7 +498,7 @@ export default function CervicalSpondylosisTreatmentPage() {
               </div>
 
               <div className="bg-[#1F5E4B]/5 border border-[#1F5E4B]/15 rounded-xl p-5 mt-4">
-                <p className="text-[#1A1A1A] text-sm leading-relaxed font-medium">{symptoms.note}</p>
+              <p className="text-[#1A1A1A] text-sm leading-relaxed font-medium"><LinkedText text={symptoms.note} /></p>
               </div>
             </motion.div>
 
@@ -684,7 +663,7 @@ export default function CervicalSpondylosisTreatmentPage() {
 
           <div className="bg-[#F9F7F2] p-8 rounded-2xl border border-[#1F5E4B]/5 mb-12 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3 text-center">{treatmentOptions.physioTitle}</h3>
-            <p className="text-[#5F5F5F] leading-relaxed text-center">{treatmentOptions.physioParagraph}</p>
+            <p className="text-[#5F5F5F] leading-relaxed text-center"><LinkedText text={treatmentOptions.physioParagraph} /></p>
           </div>
 
           {images && images.traction ? (
@@ -723,7 +702,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             })}
           </div>
           <p className="text-center text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto mt-12 text-sm font-medium">
-            {treatmentOptions.note}
+            <LinkedText text={treatmentOptions.note} />
           </p>
         </div>
       </section>
@@ -935,7 +914,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-white/80 leading-relaxed max-w-4xl mx-auto mt-10 text-center text-sm">
-            {whyChooseUs.note}
+            <LinkedText text={whyChooseUs.note} variant="light" />
           </motion.p>
         </div>
       </section>
@@ -952,7 +931,7 @@ export default function CervicalSpondylosisTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions
+              Cervical Spondylosis in Jumeirah 1: Common Questions
             </h2>
           </motion.div>
 
@@ -1031,11 +1010,11 @@ export default function CervicalSpondylosisTreatmentPage() {
         <BookConsultation
           content={{
             badge: 'Start Your Recovery',
-            title: 'Book Cervical Spondylosis Treatment in Dubai Today',
-            description: 'Get back to comfortable, pain-free neck movement with evidence-based care at RamaCare Polyclinic.',
+            title: 'Book a Neck Arthritis Assessment in Jumeirah 1',
+            description: 'Physiotherapy assessment AED 200. Open every day 10am–10pm, with same-day appointments when slots are free.',
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
-            submitButtonText: 'Confirm Free Consultation',
+            submitButtonText: 'Request Appointment',
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
@@ -1052,10 +1031,10 @@ export default function CervicalSpondylosisTreatmentPage() {
               fridayTime: '10:00 AM - 8:00 PM'
             },
             statCards: [
-              { title: 'DHA Licensed', description: 'Certified Facility' },
-              { title: 'Experienced Team', description: '10+ Years Combined' },
-              { title: 'Personalized Plans', description: 'Built Around Assessment' },
-              { title: '4.8/5 Rating', description: 'Patient Reviews' }
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'AED 200', description: 'Physiotherapy Assessment' },
+              { title: 'GP, X-ray', description: '& Ultrasound On Site' },
+              { title: 'Open Daily', description: '10am – 10pm' }
             ]
           }}
         />

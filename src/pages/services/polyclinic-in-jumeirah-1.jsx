@@ -24,6 +24,7 @@ import {
   Info,
   Check
 } from 'lucide-react';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
 
 const SEO = {
   title: 'Polyclinic in Jumeirah 1, Dubai | RamaCare Polyclinic',
@@ -40,7 +41,7 @@ const STATS_8_POINT = [
   { value: '150+', label: 'Treatments & Services', icon: Activity },
   { value: 'DHA-Licensed', label: 'Healthcare Clinic', icon: ShieldCheck },
   { value: '15+', label: 'Years Combined Experience', icon: Award },
-  { value: '4.8/5', label: 'Patient Rating', icon: Sparkles },
+  { value: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`, label: 'Patient Rating', icon: Sparkles },
   { value: 'Multispecialty', label: 'Healthcare Departments', icon: Building2 },
   { value: 'Personalised', label: 'Treatment Plans', icon: HeartPulse },
   { value: 'Experienced', label: 'Healthcare Professionals', icon: Users },

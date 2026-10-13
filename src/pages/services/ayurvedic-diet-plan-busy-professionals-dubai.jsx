@@ -75,7 +75,7 @@ const content = {
       {
         letter: 'C',
         title: 'Screen Breaks for Eyes and Neck', 
-        description: 'Follow the 20-20-20 rule (every 20 minutes, look 20 feet away for 20 seconds), blink often in air-conditioning, and stand up every hour. For tired eyes, Netra Tarpana (a traditional Ayurvedic eye therapy) is available at RamaCare after a consultation; for neck and shoulder pain, see our <a href="/services/office-neck-treatment-dubai/" class="text-[#1F5E4B] underline font-bold hover:text-[#164435]">physiotherapy team</a>.', 
+        description: 'Follow the 20-20-20 rule (every 20 minutes, look 20 feet away for 20 seconds), blink often in air-conditioning, and stand up every hour. For tired eyes, Netra Tarpana (a traditional Ayurvedic eye therapy) is available at RamaCare after a consultation; for neck and shoulder pain, see our <a href="/services/neck-pain-treatment-dubai/" class="text-[#1F5E4B] underline font-bold hover:text-[#164435]">physiotherapy team</a>.', 
         favor: 'Do not put home remedies such as rose water into your eyes; ask a doctor first.'
       }
     ]
@@ -827,8 +827,8 @@ export default function AyurvedicDietPlanBusyProfessionalsPage() {
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="/services/office-neck-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Office Neck Pain Physiotherapy</span>
+            <a href="/services/neck-pain-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Neck Pain Physiotherapy</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
             <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">

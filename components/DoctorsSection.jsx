@@ -29,14 +29,14 @@ const DoctorsSection = ({ content, customDoctors }) => {
   const normalizeDoctor = (d) => {
     const name = d?.name || '';
     const firstName = d?.firstName || (name.split(' ')[0] || '');
-    let ratingNum = 4.8;
+    let ratingNum = null;
     if (typeof d?.rating === 'number' && Number.isFinite(d.rating) && d.rating > 0) {
       ratingNum = d.rating;
     } else if (typeof d?.rating === 'string') {
       const match = d.rating.match(/[0-9]+(\.[0-9]+)?/);
       if (match) ratingNum = parseFloat(match[0]);
     }
-    const ratingLabel = ratingNum.toFixed(1);
+    const ratingLabel = ratingNum ? ratingNum.toFixed(1) : null;
     const slug = Object.keys(DOCTORS).find(key => DOCTORS[key]?.id === d?.id) || '';
     const profileHref = d?.urlSlug || (slug ? `/doctors/${slug}/` : '/doctors/');
     return {
@@ -139,7 +139,7 @@ const DoctorsSection = ({ content, customDoctors }) => {
                       </div>
                       <div>
                         <h4 className="text-sm font-semibold text-[#111827]">Comprehensive 1-on-1 Consultation</h4>
-                        <p className="text-xs text-[#6B7280] mt-0.5">Individual assessment based on your symptoms, lifestyle, and aesthetic or medical goals.</p>
+                        <p className="text-xs text-[#6B7280] mt-0.5">Individual assessment based on your symptoms, lifestyle and health goals.</p>
                       </div>
                     </div>
 
@@ -218,10 +218,14 @@ const DoctorsSection = ({ content, customDoctors }) => {
 
                       {/* Doctor Info at Bottom of Image */}
                       <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                        <div className="flex items-center gap-1.5 mb-3">
-                          {renderStars(doctor.rating, 'w-4 h-4')}
-                          <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
-                        </div>
+                        {doctor.rating ? (
+
+                          <div className="flex items-center gap-1.5 mb-3">
+                            {renderStars(doctor.rating, 'w-4 h-4')}
+                            <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
+                          </div>
+
+                        ) : null}
                         <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                           {doctor.name}
                         </h3>
@@ -343,10 +347,14 @@ const DoctorsSection = ({ content, customDoctors }) => {
                           </div>
                         )}
                         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                          <div className="flex items-center gap-1.5 mb-3">
-                            {renderStars(doctor.rating, 'w-4 h-4')}
-                            <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
-                          </div>
+                          {doctor.rating ? (
+
+                            <div className="flex items-center gap-1.5 mb-3">
+                              {renderStars(doctor.rating, 'w-4 h-4')}
+                              <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
+                            </div>
+
+                          ) : null}
                           <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                             {doctor.name}
                           </h3>
@@ -494,10 +502,14 @@ const DoctorsSection = ({ content, customDoctors }) => {
                             )}
 
                             <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                              <div className="flex items-center gap-1.5 mb-3">
-                                {renderStars(doctor.rating, 'w-4 h-4')}
-                                <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
-                              </div>
+                              {doctor.rating ? (
+
+                                <div className="flex items-center gap-1.5 mb-3">
+                                  {renderStars(doctor.rating, 'w-4 h-4')}
+                                  <span className="text-white text-sm font-medium ml-1">{doctor.ratingLabel}</span>
+                                </div>
+
+                              ) : null}
 
                               <h3 className="text-xl font-medium text-white mb-1 tracking-tight hover:underline">
                                 {doctor.name}

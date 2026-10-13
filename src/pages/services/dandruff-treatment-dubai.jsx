@@ -641,6 +641,13 @@ export default function DandruffTreatmentDubaiPage() {
             })}
           </div>
           <p className="text-center text-[#5F5F5F] text-sm mt-8 italic max-w-2xl mx-auto">{content.causes.note}</p>
+          <p className="text-center text-[#5F5F5F] text-sm mt-3 max-w-2xl mx-auto">
+            Dealing with dandruff in UAE heat? For cooling nutritional support to calm seasonal scalp flare-ups alongside clinical care, explore our guide to an{" "}
+            <Link href="/services/ayurvedic-diet-dubai-summer/" className="text-[#1F5E4B] font-semibold underline hover:text-[#1A5F3F] transition-colors">
+              Ayurvedic summer diet for Dubai
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

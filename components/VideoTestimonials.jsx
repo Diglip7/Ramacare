@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
+
 
 const PatientTestimonials = ({ content }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -64,7 +65,7 @@ const PatientTestimonials = ({ content }) => {
   const stats = [
     {
       id: 1,
-      number: '4.8/5',
+      number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
       label1: 'Average Rating',
       label2: 'Google Reviews',
       target: 4.8,

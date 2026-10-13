@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import BookConsultation from '../../../components/BookConsultation';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
 import {
   Activity,
   Calendar,
@@ -48,92 +50,40 @@ export default function SciaticaTreatmentPage() {
   };
 
   const faqs = [
-    {
-      question: 'What causes sciatica?',
-      answer: 'Sciatica is usually caused by pressure or irritation on the sciatic nerve, often from a herniated disc, spinal stenosis, or tight muscles like the piriformis.'
-    },
-    {
-      question: 'Can physiotherapy cure sciatica?',
-      answer: 'Physiotherapy can\'t guarantee a "cure" since outcomes vary by cause and individual, but it\'s highly effective at reducing pain, restoring movement, and addressing the underlying issue for most patients. Consistent physiotherapy sessions, combined with home exercises, give you the best chance of lasting improvement.'
-    },
-    {
-      question: 'How long does recovery take?',
-      answer: 'Mild cases often improve in a few weeks, while chronic sciatica may take a few months of consistent treatment.'
-    },
-    {
-      question: 'Can sciatica return?',
-      answer: 'Yes, especially if the underlying cause — like poor posture or a weak core — isn\'t addressed. This is why we focus on prevention, not just pain relief.'
-    },
-    {
-      question: 'Is surgery always necessary?',
-      answer: 'No. Most sciatica cases respond well to non-surgical treatment. Surgery is typically considered only when conservative treatment fails or there are severe neurological symptoms.'
-    },
-    {
-      question: 'Can I exercise with sciatica?',
-      answer: 'Gentle, guided exercise is usually encouraged. Complete rest for long periods can slow recovery.'
-    },
-    {
-      question: 'Is walking good for sciatica?',
-      answer: 'Light walking is often beneficial and helps maintain mobility, as long as it doesn\'t sharply increase your pain.'
-    },
-    {
-      question: 'Can prolonged sitting worsen sciatica?',
-      answer: 'Yes. Sitting increases pressure on the lower spine and can aggravate nerve irritation.'
-    },
-    {
-      question: 'What sleeping position is best?',
-      answer: 'Many patients find relief sleeping on their side with a pillow between the knees, which keeps the spine aligned.'
-    },
-    {
-      question: 'Can pregnancy cause sciatica?',
-      answer: 'Yes, pregnancy-related weight and postural changes can put pressure on the sciatic nerve.'
-    },
-    {
-      question: 'Does sciatica always cause leg pain?',
-      answer: 'Not always immediately, but pain traveling into the leg is a defining feature of true sciatica.'
-    },
-    {
-      question: 'Can stress make sciatica worse?',
-      answer: 'Stress can increase muscle tension, which may worsen symptoms indirectly.'
-    },
-    {
-      question: 'Is heat or ice better for sciatica?',
-      answer: 'Both can help. Ice is often used early to reduce inflammation, while heat may ease muscle tension later.'
-    },
-    {
-      question: 'Can obesity contribute to sciatica?',
-      answer: 'Yes, extra body weight increases spinal load and can contribute to disc problems.'
-    },
-    {
-      question: 'How is sciatica different from a pulled muscle?',
-      answer: 'A pulled muscle usually causes localized pain, while sciatica involves nerve-related pain that travels down the leg.'
-    },
-    {
-      question: 'Can driving worsen sciatica?',
-      answer: 'Yes, prolonged sitting and vibration while driving can aggravate symptoms.'
-    },
-    {
-      question: 'When should I get an MRI for sciatica?',
-      answer: 'Usually if symptoms persist beyond several weeks, worsen, or show signs of significant nerve involvement. Your physiotherapist can advise whether imaging is needed as part of your assessment, or whether it\'s reasonable to begin treatment first and monitor your response.'
-    },
-    {
-      question: 'Can young people get sciatica?',
-      answer: 'Yes, though it\'s more common in adults over 30, younger people can develop it too, especially from disc injuries or prolonged sitting.'
-    },
-    {
-      question: 'Will I need long-term physiotherapy?',
-      answer: 'Not necessarily. Many patients complete a structured program and transition to a home exercise routine for maintenance.'
-    },
-    {
-      question: 'Is sciatica preventable?',
-      answer: 'Good posture, regular movement, core strength, and proper lifting technique can significantly reduce your risk.'
-    }
+    { question: 'Where can I get sciatica treatment in Jumeirah 1?', answer: 'RamaCare Polyclinic treats sciatica on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878.' },
+    { question: 'How much does a sciatica physiotherapy assessment cost?', answer: 'A physiotherapy assessment at RamaCare costs AED 200. Insurance is by reimbursement: you pay at the clinic and claim the cost back from your insurer with our itemised invoice.' },
+    { question: 'Who treats sciatica at RamaCare?', answer: 'Sciatica is assessed and treated by our DHA-licensed physiotherapist, Jeena Mathew (BPT, MPT). Our GP works in the same clinic and can suggest or prescribe medication where appropriate, arrange an X-ray and refer you for an MRI or to a spine specialist.' },
+    { question: 'What causes sciatica?', answer: 'Sciatica is caused by irritation or compression of the sciatic nerve. The most common cause is a slipped (herniated) disc in the lower back. Other causes include spinal stenosis, degenerative discs and piriformis syndrome.' },
+    { question: 'What is piriformis syndrome?', answer: 'Piriformis syndrome is buttock pain, sometimes spreading down the back of the thigh, when the piriformis muscle irritates the sciatic nerve. It is less common than disc-related sciatica, so a proper assessment is needed to tell them apart.' },
+    { question: 'How do I know if it is sciatica or piriformis syndrome?', answer: 'Disc-related sciatica often comes with back pain, pain below the knee and changes in reflexes or strength. Piriformis syndrome is usually felt deep in the buttock, worse with sitting, and rarely causes reflex or strength changes. Your physiotherapist tests both.' },
+    { question: 'How is piriformis syndrome treated?', answer: 'Treatment usually combines hip and glute strengthening, movement retraining, hands-on soft-tissue work, dry needling and stretching, plus advice on sitting. Most people improve without injections or surgery.' },
+    { question: 'Can physiotherapy cure sciatica?', answer: 'Physiotherapy cannot guarantee a cure, but it is a first-line treatment for most people with sciatica. It helps manage pain, keeps you moving and builds strength to lower the chance of it coming back.' },
+    { question: 'Can the GP give me medication for sciatica?', answer: 'Yes. RamaCare\'s GP can assess you and suggest or prescribe medication where appropriate, in the same clinic as your physiotherapy.' },
+    { question: 'How long does sciatica take to heal?', answer: 'Many people improve within 2 to 6 weeks, and most within about 12 weeks. Long-standing sciatica can take several months of treatment and home exercise.' },
+    { question: 'When should I get an MRI for sciatica?', answer: 'An MRI is usually needed only if pain or weakness is severe, getting worse, not improving after several weeks, or if surgery is being considered. RamaCare can refer you for one.' },
+    { question: 'Is surgery needed for sciatica?', answer: 'Usually not. Most sciatica improves without surgery. Surgery is considered for emergency symptoms, increasing weakness or severe pain that does not improve. RamaCare does not perform injections or surgery and refers you if needed.' },
+    { question: 'When is sciatica an emergency?', answer: 'Go to an emergency department straight away if you lose bladder or bowel control, have numbness around the groin or buttocks, or develop weakness in both legs. These can be signs of cauda equina syndrome.' },
+    { question: 'Is walking good for sciatica?', answer: 'Yes, gentle walking is usually helpful, as long as it does not sharply increase leg pain. Long bed rest slows recovery.' },
+    { question: 'What sleeping position is best for sciatica?', answer: 'Many people find it easier lying on their side with a pillow between the knees, or on their back with a pillow under the knees.' },
+    { question: 'Is heat or ice better for sciatica?', answer: 'Both can ease pain. Many people use ice in the first days and heat later for muscle tension. Use whichever feels better for short periods.' },
+    { question: 'Can sitting or driving make sciatica worse?', answer: 'Yes. Long periods of sitting or driving can increase symptoms. Take breaks every 30 to 45 minutes and adjust your seat; your physiotherapist can advise on your desk and car set-up.' },
+    { question: 'Can pregnancy cause sciatica?', answer: 'Pregnancy can cause sciatica-like pain from posture and pelvic changes. Physiotherapy can help with safe exercises and positions.' },
+    { question: 'Can sciatica come back?', answer: 'It can. Keeping up your exercises, staying active, lifting well and improving desk posture lower the chance of another episode.' },
+    { question: 'Does insurance cover sciatica physiotherapy?', answer: 'RamaCare does not bill insurers directly. You pay at the clinic and claim the cost back from your insurer. Many plans need a doctor\'s referral, and our GP is in the same clinic.' }
   ];
 
-  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/sciatica-treatment-dubai/";
-  const PAGE_TITLE = "Sciatica Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Struggling with sciatica pain down your leg? Get expert sciatica treatment in Dubai at RamaCare Polyclinic. DHA-licensed physios for lasting relief. Book now!";
-  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/sciatica-treatment-dubai-physiotherapy.jpg";
+  const SITE = "https://ramacarepolyclinic.ae";
+  const CANONICAL_URL = `${SITE}/services/sciatica-treatment-dubai/`;
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+  const PAGE_TITLE = "Sciatica & Piriformis Treatment in Jumeirah 1 | RamaCare";
+  const PAGE_DESCRIPTION = "Sciatica and piriformis syndrome physiotherapy in Jumeirah 1, Dubai. AED 200 assessment, GP and X-ray on site. Open daily till 10pm.";
+  const OG_IMAGE = `${SITE}/images/sciatica-treatment-dubai-physiotherapy.jpg`;
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -142,10 +92,10 @@ export default function SciaticaTreatmentPage() {
         "@type": "BreadcrumbList",
         "@id": `${CANONICAL_URL}#breadcrumb`,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ramacarepolyclinic.ae/services/" },
-          { "@type": "ListItem", "position": 3, "name": "Physiotherapy", "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/" },
-          { "@type": "ListItem", "position": 4, "name": "Sciatica Treatment Dubai", "item": CANONICAL_URL }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE}/services/` },
+          { "@type": "ListItem", "position": 3, "name": "Physiotherapy", "item": `${SITE}/services/physiotherapy-dubai/` },
+          { "@type": "ListItem", "position": 4, "name": "Sciatica Treatment", "item": CANONICAL_URL }
         ]
       },
       {
@@ -155,73 +105,51 @@ export default function SciaticaTreatmentPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
         "medicalAudience": { "@type": "Patient" },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Sciatica",
-          "description": "A condition characterized by pain radiating along the sciatic nerve, which runs from the lower back through the hips and buttocks and down each leg."
-        },
-        "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": [{ "@id": `${CANONICAL_URL}#sciatica` }, { "@id": `${CANONICAL_URL}#piriformis` }],
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
+      },
+      {
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#sciatica`,
+        "name": "Sciatica",
+        "alternateName": ["Sciatic nerve pain", "Lumbar radiculopathy", "Leg nerve pain"],
+        "description": "Pain, tingling or numbness along the sciatic nerve, from the lower back or buttock down the leg, usually on one side.",
+        "possibleTreatment": [
+          therapy("Exercise-based physiotherapy", "/services/physiotherapy-dubai/"),
+          therapy("Neural mobilisation"),
+          therapy("Manual therapy"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Electrotherapy (TENS)", "/services/electrotherapy-dubai/")
+        ]
+      },
+      {
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#piriformis`,
+        "name": "Piriformis syndrome",
+        "description": "Buttock pain, sometimes spreading down the back of the thigh, when the piriformis muscle irritates the sciatic nerve.",
+        "possibleTreatment": [
+          therapy("Hip and gluteal strengthening"),
+          therapy("Soft-tissue therapy"),
+          therapy("Dry needling", "/services/dry-needling-dubai/")
+        ]
       },
       {
         "@type": "Person",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "jobTitle": "Physiotherapist",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Physiotherapist"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        }
-      },
-      {
-        "@type": "MedicalTherapy",
-        "@id": `${CANONICAL_URL}#therapy`,
-        "name": "Sciatica Physiotherapy Treatment",
-        "description": "A structured, evidence-based physiotherapy program for sciatica combining manual therapy, neural mobilization, dry needling, electrotherapy, ultrasound therapy, and progressive exercise, provided by DHA licensed physiotherapists at RamaCare Polyclinic in Dubai.",
-        "usedToTreat": {
-          "@type": "MedicalCondition",
-          "name": "Sciatica"
-        },
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -230,10 +158,7 @@ export default function SciaticaTreatmentPage() {
           return {
             "@type": "Question",
             "name": f.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": f.answer
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": f.answer }
           };
         })
       }
@@ -256,7 +181,7 @@ export default function SciaticaTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Physiotherapist treating sciatica pain at RamaCare Polyclinic Dubai" key="og:image:alt" />
+        <meta property="og:image:alt" content="Sciatica physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
 
         {/* Twitter Card Tags */}
@@ -327,7 +252,7 @@ export default function SciaticaTreatmentPage() {
                   className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
                 >
                   <Activity className="w-4 h-4" />
-                  <span>Advanced Physiotherapy Care</span>
+                  <span>DHA-Licensed Physiotherapy · Jumeirah 1</span>
                 </motion.div>
 
                 <motion.h1
@@ -336,7 +261,7 @@ export default function SciaticaTreatmentPage() {
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
                 >
-                  Sciatica Treatment Dubai
+                  Sciatica Treatment in Jumeirah 1, Dubai
                 </motion.h1>
 
                 <motion.p
@@ -345,7 +270,7 @@ export default function SciaticaTreatmentPage() {
                   transition={{ delay: 0.4, duration: 0.6 }}
                   className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl"
                 >
-                  Relieve Shooting Leg Pain & Restore Your Mobility
+                  Physiotherapy for sciatica and piriformis syndrome, with a GP and X-ray in the same clinic
                 </motion.p>
               </div>
 
@@ -356,16 +281,16 @@ export default function SciaticaTreatmentPage() {
                 className="space-y-4"
               >
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
-                  If pain is shooting from your lower back down into your leg, you're not alone. Sciatica is one of the most common reasons people in Dubai visit a physiotherapist. It can turn ordinary tasks into a daily struggle — sitting at your desk, driving, even standing up from a chair.
+                  RamaCare Polyclinic treats sciatica and piriformis syndrome at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. A physiotherapy assessment costs AED 200. Our DHA-licensed physiotherapist finds where the nerve is being irritated, whether a disc, a narrowed spine or the piriformis muscle, and builds your plan. Our GP can suggest or prescribe medication where appropriate and arrange an X-ray on the same visit. Open every day, 10am–10pm.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
-                  At RamaCare Polyclinic, we see this pattern often: patients wait weeks or months hoping the pain will fade on its own, only to find it getting worse. The truth is, sciatica responds best when it's treated early. The longer nerve irritation continues untreated, the harder recovery can become.
+                  Sciatica turns ordinary tasks into a struggle: sitting at your desk, driving, even standing up from a chair. Many people wait weeks hoping it will settle. Getting assessed early helps you manage the pain, stay active safely and spot the rare warning signs that need urgent care.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
-                  This page explains what sciatica actually is, what causes it, and how our team approaches sciatica care, using evidence-based physiotherapy. Whether your pain started last week or has lingered for months, understanding your condition is the first step toward relief. If you've been searching for reliable sciatica treatment in Dubai, you're in the right place.
+                  This page explains what sciatica is, how it differs from piriformis syndrome, and how we treat both.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed max-w-xl">
-                  Sciatica can develop from a herniated disc, muscle tightness, poor posture, or prolonged sitting — all common in Dubai's desk-heavy, car-dependent lifestyle. Patients choose RamaCare because our physiotherapists take time to identify the actual source of nerve irritation, rather than just treating symptoms. That distinction matters for lasting recovery.
+                  Long hours at a desk and in the car are common triggers in Dubai. Finding the real source of the nerve irritation, rather than treating only the painful spot, is what makes recovery last.
                 </p>
               </motion.div>
 
@@ -398,11 +323,11 @@ export default function SciaticaTreatmentPage() {
                 className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-white" />
-                  <span className="text-white/90">DHA Licensed</span>
+                  <span className="text-white/90">AED 200 Assessment</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-white" />
-                  <span className="text-white/90">Non-Surgical</span>
+                  <span className="text-white/90">Open Daily till 10pm</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -417,12 +342,12 @@ export default function SciaticaTreatmentPage() {
                 <figure>
                   <img
                     src="/images/sciatica-treatment-dubai-physiotherapy.jpg"
-                    alt="Physiotherapist treating sciatica pain at RamaCare Polyclinic Dubai"
-                    title="Sciatica Treatment Dubai - RamaCare Polyclinic"
+                    alt="Physiotherapist treating sciatica at RamaCare Polyclinic, Jumeirah 1"
+                    title="Sciatica physiotherapy at RamaCare Polyclinic, Jumeirah 1"
                     className="w-full h-[500px] object-cover"
                   />
                   <figcaption className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-sm text-[#1A1A1A]">
-                    Expert sciatica treatment at RamaCare Polyclinic, Dubai.
+                    Sciatica physiotherapy at RamaCare Polyclinic, Jumeirah 1.
                   </figcaption>
                 </figure>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -439,8 +364,8 @@ export default function SciaticaTreatmentPage() {
                     <Users className="w-6 h-6 text-[#1F5E4B]" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-[#1F5E4B]">500+</p>
-                    <p className="text-sm text-gray-600">Happy Patients</p>
+                    <p className="text-2xl font-bold text-[#1F5E4B]">{GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5</p>
+                    <p className="text-sm text-gray-600">Google rating · {GOOGLE_RATING_FALLBACK.count} reviews</p>
                   </div>
                 </div>
               </motion.div>
@@ -483,7 +408,7 @@ export default function SciaticaTreatmentPage() {
                 </p>
               </div>
               <p className="text-lg text-[#5F5F5F] leading-relaxed">
-                The sciatic nerve starts in your lower back, runs through your buttock, and travels down the back of each leg to your foot. When something presses on or irritates this nerve near its spinal root, you feel pain anywhere along that pathway — not just where the pressure is happening. This is why lasting Sciatic Nerve Rehabilitation has to address the root cause, not just the painful area.
+                The sciatic nerve starts in your lower back, runs through your buttock, and travels down the back of each leg to your foot. When something presses on or irritates this nerve near its spinal root, you feel pain anywhere along that pathway — not just where the pressure is happening. This is why treatment has to address where the nerve is irritated, not only where it hurts.
               </p>
               <p className="text-lg text-[#5F5F5F] leading-relaxed">
                 Most cases start in the lower spine. A disc may bulge, a joint may narrow, or a muscle may tighten around the nerve. This irritation sends pain signals down the leg, even though the actual problem sits in your back.
@@ -508,7 +433,7 @@ export default function SciaticaTreatmentPage() {
                 {
                   icon: Target,
                   title: "Nerve Irritation",
-                  desc: "The sciatic nerve is compressed or inflamed"
+                  desc: "The sciatic nerve is compressed or irritated"
                 },
                 {
                   icon: Activity,
@@ -631,7 +556,7 @@ export default function SciaticaTreatmentPage() {
               </p>
             </div>
             <p className="text-white/80 text-lg leading-relaxed">
-              Understanding these distinctions is why patients searching for accurate sciatica care guidance should start with a proper clinical assessment, not guesswork.
+              If your pain stays in the buttock and is worse when sitting, it may be piriformis syndrome rather than disc-related sciatica. See the comparison below.
             </p>
           </motion.div>
         </div>
@@ -650,7 +575,7 @@ export default function SciaticaTreatmentPage() {
               Common Causes of Sciatica
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Several conditions can lead to sciatic nerve irritation. Getting the right sciatica pain treatment plan starts with identifying which cause applies to your specific condition:
+              Several conditions can irritate the sciatic nerve. The right plan depends on which one applies to you:
             </p>
           </motion.div>
 
@@ -658,7 +583,7 @@ export default function SciaticaTreatmentPage() {
             {[
               {
                 title: "Herniated Disc",
-                desc: "Disc material presses on the nerve root — one of the most common reasons patients seek specialized herniated disc treatment for relief",
+                desc: "Disc material presses on the nerve root. This is the most common cause; see slipped disc treatment for more",
                 color: "from-rose-100 to-rose-50"
               },
               {
@@ -668,12 +593,12 @@ export default function SciaticaTreatmentPage() {
               },
               {
                 title: "Spinal Stenosis",
-                desc: "Narrowing of the spinal canal compresses nerves, often requiring focused nerve compression care",
+                desc: "Narrowing of the spinal canal presses on the nerves, more common after 50",
                 color: "from-purple-100 to-purple-50"
               },
               {
                 title: "Piriformis Syndrome",
-                desc: "A deep buttock muscle irritates the nerve",
+                desc: "The deep piriformis muscle in the buttock irritates the nerve; see the comparison below",
                 color: "from-amber-100 to-amber-50"
               },
               {
@@ -732,7 +657,7 @@ export default function SciaticaTreatmentPage() {
             viewport={{ once: true }}
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl" >
             <p className="text-lg leading-relaxed">
-              Understanding the root cause matters because effective sciatica care should be tailored to what's actually driving your symptoms, not a one-size-fits-all routine.
+              The cause decides the treatment, so your plan is built around your assessment, not a fixed routine.
             </p>
           </motion.div>
         </div>
@@ -787,7 +712,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 text-lg text-[#5F5F5F] leading-relaxed"
           >
             <p className="text-center bg-white p-8 rounded-2xl border border-gray-200">
-              Dubai's working population is heavy on desk jobs, commuting, and shift work. This fits several of these risk categories, which is part of why our physiotherapy clinic sees such consistent demand for sciatica care.
+              Many of our patients in Jumeirah 1 work long desk hours and drive daily, which fits several of these risk groups.
             </p>
           </motion.div>
         </div>
@@ -806,7 +731,7 @@ export default function SciaticaTreatmentPage() {
               When Should You See a Physiotherapist?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Not every backache needs a specialist. But certain signs suggest it's time for a proper assessment.
+              Not every backache needs treatment, but these signs mean it is time for an assessment.
             </p>
           </motion.div>
 
@@ -855,7 +780,7 @@ export default function SciaticaTreatmentPage() {
                   ))}
                 </ul>
                 <p className="mt-4 text-red-700 text-sm">
-                  These can indicate a rare but serious condition called cauda equina syndrome, which requires urgent medical care — not physiotherapy.
+                  These can indicate cauda equina syndrome, which needs emergency surgery. Go to an emergency department straight away; do not wait for a clinic appointment.
                 </p>
               </div>
             </motion.div>
@@ -868,9 +793,82 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-[#F9F7F2] p-8 rounded-2xl border border-gray-200"
           >
             <p className="text-lg text-[#5F5F5F] leading-relaxed text-center">
-              For everything short of an emergency, timely sciatica treatment from a licensed physiotherapist can prevent symptoms from becoming chronic.
+              For anything short of an emergency, our GP can see you the same day, and physiotherapy can start on the same visit.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Sciatica vs Piriformis Syndrome */}
+      <section className="py-20 px-4 bg-white" id="piriformis">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
+              Sciatica or Piriformis Syndrome?
+            </h2>
+            <p className="text-xl text-[#5F5F5F] max-w-3xl">
+              Piriformis syndrome happens when the piriformis muscle, deep in the buttock, irritates the sciatic nerve. It feels similar to disc-related sciatica but is treated differently, so your assessment checks both.
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border border-gray-200 rounded-2xl overflow-hidden">
+              <thead className="bg-[#1F5E4B] text-white">
+                <tr>
+                  <th className="p-4 font-semibold"> </th>
+                  <th className="p-4 font-semibold">Disc-related sciatica</th>
+                  <th className="p-4 font-semibold">Piriformis syndrome</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#1A1A1A]">
+                {[
+                  ["Where it starts", "Lower back", "Deep in the buttock"],
+                  ["Pain pattern", "Often below the knee, into the calf or foot", "Buttock and back of the thigh, rarely below the knee"],
+                  ["Back pain", "Common", "Usually not"],
+                  ["Worse with", "Bending, coughing, sitting", "Sitting, climbing stairs, crossing the legs"],
+                  ["Reflex or strength changes", "Possible", "Rare"],
+                  ["How common", "Most common cause", "Less common"],
+                  ["Main treatment", "Exercise-based physiotherapy, staying active, medication where appropriate", "Hip and glute strengthening, movement retraining, soft-tissue work and dry needling"]
+                ].map(function (row, i) {
+                  return (
+                    <tr key={i} className={i % 2 ? 'bg-[#F9F7F2]' : 'bg-white'}>
+                      <td className="p-4 font-semibold">{row[0]}</td>
+                      <td className="p-4">{row[1]}</td>
+                      <td className="p-4">{row[2]}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[#5F5F5F] mt-6 max-w-3xl">
+            Piriformis syndrome is often treated with stretching alone, but research also supports hip-strengthening and movement retraining. Your plan combines both, based on what your assessment shows.
+          </p>
+        </div>
+      </section>
+
+      {/* Who treats sciatica at RamaCare */}
+      <section className="py-16 px-4 bg-[#F9F7F2]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="bg-white p-8 rounded-2xl border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Who Treats Sciatica at RamaCare?</h2>
+            <p className="text-[#5F5F5F] leading-relaxed">
+              Your sciatica is assessed and treated by our DHA-licensed physiotherapist, Jeena Mathew (BPT, MPT, 8+ years). Our GP works in the same clinic and can suggest or prescribe medication where appropriate, arrange an X-ray on the same visit, and refer you for an MRI or to a spine specialist. RamaCare does not give injections or perform surgery.
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Quick Facts</h2>
+            <ul className="space-y-2 text-[#5F5F5F]">
+              <li>Address: Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai</li>
+              <li>Physiotherapy assessment: AED 200</li>
+              <li>Open every day, 10am to 10pm; same-day appointments when slots are free</li>
+              <li>GP and X-ray in the same clinic</li>
+              <li>Insurance: pay at the clinic, claim back from your insurer</li>
+              <li>Book: 04 286 2006 or WhatsApp 056 659 7878</li>
+            </ul>
+            <p className="text-[#5F5F5F] mt-4 text-right" lang="ar" dir="rtl">
+              علاج عرق النسا في جميرا 1، دبي: تقييم العلاج الطبيعي بـ 200 درهم، مفتوح يومياً حتى 10 مساءً.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -941,9 +939,9 @@ export default function SciaticaTreatmentPage() {
                   <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">Imaging May Be Recommended In Select Cases:</h3>
                   <ul className="space-y-4">
                     {[
-                      { icon: Activity, title: "MRI", desc: "The most detailed way to view disc and nerve issues" },
-                      { icon: Target, title: "X-ray", desc: "Useful for ruling out structural bone problems" },
-                      { icon: Shield, title: "CT Scan", desc: "Used when MRI isn't suitable or more detail is needed" }
+                      { icon: Activity, title: "MRI (by referral)", desc: "The most detailed view of discs and nerves; arranged by referral when needed" },
+                      { icon: Target, title: "X-ray (in the clinic)", desc: "Done at RamaCare on the same visit to rule out bone problems" },
+                      { icon: Shield, title: "CT scan (by referral)", desc: "Used when MRI is not suitable" }
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <div className="w-10 h-10 bg-[#1F5E4B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -961,7 +959,7 @@ export default function SciaticaTreatmentPage() {
                   </p>
                   <div className="mt-6 p-4 bg-[#1F5E4B]/5 rounded-xl border border-[#1F5E4B]/10">
                     <p className="text-[#1F5E4B] font-medium">
-                      A precise diagnosis is what separates generic advice from genuine, targeted care — it tells us exactly which structures need attention.
+                      Our GP can also suggest or prescribe medication where appropriate while you start physiotherapy.
                     </p>
                   </div>
                 </div>
@@ -1017,7 +1015,7 @@ export default function SciaticaTreatmentPage() {
                 title: "Electrotherapy",
                 desc: (
                   <span>
-                    Used to reduce pain signals and calm inflamed tissue, especially useful during the acute, more painful phase. See our{' '}
+                    Used to help reduce pain signals, especially in the early, more painful phase. See our{' '}
                     <a href="/services/electrotherapy-dubai/" className="underline text-[#1F5E4B] font-medium hover:text-[#0F3D30]">
                       electrotherapy services
                     </a>.
@@ -1029,7 +1027,7 @@ export default function SciaticaTreatmentPage() {
                 title: "Ultrasound Therapy",
                 desc: (
                   <span>
-                    Deep heating therapy that promotes blood flow and supports tissue healing around the affected nerve. Read more about{' '}
+                    Therapeutic ultrasound for soft tissue, used together with exercise. Read more about{' '}
                     <a href="/services/ultrasound-therapy-dubai/" className="underline text-[#1F5E4B] font-medium hover:text-[#0F3D30]">
                       ultrasound therapy
                     </a>.
@@ -1058,7 +1056,7 @@ export default function SciaticaTreatmentPage() {
               },
               {
                 icon: CheckCircle,
-                title: "Personalized Home Exercise Program",
+                title: "Home Exercise Programme",
                 desc: "A structured plan you can follow between sessions to reinforce progress and support long-term recovery."
               }
             ].map((treatment, index) => (
@@ -1086,7 +1084,7 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl"
           >
             <p className="text-lg leading-relaxed">
-              Each technique is introduced at the right stage of recovery. Early sessions typically focus on pain relief, while later sessions build strength and prevent recurrence. This staged approach is a core part of effective physiotherapy management, which is why generic exercise routines often fall short. It's also what distinguishes proper sciatic nerve rehabilitation from a quick, one-off session.
+              Each technique is introduced at the right stage of recovery. Early sessions typically focus on pain relief, while later sessions build strength and prevent recurrence. For piriformis syndrome, hip and glute strengthening and movement retraining are a key part of the plan, not stretching alone.
             </p>
           </motion.div>
         </div>
@@ -1115,7 +1113,7 @@ export default function SciaticaTreatmentPage() {
               { icon: Activity, title: "Improved Mobility", desc: "Improved mobility and range of motion" },
               { icon: Target, title: "Better Nerve Function", desc: "Better nerve gliding and function" },
               { icon: Shield, title: "Increased Flexibility", desc: "Increased flexibility in the back and legs" },
-              { icon: TrendingUp, title: "Faster Recovery", desc: "Faster, more structured recovery" },
+              { icon: TrendingUp, title: "A Clear Plan", desc: "A structured plan instead of trial and error" },
               { icon: CheckCircle, title: "Lower Recurrence Risk", desc: "Lower risk of the pain returning" },
               { icon: Target, title: "Better Posture", desc: "Improved posture and movement habits" },
               { icon: HeartPulse, title: "Better Quality of Life", desc: "Better overall quality of life" }
@@ -1238,7 +1236,7 @@ export default function SciaticaTreatmentPage() {
               },
               {
                 severity: "Moderate Sciatica",
-                timeline: "May take 6-8 weeks of structured treatment",
+                timeline: "Often improves within 6-12 weeks of structured treatment",
                 color: "from-amber-100 to-amber-50"
               },
               {
@@ -1291,22 +1289,22 @@ export default function SciaticaTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose RamaCare Polyclinic?
+              Why Choose RamaCare for Sciatica in Jumeirah 1?
             </h2>
             <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              When you're comparing options for sciatica treatment in Dubai, here's what sets our clinic apart:
+              What you get at our Jumeirah 1 clinic:
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: CheckCircle, title: "DHA Licensed Physiotherapists", desc: "With hands-on clinical experience" },
-              { icon: Target, title: "Individualized Rehabilitation Plans", desc: "No generic protocols" },
-              { icon: Zap, title: "Modern Physiotherapy Equipment", desc: "For accurate assessment and treatment" },
-              { icon: Shield, title: "Evidence-Based Treatment", desc: "Aligned with current physiotherapy research" },
-              { icon: MapPin, title: "Convenient Dubai Location", desc: "Easy to reach for regular sessions" },
-              { icon: Users, title: "Patient-Focused Care", desc: "We explain every step of your treatment" },
-              { icon: Activity, title: "Comprehensive Rehabilitation", desc: "From pain relief through to long-term prevention" }
+              { icon: CheckCircle, title: "DHA-Licensed Physiotherapist", desc: "Jeena Mathew, BPT, MPT, 8+ years in back and nerve rehab" },
+              { icon: Target, title: "AED 200 Assessment", desc: "Sciatica and piriformis tested in one visit" },
+              { icon: Stethoscope, title: "GP in the Same Clinic", desc: "Medication where appropriate, tests and referrals" },
+              { icon: Shield, title: "X-ray on Site", desc: "MRI and specialist referral when needed" },
+              { icon: Clock, title: "Open Daily 10am–10pm", desc: "Same-day appointments when slots are free" },
+              { icon: MapPin, title: "Jumeirah 1, near Al Satwa", desc: "Al Dhiyafah Road, free and paid parking nearby" },
+              { icon: Users, title: "Referred by Gyms and Schools", desc: "Local gyms and schools send patients to us" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -1334,13 +1332,16 @@ export default function SciaticaTreatmentPage() {
             className="mt-12 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] text-white p-8 rounded-2xl"
           >
             <p className="text-lg leading-relaxed text-center">
-              Our goal isn't just to reduce your pain today. It's to help you understand your body, build resilience, and lower the chance of sciatica returning. If your pain stems from a broader issue, our team also manages related conditions like{' '}
+              Our goal is to ease your pain and lower the chance of sciatica returning. For related problems, see{' '}
+              <a href="/services/slip-disc-treatment-dubai/" className="underline font-semibold hover:text-[#C9A961]">
+                slipped disc treatment
+              </a>,{' '}
               <a href="/services/back-pain-treatment-dubai/" className="underline font-semibold hover:text-[#C9A961]">
-                back pain
+                back pain treatment
               </a>{' '}
-              and{' '}
-              <a href="/services/frozen-shoulder-treatment-dubai/" className="underline font-semibold hover:text-[#C9A961]">
-                frozen shoulder
+              and our{' '}
+              <a href="/services/physiotherapy-dubai/" className="underline font-semibold hover:text-[#C9A961]">
+                physiotherapy in Jumeirah 1
               </a>.
             </p>
           </motion.div>
@@ -1357,10 +1358,10 @@ export default function SciaticaTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions
+              Sciatica in Jumeirah 1: Common Questions
             </h2>
             <p className="text-xl text-[#5F5F5F]">
-              Here are the questions we hear most often from patients researching sciatica treatment options in Dubai:
+              Clear answers about sciatica and piriformis syndrome at RamaCare Polyclinic.
             </p>
           </motion.div>
 
@@ -1414,10 +1415,10 @@ export default function SciaticaTreatmentPage() {
               Book Your Consultation
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              You don't have to manage sciatica pain on your own. Our DHA-licensed physiotherapists at RamaCare Polyclinic are ready to assess your condition and build a personalized treatment plan around your specific needs.
+              You don't have to manage sciatica on your own. Book an AED 200 physiotherapy assessment at RamaCare Polyclinic in Jumeirah 1.
             </p>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Take the first step toward lasting relief. Book your consultation today via WhatsApp or our online booking system, and let our team guide you through a clear, structured path to recovery. Don't wait for the pain to worsen — early action is one of the biggest factors in a smoother, faster recovery.
+              Book by WhatsApp or with the form below. Open every day 10am–10pm, with same-day appointments when slots are free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -1458,6 +1459,39 @@ export default function SciaticaTreatmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Booking form */}
+      <div id="book-form">
+        <BookConsultation
+          content={{
+            badge: 'Start Your Recovery',
+            title: 'Book a Sciatica Assessment in Jumeirah 1',
+            description: 'Physiotherapy assessment AED 200. Open every day 10am–10pm, with same-day appointments when slots are free.',
+            getInTouchTitle: 'Get In Touch',
+            requestAppointmentTitle: 'Request Appointment',
+            submitButtonText: 'Request Appointment',
+            contactInfo: {
+              phone: '+971 04 286 2006',
+              whatsapp: '971566597878',
+              email: 'query@ramacarepolyclinic.com',
+              address: {
+                line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+                line2: 'Ground Floor, Jumeirah 1 - Dubai'
+              }
+            },
+            clinicHours: {
+              weekdays: 'Sunday - Saturday:',
+              weekdaysTime: '10:00 AM - 10:00 PM'
+            },
+            statCards: [
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'AED 200', description: 'Physiotherapy Assessment' },
+              { title: 'GP & X-ray', description: 'In the Same Clinic' },
+              { title: 'Open Daily', description: '10am – 10pm' }
+            ]
+          }}
+        />
+      </div>
     </Layout>
   );
 }

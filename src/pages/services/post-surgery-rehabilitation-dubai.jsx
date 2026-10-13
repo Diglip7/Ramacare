@@ -5,7 +5,7 @@ import Layout from '../../../components/Layout';
 import BookConsultation from '../../../components/BookConsultation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
 import DoctorsSection from '../../../components/DoctorsSection';
-import { DOCTOR_GROUPS } from '../../data/doctors';
+import { DOCTORS } from '../../data/doctors';
 import {
   Calendar,
   CheckCircle,
@@ -31,11 +31,13 @@ export default function PostSurgeryRehabilitationPage() {
 
   const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/post-surgery-rehabilitation-dubai/";
 
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+
   const seo = {
-    title: "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
-    metaDescription: "Expert Post-Surgery Rehabilitation Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment today.",
+    title: "Post-Surgery Rehabilitation in Jumeirah 1, Dubai | RamaCare",
+    metaDescription: "Physiotherapy after surgery done at any hospital: knee and hip replacement, ACL, shoulder, spine. Jumeirah 1, Dubai. AED 200 assessment. Open till 10pm.",
     canonical: CANONICAL_URL,
-    keywords: "Post-surgery rehabilitation Dubai, Post-operative physiotherapy Dubai, ACL rehabilitation Dubai, Knee replacement recovery Dubai, Hip replacement rehab Dubai, Post-op physiotherapy Jumeirah, Surgical recovery physiotherapy Dubai",
     ogImage: "https://ramacarepolyclinic.ae/images/Physiotherapist%20assisting%20a%20patient%20after%20knee%20replacement%20surgery.jpg"
   };
 
@@ -47,24 +49,21 @@ export default function PostSurgeryRehabilitationPage() {
   ];
 
   const keyBenefits = [
-    "Faster, more complete recovery through structured, progressive rehabilitation",
-    "Personalized rehabilitation plans built around your specific surgery and healing stage",
-    "Supervision by DHA-licensed physiotherapists, following your surgeon's recommended protocol",
-    "A clear, staged path back to daily activities, work, or sport"
+    "Rehab after surgery done at any hospital in Dubai or abroad",
+    "Your surgeon's protocol followed, with progress reports sent to your surgeon on request",
+    "Assessment by a DHA-licensed physiotherapist for AED 200, with X-ray and a GP in the same clinic",
+    "Step-free, ground-floor clinic in Jumeirah 1, open every day 10am–10pm"
   ];
 
   const coreBenefits = [
-    "Faster recovery through guided, progressive loading of healing tissue",
-    "Improved mobility in the affected joint or limb",
-    "Better flexibility, reducing the stiffness that often follows surgery",
-    "Pain reduction through appropriate manual therapy and movement",
-    "Scar tissue management to prevent restrictions in movement",
-    "Reduced stiffness through early, appropriate mobilization",
-    "Muscle strengthening to rebuild what's lost during surgery and immobilization",
-    "Improved balance, particularly important after lower limb surgery",
-    "Better circulation, supporting healing and reducing complication risk",
-    "Reduced risk of complications such as blood clots or excessive scarring",
-    "Safe return to daily activities, guided by objective progress rather than guesswork"
+    "Regain movement in the operated joint or limb",
+    "Rebuild the strength lost during surgery and immobilisation",
+    "Reduce stiffness with early, appropriate movement",
+    "Manage pain and swelling with hands-on treatment and exercise",
+    "Keep scar tissue mobile so it does not restrict movement",
+    "Improve balance and walking, especially after leg or spine surgery",
+    "Build confidence to move without fear of damaging the repair",
+    "A clear, staged return to daily activities, work or sport"
   ];
 
   const conditionsList = [
@@ -129,9 +128,10 @@ export default function PostSurgeryRehabilitationPage() {
     { name: "Gait Training", description: "Restoring normal, efficient walking mechanics after surgery affecting the legs or spine." },
     { name: "Neuromuscular Re-education", description: "Retraining the connection between muscles and the nervous system for coordinated movement." },
     { name: "Electrotherapy", description: "Supporting pain relief and muscle activation." },
-    { name: "Ultrasound Therapy", description: "Supporting tissue healing and reducing localized discomfort." },
+    { name: "Ultrasound Therapy", description: "Therapeutic ultrasound for soft tissue and scar areas, used together with exercise." },
     { name: "Dry Needling", description: "Addressing muscular tightness and trigger points where appropriate." },
-    { name: "Taping", description: "Providing support and feedback to joints and muscles during early rehabilitation." },
+    { name: "Kinesio Taping", description: "Support and feedback for joints and muscles during early rehabilitation." },
+    { name: "Scar Mobilisation", description: "Gentle massage and movement once the wound has healed, to keep the scar soft and mobile." },
     { name: "Soft Tissue Release", description: "Reducing muscle tension and improving tissue mobility around the surgical area." },
     { name: "Functional Training", description: "Practicing real-world movements relevant to daily life, work, or sport." }
   ];
@@ -155,8 +155,8 @@ export default function PostSurgeryRehabilitationPage() {
   ];
 
   const earlyBenefits = [
-    "Reduced risk of complications",
-    "Faster overall healing",
+    "Earlier return to walking and daily tasks",
+    "Problems spotted and referred early",
     "Better mobility in the affected area",
     "Better muscle strength retention and recovery",
     "Less pain throughout the recovery process",
@@ -178,31 +178,38 @@ export default function PostSurgeryRehabilitationPage() {
   ];
 
   const whyChooseUs = [
-    "DHA-licensed physiotherapists with experience across a wide range of post-surgical conditions",
-    "Evidence-based rehabilitation grounded in recognized clinical standards",
-    "Personalized recovery plans built around your specific surgery and goals",
-    "Modern rehabilitation equipment to support every stage of recovery",
-    "Surgeon-guided protocols, ensuring rehabilitation aligns with your operating surgeon's recommendations",
-    "Patient-centered care with clear communication throughout your recovery journey",
-    "Convenient Dubai location in Jumeirah, accessible for patients across the city"
+    "Rehab after surgery done at any hospital, following your surgeon's protocol",
+    "Progress reports sent to your surgeon on request",
+    "Assessment by a DHA-licensed physiotherapist (Jeena Mathew, BPT, MPT, 8+ years) for AED 200",
+    "In-house X-ray and a GP who can suggest or prescribe medication where appropriate",
+    "Insurance: we check your coverage and request prior approval; you pay and claim with our invoice, medical report and progress notes",
+    "Step-free, ground-floor clinic on Al Dhiyafah Road, Jumeirah 1, with parking nearby",
+    "Open every day 10am–10pm, with same-day appointments when slots are free"
   ];
 
   const faqs = [
-    { question: "When should rehabilitation start?", answer: "This depends on your specific surgery and your surgeon's protocol. Some procedures call for early mobilization within days, while others require a longer initial protection period before rehabilitation begins." },
-    { question: "How many physiotherapy sessions will I need?", answer: "This varies based on your surgery type, healing progress, and personal goals. Your physiotherapist will provide a personalized estimate after your initial assessment." },
-    { question: "Can physiotherapy reduce pain after surgery?", answer: "Yes. Appropriate manual therapy, guided movement, and modalities like electrotherapy or ultrasound can all contribute to reduced post-surgical pain." },
-    { question: "How long is recovery?", answer: "Recovery timelines vary significantly depending on the surgery performed, your overall health, and how consistently you follow your rehabilitation plan. Your physiotherapist will discuss a realistic timeline based on your specific case." },
-    { question: "Can rehabilitation prevent stiffness?", answer: "Yes. Early, appropriately guided movement is one of the most effective ways to prevent excessive post-surgical stiffness." },
-    { question: "Is rehabilitation painful?", answer: "Some mild discomfort during certain exercises is common, but rehabilitation should never cause sharp or worsening pain. Your physiotherapist will adjust your program accordingly." },
-    { question: "What surgeries need physiotherapy?", answer: "Most orthopedic surgeries — including joint replacements, ligament reconstructions, tendon repairs, and spine procedures — benefit from structured post-surgical physiotherapy." },
-    { question: "Can I walk immediately after surgery?", answer: "This depends entirely on your specific procedure and surgeon's instructions. Some surgeries allow early walking with support, while others require a period of restricted weight-bearing." },
-    { question: "What exercises are safe?", answer: "Safe exercises depend on your surgery type and healing stage. Your physiotherapist will guide you through appropriate movements at each phase of recovery." },
-    { question: "Can rehabilitation improve balance?", answer: "Yes. Balance training is a core component of many rehabilitation programs, particularly following lower limb surgery." },
-    { question: "Can elderly patients benefit?", answer: "Yes. Rehabilitation programs are adapted to individual health status and mobility level, making them beneficial for elderly patients recovering from surgery." },
-    { question: "Will rehabilitation help me return to sports?", answer: "Yes. Sports-specific rehabilitation programs are designed to help athletes safely and confidently return to training and competition." },
-    { question: "What if I miss sessions?", answer: "Missing sessions can slow progress, so it's best to maintain consistency where possible. If you need to reschedule, our team can help adjust your plan accordingly." },
-    { question: "Do I need a referral?", answer: "While a referral or surgical report from your surgeon helps us align your rehabilitation with their protocol, you can generally book a physiotherapy assessment directly." },
-    { question: "Why choose RamaCare?", answer: "RamaCare Polyclinic combines DHA-licensed physiotherapy expertise with personalized, surgeon-guided rehabilitation plans, making it a trusted choice for Post-Surgery Rehabilitation Dubai patients who want a safe, complete recovery." }
+    { question: "Where can I get post-surgery physiotherapy in Jumeirah 1?", answer: "RamaCare Polyclinic provides post-surgery rehabilitation on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is step-free and open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878." },
+    { question: "Can I do my rehab at RamaCare if my surgery was at another hospital?", answer: "Yes. Most of our post-surgery patients had their operation at another hospital in Dubai or abroad. Bring your surgeon's discharge notes and rehab protocol, and we follow them." },
+    { question: "How much does a post-surgery physiotherapy assessment cost?", answer: "A physiotherapy assessment at RamaCare costs AED 200. Insurance is by reimbursement: we check your coverage, request prior approval if needed, and give you the documents to claim." },
+    { question: "When should physiotherapy start after surgery?", answer: "It depends on the operation and your surgeon's instructions. After knee or hip replacement and ACL reconstruction, gentle rehab usually starts within days. After some repairs, such as rotator cuff surgery, the joint is protected for several weeks first." },
+    { question: "Will you send updates to my surgeon?", answer: "Yes. On request, we send a progress report to your surgeon so your rehab stays aligned with their plan." },
+    { question: "What should I bring to my first session?", answer: "Your surgeon's notes or discharge summary, any rehab protocol or restrictions, scans if you have them, a list of medicines, and loose clothing that lets us see the operated area." },
+    { question: "How long does rehab take after knee replacement?", answer: "Most people walk with less support within a few weeks, and many return to most daily activities in about 3 months. Full recovery of strength often takes up to a year. Your surgeon's plan comes first." },
+    { question: "How long does rehab take after ACL reconstruction?", answer: "ACL rehab usually takes 6 to 12 months before a full return to pivoting sports. The decision to return should be based on strength, hop and movement tests, not only on time." },
+    { question: "How long does rehab take after hip replacement?", answer: "Many people walk with less support within a few weeks and return to most daily activities in about 3 months, following the hip precautions their surgeon gives." },
+    { question: "Is physiotherapy after surgery painful?", answer: "Some discomfort during exercises is normal, but treatment should not cause sharp or worsening pain. Your physiotherapist adjusts the plan to your pain level and healing stage." },
+    { question: "What warning signs after surgery need urgent care?", answer: "Contact your surgeon or go to emergency straight away if you have calf pain or swelling, chest pain or breathlessness, fever, or a red, hot or leaking wound. Call 998 for chest pain or breathing problems." },
+    { question: "Can physiotherapy reduce stiffness after surgery?", answer: "Yes. Early, appropriate movement guided by a physiotherapist is one of the best ways to limit stiffness after surgery." },
+    { question: "How can I reduce scar tissue after surgery?", answer: "Once the wound has fully healed, gentle scar massage and regular movement help keep the scar soft and mobile. Your physiotherapist shows you how and when to start." },
+    { question: "Does insurance cover physiotherapy after surgery?", answer: "Usually yes, within your plan's session limit and with a referral. Some plans need prior approval. RamaCare checks your coverage, requests approval when needed and provides the invoice, medical report and progress notes for your claim." },
+    { question: "Do you offer home physiotherapy after surgery?", answer: "No. Treatment is at our clinic, which is on the ground floor with step-free access and parking nearby, so it is easy to reach on crutches or with a walker." },
+    { question: "Can I have an X-ray at RamaCare after fracture surgery?", answer: "Yes. RamaCare has in-house X-ray, and our GP can arrange it when needed, for example to check healing after fracture fixation." },
+    { question: "How many sessions will I need?", answer: "It depends on the surgery and your goals. Smaller procedures may need a few weeks of sessions; joint replacement and ACL rehab need several months, with a home programme between visits." },
+    { question: "Can elderly patients benefit from rehab after surgery?", answer: "Yes. Rehab is adapted to age, health and mobility, and focuses on walking, balance and independence at home." },
+    { question: "Will rehab help me return to sport?", answer: "Yes. Sport-specific training and return-to-sport testing are part of rehab after ACL, meniscus, shoulder and other sports surgeries." },
+    { question: "Can I have physiotherapy before surgery?", answer: "Yes. Prehab before a planned operation, such as knee replacement or ACL reconstruction, can help you go into surgery stronger and recover more smoothly." },
+    { question: "Do I need a referral?", answer: "Not to book. Your surgeon's notes help us follow their protocol. If your insurer needs a referral, our GP is in the same clinic." },
+    { question: "What if I miss sessions?", answer: "Missing sessions can slow progress. If you need to reschedule, we adjust the plan, and sessions run until 10pm every day to fit around work." }
   ];
 
   const filteredFaqs = faqs.filter(faq =>
@@ -217,115 +224,51 @@ export default function PostSurgeryRehabilitationPage() {
       {
         "@type": "BreadcrumbList",
         "@id": `${CANONICAL_URL}#breadcrumb`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://ramacarepolyclinic.ae/services/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Physiotherapy",
-            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Post-Surgery Rehabilitation",
-            "item": CANONICAL_URL
-          }
-        ]
+        "itemListElement": breadcrumbs.map(function (b, i) {
+          return { "@type": "ListItem", "position": i + 1, "name": b.label, "item": SITE + b.href };
+        })
       },
       {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
-        "name": "Post-Surgery Rehabilitation Dubai | RamaCare Polyclinic",
         "url": CANONICAL_URL,
-        "description": "Personalized, phase-based post-operative physiotherapy and rehabilitation program supporting recovery after knee replacement, hip replacement, ACL reconstruction, shoulder surgery, spine surgery, and other orthopedic procedures, coordinated with the patient's operating surgeon.",
+        "name": seo.title,
+        "description": seo.metaDescription,
         "inLanguage": "en",
-        "medicalAudience": {
-          "@type": "Patient"
-        },
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalTherapy",
-          "name": "Post-Surgery Rehabilitation",
-          "medicineSystem": "https://schema.org/PhysicalTherapy"
-        },
-        "reviewedBy": {
-          "@type": "Physician",
-          "name": "Jeena Mathew",
-          "medicalSpecialty": "Physiotherapy",
-          "honorificSuffix": "BPT, MPT",
-          "hasCredential": "DHA Licensed Physiotherapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        },
-        "publisher": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        }
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
+        "medicalAudience": { "@type": "Patient" },
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#therapy` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Post-Surgery Rehabilitation",
-        "alternateName": "Post-Operative Physiotherapy",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Structured, phase-based post-operative physiotherapy for ACL, knee/hip replacement, rotator cuff, spine, and other surgeries, coordinated with the patient's surgeon and delivered by DHA-licensed physiotherapists.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Post-Surgical Joints and Musculoskeletal Tissues",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
+        "@type": "PhysicalTherapy",
+        "@id": `${CANONICAL_URL}#therapy`,
+        "name": "Post-surgery rehabilitation",
+        "alternateName": ["Post-operative physiotherapy", "Post-op rehab", "Rehabilitation after knee replacement", "ACL reconstruction rehabilitation", "Hip replacement rehabilitation", "Rotator cuff repair rehabilitation"],
+        "url": CANONICAL_URL
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
+        "name": "Jeena Mathew",
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
         "@id": `${CANONICAL_URL}#faq`,
-        "mainEntity": faqs.map(f => ({
-          "@type": "Question",
-          "name": f.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": f.answer
-          }
-        }))
+        "mainEntity": faqs.map(function (f) {
+          return { "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } };
+        })
       }
     ]
   };
@@ -335,7 +278,6 @@ export default function PostSurgeryRehabilitationPage() {
       <Head>
         <title key="title">{seo.title}</title>
         <meta name="description" content={seo.metaDescription} key="description" />
-        <meta name="keywords" content={seo.keywords} />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={seo.canonical} key="canonical" />
 
@@ -353,7 +295,7 @@ export default function PostSurgeryRehabilitationPage() {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seo.title} />
-        <meta name="twitter:description" content="Expert Post-Surgery Rehabilitation Dubai with DHA-licensed physiotherapists and personalized recovery plans." />
+        <meta name="twitter:description" content={seo.metaDescription} />
         <meta name="twitter:image" content={seo.ogImage} />
 
         {/* Structured Data Schemas */}
@@ -388,11 +330,11 @@ export default function PostSurgeryRehabilitationPage() {
               {/* Left Column (Content) */}
               <div className="lg:col-span-7 text-left">
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-bold uppercase tracking-wider mb-6">
-                  DHA Licensed & Trusted
+                  DHA-Licensed Physiotherapy · Jumeirah 1
                 </span>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A1A] tracking-tight mb-4 leading-tight">
-                  Post-Surgery Rehabilitation Dubai
+                  Post-Surgery Rehabilitation in Jumeirah 1, Dubai
                 </h1>
 
                 <p className="text-[#D4A574] text-base sm:text-lg font-bold tracking-wide mb-6 uppercase">
@@ -400,7 +342,7 @@ export default function PostSurgeryRehabilitationPage() {
                 </p>
 
                 <p className="text-[#5F5F5F] text-sm sm:text-base leading-relaxed mb-8">
-                  Surgery is often just the first step toward recovery — what happens afterward matters just as much. RamaCare Polyclinic's Post-Surgery Rehabilitation Dubai program is designed to help you heal faster, move more freely, and regain independence, guided by DHA-licensed physiotherapists working in step with your surgeon's protocol.
+                  RamaCare Polyclinic provides physiotherapy after surgery done at any hospital, at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. A physiotherapy assessment costs AED 200. We follow your surgeon's protocol after knee or hip replacement, ACL reconstruction, shoulder, spine and fracture surgery, and send progress reports to your surgeon on request. X-ray and a GP are in the same step-free, ground-floor clinic. Open every day, 10am–10pm.
                 </p>
 
                 {/* Expected outcomes */}
@@ -426,7 +368,7 @@ export default function PostSurgeryRehabilitationPage() {
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Physiotherapist assisting a patient after knee replacement surgery.jpg"
-                      alt="Post-Surgery Rehabilitation Dubai — physiotherapist assisting knee replacement patient"
+                      alt="Physiotherapist helping a patient after knee replacement at RamaCare, Jumeirah 1"
                       title="Physiotherapist assisting a patient after knee replacement surgery"
                       layout="fill"
                       objectFit="cover"
@@ -487,7 +429,7 @@ export default function PostSurgeryRehabilitationPage() {
                   </p>
                   <div className="space-y-6 text-[#5F5F5F] text-base leading-relaxed">
                     <p>
-                      This is exactly why <strong className="text-[#1A1A1A]">Post-Surgery Rehabilitation Dubai</strong> plays such an important role in the overall recovery journey. Without it, many patients experience prolonged stiffness, incomplete strength recovery, or a slower return to the activities that matter to them.
+                      This is why rehabilitation is such an important part of recovery. Without it, many people are left with stiffness, weakness or a slower return to the activities that matter to them.
                     </p>
                     <p>
                       Rehabilitation after surgery serves several essential purposes: preventing complications like blood clots or excessive scar tissue, restoring movement that naturally decreases during recovery, reducing post-operative pain, and helping patients regain the independence to manage daily tasks without assistance. Each of these goals requires a structured, professionally guided approach rather than simply &quot;waiting it out.&quot;
@@ -564,7 +506,7 @@ export default function PostSurgeryRehabilitationPage() {
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Why Rehabilitation Is Important After Surgery</h2>
               <p className="text-base sm:text-lg text-[#5F5F5F]">
-                Committing to structured post operative rehabilitation Dubai patients receive offers benefits that extend well beyond simply healing the surgical site — and these benefits are exactly why Post-Surgery Rehabilitation Dubai is considered a core part of recovery rather than an optional extra:
+                Structured rehabilitation after surgery helps you:
               </p>
             </div>
 
@@ -585,7 +527,7 @@ export default function PostSurgeryRehabilitationPage() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Conditions We Help After Surgery</h2>
               <p className="text-base sm:text-lg text-[#5F5F5F]">
-                Our physiotherapy team supports rehabilitation across a wide range of surgical procedures, each requiring its own tailored approach to Post-Surgery Rehabilitation Dubai:
+                We provide rehab after these operations, wherever your surgery was done:
               </p>
             </div>
 
@@ -601,6 +543,42 @@ export default function PostSurgeryRehabilitationPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SURGERY ELSEWHERE, WARNING SIGNS, SCAR TISSUE, QUICK FACTS */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+            <div className="bg-[#F0F7F4] border border-[#1F5E4B]/15 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Surgery at Another Hospital? Rehab Here</h2>
+              <p className="text-gray-700 leading-relaxed">Most of our post-surgery patients had their operation elsewhere in Dubai or abroad. Bring your discharge summary and your surgeon&apos;s rehab protocol. We follow it, and on request we send progress reports to your surgeon. The clinic is on the ground floor with step-free access and parking nearby, which matters on crutches or with a walker. We do not offer home visits.</p>
+            </div>
+            <div className="bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Warning Signs After Surgery</h2>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Calf pain, swelling or redness in the leg (possible blood clot)</li>
+                <li>• Chest pain or sudden breathlessness: call 998</li>
+                <li>• Fever, or a wound that is red, hot, swollen or leaking</li>
+                <li>• New numbness, weakness or pain that is quickly getting worse</li>
+              </ul>
+              <p className="text-gray-700 mt-3">These need your surgeon or emergency care straight away, not physiotherapy.</p>
+            </div>
+            <div className="bg-[#F9F7F2] border border-gray-200 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Scar Tissue After Surgery</h2>
+              <p className="text-gray-700 leading-relaxed">Once the wound has fully healed, gentle scar massage, stretching and regular movement help keep the scar soft so it does not limit the joint. Therapeutic ultrasound may be used alongside exercise. Your physiotherapist shows you how and when to start.</p>
+            </div>
+            <div className="bg-[#F9F7F2] border border-gray-200 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Quick Facts</h2>
+              <ul className="space-y-2 text-gray-700">
+                <li>Address: Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai (step-free)</li>
+                <li>Physiotherapy assessment: AED 200</li>
+                <li>Open every day, 10am to 10pm</li>
+                <li>X-ray and GP in the same clinic; progress reports to your surgeon on request</li>
+                <li>Insurance: coverage check and prior approval by RamaCare; pay and claim with our documents (see <a href="/services/physiotherapy-insurance-dubai/" className="text-[#1F5E4B] font-semibold underline">physiotherapy insurance</a>)</li>
+                <li>Book: 04 286 2006 or WhatsApp 056 659 7878</li>
+              </ul>
+              <p className="text-gray-700 mt-4 text-right" lang="ar" dir="rtl">العلاج الطبيعي بعد العمليات في جميرا 1، دبي: تقييم بـ 200 درهم، مفتوح يومياً حتى 10 مساءً.</p>
             </div>
           </div>
         </section>
@@ -634,14 +612,14 @@ export default function PostSurgeryRehabilitationPage() {
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Post-operative rehabilitation exercises in a Dubai physiotherapy clinic.jpg"
-                      alt="Post-operative rehabilitation exercises at RamaCare Polyclinic Dubai"
+                      alt="Post-operative rehabilitation exercises at RamaCare, Jumeirah 1"
                       title="Post-operative rehabilitation exercises in Jumeirah clinic"
                       layout="fill"
                       objectFit="cover"
                     />
                   </div>
                   <p className="text-xs text-[#5F5F5F] italic text-center px-2">
-                    Post-operative rehabilitation exercises at RamaCare Polyclinic Dubai.
+                    Post-operative rehabilitation exercises at RamaCare, Jumeirah 1.
                   </p>
                 </div>
               </div>
@@ -703,9 +681,9 @@ export default function PostSurgeryRehabilitationPage() {
 
               {/* Text column */}
               <div className="lg:col-span-7">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Post-Surgery Rehabilitation Dubai at RamaCare</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Post-Surgery Rehabilitation at RamaCare</h2>
                 <p className="text-base text-[#5F5F5F] mb-6">
-                  Our Post-Surgery Rehabilitation Dubai programs are structured around your specific procedure, healing stage, and personal recovery goals. Your program may include:
+                  Every programme is built around your procedure, healing stage, surgeon's protocol and goals. It may include:
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {servicesOffered.map((serv, idx) => (
@@ -718,7 +696,7 @@ export default function PostSurgeryRehabilitationPage() {
                 <p className="text-sm text-[#5F5F5F] italic leading-relaxed mb-6">
                   Every rehabilitation plan is personalized according to five key factors: your surgery type, your current healing stage, your pain level, your functional goals, and your broader medical history — ensuring the program fits you specifically, not a generic post-surgical template.
                 </p>
-                <h3 className="font-bold text-lg text-[#1A1A1A] mb-3">What a Personalized Post-Surgery Rehabilitation Dubai Plan Looks Like</h3>
+                <h3 className="font-bold text-lg text-[#1A1A1A] mb-3">What a Personalised Rehab Plan Looks Like</h3>
                 <p className="text-sm text-[#5F5F5F] leading-relaxed">
                   No two recovery plans at RamaCare look identical, because no two patients arrive with the same combination of surgery, healing progress, and goals. A footballer recovering from ACL reconstruction and an office worker recovering from spine surgery will follow very different exercise progressions, timelines, and functional targets, even if both plans share the same underlying phase-based structure.
                 </p>
@@ -733,7 +711,7 @@ export default function PostSurgeryRehabilitationPage() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Physiotherapy Techniques Used</h2>
               <p className="text-base sm:text-lg text-[#5F5F5F]">
-                Our physiotherapists draw on a range of evidence-based techniques, selected according to your specific needs:
+                Your physiotherapist chooses from these techniques, based on your surgery and healing stage:
               </p>
             </div>
 
@@ -747,7 +725,7 @@ export default function PostSurgeryRehabilitationPage() {
             </div>
 
             <p className="text-[#D4A574] text-xs font-semibold text-center italic">
-              These techniques are rarely used in isolation — most Post-Surgery Rehabilitation Dubai plans combine several of them in a specific sequence matched to your healing stage.
+              These techniques are combined in a sequence that matches your healing stage.
             </p>
           </div>
         </section>
@@ -799,6 +777,38 @@ export default function PostSurgeryRehabilitationPage() {
           </div>
         </section>
 
+        {/* TYPICAL RECOVERY MILESTONES */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4 text-center">Typical Recovery Times After Common Surgeries</h2>
+            <p className="text-gray-600 text-center mb-8">A general guide only. Your surgeon&apos;s instructions always come first.</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border border-gray-200 rounded-2xl overflow-hidden">
+                <thead className="bg-[#1F5E4B] text-white">
+                  <tr><th className="p-4">Surgery</th><th className="p-4">Rehab usually starts</th><th className="p-4">Typical return to daily activities</th></tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Knee replacement", "Within days", "About 3 months; strength keeps improving for up to a year"],
+                    ["Hip replacement", "Within days", "About 3 months, following hip precautions"],
+                    ["ACL reconstruction", "Within days", "Daily life in weeks; pivoting sport usually 6 to 12 months, after testing"],
+                    ["Rotator cuff repair", "After a protected period set by your surgeon", "Several months; full strength can take longer"],
+                    ["Meniscus surgery", "Within days", "A few weeks to a few months, depending on the repair"],
+                    ["Fracture fixation", "As your surgeon allows weight-bearing", "Varies by bone and fixation"],
+                    ["Spine surgery", "As advised by your surgeon", "Varies by procedure"]
+                  ].map(function (r, i) {
+                    return (
+                      <tr key={i} className={i % 2 ? 'bg-[#F9F7F2]' : 'bg-white'}>
+                        <td className="p-4 font-semibold">{r[0]}</td><td className="p-4">{r[1]}</td><td className="p-4">{r[2]}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         {/* CONDITIONS COMMONLY TREATED */}
         <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
           <div className="max-w-7xl mx-auto">
@@ -830,7 +840,7 @@ export default function PostSurgeryRehabilitationPage() {
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Manual therapy session during shoulder surgery rehabilitation.jpg"
-                      alt="Manual therapy session for shoulder surgery rehabilitation Dubai"
+                      alt="Manual therapy after shoulder surgery at RamaCare"
                       title="Manual therapy session during shoulder surgery rehabilitation"
                       layout="fill"
                       objectFit="cover"
@@ -908,7 +918,7 @@ export default function PostSurgeryRehabilitationPage() {
         {/* WHY CHOOSE US */}
         <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 text-center">Why Choose RamaCare Polyclinic?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 text-center">Why Choose RamaCare for Post-Surgery Rehab in Jumeirah 1?</h2>
             <div className="space-y-4 max-w-2xl mx-auto">
               {whyChooseUs.map((w, idx) => (
                 <div key={idx} className="flex items-start space-x-3">
@@ -924,7 +934,7 @@ export default function PostSurgeryRehabilitationPage() {
         <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Post-Surgery Rehab in Jumeirah 1: Common Questions</h2>
               <p className="text-base sm:text-lg text-[#5F5F5F]">Browse our answers to popular questions regarding post-surgery rehabilitation.</p>
             </div>
 
@@ -990,7 +1000,7 @@ export default function PostSurgeryRehabilitationPage() {
               description: 'Get back to comfortable, independent movement with evidence-based post-surgery rehabilitation care at RamaCare Polyclinic.',
               getInTouchTitle: 'Get In Touch',
               requestAppointmentTitle: 'Request Appointment',
-              submitButtonText: 'Confirm Free Consultation',
+              submitButtonText: 'Request Appointment',
               contactInfo: {
                 phone: '+971 04 286 2006',
                 whatsapp: '971566597878',
@@ -1007,10 +1017,10 @@ export default function PostSurgeryRehabilitationPage() {
                 fridayTime: '10:00 AM - 8:00 PM'
               },
               statCards: [
-                { title: 'DHA Licensed', description: 'Certified Facility' },
-                { title: 'Experienced Team', description: '15+ Years Combined' },
-                { title: 'Personalized Plans', description: 'Built Around Assessment' },
-                { title: '4.8/5 Rating', description: 'Patient Reviews' }
+                { title: 'DHA Licensed', description: 'Facility 2036418' },
+                { title: 'AED 200', description: 'Physiotherapy Assessment' },
+                { title: 'Any Hospital', description: 'Surgery Done Elsewhere Welcome' },
+                { title: 'Open Daily', description: '10am – 10pm' }
               ],
               concerns: [
                 { value: 'post-surgery-rehabilitation-dubai', label: 'Post-Surgery Rehab' },
@@ -1023,17 +1033,21 @@ export default function PostSurgeryRehabilitationPage() {
         </div>
 
         {/* DOCTORS SHOWCASE */}
-
-
-
-
+        <DoctorsSection
+          content={{
+            badge: 'Your Care Team',
+            title: 'Meet Your Physiotherapist and GP',
+            description: 'Post-surgery rehab at RamaCare is led by Jeena Mathew, a DHA-licensed physiotherapist (BPT, MPT), with our GP for X-ray, medication where appropriate and referrals.'
+          }}
+          customDoctors={[DOCTORS['jeena-mathew-physiotherapist-dubai'], DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai']].filter(Boolean)}
+        />
 
         {/* CONCLUSION AND CLINICAL NOTES */}
         <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Conclusion</h2>
             <div className="text-white/90 text-base sm:text-lg leading-relaxed mb-8">
-              Surgery is an important step, but full recovery depends just as much on what happens afterward. Post-Surgery Rehabilitation Dubai at RamaCare Polyclinic combines DHA-licensed physiotherapy expertise, surgeon-guided protocols, and a personalized, phase-based approach to help you heal safely, regain strength, and return to the activities that matter to you.
+              Surgery fixes the structure; rehabilitation restores the function. At RamaCare Polyclinic in Jumeirah 1, a DHA-licensed physiotherapist follows your surgeon's protocol after surgery done at any hospital, with X-ray and a GP in the same step-free clinic, open every day until 10pm.
             </div>
             <div className="w-16 h-0.5 bg-[#D4A574] mx-auto mb-6" />
             <p className="text-sm text-white/80 max-w-xl mx-auto leading-relaxed mb-8">

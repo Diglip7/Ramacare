@@ -3,10 +3,15 @@ import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
 import { subcategoryContent } from '../../data/subcategoryContent';
+import { DOCTORS } from '../../data/doctors';
+
+const SITE = "https://ramacarepolyclinic.ae";
+const CANONICAL_URL = `${SITE}/services/slip-disc-treatment-dubai/`;
+const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
 
 export default function SlipDiscTreatmentPage() {
   const content = subcategoryContent['slip-disc-treatment-dubai'];
-  
+
   if (!content) {
     return (
       <Layout>
@@ -17,12 +22,23 @@ export default function SlipDiscTreatmentPage() {
     );
   }
 
-  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/slip-disc-treatment-dubai/";
-  const PAGE_TITLE = "Slip Disc Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Get expert Slip Disc Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment in Dubai today.";
-  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/spine-anatomy-illustration-slip-disc.jpg";
+  const PAGE_TITLE = content.seo.title;
+  const PAGE_DESCRIPTION = content.seo.metaDescription;
+  const OG_IMAGE = `${SITE}/images/spine-anatomy-illustration-slip-disc.jpg`;
+
+  // Physiotherapist first, then GP (pain medication, X-ray, MRI and specialist referral)
+  const pageDoctors = [
+    DOCTORS['jeena-mathew-physiotherapist-dubai'],
+    DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai']
+  ].filter(Boolean);
 
   const { breadcrumbs, faqs } = content;
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -35,7 +51,7 @@ export default function SlipDiscTreatmentPage() {
             "@type": "ListItem",
             "position": i + 1,
             "name": b.label,
-            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+            "item": b.href && b.href.startsWith('http') ? b.href : SITE + b.href
           };
         })
       },
@@ -46,32 +62,39 @@ export default function SlipDiscTreatmentPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "medicalAudience": { "@type": "Patient" },
-        "about": { "@type": "MedicalCondition", "name": "Herniated Disc (Slip Disc)" },
-        "reviewedBy": { "@id": `${CANONICAL_URL}#physician` },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Herniated disc",
+        "alternateName": ["Slipped disc", "Slip disc", "Prolapsed disc", "Disc herniation", "Bulging disc"],
+        "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Intervertebral disc" },
+        "possibleTreatment": [
+          therapy("Exercise-based physiotherapy", "/services/physiotherapy-dubai/"),
+          therapy("Manual therapy"),
+          therapy("Electrotherapy (TENS)", "/services/electrotherapy-dubai/"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Posture and ergonomic advice")
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -103,8 +126,9 @@ export default function SlipDiscTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Spine anatomy diagram showing disc position relevant to slip disc treatment Dubai" key="og:image:alt" />
+        <meta property="og:image:alt" content="Slipped disc physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
@@ -112,15 +136,15 @@ export default function SlipDiscTreatmentPage() {
         <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
         <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
-        {/* Structured Data Schemas */}
+        {/* Structured Data */}
         <script
           key="schema-graph"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </Head>
-      
-      <ServicePageTemplate content={content} />
+
+      <ServicePageTemplate content={{ ...content, doctors: pageDoctors }} />
     </Layout>
   );
 }

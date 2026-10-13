@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
 
 const AboutAyurvedaSection = ({ content }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,7 @@ const AboutAyurvedaSection = ({ content }) => {
   const stats = content?.stats || [
     { number: '7', label: 'Days a week' },
     { number: '5', label: 'Departments' },
-    { number: '4.8', label: 'Google rating' }
+     { number: GOOGLE_RATING_FALLBACK.rating.toFixed(1), label: 'Google rating' }
   ];
   const ctaText = content?.ctaText || 'Meet Our Experts';
   const imagePath = content?.image || '/images/about.jpg';

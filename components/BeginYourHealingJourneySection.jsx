@@ -316,7 +316,7 @@ const BeginYourHealingJourneySection = ({ isModal = false, onClose, onSubmission
                           fontWeight: 400
                         }}
                       >
-                        A detailed consultation where our doctors carefully review your symptoms, medical history, and health goals to understand your condition completely.
+                        A detailed consultation where your doctor or therapist reviews your symptoms, medical history and health goals before recommending treatment.
 
                       </p>
                     </div>

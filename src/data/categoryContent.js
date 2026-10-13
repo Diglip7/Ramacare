@@ -1,131 +1,148 @@
 // Category-specific content for category pages
 // These pages use the same UI structure as homepage but with category-specific content
 
-import { DOCTORS, DOCTOR_GROUPS } from './doctors';
+import { DOCTORS, DOCTOR_GROUPS } from './doctors';import { GOOGLE_RATING_FALLBACK } from './clinicStats';
+
 
 export const categoryContent = {
   'ayurveda': {
-   hero: {
-  badge: 'DHA-licensed polyclinic · Licence 2036418',
-  titleLine1: 'Ayurvedic Clinic & Ayurveda Treatment',
-  titleHighlight: ' in Dubai ',
-  titleLine2: '– Jumeirah 1',
-  subtitle: 'Doctor-led Ayurveda at RamaCare Polyclinic in Jumeirah 1. Every plan starts with a consultation with our BAMS doctor, and every therapy is given by a Kerala-trained therapist of the same gender as the patient.',
-  description: 'Kerala Ayurveda at a DHA-licensed polyclinic in Jumeirah 1: ayurvedic treatment in Dubai led by an Ayurvedic doctor, including consultation, Panchakarma, therapeutic Kerala massage (Abhyanga), Kizhi and Shirodhara.',
-  ctaText: 'Book Ayurveda Consultation',
-  backgroundImage: '/images/ayurveda-therapy-room-jumeirah-1.jpg',
-  backgroundAlt: 'Ayurveda therapy room at RamaCare Polyclinic, Jumeirah 1, Dubai',
-  stats: [
-    { number: '4.8★', label: 'Google rating ' },   
-    { number: '1,000+', label: 'Ayurveda patients in 2 years' },
-    { number: '11+ yrs', label: 'Dr. Shamna, BAMS' },
-    { number: '10am–10pm', label: 'Open every day' }
-  ],
-  features: [
-    'BAMS doctor assesses every patient',
-    'Kerala-trained, DHA-licensed therapists',
-    'Male therapist for men, female therapist for women',
-    'English, Malayalam and Hindi spoken'
-  ],
-  whatsappText: 'WhatsApp 056 659 7878',
-  location: 'Al Dhiyafah Road, Jumeirah 1, Dubai',
-  timing: 'Walk-ins welcome'
-},
-   whyChooseUs: {
-  badge: 'Integrated care',
-  title: 'Ayurveda Inside a DHA-Licensed Polyclinic',
-  description: 'RamaCare\'s Ayurveda department shares a building with our general physician, physiotherapists and dermatologist. If your Ayurveda doctor thinks a medical check or physiotherapy would help, you can see the right colleague here.',
-  cards: [
-    { title: 'Doctor first', description: 'A BAMS doctor assesses you before any therapy is given.' },
-    { title: 'Kerala-trained therapists', description: 'Authentic Kerala Ayurveda therapies, given by DHA-licensed therapists trained in Kerala.' },
-    { title: 'Same-gender care', description: 'Male patients are treated by a male therapist and female patients by a female therapist.' },
-    { title: 'Works with your medicines', description: 'Bring your prescriptions to the consultation. Never stop prescribed medicine on your own.' },
-    { title: 'Several specialties, one building', description: 'Ayurveda, general medicine, physiotherapy and dermatology under one roof.' },
-    { title: 'Written plan and cost', description: 'You receive your plan and its cost in writing before treatment starts.' }
-  ]
-},
+    hero: {
+      badge: 'DHA-licensed polyclinic · Licence 2036418',
+      titleLine1: 'Ayurvedic Clinic & Ayurveda Treatment',
+      titleHighlight: ' in Dubai ',
+      titleLine2: '– Jumeirah 1',
+      subtitle: 'Doctor-led Ayurveda at RamaCare Polyclinic in Jumeirah 1. Every plan starts with a consultation with our BAMS doctor, and every therapy is given by a Kerala-trained therapist of the same gender as the patient.',
+      description: 'Kerala Ayurveda at a DHA-licensed polyclinic in Jumeirah 1: ayurvedic treatment in Dubai led by an Ayurvedic doctor, including consultation, Panchakarma, therapeutic Kerala massage (Abhyanga), Kizhi and Shirodhara.',
+      ctaText: 'Book Ayurveda Consultation',
+      backgroundImage: '/images/ayurveda-therapy-room-jumeirah-1.jpg',
+      backgroundAlt: 'Ayurveda therapy room at RamaCare Polyclinic, Jumeirah 1, Dubai',
+      stats: [
+        { number: '4.8★', label: 'Google rating ' },
+        { number: '1,000+', label: 'Ayurveda patients in 2 years' },
+        { number: '11+ yrs', label: 'Dr. Shamna, BAMS' },
+        { number: '10am–10pm', label: 'Open every day' }
+      ],
+      features: [
+        'BAMS doctor assesses every patient',
+        'Kerala-trained, DHA-licensed therapists',
+        'Male therapist for men, female therapist for women',
+        'English, Malayalam and Hindi spoken'
+      ],
+      whatsappText: 'WhatsApp 056 659 7878',
+      location: 'Al Dhiyafah Road, Jumeirah 1, Dubai',
+      timing: 'Walk-ins welcome'
+    },
+    whyChooseUs: {
+      badge: 'Integrated care',
+      title: 'Ayurveda Inside a DHA-Licensed Polyclinic',
+      description: 'RamaCare\'s Ayurveda department shares a building with our general physician, physiotherapists and dermatologist. If your Ayurveda doctor thinks a medical check or physiotherapy would help, you can see the right colleague here.',
+      cards: [
+        { title: 'Doctor first', description: 'A BAMS doctor assesses you before any therapy is given.' },
+        { title: 'Kerala-trained therapists', description: 'Authentic Kerala Ayurveda therapies, given by DHA-licensed therapists trained in Kerala.' },
+        { title: 'Same-gender care', description: 'Male patients are treated by a male therapist and female patients by a female therapist.' },
+        { title: 'Works with your medicines', description: 'Bring your prescriptions to the consultation. Never stop prescribed medicine on your own.' },
+        { title: 'Several specialties, one building', description: 'Ayurveda, general medicine, physiotherapy and dermatology under one roof.' },
+        { title: 'Written plan and cost', description: 'You receive your plan and its cost in writing before treatment starts.' }
+      ]
+    },
 
-      about: {
-        badge: 'About our Ayurveda department',
-        title: 'Ayurvedic Treatment in Dubai, Led by a BAMS Ayurvedic Doctor',
-        description: 'RamaCare Polyclinic is a DHA-licensed polyclinic (licence 2036418) at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. Its Ayurveda department is led by Dr. Shamna Keloth Meethal (BAMS, 11+ years) with two Kerala-trained, DHA-licensed therapists: a male therapist for men and a female therapist for women. It offers Ayurvedic consultation, Panchakarma, Abhyanga, Kizhi and Shirodhara, open daily 10am–10pm.',
-        paragraphs: [
-          'Every patient first sees our Ayurveda doctor, who assesses your constitution (Prakriti) and writes a personal plan covering diet, daily routine, any herbal medicines and the therapies that suit you.',
-          'Because we are a polyclinic, our Ayurvedic doctor works alongside our general physician, physiotherapists and dermatologist in the same building.',
-          'If you are looking for an Ayurvedic hospital in Dubai, our outpatient Ayurveda department offers doctor-supervised Ayurvedic therapies, including Panchakarma, without a hospital stay.'
-        ],
-        stats: [
-          { number: '1', label: 'BAMS Ayurveda doctor' },
-          { number: '2', label: 'Kerala-trained therapists' },
-          { number: '3', label: 'Languages: EN, ML, HI' }
-        ],
-        ctaText: 'Book Ayurveda Consultation',
-        image: '/images/ayurveda-consultation-dubai.jpg',
-        imageAlt: 'Ayurvedic consultation with Dr. Shamna Keloth Meethal at RamaCare Polyclinic, Jumeirah 1',
-        overlayCard: { number: '42+', smallText: 'Years combined experience', boldText: 'Doctor-led Ayurveda' }
-      },
+    about: {
+      badge: 'About our Ayurveda department',
+      title: 'Ayurvedic Treatment in Dubai, Led by a BAMS Ayurvedic Doctor',
+      description: 'RamaCare Polyclinic is a DHA-licensed polyclinic (licence 2036418) at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. Its Ayurveda department is led by Dr. Shamna Keloth Meethal (BAMS, 11+ years) with two Kerala-trained, DHA-licensed therapists: a male therapist for men and a female therapist for women. It offers Ayurvedic consultation, Panchakarma, Abhyanga, Kizhi and Shirodhara, open daily 10am–10pm.',
+      paragraphs: [
+        'Every patient first sees our Ayurveda doctor, who assesses your constitution (Prakriti) and writes a personal plan covering diet, daily routine, any herbal medicines and the therapies that suit you.',
+        'Because we are a polyclinic, our Ayurvedic doctor works alongside our general physician, physiotherapists and dermatologist in the same building.',
+        'If you are looking for an Ayurvedic hospital in Dubai, our outpatient Ayurveda department offers doctor-supervised Ayurvedic therapies, including Panchakarma, without a hospital stay.'
+      ],
+      stats: [
+        { number: '1', label: 'BAMS Ayurveda doctor' },
+        { number: '2', label: 'Kerala-trained therapists' },
+        { number: '3', label: 'Languages: EN, ML, HI' }
+      ],
+      ctaText: 'Book Ayurveda Consultation',
+      image: '/images/ayurveda-consultation-dubai.jpg',
+      imageAlt: 'Ayurvedic consultation with Dr. Shamna Keloth Meethal at RamaCare Polyclinic, Jumeirah 1',
+      overlayCard: { number: '42+', smallText: 'Years combined experience', boldText: 'Doctor-led Ayurveda' }
+    },
     treatments: {
       heading: 'Ayurvedic Treatment in Dubai: Therapies at RamaCare, Jumeirah 1',
       subtitle: 'Every therapy is prescribed after your consultation and given by a Kerala-trained therapist of your gender.',
       treatments: [
-        { id: 1, title: 'Panchakarma Treatment', slug: 'panchakarma-treatment', fullSlug: '/services/panchakarma-treatment-dubai/', icon: 'Sparkles',
+        {
+          id: 1, title: 'Panchakarma Treatment', slug: 'panchakarma-treatment', fullSlug: '/services/panchakarma-treatment-dubai/', icon: 'Sparkles',
           subtitle: "Ayurveda's classical cleansing programme, planned after your assessment.", duration: '7–21 days', badgeColor: 'violet',
           benefits: ['Preparatory oil therapies, then cleansing procedures', 'Length set by the doctor', 'Not suitable for everyone; assessed first'],
-          idealFor: 'Adults cleared by the doctor for a cleansing programme', image: '/images/panchakarma.jpg', alt: 'Panchakarma therapy at RamaCare Polyclinic, Jumeirah 1' },
-        { 
-      id: 2, 
-      title: 'Kerala Ayurvedic Massage in Dubai', 
-      slug: 'abhyanga-massage', 
-      fullSlug: '/services/abhyanga-massage-dubai/', 
-      icon: 'Sparkles',
-      subtitle: 'A therapeutic massage with medicated oils chosen after your consultation.', 
-      duration: 'Per session', 
-      badgeColor: 'teal',
-      benefits: ['Traditionally used for muscle stiffness and tension', 'Same-gender, Kerala-trained therapist', 'Oils selected by the doctor'],
-      idealFor: 'Back and neck tension, stiffness, stress', 
-      image: '/images/abhyanga.jpg', 
-      alt: 'Therapeutic Kerala Ayurvedic massage (Abhyanga) in Jumeirah 1' 
-       },
-      
-    { id: 3, title: 'Kizhi (Potli) Therapy', slug: 'kizhi-therapy', fullSlug: '/services/kizhi-therapy-dubai/', icon: 'Sparkles',   // show only after the Kizhi page is live
-      subtitle: 'Warm herbal boluses pressed over stiff muscles and joints, including Njavarakizhi.', duration: 'Per session', badgeColor: 'amber',
-      benefits: ['Podikizhi, Elakizhi and Njavarakizhi', 'Traditionally used for muscle and joint stiffness', 'Given after the doctor\'s assessment'],
-      idealFor: 'Joint and muscle stiffness', image: '/images/kizhi.jpg', alt: 'Kizhi herbal bolus therapy at RamaCare Polyclinic, Dubai' },
-    { id: 4, title: 'Shirodhara', slug: 'shirodhara-therapy', fullSlug: '/services/shirodhara-therapy-in-dubai/', icon: 'Sparkles',
-      subtitle: 'A slow stream of warm medicated oil over the forehead.', duration: 'Per session', badgeColor: 'cyan',
-      benefits: ['Traditionally used for stress and sleep', 'Calm, private therapy room', 'Often part of a wider plan'],
-      idealFor: 'Stress and poor sleep', image: '/images/shirodhara.jpg', alt: 'Shirodhara therapy at RamaCare Polyclinic, Jumeirah 1' },
-    { id: 5, title: 'Nasya (Nasyam) Therapy', slug: 'nasya-therapy', fullSlug: '/services/nasya-therapy-dubai/', icon: 'Sparkles',
-      subtitle: 'Medicated nasal therapy, given within a supervised plan.', duration: 'Per session', badgeColor: 'teal',
-      benefits: ['Classical Ayurvedic procedure', 'Prescribed after consultation', 'Often combined with oil therapies'],
-      idealFor: 'Patients the doctor clears for Nasya', image: '/images/nasya.jpg', alt: 'Nasya therapy in Dubai' },
-    { id: 6, title: 'Basti Therapy', slug: 'basti-therapy', fullSlug: '/services/basti-therapy-dubai/', icon: 'Sparkles',
-      subtitle: 'Medicated enema therapy, one of the classical Panchakarma procedures.', duration: 'As prescribed', badgeColor: 'violet',
-      benefits: ['Part of a supervised plan', 'Prepared and given by trained staff', 'Assessed by the doctor first'],
-      idealFor: 'Patients the doctor clears for Basti', image: '/images/basti.jpg', alt: 'Basti therapy in Dubai' },
-    { id: 7, title: 'Prakriti (Body Constitution) Assessment', slug: 'prakriti-dosha-assessment',fullSlug: '/services/prakriti-dosha-assessment-dubai/', icon: 'Sparkles',
-      subtitle: 'Find out your dosha and get a personal Ayurveda plan.', duration: '45–60 min consultation', badgeColor: 'cyan',
-      benefits: ['Detailed Prakriti and dosha assessment', 'Diet and daily-routine guidance', 'Basis for every therapy we recommend'],
-      idealFor: 'Anyone new to Ayurveda', image: '/images/analysis.jpg', alt: 'Ayurvedic Prakriti assessment with a BAMS doctor in Dubai' },
-    { id: 8, title: 'Ayurvedic Hair Fall Care', slug: 'ayurvedic-hairfall-treatment', fullSlug: '/services/ayurvedic-hairfall-treatment-dubai/', icon: 'Sparkles',
-      subtitle: 'Herbal scalp therapies and diet guidance for hair fall.', duration: 'After consultation', badgeColor: 'teal',
-      benefits: ['Scalp oil therapies', 'Diet and routine guidance', 'May support scalp health'],
-      idealFor: 'Hair thinning and hair fall', image: '/images/hairfall1.jpg', alt: 'Ayurvedic hair fall care in Dubai' },
-    { id: 9, title: 'Ayurvedic Skin Care', slug: 'skin-diseases-treatment', fullSlug: '/services/skin-diseases-treatment-dubai/', icon: 'Sparkles',
-      subtitle: 'Complementary Ayurvedic care for recurring skin concerns.', duration: 'After consultation', badgeColor: 'pink',
-      benefits: ['Herbal medicines and external applications', 'Diet guidance', 'Alongside your dermatologist if needed'],
-      idealFor: 'Eczema, acne and recurring skin concerns', image: '/images/skin1.jpg', alt: 'Ayurvedic skin care in Dubai' }
-  ],
-  consultationCTA: {
-    heading: 'Not sure which therapy is right for you?',
-    subtext: 'Start with a consultation with Dr. Shamna. She will assess you and recommend the therapies that suit you.',
-    buttonText: 'Book Ayurveda Consultation',
-    backgroundColor: 'bg-[#1E5A3C]',
-    buttonColor: 'bg-[#C9A547]'
-  }
-},
+          idealFor: 'Adults cleared by the doctor for a cleansing programme', image: '/images/panchakarma.jpg', alt: 'Panchakarma therapy at RamaCare Polyclinic, Jumeirah 1'
+        },
+        {
+          id: 2,
+          title: 'Kerala Ayurvedic Massage in Dubai',
+          slug: 'abhyanga-massage',
+          fullSlug: '/services/abhyanga-massage-dubai/',
+          icon: 'Sparkles',
+          subtitle: 'A therapeutic massage with medicated oils chosen after your consultation.',
+          duration: 'Per session',
+          badgeColor: 'teal',
+          benefits: ['Traditionally used for muscle stiffness and tension', 'Same-gender, Kerala-trained therapist', 'Oils selected by the doctor'],
+          idealFor: 'Back and neck tension, stiffness, stress',
+          image: '/images/abhyanga.jpg',
+          alt: 'Therapeutic Kerala Ayurvedic massage (Abhyanga) in Jumeirah 1'
+        },
 
-      experts: {
+        {
+          id: 3, title: 'Kizhi (Potli) Therapy', slug: 'kizhi-therapy', fullSlug: '/services/kizhi-therapy-dubai/', icon: 'Sparkles',   // show only after the Kizhi page is live
+          subtitle: 'Warm herbal boluses pressed over stiff muscles and joints, including Njavarakizhi.', duration: 'Per session', badgeColor: 'amber',
+          benefits: ['Podikizhi, Elakizhi and Njavarakizhi', 'Traditionally used for muscle and joint stiffness', 'Given after the doctor\'s assessment'],
+          idealFor: 'Joint and muscle stiffness', image: '/images/kizhi.jpg', alt: 'Kizhi herbal bolus therapy at RamaCare Polyclinic, Dubai'
+        },
+        {
+          id: 4, title: 'Shirodhara', slug: 'shirodhara-therapy', fullSlug: '/services/shirodhara-therapy-in-dubai/', icon: 'Sparkles',
+          subtitle: 'A slow stream of warm medicated oil over the forehead.', duration: 'Per session', badgeColor: 'cyan',
+          benefits: ['Traditionally used for stress and sleep', 'Calm, private therapy room', 'Often part of a wider plan'],
+          idealFor: 'Stress and poor sleep', image: '/images/shirodhara.jpg', alt: 'Shirodhara therapy at RamaCare Polyclinic, Jumeirah 1'
+        },
+        {
+          id: 5, title: 'Nasya (Nasyam) Therapy', slug: 'nasya-therapy', fullSlug: '/services/nasya-therapy-dubai/', icon: 'Sparkles',
+          subtitle: 'Medicated nasal therapy, given within a supervised plan.', duration: 'Per session', badgeColor: 'teal',
+          benefits: ['Classical Ayurvedic procedure', 'Prescribed after consultation', 'Often combined with oil therapies'],
+          idealFor: 'Patients the doctor clears for Nasya', image: '/images/nasya.jpg', alt: 'Nasya therapy in Dubai'
+        },
+        {
+          id: 6, title: 'Basti Therapy', slug: 'basti-therapy', fullSlug: '/services/basti-therapy-dubai/', icon: 'Sparkles',
+          subtitle: 'Medicated enema therapy, one of the classical Panchakarma procedures.', duration: 'As prescribed', badgeColor: 'violet',
+          benefits: ['Part of a supervised plan', 'Prepared and given by trained staff', 'Assessed by the doctor first'],
+          idealFor: 'Patients the doctor clears for Basti', image: '/images/basti.jpg', alt: 'Basti therapy in Dubai'
+        },
+        {
+          id: 7, title: 'Prakriti (Body Constitution) Assessment', slug: 'prakriti-dosha-assessment', fullSlug: '/services/prakriti-dosha-assessment-dubai/', icon: 'Sparkles',
+          subtitle: 'Find out your dosha and get a personal Ayurveda plan.', duration: '45–60 min consultation', badgeColor: 'cyan',
+          benefits: ['Detailed Prakriti and dosha assessment', 'Diet and daily-routine guidance', 'Basis for every therapy we recommend'],
+          idealFor: 'Anyone new to Ayurveda', image: '/images/analysis.jpg', alt: 'Ayurvedic Prakriti assessment with a BAMS doctor in Dubai'
+        },
+        {
+          id: 8, title: 'Ayurvedic Hair Fall Care', slug: 'ayurvedic-hairfall-treatment', fullSlug: '/services/ayurvedic-hairfall-treatment-dubai/', icon: 'Sparkles',
+          subtitle: 'Herbal scalp therapies and diet guidance for hair fall.', duration: 'After consultation', badgeColor: 'teal',
+          benefits: ['Scalp oil therapies', 'Diet and routine guidance', 'May support scalp health'],
+          idealFor: 'Hair thinning and hair fall', image: '/images/hairfall1.jpg', alt: 'Ayurvedic hair fall care in Dubai'
+        },
+        {
+          id: 9, title: 'Ayurvedic Skin Care', slug: 'skin-diseases-treatment', fullSlug: '/services/skin-diseases-treatment-dubai/', icon: 'Sparkles',
+          subtitle: 'Complementary Ayurvedic care for recurring skin concerns.', duration: 'After consultation', badgeColor: 'pink',
+          benefits: ['Herbal medicines and external applications', 'Diet guidance', 'Alongside your dermatologist if needed'],
+          idealFor: 'Eczema, acne and recurring skin concerns', image: '/images/skin1.jpg', alt: 'Ayurvedic skin care in Dubai'
+        }
+      ],
+      consultationCTA: {
+        heading: 'Not sure which therapy is right for you?',
+        subtext: 'Start with a consultation with Dr. Shamna. She will assess you and recommend the therapies that suit you.',
+        buttonText: 'Book Ayurveda Consultation',
+        backgroundColor: 'bg-[#1E5A3C]',
+        buttonColor: 'bg-[#C9A547]'
+      }
+    },
+
+    experts: {
       badge: 'Your Ayurveda team',
       title: 'Your Ayurvedic Doctor and Therapists in Jumeirah 1',
       description: 'Every patient first sees Dr. Shamna Keloth Meethal (BAMS), our DHA-licensed Ayurvedic doctor in Dubai. Therapies are then given by a Kerala-trained therapist of your own gender: Syamkumar Sasidharan for men and Mariya Thayyil Muhammed for women. All three speak English, Malayalam and Hindi.',
@@ -180,33 +197,44 @@ export const categoryContent = {
         title: 'Evening appointments in Jumeirah 1',
         description: 'We are open every day from 10am to 10pm, so you can book Ayurvedic therapy after work. Walk-ins are accepted; booking ahead secures your therapist.'
       }
- },
-   programs: {
-  badge: 'Ayurveda programmes',
-  heading: 'Ayurveda Programmes in Dubai',
-  subtitle: 'Each programme is planned by Dr. Shamna after your consultation. Length and therapies depend on your assessment.',
-  disclaimer: 'Ayurveda is offered as complementary care. Results vary from person to person.',
-  programs: [
-    // DELETE the old id 1 "Deep Panchakarma Detox" card completely.
-    { id: 2, title: 'Pain and Stiffness Programme', duration: 'After consultation', /* keep existing colour fields */ icon: 'heart',
-      benefits: ['Kizhi, Abhyanga and Basti as prescribed', 'Traditionally used for back and joint stiffness', 'Can run alongside physiotherapy'] },
-    { id: 3, title: 'Stress and Sleep Programme', duration: 'After consultation', icon: 'moon',
-      benefits: ['Shirodhara and Abhyanga', 'Daily-routine guidance', 'May support better rest'] },
-    { id: 4, title: "Women's Wellness Programme", duration: 'After consultation', icon: 'user',
-      benefits: ['Female therapist for all therapies', 'Diet and routine guidance', 'Complements care from your gynaecologist'] },
-    { id: 5, title: 'Digestive and Weight Balance Programme', duration: 'After consultation', icon: 'scale',
-      benefits: ['Diet plan by Dr. Shamna', 'Udwarthanam herbal powder massage', 'May support digestion and weight management'] },
-    { id: 6, title: 'Rejuvenation Programme', duration: 'After consultation', icon: 'users',
-      benefits: ['Oil therapies and Rasayana guidance', 'Planned around your constitution', 'Suitable after the doctor\'s assessment'] }
-  ]
-},
+    },
+    programs: {
+      badge: 'Ayurveda programmes',
+      heading: 'Ayurveda Programmes in Dubai',
+      subtitle: 'Each programme is planned by Dr. Shamna after your consultation. Length and therapies depend on your assessment.',
+      disclaimer: 'Ayurveda is offered as complementary care. Results vary from person to person.',
+      programs: [
+        // DELETE the old id 1 "Deep Panchakarma Detox" card completely.
+        {
+          id: 2, title: 'Pain and Stiffness Programme', duration: 'After consultation', /* keep existing colour fields */ icon: 'heart',
+          benefits: ['Kizhi, Abhyanga and Basti as prescribed', 'Traditionally used for back and joint stiffness', 'Can run alongside physiotherapy']
+        },
+        {
+          id: 3, title: 'Stress and Sleep Programme', duration: 'After consultation', icon: 'moon',
+          benefits: ['Shirodhara and Abhyanga', 'Daily-routine guidance', 'May support better rest']
+        },
+        {
+          id: 4, title: "Women's Wellness Programme", duration: 'After consultation', icon: 'user',
+          benefits: ['Female therapist for all therapies', 'Diet and routine guidance', 'Complements care from your gynaecologist']
+        },
+        {
+          id: 5, title: 'Digestive and Weight Balance Programme', duration: 'After consultation', icon: 'scale',
+          ctaLink: '/services/ayurvedic-diet-weight-loss-dubai/', ctaText: 'Ayurvedic weight loss treatment in Dubai',
+          benefits: ['Diet plan by Dr. Shamna', 'Udwarthanam herbal powder massage', 'May support digestion and weight management']
+        },
+        {
+          id: 6, title: 'Rejuvenation Programme', duration: 'After consultation', icon: 'users',
+          benefits: ['Oil therapies and Rasayana guidance', 'Planned around your constitution', 'Suitable after the doctor\'s assessment']
+        }
+      ]
+    },
 
-        successStories: {
+    successStories: {
       badge: 'Patient experiences',
       title: 'What Patients Say About Their Visit',
       subtitle: 'Patients share their experience of care at our Jumeirah 1 clinic. Individual results vary.',
       stats: [
-        { id: 1, number: '4.8/5', label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
+        { id: 1, number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`, label1: 'Google rating', label2: 'Google reviews', target: 4.8, showStars: true },
         { id: 2, number: '218', label1: 'Google reviews', label2: 'Whole clinic', target: 218 },
         { id: 3, number: '1,000+', label1: 'Ayurveda patients', label2: 'In the last 2 years', target: 1000 },
         { id: 4, number: '11+', label1: 'Years of experience', label2: 'Dr. Shamna, BAMS', target: 11 }
@@ -217,9 +245,9 @@ export const categoryContent = {
         buttonText: 'Open Google reviews'   // link to https://maps.google.com/maps?cid=4290863257518002596
       }
     },
-    
 
-      faq: {
+
+    faq: {
       title: 'Ayurveda in Dubai: Frequently Asked Questions',
       description: 'Clear answers about Ayurvedic treatment at RamaCare Polyclinic, Jumeirah 1.',
       faqs: [
@@ -244,93 +272,93 @@ export const categoryContent = {
       ]
     },
 
-          atAGlance: {
-        id: 'at-a-glance',
-        heading: 'Ayurveda at RamaCare: At a Glance',
-        table: [
-          ['Licence', 'DHA facility licence 2036418'],
-          ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, 11+ years'],
-          ['Therapists', 'Syamkumar Sasidharan (male patients, 17+ years) and Mariya Thayyil Muhammed (female patients, 14+ years in the UAE), both Kerala-trained'],
-          ['Languages', 'English, Malayalam, Hindi (clinic staff also speak Arabic and Tagalog)'],
-          ['Therapies', 'Consultation and Prakriti assessment, Panchakarma, Abhyanga, Kizhi, Njavarakizhi, Pizhichil, Udwarthanam, Shirodhara, Nasya (Nasyam), Basti, herbal steam'],
-          ['Consultation fee', 'AED 200, 45–60 minutes with Dr. Shamna'],
-          ['Hours', 'Every day, 10am–10pm; walk-ins accepted'],
-          ['Insurance', 'Reimbursement basis; itemised invoices provided'],
-          ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai; free and paid parking nearby'],
-          ['Contact', '056 659 7878 (call and WhatsApp) · 04 286 2006']
-        ]
-      },
+    atAGlance: {
+      id: 'at-a-glance',
+      heading: 'Ayurveda at RamaCare: At a Glance',
+      table: [
+        ['Licence', 'DHA facility licence 2036418'],
+        ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, 11+ years'],
+        ['Therapists', 'Syamkumar Sasidharan (male patients, 17+ years) and Mariya Thayyil Muhammed (female patients, 14+ years in the UAE), both Kerala-trained'],
+        ['Languages', 'English, Malayalam, Hindi (clinic staff also speak Arabic and Tagalog)'],
+        ['Therapies', 'Consultation and Prakriti assessment, Panchakarma, Abhyanga, Kizhi, Njavarakizhi, Pizhichil, Udwarthanam, Shirodhara, Nasya (Nasyam), Basti, herbal steam'],
+        ['Consultation fee', 'AED 200, 45–60 minutes with Dr. Shamna'],
+        ['Hours', 'Every day, 10am–10pm; walk-ins accepted'],
+        ['Insurance', 'Reimbursement basis; itemised invoices provided'],
+        ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai; free and paid parking nearby'],
+        ['Contact', '056 659 7878 (call and WhatsApp) · 04 286 2006']
+      ]
+    },
 
-      conditions: {
-        id: 'conditions',
-        heading: 'Conditions Our Ayurveda Team Commonly Sees',
-        intro: 'Ayurveda is offered as complementary care alongside your regular medical treatment. Results vary from person to person.',
-        items: [
-          { text: 'Back, neck and joint stiffness', href: '/services/back-pain-treatment-dubai/' },
-          { text: 'Stress and poor sleep', href: '/services/stress-treatment-dubai/' },
-          { text: 'Acidity, bloating and IBS', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
-          { text: 'PCOS and hormonal balance', href: '/services/pcos-treatment-dubai/' },
-          { text: 'Skin concerns such as eczema and acne', href: '/services/skin-diseases-treatment-dubai/' },
-          { text: 'Hair fall and dandruff', href: '/services/ayurvedic-hairfall-treatment-dubai/' },
-          { text: 'Weight management', href: '/services/ayurvedic-diet-weight-loss-dubai/' }
-        ]
-      },
+    conditions: {
+      id: 'conditions',
+      heading: 'Conditions Our Ayurveda Team Commonly Sees',
+      intro: 'Ayurveda is offered as complementary care alongside your regular medical treatment. Results vary from person to person.',
+      items: [
+        { text: 'Back, neck and joint stiffness', href: '/services/back-pain-treatment-dubai/' },
+        { text: 'Stress and poor sleep', href: '/services/stress-treatment-dubai/' },
+        { text: 'Acidity, bloating and IBS', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
+        { text: 'PCOS and hormonal balance', href: '/services/pcos-treatment-dubai/' },
+        { text: 'Skin concerns such as eczema and acne', href: '/services/skin-diseases-treatment-dubai/' },
+        { text: 'Hair fall and dandruff', href: '/services/ayurvedic-hairfall-treatment-dubai/' },
+        { text: 'Ayurvedic weight loss treatment in Dubai', href: '/services/ayurvedic-diet-weight-loss-dubai/' }
+      ]
+    },
 
-      firstVisit: {
-        id: 'first-visit',
-        heading: 'What Happens at Your First Ayurveda Visit',
-        ordered: true,
-        items: [
-          { text: 'History: Dr. Shamna reviews your health history, current medicines, sleep, digestion and daily routine.' },
-          { text: 'Prakriti assessment: she assesses your constitution and current imbalance (your dosha).' },
-          { text: 'Written plan: diet and routine guidance, any herbal medicines, and which therapies suit you, with cost.' },
-          { text: 'Therapies: booked with a Kerala-trained therapist of your gender.' },
-          { text: 'Follow-up: the doctor reviews your progress and adjusts the plan.' }
-        ],
-        note: 'A first consultation takes 45–60 minutes. Bring your medicines and any recent test reports.'
-      },
+    firstVisit: {
+      id: 'first-visit',
+      heading: 'What Happens at Your First Ayurveda Visit',
+      ordered: true,
+      items: [
+        { text: 'History: Dr. Shamna reviews your health history, current medicines, sleep, digestion and daily routine.' },
+        { text: 'Prakriti assessment: she assesses your constitution and current imbalance (your dosha).' },
+        { text: 'Written plan: diet and routine guidance, any herbal medicines, and which therapies suit you, with cost.' },
+        { text: 'Therapies: booked with a Kerala-trained therapist of your gender.' },
+        { text: 'Follow-up: the doctor reviews your progress and adjusts the plan.' }
+      ],
+      note: 'A first consultation takes 45–60 minutes. Bring your medicines and any recent test reports.'
+    },
 
-      cost: {
-        id: 'cost',
-        heading: 'What Does Ayurvedic Treatment Cost in Dubai?',
-        intro: 'The Ayurveda consultation fee at RamaCare is AED 200 for a 45–60 minute first consultation with Dr. Shamna, including your Prakriti assessment and a written plan.',
-        itemsTitle: 'What your therapy costs depends on:',
-        items: [
-          { text: 'which therapies the doctor recommends' },
-          { text: 'how many sessions you need' },
-          { text: 'whether herbal medicines are prescribed' },
-          { text: 'for Panchakarma, the length of the programme' }
-        ],
-        note: 'We confirm the full cost in writing before any therapy starts. Insurance is on a reimbursement basis: you pay at the clinic, and we provide itemised invoices and reports for your claim.'
-      },
+    cost: {
+      id: 'cost',
+      heading: 'What Does Ayurvedic Treatment Cost in Dubai?',
+      intro: 'The Ayurveda consultation fee at RamaCare is AED 200 for a 45–60 minute first consultation with Dr. Shamna, including your Prakriti assessment and a written plan.',
+      itemsTitle: 'What your therapy costs depends on:',
+      items: [
+        { text: 'which therapies the doctor recommends' },
+        { text: 'how many sessions you need' },
+        { text: 'whether herbal medicines are prescribed' },
+        { text: 'for Panchakarma, the length of the programme' }
+      ],
+      note: 'We confirm the full cost in writing before any therapy starts. Insurance is on a reimbursement basis: you pay at the clinic, and we provide itemised invoices and reports for your claim.'
+    },
 
-      chooseClinic: {
-        id: 'choose-clinic',
-        heading: 'How to Choose an Ayurvedic Centre or Clinic in Dubai',
-        intro: 'Dubai has many Ayurvedic centres and clinics. Before you book, check these points:',
-        items: [
-          { text: 'Check the licence. The clinic should hold a DHA facility licence and the doctor a DHA professional licence; you can check both on the DHA Sheryan directory.' },
-          { text: 'A doctor should see you first. A BAMS-qualified doctor should assess you before any therapy.' },
-          { text: 'Ask about therapists: who will treat you, their training, and whether a same-gender therapist is available.' },
-          { text: 'Ask how they work with your doctor. Ayurveda should fit around your existing medical care, not replace it.' },
-          { text: 'Get the plan and cost in writing before you start.' },
-          { text: 'Consider access: opening hours, parking and travel time for repeat sessions.' }
-        ],
-        note: 'At RamaCare each of these is in place: DHA licence 2036418, a BAMS doctor, Kerala-trained same-gender therapists, a polyclinic setting, written plans, and opening hours of 10am–10pm daily in Jumeirah 1.'
-      },
+    chooseClinic: {
+      id: 'choose-clinic',
+      heading: 'How to Choose an Ayurvedic Centre or Clinic in Dubai',
+      intro: 'Dubai has many Ayurvedic centres and clinics. Before you book, check these points:',
+      items: [
+        { text: 'Check the licence. The clinic should hold a DHA facility licence and the doctor a DHA professional licence; you can check both on the DHA Sheryan directory.' },
+        { text: 'A doctor should see you first. A BAMS-qualified doctor should assess you before any therapy.' },
+        { text: 'Ask about therapists: who will treat you, their training, and whether a same-gender therapist is available.' },
+        { text: 'Ask how they work with your doctor. Ayurveda should fit around your existing medical care, not replace it.' },
+        { text: 'Get the plan and cost in writing before you start.' },
+        { text: 'Consider access: opening hours, parking and travel time for repeat sessions.' }
+      ],
+      note: 'At RamaCare each of these is in place: DHA licence 2036418, a BAMS doctor, Kerala-trained same-gender therapists, a polyclinic setting, written plans, and opening hours of 10am–10pm daily in Jumeirah 1.'
+    },
 
-      gettingHere: {
-        id: 'getting-here',
-        heading: 'Getting to Our Ayurveda Clinic in Jumeirah 1',
-        intro: 'RamaCare Polyclinic is on Al Dhiyafah Road in Jumeirah 1, in the Jumeirah Terrace Building, ground floor. Free and paid parking is available nearby.',
-        items: [
-          { text: 'From Satwa and Al Wasl: a few minutes by car' },
-          { text: 'From City Walk, La Mer and Jumeirah 2: about 10 minutes' },
-          { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
-          { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes via Sheikh Zayed Road' }
-        ],
-        mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
-      },
+    gettingHere: {
+      id: 'getting-here',
+      heading: 'Getting to Our Ayurveda Clinic in Jumeirah 1',
+      intro: 'RamaCare Polyclinic is on Al Dhiyafah Road in Jumeirah 1, in the Jumeirah Terrace Building, ground floor. Free and paid parking is available nearby.',
+      items: [
+        { text: 'From Satwa and Al Wasl: a few minutes by car' },
+        { text: 'From City Walk, La Mer and Jumeirah 2: about 10 minutes' },
+        { text: 'From Karama and Bur Dubai: about 10–15 minutes' },
+        { text: 'From Palm Jumeirah and Emirates Hills: about 20–25 minutes via Sheikh Zayed Road' }
+      ],
+      mapUrl: 'https://maps.google.com/maps?cid=4290863257518002596'
+    },
     facility: {
       badge: 'Our Ayurveda Facility',
       title: 'Authentic Ayurvedic Healing Centre',
@@ -1497,86 +1525,61 @@ export const categoryContent = {
 
   'physiotherapy': {
     hero: {
-      badge: 'DHA-Licensed Premier Physiotherapy Centre',
-      titleLine1: 'Advanced Physiotherapy ',
-      titleHighlight: ' & Rehabilitation',
-      titleLine2: ' in Jumeirah 1',
-      // title: 'Advanced Physiotherapy– & Rehabilitation in Jumeirah 1',
-      subtitle: 'RamaCare Polyclinic provides DHA-licensed physiotherapy in Jumeirah 1, Dubai, offering personalised care for pain relief, injury recovery, posture correction, and rehabilitation. Treatment options include manual therapy, dry needling, electrotherapy, and functional rehabilitation, with care tailored to each patient’s condition, mobility needs, and recovery goals.',
-      description: 'Evidence-based Physiotherapy Treatment for pain relief, injury recovery, posture modification, and full functional restoration—created for modern lifestyles in Dubai.',
+      badge: 'DHA-Licensed Physiotherapy · Jumeirah 1',
+      titleLine1: 'Physiotherapy Clinic',
+      titleHighlight: 'in Jumeirah 1,',
+      titleLine2: 'Dubai',
+      subtitle: 'RamaCare Polyclinic offers physiotherapy at 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. Our DHA-licensed physiotherapist assesses pain, injuries and movement problems, then plans treatment such as manual therapy, exercise rehabilitation, dry needling, shockwave or kinesio taping. Open every day, 10am–10pm, with same-day appointments. Insurance is by reimbursement.',
+      description: 'Physiotherapy in Jumeirah 1 for back, neck, shoulder, knee, sports, post-surgical, neurological and paediatric needs.',
       ctaText: 'Book an Appointment',
       backgroundImage: '/images/phy3.jpg',
       backgroundAlt: 'Physiotherapy consultation at RamaCare Polyclinic in Jumeirah 1 Dubai',
       features: [
-        'DHA-Licensed Physiotherapists',
-        'Personalised Rehabilitation Programs',
-        'Advanced Therapy Equipment',
-        'Premium Jumeirah 1 Location'
+        'DHA-licensed physiotherapist',
+        'Same-day appointments, 7 days a week',
+        'Open until 10pm, including weekends',
+        'In-house GP if you need a referral'
       ],
       whatsappText: 'WhatsApp Now',
-      location: 'Heart of Jumeirah 1, Dubai',
-      timing: 'Same-Day Appointments Available'
+      location: 'Al Dhiyafah Road, Jumeirah 1, Dubai',
+      timing: 'Same-day appointments · Open till 10pm'
     },
-    whyChooseUs: {
+      whyChooseUs: {
       badge: 'Why Choose Us',
-      title: 'Dubai\'s Trusted Physiotherapy Centre',
-      description: 'Experience patient-focused physiotherapy with licensed specialists, evidence-based techniques, and personalized rehabilitation programs for pain management, mobility, and functional recovery.',
+      title: 'Why Patients Choose RamaCare for Physiotherapy in Jumeirah 1',
+      description: 'A DHA-licensed physiotherapist, long opening hours and a GP in the same building, on Al Dhiyafah Road in Jumeirah 1.',
       cards: [
-        {
-          title: 'Evidence-Based Physiotherapy',
-          description: 'Modern rehabilitation techniques supported by clinical practice to assist with mobility, pain management and functional recovery.'
-        },
-        {
-          title: 'DHA-Licensed Physiotherapists',
-          description: 'Certified professionals with extensive experience in musculoskeletal and functional rehabilitation.'
-        },
-        {
-          title: 'Personalised Treatment Plans',
-          description: 'Customised therapy protocols based on assessment findings, movement analysis, and individual recovery goals.'
-        },
-        {
-          title: 'Premium Jumeirah 1 Facility',
-          description: 'State-of-the-art physiotherapy clinic with advanced equipment and hygienic medical standards.'
-        },
-        {
-          title: 'Functional Recovery Focus',
-          description: 'Treatment plans are designed to restore mobility, strength, posture, and everyday physical performance.'
-        },
-        {
-          title: 'Patient-Centred Rehabilitation',
-          description: 'Physiotherapy is planned around the patient’s symptoms, movement limitations, daily activities and recovery goals. Progress can be reviewed during treatment so the rehabilitation approach can be adjusted when needed.'
-        }
+        { title: 'Assessment Before Treatment', description: 'Your first visit starts with a physical assessment of pain, movement and strength. Treatment is planned from those findings, not from a fixed package.' },
+        { title: 'DHA-Licensed Physiotherapist', description: 'Jeena Mathew (BPT, MPT) has more than 8 years of experience in musculoskeletal physiotherapy and rehabilitation.' },
+        { title: 'Open 10am–10pm, 7 Days', description: 'Evening and weekend sessions, with same-day appointments when slots are free. Walk-ins are welcome.' },
+        { title: 'GP and Ayurveda Under One Roof', description: 'If you need a medical review or a referral, our GP is in the same building. Ayurveda is available if you want to combine approaches.' },
+        { title: 'A Wide Range of Techniques', description: 'Manual therapy, exercise rehabilitation, dry needling, shockwave, electrotherapy, ultrasound, kinesio taping and cupping, chosen to suit your assessment.' },
+        { title: 'Easy to Reach in Jumeirah 1', description: 'Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, near Al Satwa. Free and paid parking nearby.' }
       ]
     },
     about: {
       badge: 'About Our Physiotherapy Department',
       title: 'Physiotherapy and Rehabilitation in Jumeirah 1',
-      description: 'Physiotherapy at RamaCare Polyclinic is focused on helping patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
+      description: 'Physiotherapy (also called physical therapy) at RamaCare Polyclinic in Jumeirah 1 helps patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
       paragraphs: [
-        'Physiotherapy at RamaCare Polyclinic is focused on helping patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
+        'Physiotherapy (also called physical therapy) at RamaCare Polyclinic in Jumeirah 1 helps patients move more comfortably, manage musculoskeletal problems and work towards better physical function.',
         'Treatment starts with an assessment of symptoms, movement, strength and functional limitations. Based on the findings, the physiotherapist can recommend an appropriate combination of hands-on treatment, therapeutic exercise and rehabilitation techniques.',
-        'Care may be useful for people dealing with back or neck discomfort, shoulder and knee problems, sports injuries, posture-related concerns, reduced mobility or recovery after surgery.',
+        'Care may help people with back or neck pain, shoulder and knee problems, sports injuries, jaw (TMJ) pain, posture-related strain, recovery after surgery, stroke or other neurological conditions, and children who need physiotherapy support.',
         'The goal is not simply to treat a painful area. Rehabilitation also considers how the problem affects everyday activities such as sitting, walking, working, exercising or returning to sport.'
       ],
-      ctaText: 'Meet Our Physiotherapists',
+      ctaText: 'Meet Our Physiotherapist',
       image: '/images/ph-top.jpg',
       imageAlt: 'Physiotherapist providing rehabilitation treatment in Dubai',
       overlayCard: {
-         number: '7',
+        number: '7',
         smallText: 'Days a week, 10am–10pm',
         boldText: 'Trusted Physiotherapy Care'
       }
     },
     treatments: {
-      heading: 'Physiotherapy Treatments at RamaCare',
+      heading: 'Physiotherapy Treatments in Jumeirah 1',
       subtitle: 'Different conditions require different physiotherapy approaches. Depending on the assessment, treatment may include hands-on techniques, therapeutic exercises, electrotherapy, dry needling or other rehabilitation methods.\n\nYour physiotherapist will recommend techniques appropriate for your symptoms, movement limitations and recovery goals rather than using the same approach for every patient.',
-      consultationCTA: {
-        heading: 'Ready to Move Better?',
-        subtext: 'Book your physiotherapy consultation today and start your journey to pain-free movement and improved function.',
-        buttonText: 'Consult Our Physiotherapists',
-        backgroundColor: 'bg-blue-600',
-        buttonColor: 'bg-white hover:bg-gray-100 text-blue-600'
-      },
+      
       treatments: [
         {
           id: 1,
@@ -1615,9 +1618,9 @@ export const categoryContent = {
           benefits: [
             'Reduces pain signals through targeted electrical nerve stimulation (TENS/NMES)',
             'Helps re-activate weakened or inhibited muscles after injury or surgery',
-            'Supports faster recovery alongside manual therapy and exercise'
+            'Can be combined with manual therapy and exercise in one plan'
           ],
-          idealFor: 'Patients with chronic pain conditions, post-surgical muscle weakness, or nerve-related discomfort seeking a safe, drug-free management option',
+          idealFor: 'Patients with chronic pain, muscle weakness after surgery, or nerve-related discomfort who want a non-drug option as part of their physiotherapy plan.',
           image: '/images/electro-therepy.jpg',
           alt: 'Electrotherapy stimulation session at RamaCare Polyclinic Dubai'
         },
@@ -1649,10 +1652,10 @@ export const categoryContent = {
           duration: '60-90 Mins',
           badgeColor: 'blue',
           benefits: [
-            'Improves spinal alignment and posture',
-            'Reduces back pain and muscle imbalance',
-            'Enhances mobility and functional movement',
-            'Prevents progression of spinal curvature'
+            'Exercises that support posture and spinal control',
+            'May help manage back pain and muscle imbalance',
+            'Works on mobility and everyday movement',
+            'Progress reviewed alongside your doctor’s monitoring of the curve'
           ],
           idealFor:
             'Children, adolescents, and adults diagnosed with scoliosis, individuals experiencing postural imbalance or chronic back pain',
@@ -1672,7 +1675,7 @@ export const categoryContent = {
             'Improves balance, flexibility, and coordination',
             'Strengthens muscles used in daily activities',
             'Enhances mobility and injury prevention',
-            'Supports faster recovery and long-term function'
+            'Supports a steady return to daily activities'
           ],
           idealFor:
             'Patients recovering from injury or surgery, athletes, elderly individuals, and those aiming to improve daily movement efficiency',
@@ -1689,13 +1692,13 @@ export const categoryContent = {
           duration: '30-45 Mins',
           badgeColor: 'red',
           benefits: [
-            'Relieves muscle tightness and trigger points',
-            'Reduces pain and inflammation',
-            'Improves blood circulation and muscle activation',
-            'Accelerates recovery and mobility'
+            'Targets muscle tightness and trigger points',
+            'May help reduce muscle-related pain',
+            'Used alongside exercise and manual therapy',
+            'Performed with single-use sterile needles'
           ],
           idealFor:
-            'Patients with muscle knots, sports injuries, chronic pain, or restricted movement seeking fast and effective relief',
+            'Patients with muscle knots, sports injuries, ongoing muscle pain or restricted movement, after the physiotherapist confirms it is suitable.',
           image: '/images/dry-needling-physiotherapy-dubai.jpg',
           alt: 'Dry needling therapy for targeted muscle release in Dubai'
         }
@@ -1708,13 +1711,26 @@ export const categoryContent = {
         buttonColor: 'bg-[#C9A547]'
       }
     },
+      moreServices: {
+      title: 'More Physiotherapy Services in Jumeirah 1',
+      intro: 'These services are offered after a physiotherapy assessment. If you are unsure which one applies to you, the physiotherapist will advise at your first visit.',
+      items: [
+        { title: 'Neurological and Stroke Rehabilitation', description: 'Exercise-based rehabilitation for balance, walking, strength and daily tasks after a stroke or with other neurological conditions.' },
+        { title: 'Paediatric Physiotherapy', description: 'Assessment and exercise programmes for children with movement, posture, coordination or sports-injury concerns.' },
+        { title: 'Manual Therapy', description: 'Hands-on joint mobilisation and soft-tissue techniques for stiffness and pain, combined with exercise.' },
+        { title: 'Shockwave Therapy', description: 'Acoustic-wave treatment that may be considered for persistent tendon problems such as plantar fasciitis or tennis elbow.' },
+        { title: 'Kinesio Taping', description: 'Elastic tape applied to support muscles and joints during sport, work or recovery.' },
+        { title: 'Cupping Therapy', description: 'Suction cups applied to soft tissue, used alongside physiotherapy for muscle tension.' },
+        { title: 'TMJ (Jaw) Physiotherapy', description: 'Exercises and manual techniques for jaw pain, clicking or limited mouth opening.' }
+      ]
+    },
     experts: {
       badge: 'Expert Medical Team',
-      title: 'Meet Our Physiotherapy Team',
-      description: 'Physiotherapy care at RamaCare is provided by DHA-licensed professionals who work with patients experiencing pain, movement limitations, injuries and rehabilitation needs.',
+      title: 'Meet Your Physiotherapist in Jumeirah 1',
+      description: 'Physiotherapy at RamaCare is provided by Jeena Mathew, a DHA-licensed physiotherapist (BPT, MPT) with more than 8 years of experience in musculoskeletal and rehabilitation care.',
       ctaSection: {
         title: 'Ready to Meet Your Physiotherapist?',
-        description: 'Schedule a personalized consultation with our expert therapists to begin your recovery journey.',
+        description: 'Book an assessment with Jeena. Same-day appointments are often available.',
         primaryButton: 'Book Consultation Now',
         secondaryButton: 'View Our Team'
       },
@@ -1727,7 +1743,7 @@ export const categoryContent = {
       paragraphs: [
         'Work routines, long periods of sitting, driving, exercise and repetitive activities can all affect how the body moves.',
         'People may seek physiotherapy when discomfort or stiffness starts affecting everyday activities such as working at a desk, walking, exercising, sleeping or returning to normal activity after an injury.',
-        'At RamaCare in Jumeirah 1, physiotherapy focuses on the individual’s symptoms and functional needs rather than applying the same treatment plan to everyone.'
+        'At RamaCare in Jumeirah 1, physiotherapy focuses on your symptoms and daily needs. Patients come from Jumeirah 1, Al Satwa, Al Hudaiba, Al Bada’a and Jumeirah 2, often in the evening after work.'
       ],
       benefits: [
         {
@@ -1755,7 +1771,7 @@ export const categoryContent = {
       imageAlt: 'Physiotherapy treatment room equipped for rehabilitation and exercise therapy in Jumeirah 1',
       ctaCard: {
         title: 'Physiotherapy Care in Jumeirah 1',
-        description: 'Book a consultation with our DHA-licensed physiotherapy team for personalized rehabilitation and movement support.'
+        description: 'Book a consultation with our DHA-licensed physiotherapist for personalised rehabilitation and movement support.'
       },
       bottomSection: {
         title: 'Physiotherapy Centre in Jumeirah 1, Dubai',
@@ -1764,71 +1780,37 @@ export const categoryContent = {
     },
     successStories: {
       badge: 'Patient Success Stories',
-      title: 'Real Recovery. Real Results.',
-      subtitle: 'Patients experience measurable improvement through structured Physiotherapy Treatment.',
-      
+      title: 'What Patients Say About RamaCare',
+      subtitle: 'Video stories and Google reviews from patients at our Jumeirah 1 clinic.',
+
       ctaSection: {
         title: 'Ready to start your recovery?',
-        description: 'Join thousands of satisfied patients who have regained mobility and returned to an active lifestyle with our expert physiotherapy in Dubai.',
+        description: 'Book a physiotherapy assessment in Jumeirah 1, open every day until 10pm.',
         buttonText: 'Start your journey today'
       },
     },
-    faq: {
-      title: 'Frequently Asked Questions – Physiotherapy in Dubai',
-      description: 'Clear, patient-focused information about our physiotherapy and rehabilitation services in Jumeirah 1.',
+      faq: {
+      title: 'Physiotherapy in Jumeirah 1, Dubai: Common Questions',
+      description: 'Clear answers about physiotherapy and rehabilitation at RamaCare Polyclinic in Jumeirah 1.',
       faqs: [
-        {
-          id: 1,
-          question: 'What is physiotherapy used for?',
-          answer: 'Physiotherapy can help people manage pain, stiffness, weakness and movement limitations. Depending on the condition, treatment may include exercise therapy, manual techniques, mobility work and other rehabilitation methods.'
-        },
-        {
-          id: 2,
-          question: 'How many physiotherapy sessions will I need?',
-          answer: 'There is no fixed number of sessions for everyone. Treatment duration depends on the condition, severity of symptoms, physical function and progress during rehabilitation.'
-        },
-        {
-          id: 3,
-          question: 'Can physiotherapy help with back pain?',
-          answer: 'Physiotherapy may help people with certain types of back pain by addressing movement, strength, mobility and functional limitations. The appropriate approach depends on the underlying cause and clinical assessment.'
-        },
-        {
-          id: 4,
-          question: 'Is physiotherapy useful after surgery?',
-          answer: 'Physiotherapy is commonly used as part of rehabilitation after selected surgeries. The timing and exercises depend on the type of surgery, medical advice and the patient’s recovery stage.'
-        },
-        {
-          id: 5,
-          question: 'Do I need a doctor’s referral?',
-          answer: 'Whether a referral is required depends on the patient’s situation and the type of care needed. Patients can contact the clinic to discuss their concern and appointment requirements.'
-        },
-        {
-          id: 6,
-          question: 'Is physiotherapy painful?',
-          answer: 'Some techniques or exercises may cause temporary discomfort, but treatment should be appropriate to the patient’s condition and tolerance. Patients should communicate with their physiotherapist if a technique causes significant or unusual pain.'
-        },
-        {
-          id: 7,
-          question: 'Can physiotherapy help with neck pain and posture?',
-          answer: 'Yes. Physiotherapy can address neck stiffness, upper back tension, and postural strain through manual therapy, joint mobility exercises, and ergonomic guidance.'
-        },
-        {
-          id: 8,
-          question: 'Can athletes benefit from physiotherapy?',
-          answer: 'Yes. Sports physiotherapy helps manage sports injuries, restore strength and flexibility, and support a safe, progressive return to physical activity.'
-        },
-        {
-          id: 9,
-          question: 'What conditions can be treated with physiotherapy?',
-          answer: 'Physiotherapy helps manage musculoskeletal concerns such as back pain, neck stiffness, shoulder and knee problems, sports injuries, tendon issues, and post-surgical recovery.'
-        },
-        {
-          id: 10,
-          question: 'How long does a physiotherapy session last?',
-          answer: 'A standard physiotherapy session typically lasts between 30 and 60 minutes depending on your individual treatment plan and the techniques involved.'
-        }
+        { id: 1, question: 'Where can I get physiotherapy in Jumeirah 1?', answer: 'RamaCare Polyclinic offers physiotherapy on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878 to book.' },
+        { id: 2, question: 'Can I get a same-day or evening physiotherapy appointment?', answer: 'Yes. Same-day physiotherapy appointments are available when slots are free, and the clinic is open until 10pm every day, including weekends. Walk-ins are welcome, but booking ahead on WhatsApp is the fastest way to secure a time.' },
+        { id: 3, question: 'Does insurance cover physiotherapy at RamaCare?', answer: 'RamaCare does not bill insurers directly. You pay at the clinic and claim the cost back from your insurer. Many plans only reimburse physiotherapy with a doctor’s referral and a set number of sessions, so check your policy before your first visit. The clinic provides itemised invoices for your claim.' },
+        { id: 4, question: 'Do I need a doctor’s referral for physiotherapy in Dubai?', answer: 'You can book a physiotherapy assessment at RamaCare without a referral. If your insurer needs a referral before it reimburses sessions, our GP works in the same clinic and can review you first.' },
+        { id: 5, question: 'How much does physiotherapy cost at RamaCare?', answer: 'A physiotherapy assessment at RamaCare starts from AED 200. Follow-up session prices depend on the techniques used and are confirmed when you book.' },
+        { id: 6, question: 'What happens at my first physiotherapy appointment?', answer: 'The first appointment is an assessment. The physiotherapist asks about your symptoms and history, checks your movement, strength and posture, explains the likely cause, and agrees a plan with you. Treatment and home exercises can often start in the same session.' },
+        { id: 7, question: 'How many physiotherapy sessions will I need?', answer: 'There is no fixed number. It depends on the condition, how long you have had it and how you respond. The physiotherapist reviews your progress at each session and tells you when the plan changes or is complete.' },
+        { id: 8, question: 'How long does a physiotherapy session last?', answer: 'A physiotherapy session usually lasts 30 to 60 minutes, depending on your treatment plan and the techniques used.' },
+        { id: 9, question: 'What should I wear to physiotherapy?', answer: 'Wear comfortable clothes that let the physiotherapist see and move the area being treated, such as shorts for knee problems or a loose top for neck or shoulder pain. Bring any scans, reports or doctor’s letters you have.' },
+        { id: 10, question: 'Who is the physiotherapist at RamaCare?', answer: 'Physiotherapy at RamaCare is provided by Jeena Mathew, a female DHA-licensed physiotherapist with BPT and MPT degrees and more than 8 years of musculoskeletal experience. If you have a preference about your practitioner, mention it when you book.' },
+        { id: 11, question: 'What conditions does physiotherapy at RamaCare treat?', answer: 'Common reasons people visit include back pain, sciatica, neck pain, shoulder and knee problems, sports injuries, jaw (TMJ) pain, posture-related strain, recovery after surgery, stroke and other neurological conditions, and children’s physiotherapy needs. The assessment confirms whether physiotherapy is suitable.' },
+        { id: 12, question: 'Is dry needling safe?', answer: 'Dry needling at RamaCare is done by a DHA-licensed physiotherapist with single-use sterile needles, after an assessment. Mild soreness for a day or two is common. Tell the physiotherapist if you are pregnant, take blood thinners or are afraid of needles, as another technique may suit you better.' },
+        { id: 13, question: 'Is physiotherapy painful?', answer: 'Physiotherapy should not be very painful. Some exercises or hands-on techniques can cause short-lived discomfort. Tell your physiotherapist if anything causes significant or unusual pain so the treatment can be adjusted.' },
+        { id: 14, question: 'Can I combine physiotherapy with Ayurveda?', answer: 'Yes. RamaCare has an Ayurveda doctor and a GP in the same clinic. Some patients with back, neck or joint pain use physiotherapy alongside Ayurvedic treatment, and both clinicians can see the plan.' },
+        { id: 15, question: 'Which languages does the RamaCare team speak?', answer: 'The clinic team speaks English, Arabic, Hindi, Malayalam and Tagalog, so you can book and ask questions in the language you are most comfortable with.' }
       ]
     },
+
     facility: {
       badge: 'Our Physiotherapy Facility',
       title: 'Advanced Physiotherapy & Rehabilitation Centre',
@@ -1925,7 +1907,7 @@ export const categoryContent = {
 
     programs: {
       badge: 'Personalised Rehabilitation Pathways',
-      heading: 'Physiotherapy Plans Built Around Your Recovery',
+      heading: 'Physiotherapy Rehabilitation for Back, Neck, Shoulder, Knee and Sports Injuries',
       subtitle: 'No two patients experience pain or movement problems in exactly the same way. Your symptoms, daily routine, physical activity, previous injuries, and recovery goals can all influence the type of physiotherapy you may need. At RamaCare Polyclinic in Jumeirah 1, Dubai, our physiotherapy approach starts with understanding your individual needs. Your physiotherapist can then develop a rehabilitation plan that progresses according to your condition, comfort, mobility, and functional goals.',
       programs: [
         {
@@ -1960,6 +1942,10 @@ export const categoryContent = {
             'Posture awareness',
             'Practical strategies for work and daily activities'
           ],
+           relatedLinks: 
+           [{ label: 'Neck pain treatment in Dubai', href: '/services/neck-pain-treatment-dubai/' }, 
+            { label: 'Cervical spondylosis physiotherapy', href: '/services/cervical-spondylosis-treatment-dubai/' }],
+
           ctaText: 'Book a Physiotherapy Assessment',
           ctaLink: '/book-appointment/'
         },
@@ -1976,6 +1962,11 @@ export const categoryContent = {
             'Building appropriate strength',
             'Developing better movement control',
             'Supporting a gradual return to normal activities'
+          ],
+          relatedLinks: 
+          [
+            { label: 'Shoulder pain treatment in Dubai', href: '/services/shoulder-pain-treatment-dubai/' }, 
+            { label: 'Frozen shoulder physiotherapy', href: '/services/frozen-shoulder-treatment-dubai/' }
           ],
           ctaText: 'Book a Shoulder Assessment',
           ctaLink: '/book-appointment/'
@@ -1995,6 +1986,11 @@ export const categoryContent = {
             'Functional movement'
           ],
           note: 'The appropriate approach depends on the cause of your symptoms and your individual assessment.',
+          relatedLinks: [
+            { label: 'Knee pain treatment in Dubai', href: '/services/knee-pain-treatment-dubai/' }, 
+            { label: 'Joint pain treatment', href: '/services/joint-pain-treatment-dubai/' }, 
+            { label: 'Plantar fasciitis treatment', href: '/services/plantar-fasciitis-treatment-dubai/' }
+          ],
           ctaText: 'Book a Physiotherapy Assessment',
           ctaLink: '/book-appointment/'
         },
@@ -2013,6 +2009,9 @@ export const categoryContent = {
             'Gradual return to exercise or sport'
           ],
           note: 'Your programme can be adjusted as your physical ability improves.',
+          relatedLinks: [
+            { label: 'Sports injury rehabilitation in Dubai', href: '/services/sports-injury-rehabilitation-dubai/' }
+          ],
           ctaText: 'Book Sports Injury Assessment',
           ctaLink: '/book-appointment/'
         },
@@ -2031,6 +2030,9 @@ export const categoryContent = {
             'Increasing confidence with physical activity'
           ],
           note: 'Your physiotherapist will work within the appropriate clinical guidance for your recovery.',
+           relatedLinks: [
+            { label: 'Post-surgery rehabilitation in Dubai', href: '/services/post-surgery-rehabilitation-dubai/' }
+          ],
           ctaText: 'Book Rehabilitation Assessment',
           ctaLink: '/book-appointment/'
         }
@@ -2044,7 +2046,7 @@ export const categoryContent = {
         ],
         buttons: [
           {
-           label: 'Book an Appointment',
+            label: 'Book an Appointment',
             href: '/book-appointment/',
             primary: true
           },
@@ -2383,7 +2385,7 @@ export const categoryContent = {
       ],
       consultationCTA: {
         heading: 'Not Sure Which Treatment is Right for You?',
-         subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book a consultation today and receive a personalized treatment plan tailored to your needs.',        buttonText: 'Book a Consultation',
+        subtext: 'Get expert guidance at RamaCare Polyclinic, a trusted Polyclinic in Dubai. Book a consultation today and receive a personalized treatment plan tailored to your needs.', buttonText: 'Book a Consultation',
         backgroundColor: 'bg-[#1E5A3C]',
         buttonColor: 'bg-[#C9A547]'
       }
@@ -2757,7 +2759,7 @@ export const categoryContent = {
         'Led by DHA-licensed aesthetic physicians, our expert team specializes in PRP facials, HydraFacial, Golden Elixir Facial, Oxygeneo Illuminate, and Exosomes Facial. Each plan is customized to your unique skin type and goals.',
         'We maintain the highest standards of hygiene and safety while using advanced devices and premium skincare products. Whether you want immediate glow, long-term skin rejuvenation, or anti-aging results, our approach merges expert care with luxury comfort.'
       ],
-      
+
       ctaText: 'Meet Our Facial Department',
       image: '/images/facial.jpg',
       imageAlt: 'Facial treatment',
@@ -2972,7 +2974,7 @@ export const categoryContent = {
       badge: 'Patient Success Stories',
       title: 'Real Results From Real People',
       subtitle: 'Hear from clients who experienced transformation through our facial treatments.',
-      
+
       ctaSection: {
         title: 'Ready to transform your skin?',
         description: 'Join thousands of satisfied clients who have achieved radiant, healthy skin with our luxury facial treatments in Dubai.',

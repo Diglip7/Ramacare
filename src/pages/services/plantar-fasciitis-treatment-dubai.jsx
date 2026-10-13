@@ -37,6 +37,8 @@ import {
   ClipboardCheck,
   Quote
 } from 'lucide-react';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+
 
 export default function PlantarFasciitisTreatmentPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -113,9 +115,17 @@ export default function PlantarFasciitisTreatmentPage() {
   const heroBlobStyleTwo = { transform: 'translateY(' + (scrollY * -0.15) + 'px)' };
 
   const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/plantar-fasciitis-treatment-dubai/";
-  const PAGE_TITLE = "Plantar Fasciitis Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Get expert Plantar Fasciitis Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized care, and proven heel pain relief. Book now.";
+  const PAGE_TITLE = seo.title;
+  const PAGE_DESCRIPTION = seo.metaDescription;
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
   const OG_IMAGE = "https://ramacarepolyclinic.ae/images/heel-anatomy-illustration-plantar-fasciitis.jpg";
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -128,7 +138,7 @@ export default function PlantarFasciitisTreatmentPage() {
             "@type": "ListItem",
             "position": i + 1,
             "name": b.label,
-            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+            "item": b.href && b.href.startsWith('http') ? b.href : SITE + b.href
           };
         })
       },
@@ -139,67 +149,43 @@ export default function PlantarFasciitisTreatmentPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
         "medicalAudience": { "@type": "Patient" },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Plantar Fasciitis",
-          "alternateName": "Heel Pain, Degenerative Fasciopathy"
-        },
-        "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
-        },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Plantar fasciitis",
+        "alternateName": ["Plantar fasciopathy", "Plantar heel pain", "Heel pain", "Policeman's heel"],
+        "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Plantar fascia" },
+        "signOrSymptom": symptoms.map(function (s) { return { "@type": "MedicalSymptom", "name": s }; }),
+        "possibleTreatment": [
+          therapy("Plantar fascia and calf stretching"),
+          therapy("Strengthening exercises"),
+          therapy("Shockwave therapy"),
+          therapy("Gait analysis and retraining"),
+          therapy("Kinesio taping"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Manual therapy")
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Plantar Fasciitis Treatment",
-        "alternateName": "Physiotherapy for Plantar Fasciitis and Heel Pain",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Comprehensive physiotherapy treatment for plantar fasciitis and heel pain combining manual therapy, targeted stretching, dry needling, foot taping, shockwave therapy, and custom rehabilitation exercises.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Plantar Fascia & Heel",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+97142862006",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -234,7 +220,7 @@ export default function PlantarFasciitisTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Illustration of heel anatomy showing the plantar fascia in Plantar Fasciitis Treatment Dubai" key="og:image:alt" />
+        <meta property="og:image:alt" content="Plantar fasciitis and heel pain treatment in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
@@ -368,8 +354,8 @@ export default function PlantarFasciitisTreatmentPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D30]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#1F5E4B]/10">
-                <p className="text-[#1F5E4B] font-bold text-sm">Plantar Fasciitis Specialist Care</p>
-                <p className="text-[#5F5F5F] text-xs mt-1">DHA-Licensed Specialist Physiotherapists in Jumeirah, Dubai</p>
+                <p className="text-[#1F5E4B] font-bold text-sm">Heel Pain Physiotherapy in Jumeirah 1</p>
+                <p className="text-[#5F5F5F] text-xs mt-1">DHA-licensed physiotherapist · Gait analysis · X-ray on site</p>
               </div>
             </motion.div>
           </div>
@@ -863,7 +849,7 @@ export default function PlantarFasciitisTreatmentPage() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose RamaCare Polyclinic?
+              Why Choose RamaCare for Heel Pain in Jumeirah 1?
             </h2>
             {whyChooseUsIntro ? (
               <p className="text-white/85 max-w-4xl mx-auto leading-relaxed">
@@ -933,7 +919,7 @@ export default function PlantarFasciitisTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions - Plantar Fasciitis Treatment Dubai
+                  Plantar Fasciitis & Heel Pain in Jumeirah 1: Common Questions
             </h2>
           </motion.div>
 
@@ -1021,11 +1007,11 @@ export default function PlantarFasciitisTreatmentPage() {
         <BookConsultation
           content={{
             badge: 'Start Your Recovery',
-            title: 'Book Plantar Fasciitis Treatment in Dubai Today',
-            description: 'Get back to comfortable, pain-free steps with evidence-based heel pain care at RamaCare Polyclinic.',
+            title: 'Book a Heel Pain Assessment in Jumeirah 1',
+            description: 'Physiotherapy assessment with gait analysis: AED 200. Open every day 10am–10pm, with same-day appointments when slots are free.',
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
-            submitButtonText: 'Confirm Free Consultation',
+            submitButtonText: 'Request Appointment',
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
@@ -1040,10 +1026,10 @@ export default function PlantarFasciitisTreatmentPage() {
               weekdaysTime: '10:00 AM - 10:00 PM',
             },
             statCards: [
-              { title: 'DHA Licensed', description: 'Certified Facility' },
-              { title: 'Experienced Team', description: '15+ Years Combined' },
-              { title: '2,500+ Patients', description: 'Treated' },
-              { title: '4.8/5 Rating', description: 'Patient Reviews' }
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'AED 200', description: 'Assessment + Gait Analysis' },
+              { title: 'GP & X-ray', description: 'In the Same Clinic' },
+              { title: 'Open Daily', description: '10am – 10pm' }
             ]
           }}
         />

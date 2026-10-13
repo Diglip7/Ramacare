@@ -61,11 +61,11 @@ export default function StressTreatmentPage() {
       {
         "@type": "Physician",
         "@id": `${CANONICAL_URL}#physician`,
-        "name": "Jeena Mathew",
-        "medicalSpecialty": "Musculoskeletal Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda Medicine",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA-Licensed Ayurveda Practitioner",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
         "worksFor": {
           "@type": "MedicalOrganization",
           "name": "RamaCare Polyclinic"

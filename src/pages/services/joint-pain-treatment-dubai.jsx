@@ -3,6 +3,11 @@ import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
 import { subcategoryContent } from '../../data/subcategoryContent';
+import { DOCTORS } from '../../data/doctors';
+
+const SITE = "https://ramacarepolyclinic.ae";
+const CANONICAL_URL = `${SITE}/services/joint-pain-treatment-dubai/`;
+const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
 
 export default function JointPainTreatmentPage() {
   const content = subcategoryContent['joint-pain-treatment-dubai'];
@@ -17,12 +22,24 @@ export default function JointPainTreatmentPage() {
     );
   }
 
-  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/joint-pain-treatment-dubai/";
-  const PAGE_TITLE = "Joint Pain Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Struggling with joint pain? Get expert Joint Pain Treatment Dubai care at RamaCare Polyclinic, Dubai. DHA-licensed team. Book your consultation today.";
-  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/physiotherapist-assessing-knee-joint-pain-dubai.jpg";
+  const PAGE_TITLE = content.seo.title;
+  const PAGE_DESCRIPTION = content.seo.metaDescription;
+  const OG_IMAGE = `${SITE}/images/physiotherapist-assessing-knee-joint-pain-dubai.jpg`;
+
+  // Physiotherapist first, then GP (tests, X-ray, referrals), then Ayurveda doctor
+  const pageDoctors = [
+    DOCTORS['jeena-mathew-physiotherapist-dubai'],
+    DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai'],
+    DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai']
+  ].filter(Boolean);
 
   const { breadcrumbs, faqs } = content;
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -35,7 +52,7 @@ export default function JointPainTreatmentPage() {
             "@type": "ListItem",
             "position": i + 1,
             "name": b.label,
-            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+            "item": b.href && b.href.startsWith('http') ? b.href : SITE + b.href
           };
         })
       },
@@ -43,49 +60,43 @@ export default function JointPainTreatmentPage() {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
-        "name": "Joint Pain Treatment Dubai",
+        "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "medicalAudience": "Patient",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Joint Pain"
-        },
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Jeena Mathew",
-          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        },
-        "publisher": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1, Dubai",
-            "addressCountry": "AE"
-          }
-        }
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Joint pain",
+        "alternateName": ["Arthralgia", "Joint stiffness"],
+        "possibleTreatment": [
+          therapy("Physiotherapy assessment and exercise rehabilitation", "/services/physiotherapy-dubai/"),
+          therapy("Manual therapy and joint mobilisation"),
+          therapy("Shockwave therapy"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Electrotherapy", "/services/electrotherapy-dubai/"),
+          therapy("Ultrasound therapy", "/services/ultrasound-therapy-dubai/"),
+          therapy("Kinesio taping")
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Musculoskeletal Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -94,10 +105,7 @@ export default function JointPainTreatmentPage() {
           return {
             "@type": "Question",
             "name": f.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": f.answer
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": f.answer }
           };
         })
       }
@@ -120,7 +128,7 @@ export default function JointPainTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Joint Pain Treatment in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Joint pain treatment in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
@@ -130,7 +138,7 @@ export default function JointPainTreatmentPage() {
         <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
         <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
-        {/* Structured Data Schemas */}
+        {/* Structured Data */}
         <script
           key="schema-graph"
           type="application/ld+json"
@@ -138,7 +146,7 @@ export default function JointPainTreatmentPage() {
         />
       </Head>
 
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate content={{ ...content, doctors: pageDoctors }} />
     </Layout>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
 import { ChevronRight, Home } from 'lucide-react';
 import Head from 'next/head';
 
@@ -52,7 +53,7 @@ const HeroSection = ({ content }) => {
   const stats = content?.stats || [
     { number: '7', label: 'Days a week, 10am–10pm' },
     { number: '5', label: 'Departments under one roof' },
-    { number: '4.8', label: 'Google rating' },
+    { number: GOOGLE_RATING_FALLBACK.rating.toFixed(1), label: 'Google rating' },
     { number: 'DHA', label: 'Licensed facility' }
   ];
   const features = content?.features || [
@@ -319,8 +320,8 @@ const HeroSection = ({ content }) => {
 
               {/* Rating Info */}
               <div>
-                <div className="text-2xl text-[#F5F5F5] leading-none mb-0.5">4.8/5</div>
-                <div className="text-[10px] text-[#F5F5F5]/70 mb-1.5">Patient Rating</div>
+                <div className="text-2xl text-[#F5F5F5] leading-none mb-0.5">{content?.ratingLabel || GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5</div>
+                <div className="text-[10px] text-[#F5F5F5]/70 mb-1.5">Google Rating</div>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-3 h-3 text-[#C9A24D]" fill="currentColor" viewBox="0 0 20 20">

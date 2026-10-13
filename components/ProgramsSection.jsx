@@ -294,6 +294,19 @@ const ProgramsSection = ({ content }) => {
                     {program.note}
                   </p>
                 )}
+                                {Array.isArray(program.relatedLinks) && program.relatedLinks.length > 0 && (
+                  <p className="text-[13px] leading-relaxed mb-4">
+                    <span className="text-[#6B7280]">Read more: </span>
+                    {program.relatedLinks.map((l, i) => (
+                      <span key={l.href}>
+                        <Link href={l.href} className="text-[#0F4C3A] font-medium underline underline-offset-2 hover:text-[#C9A547]">
+                          {l.label}
+                        </Link>
+                        {i < program.relatedLinks.length - 1 ? ' · ' : ''}
+                      </span>
+                    ))}
+                  </p>
+                )}
 
                 {program.benefits && Array.isArray(program.benefits) && program.benefits.length > 0 && (
                   <ul className="space-y-3 mb-6 flex-grow">

@@ -6,14 +6,15 @@
  */
 
 import { DOCTORS, DOCTOR_GROUPS } from './doctors';
+import { GOOGLE_RATING_FALLBACK } from './clinicStats';
 
 
 export const newPagesContent = {
   'anxiety-treatment-dubai': {
     byline: {
-      reviewer: "Jeena Mathew",
-      credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/jeena-mathew-physiotherapist-dubai/",
+      reviewer: "Dr. Shamna Keloth Meethal",
+      credentials: "BAMS · DHA Licensed Ayurveda Doctor",
+      href: "/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
       date: "July 2026"
     },
     seo: {
@@ -27,7 +28,7 @@ export const newPagesContent = {
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services/" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
+      { label: "Ayurveda", href: "/services/ayurveda-dubai/" },
       { label: "Anxiety Treatment", href: "/services/anxiety-treatment-dubai/" }
     ],
     hero: {
@@ -298,9 +299,9 @@ export const newPagesContent = {
 
   'stress-treatment-dubai': {
     byline: {
-      reviewer: "Jeena Mathew",
-      credentials: "DHA-Licensed Physiotherapist",
-      href: "/doctors/jeena-mathew-physiotherapist-dubai/",
+      reviewer: "Dr. Shamna Keloth Meethal",
+      credentials: "BAMS · DHA Licensed Ayurveda Practitioner",
+      href: "/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
       date: "July 2026"
     },
     seo: {
@@ -314,7 +315,7 @@ export const newPagesContent = {
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services/" },
-      { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
+      { label: "Ayurveda", href: "/services/ayurveda-dubai/" },
       { label: "Stress Treatment", href: "/services/stress-treatment-dubai/" }
     ],
     concerns: [
@@ -910,7 +911,7 @@ export const newPagesContent = {
 Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
 
 Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
-      rating: '4.8/5 Average Google Rating',
+      rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
       topBadges: [
         { icon: 'location', text: 'Jumeirah 1, Dubai' },
         { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
@@ -974,8 +975,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       { title: 'Knee Pain (Muscular Origin)', description: 'Relieves quad and IT band tension pulling unevenly on the patella.', link: '/services/knee-pain-treatment-dubai/' },
       { title: 'Sciatica-Type Leg Pain', description: 'Releases the deep piriformis muscle where it impinges or irritates the sciatic nerve.', link: null },
       { title: 'Tension Headaches', description: 'Targets suboccipital and upper trapezius trigger points referring pain over the scalp.', link: '/services/migraine-treatment-dubai/' },
-      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/office-neck-treatment-dubai/' },
-      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-recovery-dubai/' }
+      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/neck-pain-treatment-dubai/' },
+      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-rehabilitation-dubai/' }
     ],
     sportsProtocol: [
       { step: '01', title: 'Clinical Movement Analysis', desc: 'Work out what actually happened and how the injury is affecting movement.' },
@@ -1187,7 +1188,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       name: 'Jeena Mathew',
       qualifications: 'BPT, MPT (Physiotherapy)',
       title: 'DHA Licensed Physiotherapist | Musculoskeletal Physiotherapy Specialist',
-      experience: '8+ Years Clinical Experience | 600+ Patients Treated',
+      experience: '8+ Years Clinical Experience',
       bio: 'Jeena has spent most of her career on musculoskeletal cases specifically — the kind of work where the job is figuring out exactly why a muscle or joint isn’t cooperating, not just treating whatever hurts today.',
       focusAreas: [
         'Back pain — manual therapy combined with targeted strengthening',
@@ -1203,7 +1204,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       reviewerName: 'Jeena Mathew',
       reviewerRole: 'Musculoskeletal Physiotherapy Specialist',
       reviewerCredentials: 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist',
-      reviewerExperience: '8+ Years Clinical Experience · 600+ Patients Treated',
+      reviewerExperience: '8+ Years Clinical Experience',
       reviewStatement: '“I reviewed this page myself to make sure it reflects how we actually practise here — not a generic description of dry needling copied from somewhere else.” — Jeena Mathew',
       boardName: 'RamaCare Medical Review Board · Jumeirah 1, Dubai'
     },
@@ -1236,14 +1237,14 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', desc: 'Comprehensive manual therapy, spinal decompression exercises, and postural restoration.' },
       { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', desc: 'Targeted rehabilitation for patellofemoral strain, ligament recovery, and osteoarthritis.' },
       { title: 'Migraine & Tension Headache Care', link: '/services/migraine-treatment-dubai/', desc: 'Relieve cervical muscular triggers and suboccipital nerve compression causing headaches.' },
-      { title: 'Post-Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
-      { title: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
+      { title: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
+      { title: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
       { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', desc: 'Guidance and full reimbursement documentation support for major UAE health insurers.' }
     ],
     testimonials: {
       title: 'What Our Patients Say',
       subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
-      rating: '4.8/5 Average Google Rating',
+      rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
     
       testimonials: [
         { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },
@@ -1302,7 +1303,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
 Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
 
 Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
-      rating: '4.8/5 Average Google Rating',
+      rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
       topBadges: [
         { icon: 'location', text: 'Jumeirah 1, Dubai' },
         { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
@@ -1366,8 +1367,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       { title: 'Knee Pain (Muscular Origin)', description: 'Relieves quad and IT band tension pulling unevenly on the patella.', link: '/services/knee-pain-treatment-dubai/' },
       { title: 'Sciatica-Type Leg Pain', description: 'Releases the deep piriformis muscle where it impinges or irritates the sciatic nerve.', link: null },
       { title: 'Tension Headaches', description: 'Targets suboccipital and upper trapezius trigger points referring pain over the scalp.', link: '/services/migraine-treatment-dubai/' },
-      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/office-neck-treatment-dubai/' },
-      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-recovery-dubai/' }
+      { title: 'Postural Desk Strain', description: 'Counters the forward head and rounded shoulder pattern common in Dubai corporate life.', link: '/services/neck-pain-treatment-dubai/' },
+      { title: 'Post-Surgery Stiffening', description: 'Safely releases compensatory muscle splinting around healing joints.', link: '/services/post-surgery-rehabilitation-dubai/' }
     ],
     sportsProtocol: [
       { step: '01', title: 'Clinical Movement Analysis', desc: 'Work out what actually happened and how the injury is affecting movement.' },
@@ -1579,7 +1580,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       name: 'Jeena Mathew',
       qualifications: 'BPT, MPT (Physiotherapy)',
       title: 'DHA Licensed Physiotherapist | Musculoskeletal Physiotherapy Specialist',
-      experience: '8+ Years Clinical Experience | 600+ Patients Treated',
+      experience: '8+ Years Clinical Experience',
       bio: 'Jeena has spent most of her career on musculoskeletal cases specifically — the kind of work where the job is figuring out exactly why a muscle or joint isn’t cooperating, not just treating whatever hurts today.',
       focusAreas: [
         'Back pain — manual therapy combined with targeted strengthening',
@@ -1595,7 +1596,7 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       reviewerName: 'Jeena Mathew',
       reviewerRole: 'Musculoskeletal Physiotherapy Specialist',
       reviewerCredentials: 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist',
-      reviewerExperience: '8+ Years Clinical Experience · 600+ Patients Treated',
+      reviewerExperience: '8+ Years Clinical Experience',
       reviewStatement: '“I reviewed this page myself to make sure it reflects how we actually practise here — not a generic description of dry needling copied from somewhere else.” — Jeena Mathew',
       boardName: 'RamaCare Medical Review Board · Jumeirah 1, Dubai'
     },
@@ -1628,14 +1629,14 @@ Ignoring it rarely makes it go away on its own. It usually just gets more entren
       { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', desc: 'Comprehensive manual therapy, spinal decompression exercises, and postural restoration.' },
       { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', desc: 'Targeted rehabilitation for patellofemoral strain, ligament recovery, and osteoarthritis.' },
       { title: 'Migraine & Tension Headache Care', link: '/services/migraine-treatment-dubai/', desc: 'Relieve cervical muscular triggers and suboccipital nerve compression causing headaches.' },
-      { title: 'Post-Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
-      { title: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
+      { title: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', desc: 'Safe, structured progressive rehab following orthopedic and spinal surgeries.' },
+      { title: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', desc: 'Ergonomic correction, joint mobilization, and postural release for desk professionals.' },
       { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', desc: 'Guidance and full reimbursement documentation support for major UAE health insurers.' }
     ],
     testimonials: {
       title: 'What Our Patients Say',
       subtitle: 'Verified feedback from patients who found lasting relief through assessment-led dry needling at RamaCare Polyclinic.',
-      rating: '4.8/5 Average Google Rating',
+      rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
       
       testimonials: [
         { id: 1, videoUrl: '/Videos/testimonial-1.mp4', thumbnail: '/images/Thumb-1.jpeg' },

@@ -32,6 +32,7 @@ import {
   Users,
   Zap
 } from 'lucide-react';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
 
 export default function DryNeedlingPage() {
   const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/dry-needling-dubai/';
@@ -62,7 +63,7 @@ export default function DryNeedlingPage() {
 Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
 
 Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
-    rating: '4.8/5 Average Google Rating',
+    rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
     topBadges: [
       { icon: 'location', text: 'Jumeirah 1, Dubai' },
       { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
@@ -205,8 +206,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
     { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/' },
     { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/' },
     { title: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/' },
-    { title: 'Post-Surgery Recovery', link: '/services/post-surgery-recovery-dubai/' },
-    { title: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/' },
+    { title: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/' },
+    { title: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/' },
     { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/' }
   ];
 
@@ -455,7 +456,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   What We Treat With It
                 </h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
-                  Most of what walks through our door falls into a fairly predictable list: neck pain and stiffness, <Link href="/services/back-pain-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">lower back tightness</Link>, shoulder pain (frozen shoulder included), sports strains, stubborn trigger points and spasms, tennis and golfer’s elbow, <Link href="/services/knee-pain-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">knee pain</Link> that’s tied to the surrounding muscles rather than the joint itself, sciatica-type leg pain where the piriformis is involved, <Link href="/services/migraine-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">tension headaches</Link>, postural pain from years at a desk, and stiffness left behind after <Link href="/services/post-surgery-recovery-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">surgery or a bigger injury</Link>.
+                  Most of what walks through our door falls into a fairly predictable list: neck pain and stiffness, <Link href="/services/back-pain-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">lower back tightness</Link>, shoulder pain (frozen shoulder included), sports strains, stubborn trigger points and spasms, tennis and golfer’s elbow, <Link href="/services/knee-pain-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">knee pain</Link> that’s tied to the surrounding muscles rather than the joint itself, sciatica-type leg pain where the piriformis is involved, <Link href="/services/migraine-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">tension headaches</Link>, postural pain from years at a desk, and stiffness left behind after <Link href="/services/post-surgery-rehabilitation-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">surgery or a bigger injury</Link>.
                 </p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   Not everything on that list responds the same way, and not every patient with, say, “knee pain” is actually dealing with a muscular issue — some are, some aren’t, and figuring out which is half the point of the first appointment.
@@ -473,8 +474,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   { title: 'Knee Pain (Muscular)', link: '/services/knee-pain-treatment-dubai/' },
                   { title: 'Sciatica / Piriformis Pain', link: null },
                   { title: 'Tension Headaches', link: '/services/migraine-treatment-dubai/' },
-                  { title: 'Desk Postural Pain', link: '/services/office-neck-treatment-dubai/' },
-                  { title: 'Post-Surgery Stiffness', link: '/services/post-surgery-recovery-dubai/' },
+                  { title: 'Desk Postural Pain', link: '/services/neck-pain-treatment-dubai/' },
+                  { title: 'Post-Surgery Stiffness', link: '/services/post-surgery-rehabilitation-dubai/' },
                   { title: 'Repetitive Strain Injury', link: null }
                 ].map((item, idx) => (
                   <div key={idx} className="p-3.5 rounded-xl bg-[#FAF9F5] border border-gray-200/80 hover:border-[#1F5E4B] transition-colors flex items-center justify-between text-xs sm:text-sm font-semibold text-gray-800 group">
@@ -522,7 +523,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                     If you spend your day between a laptop and a car seat, your upper traps and levator scapulae are probably the tightest muscles in your body, and you probably don’t need me to tell you that. This is the single most common reason people come in asking about dry needling.
                   </p>
                   <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                    It usually works best alongside some blunt conversation about your desk chair, monitor height, and how many hours you’re actually sitting still — the kind of thing we cover in more detail in our <Link href="/services/office-neck-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">office neck treatment</Link> programme — because a released muscle that goes straight back into the same posture tends to tighten right back up within a couple of weeks.
+                    It usually works best alongside some blunt conversation about your desk chair, monitor height, and how many hours you’re actually sitting still — the kind of thing we cover in more detail in our <Link href="/services/neck-pain-treatment-dubai/" className="font-semibold text-[#1F5E4B] underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B]">neck pain treatment</Link> programme — because a released muscle that goes straight back into the same posture tends to tighten right back up within a couple of weeks.
                   </p>
                 </div>
                 <div className="mt-3 pt-3 border-t border-emerald-200/60 text-xs font-semibold text-[#1F5E4B] flex items-center gap-1.5">
@@ -1309,7 +1310,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 <span>DHA Licensed Polyclinic Standards</span>
               </div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
-                Reviewed by Jeena Mathew — Musculoskeletal Physiotherapy Specialist, BPT, MPT (Physiotherapy), DHA Licensed Physiotherapist, 8+ Years Clinical Experience, 600+ Patients Treated.
+                Reviewed by Jeena Mathew — Musculoskeletal Physiotherapy Specialist, BPT, MPT (Physiotherapy), DHA Licensed Physiotherapist, 8+ Years Clinical Experience.
               </h3>
               <div className="bg-[#FAF9F5] p-5 rounded-xl border border-gray-200 italic text-gray-700 text-sm md:text-base leading-relaxed my-3 border-l-4 border-l-[#1F5E4B]">
                 “I reviewed this page myself to make sure it reflects how we actually practise here — not a generic description of dry needling copied from somewhere else.” — Jeena Mathew

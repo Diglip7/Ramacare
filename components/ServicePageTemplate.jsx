@@ -6,6 +6,7 @@ import DoctorsSection from './DoctorsSection';
 import QuickNavigation from './QuickNavigation';
 import ContentReviewBadge from './ContentReviewBadge';
 import { DOCTOR_GROUPS } from '../src/data/doctors';
+import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
 import {
   Calendar,
   CheckCircle,
@@ -20,13 +21,20 @@ import {
 } from 'lucide-react';
 
 // Renders text containing {{Label|/href}} tokens as real inline links.
-export function LinkedText({ text, className }) {
+export function LinkedText({ text, className, linkClassName, variant = 'default' }) {
   if (!text) return null;
   const regex = /\{\{([^|]+)\|([^}]+)\}\}/g;
   const parts = [];
   let lastIndex = 0;
   let match;
   let key = 0;
+
+  const defaultLinkClass =
+    variant === 'light' || variant === 'onDark'
+      ? "text-white font-semibold underline decoration-white/70 hover:text-[#C9A961] hover:decoration-[#C9A961] underline-offset-4 transition-colors"
+      : "text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors";
+
+  const resolvedLinkClass = linkClassName || defaultLinkClass;
 
   while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
@@ -36,7 +44,7 @@ export function LinkedText({ text, className }) {
       <a
         key={key++}
         href={match[2]}
-        className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors"
+        className={resolvedLinkClass}
       >
         {match[1]}
       </a>
@@ -223,7 +231,7 @@ export default function ServicePageTemplate({ content }) {
 
                   <h3 className="text-lg sm:text-xl font-bold text-[#1A1A1A] mb-3 sm:mb-4">RamaCare Patient Care</h3>
                   <p className="text-[#5F5F5F] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-                    Our facility provides integrated orthopedic diagnostics, pain management, physical therapies, and clinical rehabilitation protocols.
+                    {content.facilityNote || 'DHA-licensed polyclinic in Jumeirah 1, Dubai, open every day 10am–10pm.'}
                   </p>
 
                   <div className="space-y-3 sm:space-y-4 border-t border-gray-100 pt-4 sm:pt-6">
@@ -237,7 +245,7 @@ export default function ServicePageTemplate({ content }) {
                     </div>
                     <div className="flex justify-between text-xs sm:text-sm">
                       <span className="font-semibold text-[#5F5F5F]">Clinical Focus</span>
-                      <span className="text-[#D4A574] font-bold">Conservative Spine & Joint Care</span>
+                      <span className="text-[#D4A574] font-bold">{content.clinicalFocus || 'Assessment-led care'}</span>
                     </div>
                   </div>
                 </div>
@@ -529,7 +537,7 @@ export default function ServicePageTemplate({ content }) {
                 <div>
                   <h5 className="font-bold text-sm text-[#1A1A1A] mb-1">{images.physio.title}</h5>
                   <p className="text-xs text-[#5F5F5F] leading-relaxed mb-1">{images.physio.caption}</p>
-                  <p className="text-xs text-[#5F5F5F]">Thorough evaluation verifies active movement restrictions and compensation patterns.</p>
+                 
                 </div>
               </div>
             </div>
@@ -541,7 +549,7 @@ export default function ServicePageTemplate({ content }) {
 
                 {selectedSymptoms.length === 0 ? (
                   <div className="text-center py-8">
-                    <p className="text-[#5F5F5F] text-sm">Please select symptoms on the left to see clinical assessment guidelines.</p>
+                    <p className="text-[#5F5F5F] text-sm">Tick any symptoms that apply to you to see when to book an assessment.</p>
                   </div>
                 ) : (
                   <div>
@@ -846,7 +854,7 @@ export default function ServicePageTemplate({ content }) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">{recoveryTimeline.title}</h2>
-            <p className="text-base sm:text-lg text-[#5F5F5F]">Select a severity profile to view expected timeline & factors.</p>
+                <p className="text-base sm:text-lg text-[#5F5F5F]">{recoveryTimeline.intro || 'Choose the option closest to your situation to see a typical timeline.'}</p>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -903,7 +911,7 @@ export default function ServicePageTemplate({ content }) {
                     >
                       {recoverySeverity === 'mild' && (
                         <div>
-                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">Progress in 2 to 4 Weeks</h3>
+                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">{recoveryTimeline.cases[0].timeframe || recoveryTimeline.cases[0].name}</h3>
                           <p className="text-[#5F5F5F] text-base leading-relaxed mb-6">
                             {recoveryTimeline.cases[0].description}
                           </p>
@@ -911,7 +919,7 @@ export default function ServicePageTemplate({ content }) {
                       )}
                       {recoverySeverity === 'moderate' && (
                         <div>
-                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4 text-[#1F5E4B]">Function in 4 to 8 Weeks</h3>
+                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">{recoveryTimeline.cases[1].timeframe || recoveryTimeline.cases[1].name}</h3>
                           <p className="text-[#5F5F5F] text-base leading-relaxed mb-6">
                             {recoveryTimeline.cases[1].description}
                           </p>
@@ -919,7 +927,7 @@ export default function ServicePageTemplate({ content }) {
                       )}
                       {recoverySeverity === 'severe' && (
                         <div>
-                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">8+ Weeks / Maintenance</h3>
+                          <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">{recoveryTimeline.cases[2].timeframe || recoveryTimeline.cases[2].name}</h3>
                           <p className="text-[#5F5F5F] text-base leading-relaxed mb-6">
                             {recoveryTimeline.cases[2].description}
                           </p>
@@ -1052,7 +1060,7 @@ export default function ServicePageTemplate({ content }) {
             if (contextStr.includes('dental') || contextStr.includes('teeth') || contextStr.includes('veneer') || contextStr.includes('root-canal') || contextStr.includes('crown') || contextStr.includes('smile') || contextStr.includes('braces')) {
               return DOCTOR_GROUPS.DENTAL;
             }
-            if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya')) {
+            if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya') || contextStr.includes('anxiety') || contextStr.includes('insomnia')) {
               return DOCTOR_GROUPS.AYURVEDA;
             }
             if (contextStr.includes('physician') || contextStr.includes('general-physician') || contextStr.includes('gp') || contextStr.includes('check-up')) {
@@ -1109,7 +1117,7 @@ export default function ServicePageTemplate({ content }) {
                     {(content.supportTags || whyChooseUs?.tags || (
                       (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('anxiety')) ? ['Stress Management', 'Physiotherapy', 'Ayurvedic Wellness'] :
                         (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress')) ? ['Anxiety Support', 'Physiotherapy', 'Ayurvedic Wellness'] :
-                          ['Joint pain', 'Sports Rehab', 'Orthopedic Care']
+                          []
                     )).map((tag, idx) => (
                       <span key={idx} className="px-2.5 py-1 bg-white text-[#5F5F5F] text-[10px] rounded-full border border-gray-200">{tag}</span>
                     ))}
@@ -1208,7 +1216,7 @@ export default function ServicePageTemplate({ content }) {
                 ? 'Take the first step toward feeling calmer and more like yourself, with evidence-based supportive care at RamaCare Polyclinic.'
                 : (((content?.category || '') + ' ' + (seo?.slug || '') + ' ' + (seo?.title || '') + ' ' + JSON.stringify(breadcrumbs || [])).toLowerCase().includes('stress'))
                   ? 'Take the first step toward feeling calmer, more energized, and more in control, with evidence-based supportive care at RamaCare Polyclinic.'
-                  : 'Get back to comfortable, pain-free joint movement with evidence-based care at RamaCare Polyclinic.'
+                  : 'Book an assessment at RamaCare Polyclinic in Jumeirah 1, open every day 10am–10pm.'
             ),
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
@@ -1230,15 +1238,13 @@ export default function ServicePageTemplate({ content }) {
             },
             statCards: [
               { title: 'DHA Licensed', description: 'Certified Facility' },
-              { title: 'Experienced Team', description: '10+ Years Combined' },
+              { title: 'Open Daily', description: '10am – 10pm' },
               { title: 'Personalized Plans', description: 'Built Around Assessment' },
-              { title: '4.8/5 Rating', description: 'Patient Reviews' }
+              { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
             ],
             concerns: content.concerns || [
-              { value: seo.slug.replace('/', ''), label: 'Primary Joint Treatment' },
-              { value: 'knee-pain-treatment-dubai', label: 'Knee Pain / Arthritis' },
-              { value: 'shoulder-pain-treatment-dubai', label: 'Shoulder Pain / Stiffness' },
-              { value: 'back-pain-treatment-dubai', label: 'Back Pain / Spine Wear' }
+                            { value: seo.slug.replace('/', ''), label: seo.title.split('|')[0].trim() },
+              { value: 'other', label: 'Other concern' }
             ]
           }}
         />

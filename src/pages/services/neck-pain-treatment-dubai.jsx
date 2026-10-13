@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import QuickNavigation from '../../../components/QuickNavigation';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import BookConsultation from '../../../components/BookConsultation';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -39,6 +40,7 @@ export default function NeckPainTreatmentPage() {
     { id: 'common-causes', label: 'Causes' },
     { id: 'symptoms', label: 'Symptoms' },
     { id: 'risk-factors', label: 'Risk Factors' },
+    { id: 'desk-neck', label: 'Desk Neck & Headaches' },
     { id: 'diagnosis', label: 'Diagnosis' },
     { id: 'treatments', label: 'Treatments' },
     { id: 'recovery-timeline', label: 'Recovery' },
@@ -53,270 +55,208 @@ export default function NeckPainTreatmentPage() {
   }, []);
 
   const symptoms = [
-    'Neck stiffness, especially in the morning — one of the most frequent reasons patients seek treatment',
-    'Joint stiffness that limits how far you can turn your head',
-    'Pain while turning or tilting the head',
+    'Stiff neck, especially in the morning or after sleeping awkwardly',
+    'Pain when turning or tilting the head, for example when reversing the car',
     'Headaches starting at the base of the skull',
-    'Shoulder pain or tightness',
-    'Arm pain that radiates from the neck',
-    'Tingling sensations in the arm or hand',
-    'Numbness along the arm',
-    'Muscle weakness in the arm or hand',
-    'Muscle spasms in the neck or upper back',
+    'Pain or tightness across the shoulders and upper back',
+    'Pain between the shoulder blades',
+    'Arm pain that spreads from the neck',
+    'Tingling or numbness in the arm or hand',
+    'Weakness in the arm or hand',
+    'Muscle spasm in the neck or upper back',
     'Reduced range of motion when looking side to side'
   ];
 
   const riskFactors = [
-    'Sedentary lifestyle — weak postural muscles struggle to support the head properly',
-    'Long computer use — hours at a screen encourage forward head posture',
-    'Mobile phone overuse — constantly looking down loads the cervical spine',
-    'Poor ergonomics — desks, chairs, and monitors set up incorrectly strain the neck',
-    'Heavy lifting — improper lifting technique can strain neck and shoulder muscles',
-    'Previous injuries — an old whiplash or sports injury can leave lasting vulnerability',
-    'Aging — natural wear on the cervical discs and joints increases with age'
+    'Long hours at a laptop or desk, often with the screen too low',
+    'Looking down at a phone for long periods ("text neck")',
+    'Long daily drives in Dubai traffic',
+    'Stress, which often settles as tension in the neck and shoulders',
+    'Weak upper-back and deep neck muscles',
+    'A previous whiplash or sports injury',
+    'Age-related wear in the neck joints and discs'
   ];
 
   const whenToSeePhysio = [
-    'Pain that persists beyond a few days',
-    'Pain lasting more than a week without improvement',
-    'Numbness or tingling running down your arm',
-    'Noticeable muscle weakness in your arm or hand',
-    'Loss of normal neck movement',
-    'Pain that began after an injury or accident',
-    'Neck pain that keeps returning in cycles'
+    'Pain that has not improved after a few days',
+    'Stiffness that limits turning your head or driving',
+    'Headaches that start in the neck',
+    'Numbness or tingling in the arm or hand',
+    'Weakness in the arm or hand',
+    'Pain after a car accident, fall or sports injury',
+    'Neck pain that keeps coming back'
   ];
 
   const urgentSigns = [
-    'Severe pain after a fall, accident, or blow to the head or neck',
-    'Sudden weakness or numbness affecting both arms or legs',
-    'Loss of bladder or bowel control alongside neck pain'
+    'Severe pain after a fall, accident or blow to the head or neck',
+    'Sudden weakness or numbness in both arms or legs, or trouble walking',
+    'Loss of bladder or bowel control with neck pain',
+    'Neck pain with fever and a stiff neck that stops you bending your chin to your chest',
+    'Sudden, severe headache unlike any before'
   ];
 
   const diagnosisSteps = [
-    'Medical history — understanding when your pain started, what triggers it, and any past injuries',
-    'Physical examination — checking the neck, shoulders, and upper back for tenderness and muscle tightness',
-    'Posture analysis — identifying forward head posture or other alignment issues contributing to strain',
-    'Cervical mobility testing — measuring how far and how comfortably you can move your neck',
-    'Neurological examination — testing reflexes, sensation, and strength to check for nerve involvement',
-    'Functional assessment — observing how your neck pain affects daily movement and activity',
-    'Imaging referrals when necessary — X-ray or MRI referrals for cases that don\'t respond as expected or show warning signs'
+    'History: when the pain started, your work, driving, sleep and any past injuries',
+    'Posture check: forward head position and rounded shoulders at the desk',
+    'Neck movement testing: how far and how comfortably you can turn, tilt and nod',
+    'Muscle examination: tender points and tightness in the neck, shoulders and upper back',
+    'Nerve tests: reflexes, sensation and strength in the arms, if pain or tingling spreads',
+    'GP review if needed: our GP can examine you and suggest or prescribe medication where appropriate',
+    'X-ray in the clinic if needed, for example after whiplash or a fall; MRI by referral'
   ];
 
   const treatments = [
     {
       title: 'Manual Therapy',
-      description: 'Hands-on techniques that ease muscle tension, improve joint mobility, and reduce pain in the early stages of treatment. Often the starting point for those with significant stiffness or muscle spasm.'
+      description: 'Hands-on joint mobilisation and soft-tissue techniques to ease stiffness and muscle spasm. Often the first step when the neck is very stiff.'
+    },
+    {
+      title: 'Deep Tissue Massage',
+      description: 'Therapeutic massage of the neck, shoulders and upper back by our DHA-licensed physiotherapist, as part of your treatment plan after an assessment. A clinical treatment for muscle tightness, not a spa service.'
     },
     {
       title: 'Dry Needling',
-      description: 'Fine needles target tight muscle knots and trigger points, particularly effective for myofascial pain and nerve compression symptoms in the neck and upper shoulders. Performed by licensed physiotherapists.'
+      description: 'Fine needles target tight muscle knots and trigger points in the neck and upper shoulders, a common source of neck pain and tension headaches.'
     },
     {
-      title: 'Electrotherapy',
-      description: 'Used to calm inflamed tissue and reduce pain signals, especially useful when neck pain is at its most acute. Often paired with manual therapy for faster relief.'
+      title: 'Kinesio Taping',
+      description: 'Tape that supports the neck and shoulder muscles and reminds you of better posture during the working day.'
+    },
+    {
+      title: 'Cupping',
+      description: 'Used alongside physiotherapy for muscle tension across the shoulders and upper back.'
+    },
+    {
+      title: 'Electrotherapy (TENS)',
+      description: 'Used with exercise to help reduce pain signals, especially in the early, more painful phase.'
     },
     {
       title: 'Ultrasound Therapy',
-      description: 'Deep heating therapy that increases blood flow and supports tissue healing in strained or inflamed areas. Typically combined with a broader treatment plan.'
+      description: 'Therapeutic ultrasound for the soft tissues of the neck, used together with exercise and hands-on treatment.'
     },
     {
-      title: 'Therapeutic Exercises',
-      description: 'Guided movement exercises that restore normal neck function and reduce compensatory strain on the shoulders and upper back.'
+      title: 'Deep Neck Strengthening',
+      description: 'Exercises for the deep neck muscles that support the head, one of the best-supported treatments for long-standing neck pain.'
     },
     {
-      title: 'Stretching Program',
-      description: 'Targeted stretches for the neck, shoulders, and upper back to relieve tightness and improve flexibility.'
+      title: 'Upper Back and Shoulder Exercises',
+      description: 'Strengthening the muscles between the shoulder blades to take load off the neck.'
     },
     {
-      title: 'Cervical Stabilization Exercises',
-      description: 'Exercises that strengthen the deep neck muscles responsible for supporting your head, reducing strain on the spine itself.'
+      title: 'Stretching and Mobility',
+      description: 'Simple stretches for the neck, shoulders and chest you can do at your desk.'
     },
     {
-      title: 'Strength Training',
-      description: 'Progressive strengthening for the neck and upper back once acute pain has settled, helping prevent recurrence.'
+      title: 'Posture and Desk Advice',
+      description: 'Practical changes to your screen height, chair, laptop use, phone habits and car seat, based on how you work.'
     },
     {
-      title: 'Posture Correction',
-      description: 'Practical guidance on sitting, standing, and movement habits that reduce ongoing strain on the cervical spine.'
-    },
-    {
-      title: 'Ergonomic Education',
-      description: 'Advice on workstation setup, monitor height, and daily habits to reduce repeated strain — especially valuable for office-based patients.'
-    },
-    {
-      title: 'Sports Rehabilitation',
-      description: 'For athletes recovering from neck-related sports injuries, this program combines strengthening and stretching exercises to restore strength and mobility.'
-    },
-    {
-      title: 'Home Exercise Program',
-      description: 'A personalized set of exercises to continue between sessions, reinforcing progress and supporting long-term recovery.'
+      title: 'Home Exercise Programme',
+      description: 'A short routine to continue between sessions so progress lasts.'
     }
   ];
 
   const recoveryTimeline = [
     {
-      period: 'Weeks 1–2',
-      description: 'Focus is on calming pain and muscle guarding, using manual therapy, electrotherapy, and gentle guided movement.'
+      period: 'Days to 2 weeks',
+      description: 'Most simple neck strains and stiff necks settle within days to a couple of weeks with gentle movement and early treatment.'
     },
     {
-      period: 'Weeks 3–4',
-      description: 'Range of motion typically improves and stretching progresses; stabilization exercises are introduced as pain settles.'
+      period: '2–6 weeks',
+      description: 'Postural neck pain and tension headaches usually improve over a few weeks as strength, posture and desk habits change.'
     },
     {
-      period: 'Weeks 5–8',
-      description: 'Strengthening and posture correction take priority, with home exercises reinforcing clinic sessions.'
+      period: '6–12 weeks',
+      description: 'Neck pain with arm symptoms from a pinched nerve often needs 6 to 12 weeks of treatment.'
     },
     {
-      period: 'Beyond 8 weeks',
-      description: 'Chronic or long-standing cases may need an extended program, with periodic reassessment to track progress.'
+      period: 'Beyond 12 weeks',
+      description: 'Long-standing neck pain may need a longer programme, with regular reviews and referral if progress is not as expected.'
     }
   ];
 
   const conditions = [
-    'Cervical spondylosis',
-    'Muscle strain',
-    'Text neck',
-    'Pinched nerve',
-    'Herniated cervical disc',
+    'Stiff neck and muscle strain',
+    'Text neck and office neck',
+    'Tension headaches from the neck',
     'Whiplash',
-    'Office syndrome',
-    'Sports injuries',
-    'Postural neck pain',
-    'Chronic neck pain'
+    'Pinched nerve (cervical radiculopathy)',
+    'Neck disc problems',
+    'Cervical spondylosis',
+    'Postural neck and upper back pain',
+    'Neck and shoulder pain together',
+    'Sports neck injuries'
   ];
 
   const relatedConditions = [
-    'Back pain',
-    'Frozen shoulder',
-    'Sciatica'
+    'Cervical spondylosis',
+    'Slipped disc',
+    'Shoulder pain'
   ];
 
   const benefits = [
-    'Pain relief without relying solely on medication',
-    'Better posture and spinal alignment',
-    'Improved flexibility in the neck and shoulders',
-    'Stronger muscles supporting the cervical spine',
-    'Increased range of motion',
-    'Faster, more structured recovery',
-    'Reduced risk of the pain returning',
-    'Better overall quality of life'
+    'Less pain, with less reliance on painkillers',
+    'Easier turning, driving and working at a screen',
+    'Fewer tension headaches for many people',
+    'Stronger deep neck and upper back muscles',
+    'Better posture at the desk and on the phone',
+    'Lower chance of the pain coming back'
   ];
 
   const preventionTips = [
-    'Set up your workstation correctly — your monitor should sit at eye level, roughly an arm\'s length away',
-    'Check your monitor positioning — avoid looking down or craning your neck forward for long periods',
-    'Stretch every hour — a short break to move your neck and shoulders prevents stiffness from building up',
-    'Do strength exercises regularly — strong neck and upper back muscles support better posture',
-    'Maintain proper sleeping posture — keep your spine neutral, avoiding sleeping on your stomach',
-    'Choose the right pillow — one that supports the natural curve of your neck',
-    'Manage stress — tension often settles in the neck and shoulders, so stress reduction matters',
-    'Stay active with regular exercise — general fitness supports spinal health and posture'
+    'Raise your screen to eye level and use a separate keyboard with a laptop',
+    'Hold your phone higher instead of looking down for long periods',
+    'Stand up and move every 30 to 45 minutes',
+    'Do a few neck and shoulder exercises daily',
+    'Sleep on your back or side with a pillow that keeps your neck level',
+    'Adjust your car seat and headrest before long drives',
+    'Manage stress, which often shows up as neck and shoulder tension',
+    'Keep up regular exercise'
   ];
 
   const whyChoose = [
-    { title: 'DHA Licensed Physiotherapists', desc: 'With hands-on clinical experience' },
-    { title: 'Personalized Treatment Plans', desc: 'Every program is built around your specific condition and goals' },
-    { title: 'Modern Rehabilitation Equipment', desc: 'For accurate assessment and effective treatment' },
-    { title: 'Evidence-Based Physiotherapy', desc: 'Aligned with current clinical research' },
-    { title: 'Multidisciplinary Care', desc: 'Coordinated support when your condition needs more than one specialty' },
-    { title: 'Convenient Dubai Location', desc: 'Easy to reach for regular sessions' },
-    { title: 'Compassionate Patient Care', desc: 'We explain every step so you understand your treatment' },
-    { title: 'Same-Day Appointments', desc: 'Subject to availability, for patients who need prompt evaluation' }
+    { title: 'DHA-Licensed Physiotherapist', desc: 'Jeena Mathew, BPT, MPT, 8+ years in neck and back rehab' },
+    { title: 'AED 200 Assessment', desc: 'Clear diagnosis and a plan from the first visit' },
+    { title: 'GP in the Same Clinic', desc: 'Can suggest or prescribe medication where appropriate, tests and referrals' },
+    { title: 'X-ray on Site', desc: 'For whiplash or falls; MRI by referral when needed' },
+    { title: 'Deep Tissue Massage', desc: 'Clinical massage alongside dry needling, taping and exercise' },
+    { title: 'Open Daily 10am–10pm', desc: 'Sessions after office hours, including weekends' },
+    { title: 'Jumeirah 1, near Al Satwa', desc: 'Al Dhiyafah Road, free and paid parking nearby' },
+    { title: 'Referred by Gyms and Schools', desc: 'Local gyms and schools send patients to us' }
   ];
 
   const patientJourney = [
-    'Initial Consultation',
-    'Comprehensive Assessment',
-    'Diagnosis',
-    'Customized Treatment Plan',
-    'Hands-on Therapy',
-    'Exercise Program',
-    'Progress Monitoring',
-    'Recovery',
-    'Prevention & Maintenance'
+    'Book by phone, WhatsApp or online',
+    'Neck assessment (AED 200)',
+    'GP and X-ray if needed',
+    'Your treatment plan',
+    'Hands-on treatment',
+    'Exercise programme',
+    'Desk and posture changes',
+    'Progress review',
+    'Prevention habits'
   ];
 
   const faqs = [
-    {
-      question: 'What causes neck pain?',
-      answer: 'Neck pain commonly results from poor posture, muscle strain, text neck, whiplash, or degenerative changes like cervical spondylosis.'
-    },
-    {
-      question: 'Can physiotherapy help neck pain?',
-      answer: 'Yes. Physiotherapy is one of the most effective non-surgical approaches for reducing neck pain, improving mobility, and preventing recurrence. Structured neck pain treatment programs combine hands-on therapy with guided exercise for lasting results.'
-    },
-    {
-      question: 'How many sessions will I need?',
-      answer: 'This varies by condition and severity. Mild strain may resolve in a few sessions, while chronic issues often need a longer, structured program.'
-    },
-    {
-      question: 'Is treatment painful?',
-      answer: 'Most techniques are comfortable, though some methods like dry needling may cause brief, mild discomfort. Your physiotherapist adjusts intensity to your tolerance.'
-    },
-    {
-      question: 'Can neck pain cause headaches?',
-      answer: 'Yes. Tension in the neck and upper shoulder muscles often triggers headaches that start at the base of the skull.'
-    },
-    {
-      question: 'Can poor posture cause neck pain?',
-      answer: 'Yes, poor posture is one of the leading causes of neck pain, particularly forward head posture from prolonged screen use.'
-    },
-    {
-      question: 'What is cervical spondylosis?',
-      answer: 'It\'s age-related wear and tear affecting the cervical vertebrae and discs, often causing stiffness and reduced mobility.'
-    },
-    {
-      question: 'When should I seek treatment?',
-      answer: 'If pain persists beyond a few days, radiates into your arm, or is accompanied by numbness or weakness, it\'s time for a proper evaluation.'
-    },
-    {
-      question: 'Does insurance cover physiotherapy?',
-      answer: 'Coverage varies by provider and policy. Our team can help you understand your options during your visit.'
-    },
-    {
-      question: 'Is surgery always necessary?',
-      answer: 'No. Most neck pain, including cases involving disc problems, responds well to non-surgical physiotherapy treatment.'
-    },
-    {
-      question: 'Can neck pain return?',
-      answer: 'Yes, especially if the underlying cause — like poor posture or weak supporting muscles — isn\'t addressed, which is why we focus on prevention as much as pain relief.'
-    },
-    {
-      question: 'Is dry needling effective?',
-      answer: 'Many patients find dry needling helpful for releasing tight muscle knots and trigger points that contribute to neck pain.'
-    },
-    {
-      question: 'What exercises help?',
-      answer: 'Gentle stretching, cervical stabilization exercises, and posture-focused strengthening are commonly used, ideally guided by a physiotherapist.'
-    },
-    {
-      question: 'How long is recovery?',
-      answer: 'Mild cases often improve within a few weeks, while chronic neck pain may take longer with consistent, structured treatment.'
-    },
-    {
-      question: 'How do I book an appointment?',
-      answer: 'You can book directly through our website, call the clinic, or message us on WhatsApp for a fast response.'
-    },
-    {
-      question: 'Can stress make neck pain worse?',
-      answer: 'Yes, stress often increases muscle tension in the neck and shoulders, which can worsen existing discomfort.'
-    },
-    {
-      question: 'Is it normal for neck pain to affect my arm?',
-      answer: 'Pain, tingling, or numbness radiating into the arm usually points to nerve involvement and should be assessed by a physiotherapist.'
-    },
-    {
-      question: 'Can sleeping position affect neck pain?',
-      answer: 'Yes, an unsupportive pillow or awkward sleeping position is a common, often overlooked cause of morning neck stiffness.'
-    },
-    {
-      question: 'Are older adults more prone to neck pain?',
-      answer: 'Yes, age-related changes like cervical spondylosis and reduced disc height increase the likelihood of neck pain in older adults.'
-    },
-    {
-      question: 'Can athletes get neck injuries treated at RamaCare?',
-      answer: 'Yes, we offer sports rehabilitation programs designed specifically for athletes recovering from neck-related injuries.'
-    }
+    { question: 'Where can I get neck pain treatment in Jumeirah 1?', answer: 'RamaCare Polyclinic treats neck pain on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878.' },
+    { question: 'How much does a neck pain assessment cost?', answer: 'A physiotherapy assessment at RamaCare costs AED 200. Insurance is by reimbursement: you pay at the clinic and claim the cost back from your insurer with our itemised invoice.' },
+    { question: 'Which doctor should I see for neck pain?', answer: 'For most neck pain, a physiotherapist is the right first step. At RamaCare, our physiotherapist assesses and treats your neck, and our GP in the same clinic can examine you, suggest or prescribe medication where appropriate, arrange an X-ray and refer you to a specialist if needed.' },
+    { question: 'What causes neck pain?', answer: 'The most common causes are desk posture, looking down at a phone, stress, sleeping awkwardly and muscle strain. Other causes include whiplash, a pinched nerve, disc problems and age-related wear (cervical spondylosis).' },
+    { question: 'Is massage good for neck and shoulder pain?', answer: 'Yes, as part of a treatment plan. At RamaCare, deep tissue massage is given by our DHA-licensed physiotherapist after an assessment and combined with exercises, so the relief lasts longer than a massage alone.' },
+    { question: 'What is text neck or office neck?', answer: 'Text neck and office neck describe neck and shoulder pain from long periods looking down at a phone or laptop. The head moves forward, the neck and upper back muscles overwork, and stiffness and headaches follow.' },
+    { question: 'Can neck pain cause headaches?', answer: 'Yes. Tension in the neck and shoulder muscles and stiffness in the upper neck joints can cause headaches that start at the base of the skull. Treating the neck often reduces these headaches.' },
+    { question: 'How do I fix a stiff neck from sleeping?', answer: 'Keep moving the neck gently, use heat for short periods and avoid holding one position for long. Most stiff necks settle within a few days. If it lasts longer or the pain spreads to your arm, get it assessed.' },
+    { question: 'Can physiotherapy help neck pain?', answer: 'Yes. Exercise-based physiotherapy, especially strengthening the deep neck and upper back muscles, combined with hands-on treatment is one of the most effective non-surgical treatments for neck pain.' },
+    { question: 'How many sessions will I need?', answer: 'Simple neck strains often need a few sessions. Postural neck pain usually improves over 2 to 6 weeks, and neck pain with arm symptoms can take 6 to 12 weeks.' },
+    { question: 'Is neck pain with arm tingling serious?', answer: 'It usually means a nerve in the neck is irritated, often by a disc or wear in the joints. Most cases improve with treatment, but get assessed soon, and seek urgent care if you have weakness in both arms or legs.' },
+    { question: 'What should I do after whiplash?', answer: 'Get checked if pain is severe or you have numbness, weakness or a bad headache. At RamaCare the GP can examine you and arrange an X-ray on the same visit, then physiotherapy can start.' },
+    { question: 'Do I need an X-ray or MRI for neck pain?', answer: 'Usually not. Most neck pain is diagnosed by examination. An X-ray can be done at RamaCare after a fall or whiplash, and an MRI is arranged by referral if nerve symptoms are severe or not improving.' },
+    { question: 'Do you give neck injections?', answer: 'No. RamaCare does not give injections or perform surgery. If you need them, we refer you to a specialist.' },
+    { question: 'Is dry needling good for neck pain?', answer: 'Dry needling can help tight muscle knots in the neck and upper shoulders, especially with tension headaches. It works best combined with exercise.' },
+    { question: 'Can I have treatment after work?', answer: 'Yes. RamaCare is open every day until 10pm, so you can book sessions after office hours, including weekends.' },
+    { question: 'What is the best sleeping position for neck pain?', answer: 'Sleeping on your back or side with a pillow that keeps your neck level is usually best. Sleeping on your stomach twists the neck.' },
+    { question: 'When is neck pain an emergency?', answer: 'Get emergency help for severe pain after an accident, weakness or numbness in both arms or legs, loss of bladder or bowel control, or neck stiffness with fever or a sudden severe headache.' },
+    { question: 'Does insurance cover neck pain physiotherapy?', answer: 'RamaCare does not bill insurers directly. You pay at the clinic and claim the cost back from your insurer. Many plans need a doctor\'s referral, and our GP is in the same clinic.' }
   ];
 
   const toggleFaq = (index) => {
@@ -324,9 +264,17 @@ export default function NeckPainTreatmentPage() {
   };
 
   const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/neck-pain-treatment-dubai/";
-  const PAGE_TITLE = "Neck Pain Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Suffering from neck pain? Get expert Neck Pain Treatment Dubai care at RamaCare Polyclinic with DHA-licensed physiotherapists. Book your consultation today.";
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+  const PAGE_TITLE = "Neck Pain Treatment in Jumeirah 1, Dubai | RamaCare";
+  const PAGE_DESCRIPTION = "Neck pain physiotherapy in Jumeirah 1, Dubai: deep tissue massage, dry needling, posture care. AED 200 assessment, GP and X-ray on site. Open till 10pm.";
   const OG_IMAGE = "https://ramacarepolyclinic.ae/images/neck-pain-clinic-cta-dubai.jpg";
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -335,30 +283,10 @@ export default function NeckPainTreatmentPage() {
         "@type": "BreadcrumbList",
         "@id": `${CANONICAL_URL}#breadcrumb`,
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://ramacarepolyclinic.ae/services/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Physiotherapy",
-            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Neck Pain Treatment Dubai",
-            "item": CANONICAL_URL
-          }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE}/services/` },
+          { "@type": "ListItem", "position": 3, "name": "Physiotherapy", "item": `${SITE}/services/physiotherapy-dubai/` },
+          { "@type": "ListItem", "position": 4, "name": "Neck Pain Treatment", "item": CANONICAL_URL }
         ]
       },
       {
@@ -368,68 +296,42 @@ export default function NeckPainTreatmentPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
         "medicalAudience": { "@type": "Patient" },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Neck Pain",
-          "alternateName": ["Cervical Pain", "Neck Stiffness"],
-          "description": "Neck pain is discomfort, stiffness, or soreness in the cervical spine — the seven small vertebrae that support your head and connect it to your shoulders. It can be caused by poor posture, text neck, muscle strain, whiplash, or degenerative changes like cervical spondylosis."
-        },
-        "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
-        },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Neck pain",
+        "alternateName": ["Cervical pain", "Stiff neck", "Text neck", "Office neck", "Cervicogenic headache", "Whiplash"],
+        "associatedAnatomy": { "@type": "AnatomicalStructure", "name": "Cervical spine" },
+        "signOrSymptom": symptoms.map(function (x) { return { "@type": "MedicalSymptom", "name": x }; }),
+        "possibleTreatment": [
+          therapy("Exercise-based physiotherapy", "/services/physiotherapy-dubai/"),
+          therapy("Manual therapy"),
+          therapy("Deep tissue massage"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Kinesio taping"),
+          therapy("Posture and desk advice")
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Neck Pain Physiotherapy Treatment",
-        "alternateName": "Cervical Spine Physiotherapy",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Expert physiotherapy treatment for neck pain combining manual therapy, dry needling, electrotherapy, ultrasound therapy, therapeutic exercises, and posture correction for lasting relief.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Cervical Spine",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -437,10 +339,7 @@ export default function NeckPainTreatmentPage() {
         "mainEntity": faqs.map(faq => ({
           "@type": "Question",
           "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
         }))
       }
     ]
@@ -449,12 +348,12 @@ export default function NeckPainTreatmentPage() {
   const causes = [
     { cause: 'Poor posture', desc: 'Slouching strains the muscles that hold your head upright' },
     { cause: 'Text neck', desc: 'Looking down at phones repeatedly overloads the cervical spine' },
-    { cause: 'Office work', desc: 'Long, static hours at a desk stiffen neck and shoulder muscles' },
+    { cause: 'Office work and driving', desc: 'Long, static hours at a desk or in the car stiffen the neck and shoulders' },
     { cause: 'Muscle strain', desc: 'Sudden movement or overuse irritates neck muscles' },
     { cause: 'Whiplash', desc: 'Rapid back-and-forth motion, often from a car accident, injures soft tissue' },
     { cause: 'Cervical spondylosis', desc: 'Age-related wear on the cervical vertebrae and discs' },
     { cause: 'Herniated disc', desc: 'Disc material presses on a nearby nerve root' },
-    { cause: 'Arthritis', desc: 'Joint inflammation reduces mobility and causes stiffness' },
+    { cause: 'Arthritis', desc: 'Wear in the neck joints reduces movement and causes stiffness' },
     { cause: 'Pinched nerve', desc: 'Compression of a cervical nerve causes localized and radiating pain' },
     { cause: 'Sports injuries', desc: 'Contact sports or repetitive strain can injure neck structures' },
     { cause: 'Sleeping posture', desc: 'An unsupportive pillow or awkward sleeping position strains the neck overnight' },
@@ -466,7 +365,6 @@ export default function NeckPainTreatmentPage() {
       <Head>
         <title key="title">{PAGE_TITLE}</title>
         <meta name="description" key="description" content={PAGE_DESCRIPTION} />
-          <meta name="keywords" content="Neck pain treatment Dubai, Neck pain specialist Dubai, Physiotherapy for neck pain Dubai, Cervical pain treatment Dubai, Chronic neck pain Dubai, Neck stiffness treatment Dubai, Cervical spondylosis Dubai, Pinched nerve neck Dubai, Upper back and neck pain Dubai, Neck muscle strain Dubai, Neck rehabilitation Dubai, Best physiotherapy clinic Dubai, Manual therapy Dubai, Dry needling Dubai, Electrotherapy Dubai, Ultrasound therapy Dubai, Sports injury physiotherapy Dubai" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
 
@@ -478,7 +376,7 @@ export default function NeckPainTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Neck Pain Treatment Dubai consultation at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Neck pain physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
@@ -515,7 +413,7 @@ export default function NeckPainTreatmentPage() {
             </li>
             <li className="flex items-center gap-1.5">
               <span className="text-gray-400">/</span>
-              <span className="text-[#1F5E4B] font-medium">Neck Pain Treatment Dubai</span>
+              <span className="text-[#1F5E4B] font-medium">Neck Pain Treatment</span>
             </li>
           </ol>
         </div>
@@ -537,20 +435,20 @@ export default function NeckPainTreatmentPage() {
               >
                 <div className="inline-flex items-center gap-2 bg-[#1F5E4B]/30 px-4 py-2 rounded-full mb-6">
                   <Star className="w-4 h-4 text-yellow-400" />
-                  <span className="text-white/80 text-sm font-medium">DHA-Licensed Physiotherapists</span>
+                  <span className="text-white/80 text-sm font-medium">DHA-Licensed Physiotherapy · Jumeirah 1</span>
                 </div>
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                  Expert <span className="text-[#38D39F]">Neck Pain Treatment</span> in Dubai
+                  <span className="text-[#38D39F]">Neck Pain Treatment</span> in Jumeirah 1, Dubai
                 </h1>
                 <div className="space-y-6 text-lg text-white/80">
                   <p>
-                    If turning your head has become a painful chore, or your neck feels stiff the moment you wake up, you're not alone. This is a problem that affects millions of desk-bound professionals in Dubai. Neck Pain Treatment Dubai searches spike every year as more people spend long hours hunched over laptops, phones, and steering wheels. RamaCare Polyclinic sees the results of that lifestyle every day in clinic.
+                    RamaCare Polyclinic treats neck pain at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. A physiotherapy assessment costs AED 200. Our DHA-licensed physiotherapist finds the cause, whether desk posture, text neck, a pinched nerve or whiplash, and treats it with exercise, manual therapy, deep tissue massage, dry needling and taping. Our GP can suggest or prescribe medication where appropriate and arrange an X-ray on the same visit. Open every day, 10am–10pm.
                   </p>
                   <p>
-                    The good news: most neck pain responds well to the right physiotherapy approach. You don't need to live with constant stiffness, headaches, or that nagging ache between your shoulder blades.
+                    If turning your head hurts, your neck is stiff when you wake up, or headaches start at the base of your skull, the right treatment usually helps. Most neck pain gets better without injections or surgery.
                   </p>
                   <p>
-                    At RamaCare Polyclinic, our DHA-licensed physiotherapists assess the real cause of your discomfort, not just the symptoms. We build a treatment plan around your body, your daily habits, and your recovery goals. Whether your pain started last week or has followed you for months, relief is possible with the right expert physiotherapy care.
+                    Sessions run until 10pm, so you can come after work. Many of our patients are office workers and drivers from Jumeirah, Al Satwa and nearby areas.
                   </p>
                 </div>
                 <Link href="/book-appointment/">
@@ -572,7 +470,7 @@ export default function NeckPainTreatmentPage() {
                 <div className="aspect-square bg-gradient-to-br from-[#1F5E4B] to-[#38D39F] rounded-3xl overflow-hidden relative shadow-lg flex items-center justify-center">
                   <img
                     src="/images/Patient consulting a physiotherapist about neck pain.jpg"
-                    alt="Neck Pain Treatment Dubai consultation at RamaCare Polyclinic"
+                    alt="Physiotherapist assessing neck pain at RamaCare Polyclinic, Jumeirah 1"
                     className="absolute inset-0 w-full h-full object-cover z-10"
                     onError={(e) => {
                       e.target.style.display = 'none';
@@ -582,7 +480,7 @@ export default function NeckPainTreatmentPage() {
                     <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Activity className="w-16 h-16 text-white" />
                     </div>
-                    <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
+                    <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Neck pain physiotherapy at RamaCare, Jumeirah 1</p>
                   </div>
                 </div>
               </motion.div>
@@ -658,7 +556,7 @@ export default function NeckPainTreatmentPage() {
                       </div>
                       <h3 className="text-2xl font-bold text-[#FF6F00] mb-4">Why Early Diagnosis Matters</h3>
                       <p className="text-gray-700">
-                        Left untreated, minor neck strain can develop into chronic tension, nerve irritation, or reduced range of motion. Getting an accurate assessment early — rather than waiting for the pain to become unbearable — makes recovery faster and more straightforward. This is the foundation of effective neck pain treatment that Dubai clinics should offer.
+                        Left untreated, minor neck strain can develop into chronic tension, nerve irritation, or reduced range of motion. Getting an accurate assessment early — rather than waiting for the pain to become unbearable — makes recovery faster and more straightforward. Most simple neck strains settle within days to a couple of weeks.
                       </p>
                     </motion.div>
                   </div>
@@ -734,7 +632,7 @@ export default function NeckPainTreatmentPage() {
                   </div>
                   <div className="bg-gradient-to-r from-[#1F5E4B]/10 to-[#38D39F]/10 p-8 rounded-2xl border border-[#1F5E4B]/20">
                     <p className="text-lg text-gray-700">
-                      Many patients are dealing with more than one of these at once. Forward head posture often combines with stress-related muscle spasm, or a neck muscle strain that has spread into the upper shoulders. This overlap is why upper back and neck pain so often occur together, and why a proper assessment matters more than guessing at home remedies.
+                      Many patients are dealing with more than one of these at once. Forward head posture often combines with stress-related muscle spasm, or a neck muscle strain that has spread into the upper shoulders. This is why neck and upper back pain so often occur together, and why an assessment works better than guessing.
                     </p>
                   </div>
                 </motion.div>
@@ -819,7 +717,7 @@ export default function NeckPainTreatmentPage() {
                 </div>
                 <div className="bg-[#1F5E4B] text-white p-8 rounded-2xl">
                   <p className="text-lg">
-                    Dubai's fast-paced, desk-heavy work culture means office syndrome — a cluster of neck, shoulder, and back complaints from prolonged sitting — is one of the most common reasons patients seek specialist care.
+                    Long desk hours and daily driving make office neck one of the most common reasons people in Jumeirah 1 see our physiotherapist.
                   </p>
                 </div>
               </div>
@@ -882,13 +780,42 @@ export default function NeckPainTreatmentPage() {
                     </div>
                     <div className="mt-6 pt-6 border-t border-[#FFCDD2]">
                       <p className="text-gray-700">
-                        These symptoms may indicate a serious spinal issue and require immediate medical evaluation, not physiotherapy alone.
+                        Call 998 or go to an emergency department straight away. These can be signs of a serious spinal problem or infection that needs urgent medical care.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Text Neck, Office Neck and Headaches */}
+        <section id="desk-neck" className="py-24 bg-[#F9F7F2]">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Text Neck, Office Neck and Neck Headaches</h2>
+                <div className="w-24 h-1 bg-[#38D39F] mx-auto"></div>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white p-8 rounded-2xl border border-[#1F5E4B]/10">
+                  <h3 className="text-xl font-bold text-[#1F5E4B] mb-3">Office Neck</h3>
+                  <p className="text-gray-700 leading-relaxed">Hours at a laptop pull the head forward. The neck and upper back muscles work harder all day, leading to stiffness, aching shoulders and pain between the shoulder blades by the evening.</p>
+                </div>
+                <div className="bg-white p-8 rounded-2xl border border-[#1F5E4B]/10">
+                  <h3 className="text-xl font-bold text-[#1F5E4B] mb-3">Text Neck</h3>
+                  <p className="text-gray-700 leading-relaxed">Looking down at a phone for long periods adds load to the neck. It is common in teenagers and adults alike, and responds well to strengthening and simple habit changes.</p>
+                </div>
+                <div className="bg-white p-8 rounded-2xl border border-[#1F5E4B]/10">
+                  <h3 className="text-xl font-bold text-[#1F5E4B] mb-3">Headaches from the Neck</h3>
+                  <p className="text-gray-700 leading-relaxed">Tight neck and shoulder muscles and a stiff upper neck can cause headaches that start at the base of the skull and spread forward. Treating the neck often reduces them.</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mt-8 max-w-4xl mx-auto text-center">
+                Treatment combines deep neck and upper back strengthening, hands-on treatment, deep tissue massage or dry needling for tight muscles, and practical changes to your screen height, chair, phone use and car seat. Sessions until 10pm fit around office hours.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -904,7 +831,7 @@ export default function NeckPainTreatmentPage() {
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Diagnosis at RamaCare</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Effective neck pain treatment begins with an accurate diagnosis. Our physiotherapists follow a structured assessment process.
+                  Your neck assessment in Jumeirah 1 (AED 200) usually includes:
                 </p>
                 <div className="w-24 h-1 bg-[#38D39F] mx-auto mt-6"></div>
               </div>
@@ -919,7 +846,7 @@ export default function NeckPainTreatmentPage() {
                   <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden border border-[#1F5E4B]/20 lg:sticky lg:top-24">
                     <Image
                       src="/images/Physiotherapist examining a patient's neck.jpg"
-                      alt="Physiotherapist assessing cervical mobility in Dubai clinic"
+                      alt="Physiotherapist assessing neck movement at RamaCare, Jumeirah 1"
                       fill
                       sizes="(max-width: 1024px) 100vw, 41.66vw"
                       className="object-cover"
@@ -955,26 +882,31 @@ export default function NeckPainTreatmentPage() {
           </div>
         </section>
 
-        {/* What to Expect From Neck Pain Treatment Dubai Clinics */}
+        {/* Who Treats Neck Pain at RamaCare */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">What to Expect From Neck Pain Treatment Dubai Clinics</h2>
-                <div className="w-24 h-1 bg-[#38D39F] mx-auto"></div>
-              </div>
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-r from-[#1F5E4B] to-[#38D39F] p-10 rounded-3xl text-white">
-                <p className="text-xl leading-relaxed">
-                  A reliable clinic combines hands-on therapy with active rehabilitation, not just short-term pain relief. You should expect a clear explanation of your diagnosis, a treatment plan tailored to your findings, and measurable progress checkpoints along the way.
+                <h2 className="text-3xl font-bold mb-4">Who Treats Neck Pain at RamaCare?</h2>
+                <p className="text-lg leading-relaxed">
+                  Your neck is assessed and treated by our DHA-licensed physiotherapist, Jeena Mathew (BPT, MPT, 8+ years). Our GP works in the same clinic and can examine you, suggest or prescribe medication where appropriate, arrange an X-ray and refer you for an MRI or to a specialist. RamaCare does not give injections or perform surgery.
                 </p>
               </div>
-            </motion.div>
+              <div className="bg-[#F9F7F2] p-10 rounded-3xl border border-[#1F5E4B]/10">
+                <h2 className="text-3xl font-bold text-[#1F5E4B] mb-4">Quick Facts</h2>
+                <ul className="space-y-2 text-gray-700">
+                  <li>Address: Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai</li>
+                  <li>Physiotherapy assessment: AED 200</li>
+                  <li>Open every day, 10am to 10pm; same-day appointments when slots are free</li>
+                  <li>GP and X-ray in the same clinic</li>
+                  <li>Insurance: pay at the clinic, claim back from your insurer</li>
+                  <li>Book: 04 286 2006 or WhatsApp 056 659 7878</li>
+                </ul>
+                <p className="text-gray-700 mt-4 text-right" lang="ar" dir="rtl">
+                  علاج آلام الرقبة في جميرا 1، دبي: تقييم العلاج الطبيعي بـ 200 درهم، مفتوح يومياً حتى 10 مساءً.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -989,7 +921,7 @@ export default function NeckPainTreatmentPage() {
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Neck Pain Treatments at RamaCare</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Our approach to neck pain treatment combines hands-on therapy with active rehabilitation. We build every rehabilitation program around your specific diagnosis.
+                  Every plan starts from your assessment and combines hands-on treatment with exercise.
                 </p>
                 <div className="w-24 h-1 bg-[#38D39F] mx-auto mt-6"></div>
               </div>
@@ -1024,7 +956,7 @@ export default function NeckPainTreatmentPage() {
                     </div>
                     <img
                       src="/images/manual-therapy-session-dubai.jpg"
-                      alt="Manual therapy session for cervical pain treatment Dubai"
+                      alt="Manual therapy for neck pain at RamaCare, Jumeirah 1"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -1043,7 +975,7 @@ export default function NeckPainTreatmentPage() {
                     </div>
                     <img
                       src="/images/Dry needling treatment on neck.jpg"
-                      alt="Dry needling therapy for neck muscle tension Dubai"
+                      alt="Dry needling for neck muscle tension"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -1061,7 +993,7 @@ export default function NeckPainTreatmentPage() {
                     </div>
                     <img
                       src="/images/Posture correction demonstration.jpg"
-                      alt="Posture correction technique for neck pain relief Dubai"
+                      alt="Posture correction for neck pain"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -1085,7 +1017,7 @@ export default function NeckPainTreatmentPage() {
           </div>
         </section>
 
-        {/* What to Expect: Recovery Timeline */}
+        {/* Recovery Timeline */}
         <section id="recovery-timeline" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <motion.div
@@ -1094,7 +1026,7 @@ export default function NeckPainTreatmentPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }} >
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">What to Expect: Recovery Timeline</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Recovery Timeline</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Recovery speed depends on the underlying cause, how long symptoms have been present, and consistency with home exercises. As a general guide:
                 </p>
@@ -1167,7 +1099,7 @@ export default function NeckPainTreatmentPage() {
                 </div>
                 <div className="bg-gradient-to-r from-[#1F5E4B]/10 to-[#38D39F]/10 p-8 rounded-2xl border border-[#1F5E4B]/20">
                   <p className="text-lg text-gray-700">
-                    If your neck pain is connected to a broader issue, our team also manages related conditions such as back pain, frozen shoulder, and sciatica.
+                    Related pages: cervical spondylosis, slipped disc (neck discs) and shoulder pain. See the links at the end of this page.
                   </p>
                 </div>
               </div>
@@ -1209,7 +1141,7 @@ export default function NeckPainTreatmentPage() {
                 </div>
                 <div className="bg-[#1F5E4B] text-white p-8 rounded-2xl">
                   <p className="text-lg">
-                    Physiotherapy also gives you practical tools to manage your neck health independently, rather than depending on repeated treatment every time discomfort returns.
+                    You also learn exercises and habits to manage your neck yourself, so you are not dependent on repeated treatment.
                   </p>
                 </div>
               </div>
@@ -1266,7 +1198,7 @@ export default function NeckPainTreatmentPage() {
                       </div>
                       <img
                         src="/images/Ergonomic workstation setup.jpg"
-                        alt="Ergonomic desk setup to prevent neck pain Dubai"
+                        alt="Desk set-up to prevent neck pain"
                         className="absolute inset-0 w-full h-full object-cover z-10"
                         onError={(e) => {
                           e.target.style.display = 'none';
@@ -1292,7 +1224,7 @@ export default function NeckPainTreatmentPage() {
                       </div>
                       <img
                         src="/images/Patient performing neck stretching exercises.jpg"
-                        alt="Guided neck stretching exercise at Dubai physiotherapy clinic"
+                        alt="Guided neck stretching exercise at RamaCare"
                         className="absolute inset-0 w-full h-full object-cover z-10"
                         onError={(e) => {
                           e.target.style.display = 'none';
@@ -1322,9 +1254,9 @@ export default function NeckPainTreatmentPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Why Choose RamaCare Polyclinic?</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Why Choose RamaCare for Neck Pain in Jumeirah 1?</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  When you're comparing options for neck pain treatment in Dubai, here's what sets us apart:
+                  What you get at our Jumeirah 1 clinic:
                 </p>
                 <div className="w-24 h-1 bg-[#38D39F] mx-auto mt-6"></div>
               </div>
@@ -1414,7 +1346,7 @@ export default function NeckPainTreatmentPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Frequently Asked Questions</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#1F5E4B] mb-4">Neck Pain in Jumeirah 1: Common Questions</h2>
                 <div className="w-24 h-1 bg-[#38D39F] mx-auto"></div>
               </div>
               <div className="max-w-3xl mx-auto space-y-4">
@@ -1469,13 +1401,13 @@ export default function NeckPainTreatmentPage() {
               <div className="mb-12">
                 <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Book Your Consultation</h2>
                 <p className="text-xl text-white/80">
-                  You don't have to manage neck pain on your own. Our DHA-licensed physiotherapists at RamaCare Polyclinic are ready to assess your condition and build a treatment plan around your specific needs.
+                  You don't have to live with neck pain. Book an AED 200 physiotherapy assessment at RamaCare Polyclinic in Jumeirah 1.
                 </p>
               </div>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                    Take the first step toward lasting relief. Call RamaCare Polyclinic, message us on WhatsApp, or book your physiotherapy consultation online. Early treatment leads to a smoother, faster recovery — don't wait for stiffness or discomfort to become a bigger problem.
+                    Call, WhatsApp or use the form below. Open every day 10am–10pm, with same-day appointments when slots are free.
                   </p>
                   <Link href="/book-appointment/">
                     <motion.button
@@ -1496,7 +1428,7 @@ export default function NeckPainTreatmentPage() {
                   <div className="aspect-[4/3] bg-white/10 rounded-3xl overflow-hidden relative border border-white/20 flex items-center justify-center">
                     <img
                       src="/images/neck-pain-clinic-cta-dubai.jpg"
-                      alt="Book Neck Pain Treatment Dubai consultation at RamaCare Polyclinic"
+                      alt="Book a neck pain assessment at RamaCare Polyclinic, Jumeirah 1"
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -1506,14 +1438,14 @@ export default function NeckPainTreatmentPage() {
                       <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <Activity className="w-16 h-16 text-white" />
                       </div>
-                      <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Book Neck Pain Treatment Dubai consultation at RamaCare Polyclinic</p>
+                      <p className="text-white/80 text-sm mt-2 max-w-xs mx-auto">Neck pain assessment at RamaCare, Jumeirah 1</p>
                     </div>
                   </div>
                 </motion.div>
               </div>
               <div className="mt-12">
                 <p className="text-white/80">
-                  Visit our <Link href="/" className="underline hover:text-white">RamaCare Polyclinic homepage</Link> to learn more about our full range of physiotherapy and rehabilitation services, including <Link href="/services/post-surgery-rehabilitation-dubai/" className="underline hover:text-white">post-surgery rehabilitation</Link>. Our team also manages related conditions such as <Link href="/services/back-pain-treatment-dubai/" className="underline hover:text-white">back pain</Link>, <Link href="/services/frozen-shoulder-treatment-dubai/" className="underline hover:text-white">frozen shoulder</Link>, <Link href="/services/cervical-spondylosis-treatment-dubai/" className="underline hover:text-white">cervical spondylosis</Link>, and <Link href="/services/sciatica-treatment-dubai/" className="underline hover:text-white">sciatica</Link>.
+                  See all our <Link href="/services/physiotherapy-dubai/" className="underline hover:text-white">physiotherapy in Jumeirah 1</Link>, or read about <Link href="/services/cervical-spondylosis-treatment-dubai/" className="underline hover:text-white">cervical spondylosis treatment</Link>, <Link href="/services/slip-disc-treatment-dubai/" className="underline hover:text-white">slipped disc treatment</Link> and <Link href="/services/shoulder-pain-treatment-dubai/" className="underline hover:text-white">shoulder pain treatment</Link>.
                 </p>
               </div>
             </motion.div>
@@ -1534,15 +1466,11 @@ export default function NeckPainTreatmentPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { text: 'Cervical Spondylosis Treatment', link: '/services/cervical-spondylosis-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
-                { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
-                { text: 'Shoulder Pain Treatment', link: '/services/shoulder-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
-                { text: 'Frozen Shoulder Treatment', link: '/services/frozen-shoulder-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
-                { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
-                { text: 'Sciatica Treatment', link: '/services/sciatica-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
-                { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#EFF6FF]' },
-                { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
-                { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#F5F3FF]' },
+                { text: 'Cervical spondylosis treatment', link: '/services/cervical-spondylosis-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+                { text: 'Slipped disc treatment', link: '/services/slip-disc-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
+                { text: 'Shoulder pain treatment', link: '/services/shoulder-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+                { text: 'Dry needling', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#FEF2F2]' },
+                { text: 'Physiotherapy in Jumeirah 1', link: '/services/physiotherapy-dubai/', bgColor: 'bg-[#F5F3FF]' },
                 { text: 'Physiotherapy in Dubai', link: '/services/physiotherapy-dubai/', bgColor: 'bg-[#ECFDF5]' }
               ].map((resource, index) => (
                 <a 
@@ -1577,6 +1505,38 @@ export default function NeckPainTreatmentPage() {
             </p>
           </div>
         </section>
+        {/* Booking form */}
+        <div id="book-form">
+          <BookConsultation
+            content={{
+              badge: 'Start Your Recovery',
+              title: 'Book a Neck Pain Assessment in Jumeirah 1',
+              description: 'Physiotherapy assessment AED 200. Open every day 10am–10pm, with same-day appointments when slots are free.',
+              getInTouchTitle: 'Get In Touch',
+              requestAppointmentTitle: 'Request Appointment',
+              submitButtonText: 'Request Appointment',
+              contactInfo: {
+                phone: '+971 04 286 2006',
+                whatsapp: '971566597878',
+                email: 'query@ramacarepolyclinic.com',
+                address: {
+                  line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+                  line2: 'Ground Floor, Jumeirah 1 - Dubai'
+                }
+              },
+              clinicHours: {
+                weekdays: 'Sunday - Saturday:',
+                weekdaysTime: '10:00 AM - 10:00 PM'
+              },
+              statCards: [
+                { title: 'DHA Licensed', description: 'Facility 2036418' },
+                { title: 'AED 200', description: 'Physiotherapy Assessment' },
+                { title: 'GP & X-ray', description: 'In the Same Clinic' },
+                { title: 'Open Daily', description: '10am – 10pm' }
+              ]
+            }}
+          />
+        </div>
       </div>
     </Layout>
   );

@@ -6,18 +6,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 
 const content = {
   hero: {
-    title: 'Ayurvedic Diet for Weight Loss in Dubai: Sustainable Fat Loss through Metabolic Balance',
-    description: 'If you\'ve tried every calorie-counting app and "low-carb" trend in the UAE only to see the weight return, it\'s time for a different approach. An Ayurvedic diet for weight loss in Dubai doesn\'t just focus on the scale; it focuses on your Agni (digestive fire) and the elimination of Ama (metabolic toxins).',
+    title: 'Ayurvedic Weight Loss Treatment and Diet in Dubai',
+    description: 'Ayurveda links weight gain mainly to excess Kapha, weak digestion (Agni) and the build-up of fat tissue (Medas). At RamaCare Polyclinic in Jumeirah 1, Dubai, Ayurvedic weight loss care starts with a consultation with Dr. Shamna Keloth Meethal (BAMS), with checks by our GP if needed, and combines a Kapha-balancing diet with therapies such as Udwarthanam (herbal powder massage) and herbal steam, given by therapists of your own gender.',
     summary: {
-      title: 'The "Answer-First" Summary for Weight Loss',
-      question: 'How does Ayurveda help with weight loss in Dubai?',
-      answer: 'Unlike restrictive diets, Ayurveda identifies that weight gain is often a result of a sluggish Kapha dosha and poor digestion. By shifting your heaviest meal to midday, incorporating fat-burning spices like ginger and black pepper, and following a "Kapha-pacifying" plan, residents often notice better digestion and energy, and weight changes follow gradually; results vary from person to person.'
+      title: 'How Does Ayurveda Help With Weight Loss?',
+      question: 'In short:',
+      answer: 'Ayurveda treats weight gain as a Kapha imbalance with weak digestion. A typical plan combines a Kapha-balancing diet (main meal at lunch, light early dinner, warm cooked food, fewer sweets and fried food), regular exercise, and therapies such as Udwarthanam and herbal steam, with Virechana or Basti for some people. Weight loss is gradual and varies from person to person; medical causes such as thyroid problems or PCOS should be checked first.'
     },
     ctaButtons: {
-      primary: { text: 'Start Your 30-Day Transformation' },
+      primary: { text: 'Book a Weight Loss Consultation' },
       secondary: { text: 'WhatsApp Consultation', phone: '971566597878' }
     },
     trustBadges: [
@@ -27,116 +28,158 @@ const content = {
     ]
   },
   weightTrap: {
-    title: '1. The "Dubai Weight" Trap: Why Standard Diets Fail Here',
+    title: 'Why Weight Gain Is Common in Dubai',
     items: [
       {
-        title: 'High-Carb, Low-Activity Lifestyle',
-        description: 'Long work hours, car-dependent commutes, and restaurant culture create the perfect storm for Kapha imbalance.',
-        icon: 'AlertCircle'
+        title: 'Long Hours and Little Walking',
+        description: 'Car commutes, desk jobs and the summer heat leave little daily movement. Ayurveda links this inactivity to Kapha.',
+        icon: 'Clock'
       },
       {
-        title: 'Weak Digestive Fire (Mandagni)',
-        description: 'Air conditioning, late dinners, and irregular meal timing suppress Agni, leading to Ama buildup and stubborn fat.',
-        icon: 'TrendingDown'
+        title: 'Late Dinners and Eating Out',
+        description: 'Late, heavy restaurant meals and brunches add up. In Ayurveda, weak digestion in the evening (Mandagni) leads to heaviness.',
+        icon: 'Utensils'
       },
       {
-        title: 'One-Size-Fits-All Plans',
-        description: (
-          <>
-            Generic keto or fasting plans ignore your unique Prakriti (constitution), causing frustration and rebound weight gain. Compare approaches in our <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="text-[#1F5E4B] underline font-semibold hover:text-[#16442d]">Ayurvedic diet vs keto</a> guide.
-          </>
-        ),
-        icon: 'Thermometer'
+        title: 'Hidden Medical Causes',
+        description: 'Thyroid problems, PCOS, some medicines and poor sleep can make weight harder to lose. Our GP in the same building can check these.',
+        icon: 'Stethoscope'
       }
     ]
   },
   pillars: {
-    title: '2. The 3 Pillars of Ayurvedic Fat Loss',
+    title: 'The Ayurvedic Diet for Weight Loss',
     items: [
       {
         letter: 'A',
-        title: 'Kindle Your Digestive Fire (Agni)',
-        description: 'Before thinking about calories, we assess your digestive strength. A weak Agni leads to Ama (toxins) that block fat metabolism. We use warm spices (cumin, fennel, ginger) and avoid cold, heavy foods that dampen your metabolic fire.',
+        title: 'Support Your Digestion (Agni)',
+        description: 'Warm, freshly cooked food, warm water or ginger tea, and spices such as cumin, ginger and black pepper are traditionally used to support digestion. Avoid iced drinks with meals.',
         icon: '🔥'
       },
       {
         letter: 'B',
-        title: 'Eat with the Sun',
-        description: 'Your largest meal should be at lunch (12-1 PM) when Agni is naturally strongest. Dinner should be light and before 7 PM. This simple shift alone can reduce bloating and initiate fat loss within 7-10 days.',
+        title: 'Eat With the Sun',
+        description: 'Make lunch your largest meal and keep dinner light and early, ideally by 7–8pm. Many people find this alone reduces evening snacking and bloating.',
         icon: '☀️'
       },
       {
         letter: 'C',
-        title: 'Kapha-Pacifying Foods',
-        description: 'Weight gain in Dubai often signals excess Kapha. We prioritize warm, cooked vegetables, mung dal, quinoa, and reduce dairy, fried foods, and refined sugars that aggravate Kapha.',
+        title: 'Kapha-Balancing Foods',
+        description: 'Fill half your plate with vegetables, add protein (dal, fish, chicken, eggs), and keep whole grains such as millet or barley to a quarter. Cut sweets, fried food, refined flour and heavy dairy.',
         icon: '🌿'
       }
     ]
   },
+
+  therapies: {
+    id: 'weight-loss-therapies',
+    heading: 'Ayurvedic Therapies for Weight Loss at RamaCare',
+    intro: 'Chosen by Dr. Shamna after your consultation, and given by Kerala-trained therapists of your own gender.',
+    table: [
+      ['Udwarthanam', 'A brisk massage with warm herbal powders in upward strokes, traditionally used for Kapha and weight management.'],
+      ['Herbal steam (Swedana)', 'Gentle herbal steam, usually after Udwarthanam, to relax the body.'],
+      ['Dhanyamla Dhara', 'A warm stream of fermented herbal liquid over the body, traditionally used for heaviness and Vata-Kapha conditions.'],
+      ['Virechana or Basti', 'Supervised Panchakarma therapies, for some people, when the doctor finds them suitable.']
+    ],
+    note: 'Read more: Panchakarma (/services/panchakarma-treatment-dubai/) · Kerala Ayurvedic massage (/services/abhyanga-massage-dubai/).'
+  },
+  udwarthanamSteps: {
+    id: 'udwarthanam-session',
+    heading: 'What Happens in an Udwarthanam Session',
+    ordered: true,
+    items: [
+      { text: 'Your first visit is a consultation with Dr. Shamna, who checks that it suits you.' },
+      { text: 'Your therapist, always of your own gender, applies warm herbal powder and massages in brisk, upward strokes.' },
+      { text: 'You usually rest briefly and then have gentle herbal steam.' },
+      { text: 'A warm shower is available afterwards. Sessions last 60–90 minutes.' }
+    ]
+  },
+  sampleDay: {
+    id: 'sample-day',
+    heading: 'Sample Ayurvedic Weight Loss Day',
+    intro: 'An example only. Your plan depends on your health and routine.',
+    table: [
+      ['On waking', 'Warm water with ginger'],
+      ['Breakfast', 'Vegetable oats or millet upma, or two eggs with sautéed vegetables'],
+      ['Lunch (main meal)', 'Plenty of vegetables, dal or grilled fish or chicken, and a small portion of millet, barley or brown rice'],
+      ['After lunch', 'A 10–15 minute walk'],
+      ['Afternoon', 'Buttermilk or herbal tea; a fruit if hungry'],
+      ['Dinner (by 7–8pm)', 'Vegetable and lentil soup, or a light plate of cooked vegetables with protein']
+    ]
+  },
+  otherOptions: {
+    id: 'other-options',
+    heading: 'Other Weight Loss Options at RamaCare',
+    items: [
+      { text: 'Eximia body contouring, for shaping specific areas, alongside a healthy diet', href: '/services/eximia-body-contouring-dubai/' },
+      { text: 'GP checks for thyroid, blood sugar, cholesterol and PCOS', href: '/services/general-physician-dubai/' }
+    ]
+  },
+  yourVisit: {
+    id: 'your-visit',
+    heading: 'Your Weight Loss Consultation in Jumeirah 1',
+    table: [
+      ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+      ['Therapists', 'Syamkumar Sasidharan (men) and Mariya Thayyil Muhammed (women), Kerala-trained'],
+      ['Consultation', 'From AED 200, 45–60 minutes; therapy prices confirmed when you book'],
+      ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+      ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+      ['Hours', 'Every day, 10am–10pm, including after-work evenings']
+    ]
+  },
   superfoods: {
-    title: '3. Ayurvedic "Superfoods" for Fat Burning in the UAE',
+    title: 'Ayurvedic Herbs Used in Weight Management',
     items: [
       {
         title: 'Triphala',
-        description: 'A gentle detoxifier that supports regular elimination and reduces bloating—critical for clearing Ama.',
+        description: 'A classical formula traditionally used for regular digestion.',
         icon: '🌿'
       },
       {
-        title: 'Guggul',
-        description: 'Traditionally used to support healthy cholesterol and stimulate fat metabolism.',
+        title: 'Guggulu formulations',
+        description: 'Traditionally used in Ayurveda for Kapha and Medas (fat tissue) imbalance.',
         icon: '🌿'
       },
       {
-        title: 'Cinnamon',
-        description: 'Helps regulate blood sugar and enhances Agni without overstimulation.',
+        title: 'Cinnamon and Ginger',
+        description: 'Kitchen spices traditionally used to support digestion; fine in food amounts.',
         icon: '🌿'
       }
     ]
   },
   faqs: {
-    title: '4. People Also Ask (PAA) - Weight Loss Dubai',
+    title: 'Ayurvedic Weight Loss: Frequently Asked Questions',
     items: [
-      {
-        question: 'Can I follow an Ayurvedic diet if I eat out frequently in Dubai?',
-        answer: 'Yes. Ayurveda focuses on principles rather than rigid meal prep — choosing warm, cooked dishes over cold or raw options, favoring grilled proteins and vegetable-based mains, and being mindful of portion size at business lunches or dinners. Most Dubai restaurant menus have suitable choices once you know what to look for.'
-      },
-      {
-        question: 'How long until I see results?',
-        answer: 'Many people notice less bloating and better energy within the first couple of weeks of regular meal timing. Weight changes are gradual and vary from person to person; your doctor reviews progress at each follow-up.'
-      },
-      {
-        question: 'Is this safe alongside my medications?',
-        answer: 'Ayurvedic dietary changes can generally be followed alongside most medications, but any herbal supplements — such as Triphala or Guggul — should only be introduced under the guidance of a licensed Ayurvedic practitioner. Always inform your doctor about any new supplements if you\'re on prescribed medication.'
-      },
-      {
-        question: 'Do I need to buy special supplements?',
-        answer: 'Not necessarily. The core of an Ayurvedic weight loss plan is dietary and lifestyle change — meal timing, food choices, and daily routine. Herbal support like Triphala or Guggul can be added for extra benefit, but a personalized plan can start with food alone.'
-      }
+      { question: 'What is Ayurvedic weight loss treatment?', answer: 'A doctor-planned approach that combines a Kapha-balancing diet, daily activity and Ayurvedic therapies such as Udwarthanam (herbal powder massage) and herbal steam, with Virechana or Basti for some people. At RamaCare in Jumeirah 1 it starts with a consultation with Dr. Shamna Keloth Meethal (BAMS).' },
+      { question: 'What is Udwarthanam?', answer: 'Udwarthanam is a brisk Ayurvedic massage using warm herbal powders, rubbed in upward strokes. It is traditionally used for Kapha and weight management, and is usually followed by herbal steam.' },
+      { question: 'Does Udwarthanam reduce fat?', answer: 'It is traditionally used as part of Ayurvedic weight management and many people find their skin feels firmer, but massage alone does not remove fat. Weight loss comes mainly from diet and activity; therapies support the plan.' },
+      { question: 'Which Ayurvedic therapies are used for weight loss?', answer: 'Udwarthanam, herbal steam (Swedana), Dhanyamla Dhara, and for some people Virechana or Basti as part of Panchakarma. The doctor decides which suit you.' },
+      { question: 'Is there an Ayurvedic weight loss package in Dubai?', answer: 'Yes. After your consultation, Dr. Shamna plans a programme of therapies and diet for you. Its length and price depend on your needs and are confirmed when you book.' },
+      { question: 'How fast will I lose weight?', answer: 'It varies. A steady rate of about 0.5–1 kg a week is generally considered healthy. The doctor reviews your weight and measurements at follow-ups.' },
+      { question: 'How can I lose weight in Dubai?', answer: 'Follow a weight loss plan you can keep: make lunch your main meal, eat a light early dinner, cut sugary drinks and late snacks, and walk daily, indoors or early in the morning in summer. If weight is hard to shift, check thyroid and other causes with a doctor, and consider a personal Ayurvedic plan in Jumeirah 1.' },
+      { question: 'What should I eat for weight loss in Ayurveda?', answer: 'Warm, freshly cooked meals with plenty of vegetables, protein such as dal, fish, chicken or eggs, and a small portion of whole grains like millet or barley. Make lunch your main meal and keep dinner light and early.' },
+      { question: 'Can I follow an Ayurvedic diet if I eat out often in Dubai?', answer: 'Yes. Choose grilled protein, lentil soup, dal and cooked vegetables, keep rice and bread small, skip sugary drinks and desserts, and avoid large late dinners.' },
+      { question: 'Should I get blood tests before starting?', answer: 'It is a good idea, especially if weight gain is recent or hard to shift. Our GP in the same building can check thyroid function, blood sugar, cholesterol and, for women, signs of PCOS.' },
+      { question: 'Is it safe with my medicines?', answer: 'Diet changes can usually be followed alongside medicines. Herbal medicines are prescribed only after the doctor reviews your health and current medicines.' },
+      { question: 'Who gives the therapies?', answer: 'Kerala-trained therapists of your own gender: Syamkumar Sasidharan for men and Mariya Thayyil Muhammed for women.' },
+      { question: 'Who should not have Udwarthanam?', answer: 'It may be postponed during pregnancy, fever, skin infections or broken skin, and with some heart conditions. The doctor checks this at your consultation.' },
+      { question: 'Do you offer other weight loss options?', answer: 'Yes. RamaCare also offers Eximia body contouring for shaping specific areas, which can be combined with an Ayurvedic diet plan.' },
+      { question: 'Where is RamaCare?', answer: 'At 12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day, 10am–10pm.' },
+      { question: 'How much does a weight loss consultation cost?', answer: 'A consultation with Dr. Shamna starts from AED 200 and takes 45–60 minutes. Therapy prices are confirmed when you book.' }
     ]
   },
   clinical: {
-    title: '5. Experience Clinical Weight Loss at RamaCare',
-    description: 'At RamaCare Polyclinic in Jumeirah, we combine ancient Ayurvedic wisdom with modern diagnostic tools. Our practitioners conduct a full Prakriti and Vikriti assessment, review your lifestyle in the context of Dubai\'s unique climate, and design a personalized Ahara (diet) and Vihara (lifestyle) plan.',
+    title: 'How Ayurvedic Weight Loss Care Works at RamaCare',
+    description: 'Every plan is personal, and its length is set by the doctor. Prices for therapies are confirmed when you book.',
     points: [
-      { label: 'Week 1-2', text: 'Initial consultation, dosha analysis, baseline metabolic assessment' },
-      { label: 'Week 3-6', text: 'Customized meal plans, herbal support, weekly progress tracking' },
-      { label: 'Month 2-3', text: 'Fine-tuning, sustainable habit formation, long-term maintenance strategy' }
+      { label: 'Step 1', text: 'Consultation with Dr. Shamna (from AED 200): weight history, Prakriti, digestion and goals.' },
+      { label: 'Step 2', text: 'GP checks if needed: thyroid, blood sugar, cholesterol and, for women, PCOS.' },
+      { label: 'Step 3', text: 'Your plan: Kapha-balancing diet, activity, and therapies such as Udwarthanam and herbal steam.' },
+      { label: 'Step 4', text: 'Follow-ups: weight and measurements reviewed, plan adjusted as you go.' }
     ],
-    cta: 'Start Your 30-Day Transformation in Jumeirah Today'
+    cta: 'Book a Weight Loss Consultation'
   },
-  retargeting: {
-    title: 'Still Thinking?',
-    cards: [
-      { label: '4.8/5 Patient Rating', icon: 'Star', stars: 5 },
-      { label: '500+', subLabel: 'Successful Transformations', icon: 'Users' },
-      { label: '3-6 Weeks', subLabel: 'To Visible Results', icon: 'Clock' }
-    ],
-    badge: 'Limited consultation slots this week',
-    buttons: {
-      confirm: 'Book Now',
-      whatsapp: 'WhatsApp Instantly'
-    }
-  },
+
   leadCapture: {
     title: 'Ready to Transform Your Health?',
     subtitle: 'Book your personalized Ayurvedic consultation today',
@@ -183,59 +226,52 @@ export default function AyurvedicDietWeightLossPage() {
         "@type": "MedicalWebPage",
         "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#webpage",
         "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/",
-        "name": "Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans",
-        "description": "Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Weight Management / Metabolic Balance (Kapha & Agni)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#physician"
-        },
+        "name": "Ayurvedic Weight Loss Treatment Dubai | Udwarthanam & Diet",
+        "inLanguage": "en-AE",
+        "about": [
+          { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#therapy" },
+          { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#diet" }
+        ],
+        "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+        "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+        "lastReviewed": "2026-01-12",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
             { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Weight Loss", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" }
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Weight Loss Treatment", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" }
           ]
         }
       },
       {
-        "@type": "Person",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#physician",
+        "@type": "MedicalTherapy",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#therapy",
+        "name": "Ayurvedic weight loss treatment",
+        "alternateName": ["Udwarthanam", "Udvartanam", "Ayurvedic slimming treatment", "Ayurvedic weight loss programme", "Dhanyamla Dhara", "Herbal steam (Swedana)"],
+        "description": "Doctor-planned Ayurvedic weight loss care at RamaCare Polyclinic, Jumeirah 1, Dubai: consultation with a BAMS doctor, GP checks when needed, Udwarthanam (herbal powder massage), herbal steam, Dhanyamla Dhara, and Virechana or Basti when suitable, given by same-gender therapists, with a Kapha-balancing diet plan.",
+        "relevantSpecialty": "https://schema.org/Ayurvedic",
+        "provider": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+      },
+      {
+        "@type": "Diet",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#diet",
+        "name": "Ayurvedic diet for weight loss",
+        "dietFeatures": "Main meal at lunch, light early dinner, plate method with vegetables and protein, Kapha-balancing warm and lightly spiced food, fewer sweets, fried food and refined flour",
+        "expertConsiderations": "Medical causes of weight gain such as thyroid problems, PCOS or medicines should be checked by a doctor. Herbal medicines only as prescribed."
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
         "name": "Dr. Shamna Keloth Meethal",
-        "jobTitle": "Ayurveda Doctor",
-        "honorificSuffix": "BAMS",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "License",
-          "name": "DHA Licensed Ayurveda Doctor"
-        },
-        "worksFor": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
-          }
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+        "gender": "Female",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+        "medicalSpecialty": "https://schema.org/Ayurvedic",
+        "knowsLanguage": ["en", "ml", "hi"],
+        "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/#faq",
         "mainEntity": faqsForSchema
       }
     ]
@@ -288,27 +324,27 @@ export default function AyurvedicDietWeightLossPage() {
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans</title>
-        <meta name="description" content="Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas. Visit RamaCare Jumeirah." key="description" />
+        <title key="title">Ayurvedic Weight Loss Treatment Dubai | Udwarthanam & Diet</title>
+        <meta name="description" content="Ayurvedic weight loss treatment in Jumeirah 1, Dubai: Udwarthanam, herbal steam and a Kapha diet plan by a BAMS doctor, with GP checks and same-gender therapists." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans" key="og:title" />
-        <meta property="og:description" content="Lose weight sustainably without fad diets. Our DHA-licensed Ayurvedic weight loss plans in Dubai target the root cause of obesity by boosting metabolism and balancing Doshas. Visit RamaCare Jumeirah." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Weight Loss Treatment Dubai | Udwarthanam & Diet" key="og:title" />
+        <meta property="og:description" content="Ayurvedic weight loss treatment in Jumeirah 1, Dubai: Udwarthanam, herbal steam and a Kapha diet plan by a BAMS doctor, with GP checks and same-gender therapists." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-weight-loss-dubai/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/diet1.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet for Weight Loss in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic weight loss treatment with Udwarthanam at RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet for Weight Loss Dubai | Natural Fat Loss Plans" key="twitter:title" />
-        <meta name="twitter:description" content="Sustainable, DHA-licensed Ayurvedic weight loss plans in Dubai — targeting metabolism and Dosha balance instead of fad diets." key="twitter:description" />
+        <meta name="twitter:title" content="Ayurvedic Weight Loss Treatment Dubai | Udwarthanam & Diet" key="twitter:title" />
+        <meta name="twitter:description" content="Ayurvedic weight loss treatment in Jumeirah 1, Dubai: Udwarthanam, herbal steam and a Kapha diet plan by a BAMS doctor, with GP checks and same-gender therapists." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/diet1.jpg" key="twitter:image" />
 
         <script
@@ -421,7 +457,7 @@ export default function AyurvedicDietWeightLossPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {content.weightTrap.items.map((item, idx) => {
-              const Icon = LucideIcons[item.icon];
+              const Icon = (item.icon && LucideIcons[item.icon]) || LucideIcons.AlertCircle;
               return (
                 <motion.div
                   key={idx}
@@ -488,6 +524,9 @@ export default function AyurvedicDietWeightLossPage() {
         </div>
       </section>
 
+      <AyurvedaInfoSection content={content.therapies} />
+      <AyurvedaInfoSection content={content.udwarthanamSteps} />
+
       {/* Section 3: Superfoods */}
       <section className="bg-[#F9F7F2] py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -538,6 +577,8 @@ export default function AyurvedicDietWeightLossPage() {
           </motion.div>
         </div>
       </section>
+      <AyurvedaInfoSection content={content.sampleDay} />
+      <AyurvedaInfoSection content={content.otherOptions} />
 
       {/* Section 4: FAQs */}
       <section className="bg-white py-16 md:py-24">
@@ -650,74 +691,7 @@ export default function AyurvedicDietWeightLossPage() {
           </div>
         </div>
       </section>
-
-      {/* Section: Still Thinking? */}
-      <section className="bg-[#F5F1EA] py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-3xl lg:text-[36px] font-bold text-[#1A1A1A] mb-6"
-          >
-            {content.retargeting.title}
-          </motion.h3>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-            {content.retargeting.cards.map((card, idx) => {
-              const Icon = LucideIcons[card.icon];
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-center w-[304px] h-[168px]"
-                >
-                  <Icon className="text-[#1F5E4B] mb-3" size={40} />
-                  {card.stars && (
-                    <div className="flex gap-1 mb-2">
-                      {[...Array(card.stars)].map((_, i) => (
-                        <LucideIcons.Star key={i} size={16} className="fill-[#1F5E4B] text-[#1F5E4B]" />
-                      ))}
-                    </div>
-                  )}
-                  <p className={`${card.subLabel ? 'text-2xl font-bold' : 'text-sm'} text-[#1A1A1A] mb-1`}>{card.label}</p>
-                  {card.subLabel && <p className="text-[#5F5F5F] text-sm">{card.subLabel}</p>}
-                </motion.div>
-              );
-            })}
-          </div>
-
-          <div className="flex flex-col items-center gap-8">
-            <div className="bg-white px-6 py-3 rounded-full border border-[#E9E2D6] flex items-center gap-2 shadow-sm">
-              <LucideIcons.Zap className="text-orange-500 fill-orange-500" size={18} />
-              <strong className="text-[#1F5E4B] font-bold text-[18px]">
-                {content.retargeting.badge}
-              </strong>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-              <button
-                onClick={scrollToForm}
-                className="flex-1 bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-bold text-[16px] hover:bg-[#164435] transition-all shadow-lg"
-              >
-                {content.retargeting.buttons.confirm}
-              </button>
-              <a
-                href={`https://wa.me/${content.hero.ctaButtons.secondary.phone}`}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="flex-1 bg-white text-[#1F5E4B] px-8 py-4 rounded-lg font-bold text-[16px] border-2 border-[#1F5E4B] hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
-              >
-                {content.retargeting.buttons.whatsapp}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <AyurvedaInfoSection content={content.yourVisit} />
       {/* Section: Booking Form */}
       <section id="booking-form" className="bg-[#1F5E4B] py-16 md:py-24 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center mb-12">
@@ -787,9 +761,9 @@ export default function AyurvedicDietWeightLossPage() {
                 required
               >
                 <option value="">Select your goal</option>
-                <option value="weight-loss">Weight Loss</option>
-                <option value="metabolism">Boost Metabolism</option>
-                <option value="detox">Detoxification</option>
+                <option value="weight-loss">Weight loss</option>
+                <option value="udwarthanam">Udwarthanam / therapies</option>
+                <option value="diet">Diet plan</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -803,9 +777,9 @@ export default function AyurvedicDietWeightLossPage() {
                 required
               >
                 <option value="">Select preferred time</option>
-                <option value="morning">Morning (9 AM - 12 PM)</option>
-                <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                <option value="evening">Evening (4 PM - 8 PM)</option>
+                <option value="morning">Morning (10 AM - 1 PM)</option>
+                <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                <option value="evening">After work (5 PM - 10 PM)</option>
               </select>
             </div>
 
@@ -836,30 +810,54 @@ export default function AyurvedicDietWeightLossPage() {
             Related Ayurvedic Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Detox Diet Plan</span>
-              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
-            </a>
             <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
               <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet Plan</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
+            <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Gut Health</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
             <a href="/services/ayurvedic-diet-vs-keto-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
-              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic diet vs keto</span>
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Keto</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-vs-intermittent-fasting-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet vs Intermittent Fasting</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-diet-pcos-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Diet for PCOS</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/panchakarma-treatment-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Panchakarma Treatment</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/eximia-body-contouring-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Eximia Body Contouring</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurveda-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Clinic in Dubai</span>
+              <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
+            </a>
+            <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#F5F1EA] hover:bg-[#E9E2D6] p-6 rounded-2xl flex items-center justify-between transition-all group shadow-sm">
+              <span className="font-bold text-[#1A1A1A] group-hover:text-[#1F5E4B]">Ayurvedic Detox Diet</span>
               <LucideIcons.ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#1F5E4B] transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
       </section>
 
-      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-weight-loss-dubai" />
+      <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-weight-loss-dubai" lastReviewed="2026-01-12" />
 
       {/* Sticky Bottom CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-[#1F5E4B] text-white py-4 px-6 z-50 shadow-2xl">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
-            <p className="font-bold text-lg">Start Your 30-Day Transformation</p>
-            <p className="text-xs text-white/70">Limited slots available this week</p>
+            <p className="font-bold text-lg">Ayurvedic weight loss consultation in Jumeirah 1</p>
+            <p className="text-xs text-white/70">Open daily 10am–10pm</p>
           </div>
           <div className="flex gap-4">
             <button

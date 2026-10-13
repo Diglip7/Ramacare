@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Sparkles, Scissors, Zap, Target, Heart, Activity, Stethoscope,
   Smile, Droplets, Brain, Shield, Pill, Users, Calendar,
@@ -202,18 +203,15 @@ const TreatmentSection = ({ category, content }) => {
     setSelectedTreatmentId(treatmentId);
   };
 
-  const handleLearnMore = () => {
-    if (selectedTreatment.fullSlug) {
-      router.push(selectedTreatment.fullSlug);
-    } else if (category && category !== 'all') {
+    // Builds a crawlable URL for each treatment card
+  const getTreatmentHref = (t) => {
+    if (t?.fullSlug) return t.fullSlug;
+    if (category && category !== 'all') {
       const categorySlug = category.replace(/\s+/g, '-').toLowerCase();
-      router.push(`/services/${categorySlug}-dubai/${selectedTreatment.slug}`);
-    } else {
-      const slugWithDubai = selectedTreatment.slug.endsWith('-dubai')
-        ? selectedTreatment.slug
-        : `${selectedTreatment.slug}-dubai`;
-      router.push(`/services/${slugWithDubai}`);
+      return `/services/${categorySlug}-dubai/${t.slug}/`;
     }
+    const slugWithDubai = t.slug.endsWith('-dubai') ? t.slug : `${t.slug}-dubai`;
+    return `/services/${slugWithDubai}/`;
   };
 
   const handleConsultationClick = () => {
@@ -409,12 +407,12 @@ const TreatmentSection = ({ category, content }) => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
                         </button>
-                        <button
-                          onClick={handleLearnMore}
+                        <Link
+                          href={getTreatmentHref(treatment)}
                           className="flex items-center justify-center bg-white border-2 border-[#1E5A3C] text-[#1E5A3C] px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-[#1E5A3C] hover:text-white transition-all duration-300"
                         >
-                          Learn More
-                        </button>
+                          {treatment.title} details
+                        </Link>
                       </div>
                     </div>
                   </div>

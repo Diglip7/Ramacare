@@ -25,7 +25,8 @@ import {
   ChevronUp,
   AlertTriangle,
   MessageCircle
-} from 'lucide-react';
+} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+
 
 export default function BackPainTreatmentPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -155,8 +156,8 @@ export default function BackPainTreatmentPage() {
     { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
     { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
     { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Post Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
     { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
   ];
 
@@ -1067,7 +1068,7 @@ export default function BackPainTreatmentPage() {
           description: 'Restore your mobility and live pain-free with trusted back pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
-          submitButtonText: 'Confirm Free Consultation',
+          submitButtonText: 'Request Appointment',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
@@ -1093,12 +1094,12 @@ export default function BackPainTreatmentPage() {
               description: '15+ Years Combined'
             },
             {
-              title: '2,500+ Patients',
-              description: 'Treated'
+              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
             },
             {
-              title: '4.8/5 Rating',
-              description: 'Patient Reviews'
+              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
             }
           ]
         }}

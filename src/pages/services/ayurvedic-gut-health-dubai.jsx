@@ -22,9 +22,9 @@ const content = {
     image: '/images/gut.jpg'
   },
   summary: {
-   title: 'How Can I Improve My Gut Health With Ayurveda?',
-   question: 'In short:',
-   answer: 'Keep your digestive fire (Agni) steady. Eat at regular times, make lunch your largest meal, sip warm water or ginger water before meals instead of iced drinks, avoid incompatible combinations such as fruit with dairy or fish with milk, and keep dinner light and early. In Dubai, balance long hours in air-conditioning with warm, lightly spiced, freshly cooked food.'
+    title: 'How Can I Improve My Gut Health With Ayurveda?',
+    question: 'In short:',
+    answer: 'Keep your digestive fire (Agni) steady. Eat at regular times, make lunch your largest meal, sip warm water or ginger water before meals instead of iced drinks, avoid incompatible combinations such as fruit with dairy or fish with milk, and keep dinner light and early. In Dubai, balance long hours in air-conditioning with warm, lightly spiced, freshly cooked food.'
   },
   dubaiGut: {
     title: 'Why Digestion Struggles in Dubai',
@@ -44,10 +44,10 @@ const content = {
         description: 'Eating while standing, driving, or answering emails in DIFC keeps the body in "fight or flight" mode, which shuts down the digestive system (The Enteric Nervous System).',
         icon: 'Activity'
       },
-      { 
-        title: 'Long Hours in Air-Conditioning', 
-        description: 'Cold, dry air all day aggravates Vata in Ayurveda, which shows up as gas, dryness and irregular digestion.', 
-        icon: 'Wind' 
+      {
+        title: 'Long Hours in Air-Conditioning',
+        description: 'Cold, dry air all day aggravates Vata in Ayurveda, which shows up as gas, dryness and irregular digestion.',
+        icon: 'Wind'
       }
     ]
   },
@@ -148,52 +148,53 @@ const content = {
       { id: 'Step 4', title: 'Medical Checks if Needed', description: 'If anything needs a medical check, our GP in the same building can examine you and arrange tests.', icon: 'Stethoscope' }
     ]
   },
-      whenToSeeDoctor: {
-      id: 'when-to-see-a-doctor',
-      heading: 'When to See a Doctor About Your Digestion',
-      intro: 'Ayurvedic self-care is for everyday digestion. See a doctor first if you have:',
-      items: [
-        { text: 'unexplained weight loss or loss of appetite' },
-        { text: 'blood in the stool, black stools, or vomiting blood' },
-        { text: 'difficulty or pain when swallowing' },
-        { text: 'severe, constant or night-time abdominal pain' },
-        { text: 'a new change in bowel habit lasting several weeks' }
-      ],
-      note: 'At RamaCare, our general physician is in the same building and can arrange blood tests, stool tests and H. pylori testing if needed (/services/general-physician-dubai/). We do not offer gut microbiome or food-intolerance testing.'
-    },
-    yourVisit: {
-      id: 'your-visit',
-      heading: 'Your Ayurvedic Digestive Assessment in Jumeirah 1',
-      table: [
-        ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
-        ['Therapies, if needed', 'Given by Kerala-trained therapists of your own gender, always'],
-        ['Consultation', 'From AED 200, 45–60 minutes'],
-        ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
-        ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
-        ['Hours', 'Every day, 10am–10pm']
-      ]
-    },
-    relatedGuides: {
-      id: 'related-guides',
-      heading: 'Related Ayurvedic Guides and Treatments',
-      items: [
-        { text: 'Ayurvedic treatment for acidity, IBS and digestive problems', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
-        { text: 'Ayurvedic diet plan in Dubai', href: '/services/ayurvedic-diet-plan-dubai/' },
-        { text: 'Take the dosha test (Prakriti and dosha assessment)', href: '/services/prakriti-dosha-assessment-dubai/' },
-        { text: 'Ayurvedic summer diet for Dubai', href: '/services/ayurvedic-diet-dubai-summer/' },
-        { text: 'Ayurvedic detox diet', href: '/services/ayurvedic-detox-diet-plan-dubai/' },
-        { text: 'Basti therapy (for Vata digestion)', href: '/services/basti-therapy-dubai/' }
-      ]
-    },
+  whenToSeeDoctor: {
+    id: 'when-to-see-a-doctor',
+    heading: 'When to See a Doctor About Your Digestion',
+    intro: 'Ayurvedic self-care is for everyday digestion. See a doctor first if you have:',
+    items: [
+      { text: 'unexplained weight loss or loss of appetite' },
+      { text: 'blood in the stool, black stools, or vomiting blood' },
+      { text: 'difficulty or pain when swallowing' },
+      { text: 'severe, constant or night-time abdominal pain' },
+      { text: 'a new change in bowel habit lasting several weeks' }
+    ],
+    note: 'At RamaCare, our general physician is in the same building and can arrange blood tests, stool tests and H. pylori testing if needed (/services/general-physician-dubai/). We do not offer gut microbiome or food-intolerance testing.'
+  },
+  yourVisit: {
+    id: 'your-visit',
+    heading: 'Your Ayurvedic Digestive Assessment in Jumeirah 1',
+    table: [
+      ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+      ['Therapies, if needed', 'Given by Kerala-trained therapists of your own gender, always'],
+      ['Consultation', 'From AED 200, 45–60 minutes'],
+      ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+      ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+      ['Hours', 'Every day, 10am–10pm']
+    ]
+  },
+  relatedGuides: {
+    id: 'related-guides',
+    heading: 'Related Ayurvedic Guides and Treatments',
+    items: [
+      { text: 'Ayurvedic treatment for acidity, IBS and digestive problems', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
+      { text: 'Ayurvedic diet plan in Dubai', href: '/services/ayurvedic-diet-plan-dubai/' },
+      { text: 'Ayurvedic weight loss treatment in Dubai', href: '/services/ayurvedic-diet-weight-loss-dubai/' },
+      { text: 'Take the dosha test (Prakriti and dosha assessment)', href: '/services/prakriti-dosha-assessment-dubai/' },
+      { text: 'Ayurvedic summer diet for Dubai', href: '/services/ayurvedic-diet-dubai-summer/' },
+      { text: 'Ayurvedic detox diet', href: '/services/ayurvedic-detox-diet-plan-dubai/' },
+      { text: 'Basti therapy (for Vata digestion)', href: '/services/basti-therapy-dubai/' }
+    ]
+  },
 
-      authorityFooter: {
-        title: 'Ready to Look After Your Digestion?',
-        description: 'Book a digestive assessment with Dr. Shamna in Jumeirah 1, from AED 200, or explore our Ayurvedic diet plan and Ayurvedic digestive treatment.',
-        cta: 'Book Your Digestive Assessment'
-      }
-    };
+  authorityFooter: {
+    title: 'Ready to Look After Your Digestion?',
+    description: 'Book a digestive assessment with Dr. Shamna in Jumeirah 1, from AED 200, or explore our Ayurvedic diet plan and Ayurvedic digestive treatment.',
+    cta: 'Book Your Digestive Assessment'
+  }
+};
 
-    export default function AyurvedicGutHealthDubaiPage() {
+export default function AyurvedicGutHealthDubaiPage() {
   const { showToast, ToastComponent } = useToast();
   const [activeAccordion, setActiveAccordion] = useState(1);
   const router = useRouter();
@@ -216,48 +217,48 @@ const content = {
     }
   }));
 
- const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalWebPage",
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#webpage",
-          "url": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/",
-          "name": "Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion",
-          "description": "An Ayurvedic guide to gut health and Agni (digestive fire) by RamaCare Polyclinic, Jumeirah 1, Dubai: the four types of Agni, Dubai habits that upset digestion, kitchen remedies, an Agni self-check and when to see a doctor.",
-          "inLanguage": "en-AE",
-          "about": [
-            { "@type": "Thing", "name": "Agni (digestive fire) in Ayurveda" },
-            { "@type": "Thing", "name": "Gut health" }
-          ],
-          "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
-          "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
-          "lastReviewed": "2026-01-12",
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
-              { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-              { "@type": "ListItem", "position": 3, "name": "Ayurvedic Gut Health", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" }
-            ]
-          }
-        },
-        {
-          "@type": "Physician",
-          "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
-          "name": "Dr. Shamna Keloth Meethal",
-          "gender": "Female",
-          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
-          "medicalSpecialty": "https://schema.org/Ayurvedic",
-          "knowsLanguage": ["en", "ml", "hi"],
-          "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": faqsForSchema
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/#webpage",
+        "url": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/",
+        "name": "Ayurvedic Gut Health Dubai, Jumeirah 1 | Agni & Digestion",
+        "description": "An Ayurvedic guide to gut health and Agni (digestive fire) by RamaCare Polyclinic, Jumeirah 1, Dubai: the four types of Agni, Dubai habits that upset digestion, kitchen remedies, an Agni self-check and when to see a doctor.",
+        "inLanguage": "en-AE",
+        "about": [
+          { "@type": "Thing", "name": "Agni (digestive fire) in Ayurveda" },
+          { "@type": "Thing", "name": "Gut health" }
+        ],
+        "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+        "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+        "lastReviewed": "2026-01-12",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
+            { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Gut Health", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-gut-health-dubai/" }
+          ]
         }
-      ]
-    };
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
+        "name": "Dr. Shamna Keloth Meethal",
+        "gender": "Female",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+        "medicalSpecialty": "https://schema.org/Ayurvedic",
+        "knowsLanguage": ["en", "ml", "hi"],
+        "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqsForSchema
+      }
+    ]
+  };
 
   return (
     <Layout>
@@ -402,7 +403,7 @@ const content = {
       </section>
 
       {/* 4. 4 Types of Agni Section */}
-      
+
       <section className="bg-[#F5F1EA] py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] text-center mb-12">
@@ -479,18 +480,18 @@ const content = {
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] text-center mb-12">
             {content.paa.title}
           </h2>
-          
+
           <div className="space-y-4 mt-12">
             {content.paa.items.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <button
                   onClick={() => setActiveAccordion(activeAccordion === index ? null : index)}
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
                   <span className="font-bold text-[#1A1A1A]">{item.question}</span>
-                  <LucideIcons.ChevronDown 
-                    className={`w-5 h-5 text-gray-400 transition-transform ${activeAccordion === index ? 'rotate-180' : ''}`} 
+                  <LucideIcons.ChevronDown
+                    className={`w-5 h-5 text-gray-400 transition-transform ${activeAccordion === index ? 'rotate-180' : ''}`}
                   />
                 </button>
                 {activeAccordion === index && (
@@ -503,7 +504,7 @@ const content = {
           </div>
 
           {/* Floating Action Button */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="hidden lg:block fixed top-1/2 right-8 -translate-y-1/2 z-40"
@@ -548,9 +549,9 @@ const content = {
           </div>
         </div>
       </section>
-<AyurvedaInfoSection content={content.whenToSeeDoctor} />
-<AyurvedaInfoSection content={content.yourVisit} />
-<AyurvedaInfoSection content={content.relatedGuides} />
+      <AyurvedaInfoSection content={content.whenToSeeDoctor} />
+      <AyurvedaInfoSection content={content.yourVisit} />
+      <AyurvedaInfoSection content={content.relatedGuides} />
 
       {/* 8. Authority Footer Section */}
       <section className="bg-[#1A5F3F] py-20 px-6 text-white text-center">

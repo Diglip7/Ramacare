@@ -34,6 +34,10 @@ export default function AyurvedaCategoryPage() {
       ,{" "}
       <Link href="/services/kizhi-therapy-dubai/" className="text-[#007474] hover:underline font-medium">
         Kizhi therapy
+      </Link>
+      ,{" "}
+      <Link href="/services/ayurvedic-diet-weight-loss-dubai/" className="text-[#007474] hover:underline font-medium">
+        Ayurvedic weight loss treatment in Dubai
       </Link>{" "}
       and our{" "}
       <Link href="/services/ayurvedic-clinic-in-jumeirah/" className="text-[#007474] hover:underline font-medium">

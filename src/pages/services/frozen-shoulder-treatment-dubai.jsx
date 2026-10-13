@@ -1584,7 +1584,7 @@ export default function FrozenShoulderTreatmentPage() {
               { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#ECFDF5]' },
               { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
               { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#FEF2F2]' },
-              { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
+              { text: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
               { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#ECFDF5]' },
               { text: 'Physiotherapy in Dubai', link: '/services/physiotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' }
             ].map((resource, index) => (

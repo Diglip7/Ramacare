@@ -37,11 +37,11 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
 
   if (isGenericTitle) {
     // 1. Physiotherapy & Rehabilitation
-    if (contextStr.includes('physio') || contextStr.includes('joint') || contextStr.includes('knee') || contextStr.includes('back') || contextStr.includes('shoulder') || contextStr.includes('neck') || contextStr.includes('sciatica') || contextStr.includes('disc') || contextStr.includes('rehab') || contextStr.includes('ultrasound') || contextStr.includes('spine') || contextStr.includes('post-surgery') || contextStr.includes('plantar') || contextStr.includes('cervical') || contextStr.includes('arthritis') || contextStr.includes('stress') || contextStr.includes('anxiety') || contextStr.includes('insomnia') || contextStr.includes('dry-needling') || contextStr.includes('electrotherapy')) {
+    if (contextStr.includes('physio') || contextStr.includes('joint') || contextStr.includes('knee') || contextStr.includes('back') || contextStr.includes('shoulder') || contextStr.includes('neck') || contextStr.includes('sciatica') || contextStr.includes('disc') || contextStr.includes('rehab') || contextStr.includes('ultrasound') || contextStr.includes('spine') || contextStr.includes('post-surgery') || contextStr.includes('plantar') || contextStr.includes('cervical') || contextStr.includes('arthritis') || contextStr.includes('stress') || contextStr.includes('dry-needling') || contextStr.includes('electrotherapy')) {
       isJeena = true;
     }
     // 2. Ayurveda & Ayurvedic Comparisons
-    else if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya')) {
+    else if (contextStr.includes('ayurveda') || contextStr.includes('panchakarma') || contextStr.includes('abhyanga') || contextStr.includes('gut') || contextStr.includes('basti') || contextStr.includes('shirodhara') || contextStr.includes('nasya') || contextStr.includes('anxiety') || contextStr.includes('insomnia')) {
       isShamna = true;
     }
     // 3. Dental & Teeth Treatments
@@ -78,7 +78,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     name = 'Jeena Mathew';
     role = 'Musculoskeletal Physiotherapy Specialist';
     credentials = 'BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist';
-    experience = '8+ Years Clinical Experience · 600+ Patients Treated';
+    experience = '8+ Years Clinical Experience';
     link = '/doctors/jeena-mathew-physiotherapist-dubai/';
     image = '/images/Jeena Mathew.jpeg';
     statement = 'This physiotherapy guide has been clinically reviewed and verified for medical accuracy, evidence-based joint care protocols, and DHA guidelines by Jeena Mathew to ensure safe, effective patient care.';
@@ -86,7 +86,7 @@ export default function ContentReviewBadge({ doctorName, doctorRole, doctorCrede
     name = 'Dr. Shamna Keloth Meethal';
     role = 'Ayurveda & Holistic Health Specialist';
     credentials = 'BAMS · DHA Licensed Ayurveda Doctor';
-    experience = '11+ Years Clinical Experience · 800+ Patients Treated';
+    experience = '11+ Years Clinical Experience';
     link = '/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/';
     image = '/images/Dr Shamna Keloth Meethal.jpeg';
     statement = 'This Ayurvedic medical guide has been reviewed for clinical authenticity and DHA healthcare standards by Dr. Shamna Keloth Meethal to support holistic wellness and evidence-based patient guidance.';

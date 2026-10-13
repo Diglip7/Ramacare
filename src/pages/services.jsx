@@ -67,7 +67,9 @@ const categorizeSlug = (slug) => {
     s.includes('nasya') || 
     s.includes('gut-health') || 
     s.includes('kizhi') || 
-    s.includes('allopathy')
+    s.includes('allopathy') ||
+    s.includes('insomnia') ||
+    s.includes('anxiety')
   ) {
     return 'ayurveda-dubai';
   }
@@ -105,8 +107,6 @@ const categorizeSlug = (slug) => {
     s.includes('spondylosis') || 
     s.includes('sciatica') || 
     s.includes('disc') || 
-    s.includes('insomnia') || 
-    s.includes('anxiety') || 
     s.includes('stress') || 
     s.includes('exercise') || 
     s.includes('massage') || 

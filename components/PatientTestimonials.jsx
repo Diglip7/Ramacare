@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { GOOGLE_RATING_FALLBACK } from '../src/data/clinicStats';
 
 const PatientTestimonials = ({ content }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -67,18 +68,18 @@ const PatientTestimonials = ({ content }) => {
   const stats = content?.stats || [
     {
       id: 1,
-      number: '4.8/5',
+       number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
       label1: 'Average Rating',
       label2: 'Google Reviews',
-      target: 4.8,
+      target: GOOGLE_RATING_FALLBACK.rating,
       showStars: true
     },
     {
       id: 2,
-      number: '200+',
-      label1: 'Patient Reviews',
-      label2: 'Verified Testimonials',
-      target: 200
+       number: `${GOOGLE_RATING_FALLBACK.count}`,
+      label1: 'Google Reviews',
+      label2: 'RamaCare Polyclinic',
+      target: GOOGLE_RATING_FALLBACK.count
     },
     {
       id: 3,
@@ -128,7 +129,7 @@ const PatientTestimonials = ({ content }) => {
       return match ? parseFloat(match[0]) : fallback;
     };
 
-    const targetRating = parseTarget(stats[0], 4.8);
+    const targetRating = parseTarget(stats[0], GOOGLE_RATING_FALLBACK.rating);
     const targetReviews = parseTarget(stats[1], 500);
     const targetSuccess = parseTarget(stats[2], 98);
     const targetPatients = parseTarget(stats[3], 2500);

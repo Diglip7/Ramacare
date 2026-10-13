@@ -3,6 +3,11 @@ import Head from 'next/head';
 import Layout from '../../../components/Layout';
 import ServicePageTemplate from '../../../components/ServicePageTemplate';
 import { subcategoryContent } from '../../data/subcategoryContent';
+import { DOCTORS } from '../../data/doctors';
+
+const SITE = "https://ramacarepolyclinic.ae";
+const CANONICAL_URL = `${SITE}/services/sports-injury-rehabilitation-dubai/`;
+const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
 
 export default function SportsInjuryRehabilitationPage() {
   const content = subcategoryContent['sports-injury-rehabilitation-dubai'];
@@ -17,12 +22,23 @@ export default function SportsInjuryRehabilitationPage() {
     );
   }
 
-  const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/sports-injury-rehabilitation-dubai/";
-  const PAGE_TITLE = "Sports Injury Rehabilitation Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Expert Sports Injury Rehabilitation Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists, personalized recovery plans. Book your assessment today.";
-  const OG_IMAGE = "https://ramacarepolyclinic.ae/images/sports-physiotherapist-treating-athlete-dubai.jpg";
+  const PAGE_TITLE = content.seo.title;
+  const PAGE_DESCRIPTION = content.seo.metaDescription;
+  const OG_IMAGE = `${SITE}/images/sports-physiotherapist-treating-athlete-dubai.jpg`;
+
+  // Physiotherapist first, then GP (same-visit examination and X-ray for new injuries)
+  const pageDoctors = [
+    DOCTORS['jeena-mathew-physiotherapist-dubai'],
+    DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai']
+  ].filter(Boolean);
 
   const { breadcrumbs, faqs } = content;
+
+  const therapy = (name, path) => ({
+    "@type": "PhysicalTherapy",
+    name,
+    ...(path ? { url: `${SITE}${path}` } : {})
+  });
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -35,7 +51,7 @@ export default function SportsInjuryRehabilitationPage() {
             "@type": "ListItem",
             "position": i + 1,
             "name": b.label,
-            "item": b.href && b.href.startsWith('http') ? b.href : "https://ramacarepolyclinic.ae" + b.href
+            "item": b.href && b.href.startsWith('http') ? b.href : SITE + b.href
           };
         })
       },
@@ -46,36 +62,41 @@ export default function SportsInjuryRehabilitationPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalTherapy",
-          "name": "Sports Injury Rehabilitation"
-        },
-        "reviewedBy": {
-          "@id": `${CANONICAL_URL}#physician`
-        },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "MedicalCondition",
+        "@id": `${CANONICAL_URL}#condition`,
+        "name": "Sports injury",
+        "alternateName": ["Sports-related musculoskeletal injury", "Athletic injury"],
+        "possibleTreatment": [
+          therapy("Sports injury rehabilitation and exercise therapy", "/services/physiotherapy-dubai/"),
+          therapy("Return-to-sport testing"),
+          therapy("Deep tissue sports massage"),
+          therapy("Manual therapy"),
+          therapy("Shockwave therapy"),
+          therapy("Kinesio taping"),
+          therapy("Dry needling", "/services/dry-needling-dubai/"),
+          therapy("Post-surgery rehabilitation", "/services/post-surgery-rehabilitation-dubai/")
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Musculoskeletal Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -84,10 +105,7 @@ export default function SportsInjuryRehabilitationPage() {
           return {
             "@type": "Question",
             "name": f.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": f.answer
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": f.answer }
           };
         })
       }
@@ -110,8 +128,9 @@ export default function SportsInjuryRehabilitationPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Sports Injury Rehabilitation in Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Sports injury physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
@@ -119,7 +138,7 @@ export default function SportsInjuryRehabilitationPage() {
         <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
         <meta name="twitter:image" content={OG_IMAGE} key="twitter:image" />
 
-        {/* Structured Data Schemas */}
+        {/* Structured Data */}
         <script
           key="schema-graph"
           type="application/ld+json"
@@ -127,7 +146,7 @@ export default function SportsInjuryRehabilitationPage() {
         />
       </Head>
 
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate content={{ ...content, doctors: pageDoctors }} />
     </Layout>
   );
 }

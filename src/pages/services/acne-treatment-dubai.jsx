@@ -26,7 +26,8 @@ import {
   Sun,
   Moon,
   MessageCircle
-} from 'lucide-react';
+} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+
 
 const SITE_URL = 'https://ramacarepolyclinic.ae';
 const PAGE_PATH = '/services/acne-treatment-dubai/';
@@ -1006,8 +1007,8 @@ export default function AcneTreatmentPage() {
               description: 'Completed'
             },
             {
-              title: '4.8/5 Rating',
-              description: 'Patient Reviews'
+              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
             }
           ]
         }}

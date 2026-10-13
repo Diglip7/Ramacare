@@ -26,7 +26,8 @@ import {
   Zap,
   Footprints,
   Hand
-} from 'lucide-react';
+} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+
 
 export default function KneePainTreatmentPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -323,7 +324,7 @@ export default function KneePainTreatmentPage() {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
-        "name": "Knee Pain Treatment in Dubai | Joint Pain Relief",
+        "name": "Knee Pain Treatment in Jumeirah 1, Dubai | RamaCare",
         "description": "Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic.",
         "inLanguage": "en",
         "isPartOf": {
@@ -395,15 +396,15 @@ export default function KneePainTreatmentPage() {
     { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
     { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
     { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Post Surgery Recovery', link: '/services/post-surgery-recovery-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Office Neck Treatment', link: '/services/office-neck-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
+    { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#ECFDF5]' },
+    { text: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
     { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
   ];
 
   return (
     <Layout>
       <Head>
-        <title key="title">Knee Pain Treatment in Dubai | Joint Pain Relief</title>
+        <title key="title">Knee Pain Treatment in Jumeirah 1, Dubai | RamaCare</title>
         <meta name="description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic." key="description" />
         <meta name="keywords" content="Knee pain treatment Dubai, Knee physiotherapy Dubai, Arthritis knee treatment, Sports injury knee treatment, Chronic knee pain Dubai, Knee rehabilitation Dubai, Joint pain relief Dubai" />
         <meta name="robots" content="index, follow" key="robots" />
@@ -411,7 +412,7 @@ export default function KneePainTreatmentPage() {
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Knee Pain Treatment in Dubai | Joint Pain Relief" />
+        <meta property="og:title" content="Knee Pain Treatment in Jumeirah 1, Dubai | RamaCare" />
         <meta property="og:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions at RamaCare Polyclinic." />
         <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/knee-pain.jpg" />
@@ -422,7 +423,7 @@ export default function KneePainTreatmentPage() {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Knee Pain Treatment in Dubai | Joint Pain Relief" />
+        <meta name="twitter:title" content="Knee Pain Treatment in Jumeirah 1, Dubai | RamaCare" />
         <meta name="twitter:description" content="Expert knee pain treatment in Dubai with personalized physiotherapy and non-surgical solutions." />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/knee-pain.jpg" />
 
@@ -1501,7 +1502,7 @@ export default function KneePainTreatmentPage() {
           description: 'Restore your mobility and live pain-free with trusted knee pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
           getInTouchTitle: 'Get In Touch',
           requestAppointmentTitle: 'Request Appointment',
-          submitButtonText: 'Confirm Free Consultation',
+          submitButtonText: 'Request Appointment',
           contactInfo: {
             phone: '+971 04 286 2006',
             whatsapp: '971566597878',
@@ -1527,12 +1528,12 @@ export default function KneePainTreatmentPage() {
               description: '15+ Years Combined'
             },
             {
-              title: '2,500+ Patients',
-              description: 'Treated'
+              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
             },
             {
-              title: '4.8/5 Rating',
-              description: 'Patient Reviews'
+              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
             }
           ]
         }}

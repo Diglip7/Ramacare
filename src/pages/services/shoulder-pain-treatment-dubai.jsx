@@ -42,13 +42,20 @@ import {
 // Renders text containing {{Label|/href}} tokens as real inline links.
 // This is how every internal link named in the source doc gets woven into
 // the copy itself, rather than only appearing as a chip at the bottom of a section.
-function LinkedText({ text, className }) {
+function LinkedText({ text, className, linkClassName, variant = 'default' }) {
   if (!text) return null;
   const regex = /\{\{([^|]+)\|([^}]+)\}\}/g;
   const parts = [];
   let lastIndex = 0;
   let match;
   let key = 0;
+
+  const defaultLinkClass =
+    variant === 'light' || variant === 'onDark'
+      ? "text-white font-semibold underline decoration-white/70 hover:text-[#C9A961] hover:decoration-[#C9A961] underline-offset-4 transition-colors"
+      : "text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors";
+
+  const resolvedLinkClass = linkClassName || defaultLinkClass;
 
   while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
@@ -58,7 +65,7 @@ function LinkedText({ text, className }) {
       <a
         key={key++}
         href={match[2]}
-        className="text-[#1F5E4B] font-semibold underline decoration-[#1F5E4B]/40 hover:decoration-[#1F5E4B] underline-offset-2 transition-colors"
+        className={resolvedLinkClass}
       >
         {match[1]}
       </a>
@@ -152,8 +159,10 @@ export default function ShoulderPainTreatmentPage() {
   const heroBlobStyleTwo = { transform: 'translateY(' + (scrollY * -0.15) + 'px)' };
 
   const CANONICAL_URL = "https://ramacarepolyclinic.ae/services/shoulder-pain-treatment-dubai/";
-  const PAGE_TITLE = "Shoulder Pain Treatment Dubai | RamaCare Polyclinic";
-  const PAGE_DESCRIPTION = "Struggling with shoulder pain? Get expert Shoulder Pain Treatment Dubai at RamaCare Polyclinic. DHA-licensed physiotherapists. Book your appointment today.";
+   const PAGE_TITLE = seo.title;
+  const PAGE_DESCRIPTION = seo.metaDescription;
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
   const OG_IMAGE = "https://ramacarepolyclinic.ae/images/shoulder-pain-treatment-dubai.jpg";
 
   const schemaGraph = {
@@ -178,38 +187,31 @@ export default function ShoulderPainTreatmentPage() {
         "name": PAGE_TITLE,
         "description": PAGE_DESCRIPTION,
         "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
+        "isPartOf": { "@id": `${SITE}/#website` },
         "medicalAudience": { "@type": "Patient" },
-        "about": { "@type": "MedicalCondition", "name": "Shoulder Pain" },
-        "reviewedBy": { "@id": `${CANONICAL_URL}#physician` },
-        "publisher": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/"
-        }
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#condition` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-15", // change to the deploy date
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
       {
-        "@type": "Physician",
-        "@id": `${CANONICAL_URL}#physician`,
+        "@type": "Person",
+        "@id": JEENA_ID,
         "name": "Jeena Mathew",
-        "medicalSpecialty": "Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        }
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
       },
       {
         "@type": "MedicalCondition",
         "@id": `${CANONICAL_URL}#condition`,
         "name": "Shoulder Pain",
-        "alternateName": "Frozen Shoulder, Rotator Cuff Injury, Shoulder Impingement",
+        "alternateName": ["Shoulder and upper arm pain", "Rotator cuff tendinopathy", "Shoulder impingement", "Subacromial bursitis"],
         "signOrSymptom": symptoms.map(function (s) { return { "@type": "MedicalSymptom", "name": s }; }),
         "riskFactor": riskFactors.map(function (r) { return { "@type": "MedicalRiskFactor", "name": r }; }),
         "possibleTreatment": treatmentOptions.map(function (t) { return { "@type": "MedicalTherapy", "name": t.title }; })
@@ -244,7 +246,7 @@ export default function ShoulderPainTreatmentPage() {
         <meta property="og:image" content={OG_IMAGE} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Shoulder Pain Treatment Dubai at RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Shoulder pain physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
 
         {/* Twitter Card Tags */}
@@ -369,8 +371,8 @@ export default function ShoulderPainTreatmentPage() {
                 <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
                   <Activity className="w-12 h-12 text-white" />
                 </div>
-                <p className="text-white text-lg font-bold">Shoulder Pain Specialist Care</p>
-                <p className="text-white/70 text-xs mt-1">DHA-Licensed Specialist Physiotherapists in Jumeirah, Dubai</p>
+                <p className="text-white text-lg font-bold">Shoulder Physiotherapy in Jumeirah 1</p>
+                <p className="text-white/70 text-xs mt-1">DHA-licensed physiotherapist · GP and X-ray on site</p>
               </div>
             </motion.div>
           </div>
@@ -476,7 +478,7 @@ export default function ShoulderPainTreatmentPage() {
                     <CheckCircle className="w-12 h-12 text-[#38D39F]" />
                   </div>
                   <p className="text-[#1F5E4B] text-lg font-bold mb-1">Shoulder Pain Causes</p>
-                  <p className="text-gray-600 text-xs max-w-xs mx-auto">Common causes of shoulder pain infographic Dubai</p>
+                  <p className="text-gray-600 text-xs max-w-xs mx-auto">Common causes of shoulder pain</p>
                 </div>
               </div>
               <figcaption className="text-sm text-[#5F5F5F] mt-3 text-center">{images.causesInfographic.caption}</figcaption>
@@ -812,7 +814,7 @@ export default function ShoulderPainTreatmentPage() {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose RamaCare Polyclinic?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose RamaCare for Shoulder Pain in Jumeirah 1?</h2>
             <p className="text-white/85 max-w-4xl mx-auto leading-relaxed">{whyChooseUsIntro}</p>
           </motion.div>
 
@@ -838,6 +840,7 @@ export default function ShoulderPainTreatmentPage() {
 
           <LinkedText
             text={whyChooseUsClosing}
+            variant="light"
             className="block text-white/80 leading-relaxed max-w-4xl mx-auto mt-10 text-center"
           />
 
@@ -903,7 +906,7 @@ export default function ShoulderPainTreatmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions - Shoulder Pain Treatment Dubai
+                 Shoulder Pain in Jumeirah 1: Common Questions
             </h2>
           </motion.div>
 
@@ -987,11 +990,11 @@ export default function ShoulderPainTreatmentPage() {
         <BookConsultation
           content={{
             badge: 'Start Your Recovery',
-            title: 'Book Shoulder Pain Treatment in Dubai Today',
-            description: 'Get back to comfortable, pain-free shoulder movement with evidence-based care at RamaCare Polyclinic.',
+            title: 'Book a Shoulder Assessment in Jumeirah 1',
+            description: 'Physiotherapy assessment AED 200. Open every day 10am–10pm, with same-day appointments when slots are free.',
             getInTouchTitle: 'Get In Touch',
             requestAppointmentTitle: 'Request Appointment',
-            submitButtonText: 'Confirm Free Consultation',
+            submitButtonText: 'Request Appointment',
             contactInfo: {
               phone: '+971 04 286 2006',
               whatsapp: '971566597878',
@@ -1008,10 +1011,10 @@ export default function ShoulderPainTreatmentPage() {
               fridayTime: '10:00 AM - 8:00 PM'
             },
             statCards: [
-              { title: 'DHA Licensed', description: 'Certified Facility' },
-              { title: 'Personalized Plans', description: 'Built Around Your Assessment' },
-              { title: 'Multidisciplinary Care', description: 'Physio + Medical Team' },
-              { title: 'Flexible Scheduling', description: 'Routine & Urgent Cases' }
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'AED 200', description: 'Physiotherapy Assessment' },
+              { title: 'GP & X-ray', description: 'In the Same Clinic' },
+              { title: 'Open Daily', description: '10am – 10pm' }
             ]
           }}
         />

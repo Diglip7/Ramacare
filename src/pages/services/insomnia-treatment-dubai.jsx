@@ -23,6 +23,7 @@ import {
   MapPin,
   Sparkles
 } from 'lucide-react';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
 
 export default function InsomniaTreatmentPage() {
   const [activeTab, setActiveTab] = useState('acute');
@@ -38,7 +39,7 @@ export default function InsomniaTreatmentPage() {
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services/" },
-    { label: "Physiotherapy", href: "/services/physiotherapy-dubai/" },
+    { label: "Ayurveda", href: "/services/ayurveda-dubai/" },
     { label: "Insomnia Treatment", href: "/services/insomnia-treatment-dubai/" }
   ];
 
@@ -201,15 +202,15 @@ export default function InsomniaTreatmentPage() {
         "lastReviewed": "2026-08-29",
         "reviewedBy": {
           "@type": "Person",
-          "name": "Dr. Sahar Zomorrodi",
-          "jobTitle": "General Practitioner",
-          "honorificSuffix": "MD",
+          "name": "Dr. Shamna Keloth Meethal",
+          "jobTitle": "Ayurveda Physician (BAMS)",
+          "honorificSuffix": "BAMS",
           "hasCredential": {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "License",
-            "name": "DHA Licensed General Practitioner"
+            "name": "DHA-Licensed Ayurveda Physician"
           },
-          "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/"
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
         },
         "publisher": {
           "@type": "Organization",
@@ -220,15 +221,15 @@ export default function InsomniaTreatmentPage() {
       {
         "@type": "Person",
         "@id": `${CANONICAL_URL}#physician`,
-        "name": "Dr. Sahar Zomorrodi",
-        "jobTitle": "General Practitioner",
-        "honorificSuffix": "MD",
+        "name": "Dr. Shamna Keloth Meethal",
+        "jobTitle": "Ayurveda Physician (BAMS)",
+        "honorificSuffix": "BAMS",
         "hasCredential": {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "License",
-          "name": "DHA Licensed General Practitioner"
+          "name": "DHA-Licensed Ayurveda Physician"
         },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
         "worksFor": {
           "@type": "MedicalClinic",
           "name": "RamaCare Polyclinic",
@@ -854,7 +855,7 @@ export default function InsomniaTreatmentPage() {
               { title: 'DHA Licensed', description: 'Certified Clinic' },
               { title: 'Holistic Approach', description: 'Ayurveda & Physio' },
               { title: 'Personalized Plans', description: 'Tailored to Assessment' },
-              { title: '4.8/5 Rating', description: 'Patient Reviews' }
+              { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
             ],
             concerns: [
               { value: 'insomnia-treatment-dubai', label: 'Insomnia / Sleep wellness' },
@@ -868,7 +869,7 @@ export default function InsomniaTreatmentPage() {
         {/* DOCTORS SHOWCASE */}
         <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
-            <DoctorsSection customDoctors={[DOCTORS.sahar, DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai'], DOCTORS['jeena-mathew-physiotherapist-dubai']]} />
+            <DoctorsSection customDoctors={[DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai'], DOCTORS.sahar, DOCTORS['jeena-mathew-physiotherapist-dubai']]} />
           </div>
         </section>
 
@@ -948,7 +949,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* Content Reviewer Badge */}
-        <ContentReviewBadge doctorName="Dr. Sahar Zomorrodi" pageSlug="/services/insomnia-treatment-dubai/" />
+        <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="/services/insomnia-treatment-dubai/" />
       </div>
     </Layout>
   );

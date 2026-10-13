@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
@@ -64,6 +63,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: '/services/post-surgery-recovery-dubai', destination: '/services/post-surgery-rehabilitation-dubai/', permanent: true },
+      { source: '/services/post-surgery-recovery-dubai/', destination: '/services/post-surgery-rehabilitation-dubai/', permanent: true },
+      { source: '/services/office-neck-treatment-dubai', destination: '/services/neck-pain-treatment-dubai/', permanent: true },
+      { source: '/services/office-neck-treatment-dubai/', destination: '/services/neck-pain-treatment-dubai/', permanent: true },
       { source: '/services/face-prp', destination: '/services/face-prp-in-dubai/', permanent: true },
       { source: '/services/face-prp/', destination: '/services/face-prp-in-dubai/', permanent: true },
       { source: '/services/ayurvedic-dandruff-treatment-dubai', destination: '/services/pcos-treatment-dubai/', permanent: true },

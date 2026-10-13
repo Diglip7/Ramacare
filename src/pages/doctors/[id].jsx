@@ -6,6 +6,7 @@ import Link from 'next/link';
 import BeginYourHealingJourneySection from '../../../components/BeginYourHealingJourneySection';
 import { DOCTORS } from '../../../src/data/doctors';
 import { getDoctorCanonical } from '../../utils/canonical';
+import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
 
 const getIconForTitle = (title) => {
   const t = title.toLowerCase();
@@ -238,14 +239,7 @@ const DoctorProfilePage = ({ doctor }) => {
                     "credentialCategory": "certification",
                     "name": cert
                   }))
-                ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": currentDoctor.rating.toString(),
-                  "reviewCount": "542",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                }
+                ]
               })
           }}
         />
@@ -310,8 +304,8 @@ const DoctorProfilePage = ({ doctor }) => {
                   <p className="text-sm sm:text-base font-extrabold mt-1 text-white">{currentDoctor.experience.split('|')[0].trim()}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Rating</p>
-                  <p className="text-sm sm:text-base font-extrabold mt-1 text-[#C9A961]">{currentDoctor.rating} ★★★★★</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Clinic Google Rating</p>
+                  <p className="text-sm sm:text-base font-extrabold mt-1 text-[#C9A961]">{GOOGLE_RATING_FALLBACK.rating.toFixed(1)} ★ ({GOOGLE_RATING_FALLBACK.count})</p>
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Languages</p>

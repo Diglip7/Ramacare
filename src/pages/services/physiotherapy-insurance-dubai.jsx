@@ -2,1232 +2,387 @@ import { useState } from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MessageCircle, Calendar, CheckCircle, MapPin, Phone } from 'lucide-react';
-import { useToast } from '../../../components/Toast';
+import { MessageCircle, Calendar, CheckCircle, FileText, ShieldCheck, Stethoscope, ClipboardList, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import BookConsultation from '../../../components/BookConsultation';
+
+const SITE = 'https://ramacarepolyclinic.ae';
+const CANONICAL_URL = `${SITE}/services/physiotherapy-insurance-dubai/`;
+const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+const PAGE_TITLE = 'Physiotherapy Insurance in Dubai: Coverage & Claims | RamaCare';
+const PAGE_DESCRIPTION = 'Does insurance cover physiotherapy in Dubai? Session limits, GP referral and how to claim. RamaCare Jumeirah 1: pay and claim, with all documents provided.';
+const WHATSAPP = 'https://wa.me/971566597878?text=Hi%20RamaCare%2C%20please%20check%20my%20insurance%20coverage%20for%20physiotherapy.';
+
+const coverageRows = [
+  { plan: 'Basic plan (DHA Essential Benefits Plan)', sessions: 'Usually up to 6 sessions per year', referral: 'GP referral needed', approval: 'Prior approval usually needed', copay: 'Often around 20%' },
+  { plan: 'Enhanced or company plans', sessions: 'Often 10 to 20 sessions per year', referral: 'Usually needed', approval: 'Often needed', copay: 'Varies by plan' },
+  { plan: 'International plans', sessions: 'Varies widely', referral: 'Often needed', approval: 'Varies', copay: 'Varies by plan' }
+];
+
+const steps = [
+  { title: 'See our GP for a referral', text: 'Most plans only pay for physiotherapy with a doctor\'s referral. Our GP is in the same clinic and can assess you and write the referral letter.' },
+  { title: 'We check your coverage', text: 'Send us your insurance card. We check what your plan covers for physiotherapy and request prior approval if your plan needs it.' },
+  { title: 'Have your physiotherapy and pay at the clinic', text: 'RamaCare works on reimbursement only (pay and claim). There is no direct billing. The physiotherapy assessment costs AED 200.' },
+  { title: 'Collect your documents', text: 'We give you an itemised invoice, a medical report, progress notes and the GP referral letter, so your claim has what insurers usually ask for.' },
+  { title: 'Submit your claim to your insurer', text: 'Submit through your insurer\'s app, website or claim form within their deadline. Keep the original documents in case your insurer asks for them.' }
+];
+
+const documents = [
+  'GP referral letter for physiotherapy',
+  'Itemised invoice and payment receipt',
+  'Medical report with your diagnosis and treatment plan',
+  'Progress notes during your course of treatment',
+  'Prior approval reference, if your plan required one',
+  'Copy of your insurance card and Emirates ID',
+  'Your bank details for the refund (requested by your insurer)'
+];
+
+const rejections = [
+  'No doctor\'s referral, or a referral dated after treatment started',
+  'Prior approval was needed but not obtained',
+  'The yearly physiotherapy session limit has already been used',
+  'Missing diagnosis or medical report',
+  'No progress notes for a longer course of treatment',
+  'Claim submitted after the insurer\'s deadline',
+  'Documents not in English or Arabic'
+];
+
+const faqs = [
+  { question: 'Does insurance cover physiotherapy in Dubai?', answer: 'Yes, most health insurance plans in Dubai cover physiotherapy, but with limits. Basic plans usually cover up to 6 sessions a year with a GP referral and prior approval; better plans often cover 10 to 20 sessions. Always check your own table of benefits.' },
+  { question: 'Does RamaCare offer direct billing for physiotherapy?', answer: 'No. RamaCare works on reimbursement only. You pay at the clinic and claim the cost back from your insurer. We provide the documents for your claim and help with coverage checks and prior approval.' },
+  { question: 'How does pay and claim (reimbursement) work?', answer: 'You pay for your sessions at the clinic, collect your invoice, medical report and progress notes, and submit them to your insurer. The insurer then refunds the covered amount, minus any co-payment, to your bank account.' },
+  { question: 'How many physiotherapy sessions does insurance cover?', answer: 'It depends on your plan. The DHA Essential Benefits Plan usually covers up to 6 sessions a year. Enhanced and company plans often cover 10 to 20 sessions. Your table of benefits shows your exact limit.' },
+  { question: 'Do I need a referral for insurance to cover physiotherapy?', answer: 'Usually yes. Most plans need a referral from a GP or specialist. RamaCare\'s GP works in the same clinic and can assess you and write the referral letter.' },
+  { question: 'What is prior approval and do I need it?', answer: 'Prior approval (pre-authorisation) means your insurer agrees to cover treatment before it starts. Many plans need it for physiotherapy. If your plan does, RamaCare requests it for you.' },
+  { question: 'Can RamaCare check my insurance coverage?', answer: 'Yes. Send a photo of your insurance card on WhatsApp and our team will check what your plan covers for physiotherapy before you start.' },
+  { question: 'What documents do I need to claim physiotherapy?', answer: 'Usually a doctor\'s referral, an itemised invoice and receipt, a medical report, progress notes, a copy of your insurance card and your bank details. RamaCare provides the invoice, medical report, progress notes and GP referral.' },
+  { question: 'How much will I pay upfront?', answer: 'The physiotherapy assessment at RamaCare costs AED 200. You pay at the clinic and claim it back. How much you get back depends on your plan and any co-payment.' },
+  { question: 'What is a co-payment?', answer: 'A co-payment (co-insurance) is the share of each session your plan does not pay, often around 20% on basic plans. It is deducted from your refund.' },
+  { question: 'How long does a reimbursement claim take?', answer: 'It depends on your insurer. Many process claims within a few weeks once all documents are submitted. Missing documents are the most common cause of delays.' },
+  { question: 'Why do physiotherapy claims get rejected?', answer: 'The most common reasons are no referral, no prior approval when it was required, the yearly session limit already used, a missing medical report or progress notes, and submitting after the deadline.' },
+  { question: 'Is there a deadline to submit my claim?', answer: 'Yes. Every policy has a cut-off period for reimbursement claims. Check your policy and submit as soon as you have your documents.' },
+  { question: 'Is ultrasound covered by insurance?', answer: 'Therapeutic ultrasound used during physiotherapy is usually covered as part of your physiotherapy sessions. A diagnostic ultrasound scan is a separate test that is often covered with a doctor\'s request. RamaCare offers both.' },
+  { question: 'Does insurance cover physiotherapy after surgery or a sports injury?', answer: 'Usually yes, within your plan\'s session limit and with a referral. Some plans also need prior approval for longer rehab programmes.' },
+  { question: 'Does insurance cover dry needling, shockwave or massage?', answer: 'It depends on your plan. Some insurers cover these as part of physiotherapy, others do not. Ask us to check your coverage before treatment.' },
+  { question: 'Can I have physiotherapy without insurance?', answer: 'Yes. You can self-pay without a referral. The physiotherapy assessment costs AED 200.' },
+  { question: 'Do unused physiotherapy sessions carry over to next year?', answer: 'Usually no. Session limits normally reset when your policy renews.' },
+  { question: 'Where is RamaCare located?', answer: 'Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. Open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878.' }
+];
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${CANONICAL_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE}/services/` },
+        { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: `${SITE}/services/physiotherapy-dubai/` },
+        { '@type': 'ListItem', position: 4, name: 'Physiotherapy Insurance', item: CANONICAL_URL }
+      ]
+    },
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${CANONICAL_URL}#webpage`,
+      url: CANONICAL_URL,
+      name: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      breadcrumb: { '@id': `${CANONICAL_URL}#breadcrumb` },
+      medicalAudience: { '@type': 'Patient' },
+      specialty: 'https://schema.org/Physiotherapy',
+      about: { '@type': 'Thing', name: 'Health insurance coverage and reimbursement claims for physiotherapy in Dubai' },
+      reviewedBy: { '@id': JEENA_ID },
+      lastReviewed: '2026-10-15', // change to the deploy date
+      publisher: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'HowTo',
+      '@id': `${CANONICAL_URL}#howto`,
+      name: 'How to claim physiotherapy from insurance in Dubai (reimbursement)',
+      step: steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: s.text }))
+    },
+    {
+      '@type': 'Person',
+      '@id': JEENA_ID,
+      name: 'Jeena Mathew',
+      jobTitle: 'DHA-Licensed Physiotherapist',
+      url: `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+      worksFor: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${CANONICAL_URL}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer }
+      }))
+    }
+  ]
+};
 
 export default function PhysiotherapyInsuranceDubai() {
-  const { showToast, ToastComponent } = useToast();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
-  const [formData, setFormData] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    insuranceProvider: '',
-    preferredTime: ''
-  });
-
-  const handleBookAppointment = () => {
-    setIsModalOpen(true);
-  };
-
-  const scrollToForm = () => {
-    const formSection = document.getElementById('verify-coverage-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/api/appointment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fullName: formData.fullName,
-          phone: formData.phone,
-          email: formData.email,
-          preferredTime: formData.preferredTime,
-          concern: `Insurance Provider: ${formData.insuranceProvider}`,
-          source: 'physiotherapy-insurance-dubai'
-        }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        showToast('Thank you! We will verify your coverage and get back to you within 24 hours.', 'success');
-        setFormData({
-          fullName: '',
-          phone: '',
-          email: '',
-          insuranceProvider: '',
-          preferredTime: ''
-        });
-      } else {
-        showToast('Failed to submit appointment. Please try again or contact us directly.', 'error');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      showToast('An error occurred. Please try again later.', 'error');
-    }
-  };
-
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/971566597878', '_blank');
-  };
-
-  const faqs = [
-    {
-      question: "Do I need a doctor's referral for ultrasound therapy?",
-      answer: "Yes, for insurance to cover the cost, a referral from a DHA-licensed doctor is usually mandatory. If you are paying out-of-pocket, no referral is needed."
-    },
-    {
-      question: "What is the typical co-payment for physio in Dubai?",
-      answer: "For most plans, the co-payment is 20%. This means if a session is AED 400, you pay AED 80, and the insurance pays AED 320."
-    },
-    {
-      question: "Can my claim be rejected?",
-      answer: "Claims are usually only rejected if the medical report is missing a diagnosis or if you have exceeded your annual session limit (usually 6-12 sessions depending on the plan)."
-    }
-  ];
-
-  const schemaGraph = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'MedicalClinic',
-        '@id': 'https://ramacarepolyclinic.ae/#clinic',
-        name: 'RamaCare Polyclinic',
-        url: 'https://ramacarepolyclinic.ae/',
-        image: 'https://ramacarepolyclinic.ae/images/ultrasound.jpg',
-        priceRange: '$$',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor',
-          addressLocality: 'Jumeirah 1, Dubai',
-          addressCountry: 'AE'
-        },
-        medicalSpecialty: 'Physiotherapy',
-        hasCredential: 'DHA Licensed'
-      },
-      {
-        '@type': 'MedicalWebPage',
-        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#webpage',
-        url: 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/',
-        name: 'Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare',
-        description: 'Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims.',
-        inLanguage: 'en-AE',
-        lastReviewed: '2026-08-29',
-        medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
-        about: { '@type': 'MedicalProcedure', name: 'Physiotherapy Insurance Coverage' },
-        reviewedBy: {
-          '@type': 'Person',
-          name: 'Jeena Mathew',
-          jobTitle: 'Musculoskeletal Physiotherapy Specialist',
-          url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'RamaCare Polyclinic',
-          url: 'https://ramacarepolyclinic.ae/'
-        }
-      },
-      {
-        '@type': 'Person',
-        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#physician',
-        name: 'Jeena Mathew',
-        jobTitle: 'Physiotherapist',
-        honorificSuffix: 'BPT, MPT',
-        hasCredential: {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'License',
-          name: 'DHA Licensed Physiotherapist'
-        },
-        worksFor: {
-          '@type': 'MedicalClinic',
-          name: 'RamaCare Polyclinic',
-          url: 'https://ramacarepolyclinic.ae/',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor',
-            addressLocality: 'Jumeirah 1',
-            addressRegion: 'Dubai',
-            addressCountry: 'AE'
-          }
-        },
-        url: 'https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/'
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ramacarepolyclinic.ae/' },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ramacarepolyclinic.ae/services/' },
-          { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-dubai/' },
-          { '@type': 'ListItem', position: 4, name: 'Physiotherapy Insurance', item: 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/' }
-        ]
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/#faq',
-        mainEntity: faqs.map((f) => ({
-          '@type': 'Question',
-          name: f.question,
-          acceptedAnswer: { '@type': 'Answer', text: f.answer }
-        }))
-      }
-    ]
-  };
+  const [openFaq, setOpenFaq] = useState(0);
 
   return (
     <Layout>
-      {ToastComponent}
       <Head>
-        <title key="title">Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare</title>
-        <meta name="description" content="Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="description" />
-        <meta name="keywords" content="Physiotherapy insurance Dubai, Ultrasound therapy insurance coverage, NextCare physiotherapy Dubai, Daman physiotherapy claim, GIG insurance physiotherapy, Direct billing physiotherapy Dubai, Reimbursement physiotherapy Dubai, UAE health insurance physiotherapy" />
-        <link rel="canonical" href="https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/" key="canonical" />
-
-        {/* Open Graph Tags */}
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
+        <link rel="canonical" href={CANONICAL_URL} key="canonical" />
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare" key="og:title" />
-        <meta property="og:description" content="Does your UAE health insurance cover ultrasound therapy? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="og:description" />
-        <meta property="og:url" content="https://ramacarepolyclinic.ae/services/physiotherapy-insurance-dubai/" key="og:url" />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="og:image" />
-        <meta property="og:image:width" content="1200" key="og:image:width" />
-        <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Physiotherapy Insurance Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={`${SITE}/images/ultrasound.jpg`} key="og:image" />
+        <meta property="og:image:alt" content="Physiotherapy insurance claims at RamaCare Polyclinic, Jumeirah 1, Dubai" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
-
-        {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare" key="twitter:title" />
-        <meta name="twitter:description" content="Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims." key="twitter:description" />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/ultrasound.jpg" key="twitter:image" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaGraph)
-          }}
-        />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE}/images/ultrasound.jpg`} key="twitter:image" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }} />
       </Head>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="bg-white py-16 px-6">
-        <div className="max-w-[1440px] mx-auto">
-          {/* Breadcrumb Navigation */}
+        <div className="max-w-6xl mx-auto">
           <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
-            <Link href="/" className="hover:text-[#1F5E4B] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#1F5E4B]">Home</Link>
             <span aria-hidden="true">/</span>
-            <Link href="/services/" className="hover:text-[#1F5E4B] transition-colors">Services</Link>
+            <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
             <span aria-hidden="true">/</span>
-            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</Link>
+            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
             <span aria-hidden="true">/</span>
             <span className="text-[#1F5E4B]">Physiotherapy Insurance</span>
           </nav>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }} >
-              <div
-                className="inline-block px-4 py-2 rounded-full bg-[#F5F1EA] mb-6" >
-                <p
-                  className="text-sm text-[#5F5F5F]"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-                >
-                  Physiotherapy Insurance Dubai | How to Claim Ultrasound at RamaCare
-                </p>
-              </div>
-
-              <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-6 leading-tight"
-                style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                Is Ultrasound Therapy Covered by Insurance in Dubai?
-              </h1>
-
-              <p
-                className="text-lg text-[#5F5F5F] mb-8 leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-              >
-                Does your UAE health insurance cover <a href="/services/ultrasound-therapy-dubai/" style={{ color: '#1F5E4B', textDecoration: 'underline' }}>ultrasound therapy </a>? Learn about direct billing with NextCare, AXA/GIG, and Daman, plus a step-by-step guide to reimbursement claims.
-              </p>
-
-              <p
-                className="text-base text-[#1A1A1A] mb-8 leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-              >
-                Yes, under Dubai Health Authority (DHA) regulations, physiotherapy—including therapeutic <a href="/services/ultrasound-therapy-dubai/" style={{ color: '#1F5E4B', textDecoration: 'underline' }}>ultrasound therapy </a> is a covered benefit in most standard and premium health insurance plans. However, coverage levels and "Direct Billing" availability vary depending on your specific network and provider.
-              </p>
-
-              {/* Quick Check Box */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="rounded-3xl p-8 mb-8 shadow-sm"
-                style={{ backgroundColor: 'rgb(245, 241, 234)' }}
-              >
-                <h3
-                  className="text-xl font-medium text-[#1F5E4B] mb-4"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-                >
-                  The "Quick Check" for Coverage (2026 Rules):
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                    <span className="text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>
-                      <strong>Standard Plans:</strong> Often cover 6 to 10 sessions per year.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                    <span className="text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>
-                      <strong>Co-payment:</strong> Most plans require a 10% to 20% co-pay (the amount you pay at the clinic).
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                    <span className="text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>
-                      <strong>Referral Requirement:</strong> You typically need a referral from a GP or Specialist before insurance will approve physiotherapy sessions.
-                    </span>
-                  </li>
-                </ul>
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => window.open('https://wa.me/971566597878', '_blank')}
-                  className="rounded-xl flex items-center justify-center gap-2 px-8 py-4 transition-all hover:opacity-90 cursor-pointer"
-                  style={{ backgroundColor: '#1F5E4B', color: 'white', fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '600' }}
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Verify Coverage on WhatsApp
-                </button>
-                <button
-                  onClick={scrollToForm}
-                  className="bg-white text-[#1F5E4B] px-8 py-4 rounded-2xl flex items-center justify-center gap-3 border-2 border-[#1F5E4B] transition-all hover:bg-[#F5F1EA] cursor-pointer"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '600' }}
-                >
-                  <Calendar className="w-5 h-5" />
-                  Book Consultation
-                </button>
-              </div>
-            </motion.div>
-
-            {/* Right Content - Insurance Partners Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div
-                className="rounded-3xl p-1 shadow-2xl"
-                style={{ background: 'linear-gradient(to bottom right, rgb(255, 251, 234), rgb(233, 226, 214))' }}
-              >
-                <div className="rounded-3xl p-8 shadow-lg" style={{ backgroundColor: 'rgb(245, 241, 234)' }}>
-                  <h2
-                    className="text-center mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '22px', fontWeight: '600', color: '#1F5E4B' }}
-                  >
-                    Trusted Insurance Partners
-                  </h2>
-                  <p
-                    className="text-center mb-8"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '13px', fontWeight: '400', color: '#6B7280' }}
-                  >
-                    Direct Billing Available
-                  </p>
-
-                  {/* Insurance Provider Logos */}
-                  <div className="grid grid-cols-3 gap-4 mb-8">
-                    <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center">
-                      <span className="text-sm font-medium text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>NextCare</span>
-                    </div>
-                    <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center">
-                      <span className="text-sm font-medium text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>Daman</span>
-                    </div>
-                    <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center">
-                      <span className="text-sm font-medium text-[#1A1A1A]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>GIG</span>
-                    </div>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t mb-8" style={{ borderColor: '#E0D8CC' }}></div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-8">
-                    <div className="text-center">
-                      <p
-                        className="mb-1"
-                        style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '32px', fontWeight: '700', color: '#1F5E4B' }}
-                      >
-                        5+
-                      </p>
-                      <p
-                        style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#6B7280' }}
-                      >
-                        Insurance Providers
-                      </p>
-                    </div>
-                    <div className="text-center border-l" style={{ borderColor: '#E0D8CC' }}>
-                      <p
-                        className="mb-1"
-                        style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '32px', fontWeight: '700', color: '#1F5E4B' }}
-                      >
-                        24h
-                      </p>
-                      <p
-                        style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#6B7280' }}
-                      >
-                        Approval Time
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Direct Billing vs Reimbursement Section */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-[1440px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: '700' }}
-            >
-              Direct Billing vs. Reimbursement: Which is Better?
-            </h2>
-            <p
-              className="text-lg text-[#5F5F5F] max-w-2xl mx-auto"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '18px' }}
-            >
-              At RamaCare Polyclinic, we aim to make your recovery stress-free by offering both options.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Direct Billing Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-[#E9E2D6] hover:shadow-2xl transition-all"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mb-6">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="32" height="32" rx="16" fill="#1F5E4B" />
-                  <rect x="8" y="12" width="16" height="8" rx="2" fill="white" />
-                  <line x1="10" y1="15" x2="22" y2="15" stroke="#1F5E4B" strokeWidth="1.5" />
-                  <line x1="10" y1="18" x2="22" y2="18" stroke="#1F5E4B" strokeWidth="1.5" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-2xl font-bold text-[#1F5E4B] mb-4"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: '700' }}
-              >
-                1. Direct Billing (Cashless)
-              </h3>
-
-              <p
-                className="text-base text-[#1A1A1A] mb-6 leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
-              >
-                We settle the bill directly with your insurance provider. You only pay your designated co-payment at our front desk in Jumeirah 1.
-              </p>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      className="font-medium text-[#1A1A1A] mb-1"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      Best for:
-                    </p>
-                    <p
-                      className="text-[#5F5F5F]"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      Patients with providers in our network (NextCare, GIG, Daman, etc.).
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      className="font-medium text-[#1A1A1A] mb-1"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      What you need:
-                    </p>
-                    <p
-                      className="text-[#5F5F5F]"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      Your Emirates ID and a valid insurance card.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom highlight bar */}
-              <div className="bg-[#F5F1EA] rounded-2xl p-4 border-l-4 border-[#1F5E4B]">
-                <p
-                  className="text-sm font-medium text-[#1A1A1A]"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}
-                >
-                  ✓ Zero paperwork • Instant approval • Pay only co-pay
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Reimbursement Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-[#E9E2D6] hover:shadow-2xl transition-all"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mb-6">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="32" height="32" rx="16" fill="#1F5E4B" />
-                  <rect x="9" y="10" width="14" height="12" rx="2" fill="white" />
-                  <line x1="12" y1="13" x2="20" y2="13" stroke="#1F5E4B" strokeWidth="1.5" />
-                  <line x1="12" y1="16" x2="20" y2="16" stroke="#1F5E4B" strokeWidth="1.5" />
-                  <line x1="12" y1="19" x2="18" y2="19" stroke="#1F5E4B" strokeWidth="1.5" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-2xl font-bold text-[#1F5E4B] mb-4"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: '700' }}
-              >
-                2. Reimbursement (Pay and Claim)
-              </h3>
-
-              <p
-                className="text-base text-[#1A1A1A] mb-6 leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
-              >
-                If we are "out-of-network" for your specific plan, you pay the session fee upfront, and we provide the legal documentation for you to get your money back from your insurer.
-              </p>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      className="font-medium text-[#1A1A1A] mb-1"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>
-                      Best for:
-                    </p>
-                    <p
-                      className="text-[#5F5F5F]"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }} >
-                      International plans or restricted local networks.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="9" stroke="#1F5E4B" strokeWidth="1.5" />
-                      <path d="M6 10L9 13L14 7" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      className="font-medium text-[#1A1A1A] mb-1"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      Turnaround:
-                    </p>
-                    <p
-                      className="text-[#5F5F5F]"
-                      style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}
-                    >
-                      Usually takes 14 to 21 days for the insurer to deposit the funds into your bank account.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom highlight bar */}
-              <div className="bg-[#F5F1EA] rounded-2xl p-4 border-l-4 border-[#1F5E4B]">
-                <p
-                  className="text-sm font-medium text-[#1A1A1A]"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}
-                >
-                  ✓ All documents provided • Full support • Claim guidance
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Step-by-Step Claim Process Section */}
-      <section className="bg-[#F5F1EA] py-20 px-6">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
-            >
-              Step-by-Step: How to Claim Ultrasound Therapy in 2026
-            </h2>
-            <p
-              className="text-lg text-[#5F5F5F] max-w-3xl mx-auto"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
-            >
-              If you are filing a reimbursement claim, follow this 4-step "Golden Rule" to ensure your claim is not rejected by the insurance company.
-            </p>
-          </motion.div>
-
-          {/* Steps Grid */}
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-[#1F5E4B] via-[#1F5E4B] to-[#1F5E4B]" style={{ zIndex: 0 }}></div>
-
-            {/* Step 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all"
-              style={{ zIndex: 1 }}
-            >
-              {/* Number Badge */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>1</span>
-              </div>
-
-              {/* Icon */}
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="6" width="16" height="20" rx="3" stroke="#1F5E4B" strokeWidth="2" fill="none" />
-                  <path d="M12 12L16 16L20 12" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
-              >
-                Get a Referral
-              </h3>
-
-              <p
-                className="text-sm text-[#5F5F5F] text-center leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
-              >
-                Most UAE insurers (like Sukoon or Daman) require a referral from a licensed GP or Orthopedic Specialist. The referral must state "Physiotherapy including Ultrasound" to be valid.
-              </p>
-            </motion.div>
-
-            {/* Step 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all"
-              style={{ zIndex: 1 }}
-            >
-              {/* Number Badge */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>2</span>
-              </div>
-
-              {/* Icon */}
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="8" width="20" height="16" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none" />
-                  <line x1="10" y1="13" x2="22" y2="13" stroke="#1F5E4B" strokeWidth="2" />
-                  <line x1="10" y1="17" x2="22" y2="17" stroke="#1F5E4B" strokeWidth="2" />
-                  <line x1="10" y1="21" x2="18" y2="21" stroke="#1F5E4B" strokeWidth="2" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
-              >
-                Collect the "Big Three" Documents
-              </h3>
-
-              <p
-                className="text-sm text-[#5F5F5F] text-center leading-relaxed mb-4"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
-              >
-                Before leaving RamaCare, ensure our admin team gives you:
-              </p>
-
-              <ul className="space-y-2 text-left">
-                <li className="flex items-start gap-2">
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                  <span className="text-sm text-[#5F5F5F]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(13px, 1.5vw, 14px)' }}>
-                    <strong>Official Reimbursement Form:</strong> Duly signed and stamped by our DHA-licensed physiotherapist.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                  <span className="text-sm text-[#5F5F5F]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(13px, 1.5vw, 14px)' }}>
-                    <strong>Itemized Invoice:</strong> Showing the specific code for "Therapeutic Ultrasound."
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: '#1F5E4B' }}></div>
-                  <span className="text-sm text-[#5F5F5F]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(13px, 1.5vw, 14px)' }}>
-                    <strong>Detailed Medical Report:</strong> Explaining your diagnosis (e.g., Sciatica or Sports Injury) and the necessity of treatment.
-                  </span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Step 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all"
-              style={{ zIndex: 1 }}
-            >
-              {/* Number Badge */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>3</span>
-              </div>
-
-              {/* Icon */}
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="10" y="6" width="12" height="20" rx="2" stroke="#1F5E4B" strokeWidth="2" fill="none" />
-                  <circle cx="16" cy="22" r="2" fill="#1F5E4B" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
-              >
-                Submit via Mobile App
-              </h3>
-
-              <p
-                className="text-sm text-[#5F5F5F] text-center leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
-              >
-                In 2026, most Dubai insurers prefer submissions through apps like MyGIG, Lumi (NextCare), or the Daman App. Upload clear photos of your documents and your Emirates ID.
-              </p>
-            </motion.div>
-
-            {/* Step 4 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all"
-              style={{ zIndex: 1 }}
-            >
-              {/* Number Badge */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F5E4B] flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-white" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>4</span>
-              </div>
-
-              {/* Icon */}
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10H24L22 24H10L8 10Z" stroke="#1F5E4B" strokeWidth="2" strokeLinejoin="round" fill="none" />
-                  <path d="M12 10V8C12 6.89543 12.8954 6 14 6H18C19.1046 6 20 6.89543 20 8V10" stroke="#1F5E4B" strokeWidth="2" />
-                </svg>
-              </div>
-
-              <h3
-                className="text-xl font-semibold text-[#1A1A1A] mb-4 text-center"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(18px, 2vw, 20px)' }}
-              >
-                Keep Your Receipts
-              </h3>
-
-              <p
-                className="text-sm text-[#5F5F5F] text-center leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.5vw, 15px)' }}
-              >
-                Keep the original physical copies for at least 6 months. Insurers occasionally request the originals for random audits.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Pro Tip Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="mt-16 bg-white rounded-3xl p-8 shadow-lg max-w-4xl mx-auto"
-          >
-            <p
-              className="text-center mb-6"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)', fontWeight: '600', color: '#1A1A1A' }}
-            >
-              <strong>Pro Tip:</strong> Taking these 4 steps seriously can improve your claim approval rate by over 90%.
-            </p>
-
-            <div className="text-center">
-              <button
-                onClick={() => window.open('https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20would%20like%20to%20request%20the%20Physiotherapy%20Insurance%20Claim%20Checklist.', '_blank')}
-                className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '600', transform: 'none' }}
-              >
-                Download Claim Checklist
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Common Insurance Providers Section */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-12 py-20 md:py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16" >
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4 flex items-center justify-center gap-3"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
-          >
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4L8 9V20C8 27.18 13.2 33.9 20 36C26.8 33.9 32 27.18 32 20V9L20 4Z" stroke="#1F5E4B" strokeWidth="2" fill="none" />
-            </svg>
-            Common Insurance Providers We Support
-          </h2>
-          <p
-            className="text-lg text-[#5F5F5F] max-w-3xl mx-auto"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '18px' }}
-          >
-            While networks update frequently, RamaCare works closely with the following major TPA (Third Party Administrators) and Insurers:
+          <p className="inline-block px-4 py-2 rounded-full bg-[#F5F1EA] text-sm text-[#5F5F5F] mb-6">DHA-Licensed Physiotherapy · Jumeirah 1</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6">Does Insurance Cover Physiotherapy in Dubai?</h1>
+          <p className="text-lg text-[#3F3F3F] leading-relaxed max-w-4xl mb-6">
+            Yes, most health insurance plans in Dubai cover physiotherapy, within limits. Basic plans usually cover up to 6 sessions a year with a GP referral and prior approval; enhanced plans often cover 10 to 20. At RamaCare Polyclinic in Jumeirah 1, physiotherapy works on <strong>reimbursement (pay and claim)</strong>: you pay at the clinic and we give you the documents to claim from your insurer.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {[
-            { name: 'NextCare', sub: 'General & Comprehensive' },
-            { name: 'GIG Gulf', sub: 'Formerly AXA' },
-            { name: 'Daman', sub: 'NW1 & Royal' },
-            { name: 'Neuron', sub: 'Network Provider' },
-            { name: 'Oman Insurance', sub: 'Sukoon' },
-            { name: 'MetLife', sub: 'Corporate Plans' },
-          ].map((provider, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all flex flex-col items-center text-center border border-[#F0EBE3]"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#F5F1EA] flex items-center justify-center mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z" stroke="#1F5E4B" strokeWidth="1.5" fill="none" />
-                </svg>
-              </div>
-              <h3 className="text-base font-medium text-[#1A1A1A] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>{provider.name}</h3>
-              <p className="text-xs text-[#5F5F5F]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '12px' }}>{provider.sub}</p>
-            </motion.div>
-          ))}
+          <div className="bg-[#F9F7F2] border-l-4 border-[#1F5E4B] rounded-xl p-6 max-w-4xl mb-8">
+            <p className="font-bold text-[#1F5E4B] mb-2">How insurance works at RamaCare</p>
+            <ul className="space-y-1 text-[#3F3F3F]">
+              <li>• Reimbursement only. There is no direct billing.</li>
+              <li>• We check your coverage and request prior approval if your plan needs it.</li>
+              <li>• Our GP in the same clinic can write your physiotherapy referral.</li>
+              <li>• We provide the invoice, medical report and progress notes for your claim.</li>
+              <li>• Physiotherapy assessment: AED 200. Open every day, 10am–10pm.</li>
+            </ul>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#174a3b]">
+              <MessageCircle className="w-5 h-5" /> Check My Coverage on WhatsApp
+            </a>
+            <a href="#book-form" className="inline-flex items-center gap-2 border-2 border-[#1F5E4B] text-[#1F5E4B] px-6 py-3 rounded-full font-semibold hover:bg-[#1F5E4B] hover:text-white">
+              <Calendar className="w-5 h-5" /> Request Appointment
+            </a>
+          </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 bg-[#F5F1EA] rounded-3xl p-8 max-w-3xl mx-auto text-center border border-[#E9E2D6]" >
-          <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px', color: '#1A1A1A' }}>
-            <strong>Don&apos;t see your provider?</strong> No worries! We can still process your claim through reimbursement. Contact our billing team to verify your specific plan.
-          </p>
-        </motion.div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="bg-[#F5F1EA] py-20 md:py-32">
-        <div className="max-w-[1000px] mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"  >
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4 flex items-center justify-center gap-3"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)' }}
-            >
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="16" stroke="#1F5E4B" strokeWidth="2" fill="none" />
-                <path d="M16 16C16 13.8 17.8 12 20 12C22.2 12 24 13.8 24 16C24 18.5 20 19 20 22" stroke="#1F5E4B" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="20" cy="27" r="1.5" fill="#1F5E4B" />
-              </svg>
-              Frequently Asked Questions
-            </h2>
-            <p
-              className="text-lg text-[#5F5F5F]"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '18px' }}>
-              Get answers to common questions about insurance coverage for ultrasound therapy
-            </p>
-          </motion.div>
+      {/* Coverage table */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">How Many Physiotherapy Sessions Does Insurance Cover?</h2>
+          <p className="text-[#5F5F5F] mb-8 max-w-3xl">Typical limits in Dubai. Your own table of benefits is the final word, so we always check it with you.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left bg-white rounded-2xl overflow-hidden border border-gray-200">
+              <thead className="bg-[#1F5E4B] text-white">
+                <tr>
+                  <th className="p-4">Type of plan</th>
+                  <th className="p-4">Sessions per year</th>
+                  <th className="p-4">Referral</th>
+                  <th className="p-4">Prior approval</th>
+                  <th className="p-4">Co-payment</th>
+                </tr>
+              </thead>
+              <tbody>
+                {coverageRows.map((r, i) => (
+                  <tr key={r.plan} className={i % 2 ? 'bg-[#F9F7F2]' : 'bg-white'}>
+                    <td className="p-4 font-semibold">{r.plan}</td>
+                    <td className="p-4">{r.sessions}</td>
+                    <td className="p-4">{r.referral}</td>
+                    <td className="p-4">{r.approval}</td>
+                    <td className="p-4">{r.copay}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
-          <div className="space-y-4">
-            {[
-              {
-                q: "Do I need a doctor's referral for ultrasound therapy?",
-                a: "Yes, for insurance to cover the cost, a referral from a DHA-licensed doctor is usually mandatory. If you are paying out-of-pocket, no referral is needed."
-              },
-              {
-                q: "What is the typical co-payment for physio in Dubai?",
-                a: "For most plans, the co-payment is 20%. This means if a session is AED 400, you pay AED 80, and the insurance pays AED 320."
-              },
-              {
-                q: "Can my claim be rejected?",
-                a: "Claims are usually only rejected if the medical report is missing a diagnosis or if you have exceeded your annual session limit (usually 6-12 sessions depending on the plan)."
-              },
-            ].map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl shadow-sm overflow-hidden" >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i + 10 ? null : i + 10)}
-                  className="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-[#F5F1EA] transition-colors group" >
-                  <span className="text-lg font-semibold text-[#1A1A1A] pr-4" >
-                    {faq.q}
-                  </span>
-                  <svg
-                    width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    className={`flex-shrink-0 ml-4 transition-transform duration-300 ${openFaq === i + 10 ? 'rotate-180' : ''}`}>
-                    <path d="M5 8L10 13L15 8" stroke="#1F5E4B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                {openFaq === i + 10 && (
-                  <div className="px-8 py-5 border-t border-[#F0EBE3]">
-                    <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(14px, 1.8vw, 16px)', color: '#5F5F5F', lineHeight: '1.7' }}>
-                      {faq.a}
-                    </p>
-                  </div>
-                )}
-              </motion.div>
+      {/* Steps */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8">How to Claim Physiotherapy from Insurance at RamaCare</h2>
+          <ol className="grid md:grid-cols-5 gap-6">
+            {steps.map((s, i) => (
+              <li key={s.title} className="bg-[#F9F7F2] rounded-2xl p-6 border border-gray-200">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#1F5E4B] text-white font-bold mb-4">{i + 1}</span>
+                <h3 className="font-bold text-[#1A1A1A] mb-2">{s.title}</h3>
+                <p className="text-sm text-[#5F5F5F] leading-relaxed">{s.text}</p>
+              </li>
             ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12 bg-white rounded-3xl p-8 shadow-lg max-w-sm mx-auto text-center">
-            <p className="text-base text-[#5F5F5F] mb-4" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px' }}>Still have questions?</p>
-            <button
-              onClick={() => window.open('https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20have%20questions%20about%20physiotherapy%20insurance%20coverage.%20Can%20you%20please%20help%20me%3F', '_blank')}
-              className="bg-[#1F5E4B] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:bg-[#154a32] hover:scale-105 cursor-pointer flex items-center justify-center gap-2 mx-auto"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px', fontWeight: '600' }}>
-              <MessageCircle className="w-4 h-4" />
-              Chat with Our Team
-            </button>
-          </motion.div>
+          </ol>
         </div>
       </section>
 
-      {/* Related Services & Disclaimer */}
-      <section className="bg-white py-12 px-6 border-t border-[#E9E2D6]">
-        <div className="max-w-[1440px] mx-auto">
-          <h2 className="text-xl font-semibold text-[#1A1A1A] mb-5">Explore Related Physiotherapy Services</h2>
-          <div className="flex flex-wrap gap-2.5">
-            <Link href="/services/physiotherapy-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              Physiotherapy Dubai
-            </Link>
-            <Link href="/services/ultrasound-therapy-cost-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              Ultrasound Therapy Cost
-            </Link>
-            <Link href="/services/professional-vs-home-ultrasound/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              Professional vs Home Ultrasound
-            </Link>
-            <Link href="/services/knee-pain-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              Knee Pain Treatment
-            </Link>
-            <Link href="/services/sciatica-treatment-dubai/" className="text-base text-[#1F5E4B] bg-[#F0F7F4] hover:bg-[#1F5E4B] hover:text-white transition-colors px-4 py-2 rounded-full">
-              Sciatica Treatment
-            </Link>
+      {/* Documents + rejections */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><FileText className="w-6 h-6 text-[#1F5E4B]" /> Documents for Your Claim</h2>
+            <ul className="space-y-3">
+              {documents.map((d) => (
+                <li key={d} className="flex gap-3 text-[#3F3F3F]"><CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-none mt-0.5" />{d}</li>
+              ))}
+            </ul>
+            <p className="text-sm text-[#5F5F5F] mt-4">Insurers usually accept documents in English or Arabic only. Keep the originals until your claim is paid.</p>
           </div>
-          <p className="text-sm text-[#5F5F5F] leading-relaxed mt-8">
-            <span className="font-medium text-[#1A1A1A]">Medical & Insurance Disclaimer:</span> Insurance coverage policies, network inclusions, direct billing availability, and co-payment terms are determined by individual insurance providers and plan terms, subject to change without notice. Information provided on this page is for educational guidance only and does not guarantee claim approval or coverage. Please consult with our administrative team and your insurance provider to verify eligibility prior to treatment.
+          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><AlertCircle className="w-6 h-6 text-[#B4432F]" /> Why Physiotherapy Claims Get Rejected</h2>
+            <ul className="space-y-3">
+              {rejections.map((r) => (
+                <li key={r} className="flex gap-3 text-[#3F3F3F]"><span className="text-[#B4432F] font-bold">•</span>{r}</li>
+              ))}
+            </ul>
+            <p className="text-sm text-[#5F5F5F] mt-4">We check your coverage, request prior approval when needed and give you a complete set of documents to avoid these problems.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Help + ultrasound */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+          <div className="rounded-2xl p-8 bg-[#1F5E4B] text-white">
+            <ShieldCheck className="w-8 h-8 mb-3" />
+            <h2 className="text-xl font-bold mb-2">Coverage Check and Prior Approval</h2>
+            <p className="text-white/90 leading-relaxed">Send us your insurance card before your first session. We check your physiotherapy benefit and, if your plan needs it, request prior approval for you.</p>
+          </div>
+          <div className="rounded-2xl p-8 bg-[#F9F7F2] border border-gray-200">
+            <Stethoscope className="w-8 h-8 mb-3 text-[#1F5E4B]" />
+            <h2 className="text-xl font-bold text-[#1A1A1A] mb-2">GP Referral in the Same Clinic</h2>
+            <p className="text-[#5F5F5F] leading-relaxed">Our GP can assess you and write the physiotherapy referral most insurers ask for, so you do not need a separate appointment elsewhere. See our <Link href="/services/general-physician-dubai/" className="text-[#1F5E4B] font-semibold underline">GP in Jumeirah 1</Link>.</p>
+          </div>
+          <div className="rounded-2xl p-8 bg-[#F9F7F2] border border-gray-200">
+            <ClipboardList className="w-8 h-8 mb-3 text-[#1F5E4B]" />
+            <h2 className="text-xl font-bold text-[#1A1A1A] mb-2">Is Ultrasound Covered?</h2>
+            <p className="text-[#5F5F5F] leading-relaxed">Therapeutic ultrasound during physiotherapy is usually covered as part of your sessions. A diagnostic ultrasound scan is a separate test, often covered with a doctor&apos;s request. Read about <Link href="/services/ultrasound-therapy-dubai/" className="text-[#1F5E4B] font-semibold underline">ultrasound therapy</Link>.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick facts */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto bg-white rounded-2xl p-8 border border-gray-200">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Quick Facts: Physiotherapy Insurance at RamaCare, Jumeirah 1</h2>
+          <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-[#3F3F3F]">
+            <li>Payment: reimbursement only (pay and claim); no direct billing</li>
+            <li>Coverage check: yes, send your insurance card on WhatsApp</li>
+            <li>Prior approval: requested by RamaCare when your plan needs it</li>
+            <li>GP referral: available in the same clinic</li>
+            <li>Documents: itemised invoice, medical report, progress notes</li>
+            <li>Physiotherapy assessment: AED 200</li>
+            <li>Address: 12 Al Dhiyafah Road, Jumeirah Terrace Building, Jumeirah 1, Dubai</li>
+            <li>Open every day, 10am to 10pm · 04 286 2006 · WhatsApp 056 659 7878</li>
+          </ul>
+          <p className="text-[#3F3F3F] mt-4 text-right" lang="ar" dir="rtl">
+            هل يغطي التأمين العلاج الطبيعي في دبي؟ نعم ضمن حدود الخطة. في راما كير جميرا 1 الدفع ثم المطالبة من شركة التأمين، ونوفر لك جميع المستندات.
           </p>
         </div>
       </section>
 
-      <ContentReviewBadge doctorName="Jeena Mathew" variant="full" />
-
-      {/* Verify Your Coverage Today Section */}
-      <section id="verify-coverage-form" className="bg-[#1F5E4B] py-20 md:py-32">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: '700' }}
-              >
-                Verify Your Coverage Today
-              </h2>
-
-              <p
-                className="text-base md:text-lg text-white/90 mb-8 leading-relaxed"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: 'clamp(16px, 2vw, 18px)' }}
-              >
-                Don't guess your benefits. Send us a photo of your insurance card via WhatsApp, and our billing team will check your eligibility instantly.
-              </p>
-
-              {/* Contact Info */}
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-base font-semibold text-white mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px', fontWeight: '600' }}>
-                      Our Location
-                    </h4>
-                    <p className="text-sm text-white/80" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}>
-                      12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1 - Dubai
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-base font-semibold text-white mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px', fontWeight: '600' }}>
-                      Quick Contact
-                    </h4>
-                    <p className="text-sm text-white/80" style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px' }}>
-                      WhatsApp for Insurance Check
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* WhatsApp Button */}
-              <button
-                onClick={handleWhatsAppClick}
-                className="bg-white text-[#1F5E4B] px-8 py-4 rounded-2xl flex items-center gap-3 font-semibold transition-all hover:bg-white/90 cursor-pointer shadow-lg"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px', fontWeight: '600' }}
-              >
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp Instantly
-              </button>
-            </div>
-
-            {/* Right Content - Form Card */}
-            <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <h3
-                className="text-2xl font-medium text-[#1A1A1A] mb-6"
-                style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '24px', fontWeight: '500' }}
-              >
-                Request a Coverage Check
-              </h3>
-
-              <form onSubmit={handleFormSubmit} className="space-y-5">
-                {/* Full Name */}
-                <div>
-                  <label
-                    htmlFor="fullName"
-                    className="block text-sm font-medium text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }} >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    value={formData.fullName}
-                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl border border-[#E0D8CC] bg-[#F9F7F4] text-[#1A1A1A] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] focus:border-transparent transition-all"
-                    placeholder="John Doe"
-                    required
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px' }}
-                  />
-                </div>
-
-                {/* Phone Number */}
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl border border-[#E0D8CC] bg-[#F9F7F4] text-[#1A1A1A] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] focus:border-transparent transition-all"
-                    placeholder="+971 50 123 4567"
-                    required
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px' }}
-                  />
-                </div>
-
-                {/* Email Address */}
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl border border-[#E0D8CC] bg-[#F9F7F4] text-[#1A1A1A] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] focus:border-transparent transition-all"
-                    placeholder="your.email@example.com"
-                    required
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px' }}
-                  />
-                </div>
-
-                {/* Insurance Provider */}
-                <div>
-                  <label
-                    htmlFor="insuranceProvider"
-                    className="block text-sm font-medium text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
-                  >
-                    Insurance Provider
-                  </label>
-                  <select
-                    id="insuranceProvider"
-                    value={formData.insuranceProvider}
-                    onChange={(e) => setFormData({ ...formData, insuranceProvider: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl border border-[#E0D8CC] bg-[#F9F7F4] text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] focus:border-transparent transition-all appearance-none cursor-pointer"
-                    required
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px' }}
-                  >
-                    <option value="">Select your provider</option>
-                    <option value="NextCare">NextCare</option>
-                    <option value="GIG">GIG Gulf</option>
-                    <option value="Daman">Daman</option>
-                    <option value="Neuron">Neuron</option>
-                    <option value="Sukoon">Oman Insurance (Sukoon)</option>
-                    <option value="MetLife">MetLife</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                {/* Preferred Time */}
-                <div>
-                  <label
-                    htmlFor="preferredTime"
-                    className="block text-sm font-medium text-[#1A1A1A] mb-2"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '500' }}
-                  >
-                    Preferred Time
-                  </label>
-                  <select
-                    id="preferredTime"
-                    value={formData.preferredTime}
-                    onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl border border-[#E0D8CC] bg-[#F9F7F4] text-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#1F5E4B] focus:border-transparent transition-all appearance-none cursor-pointer"
-                    required
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px' }}
-                  >
-                    <option value="">Select preferred time</option>
-                    <option value="morning">Morning (9AM-12PM)</option>
-                    <option value="afternoon">Afternoon (12PM-4PM)</option>
-                    <option value="evening">Evening (4PM-9PM)</option>
-                  </select>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-[#1F5E4B] text-white py-4 rounded-2xl font-semibold transition-all hover:bg-[#154a32] hover:shadow-lg cursor-pointer"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px', fontWeight: '600' }}
-                >
-                  Confirm Coverage Check
-                </button>
-
-                {/* WhatsApp Button */}
+      {/* FAQ */}
+      <section className="bg-white py-16 px-6" id="faq">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8 text-center">Physiotherapy Insurance in Dubai: Common Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((f, i) => (
+              <div key={f.question} className="border border-gray-200 rounded-xl overflow-hidden">
                 <button
                   type="button"
-                  onClick={handleWhatsAppClick}
-                  className="w-full bg-white text-[#1F5E4B] py-4 rounded-2xl font-semibold border-2 border-[#1F5E4B] transition-all hover:bg-[#1F5E4B] hover:text-white cursor-pointer flex items-center justify-center gap-2"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '15px', fontWeight: '600' }}
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex justify-between items-center gap-4 p-5 text-left font-semibold text-[#1A1A1A] hover:bg-[#F9F7F2]"
+                  aria-expanded={openFaq === i}
                 >
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp Instantly
+                  <span>{f.question}</span>
+                  {openFaq === i ? <ChevronUp className="w-5 h-5 flex-none" /> : <ChevronDown className="w-5 h-5 flex-none" />}
                 </button>
-
-                {/* Helper Text */}
-                <p
-                  className="text-xs text-center text-[#5F5F5F] mt-4"
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '12px' }}
-                >
-                  We'll verify your coverage and get back to you within 24 hours
-                </p>
-              </form>
-            </div>
+                <div className={openFaq === i ? 'px-5 pb-5 text-[#5F5F5F] leading-relaxed' : 'hidden'}>{f.answer}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Related */}
+      <section className="bg-[#F9F7F2] py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6">Related Pages</h2>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { text: 'Physiotherapy in Jumeirah 1', link: '/services/physiotherapy-dubai/' },
+              { text: 'Physiotherapy cost in Dubai', link: '/services/physiotherapy-cost-dubai/' },
+              { text: 'GP in Jumeirah 1', link: '/services/general-physician-dubai/' },
+              { text: 'Sports injury rehabilitation', link: '/services/sports-injury-rehabilitation-dubai/' },
+              { text: 'Post-surgery rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/' },
+              { text: 'Ultrasound therapy', link: '/services/ultrasound-therapy-dubai/' }
+            ].map((r) => (
+              <Link key={r.link} href={r.link} className="px-5 py-2 rounded-full bg-white border border-gray-200 text-[#1F5E4B] font-medium hover:border-[#1F5E4B]">{r.text}</Link>
+            ))}
+          </div>
+          <p className="text-xs text-[#5F5F5F] mt-8 max-w-4xl">
+            Insurance disclaimer: coverage, session limits, co-payments and approval rules are set by each insurer and plan and can change. This page is general guidance and does not guarantee that a claim will be paid. Please check your table of benefits or ask us to check your coverage before treatment.
+          </p>
+        </div>
+      </section>
+
+      <ContentReviewBadge
+        doctorName="Jeena Mathew"
+        doctorRole="DHA Licensed Physiotherapist"
+        doctorCredentials="BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist"
+        pageSlug="physiotherapy-insurance-dubai"
+        customStatement="This guide explains how physiotherapy insurance and reimbursement claims usually work in Dubai. Coverage depends on your own plan; please check your table of benefits."
+      />
+
+      <div id="book-form">
+        <BookConsultation
+          content={{
+            badge: 'Check Coverage or Book',
+            title: 'Book Physiotherapy in Jumeirah 1',
+            description: 'Physiotherapy assessment AED 200. Pay and claim from your insurer; we provide the documents. Open every day 10am–10pm.',
+            getInTouchTitle: 'Get In Touch',
+            requestAppointmentTitle: 'Request Appointment',
+            submitButtonText: 'Request Appointment',
+            contactInfo: {
+              phone: '+971 04 286 2006',
+              whatsapp: '971566597878',
+              email: 'query@ramacarepolyclinic.com',
+              address: {
+                line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
+                line2: 'Ground Floor, Jumeirah 1 - Dubai'
+              }
+            },
+            clinicHours: {
+              weekdays: 'Sunday - Saturday:',
+              weekdaysTime: '10:00 AM - 10:00 PM'
+            },
+            statCards: [
+              { title: 'Reimbursement', description: 'Pay and Claim' },
+              { title: 'AED 200', description: 'Physiotherapy Assessment' },
+              { title: 'GP Referral', description: 'In the Same Clinic' },
+              { title: 'Open Daily', description: '10am – 10pm' }
+            ]
+          }}
+        />
+      </div>
     </Layout>
   );
 }

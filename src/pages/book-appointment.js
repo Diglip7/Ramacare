@@ -13,7 +13,8 @@ import {
   Shield,
   Star,
   CheckCircle
-} from 'lucide-react';
+} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../data/clinicStats';
+
 
 const AppointmentPage = () => {
   const appointmentSEOContent = [
@@ -66,8 +67,8 @@ const AppointmentPage = () => {
     },
     {
       icon: Star,
-      title: '4.8/5 Rating',
-      description: '200+ reviews on Google'
+      title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+      description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
     }
   ];
 

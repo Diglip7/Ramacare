@@ -729,12 +729,12 @@ export default function UltrasoundTherapyCostPage() {
                       className="mb-2"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px', fontWeight: '600', color: '#1A1A1A' }}
                     >
-                      Direct Billing
+                                           Coverage Check and Prior Approval
                     </h3>
                     <p 
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#5F5F5F', lineHeight: '1.6' }}
                     >
-                      Depending on your network (e.g., NextCare, AXA/GIG, Daman).
+                      We check your coverage and request prior approval if your plan needs it. RamaCare works on reimbursement only (no direct billing).
                     </p>
                   </div>
                 </div>

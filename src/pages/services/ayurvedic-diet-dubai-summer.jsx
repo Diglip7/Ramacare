@@ -8,12 +8,13 @@ import { motion } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import { useToast } from '../../../components/Toast';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
+import AyurvedaInfoSection from '../../../components/AyurvedaInfoSection';
 
 const content = {
   hero: {
-    title: 'Cooling Your Pitta: Ayurvedic Diet Tips for the Dubai Summer',
-    mainDescription: 'When the desert sun peaks and temperatures in Dubai soar above 45°C, your body undergoes an internal "heat wave." In Ayurveda, this season is dominated by Pitta, the energy of fire and water. If left unmanaged, the intense UAE summer can lead to burnout, skin inflammation, and digestive acidity.',
-    highlightBox: 'An Ayurvedic Diet for the Dubai Summer is your internal air conditioning. It isn\'t just about drinking cold water—it\'s about choosing foods that chemically cool your blood and calm your nervous system.',
+    title: 'Ayurvedic Summer Diet for Dubai: Cooling Foods for Pitta and the Heat',
+    mainDescription: 'When Dubai temperatures pass 45°C, many people notice acidity, prickly heat, headaches, irritability and tiredness. Ayurveda calls summer Grishma, the season when Pitta (fire) rises and digestion weakens, and it has a classical seasonal routine for it, Grishma Ritucharya.',
+    highlightBox: 'In short, the Ayurvedic summer diet favours sweet, cooling, light and liquid foods, and cuts back on salty, sour, spicy and very hot foods. This guide from RamaCare Polyclinic in Jumeirah 1 adapts it to Dubai life.',
     ctaButtons: {
       primary: { text: 'Book Summer Cooling Consultation', link: '/book-appointment/' },
       secondary: { text: 'WhatsApp Now', phone: '971566597878' }
@@ -24,124 +25,172 @@ const content = {
     }
   },
   summary: {
-    badge: 'Answer-First Summary',
-    title: 'The "Answer-First" Summary for Summer Cooling',
-    question: 'How can I reduce body heat during the Dubai summer?',
-    answer: 'To pacify Pitta, focus on the three "Cooling Tastes": Sweet, Bitter, and Astringent. Incorporate hydrating foods like watermelon, cucumber, and coconut water, and use cooling spices like fennel and coriander. Avoid "heating" triggers like red chilies, caffeine, and vinegar-heavy foods, which can worsen heat-related irritability and acidity.',
+    badge: 'Quick answer',
+    title: 'How Can I Reduce Body Heat in the Dubai Summer?',
+    question: 'In short:',
+    answer: 'Choose cooling foods with sweet, bitter and astringent tastes: cucumber, melons, coconut water, leafy greens, rice, mung dal and buttermilk. Use cooling spices such as fennel, coriander and mint. Cut back on chilli, pickles, vinegar, fried food, alcohol and excess coffee. Drink plenty of room-temperature water through the day (Ayurveda advises against ice-cold drinks with meals), and avoid the midday sun and hard exercise in the heat.',
     cta: ''
   },
   pittaCrisis: {
-    title: 'Why the "Dubai Summer" is a Pitta Crisis',
+    title: 'Why the Dubai Summer Affects Your Body',
     description: 'At RamaCare Polyclinic, we see a surge in "heat-stress" symptoms during the months of June through September. The Dubai environment creates a perfect storm for Pitta imbalance:',
     items: [
       {
-        title: 'Extreme External Heat',
-        description: 'High UV exposure increases the fire element in the skin and liver.',
+        title: 'Intense Heat and Sun',
+        description: 'From May to September, heat and strong sun raise Pitta in Ayurvedic terms, often felt as acidity, prickly heat, irritability and skin sensitivity.',
         icon: 'Leaf'
       },
       {
-        title: 'The "AC Transition" Shock',
-        description: 'Moving from 50°C outdoors to 20°C indoors confuses the body\'s thermoregulation, often leading to respiratory "summer colds."',
+        title: 'Hot Outdoors, Cold Indoors',
+        description: 'Moving between the heat and strong air-conditioning, and drinking iced drinks, can upset digestion; Ayurveda says digestive fire is already weak in summer.',
         icon: 'Wind'
       },
       {
-        title: 'Dehydration & Electrolyte Loss',
-        description: 'Excessive sweating in the humidity of Dubai Marina or Jumeirah leads to the depletion of vital minerals, causing fatigue and "brain fog."',
+        title: 'Sweat, Fluid and Salt Loss',
+        description: 'Heavy sweating in Dubai\'s humidity loses water and salts, causing tiredness, headaches and cramps if you do not drink enough.',
         icon: 'Droplets'
       }
     ]
   },
   superfoods: {
-    title: '2. Top 5 Cooling Superfoods for UAE Residents',
-    description: 'These are essential items for your next trip to Spinneys, Waitrose, or Lulu Hypermarket:',
+    title: 'Five Cooling Foods for the Dubai Summer',
+    description: 'Traditional Ayurvedic summer foods, easy to find in Dubai:',
     items: [
       {
         title: 'Fresh Coconut Water',
-        description: 'Nature\'s electrolyte drink. Rich in potassium and natural cooling properties. Drink fresh, not packaged.',
+        description: 'Naturally contains potassium and is a traditional summer drink in Ayurveda. Fresh is best. People with diabetes or kidney disease should check with their doctor first.',
         icon: '🥥'
       },
       {
-        title: 'Watermelon & Muskmelon',
-        description: 'Over 90% water content. Sweet taste pacifies Pitta. The mild diuretic action helps flush heat from the kidneys.',
+        title: 'Watermelon and Muskmelon',
+        description: 'Over 90% water. The sweet taste is traditionally used to balance Pitta. Eat them on their own, in moderate portions if you have diabetes.',
         icon: '🍉'
       },
       {
-        title: 'Coriander & Mint',
-        description: 'Cooling herbs that reduce internal inflammation. Add fresh to salads, or brew as tea.',
+        title: 'Coriander and Mint',
+        description: 'Cooling herbs in Ayurveda. Add fresh to salads and raita, or brew as a light tea.',
         icon: '🌿'
       },
       {
         title: 'Barley (Yava)',
-        description: 'Ancient cooling grain. Make barley water by boiling and straining. Reduces body heat and supports liver function.',
+        description: 'A traditional cooling grain. Barley water (boiled, strained and cooled to room temperature) is a classic summer drink.',
         icon: '🌾'
       },
       {
-        title: 'Gulkand (Rose Petal Jam)',
-        description: 'Traditional cooling preparation. 1 teaspoon daily reduces acidity, body heat, and emotional irritability.',
+        title: 'Gulkand (Rose Petal Preserve)',
+        description: 'A traditional cooling preparation, taken in small amounts (about a teaspoon). It is high in sugar, so avoid it if you have diabetes.',
         icon: '🌹'
       }
     ]
   },
+  coolingTable: {
+    id: 'cooling-vs-heating',
+    heading: 'Cooling vs Heating Foods in Ayurveda',
+    table: [
+      ['Favour (cooling)', 'Cucumber, melons, coconut, leafy greens, zucchini, rice, barley, mung dal, milk, buttermilk, ghee in small amounts, sweet ripe fruits, fennel, coriander, mint, cardamom'],
+      ['Limit (heating)', 'Chilli and very spicy food, garlic and raw onion in large amounts, pickles, vinegar, tomato-heavy and sour dishes, fried and salty snacks, alcohol, excess coffee and energy drinks'],
+      ['Tastes', 'Favour sweet, bitter and astringent; reduce salty, sour and pungent, as the classical summer routine (Grishma Ritucharya) advises']
+    ]
+  },
+  sampleDay: {
+    id: 'summer-sample-day',
+    heading: 'Sample Ayurvedic Summer Day in Dubai',
+    intro: 'An example only. Your plan depends on your dosha and health.',
+    table: [
+      ['On waking', 'A glass of room-temperature water, or coriander seed water'],
+      ['Breakfast', 'Oats or poha with sweet fruit, or idli with coconut chutney'],
+      ['Mid-morning', 'Fresh coconut water or a few slices of melon'],
+      ['Lunch (main meal)', 'Rice, mung dal, a cooked green vegetable, cucumber salad and buttermilk'],
+      ['Afternoon (stay indoors)', 'Fennel and rose water; rest in the hottest hours'],
+      ['Dinner (early)', 'Light vegetable soup or kitchari'],
+      ['Exercise', 'Early morning walk or indoor yoga; avoid 11am–4pm outdoors']
+    ]
+  },
+  heatSafety: {
+    id: 'heat-safety',
+    heading: 'Heat Exhaustion and Heatstroke: When to Get Help',
+    intro: 'Diet helps you cope with summer, but heat illness needs action. Based on NHS guidance:',
+    items: [
+      { text: 'Heat exhaustion: tiredness, dizziness, headache, cramps, nausea, heavy sweating, intense thirst. Move somewhere cool, lie down, drink water or a rehydration drink, and cool the skin. You should feel better within about 30 minutes.' },
+      { text: 'Heatstroke is an emergency: a very high temperature (around 40°C or more), hot skin that is not sweating, confusion, fast breathing or heartbeat, a seizure or loss of consciousness, or no improvement after 30 minutes. Call 998 for an ambulance.' },
+      { text: 'Take extra care with older people, young children, pregnant women and anyone with heart or kidney disease or diabetes, and anyone working outdoors.' }
+    ],
+    note: 'Source: NHS, Heat exhaustion and heatstroke (https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/). For a medical check, see our GP (/services/general-physician-dubai/).'
+  },
+  summerProblems: {
+    id: 'summer-problems',
+    heading: 'Common Summer Problems and Where to Get Help at RamaCare',
+    items: [
+      { text: 'Prickly heat (heat rash) and itchy skin: Ayurvedic skin treatment', href: '/services/skin-diseases-treatment-dubai/' },
+      { text: 'Acidity and heartburn in the heat: Ayurvedic digestive treatment', href: '/services/gastrointestinal-diseases-treatment-dubai/' },
+      { text: 'Hair fall and dandruff in summer: Ayurvedic hair fall treatment', href: '/services/ayurvedic-hairfall-treatment-dubai/' },
+      { text: 'Stress and poor sleep: Shirodhara and Takradhara', href: '/services/shirodhara-therapy-in-dubai/' }
+    ]
+  },
+  yourVisit: {
+    id: 'your-visit',
+    heading: 'Your Summer Consultation in Jumeirah 1',
+    table: [
+      ['Doctor', 'Dr. Shamna Keloth Meethal, BAMS, DHA-licensed Ayurvedic doctor (11+ years)'],
+      ['Consultation', 'From AED 200, 45–60 minutes'],
+      ['Therapies', 'Takradhara, Shirodhara, Abhyanga, with same-gender therapists'],
+      ['Address', '12 Al Dhiyafah Road, Jumeirah Terrace Building, Ground Floor, Jumeirah 1, Dubai'],
+      ['Nearby', 'A few minutes from Satwa and Al Wasl; about 10 minutes from Jumeirah 2, City Walk and La Mer'],
+      ['Hours', 'Every day, 10am–10pm; evening slots avoid the midday heat']
+    ]
+  },
   summerSip: {
-    title: '3. The "Summer Sip" Protocol: 3 DIY Cooling Drinks',
+    title: 'Three Ayurvedic Cooling Drinks',
     items: [
       {
-        title: 'Fennel & Rose Cooler',
-        recipe: 'Soak 1 tsp fennel seeds + 3-4 dried rose petals in 500ml water overnight. Strain and sip throughout the day.',
-        benefit: 'Reduces internal heat and calms the digestive tract.'
+        title: 'Fennel and Rose Water',
+        recipe: 'Soak 1 tsp fennel seeds and a few dried rose petals in 500 ml water overnight. Strain and sip through the day.',
+        benefit: 'Traditionally used to cool and settle digestion.'
       },
       {
-        title: 'The Ayurvedic "Buttermilk" (Takra)',
-        recipe: 'Blend 1 cup yogurt + 2 cups water + pinch of cumin + fresh coriander. Drink at lunch.',
-        benefit: 'Probiotic-rich and cools the stomach. The "cooling food" for pitta digestion.'
+        title: 'Ayurvedic Buttermilk (Takra)',
+        recipe: 'Blend 1 cup yoghurt with 2 cups water, a pinch of roasted cumin and fresh coriander. Drink at lunch.',
+        benefit: 'Ayurveda prefers thin buttermilk to thick yoghurt in summer; it is traditionally used for digestion.'
       },
       {
-        title: 'Coriander Seed Tea',
-        recipe: 'Boil 1 tsp coriander seeds in 2 cups water for 5 minutes. Strain and drink warm or room temperature.',
-        benefit: 'Flushes toxins, cools the liver, and reduces skin inflammation.'
+        title: 'Coriander Seed Water',
+        recipe: 'Boil 1 tsp coriander seeds in 2 cups water for 5 minutes, strain and drink at room temperature.',
+        benefit: 'A traditional cooling drink for Pitta.'
       }
     ]
   },
   paa: {
-    title: '4. People Also Ask (PAA) - Dubai Summer Edition',
+    title: 'Ayurvedic Summer Diet: Frequently Asked Questions',
     items: [
-      {
-        question: 'Can I eat spicy food during the summer if I live in Dubai?',
-        answer: 'We recommend minimizing "pungent" spices (chili, garlic, raw onion) during peak summer. If you must have spice, balance it with cooling sides like cucumber raita or extra Ghee.'
-      },
-      {
-        question: 'Why do I feel more irritable and angry when it\'s hot in Dubai?',
-        answer: 'In Ayurveda, "Pitta" governs both body temperature and emotions like anger. High external heat "cooks" the Pitta in your mind. A cooling diet and Sheetali Pranayama (cooling breath) can significantly calm "summer road rage" and irritability.'
-      },
-      {
-        question: 'Is it okay to eat salads all day during a Dubai summer?',
-        answer: 'While salads are cooling, they are also "Vata-increasing" (dry and rough). For best results, have your raw salad at lunch when your digestion is strongest, and stick to cooked, cooling meals like mung dal and rice for dinner.'
-      }
+      { question: 'What is the Ayurvedic summer diet?', answer: 'Ayurveda calls summer Grishma and recommends sweet, cooling, light and liquid foods, such as rice, mung dal, cucumber, melons, coconut water, milk and buttermilk, while reducing salty, sour, spicy and very hot foods. This is the classical summer routine, Grishma Ritucharya.' },
+      { question: 'Which foods should I avoid in the Dubai summer?', answer: 'Cut back on chilli and very spicy food, pickles, vinegar, fried and salty snacks, alcohol and excess coffee or energy drinks, which Ayurveda considers heating.' },
+      { question: 'Should I drink ice-cold water in summer?', answer: 'Ayurveda advises against ice-cold drinks, especially with meals, because they weaken digestion. Drink plenty of cool or room-temperature water through the day instead.' },
+      { question: 'Can I eat spicy food in the Dubai summer?', answer: 'Keep it mild. If you do eat spicy food, balance it with cooling sides like cucumber raita, rice and buttermilk.' },
+      { question: 'Is yoghurt good in summer?', answer: 'Ayurveda prefers thin buttermilk (yoghurt blended with water and cumin) to thick yoghurt in summer, as yoghurt is considered heating and heavy.' },
+      { question: 'Are salads good in summer?', answer: 'Yes, at lunch when digestion is strongest. For dinner, cooked and cooling meals such as mung dal and rice are easier to digest.' },
+      { question: 'Why do I feel irritable in the heat?', answer: 'Ayurveda links heat and irritability to Pitta. A cooling diet, enough water, rest in the hottest hours and Sheetali (cooling) breathing are traditional ways to stay calm.' },
+      { question: 'What are the signs of heat exhaustion?', answer: 'Tiredness, dizziness, headache, muscle cramps, nausea, heavy sweating and intense thirst. Move to a cool place, drink water and cool the skin; you should feel better within about 30 minutes.' },
+      { question: 'When is heat an emergency?', answer: 'Call 998 (ambulance) for signs of heatstroke: a very high temperature, hot skin without sweating, confusion, fast breathing or heartbeat, a seizure or fainting, or if someone is still unwell after 30 minutes of cooling.' },
+      { question: 'Is coconut water safe if I have diabetes or kidney disease?', answer: 'Coconut water contains natural sugar and potassium. People with diabetes should limit it, and people with kidney disease should check with their doctor first.' },
+      { question: 'When should I exercise in the Dubai summer?', answer: 'Early in the morning or indoors. Ayurveda advises against hard exercise in the summer heat, and medical guidance agrees: avoid the hottest hours, roughly 11am to 4pm.' },
+      { question: 'Which Ayurvedic therapies help in summer?', answer: 'Takradhara and Shirodhara (calming streams over the forehead) and coconut-oil Abhyanga are traditional summer therapies. At RamaCare they follow a consultation with Dr. Shamna.' },
+      { question: 'Where can I get an Ayurvedic summer diet plan near Jumeirah 1?', answer: 'At RamaCare Polyclinic, 12 Al Dhiyafah Road, Jumeirah 1, a few minutes from Satwa and Al Wasl and about 10 minutes from Jumeirah 2, City Walk and La Mer. Open every day 10am–10pm, so you can come in the cooler evening hours. Consultation from AED 200.' }
     ]
   },
   beatHeat: {
-    title: '5. Beat the Heat at RamaCare Polyclinic',
-    description: 'Don\'t wait for a heat stroke to take action. At our Jumeirah 1 clinic, we offer specialized Summer Wellness Assessments.',
+    title: 'Summer Care at RamaCare Polyclinic',
+    description: 'A consultation with Dr. Shamna Keloth Meethal (BAMS), from AED 200, includes your dosha (Pitta) assessment and a summer diet and routine plan for Dubai.',
     items: [
-      {
-        title: 'Pitta-Analysis',
-        description: 'Find out how much "fire" is currently in your system.'
-      },
-      {
-        title: 'Customized Hydration Plans',
-        description: 'Beyond water, we tell you exactly which infusions your body type needs.'
-      },
-      {
-        title: 'Cooling Therapies',
-        description: 'Experience Takradhara (medicated buttermilk poured on the forehead), the gold standard for cooling the brain and nervous system in the UAE summer.'
-      }
+      { title: 'Dosha and Pitta Assessment', description: 'Find out how much the heat is affecting your digestion, skin and sleep, in Ayurvedic terms.' },
+      { title: 'Summer Diet and Drinks Plan', description: 'Which foods and drinks suit your body type in the heat, with cautions if you have diabetes or kidney problems.' },
+      { title: 'Cooling Therapies', description: 'Takradhara, Shirodhara and coconut-oil Abhyanga, given by therapists of your own gender, if suitable.' }
     ],
     cta: 'Book Your Summer Cooling Consultation'
   },
   authorityFooter: {
-    title: 'The "Authority" Footer',
-    description: 'Stay energized and balanced even in the peak of August. Start your journey with a professional Ayurvedic Diet Plan Dubai tailored for the desert climate.',
-    cta: 'Book Your Summer Cooling Consultation in Jumeirah Today'
+    title: 'Stay Comfortable Through the Dubai Summer',
+    description: 'Book a summer consultation with Dr. Shamna in Jumeirah 1, including evening slots up to 10pm. For a full plan, see our Ayurvedic diet plan in Dubai.',
+    cta: 'Book a Summer Consultation'
   },
   reviewer: {
     name: 'Shamna',
@@ -169,47 +218,46 @@ export default function AyurvedicDietDubaiSummerPage() {
         "@type": "MedicalWebPage",
         "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#webpage",
         "url": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/",
-        "name": "Ayurvedic Diet Tips for Dubai Summer | RamaCare",
-        "description": "Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Heat Stress / Pitta Imbalance (Seasonal)"
-        },
-        "lastReviewed": "2026-08-29",
-        "reviewedBy": {
-          "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#physician"
-        },
+        "name": "Ayurvedic Summer Diet Dubai | Cooling Foods for Pitta & Heat",
+        "inLanguage": "en-AE",
+        "about": [
+          { "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#diet" },
+          { "@type": "Thing", "name": "Heat exhaustion and heatstroke" }
+        ],
+        "isPartOf": { "@id": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/#webpage" },
+        "reviewedBy": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" },
+        "lastReviewed": "YYYY-MM-DD",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ramacarepolyclinic.ae/" },
             { "@type": "ListItem", "position": 2, "name": "Ayurveda", "item": "https://ramacarepolyclinic.ae/services/ayurveda-dubai/" },
-            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Diet for Dubai Summer", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" }
+            { "@type": "ListItem", "position": 3, "name": "Ayurvedic Summer Diet", "item": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" }
           ]
         }
       },
       {
+        "@type": "Diet",
+        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#diet",
+        "name": "Ayurvedic summer diet (Grishma Ritucharya) for Dubai",
+        "alternateName": ["Pitta diet", "Pitta-pacifying diet", "Ayurvedic cooling foods", "Grishma Ritucharya"],
+        "description": "The classical Ayurvedic summer regimen adapted for Dubai by RamaCare Polyclinic, Jumeirah 1: sweet, cooling, light and liquid foods; fewer salty, sour, pungent and very hot foods; room-temperature drinks instead of iced; avoiding midday sun and heavy exertion.",
+        "dietFeatures": "Cucumber, melons, coconut water, buttermilk, rice, mung dal, leafy greens, sweet ripe fruit, fennel, coriander and mint; limit chilli, pickles, vinegar, fried food, alcohol and excess caffeine",
+        "expertConsiderations": "People with diabetes should watch sweet fruits, coconut water and gulkand; people with kidney disease should follow their doctor's fluid and potassium advice. Seek urgent help for heatstroke symptoms.",
+        "endorsers": { "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician" }
+      },
+      {
         "@type": "Physician",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#physician",
+        "@id": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/#physician",
         "name": "Dr. Shamna Keloth Meethal",
-        "medicalSpecialty": "Ayurveda",
-        "honorificSuffix": "BAMS",
-        "hasCredential": "DHA Licensed Ayurveda Doctor",
-        "worksFor": {
-          "@type": "MedicalOrganization",
-          "name": "RamaCare Polyclinic"
-        },
-        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
+        "gender": "Female",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
+        "medicalSpecialty": "https://schema.org/Ayurvedic",
+        "knowsLanguage": ["en", "ml", "hi"],
+        "worksFor": { "@id": "https://ramacarepolyclinic.ae/#clinic" }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/#faq",
         "mainEntity": faqsForSchema
       }
     ]
@@ -228,27 +276,27 @@ export default function AyurvedicDietDubaiSummerPage() {
     <Layout>
       {ToastComponent}
       <Head>
-        <title key="title">Ayurvedic Diet Tips for Dubai Summer | RamaCare</title>
-        <meta name="description" content="Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah." key="description" />
+        <title key="title">Ayurvedic Summer Diet Dubai | Cooling Foods for Pitta & Heat</title>
+        <meta name="description" content="Ayurvedic summer diet for Dubai: cooling foods for Pitta, foods to limit, drinks, a sample day and heat-illness warning signs, from RamaCare, Jumeirah 1." key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href="https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" key="canonical" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="Ayurvedic Diet Tips for Dubai Summer | RamaCare" key="og:title" />
-        <meta property="og:description" content="Discover Ayurvedic diet tips to cool Pitta and manage heat stress during the intense Dubai summer at RamaCare Polyclinic Jumeirah." key="og:description" />
+        <meta property="og:title" content="Ayurvedic Summer Diet Dubai | Cooling Foods for Pitta & Heat" key="og:title" />
+        <meta property="og:description" content="Ayurvedic summer diet for Dubai: cooling foods for Pitta, foods to limit, drinks, a sample day and heat-illness warning signs, from RamaCare, Jumeirah 1." key="og:description" />
         <meta property="og:url" content="https://ramacarepolyclinic.ae/services/ayurvedic-diet-dubai-summer/" key="og:url" />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/pitta.jpg" key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
-        <meta property="og:image:alt" content="Ayurvedic Diet Tips for the Dubai Summer - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:image:alt" content="Ayurvedic cooling summer foods and drinks for the Dubai heat, RamaCare Polyclinic, Jumeirah 1" key="og:image:alt" />
         <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
         <meta property="og:locale" content="en_AE" key="og:locale" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Ayurvedic Diet Tips for Dubai Summer | RamaCare" key="twitter:title" />
-        <meta name="twitter:description" content="Cool Pitta and beat the Dubai heat with Ayurvedic diet tips from RamaCare Polyclinic Jumeirah." key="twitter:description" />
+        <meta name="twitter:title" content="Ayurvedic Summer Diet Dubai | Cooling Foods for Pitta & Heat" key="twitter:title" />
+        <meta name="twitter:description" content="Ayurvedic summer diet for Dubai: cooling foods for Pitta, foods to limit, drinks, a sample day and heat-illness warning signs, from RamaCare, Jumeirah 1." key="twitter:description" />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/pitta.jpg" key="twitter:image" />
 
         <script
@@ -292,7 +340,7 @@ export default function AyurvedicDietDubaiSummerPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={content.hero.ctaButtons.primary.link}>
-                  <button 
+                  <button
                     className="bg-[#1F5E4B] text-white px-8 py-4 rounded-lg hover:bg-[#16493a] transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2 font-medium w-full"
                   >
                     {content.hero.ctaButtons.primary.text}
@@ -342,11 +390,11 @@ export default function AyurvedicDietDubaiSummerPage() {
             <div className="mb-4 inline-block rounded-full bg-[#E9E2D6] px-4 py-2 text-sm font-medium text-[#5F5F5F]">
               {content.summary.badge}
             </div>
-            
+
             <h2 className="mb-6 text-3xl lg:text-4xl font-bold text-[#1A1A1A] leading-tight">
               {content.summary.title}
             </h2>
-            
+
             <p className="text-[#1A1A1A] text-lg leading-relaxed">
               <strong>{content.summary.question}</strong> {content.summary.answer}
             </p>
@@ -440,7 +488,7 @@ export default function AyurvedicDietDubaiSummerPage() {
           </div>
         </div>
       </section>
-
+      <AyurvedaInfoSection content={content.coolingTable} />
       {/* Summer Sip Section */}
       <section className="px-6 py-20 lg:px-12 bg-white">
         <div className="mx-auto max-w-7xl">
@@ -448,7 +496,7 @@ export default function AyurvedicDietDubaiSummerPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"> 
+            className="mb-12">
             <h2 className="mb-12 text-4xl font-bold text-[#1A1A1A]">
               {content.summerSip.title}
             </h2>
@@ -490,7 +538,9 @@ export default function AyurvedicDietDubaiSummerPage() {
           </div>
         </div>
       </section>
-
+      <AyurvedaInfoSection content={content.sampleDay} />
+      <AyurvedaInfoSection content={content.heatSafety} />
+      <AyurvedaInfoSection content={content.summerProblems} />
       {/* PAA Section */}
       <section className="px-6 py-20 lg:px-12 bg-[#F5F1EA]">
         <div className="mx-auto max-w-4xl">
@@ -533,6 +583,7 @@ export default function AyurvedicDietDubaiSummerPage() {
           </div>
         </div>
       </section>
+      <AyurvedaInfoSection content={content.yourVisit} />
       {/* Beat the Heat Section */}
       <section className="px-6 py-20 lg:px-12 bg-white">
         <div className="mx-auto max-w-7xl">
@@ -545,11 +596,11 @@ export default function AyurvedicDietDubaiSummerPage() {
             <div className="mb-8 flex justify-center">
               <LucideIcons.Sparkles size={48} className="text-white" />
             </div>
-            
+
             <h2 className="mb-6 text-3xl lg:text-4xl font-bold leading-tight">
               {content.beatHeat.title}
             </h2>
-            
+
             <p className="mx-auto mb-12 max-w-2xl text-lg opacity-90">
               {content.beatHeat.description}
             </p>
@@ -587,7 +638,7 @@ export default function AyurvedicDietDubaiSummerPage() {
             <h2 className="mb-6 text-3xl lg:text-[40px] font-bold text-[#1A1A1A] leading-tight">
               {content.authorityFooter.title}
             </h2>
-            
+
             <p className="mb-8 text-lg leading-relaxed text-[#5F5F5F]">
               {content.authorityFooter.description}
             </p>
@@ -601,23 +652,34 @@ export default function AyurvedicDietDubaiSummerPage() {
             {/* Related Reading */}
             <div className="mx-auto max-w-4xl mt-12 mb-8">
               <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">Related Ayurvedic Guides</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-                <a href="/services/ayurvedic-detox-diet-plan-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
-                  <span className="font-bold text-[#1A1A1A] text-sm">Detox Diet Plan</span>
-                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
-                </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
                 <a href="/services/ayurvedic-diet-plan-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
                   <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Diet Plan</span>
                   <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="/services/ayurvedic-gut-health-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
-                  <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Gut Health</span>
+                <a href="/services/skin-diseases-treatment-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Skin Treatment</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/gastrointestinal-diseases-treatment-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Ayurvedic Digestive Treatment</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/shirodhara-therapy-in-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Shirodhara Therapy</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/abhyanga-massage-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Kerala Ayurvedic Massage</span>
+                  <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/services/prakriti-dosha-assessment-dubai/" className="bg-[#E9E2D6] hover:bg-[#d8cfc0] p-5 rounded-xl flex items-center justify-between transition-all group">
+                  <span className="font-bold text-[#1A1A1A] text-sm">Prakriti & Dosha Assessment</span>
                   <LucideIcons.ArrowRight className="w-4 h-4 text-[#1F5E4B] group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
-
-            <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-dubai-summer" />
+            <ContentReviewBadge doctorName="Dr. Shamna Keloth Meethal" pageSlug="ayurvedic-diet-dubai-summer" lastReviewed="2026-01-12" />
           </motion.div>
         </div>
       </section>
@@ -636,6 +698,6 @@ export default function AyurvedicDietDubaiSummerPage() {
           </Link>
         </div>
       </div>
-     </Layout>
-   );
- }
+    </Layout>
+  );
+}

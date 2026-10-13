@@ -17,7 +17,8 @@ import {
   Users,
   Shield,
   Star
-} from 'lucide-react';
+} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../data/clinicStats';
+
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
@@ -273,7 +274,7 @@ const ContactUsPage = () => {
                   <div className="text-sm text-gray-200">Licensed facility</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">4.8/5</div>
+                  <div className="text-2xl md:text-3xl font-bold text-[#d4a574]">{GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5</div>
                   <div className="text-sm text-gray-200">Patient Rating</div>
                 </div>
               </div>

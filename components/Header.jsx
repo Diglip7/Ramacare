@@ -91,7 +91,10 @@ const Header = () => {
         { name: 'Ayurvedic Diet Plan for Busy Professionals', slug: 'ayurvedic-diet-plan-busy-professionals-dubai' },
         { name: 'Ayurvedic Diet for Weight Loss', slug: 'ayurvedic-diet-weight-loss-dubai' },
         { name: 'Ayurvedic Diet for Dubai Summer', slug: 'ayurvedic-diet-dubai-summer' },
-        { name: 'Ayurvedic Diet for Thyroid', slug: 'ayurvedic-diet-thyroid-dubai' }
+        { name: 'Ayurvedic Diet for Thyroid', slug: 'ayurvedic-diet-thyroid-dubai' },
+        { name: 'Anxiety Treatment', slug: 'anxiety-treatment-dubai' },
+        { name: 'Stress Treatment', slug: 'stress-treatment-dubai' },
+        { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' }
       ],
       icon: Leaf
     },
@@ -108,22 +111,17 @@ const Header = () => {
         { name: 'Back Pain Treatment', slug: 'back-pain-treatment-dubai' },
         { name: 'Knee Pain Treatment', slug: 'knee-pain-treatment-dubai' },
         { name: 'Migraine Treatment', slug: 'migraine-treatment-dubai' },
-        { name: 'Office Neck Treatment', slug: 'office-neck-treatment-dubai' },
-        { name: 'Post Surgery Recovery', slug: 'post-surgery-recovery-dubai' },
         { name: 'Post Surgery Rehabilitation', slug: 'post-surgery-rehabilitation-dubai' },
         { name: 'Physiotherapy Insurance', slug: 'physiotherapy-insurance-dubai' },
         { name: 'Cervical Spondylosis Treatment', slug: 'cervical-spondylosis-treatment-dubai' },
         { name: 'Frozen Shoulder Treatment', slug: 'frozen-shoulder-treatment-dubai' },
         { name: 'Neck Pain Treatment', slug: 'neck-pain-treatment-dubai' },
-        { name: 'Plantar Phasciitis Treatment', slug: 'plantar-fasciitis-treatment-dubai' },
+        { name: 'Plantar Fasciitis Treatment', slug: 'plantar-fasciitis-treatment-dubai' },
         { name: 'Sciatica Treatment', slug: 'sciatica-treatment-dubai' },
         { name: 'Shoulder Pain Treatment', slug: 'shoulder-pain-treatment-dubai' },
         { name: 'Slip Disc Treatment', slug: 'slip-disc-treatment-dubai' },
         { name: 'Sports Injury Rehabilitation', slug: 'sports-injury-rehabilitation-dubai' },
-        { name: 'Joint Pain Treatment', slug: 'joint-pain-treatment-dubai' },
-        { name: 'Anxiety Treatment', slug: 'anxiety-treatment-dubai' },
-        { name: 'Stress Treatment', slug: 'stress-treatment-dubai' },
-        { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' }
+        { name: 'Joint Pain Treatment', slug: 'joint-pain-treatment-dubai' }
       ],
       icon: Activity
     },

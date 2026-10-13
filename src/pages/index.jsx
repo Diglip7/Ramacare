@@ -11,6 +11,7 @@ import WhyAyurvedaDubaiSection from "../../components/WhyAyurvedaDubaiSection";
 import FAQSection from "../../components/FAQSection";
 // import OurFacilitySection from "../../components/OurFacilitySection";
 import BeginYourHealingJourneySection from "../../components/BeginYourHealingJourneySection";
+import { GOOGLE_RATING_FALLBACK } from '../data/clinicStats';
 // import SEOContentSection from "../../components/SEOContentSection";
 
 
@@ -162,7 +163,7 @@ const testimonialsContent = {
   title: "What patients say about RamaCare",
   subtitle: "Video stories from patients at our Jumeirah 1 clinic, plus our Google reviews.",
   stats: [
-    { id: 1, number: "4.8/5", label1: "Average Rating", label2: "Google Reviews", target: 4.8, showStars: true },
+    { id: 1, number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`, label1: "Average Rating", label2: "Google Reviews", target: 4.8, showStars: true },
     { id: 2, number: "200", label1: "Patient Reviews", label2: "On Google", target: 200 },
     { id: 3, number: "5", label1: "Departments", label2: "Under one roof", target: 5 },
     { id: 4, number: "7", label1: "Days a week", label2: "Open 10am–10pm", target: 7 }

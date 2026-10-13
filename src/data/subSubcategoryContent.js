@@ -8,7 +8,8 @@
  */
 
 import { devNull } from "os";
-import { DOCTORS, DOCTOR_GROUPS } from './doctors';
+import { DOCTORS, DOCTOR_GROUPS } from './doctors';import { GOOGLE_RATING_FALLBACK } from './clinicStats';
+
 
 export const subSubcategoryContent = {
 
@@ -21,7 +22,7 @@ export const subSubcategoryContent = {
       subtitle: 'Deep Hydration & Natural Skin Rejuvenation',
       description: 'Restore your skin\'s natural glow, hydration, and youthful appearance with Skin Boosters in Dubai at RamaCare Polyclinic.Our advanced injectable skin rejuvenation treatment is designed to deeply hydrate the skin from within, improve elasticity, refine texture, and reduce the appearance of fine lines for healthy, radiant-looking skin. Unlike traditional dermal fillers that primarily restore facial volume, skin boosters focus on improving overall skin quality by delivering hydrating hyaluronic acid into the deeper layers of the skin. Whether you are concerned about dry skin, dullness, early signs of ageing, uneven texture, or loss of elasticity, our DHA-licensed aesthetic specialists create a personalized treatment plan tailored to your unique skin type and aesthetic goals.Skin booster treatments are suitable for the face, neck, décolletage, and hands, offering comprehensive skin rejuvenation with minimal discomfort and little to no downtime.',
       rating: '500+ Happy Clients',
-      
+
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -755,12 +756,12 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '2,500+ Patients', description: 'Successfully Treated' },
-        { title: '4.8/5 Rating', description: 'Patient Reviews' }
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
       ]
     },
     testimonials: {
-     
+
     }
   },
 
@@ -769,7 +770,7 @@ export const subSubcategoryContent = {
       subtitle: 'Natural Skin Repair for Smoother, Healthier-Looking Skin',
       description: 'Restore smoother, healthier, and more radiant skin with derma roller treatment in Dubai at RamaCare Polyclinic.This advanced microneedling treatment stimulates your skin\'s natural healing process by encouraging collagen and elastin production, helping improve acne scars, fine lines, enlarged pores, uneven skin texture, and overall skin quality without surgery. Over time, aging, acne, sun exposure, and environmental factors can affect your skin\'s appearance, leaving it dull, rough, or uneven.As the skin repairs itself, you may notice gradual improvements in texture, elasticity, and overall radiance. At RamaCare Polyclinic, every treatment begins with a detailed skin assessment by our DHA-licensed aesthetic specialists.We create a personalized treatment plan based on your skin type, concerns, and aesthetic goals to deliver safe, natural-looking results.',
       rating: '500+ Happy Clients',
-      
+
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -1480,8 +1481,8 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '2,500+ Patients', description: 'Treated' },
-        { title: '4.8/5 Rating', description: 'Patient Reviews' }
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
       ]
     }
   },
@@ -1491,7 +1492,7 @@ export const subSubcategoryContent = {
       subtitle: 'Advanced Non-Surgical Care for Firmer, Youthful Skin',
       description: 'Loose or sagging skin is a natural result of aging, collagen loss, weight changes, pregnancy, and sun exposure.As collagen and elastin levels decline over time, the skin may lose its firmness, making fine lines, wrinkles, and skin laxity more noticeable.Fortunately, modern aesthetic treatments can effectively improve skin tightness and elasticity without the need for surgery. At RamaCare Polyclinic, we offer advanced skin tightening treatment in Dubai to help restore firmer, smoother, and younger-looking skin.Our focus is on achieving gradual, long-lasting improvements while preserving your natural appearance. Choose RamaCare Polyclinic for trusted skin tightening treatment in Dubai and enjoy personalized care designed to help you achieve healthier, firmer, and more youthful-looking skin with confidence.',
       rating: '500+ Happy Clients',
-      
+
       ctaButtons: {
         primary: { text: 'Book Consultation', icon: 'calendar', link: '#book-consultation' },
         secondary: { text: 'WhatsApp', phone: '+971 56 659 7878', icon: 'whatsapp' }
@@ -2201,8 +2202,8 @@ export const subSubcategoryContent = {
       statCards: [
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
-        { title: '2,500+ Patients', description: 'Treated' },
-        { title: '4.8/5 Rating', description: 'Patient Reviews' }
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
       ]
     }
   },
@@ -2212,7 +2213,7 @@ export const subSubcategoryContent = {
       subtitle: 'Gentle Skin Resurfacing for a Brighter, Smoother & Healthier Complexion',
       description: 'Dull skin, uneven texture, clogged pores, and the early signs of aging can affect your skin\'s natural radiance and confidence.Over time, dead skin cells accumulate on the skin\'s surface, making the complexion appear rough, tired, and less vibrant. At RamaCare Polyclinic, we provide professional microdermabrasion in Dubai using advanced exfoliation technology to remove dead skin cells, refine skin texture, minimize the appearance of enlarged pores, and promote healthy skin renewal.Restore your skin\'s natural glow with personalized microdermabrasion treatment in Dubai at RamaCare Polyclinic and enjoy healthier, smoother, and more radiant skin with confidence. ',
       rating: '500+ Happy Clients',
-     
+
       ctaButtons: {
         primary: {
           text: 'Book Free Consultation',
@@ -2941,12 +2942,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -2957,7 +2958,7 @@ export const subSubcategoryContent = {
       subtitle: 'Revitalize Your Skin & Hair with Advanced Mesotherapy ',
       description: 'Healthy skin and strong hair depend on essential vitamins, minerals, amino acids, and proper hydration. Over time, aging, stress, hormonal changes, nutritional deficiencies, sun exposure, and environmental factors can reduce the skin\'s natural radiance and contribute to hair thinning, pigmentation, fine lines, and loss of elasticity.Because many of these concerns begin beneath the surface, topical products alone may not always provide the desired results.Mesotherapy in Dubai offers a minimally invasive solution that delivers nourishing ingredients directly where they are needed most. At RamaCare Polyclinic, we provide mesotherapy in Dubai using personalized treatment protocols designed to improve both skin and scalp health.The treatment involves administering carefully selected combinations of vitamins, minerals, amino acids, antioxidants, and hyaluronic acid into the targeted area to stimulate cell renewal, enhance hydration, improve circulation, and support natural collagen production.',
       rating: '500+ Happy Clients',
-      
+
       ctaButtons: {
         primary: {
           text: 'Book Your Mesotherapy Consultation',
@@ -3656,12 +3657,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -3719,7 +3720,7 @@ export const subSubcategoryContent = {
       subtitle: 'Expert Care for Itching, Rashes & Sensitive Skin Relief',
       description: 'Skin allergies can cause persistent itching, redness, rashes, swelling, dryness, and irritation that affect both your comfort and confidence. At RamaCare Polyclinic, we provide medically guided Skin Allergy Treatment in Dubai to accurately identify the underlying cause of your symptoms and develop a personalised treatment plan tailored to your needs.Our experienced medical professionals focus on relieving itching, reducing inflammation, calming irritated skin, and helping prevent future flare-ups through evidence-based medical care. Whether you are experiencing allergic skin rashes, eczema, contact dermatitis, hives (urticaria), or other allergy-related skin concerns, we offer comprehensive assessment and treatment to restore healthier skin safely and effectively.Every treatment plan is designed to provide symptom relief while supporting long-term skin health and improving your quality of life.',
       rating: '500+ Happy Clients',
-      
+
       ctaButtons: {
         primary: {
           text: 'Book Free Consultation',
@@ -4463,7 +4464,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -4540,12 +4541,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -5310,7 +5311,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -5387,12 +5388,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -6106,7 +6107,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -6183,12 +6184,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -6939,7 +6940,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -7095,12 +7096,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -7815,7 +7816,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -7892,12 +7893,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -8620,7 +8621,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -8836,12 +8837,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -9540,7 +9541,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -9617,12 +9618,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -10399,7 +10400,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -10476,12 +10477,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -11073,7 +11074,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -11150,12 +11151,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -11751,12 +11752,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '1,200+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     }
@@ -12261,7 +12262,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -12338,12 +12339,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '2,500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: '200+ Verified Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
         }
       ]
     }
@@ -12959,7 +12960,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -13036,12 +13037,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '2,500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: '200+ Verified Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
         }
       ]
     },
@@ -13698,7 +13699,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -13775,12 +13776,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '2,500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: '200+ Verified Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
         }
       ]
     },
@@ -14438,7 +14439,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -14515,12 +14516,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '2,500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: '200+ Verified Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} Google reviews`
         }
       ]
     }
@@ -15208,7 +15209,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -15289,8 +15290,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -15912,7 +15913,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: '500+ Treatments', description: 'Completed' },
-        { title: '4.8/5 Rating', description: 'Patient Reviews' }
+        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
       ]
     }
   },
@@ -16597,7 +16598,7 @@ export const subSubcategoryContent = {
     //   stats: [
     //     {
     //       id: 1,
-    //       number: '4.8/5',
+    //       number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
     //       label1: 'Average Rating',
     //       label2: 'Patient Reviews',
     //       target: 4.8
@@ -16678,8 +16679,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -17349,7 +17350,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -17430,8 +17431,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -18138,7 +18139,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -18219,8 +18220,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -18897,7 +18898,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -18978,8 +18979,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -19721,7 +19722,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -19802,8 +19803,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -20533,7 +20534,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -20614,8 +20615,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -21345,7 +21346,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -21426,8 +21427,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -22117,7 +22118,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -22198,8 +22199,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -22903,7 +22904,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -22984,8 +22985,8 @@ export const subSubcategoryContent = {
           description: 'Completed'
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -23286,6 +23287,14 @@ export const subSubcategoryContent = {
           hasLearnMore: true,
           expandedContent:
             'With a personalized treatment plan and a healthy lifestyle, Eximia Body Contouring in Dubai can help improve body contours, reduce localized fat, enhance skin firmness, and minimize the appearance of cellulite. Results develop gradually over multiple sessions, leaving you with a slimmer, more sculpted appearance and greater confidence in your body.'
+        },
+        {
+          id: 8,
+          title: 'Pair with an Ayurvedic Diet Plan',
+          description:
+            'Pair your body contouring sessions with a personalized [Ayurvedic weight loss treatment in Dubai](/services/ayurvedic-diet-weight-loss-dubai/) to balance your dosha and support lasting metabolic health.',
+          hasLearnMore: false,
+          expandedContent: null
         }
       ]
     },
@@ -23664,6 +23673,12 @@ export const subSubcategoryContent = {
           bgColor: 'bg-[#FEF2F2]',
           link: '/services/eximia-belly-fat-reduction-dubai/'
         },
+        {
+          id: 5,
+          text: 'Ayurvedic weight loss treatment in Dubai',
+          bgColor: 'bg-[#ECFDF5]',
+          link: '/services/ayurvedic-diet-weight-loss-dubai/'
+        }
       ]
     },
     testimonials: {
@@ -23672,7 +23687,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -23749,12 +23764,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },
@@ -24360,7 +24375,7 @@ export const subSubcategoryContent = {
       stats: [
         {
           id: 1,
-          number: '4.8/5',
+          number: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5`,
           label1: 'Average Rating',
           label2: 'Patient Reviews',
           target: 4.8
@@ -24437,12 +24452,12 @@ export const subSubcategoryContent = {
           description: '15+ Years Combined'
         },
         {
-          title: '500+ Patients',
-          description: 'Successfully Treated'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         },
         {
-          title: '4.8/5 Rating',
-          description: 'Patient Reviews'
+          title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
+          description: `${GOOGLE_RATING_FALLBACK.count} reviews`
         }
       ]
     },

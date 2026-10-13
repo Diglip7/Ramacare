@@ -60,11 +60,11 @@ export default function AnxietyTreatmentPage() {
         },
         "reviewedBy": {
           "@type": "Physician",
-          "name": "Jeena Mathew",
-          "medicalSpecialty": "Physiotherapy",
-          "honorificSuffix": "BPT, MPT",
-          "hasCredential": "DHA Licensed Physiotherapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
+          "name": "Dr. Shamna Keloth Meethal",
+          "medicalSpecialty": "Ayurveda",
+          "honorificSuffix": "BAMS",
+          "hasCredential": "DHA-Licensed Ayurveda Physician",
+          "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/"
         },
         "publisher": {
           "@type": "MedicalClinic",
@@ -83,11 +83,11 @@ export default function AnxietyTreatmentPage() {
       {
         "@type": "Physician",
         "@id": `${CANONICAL_URL}#physician`,
-        "name": "Jeena Mathew",
-        "medicalSpecialty": "Musculoskeletal Physiotherapy",
-        "honorificSuffix": "BPT, MPT",
-        "hasCredential": "DHA Licensed Physiotherapist",
-        "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/",
+        "name": "Dr. Shamna Keloth Meethal",
+        "medicalSpecialty": "Ayurveda",
+        "honorificSuffix": "BAMS",
+        "hasCredential": "DHA-Licensed Ayurveda Physician",
+        "url": "https://ramacarepolyclinic.ae/doctors/dr-shamna-keloth-meethal-ayurveda-doctor-dubai/",
         "worksFor": {
           "@type": "MedicalOrganization",
           "name": "RamaCare Polyclinic"
