@@ -1,1109 +1,362 @@
+import { useState } from 'react';
 import Layout from '../../../components/Layout';
-import Head from "next/head";
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import BookConsultation from '../../../components/BookConsultation';
-import DoctorsSection from '../../../components/DoctorsSection';
+import Head from 'next/head';
+import Link from 'next/link';
+import { MessageCircle, Calendar, AlertCircle, CheckCircle, Activity, Stethoscope, ScanLine, ChevronDown, ChevronUp } from 'lucide-react';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
-import { subcategoryContent } from '../../data/subcategoryContent';
-import {
-  Activity,
-  MapPin,
-  Award,
-  Calendar,
-  Phone,
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Users,
-  Target,
-  Heart,
-  Shield,
-  Zap,
-  ChevronDown,
-  ChevronUp,
-  AlertTriangle,
-  MessageCircle
-} from 'lucide-react';import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+import DoctorsSection from '../../../components/DoctorsSection';
+import BookConsultation from '../../../components/BookConsultation';
+import { DOCTORS } from '../../data/doctors';
 
+const SITE = 'https://ramacarepolyclinic.ae';
+const CANONICAL_URL = `${SITE}/services/back-pain-treatment-dubai/`;
+const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+const PAGE_TITLE = 'Back Pain Treatment in Jumeirah 1, Dubai | RamaCare';
+const PAGE_DESCRIPTION = 'Chronic, lower and upper back pain physiotherapy in Jumeirah 1, Dubai. GP, X-ray and ultrasound on site. AED 200 assessment. Open daily till 10pm.';
+const WHATSAPP = 'https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20would%20like%20to%20book%20a%20back%20pain%20assessment.';
+
+const types = [
+  { name: 'Lower back pain', text: 'The most common type, from muscle strain, stiff joints, long sitting, lifting or weak core muscles. Most cases are “non-specific” and settle with active treatment.' },
+  { name: 'Chronic back pain', text: 'Pain lasting more than 12 weeks. Treatment focuses on exercise, movement confidence and habits, not rest, and usually needs a structured programme.' },
+  { name: 'Acute back spasm', text: 'A sudden “locked” back after bending, lifting or twisting. Usually improves within days to weeks with gentle movement and the right advice.' },
+  { name: 'Upper and middle back pain', text: 'Pain between the shoulder blades, often from desk posture, phone use and stress. Usually muscular and responds well to treatment.' },
+  { name: 'Back pain from desk work and driving', text: 'Long hours sitting in the office or the car load the lower back. Posture, movement breaks and strength work make a big difference.' },
+  { name: 'Back pain in pregnancy and after childbirth', text: 'Lower back and pelvic pain are common in pregnancy and after. Safe exercises and positions are adapted to each stage.' }
+];
+
+const redFlags = [
+  'Loss of bladder or bowel control, or numbness around the groin or buttocks: go to an emergency department now',
+  'Weakness or numbness in both legs, or getting worse quickly',
+  'Back pain with fever, unexplained weight loss or a history of cancer',
+  'Severe pain after a fall, accident or in someone with osteoporosis',
+  'Constant pain that is worse at night and not eased by rest',
+  'Upper back pain with chest pain, breathlessness or sweating: call 998'
+];
+
+const assessment = [
+  { icon: Activity, title: 'Physiotherapy assessment (AED 200)', text: 'History, posture, how your back moves, muscle strength and nerve tests for leg symptoms. You leave with a clear explanation and a plan.' },
+  { icon: Stethoscope, title: 'GP review if needed', text: 'Our GP can examine you, suggest or prescribe medication where appropriate, and refer you to a spine specialist if needed.' },
+  { icon: ScanLine, title: 'X-ray or ultrasound in the clinic', text: 'Scans are not needed for most back pain. When they are, X-ray and ultrasound are done at RamaCare; MRI is arranged by referral.' }
+];
+
+const treatments = [
+  'Exercise therapy: core, back and hip strengthening matched to your assessment',
+  'Manual therapy and spinal mobilisation for stiff joints and muscle spasm',
+  'Dry needling for tight muscles and trigger points',
+  'Deep tissue massage by our DHA-licensed physiotherapist, as part of your plan',
+  'Kinesio taping to support posture during the working day',
+  'Cupping alongside physiotherapy for muscle tension',
+  'Electrotherapy (TENS) and therapeutic ultrasound with exercise',
+  'Posture, desk and car-seat advice for office workers and drivers',
+  'Lifting technique and return-to-gym guidance',
+  'A short home exercise programme between sessions'
+];
+
+const exercises = [
+  { name: 'Pelvic tilts', text: 'Lying on your back with knees bent, gently flatten and arch your lower back. 10 slow repeats.' },
+  { name: 'Knee to chest', text: 'Lying down, bring one knee towards your chest and hold 20 seconds. Swap sides.' },
+  { name: 'Cat and camel', text: 'On hands and knees, slowly round and then arch your back. 10 repeats.' },
+  { name: 'Bridges', text: 'Lying on your back, squeeze your buttocks and lift your hips. Hold 5 seconds, 10 times.' },
+  { name: 'Bird dog', text: 'On hands and knees, reach one arm forward and the opposite leg back, keeping your back still.' },
+  { name: 'Walking', text: 'Short, regular walks are one of the best things for most back pain.' }
+];
+
+const faqs = [
+  { question: 'Where can I get back pain treatment in Jumeirah 1?', answer: 'RamaCare Polyclinic treats back pain on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is step-free and open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878.' },
+  { question: 'How much does a back pain assessment cost?', answer: 'A physiotherapy assessment at RamaCare costs AED 200. Insurance is by reimbursement: we check your coverage and give you the documents to claim.' },
+  { question: 'What is the best treatment for chronic back pain?', answer: 'For most people, an active, exercise-based physiotherapy programme is the most effective first treatment for chronic back pain, combined with hands-on treatment and changes to daily habits. Medication can help in flare-ups.' },
+  { question: 'Can back pain go away on its own?', answer: 'Many new episodes of back pain improve within a few weeks, especially if you stay gently active. If pain lasts more than 2 to 3 weeks, keeps returning or spreads down the leg, get it assessed.' },
+  { question: 'When should I worry about back pain?', answer: 'Seek urgent care for loss of bladder or bowel control, numbness around the groin, weakness in both legs, back pain with fever or weight loss, severe pain after a fall, or upper back pain with chest pain or breathlessness.' },
+  { question: 'Which doctor should I see for back pain?', answer: 'For most back pain, a physiotherapist is the right first step. At RamaCare, our GP is in the same clinic and can examine you, suggest or prescribe medication where appropriate and refer you to a spine specialist if needed.' },
+  { question: 'What causes upper left side back pain?', answer: 'Most upper back pain is muscular, from posture or strain. Pain on the upper left side can occasionally come from the heart, lungs or kidney, so get urgent help if it comes with chest pain, breathlessness, fever or feeling unwell.' },
+  { question: 'Do you offer back pain injections?', answer: 'No. RamaCare does not give back pain injections. If you may need an injection, we refer you to a specialist. Dry needling, which uses fine needles without medicine, is available for muscle trigger points.' },
+  { question: 'Do I need an X-ray or MRI for back pain?', answer: 'Usually not. Most back pain is diagnosed by examination. X-ray and ultrasound can be done at RamaCare when needed, and MRI is arranged by referral for warning signs or leg symptoms that are not improving.' },
+  { question: 'Is bed rest good for back pain?', answer: 'No. Long bed rest slows recovery. Short rests are fine, but staying gently active and walking help most back pain settle faster.' },
+  { question: 'How many physiotherapy sessions will I need?', answer: 'An acute back spasm may need a few sessions. Chronic back pain usually needs a programme over 6 to 12 weeks, with a home exercise plan between visits.' },
+  { question: 'Can office work cause back pain?', answer: 'Yes. Long hours sitting, a low screen and few movement breaks load the lower back. Posture changes, breaks every 30 to 45 minutes and core strength help.' },
+  { question: 'Is dry needling good for back pain?', answer: 'Dry needling can help when tight muscles and trigger points add to back pain. It works best combined with exercise.' },
+  { question: 'What exercises help lower back pain?', answer: 'Gentle pelvic tilts, knee-to-chest stretches, cat and camel, bridges, bird dog and regular walking. Stop any exercise that sharply increases pain or leg symptoms.' },
+  { question: 'Is heat or ice better for back pain?', answer: 'Both can ease pain. Many people prefer heat for muscle spasm and stiffness. Use either for short periods and keep moving.' },
+  { question: 'Can I go to the gym with back pain?', answer: 'Often yes, with changes. Your physiotherapist will tell you which exercises to keep, adapt or pause, and how to build back up safely.' },
+  { question: 'Does back pain come back?', answer: 'It can. Keeping up your exercises, staying active, lifting well and improving desk posture lower the chance of another episode.' },
+  { question: 'Is my back pain sciatica or a slipped disc?', answer: 'If pain spreads below the knee with tingling or numbness, it may be sciatica, often from a slipped disc. The assessment checks this. See our pages on sciatica and slipped disc treatment.' },
+  { question: 'Do you treat back pain in pregnancy?', answer: 'Yes. Physiotherapy can help back and pelvic pain in pregnancy and after childbirth, with exercises and positions adapted to each stage.' },
+  { question: 'Can I have treatment after work?', answer: 'Yes. RamaCare is open every day until 10pm, including weekends, with same-day appointments when slots are free.' },
+  { question: 'Does insurance cover back pain physiotherapy?', answer: 'Usually, within your plan’s session limit and with a referral. RamaCare works on reimbursement: we check your coverage, request prior approval if needed and provide the invoice, medical report and progress notes.' }
+];
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${CANONICAL_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE}/services/` },
+        { '@type': 'ListItem', position: 3, name: 'Physiotherapy', item: `${SITE}/services/physiotherapy-dubai/` },
+        { '@type': 'ListItem', position: 4, name: 'Back Pain Treatment', item: CANONICAL_URL }
+      ]
+    },
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${CANONICAL_URL}#webpage`,
+      url: CANONICAL_URL,
+      name: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      breadcrumb: { '@id': `${CANONICAL_URL}#breadcrumb` },
+      medicalAudience: { '@type': 'Patient' },
+      specialty: 'https://schema.org/Physiotherapy',
+      about: { '@id': `${CANONICAL_URL}#condition` },
+      reviewedBy: { '@id': JEENA_ID },
+      lastReviewed: '2026-10-15', // change to the deploy date
+      publisher: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'MedicalCondition',
+      '@id': `${CANONICAL_URL}#condition`,
+      name: 'Back pain',
+      alternateName: ['Chronic back pain', 'Lower back pain', 'Upper back pain', 'Non-specific low back pain', 'Back spasm'],
+      associatedAnatomy: { '@type': 'AnatomicalStructure', name: 'Spine' },
+      possibleTreatment: [
+        { '@type': 'PhysicalTherapy', name: 'Exercise-based back physiotherapy', url: `${SITE}/services/physiotherapy-dubai/` },
+        { '@type': 'PhysicalTherapy', name: 'Manual therapy and spinal mobilisation' },
+        { '@type': 'PhysicalTherapy', name: 'Dry needling', url: `${SITE}/services/dry-needling-dubai/` },
+        { '@type': 'PhysicalTherapy', name: 'Kinesio taping' },
+        { '@type': 'PhysicalTherapy', name: 'Posture and ergonomic advice' }
+      ]
+    },
+    {
+      '@type': 'Person',
+      '@id': JEENA_ID,
+      name: 'Jeena Mathew',
+      jobTitle: 'DHA-Licensed Physiotherapist',
+      url: `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+      worksFor: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${CANONICAL_URL}#faq`,
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } }))
+    }
+  ]
+};
 
 export default function BackPainTreatmentPage() {
-  const [openFaq, setOpenFaq] = useState(null);
-  const [scrollY, setScrollY] = useState(0);
-
-  // Get content from data file - Single source of truth
-  const content = subcategoryContent['back-pain-treatment-dubai'];
-  const { treatmentTypes, treatmentOptions, treatmentProcess, whoCanBenefit, causes, symptoms, whenToSeeSpecialist, preventionTips, faqs } = content;
-
-  // Map icon names to actual components
-  const iconMap = {
-    Activity,
-    Zap,
-    Heart,
-    Target,
-    Users,
-    Shield
-  };
-
-  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/back-pain-treatment-dubai/';
-
-  const faqsForSchema = (faqs || []).map(faq => ({
-    question: faq.question,
-    answer: faq.answer
-  }));
-
-  const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${CANONICAL_URL}#breadcrumb`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Physiotherapy",
-            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Back Pain Treatment",
-            "item": CANONICAL_URL
-          }
-        ]
-      },
-      {
-        "@type": "MedicalWebPage",
-        "@id": `${CANONICAL_URL}#webpage`,
-        "url": CANONICAL_URL,
-        "name": "Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care",
-        "description": "Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Back Pain"
-        },
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Jeena Mathew",
-          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Back Pain Treatment in Dubai",
-        "alternateName": "Therapeutic Back Pain Physiotherapy",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Non-surgical physiotherapy and rehabilitation for lower back pain, upper back pain, sciatica, and slip disc conditions, delivered by DHA-licensed physiotherapists.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Back and Spine",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "telephone": "+971 56 659 7878",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${CANONICAL_URL}#faq`,
-        "mainEntity": faqsForSchema.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      }
-    ]
-  };
-
-  const physiotherapyResources = [
-    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
-    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
-    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  const [openFaq, setOpenFaq] = useState(0);
+  const careTeam = [
+    DOCTORS['jeena-mathew-physiotherapist-dubai'],
+    DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai']
+  ].filter(Boolean);
 
   return (
     <Layout>
       <Head>
-        <title key="title">Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care</title>
-        <meta name="description" content="Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility." key="description" />
-        <meta name="keywords" content="Back pain treatment Dubai, Physiotherapy for back pain, Lower back pain treatment, Sciatica treatment Dubai, Posture correction Dubai, Non-surgical back pain treatment, Back pain specialist Dubai" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
-
-        {/* Open Graph Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care" />
-        <meta property="og:description" content="Expert back pain treatment in Dubai with advanced physiotherapy, posture correction, and non-surgical rehabilitation for lasting pain relief and improved mobility." />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/back-pain.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="RamaCare Polyclinic" />
-        <meta property="og:locale" content="en_AE" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Back Pain Treatment in Dubai | Advanced Physiotherapy & Non-Surgical Care" />
-        <meta name="twitter:description" content="Expert back pain treatment in Dubai with advanced physiotherapy and non-surgical rehabilitation for lasting relief." />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/back-pain.jpg" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaGraph)
-          }}
-        />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={`${SITE}/images/back-pain.jpg`} key="og:image" />
+        <meta property="og:image:alt" content="Back pain physiotherapy in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE}/images/back-pain.jpg`} key="twitter:image" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }} />
       </Head>
 
-      {/* Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
-            <li>
-              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <span className="text-gray-400">/</span>
-              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <span className="text-gray-400">/</span>
-              <span className="text-[#1F5E4B] font-medium">Back Pain Treatment</span>
-            </li>
-          </ol>
-        </div>
-      </nav>
-
-      {/* Hero Section with Parallax Effect */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1F5E4B] via-[#2A7D63] to-[#1F5E4B]">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute w-96 h-96 bg-white/5 rounded-full -top-20 -left-20 blur-3xl"
-            style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-          ></div>
-          <div
-            className="absolute w-72 h-72 bg-white/10 rounded-full bottom-20 right-20 blur-2xl"
-            style={{ transform: `translateY(${scrollY * -0.2}px)` }}
-          ></div>
-          <div
-            className="absolute w-64 h-64 bg-white/8 rounded-full top-1/2 left-1/3 blur-xl"
-            style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-          ></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-white space-y-8"
-            >
-              <div className="space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
-                >
-                  <Award className="w-4 h-4" />
-                  <span>Advanced Physiotherapy & Non-Surgical Care</span>
-                </motion.div>
-
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
-                >
-                  Back Pain Treatment in Dubai
-                </motion.h1>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl"
-                >
-                  Advanced Physiotherapy & Non-Surgical Care for Lasting Pain Relief
-                </motion.p>
-              </div>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="text-lg text-white/80 leading-relaxed max-w-xl"
-              >
-                Back pain can affect every aspect of daily life, from sitting and walking to sleeping and working comfortably. Whether caused by long office hours, poor posture, sports injuries, muscle strain, or spinal conditions, chronic back pain can reduce mobility, productivity, and overall quality of life.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
-              >
-                <a
-                  href="#book-now"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#1F5E4B] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                  <Calendar className="w-5 h-5" />
-                  Book Consultation
-                </a>
-                <a
-                  href="https://wa.me/971566597878"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="flex items-center gap-6 pt-4">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                  <span className="text-white/90">DHA Licensed</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                  <span className="text-white/90">Expert Physiotherapists</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                  <span className="text-white/90">Non-Surgical</span>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/back-pain.jpg"
-                  alt="Back Pain Treatment in Dubai"
-                  width={1200}
-                  height={630}
-                  quality={75}
-                  priority
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              </div>
-
-              {/* Floating Stats Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-[#1F5E4B]" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-[#1F5E4B]">500+</p>
-                    <p className="text-sm text-gray-600">Happy Patients</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose RamaCare Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose RamaCare for Back Pain Treatment in Dubai?
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              RamaCare Polyclinic is trusted by patients across Dubai for effective and patient-focused back pain therapy solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Target, title: "Personalized treatment plans for every patient", color: "bg-blue-50 text-blue-600" },
-              { icon: Users, title: "Experienced physiotherapists and rehabilitation experts", color: "bg-green-50 text-green-600" },
-              { icon: Activity, title: "Advanced physiotherapy and electrotherapy techniques", color: "bg-purple-50 text-purple-600" },
-              { icon: Shield, title: "Non-surgical and drug-free treatment options", color: "bg-orange-50 text-orange-600" },
-              { icon: Heart, title: "Modern pain management therapies", color: "bg-red-50 text-red-600" },
-              { icon: Award, title: "Posture correction and spinal rehabilitation support", color: "bg-indigo-50 text-indigo-600" },
-              { icon: CheckCircle, title: "Comfortable and patient-friendly environment", color: "bg-teal-50 text-teal-600" },
-              { icon: Zap, title: "Holistic approach focused on long-term recovery", color: "bg-yellow-50 text-yellow-600" }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:border-gray-200"
-              >
-                <div className={`w-14 h-14 ${item.color} rounded-xl flex items-center justify-center mb-4`}>
-                  <item.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">{item.title}</h3>
-              </motion.div>
+      {/* Hero */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B]">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B]">Physiotherapy</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Back Pain Treatment</span>
+          </nav>
+          <p className="inline-block px-4 py-2 rounded-full bg-[#F5F1EA] text-sm text-[#5F5F5F] mb-6">DHA-Licensed Physiotherapy · Jumeirah 1</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6">Back Pain Treatment in Jumeirah 1, Dubai</h1>
+          <p className="text-lg text-[#3F3F3F] leading-relaxed max-w-4xl mb-6">
+            RamaCare Polyclinic treats chronic, lower and upper back pain with physiotherapy at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. A physiotherapy assessment costs AED 200. Treatment is exercise-led, with manual therapy, dry needling, taping and posture advice for desk workers and drivers. Our GP can suggest or prescribe medication where appropriate, and an X-ray or ultrasound can be done in the same visit if needed. Open every day, 10am–10pm.
+          </p>
+          <div className="flex flex-wrap gap-3 mb-8 text-sm">
+            {['AED 200 assessment', 'GP + X-ray + ultrasound on site', 'Open daily till 10pm', 'Same-day appointments', 'Step-free clinic'].map((b) => (
+              <span key={b} className="px-4 py-2 rounded-full bg-[#F0F7F4] text-[#1F5E4B] font-medium">{b}</span>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Back Pain Is Common in Dubai */}
-      <section className="py-20 px-4 bg-[#F5F1E8]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
-                Why Back Pain Is Common in Dubai
-              </h2>
-              <p className="text-lg text-[#5F5F5F] leading-relaxed">
-                Back pain has become increasingly common among Dubai residents due to modern lifestyles and work habits. Long sitting hours, desk jobs, prolonged driving, stress, lack of exercise, and poor posture contribute significantly to spinal discomfort and muscular strain.
-              </p>
-              <p className="text-lg text-[#5F5F5F] leading-relaxed">
-                Many office workers, drivers, gym-goers, and individuals with sedentary routines experience chronic lower back pain, neck stiffness, and posture-related issues that worsen over time without proper treatment. Early physiotherapy and rehabilitation can help prevent long-term complications and restore healthy movement patterns.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6"
-            >
-              {[
-                { icon: Clock, title: "Long Sitting Hours", desc: "8+ hours daily" },
-                { icon: Activity, title: "Sedentary Lifestyle", desc: "Limited movement" },
-                { icon: Target, title: "Poor Posture", desc: "Desk work strain" },
-                { icon: Zap, title: "Stress & Tension", desc: "Mental & physical" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-xl shadow-md text-center"
-                >
-                  <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <item.icon className="w-6 h-6 text-[#1F5E4B]" />
-                  </div>
-                  <h3 className="font-semibold text-[#1A1A1A] mb-1">{item.title}</h3>
-                  <p className="text-sm text-[#5F5F5F]">{item.desc}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+          <div className="flex flex-wrap gap-4">
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#174a3b]">
+              <MessageCircle className="w-5 h-5" /> Book on WhatsApp
+            </a>
+            <a href="#book-form" className="inline-flex items-center gap-2 border-2 border-[#1F5E4B] text-[#1F5E4B] px-6 py-3 rounded-full font-semibold hover:bg-[#1F5E4B] hover:text-white">
+              <Calendar className="w-5 h-5" /> Request Appointment
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Common Causes Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Common Causes of Back Pain
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Back pain may develop suddenly due to injury or gradually because of lifestyle and posture-related problems.
-            </p>
-          </motion.div>
-
+      {/* Types */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">Types of Back Pain We Treat</h2>
+          <p className="text-[#5F5F5F] mb-8 max-w-3xl">About 80% of back pain is “non-specific”: no single damaged structure, and it usually responds well to active physiotherapy.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {causes.map((cause, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-start gap-3 p-4 bg-[#F9F7F2] rounded-lg hover:bg-[#F5F1E8] transition-colors">
-                <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                <span className="text-[#1A1A1A]">{cause}</span>
-              </motion.div>
+            {types.map((t) => (
+              <div key={t.name} className="bg-white rounded-2xl p-6 border border-gray-200">
+                <h3 className="font-bold text-lg text-[#1F5E4B] mb-2">{t.name}</h3>
+                <p className="text-[#5F5F5F] leading-relaxed">{t.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#5F5F5F] mt-8 max-w-4xl">
+            Pain spreading down the leg? See <Link href="/services/sciatica-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline">sciatica treatment</Link>. Diagnosed with a disc problem? See <Link href="/services/slip-disc-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline">slipped disc treatment</Link>. Curved spine? See <Link href="/services/scoliosis-treatment-in-dubai/" className="text-[#1F5E4B] font-semibold underline">scoliosis treatment</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* Red flags */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><AlertCircle className="w-6 h-6 text-[#B4432F]" /> When to Worry About Back Pain</h2>
+          <ul className="space-y-2 text-[#3F3F3F]">{redFlags.map((r) => <li key={r} className="flex gap-2"><span className="text-[#B4432F] font-bold">•</span>{r}</li>)}</ul>
+          <p className="mt-4 text-[#3F3F3F]">For other severe or worsening pain, our GP can see you the same day.</p>
+        </div>
+      </section>
+
+      {/* Assessment */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8">Back Pain Assessment at RamaCare</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {assessment.map((a) => (
+              <div key={a.title} className="bg-white rounded-2xl p-6 border border-gray-200">
+                <a.icon className="w-8 h-8 text-[#1F5E4B] mb-3" />
+                <h3 className="font-bold text-lg text-[#1A1A1A] mb-2">{a.title}</h3>
+                <p className="text-[#5F5F5F] leading-relaxed">{a.text}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Types of Back Pain We Treat */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#F9F7F2]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Types of Back Pain We Treat
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At RamaCare Polyclinic, we provide treatment for various acute and chronic spinal conditions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {treatmentTypes.map((type, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100"
-              >
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{type.title}</h3>
-                <p className="text-[#5F5F5F] mb-4 leading-relaxed">{type.description}</p>
-
-                {type.focus && (
-                  <p className="text-[#1F5E4B] font-medium mb-4 leading-relaxed">{type.focus}</p>
-                )}
-
-                {type.treatment && (
-                  <p className="text-[#1F5E4B] font-medium mb-4 leading-relaxed">{type.treatment}</p>
-                )}
-
-                {type.symptoms && (
-                  <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Symptoms may include:</h4>
-                    {type.symptoms.map((symptom, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <ArrowRight className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F]">{symptom}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {type.benefits && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Our non-surgical rehabilitation programs help:</h4>
-                    {type.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <ArrowRight className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F]">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
+      {/* Treatment + exercises */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6">Physiotherapy Treatment for Back Pain</h2>
+            <ul className="space-y-3">{treatments.map((t) => <li key={t} className="flex gap-3 text-[#3F3F3F]"><CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-none mt-0.5" />{t}</li>)}</ul>
+            <p className="text-[#5F5F5F] mt-6">RamaCare does not give back pain injections, use traction machines or perform surgery. If you need these, we refer you.</p>
+          </div>
+          <div className="bg-[#F9F7F2] rounded-2xl p-8 border border-gray-200">
+            <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">Simple Exercises for Lower Back Pain</h3>
+            <ul className="space-y-3">{exercises.map((e) => <li key={e.name} className="text-[#3F3F3F]"><strong>{e.name}:</strong> {e.text}</li>)}</ul>
+            <p className="text-sm text-[#5F5F5F] mt-4">Start gently. Stop any exercise that sharply increases pain or causes leg symptoms, and get assessed.</p>
           </div>
         </div>
       </section>
 
-      {/* Symptoms Section */}
-      <section className="py-20 px-4 bg-[#1F5E4B]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Symptoms of Back Pain
-              </h2>
-              <p className="text-xl text-white/80 leading-relaxed">
-                You may benefit from professional back pain treatment if you experience:
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4"
-            >
-              {symptoms.map((symptom, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20"
-                >
-                  <CheckCircle className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                  <span className="text-white/90">{symptom}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+      {/* Quick facts */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto bg-white rounded-2xl p-8 border border-gray-200">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Quick Facts: Back Pain Care at RamaCare, Jumeirah 1</h2>
+          <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-[#3F3F3F]">
+            <li>Physiotherapy assessment: AED 200</li>
+            <li>DHA-licensed physiotherapist: Jeena Mathew (BPT, MPT, 8+ years)</li>
+            <li>GP in the same clinic: medication where appropriate and referrals</li>
+            <li>X-ray and ultrasound in the clinic; MRI by referral</li>
+            <li>Dry needling, cupping, kinesio taping, deep tissue massage</li>
+            <li>Insurance: pay and claim; we check your coverage (see <Link href="/services/physiotherapy-insurance-dubai/" className="text-[#1F5E4B] underline">physiotherapy insurance</Link>)</li>
+            <li>Step-free, ground floor: 12 Al Dhiyafah Road, Jumeirah Terrace Building, Jumeirah 1</li>
+            <li>Open every day 10am–10pm · 04 286 2006 · WhatsApp 056 659 7878</li>
+          </ul>
+          <p className="text-[#3F3F3F] mt-4 text-right" lang="ar" dir="rtl">علاج آلام الظهر في جميرا 1، دبي: تقييم العلاج الطبيعي بـ 200 درهم، طبيب عام وأشعة في نفس العيادة، مفتوح يومياً حتى 10 مساءً.</p>
         </div>
       </section>
 
-      {/* When Should You See a Specialist */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-[#F9F7F2] to-[#F5F1E8] rounded-2xl p-8 md:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
-                  When Should You See a Back Pain Specialist?
-                </h2>
-                <p className="text-lg text-[#5F5F5F] leading-relaxed">
-                  Many people ignore early symptoms until the pain becomes chronic. Seeking timely medical care can help prevent long-term complications.
-                </p>
-                <p className="text-lg text-[#5F5F5F] leading-relaxed">
-                  You should consult a back pain specialist in Dubai if:
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-4"
-              >
-                {whenToSeeSpecialist.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-md"
-                  >
-                    <AlertTriangle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                    <span className="text-[#1A1A1A]">{item}</span>
-                  </motion.div>
-                ))}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7 }}
-                  className="text-lg font-semibold text-[#1F5E4B] mt-6"
-                >
-                  Early diagnosis and physiotherapy can significantly improve recovery outcomes.
-                </motion.p>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[#F9F7F2] to-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Our Back Pain Treatment Options in Dubai
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              We offer evidence-based physiotherapy and rehabilitation programs designed to improve mobility, reduce inflammation, and support long-term spinal health.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatmentOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:border-[#1F5E4B]/30"
-              >
-                <div className="w-14 h-14 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-6">
-                  {(() => { const IconComp = iconMap[option.icon]; return IconComp ? <IconComp className="w-7 h-7 text-[#1F5E4B]" /> : null; })()}
-                </div>
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
-                <p className="text-[#5F5F5F] mb-6 leading-relaxed">{option.description}</p>
-
-                {option.benefits && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Benefits:</h4>
-                    {option.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {option.note && (
-                  <p className="text-[#1F5E4B] font-medium mt-4 text-sm leading-relaxed">{option.note}</p>
-                )}
-
-                {option.treatments && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">We may use:</h4>
-                    {option.treatments.map((treatment, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{treatment}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {option.conditions && (
-                  <div className="space-y-2 mt-4">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Recommended for:</h4>
-                    {option.conditions.map((condition, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{condition}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {option.therapies && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-[#1A1A1A] mb-2">Supportive therapies may include:</h4>
-                    {option.therapies.map((therapy, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#1F5E4B] mt-1 flex-shrink-0" />
-                        <span className="text-[#5F5F5F] text-sm">{therapy}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Process */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Back Pain Treatment Process at RamaCare
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {treatmentProcess.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="relative"
-              >
-                {index < treatmentProcess.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#1F5E4B] to-transparent z-0"></div>
-                )}
-                <div className="bg-[#F9F7F2] p-6 rounded-xl relative z-10">
-                  <div className="w-12 h-12 bg-[#1F5E4B] text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="text-lg font-bold text-[#1A1A1A] mb-3">{step.title}</h3>
-                  <p className="text-[#5F5F5F] leading-relaxed">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-[#1F5E4B]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Benefits of Professional Back Pain Treatment
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Professional treatment can improve overall comfort, mobility, and quality of life.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "Long-term pain relief",
-              "Improved posture and spinal alignment",
-              "Better flexibility and movement",
-              "Reduced muscle stiffness",
-              "Faster recovery from injuries",
-              "Improved physical performance",
-              "Better sleep and daily comfort",
-              "Prevention of chronic spinal issues"
-            ].map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20"
-              >
-                <CheckCircle className="w-6 h-6 text-white mb-3" />
-                <p className="text-white font-medium">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Who Can Benefit */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Who Can Benefit From Back Pain Treatment?
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Our treatment programs are suitable for:
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whoCanBenefit.map((person, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-[#F9F7F2] p-6 rounded-xl text-center hover:bg-[#F5F1E8] transition-colors"
-              >
-                <Users className="w-8 h-8 text-[#1F5E4B] mx-auto mb-3" />
-                <p className="text-[#1A1A1A] font-medium">{person}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Cost Section */}
-      <section className="py-20 px-4 bg-[#F5F1E8]">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-8"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-                Back Pain Treatment Cost in Dubai
-              </h2>
-              <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-                The cost of back pain treatment in Dubai depends on several factors, including:
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {[
-                "Severity of the condition",
-                "Number of physiotherapy sessions required",
-                "Type of therapy recommended",
-                "Duration of rehabilitation",
-                "Advanced treatment techniques used"
-              ].map((factor, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-3 bg-[#F9F7F2] p-4 rounded-lg"
-                >
-                  <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                  <span className="text-[#1A1A1A]">{factor}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center text-lg text-[#5F5F5F] leading-relaxed max-w-4xl mx-auto"
-            >
-              At RamaCare Polyclinic, we provide affordable and personalized treatment plans designed according to individual patient needs. Our specialists explain the recommended therapy program and expected treatment duration during consultation.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* Prevention Tips */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Tips to Prevent Back Pain
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Simple lifestyle improvements can help reduce the risk of recurring spinal pain.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {preventionTips.map((tip, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-3 bg-[#F9F7F2] p-6 rounded-xl hover:bg-[#F5F1E8] transition-colors"
-              >
-                <Shield className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
-                <span className="text-[#1A1A1A]">{tip}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-[#F9F7F2]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions – Back Pain Treatment in Dubai
-            </h2>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-md"
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-[#F9F7F2] transition-colors"
-                >
-                  <span className="text-lg font-semibold text-[#1A1A1A] pr-4">{faq.question}</span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#1F5E4B] flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-[#1F5E4B] flex-shrink-0" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-[#5F5F5F] leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Related Resources Section */}
-      <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
-              Complete Physiotherapy Services
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {physiotherapyResources.map((resource, index) => (
-              <a
-                key={index}
-                href={resource.link}
-                className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
-              >
-                <div className="flex items-center gap-3 md:gap-4 flex-1">
-                  <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                    <Activity className="w-5 h-5 text-[#1F5E4B]" />
-                  </div>
-                  <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B] group-hover:text-sm md:group-hover:text-base">
-                    {resource.text}
-                  </span>
-                </div>
-
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <DoctorsSection content={content?.doctors} />
-
-      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="back-pain-treatment-dubai" />
-
-      {/* Book Consultation Section */}
-      <BookConsultation
+      <DoctorsSection
         content={{
-          badge: 'Start Your Journey',
-          title: 'Book Back Pain Treatment in Dubai Today',
-          description: 'Restore your mobility and live pain-free with trusted back pain treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
-          getInTouchTitle: 'Get In Touch',
-          requestAppointmentTitle: 'Request Appointment',
-          submitButtonText: 'Request Appointment',
-          contactInfo: {
-            phone: '+971 04 286 2006',
-            whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
-            address: {
-              line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
-              line2: 'Ground Floor, Jumeirah 1 - Dubai'
-            }
-          },
-          clinicHours: {
-            weekdays: 'Sunday - Saturday:',
-            weekdaysTime: '10:00 AM - 10:00 PM',
-            friday: 'Friday:',
-            fridayTime: '10:00 AM - 8:00 PM'
-          },
-          statCards: [
-            {
-              title: 'DHA Licensed',
-              description: 'Certified Physiotherapy Facility'
-            },
-            {
-              title: 'Experienced Team',
-              description: '15+ Years Combined'
-            },
-            {
-              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
-              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
-            },
-            {
-              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
-              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
-            }
-          ]
+          badge: 'Your Care Team',
+          title: 'Meet Your Physiotherapist and GP',
+          description: 'Back pain care at RamaCare is led by Jeena Mathew, a DHA-licensed physiotherapist (BPT, MPT), with our GP for medication, X-ray, ultrasound and referrals.'
         }}
+        customDoctors={careTeam}
       />
+
+      {/* FAQ */}
+      <section className="bg-white py-16 px-6" id="faq">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8 text-center">Back Pain in Jumeirah 1: Common Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((f, i) => (
+              <div key={f.question} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button type="button" onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}
+                  className="w-full flex justify-between items-center gap-4 p-5 text-left font-semibold text-[#1A1A1A] hover:bg-[#F9F7F2]">
+                  <span>{f.question}</span>
+                  {openFaq === i ? <ChevronUp className="w-5 h-5 flex-none" /> : <ChevronDown className="w-5 h-5 flex-none" />}
+                </button>
+                <div className={openFaq === i ? 'px-5 pb-5 text-[#5F5F5F] leading-relaxed' : 'hidden'}>{f.answer}</div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-3 mt-10">
+            {[
+              { text: 'Physiotherapy in Jumeirah 1', link: '/services/physiotherapy-dubai/' },
+              { text: 'Sciatica treatment', link: '/services/sciatica-treatment-dubai/' },
+              { text: 'Slipped disc treatment', link: '/services/slip-disc-treatment-dubai/' },
+              { text: 'Neck pain treatment', link: '/services/neck-pain-treatment-dubai/' },
+              { text: 'Dry needling', link: '/services/dry-needling-dubai/' },
+              { text: 'Ayurveda vs physiotherapy for back pain', link: '/services/ayurveda-vs-physiotherapy-for-back-pain-dubai/' }
+            ].map((r) => (
+              <Link key={r.link} href={r.link} className="px-5 py-2 rounded-full bg-[#F9F7F2] border border-gray-200 text-[#1F5E4B] font-medium hover:border-[#1F5E4B]">{r.text}</Link>
+            ))}
+          </div>
+          <p className="text-xs text-[#5F5F5F] mt-8">Medical disclaimer: general information only. Treatment depends on your assessment, and no result is guaranteed.</p>
+        </div>
+      </section>
+      <ContentReviewBadge
+        doctorName="Jeena Mathew"
+        doctorRole="DHA Licensed Physiotherapist"
+        doctorCredentials="BPT, MPT (Physiotherapy) · DHA Licensed Physiotherapist"
+        pageSlug="back-pain-treatment-dubai"
+        customStatement="This page has been reviewed for general information about back pain physiotherapy. Treatment depends on an individual assessment."
+      />
+
+      <div id="book-form">
+        <BookConsultation
+          content={{
+            badge: 'Start Your Recovery',
+            title: 'Book a Back Pain Assessment in Jumeirah 1',
+            description: 'Physiotherapy assessment AED 200. GP, X-ray and ultrasound on site. Open every day 10am–10pm.',
+            getInTouchTitle: 'Get In Touch',
+            requestAppointmentTitle: 'Request Appointment',
+            submitButtonText: 'Request Appointment',
+            contactInfo: {
+              phone: '+971 04 286 2006',
+              whatsapp: '971566597878',
+              email: 'query@ramacarepolyclinic.com',
+              address: { line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,', line2: 'Ground Floor, Jumeirah 1 - Dubai' }
+            },
+            clinicHours: { weekdays: 'Sunday - Saturday:', weekdaysTime: '10:00 AM - 10:00 PM' },
+            statCards: [
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'AED 200', description: 'Physiotherapy Assessment' },
+              { title: 'GP & Imaging', description: 'In the Same Clinic' },
+              { title: 'Open Daily', description: '10am – 10pm' }
+            ]
+          }}
+        />
+      </div>
     </Layout>
   );
 }

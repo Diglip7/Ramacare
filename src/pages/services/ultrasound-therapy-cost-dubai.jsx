@@ -729,7 +729,7 @@ export default function UltrasoundTherapyCostPage() {
                       className="mb-2"
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '16px', fontWeight: '600', color: '#1A1A1A' }}
                     >
-                                           Coverage Check and Prior Approval
+                      Coverage Check and Prior Approval
                     </h3>
                     <p 
                       style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '14px', fontWeight: '400', color: '#5F5F5F', lineHeight: '1.6' }}

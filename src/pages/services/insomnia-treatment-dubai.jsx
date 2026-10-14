@@ -346,7 +346,7 @@ export default function InsomniaTreatmentPage() {
 
               {/* Right Column (Hero Image) */}
               <div className="lg:col-span-5 relative">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-lg">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-[#EBE6DD] shadow-lg">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/DHA-licensed healthcare professional.jpg"
@@ -366,9 +366,9 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* INTRODUCTION */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-[#F9F7F2] p-8 sm:p-12 rounded-3xl shadow-sm border border-[#D4A574]/20 relative overflow-hidden">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-[#F9F7F2] p-8 sm:p-12 rounded-3xl shadow-sm border border-[#D4A574]/25 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-3 h-full bg-[#1F5E4B]" />
               <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-6 pl-4">Introduction</h2>
               <div className="space-y-6 text-[#5F5F5F] text-base leading-relaxed pl-4">
@@ -387,8 +387,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* WHAT IS INSOMNIA? */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
                 What Is Insomnia?
@@ -398,12 +398,12 @@ export default function InsomniaTreatmentPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-12">
               <button
                 onClick={() => setActiveTab('acute')}
                 className={`p-6 rounded-2xl text-left border transition-all ${activeTab === 'acute'
                   ? 'bg-white border-[#1F5E4B] text-[#1A1A1A] shadow-md ring-1 ring-[#1F5E4B]'
-                  : 'bg-[#FCFDFB] border-gray-200 text-[#5F5F5F] hover:border-gray-300'}`}
+                  : 'bg-[#FCFDFB] border-[#EBE6DD] text-[#5F5F5F] hover:border-gray-300'}`}
               >
                 <h3 className="font-bold text-lg mb-2 text-[#1A1A1A]">Acute Insomnia</h3>
                 <p className="text-sm leading-relaxed text-[#5F5F5F]">
@@ -415,7 +415,7 @@ export default function InsomniaTreatmentPage() {
                 onClick={() => setActiveTab('chronic')}
                 className={`p-6 rounded-2xl text-left border transition-all ${activeTab === 'chronic'
                   ? 'bg-white border-[#1F5E4B] text-[#1A1A1A] shadow-md ring-1 ring-[#1F5E4B]'
-                  : 'bg-[#FCFDFB] border-gray-200 text-[#5F5F5F] hover:border-gray-300'}`}
+                  : 'bg-[#FCFDFB] border-[#EBE6DD] text-[#5F5F5F] hover:border-gray-300'}`}
               >
                 <h3 className="font-bold text-lg mb-2 text-[#1A1A1A]">Chronic Insomnia</h3>
                 <p className="text-sm leading-relaxed text-[#5F5F5F]">
@@ -424,7 +424,7 @@ export default function InsomniaTreatmentPage() {
               </button>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-150 max-w-4xl mx-auto shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#EBE6DD] max-w-5xl mx-auto shadow-sm">
               <h4 className="font-bold text-base text-[#D4A574] mb-4">Insomnia can present in different ways, including:</h4>
               <ul className="grid sm:grid-cols-2 gap-4 text-sm text-[#1A1A1A]">
                 <li className="flex items-start gap-2">
@@ -452,7 +452,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* COMMON SYMPTOMS OF INSOMNIA */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Text Column */}
@@ -463,7 +463,7 @@ export default function InsomniaTreatmentPage() {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {symptoms.map((symp, idx) => (
-                    <div key={idx} className="flex items-center space-x-3 p-3 bg-[#FCFDFB] rounded-xl border border-gray-150 shadow-sm">
+                    <div key={idx} className="flex items-center space-x-3 p-3 bg-[#FCFDFB] rounded-xl border border-[#EBE6DD] shadow-sm">
                       <span className="w-2 h-2 rounded-full bg-[#D4A574] flex-shrink-0" />
                       <span className="text-xs sm:text-sm font-semibold text-gray-700">{symp}</span>
                     </div>
@@ -476,7 +476,7 @@ export default function InsomniaTreatmentPage() {
 
               {/* Image Column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-[#EBE6DD] shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Relaxing bedtime routine.jpg"
@@ -496,18 +496,18 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* CAUSES AND RISK FACTORS */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Causes and Risk Factors</h2>
-              <p className="text-base sm:text-lg text-[#5F5F5F]">
+              <p className="text-base sm:text-lg text-[#5F5F5F] max-w-3xl mx-auto">
                 Sleep problems rarely have a single cause. In our experience supporting patients across Dubai, insomnia is often the result of overlapping physical, psychological, and lifestyle factors:
               </p>
             </div>
 
-            <div className="space-y-3 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-3.5 max-w-5xl mx-auto">
               {causes.map((c, idx) => (
-                <div key={idx} className="flex items-start space-x-3 p-4 bg-white rounded-xl border border-gray-150 shadow-sm">
+                <div key={idx} className="flex items-start space-x-3 p-4 bg-white rounded-xl border border-[#EBE6DD] shadow-sm">
                   <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-[#1A1A1A] leading-relaxed">{c}</span>
                 </div>
@@ -521,12 +521,12 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* WHY EARLY ASSESSMENT MATTERS */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Image Column */}
               <div className="lg:col-span-5 order-last lg:order-first">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-[#EBE6DD] shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Physiotherapist treating neck tension.jpg"
@@ -566,7 +566,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* ASSESSMENT PROCESS AT RAMACARE */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Assessment Process at RamaCare</h2>
@@ -577,7 +577,7 @@ export default function InsomniaTreatmentPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {assessmentSteps.map((step, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm hover:border-[#1F5E4B]/40 transition-all flex flex-col justify-between">
+                <div key={idx} className="bg-white p-6 rounded-2xl border border-[#EBE6DD] shadow-xs hover:border-[#1F5E4B]/40 hover:shadow-md transition-all flex flex-col justify-between">
                   <div>
                     <span className="text-xs text-[#D4A574] font-semibold tracking-wider">Step 0{idx + 1}</span>
                     <h4 className="font-bold text-base text-[#1A1A1A] mt-2 mb-2">{step.name}</h4>
@@ -594,7 +594,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* SUPPORTIVE CARE APPROACH */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Insomnia Treatment Dubai at RamaCare: Our Supportive Care Approach</h2>
@@ -603,9 +603,9 @@ export default function InsomniaTreatmentPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
               {supportivePlans.map((plan, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-[#FCFDFB] border border-gray-150 flex items-start space-x-3 hover:border-[#D4A574]/45 transition-all shadow-sm">
+                <div key={idx} className="p-5 rounded-2xl bg-[#FCFDFB] border border-[#EBE6DD] flex items-start space-x-3 hover:border-[#D4A574]/45 transition-all shadow-sm">
                   <CheckCircle className="w-5 h-5 text-[#D4A574] mt-0.5 flex-shrink-0" />
                   <span className="text-xs sm:text-sm text-gray-700 leading-relaxed">{plan}</span>
                 </div>
@@ -619,7 +619,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* PHYSIOTHERAPY FOR BETTER SLEEP */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Text Column */}
@@ -644,7 +644,7 @@ export default function InsomniaTreatmentPage() {
 
               {/* Image Column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-[#EBE6DD] shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Ayurvedic wellness consultation.jpg"
@@ -664,8 +664,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* AYURVEDIC WELLNESS SUPPORT */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Ayurvedic Wellness Support for Sleep</h2>
               <p className="text-base text-[#5F5F5F]">
@@ -673,11 +673,11 @@ export default function InsomniaTreatmentPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-gray-150 shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Practitioner Consult</h4><p className="text-xs text-[#5F5F5F]">A personalized consultation with an Ayurvedic wellness practitioner.</p></div>
-              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-gray-150 shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Dinacharya Routines</h4><p className="text-xs text-[#5F5F5F]">Guidance on daily routine patterns aligned with circadian rhythms.</p></div>
-              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-gray-150 shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Relaxation Therapies</h4><p className="text-xs text-[#5F5F5F]">Easing physical and mental tension using traditional external therapies.</p></div>
-              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-gray-150 shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Grounding Diet</h4><p className="text-xs text-[#5F5F5F]">Warm dietary recommendations supporting digestive rest and evening relaxation.</p></div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-[#EBE6DD] shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Practitioner Consult</h4><p className="text-xs text-[#5F5F5F]">A personalized consultation with an Ayurvedic wellness practitioner.</p></div>
+              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-[#EBE6DD] shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Dinacharya Routines</h4><p className="text-xs text-[#5F5F5F]">Guidance on daily routine patterns aligned with circadian rhythms.</p></div>
+              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-[#EBE6DD] shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Relaxation Therapies</h4><p className="text-xs text-[#5F5F5F]">Easing physical and mental tension using traditional external therapies.</p></div>
+              <div className="p-5 rounded-xl bg-[#FCFDFB] border border-[#EBE6DD] shadow-sm"><h4 className="font-bold text-sm text-[#D4A574] mb-2">Grounding Diet</h4><p className="text-xs text-[#5F5F5F]">Warm dietary recommendations supporting digestive rest and evening relaxation.</p></div>
             </div>
 
             <p className="text-xs text-[#5F5F5F] text-center italic">
@@ -687,12 +687,12 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* HEALTHY SLEEP HABITS AND TIPS */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Image Column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-[#EBE6DD] shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/homepage.jpg"
@@ -728,7 +728,7 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* BENEFITS OF BETTER SLEEP */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">The Benefits of Better Sleep</h2>
@@ -737,9 +737,9 @@ export default function InsomniaTreatmentPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {sleepBenefits.map((b, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-[#FCFDFB] border border-gray-150 shadow-sm flex items-center space-x-3 hover:shadow-md transition-all">
+                <div key={idx} className="p-4 rounded-xl bg-[#FCFDFB] border border-[#EBE6DD] shadow-sm flex items-center space-x-3 hover:shadow-md transition-all">
                   <Sparkles className="w-5 h-5 text-[#D4A574] flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-semibold text-[#1A1A1A]">{b}</span>
                 </div>
@@ -749,15 +749,15 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* WHY CHOOSE US */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 text-center">Why Choose RamaCare Polyclinic for Insomnia Treatment in Dubai?</h2>
-            <p className="text-center text-sm text-[#5F5F5F] max-w-2xl mx-auto mb-10">
+            <p className="text-center text-sm sm:text-base text-[#5F5F5F] max-w-3xl mx-auto mb-10 leading-relaxed">
               Patients across Dubai choose RamaCare for our combination of clinical care and genuine wellness expertise. We are known as a Sleep Clinic Dubai residents recommend to friends and colleagues. We also offer the kind of Natural Sleep Support Dubai patients increasingly look for alongside conventional care.
             </p>
-            <div className="space-y-4 max-w-xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4 lg:gap-5 max-w-5xl mx-auto">
               {whyChooseUs.map((w, idx) => (
-                <div key={idx} className="flex items-start space-x-3">
+                <div key={idx} className="flex items-start space-x-3 p-4 bg-[#FCFDFB] rounded-xl border border-[#EBE6DD] shadow-xs hover:border-[#1F5E4B]/30 transition-colors">
                   <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed">{w}</span>
                 </div>
@@ -767,8 +767,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* SEARCHABLE FAQ SECTION */}
-        <section className="py-12 md:py-20 px-4 bg-[#F5F1E8]">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4">Frequently Asked Questions</h2>
               <p className="text-base text-[#5F5F5F]">Browse answers regarding sleep cycle support, physiotherapy, and wellness tips.</p>
@@ -781,7 +781,7 @@ export default function InsomniaTreatmentPage() {
                 placeholder="Search FAQs..."
                 value={faqSearch}
                 onChange={(e) => setFaqSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#1F5E4B] text-sm text-[#1A1A1A]"
+                className="w-full pl-12 pr-4 py-3 bg-white border border-[#EBE6DD] rounded-xl focus:outline-none focus:ring-1 focus:ring-[#1F5E4B] text-sm text-[#1A1A1A]"
               />
               <Search className="w-5 h-5 text-[#5F5F5F] absolute left-4 top-1/2 transform -translate-y-1/2" />
             </div>
@@ -791,7 +791,7 @@ export default function InsomniaTreatmentPage() {
               {filteredFaqs.map((faq, idx) => {
                 const isOpen = activeFaq === idx;
                 return (
-                  <div key={idx} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                  <div key={idx} className="bg-white rounded-xl border border-[#EBE6DD] overflow-hidden shadow-sm">
                     <button
                       onClick={() => setActiveFaq(isOpen ? null : idx)}
                       className="w-full flex justify-between items-center p-5 text-left font-bold text-[#1A2521] hover:text-[#1F5E4B] transition-colors text-sm sm:text-base"
@@ -874,8 +874,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* CONCLUSION */}
-        <section className="py-12 md:py-20 px-4 bg-[#1F5E4B] text-white">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#1F5E4B] text-white">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Conclusion</h2>
             <div className="text-white/90 text-base sm:text-lg leading-relaxed mb-8">
               Struggling with sleep can affect every part of your day, from your energy and focus to your mood and overall wellbeing. At RamaCare Polyclinic, our Insomnia Treatment Dubai service is built around understanding your unique situation, addressing physical tension through physiotherapy, offering complementary Ayurvedic wellness support where appropriate, and guiding you toward healthier, more sustainable sleep habits.
@@ -896,8 +896,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* External References Section */}
-        <section className="py-12 bg-white border-t border-gray-150 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-12 bg-white border-t border-[#EBE6DD] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
             <h3 className="text-sm font-bold text-[#1A1A1A] uppercase tracking-wider mb-3 text-center">
               External References Used for Factual Accuracy
             </h3>
@@ -940,8 +940,8 @@ export default function InsomniaTreatmentPage() {
         </section>
 
         {/* Medical Disclaimer */}
-        <section className="py-10 bg-gray-50 border-t border-gray-150 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-10 bg-gray-50 border-t border-[#EBE6DD] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto text-center">
             <p className="text-xs text-gray-500 leading-relaxed">
               <strong className="text-gray-700">Medical Disclaimer:</strong> This content is for general informational purposes and does not constitute medical advice or a diagnosis. Individual results and recovery timelines vary. Patients with persistent or severe sleep disorders should seek evaluation from an appropriate sleep medicine or mental health specialist. For personal medical concerns, please Contact Us or Book an Appointment to speak with our licensed healthcare team.
             </p>

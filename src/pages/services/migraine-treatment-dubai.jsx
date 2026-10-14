@@ -213,7 +213,7 @@ export default function MigraineTreatmentPage() {
           <p className="text-[#5F5F5F] mb-8 max-w-3xl">Not every headache is a migraine. Knowing the type decides the treatment.</p>
           <div className="grid md:grid-cols-3 gap-6">
             {headacheTypes.map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl p-6 border border-gray-200">
+              <div key={t.name} className="bg-white rounded-2xl p-6 border border-[#EBE6DD] shadow-xs">
                 <h3 className="font-bold text-lg text-[#1F5E4B] mb-2">{t.name}</h3>
                 <p className="text-[#5F5F5F] leading-relaxed">{t.text}</p>
               </div>
@@ -224,7 +224,7 @@ export default function MigraineTreatmentPage() {
 
       {/* Red flags */}
       <section className="bg-white py-16 px-6">
-        <div className="max-w-4xl mx-auto bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
+        <div className="max-w-6xl mx-auto bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
           <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><AlertCircle className="w-6 h-6 text-[#B4432F]" /> When Is a Headache an Emergency?</h2>
           <ul className="space-y-2 text-[#3F3F3F]">
             {redFlags.map((r) => <li key={r} className="flex gap-2"><span className="text-[#B4432F] font-bold">•</span>{r}</li>)}
@@ -239,7 +239,7 @@ export default function MigraineTreatmentPage() {
           <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8">How We Treat Migraines and Headaches at RamaCare</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {treatments.map((t) => (
-              <div key={t.title} className="bg-white rounded-2xl p-6 border border-gray-200">
+              <div key={t.title} className="bg-white rounded-2xl p-6 border border-[#EBE6DD] shadow-xs">
                 <t.icon className="w-8 h-8 text-[#1F5E4B] mb-3" />
                 <h3 className="font-bold text-lg text-[#1A1A1A] mb-2">{t.title}</h3>
                 <p className="text-[#5F5F5F] leading-relaxed">{t.text}</p>
@@ -260,7 +260,7 @@ export default function MigraineTreatmentPage() {
             <p className="text-[#3F3F3F] leading-relaxed mb-4">Our GP sees children and teenagers with headaches. Migraine is common in children and often shorter than in adults, sometimes with tummy pain or vomiting. Tension headaches, dehydration, skipped meals, poor sleep, screen time and eyesight problems are other common causes.</p>
             <p className="text-[#3F3F3F] leading-relaxed">Bring a short headache diary if you can. Children with warning signs, such as morning vomiting, headaches waking them from sleep, clumsiness or behaviour change, are referred urgently.</p>
           </div>
-          <div className="bg-[#F9F7F2] rounded-2xl p-8 border border-gray-200">
+          <div className="bg-[#F9F7F2] rounded-2xl p-8 border border-[#EBE6DD] shadow-xs">
             <h3 className="text-xl font-bold text-[#1A1A1A] mb-3 flex items-center gap-2"><ClipboardList className="w-6 h-6 text-[#1F5E4B]" /> How to Keep a Headache Diary</h3>
             <ul className="space-y-2 text-[#3F3F3F]">
               {['Date, start time and how long it lasted', 'How bad it was (0 to 10) and where it hurt', 'Other symptoms: nausea, light sensitivity, aura', 'Sleep, meals, water and screen time that day', 'Any medicine taken and whether it helped', 'For women: where you are in your cycle'].map((d) => (
@@ -274,11 +274,11 @@ export default function MigraineTreatmentPage() {
       {/* Triggers and prevention */}
       <section className="bg-[#F9F7F2] py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="bg-white rounded-2xl p-8 border border-[#EBE6DD] shadow-xs">
             <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Common Migraine Triggers in Dubai</h2>
             <ul className="space-y-2 text-[#3F3F3F]">{triggers.map((t) => <li key={t} className="flex gap-2"><span className="text-[#1F5E4B] font-bold">•</span>{t}</li>)}</ul>
           </div>
-          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="bg-white rounded-2xl p-8 border border-[#EBE6DD] shadow-xs">
             <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Tips to Prevent Migraines</h2>
             <ul className="space-y-2 text-[#3F3F3F]">{prevention.map((t) => <li key={t} className="flex gap-2"><CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-none mt-0.5" />{t}</li>)}</ul>
           </div>
@@ -287,7 +287,7 @@ export default function MigraineTreatmentPage() {
 
       {/* Quick facts */}
       <section className="bg-white py-16 px-6">
-        <div className="max-w-6xl mx-auto bg-[#F9F7F2] rounded-2xl p-8 border border-gray-200">
+        <div className="max-w-6xl mx-auto bg-[#F9F7F2] rounded-2xl p-8 border border-[#EBE6DD] shadow-xs">
           <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Quick Facts: Migraine Care at RamaCare, Jumeirah 1</h2>
           <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-[#3F3F3F]">
             <li>Who treats you: DHA-licensed GP, with physiotherapy and Ayurveda in the same clinic</li>
@@ -315,11 +315,11 @@ export default function MigraineTreatmentPage() {
 
       {/* FAQ */}
       <section className="bg-white py-16 px-6" id="faq">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8 text-center">Migraine & Headaches in Jumeirah 1: Common Questions</h2>
           <div className="space-y-3">
             {faqs.map((f, i) => (
-              <div key={f.question} className="border border-gray-200 rounded-xl overflow-hidden">
+              <div key={f.question} className="border border-[#EBE6DD] rounded-xl overflow-hidden shadow-xs">
                 <button type="button" onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}
                   className="w-full flex justify-between items-center gap-4 p-5 text-left font-semibold text-[#1A1A1A] hover:bg-[#F9F7F2]">
                   <span>{f.question}</span>

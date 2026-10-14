@@ -165,7 +165,7 @@ const allFaqs = faqGroups.flatMap((g) => g.items);
 const related = [
   { label: 'Physiotherapy Dubai', href: '/services/physiotherapy-dubai/' },
   { label: 'Ayurveda Dubai', href: '/services/ayurveda-dubai/' },
-  { label: 'Back Pain Treatment Dubai', href: '/services/back-pain-treatment-dubai/' },
+  { label: 'Chronic back pain treatment', href: '/services/back-pain-treatment-dubai/' },
   { label: 'Dry Needling Dubai', href: '/services/dry-needling-dubai/' },
   { label: 'Electrotherapy Dubai', href: '/services/electrotherapy-dubai/' },
   { label: 'Ultrasound Therapy Dubai', href: '/services/ultrasound-therapy-dubai/' },
@@ -179,6 +179,7 @@ const related = [
 /* ------------------------------------------------------------------
    JSON-LD schema — the 7 blocks specified in the brief
 ------------------------------------------------------------------- */
+
 function buildSchema() {
   const medicalClinic = {
     '@context': 'https://schema.org',

@@ -9,6 +9,7 @@ import QuickNavigation from '../../../components/QuickNavigation';
 import PatientTestimonials from '../../../components/VideoTestimonials';
 import PaymentInsurance from '../../../components/PaymentInsurance';
 import FAQSection from '../../../components/Faq';
+import BookConsultation from '../../../components/BookConsultation';
 import {
   Activity,
   AlertTriangle,
@@ -56,17 +57,19 @@ export default function DryNeedlingPage() {
   ];
 
   const heroData = {
-    title: 'Dry Needling in Dubai for Muscle Pain & Trigger Point Relief',
+    title: 'Dry Needling in Jumeirah 1, Dubai for Muscle Pain & Trigger Points',
     subtitle: 'Physiotherapy-Led Trigger Point Treatment for Muscle Tension and Restricted Movement',
-    description: `Most weeks I see some version of the same patient — a knot in the shoulder that’s been there for three months, a heating pad and two mattress changes already tried, and finally a question I hear a lot: “why hasn’t this just gone away on its own?” More often than not, the answer is a trigger point — a small, stubborn band of muscle that stays contracted long after whatever caused it has passed, and that rest by itself rarely undoes.
+    description: `RamaCare Polyclinic offers dry needling at 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. Every session is done by our DHA-licensed physiotherapist, Jeena Mathew (BPT, MPT), after an assessment, and is combined with exercise and hands-on treatment. Open every day, 10am–10pm, with same-day appointments. Pay by card, cash or Tabby instalments; insurance is by reimbursement.
+
+Most weeks I see some version of the same patient — a knot in the shoulder that’s been there for three months, a heating pad and two mattress changes already tried, and finally a question I hear a lot: “why hasn’t this just gone away on its own?” More often than not, the answer is a trigger point — a small, stubborn band of muscle that stays contracted long after whatever caused it has passed, and that rest by itself rarely undoes.
 
 Dry needling is built for exactly that, and it’s one part of the broader {{physiotherapy|/services/physiotherapy-dubai/}} work we do at RamaCare. A hair-fine, sterile needle goes directly into the tight muscle band to get it to let go. It’s not the whole answer on its own, and I’d rather tell you that now than after you’ve booked five sessions expecting a miracle — but for the right case, especially in a city where most of my patients are sitting at a desk or in traffic for the better part of the day, it’s often the one thing that finally moves the needle after weeks of stretching and heat packs going nowhere.
 
-Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone stuck in an hour-long commute down Sheikh Zayed Road tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
+Before I pick up a needle, though, I want to understand how you actually move, not just where it hurts. A tight upper trap in someone with a long daily drive and a desk job tells a different story than the same tight trap in someone who overdid it on the padel court over the weekend — and the treatment should follow that story, not a fixed protocol.`,
     rating: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Average Google Rating`,
     topBadges: [
       { icon: 'location', text: 'Jumeirah 1, Dubai' },
-      { icon: 'building', text: 'DHA-Licensed Physiotherapists' },
+      { icon: 'building', text: 'DHA-Licensed Physiotherapist' },
       { icon: 'star', text: 'Assessment-Led Protocol' }
     ],
     ctaButtons: {
@@ -91,7 +94,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
     ],
     image: {
       src: '/images/dry-needling-physiotherapy-dubai.jpg',
-      alt: 'Dry needling therapy performed by a DHA-licensed physiotherapist in Dubai'
+      alt: 'Dry needling performed by a DHA-licensed physiotherapist at RamaCare, Jumeirah 1, Dubai'
     },
     medicalNotice: {
       text: 'Medical Disclaimer: Dry needling isn’t suitable for everyone, and it isn’t a substitute for medical diagnosis where one is needed. Treatment follows a clinical assessment, and how you respond will depend on your specific condition and how consistently you follow through on the rehab side of things.',
@@ -153,8 +156,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       a: 'Dry needling is not suitable for every patient. Certain medical conditions, medications, bleeding or clotting problems, infections and other individual factors may require additional consideration. Your physiotherapist should review your health history before treatment and determine whether dry needling is appropriate for you.'
     },
     {
-      q: 'Where can I get dry needling in Dubai?',
-      a: 'RamaCare Polyclinic provides dry needling as part of its physiotherapy services in Jumeirah 1, Dubai. The treatment is considered following an assessment of your symptoms and physical condition. Where appropriate, dry needling can be combined with other physiotherapy and rehabilitation techniques to address your individual treatment needs.'
+      q: 'Where can I get dry needling in Jumeirah 1, Dubai?',
+      a: 'RamaCare Polyclinic offers dry needling on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. It is done by our DHA-licensed physiotherapist after an assessment. The clinic is open every day from 10am to 10pm. Call 04 286 2006 or WhatsApp 056 659 7878.'
     },
     {
       q: 'How soon will I feel a difference after dry needling?',
@@ -168,11 +171,44 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       q: 'Is dry needling a permanent fix?',
       a: 'Dry needling should not be considered a guaranteed permanent solution. It may help manage muscular pain or tightness, but lasting improvement often depends on addressing the factors contributing to the problem. Depending on your condition, this may include strengthening, mobility exercises, posture or movement changes and a structured physiotherapy rehabilitation programme.'
     }
+    ,
+    {
+      q: 'How much does dry needling cost in Dubai?',
+      a: 'The cost depends on your assessment, how many areas need treating and whether needling is part of a longer physiotherapy plan. Message us on WhatsApp for current prices. You can pay by card, cash or Tabby instalments, and claim from your insurer by reimbursement.'
+    },
+    {
+      q: 'Do you offer trigger point injections?',
+      a: 'No. RamaCare does not give trigger point injections. Dry needling treats the same muscle trigger points with a fine needle and no medicine. If an injection is more suitable for you, we refer you to a doctor who offers it.'
+    },
+    {
+      q: 'What is the difference between dry needling and trigger point injections?',
+      a: 'Both target tight muscle knots. A trigger point injection uses a syringe to inject medicine, usually a local anaesthetic, and is given by a doctor. Dry needling uses a much thinner needle with no medicine and is part of a physiotherapy plan with exercise.'
+    },
+    {
+      q: 'Do you offer a dry needling and ultrasound combo?',
+      a: 'Yes. RamaCare offers a dry needling and ultrasound therapy combination package, where suitable after your assessment. Ask on WhatsApp for details.'
+    },
+    {
+      q: 'Can I pay for dry needling with Tabby?',
+      a: 'Yes. RamaCare accepts Tabby, so you can split the cost into instalments, as well as cash and cards.'
+    },
+    {
+      q: 'Does insurance cover dry needling?',
+      a: 'It depends on your plan. Some insurers cover dry needling as part of physiotherapy. RamaCare works on reimbursement only: we check your coverage, request prior approval if needed and give you the invoice and clinical notes to claim.'
+    },
+    {
+      q: 'Can I have dry needling after work?',
+      a: 'Yes. RamaCare is open every day until 10pm, including weekends, with same-day appointments when slots are free.'
+    },
+    {
+      q: 'Who performs dry needling at RamaCare?',
+      a: 'Dry needling at RamaCare is performed by Jeena Mathew, a DHA-licensed physiotherapist (BPT, MPT) with more than 8 years of musculoskeletal experience, after a full assessment.'
+    }
   ];
 
   const faqContent = {
-    title: 'Frequently Asked Questions',
-    description: 'Practical answers to common questions about dry needling therapy, trigger points, and physiotherapy rehabilitation at RamaCare in Dubai.',
+    title: 'Dry Needling in Jumeirah 1: Common Questions',
+    description: 'Practical answers about dry needling, trigger points, cost and physiotherapy at RamaCare Polyclinic, Jumeirah 1, Dubai.',
     faqs: rawFaqs.map((item, idx) => ({
       id: idx + 1,
       question: item.q,
@@ -190,12 +226,12 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       'Payment made at the time of your visit'
     ],
     insuranceOptions: [
-      'Reimbursement Basis — we accept insurance on a reimbursement basis for all major UAE insurers',
+      'Reimbursement only — you pay at the clinic and claim from your insurer; we check your coverage and request prior approval if needed',
       'Itemised DHA-compliant medical invoice provided on the day of treatment',
       'Detailed clinical notes and documentation assistance for smooth reimbursement'
     ]
   };
-  
+
   const otherServices = [
     { title: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/' },
     { title: 'Electrotherapy', link: '/services/electrotherapy-dubai/' },
@@ -205,11 +241,17 @@ Before I pick up a needle, though, I want to understand how you actually move, n
     { title: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/' },
     { title: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/' },
     { title: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/' },
-    { title: 'Migraine Treatment', link: '/services/migraine-treatment-dubai/' },
-    { title: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/' },
     { title: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/' },
+    { title: 'Sports Injury Rehabilitation', link: '/services/sports-injury-rehabilitation-dubai/' },
+    { title: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/' },
+    { title: 'Shoulder Pain Treatment', link: '/services/shoulder-pain-treatment-dubai/' },
     { title: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/' }
   ];
+
+  const SITE = "https://ramacarepolyclinic.ae";
+  const JEENA_ID = `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/#person`;
+  const PAGE_TITLE = "Dry Needling in Jumeirah 1, Dubai | RamaCare Physiotherapy";
+  const PAGE_DESCRIPTION = "Dry needling for muscle knots, trigger points and tightness in Jumeirah 1, Dubai, by a DHA-licensed physiotherapist. Open daily till 10pm. Tabby available.";
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -218,82 +260,55 @@ Before I pick up a needle, though, I want to understand how you actually move, n
         "@type": "BreadcrumbList",
         "@id": `${CANONICAL_URL}#breadcrumb`,
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Physiotherapy",
-            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Dry Needling",
-            "item": CANONICAL_URL
-          }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE}/services/` },
+          { "@type": "ListItem", "position": 3, "name": "Physiotherapy", "item": `${SITE}/services/physiotherapy-dubai/` },
+          { "@type": "ListItem", "position": 4, "name": "Dry Needling", "item": CANONICAL_URL }
         ]
       },
-
       {
         "@type": "MedicalWebPage",
         "@id": `${CANONICAL_URL}#webpage`,
         "url": CANONICAL_URL,
-        "name": "Dry Needling in Dubai for Muscle Pain & Trigger Point Relief",
-        "description": "Physiotherapy-led dry needling for muscle tension and trigger points at RamaCare Polyclinic, Jumeirah 1. Assessed and treated by Jeena Mathew, DHA-licensed physiotherapist.",
-        "inLanguage": "en-AE",
-        "lastReviewed": "2026-09-04",
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Jeena Mathew",
-          "jobTitle": "DHA Licensed Physiotherapist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        },
-        "medicalAudience": {
-          "@type": "MedicalAudience",
-          "audienceType": "Patient"
-        },
-        "about": {
-          "@type": "MedicalTherapy",
-          "name": "Dry Needling",
-          "alternateName": "Trigger Point Dry Needling",
-          "recognizingAuthority": {
-            "@type": "Organization",
-            "name": "Dubai Health Authority"
-          }
-        },
-        "mainContentOfPage": {
-          "@type": "WebPageElement",
-          "cssSelector": "main"
-        },
-        "publisher": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "url": "https://ramacarepolyclinic.ae/",
-          "telephone": "+971566597878",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd, Jumeirah Terrace Building, Ground Floor",
-            "addressLocality": "Jumeirah 1, Dubai",
-            "addressCountry": "AE"
-          }
-        }
+        "name": PAGE_TITLE,
+        "description": PAGE_DESCRIPTION,
+        "inLanguage": "en",
+        "isPartOf": { "@id": `${SITE}/#website` },
+        "breadcrumb": { "@id": `${CANONICAL_URL}#breadcrumb` },
+        "medicalAudience": { "@type": "Patient" },
+        "specialty": "https://schema.org/Physiotherapy",
+        "about": { "@id": `${CANONICAL_URL}#therapy` },
+        "reviewedBy": { "@id": JEENA_ID },
+        "lastReviewed": "2026-10-14",
+        "publisher": { "@id": `${SITE}/#clinic` }
       },
-
+      {
+        "@type": "PhysicalTherapy",
+        "@id": `${CANONICAL_URL}#therapy`,
+        "name": "Dry needling",
+        "alternateName": ["Trigger point dry needling", "Myofascial trigger point therapy", "Intramuscular stimulation", "Muscle needling"],
+        "description": "A physiotherapy technique using a fine, sterile, single-use needle without medicine to treat tight muscle bands and myofascial trigger points, combined with exercise.",
+        "url": CANONICAL_URL
+      },
+      {
+        "@type": "Person",
+        "@id": JEENA_ID,
+        "name": "Jeena Mathew",
+        "jobTitle": "DHA-Licensed Physiotherapist",
+        "url": `${SITE}/doctors/jeena-mathew-physiotherapist-dubai/`,
+        "worksFor": { "@id": `${SITE}/#clinic` },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Bachelor of Physiotherapy (BPT)" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Master of Physiotherapy (MPT)" }
+        ]
+      },
       {
         "@type": "FAQPage",
         "@id": `${CANONICAL_URL}#faq`,
         "mainEntity": rawFaqs.map(faq => ({
           "@type": "Question",
           "name": faq.q,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.a
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": faq.a }
         }))
       }
     ]
@@ -303,36 +318,23 @@ Before I pick up a needle, though, I want to understand how you actually move, n
     <Layout>
       <Head>
         {/* SEO Title: 56 characters */}
-        <title key="title">Dry Needling in Dubai — Trigger Point Therapy | RamaCare</title>
+        <title key="title">{PAGE_TITLE}</title>
         {/* Meta Description: ~155 characters */}
-        <meta
-          name="description"
-          content="Physiotherapy-led dry needling for muscle tension and trigger points at RamaCare Polyclinic, Jumeirah 1. Assessed and treated by Jeena Mathew, DHA-licensed physiotherapist."
-          key="description"/>
-        <meta
-          name="keywords"
-          content="Dry needling in Dubai, Dry needling Dubai, trigger point therapy Dubai, physiotherapy dry needling Dubai, muscle pain relief Dubai, Jumeirah 1 physiotherapy, Jeena Mathew physiotherapist"
-        />
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:title" content="Dry Needling in Dubai — Trigger Point Therapy | RamaCare" />
-        <meta
-          property="og:description"
-          content="Physiotherapy-led dry needling for muscle tension and trigger points at RamaCare Polyclinic, Jumeirah 1. Assessed and treated by Jeena Mathew, DHA-licensed physiotherapist."
-        />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
         <meta property="og:image" content="https://ramacarepolyclinic.ae/images/dry-needling-physiotherapy-dubai.jpg" />
         <meta property="og:site_name" content="RamaCare Polyclinic" />
         <meta property="og:locale" content="en_AE" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dry Needling in Dubai — Trigger Point Therapy | RamaCare" />
-        <meta
-          name="twitter:description"
-          content="Physiotherapy-led dry needling for muscle tension and trigger points at RamaCare Polyclinic, Jumeirah 1. Assessed and treated by Jeena Mathew, DHA-licensed physiotherapist."
-        />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
         <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/dry-needling-physiotherapy-dubai.jpg" />
 
         {/* JSON-LD Schema */}
@@ -413,7 +415,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                     className="w-full h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       e.currentTarget.src = '/images/dry-needling-physiotherapy-dubai.jpg';
-                    }}/>
+                    }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
                     <span className="text-xs uppercase font-semibold tracking-wider text-emerald-300 mb-1">Targeted Release</span>
                     <p className="text-xs md:text-sm font-medium">Fine filament needles targeting exact musculoskeletal trigger points</p>
@@ -528,7 +530,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 </div>
                 <div className="mt-3 pt-3 border-t border-emerald-200/60 text-xs font-semibold text-[#1F5E4B] flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#1F5E4B]" />
-                  <span>Sheikh Zayed Road commute ergonomics included.</span>
+                  <span>Desk, screen and car-seat advice included.</span>
                 </div>
               </div>
 
@@ -694,9 +696,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
         </section>
 
@@ -741,7 +741,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
 
             {/* The 4 Exact Step Blocks */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-
               <div className="bg-[#FAF9F5] p-6 rounded-2xl border border-[#E0D8CC] flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
                   <div className="w-9 h-9 rounded-xl bg-[#1F5E4B] text-white font-bold text-sm flex items-center justify-center mb-4 shadow-xs">
@@ -789,9 +788,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   </p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </section>
 
@@ -853,8 +850,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   className="w-full h-full object-cover object-center min-h-[250px]"
                   onError={(e) => {
                     e.currentTarget.src = '/images/ramacare-physiotherapy-consultation-dubai.jpg';
-                  }}/>
-                  
+                  }} />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
                   <span className="text-xs uppercase font-semibold text-emerald-300">DHA Licensed Clinic</span>
                   <p className="text-xs font-semibold">Rigorous hygiene and single-patient safety screening protocols</p>
@@ -892,7 +889,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 </h2>
                 <div className="space-y-3.5 text-sm md:text-base text-gray-700 leading-relaxed">
                   <p>
-                    I don’t love quoting percentages without context, so here’s roughly what we hear back from patients, based on feedback collected across our caseload rather than a formal study: most people notice faster relief from the specific pain they came in with, a good majority feel trigger points release properly rather than just going quiet temporarily, and flexibility improvements show up often enough that we build stretching into almost every plan. Chronic neck, back, and shoulder pain responds particularly well when it’s genuinely muscular in origin. Fewer spasms, less stiffness, and a general preference among patients for something that doesn’t involve medication come up constantly in conversation.
+                    I don’t quote percentages, because every case is different. What patients most often tell us, when the problem really is muscular, is that tight spots release, movement feels easier and spasms settle, especially when needling is combined with exercise: most people notice faster relief from the specific pain they came in with, a good majority feel trigger points release properly rather than just going quiet temporarily, and flexibility improvements show up often enough that we build stretching into almost every plan. Chronic neck, back, and shoulder pain responds particularly well when it’s genuinely muscular in origin. Fewer spasms, less stiffness, and a general preference among patients for something that doesn’t involve medication come up constantly in conversation.
                   </p>
                   <p>
                     None of that is a promise for your specific case — it’s what tends to happen when the underlying issue matches what dry needling is actually designed to treat.
@@ -902,20 +899,20 @@ Before I pick up a needle, though, I want to understand how you actually move, n
 
               <div className="lg:col-span-5 grid grid-cols-2 gap-3.5">
                 <div className="bg-[#FAF9F5] p-5 rounded-xl border border-gray-200 text-center shadow-xs">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#1F5E4B]">92%</div>
-                  <div className="text-xs text-gray-700 font-semibold mt-1">Faster Relief</div>
+                  <div className="text-lg sm:text-xl font-bold text-[#1F5E4B]">Tight spots</div>
+                  <div className="text-xs text-gray-700 font-semibold mt-1">release</div>
                 </div>
                 <div className="bg-[#FAF9F5] p-5 rounded-xl border border-gray-200 text-center shadow-xs">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#1F5E4B]">90%</div>
-                  <div className="text-xs text-gray-700 font-semibold mt-1">Trigger Point Release</div>
+                  <div className="text-lg sm:text-xl font-bold text-[#1F5E4B]">Movement</div>
+                  <div className="text-xs text-gray-700 font-semibold mt-1">feels easier</div>
                 </div>
                 <div className="bg-[#FAF9F5] p-5 rounded-xl border border-gray-200 text-center shadow-xs">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#1F5E4B]">88%</div>
-                  <div className="text-xs text-gray-700 font-semibold mt-1">Flexibility Gains</div>
+                  <div className="text-lg sm:text-xl font-bold text-[#1F5E4B]">Spasms</div>
+                  <div className="text-xs text-gray-700 font-semibold mt-1">settle down</div>
                 </div>
                 <div className="bg-[#FAF9F5] p-5 rounded-xl border border-gray-200 text-center shadow-xs">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#1F5E4B]">96%</div>
-                  <div className="text-xs text-gray-700 font-semibold mt-1">Drug-Free Preference</div>
+                  <div className="text-lg sm:text-xl font-bold text-[#1F5E4B]">No medicine</div>
+                  <div className="text-xs text-gray-700 font-semibold mt-1">involved</div>
                 </div>
               </div>
 
@@ -1019,7 +1016,35 @@ Before I pick up a needle, though, I want to understand how you actually move, n
           </div>
         </section>
 
-    {/* =========================================================================
+        {/* =========================================================================
+            SECTION: Trigger point injections vs dry needling + Quick Facts
+        ========================================================================= */}
+        <section className="w-full py-12 md:py-16 bg-[#FAF9F5] border-b border-[#E0D8CC]/60">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4" style={{ color: '#1F5E4B' }}>Trigger Point Injections or Dry Needling?</h2>
+              <div className="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed">
+                <p>A lot of people search for trigger point injections, so it’s worth being clear. A trigger point injection uses a syringe to put medicine, usually a local anaesthetic, into a tight muscle knot, and it’s given by a doctor. Dry needling targets the same knots with a much thinner needle and no medicine at all.</p>
+                <p>RamaCare does not give trigger point injections. For muscular knots, dry needling combined with exercise is often enough. If I think an injection would suit you better, I’ll tell you and we’ll refer you.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4" style={{ color: '#1F5E4B' }}>Quick Facts: Dry Needling at RamaCare</h2>
+              <ul className="space-y-2 text-sm md:text-base text-gray-700">
+                <li>Where: Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai (near Al Satwa)</li>
+                <li>Who: Jeena Mathew, DHA-licensed physiotherapist (BPT, MPT, 8+ years)</li>
+                <li>Needles: sterile, single-use, no medicine</li>
+                <li>Session: assessment first; needling about 20–30 minutes</li>
+                <li>Also available: dry needling and ultrasound combo package</li>
+                <li>Payment: cash, cards or Tabby instalments; insurance by reimbursement</li>
+                <li>Open every day 10am–10pm · 04 286 2006 · WhatsApp 056 659 7878</li>
+              </ul>
+              <p className="text-gray-700 mt-4 text-right" lang="ar" dir="rtl">العلاج بالإبر الجافة في جميرا 1، دبي، على يد أخصائية علاج طبيعي مرخصة من هيئة الصحة بدبي، مفتوح يومياً حتى 10 مساءً.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
             SECTION: Cost (ID: cost) & PaymentInsurance (Existing UI)
         ========================================================================= */}
         <section id="cost" className="w-full py-12 md:py-16 bg-white border-b border-gray-100">
@@ -1037,7 +1062,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 </h2>
                 <div className="space-y-3.5 text-sm md:text-base text-gray-700 leading-relaxed">
                   <p>
-                    Pricing depends on the assessment, how many areas need treating, and whether it’s part of a longer rehab programme rather than a single session. I’d rather quote you accurately after seeing what’s actually going on than throw out a number that doesn’t match your situation.
+                    Pricing depends on the assessment, how many areas need treating, and whether it’s part of a longer rehab programme or our dry needling and ultrasound combo package. I’d rather quote you accurately after seeing what’s actually going on than throw out a number that doesn’t match your situation.
                   </p>
                   <p>
                     Call <strong className="text-[#1F5E4B]">{displayCallingPhone}</strong> or WhatsApp <strong className="text-[#1F5E4B]">{displayWhatsApp}</strong> and we’ll talk through it. If you’re comparing clinics, it’s worth asking directly whether their quote includes the assessment and follow-up guidance, or just the fifteen minutes of needling — that’s usually where the real difference in value sits.
@@ -1062,7 +1087,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   </a>
                 </div>
               </div>
-              
+
               <div className="lg:col-span-5 bg-[#FAF9F5] p-6 sm:p-7 rounded-2xl border border-[#E0D8CC] shadow-xs">
                 <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">Comparing Clinics Checklist</h3>
                 <ul className="space-y-2.5 text-xs sm:text-sm text-gray-700">
@@ -1113,7 +1138,7 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   Why Patients Keep Coming Back to RamaCare for This
                 </h2>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-6">
-                  We don’t skip the assessment, even when a patient is fairly sure they already know what’s wrong. Treatment gets built around your actual pattern of tightness rather than a standard protocol, and needling gets combined with exercise and manual therapy when that’s what the case calls for — which, honestly, is most of the time. Everything’s delivered by DHA-licensed physiotherapists, and you leave with a plan for the week, not just a sore muscle and a callback in seven days. We’re based in Jumeirah 1, a short drive from most of the city.
+                  We don’t skip the assessment, even when a patient is fairly sure they already know what’s wrong. Treatment gets built around your actual pattern of tightness rather than a standard protocol, and needling gets combined with exercise and manual therapy when that’s what the case calls for — which, honestly, is most of the time. Everything’s delivered by DHA-licensed physiotherapists, and you leave with a plan for the week, not just a sore muscle and a callback in seven days. We’re on Al Dhiyafah Road in Jumeirah 1, near Al Satwa, open every day until 10pm.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -1129,8 +1154,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                   </div>
                   <div className="p-3.5 rounded-xl bg-white border border-[#E0D8CC] shadow-2xs">
                     <span className="text-xs font-semibold text-[#1F5E4B] uppercase block mb-0.5">Credentialed</span>
-                    <strong className="text-xs sm:text-sm font-bold text-gray-900 block">DHA-Licensed Experts</strong>
-                    <span className="text-xs text-gray-600">University-degreed physiotherapists only</span>
+                    <strong className="text-xs sm:text-sm font-bold text-gray-900 block">DHA-Licensed Physiotherapist</strong>
+                    <span className="text-xs text-gray-600">BPT, MPT, 8+ years</span>
                   </div>
                   <div className="p-3.5 rounded-xl bg-white border border-[#E0D8CC] shadow-2xs">
                     <span className="text-xs font-semibold text-[#1F5E4B] uppercase block mb-0.5">Central Hub</span>
@@ -1325,10 +1350,8 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 </Link>
               </div>
             </div>
-
           </div>
         </section>
-
 
         {/* =========================================================================
             SECTION: Frequently Asked Questions (Official Existing FAQ UI)
@@ -1387,7 +1410,6 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 <p className="text-xs sm:text-sm text-emerald-200 mb-6 font-medium">
                   Book your consultation at RamaCare Polyclinic, Jumeirah 1, Dubai. Call: {displayCallingPhone} | WhatsApp: {displayWhatsApp}
                 </p>
-
                 <div className="flex flex-wrap gap-3.5 justify-center">
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello RamaCare Polyclinic, I would like to book an appointment for Dry Needling in Dubai.')}`}
@@ -1407,10 +1429,33 @@ Before I pick up a needle, though, I want to understand how you actually move, n
                 </div>
               </div>
             </div>
-
           </div>
         </section>
-
+        <div id="book-form">
+          <BookConsultation
+            content={{
+              badge: 'Start Your Recovery',
+              title: 'Book Dry Needling in Jumeirah 1',
+              description: 'Assessment first, then dry needling where it suits you. Open every day 10am–10pm. Tabby available.',
+              getInTouchTitle: 'Get In Touch',
+              requestAppointmentTitle: 'Request Appointment',
+              submitButtonText: 'Request Appointment',
+              contactInfo: {
+                phone: '+971 04 286 2006',
+                whatsapp: '971566597878',
+                email: 'query@ramacarepolyclinic.com',
+                address: { line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,', line2: 'Ground Floor, Jumeirah 1 - Dubai' }
+              },
+              clinicHours: { weekdays: 'Sunday - Saturday:', weekdaysTime: '10:00 AM - 10:00 PM' },
+              statCards: [
+                { title: 'DHA Licensed', description: 'Facility 2036418' },
+                { title: 'Single-Use', description: 'Sterile Needles' },
+                { title: 'Tabby', description: 'Instalments Available' },
+                { title: 'Open Daily', description: '10am – 10pm' }
+              ]
+            }}
+          />
+        </div>
       </main>
     </Layout>
   );
