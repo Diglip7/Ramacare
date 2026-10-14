@@ -303,7 +303,7 @@ export default function MigraineTreatmentPage() {
         </div>
       </section>
 
-      {/* Care team */}
+      {/* Care team */}  
       <DoctorsSection
         content={{
           badge: 'Your Care Team',

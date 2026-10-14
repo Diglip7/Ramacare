@@ -354,13 +354,11 @@ Before I pick up a needle, though, I want to understand how you actually move, n
       {/* Quick Navigation Sticky Bar */}
       <QuickNavigation navItems={navItems} />
       <main className="w-full bg-white text-gray-800 overflow-hidden">
-
-        {/* =========================================================================
+    {/* =========================================================================
             SECTION: Treatment Overview
         ========================================================================= */}
         <section id="treatment-info" className="w-full py-12 md:py-16 bg-gradient-to-b from-white via-[#FAF9F5]/80 to-white border-b border-[#E0D8CC]/40">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             {/* Main Section Header */}
             <div className="mb-10">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1F5E4B]/10 text-[#1F5E4B] text-xs font-semibold uppercase tracking-wider mb-3">
