@@ -1,1191 +1,369 @@
+import { useState } from 'react';
 import Layout from '../../../components/Layout';
-import Head from "next/head";
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import BookConsultation from '../../../components/BookConsultation';
+import Head from 'next/head';
+import Link from 'next/link';
+import { MessageCircle, Calendar, AlertCircle, Stethoscope, Activity, Leaf, ClipboardList, Baby, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import ContentReviewBadge from '../../../components/ContentReviewBadge';
-import { subcategoryContent } from '../../data/subcategoryContent';
-import {
-  Activity,
-  Target,
-  MapPin,
-  Award,
-  Phone,
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Users,
-  Heart,
-  Shield,
-  Zap,
-  ChevronDown,
-  ChevronUp,
-  AlertCircle,
-  Sparkles,
-  Brain,
-  Eye,
-  Droplets
-} from 'lucide-react';
-import { GOOGLE_RATING_FALLBACK } from '../../data/clinicStats';
+import DoctorsSection from '../../../components/DoctorsSection';
+import BookConsultation from '../../../components/BookConsultation';
+import { DOCTORS } from '../../data/doctors';
 
+const SITE = 'https://ramacarepolyclinic.ae';
+const CANONICAL_URL = `${SITE}/services/migraine-treatment-dubai/`;
+const SAHAR_ID = `${SITE}/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/#person`;
+const PAGE_TITLE = 'Migraine & Headache Treatment in Jumeirah 1, Dubai | RamaCare';
+const PAGE_DESCRIPTION = 'GP-led migraine and headache care in Jumeirah 1, Dubai, for adults and children: diagnosis, medication, physio and Ayurveda. Same-day slots till 10pm.';
+const WHATSAPP = 'https://wa.me/971566597878?text=Hi%20RamaCare%2C%20I%20would%20like%20to%20book%20a%20GP%20appointment%20for%20headaches%20or%20migraine.';
+
+const headacheTypes = [
+  { name: 'Migraine without aura', text: 'Moderate to severe, often throbbing pain, usually on one side, lasting 4 to 72 hours, with nausea or sensitivity to light and sound.' },
+  { name: 'Migraine with aura', text: 'Visual changes such as flashing lights or zigzag lines, or tingling, that come before or with the headache and usually last under an hour.' },
+  { name: 'Tension-type headache', text: 'The most common headache: a pressing or tight band around the head, often linked to stress, poor sleep and neck and shoulder tension.' },
+  { name: 'Neck-related (cervicogenic) headache', text: 'Pain that starts in the neck and spreads to the back of the head or forehead, often worse with desk work or certain neck movements.' },
+  { name: 'Cluster headache', text: 'Very severe pain around one eye, with a watery eye or blocked nose on the same side, in bouts over weeks. Needs medical review.' },
+  { name: 'Medication-overuse headache', text: 'Daily or near-daily headaches caused by taking painkillers too often, usually on 10 to 15 or more days a month.' }
+];
+
+const redFlags = [
+  'A sudden, severe “thunderclap” headache or the worst headache of your life',
+  'Headache with fever, a stiff neck or a rash',
+  'Weakness, numbness, slurred speech, confusion or loss of vision',
+  'Headache after a head injury or fall',
+  'A new headache pattern after age 50, or headaches that keep getting worse',
+  'Headache in pregnancy or with very high blood pressure'
+];
+
+const treatments = [
+  { icon: Stethoscope, title: 'GP Diagnosis and Medication', text: 'Our GP takes a full history, examines you, checks blood pressure and, where appropriate, suggests or prescribes medication for attacks or prevention. Most migraines are diagnosed clinically, without scans.' },
+  { icon: ClipboardList, title: 'Headache Diary and Triggers', text: 'You record when headaches start, how long they last, what you ate, slept and did, and what medicine you took. The pattern guides your treatment and shows triggers to avoid.' },
+  { icon: Activity, title: 'Physiotherapy for Neck and Tension Headaches', text: 'For headaches linked to the neck or muscle tension: manual therapy, deep neck strengthening, posture advice and dry needling of tight neck and shoulder muscles. Assessment AED 200.' },
+  { icon: Leaf, title: 'Ayurvedic Support', text: 'Some patients add Ayurvedic therapies such as Shirodhara or Nasya with our Ayurveda doctor, alongside medical care, mainly for stress-related headaches.' },
+  { icon: AlertCircle, title: 'Referral to a Neurologist', text: 'For red-flag symptoms, chronic migraine (15 or more headache days a month) or specialist treatments such as preventive injections or nerve blocks, our GP refers you to a neurologist.' }
+];
+
+const triggers = [
+  'Dehydration and heat, common in Dubai summers',
+  'Skipped meals or irregular eating',
+  'Poor or irregular sleep, including oversleeping at weekends',
+  'Stress, or the let-down after stress',
+  'Long screen time and desk posture',
+  'Hormonal changes, such as around periods',
+  'Too much or too little caffeine',
+  'Bright light, strong smells or loud noise',
+  'Some foods and alcohol (varies between people)'
+];
+
+const prevention = [
+  'Drink water regularly through the day, more in hot weather',
+  'Eat at regular times and do not skip breakfast',
+  'Keep a regular sleep and wake time, including weekends',
+  'Take screen breaks every 30 to 45 minutes',
+  'Keep regular, moderate exercise',
+  'Limit painkillers to fewer than 2 to 3 days a week, unless your doctor advises otherwise',
+  'Keep a headache diary to find your triggers'
+];
+
+const faqs = [
+  { question: 'Where can I get migraine treatment in Jumeirah 1?', answer: 'RamaCare Polyclinic treats migraine and headaches on the ground floor of Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai, near Al Satwa. The clinic is open every day from 10am to 10pm, with same-day appointments when slots are free. Call 04 286 2006 or WhatsApp 056 659 7878.' },
+  { question: 'Which doctor should I see for migraines in Dubai?', answer: 'Start with a GP. A GP can diagnose most migraines and headaches, prescribe treatment and refer you to a neurologist if you have warning signs, chronic migraine or need specialist treatment. At RamaCare, the GP, physiotherapist and Ayurveda doctor are in the same clinic.' },
+  { question: 'Do you treat headaches in children?', answer: 'Yes. Our GP sees children and teenagers with headaches. Common causes include migraine, tension headaches, poor sleep, dehydration, skipped meals and screen time. Children with red-flag symptoms are referred urgently.' },
+  { question: 'How do I know if it is a migraine or a normal headache?', answer: 'A migraine is usually moderate to severe, often throbbing and one-sided, lasts 4 to 72 hours, and comes with nausea or sensitivity to light and sound. A tension headache feels like a tight band and is usually milder. Your GP can confirm which type you have.' },
+  { question: 'When is a headache an emergency?', answer: 'Get emergency help (call 998) for a sudden, severe thunderclap headache, a headache with fever and stiff neck, weakness, numbness, slurred speech, confusion, vision loss, or a headache after a head injury.' },
+  { question: 'Do I need a scan for migraines?', answer: 'Usually not. Migraine is a clinical diagnosis. Scans are needed only if there are warning signs or the pattern of headaches changes. Your GP decides and refers you for imaging if needed.' },
+  { question: 'Can a GP prescribe migraine medication?', answer: 'Yes. RamaCare\'s GP can suggest or prescribe medication where appropriate, both for treating attacks and, if needed, for preventing them.' },
+  { question: 'Can physiotherapy help migraines?', answer: 'Physiotherapy helps most when headaches are linked to the neck or muscle tension, such as tension-type and neck-related headaches. It can also help some people with migraine who have neck pain. It works alongside medical care, not instead of it.' },
+  { question: 'Can dry needling help headaches?', answer: 'Dry needling can help tension and neck-related headaches by releasing tight trigger points in the neck and shoulder muscles, usually combined with exercise and posture work.' },
+  { question: 'Can Ayurveda help migraines?', answer: 'Some patients find Ayurvedic therapies such as Shirodhara or Nasya help with relaxation and stress-related headaches. At RamaCare they are offered by our Ayurveda doctor alongside, not instead of, medical assessment.' },
+  { question: 'What is a headache diary?', answer: 'A simple record of each headache: date, time, how long it lasted, how bad it was, what you ate, slept and did, and what medicine you took. It helps your doctor confirm the type of headache and find triggers.' },
+  { question: 'What triggers migraines?', answer: 'Common triggers are dehydration, heat, skipped meals, poor sleep, stress, screen time, hormonal changes, caffeine changes, bright light and strong smells. Triggers vary from person to person.' },
+  { question: 'Can taking too many painkillers cause headaches?', answer: 'Yes. Using painkillers on many days each month can cause medication-overuse headache. If you take painkillers on more than 2 to 3 days a week, see your GP.' },
+  { question: 'What is migraine with aura?', answer: 'Aura is a warning phase, usually visual changes like flashing lights or zigzag lines, that comes before or with the headache and usually lasts less than an hour. A first-ever aura, or aura with weakness, should be checked urgently.' },
+  { question: 'Do you offer Botox for migraine?', answer: 'No. Botox for chronic migraine is a specialist treatment. If you may benefit from it, our GP can refer you to a neurologist.' },
+  { question: 'Is surgery used for migraines?', answer: 'Rarely. Surgery is not a routine migraine treatment. Most people are managed with lifestyle changes, medication and, for some, specialist neurology treatment. RamaCare does not perform surgery.' },
+  { question: 'How long does migraine treatment take to work?', answer: 'Treatment for attacks can work within hours. Preventive treatment and trigger changes usually need several weeks to a few months to show their full effect. Your GP reviews progress with you.' },
+  { question: 'Are migraines common in the UAE?', answer: 'Yes. Migraine is common in the UAE and the Gulf, and many people are never properly diagnosed. Heat, dehydration, long screen hours and irregular sleep are common triggers here.' },
+  { question: 'Can I get a same-day appointment for a headache?', answer: 'Yes, when slots are free. RamaCare is open every day from 10am to 10pm, including weekends, which helps when a headache starts after work.' },
+  { question: 'Does insurance cover migraine treatment?', answer: 'Many plans cover GP visits and prescribed medication. RamaCare does not bill insurers directly: you pay at the clinic and claim back with our invoice and medical report. We can check your coverage first.' }
+];
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${CANONICAL_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE}/services/` },
+        { '@type': 'ListItem', position: 3, name: 'General Physician', item: `${SITE}/services/general-physician-dubai/` },
+        { '@type': 'ListItem', position: 4, name: 'Migraine & Headache Treatment', item: CANONICAL_URL }
+      ]
+    },
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${CANONICAL_URL}#webpage`,
+      url: CANONICAL_URL,
+      name: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      breadcrumb: { '@id': `${CANONICAL_URL}#breadcrumb` },
+      medicalAudience: { '@type': 'Patient' },
+      specialty: 'https://schema.org/PrimaryCare',
+      about: { '@id': `${CANONICAL_URL}#condition` },
+      reviewedBy: { '@id': SAHAR_ID },
+      lastReviewed: '2026-10-15', // change to the deploy date
+      publisher: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'MedicalCondition',
+      '@id': `${CANONICAL_URL}#condition`,
+      name: 'Migraine',
+      alternateName: ['Migraine headache', 'Headache', 'Tension-type headache', 'Cervicogenic headache', 'Headache in children'],
+      signOrSymptom: ['Throbbing one-sided headache', 'Nausea', 'Sensitivity to light and sound', 'Visual aura'].map((n) => ({ '@type': 'MedicalSymptom', name: n })),
+      possibleTreatment: [
+        { '@type': 'MedicalTherapy', name: 'GP assessment and medication' },
+        { '@type': 'MedicalTherapy', name: 'Trigger management and headache diary' },
+        { '@type': 'PhysicalTherapy', name: 'Physiotherapy for neck-related and tension headaches', url: `${SITE}/services/neck-pain-treatment-dubai/` }
+      ]
+    },
+    {
+      '@type': 'Physician',
+      '@id': SAHAR_ID,
+      name: 'Dr. Sahar Zomorrodi',
+      jobTitle: 'DHA-Licensed General Practitioner',
+      url: `${SITE}/doctors/dr-sahar-zomorrodi-general-practitioner-dubai/`,
+      medicalSpecialty: 'https://schema.org/PrimaryCare',
+      worksFor: { '@id': `${SITE}/#clinic` }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${CANONICAL_URL}#faq`,
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } }))
+    }
+  ]
+};
 
 export default function MigraineTreatmentPage() {
-  const [openFaq, setOpenFaq] = useState(null);
-  const [scrollY, setScrollY] = useState(0);
-
-  // Get content from data file - Single source of truth
-  const content = subcategoryContent['migraine-treatment-dubai'];
-  const { advantages, migraineFactors, symptoms, headacheTypes, whenToSeeDoctor, treatmentOptions, treatmentProcess, benefits, whoCanBenefit, preventionTips, faqs } = content;
-
-  // Map icon names to actual components
-  const iconMap = {
-    Target,
-    Zap,
-    Heart,
-    Shield,
-    Sparkles,
-    Brain,
-    Eye,
-    Droplets
-  };
-
-  const CANONICAL_URL = 'https://ramacarepolyclinic.ae/services/migraine-treatment-dubai/';
-
-  const faqsForSchema = (faqs || []).map(faq => ({
-    question: faq.question,
-    answer: faq.answer
-  }));
-
-  const schemaGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${CANONICAL_URL}#breadcrumb`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ramacarepolyclinic.ae/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Physiotherapy",
-            "item": "https://ramacarepolyclinic.ae/services/physiotherapy-dubai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Migraine Treatment",
-            "item": CANONICAL_URL
-          }
-        ]
-      },
-      {
-        "@type": "MedicalWebPage",
-        "@id": `${CANONICAL_URL}#webpage`,
-        "url": CANONICAL_URL,
-        "name": "Migraine Treatment in Dubai | Headache Relief",
-        "description": "Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic.",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://ramacarepolyclinic.ae/",
-          "name": "RamaCare Polyclinic"
-        },
-        "about": {
-          "@type": "MedicalCondition",
-          "name": "Migraine"
-        },
-        "reviewedBy": {
-          "@type": "Person",
-          "name": "Jeena Mathew",
-          "jobTitle": "Musculoskeletal Physiotherapy Specialist",
-          "url": "https://ramacarepolyclinic.ae/doctors/jeena-mathew-physiotherapist-dubai/"
-        }
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": `${CANONICAL_URL}#procedure`,
-        "name": "Migraine Treatment in Dubai",
-        "alternateName": "Migraine Physiotherapy and Headache Relief",
-        "url": CANONICAL_URL,
-        "mainEntityOfPage": CANONICAL_URL,
-        "description": "Personalized migraine and chronic headache treatment including trigger assessment, physiotherapy, stress management, and holistic wellness support in Dubai.",
-        "procedureType": "Physical therapy technique",
-        "bodyLocation": "Head and Neck",
-        "provider": {
-          "@type": "MedicalClinic",
-          "name": "RamaCare Polyclinic",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "12 Al Dhiyafah Rd - Jumeirah Terrace Building, Ground Floor, Jumeirah 1",
-            "addressLocality": "Jumeirah 1",
-            "addressRegion": "Dubai",
-            "postalCode": "393558",
-            "addressCountry": "AE"
-          },
-          "telephone": "+971 56 659 7878",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dubai"
-          }
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${CANONICAL_URL}#faq`,
-        "mainEntity": faqsForSchema.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      }
-    ]
-  };
-
-  const physiotherapyResources = [
-    { text: 'Ultrasound Therapy', link: '/services/ultrasound-therapy-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Electrotherapy', link: '/services/electrotherapy-dubai/', bgColor: 'bg-[#EFF6FF]' },
-    { text: 'Pelvic Floor Therapy', link: '/services/pelvic-floor-therapy-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Scoliosis Treatment', link: '/services/scoliosis-treatment-in-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Functional Exercise', link: '/services/functional-exercises-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Dry Needling Therapy', link: '/services/dry-needling-dubai/', bgColor: 'bg-[#F5F3FF]' },
-    { text: 'Dry Needling & Ultrasound Combo', link: '/services/dry-needling-ultrasound-combo-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Back Pain Treatment', link: '/services/back-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
-    { text: 'Knee Pain Treatment', link: '/services/knee-pain-treatment-dubai/', bgColor: 'bg-[#FEF2F2]' },
-    { text: 'Post-Surgery Rehabilitation', link: '/services/post-surgery-rehabilitation-dubai/', bgColor: 'bg-[#ECFDF5]' },
-    { text: 'Neck Pain Treatment', link: '/services/neck-pain-treatment-dubai/', bgColor: 'bg-[#EFF6FF]' },
-    { text: 'Physiotherapy Insurance', link: '/services/physiotherapy-insurance-dubai/', bgColor: 'bg-[#FEF2F2]' }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  const [openFaq, setOpenFaq] = useState(0);
+  const careTeam = [
+    DOCTORS['dr-sahar-zomorrodi-general-practitioner-dubai'],
+    DOCTORS['jeena-mathew-physiotherapist-dubai'],
+    DOCTORS['dr-shamna-keloth-meethal-ayurveda-doctor-dubai']
+  ].filter(Boolean);
 
   return (
     <Layout>
       <Head>
-        <title key="title">Migraine Treatment in Dubai | Headache Relief</title>
-        <meta name="description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic." key="description" />
-        <meta name="keywords" content="Migraine treatment Dubai, Chronic migraine treatment, Headache treatment Dubai, Tension headache treatment, Stress-related headache Dubai, Migraine specialist Dubai, Physiotherapy for migraine" />
+        <title key="title">{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} key="description" />
         <meta name="robots" content="index, follow" key="robots" />
         <link rel="canonical" href={CANONICAL_URL} key="canonical" />
-
-        {/* Open Graph Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Migraine Treatment in Dubai | Headache Relief" />
-        <meta property="og:description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support at RamaCare Polyclinic." />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content="https://ramacarepolyclinic.ae/images/migraine-treatment.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="RamaCare Polyclinic" />
-        <meta property="og:locale" content="en_AE" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Migraine Treatment in Dubai | Headache Relief" />
-        <meta name="twitter:description" content="Expert migraine treatment in Dubai with personalized care for chronic headaches and wellness support." />
-        <meta name="twitter:image" content="https://ramacarepolyclinic.ae/images/migraine-treatment.jpg" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaGraph)
-          }}
-        />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={PAGE_TITLE} key="og:title" />
+        <meta property="og:description" content={PAGE_DESCRIPTION} key="og:description" />
+        <meta property="og:url" content={CANONICAL_URL} key="og:url" />
+        <meta property="og:image" content={`${SITE}/images/migraine-treatment.jpg`} key="og:image" />
+        <meta property="og:image:alt" content="Migraine and headache treatment in Jumeirah 1, Dubai - RamaCare Polyclinic" key="og:image:alt" />
+        <meta property="og:site_name" content="RamaCare Polyclinic" key="og:site_name" />
+        <meta property="og:locale" content="en_AE" key="og:locale" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={PAGE_TITLE} key="twitter:title" />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} key="twitter:description" />
+        <meta name="twitter:image" content={`${SITE}/images/migraine-treatment.jpg`} key="twitter:image" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }} />
       </Head>
 
-      {/* Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[#5F5F5F]">
-            <li>
-              <a href="/" className="hover:text-[#1F5E4B] transition-colors">Home</a>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <span className="text-gray-400">/</span>
-              <a href="/services/physiotherapy-dubai/" className="hover:text-[#1F5E4B] transition-colors">Physiotherapy</a>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <span className="text-gray-400">/</span>
-              <span className="text-[#1F5E4B] font-medium">Migraine Treatment</span>
-            </li>
-          </ol>
-        </div>
-      </nav>
-
-      {/* Hero Section - Unique Diagonal Design */}
-      <section className="relative bg-white overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#E8F5E9] to-transparent"></div>
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-20 w-64 h-64 bg-[#2A7D63]/5 rounded-full blur-2xl"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Content - Spans 7 columns */}
-            <div className="lg:col-span-7 space-y-6 md:space-y-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
-              >
-                {/* Badge with Icon */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="inline-flex items-center gap-3 bg-white border-2 border-[#1F5E4B]/20 px-5 py-2.5 rounded-full shadow-sm"
-                >
-                  <div className="w-8 h-8 bg-[#1F5E4B] rounded-full flex items-center justify-center">
-                    <Brain className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-[#1F5E4B] font-semibold text-sm">Neurological Headache Care</span>
-                </motion.div>
-
-                {/* Main Heading */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="space-y-2"
-                >
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1A1A1A] leading-[1.1]">
-                    Migraine <span className="text-[#1b5e3f]">Treatment in Dubai</span>
-                  </h1>
-                </motion.div>
-
-                {/* Subtitle */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="text-lg md:text-xl text-[#1F5E4B] font-medium leading-relaxed"
-                >
-                  Personalized Care for Chronic Headaches, Migraine Relief & Better Quality of Life
-                </motion.p>
-
-                {/* Description */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-base md:text-lg text-[#5F5F5F] leading-relaxed max-w-2xl hidden sm:block"
-                >
-                  Migraines are more than just a headache. It is a neurological condition that can cause intense pain, nausea, sensitivity to light and sound, fatigue, and difficulty performing daily activities.
-                </motion.p>
-
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="flex flex-wrap gap-4"
-                >
-                  <a
-                    href="#book-now"
-                    className="group inline-flex items-center gap-3 bg-[#1F5E4B] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2A7D63] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                  >
-                    <Clock className="w-5 h-5" />
-                    <span>Book Consultation</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                  <a rel="nofollow noopener noreferrer" target="_blank" href="https://wa.me/971566597878"
-                    className="inline-flex items-center gap-3 border-2 border-[#1F5E4B] text-[#1F5E4B] px-8 py-4 rounded-lg font-semibold hover:bg-[#1F5E4B] hover:text-white transition-all hover:-translate-y-0.5"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>WhatsApp</span>
-                  </a>
-                </motion.div>
-              </motion.div>
-
-              {/* Stats with Icons */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="grid grid-cols-2 gap-6 pt-8 border-t-2 border-[#E9E2D6]"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 bg-[#E8F5E9] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-[#1F5E4B]" />
-                  </div>
-                  <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">2500+</div>
-                    <div className="text-xs md:text-sm text-[#5F5F5F]">Patients Treated</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 bg-[#FFF3E0] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-6 h-6 text-[#E65100]" />
-                  </div>
-                  <div>
-                    <div className="text-2xl md:text-3xl font-bold text-[#1A1A1A]">95%</div>
-                    <div className="text-xs md:text-sm text-[#5F5F5F]">Success Rate</div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right Visual - Spans 5 columns */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="lg:col-span-5 hidden lg:block"
-            >
-              <div className="relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/migraine-treatment.jpg"
-                    alt="Migraine and headache treatment consultation at RamaCare Polyclinic Dubai"
-                    width={1200}
-                    height={630}
-                    quality={75}
-                    priority
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-
-                {/* Floating Badge */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1, type: 'spring' }}
-                  className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border-2 border-[#1F5E4B]/20"
-                >
-                  <div className="flex items-center gap-2">
-                    <Target className="w-6 h-6 text-[#1F5E4B]" />
-                    <div>
-                      <div className="text-sm font-bold text-[#1A1A1A]">Expert</div>
-                      <div className="text-xs text-[#5F5F5F]">Specialists</div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Bottom Accent Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.2 }}
-                  className="absolute -bottom-6 -left-6 bg-[#E3F2FD] rounded-xl shadow-lg p-4 border-2 border-[#1565C0]/20"
-                >
-                  <div className="flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-[#1565C0]" />
-                    <span className="text-sm font-semibold text-[#1565C0]">Safe & Effective</span>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+      {/* Hero */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm font-medium text-[#5F5F5F] flex-wrap">
+            <Link href="/" className="hover:text-[#1F5E4B]">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/" className="hover:text-[#1F5E4B]">Services</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/services/general-physician-dubai/" className="hover:text-[#1F5E4B]">General Physician</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#1F5E4B]">Migraine & Headache Treatment</span>
+          </nav>
+          <p className="inline-block px-4 py-2 rounded-full bg-[#F5F1EA] text-sm text-[#5F5F5F] mb-6">DHA-Licensed GP · Jumeirah 1</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6">Migraine & Headache Treatment in Jumeirah 1, Dubai</h1>
+          <p className="text-lg text-[#3F3F3F] leading-relaxed max-w-4xl mb-6">
+            RamaCare Polyclinic offers GP-led care for migraines and headaches in adults and children at 12 Al Dhiyafah Road, Jumeirah 1, Dubai. Our GP diagnoses the type of headache, suggests or prescribes medication where appropriate and helps you find your triggers. Physiotherapy for neck and tension headaches and Ayurvedic therapies are available in the same clinic, and we refer you to a neurologist when needed. Open every day, 10am–10pm, with same-day appointments.
+          </p>
+          <div className="bg-[#FEF2F2] border-l-4 border-[#B4432F] rounded-xl p-5 max-w-4xl mb-8">
+            <p className="font-bold text-[#B4432F] mb-1">Emergency? Call 998</p>
+            <p className="text-[#3F3F3F]">A sudden, severe “thunderclap” headache, or a headache with fever and stiff neck, weakness, confusion, speech or vision problems, needs emergency care, not a clinic appointment.</p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#1F5E4B] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#174a3b]">
+              <MessageCircle className="w-5 h-5" /> Book on WhatsApp
+            </a>
+            <a href="#book-form" className="inline-flex items-center gap-2 border-2 border-[#1F5E4B] text-[#1F5E4B] px-6 py-3 rounded-full font-semibold hover:bg-[#1F5E4B] hover:text-white">
+              <Calendar className="w-5 h-5" /> Request Appointment
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section - Bento Grid Layout */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-6">
-            {/* Large Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] p-8 md:p-12 rounded-3xl text-white"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Expert Migraine Treatment at RamaCare Polyclinic
-              </h2>
-              <div className="space-y-4 text-white/90 leading-relaxed text-lg">
-                <p>
-                  At RamaCare Polyclinic, we provide comprehensive and personalized migraine treatment in Dubai focused on identifying triggers, reducing headache frequency, and improving long-term health naturally and effectively.
-                </p>
-                <p>
-                  Our experienced healthcare professionals provide customized treatment plans that may include medical management, <a href="/services/physiotherapy-dubai/" className="text-white underline hover:text-white/80 font-medium">physiotherapy</a>, stress management, lifestyle guidance, wellness therapies, and holistic support to help patients manage migraines safely and improve their daily comfort.
-                </p>
+      {/* Types */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4">Types of Headache We Treat</h2>
+          <p className="text-[#5F5F5F] mb-8 max-w-3xl">Not every headache is a migraine. Knowing the type decides the treatment.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {headacheTypes.map((t) => (
+              <div key={t.name} className="bg-white rounded-2xl p-6 border border-gray-200">
+                <h3 className="font-bold text-lg text-[#1F5E4B] mb-2">{t.name}</h3>
+                <p className="text-[#5F5F5F] leading-relaxed">{t.text}</p>
               </div>
-            </motion.div>
-
-            {/* Small Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#FAFAF8] p-8 rounded-3xl border border-gray-100"
-            >
-              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">Personalized Care</h3>
-              <p className="text-[#5F5F5F] leading-relaxed">
-                Whether you suffer from chronic migraines, tension headaches, stress-related headaches, or recurring migraine attacks, our specialists focus on personalized and result-oriented care tailored to your condition and lifestyle.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Advantages Section - Horizontal Scroll Cards */}
-      <section className="py-24 bg-gradient-to-b from-[#FAFAF8] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Why Choose RamaCare for Migraine Treatment in Dubai?
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Patients across Dubai trust RamaCare Polyclinic for compassionate and holistic migraine management solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30"
-              >
-                <div className="w-12 h-12 bg-[#1F5E4B]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#1F5E4B] transition-colors">
-                  <CheckCircle className="w-6 h-6 text-[#1F5E4B] group-hover:text-white transition-colors" />
-                </div>
-                <p className="text-[#1A1A1A] font-semibold text-sm leading-relaxed">{advantage}</p>
-              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What Is Migraine Section - Split with Visual List */}
-      <section className="py-24 bg-gradient-to-br from-[#F8F9FA] via-white to-[#FAFAF8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-8 sticky top-32"
-            >
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6">
-                  What Is a <span className="text-[#1F5E4B]">Migraine?</span>
-                </h2>
-                <div className="space-y-4 text-[#5F5F5F] leading-relaxed text-lg">
-                  <p>
-                    Migraine is a neurological condition characterized by recurring headache attacks that may range from moderate to severe. Migraines are often accompanied by symptoms such as nausea, vomiting, dizziness, sensitivity to light, and visual disturbances.
-                  </p>
-                  <p>
-                    Migraine attacks may last for several hours or even days and can significantly affect physical, emotional, and mental well-being.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-[#1F5E4B]">
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 text-[#1F5E4B]" />
-                  Why Migraines Are Common in Dubai
-                </h3>
-                <p className="text-[#5F5F5F] mb-4">
-                  Modern lifestyle habits and environmental factors contribute to increasing migraine cases among Dubai residents. Long working hours, stress, dehydration, excessive screen exposure, poor sleep, heat, and irregular eating patterns may trigger migraine attacks.
-                </p>
-                <p className="text-sm text-[#5F5F5F]">
-                  Early treatment and trigger management can help reduce migraine frequency and severity. Patients suffering from stress-related muscular tension may also benefit from <a href="/services/back-pain-treatment-dubai/" className="text-[#1F5E4B] hover:underline font-medium">back pain treatment in Dubai</a> and posture rehabilitation support.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Right - Trigger List */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-8">Common Migraine Triggers</h3>
-              <div className="grid gap-4">
-                {migraineFactors.map((factor, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    whileHover={{ x: 10, scale: 1.02 }}
-                    className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30 cursor-pointer"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform">
-                        {index + 1}
-                      </div>
-                      <span className="text-[#1A1A1A] font-medium flex-1">{factor}</span>
-                      <ArrowRight className="w-5 h-5 text-[#1F5E4B] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+      {/* Red flags */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><AlertCircle className="w-6 h-6 text-[#B4432F]" /> When Is a Headache an Emergency?</h2>
+          <ul className="space-y-2 text-[#3F3F3F]">
+            {redFlags.map((r) => <li key={r} className="flex gap-2"><span className="text-[#B4432F] font-bold">•</span>{r}</li>)}
+          </ul>
+          <p className="mt-4 text-[#3F3F3F]">For any of these, call 998 or go to an emergency department. For headaches that are frequent, changing or not responding to painkillers, book a GP appointment.</p>
         </div>
       </section>
 
-      {/* Symptoms Section - Grid with Hover Effects */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#1F5E4B] font-semibold">Symptom Awareness</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Common Symptoms of Migraine
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Migraine symptoms vary between individuals but may include:
-            </p>
-          </motion.div>
-
+      {/* Treatment */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8">How We Treat Migraines and Headaches at RamaCare</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {symptoms.map((symptom, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-                className="group relative bg-gradient-to-br from-[#FAFAF8] to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden"
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1F5E4B] to-[#2A7D63] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-[#1F5E4B] transition-colors">
-                    <AlertCircle className="w-6 h-6 text-[#1F5E4B] group-hover:text-white transition-colors" />
-                  </div>
-                  <span className="text-[#1A1A1A] font-semibold pt-3">{symptom}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
-            <p className="text-[#5F5F5F] text-lg">
-              Patients experiencing recurring headaches should seek medical evaluation for proper diagnosis and treatment.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Types of Headaches Section - Horizontal Scroll Cards */}
-      <section className="py-24 bg-gradient-to-br from-[#F8F9FA] to-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Types of Headaches We Treat
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At RamaCare Polyclinic, we provide treatment for different types of headaches and migraine-related conditions.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {headacheTypes.map((type, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group bg-white p-8 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#1F5E4B]/10 to-transparent rounded-bl-full"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-xl flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] flex-1">{type.title}</h3>
-                  </div>
-                  <p className="text-[#5F5F5F] mb-6 leading-relaxed text-lg">{type.description}</p>
-                  {type.focus && (
-                    <div className="bg-[#FAFAF8] p-4 rounded-xl border-l-4 border-[#1F5E4B]">
-                      <p className="text-[#1F5E4B] font-medium leading-relaxed" dangerouslySetInnerHTML={{ __html: type.focus }} />
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* When to See Doctor Section - Clean Light Design */}
-      <section className="py-24 bg-gradient-to-br from-[#F8F9FA] via-white to-[#FAFAF8] relative overflow-hidden">
-        {/* Subtle Decorative Background */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-64 h-64 border-2 border-[#1F5E4B] rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 border-2 border-[#1F5E4B] rounded-full"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#1F5E4B] font-semibold">Medical Attention</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              When Should You See a Doctor for Migraines?
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Frequent or severe headaches should not be ignored. Early diagnosis and treatment can help prevent worsening symptoms and improve quality of life.
-            </p>
-          </motion.div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {whenToSeeDoctor.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30 cursor-pointer"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <span className="text-white font-bold text-sm">{index + 1}</span>
-                    </div>
-                    <span className="text-[#1A1A1A] font-medium">{item}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100"
-            >
-              <p className="text-[#5F5F5F] text-lg">
-                Professional medical care and <a href="/services/physiotherapy-dubai/" className="text-[#1F5E4B] hover:underline font-semibold">physiotherapy treatment</a> may help reduce migraine frequency and improve daily comfort.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options - Clean White Cards */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#1F5E4B] font-semibold">Comprehensive Care</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Our Migraine Treatment Options in Dubai
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              At RamaCare Polyclinic, we provide personalized treatment strategies designed according to the patient's symptoms, triggers, lifestyle, and overall health condition.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatmentOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group bg-gradient-to-br from-white to-[#FAFAF8] p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#1F5E4B]/5 to-transparent rounded-bl-full"></div>
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                    {(() => { const IconComp = iconMap[option.icon]; return IconComp ? <IconComp className="w-8 h-8 text-white" /> : null; })()}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#1A1A1A] mb-4">{option.title}</h3>
-                  <p className="text-[#5F5F5F] leading-relaxed">{option.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Process - Timeline */}
-      <section className="py-24 bg-gradient-to-b from-[#FAFAF8] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Migraine Treatment Process at RamaCare
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Our structured approach ensures comprehensive care and long-term migraine relief.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {treatmentProcess.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group relative" >
-                  {/* Timeline Line */}
-                  {index < treatmentProcess.length - 1 && (
-                    <div className="absolute left-6 top-20 w-0.5 h-full bg-gradient-to-b from-[#1F5E4B] to-[#1F5E4B]/20"></div>
-                  )}
-
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0 relative">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                        {step.step}
-                      </div>
-                    </div>
-                    <div className="bg-white p-8 rounded-2xl flex-1 shadow-lg hover:shadow-xl transition-all border-2 border-transparent group-hover:border-[#1F5E4B]/30">
-                      <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3">{step.title}</h3>
-                      <p className="text-[#5F5F5F] leading-relaxed text-lg">{step.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section - Grid with Icons */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Benefits of Professional Migraine Treatment
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Professional migraine care can help improve both physical and emotional health.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="group bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] p-6 rounded-2xl text-white shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-white/30 transition-colors">
-                    <CheckCircle className="w-6 h-6" />
-                  </div>
-                  <p className="text-white font-semibold text-sm leading-relaxed pt-3">{benefit}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Who Can Benefit - Clean List */}
-      <section className="py-24 bg-gradient-to-br from-[#F8F9FA] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Who Can Benefit From Migraine Treatment?
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Our migraine treatment programs are suitable for:
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-6">
-                {whoCanBenefit.map((person, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    whileHover={{ x: 10 }}
-                    className="flex items-center gap-4 group"
-                  >
-                    <div className="w-10 h-10 bg-[#1F5E4B]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#1F5E4B] transition-colors">
-                      <Users className="w-5 h-5 text-[#1F5E4B] group-hover:text-white transition-colors" />
-                    </div>
-                    <span className="text-[#1A1A1A] font-medium">{person}</span>
-                  </motion.div>
-                ))}
+            {treatments.map((t) => (
+              <div key={t.title} className="bg-white rounded-2xl p-6 border border-gray-200">
+                <t.icon className="w-8 h-8 text-[#1F5E4B] mb-3" />
+                <h3 className="font-bold text-lg text-[#1A1A1A] mb-2">{t.title}</h3>
+                <p className="text-[#5F5F5F] leading-relaxed">{t.text}</p>
               </div>
-            </div>
+            ))}
           </div>
+          <p className="text-[#5F5F5F] mt-8 max-w-4xl">
+            Related care at RamaCare: <Link href="/services/neck-pain-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline">neck pain treatment</Link>, <Link href="/services/dry-needling-dubai/" className="text-[#1F5E4B] font-semibold underline">dry needling</Link>, <Link href="/services/shirodhara-therapy-in-dubai/" className="text-[#1F5E4B] font-semibold underline">Shirodhara</Link>, <Link href="/services/nasya-therapy-dubai/" className="text-[#1F5E4B] font-semibold underline">Nasya therapy</Link>, <Link href="/services/stress-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline">stress treatment</Link> and <Link href="/services/insomnia-treatment-dubai/" className="text-[#1F5E4B] font-semibold underline">insomnia treatment</Link>.
+          </p>
         </div>
       </section>
 
-      {/* Cost Section - Premium Card */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative bg-gradient-to-br from-[#1F5E4B] to-[#2A7D63] p-8 md:p-12 rounded-3xl shadow-2xl text-white overflow-hidden"
-            >
-              {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
-
-              <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Migraine Treatment Cost in Dubai
-                </h2>
-                <p className="text-white/90 leading-relaxed mb-8 text-lg">
-                  The cost of migraine treatment in Dubai depends on several factors, including:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  {[
-                    "Severity and frequency of migraines",
-                    "Diagnostic evaluations required",
-                    "Type of treatment recommended",
-                    "Physiotherapy or wellness sessions needed",
-                    "Duration of care and support"
-                  ].map((factor, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl"
-                    >
-                      <ArrowRight className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                      <span className="text-white">{factor}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                <p className="text-white/90 leading-relaxed">
-                  At RamaCare Polyclinic, we provide personalized and affordable migraine treatment plans tailored to each patient's symptoms, health condition, and treatment goals.
-                </p>
-              </div>
-            </motion.div>
+      {/* Children */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-4 flex items-center gap-2"><Baby className="w-7 h-7 text-[#1F5E4B]" /> Headaches in Children</h2>
+            <p className="text-[#3F3F3F] leading-relaxed mb-4">Our GP sees children and teenagers with headaches. Migraine is common in children and often shorter than in adults, sometimes with tummy pain or vomiting. Tension headaches, dehydration, skipped meals, poor sleep, screen time and eyesight problems are other common causes.</p>
+            <p className="text-[#3F3F3F] leading-relaxed">Bring a short headache diary if you can. Children with warning signs, such as morning vomiting, headaches waking them from sleep, clumsiness or behaviour change, are referred urgently.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Prevention Tips Section - Grid Layout */}
-      <section className="py-24 bg-gradient-to-b from-[#FAFAF8] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#1F5E4B] font-semibold">Wellness Tips</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Tips to Prevent Migraines Naturally
-            </h2>
-            <p className="text-xl text-[#5F5F5F] max-w-3xl mx-auto">
-              Healthy lifestyle habits can help reduce migraine triggers and improve long-term wellness.
-            </p>
-          </motion.div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {preventionTips.map((tip, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-[#1F5E4B]/30"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-[#1F5E4B]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-[#1F5E4B]" />
-                    </div>
-                    <span className="text-[#1A1A1A] font-medium">{tip}</span>
-                  </div>
-                </motion.div>
+          <div className="bg-[#F9F7F2] rounded-2xl p-8 border border-gray-200">
+            <h3 className="text-xl font-bold text-[#1A1A1A] mb-3 flex items-center gap-2"><ClipboardList className="w-6 h-6 text-[#1F5E4B]" /> How to Keep a Headache Diary</h3>
+            <ul className="space-y-2 text-[#3F3F3F]">
+              {['Date, start time and how long it lasted', 'How bad it was (0 to 10) and where it hurt', 'Other symptoms: nausea, light sensitivity, aura', 'Sleep, meals, water and screen time that day', 'Any medicine taken and whether it helped', 'For women: where you are in your cycle'].map((d) => (
+                <li key={d} className="flex gap-2"><CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-none mt-0.5" />{d}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Clean & Bright */}
-      <section id="cta-section" className="py-24 bg-gradient-to-br from-[#FAFAF8] via-white to-[#F0F4F3] relative overflow-hidden">
-        {/* Subtle Accent */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-[#1F5E4B]/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full">
-              <span className="text-[#1F5E4B] font-semibold">Start Your Journey</span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A]">
-              Book Migraine Treatment in Dubai
-            </h2>
-
-            <div className="space-y-4 text-[#5F5F5F] leading-relaxed text-lg max-w-3xl mx-auto">
-              <p>
-                If you are struggling with chronic headaches, migraine attacks, stress-related headaches, or recurring neck tension, professional care can help improve your comfort and quality of life.
-              </p>
-              <p>
-                At RamaCare Polyclinic, we provide personalized migraine treatment in Dubai focused on trigger management, headache relief, stress reduction, and long-term wellness support.
-              </p>
-              <p className="text-[#1A1A1A] font-semibold text-xl">
-                Book your consultation today and take the first step toward a healthier, migraine-free life.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 pt-6">
-              <a
-                href="#book-now"
-                className="group inline-flex items-center gap-3 bg-[#1F5E4B] text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-[#2A7D63] transition-all hover:scale-105 shadow-xl"
-              >
-                <Clock className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                <span>Book Consultation</span>
-              </a>
-              <a rel="nofollow noopener noreferrer" target="_blank" href="https://wa.me/971566597878"
-                className="group inline-flex items-center gap-3 bg-white text-[#1F5E4B] px-10 py-5 rounded-full font-semibold text-lg hover:bg-[#1F5E4B] hover:text-white transition-all border-2 border-[#1F5E4B] hover:scale-105 shadow-lg">
-
-                <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                <span>WhatsApp Us</span>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Section - Clean Accordion */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block bg-[#1F5E4B]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#1F5E4B] font-semibold">Common Questions</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-[#5F5F5F]">
-              Common questions about migraine treatment and care
-            </p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-[#FAFAF8] rounded-2xl overflow-hidden border-2 border-transparent hover:border-[#1F5E4B]/30 transition-all"
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-[#F5F5F5] transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] pr-4">{faq.question}</h3>
-                  <div className={`w-10 h-10 bg-[#1F5E4B]/10 rounded-full flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}>
-                    <ChevronDown className="w-5 h-5 text-[#1F5E4B]" />
-                  </div>
-                </button>
-                {openFaq === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-6" >
-                    <p className="text-[#5F5F5F] leading-relaxed">{faq.answer}</p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
+      {/* Triggers and prevention */}
+      <section className="bg-[#F9F7F2] py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Common Migraine Triggers in Dubai</h2>
+            <ul className="space-y-2 text-[#3F3F3F]">{triggers.map((t) => <li key={t} className="flex gap-2"><span className="text-[#1F5E4B] font-bold">•</span>{t}</li>)}</ul>
+          </div>
+          <div className="bg-white rounded-2xl p-8 border border-gray-200">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Tips to Prevent Migraines</h2>
+            <ul className="space-y-2 text-[#3F3F3F]">{prevention.map((t) => <li key={t} className="flex gap-2"><CheckCircle className="w-5 h-5 text-[#1F5E4B] flex-none mt-0.5" />{t}</li>)}</ul>
           </div>
         </div>
       </section>
 
-      {/* Related Resources Section */}
-      <section className="w-full bg-[#F3F4F6] py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-3">
-              Complete Physiotherapy Services
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {physiotherapyResources.map((resource, index) => (
-              <a
-                key={index}
-                href={resource.link}
-                className="bg-white rounded-xl p-4 md:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg hover:translate-x-1 hover:border hover:border-[#1F5E4B]/30 group"
-              >
-                <div className="flex items-center gap-3 md:gap-4 flex-1">
-                  <div className={`${resource.bgColor} w-10 h-10 md:w-11 md:h-11 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                    <Activity className="w-5 h-5 text-[#1F5E4B]" />
-                  </div>
-                  <span className="text-xs md:text-sm font-semibold text-[#1F2937] transition-all duration-300 group-hover:text-[#1F5E4B] group-hover:text-sm md:group-hover:text-base">
-                    {resource.text}
-                  </span>
-                </div>
-
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-[#6B7280] flex-shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#1F5E4B]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            ))}
-          </div>
+      {/* Quick facts */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto bg-[#F9F7F2] rounded-2xl p-8 border border-gray-200">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Quick Facts: Migraine Care at RamaCare, Jumeirah 1</h2>
+          <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 text-[#3F3F3F]">
+            <li>Who treats you: DHA-licensed GP, with physiotherapy and Ayurveda in the same clinic</li>
+            <li>Adults and children seen</li>
+            <li>Medication suggested or prescribed where appropriate; neurologist referral when needed</li>
+            <li>Physiotherapy assessment for neck and tension headaches: AED 200</li>
+            <li>Same-day appointments; open every day, 10am to 10pm</li>
+            <li>Insurance: pay and claim; we check your coverage</li>
+            <li>Address: 12 Al Dhiyafah Road, Jumeirah Terrace Building, Jumeirah 1, Dubai (near Al Satwa)</li>
+            <li>Book: 04 286 2006 · WhatsApp 056 659 7878</li>
+          </ul>
+          <p className="text-[#3F3F3F] mt-4 text-right" lang="ar" dir="rtl">علاج الصداع والصداع النصفي في جميرا 1، دبي: طبيب عام مرخص من هيئة الصحة، للكبار والأطفال، مفتوح يومياً حتى 10 مساءً.</p>
         </div>
       </section>
 
-      {/* Content Reviewer Badge */}
-      <ContentReviewBadge doctorName="Jeena Mathew" pageSlug="migraine-treatment-dubai" />
-
-      {/* Book Consultation Component */}
-      <BookConsultation
+      {/* Care team */}
+      <DoctorsSection
         content={{
-          badge: 'Start Your Journey',
-          title: 'Book Migraine Treatment in Dubai Today',
-          description: 'Restore your wellness and live pain-free with trusted migraine treatment at RamaCare Polyclinic—safe, personalized, and focused on long-term results.',
-          getInTouchTitle: 'Get In Touch',
-          requestAppointmentTitle: 'Request Appointment',
-          submitButtonText: 'Confirm Free Consultation',
-          contactInfo: {
-            phone: '+971 04 286 2006',
-            whatsapp: '971566597878',
-            email: 'query@ramacarepolyclinic.com',
-            address: {
-              line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,',
-              line2: 'Ground Floor, Jumeirah 1 - Dubai'
-            }
-          },
-          clinicHours: {
-            weekdays: 'Sunday - Saturday:',
-            weekdaysTime: '10:00 AM - 10:00 PM',
-            friday: 'Friday:',
-            fridayTime: '10:00 AM - 8:00 PM'
-          },
-          statCards: [
-            {
-              title: 'DHA Licensed',
-              description: 'Certified Physiotherapy Facility'
-            },
-            {
-              title: 'Experienced Team',
-              description: '15+ Years Combined'
-            },
-            {
-              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
-              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
-            },
-            {
-              title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`,
-              description: `${GOOGLE_RATING_FALLBACK.count} reviews`
-            }
-          ]
+          badge: 'Your Care Team',
+          title: 'Meet Your GP, Physiotherapist and Ayurveda Doctor',
+          description: 'Migraine care at RamaCare is led by our DHA-licensed GP, with physiotherapy for neck and tension headaches and Ayurvedic support in the same clinic.'
         }}
+        customDoctors={careTeam}
       />
+
+      {/* FAQ */}
+      <section className="bg-white py-16 px-6" id="faq">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-8 text-center">Migraine & Headaches in Jumeirah 1: Common Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((f, i) => (
+              <div key={f.question} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button type="button" onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}
+                  className="w-full flex justify-between items-center gap-4 p-5 text-left font-semibold text-[#1A1A1A] hover:bg-[#F9F7F2]">
+                  <span>{f.question}</span>
+                  {openFaq === i ? <ChevronUp className="w-5 h-5 flex-none" /> : <ChevronDown className="w-5 h-5 flex-none" />}
+                </button>
+                <div className={openFaq === i ? 'px-5 pb-5 text-[#5F5F5F] leading-relaxed' : 'hidden'}>{f.answer}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-[#5F5F5F] mt-8">Medical disclaimer: this page is general information and does not replace a consultation. Treatment depends on your assessment, and no result is guaranteed.</p>
+        </div>
+      </section>
+
+      <ContentReviewBadge
+        doctorName="Dr. Sahar Zomorrodi"
+        pageSlug="migraine-treatment-dubai"
+        customStatement="This page has been medically reviewed for general information about migraine and headache care. Diagnosis and treatment depend on an individual consultation."
+      />
+
+      <div id="book-form">
+        <BookConsultation
+          content={{
+            badge: 'Book Your GP Appointment',
+            title: 'Book Migraine & Headache Care in Jumeirah 1',
+            description: 'GP appointments for adults and children, with same-day slots when available. Open every day 10am–10pm.',
+            getInTouchTitle: 'Get In Touch',
+            requestAppointmentTitle: 'Request Appointment',
+            submitButtonText: 'Request Appointment',
+            contactInfo: {
+              phone: '+971 04 286 2006',
+              whatsapp: '971566597878',
+              email: 'query@ramacarepolyclinic.com',
+              address: { line1: '12 Al Dhiyafah Rd - Jumeirah Terrace Building,', line2: 'Ground Floor, Jumeirah 1 - Dubai' }
+            },
+            clinicHours: { weekdays: 'Sunday - Saturday:', weekdaysTime: '10:00 AM - 10:00 PM' },
+            statCards: [
+              { title: 'DHA Licensed', description: 'Facility 2036418' },
+              { title: 'GP-Led', description: 'Adults and Children' },
+              { title: 'Same-Day', description: 'Appointments' },
+              { title: 'Open Daily', description: '10am – 10pm' }
+            ]
+          }}
+        />
+      </div>
     </Layout>
   );
 }

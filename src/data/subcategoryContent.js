@@ -1323,180 +1323,7 @@ export const subcategoryContent = {
     }
   },
 
-  // ============================================
-  // PHYSIOTHERAPY CATEGORY - MIGRAINE
-  // ============================================
-  'migraine-treatment-dubai': {
-    advantages: [
-      "Personalized migraine treatment plans",
-      "Experienced healthcare and wellness specialists",
-      "Focus on identifying migraine triggers",
-      "Non-surgical and holistic treatment approaches",
-      "Stress management and lifestyle guidance",
-      "Physiotherapy and posture correction support",
-      "Comfortable and patient-focused care environment",
-      "Long-term migraine prevention strategies"
-    ],
-    migraineFactors: [
-      "Stress and anxiety",
-      "Dehydration",
-      "Poor sleep quality",
-      "Hormonal changes",
-      "Prolonged screen time",
-      "Irregular meals",
-      "Heat and weather changes",
-      "Poor posture and neck tension",
-      "Excess caffeine intake"
-    ],
-    symptoms: [
-      "Severe throbbing headache",
-      "Pain on one side of the head",
-      "Sensitivity to light and sound",
-      "Nausea and vomiting",
-      "Dizziness and fatigue",
-      "Blurred vision",
-      "Neck stiffness",
-      "Difficulty concentrating",
-      "Visual aura or flashing lights",
-      "Increased sensitivity to smell"
-    ],
-    headacheTypes: [
-      {
-        title: "Chronic Migraine Treatment Dubai",
-        description: "Chronic migraines occur frequently and may interfere with daily activities, sleep, work, and emotional well-being.",
-        focus: "Our treatment plans focus on reducing migraine frequency, identifying triggers, improving lifestyle habits, and reducing stress and muscle tension."
-      },
-      {
-        title: "Tension Headache Treatment",
-        description: "Tension headaches are often caused by stress, muscle strain, neck stiffness, poor posture, and prolonged screen use.",
-        focus: "Treatment may include physiotherapy, posture correction therapy, relaxation therapies, and stress management support."
-      },
-      {
-        title: "Stress-Related Headache Treatment",
-        description: "Stress and anxiety can trigger recurring headaches and migraine attacks. Our wellness-focused approach helps patients manage physical and emotional stress more effectively.",
-        focus: "Holistic wellness support including <a href=\"/services/ayurveda-dubai/\" class=\"underline font-semibold hover:text-[#2A7D63]\">Ayurveda treatment in Dubai</a> for relaxation and stress relief."
-      },
-      {
-        title: "Neck & Posture-Related Headache Treatment",
-        description: "Poor posture and neck muscle tension may contribute to chronic headaches and migraines.",
-        focus: "Physiotherapy and rehabilitation programs help improve posture, reduce neck stiffness, relieve muscle tension, and improve spinal alignment."
-      }
-    ],
-    whenToSeeDoctor: [
-      "Headaches occur frequently",
-      "Pain interferes with daily activities",
-      "You experience nausea or dizziness",
-      "Headaches affect sleep or concentration",
-      "Over-the-counter medicines are ineffective",
-      "You notice visual disturbances",
-      "Symptoms continue to worsen over time"
-    ],
-    treatmentOptions: [
-      {
-        icon: "Target",
-        title: "Migraine Evaluation & Trigger Assessment",
-        description: "Identifying migraine triggers is an important step in effective treatment. Our specialists evaluate headache patterns, stress levels, sleep habits, posture, lifestyle factors, and dietary triggers to create a customized treatment plan."
-      },
-      {
-        icon: "Zap",
-        title: "Physiotherapy for Migraine & Headache Relief",
-        description: "Physiotherapy may help reduce migraine frequency caused by neck tension, posture imbalance, and muscle stiffness. Benefits include improved posture, reduced neck tension, better mobility, improved blood circulation, and reduced muscular stress."
-      },
-      {
-        icon: "Heart",
-        title: "Stress Management & Wellness Support",
-        description: "Stress is one of the leading migraine triggers. Our wellness programs help patients improve stress management through relaxation therapies, breathing exercises, and healthy lifestyle practices."
-      },
-      {
-        icon: "Shield",
-        title: "Lifestyle & Nutritional Guidance",
-        description: "Healthy daily habits can help reduce migraine attacks significantly. Our specialists provide guidance on hydration, sleep improvement, healthy nutrition, trigger management, and screen-time balance to support long-term migraine prevention."
-      },
-      {
-        icon: "Sparkles",
-        title: "Ayurvedic Supportive Therapy for Migraine",
-        description: "Holistic therapies may help support relaxation and reduce stress-related headache symptoms naturally. Supportive wellness therapies include head massage therapies, relaxation treatments, stress management therapies, and wellness-focused Ayurvedic support."
-      }
-    ],
-    treatmentProcess: [
-      {
-        step: "1",
-        title: "Consultation & Symptom Assessment",
-        description: "Our specialists evaluate headache history, migraine triggers, stress levels, posture, sleep quality, and lifestyle habits to understand the underlying causes of migraine symptoms."
-      },
-      {
-        step: "2",
-        title: "Personalized Treatment Planning",
-        description: "A customized treatment strategy is developed based on headache severity, migraine frequency, lifestyle factors, physical symptoms, and wellness goals."
-      },
-      {
-        step: "3",
-        title: "Therapy & Wellness Sessions",
-        description: "Patients may receive physiotherapy, stress management support, posture correction therapy, wellness guidance, and holistic supportive care depending on their individual needs."
-      },
-      {
-        step: "4",
-        title: "Long-Term Migraine Prevention",
-        description: "We help patients improve lifestyle habits, stress management, posture, hydration, and sleep quality to reduce future migraine attacks and improve overall well-being."
-      }
-    ],
-    benefits: [
-      "Reduced migraine frequency",
-      "Lower headache intensity",
-      "Better stress management",
-      "Improved sleep quality",
-      "Reduced neck and muscle tension",
-      "Better posture and mobility",
-      "Improved concentration and productivity",
-      "Better overall quality of life"
-    ],
-    whoCanBenefit: [
-      "Patients with chronic migraines",
-      "Individuals with recurring headaches",
-      "Office workers with neck tension",
-      "People affected by stress-related headaches",
-      "Individuals sensitive to screen exposure",
-      "Patients with posture-related headaches",
-      "Adults experiencing sleep-related migraines"
-    ],
-    preventionTips: [
-      "Stay hydrated throughout the day",
-      "Maintain regular sleep schedules",
-      "Manage stress effectively",
-      "Avoid skipping meals",
-      "Limit excessive screen time",
-      "Exercise regularly",
-      "Maintain correct posture",
-      "Identify and avoid migraine triggers",
-      "Reduce excessive caffeine intake"
-    ],
-    faqs: [
-      {
-        question: "What is the best treatment for migraines in Dubai?",
-        answer: "The best migraine treatment depends on the underlying causes, frequency, and severity of your symptoms. A personalized approach combining medical evaluation, physiotherapy, stress management, and lifestyle guidance provides the most effective long-term relief."
-      },
-      {
-        question: "Can physiotherapy help reduce migraines?",
-        answer: "Yes, physiotherapy can help reduce migraine frequency caused by neck tension, posture imbalance, and muscle stiffness. It improves blood circulation, reduces muscular stress, and supports better spinal alignment."
-      },
-      {
-        question: "How long does migraine treatment take to show results?",
-        answer: "Results vary depending on migraine severity and underlying triggers. Some patients notice improvement within a few weeks, while chronic cases may require ongoing treatment and lifestyle adjustments for long-term relief."
-      },
-      {
-        question: "What are the common migraine triggers?",
-        answer: "Common migraine triggers include stress and anxiety, dehydration, poor sleep quality, hormonal changes, prolonged screen time, irregular meals, heat and weather changes, poor posture, and excess caffeine intake."
-      },
-      {
-        question: "Is stress management effective for migraine treatment?",
-        answer: "Yes, stress management is a crucial component of migraine treatment. Reducing stress through relaxation therapies, breathing exercises, and lifestyle changes can significantly decrease migraine frequency and intensity."
-      },
-      {
-        question: "How much does migraine treatment cost in Dubai?",
-        answer: "The cost of migraine treatment in Dubai depends on severity and frequency of migraines, diagnostic evaluations required, type of treatment recommended, physiotherapy or wellness sessions needed, and duration of care and support."
-      }
-    ]
-  },
+ 
 
   // ============================================
   // AYURVEDA CATEGORY
@@ -37405,7 +37232,7 @@ Seek a cost-effective smile restoration`
       title: "Arthritis Treatment Dubai | RamaCare Polyclinic",
       metaTitle: "Arthritis Treatment Dubai – RamaCare Polyclinic",
       metaDescription: "Personalized Arthritis Treatment Dubai at RamaCare Polyclinic. DHA-licensed doctors & physiotherapists, evidence-based care. Book your consultation now.",
-      keywords: "Arthritis Treatment Dubai, Knee Arthritis Dubai, Osteoarthritis Dubai, Rheumatoid Arthritis Dubai, Joint Pain Specialist Dubai, Jumeirah Polyclinic, Spine Pain Treatment",
+      keywords: "Arthritis Treatment Dubai, Osteoarthritis Dubai, Rheumatoid Arthritis Dubai, Joint Pain Specialist Dubai, Jumeirah Polyclinic, Spine Pain Treatment",
       slug: "/services/arthritis-treatment-dubai/",
       canonical: "https://ramacarepolyclinic.ae/services/arthritis-treatment-dubai/"
     },
@@ -37453,7 +37280,7 @@ Seek a cost-effective smile restoration`
       title: "Types of Arthritis",
       intro: "Understanding which type of arthritis you have shapes the entire treatment approach. Here are the most common forms we assess and manage:",
       list: [
-        { name: "Osteoarthritis", description: "The most common form of arthritis, osteoarthritis develops as cartilage gradually wears down, most often in the knees, hips, hands, and spine. Symptoms typically include pain that worsens with activity, stiffness after rest, and a gradual reduction in joint mobility. Treatment usually centers on {{Physiotherapy|/services/physiotherapy-dubai/}}, strengthening exercises, weight management, and pain control." },
+        { name: "Osteoarthritis", description: "The most common form of arthritis, osteoarthritis develops as cartilage gradually wears down, most often in the knees, hips, hands, and spine. Symptoms typically include pain that worsens with activity, stiffness after rest, and a gradual reduction in joint mobility. Treatment usually centers on {{Physiotherapy|/services/physiotherapy-dubai/}}, strengthening exercises, weight management, and pain control. For knee osteoarthritis, see {{knee pain treatment|/services/knee-pain-treatment-dubai/}}." },
         { name: "Rheumatoid Arthritis", description: "An autoimmune condition where the immune system attacks the lining of the joints, rheumatoid arthritis often affects joints symmetrically — both hands or both knees, for example. It tends to cause more pronounced morning stiffness, swelling, and fatigue than osteoarthritis, and typically requires coordinated medical management alongside physiotherapy." },
         { name: "Psoriatic Arthritis", description: "Linked to the skin condition psoriasis, psoriatic arthritis can cause joint pain, swelling, and stiffness, sometimes alongside nail changes. It can affect any joint and occasionally the spine, requiring a treatment plan that considers both skin and joint symptoms." },
         { name: "Gout", description: "Caused by a buildup of uric acid crystals in the joint, gout often presents as sudden, severe pain, redness, and swelling — commonly in the big toe, though other joints can be affected. Dietary factors play a significant role, and treatment often combines acute pain management with longer-term lifestyle adjustments." },

@@ -110,7 +110,6 @@ const Header = () => {
         { name: 'Dry Needling', slug: 'dry-needling-dubai' },
         { name: 'Back Pain Treatment', slug: 'back-pain-treatment-dubai' },
         { name: 'Knee Pain Treatment', slug: 'knee-pain-treatment-dubai' },
-        { name: 'Migraine Treatment', slug: 'migraine-treatment-dubai' },
         { name: 'Post Surgery Rehabilitation', slug: 'post-surgery-rehabilitation-dubai' },
         { name: 'Physiotherapy Insurance', slug: 'physiotherapy-insurance-dubai' },
         { name: 'Cervical Spondylosis Treatment', slug: 'cervical-spondylosis-treatment-dubai' },
@@ -129,6 +128,7 @@ const Header = () => {
       name: 'General Physician',
       slug: 'general-physician-dubai',
       subcategories: [
+        { name: 'Migraine Treatment', slug: 'migraine-treatment-dubai' },
         { name: 'Gastrointestinal Disorders', slug: 'gastrointestinal-disorders-dubai' },
         { name: 'Management of Allergy', slug: 'management-of-allergy-dubai' },
         { name: 'Wound Stitching Services', slug: 'wound-stitching-services-dubai' },
