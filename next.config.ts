@@ -63,6 +63,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: '/services/scoliosis-treatment-dubai', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
+      { source: '/services/scoliosis-treatment-dubai/', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
+      { source: '/services/scoliosis-treatment', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
+      { source: '/services/scoliosis-treatment/', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
+      { source: '/physiotherapy/scoliosis-treatment-in-dubai', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
+      { source: '/physiotherapy/scoliosis-treatment-in-dubai/', destination: '/services/scoliosis-treatment-in-dubai/', permanent: true },
       { source: '/services/post-surgery-recovery-dubai', destination: '/services/post-surgery-rehabilitation-dubai/', permanent: true },
       { source: '/services/post-surgery-recovery-dubai/', destination: '/services/post-surgery-rehabilitation-dubai/', permanent: true },
       { source: '/services/office-neck-treatment-dubai', destination: '/services/neck-pain-treatment-dubai/', permanent: true },

@@ -78,6 +78,7 @@ const Header = () => {
         { name: 'Gastrointestinal Diseases Treatment', slug: 'gastrointestinal-diseases-treatment-dubai' },
         { name: 'PCOS Treatment', slug: 'pcos-treatment-dubai' },
         { name: 'Abhyanga Massage', slug: 'abhyanga-massage-dubai' },
+        { name: 'Kizhi Therapy (Herbal Pouch)', slug: 'kizhi-therapy-dubai' },
         { name: 'Basti Therapy', slug: 'basti-therapy-dubai' },
         { name: 'Shirodhara Therapy', slug: 'shirodhara-therapy-in-dubai' },
         { name: 'Nasya Therapy', slug: 'nasya-therapy-dubai' },
@@ -94,7 +95,13 @@ const Header = () => {
         { name: 'Ayurvedic Diet for Thyroid', slug: 'ayurvedic-diet-thyroid-dubai' },
         { name: 'Anxiety Treatment', slug: 'anxiety-treatment-dubai' },
         { name: 'Stress Treatment', slug: 'stress-treatment-dubai' },
-        { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' }
+        { name: 'Insomnia Treatment', slug: 'insomnia-treatment-dubai' },
+        { name: 'Ayurvedic Arthritis & Knee Pain Treatment', slug: 'ayurvedic-arthritis-knee-pain-treatment-dubai' },
+        { name: 'Ayurvedic Back Pain Treatment', slug: 'ayurvedic-back-pain-treatment-dubai' },
+        { name: 'Ayurvedic Postnatal Care', slug: 'ayurvedic-postnatal-care-dubai' },
+        { name: 'Leech Therapy (Jalaukavacharana)', slug: 'leech-therapy-dubai' },
+        { name: 'Pizhichil Treatment (Thailadhara)', slug: 'pizhichil-treatment-dubai' },
+        { name: 'Netra Tarpana (Eye Nourishment)', slug: 'netra-tarpana-dubai' }
       ],
       icon: Leaf
     },

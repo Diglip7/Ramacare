@@ -757,7 +757,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
-        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
+        { title: 'Open Daily', description: '10am - 10pm' }
       ]
     },
     testimonials: {
@@ -1482,7 +1482,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
-        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
+        { title: 'Open Daily', description: '10am - 10pm' }
       ]
     }
   },
@@ -2203,7 +2203,7 @@ export const subSubcategoryContent = {
         { title: 'DHA Licensed', description: 'Certified Facility' },
         { title: 'Experienced Team', description: '15+ Years' },
         { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` },
-        { title: `${GOOGLE_RATING_FALLBACK.rating.toFixed(1)}/5 Google Rating`, description: `${GOOGLE_RATING_FALLBACK.count} reviews` }
+        { title: 'Open Daily', description: '10am - 10pm' }
       ]
     }
   },

@@ -348,7 +348,7 @@ export default function PostSurgeryRehabilitationPage() {
                 {/* Expected outcomes */}
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                   {keyBenefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start space-x-3 bg-white p-4 rounded-xl shadow-sm border border-gray-150">
+                    <div key={idx} className="flex items-start space-x-3 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                       <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
                       <span className="text-[#1A1A1A] text-xs sm:text-sm font-medium leading-normal">{benefit}</span>
                     </div>
@@ -364,7 +364,7 @@ export default function PostSurgeryRehabilitationPage() {
 
               {/* Right Column (Hero Image) */}
               <div className="lg:col-span-5 relative">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-lg">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl shadow-lg">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Physiotherapist assisting a patient after knee replacement surgery.jpg"
@@ -384,7 +384,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* INTRODUCTION */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-[#F9F7F2]/50 border-b border-gray-150">
+        <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-[#F9F7F2]/50">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-start">
               {/* Left Column - Visual Highlight Sidebar */}
@@ -441,7 +441,7 @@ export default function PostSurgeryRehabilitationPage() {
                 </div>
 
                 {/* Myth vs Reality Card */}
-                <div className="bg-[#FCFDFB] p-6 sm:p-8 rounded-2xl border border-gray-150 shadow-sm relative overflow-hidden">
+                <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-2 h-full bg-[#D4A574]" />
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
@@ -451,7 +451,7 @@ export default function PostSurgeryRehabilitationPage() {
                         Many assume recovery happens automatically on its own. However, muscles go unused and weaken quickly, while joints naturally stiffen and form restrictive scar tissue.
                       </p>
                     </div>
-                    <div className="sm:border-l sm:border-gray-250 sm:pl-6">
+                    <div className="sm:border-l sm:border-gray-200/60 sm:pl-6">
                       <span className="text-xs text-[#1F5E4B] font-extrabold uppercase tracking-wider block mb-1">Clinical Reality</span>
                       <h4 className="font-bold text-sm text-[#1A1A1A] mb-2">Structured input is required for optimal loading.</h4>
                       <p className="text-xs text-[#5F5F5F] leading-relaxed">
@@ -478,19 +478,19 @@ export default function PostSurgeryRehabilitationPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-150">
+              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-lg text-[#1A1A1A] mb-3">Why Rehab Matters</h3>
                 <p className="text-[#5F5F5F] text-sm leading-relaxed">
                   Rehabilitation matters because surgery, while addressing the underlying structural issue, often results in temporary muscle weakness, joint stiffness, and reduced confidence in movement — all of which need deliberate, guided attention to resolve properly. Left unaddressed, these effects can persist well beyond the expected healing time.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-150">
+              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-lg text-[#1A1A1A] mb-3">Structured Phases</h3>
                 <p className="text-[#5F5F5F] text-sm leading-relaxed">
                   The goals of physiotherapy after surgery typically include reducing pain and swelling, restoring range of motion, rebuilding strength, retraining movement patterns, and ultimately supporting a safe return to daily activities or sport. These goals are pursued in a specific sequence, often described as recovery phases, that respects how surgical tissue actually heals.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-150">
+              <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-lg text-[#1A1A1A] mb-3">Surgeon Collaboration</h3>
                 <p className="text-[#5F5F5F] text-sm leading-relaxed">
                   Following your surgeon's protocol is essential throughout this process. Surgeons provide specific guidance based on the exact procedure performed — weight-bearing restrictions, movement precautions, or timelines for introducing certain exercises — and rehabilitation at RamaCare is always coordinated with these instructions rather than working independently of them.
@@ -501,7 +501,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* WHY REHABILITATION IS IMPORTANT AFTER SURGERY */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Why Rehabilitation Is Important After Surgery</h2>
@@ -512,7 +512,7 @@ export default function PostSurgeryRehabilitationPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {coreBenefits.map((benefit, idx) => (
-                <div key={idx} className="p-5 rounded-xl border border-gray-150 bg-[#FCFDFB] flex items-start space-x-3 hover:border-[#1F5E4B]/30 hover:shadow-sm transition-all">
+                <div key={idx} className="p-5 rounded-xl bg-[#FCFDFB] shadow-sm flex items-start space-x-3 hover:shadow-md hover:bg-white transition-all">
                   <CheckCircle className="w-5 h-5 text-[#1F5E4B] mt-0.5 flex-shrink-0" />
                   <span className="text-sm font-medium text-[#1A1A1A] leading-relaxed">{benefit}</span>
                 </div>
@@ -533,7 +533,7 @@ export default function PostSurgeryRehabilitationPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {conditionsList.map((cond, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white border border-gray-150 hover:shadow-md transition-all flex flex-col justify-between">
+                <div key={idx} className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                   <div>
                     <div className="w-10 h-10 rounded-xl bg-[#1F5E4B]/5 text-[#1F5E4B] font-bold text-sm flex items-center justify-center mb-4">
                       {idx + 1}
@@ -550,11 +550,11 @@ export default function PostSurgeryRehabilitationPage() {
         {/* SURGERY ELSEWHERE, WARNING SIGNS, SCAR TISSUE, QUICK FACTS */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
-            <div className="bg-[#F0F7F4] border border-[#1F5E4B]/15 rounded-2xl p-8">
+            <div className="bg-[#F0F7F4] rounded-2xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Surgery at Another Hospital? Rehab Here</h2>
               <p className="text-gray-700 leading-relaxed">Most of our post-surgery patients had their operation elsewhere in Dubai or abroad. Bring your discharge summary and your surgeon&apos;s rehab protocol. We follow it, and on request we send progress reports to your surgeon. The clinic is on the ground floor with step-free access and parking nearby, which matters on crutches or with a walker. We do not offer home visits.</p>
             </div>
-            <div className="bg-[#FEF2F2] border border-red-200 rounded-2xl p-8">
+            <div className="bg-[#FEF2F2] rounded-2xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Warning Signs After Surgery</h2>
               <ul className="space-y-2 text-gray-700">
                 <li>• Calf pain, swelling or redness in the leg (possible blood clot)</li>
@@ -564,11 +564,11 @@ export default function PostSurgeryRehabilitationPage() {
               </ul>
               <p className="text-gray-700 mt-3">These need your surgeon or emergency care straight away, not physiotherapy.</p>
             </div>
-            <div className="bg-[#F9F7F2] border border-gray-200 rounded-2xl p-8">
+            <div className="bg-[#F9F7F2] rounded-2xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Scar Tissue After Surgery</h2>
               <p className="text-gray-700 leading-relaxed">Once the wound has fully healed, gentle scar massage, stretching and regular movement help keep the scar soft so it does not limit the joint. Therapeutic ultrasound may be used alongside exercise. Your physiotherapist shows you how and when to start.</p>
             </div>
-            <div className="bg-[#F9F7F2] border border-gray-200 rounded-2xl p-8">
+            <div className="bg-[#F9F7F2] rounded-2xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">Quick Facts</h2>
               <ul className="space-y-2 text-gray-700">
                 <li>Address: Ground floor, Jumeirah Terrace Building, 12 Al Dhiyafah Road, Jumeirah 1, Dubai (step-free)</li>
@@ -584,7 +584,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* SYMPTOMS THAT REQUIRE REHABILITATION */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Checklist column */}
@@ -595,7 +595,7 @@ export default function PostSurgeryRehabilitationPage() {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {symptoms.map((s, idx) => (
-                    <div key={idx} className="flex items-center space-x-3 p-3 bg-[#FCFDFB] rounded-xl border border-gray-150">
+                    <div key={idx} className="flex items-center space-x-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#D4A574] flex-shrink-0" />
                       <span className="text-xs sm:text-sm font-semibold text-gray-700">{s}</span>
                     </div>
@@ -608,7 +608,7 @@ export default function PostSurgeryRehabilitationPage() {
 
               {/* Image column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Post-operative rehabilitation exercises in a Dubai physiotherapy clinic.jpg"
@@ -639,7 +639,7 @@ export default function PostSurgeryRehabilitationPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
               {assessmentSteps.map((step, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-white border border-gray-150 shadow-sm flex items-start space-x-3">
+                <div key={idx} className="p-5 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow flex items-start space-x-3">
                   <div className="w-8 h-8 rounded-lg bg-[#1F5E4B]/10 text-[#1F5E4B] font-bold text-xs flex items-center justify-center flex-shrink-0">
                     {idx + 1}
                   </div>
@@ -651,19 +651,19 @@ export default function PostSurgeryRehabilitationPage() {
               ))}
             </div>
 
-            <p className="text-sm sm:text-base text-[#5F5F5F] leading-relaxed italic text-center max-w-3xl mx-auto border-t border-gray-300/40 pt-6">
+            <p className="text-sm sm:text-base text-[#5F5F5F] leading-relaxed italic text-center max-w-3xl mx-auto border-t border-gray-200/50 pt-6">
               This assessment isn't a one-time event. As your recovery progresses, your physiotherapist will periodically reassess your range of motion, strength, and function to confirm your rehabilitation plan is still matched to where you actually are in the healing process, adjusting the pace or focus of treatment as needed rather than following a fixed schedule regardless of progress.
             </p>
           </div>
         </section>
 
         {/* CLINICAL OPTIONS */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Image column */}
               <div className="lg:col-span-5 order-last lg:order-first">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Gait training session after orthopedic surgery.jpg"
@@ -717,7 +717,7 @@ export default function PostSurgeryRehabilitationPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
               {techniques.map((t, idx) => (
-                <div key={idx} className="bg-white p-5 rounded-2xl border border-gray-150 hover:border-[#1F5E4B]/30 hover:shadow-md transition-all">
+                <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
                   <h4 className="font-bold text-sm sm:text-base text-[#1A1A1A] mb-2">{t.name}</h4>
                   <p className="text-xs text-[#5F5F5F] leading-relaxed">{t.description}</p>
                 </div>
@@ -731,7 +731,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* REHABILITATION TIMELINE (STEPS) */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">Rehabilitation Timeline</h2>
@@ -745,9 +745,9 @@ export default function PostSurgeryRehabilitationPage() {
                   <button
                     key={idx}
                     onClick={() => setActivePhase(idx)}
-                    className={`w-full flex justify-between items-center p-5 rounded-2xl text-left border font-bold transition-all ${activePhase === idx
-                      ? 'bg-[#1F5E4B] text-white border-[#1F5E4B] shadow-md'
-                      : 'bg-[#FCFDFB] text-[#5F5F5F] border-gray-200 hover:border-[#1F5E4B]/30'
+                    className={`w-full flex justify-between items-center p-5 rounded-2xl text-left font-bold transition-all ${activePhase === idx
+                      ? 'bg-[#1F5E4B] text-white shadow-md'
+                      : 'bg-white text-[#5F5F5F] shadow-sm hover:shadow-md hover:text-[#1F5E4B]'
                       }`}
                   >
                     <span>{p.phase}: {p.title}</span>
@@ -758,7 +758,7 @@ export default function PostSurgeryRehabilitationPage() {
 
               {/* Display Result Details (Col 8) */}
               <div className="lg:col-span-8">
-                <div className="bg-[#F9F7F2] p-6 sm:p-10 rounded-3xl border border-[#D4A574]/20 shadow-sm min-h-[220px] flex flex-col justify-between">
+                <div className="bg-[#F9F7F2] p-6 sm:p-10 rounded-3xl shadow-sm min-h-[220px] flex flex-col justify-between">
                   <div>
                     <span className="text-xs text-[#D4A574] font-bold uppercase tracking-wider block mb-1">Clinical Goal</span>
                     <h3 className="text-2xl font-black text-[#1F5E4B] mb-4">
@@ -782,8 +782,8 @@ export default function PostSurgeryRehabilitationPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-4 text-center">Typical Recovery Times After Common Surgeries</h2>
             <p className="text-gray-600 text-center mb-8">A general guide only. Your surgeon&apos;s instructions always come first.</p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border border-gray-200 rounded-2xl overflow-hidden">
+            <div className="overflow-x-auto rounded-2xl shadow-sm">
+              <table className="w-full text-left overflow-hidden">
                 <thead className="bg-[#1F5E4B] text-white">
                   <tr><th className="p-4">Surgery</th><th className="p-4">Rehab usually starts</th><th className="p-4">Typical return to daily activities</th></tr>
                 </thead>
@@ -821,7 +821,7 @@ export default function PostSurgeryRehabilitationPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {commonlyTreated.map((ct, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm hover:shadow-md transition-all">
+                <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
                   <h4 className="font-bold text-base text-[#1A1A1A] mb-2">{ct.title}</h4>
                   <p className="text-xs text-[#5F5F5F] leading-relaxed">{ct.desc}</p>
                 </div>
@@ -831,12 +831,12 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* BENEFITS OF EARLY REHABILITATION */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               {/* Image column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Manual therapy session during shoulder surgery rehabilitation.jpg"
@@ -896,7 +896,7 @@ export default function PostSurgeryRehabilitationPage() {
 
               {/* Image column */}
               <div className="lg:col-span-5">
-                <div className="bg-[#FCFDFB] p-4 rounded-3xl border border-gray-150 shadow-md">
+                <div className="bg-[#FCFDFB] p-4 rounded-3xl shadow-md">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3">
                     <Image
                       src="/images/Personalized rehabilitation consultation with a DHA-licensed physiotherapist.jpg"
@@ -916,7 +916,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* WHY CHOOSE US */}
-        <section className="py-12 md:py-20 px-4 bg-white border-b border-gray-100">
+        <section className="py-12 md:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 text-center">Why Choose RamaCare for Post-Surgery Rehab in Jumeirah 1?</h2>
             <div className="space-y-4 max-w-2xl mx-auto">
@@ -945,7 +945,7 @@ export default function PostSurgeryRehabilitationPage() {
                 placeholder="Search FAQs..."
                 value={faqSearch}
                 onChange={(e) => setFaqSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#1F5E4B] text-sm"
+                className="w-full pl-12 pr-4 py-3 bg-white shadow-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1F5E4B]/30 text-sm"
               />
               <Search className="w-5 h-5 text-[#5F5F5F] absolute left-4 top-1/2 transform -translate-y-1/2" />
             </div>
@@ -955,7 +955,7 @@ export default function PostSurgeryRehabilitationPage() {
               {filteredFaqs.map((faq, idx) => {
                 const isOpen = activeFaq === idx;
                 return (
-                  <div key={idx} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                  <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <button
                       onClick={() => setActiveFaq(isOpen ? null : idx)}
                       className="w-full flex justify-between items-center p-5 text-left font-bold text-[#1A2521] hover:text-[#1F5E4B] transition-colors text-sm sm:text-base"
@@ -1065,7 +1065,7 @@ export default function PostSurgeryRehabilitationPage() {
         </section>
 
         {/* Medical Disclaimer */}
-        <section className="py-10 bg-gray-50 border-t border-gray-150 px-4">
+        <section className="py-10 bg-gray-50 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xs text-gray-500 leading-relaxed">
               <strong className="text-gray-700">Medical Disclaimer:</strong> This content is provided for general informational purposes only and does not constitute medical advice. Recovery timelines vary considerably from patient to patient depending on the type of surgery, individual health factors, and adherence to rehabilitation. This content is not intended to replace guidance from your operating surgeon or a personalized assessment from a qualified healthcare professional. Please consult a DHA-licensed physiotherapist or physician at RamaCare Polyclinic, in coordination with your surgeon, for an individualized rehabilitation plan.

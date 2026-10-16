@@ -67,6 +67,11 @@ const categorizeSlug = (slug) => {
     s.includes('nasya') || 
     s.includes('gut-health') || 
     s.includes('kizhi') || 
+    s.includes('pizhichil') || 
+    s.includes('leech') || 
+    s.includes('prakriti') || 
+    s.includes('netra') || 
+    s.includes('tarpana') || 
     s.includes('allopathy') ||
     s.includes('insomnia') ||
     s.includes('anxiety')
