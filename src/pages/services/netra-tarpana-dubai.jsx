@@ -405,9 +405,6 @@ export default function NetraTarpanaDubai() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <figcaption className="text-center text-xs sm:text-sm font-semibold text-stone-600 mt-3 italic">
-                    Illustration of a tray with a small bowl, a dough ring and sterile gauze for a traditional Ayurvedic eye therapy.
-                  </figcaption>
                 </figure>
               </div>
             </div>
